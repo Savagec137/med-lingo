@@ -14,7 +14,129 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      lesson_attempts: {
+        Row: {
+          correct: number
+          created_at: string
+          id: string
+          lesson_id: string
+          stars: number
+          total: number
+          user_id: string
+        }
+        Insert: {
+          correct: number
+          created_at?: string
+          id?: string
+          lesson_id: string
+          stars: number
+          total: number
+          user_id: string
+        }
+        Update: {
+          correct?: number
+          created_at?: string
+          id?: string
+          lesson_id?: string
+          stars?: number
+          total?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      srs_cards: {
+        Row: {
+          due_at: string
+          ease_factor: number
+          id: string
+          interval_days: number
+          item_key: string
+          lapses: number
+          reps: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          due_at?: string
+          ease_factor?: number
+          id?: string
+          interval_days?: number
+          item_key: string
+          lapses?: number
+          reps?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          due_at?: string
+          ease_factor?: number
+          id?: string
+          interval_days?: number
+          item_key?: string
+          lapses?: number
+          reps?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_progress: {
+        Row: {
+          completed_lessons: Json
+          hearts: number
+          hearts_updated_at: string
+          last_study_date: string | null
+          streak: number
+          updated_at: string
+          user_id: string
+          xp: number
+        }
+        Insert: {
+          completed_lessons?: Json
+          hearts?: number
+          hearts_updated_at?: string
+          last_study_date?: string | null
+          streak?: number
+          updated_at?: string
+          user_id: string
+          xp?: number
+        }
+        Update: {
+          completed_lessons?: Json
+          hearts?: number
+          hearts_updated_at?: string
+          last_study_date?: string | null
+          streak?: number
+          updated_at?: string
+          user_id?: string
+          xp?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
