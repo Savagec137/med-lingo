@@ -36,7 +36,9 @@ const q = (
   prompt = "Choisis la bonne réponse",
 ): Question => ({ id, type: "mcq", prompt, question, choices, answer, explanation });
 
-export const UNITS: Unit[] = [
+import { DEA_UNITS } from "./curriculum-dea";
+
+const BASE_UNITS: Unit[] = [
   {
     id: "os",
     title: "Les Os",
@@ -308,6 +310,9 @@ export const UNITS: Unit[] = [
     ],
   },
 ];
+
+// DEA ambulancier en premier (marché initial), puis les fondamentaux généralistes.
+export const UNITS: Unit[] = [...DEA_UNITS, ...BASE_UNITS];
 
 export function findLesson(lessonId: string): { unit: Unit; lesson: Lesson } | null {
   for (const unit of UNITS) {
