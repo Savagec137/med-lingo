@@ -27,11 +27,11 @@ function Home() {
       <main className="mx-auto max-w-3xl px-4 pb-24 pt-6">
         <section className="mb-8 rounded-2xl bg-gradient-to-br from-[color:var(--color-primary)] to-[color:oklch(0.58_0.16_190)] p-6 text-primary-foreground shadow-md">
           <h1 className="text-2xl font-extrabold leading-tight sm:text-3xl">
-            Apprends le corps humain, une leçon à la fois.
+            MedLingo — DEA Ambulancier
           </h1>
           <p className="mt-2 max-w-xl text-sm opacity-95 sm:text-base">
-            Os, organes, préfixes, suffixes, radicaux… puis les pathologies quand
-            tu maîtrises les bases. Des mini-quiz courts, sans stress.
+            Hygiène, bilans, gestes d'urgence, pathologies, réglementation.
+            Des mini-quiz courts pour réviser chaque jour et progresser.
           </p>
           {hydrated && progress.xp > 0 && (
             <button
