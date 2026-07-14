@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Star, Lock, Check, RotateCcw } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Star, Lock, Check, RotateCcw, Sparkles } from "lucide-react";
 import { UNITS, allLessonsInOrder } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -13,6 +14,13 @@ const OFFSETS = [0, 64, 96, 64, 0, -64, -96, -64];
 
 function Home() {
   const { progress, hydrated, resetAll } = useProgress();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (hydrated && !progress.onboarded) {
+      navigate({ to: "/onboarding" });
+    }
+  }, [hydrated, progress.onboarded, navigate]);
 
   const order = allLessonsInOrder();
   const unlockedSet = new Set<string>();

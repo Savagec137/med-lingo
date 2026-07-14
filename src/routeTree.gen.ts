@@ -9,10 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PulseRouteImport } from './routes/pulse'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LeconLessonIdRouteImport } from './routes/lecon.$lessonId'
+import { Route as ApiPulseRouteImport } from './routes/api/pulse'
 
+const PulseRoute = PulseRouteImport.update({
+  id: '/pulse',
+  path: '/pulse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
@@ -28,39 +41,89 @@ const LeconLessonIdRoute = LeconLessonIdRouteImport.update({
   path: '/lecon/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPulseRoute = ApiPulseRouteImport.update({
+  id: '/api/pulse',
+  path: '/api/pulse',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/onboarding': typeof OnboardingRoute
+  '/pulse': typeof PulseRoute
+  '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/onboarding': typeof OnboardingRoute
+  '/pulse': typeof PulseRoute
+  '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/onboarding': typeof OnboardingRoute
+  '/pulse': typeof PulseRoute
+  '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/auth' | '/lecon/$lessonId'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/onboarding'
+    | '/pulse'
+    | '/api/pulse'
+    | '/lecon/$lessonId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/lecon/$lessonId'
-  id: '__root__' | '/' | '/auth' | '/lecon/$lessonId'
+  to:
+    | '/'
+    | '/auth'
+    | '/onboarding'
+    | '/pulse'
+    | '/api/pulse'
+    | '/lecon/$lessonId'
+  id:
+    | '__root__'
+    | '/'
+    | '/auth'
+    | '/onboarding'
+    | '/pulse'
+    | '/api/pulse'
+    | '/lecon/$lessonId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthRoute: typeof AuthRoute
+  OnboardingRoute: typeof OnboardingRoute
+  PulseRoute: typeof PulseRoute
+  ApiPulseRoute: typeof ApiPulseRoute
   LeconLessonIdRoute: typeof LeconLessonIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pulse': {
+      id: '/pulse'
+      path: '/pulse'
+      fullPath: '/pulse'
+      preLoaderRoute: typeof PulseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
@@ -82,12 +145,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeconLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/pulse': {
+      id: '/api/pulse'
+      path: '/api/pulse'
+      fullPath: '/api/pulse'
+      preLoaderRoute: typeof ApiPulseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRoute,
+  OnboardingRoute: OnboardingRoute,
+  PulseRoute: PulseRoute,
+  ApiPulseRoute: ApiPulseRoute,
   LeconLessonIdRoute: LeconLessonIdRoute,
 }
 export const routeTree = rootRouteImport
