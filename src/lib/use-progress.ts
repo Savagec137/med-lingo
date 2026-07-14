@@ -232,7 +232,21 @@ export function useProgress() {
     }
   }, []);
 
-  return { progress, hydrated, completeLesson, loseHeart, resetAll };
+  const applyPlacement = useCallback((lessonIds: string[]) => {
+    setProgress((p) => {
+      const completed = { ...p.completedLessons };
+      for (const id of lessonIds) {
+        if (!completed[id]) completed[id] = { stars: 2, bestScore: 0.8 };
+      }
+      return { ...p, completedLessons: completed, onboarded: true };
+    });
+  }, []);
+
+  const markOnboarded = useCallback(() => {
+    setProgress((p) => (p.onboarded ? p : { ...p, onboarded: true }));
+  }, []);
+
+  return { progress, hydrated, completeLesson, loseHeart, resetAll, applyPlacement, markOnboarded };
 }
 
 export { MAX_HEARTS };
