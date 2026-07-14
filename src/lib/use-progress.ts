@@ -11,6 +11,7 @@ export interface Progress {
   lastStudyDate: string | null; // yyyy-mm-dd
   hearts: number;
   heartsUpdatedAt: number;
+  onboarded: boolean;
 }
 
 const DEFAULT: Progress = {
@@ -20,6 +21,7 @@ const DEFAULT: Progress = {
   lastStudyDate: null,
   hearts: 5,
   heartsUpdatedAt: Date.now(),
+  onboarded: false,
 };
 
 const HEART_REGEN_MS = 15 * 60 * 1000;
