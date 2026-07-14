@@ -71,6 +71,7 @@ type Row = {
   hearts: number;
   hearts_updated_at: string;
   completed_lessons: Record<string, { stars: number; bestScore: number }>;
+  onboarded?: boolean | null;
 };
 function rowToProgress(r: Row): Progress {
   return {
@@ -80,6 +81,7 @@ function rowToProgress(r: Row): Progress {
     hearts: r.hearts ?? MAX_HEARTS,
     heartsUpdatedAt: r.hearts_updated_at ? new Date(r.hearts_updated_at).getTime() : Date.now(),
     completedLessons: r.completed_lessons ?? {},
+    onboarded: r.onboarded ?? ((r.xp ?? 0) > 0 || Object.keys(r.completed_lessons ?? {}).length > 0),
   };
 }
 function progressToRow(p: Progress) {
@@ -109,6 +111,7 @@ function mergeProgress(a: Progress, b: Progress): Progress {
     hearts: Math.min(a.hearts, b.hearts),
     heartsUpdatedAt: Math.max(a.heartsUpdatedAt, b.heartsUpdatedAt),
     completedLessons: completed,
+    onboarded: a.onboarded || b.onboarded,
   };
 }
 
