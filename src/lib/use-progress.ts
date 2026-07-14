@@ -11,6 +11,7 @@ export interface Progress {
   lastStudyDate: string | null; // yyyy-mm-dd
   hearts: number;
   heartsUpdatedAt: number;
+  onboarded: boolean;
 }
 
 const DEFAULT: Progress = {
@@ -20,6 +21,7 @@ const DEFAULT: Progress = {
   lastStudyDate: null,
   hearts: 5,
   heartsUpdatedAt: Date.now(),
+  onboarded: false,
 };
 
 const HEART_REGEN_MS = 15 * 60 * 1000;
@@ -69,6 +71,7 @@ type Row = {
   hearts: number;
   hearts_updated_at: string;
   completed_lessons: Record<string, { stars: number; bestScore: number }>;
+  onboarded?: boolean | null;
 };
 function rowToProgress(r: Row): Progress {
   return {
@@ -78,6 +81,7 @@ function rowToProgress(r: Row): Progress {
     hearts: r.hearts ?? MAX_HEARTS,
     heartsUpdatedAt: r.hearts_updated_at ? new Date(r.hearts_updated_at).getTime() : Date.now(),
     completedLessons: r.completed_lessons ?? {},
+    onboarded: r.onboarded ?? ((r.xp ?? 0) > 0 || Object.keys(r.completed_lessons ?? {}).length > 0),
   };
 }
 function progressToRow(p: Progress) {
@@ -107,6 +111,7 @@ function mergeProgress(a: Progress, b: Progress): Progress {
     hearts: Math.min(a.hearts, b.hearts),
     heartsUpdatedAt: Math.max(a.heartsUpdatedAt, b.heartsUpdatedAt),
     completedLessons: completed,
+    onboarded: a.onboarded || b.onboarded,
   };
 }
 
@@ -227,7 +232,21 @@ export function useProgress() {
     }
   }, []);
 
-  return { progress, hydrated, completeLesson, loseHeart, resetAll };
+  const applyPlacement = useCallback((lessonIds: string[]) => {
+    setProgress((p) => {
+      const completed = { ...p.completedLessons };
+      for (const id of lessonIds) {
+        if (!completed[id]) completed[id] = { stars: 2, bestScore: 0.8 };
+      }
+      return { ...p, completedLessons: completed, onboarded: true };
+    });
+  }, []);
+
+  const markOnboarded = useCallback(() => {
+    setProgress((p) => (p.onboarded ? p : { ...p, onboarded: true }));
+  }, []);
+
+  return { progress, hydrated, completeLesson, loseHeart, resetAll, applyPlacement, markOnboarded };
 }
 
 export { MAX_HEARTS };

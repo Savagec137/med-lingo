@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -34,6 +34,14 @@ export function TopBar() {
           <span className="font-display text-lg font-extrabold tracking-tight">MedLingo</span>
         </Link>
         <div className="flex items-center gap-3 text-sm font-bold sm:gap-4">
+          <Link
+            to="/pulse"
+            aria-label="Pulse IA"
+            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-primary)]/15 px-2.5 py-1 text-[color:var(--color-primary)] hover:bg-[color:var(--color-primary)]/25 sm:inline-flex"
+          >
+            <Sparkles className="h-4 w-4" />
+            <span className="text-xs font-extrabold uppercase tracking-wide">Pulse</span>
+          </Link>
           <span className="flex items-center gap-1 text-[color:var(--color-warning)]">
             <Flame className="h-5 w-5" /> {hydrated ? progress.streak : 0}
           </span>

@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Star, Lock, Check, RotateCcw } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Star, Lock, Check, RotateCcw, Sparkles } from "lucide-react";
 import { UNITS, allLessonsInOrder } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -13,6 +14,13 @@ const OFFSETS = [0, 64, 96, 64, 0, -64, -96, -64];
 
 function Home() {
   const { progress, hydrated, resetAll } = useProgress();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (hydrated && !progress.onboarded) {
+      navigate({ to: "/onboarding" });
+    }
+  }, [hydrated, progress.onboarded, navigate]);
 
   const order = allLessonsInOrder();
   const unlockedSet = new Set<string>();
@@ -36,16 +44,16 @@ function Home() {
 
       <main className="mx-auto max-w-2xl px-4 pb-24 pt-6">
         {/* Hero */}
-        <section className="relative mb-10 overflow-hidden rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-6 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
+        <section className="relative mb-6 overflow-hidden rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-6 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
           <div className="relative z-10">
             <p className="text-xs font-bold uppercase tracking-[0.2em] opacity-90">
-              DEA · Ambulancier
+              Vocabulaire · Anatomie · Urgences
             </p>
             <h1 className="mt-1 font-display text-3xl font-extrabold leading-tight sm:text-4xl">
-              Prends la route<br />de tes révisions.
+              Apprends les bases,<br />affronte les urgences.
             </h1>
             <p className="mt-3 max-w-md text-sm opacity-95">
-              Bilans, gestes d'urgence, pathologies. Une leçon par jour, ta série grandit.
+              Préfixes, os, organes, pathologies, puis cas terrain DEA. Une leçon par jour.
             </p>
             {hydrated && progress.xp > 0 && (
               <button
@@ -60,6 +68,23 @@ function Home() {
           </div>
           <AmbulanceSVG className="absolute -bottom-2 -right-3 h-24 w-24 rotate-[8deg] opacity-95 drop-shadow-lg sm:h-28 sm:w-28" />
         </section>
+
+        {/* Pulse IA CTA */}
+        <Link
+          to="/pulse"
+          className="mb-10 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)]"
+        >
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
+            <Sparkles className="h-6 w-6" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-display text-sm font-extrabold">Pulse IA</div>
+            <div className="truncate text-xs text-muted-foreground">
+              Ton tuteur médical : pose-lui n'importe quelle question.
+            </div>
+          </div>
+          <span className="text-[color:var(--color-primary)]">→</span>
+        </Link>
 
         <div className="space-y-14">
           {UNITS.map((unit, unitIdx) => (
