@@ -311,8 +311,33 @@ const BASE_UNITS: Unit[] = [
   },
 ];
 
-// DEA ambulancier en premier (marché initial), puis les fondamentaux généralistes.
-export const UNITS: Unit[] = [...DEA_UNITS, ...BASE_UNITS];
+// Ordre pédagogique : d'abord les bases du vocabulaire médical (préfixes / suffixes /
+// radicaux), puis l'anatomie (os, organes), puis les pathologies qui réutilisent tout
+// ce qui précède, et enfin les cas et gestes de terrain (DEA ambulancier).
+const ORDER = ["prefixes", "suffixes", "radicaux", "os", "organes", "pathologies"];
+const ORDERED_BASE = ORDER
+  .map((id) => BASE_UNITS.find((u) => u.id === id))
+  .filter((u): u is Unit => Boolean(u));
+export const UNITS: Unit[] = [...ORDERED_BASE, ...DEA_UNITS];
+
+// Ids de repères pour le placement de niveau (onboarding).
+export const LEVEL_MILESTONES = {
+  debutant: [] as string[],
+  vocabulaire: ["prefixes", "suffixes", "radicaux"],
+  anatomie: ["prefixes", "suffixes", "radicaux", "os", "organes", "pathologies"],
+  dea: ["prefixes", "suffixes", "radicaux", "os", "organes", "pathologies"],
+} as const;
+export type LevelKey = keyof typeof LEVEL_MILESTONES;
+
+export function lessonsForLevel(level: LevelKey): string[] {
+  const unitIds = LEVEL_MILESTONES[level];
+  const out: string[] = [];
+  for (const uid of unitIds) {
+    const u = UNITS.find((x) => x.id === uid);
+    if (u) for (const l of u.lessons) out.push(l.id);
+  }
+  return out;
+}
 
 export function findLesson(lessonId: string): { unit: Unit; lesson: Lesson } | null {
   for (const unit of UNITS) {
