@@ -1,6 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
+import { UNITS, findLesson } from "@/lib/curriculum";
+import {
+  awardBadges,
+  bumpMissions,
+  logXpTransaction,
+} from "@/lib/use-gamification";
+import {
+  badgesToAward,
+  levelFromXp,
+  todayIso,
+} from "@/lib/gamification";
 
 const KEY = "medlingo-progress-v1";
 
@@ -12,6 +23,9 @@ export interface Progress {
   hearts: number;
   heartsUpdatedAt: number;
   onboarded: boolean;
+  dailyGoalXp: number;
+  xpToday: number;
+  xpTodayDate: string;
 }
 
 const DEFAULT: Progress = {
@@ -22,15 +36,14 @@ const DEFAULT: Progress = {
   hearts: 5,
   heartsUpdatedAt: Date.now(),
   onboarded: false,
+  dailyGoalXp: 30,
+  xpToday: 0,
+  xpTodayDate: todayIso(),
 };
 
 const HEART_REGEN_MS = 15 * 60 * 1000;
 const MAX_HEARTS = 5;
 
-function today(): string {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
 function daysBetween(a: string, b: string): number {
   const da = new Date(a + "T00:00:00");
   const db = new Date(b + "T00:00:00");
@@ -62,8 +75,12 @@ function regenHearts(p: Progress): Progress {
   const newHearts = Math.min(MAX_HEARTS, p.hearts + gained);
   return { ...p, hearts: newHearts, heartsUpdatedAt: p.heartsUpdatedAt + gained * HEART_REGEN_MS };
 }
+function rollDaily(p: Progress): Progress {
+  const t = todayIso();
+  if (p.xpTodayDate === t) return p;
+  return { ...p, xpTodayDate: t, xpToday: 0 };
+}
 
-// Cloud <-> local mapping
 type Row = {
   xp: number;
   streak: number;
@@ -72,6 +89,9 @@ type Row = {
   hearts_updated_at: string;
   completed_lessons: Record<string, { stars: number; bestScore: number }>;
   onboarded?: boolean | null;
+  daily_goal_xp?: number | null;
+  xp_today?: number | null;
+  xp_today_date?: string | null;
 };
 function rowToProgress(r: Row): Progress {
   return {
@@ -82,6 +102,9 @@ function rowToProgress(r: Row): Progress {
     heartsUpdatedAt: r.hearts_updated_at ? new Date(r.hearts_updated_at).getTime() : Date.now(),
     completedLessons: r.completed_lessons ?? {},
     onboarded: r.onboarded ?? ((r.xp ?? 0) > 0 || Object.keys(r.completed_lessons ?? {}).length > 0),
+    dailyGoalXp: r.daily_goal_xp ?? 30,
+    xpToday: r.xp_today ?? 0,
+    xpTodayDate: r.xp_today_date ?? todayIso(),
   };
 }
 function progressToRow(p: Progress) {
@@ -92,6 +115,10 @@ function progressToRow(p: Progress) {
     hearts: p.hearts,
     hearts_updated_at: new Date(p.heartsUpdatedAt).toISOString(),
     completed_lessons: p.completedLessons,
+    level: levelFromXp(p.xp),
+    daily_goal_xp: p.dailyGoalXp,
+    xp_today: p.xpToday,
+    xp_today_date: p.xpTodayDate,
     updated_at: new Date().toISOString(),
   };
 }
@@ -112,7 +139,15 @@ function mergeProgress(a: Progress, b: Progress): Progress {
     heartsUpdatedAt: Math.max(a.heartsUpdatedAt, b.heartsUpdatedAt),
     completedLessons: completed,
     onboarded: a.onboarded || b.onboarded,
+    dailyGoalXp: Math.max(a.dailyGoalXp, b.dailyGoalXp),
+    xpToday: a.xpTodayDate === b.xpTodayDate ? Math.max(a.xpToday, b.xpToday) : (a.xpTodayDate > b.xpTodayDate ? a.xpToday : b.xpToday),
+    xpTodayDate: a.xpTodayDate > b.xpTodayDate ? a.xpTodayDate : b.xpTodayDate,
   };
+}
+
+function allLessonIdsForUnit(unitId: string): string[] {
+  const u = UNITS.find((x) => x.id === unitId);
+  return u ? u.lessons.map((l) => l.id) : [];
 }
 
 export function useProgress() {
@@ -122,13 +157,12 @@ export function useProgress() {
   const cloudSyncing = useRef(false);
   const userIdRef = useRef<string | null>(null);
 
-  // Initial load: local first (fast), then cloud merge if signed in.
   useEffect(() => {
     if (authLoading) return;
     let cancelled = false;
 
     (async () => {
-      const local = regenHearts(loadLocal());
+      const local = rollDaily(regenHearts(loadLocal()));
       if (!user) {
         if (!cancelled) {
           setProgress(local);
@@ -149,11 +183,10 @@ export function useProgress() {
         setHydrated(true);
         return;
       }
-      const cloud = regenHearts(rowToProgress(data as unknown as Row));
+      const cloud = rollDaily(regenHearts(rowToProgress(data as unknown as Row)));
       const merged = mergeProgress(cloud, local);
       setProgress(merged);
       setHydrated(true);
-      // Push merged back if local had anything more than cloud
       if (JSON.stringify(merged) !== JSON.stringify(cloud)) {
         cloudSyncing.current = true;
         await supabase.from("user_progress").upsert({ user_id: user.id, ...progressToRow(merged) });
@@ -166,13 +199,11 @@ export function useProgress() {
     };
   }, [user, authLoading]);
 
-  // Persist locally always
   useEffect(() => {
     if (!hydrated) return;
     saveLocal(progress);
   }, [progress, hydrated]);
 
-  // Debounced cloud sync when signed in
   useEffect(() => {
     if (!hydrated || !userIdRef.current) return;
     const uid = userIdRef.current;
@@ -185,32 +216,69 @@ export function useProgress() {
   const completeLesson = useCallback((lessonId: string, correct: number, total: number) => {
     const score = total === 0 ? 0 : correct / total;
     const stars = score >= 0.95 ? 3 : score >= 0.75 ? 2 : score >= 0.5 ? 1 : 0;
+    const gainedXp = 10 + stars * 5;
+    const t = todayIso();
+
+    let nextProgress: Progress = DEFAULT;
     setProgress((p) => {
-      const prev = p.completedLessons[lessonId];
+      const rolled = rollDaily(p);
+      const prev = rolled.completedLessons[lessonId];
       const bestScore = Math.max(prev?.bestScore ?? 0, score);
       const bestStars = Math.max(prev?.stars ?? 0, stars);
-      const gainedXp = 10 + stars * 5;
-      const t = today();
-      let streak = p.streak;
-      if (p.lastStudyDate !== t) {
-        if (p.lastStudyDate && daysBetween(p.lastStudyDate, t) === 1) streak += 1;
+      let streak = rolled.streak;
+      if (rolled.lastStudyDate !== t) {
+        if (rolled.lastStudyDate && daysBetween(rolled.lastStudyDate, t) === 1) streak += 1;
         else streak = 1;
       }
-      return {
-        ...p,
-        completedLessons: { ...p.completedLessons, [lessonId]: { stars: bestStars, bestScore } },
-        xp: p.xp + gainedXp,
+      const updated: Progress = {
+        ...rolled,
+        completedLessons: { ...rolled.completedLessons, [lessonId]: { stars: bestStars, bestScore } },
+        xp: rolled.xp + gainedXp,
+        xpToday: rolled.xpToday + gainedXp,
         streak,
         lastStudyDate: t,
       };
+      nextProgress = updated;
+      return updated;
     });
-    // Log attempt to cloud if signed in
+
     const uid = userIdRef.current;
     if (uid) {
+      // Log attempt + XP
       supabase.from("lesson_attempts").insert({ user_id: uid, lesson_id: lessonId, correct, total, stars });
+      logXpTransaction(uid, gainedXp, "lesson", lessonId);
+
+      // Missions
+      const isNewDay = nextProgress.lastStudyDate !== progress.lastStudyDate;
+      bumpMissions(uid, "xp", gainedXp);
+      bumpMissions(uid, "lessons", 1);
+      if (stars === 3) bumpMissions(uid, "perfect_lessons", 1);
+      if (isNewDay) bumpMissions(uid, "study_days", 1);
+
+      // Badges
+      const found = findLesson(lessonId);
+      const completedIds = Object.keys(nextProgress.completedLessons);
+      const anatomyDone =
+        allLessonIdsForUnit("os").every((id) => completedIds.includes(id)) &&
+        allLessonIdsForUnit("organes").every((id) => completedIds.includes(id));
+      const vocabDone =
+        allLessonIdsForUnit("prefixes").every((id) => completedIds.includes(id)) &&
+        allLessonIdsForUnit("suffixes").every((id) => completedIds.includes(id)) &&
+        allLessonIdsForUnit("radicaux").every((id) => completedIds.includes(id));
+      const codes = badgesToAward({
+        xp: nextProgress.xp,
+        streak: nextProgress.streak,
+        level: levelFromXp(nextProgress.xp),
+        completedCount: completedIds.length,
+        perfectLesson: stars === 3,
+        lessonUnitId: found?.unit.id,
+        anatomyDone,
+        vocabDone,
+      });
+      awardBadges(uid, codes);
     }
-    return { stars, score };
-  }, []);
+    return { stars, score, xpGained: gainedXp };
+  }, [progress.lastStudyDate]);
 
   const loseHeart = useCallback(() => {
     setProgress((p) => {
@@ -246,7 +314,20 @@ export function useProgress() {
     setProgress((p) => (p.onboarded ? p : { ...p, onboarded: true }));
   }, []);
 
-  return { progress, hydrated, completeLesson, loseHeart, resetAll, applyPlacement, markOnboarded };
+  const setDailyGoal = useCallback((xp: number) => {
+    setProgress((p) => ({ ...p, dailyGoalXp: Math.max(10, Math.min(200, xp)) }));
+  }, []);
+
+  return {
+    progress,
+    hydrated,
+    completeLesson,
+    loseHeart,
+    resetAll,
+    applyPlacement,
+    markOnboarded,
+    setDailyGoal,
+  };
 }
 
 export { MAX_HEARTS };
