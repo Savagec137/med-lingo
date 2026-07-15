@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PulseRouteImport } from './routes/pulse'
+import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
@@ -19,6 +20,11 @@ import { Route as ApiPulseRouteImport } from './routes/api/pulse'
 const PulseRoute = PulseRouteImport.update({
   id: '/pulse',
   path: '/pulse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfilRoute = ProfilRouteImport.update({
+  id: '/profil',
+  path: '/profil',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OnboardingRoute = OnboardingRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/onboarding': typeof OnboardingRoute
+  '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
   '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/onboarding': typeof OnboardingRoute
+  '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
   '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/onboarding': typeof OnboardingRoute
+  '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
   '/api/pulse': typeof ApiPulseRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/onboarding'
+    | '/profil'
     | '/pulse'
     | '/api/pulse'
     | '/lecon/$lessonId'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/onboarding'
+    | '/profil'
     | '/pulse'
     | '/api/pulse'
     | '/lecon/$lessonId'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/onboarding'
+    | '/profil'
     | '/pulse'
     | '/api/pulse'
     | '/lecon/$lessonId'
@@ -103,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthRoute: typeof AuthRoute
   OnboardingRoute: typeof OnboardingRoute
+  ProfilRoute: typeof ProfilRoute
   PulseRoute: typeof PulseRoute
   ApiPulseRoute: typeof ApiPulseRoute
   LeconLessonIdRoute: typeof LeconLessonIdRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/pulse'
       fullPath: '/pulse'
       preLoaderRoute: typeof PulseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profil': {
+      id: '/profil'
+      path: '/profil'
+      fullPath: '/profil'
+      preLoaderRoute: typeof ProfilRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/onboarding': {
@@ -159,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRoute,
   OnboardingRoute: OnboardingRoute,
+  ProfilRoute: ProfilRoute,
   PulseRoute: PulseRoute,
   ApiPulseRoute: ApiPulseRoute,
   LeconLessonIdRoute: LeconLessonIdRoute,
