@@ -1,78 +1,248 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { Star, Lock, Check, RotateCcw, Sparkles } from "lucide-react";
-import { UNITS, allLessonsInOrder } from "@/lib/curriculum";
+import { useEffect, useMemo } from "react";
+import { Star, Lock, Check, Sparkles, Zap, Flame, Trophy, Target, ChevronRight, User as UserIcon } from "lucide-react";
+import { UNITS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
+import { useAuth } from "@/lib/use-auth";
+import { levelProgress } from "@/lib/gamification";
+import {
+  useBadgesCatalog,
+  useUserBadges,
+  useMissionsCatalog,
+  useUserMissions,
+  useXpHistory,
+} from "@/lib/use-gamification";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
-// Serpentine horizontal offsets (px) for a zig-zag path
 const OFFSETS = [0, 64, 96, 64, 0, -64, -96, -64];
 
 function Home() {
-  const { progress, hydrated, resetAll } = useProgress();
+  const { progress, hydrated } = useProgress();
+  const { user } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (hydrated && !progress.onboarded) {
-      navigate({ to: "/onboarding" });
-    }
+    if (hydrated && !progress.onboarded) navigate({ to: "/onboarding" });
   }, [hydrated, progress.onboarded, navigate]);
 
   const order = allLessonsInOrder();
   const unlockedSet = new Set<string>();
   if (order.length > 0) unlockedSet.add(order[0].lessonId);
   for (let i = 0; i < order.length - 1; i++) {
-    const cur = order[i].lessonId;
-    if (progress.completedLessons[cur]) unlockedSet.add(order[i + 1].lessonId);
+    if (progress.completedLessons[order[i].lessonId]) unlockedSet.add(order[i + 1].lessonId);
   }
+  const currentLessonId = hydrated
+    ? order.find((l) => unlockedSet.has(l.lessonId) && !progress.completedLessons[l.lessonId])?.lessonId
+    : undefined;
 
-  // Current lesson = first unlocked & not completed
-  const currentLessonId =
-    hydrated
-      ? order.find(
-          (l) => unlockedSet.has(l.lessonId) && !progress.completedLessons[l.lessonId],
-        )?.lessonId
-      : undefined;
+  const currentLesson = currentLessonId ? findLesson(currentLessonId) : null;
+
+  const firstName = useMemo(() => {
+    const full = (user?.user_metadata?.full_name as string) || (user?.user_metadata?.name as string) || "";
+    if (full) return full.split(" ")[0];
+    if (user?.email) return user.email.split("@")[0];
+    return "toi";
+  }, [user]);
+
+  const lp = levelProgress(progress.xp);
+  const dailyPct = Math.min(1, progress.xpToday / Math.max(1, progress.dailyGoalXp));
+
+  const { data: badges = [] } = useBadgesCatalog();
+  const { data: userBadges = [] } = useUserBadges();
+  const { data: missions = [] } = useMissionsCatalog();
+  const { data: userMissions = [] } = useUserMissions();
+  const { data: xpHistory = [] } = useXpHistory(7);
+
+  const dailyMissions = missions.filter((m) => m.period === "daily").slice(0, 3);
+  const badgeMap = new Map(badges.map((b) => [b.code, b]));
+  const recentBadges = userBadges.slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-24">
       <TopBar />
 
-      <main className="mx-auto max-w-2xl px-4 pb-24 pt-6">
-        {/* Hero */}
-        <section className="relative mb-6 overflow-hidden rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-6 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
-          <div className="relative z-10">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] opacity-90">
-              Vocabulaire · Anatomie · Urgences
-            </p>
-            <h1 className="mt-1 font-display text-3xl font-extrabold leading-tight sm:text-4xl">
-              Apprends les bases,<br />affronte les urgences.
+      <main className="mx-auto max-w-2xl px-4 pt-4">
+        {/* Greeting */}
+        <div className="mb-4 flex items-center justify-between">
+          <div>
+            <h1 className="font-display text-2xl font-extrabold leading-tight">
+              Bonjour {firstName} 👋
             </h1>
-            <p className="mt-3 max-w-md text-sm opacity-95">
-              Préfixes, os, organes, pathologies, puis cas terrain DEA. Une leçon par jour.
+            <p className="text-xs text-muted-foreground">
+              {progress.streak > 0
+                ? `${progress.streak} jour${progress.streak > 1 ? "s" : ""} de série — continue !`
+                : "Prêt pour ta première leçon du jour ?"}
             </p>
-            {hydrated && progress.xp > 0 && (
-              <button
-                onClick={() => {
-                  if (confirm("Réinitialiser toute ta progression ?")) resetAll();
-                }}
-                className="mt-4 inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-wider hover:bg-white/30"
-              >
-                <RotateCcw className="h-3 w-3" /> Réinitialiser
-              </button>
-            )}
           </div>
-          <AmbulanceSVG className="absolute -bottom-2 -right-3 h-24 w-24 rotate-[8deg] opacity-95 drop-shadow-lg sm:h-28 sm:w-28" />
+          <Link
+            to="/profil"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-border bg-card text-foreground shadow-[0_3px_0_0_var(--color-border)] hover:border-[color:var(--color-primary)]"
+            aria-label="Profil"
+          >
+            <UserIcon className="h-5 w-5" />
+          </Link>
+        </div>
+
+        {/* Level + Daily goal card */}
+        <section className="mb-4 rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-5 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
+          <div className="flex items-center gap-4">
+            {/* Level ring */}
+            <ProgressRing pct={lp.pct} size={72}>
+              <div className="text-center leading-none">
+                <div className="text-[10px] font-bold uppercase opacity-80">Niv</div>
+                <div className="font-display text-2xl font-extrabold">{lp.level}</div>
+              </div>
+            </ProgressRing>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <div className="font-display text-sm font-extrabold uppercase tracking-wider">
+                  Niveau {lp.level}
+                </div>
+                <div className="text-[11px] font-bold opacity-90">
+                  {lp.xpIntoLevel}/{lp.xpForNextLevel} XP
+                </div>
+              </div>
+              <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/25">
+                <div
+                  className="h-full rounded-full bg-white transition-all"
+                  style={{ width: `${lp.pct * 100}%` }}
+                />
+              </div>
+              <div className="mt-2 flex items-center gap-3 text-[11px] font-bold opacity-95">
+                <span className="inline-flex items-center gap-1"><Flame className="h-3.5 w-3.5" />{progress.streak}j</span>
+                <span className="inline-flex items-center gap-1"><Zap className="h-3.5 w-3.5" />{progress.xp} XP</span>
+                <span className="inline-flex items-center gap-1"><Trophy className="h-3.5 w-3.5" />{userBadges.length}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
+            <div className="flex items-center justify-between text-[11px] font-extrabold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5"><Target className="h-3.5 w-3.5" />Objectif du jour</span>
+              <span>{progress.xpToday}/{progress.dailyGoalXp} XP</span>
+            </div>
+            <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/30">
+              <div
+                className="h-full rounded-full bg-[color:var(--color-warning)] transition-all"
+                style={{ width: `${dailyPct * 100}%` }}
+              />
+            </div>
+          </div>
         </section>
 
-        {/* Pulse IA CTA */}
+        {/* Continue lesson CTA */}
+        {currentLesson && (
+          <Link
+            to="/lecon/$lessonId"
+            params={{ lessonId: currentLesson.lesson.id }}
+            className="mb-4 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_4px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)] active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-border)]"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-3xl">
+              {currentLesson.lesson.emoji}
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
+                Continuer
+              </div>
+              <div className="truncate font-display text-base font-extrabold">{currentLesson.lesson.title}</div>
+              <div className="truncate text-[11px] text-muted-foreground">{currentLesson.unit.title}</div>
+            </div>
+            <ChevronRight className="h-6 w-6 text-[color:var(--color-primary)]" />
+          </Link>
+        )}
+
+        {/* Daily missions */}
+        {user && dailyMissions.length > 0 && (
+          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Missions du jour</h2>
+              <span className="text-[10px] font-bold text-muted-foreground">
+                {userMissions.filter((um) => um.completed && dailyMissions.some((m) => m.code === um.mission_code)).length}
+                /{dailyMissions.length}
+              </span>
+            </div>
+            <div className="space-y-2.5">
+              {dailyMissions.map((m) => {
+                const um = userMissions.find((u) => u.mission_code === m.code);
+                const done = um?.completed ?? false;
+                const prog = Math.min(m.target, um?.progress ?? 0);
+                const pct = (prog / m.target) * 100;
+                return (
+                  <div key={m.code} className="flex items-center gap-3">
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl ${done ? "bg-[color:var(--color-success)]/20" : "bg-secondary"}`}>
+                      {done ? <Check className="h-5 w-5 text-[color:var(--color-success)]" strokeWidth={3} /> : m.icon}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-baseline justify-between gap-2">
+                        <div className="truncate text-sm font-extrabold">{m.title}</div>
+                        <div className="shrink-0 text-[11px] font-bold text-muted-foreground">
+                          {prog}/{m.target} · +{m.xp_reward}XP
+                        </div>
+                      </div>
+                      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-secondary">
+                        <div
+                          className={`h-full rounded-full ${done ? "bg-[color:var(--color-success)]" : "bg-[color:var(--color-primary)]"} transition-all`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* Weekly XP */}
+        {xpHistory.length > 0 && (
+          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Cette semaine</h2>
+              <span className="text-[11px] font-bold text-[color:var(--color-primary)]">
+                {xpHistory.reduce((s, d) => s + d.xp, 0)} XP
+              </span>
+            </div>
+            <WeeklyBars data={xpHistory} goal={progress.dailyGoalXp} />
+          </section>
+        )}
+
+        {/* Recent badges */}
+        {recentBadges.length > 0 && (
+          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges récents</h2>
+              <Link to="/profil" className="text-[11px] font-bold text-[color:var(--color-primary)]">
+                Tout voir →
+              </Link>
+            </div>
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              {recentBadges.map((ub) => {
+                const b = badgeMap.get(ub.badge_code);
+                if (!b) return null;
+                return (
+                  <div
+                    key={ub.badge_code}
+                    className={`flex w-20 shrink-0 flex-col items-center rounded-xl border-2 p-2 ${rarityBorder(b.rarity)}`}
+                  >
+                    <div className="text-3xl">{b.icon}</div>
+                    <div className="mt-1 line-clamp-2 text-center text-[10px] font-bold leading-tight">
+                      {b.title}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* Pulse CTA */}
         <Link
           to="/pulse"
-          className="mb-10 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)]"
+          className="mb-8 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)]"
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
             <Sparkles className="h-6 w-6" />
@@ -80,16 +250,17 @@ function Home() {
           <div className="min-w-0 flex-1">
             <div className="font-display text-sm font-extrabold">Pulse IA</div>
             <div className="truncate text-xs text-muted-foreground">
-              Ton tuteur médical : pose-lui n'importe quelle question.
+              Ton tuteur médical — demande-lui n'importe quoi.
             </div>
           </div>
-          <span className="text-[color:var(--color-primary)]">→</span>
+          <ChevronRight className="h-5 w-5 text-[color:var(--color-primary)]" />
         </Link>
 
+        {/* Parcours */}
+        <h2 className="mb-4 font-display text-lg font-extrabold">Ton parcours</h2>
         <div className="space-y-14">
           {UNITS.map((unit, unitIdx) => (
             <section key={unit.id}>
-              {/* Unit banner */}
               <div className="mb-6 flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-3xl">
                   {unit.icon}
@@ -98,14 +269,11 @@ function Home() {
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
                     Unité {unitIdx + 1}
                   </p>
-                  <h2 className="truncate font-display text-lg font-extrabold">
-                    {unit.title}
-                  </h2>
+                  <h2 className="truncate font-display text-lg font-extrabold">{unit.title}</h2>
                   <p className="truncate text-xs text-muted-foreground">{unit.subtitle}</p>
                 </div>
               </div>
 
-              {/* Serpentine path */}
               <div className="relative mx-auto flex flex-col items-center gap-6 py-2">
                 {unit.lessons.map((lesson, i) => {
                   const done = hydrated ? progress.completedLessons[lesson.id] : undefined;
@@ -144,6 +312,73 @@ function Home() {
   );
 }
 
+// -------- UI bits --------
+
+function ProgressRing({ pct, size = 64, children }: { pct: number; size?: number; children?: React.ReactNode }) {
+  const stroke = 6;
+  const r = (size - stroke) / 2;
+  const c = 2 * Math.PI * r;
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth={stroke} />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={r}
+          fill="none"
+          stroke="#fff"
+          strokeWidth={stroke}
+          strokeLinecap="round"
+          strokeDasharray={c}
+          strokeDashoffset={c * (1 - Math.max(0, Math.min(1, pct)))}
+          style={{ transition: "stroke-dashoffset 0.6s ease" }}
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">{children}</div>
+    </div>
+  );
+}
+
+function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal: number }) {
+  const max = Math.max(goal, ...data.map((d) => d.xp), 10);
+  const labels = ["L", "M", "M", "J", "V", "S", "D"];
+  return (
+    <div className="flex items-end justify-between gap-1.5 h-24">
+      {data.map((d, i) => {
+        const day = new Date(d.date + "T00:00:00").getDay();
+        const li = day === 0 ? 6 : day - 1;
+        const h = (d.xp / max) * 100;
+        const met = d.xp >= goal;
+        return (
+          <div key={d.date} className="flex flex-1 flex-col items-center gap-1">
+            <div className="relative flex h-full w-full items-end">
+              <div
+                className={`w-full rounded-t-md ${met ? "bg-[color:var(--color-success)]" : d.xp > 0 ? "bg-[color:var(--color-primary)]" : "bg-secondary"}`}
+                style={{ height: `${Math.max(h, 4)}%` }}
+              />
+            </div>
+            <div className="text-[10px] font-bold text-muted-foreground">{labels[li]}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function rarityBorder(rarity: string): string {
+  switch (rarity) {
+    case "legendary":
+      return "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/10";
+    case "epic":
+      return "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10";
+    case "rare":
+      return "border-[color:var(--color-info,#3B82F6)] bg-[color:var(--color-info,#3B82F6)]/10";
+    default:
+      return "border-border bg-secondary";
+  }
+}
+
 function LessonNode({
   lessonId,
   title,
@@ -163,19 +398,13 @@ function LessonNode({
 }) {
   const bubble = (
     <div className="group relative flex flex-col items-center">
-      {/* Ambulance marker for current lesson */}
       {isCurrent && (
-        <div className="pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="relative flex flex-col items-center">
-            <div className="mb-1 whitespace-nowrap rounded-full bg-[color:var(--color-foreground)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-background shadow">
-              À toi !
-            </div>
-            <AmbulanceSVG className="h-12 w-12 drop-shadow" />
+        <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="whitespace-nowrap rounded-full bg-[color:var(--color-foreground)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-background shadow">
+            À toi !
           </div>
         </div>
       )}
-
-      {/* Circular button */}
       <button
         type="button"
         disabled={!unlocked}
@@ -202,63 +431,22 @@ function LessonNode({
               <Star
                 key={s}
                 className={`h-3 w-3 ${
-                  s < stars
-                    ? "fill-[color:var(--color-warning)] text-[color:var(--color-warning)]"
-                    : "text-border"
+                  s < stars ? "fill-[color:var(--color-warning)] text-[color:var(--color-warning)]" : "text-border"
                 }`}
               />
             ))}
           </div>
         )}
       </button>
-
-      {/* Title */}
-      <p
-        className={`mt-3 max-w-[160px] text-center text-xs font-bold leading-tight ${
-          unlocked ? "text-foreground" : "text-muted-foreground"
-        }`}
-      >
+      <p className={`mt-3 max-w-[160px] text-center text-xs font-bold leading-tight ${unlocked ? "text-foreground" : "text-muted-foreground"}`}>
         {title}
       </p>
     </div>
   );
-
   if (!unlocked) return bubble;
   return (
     <Link to="/lecon/$lessonId" params={{ lessonId }} className="block">
       {bubble}
     </Link>
-  );
-}
-
-function AmbulanceSVG({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 64 40" className={className} aria-hidden="true">
-      {/* Body */}
-      <rect x="2" y="10" width="42" height="20" rx="3" fill="#ffffff" stroke="#0F172A" strokeWidth="2" />
-      {/* Cab */}
-      <path
-        d="M44 14 L58 14 L62 22 L62 30 L44 30 Z"
-        fill="#ffffff"
-        stroke="#0F172A"
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
-      {/* Window */}
-      <path d="M46 16 L57 16 L60 22 L46 22 Z" fill="#7DD3FC" stroke="#0F172A" strokeWidth="1.5" />
-      {/* Red cross */}
-      <rect x="18" y="15" width="10" height="10" fill="#EF4444" />
-      <rect x="21.5" y="13" width="3" height="14" fill="#ffffff" />
-      <rect x="16" y="18.5" width="14" height="3" fill="#ffffff" />
-      {/* Lightbar */}
-      <rect x="10" y="6" width="24" height="4" rx="1" fill="#EF4444" stroke="#0F172A" strokeWidth="1.5" />
-      <rect x="14" y="6" width="6" height="4" fill="#3B82F6" />
-      <rect x="24" y="6" width="6" height="4" fill="#3B82F6" />
-      {/* Wheels */}
-      <circle cx="14" cy="32" r="5" fill="#0F172A" />
-      <circle cx="14" cy="32" r="2" fill="#ffffff" />
-      <circle cx="50" cy="32" r="5" fill="#0F172A" />
-      <circle cx="50" cy="32" r="2" fill="#ffffff" />
-    </svg>
   );
 }
