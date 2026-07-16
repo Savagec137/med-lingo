@@ -71,7 +71,7 @@ function Home() {
         <div className="mb-4 flex items-center justify-between">
           <div>
             <h1 className="font-display text-2xl font-extrabold leading-tight">
-              Bonjour {firstName} 👋
+              Bonjour {firstName}
             </h1>
             <p className="text-xs text-muted-foreground">
               {progress.streak > 0
