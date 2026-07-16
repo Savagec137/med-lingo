@@ -1,80 +1,143 @@
-# Plan : MedLingo v2 — App médicale complète
+# Boutique Premium MedLingo — Plan de mise en œuvre
 
-Objectif : passer d'un prototype à une vraie app d'apprentissage stable et riche, sur les 5 axes que tu as validés.
-
-⚠️ **Ampleur** : c'est un très gros chantier (~4-6 tours de build). Je vais découper en **5 phases livrées successivement** pour que tu puisses tester à chaque étape, plutôt que d'attendre 1h un gros bloc qui risque de casser.
+Objectif : ajouter une **boutique** avec monnaie in-app (pièces), **coffres de compensation** quand les vies tombent à 0, **avatars/badges exclusifs**, et un **abonnement Premium** débloquant des cas cliniques avancés — le tout compatible free ↔ premium.
 
 ---
 
-## Phase 1 — Fondations Cloud + Comptes (1 tour)
+## 1. Modèle économique
 
-**But** : sauvegarder la progression dans le cloud, plus jamais perdue.
+**Free (reste riche)**
+- Toutes les unités actuelles (vocabulaire, anatomie, pathologies, DEA base)
+- 5 vies + régénération 15 min
+- Coffre de compensation à chaque « game over » (1× / 4h max, anti-farm)
+- Pulse IA : 10 messages / jour
+- Boutique de cosmétiques payable en **pièces gagnées**
 
-- Activer **Lovable Cloud** (base de données + auth)
-- Auth email/mot de passe + Google
-- Tables : `profiles`, `user_progress` (XP, streak, cœurs, leçons complétées), `lesson_attempts`, `srs_cards` (pour phase 3)
-- RLS strict : chaque user ne voit que ses données
-- Migration automatique : au premier login, on push le `localStorage` existant vers le cloud
-- Header : avatar + menu déconnexion
-
-## Phase 2 — Contenu massif + relecture (1-2 tours)
-
-**But** : passer de ~15 questions à **500+ questions** couvrant vraiment le programme.
-
-- **Os** : squelette complet (crâne, colonne, membres sup/inf, main, pied) — 8 leçons
-- **Organes** : cardio, respiratoire, digestif, urinaire, reproducteur, nerveux, endocrinien, sensoriel — 10 leçons
-- **Muscles** (nouveau) : principaux groupes — 5 leçons
-- **Préfixes / Suffixes / Radicaux** : ~150 morphèmes médicaux — 12 leçons
-- **Pathologies** : par système, avec décomposition étymologique — 15 leçons
-- Chaque leçon = 15-20 questions
-- Sources : terminologie médicale standard (Nomina Anatomica FR, référentiels IFSI/PASS)
-- Un fichier `curriculum/` structuré par domaine, facile à étendre
-
-## Phase 3 — Types d'exercices variés + SRS (1-2 tours)
-
-**But** : arrêter le tout-QCM, ajouter la révision espacée style Anki.
-
-Nouveaux types d'exercices :
-1. **QCM** (existant)
-2. **Associer paires** (mot ↔ définition)
-3. **Écrire le mot** (saisie clavier avec tolérance orthographique)
-4. **Remettre dans l'ordre** (décomposer "péri-cardi-te")
-5. **Image → mot** (cliquer sur l'os/organe sur un schéma)
-6. **Vrai/Faux** rapide
-7. **Compléter la phrase**
-
-Révision espacée (algo SM-2 simplifié) :
-- Chaque item appris = carte SRS avec date de prochaine révision
-- Bouton "Réviser" sur l'accueil qui liste les cartes dues du jour
-- Mode "Mes erreurs" : refait uniquement ce qui a été raté
-
-## Phase 4 — Visuels anatomiques (1 tour)
-
-**But** : voir ce qu'on apprend, pas juste des mots.
-
-- Illustrations SVG interactives : squelette, silhouette organes, cerveau, cœur, poumon
-- Zones cliquables sur schéma pour exercices "image → mot"
-- Images générées pour chaque leçon (bannière thématique)
-- Animations douces (framer-motion) pour bonnes/mauvaises réponses
-
-## Phase 5 — Rétention & polish (1 tour)
-
-- **Sons** : bip correct/incorrect, jingle fin de leçon (Web Audio, sans lib lourde)
-- **Notifications push** (via PWA) : rappel quotidien à heure choisie
-- **Classement hebdo** simple entre users
-- **Badges** : "10 jours de suite", "Système cardio maîtrisé", etc.
-- **Mode révision hors-ligne** : PWA offline pour les leçons déjà chargées
-- Fine-tuning UX : transitions, haptics mobile, dark mode
+**Premium (9,99 €/mois — 79,99 €/an)**
+- ❤️ Vies illimitées
+- 🧠 Cas cliniques avancés (nouvelle unité verrouillée)
+- 🤖 Pulse IA illimité + mode « coach quotidien »
+- 🎨 Avatars / cadres / fonds exclusifs (tag « Premium »)
+- 🏆 Badge animé « Membre Premium »
+- 📊 Statistiques avancées + export PDF
+- 🚫 Zéro pub future
 
 ---
 
-## Ordre proposé & questions
+## 2. Base de données (nouvelles tables)
 
-Je propose de démarrer par la **Phase 1 (Cloud + comptes)** immédiatement, car tout le reste (SRS, classement, sync mobile↔desktop) en dépend.
+Toutes en `public.*`, RLS activée, GRANT `authenticated` + `service_role`.
 
-**Avant de lancer, deux questions rapides** :
+| Table | Rôle |
+|---|---|
+| `wallets` | `user_id`, `coins`, `gems` (soft currency / hard currency) |
+| `coin_transactions` | historique gains/dépenses (source, amount, ref) |
+| `shop_items` | catalogue : `code`, `type` (avatar/frame/background/badge/booster/chest), `price_coins`, `price_gems`, `premium_only`, `rarity`, `asset_url`, `active` |
+| `user_inventory` | items possédés (`user_id`, `item_code`, `equipped`, `acquired_at`) |
+| `chests` | définitions (`code`, `tier` bronze/argent/or/légendaire, `loot_table` jsonb) |
+| `chest_openings` | `user_id`, `chest_code`, `opened_at`, `rewards` jsonb, `source` (compensation / shop / mission) |
+| `subscriptions` | `user_id`, `status`, `plan`, `current_period_end`, `stripe_customer_id`, `stripe_subscription_id` |
+| `entitlements` (vue) | résout `is_premium` par user (subscription active OU compte staff) |
+| `premium_content` | flag `is_premium` sur unités/leçons (colonne ajoutée à `curriculum` côté code ou table `lesson_flags`) |
 
-1. **Google login** en plus de l'email/mot de passe ? (recommandé pour usage mobile fluide)
-2. **Public cible principal** ? (étudiant IFSI / PASS-LAS / aide-soignant / curieux) — ça oriente le niveau de détail du contenu Phase 2.
+Fonctions SQL :
+- `grant_compensation_chest(user_id)` — SECURITY DEFINER, vérifie cooldown 4h, insère `chest_openings` + crédite loot.
+- `has_active_subscription(user_id)` — utilisée dans policies pour contenu premium.
+- `spend_coins(user_id, amount, reason)` — transaction atomique.
 
-Dis-moi go et je démarre la Phase 1.
+---
+
+## 3. Paiement — Stripe seamless (Lovable Payments)
+
+- Enable via `enable_stripe_payments` (built-in, pas de compte à créer)
+- Tax handling : **managed_payments** (produit digital, SaaS)
+- 2 produits : `premium_monthly`, `premium_annual`
+- Webhook `/api/public/webhooks/stripe` (vérif signature) → met à jour `subscriptions`
+- Server fn `createCheckoutSession` + `openCustomerPortal`
+
+---
+
+## 4. Coffre de compensation (flow « 0 vie »)
+
+Déclenché dans `use-progress.ts` quand `hearts` passe à 0 :
+
+1. Appel serverFn `claimCompensationChest()` (cooldown 4h côté SQL).
+2. Modal plein écran animée : coffre qui s'ouvre, confettis, loot révélé carte par carte.
+3. Loot table bronze : 20-50 pièces, 1 vie bonus, chance 5% skin commun.
+4. CTA en bas : « Vies illimitées avec Premium → » (soft-sell, jamais bloquant).
+5. Si Premium actif : coffre argent (loot ×2) + zéro paywall.
+
+---
+
+## 5. Boutique — routes & UI
+
+Nouvelle route `/boutique` avec 4 onglets :
+
+- **Coffres** — bronze (gratuit 24h), argent (500 pièces), or (2000), légendaire (Premium ou 50 gems)
+- **Avatars** — grille filtrable (Étudiant, IFSI, DEA, SAMU…), premium tagués 👑
+- **Personnalisation** — cadres, fonds, titres (référence `project-knowledge`)
+- **Premium** — pricing card mensuel/annuel, liste d'avantages, CTA Stripe Checkout
+
+Composants :
+- `ShopCard`, `ChestOpeningModal`, `PremiumBadge`, `PaywallDialog` (réutilisable)
+- `useWallet()`, `useInventory()`, `useSubscription()`, `useEntitlements()` (hooks React Query)
+
+Intégrations existantes :
+- `TopBar` : affiche pièces + icône couronne Premium
+- `profil.tsx` : vitrine avatars/cadres équipés, bouton « Gérer abonnement »
+- Écran fin de leçon : bonus pièces (5-15 selon étoiles) → alimente boutique naturellement
+
+---
+
+## 6. Contenu Premium — cas cliniques avancés
+
+- Nouvelle unité `cas-cliniques-avances` dans `curriculum.ts` avec `premiumOnly: true`
+- 15 cas multi-étapes (bilan ABCDE → décision → justification) rédigés progressivement
+- Sur la carte du parcours : cadenas doré + tap → `PaywallDialog`
+- Preview gratuite : 1er cas jouable pour créer l'envie
+
+---
+
+## 7. Gating — comment on décide Free vs Premium
+
+Un seul hook `useEntitlements()` → `{ isPremium, unlimitedHearts, premiumContent }`.
+
+Utilisé partout :
+- `use-progress.loseHeart()` : no-op si `unlimitedHearts`
+- Router loader d'une leçon premium : redirect vers paywall si `!premiumContent`
+- Composants cosmétiques : filtre `premium_only` dans la boutique
+- Server-side : policies RLS sur `premium_content` valident `has_active_subscription()`
+
+---
+
+## 8. Découpage en lots livrables
+
+**Lot A — Fondations économie (1 turn)**
+Migration wallets/coin_transactions/shop_items/user_inventory + seed catalogue initial + hook `useWallet` + affichage pièces dans TopBar + récompense pièces en fin de leçon.
+
+**Lot B — Coffres & compensation (1 turn)**
+Migration chests/chest_openings + SQL `grant_compensation_chest` + `ChestOpeningModal` + hook 0-vie dans `use-progress`.
+
+**Lot C — Boutique UI (1-2 turns)**
+Route `/boutique` complète (4 onglets), inventaire, équipement avatar/cadre, intégration profil.
+
+**Lot D — Premium & Stripe (1 turn)**
+`enable_stripe_payments` + produits + subscriptions table + webhook + `useEntitlements` + `PaywallDialog` + application du gating (vies illimitées, cas cliniques verrouillés).
+
+**Lot E — Contenu premium (1 turn, itératif)**
+Unité cas cliniques avancés + intégration parcours.
+
+---
+
+## Détails techniques
+
+- **Sécurité** : toutes les écritures monnaie/inventaire passent par `createServerFn` + `requireSupabaseAuth` → jamais depuis le client. Le client ne peut PAS s'auto-créditer des pièces.
+- **RLS** : lecture `user_inventory`/`wallets` scopée `auth.uid()`. `shop_items` en lecture `anon+authenticated` (catalogue public).
+- **Anti-triche coffre** : cooldown 4h vérifié SQL-side, pas JS.
+- **Webhook Stripe** : `/api/public/webhooks/stripe`, vérif signature HMAC, `supabaseAdmin` importé dans le handler.
+- **Compat rétro** : users existants → wallet créé à la volée à première lecture ; aucune donnée perdue.
+- **Design** : cohérent avec palette Duolingo énergique + Space Grotesk actuelle, animations Framer Motion sur coffres/paywall.
+
+---
+
+**Dis-moi par quel lot je démarre** (recommandé : **Lot A** pour poser l'économie, puis B pour le hook émotionnel du coffre de compensation).
