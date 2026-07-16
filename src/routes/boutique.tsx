@@ -198,7 +198,7 @@ function Boutique() {
             })}
             {itemsFor(tab).length === 0 && (
               <div className="col-span-full rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-                Bientôt disponible ✨
+                Bientôt disponible
               </div>
             )}
           </div>
