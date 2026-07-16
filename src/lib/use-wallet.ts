@@ -73,15 +73,6 @@ export async function regenEnergy() {
   return data as unknown as number;
 }
 
-  const { data, error } = await supabase.rpc("award_coins" as never, {
-    _amount: amount,
-    _source: source,
-    _reference: reference ?? null,
-  } as never);
-  if (error) throw error;
-  return data as unknown as number;
-}
-
 export async function purchaseItem(itemCode: string) {
   const { data, error } = await supabase.rpc("purchase_item" as never, {
     _item_code: itemCode,
