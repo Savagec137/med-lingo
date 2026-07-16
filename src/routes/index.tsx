@@ -229,7 +229,7 @@ function Home() {
                     key={ub.badge_code}
                     className={`flex w-20 shrink-0 flex-col items-center rounded-xl border-2 p-2 ${rarityBorder(b.rarity)}`}
                   >
-                    <div className="text-3xl">{b.icon}</div>
+                    <BadgeIcon code={ub.badge_code} className="h-7 w-7" strokeWidth={2.25} />
                     <div className="mt-1 line-clamp-2 text-center text-[10px] font-bold leading-tight">
                       {b.title}
                     </div>
