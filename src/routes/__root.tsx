@@ -93,10 +93,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#2fb3a6" },
+      { name: "theme-color", content: "#0a1024" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "mobile-web-app-capable", content: "yes" },
-      { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
       { name: "apple-mobile-web-app-title", content: "MedLingo" },
     ],
     links: [
@@ -147,6 +147,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Ambient neon orbs — decoration */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="orb animate-float-slow" style={{ width: 420, height: 420, top: -120, left: -120, background: "radial-gradient(circle, oklch(0.55 0.22 300 / 0.7), transparent 70%)" }} />
+        <div className="orb animate-float-slow" style={{ width: 520, height: 520, top: 120, right: -180, background: "radial-gradient(circle, oklch(0.55 0.2 210 / 0.6), transparent 70%)", animationDelay: "-3s" }} />
+        <div className="orb animate-float-slow" style={{ width: 380, height: 380, bottom: -140, left: "30%", background: "radial-gradient(circle, oklch(0.55 0.22 350 / 0.5), transparent 70%)", animationDelay: "-6s" }} />
+      </div>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster />

@@ -29,15 +29,15 @@ export function TopBar() {
     .toUpperCase();
 
   return (
-    <header className="sticky top-0 z-20 w-full border-b border-border bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-20 w-full border-b border-white/10 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[color:var(--color-primary)] text-primary-foreground">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl text-primary-foreground glow-primary" style={{ backgroundImage: "var(--gradient-primary)" }}>
             <Stethoscope className="h-5 w-5" strokeWidth={2.5} />
           </span>
-          <span className="font-display text-lg font-extrabold tracking-tight">MedLingo</span>
+          <span className="font-display text-lg font-extrabold tracking-tight text-gradient-primary">MedLingo</span>
         </Link>
-        <div className="flex items-center gap-3 text-sm font-bold sm:gap-4">
+        <div className="flex items-center gap-2 text-sm font-bold sm:gap-3">
           <Link
             to="/pulse"
             aria-label="Pulse IA"
