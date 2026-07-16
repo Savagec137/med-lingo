@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PulseRouteImport } from './routes/pulse'
 import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as InventaireRouteImport } from './routes/inventaire'
 import { Route as ClassementRouteImport } from './routes/classement'
 import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -32,6 +33,11 @@ const ProfilRoute = ProfilRouteImport.update({
 const OnboardingRoute = OnboardingRouteImport.update({
   id: '/onboarding',
   path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InventaireRoute = InventaireRouteImport.update({
+  id: '/inventaire',
+  path: '/inventaire',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClassementRoute = ClassementRouteImport.update({
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   BoutiqueRoute: typeof BoutiqueRoute
   ClassementRoute: typeof ClassementRoute
+  InventaireRoute: typeof InventaireRoute
   OnboardingRoute: typeof OnboardingRoute
   ProfilRoute: typeof ProfilRoute
   PulseRoute: typeof PulseRoute
@@ -168,6 +181,13 @@ declare module '@tanstack/react-router' {
       path: '/onboarding'
       fullPath: '/onboarding'
       preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inventaire': {
+      id: '/inventaire'
+      path: '/inventaire'
+      fullPath: '/inventaire'
+      preLoaderRoute: typeof InventaireRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/classement': {
@@ -220,6 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   BoutiqueRoute: BoutiqueRoute,
   ClassementRoute: ClassementRoute,
+  InventaireRoute: InventaireRoute,
   OnboardingRoute: OnboardingRoute,
   ProfilRoute: ProfilRoute,
   PulseRoute: PulseRoute,
@@ -229,3 +250,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

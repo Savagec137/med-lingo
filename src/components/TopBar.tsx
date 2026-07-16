@@ -1,5 +1,20 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Gem, Key, Stethoscope, Battery, Trophy } from "lucide-react";
+import {
+  Heart,
+  Flame,
+  Zap,
+  LogOut,
+  LogIn,
+  User as UserIcon,
+  Sparkles,
+  Coins,
+  Gem,
+  Key,
+  Stethoscope,
+  Battery,
+  Trophy,
+  Package,
+} from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -29,7 +44,6 @@ export function TopBar() {
     }
   }, [progress.hearts, user, hydrated, chest]);
 
-
   useEffect(() => {
     if (!menuOpen) return;
     function onClick(e: MouseEvent) {
@@ -49,10 +63,15 @@ export function TopBar() {
     <header className="sticky top-0 z-20 w-full border-b border-white/10 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl text-primary-foreground glow-primary" style={{ backgroundImage: "var(--gradient-primary)" }}>
+          <span
+            className="flex h-9 w-9 items-center justify-center rounded-xl text-primary-foreground glow-primary"
+            style={{ backgroundImage: "var(--gradient-primary)" }}
+          >
             <Stethoscope className="h-5 w-5" strokeWidth={2.5} />
           </span>
-          <span className="font-display text-lg font-extrabold tracking-tight text-gradient-primary">MedLingo</span>
+          <span className="font-display text-lg font-extrabold tracking-tight text-gradient-primary">
+            MedLingo
+          </span>
         </Link>
         <div className="flex items-center gap-2 text-sm font-bold sm:gap-3">
           <Link
@@ -101,7 +120,9 @@ export function TopBar() {
             title="Régénère 1 point / 6 min"
           >
             <Battery className="h-4 w-4" />
-            <span className="tabular-nums">{wallet?.energy ?? 5}/{wallet?.energy_max ?? 5}</span>
+            <span className="tabular-nums">
+              {wallet?.energy ?? 5}/{wallet?.energy_max ?? 5}
+            </span>
           </span>
           <span className="flex items-center gap-1 text-[color:var(--color-warning)]">
             <Flame className="h-5 w-5" /> {hydrated ? progress.streak : 0}
@@ -112,7 +133,6 @@ export function TopBar() {
           <span className="flex items-center gap-1 text-[color:var(--color-destructive)]">
             <Heart className="h-5 w-5 fill-current" /> {hydrated ? progress.hearts : MAX_HEARTS}
           </span>
-
 
           {user ? (
             <div ref={menuRef} className="relative">
@@ -135,6 +155,13 @@ export function TopBar() {
                     className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm font-semibold hover:bg-secondary"
                   >
                     <UserIcon className="h-4 w-4" /> Mon profil
+                  </Link>
+                  <Link
+                    to="/inventaire"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm font-semibold hover:bg-secondary"
+                  >
+                    <Package className="h-4 w-4" /> Inventaire
                   </Link>
                   <Link
                     to="/classement"
@@ -171,4 +198,3 @@ export function TopBar() {
     </header>
   );
 }
-
