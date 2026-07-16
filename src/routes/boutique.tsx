@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { BadgeCheck, Check, Coins, Crown, Gem, Lock, PackageOpen, Sparkles } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
-import { PREMIUM_CROWN, SHOP_IMAGE } from "@/lib/asset-map";
+import { CHEST_PACK_PREMIUM, PREMIUM_CROWN, SHOP_IMAGE } from "@/lib/asset-map";
 import { ShopItemIcon } from "@/lib/icon-map";
 import { useAuth } from "@/lib/use-auth";
 import {
@@ -143,6 +143,7 @@ function Boutique() {
             </button>
           ))}
         </nav>
+        {tab === "coffres" && <ChestCollectionBanner />}
         {message && (
           <div className="mb-4 rounded-xl border border-border bg-card px-3 py-2 text-sm font-semibold">
             {message}
@@ -181,6 +182,30 @@ function Boutique() {
         )}
       </main>
     </div>
+  );
+}
+
+function ChestCollectionBanner() {
+  return (
+    <section className="relative mb-5 overflow-hidden rounded-3xl border border-[color:var(--color-primary)]/30 bg-slate-950 shadow-[0_16px_38px_rgba(0,0,0,0.22)]">
+      <img
+        src={CHEST_PACK_PREMIUM}
+        alt="Collection des coffres MedLingo : Bronze, Argent, Or, Légendaire et Mythique"
+        className="h-44 w-full object-cover object-[center_31%] opacity-90 sm:h-52"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+      <div className="absolute inset-x-4 bottom-3 flex items-end justify-between gap-3">
+        <div>
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/65">
+            Collection premium
+          </p>
+          <h2 className="font-display text-lg font-extrabold text-white">Cinq coffres, cinq raretés</h2>
+        </div>
+        <span className="rounded-full border border-white/20 bg-black/25 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white backdrop-blur">
+          À ouvrir
+        </span>
+      </div>
+    </section>
   );
 }
 
