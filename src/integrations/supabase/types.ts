@@ -365,6 +365,7 @@ export type Database = {
           daily_goal_xp: number
           hearts: number
           hearts_updated_at: string
+          is_premium: boolean
           last_study_date: string | null
           level: number
           streak: number
@@ -379,6 +380,7 @@ export type Database = {
           daily_goal_xp?: number
           hearts?: number
           hearts_updated_at?: string
+          is_premium?: boolean
           last_study_date?: string | null
           level?: number
           streak?: number
@@ -393,6 +395,7 @@ export type Database = {
           daily_goal_xp?: number
           hearts?: number
           hearts_updated_at?: string
+          is_premium?: boolean
           last_study_date?: string | null
           level?: number
           streak?: number
