@@ -174,8 +174,8 @@ function Home() {
                 const pct = (prog / m.target) * 100;
                 return (
                   <div key={m.code} className="flex items-center gap-3">
-                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl ${done ? "bg-[color:var(--color-success)]/20" : "bg-secondary"}`}>
-                      {done ? <Check className="h-5 w-5 text-[color:var(--color-success)]" strokeWidth={3} /> : m.icon}
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${done ? "bg-[color:var(--color-success)]/20 text-[color:var(--color-success)]" : "bg-secondary text-foreground"}`}>
+                      {done ? <Check className="h-5 w-5" strokeWidth={3} /> : <MissionIcon code={m.code} className="h-5 w-5" strokeWidth={2.25} />}
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-baseline justify-between gap-2">
