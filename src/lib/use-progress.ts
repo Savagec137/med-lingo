@@ -154,6 +154,7 @@ function allLessonIdsForUnit(unitId: string): string[] {
 
 export function useProgress() {
   const { user, loading: authLoading } = useAuth();
+  const qc = useQueryClient();
   const [hydrated, setHydrated] = useState(false);
   const [progress, setProgress] = useState<Progress>(DEFAULT);
   const cloudSyncing = useRef(false);
