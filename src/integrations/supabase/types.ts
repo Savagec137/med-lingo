@@ -77,6 +77,36 @@ export type Database = {
         }
         Relationships: []
       }
+      currency_transactions: {
+        Row: {
+          amount: number
+          created_at: string
+          currency: string
+          id: string
+          reference: string | null
+          source: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          currency: string
+          id?: string
+          reference?: string | null
+          source: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          currency?: string
+          id?: string
+          reference?: string | null
+          source?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       lesson_attempts: {
         Row: {
           correct: number
@@ -104,6 +134,36 @@ export type Database = {
           stars?: number
           total?: number
           user_id?: string
+        }
+        Relationships: []
+      }
+      loot_tables: {
+        Row: {
+          active: boolean
+          code: string
+          created_at: string
+          entries: Json
+          id: string
+          tier: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          code: string
+          created_at?: string
+          entries: Json
+          id?: string
+          tier: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          code?: string
+          created_at?: string
+          entries?: Json
+          id?: string
+          tier?: string
+          updated_at?: string
         }
         Relationships: []
       }
@@ -411,21 +471,33 @@ export type Database = {
         Row: {
           coins: number
           created_at: string
+          energy: number
+          energy_max: number
+          energy_updated_at: string
           gems: number
+          keys: number
           updated_at: string
           user_id: string
         }
         Insert: {
           coins?: number
           created_at?: string
+          energy?: number
+          energy_max?: number
+          energy_updated_at?: string
           gems?: number
+          keys?: number
           updated_at?: string
           user_id: string
         }
         Update: {
           coins?: number
           created_at?: string
+          energy?: number
+          energy_max?: number
+          energy_updated_at?: string
           gems?: number
+          keys?: number
           updated_at?: string
           user_id?: string
         }
@@ -467,7 +539,20 @@ export type Database = {
         Args: { _amount: number; _reference?: string; _source: string }
         Returns: number
       }
+      award_gems: {
+        Args: { _amount: number; _reference?: string; _source: string }
+        Returns: number
+      }
+      award_keys: {
+        Args: { _amount: number; _reference?: string; _source: string }
+        Returns: number
+      }
       purchase_item: { Args: { _item_code: string }; Returns: Json }
+      regen_energy: { Args: never; Returns: number }
+      spend_energy: {
+        Args: { _amount: number; _reason: string }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never

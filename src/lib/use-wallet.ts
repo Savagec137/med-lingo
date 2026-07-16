@@ -5,6 +5,10 @@ import { useAuth } from "@/lib/use-auth";
 export interface Wallet {
   coins: number;
   gems: number;
+  keys: number;
+  energy: number;
+  energy_max: number;
+  energy_updated_at: string;
 }
 
 export function useWallet() {
@@ -12,24 +16,59 @@ export function useWallet() {
   return useQuery({
     queryKey: ["wallet", user?.id ?? "anon"],
     enabled: !!user,
+    refetchInterval: 60_000, // refresh so energy regen visible
     queryFn: async (): Promise<Wallet> => {
       const { data, error } = await supabase
         .from("wallets" as never)
-        .select("coins, gems")
+        .select("coins, gems, keys, energy, energy_max, energy_updated_at")
         .maybeSingle();
       if (error) throw error;
       const row = data as unknown as Wallet | null;
-      return row ?? { coins: 0, gems: 0 };
+      return (
+        row ?? {
+          coins: 0, gems: 0, keys: 0,
+          energy: 5, energy_max: 5,
+          energy_updated_at: new Date().toISOString(),
+        }
+      );
     },
   });
 }
 
 export async function awardCoins(amount: number, source: string, reference?: string) {
   const { data, error } = await supabase.rpc("award_coins" as never, {
-    _amount: amount,
-    _source: source,
-    _reference: reference ?? null,
+    _amount: amount, _source: source, _reference: reference ?? null,
   } as never);
+  if (error) throw error;
+  return data as unknown as number;
+}
+
+export async function awardGems(amount: number, source: string, reference?: string) {
+  const { data, error } = await supabase.rpc("award_gems" as never, {
+    _amount: amount, _source: source, _reference: reference ?? null,
+  } as never);
+  if (error) throw error;
+  return data as unknown as number;
+}
+
+export async function awardKeys(amount: number, source: string, reference?: string) {
+  const { data, error } = await supabase.rpc("award_keys" as never, {
+    _amount: amount, _source: source, _reference: reference ?? null,
+  } as never);
+  if (error) throw error;
+  return data as unknown as number;
+}
+
+export async function spendEnergy(amount: number, reason: string) {
+  const { data, error } = await supabase.rpc("spend_energy" as never, {
+    _amount: amount, _reason: reason,
+  } as never);
+  if (error) throw error;
+  return data as unknown as number;
+}
+
+export async function regenEnergy() {
+  const { data, error } = await supabase.rpc("regen_energy" as never, {} as never);
   if (error) throw error;
   return data as unknown as number;
 }
