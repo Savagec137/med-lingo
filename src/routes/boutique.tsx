@@ -153,8 +153,8 @@ function Boutique() {
                       <Crown className="h-3 w-3" /> PREMIUM
                     </span>
                   )}
-                  <div className="mb-2 flex h-16 items-center justify-center text-4xl">
-                    {item.icon ?? "🎁"}
+                  <div className="mb-2 flex h-16 items-center justify-center text-[color:var(--color-primary)]">
+                    <ShopItemIcon code={item.code} className="h-9 w-9" strokeWidth={2.25} />
                   </div>
                   <div className="text-sm font-extrabold leading-tight">{item.name}</div>
                   <div className="mb-2 line-clamp-2 text-[11px] opacity-70">
