@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
 import { UNITS, findLesson } from "@/lib/curriculum";
@@ -7,6 +8,7 @@ import {
   bumpMissions,
   logXpTransaction,
 } from "@/lib/use-gamification";
+import { awardCoins } from "@/lib/use-wallet";
 import {
   badgesToAward,
   levelFromXp,
@@ -152,6 +154,7 @@ function allLessonIdsForUnit(unitId: string): string[] {
 
 export function useProgress() {
   const { user, loading: authLoading } = useAuth();
+  const qc = useQueryClient();
   const [hydrated, setHydrated] = useState(false);
   const [progress, setProgress] = useState<Progress>(DEFAULT);
   const cloudSyncing = useRef(false);
@@ -276,9 +279,15 @@ export function useProgress() {
         vocabDone,
       });
       awardBadges(uid, codes);
+
+      // Coins: 5 base + 5 par étoile (5-20)
+      const coinsGained = 5 + stars * 5;
+      awardCoins(coinsGained, "lesson", lessonId).then(() => {
+        qc.invalidateQueries({ queryKey: ["wallet"] });
+      }).catch(() => {});
     }
-    return { stars, score, xpGained: gainedXp };
-  }, [progress.lastStudyDate]);
+    return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
+  }, [progress.lastStudyDate, qc]);
 
   const loseHeart = useCallback(() => {
     setProgress((p) => {

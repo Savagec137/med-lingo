@@ -1,12 +1,14 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
+import { useWallet } from "@/lib/use-wallet";
 
 export function TopBar() {
   const { progress, hydrated } = useProgress();
   const { user } = useAuth();
+  const { data: wallet } = useWallet();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -42,10 +44,18 @@ export function TopBar() {
             <Sparkles className="h-4 w-4" />
             <span className="text-xs font-extrabold uppercase tracking-wide">Pulse</span>
           </Link>
+          <Link
+            to="/boutique"
+            aria-label="Boutique"
+            className="flex items-center gap-1 rounded-full bg-[color:var(--color-warning)]/15 px-2.5 py-1 text-[color:var(--color-warning)] hover:bg-[color:var(--color-warning)]/25"
+          >
+            <Coins className="h-4 w-4" />
+            <span className="tabular-nums">{wallet?.coins ?? 0}</span>
+          </Link>
           <span className="flex items-center gap-1 text-[color:var(--color-warning)]">
             <Flame className="h-5 w-5" /> {hydrated ? progress.streak : 0}
           </span>
-          <span className="flex items-center gap-1 text-[color:var(--color-primary)]">
+          <span className="hidden items-center gap-1 text-[color:var(--color-primary)] sm:flex">
             <Zap className="h-5 w-5" /> {hydrated ? progress.xp : 0}
           </span>
           <span className="flex items-center gap-1 text-[color:var(--color-destructive)]">

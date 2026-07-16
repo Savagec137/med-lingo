@@ -47,6 +47,36 @@ export type Database = {
         }
         Relationships: []
       }
+      coin_transactions: {
+        Row: {
+          amount: number
+          created_at: string
+          currency: string
+          id: string
+          reference: string | null
+          source: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          currency?: string
+          id?: string
+          reference?: string | null
+          source: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          currency?: string
+          id?: string
+          reference?: string | null
+          source?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       lesson_attempts: {
         Row: {
           correct: number
@@ -143,6 +173,54 @@ export type Database = {
         }
         Relationships: []
       }
+      shop_items: {
+        Row: {
+          active: boolean
+          asset_url: string | null
+          code: string
+          created_at: string
+          description: string | null
+          icon: string | null
+          name: string
+          premium_only: boolean
+          price_coins: number
+          price_gems: number
+          rarity: string
+          sort_order: number
+          type: string
+        }
+        Insert: {
+          active?: boolean
+          asset_url?: string | null
+          code: string
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          name: string
+          premium_only?: boolean
+          price_coins?: number
+          price_gems?: number
+          rarity?: string
+          sort_order?: number
+          type: string
+        }
+        Update: {
+          active?: boolean
+          asset_url?: string | null
+          code?: string
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          name?: string
+          premium_only?: boolean
+          price_coins?: number
+          price_gems?: number
+          rarity?: string
+          sort_order?: number
+          type?: string
+        }
+        Relationships: []
+      }
       srs_cards: {
         Row: {
           due_at: string
@@ -208,6 +286,38 @@ export type Database = {
           },
         ]
       }
+      user_inventory: {
+        Row: {
+          acquired_at: string
+          equipped: boolean
+          id: string
+          item_code: string
+          user_id: string
+        }
+        Insert: {
+          acquired_at?: string
+          equipped?: boolean
+          id?: string
+          item_code: string
+          user_id: string
+        }
+        Update: {
+          acquired_at?: string
+          equipped?: boolean
+          id?: string
+          item_code?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_inventory_item_code_fkey"
+            columns: ["item_code"]
+            isOneToOne: false
+            referencedRelation: "shop_items"
+            referencedColumns: ["code"]
+          },
+        ]
+      }
       user_missions: {
         Row: {
           completed: boolean
@@ -255,6 +365,7 @@ export type Database = {
           daily_goal_xp: number
           hearts: number
           hearts_updated_at: string
+          is_premium: boolean
           last_study_date: string | null
           level: number
           streak: number
@@ -269,6 +380,7 @@ export type Database = {
           daily_goal_xp?: number
           hearts?: number
           hearts_updated_at?: string
+          is_premium?: boolean
           last_study_date?: string | null
           level?: number
           streak?: number
@@ -283,6 +395,7 @@ export type Database = {
           daily_goal_xp?: number
           hearts?: number
           hearts_updated_at?: string
+          is_premium?: boolean
           last_study_date?: string | null
           level?: number
           streak?: number
@@ -291,6 +404,30 @@ export type Database = {
           xp?: number
           xp_today?: number
           xp_today_date?: string
+        }
+        Relationships: []
+      }
+      wallets: {
+        Row: {
+          coins: number
+          created_at: string
+          gems: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          coins?: number
+          created_at?: string
+          gems?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          coins?: number
+          created_at?: string
+          gems?: number
+          updated_at?: string
+          user_id?: string
         }
         Relationships: []
       }
@@ -326,7 +463,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      award_coins: {
+        Args: { _amount: number; _reference?: string; _source: string }
+        Returns: number
+      }
+      purchase_item: { Args: { _item_code: string }; Returns: Json }
     }
     Enums: {
       [_ in never]: never
