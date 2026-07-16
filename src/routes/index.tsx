@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo } from "react";
 import { Star, Lock, Check, Sparkles, Zap, Flame, Trophy, Target, ChevronRight, User as UserIcon } from "lucide-react";
-import { UnitIcon, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
+import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { UNITS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -263,9 +263,7 @@ function Home() {
           {UNITS.map((unit, unitIdx) => (
             <section key={unit.id}>
               <div className="mb-6 flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]">
-                  <UnitIcon unitId={unit.id} className="h-7 w-7" strokeWidth={2.25} />
-                </div>
+                <UnitArtwork unitId={unit.id} />
                 <div className="min-w-0">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
                     Unité {unitIdx + 1}

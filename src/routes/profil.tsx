@@ -8,6 +8,10 @@ import { levelProgress } from "@/lib/gamification";
 import { UNITS } from "@/lib/curriculum";
 import { useBadgesCatalog, useUserBadges, useXpHistory } from "@/lib/use-gamification";
 import { BadgeIcon } from "@/lib/icon-map";
+import { ProfileVisitCard } from "@/features/gamification/components/ProfileVisitCard";
+import { DEFAULT_PROFILE_CARD, PROFILE_CARD_CATALOG } from "@/features/gamification/domain/profile-cards";
+import { useProfileCard } from "@/features/gamification/hooks/use-profile-card";
+import { useGameInventory } from "@/features/gamification/hooks/use-game-inventory";
 
 export const Route = createFileRoute("/profil")({
   component: ProfilPage,
@@ -29,9 +33,12 @@ function ProfilPage() {
   const { data: badges = [] } = useBadgesCatalog();
   const { data: userBadges = [] } = useUserBadges();
   const { data: xpHistory = [] } = useXpHistory(30);
+  const { data: gameInventory = [] } = useGameInventory();
+  const profileCard = useProfileCard();
 
   const earnedSet = useMemo(() => new Set(userBadges.map((b) => b.badge_code)), [userBadges]);
   const [goalEdit, setGoalEdit] = useState(false);
+  const [cardPickerOpen, setCardPickerOpen] = useState(false);
 
   const totalLessons = UNITS.reduce((s, u) => s + u.lessons.length, 0);
   const doneLessons = Object.keys(progress.completedLessons).length;
@@ -44,6 +51,11 @@ function ProfilPage() {
     (user?.user_metadata?.name as string) ||
     user?.email?.split("@")[0] ||
     "Invité";
+  const ownedProfileCards = useMemo(
+    () => new Set(gameInventory.filter((item) => item.itemType === "profile_card").map((item) => item.itemCode)),
+    [gameInventory],
+  );
+  const equippedCard = profileCard.data ?? DEFAULT_PROFILE_CARD;
   const initials = displayName.trim().charAt(0).toUpperCase();
 
   return (
@@ -54,8 +66,85 @@ function ProfilPage() {
           <ArrowLeft className="h-4 w-4" /> Accueil
         </Link>
 
-        {/* Identity */}
-        <section className="mb-4 rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-5 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
+        <section className="mb-4">
+          <ProfileVisitCard
+            code={equippedCard}
+            displayName={displayName}
+            email={user?.email}
+            level={lp.level}
+            progressLabel={`Progression vers Niv ${lp.level + 1}`}
+            progressValue={lp.pct}
+            xp={progress.xp}
+            streak={progress.streak}
+            ranks={userBadges.length}
+            lessons={doneLessons}
+          />
+          <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
+            <div>
+              <p className="text-sm font-extrabold">Carte de visite</p>
+              <p className="text-xs text-muted-foreground">Debloque des designs dans les coffres et selectionne ton favori.</p>
+            </div>
+            <button
+              onClick={() => setCardPickerOpen((open) => !open)}
+              className="shrink-0 rounded-xl bg-[color:var(--color-primary)] px-3 py-2 text-xs font-extrabold text-primary-foreground"
+            >
+              {cardPickerOpen ? "Fermer" : "Personnaliser"}
+            </button>
+          </div>
+        </section>
+
+        {cardPickerOpen && (
+          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div>
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Choisir une carte</h2>
+                <p className="mt-0.5 text-xs text-muted-foreground">Les cartes verrouillees peuvent etre gagnees dans les coffres ou achetees dans la boutique.</p>
+              </div>
+              <span className="shrink-0 text-xs font-bold text-muted-foreground">
+                {ownedProfileCards.size + 1}/{PROFILE_CARD_CATALOG.length}
+              </span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {PROFILE_CARD_CATALOG.map((card) => {
+                const owned = card.code === DEFAULT_PROFILE_CARD || ownedProfileCards.has(card.code);
+                const selected = card.code === equippedCard;
+                return (
+                  <button
+                    key={card.code}
+                    type="button"
+                    disabled={!owned || profileCard.isEquipping}
+                    onClick={() => profileCard.equip(card.code)}
+                    className={`relative overflow-hidden rounded-2xl text-left transition ${
+                      selected ? "ring-2 ring-[color:var(--color-primary)] ring-offset-2 ring-offset-background" : ""
+                    } ${owned ? "hover:-translate-y-0.5" : "cursor-not-allowed opacity-45 grayscale"}`}
+                  >
+                    <ProfileVisitCard
+                      compact
+                      code={card.code}
+                      displayName={displayName}
+                      level={lp.level}
+                      progressLabel={card.name}
+                      progressValue={lp.pct}
+                      xp={progress.xp}
+                      streak={progress.streak}
+                      ranks={userBadges.length}
+                      lessons={doneLessons}
+                    />
+                    <span className="absolute right-3 top-3 rounded-full bg-black/45 px-2 py-1 text-[9px] font-extrabold uppercase tracking-wide text-white backdrop-blur">
+                      {selected ? "Equipee" : owned ? "Selectionner" : "Verrouillee"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            {profileCard.equipError && (
+              <p className="mt-3 text-xs font-bold text-destructive">Impossible d'equiper cette carte pour le moment.</p>
+            )}
+          </section>
+        )}
+
+        {/* Legacy identity card kept for backwards-compatible markup. */}
+        <section className="hidden mb-4 rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-5 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
           <div className="flex items-center gap-4">
             <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white/40 bg-white/20 font-display text-3xl font-extrabold">
               {initials}

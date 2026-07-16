@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import unitIconsSheet from "@/assets/unit-icons-sheet.png";
 import {
   Bone, Brain, HeartPulse, Dumbbell, Footprints,
   Wind, Utensils, Type, Dna, Pencil, Microscope,
@@ -32,6 +33,31 @@ const UNIT_ICONS: Record<string, LucideIcon> = {
   "dea-spe": Baby,
   "dea-regl": Scale,
 };
+
+// The unit artwork is supplied as one consistent MedLingo sprite sheet.  Keeping
+// the crop coordinates here lets the curriculum use real artwork without
+// duplicating image files for every unit.
+const UNIT_ARTWORK: Record<string, { x: number; y: number }> = {
+  prefixes: { x: 29, y: 20 },
+  suffixes: { x: 363, y: 20 },
+  radicaux: { x: 762, y: 20 },
+  os: { x: 1074, y: 20 },
+  organes: { x: 29, y: 259 },
+  pathologies: { x: 443, y: 259 },
+  "dea-hygiene": { x: 846, y: 259 },
+  "dea-secu": { x: 1188, y: 259 },
+  "dea-bilans": { x: 29, y: 490 },
+  "dea-detresses": { x: 501, y: 490 },
+  "dea-gestes": { x: 1007, y: 490 },
+  "dea-anat": { x: 29, y: 700 },
+  "dea-patho": { x: 416, y: 700 },
+  "dea-trauma": { x: 1076, y: 700 },
+  "dea-spe": { x: 224, y: 908 },
+  "dea-regl": { x: 734, y: 908 },
+};
+
+const UNIT_ARTWORK_SCALE = 0.74;
+const UNIT_ARTWORK_SHEET_SIZE = { width: 1536, height: 1024 };
 
 // -------- Lessons (id → icon) --------
 const LESSON_ICONS: Record<string, LucideIcon> = {
@@ -86,6 +112,31 @@ type IconProps = { className?: string; strokeWidth?: number };
 export function UnitIcon({ unitId, className, strokeWidth }: IconProps & { unitId: string }) {
   const Icon = UNIT_ICONS[unitId] ?? Book;
   return <Icon className={className} strokeWidth={strokeWidth ?? 2} />;
+}
+
+export function UnitArtwork({ unitId, className = "" }: { unitId: string; className?: string }) {
+  const artwork = UNIT_ARTWORK[unitId];
+
+  if (!artwork) {
+    return (
+      <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)] ${className}`}>
+        <UnitIcon unitId={unitId} className="h-7 w-7" strokeWidth={2.25} />
+      </div>
+    );
+  }
+
+  return (
+    <span
+      aria-hidden="true"
+      className={`block h-14 w-14 shrink-0 rounded-2xl ${className}`}
+      style={{
+        backgroundImage: `url(${unitIconsSheet})`,
+        backgroundPosition: `-${artwork.x * UNIT_ARTWORK_SCALE}px -${artwork.y * UNIT_ARTWORK_SCALE}px`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: `${UNIT_ARTWORK_SHEET_SIZE.width * UNIT_ARTWORK_SCALE}px ${UNIT_ARTWORK_SHEET_SIZE.height * UNIT_ARTWORK_SCALE}px`,
+      }}
+    />
+  );
 }
 
 export function LessonIcon({
