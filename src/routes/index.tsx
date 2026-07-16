@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo } from "react";
-import { Star, Lock, Check, Sparkles, Zap, Flame, Trophy, Target, ChevronRight, User as UserIcon } from "lucide-react";
+import { Star, Lock, Check, Sparkles, ChevronRight, User as UserIcon } from "lucide-react";
+import { UnitIcon, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { UNITS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
