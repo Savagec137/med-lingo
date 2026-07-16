@@ -22,15 +22,15 @@ const UNIT_ICONS: Record<string, LucideIcon> = {
   radicaux: Sprout,
   pathologies: Stethoscope,
   "dea-hygiene": SprayCan,
-  "dea-securite": HardHat,
+  "dea-secu": HardHat,
   "dea-bilans": ClipboardList,
-  "dea-urgences": Ambulance,
+  "dea-detresses": Siren,
   "dea-gestes": Zap,
-  "dea-anatomie": HeartPulse,
+  "dea-anat": HeartPulse,
   "dea-patho": Stethoscope,
   "dea-trauma": Bandage,
-  "dea-special": Baby,
-  "dea-reglementation": Scale,
+  "dea-spe": Baby,
+  "dea-regl": Scale,
 };
 
 // -------- Lessons (id → icon) --------
@@ -38,9 +38,9 @@ const LESSON_ICONS: Record<string, LucideIcon> = {
   "os-1": Brain, "os-2": Bone, "os-3": Dumbbell, "os-4": Footprints,
   "org-1": HeartPulse, "org-2": Wind, "org-3": Utensils, "org-4": Brain,
   "pref-1": Type, "pref-2": Dna,
-  "suff-1": Stethoscope, "suff-2": Microscope,
+  "suf-1": Stethoscope, "suf-2": Microscope,
   "rad-1": Sprout, "rad-2": Dna,
-  "path-1": HeartPulse, "path-2": Stethoscope, "path-3": Bone, "path-4": Puzzle,
+  "pat-1": HeartPulse, "pat-2": Stethoscope, "pat-3": Bone, "pat-4": Puzzle,
 };
 
 // -------- Missions --------
