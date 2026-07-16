@@ -89,7 +89,7 @@ function Home() {
         </div>
 
         {/* Level + Daily goal card */}
-        <section className="mb-4 rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-5 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
+        <section className="mb-4 rounded-3xl border border-white/10 p-5 text-primary-foreground glow-primary" style={{ backgroundImage: "var(--gradient-primary)" }}>
           <div className="flex items-center gap-4">
             {/* Level ring */}
             <ProgressRing pct={lp.pct} size={72}>
@@ -370,13 +370,13 @@ function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal
 function rarityBorder(rarity: string): string {
   switch (rarity) {
     case "legendary":
-      return "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/10";
+      return "rarity-legendary bg-[color:var(--color-legendary)]/10";
     case "epic":
-      return "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10";
+      return "rarity-epic bg-[color:var(--color-epic)]/10";
     case "rare":
-      return "border-[color:var(--color-info,#3B82F6)] bg-[color:var(--color-info,#3B82F6)]/10";
+      return "rarity-rare bg-[color:var(--color-rare)]/10";
     default:
-      return "border-border bg-secondary";
+      return "rarity-common bg-white/5";
   }
 }
 
