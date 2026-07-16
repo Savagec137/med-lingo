@@ -47,6 +47,36 @@ export type Database = {
         }
         Relationships: []
       }
+      chest_openings: {
+        Row: {
+          chest_code: string
+          id: string
+          loot: Json
+          opened_at: string
+          source: string
+          tier: string
+          user_id: string
+        }
+        Insert: {
+          chest_code: string
+          id?: string
+          loot: Json
+          opened_at?: string
+          source: string
+          tier: string
+          user_id: string
+        }
+        Update: {
+          chest_code?: string
+          id?: string
+          loot?: Json
+          opened_at?: string
+          source?: string
+          tier?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       coin_transactions: {
         Row: {
           amount: number
@@ -476,6 +506,7 @@ export type Database = {
           energy_updated_at: string
           gems: number
           keys: number
+          last_compensation_at: string | null
           updated_at: string
           user_id: string
         }
@@ -487,6 +518,7 @@ export type Database = {
           energy_updated_at?: string
           gems?: number
           keys?: number
+          last_compensation_at?: string | null
           updated_at?: string
           user_id: string
         }
@@ -498,6 +530,7 @@ export type Database = {
           energy_updated_at?: string
           gems?: number
           keys?: number
+          last_compensation_at?: string | null
           updated_at?: string
           user_id?: string
         }
@@ -547,6 +580,8 @@ export type Database = {
         Args: { _amount: number; _reference?: string; _source: string }
         Returns: number
       }
+      claim_compensation_chest: { Args: never; Returns: Json }
+      open_chest: { Args: { _source: string; _tier: string }; Returns: Json }
       purchase_item: { Args: { _item_code: string }; Returns: Json }
       regen_energy: { Args: never; Returns: number }
       spend_energy: {
