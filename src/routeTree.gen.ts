@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PulseRouteImport } from './routes/pulse'
 import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as ClassementRouteImport } from './routes/classement'
 import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
@@ -31,6 +32,11 @@ const ProfilRoute = ProfilRouteImport.update({
 const OnboardingRoute = OnboardingRouteImport.update({
   id: '/onboarding',
   path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClassementRoute = ClassementRouteImport.update({
+  id: '/classement',
+  path: '/classement',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoutiqueRoute = BoutiqueRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
+  '/classement': typeof ClassementRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
+  '/classement': typeof ClassementRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
+  '/classement': typeof ClassementRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/boutique'
+    | '/classement'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/boutique'
+    | '/classement'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/boutique'
+    | '/classement'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthRoute: typeof AuthRoute
   BoutiqueRoute: typeof BoutiqueRoute
+  ClassementRoute: typeof ClassementRoute
   OnboardingRoute: typeof OnboardingRoute
   ProfilRoute: typeof ProfilRoute
   PulseRoute: typeof PulseRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/onboarding'
       fullPath: '/onboarding'
       preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/classement': {
+      id: '/classement'
+      path: '/classement'
+      fullPath: '/classement'
+      preLoaderRoute: typeof ClassementRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/boutique': {
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRoute,
   BoutiqueRoute: BoutiqueRoute,
+  ClassementRoute: ClassementRoute,
   OnboardingRoute: OnboardingRoute,
   ProfilRoute: ProfilRoute,
   PulseRoute: PulseRoute,
