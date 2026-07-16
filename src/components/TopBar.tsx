@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
 import { useWallet } from "@/lib/use-wallet";
+import { useChest } from "@/lib/use-chest";
+import { ChestOpeningModal } from "@/components/ChestOpeningModal";
 
 export function TopBar() {
   const { progress, hydrated } = useProgress();
@@ -12,6 +14,21 @@ export function TopBar() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const chest = useChest();
+
+  // Trigger compensation chest when hearts drop to 0 (silent cooldown handling)
+  const lastZeroRef = useRef<boolean>(false);
+  useEffect(() => {
+    if (!user || !hydrated) return;
+    const isZero = progress.hearts <= 0;
+    if (isZero && !lastZeroRef.current) {
+      lastZeroRef.current = true;
+      chest.claimCompensation();
+    } else if (!isZero) {
+      lastZeroRef.current = false;
+    }
+  }, [progress.hearts, user, hydrated, chest]);
+
 
   useEffect(() => {
     if (!menuOpen) return;
