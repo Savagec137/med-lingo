@@ -137,6 +137,69 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_rewards: {
+        Row: {
+          claimed_at: string
+          id: string
+          reward_date: string
+          rewards: Json
+          streak_day: number
+          user_id: string
+        }
+        Insert: {
+          claimed_at?: string
+          id?: string
+          reward_date: string
+          rewards: Json
+          streak_day: number
+          user_id: string
+        }
+        Update: {
+          claimed_at?: string
+          id?: string
+          reward_date?: string
+          rewards?: Json
+          streak_day?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      inventory: {
+        Row: {
+          acquired_at: string
+          id: string
+          item_code: string
+          item_type: string
+          metadata: Json
+          quantity: number
+          rarity: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          acquired_at?: string
+          id?: string
+          item_code: string
+          item_type: string
+          metadata?: Json
+          quantity?: number
+          rarity?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          acquired_at?: string
+          id?: string
+          item_code?: string
+          item_type?: string
+          metadata?: Json
+          quantity?: number
+          rarity?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       lesson_attempts: {
         Row: {
           correct: number
@@ -263,6 +326,33 @@ export type Database = {
         }
         Relationships: []
       }
+      reward_history: {
+        Row: {
+          created_at: string
+          id: string
+          reference: string | null
+          reward: Json
+          source: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          reference?: string | null
+          reward: Json
+          source: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          reference?: string | null
+          reward?: Json
+          source?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       shop_items: {
         Row: {
           active: boolean
@@ -271,6 +361,7 @@ export type Database = {
           created_at: string
           description: string | null
           icon: string | null
+          metadata: Json
           name: string
           premium_only: boolean
           price_coins: number
@@ -286,6 +377,7 @@ export type Database = {
           created_at?: string
           description?: string | null
           icon?: string | null
+          metadata?: Json
           name: string
           premium_only?: boolean
           price_coins?: number
@@ -301,6 +393,7 @@ export type Database = {
           created_at?: string
           description?: string | null
           icon?: string | null
+          metadata?: Json
           name?: string
           premium_only?: boolean
           price_coins?: number
@@ -375,6 +468,39 @@ export type Database = {
             referencedColumns: ["code"]
           },
         ]
+      }
+      user_currency: {
+        Row: {
+          coins: number
+          energy: number
+          energy_max: number
+          gems: number
+          keys: number
+          tickets: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          coins?: number
+          energy?: number
+          energy_max?: number
+          gems?: number
+          keys?: number
+          tickets?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          coins?: number
+          energy?: number
+          energy_max?: number
+          gems?: number
+          keys?: number
+          tickets?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
       }
       user_inventory: {
         Row: {
@@ -581,6 +707,8 @@ export type Database = {
         Returns: number
       }
       claim_compensation_chest: { Args: never; Returns: Json }
+      claim_daily_reward: { Args: never; Returns: Json }
+      game_level_from_xp: { Args: { total_xp: number }; Returns: number }
       get_my_weekly_rank: {
         Args: never
         Returns: {
@@ -599,7 +727,13 @@ export type Database = {
           weekly_xp: number
         }[]
       }
+      grant_game_reward: {
+        Args: { _reference?: string; _reward: Json; _source: string }
+        Returns: Json
+      }
       open_chest: { Args: { _source: string; _tier: string }; Returns: Json }
+      open_game_chest: { Args: { _chest_code: string }; Returns: Json }
+      purchase_game_item: { Args: { _item_code: string }; Returns: Json }
       purchase_item: { Args: { _item_code: string }; Returns: Json }
       regen_energy: { Args: never; Returns: number }
       spend_energy: {
