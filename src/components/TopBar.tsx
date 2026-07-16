@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Stethoscope } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Gem, Key, Stethoscope, Battery } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -54,6 +54,30 @@ export function TopBar() {
             <Coins className="h-4 w-4" />
             <span className="tabular-nums">{wallet?.coins ?? 0}</span>
           </Link>
+          <Link
+            to="/boutique"
+            aria-label="Gemmes"
+            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-accent)]/15 px-2.5 py-1 text-[color:var(--color-accent)] hover:bg-[color:var(--color-accent)]/25 sm:inline-flex"
+          >
+            <Gem className="h-4 w-4" />
+            <span className="tabular-nums">{wallet?.gems ?? 0}</span>
+          </Link>
+          <Link
+            to="/boutique"
+            aria-label="Clés"
+            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-info)]/15 px-2.5 py-1 text-[color:var(--color-info)] hover:bg-[color:var(--color-info)]/25 sm:inline-flex"
+          >
+            <Key className="h-4 w-4" />
+            <span className="tabular-nums">{wallet?.keys ?? 0}</span>
+          </Link>
+          <span
+            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-success)]/15 px-2.5 py-1 text-[color:var(--color-success)] sm:inline-flex"
+            aria-label="Énergie"
+            title="Régénère 1 point / 6 min"
+          >
+            <Battery className="h-4 w-4" />
+            <span className="tabular-nums">{wallet?.energy ?? 5}/{wallet?.energy_max ?? 5}</span>
+          </span>
           <span className="flex items-center gap-1 text-[color:var(--color-warning)]">
             <Flame className="h-5 w-5" /> {hydrated ? progress.streak : 0}
           </span>
@@ -63,6 +87,7 @@ export function TopBar() {
           <span className="flex items-center gap-1 text-[color:var(--color-destructive)]">
             <Heart className="h-5 w-5 fill-current" /> {hydrated ? progress.hearts : MAX_HEARTS}
           </span>
+
 
           {user ? (
             <div ref={menuRef} className="relative">
