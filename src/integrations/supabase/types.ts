@@ -581,6 +581,24 @@ export type Database = {
         Returns: number
       }
       claim_compensation_chest: { Args: never; Returns: Json }
+      get_my_weekly_rank: {
+        Args: never
+        Returns: {
+          rank: number
+          total_players: number
+          weekly_xp: number
+        }[]
+      }
+      get_weekly_leaderboard: {
+        Args: { _limit?: number }
+        Returns: {
+          avatar_url: string
+          display_name: string
+          rank: number
+          user_id: string
+          weekly_xp: number
+        }[]
+      }
       open_chest: { Args: { _source: string; _tier: string }; Returns: Json }
       purchase_item: { Args: { _item_code: string }; Returns: Json }
       regen_energy: { Args: never; Returns: number }
