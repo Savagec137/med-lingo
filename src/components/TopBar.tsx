@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Gem, Key, Stethoscope, Battery } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Gem, Key, Stethoscope, Battery, Trophy } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -55,6 +55,14 @@ export function TopBar() {
           <span className="font-display text-lg font-extrabold tracking-tight text-gradient-primary">MedLingo</span>
         </Link>
         <div className="flex items-center gap-2 text-sm font-bold sm:gap-3">
+          <Link
+            to="/classement"
+            aria-label="Classement"
+            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-accent)]/15 px-2.5 py-1 text-[color:var(--color-accent)] hover:bg-[color:var(--color-accent)]/25 sm:inline-flex"
+          >
+            <Trophy className="h-4 w-4" />
+            <span className="text-xs font-extrabold uppercase tracking-wide">Ligue</span>
+          </Link>
           <Link
             to="/pulse"
             aria-label="Pulse IA"
@@ -127,6 +135,13 @@ export function TopBar() {
                     className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm font-semibold hover:bg-secondary"
                   >
                     <UserIcon className="h-4 w-4" /> Mon profil
+                  </Link>
+                  <Link
+                    to="/classement"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm font-semibold hover:bg-secondary sm:hidden"
+                  >
+                    <Trophy className="h-4 w-4" /> Classement
                   </Link>
                   <button
                     onClick={async () => {
