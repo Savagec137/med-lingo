@@ -223,8 +223,8 @@ function Boutique() {
 function PremiumTab() {
   return (
     <div className="rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 via-white to-yellow-50 p-6 shadow-lg">
-      <div className="mb-3 flex items-center gap-2">
-        <Crown className="h-7 w-7 text-amber-500" />
+      <div className="mb-3 flex items-center gap-3">
+        <img src={PREMIUM_CROWN} alt="" width={64} height={64} className="h-16 w-16 object-contain drop-shadow-[0_6px_16px_rgba(217,119,6,0.45)]" />
         <h2 className="font-display text-2xl font-extrabold">MedLingo Premium</h2>
       </div>
       <p className="mb-4 text-sm text-muted-foreground">
