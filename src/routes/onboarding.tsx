@@ -1,5 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import type { LucideIcon } from "lucide-react";
+import { Sprout, Type, HeartPulse, Ambulance, Stethoscope } from "lucide-react";
 import { LEVEL_MILESTONES, lessonsForLevel, type LevelKey } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 
@@ -7,30 +9,30 @@ export const Route = createFileRoute("/onboarding")({
   component: Onboarding,
 });
 
-type Choice = { key: LevelKey; emoji: string; title: string; desc: string };
+type Choice = { key: LevelKey; Icon: LucideIcon; title: string; desc: string };
 
 const CHOICES: Choice[] = [
   {
     key: "debutant",
-    emoji: "🌱",
+    Icon: Sprout,
     title: "Je débute",
     desc: "Je découvre le vocabulaire médical. Je commence tout depuis le début.",
   },
   {
     key: "vocabulaire",
-    emoji: "🔤",
+    Icon: Type,
     title: "Je connais le vocabulaire",
     desc: "Je maîtrise préfixes, suffixes et radicaux. Direct l'anatomie.",
   },
   {
     key: "anatomie",
-    emoji: "🫀",
+    Icon: HeartPulse,
     title: "Je maîtrise l'anatomie",
     desc: "Vocabulaire + os + organes + pathologies acquis. Cap sur les cas terrain.",
   },
   {
     key: "dea",
-    emoji: "🚑",
+    Icon: Ambulance,
     title: "Je révise le DEA",
     desc: "Je suis déjà en formation ambulancier — je vais direct aux gestes et bilans.",
   },
@@ -60,7 +62,9 @@ function Onboarding() {
     <div className="min-h-screen bg-background px-4 pb-24 pt-10">
       <div className="mx-auto max-w-xl">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-3 text-5xl">⚕️</div>
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[color:var(--color-primary)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)]">
+            <Stethoscope className="h-8 w-8" strokeWidth={2.25} />
+          </div>
           <h1 className="font-display text-2xl font-extrabold sm:text-3xl">
             Où en es-tu aujourd'hui ?
           </h1>
@@ -72,6 +76,7 @@ function Onboarding() {
         <div className="space-y-3">
           {CHOICES.map((c) => {
             const active = selected === c.key;
+            const { Icon } = c;
             return (
               <button
                 key={c.key}
@@ -83,8 +88,8 @@ function Onboarding() {
                     : "border-border bg-card hover:border-[color:var(--color-primary)]/60"
                 }`}
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-warning)]/25 text-2xl">
-                  {c.emoji}
+                <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${active ? "bg-[color:var(--color-primary)] text-primary-foreground" : "bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]"}`}>
+                  <Icon className="h-6 w-6" strokeWidth={2.25} />
                 </div>
                 <div className="min-w-0">
                   <div className="font-display text-base font-extrabold">{c.title}</div>
