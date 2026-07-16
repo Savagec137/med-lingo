@@ -290,8 +290,8 @@ function Home() {
                     >
                       <LessonNode
                         lessonId={lesson.id}
+                        unitId={unit.id}
                         title={lesson.title}
-                        emoji={lesson.emoji}
                         unlocked={unlocked}
                         done={!!done}
                         stars={stars}
