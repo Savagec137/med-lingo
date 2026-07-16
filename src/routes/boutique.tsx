@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Coins, Crown, Lock, Check, Sparkles } from "lucide-react";
+import { Coins, Crown, Lock, Check, Sparkles, Heart, Brain, Bot, Palette, Trophy, BarChart3, X as XIcon } from "lucide-react";
+import { ShopItemIcon } from "@/lib/icon-map";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
 import {
