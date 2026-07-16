@@ -263,8 +263,8 @@ function Home() {
           {UNITS.map((unit, unitIdx) => (
             <section key={unit.id}>
               <div className="mb-6 flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-3xl">
-                  {unit.icon}
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]">
+                  <UnitIcon unitId={unit.id} className="h-7 w-7" strokeWidth={2.25} />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
