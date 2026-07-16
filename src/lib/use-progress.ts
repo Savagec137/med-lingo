@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
 import { UNITS, findLesson } from "@/lib/curriculum";
@@ -7,6 +8,7 @@ import {
   bumpMissions,
   logXpTransaction,
 } from "@/lib/use-gamification";
+import { awardCoins } from "@/lib/use-wallet";
 import {
   badgesToAward,
   levelFromXp,
