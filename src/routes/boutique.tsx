@@ -15,6 +15,7 @@ import {
   useWallet,
 } from "@/lib/use-wallet";
 import { useGameChests } from "@/features/gamification/hooks/use-game-chests";
+import { ShopItemArtwork } from "@/features/gamification/components/ShopItemArtwork";
 
 export const Route = createFileRoute("/boutique")({ component: Boutique });
 
@@ -248,11 +249,16 @@ function ShopCard({
         </span>
       )}
       <div className="mb-2 flex h-20 items-center justify-center text-[color:var(--color-primary)]">
-        {SHOP_IMAGE[item.code] ? (
-          <img src={SHOP_IMAGE[item.code]} alt="" className="h-20 w-20 object-contain" />
-        ) : (
-          <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
-        )}
+        <ShopItemArtwork
+          code={item.code}
+          fallback={
+            SHOP_IMAGE[item.code] ? (
+              <img src={SHOP_IMAGE[item.code]} alt="" className="h-20 w-20 object-contain" />
+            ) : (
+              <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
+            )
+          }
+        />
       </div>
       <div className="text-sm font-extrabold leading-tight">{item.name}</div>
       <div className="mb-3 mt-1 line-clamp-2 text-[11px] opacity-70">{item.description}</div>
