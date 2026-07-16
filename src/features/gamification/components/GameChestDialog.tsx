@@ -1,10 +1,29 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { Box, Coins, Gem, KeyRound, Sparkles, Ticket, X, Zap } from "lucide-react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { Box, Coins, Gem, KeyRound, LockKeyhole, Sparkles, Ticket, X, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChestOpenResult, GameReward, RewardType } from "@/features/gamification/domain";
 import { CHEST_META, RARITY_META } from "@/features/gamification/domain";
 import { LevelUpCelebration } from "@/features/gamification/components/LevelUpCelebration";
+import {
+  CHEST_OPENING_TIMING,
+  canStartChestOpening,
+  getContinueDelay,
+  type ChestOpeningPhase,
+} from "@/features/gamification/components/chest-opening-sequence";
 import { CHEST_IMAGE } from "@/lib/asset-map";
+
+const OPEN_EASE = [0.22, 1, 0.36, 1] as const;
+const PARTICLE_COUNT = 20;
+const PARTICLES = Array.from({ length: PARTICLE_COUNT }, (_, index) => {
+  const angle = (Math.PI * 2 * index) / PARTICLE_COUNT;
+  const distance = 62 + (index % 4) * 13;
+  return {
+    id: index,
+    x: Math.cos(angle) * distance,
+    y: Math.sin(angle) * distance - 20 - (index % 3) * 8,
+    size: index % 5 === 0 ? 7 : 4,
+  };
+});
 
 const REWARD_META: Record<RewardType, { label: string; Icon: typeof Coins }> = {
   coins: { label: "Pièces", Icon: Coins },
@@ -16,25 +35,51 @@ const REWARD_META: Record<RewardType, { label: string; Icon: typeof Coins }> = {
   item: { label: "Objet", Icon: Box },
 };
 
-function RewardRow({ reward, index }: { reward: GameReward; index: number }) {
+function playUnlockPlaceholderSound() {
+  if (typeof window === "undefined") return;
+
+  try {
+    const AudioContextConstructor =
+      window.AudioContext ??
+      (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (!AudioContextConstructor) return;
+    const context = new AudioContextConstructor();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    const now = context.currentTime;
+
+    oscillator.type = "sine";
+    oscillator.frequency.setValueAtTime(720, now);
+    oscillator.frequency.exponentialRampToValueAtTime(1020, now + 0.11);
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.045, now + 0.018);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.13);
+    oscillator.connect(gain).connect(context.destination);
+    oscillator.start(now);
+    oscillator.stop(now + 0.14);
+    window.setTimeout(() => context.close().catch(() => undefined), 250);
+  } catch {
+    // Audio is optional; browsers may block sound when it was not user initiated.
+  }
+}
+
+function RewardRow({ reward, index, reducedMotion }: { reward: GameReward; index: number; reducedMotion: boolean }) {
   const { Icon, label } = REWARD_META[reward.type];
   const rarity = reward.rarity ?? "common";
   const accent = RARITY_META[rarity].accent;
-  const name =
-    reward.type === "item" ? String(reward.metadata?.name ?? reward.itemCode ?? label) : label;
+  const name = reward.type === "item" ? String(reward.metadata?.name ?? reward.itemCode ?? label) : label;
+  const rotate = ((index * 13) % 7) - 3;
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 28, scale: 0.86, rotateX: -18 }}
-      animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      transition={{ delay: 0.12 + index * 0.16, type: "spring", stiffness: 280, damping: 20 }}
+      initial={reducedMotion ? false : { opacity: 0, y: 24, scale: 0.7, rotate }}
+      animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+      transition={reducedMotion ? { duration: 0 } : { delay: index * 0.12, duration: 0.42, ease: OPEN_EASE }}
       className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
     >
       <span
         className="flex h-10 w-10 items-center justify-center rounded-xl"
-        style={{
-          color: accent,
-          backgroundColor: `color-mix(in oklab, ${accent} 17%, transparent)`,
-        }}
+        style={{ color: accent, backgroundColor: `color-mix(in oklab, ${accent} 17%, transparent)` }}
       >
         <Icon className="h-5 w-5" strokeWidth={2.3} />
       </span>
@@ -50,264 +95,304 @@ function RewardRow({ reward, index }: { reward: GameReward; index: number }) {
   );
 }
 
-function ChestBurst({ accent, opened }: { accent: string; opened: boolean }) {
+function ChestParticles({ accent, visible, reducedMotion }: { accent: string; visible: boolean; reducedMotion: boolean }) {
+  if (!visible || reducedMotion) return null;
+
   return (
-    <>
-      <motion.div
-        className="pointer-events-none absolute inset-5 rounded-full border-2"
-        style={{ borderColor: accent }}
-        initial={{ opacity: 0, scale: 0.35 }}
-        animate={opened ? { opacity: [0, 0.85, 0], scale: [0.35, 1.75, 2.25] } : { opacity: 0, scale: 0.35 }}
-        transition={{ delay: 1.1, duration: 0.72, ease: "easeOut" }}
-      />
-      <motion.div
-        className="pointer-events-none absolute inset-9 rounded-full border"
-        style={{ borderColor: "rgba(255,255,255,0.85)" }}
-        initial={{ opacity: 0, scale: 0.3 }}
-        animate={opened ? { opacity: [0, 0.9, 0], scale: [0.3, 1.45, 1.9] } : { opacity: 0, scale: 0.3 }}
-        transition={{ delay: 1.2, duration: 0.66, ease: "easeOut" }}
-      />
-      {Array.from({ length: 18 }).map((_, index) => {
-        const angle = (360 / 18) * index;
-        const distance = 74 + (index % 3) * 16;
-        const size = index % 4 === 0 ? 7 : 4;
-        return (
-          <motion.span
-            key={index}
-            className="pointer-events-none absolute left-1/2 top-1/2 rounded-full"
-            style={{
-              width: size,
-              height: size,
-              backgroundColor: index % 3 === 0 ? "white" : accent,
-              boxShadow: `0 0 12px ${accent}`,
-            }}
-            initial={{ opacity: 0, x: 0, y: 0, scale: 0.2 }}
-            animate={
-              opened
-                ? {
-                    opacity: [0, 1, 0],
-                    x: Math.cos((angle * Math.PI) / 180) * distance,
-                    y: Math.sin((angle * Math.PI) / 180) * distance,
-                    scale: [0.2, 1, 0.35],
-                  }
-                : { opacity: 0, x: 0, y: 0, scale: 0.2 }
-            }
-            transition={{ delay: 1.08 + (index % 4) * 0.025, duration: 0.7, ease: "easeOut" }}
-          />
-        );
-      })}
-    </>
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-visible">
+      {PARTICLES.map((particle) => (
+        <motion.span
+          key={particle.id}
+          className="absolute left-1/2 top-1/2 rounded-full will-change-transform"
+          style={{
+            width: particle.size,
+            height: particle.size,
+            backgroundColor: particle.id % 3 === 0 ? "white" : accent,
+            boxShadow: `0 0 10px ${accent}`,
+          }}
+          initial={{ opacity: 0, x: 0, y: 0, scale: 0.35 }}
+          animate={{ opacity: [0, 1, 0], x: particle.x, y: particle.y, scale: [0.35, 1, 0.4] }}
+          transition={{ duration: 0.62, delay: (particle.id % 4) * 0.018, ease: "easeOut" }}
+        />
+      ))}
+    </div>
   );
 }
 
-export function GameChestDialog({
-  result,
-  onClose,
-}: {
-  result: ChestOpenResult | null;
-  onClose: () => void;
-}) {
-  const [phase, setPhase] = useState<"closed" | "opening" | "rewards">("closed");
+type ChestVisualProps = {
+  accent: string;
+  gradient: string;
+  image?: string;
+  phase: ChestOpeningPhase;
+  reducedMotion: boolean;
+};
+
+function ChestVisual({ accent, gradient, image, phase, reducedMotion }: ChestVisualProps) {
+  const atRest = phase === "rest";
+  const isUnlocking = phase === "unlocking";
+  const isOpening = phase === "opening" || phase === "rewards";
+
+  return (
+    <div className="relative mx-auto my-3 flex h-48 w-48 items-center justify-center" style={{ perspective: "1000px" }}>
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-4 rounded-full"
+        style={{ background: `radial-gradient(circle, ${accent} 0%, transparent 68%)` }}
+        initial={false}
+        animate={
+          isOpening
+            ? { opacity: 1, scale: 1.35, filter: "blur(22px)" }
+            : { opacity: atRest ? 0.18 : 0, scale: atRest ? 0.82 : 0.6, filter: "blur(7px)" }
+        }
+        transition={reducedMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
+      />
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-6 rounded-full"
+        style={{ background: gradient, filter: "blur(32px)" }}
+        animate={atRest && !reducedMotion ? { opacity: [0.2, 0.42, 0.2], scale: [0.8, 1.04, 0.8] } : { opacity: isOpening ? 0.44 : 0.12, scale: 1 }}
+        transition={atRest && !reducedMotion ? { duration: 2.4, repeat: Infinity, ease: "easeInOut" } : { duration: 0.2 }}
+      />
+      <ChestParticles accent={accent} visible={phase === "opening"} reducedMotion={reducedMotion} />
+      <motion.div
+        className="pointer-events-none absolute bottom-5 h-8 w-32 rounded-[50%] bg-black/55 blur-md"
+        animate={isOpening ? { opacity: 0.45, scale: 1.05 } : { opacity: 0.34, scale: 0.84 }}
+        transition={{ duration: reducedMotion ? 0 : 0.22 }}
+      />
+      <motion.div
+        className="relative h-32 w-32 will-change-transform"
+        style={{ transformStyle: "preserve-3d" }}
+        animate={
+          atRest && !reducedMotion
+            ? { y: [0, -4, 0], rotateZ: [-1.5, 1.5, -1.5] }
+            : phase === "preopening"
+              ? { scaleY: [1, 0.96, 1], x: [0, -4, 4, -4, 4, -3, 3, 0], rotateZ: 0 }
+              : { y: 0, x: 0, rotateZ: 0, scaleY: 1 }
+        }
+        transition={
+          atRest && !reducedMotion
+            ? { duration: 2.4, repeat: Infinity, ease: "easeInOut" }
+            : phase === "preopening"
+              ? { duration: 0.45, ease: "easeInOut" }
+              : { duration: reducedMotion ? 0 : 0.12 }
+        }
+      >
+        <div
+          className="absolute inset-0 overflow-hidden rounded-[2rem] border border-white/30 shadow-2xl"
+          style={{ background: gradient, boxShadow: `0 0 38px ${accent}` }}
+        >
+          {image ? <img src={image} alt="" className="h-full w-full object-contain p-1.5 drop-shadow-[0_12px_12px_rgba(0,0,0,0.5)]" /> : <Box className="m-9 h-14 w-14 text-white" strokeWidth={2.2} />}
+          <motion.div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              clipPath: "inset(0 0 48% 0)",
+              transformOrigin: "50% 78%",
+              transformStyle: "preserve-3d",
+            }}
+            animate={isOpening ? { rotateX: -105, y: -8 } : { rotateX: 0, y: 0 }}
+            transition={reducedMotion ? { duration: 0 } : { duration: 0.65, ease: OPEN_EASE }}
+          >
+            {image && <img src={image} alt="" className="h-full w-full object-contain p-1.5 drop-shadow-[0_-8px_14px_rgba(255,255,255,0.28)]" />}
+          </motion.div>
+          <motion.div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-5 top-8 h-12 rounded-full"
+            style={{ backgroundColor: accent, filter: "blur(14px)" }}
+            animate={isOpening ? { opacity: 0.95, scale: 1.25 } : { opacity: 0, scale: 0.6 }}
+            transition={reducedMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
+          />
+        </div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute left-1/2 top-[53%] flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-white/45 bg-slate-950/55 shadow-lg"
+          animate={isUnlocking || isOpening ? { rotate: [0, 25, 18], scale: [1, 1.08, 0.9], opacity: isOpening ? 0 : 1 } : { rotate: 0, scale: 1, opacity: 1 }}
+          transition={reducedMotion ? { duration: 0 } : { duration: isUnlocking ? 0.3 : 0.16, ease: OPEN_EASE }}
+        >
+          <LockKeyhole className="h-4 w-4" style={{ color: accent }} strokeWidth={2.6} />
+        </motion.div>
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-[-10%] rounded-full"
+          style={{ background: `radial-gradient(circle, white 0%, ${accent} 27%, transparent 68%)` }}
+          animate={isUnlocking ? { opacity: [0, 0.95, 0], scale: [0.4, 1.25, 1.7] } : { opacity: 0, scale: 0.4 }}
+          transition={reducedMotion ? { duration: 0 } : { duration: 0.3, ease: "easeOut" }}
+        />
+      </motion.div>
+    </div>
+  );
+}
+
+export function GameChestDialog({ result, onClose }: { result: ChestOpenResult | null; onClose: () => void }) {
+  const reducedMotion = useReducedMotion() ?? false;
+  const [phase, setPhase] = useState<ChestOpeningPhase>("rest");
+  const [continueVisible, setContinueVisible] = useState(false);
+  const startedRef = useRef(false);
+  const timersRef = useRef(new Set<number>());
+  const continueButtonRef = useRef<HTMLButtonElement>(null);
   const chestMeta = result ? CHEST_META[result.tier] : null;
   const rarity = chestMeta?.rarity ?? "common";
   const accent = RARITY_META[rarity].accent;
   const image = result ? CHEST_IMAGE[result.tier] ?? CHEST_IMAGE.bronze : undefined;
-  const isOpening = phase === "opening" || phase === "rewards";
+
+  const clearTimers = useCallback(() => {
+    timersRef.current.forEach((timer) => window.clearTimeout(timer));
+    timersRef.current.clear();
+  }, []);
+
+  const schedule = useCallback((callback: () => void, delay: number) => {
+    const timer = window.setTimeout(() => {
+      timersRef.current.delete(timer);
+      callback();
+    }, delay);
+    timersRef.current.add(timer);
+    return timer;
+  }, []);
+
+  useEffect(() => () => clearTimers(), [clearTimers]);
 
   useEffect(() => {
-    if (result) setPhase("closed");
-  }, [result]);
+    clearTimers();
+    startedRef.current = false;
+    setPhase("rest");
+    setContinueVisible(false);
+  }, [result, clearTimers]);
 
   useEffect(() => {
-    if (phase !== "opening") return;
-    const timer = window.setTimeout(() => setPhase("rewards"), 1450);
-    return () => window.clearTimeout(timer);
-  }, [phase]);
+    if (phase !== "unlocking" || reducedMotion) return;
+    playUnlockPlaceholderSound();
+  }, [phase, reducedMotion]);
+
+  useEffect(() => {
+    if (phase !== "rewards" || !result) return;
+    if (reducedMotion) {
+      setContinueVisible(true);
+      return;
+    }
+
+    const timer = schedule(() => setContinueVisible(true), getContinueDelay(result.rewards.length));
+    return () => {
+      window.clearTimeout(timer);
+      timersRef.current.delete(timer);
+    };
+  }, [phase, reducedMotion, result, schedule]);
+
+  useEffect(() => {
+    if (continueVisible) continueButtonRef.current?.focus();
+  }, [continueVisible]);
+
+  const startOpening = useCallback(() => {
+    if (!canStartChestOpening(phase, startedRef.current)) return;
+    startedRef.current = true;
+
+    if (reducedMotion) {
+      setPhase("rewards");
+      setContinueVisible(true);
+      return;
+    }
+
+    setPhase("preopening");
+    schedule(() => setPhase("unlocking"), CHEST_OPENING_TIMING.preopening);
+    schedule(
+      () => setPhase("opening"),
+      CHEST_OPENING_TIMING.preopening + CHEST_OPENING_TIMING.unlocking,
+    );
+    schedule(
+      () => setPhase("rewards"),
+      CHEST_OPENING_TIMING.preopening + CHEST_OPENING_TIMING.unlocking + CHEST_OPENING_TIMING.opening,
+    );
+  }, [phase, reducedMotion, schedule]);
+
+  const handleClose = useCallback(() => {
+    clearTimers();
+    onClose();
+  }, [clearTimers, onClose]);
 
   return (
     <AnimatePresence>
-      {result && (
+      {result && chestMeta && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={onClose}
+          onClick={handleClose}
         >
           <motion.section
+            aria-labelledby="chest-opening-title"
+            aria-modal="true"
+            role="dialog"
             className="glass-strong relative w-full max-w-md overflow-hidden rounded-3xl p-6"
-            initial={{ scale: 0.84, y: 24 }}
+            initial={reducedMotion ? false : { scale: 0.94, y: 18 }}
             animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 220, damping: 20 }}
+            exit={{ scale: reducedMotion ? 1 : 0.96, opacity: 0 }}
+            transition={reducedMotion ? { duration: 0 } : { type: "spring", stiffness: 220, damping: 22 }}
             onClick={(event) => event.stopPropagation()}
           >
             <motion.div
-              className="pointer-events-none absolute inset-x-0 top-0 h-48 opacity-50"
-              style={{ background: chestMeta?.gradient }}
-              initial={{ opacity: 0, scaleY: 0.2 }}
-              animate={{ opacity: [0, 0.58, 0.28], scaleY: [0.2, 1, 1] }}
-              transition={{ duration: 1.2 }}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-0 h-48 opacity-35"
+              style={{ background: chestMeta.gradient }}
+              animate={phase === "opening" || phase === "rewards" ? { opacity: 0.55, scaleY: 1 } : { opacity: 0.2, scaleY: 0.65 }}
+              transition={{ duration: reducedMotion ? 0 : 0.5 }}
             />
             <button
-              onClick={onClose}
-              className="absolute right-3 top-3 rounded-full bg-white/10 p-2 text-muted-foreground"
+              type="button"
+              onClick={handleClose}
+              aria-label="Fermer l'ouverture du coffre"
+              className="absolute right-3 top-3 rounded-full bg-white/10 p-2 text-muted-foreground transition hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <X className="h-4 w-4" />
             </button>
             <div className="relative text-center">
-              <div className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted-foreground">
-                Récompenses obtenues
+              <div aria-live="polite" className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted-foreground">
+                {phase === "rest" ? "Coffre prêt" : phase === "rewards" ? "Récompenses obtenues" : "Ouverture en cours"}
               </div>
-              <h2 className="mt-1 font-display text-2xl font-extrabold">
-                {CHEST_META[result.tier].label}
+              <h2 id="chest-opening-title" className="mt-1 font-display text-2xl font-extrabold">
+                {chestMeta.label}
               </h2>
             </div>
-            <div
-              className="relative mx-auto my-3 flex h-48 w-48 items-center justify-center"
-              style={{ perspective: "1000px" }}
-            >
-              <motion.div
-                className="absolute inset-5 rounded-full blur-3xl"
-                style={{ background: CHEST_META[result.tier].gradient }}
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={
-                  isOpening
-                    ? { opacity: [0, 0.72, 0.42, 0.66], scale: [0.5, 1.1, 0.92, 1.08] }
-                    : { opacity: [0.24, 0.52, 0.24], scale: [0.82, 1.05, 0.82] }
-                }
-                transition={isOpening ? { duration: 1.75, times: [0, 0.35, 0.72, 1] } : { duration: 2.4, repeat: Infinity }}
-              />
-              <motion.div
-                className="pointer-events-none absolute inset-1 rounded-full"
-                style={{
-                  background:
-                    "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.48) 0deg 2deg, transparent 2deg 22deg)",
-                }}
-                initial={{ opacity: 0, rotate: -20, scale: 0.3 }}
-                animate={
-                  isOpening
-                    ? { opacity: [0, 0, 0.78, 0.28], rotate: [-20, 15, 52, 90], scale: [0.3, 0.4, 1.08, 1.28] }
-                    : { opacity: 0, rotate: -20, scale: 0.3 }
-                }
-                transition={{ delay: 0.9, duration: 1.15, ease: "easeOut" }}
-              />
-              <ChestBurst accent={accent} opened={isOpening} />
-              <motion.div
-                className="pointer-events-none absolute bottom-6 h-8 w-32 rounded-[50%] bg-black/55 blur-md"
-                initial={{ opacity: 0, scale: 0.4 }}
-                animate={isOpening ? { opacity: [0, 0.7, 0.42], scale: [0.4, 1.15, 0.95] } : { opacity: 0.38, scale: 0.84 }}
-                transition={isOpening ? { duration: 1.1, times: [0, 0.35, 1] } : { duration: 0.3 }}
-              />
-              <motion.div
-                className="relative flex h-32 w-32 items-center justify-center rounded-[2rem] border border-white/30 text-white shadow-2xl"
-                style={{
-                  background: CHEST_META[result.tier].gradient,
-                  boxShadow: `0 0 38px ${accent}`,
-                  transformStyle: "preserve-3d",
-                }}
-                initial={{ y: 36, rotateX: -24, rotateY: -38, rotateZ: -9, scale: 0.45 }}
-                animate={
-                  isOpening
-                    ? {
-                        y: [36, -8, 0, 0],
-                        rotateX: [-24, 10, 0, 0],
-                        rotateY: [-38, 22, -16, 13, -9, 5, 0],
-                        rotateZ: [-9, 0, -5, 5, -4, 3, 0],
-                        scale: [0.45, 1.08, 1, 1.04, 1],
-                      }
-                    : { y: [0, -7, 0], rotateX: [0, 5, 0], rotateY: [-12, 12, -12], rotateZ: 0, scale: 1 }
-                }
-                transition={
-                  isOpening
-                    ? { duration: 1.35, times: [0, 0.32, 0.5, 0.68, 1], ease: [0.22, 1, 0.36, 1] }
-                    : { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
-                }
-              >
-                {image ? (
-                  <>
-                    <motion.img
-                      src={image}
-                      alt=""
-                      className="h-full w-full object-contain p-1.5 drop-shadow-[0_12px_12px_rgba(0,0,0,0.5)]"
-                      initial={{ opacity: 0, scale: 0.7 }}
-                      animate={{ opacity: 1, scale: [0.7, 1.12, 1] }}
-                      transition={{ duration: 0.55, delay: 0.2 }}
-                    />
-                    <motion.div
-                      className="pointer-events-none absolute inset-0 overflow-hidden rounded-[2rem]"
-                      style={{
-                        clipPath: "inset(0 0 46% 0)",
-                        transformOrigin: "50% 88%",
-                        transformStyle: "preserve-3d",
-                      }}
-                      initial={{ rotateX: 0, y: 0, opacity: 0 }}
-                      animate={isOpening ? { rotateX: [0, 0, -66], y: [0, 0, -9], opacity: [0, 1, 1] } : { rotateX: 0, y: 0, opacity: 0 }}
-                      transition={{ delay: 0.28, duration: 1.15, times: [0, 0.67, 1], ease: "easeInOut" }}
-                    >
-                      <img
-                        src={image}
-                        alt=""
-                        className="h-full w-full object-contain p-1.5 drop-shadow-[0_-8px_14px_rgba(255,255,255,0.28)]"
-                      />
-                    </motion.div>
-                    <motion.div
-                      className="pointer-events-none absolute inset-x-5 top-8 h-12 rounded-full blur-xl"
-                      style={{ backgroundColor: accent }}
-                      initial={{ opacity: 0, scale: 0.4 }}
-                      animate={isOpening ? { opacity: [0, 0, 0.95, 0.3], scale: [0.4, 0.5, 1.25, 1.55] } : { opacity: 0, scale: 0.4 }}
-                      transition={{ delay: 0.72, duration: 0.82, ease: "easeOut" }}
-                    />
-                  </>
-                ) : (
-                  <Box className="h-14 w-14" strokeWidth={2.2} />
-                )}
-              </motion.div>
-            </div>
-            {phase === "closed" ? (
+            <ChestVisual accent={accent} gradient={chestMeta.gradient} image={image} phase={phase} reducedMotion={reducedMotion} />
+            {phase === "rest" ? (
               <motion.button
-                onClick={() => setPhase("opening")}
-                initial={{ opacity: 0, y: 12 }}
+                type="button"
+                onClick={startOpening}
+                initial={reducedMotion ? false : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
-                className="btn-primary mt-1 w-full rounded-2xl py-3 font-display font-extrabold"
+                transition={{ duration: reducedMotion ? 0 : 0.24, delay: reducedMotion ? 0 : 0.2 }}
+                className="btn-primary mt-1 w-full rounded-2xl py-3 font-display font-extrabold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Ouvrir le coffre
               </motion.button>
-            ) : phase === "opening" ? (
-              <div className="mt-1 text-center text-[10px] font-extrabold uppercase tracking-[0.16em]" style={{ color: accent }}>
-                Ouverture en cours
-              </div>
-            ) : (
+            ) : phase === "rewards" ? (
               <>
-                <motion.div
-                  className="mb-3 text-center text-[10px] font-extrabold uppercase tracking-[0.16em]"
-                  style={{ color: accent }}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
+                <div className="mb-3 text-center text-[10px] font-extrabold uppercase tracking-[0.16em]" style={{ color: accent }}>
                   Révélation des récompenses
-                </motion.div>
-                <div className="space-y-2 [perspective:800px]">
+                </div>
+                <div className="space-y-2 [perspective:800px]" aria-live="polite">
                   {result.rewards.map((reward, index) => (
-                    <RewardRow
-                      key={`${reward.type}-${reward.itemCode ?? index}`}
-                      reward={reward}
-                      index={index}
-                    />
+                    <RewardRow key={`${reward.type}-${reward.itemCode ?? index}`} reward={reward} index={index} reducedMotion={reducedMotion} />
                   ))}
                 </div>
                 {result.levelUp && <LevelUpCelebration from={result.levelUp.from} to={result.levelUp.to} />}
-                <motion.button
-                  onClick={onClose}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 + result.rewards.length * 0.16 }}
-                  className="btn-primary mt-5 w-full rounded-2xl py-3 font-display font-extrabold"
-                >
-                  Continuer
-                </motion.button>
+                {continueVisible && (
+                  <motion.button
+                    ref={continueButtonRef}
+                    type="button"
+                    onClick={handleClose}
+                    initial={reducedMotion ? false : { opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: reducedMotion ? 0 : 0.22 }}
+                    className="btn-primary mt-5 w-full rounded-2xl py-3 font-display font-extrabold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  >
+                    Continuer
+                  </motion.button>
+                )}
               </>
+            ) : (
+              <div aria-live="polite" className="mt-1 text-center text-[10px] font-extrabold uppercase tracking-[0.16em]" style={{ color: accent }}>
+                {phase === "preopening" ? "Préparation" : phase === "unlocking" ? "Déverrouillage" : "Ouverture"}
+              </div>
             )}
           </motion.section>
         </motion.div>
