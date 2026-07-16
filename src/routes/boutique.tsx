@@ -220,16 +220,17 @@ function PremiumTab() {
       </p>
       <ul className="mb-5 space-y-2 text-sm">
         {[
-          "❤️ Vies illimitées — plus jamais bloqué",
-          "🧠 Cas cliniques avancés (DEA + IFSI)",
-          "🤖 Pulse IA illimité + coach quotidien",
-          "🎨 Avatars, cadres, fonds exclusifs",
-          "🏆 Badge « Membre Premium » animé",
-          "📊 Statistiques avancées + export PDF",
-        ].map((f) => (
-          <li key={f} className="flex items-start gap-2">
+          { Icon: Heart, label: "Vies illimitées — plus jamais bloqué" },
+          { Icon: Brain, label: "Cas cliniques avancés (DEA + IFSI)" },
+          { Icon: Bot, label: "Pulse IA illimité + coach quotidien" },
+          { Icon: Palette, label: "Avatars, cadres, fonds exclusifs" },
+          { Icon: Trophy, label: "Badge « Membre Premium » animé" },
+          { Icon: BarChart3, label: "Statistiques avancées + export PDF" },
+        ].map(({ Icon, label }) => (
+          <li key={label} className="flex items-start gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-            <span>{f}</span>
+            <Icon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" strokeWidth={2.25} />
+            <span>{label}</span>
           </li>
         ))}
       </ul>
