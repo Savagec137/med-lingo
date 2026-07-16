@@ -116,8 +116,8 @@ export function ShopItemIcon({
   type,
   className,
   strokeWidth,
-}: IconProps & { code: string; type: string }) {
-  const Icon = SHOP_ICONS[code] ?? SHOP_TYPE_FALLBACK[type] ?? Package;
+}: IconProps & { code: string; type?: string }) {
+  const Icon = SHOP_ICONS[code] ?? (type ? SHOP_TYPE_FALLBACK[type] : undefined) ?? Package;
   return <Icon className={className} strokeWidth={strokeWidth ?? 2} />;
 }
 
