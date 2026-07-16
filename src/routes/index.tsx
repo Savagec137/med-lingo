@@ -142,8 +142,8 @@ function Home() {
             params={{ lessonId: currentLesson.lesson.id }}
             className="mb-4 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_4px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)] active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-border)]"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-3xl">
-              {currentLesson.lesson.emoji}
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
+              <LessonIcon lessonId={currentLesson.lesson.id} unitId={currentLesson.unit.id} className="h-7 w-7" strokeWidth={2.25} />
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
