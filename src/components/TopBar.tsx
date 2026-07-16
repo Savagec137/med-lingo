@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, ShoppingBag } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
