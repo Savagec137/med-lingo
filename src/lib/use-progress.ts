@@ -279,9 +279,15 @@ export function useProgress() {
         vocabDone,
       });
       awardBadges(uid, codes);
+
+      // Coins: 5 base + 5 par étoile (5-20)
+      const coinsGained = 5 + stars * 5;
+      awardCoins(coinsGained, "lesson", lessonId).then(() => {
+        qc.invalidateQueries({ queryKey: ["wallet"] });
+      }).catch(() => {});
     }
-    return { stars, score, xpGained: gainedXp };
-  }, [progress.lastStudyDate]);
+    return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
+  }, [progress.lastStudyDate, qc]);
 
   const loseHeart = useCallback(() => {
     setProgress((p) => {
