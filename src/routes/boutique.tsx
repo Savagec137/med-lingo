@@ -60,7 +60,7 @@ function Boutique() {
     try {
       await purchaseItem(item.code);
       invalidate();
-      setMsg(`✅ ${item.name} acquis !`);
+      setMsg(`${item.name} acquis !`);
     } catch (e) {
       const err = e as { message?: string };
       const raw = err.message ?? "Erreur";
@@ -69,7 +69,7 @@ function Boutique() {
         raw.includes("premium") ? "Réservé aux abonnés Premium" :
         raw.includes("already") ? "Déjà possédé" :
         raw;
-      setMsg(`❌ ${friendly}`);
+      setMsg(friendly);
     } finally {
       setBusy(null);
       setTimeout(() => setMsg(null), 2500);
