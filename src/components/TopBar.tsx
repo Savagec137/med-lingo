@@ -152,6 +152,8 @@ export function TopBar() {
           )}
         </div>
       </div>
+      <ChestOpeningModal result={chest.pending} onClose={chest.close} />
     </header>
   );
 }
+
