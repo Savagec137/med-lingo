@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Check, X, Heart, ArrowRight, Home as HomeIcon } from "lucide-react";
+import { Check, X, Heart, ArrowRight, Home as HomeIcon, Trophy, PartyPopper, Dumbbell, Star } from "lucide-react";
 import { findLesson } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 
