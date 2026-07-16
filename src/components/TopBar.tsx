@@ -8,6 +8,7 @@ import { useWallet } from "@/lib/use-wallet";
 export function TopBar() {
   const { progress, hydrated } = useProgress();
   const { user } = useAuth();
+  const { data: wallet } = useWallet();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
