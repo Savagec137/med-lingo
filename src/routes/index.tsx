@@ -382,16 +382,16 @@ function rarityBorder(rarity: string): string {
 
 function LessonNode({
   lessonId,
+  unitId,
   title,
-  emoji,
   unlocked,
   done,
   stars,
   isCurrent,
 }: {
   lessonId: string;
+  unitId: string;
   title: string;
-  emoji: string;
   unlocked: boolean;
   done: boolean;
   stars: number;
@@ -409,14 +409,14 @@ function LessonNode({
       <button
         type="button"
         disabled={!unlocked}
-        className={`relative flex h-20 w-20 items-center justify-center rounded-full text-3xl transition-transform ${
+        className={`relative flex h-20 w-20 items-center justify-center rounded-full transition-transform ${
           !unlocked
             ? "cursor-not-allowed border-2 border-dashed border-border bg-muted text-muted-foreground"
             : done
               ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-success)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
               : isCurrent
                 ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-primary)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] ring-4 ring-[color:var(--color-primary)]/25 active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
-                : "border-2 border-border bg-card text-foreground shadow-[0_5px_0_0_var(--color-border)] active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-border)]"
+                : "border-2 border-border bg-card text-[color:var(--color-primary)] shadow-[0_5px_0_0_var(--color-border)] active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-border)]"
         }`}
       >
         {!unlocked ? (
@@ -424,7 +424,7 @@ function LessonNode({
         ) : done ? (
           <Check className="h-8 w-8" strokeWidth={3.5} />
         ) : (
-          <span>{emoji}</span>
+          <LessonIcon lessonId={lessonId} unitId={unitId} className="h-8 w-8" strokeWidth={2.25} />
         )}
         {done && stars > 0 && (
           <div className="absolute -bottom-2 flex items-center gap-0.5 rounded-full bg-card px-1.5 py-0.5 shadow">
