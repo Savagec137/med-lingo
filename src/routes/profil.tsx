@@ -7,6 +7,7 @@ import { useAuth, signOut } from "@/lib/use-auth";
 import { levelProgress } from "@/lib/gamification";
 import { UNITS } from "@/lib/curriculum";
 import { useBadgesCatalog, useUserBadges, useXpHistory } from "@/lib/use-gamification";
+import { BadgeIcon } from "@/lib/icon-map";
 
 export const Route = createFileRoute("/profil")({
   component: ProfilPage,
