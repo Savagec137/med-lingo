@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Coins, Crown, Lock, Check, Sparkles, Heart, Brain, Bot, Palette, Trophy, BarChart3, X as XIcon } from "lucide-react";
 import { ShopItemIcon } from "@/lib/icon-map";
+import { SHOP_IMAGE, PREMIUM_CROWN } from "@/lib/asset-map";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
 import {
@@ -153,8 +154,19 @@ function Boutique() {
                       <Crown className="h-3 w-3" /> PREMIUM
                     </span>
                   )}
-                  <div className="mb-2 flex h-16 items-center justify-center text-[color:var(--color-primary)]">
-                    <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
+                  <div className="mb-2 flex h-20 items-center justify-center text-[color:var(--color-primary)]">
+                    {SHOP_IMAGE[item.code] ? (
+                      <img
+                        src={SHOP_IMAGE[item.code]}
+                        alt=""
+                        width={80}
+                        height={80}
+                        loading="lazy"
+                        className="h-20 w-20 object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
+                      />
+                    ) : (
+                      <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
+                    )}
                   </div>
                   <div className="text-sm font-extrabold leading-tight">{item.name}</div>
                   <div className="mb-2 line-clamp-2 text-[11px] opacity-70">
@@ -211,8 +223,8 @@ function Boutique() {
 function PremiumTab() {
   return (
     <div className="rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 via-white to-yellow-50 p-6 shadow-lg">
-      <div className="mb-3 flex items-center gap-2">
-        <Crown className="h-7 w-7 text-amber-500" />
+      <div className="mb-3 flex items-center gap-3">
+        <img src={PREMIUM_CROWN} alt="" width={64} height={64} className="h-16 w-16 object-contain drop-shadow-[0_6px_16px_rgba(217,119,6,0.45)]" />
         <h2 className="font-display text-2xl font-extrabold">MedLingo Premium</h2>
       </div>
       <p className="mb-4 text-sm text-muted-foreground">

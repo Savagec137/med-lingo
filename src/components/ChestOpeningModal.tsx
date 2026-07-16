@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Coins, Gem, Key, Package, Sparkles, X } from "lucide-react";
 import type { ChestResult, ChestTier, LootItem } from "@/lib/use-chest";
+import { CHEST_IMAGE } from "@/lib/asset-map";
 
 const TIER_META: Record<ChestTier, { label: string; gradient: string; glow: string; rarity: string }> = {
   bronze:  { label: "Coffre Bronze",    gradient: "linear-gradient(135deg,#c17c3a,#8a4a1a)", glow: "0 0 60px #c17c3a88", rarity: "rarity-common" },
@@ -78,13 +79,23 @@ export function ChestOpeningModal({ result, onClose }: { result: ChestResult | n
                 transition={{ duration: 1.4 }}
               />
               <motion.div
-                className={`relative flex h-32 w-32 items-center justify-center rounded-3xl border-2 border-white/20 ${TIER_META[result.tier].rarity}`}
+                className={`relative flex h-32 w-32 items-center justify-center rounded-3xl border-2 border-white/20 overflow-hidden ${TIER_META[result.tier].rarity}`}
                 style={{ background: TIER_META[result.tier].gradient, boxShadow: TIER_META[result.tier].glow }}
                 initial={{ rotate: -8, scale: 0.7 }}
                 animate={{ rotate: [-8, 8, -6, 6, 0], scale: [0.7, 1.05, 1] }}
                 transition={{ duration: 1.4, times: [0, 0.25, 0.5, 0.75, 1] }}
               >
-                <Package className="h-16 w-16 text-white drop-shadow-lg" strokeWidth={2.2} />
+                {CHEST_IMAGE[result.tier] ? (
+                  <img
+                    src={CHEST_IMAGE[result.tier]}
+                    alt=""
+                    width={128}
+                    height={128}
+                    className="h-full w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
+                  />
+                ) : (
+                  <Package className="h-16 w-16 text-white drop-shadow-lg" strokeWidth={2.2} />
+                )}
               </motion.div>
               {/* burst rays */}
               <motion.div
