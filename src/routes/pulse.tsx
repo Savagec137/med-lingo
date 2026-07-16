@@ -21,7 +21,7 @@ function PulsePage() {
     {
       role: "assistant",
       content:
-        "Salut ! Je suis Pulse, ton tuteur IA médical. Pose-moi une question sur le vocabulaire, l'anatomie, une pathologie ou un geste. 👇",
+        "Salut ! Je suis Pulse, ton tuteur IA médical. Pose-moi une question sur le vocabulaire, l'anatomie, une pathologie ou un geste — je te réponds avec des explications claires.",
     },
   ]);
   const [input, setInput] = useState("");

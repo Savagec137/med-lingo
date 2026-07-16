@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Check, X, Heart, ArrowRight, Home as HomeIcon } from "lucide-react";
+import { Check, X, Heart, ArrowRight, Home as HomeIcon, Trophy, PartyPopper, Dumbbell, Star } from "lucide-react";
 import { findLesson } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 
@@ -113,8 +113,14 @@ function LessonPage() {
     const xpGained = 10 + result.stars * 5;
     return (
       <div className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-center p-6 text-center">
-        <div className="mb-4 text-6xl">
-          {result.stars === 3 ? "🏆" : result.stars >= 1 ? "🎉" : "💪"}
+        <div className={`mb-4 flex h-24 w-24 items-center justify-center rounded-3xl border-2 shadow-[0_6px_0_0_var(--color-border)] ${result.stars === 3 ? "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/15 text-[color:var(--color-warning)]" : result.stars >= 1 ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]" : "border-border bg-secondary text-foreground"}`}>
+          {result.stars === 3 ? (
+            <Trophy className="h-12 w-12" strokeWidth={2.25} />
+          ) : result.stars >= 1 ? (
+            <PartyPopper className="h-12 w-12" strokeWidth={2.25} />
+          ) : (
+            <Dumbbell className="h-12 w-12" strokeWidth={2.25} />
+          )}
         </div>
         <h1 className="mb-1 text-3xl font-extrabold">
           {result.stars === 0 ? "Presque !" : "Bien joué !"}
@@ -122,10 +128,17 @@ function LessonPage() {
         <p className="mb-6 text-muted-foreground">
           {correctCount} bonnes réponses sur {total} ({pct}%)
         </p>
-        <div className="mb-6 flex gap-6 text-center">
+        <div className="mb-6 flex gap-8 text-center">
           <div>
             <p className="text-xs font-bold uppercase text-muted-foreground">Étoiles</p>
-            <p className="text-2xl font-extrabold">{"⭐".repeat(result.stars) || "—"}</p>
+            <div className="mt-1 flex items-center justify-center gap-0.5">
+              {[0, 1, 2].map((s) => (
+                <Star
+                  key={s}
+                  className={`h-6 w-6 ${s < result.stars ? "fill-[color:var(--color-warning)] text-[color:var(--color-warning)]" : "text-border"}`}
+                />
+              ))}
+            </div>
           </div>
           <div>
             <p className="text-xs font-bold uppercase text-muted-foreground">XP gagnés</p>

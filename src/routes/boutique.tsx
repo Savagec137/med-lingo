@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Coins, Crown, Lock, Check, Sparkles } from "lucide-react";
+import { Coins, Crown, Lock, Check, Sparkles, Heart, Brain, Bot, Palette, Trophy, BarChart3, X as XIcon } from "lucide-react";
+import { ShopItemIcon } from "@/lib/icon-map";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
 import {
@@ -59,7 +60,7 @@ function Boutique() {
     try {
       await purchaseItem(item.code);
       invalidate();
-      setMsg(`✅ ${item.name} acquis !`);
+      setMsg(`${item.name} acquis !`);
     } catch (e) {
       const err = e as { message?: string };
       const raw = err.message ?? "Erreur";
@@ -68,7 +69,7 @@ function Boutique() {
         raw.includes("premium") ? "Réservé aux abonnés Premium" :
         raw.includes("already") ? "Déjà possédé" :
         raw;
-      setMsg(`❌ ${friendly}`);
+      setMsg(friendly);
     } finally {
       setBusy(null);
       setTimeout(() => setMsg(null), 2500);
@@ -152,8 +153,8 @@ function Boutique() {
                       <Crown className="h-3 w-3" /> PREMIUM
                     </span>
                   )}
-                  <div className="mb-2 flex h-16 items-center justify-center text-4xl">
-                    {item.icon ?? "🎁"}
+                  <div className="mb-2 flex h-16 items-center justify-center text-[color:var(--color-primary)]">
+                    <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
                   </div>
                   <div className="text-sm font-extrabold leading-tight">{item.name}</div>
                   <div className="mb-2 line-clamp-2 text-[11px] opacity-70">
@@ -197,7 +198,7 @@ function Boutique() {
             })}
             {itemsFor(tab).length === 0 && (
               <div className="col-span-full rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-                Bientôt disponible ✨
+                Bientôt disponible
               </div>
             )}
           </div>
@@ -219,16 +220,17 @@ function PremiumTab() {
       </p>
       <ul className="mb-5 space-y-2 text-sm">
         {[
-          "❤️ Vies illimitées — plus jamais bloqué",
-          "🧠 Cas cliniques avancés (DEA + IFSI)",
-          "🤖 Pulse IA illimité + coach quotidien",
-          "🎨 Avatars, cadres, fonds exclusifs",
-          "🏆 Badge « Membre Premium » animé",
-          "📊 Statistiques avancées + export PDF",
-        ].map((f) => (
-          <li key={f} className="flex items-start gap-2">
+          { Icon: Heart, label: "Vies illimitées — plus jamais bloqué" },
+          { Icon: Brain, label: "Cas cliniques avancés (DEA + IFSI)" },
+          { Icon: Bot, label: "Pulse IA illimité + coach quotidien" },
+          { Icon: Palette, label: "Avatars, cadres, fonds exclusifs" },
+          { Icon: Trophy, label: "Badge « Membre Premium » animé" },
+          { Icon: BarChart3, label: "Statistiques avancées + export PDF" },
+        ].map(({ Icon, label }) => (
+          <li key={label} className="flex items-start gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-            <span>{f}</span>
+            <Icon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" strokeWidth={2.25} />
+            <span>{label}</span>
           </li>
         ))}
       </ul>

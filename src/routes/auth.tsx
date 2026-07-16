@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { toast } from "sonner";
+import { Stethoscope } from "lucide-react";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
@@ -80,7 +81,9 @@ function AuthPage() {
     <div className="min-h-screen bg-background px-4 py-10">
       <div className="mx-auto max-w-sm">
         <Link to="/" className="mb-6 flex items-center justify-center gap-2">
-          <span className="text-3xl">⚕️</span>
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:var(--color-primary)] text-primary-foreground shadow-[0_3px_0_0_oklch(0.55_0.17_145)]">
+            <Stethoscope className="h-6 w-6" strokeWidth={2.5} />
+          </span>
           <span className="font-display text-2xl font-extrabold">MedLingo</span>
         </Link>
 

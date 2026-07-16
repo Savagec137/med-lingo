@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo } from "react";
 import { Star, Lock, Check, Sparkles, Zap, Flame, Trophy, Target, ChevronRight, User as UserIcon } from "lucide-react";
+import { UnitIcon, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { UNITS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -70,7 +71,7 @@ function Home() {
         <div className="mb-4 flex items-center justify-between">
           <div>
             <h1 className="font-display text-2xl font-extrabold leading-tight">
-              Bonjour {firstName} 👋
+              Bonjour {firstName}
             </h1>
             <p className="text-xs text-muted-foreground">
               {progress.streak > 0
@@ -141,8 +142,8 @@ function Home() {
             params={{ lessonId: currentLesson.lesson.id }}
             className="mb-4 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_4px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)] active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-border)]"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-3xl">
-              {currentLesson.lesson.emoji}
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
+              <LessonIcon lessonId={currentLesson.lesson.id} unitId={currentLesson.unit.id} className="h-7 w-7" strokeWidth={2.25} />
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
@@ -173,8 +174,8 @@ function Home() {
                 const pct = (prog / m.target) * 100;
                 return (
                   <div key={m.code} className="flex items-center gap-3">
-                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl ${done ? "bg-[color:var(--color-success)]/20" : "bg-secondary"}`}>
-                      {done ? <Check className="h-5 w-5 text-[color:var(--color-success)]" strokeWidth={3} /> : m.icon}
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${done ? "bg-[color:var(--color-success)]/20 text-[color:var(--color-success)]" : "bg-secondary text-foreground"}`}>
+                      {done ? <Check className="h-5 w-5" strokeWidth={3} /> : <MissionIcon code={m.code} className="h-5 w-5" strokeWidth={2.25} />}
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-baseline justify-between gap-2">
@@ -228,7 +229,7 @@ function Home() {
                     key={ub.badge_code}
                     className={`flex w-20 shrink-0 flex-col items-center rounded-xl border-2 p-2 ${rarityBorder(b.rarity)}`}
                   >
-                    <div className="text-3xl">{b.icon}</div>
+                    <BadgeIcon code={ub.badge_code} className="h-7 w-7" strokeWidth={2.25} />
                     <div className="mt-1 line-clamp-2 text-center text-[10px] font-bold leading-tight">
                       {b.title}
                     </div>
@@ -262,8 +263,8 @@ function Home() {
           {UNITS.map((unit, unitIdx) => (
             <section key={unit.id}>
               <div className="mb-6 flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-3xl">
-                  {unit.icon}
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]">
+                  <UnitIcon unitId={unit.id} className="h-7 w-7" strokeWidth={2.25} />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
@@ -289,8 +290,8 @@ function Home() {
                     >
                       <LessonNode
                         lessonId={lesson.id}
+                        unitId={unit.id}
                         title={lesson.title}
-                        emoji={lesson.emoji}
                         unlocked={unlocked}
                         done={!!done}
                         stars={stars}
@@ -381,16 +382,16 @@ function rarityBorder(rarity: string): string {
 
 function LessonNode({
   lessonId,
+  unitId,
   title,
-  emoji,
   unlocked,
   done,
   stars,
   isCurrent,
 }: {
   lessonId: string;
+  unitId: string;
   title: string;
-  emoji: string;
   unlocked: boolean;
   done: boolean;
   stars: number;
@@ -408,14 +409,14 @@ function LessonNode({
       <button
         type="button"
         disabled={!unlocked}
-        className={`relative flex h-20 w-20 items-center justify-center rounded-full text-3xl transition-transform ${
+        className={`relative flex h-20 w-20 items-center justify-center rounded-full transition-transform ${
           !unlocked
             ? "cursor-not-allowed border-2 border-dashed border-border bg-muted text-muted-foreground"
             : done
               ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-success)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
               : isCurrent
                 ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-primary)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] ring-4 ring-[color:var(--color-primary)]/25 active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
-                : "border-2 border-border bg-card text-foreground shadow-[0_5px_0_0_var(--color-border)] active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-border)]"
+                : "border-2 border-border bg-card text-[color:var(--color-primary)] shadow-[0_5px_0_0_var(--color-border)] active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-border)]"
         }`}
       >
         {!unlocked ? (
@@ -423,7 +424,7 @@ function LessonNode({
         ) : done ? (
           <Check className="h-8 w-8" strokeWidth={3.5} />
         ) : (
-          <span>{emoji}</span>
+          <LessonIcon lessonId={lessonId} unitId={unitId} className="h-8 w-8" strokeWidth={2.25} />
         )}
         {done && stars > 0 && (
           <div className="absolute -bottom-2 flex items-center gap-0.5 rounded-full bg-card px-1.5 py-0.5 shadow">

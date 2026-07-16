@@ -7,6 +7,7 @@ import { useAuth, signOut } from "@/lib/use-auth";
 import { levelProgress } from "@/lib/gamification";
 import { UNITS } from "@/lib/curriculum";
 import { useBadgesCatalog, useUserBadges, useXpHistory } from "@/lib/use-gamification";
+import { BadgeIcon } from "@/lib/icon-map";
 
 export const Route = createFileRoute("/profil")({
   component: ProfilPage,
@@ -145,7 +146,7 @@ function ProfilPage() {
                   }`}
                   title={b.description}
                 >
-                  <div className="text-3xl">{b.icon}</div>
+                  <BadgeIcon code={b.code} className={`h-7 w-7 ${earned ? "text-[color:var(--color-primary)]" : "text-muted-foreground"}`} strokeWidth={2.25} />
                   <div className="mt-1 line-clamp-2 text-[11px] font-extrabold leading-tight">{b.title}</div>
                   <div className="mt-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
                     {earned ? b.rarity : "Verrouillé"}

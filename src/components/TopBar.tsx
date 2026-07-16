@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins } from "lucide-react";
+import { Heart, Flame, Zap, LogOut, LogIn, User as UserIcon, Sparkles, Coins, Stethoscope } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -32,7 +32,9 @@ export function TopBar() {
     <header className="sticky top-0 z-20 w-full border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl">⚕️</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[color:var(--color-primary)] text-primary-foreground">
+            <Stethoscope className="h-5 w-5" strokeWidth={2.5} />
+          </span>
           <span className="font-display text-lg font-extrabold tracking-tight">MedLingo</span>
         </Link>
         <div className="flex items-center gap-3 text-sm font-bold sm:gap-4">
