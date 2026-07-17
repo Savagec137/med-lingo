@@ -11,6 +11,7 @@ import {
   type ChestOpeningPhase,
 } from "@/features/gamification/components/chest-opening-sequence";
 import { CHEST_IMAGE } from "@/lib/asset-map";
+import { Confetti } from "@/components/Confetti";
 
 const OPEN_EASE = [0.22, 1, 0.36, 1] as const;
 const PARTICLE_COUNT = 20;
