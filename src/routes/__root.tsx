@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { PageTransition } from "@/components/PageTransition";
 
 function NotFoundComponent() {
   return (
@@ -154,7 +155,9 @@ function RootComponent() {
         <div className="orb animate-float-slow" style={{ width: 380, height: 380, bottom: -140, left: "30%", background: "radial-gradient(circle, oklch(0.55 0.22 350 / 0.5), transparent 70%)", animationDelay: "-6s" }} />
       </div>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <PageTransition>
+        <Outlet />
+      </PageTransition>
       <Toaster />
     </QueryClientProvider>
   );

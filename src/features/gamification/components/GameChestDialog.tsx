@@ -11,6 +11,7 @@ import {
   type ChestOpeningPhase,
 } from "@/features/gamification/components/chest-opening-sequence";
 import { CHEST_IMAGE } from "@/lib/asset-map";
+import { Confetti } from "@/components/Confetti";
 
 const OPEN_EASE = [0.22, 1, 0.36, 1] as const;
 const PARTICLE_COUNT = 20;
@@ -395,6 +396,28 @@ export function GameChestDialog({ result, onClose }: { result: ChestOpenResult |
               </div>
             )}
           </motion.section>
+          {/* Full-viewport light burst during the opening frame */}
+          <AnimatePresence>
+            {(phase === "opening" || phase === "rewards") && !reducedMotion && (
+              <motion.div
+                key="chest-flash"
+                aria-hidden="true"
+                className="pointer-events-none fixed inset-0 z-40"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 0] }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                style={{
+                  background: `radial-gradient(circle at center, ${accent} 0%, transparent 55%)`,
+                  mixBlendMode: "screen",
+                }}
+              />
+            )}
+          </AnimatePresence>
+          {/* Confetti finale for premium tiers */}
+          {phase === "rewards" && (rarity === "legendary" || rarity === "mythic") && (
+            <Confetti count={rarity === "mythic" ? 120 : 80} />
+          )}
         </motion.div>
       )}
     </AnimatePresence>
