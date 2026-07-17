@@ -575,6 +575,24 @@ export type Database = {
           },
         ]
       }
+      user_profile_customization: {
+        Row: {
+          profile_card_code: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          profile_card_code?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          profile_card_code?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_progress: {
         Row: {
           completed_lessons: Json
@@ -708,6 +726,7 @@ export type Database = {
       }
       claim_compensation_chest: { Args: never; Returns: Json }
       claim_daily_reward: { Args: never; Returns: Json }
+      equip_game_profile_card: { Args: { _item_code: string }; Returns: Json }
       game_level_from_xp: { Args: { total_xp: number }; Returns: number }
       get_my_weekly_rank: {
         Args: never
