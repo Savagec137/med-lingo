@@ -243,3 +243,72 @@
   button:not(:disabled):active { transform: scale(0.96); }
   a[role="button"]:active, [data-press]:active { transform: scale(0.96); }
 }
+
+/* ==== Elevation ramp ==== */
+@utility elev-1 { box-shadow: 0 1px 0 0 oklch(1 0 0 / 0.05), 0 4px 12px -6px oklch(0 0 0 / 0.4); }
+@utility elev-2 { box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.06), 0 10px 30px -12px oklch(0 0 0 / 0.55); }
+@utility elev-3 { box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.08), 0 20px 60px -20px oklch(0 0 0 / 0.65); }
+
+/* ==== Section header ==== */
+@utility section-eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-primary);
+}
+
+/* ==== Chip / pill ==== */
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  background: color-mix(in oklab, var(--color-card) 60%, transparent);
+  border: 1px solid oklch(1 0 0 / 0.10);
+  backdrop-filter: blur(8px);
+}
+
+/* ==== Card interactive (used by tiles) ==== */
+@utility card-interactive {
+  border-radius: var(--radius);
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--color-card) 92%, white 3%),
+    var(--color-card));
+  border: 1px solid oklch(1 0 0 / 0.08);
+  box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.06), 0 10px 30px -12px oklch(0 0 0 / 0.55);
+  transition: transform 0.14s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.18s ease,
+              border-color 0.18s ease;
+}
+@utility card-interactive-hover {
+  border-color: color-mix(in oklab, var(--color-primary) 55%, transparent);
+  box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.08), 0 16px 40px -14px oklch(0 0 0 / 0.65), 0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent);
+}
+
+/* ==== Divider ==== */
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.12), transparent);
+}
+
+/* Slower ambient float variant */
+@keyframes float-slower {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50%      { transform: translate3d(0,-16px,0) scale(1.03); }
+}
+@utility animate-float-slower { animation: float-slower 14s ease-in-out infinite; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
