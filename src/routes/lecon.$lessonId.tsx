@@ -98,14 +98,14 @@ function LessonPage() {
 
   // Les questions historiques conservent leur comportement. Les nouvelles
   // leçons gardent leur ordre pédagogique et mélangent seulement les réponses.
-  const questions = useMemo(
+  const questions = useMemo<PlayableInteraction[]>(
     () =>
       contentLesson
         ? (contentLessonV2
             ? selectContentItems(contentLessonV2.interactions, contentLessonV2.selection)
             : contentLesson.interactions
-          ).map((item) => ({
-            ...prepareContentInteraction(item),
+          ).map((item: unknown) => ({
+            ...prepareContentInteraction(item as Parameters<typeof prepareContentInteraction>[0]),
             contentDriven: true,
           }))
         : found
