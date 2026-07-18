@@ -10,19 +10,29 @@ type NavItem = {
 };
 
 const ITEMS: NavItem[] = [
-  { to: "/", label: "Accueil", icon: Home, match: (p) => p === "/" },
-  { to: "/pulse", label: "Pulse", icon: Sparkles, match: (p) => p.startsWith("/pulse") },
-  { to: "/boutique", label: "Boutique", icon: ShoppingBag, match: (p) => p.startsWith("/boutique") || p.startsWith("/inventaire") },
-  { to: "/classement", label: "Ligue", icon: Trophy, match: (p) => p.startsWith("/classement") },
-  { to: "/profil", label: "Profil", icon: UserIcon, match: (p) => p.startsWith("/profil") },
+  { to: "/", label: "Accueil", icon: Home, match: (path) => path === "/" },
+  { to: "/pulse", label: "Pulse", icon: Sparkles, match: (path) => path.startsWith("/pulse") },
+  {
+    to: "/boutique",
+    label: "Boutique",
+    icon: ShoppingBag,
+    match: (path) => path.startsWith("/boutique") || path.startsWith("/inventaire"),
+  },
+  {
+    to: "/classement",
+    label: "Ligue",
+    icon: Trophy,
+    match: (path) => path.startsWith("/classement"),
+  },
+  { to: "/profil", label: "Profil", icon: UserIcon, match: (path) => path.startsWith("/profil") },
 ];
 
-// Routes qui masquent la bottom nav (immersion totale).
 const HIDDEN_PREFIXES = ["/lecon", "/auth", "/onboarding"];
 
 export function BottomNav() {
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  if (HIDDEN_PREFIXES.some((p) => pathname.startsWith(p))) return null;
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  if (HIDDEN_PREFIXES.some((prefix) => pathname.startsWith(prefix))) return null;
 
   return (
     <nav
@@ -34,6 +44,7 @@ export function BottomNav() {
         {ITEMS.map((item) => {
           const active = item.match(pathname);
           const Icon = item.icon;
+
           return (
             <li key={item.to} className="flex">
               <Link
@@ -52,13 +63,13 @@ export function BottomNav() {
                     className={`h-5 w-5 transition-transform ${active ? "scale-110" : ""}`}
                     strokeWidth={active ? 2.6 : 2.1}
                   />
-                  {active && (
+                  {active ? (
                     <span
                       aria-hidden
                       className="pointer-events-none absolute inset-0 rounded-2xl"
                       style={{ boxShadow: "var(--glow-primary)" }}
                     />
-                  )}
+                  ) : null}
                 </span>
                 <span
                   className={`text-[10px] font-extrabold uppercase tracking-wider transition-colors ${
