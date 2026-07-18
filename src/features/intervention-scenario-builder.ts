@@ -1,5 +1,6 @@
 import type {
   InterventionPhase,
+  InterventionQuestionFormat,
   InterventionScenario,
   MissionAlert,
   MissionDifficulty,
@@ -10,7 +11,8 @@ import type {
   ScenarioIllustration,
   ScenarioStep,
 } from "./intervention-domain.ts";
-import { buildInterventionQuestion } from "./intervention-question-factory.ts";
+import { INTERVENTION_CONTENT_CATALOG } from "../content/intervention-content-catalog.ts";
+import type { ContentItem, ContentType } from "../content/content-domain.ts";
 
 export interface OfficialMissionProfile {
   id: string;
@@ -109,6 +111,26 @@ const PHASE_META: Record<InterventionPhase, { eyebrow: string; title: string; ob
     },
   };
 
+const INTERVENTION_FORMAT_BY_CONTENT_TYPE: Record<ContentType, InterventionQuestionFormat> = {
+  mcq: "single",
+  multiple_choice: "multiple",
+  ordering: "sequence",
+  true_false_contextual: "contextual-true-false",
+  equipment: "equipment",
+  association: "association",
+  error_identification: "error-identification",
+  regulatory: "regulatory",
+  handover: "handover",
+};
+
+function questionContent(profile: OfficialMissionProfile, phase: InterventionPhase): ContentItem {
+  const item = INTERVENTION_CONTENT_CATALOG.get(`${profile.id}-${phase}`);
+  if (item.metadata?.missionId !== profile.id || item.metadata?.phase !== phase) {
+    throw new Error(`Métadonnées de contenu incohérentes pour ${item.id}.`);
+  }
+  return item;
+}
+
 function snapshot(profile: OfficialMissionProfile, phase: InterventionPhase): PatientSnapshot {
   if (phase === "arrival") {
     return {
@@ -146,11 +168,13 @@ function buildStep(
   profile: OfficialMissionProfile,
   phase: InterventionPhase,
   narrative: string,
-  recommendedAction: string,
   index: number,
 ): ScenarioStep {
   const meta = PHASE_META[phase];
-  const question = buildInterventionQuestion(profile, phase, recommendedAction);
+  const content = questionContent(profile, phase);
+  const correctIds = new Set(
+    Array.isArray(content.correctAnswer) ? content.correctAnswer : [content.correctAnswer],
+  );
   const correctTime = 40 + index * 12;
   const errorTime = 25 + index * 8;
   const rewardBonus = phase === "care" || phase === "decision" || phase === "debrief" ? 8 : 0;
@@ -177,33 +201,39 @@ function buildStep(
     title: meta.title,
     narrative,
     objective: meta.objective,
-    question: question.question,
-    format: question.format,
-    requiredSelections: question.requiredSelections,
-    successFeedback: question.successFeedback,
-    priorityReminder: question.priorityReminder,
+    question: content.question,
+    format: INTERVENTION_FORMAT_BY_CONTENT_TYPE[content.type],
+    requiredSelections: content.metadata?.requiredSelections ?? correctIds.size,
+    successFeedback: content.explanation,
+    priorityReminder: content.priorityReminder,
     successEffect,
     failureEffect,
     patient: snapshot(profile, phase),
-    choices: question.choices.map((choice) => ({
-      ...choice,
-      feedback: choice.rationale,
-      effect: choice.recommended ? successEffect : failureEffect,
+    choices: content.answers.map((answer) => ({
+      id: answer.id,
+      label: answer.text,
+      detail: answer.detail ?? "Comparer cette option à la priorité immédiate de la situation.",
+      feedback: answer.explanation,
+      rationale: answer.explanation,
+      distractorKind: answer.distractorType,
+      sequenceRank: answer.sequenceRank,
+      recommended: correctIds.has(answer.id),
+      effect: correctIds.has(answer.id) ? successEffect : failureEffect,
     })),
   };
 }
 
 export function buildOfficialScenario(profile: OfficialMissionProfile): InterventionScenario {
   const { content } = profile;
-  const phases: Array<[InterventionPhase, string, string]> = [
-    ["arrival", content.arrival, content.equipment],
-    ["safety", content.scene, content.safetyAction],
-    ["primary", content.primary, content.primaryAction],
-    ["secondary", content.secondary, content.secondaryAction],
-    ["care", content.care, content.careAction],
-    ["decision", content.decision, content.decisionAction],
-    ["transport", content.transport, content.transportAction],
-    ["debrief", content.handover, "Faire un relais oral chronologique et compléter la traçabilité"],
+  const phases: Array<[InterventionPhase, string]> = [
+    ["arrival", content.arrival],
+    ["safety", content.scene],
+    ["primary", content.primary],
+    ["secondary", content.secondary],
+    ["care", content.care],
+    ["decision", content.decision],
+    ["transport", content.transport],
+    ["debrief", content.handover],
   ];
 
   return {
@@ -222,9 +252,7 @@ export function buildOfficialScenario(profile: OfficialMissionProfile): Interven
     reward: profile.reward,
     startingPatient: profile.startingPatient,
     pulseAdvice: profile.pulseAdvice,
-    steps: phases.map(([phase, narrative, recommended], index) =>
-      buildStep(profile, phase, narrative, recommended, index),
-    ),
+    steps: phases.map(([phase, narrative], index) => buildStep(profile, phase, narrative, index)),
   };
 }
 

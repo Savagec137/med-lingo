@@ -6,8 +6,9 @@ Le module est volontairement isolé des leçons, des quiz, de Pulse et de Supaba
 
 - `intervention-domain.ts` décrit les contrats TypeScript communs.
 - `intervention-missions.json` contient les 15 missions officielles, sans logique d'interface.
-- `intervention-scenario-builder.ts` transforme un profil de mission en huit étapes compatibles avec le moteur.
-- `intervention-question-factory.ts` génère les formats, les distracteurs plausibles et les feedbacks pédagogiques selon la difficulté.
+- `../content/banks/intervention-content.json` contient les 120 questions et leurs feedbacks, sans logique TypeScript.
+- `../content/content-schema.ts` valide la banque avant son utilisation.
+- `intervention-scenario-builder.ts` assemble un profil de mission et son contenu en huit étapes compatibles avec le moteur.
 - `intervention-official-scenarios.ts` charge et expose le catalogue officiel à l'interface.
 - `intervention-scenarios.ts` conserve les trois scénarios historiques, mais n'alimente plus le chapitre officiel.
 - `intervention-engine.ts` applique les décisions, embranchements, scores et récompenses sans dépendre de React.
@@ -17,17 +18,17 @@ Le module est volontairement isolé des leçons, des quiz, de Pulse et de Supaba
 
 ## Ajouter une mission officielle
 
-Ajouter un profil dans le tableau `missions` de `intervention-missions.json`. L'identifiant et l'ordre doivent être uniques et `unlockAfter` doit référencer la mission précédente. L'écran d'alerte représente la réception de l'appel, puis le builder génère automatiquement les huit phases du moteur : Arrivée, Sécurisation, ABCDE, Bilan secondaire, Gestes, Décisions, Transport et Débriefing.
+Ajouter un profil dans le tableau `missions` de `intervention-missions.json`. L'identifiant et l'ordre doivent être uniques et `unlockAfter` doit référencer la mission précédente. Ajouter ensuite ses huit questions dans `../content/banks/intervention-content.json`, avec les identifiants `${missionId}-${phase}`. L'écran d'alerte représente la réception de l'appel, puis le builder assemble automatiquement les huit phases du moteur : Arrivée, Sécurisation, ABCDE, Bilan secondaire, Gestes, Décisions, Transport et Débriefing.
 
 Les effets (`score`, `patient`, `timeSeconds`, `xpBonus`, `rewardBonus`) sont calculés par le moteur. Le composant d'interface n'a donc pas besoin d'être modifié, même si plus de 200 profils sont ajoutés. Les tests du catalogue contrôlent l'unicité, l'ordre, les huit phases et la chaîne de déverrouillage.
 
 ## Questions et randomisation
 
-Chaque question conserve des identifiants de réponse stables. Au début d'une nouvelle tentative, le moteur crée un ordre visuel aléatoire et l'enregistre dans la session. La correction compare les identifiants sélectionnés, jamais les lettres A, B, C, D ou E. Pour les choix uniques, l'algorithme équilibre les positions disponibles et interdit une troisième bonne réponse consécutive au même emplacement.
+Chaque question est chargée depuis le moteur de contenu générique et conserve des identifiants de réponse stables. Au début d'une nouvelle tentative, le moteur crée un ordre visuel aléatoire et l'enregistre dans la session. La correction compare les identifiants sélectionnés, jamais les lettres A, B, C, D ou E. Pour les choix uniques, l'algorithme équilibre les positions disponibles et interdit une troisième bonne réponse consécutive au même emplacement.
 
 Les formats `single`, `multiple`, `sequence`, `contextual-true-false`, `equipment`, `association`, `error-identification`, `regulatory` et `handover` utilisent le même moteur. Les choix multiples comparent un ensemble d'identifiants ; l'ordre chronologique compare une séquence d'identifiants.
 
-Le test `intervention-question-quality.test.ts` vérifie les nombres de choix, l'unicité des identifiants, la correction après mélange, les répétitions de position, l'équilibrage statistique et les réponses presque identiques.
+Le test `../content/content-engine.test.ts` vérifie le schéma, les recherches et les trois familles de correction. Le test `intervention-question-quality.test.ts` vérifie les nombres de choix, l'unicité des identifiants, la correction après mélange, les répétitions de position, l'équilibrage statistique et les réponses presque identiques.
 
 ## Accessibilité et performances
 
