@@ -124,7 +124,7 @@ function InterventionRoute() {
               session={intervention.session}
               elapsedSeconds={intervention.elapsedSeconds}
               reducedMotion={reducedMotion}
-              onChoose={intervention.choose}
+              onSubmit={intervention.submitAnswers}
               onContinue={intervention.continueMission}
             />
           )}

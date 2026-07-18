@@ -14,6 +14,22 @@ export type MissionDifficulty = "initiation" | "intermediate" | "advanced";
 export type MissionDifficultyStars = 1 | 2 | 3 | 4 | 5;
 export type MissionState = "new" | "completed" | "locked";
 export type PatientTone = "stable" | "watch" | "critical";
+export type InterventionQuestionFormat =
+  | "single"
+  | "multiple"
+  | "sequence"
+  | "contextual-true-false"
+  | "equipment"
+  | "association"
+  | "error-identification"
+  | "regulatory"
+  | "handover";
+export type DistractorKind =
+  | "frequent-error"
+  | "wrong-timing"
+  | "secondary-priority"
+  | "sign-misinterpretation"
+  | "other-context";
 export type ScenarioIllustration =
   | "general"
   | "cardiac"
@@ -75,6 +91,9 @@ export interface ScenarioChoice {
   label: string;
   detail: string;
   feedback: string;
+  rationale?: string;
+  distractorKind?: DistractorKind;
+  sequenceRank?: number;
   recommended: boolean;
   nextStepId?: string;
   effect: DecisionEffect;
@@ -87,6 +106,13 @@ export interface ScenarioStep {
   title: string;
   narrative: string;
   objective: string;
+  question?: string;
+  format?: InterventionQuestionFormat;
+  requiredSelections?: number;
+  successFeedback?: string;
+  priorityReminder?: string;
+  successEffect?: DecisionEffect;
+  failureEffect?: DecisionEffect;
   patient: PatientSnapshot;
   choices: ScenarioChoice[];
 }
@@ -115,6 +141,14 @@ export interface DecisionRecord {
   phase: InterventionPhase;
   choiceId: string;
   choiceLabel: string;
+  selectedChoiceIds?: string[];
+  choiceFeedbacks?: Array<{
+    choiceId: string;
+    choiceLabel: string;
+    rationale: string;
+    recommended: boolean;
+    selected: boolean;
+  }>;
   feedback: string;
   recommended: boolean;
   effect: DecisionEffect;
@@ -125,6 +159,7 @@ export interface InterventionSession {
   scenarioId: string;
   status: "alert" | "active" | "debrief";
   currentStepId: string;
+  choiceOrderByStep: Record<string, string[]>;
   visitedStepIds: string[];
   score: number;
   patientState: number;

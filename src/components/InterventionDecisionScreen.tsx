@@ -8,8 +8,12 @@ import {
   ShieldAlert,
   TimerReset,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
-import type { InterventionSession, ScenarioStep } from "@/features/intervention-domain";
+import { useEffect, useRef, useState } from "react";
+import type {
+  InterventionQuestionFormat,
+  InterventionSession,
+  ScenarioStep,
+} from "@/features/intervention-domain";
 import { PHASE_LABELS } from "@/features/intervention-domain";
 import { InterventionPhaseRail } from "@/components/InterventionPhaseRail";
 
@@ -18,7 +22,7 @@ interface Props {
   session: InterventionSession;
   elapsedSeconds: number;
   reducedMotion: boolean;
-  onChoose: (choiceId: string) => void;
+  onSubmit: (choiceIds: string[]) => void;
   onContinue: () => void;
 }
 
@@ -30,18 +34,39 @@ export function InterventionDecisionScreen({
   session,
   elapsedSeconds,
   reducedMotion,
-  onChoose,
+  onSubmit,
   onContinue,
 }: Props) {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  useEffect(() => titleRef.current?.focus(), [step.id]);
+  const [selectedChoiceIds, setSelectedChoiceIds] = useState<string[]>([]);
+  useEffect(() => {
+    setSelectedChoiceIds([]);
+    titleRef.current?.focus();
+  }, [step.id]);
   const decision = session.pendingDecision;
+  const format = step.format ?? "single";
+  const requiresValidation = format === "multiple" || format === "sequence";
+  const requiredSelections = step.requiredSelections ?? 1;
+  const readyToSubmit = selectedChoiceIds.length === requiredSelections;
   const patientColor =
     session.patientState >= 70
       ? "text-emerald-300"
       : session.patientState >= 40
         ? "text-amber-300"
         : "text-red-300";
+
+  const selectChoice = (choiceId: string) => {
+    if (decision) return;
+    if (!requiresValidation) {
+      onSubmit([choiceId]);
+      return;
+    }
+    setSelectedChoiceIds((current) => {
+      if (current.includes(choiceId)) return current.filter((id) => id !== choiceId);
+      if (current.length >= requiredSelections) return current;
+      return [...current, choiceId];
+    });
+  };
 
   return (
     <section aria-labelledby="intervention-step-title" className="mx-auto max-w-5xl">
@@ -76,24 +101,50 @@ export function InterventionDecisionScreen({
             </div>
 
             <fieldset className="mt-6" disabled={Boolean(decision)}>
-              <legend className="mb-3 text-sm font-black uppercase tracking-wider text-slate-200">
-                Quelle est ta décision ?
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <span className="rounded-full border border-violet-300/15 bg-violet-300/[0.07] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-violet-200">
+                  {FORMAT_LABELS[format]}
+                </span>
+                {requiresValidation && !decision && (
+                  <span className="text-xs font-bold text-slate-400">
+                    {selectedChoiceIds.length}/{requiredSelections} sélectionnées
+                  </span>
+                )}
+              </div>
+              <legend className="text-base font-black leading-relaxed text-slate-100">
+                {step.question ?? "Quelle est ta décision ?"}
               </legend>
+              <p className="mb-3 mt-1 text-xs leading-relaxed text-slate-500">
+                {format === "sequence"
+                  ? "Sélectionne les actions dans l'ordre où tu les réaliserais."
+                  : format === "multiple"
+                    ? `Sélectionne exactement ${requiredSelections} réponses puis valide.`
+                    : "Une seule réponse est attendue."}
+              </p>
               <div className="space-y-3">
                 {step.choices.map((choice, index) => {
-                  const selected = decision?.choiceId === choice.id;
+                  const recordedSelection = decision?.selectedChoiceIds ?? [decision?.choiceId];
+                  const selected = decision
+                    ? recordedSelection.includes(choice.id)
+                    : selectedChoiceIds.includes(choice.id);
+                  const sequencePosition = selectedChoiceIds.indexOf(choice.id) + 1;
                   return (
                     <motion.button
                       key={choice.id}
                       type="button"
-                      onClick={() => onChoose(choice.id)}
+                      onClick={() => selectChoice(choice.id)}
+                      aria-pressed={selected}
                       initial={reducedMotion ? false : { opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: reducedMotion ? 0 : index * 0.06 }}
                       className={`flex min-h-16 w-full items-start gap-3 rounded-2xl border p-4 text-left outline-none transition focus-visible:ring-4 focus-visible:ring-cyan-300/30 ${selected ? "border-cyan-300/50 bg-cyan-300/12" : decision ? "border-white/5 bg-white/[0.02] opacity-45" : "border-white/10 bg-white/[0.04] hover:border-cyan-300/35 hover:bg-white/[0.07]"}`}
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-black text-white">
-                        {String.fromCharCode(65 + index)}
+                        {format === "sequence" && sequencePosition > 0
+                          ? sequencePosition
+                          : selected && format === "multiple"
+                            ? "✓"
+                            : String.fromCharCode(65 + index)}
                       </span>
                       <span>
                         <span className="block font-bold text-slate-100">{choice.label}</span>
@@ -105,6 +156,16 @@ export function InterventionDecisionScreen({
                   );
                 })}
               </div>
+              {requiresValidation && !decision && (
+                <button
+                  type="button"
+                  disabled={!readyToSubmit}
+                  onClick={() => onSubmit(selectedChoiceIds)}
+                  className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-violet-300 px-5 font-black text-slate-950 outline-none hover:bg-violet-200 focus-visible:ring-4 focus-visible:ring-violet-200/35 disabled:cursor-not-allowed disabled:bg-slate-800 disabled:text-slate-500"
+                >
+                  Valider ma sélection
+                </button>
+              )}
             </fieldset>
 
             <AnimatePresence>
@@ -120,12 +181,42 @@ export function InterventionDecisionScreen({
                       className={`mt-0.5 h-5 w-5 shrink-0 ${decision.recommended ? "text-emerald-300" : "text-amber-300"}`}
                     />
                     <div>
-                      <div className="font-black text-white">Conséquence observée</div>
+                      <div className="font-black text-white">
+                        {decision.recommended ? "Raisonnement attendu" : "Priorité à réévaluer"}
+                      </div>
                       <p className="mt-1 text-sm leading-relaxed text-slate-300">
                         {decision.feedback}
                       </p>
                     </div>
                   </div>
+                  {step.priorityReminder && (
+                    <div className="mt-3 rounded-xl border border-white/8 bg-slate-950/35 p-3 text-xs leading-relaxed text-slate-300">
+                      <span className="font-black text-white">Règle à retenir : </span>
+                      {step.priorityReminder}
+                    </div>
+                  )}
+                  {decision.choiceFeedbacks && (
+                    <ul className="mt-3 space-y-2" aria-label="Explication de chaque réponse">
+                      {decision.choiceFeedbacks.map((feedback) => (
+                        <li
+                          key={feedback.choiceId}
+                          className={`rounded-xl border p-3 text-xs leading-relaxed ${feedback.recommended ? "border-emerald-300/15 bg-emerald-300/[0.05]" : feedback.selected ? "border-amber-300/15 bg-amber-300/[0.05]" : "border-white/8 bg-white/[0.025]"}`}
+                        >
+                          <div className="font-bold text-slate-100">
+                            {feedback.choiceLabel}
+                            <span className="ml-2 text-[9px] font-black uppercase tracking-wider text-slate-500">
+                              {feedback.recommended
+                                ? format === "sequence"
+                                  ? "Ordre attendu"
+                                  : "Réponse attendue"
+                                : "Moins adaptée"}
+                            </span>
+                          </div>
+                          <p className="mt-1 text-slate-400">{feedback.rationale}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-bold">
                     <span className="rounded-full bg-white/8 px-3 py-1 text-slate-200">
                       Score {decision.effect.score >= 0 ? "+" : ""}
@@ -203,6 +294,18 @@ export function InterventionDecisionScreen({
     </section>
   );
 }
+
+const FORMAT_LABELS: Record<InterventionQuestionFormat, string> = {
+  single: "Choix unique",
+  multiple: "Choix multiples",
+  sequence: "Ordre chronologique",
+  "contextual-true-false": "Vrai / faux contextualisé",
+  equipment: "Sélection du matériel",
+  association: "Association signe / action",
+  "error-identification": "Identification d'une erreur",
+  regulatory: "Décision réglementaire",
+  handover: "Transmission SAMU",
+};
 
 function Metric({ Icon, label, value }: { Icon: typeof Activity; label: string; value: string }) {
   return (

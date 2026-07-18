@@ -10,6 +10,7 @@ import type {
   ScenarioIllustration,
   ScenarioStep,
 } from "./intervention-domain.ts";
+import { buildInterventionQuestion } from "./intervention-question-factory.ts";
 
 export interface OfficialMissionProfile {
   id: string;
@@ -146,13 +147,28 @@ function buildStep(
   phase: InterventionPhase,
   narrative: string,
   recommendedAction: string,
-  unsafeAction: string,
   index: number,
 ): ScenarioStep {
   const meta = PHASE_META[phase];
+  const question = buildInterventionQuestion(profile, phase, recommendedAction);
   const correctTime = 40 + index * 12;
   const errorTime = 25 + index * 8;
   const rewardBonus = phase === "care" || phase === "decision" || phase === "debrief" ? 8 : 0;
+  const successEffect = {
+    score: 8 + profile.difficultyStars,
+    patient: phase === "debrief" ? 3 : 5 + Math.floor(profile.difficultyStars / 2),
+    timeSeconds: correctTime,
+    xpBonus: 5 + profile.difficultyStars,
+    rewardBonus,
+    flags: [`${phase}-secured`],
+  };
+  const failureEffect = {
+    score: -(7 + profile.difficultyStars),
+    patient: -(6 + profile.difficultyStars),
+    timeSeconds: errorTime,
+    isError: true,
+    flags: [`${phase}-risk`],
+  };
 
   return {
     id: `${profile.id}-${phase}`,
@@ -161,59 +177,33 @@ function buildStep(
     title: meta.title,
     narrative,
     objective: meta.objective,
+    question: question.question,
+    format: question.format,
+    requiredSelections: question.requiredSelections,
+    successFeedback: question.successFeedback,
+    priorityReminder: question.priorityReminder,
+    successEffect,
+    failureEffect,
     patient: snapshot(profile, phase),
-    choices: [
-      {
-        id: `${profile.id}-${phase}-recommended`,
-        label: recommendedAction,
-        detail: "Conduite structurée, réévaluée et coordonnée avec l'équipe.",
-        feedback:
-          "Cette décision respecte les priorités, limite le risque et améliore la continuité de la prise en charge.",
-        recommended: true,
-        effect: {
-          score: 8 + profile.difficultyStars,
-          patient: phase === "debrief" ? 3 : 5 + Math.floor(profile.difficultyStars / 2),
-          timeSeconds: correctTime,
-          xpBonus: 5 + profile.difficultyStars,
-          rewardBonus,
-          flags: [`${phase}-secured`],
-        },
-      },
-      {
-        id: `${profile.id}-${phase}-unsafe`,
-        label: unsafeAction,
-        detail: "Option rapide en apparence, mais inadaptée aux priorités de la situation.",
-        feedback:
-          "Cette décision retarde une action prioritaire ou augmente le risque pour le patient et l'équipe.",
-        recommended: false,
-        effect: {
-          score: -(7 + profile.difficultyStars),
-          patient: -(6 + profile.difficultyStars),
-          timeSeconds: errorTime,
-          isError: true,
-          flags: [`${phase}-risk`],
-        },
-      },
-    ],
+    choices: question.choices.map((choice) => ({
+      ...choice,
+      feedback: choice.rationale,
+      effect: choice.recommended ? successEffect : failureEffect,
+    })),
   };
 }
 
 export function buildOfficialScenario(profile: OfficialMissionProfile): InterventionScenario {
   const { content } = profile;
-  const phases: Array<[InterventionPhase, string, string, string]> = [
-    ["arrival", content.arrival, content.equipment, "Partir sans briefing ni matériel anticipé"],
-    ["safety", content.scene, content.safetyAction, content.safetyAvoid],
-    ["primary", content.primary, content.primaryAction, content.primaryAvoid],
-    ["secondary", content.secondary, content.secondaryAction, content.secondaryAvoid],
-    ["care", content.care, content.careAction, content.careAvoid],
-    ["decision", content.decision, content.decisionAction, content.decisionAvoid],
-    ["transport", content.transport, content.transportAction, content.transportAvoid],
-    [
-      "debrief",
-      content.handover,
-      "Faire un relais oral chronologique et compléter la traçabilité",
-      "Déposer uniquement la fiche sans transmission orale",
-    ],
+  const phases: Array<[InterventionPhase, string, string]> = [
+    ["arrival", content.arrival, content.equipment],
+    ["safety", content.scene, content.safetyAction],
+    ["primary", content.primary, content.primaryAction],
+    ["secondary", content.secondary, content.secondaryAction],
+    ["care", content.care, content.careAction],
+    ["decision", content.decision, content.decisionAction],
+    ["transport", content.transport, content.transportAction],
+    ["debrief", content.handover, "Faire un relais oral chronologique et compléter la traçabilité"],
   ];
 
   return {
@@ -232,8 +222,8 @@ export function buildOfficialScenario(profile: OfficialMissionProfile): Interven
     reward: profile.reward,
     startingPatient: profile.startingPatient,
     pulseAdvice: profile.pulseAdvice,
-    steps: phases.map(([phase, narrative, recommended, unsafe], index) =>
-      buildStep(profile, phase, narrative, recommended, unsafe, index),
+    steps: phases.map(([phase, narrative, recommended], index) =>
+      buildStep(profile, phase, narrative, recommended, index),
     ),
   };
 }

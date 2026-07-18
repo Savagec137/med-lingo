@@ -12,6 +12,7 @@ import {
   getCurrentScenarioStep,
   mergeMissionProgress,
   selectInterventionChoice,
+  submitInterventionAnswers,
 } from "@/features/intervention-engine";
 
 const STORAGE_KEY = "medlingo:intervention-progress:v1";
@@ -87,6 +88,16 @@ export function useInterventionSession() {
     [scenario],
   );
 
+  const submitAnswers = useCallback(
+    (choiceIds: string[]) => {
+      if (!scenario) return;
+      setSession((current) =>
+        current ? submitInterventionAnswers(scenario, current, choiceIds) : current,
+      );
+    },
+    [scenario],
+  );
+
   const continueMission = useCallback(() => {
     if (!scenario) return;
     setSession((current) => {
@@ -129,6 +140,7 @@ export function useInterventionSession() {
     selectMission,
     acceptMission,
     choose,
+    submitAnswers,
     continueMission,
     leaveMission,
     restartMission,
