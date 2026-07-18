@@ -15,10 +15,14 @@ export interface Lesson {
   title: string;
   emoji: string;
   questions: Question[];
+  kind?: "lesson" | "quiz" | "boss";
+  formationId?: string;
+  parcoursId?: string;
   contentLessonId?: string;
+  contentFile?: string;
 }
 
-export interface Unit {
+export interface Parcours {
   id: string;
   title: string;
   subtitle: string;
@@ -26,6 +30,9 @@ export interface Unit {
   icon: string;
   lessons: Lesson[];
 }
+
+/** @deprecated Utiliser Parcours pour les nouveaux contenus. */
+export type Unit = Parcours;
 
 // Helper to build MCQ quickly
 const q = (
@@ -38,6 +45,7 @@ const q = (
 ): Question => ({ id, type: "mcq", prompt, question, choices, answer, explanation });
 
 import { DEA_UNITS } from "./curriculum-dea";
+import { DATA_DRIVEN_PARCOURS } from "../content/curriculum-content";
 
 const BASE_UNITS: Unit[] = [
   {
@@ -728,7 +736,9 @@ const ORDER = ["prefixes", "suffixes", "radicaux", "os", "organes", "pathologies
 const ORDERED_BASE = ORDER.map((id) => BASE_UNITS.find((u) => u.id === id)).filter((u): u is Unit =>
   Boolean(u),
 );
-export const UNITS: Unit[] = [...ORDERED_BASE, ...DEA_UNITS];
+export const PARCOURS: Parcours[] = [...DATA_DRIVEN_PARCOURS, ...ORDERED_BASE, ...DEA_UNITS];
+/** @deprecated Alias de compatibilité pour les données historiques. */
+export const UNITS: Parcours[] = PARCOURS;
 
 // Ids de repères pour le placement de niveau (onboarding).
 export const LEVEL_MILESTONES = {
@@ -749,16 +759,26 @@ export function lessonsForLevel(level: LevelKey): string[] {
   return out;
 }
 
-export function findLesson(lessonId: string): { unit: Unit; lesson: Lesson } | null {
-  for (const unit of UNITS) {
-    const lesson = unit.lessons.find((l) => l.id === lessonId);
-    if (lesson) return { unit, lesson };
+export function findLesson(
+  lessonId: string,
+): { parcours: Parcours; unit: Parcours; lesson: Lesson } | null {
+  for (const parcours of PARCOURS) {
+    const lesson = parcours.lessons.find((item) => item.id === lessonId);
+    if (lesson) return { parcours, unit: parcours, lesson };
   }
   return null;
 }
 
-export function allLessonsInOrder(): { unitId: string; lessonId: string }[] {
-  const out: { unitId: string; lessonId: string }[] = [];
-  for (const u of UNITS) for (const l of u.lessons) out.push({ unitId: u.id, lessonId: l.id });
+export function allLessonsInOrder(): {
+  parcoursId: string;
+  unitId: string;
+  lessonId: string;
+}[] {
+  const out: { parcoursId: string; unitId: string; lessonId: string }[] = [];
+  for (const parcours of PARCOURS) {
+    for (const lesson of parcours.lessons) {
+      out.push({ parcoursId: parcours.id, unitId: parcours.id, lessonId: lesson.id });
+    }
+  }
   return out;
 }

@@ -1,5 +1,9 @@
 import type { ContentItem } from "./content-domain.ts";
-import { isMatchingAssociation } from "./pedagogical-content.ts";
+import type { LessonSelectionPolicy } from "./learning-domain.ts";
+
+function isMatchingAssociation(item: ContentItem) {
+  return item.type === "association" && item.metadata?.associationMode === "matching";
+}
 
 export interface PreparedLessonAnswer {
   id: string;
@@ -10,11 +14,12 @@ export interface PreparedLessonAnswer {
 
 export interface PreparedLessonInteraction {
   id: string;
-  type: "choice" | "association";
+  type: "choice" | "multiple_choice" | "association" | "ordering";
   question: string;
   answers: PreparedLessonAnswer[];
   matchOptions: Array<{ id: string; text: string }>;
   correctAnswerIds: string[];
+  requiredSelections: number;
   explanation?: string;
 }
 
@@ -32,10 +37,18 @@ export function prepareContentInteraction(
   random: () => number = Math.random,
 ): PreparedLessonInteraction {
   const association = isMatchingAssociation(item);
+  const ordering = item.type === "ordering";
+  const multipleChoice = item.type === "multiple_choice";
   const answers = association ? item.answers : shuffled(item.answers, random);
   return {
     id: item.id,
-    type: association ? "association" : "choice",
+    type: association
+      ? "association"
+      : ordering
+        ? "ordering"
+        : multipleChoice
+          ? "multiple_choice"
+          : "choice",
     question: item.question,
     answers: answers.map((answer) => ({
       id: answer.id,
@@ -53,6 +66,17 @@ export function prepareContentInteraction(
         )
       : [],
     correctAnswerIds: Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer],
+    requiredSelections: Array.isArray(item.correctAnswer) ? item.correctAnswer.length : 1,
     explanation: item.explanation,
   };
+}
+
+export function selectContentItems(
+  items: ContentItem[],
+  policy: LessonSelectionPolicy,
+  random: () => number = Math.random,
+) {
+  if (policy.strategy === "all") return [...items];
+  const count = Math.min(policy.count ?? items.length, items.length);
+  return shuffled(items, random).slice(0, count);
 }

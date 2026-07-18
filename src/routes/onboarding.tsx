@@ -88,7 +88,9 @@ function Onboarding() {
                     : "border-border bg-card hover:border-[color:var(--color-primary)]/60"
                 }`}
               >
-                <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${active ? "bg-[color:var(--color-primary)] text-primary-foreground" : "bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]"}`}>
+                <div
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${active ? "bg-[color:var(--color-primary)] text-primary-foreground" : "bg-[color:var(--color-warning)]/25 text-[color:var(--color-warning)]"}`}
+                >
                   <Icon className="h-6 w-6" strokeWidth={2.25} />
                 </div>
                 <div className="min-w-0">
@@ -96,7 +98,8 @@ function Onboarding() {
                   <div className="mt-1 text-xs text-muted-foreground">{c.desc}</div>
                   {LEVEL_MILESTONES[c.key].length > 0 && (
                     <div className="mt-2 text-[10px] font-bold uppercase tracking-wider text-[color:var(--color-primary)]">
-                      {LEVEL_MILESTONES[c.key].length} unité·s validée·s automatiquement
+                      {LEVEL_MILESTONES[c.key].length} parcours validé
+                      {LEVEL_MILESTONES[c.key].length > 1 ? "s" : ""} automatiquement
                     </div>
                   )}
                 </div>

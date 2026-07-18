@@ -2,6 +2,8 @@
 
 Les questions sont des données. Elles ne doivent pas être écrites dans un composant React, un hook ou une fonction de génération.
 
+Les nouvelles banques utilisent la V2 décrite dans [`formations/README.md`](./formations/README.md). La V1 reste disponible uniquement pour assurer la compatibilité des contenus historiques pendant leur migration.
+
 ## Organisation
 
 - `content-domain.ts` contient les contrats TypeScript indépendants de l'interface.
@@ -12,6 +14,10 @@ Les questions sont des données. Elles ne doivent pas être écrites dans un com
 - `pedagogical-content.ts` valide et expose les leçons courtes du parcours DEA.
 - `lesson-runtime.ts` prépare une nouvelle tentative et mélange les réponses sans perdre leurs identifiants.
 - `banks/pedagogical-lessons.json` décrit l'ordre des interactions, la carte Pulse et la provenance de chaque leçon.
+- `formation-registry.ts` découvre automatiquement toutes les formations et leurs parcours.
+- `lesson-content-repository.ts` charge chaque fichier de leçon à la demande et le met en cache.
+- `formations/<formation>/formation.json` définit les parcours, leçons, quiz et boss.
+- `formations/<formation>/parcours-XX/lesson-XX.json` contient une seule banque indépendante.
 
 ## Ajouter une question
 
@@ -72,6 +78,8 @@ const result = catalog.evaluate("communication_001", ["communication_001-introdu
 Le résultat contient la correction globale et le feedback de chaque réponse. Le moteur ne dépend ni de React ni du Mode Intervention.
 
 ## Ajouter une leçon pédagogique
+
+Pour tout nouveau contenu, utiliser exclusivement la structure V2 dans `formations/`. Les étapes ci-dessous concernent seulement une maintenance temporaire de la V1.
 
 1. Ajouter les interactions dans une banque JSON dédiée sous `banks/`.
 2. Renseigner `metadata.lessonId`, `metadata.sourceDocument` et `metadata.sourcePages` sur chaque interaction.

@@ -3,17 +3,10 @@ import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
 import { UNITS, findLesson } from "@/lib/curriculum";
-import {
-  awardBadges,
-  bumpMissions,
-  logXpTransaction,
-} from "@/lib/use-gamification";
+import { lessonXpForResult } from "@/content/learning-rewards";
+import { awardBadges, bumpMissions, logXpTransaction } from "@/lib/use-gamification";
 import { awardCoins } from "@/lib/use-wallet";
-import {
-  badgesToAward,
-  levelFromXp,
-  todayIso,
-} from "@/lib/gamification";
+import { badgesToAward, levelFromXp, todayIso } from "@/lib/gamification";
 
 const KEY = "medlingo-progress-v1";
 
@@ -103,7 +96,8 @@ function rowToProgress(r: Row): Progress {
     hearts: r.hearts ?? MAX_HEARTS,
     heartsUpdatedAt: r.hearts_updated_at ? new Date(r.hearts_updated_at).getTime() : Date.now(),
     completedLessons: r.completed_lessons ?? {},
-    onboarded: r.onboarded ?? ((r.xp ?? 0) > 0 || Object.keys(r.completed_lessons ?? {}).length > 0),
+    onboarded:
+      r.onboarded ?? ((r.xp ?? 0) > 0 || Object.keys(r.completed_lessons ?? {}).length > 0),
     dailyGoalXp: r.daily_goal_xp ?? 30,
     xpToday: r.xp_today ?? 0,
     xpTodayDate: r.xp_today_date ?? todayIso(),
@@ -135,14 +129,24 @@ function mergeProgress(a: Progress, b: Progress): Progress {
   return {
     xp: Math.max(a.xp, b.xp),
     streak: Math.max(a.streak, b.streak),
-    lastStudyDate:
-      !a.lastStudyDate ? b.lastStudyDate : !b.lastStudyDate ? a.lastStudyDate : a.lastStudyDate > b.lastStudyDate ? a.lastStudyDate : b.lastStudyDate,
+    lastStudyDate: !a.lastStudyDate
+      ? b.lastStudyDate
+      : !b.lastStudyDate
+        ? a.lastStudyDate
+        : a.lastStudyDate > b.lastStudyDate
+          ? a.lastStudyDate
+          : b.lastStudyDate,
     hearts: Math.min(a.hearts, b.hearts),
     heartsUpdatedAt: Math.max(a.heartsUpdatedAt, b.heartsUpdatedAt),
     completedLessons: completed,
     onboarded: a.onboarded || b.onboarded,
     dailyGoalXp: Math.max(a.dailyGoalXp, b.dailyGoalXp),
-    xpToday: a.xpTodayDate === b.xpTodayDate ? Math.max(a.xpToday, b.xpToday) : (a.xpTodayDate > b.xpTodayDate ? a.xpToday : b.xpToday),
+    xpToday:
+      a.xpTodayDate === b.xpTodayDate
+        ? Math.max(a.xpToday, b.xpToday)
+        : a.xpTodayDate > b.xpTodayDate
+          ? a.xpToday
+          : b.xpToday,
     xpTodayDate: a.xpTodayDate > b.xpTodayDate ? a.xpTodayDate : b.xpTodayDate,
   };
 }
@@ -216,78 +220,88 @@ export function useProgress() {
     return () => clearTimeout(t);
   }, [progress, hydrated]);
 
-  const completeLesson = useCallback((lessonId: string, correct: number, total: number) => {
-    const score = total === 0 ? 0 : correct / total;
-    const stars = score >= 0.95 ? 3 : score >= 0.75 ? 2 : score >= 0.5 ? 1 : 0;
-    const gainedXp = 10 + stars * 5;
-    const t = todayIso();
+  const completeLesson = useCallback(
+    (lessonId: string, correct: number, total: number, configuredXp?: number) => {
+      const score = total === 0 ? 0 : correct / total;
+      const stars = score >= 0.95 ? 3 : score >= 0.75 ? 2 : score >= 0.5 ? 1 : 0;
+      const gainedXp = lessonXpForResult(stars, configuredXp);
+      const t = todayIso();
 
-    let nextProgress: Progress = DEFAULT;
-    setProgress((p) => {
-      const rolled = rollDaily(p);
-      const prev = rolled.completedLessons[lessonId];
-      const bestScore = Math.max(prev?.bestScore ?? 0, score);
-      const bestStars = Math.max(prev?.stars ?? 0, stars);
-      let streak = rolled.streak;
-      if (rolled.lastStudyDate !== t) {
-        if (rolled.lastStudyDate && daysBetween(rolled.lastStudyDate, t) === 1) streak += 1;
-        else streak = 1;
-      }
-      const updated: Progress = {
-        ...rolled,
-        completedLessons: { ...rolled.completedLessons, [lessonId]: { stars: bestStars, bestScore } },
-        xp: rolled.xp + gainedXp,
-        xpToday: rolled.xpToday + gainedXp,
-        streak,
-        lastStudyDate: t,
-      };
-      nextProgress = updated;
-      return updated;
-    });
-
-    const uid = userIdRef.current;
-    if (uid) {
-      // Log attempt + XP
-      supabase.from("lesson_attempts").insert({ user_id: uid, lesson_id: lessonId, correct, total, stars });
-      logXpTransaction(uid, gainedXp, "lesson", lessonId);
-
-      // Missions
-      const isNewDay = nextProgress.lastStudyDate !== progress.lastStudyDate;
-      bumpMissions(uid, "xp", gainedXp);
-      bumpMissions(uid, "lessons", 1);
-      if (stars === 3) bumpMissions(uid, "perfect_lessons", 1);
-      if (isNewDay) bumpMissions(uid, "study_days", 1);
-
-      // Badges
-      const found = findLesson(lessonId);
-      const completedIds = Object.keys(nextProgress.completedLessons);
-      const anatomyDone =
-        allLessonIdsForUnit("os").every((id) => completedIds.includes(id)) &&
-        allLessonIdsForUnit("organes").every((id) => completedIds.includes(id));
-      const vocabDone =
-        allLessonIdsForUnit("prefixes").every((id) => completedIds.includes(id)) &&
-        allLessonIdsForUnit("suffixes").every((id) => completedIds.includes(id)) &&
-        allLessonIdsForUnit("radicaux").every((id) => completedIds.includes(id));
-      const codes = badgesToAward({
-        xp: nextProgress.xp,
-        streak: nextProgress.streak,
-        level: levelFromXp(nextProgress.xp),
-        completedCount: completedIds.length,
-        perfectLesson: stars === 3,
-        lessonUnitId: found?.unit.id,
-        anatomyDone,
-        vocabDone,
+      let nextProgress: Progress = DEFAULT;
+      setProgress((p) => {
+        const rolled = rollDaily(p);
+        const prev = rolled.completedLessons[lessonId];
+        const bestScore = Math.max(prev?.bestScore ?? 0, score);
+        const bestStars = Math.max(prev?.stars ?? 0, stars);
+        let streak = rolled.streak;
+        if (rolled.lastStudyDate !== t) {
+          if (rolled.lastStudyDate && daysBetween(rolled.lastStudyDate, t) === 1) streak += 1;
+          else streak = 1;
+        }
+        const updated: Progress = {
+          ...rolled,
+          completedLessons: {
+            ...rolled.completedLessons,
+            [lessonId]: { stars: bestStars, bestScore },
+          },
+          xp: rolled.xp + gainedXp,
+          xpToday: rolled.xpToday + gainedXp,
+          streak,
+          lastStudyDate: t,
+        };
+        nextProgress = updated;
+        return updated;
       });
-      awardBadges(uid, codes);
 
-      // Coins: 5 base + 5 par étoile (5-20)
-      const coinsGained = 5 + stars * 5;
-      awardCoins(coinsGained, "lesson", lessonId).then(() => {
-        qc.invalidateQueries({ queryKey: ["wallet"] });
-      }).catch(() => {});
-    }
-    return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
-  }, [progress.lastStudyDate, qc]);
+      const uid = userIdRef.current;
+      if (uid) {
+        // Log attempt + XP
+        supabase
+          .from("lesson_attempts")
+          .insert({ user_id: uid, lesson_id: lessonId, correct, total, stars });
+        logXpTransaction(uid, gainedXp, "lesson", lessonId);
+
+        // Missions
+        const isNewDay = nextProgress.lastStudyDate !== progress.lastStudyDate;
+        bumpMissions(uid, "xp", gainedXp);
+        bumpMissions(uid, "lessons", 1);
+        if (stars === 3) bumpMissions(uid, "perfect_lessons", 1);
+        if (isNewDay) bumpMissions(uid, "study_days", 1);
+
+        // Badges
+        const found = findLesson(lessonId);
+        const completedIds = Object.keys(nextProgress.completedLessons);
+        const anatomyDone =
+          allLessonIdsForUnit("os").every((id) => completedIds.includes(id)) &&
+          allLessonIdsForUnit("organes").every((id) => completedIds.includes(id));
+        const vocabDone =
+          allLessonIdsForUnit("prefixes").every((id) => completedIds.includes(id)) &&
+          allLessonIdsForUnit("suffixes").every((id) => completedIds.includes(id)) &&
+          allLessonIdsForUnit("radicaux").every((id) => completedIds.includes(id));
+        const codes = badgesToAward({
+          xp: nextProgress.xp,
+          streak: nextProgress.streak,
+          level: levelFromXp(nextProgress.xp),
+          completedCount: completedIds.length,
+          perfectLesson: stars === 3,
+          lessonUnitId: found?.unit.id,
+          anatomyDone,
+          vocabDone,
+        });
+        awardBadges(uid, codes);
+
+        // Coins: 5 base + 5 par étoile (5-20)
+        const coinsGained = 5 + stars * 5;
+        awardCoins(coinsGained, "lesson", lessonId)
+          .then(() => {
+            qc.invalidateQueries({ queryKey: ["wallet"] });
+          })
+          .catch(() => {});
+      }
+      return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
+    },
+    [progress.lastStudyDate, qc],
+  );
 
   const loseHeart = useCallback(() => {
     setProgress((p) => {

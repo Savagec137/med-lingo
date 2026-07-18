@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 2,
+  "id": "dea",
+  "title": "Diplôme d'État d'Ambulancier",
+  "parcours": [
+    {
+      "id": "parcours-01",
+      "order": 1,
+      "title": "Découvrir le corps humain",
+      "subtitle": "Les bases de l'anatomie",
+      "theme": "green",
+      "lessons": [
+        {
+          "id": "dea-p01-l01",
+          "title": "Pourquoi apprendre l'anatomie ?",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-01.json"
+        },
+        {
+          "id": "dea-p01-l02",
+          "title": "Position anatomique",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-02.json"
+        },
+        {
+          "id": "dea-p01-l03",
+          "title": "Plans anatomiques",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-03.json"
+        },
+        {
+          "id": "dea-p01-l04",
+          "title": "Régions du corps",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-04.json"
+        },
+        {
+          "id": "dea-p01-l05",
+          "title": "Orientation (antérieur, postérieur…)",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-05.json"
+        },
+        {
+          "id": "dea-p01-l06",
+          "title": "Cellules",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-06.json"
+        },
+        {
+          "id": "dea-p01-l07",
+          "title": "Tissus",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-07.json"
+        },
+        {
+          "id": "dea-p01-l08",
+          "title": "Organes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-08.json"
+        },
+        {
+          "id": "dea-p01-l09",
+          "title": "Systèmes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-09.json"
+        },
+        {
+          "id": "dea-p01-l10",
+          "title": "Quiz",
+          "kind": "quiz",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-10.json"
+        },
+        {
+          "id": "dea-p01-l11",
+          "title": "Boss",
+          "kind": "boss",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-11.json"
+        }
+      ]
+    },
+    {
+      "id": "parcours-02",
+      "order": 2,
+      "title": "Parler le langage médical",
+      "subtitle": "Préfixes, suffixes et radicaux",
+      "theme": "blue",
+      "lessons": [
+        {
+          "id": "dea-p02-l01",
+          "title": "Construire un mot médical",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-01.json"
+        },
+        {
+          "id": "dea-p02-l02",
+          "title": "Préfixes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-02.json"
+        },
+        {
+          "id": "dea-p02-l03",
+          "title": "Préfixes quantité",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-03.json"
+        },
+        {
+          "id": "dea-p02-l04",
+          "title": "Préfixes position",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-04.json"
+        },
+        {
+          "id": "dea-p02-l05",
+          "title": "Suffixes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-05.json"
+        },
+        {
+          "id": "dea-p02-l06",
+          "title": "Suffixes pathologie",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-06.json"
+        },
+        {
+          "id": "dea-p02-l07",
+          "title": "Suffixes chirurgie",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-07.json"
+        },
+        {
+          "id": "dea-p02-l08",
+          "title": "Radicaux",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-08.json"
+        },
+        {
+          "id": "dea-p02-l09",
+          "title": "Radicaux organes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-09.json"
+        },
+        {
+          "id": "dea-p02-l10",
+          "title": "Radicaux tissus",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-10.json"
+        },
+        {
+          "id": "dea-p02-l11",
+          "title": "Décoder un mot complexe",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-11.json"
+        },
+        {
+          "id": "dea-p02-l12",
+          "title": "Quiz",
+          "kind": "quiz",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-12.json"
+        },
+        {
+          "id": "dea-p02-l13",
+          "title": "Boss",
+          "kind": "boss",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-13.json"
+        }
+      ]
+    },
+    {
+      "id": "parcours-03",
+      "order": 3,
+      "title": "Construire le squelette",
+      "subtitle": "Comprendre l'ossature humaine",
+      "theme": "purple",
+      "lessons": []
+    },
+    {
+      "id": "parcours-04",
+      "order": 4,
+      "title": "Mettre le corps en mouvement",
+      "subtitle": "Muscles et articulations",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-05",
+      "order": 5,
+      "title": "Explorer les organes",
+      "subtitle": "Les grands systèmes du corps",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-06",
+      "order": 6,
+      "title": "Comprendre le vivant",
+      "subtitle": "Physiologie et fonctionnement",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-07",
+      "order": 7,
+      "title": "Communiquer avec le patient",
+      "subtitle": "Relation de confiance et transmission",
+      "theme": "purple",
+      "lessons": []
+    },
+    {
+      "id": "parcours-08",
+      "order": 8,
+      "title": "Prévenir les risques",
+      "subtitle": "Hygiène et asepsie",
+      "theme": "teal",
+      "lessons": []
+    },
+    {
+      "id": "parcours-09",
+      "order": 9,
+      "title": "Sécuriser l'intervention",
+      "subtitle": "Protection et approche de la victime",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-10",
+      "order": 10,
+      "title": "Évaluer le patient",
+      "subtitle": "Bilans et paramètres vitaux",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-11",
+      "order": 11,
+      "title": "Agir en urgence",
+      "subtitle": "Gestes qui sauvent",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-12",
+      "order": 12,
+      "title": "Reconnaître les détresses vitales",
+      "subtitle": "Respiratoire, circulatoire et neurologique",
+      "theme": "cyan",
+      "lessons": []
+    },
+    {
+      "id": "parcours-13",
+      "order": 13,
+      "title": "Comprendre les pathologies",
+      "subtitle": "Les maladies rencontrées sur le terrain",
+      "theme": "purple",
+      "lessons": []
+    },
+    {
+      "id": "parcours-14",
+      "order": 14,
+      "title": "Prendre en charge les traumatismes",
+      "subtitle": "Fractures, plaies et brûlures",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-15",
+      "order": 15,
+      "title": "Faire face aux situations particulières",
+      "subtitle": "Obstétrique, pédiatrie, gériatrie et psychiatrie",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-16",
+      "order": 16,
+      "title": "Maîtriser le transport sanitaire",
+      "subtitle": "Brancardage, matériel et ergonomie",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-17",
+      "order": 17,
+      "title": "Exercer comme professionnel",
+      "subtitle": "Réglementation, éthique et responsabilités",
+      "theme": "slate",
+      "lessons": []
+    }
+  ]
+}
