@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "b1-u1-l1-qcm-01",
+      "unit": "Bloc 1 - Unité 1",
+      "lesson": "Les bases de la communication",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Le patient dit « tout va bien », mais reste crispé et détourne le regard. Quelle attitude est la plus adaptée ?",
+      "instruction": "Choisis la réponse qui tient compte de toute la communication.",
+      "answers": [
+        {
+          "id": "b1-u1-l1-qcm-01-verbal-nonverbal",
+          "text": "Prendre en compte le décalage et vérifier avec tact ce que ressent le patient",
+          "explanation": "Les mots et le langage corporel peuvent transmettre des messages différents."
+        },
+        {
+          "id": "b1-u1-l1-qcm-01-verbal-seul",
+          "text": "Retenir uniquement sa réponse verbale puisqu'il affirme que tout va bien",
+          "explanation": "Se limiter aux mots fait perdre des informations apportées par la posture et le regard.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b1-u1-l1-qcm-01-certitude",
+          "text": "Conclure que sa posture prouve un refus définitif de communiquer",
+          "explanation": "Le non-verbal donne des indices, mais ne permet pas une conclusion certaine sans échange.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b1-u1-l1-qcm-01-verbal-nonverbal",
+      "explanation": "La communication associe les mots, l'attitude, les gestes, le regard et l'intonation.",
+      "tags": ["bloc1", "b1m1", "communication", "non-verbal"],
+      "metadata": {
+        "lessonId": "b1-u1-l1",
+        "sourceDocument": "B1.M1 - Support Etudiant",
+        "sourcePages": "4-6",
+        "requiredSelections": 1
+      }
+    },
+    {
+      "id": "b1-u1-l1-qcm-02",
+      "unit": "Bloc 1 - Unité 1",
+      "lesson": "Les bases de la communication",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Lors du premier contact avec un patient, quelle attitude favorise le mieux la confiance ?",
+      "instruction": "Choisis l'attitude professionnelle la plus cohérente.",
+      "answers": [
+        {
+          "id": "b1-u1-l1-qcm-02-attitude-ouverte",
+          "text": "Tenue soignée, posture ouverte, regard disponible et présentation claire",
+          "explanation": "La première impression et une attitude disponible favorisent l'échange."
+        },
+        {
+          "id": "b1-u1-l1-qcm-02-telephone",
+          "text": "Tenue soignée, mais téléphone en main et regards fréquents vers l'heure",
+          "explanation": "Ces signaux non verbaux peuvent donner l'impression d'un manque d'intérêt.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b1-u1-l1-qcm-02-constantes",
+          "text": "Prise immédiate des constantes, sans présentation pour gagner du temps",
+          "explanation": "Hors urgence immédiate, l'acte technique ne remplace pas l'entrée en relation.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "b1-u1-l1-qcm-02-attitude-ouverte",
+      "explanation": "Hygiène, tenue et posture transmettent un message avant même les premières paroles.",
+      "tags": ["bloc1", "b1m1", "communication", "premier-contact"],
+      "metadata": {
+        "lessonId": "b1-u1-l1",
+        "sourceDocument": "B1.M1 - Support Etudiant",
+        "sourcePages": "6",
+        "requiredSelections": 1
+      }
+    },
+    {
+      "id": "b1-u1-l1-qcm-03",
+      "unit": "Bloc 1 - Unité 1",
+      "lesson": "Les bases de la communication",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Le patient peine à préciser sa pensée. Quelle façon de le questionner est la plus adaptée pour commencer ?",
+      "instruction": "Choisis la formulation qui facilite progressivement l'échange.",
+      "answers": [
+        {
+          "id": "b1-u1-l1-qcm-03-fermee-puis-ouverte",
+          "text": "« Avez-vous mal maintenant ? », puis « Où avez-vous mal ? »",
+          "explanation": "Une question fermée peut faciliter le départ avant de poursuivre par une question ouverte."
+        },
+        {
+          "id": "b1-u1-l1-qcm-03-ouverte-large",
+          "text": "« Racontez-moi en détail tout ce qui vous arrive depuis le début »",
+          "explanation": "Une question très large peut mettre davantage en difficulté un patient qui peine déjà à répondre.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "b1-u1-l1-qcm-03-induite-double",
+          "text": "« Vous avez mal au thorax et vous êtes essoufflé, c'est bien cela ? »",
+          "explanation": "Cette formulation cumule plusieurs éléments et risque d'induire la réponse.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "b1-u1-l1-qcm-03-fermee-puis-ouverte",
+      "explanation": "Il faut poser une seule question à la fois et adapter son type aux capacités d'expression du patient.",
+      "tags": ["bloc1", "b1m1", "communication", "questionnement"],
+      "metadata": {
+        "lessonId": "b1-u1-l1",
+        "sourceDocument": "B1.M1 - Support Etudiant",
+        "sourcePages": "16",
+        "requiredSelections": 1
+      }
+    },
+    {
+      "id": "b1-u1-l1-vf-01",
+      "unit": "Bloc 1 - Unité 1",
+      "lesson": "Les bases de la communication",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Dans une relation de soin, la communication se limite aux mots prononcés.",
+      "instruction": "Indique si cette affirmation est vraie ou fausse.",
+      "answers": [
+        {
+          "id": "b1-u1-l1-vf-01-vrai",
+          "text": "Vrai",
+          "explanation": "Les mots ne représentent qu'une partie de la communication.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "b1-u1-l1-vf-01-faux",
+          "text": "Faux",
+          "explanation": "L'attitude, les gestes, le regard et l'intonation participent aussi au message."
+        }
+      ],
+      "correctAnswer": "b1-u1-l1-vf-01-faux",
+      "explanation": "La communication peut être verbale, non verbale et paraverbale.",
+      "tags": ["bloc1", "b1m1", "communication", "vrai-faux"],
+      "metadata": {
+        "lessonId": "b1-u1-l1",
+        "sourceDocument": "B1.M1 - Support Etudiant",
+        "sourcePages": "4-6",
+        "requiredSelections": 1
+      }
+    },
+    {
+      "id": "b1-u1-l1-association-01",
+      "unit": "Bloc 1 - Unité 1",
+      "lesson": "Les bases de la communication",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque type de reformulation à son objectif.",
+      "instruction": "Choisis pour chaque type la définition correspondante.",
+      "answers": [
+        {
+          "id": "b1-u1-l1-association-01-miroir",
+          "text": "Reformulation miroir",
+          "match": "Reprendre les propos avec les mêmes mots ou des mots similaires",
+          "explanation": "La reformulation miroir reprend directement les propos entendus."
+        },
+        {
+          "id": "b1-u1-l1-association-01-resume",
+          "text": "Reformulation résumé",
+          "match": "Faire une synthèse de l'idée principale",
+          "explanation": "La reformulation résumé rassemble l'essentiel du message."
+        },
+        {
+          "id": "b1-u1-l1-association-01-clarification",
+          "text": "Reformulation clarification",
+          "match": "Faire préciser les propos de l'interlocuteur",
+          "explanation": "La clarification cherche à obtenir un propos plus précis."
+        }
+      ],
+      "correctAnswer": [
+        "b1-u1-l1-association-01-miroir",
+        "b1-u1-l1-association-01-resume",
+        "b1-u1-l1-association-01-clarification"
+      ],
+      "explanation": "Reformuler permet de montrer que l'on a compris, de préciser ou de synthétiser.",
+      "tags": ["bloc1", "b1m1", "communication", "reformulation"],
+      "metadata": {
+        "lessonId": "b1-u1-l1",
+        "sourceDocument": "B1.M1 - Support Etudiant",
+        "sourcePages": "15",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    }
+  ]
+}

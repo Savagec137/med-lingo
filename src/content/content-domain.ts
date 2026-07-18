@@ -19,6 +19,7 @@ export type ContentType = (typeof CONTENT_TYPES)[number];
 export interface ContentAnswer {
   id: string;
   text: string;
+  match?: string;
   detail?: string;
   explanation: string;
   distractorType?:
@@ -34,6 +35,10 @@ export interface ContentMetadata {
   missionId?: string;
   phase?: string;
   specialty?: string;
+  lessonId?: string;
+  sourceDocument?: string;
+  sourcePages?: string;
+  associationMode?: "matching";
   requiredSelections?: number;
   [key: string]: string | number | boolean | undefined;
 }

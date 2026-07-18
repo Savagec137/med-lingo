@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "lessons": [
+    {
+      "id": "b1-u1-l1",
+      "unitId": "b1-u1-communication",
+      "unitTitle": "Communication adaptée",
+      "unitSubtitle": "Établir une relation professionnelle",
+      "title": "Les bases de la communication",
+      "pulse": "Communiquer, ce n'est pas seulement transmettre des mots : c'est établir une relation avec le verbal, le non-verbal et le paraverbal.",
+      "estimatedMinutes": 3,
+      "sourceDocument": "B1.M1 - Support Etudiant",
+      "sourcePages": [4, 5, 6, 15, 16],
+      "interactionIds": [
+        "b1-u1-l1-qcm-01",
+        "b1-u1-l1-qcm-02",
+        "b1-u1-l1-qcm-03",
+        "b1-u1-l1-vf-01",
+        "b1-u1-l1-association-01"
+      ]
+    }
+  ]
+}

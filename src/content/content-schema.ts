@@ -4,6 +4,7 @@ import { CONTENT_DIFFICULTIES, CONTENT_TYPES, type ContentBank } from "./content
 const contentAnswerSchema = z.object({
   id: z.string().trim().min(1),
   text: z.string().trim().min(1),
+  match: z.string().trim().min(1).optional(),
   detail: z.string().trim().min(1).optional(),
   explanation: z.string().trim().min(1),
   distractorType: z
@@ -23,6 +24,10 @@ const contentMetadataSchema = z
     missionId: z.string().trim().min(1).optional(),
     phase: z.string().trim().min(1).optional(),
     specialty: z.string().trim().min(1).optional(),
+    lessonId: z.string().trim().min(1).optional(),
+    sourceDocument: z.string().trim().min(1).optional(),
+    sourcePages: z.string().trim().min(1).optional(),
+    associationMode: z.literal("matching").optional(),
     requiredSelections: z.number().int().positive().optional(),
   })
   .catchall(z.union([z.string(), z.number(), z.boolean()]));
@@ -74,7 +79,10 @@ const contentItemSchema = z
       }
     }
 
-    const expectsSeveral = item.type === "multiple_choice" || item.type === "ordering";
+    const isMatchingAssociation =
+      item.type === "association" && item.metadata?.associationMode === "matching";
+    const expectsSeveral =
+      item.type === "multiple_choice" || item.type === "ordering" || isMatchingAssociation;
     if (expectsSeveral && !Array.isArray(item.correctAnswer)) {
       context.addIssue({
         code: z.ZodIssueCode.custom,
@@ -109,6 +117,20 @@ const contentItemSchema = z
           path: ["answers"],
           message:
             "Un ordre chronologique doit classer toutes les réponses avec des rangs continus.",
+        });
+      }
+    }
+    if (isMatchingAssociation) {
+      const everyAnswerHasMatch = item.answers.every((answer) => answer.match);
+      const mapsEveryAnswer =
+        correctIds.length === answerIds.length &&
+        correctIds.every((correctId, index) => correctId === answerIds[index]);
+      if (!everyAnswerHasMatch || !mapsEveryAnswer) {
+        context.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["answers"],
+          message:
+            "Une association doit fournir un libellé match et une correspondance pour chaque réponse.",
         });
       }
     }

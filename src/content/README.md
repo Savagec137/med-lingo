@@ -9,6 +9,9 @@ Les questions sont des données. Elles ne doivent pas être écrites dans un com
 - `content-engine.ts` fournit la recherche et la correction par identifiant.
 - `banks/*.json` contient les questions publiables.
 - `intervention-content-catalog.ts` branche la banque Intervention sur le moteur générique.
+- `pedagogical-content.ts` valide et expose les leçons courtes du parcours DEA.
+- `lesson-runtime.ts` prépare une nouvelle tentative et mélange les réponses sans perdre leurs identifiants.
+- `banks/pedagogical-lessons.json` décrit l'ordre des interactions, la carte Pulse et la provenance de chaque leçon.
 
 ## Ajouter une question
 
@@ -49,7 +52,7 @@ Ajouter un objet à la propriété `items` de la banque concernée. Exemple mini
 - `ordering` : ordre chronologique exact.
 - `true_false_contextual` : vrai/faux contextualisé à choix unique.
 - `equipment` : sélection de matériel.
-- `association` : association signe/action.
+- `association` : association signe/action ou mise en correspondance. Pour une mise en correspondance, chaque réponse possède un champ `match`, `metadata.associationMode` vaut `matching` et `correctAnswer` contient tous les identifiants dans l'ordre attendu.
 - `error_identification` : identification d'une erreur.
 - `regulatory` : décision réglementaire.
 - `handover` : transmission ou relais.
@@ -67,6 +70,15 @@ const result = catalog.evaluate("communication_001", ["communication_001-introdu
 ```
 
 Le résultat contient la correction globale et le feedback de chaque réponse. Le moteur ne dépend ni de React ni du Mode Intervention.
+
+## Ajouter une leçon pédagogique
+
+1. Ajouter les interactions dans une banque JSON dédiée sous `banks/`.
+2. Renseigner `metadata.lessonId`, `metadata.sourceDocument` et `metadata.sourcePages` sur chaque interaction.
+3. Ajouter le manifeste de la leçon dans `banks/pedagogical-lessons.json` avec une phrase Pulse et l'ordre des interactions.
+4. Relier le manifeste au curriculum avec `contentLessonId` ; l'interface existante charge alors la leçon sans question codée dans React.
+
+La phrase Pulse est un écran d'introduction non noté. Le nombre d'interactions du manifeste pilote la progression, le score et la fin de leçon.
 
 ## Garanties automatiques
 

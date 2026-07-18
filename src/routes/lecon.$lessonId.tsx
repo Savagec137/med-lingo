@@ -1,8 +1,24 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { Check, X, Heart, ArrowRight, Home as HomeIcon, Trophy, PartyPopper, Dumbbell, Star } from "lucide-react";
-import { findLesson } from "@/lib/curriculum";
+import { useEffect, useMemo, useState } from "react";
+import {
+  Check,
+  X,
+  Heart,
+  ArrowRight,
+  Home as HomeIcon,
+  Trophy,
+  PartyPopper,
+  Dumbbell,
+  Star,
+  Sparkles,
+} from "lucide-react";
+import { findLesson, type Question } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
+import { getPedagogicalLesson, PEDAGOGICAL_CONTENT_CATALOG } from "@/content/pedagogical-content";
+import {
+  prepareContentInteraction,
+  type PreparedLessonInteraction,
+} from "@/content/lesson-runtime";
 
 export const Route = createFileRoute("/lecon/$lessonId")({
   component: LessonPage,
@@ -28,33 +44,76 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+interface PlayableInteraction extends PreparedLessonInteraction {
+  contentDriven: boolean;
+}
+
+function legacyInteractions(questions: Question[]): PlayableInteraction[] {
+  return shuffle(questions).map((question) => ({
+    id: question.id,
+    type: "choice",
+    question: question.question,
+    answers: question.choices.map((choice, index) => ({
+      id: `${question.id}-answer-${index}`,
+      text: choice,
+      explanation: question.explanation ?? "",
+    })),
+    matchOptions: [],
+    correctAnswerIds: [`${question.id}-answer-${question.answer}`],
+    explanation: question.explanation,
+    contentDriven: false,
+  }));
+}
+
 function LessonPage() {
   const { lessonId } = Route.useParams();
   const navigate = useNavigate();
   const found = findLesson(lessonId);
+  const contentLesson = found?.lesson.contentLessonId
+    ? getPedagogicalLesson(found.lesson.contentLessonId)
+    : null;
   const { progress, hydrated, completeLesson, loseHeart } = useProgress();
 
-  // Shuffle questions once per mount for freshness (stable enough for a session).
+  // Les questions historiques conservent leur comportement. Les nouvelles
+  // leçons gardent leur ordre pédagogique et mélangent seulement les réponses.
   const questions = useMemo(
-    () => (found ? shuffle(found.lesson.questions) : []),
+    () =>
+      contentLesson
+        ? contentLesson.interactions.map((item) => ({
+            ...prepareContentInteraction(item),
+            contentDriven: true,
+          }))
+        : found
+          ? legacyInteractions(found.lesson.questions)
+          : [],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [lessonId],
   );
 
   const [idx, setIdx] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [associations, setAssociations] = useState<Record<string, string>>({});
   const [checked, setChecked] = useState(false);
+  const [responseCorrect, setResponseCorrect] = useState<boolean | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
   const [finished, setFinished] = useState(false);
   const [result, setResult] = useState<{ stars: number; score: number } | null>(null);
+  const [pulseDismissed, setPulseDismissed] = useState(false);
+
+  useEffect(() => {
+    setPulseDismissed(false);
+  }, [lessonId]);
 
   if (!found) {
     return (
       <div className="flex min-h-screen items-center justify-center p-6 text-center">
         <div>
           <p className="mb-4 text-lg font-bold">Leçon introuvable.</p>
-          <Link to="/" className="rounded-xl bg-primary px-4 py-2 font-bold text-primary-foreground">
+          <Link
+            to="/"
+            className="rounded-xl bg-primary px-4 py-2 font-bold text-primary-foreground"
+          >
             Retour à l'accueil
           </Link>
         </div>
@@ -64,13 +123,28 @@ function LessonPage() {
 
   const total = questions.length;
   const current = questions[idx];
-  const progressPct = ((idx + (checked ? 1 : 0)) / total) * 100;
+  const progressPct = total === 0 ? 0 : ((idx + (checked ? 1 : 0)) / total) * 100;
   const outOfHearts = hydrated && progress.hearts <= 0 && !finished;
+  const showPulse = Boolean(contentLesson?.pulse && !pulseDismissed);
+  const canCheck = current
+    ? current.type === "association"
+      ? current.answers.every((answer) => Boolean(associations[answer.id]))
+      : selected !== null
+    : false;
 
   const onCheck = () => {
-    if (selected === null) return;
-    const isCorrect = selected === current.answer;
+    if (!current || !canCheck) return;
+    const selectedIds =
+      current.type === "association"
+        ? current.answers.map((answer) => associations[answer.id] ?? "")
+        : selected
+          ? [selected]
+          : [];
+    const isCorrect = current.contentDriven
+      ? PEDAGOGICAL_CONTENT_CATALOG.evaluate(current.id, selectedIds).isCorrect
+      : selectedIds.length === 1 && current.correctAnswerIds.includes(selectedIds[0]);
     setChecked(true);
+    setResponseCorrect(isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
     else {
       setWrongCount((c) => c + 1);
@@ -87,7 +161,9 @@ function LessonPage() {
     }
     setIdx((i) => i + 1);
     setSelected(null);
+    setAssociations({});
     setChecked(false);
+    setResponseCorrect(null);
   };
 
   if (outOfHearts) {
@@ -108,12 +184,66 @@ function LessonPage() {
     );
   }
 
+  if (showPulse && contentLesson) {
+    return (
+      <div className="flex min-h-screen flex-col bg-background">
+        <header className="border-b border-border bg-background">
+          <div className="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3">
+            <button
+              onClick={() => navigate({ to: "/" })}
+              className="p-1 text-muted-foreground hover:text-foreground"
+              aria-label="Quitter"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <div className="h-3 flex-1 overflow-hidden rounded-full bg-secondary">
+              <div className="h-full w-0 rounded-full bg-[color:var(--color-success)]" />
+            </div>
+            <span className="flex items-center gap-1 text-sm font-bold text-[color:var(--color-destructive)]">
+              <Heart className="h-5 w-5 fill-current" />
+              {hydrated ? progress.hearts : MAX_HEARTS}
+            </span>
+          </div>
+        </header>
+
+        <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-4 py-8">
+          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[color:var(--color-primary)]">
+            Carte Pulse
+          </p>
+          <div className="rounded-3xl border-2 border-[color:var(--color-primary)]/35 bg-[color:var(--color-primary)]/10 p-6 shadow-[0_6px_0_0_var(--color-border)] sm:p-8">
+            <Sparkles
+              className="mb-5 h-10 w-10 text-[color:var(--color-primary)]"
+              strokeWidth={2.25}
+              aria-hidden="true"
+            />
+            <p className="text-xl font-extrabold leading-relaxed sm:text-2xl">
+              {contentLesson.pulse}
+            </p>
+          </div>
+        </main>
+
+        <footer className="border-t-2 border-border bg-background">
+          <div className="mx-auto max-w-2xl px-4 py-4">
+            <button
+              onClick={() => setPulseDismissed(true)}
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 font-extrabold uppercase tracking-wide text-primary-foreground shadow-[0_4px_0_0_oklch(from_var(--color-primary)_calc(l-0.12)_c_h)] active:translate-y-[2px] active:shadow-[0_2px_0_0_oklch(from_var(--color-primary)_calc(l-0.12)_c_h)]"
+            >
+              Commencer <ArrowRight className="h-5 w-5" />
+            </button>
+          </div>
+        </footer>
+      </div>
+    );
+  }
+
   if (finished && result) {
     const pct = Math.round(result.score * 100);
     const xpGained = 10 + result.stars * 5;
     return (
       <div className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-center p-6 text-center">
-        <div className={`mb-4 flex h-24 w-24 items-center justify-center rounded-3xl border-2 shadow-[0_6px_0_0_var(--color-border)] ${result.stars === 3 ? "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/15 text-[color:var(--color-warning)]" : result.stars >= 1 ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]" : "border-border bg-secondary text-foreground"}`}>
+        <div
+          className={`mb-4 flex h-24 w-24 items-center justify-center rounded-3xl border-2 shadow-[0_6px_0_0_var(--color-border)] ${result.stars === 3 ? "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/15 text-[color:var(--color-warning)]" : result.stars >= 1 ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]" : "border-border bg-secondary text-foreground"}`}
+        >
           {result.stars === 3 ? (
             <Trophy className="h-12 w-12" strokeWidth={2.25} />
           ) : result.stars >= 1 ? (
@@ -157,7 +287,9 @@ function LessonPage() {
               onClick={() => {
                 setIdx(0);
                 setSelected(null);
+                setAssociations({});
                 setChecked(false);
+                setResponseCorrect(null);
                 setCorrectCount(0);
                 setWrongCount(0);
                 setFinished(false);
@@ -173,8 +305,13 @@ function LessonPage() {
     );
   }
 
-  const isCorrect = checked && selected === current.answer;
-  const isWrong = checked && selected !== current.answer;
+  const isCorrect = checked && responseCorrect === true;
+  const isWrong = checked && responseCorrect === false;
+  const selectedAnswer =
+    current.type === "choice"
+      ? current.answers.find((answer) => answer.id === selected)
+      : undefined;
+  const correctAnswer = current.answers.find((answer) => answer.id === current.correctAnswerIds[0]);
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -211,31 +348,84 @@ function LessonPage() {
           {current.question}
         </h1>
 
-        <div className="grid gap-3">
-          {current.choices.map((choice, i) => {
-            const chosen = selected === i;
-            const showCorrect = checked && i === current.answer;
-            const showWrong = checked && chosen && i !== current.answer;
-            return (
-              <button
-                key={i}
-                disabled={checked}
-                onClick={() => setSelected(i)}
-                className={`rounded-2xl border-2 px-4 py-4 text-left font-bold transition ${
-                  showCorrect
-                    ? "border-[color:var(--color-success)] bg-[color:var(--color-success)]/10 text-[color:var(--color-success)]"
-                    : showWrong
-                      ? "border-[color:var(--color-destructive)] bg-[color:var(--color-destructive)]/10 text-[color:var(--color-destructive)]"
-                      : chosen
-                        ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10"
-                        : "border-border bg-card hover:border-[color:var(--color-primary)]/60"
-                }`}
-              >
-                {choice}
-              </button>
-            );
-          })}
-        </div>
+        {current.type === "association" ? (
+          <div className="grid gap-3">
+            {current.answers.map((answer) => {
+              const selectedMatch = associations[answer.id] ?? "";
+              const rowCorrect = checked && selectedMatch === answer.id;
+              const rowWrong = checked && selectedMatch !== answer.id;
+              return (
+                <label
+                  key={answer.id}
+                  className={`rounded-2xl border-2 bg-card p-4 transition ${
+                    rowCorrect
+                      ? "border-[color:var(--color-success)] bg-[color:var(--color-success)]/10"
+                      : rowWrong
+                        ? "border-[color:var(--color-destructive)] bg-[color:var(--color-destructive)]/10"
+                        : "border-border"
+                  }`}
+                >
+                  <span className="mb-3 block font-extrabold">{answer.text}</span>
+                  <select
+                    value={selectedMatch}
+                    disabled={checked}
+                    onChange={(event) =>
+                      setAssociations((currentAssociations) => ({
+                        ...currentAssociations,
+                        [answer.id]: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-xl border-2 border-border bg-background px-3 py-3 text-sm font-bold text-foreground outline-none focus:border-[color:var(--color-primary)]"
+                    aria-label={`Associer ${answer.text}`}
+                  >
+                    <option value="">Choisir une définition</option>
+                    {current.matchOptions.map((option) => {
+                      const usedElsewhere = Object.entries(associations).some(
+                        ([answerId, optionId]) => answerId !== answer.id && optionId === option.id,
+                      );
+                      return (
+                        <option key={option.id} value={option.id} disabled={usedElsewhere}>
+                          {option.text}
+                        </option>
+                      );
+                    })}
+                  </select>
+                  {rowWrong && (
+                    <span className="mt-2 block text-sm font-semibold text-[color:var(--color-success)]">
+                      {answer.match}
+                    </span>
+                  )}
+                </label>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="grid gap-3">
+            {current.answers.map((answer) => {
+              const chosen = selected === answer.id;
+              const showCorrect = checked && current.correctAnswerIds.includes(answer.id);
+              const showWrong = checked && chosen && !current.correctAnswerIds.includes(answer.id);
+              return (
+                <button
+                  key={answer.id}
+                  disabled={checked}
+                  onClick={() => setSelected(answer.id)}
+                  className={`rounded-2xl border-2 px-4 py-4 text-left font-bold transition ${
+                    showCorrect
+                      ? "border-[color:var(--color-success)] bg-[color:var(--color-success)]/10 text-[color:var(--color-success)]"
+                      : showWrong
+                        ? "border-[color:var(--color-destructive)] bg-[color:var(--color-destructive)]/10 text-[color:var(--color-destructive)]"
+                        : chosen
+                          ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10"
+                          : "border-border bg-card hover:border-[color:var(--color-primary)]/60"
+                  }`}
+                >
+                  {answer.text}
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         <div className="flex-1" />
       </main>
@@ -263,21 +453,26 @@ function LessonPage() {
                 {isCorrect ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
                 {isCorrect ? "Bonne réponse !" : "Pas tout à fait"}
               </p>
-              {!isCorrect && (
+              {!isCorrect && current.type === "choice" && correctAnswer && (
                 <p className="mt-1 text-sm">
-                  Bonne réponse :{" "}
-                  <span className="font-bold">{current.choices[current.answer]}</span>
+                  Bonne réponse : <span className="font-bold">{correctAnswer.text}</span>
                 </p>
               )}
+              {isWrong && selectedAnswer?.explanation && (
+                <p className="mt-1 text-sm text-muted-foreground">{selectedAnswer.explanation}</p>
+              )}
               {current.explanation && (
-                <p className="mt-1 text-sm text-muted-foreground">{current.explanation}</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {isWrong && selectedAnswer?.explanation ? "À retenir : " : ""}
+                  {current.explanation}
+                </p>
               )}
             </div>
           )}
           {!checked ? (
             <button
               onClick={onCheck}
-              disabled={selected === null}
+              disabled={!canCheck}
               className="w-full rounded-2xl bg-primary py-4 font-extrabold uppercase tracking-wide text-primary-foreground shadow-[0_4px_0_0_oklch(from_var(--color-primary)_calc(l-0.12)_c_h)] transition disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none active:translate-y-[2px] active:shadow-[0_2px_0_0_oklch(from_var(--color-primary)_calc(l-0.12)_c_h)]"
             >
               Vérifier

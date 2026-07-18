@@ -14,6 +14,13 @@ function sameSet(left: string[], right: string[]) {
   return left.length === right.length && left.every((value) => right.includes(value));
 }
 
+function needsExactOrder(item: ContentItem) {
+  return (
+    item.type === "ordering" ||
+    (item.type === "association" && item.metadata?.associationMode === "matching")
+  );
+}
+
 export class ContentCatalog {
   readonly bank: ContentBank;
   private readonly byId: ReadonlyMap<string, ContentItem>;
@@ -68,11 +75,10 @@ export class ContentCatalog {
     }
 
     const correctAnswerIds = answerIds(item);
-    const isCorrect =
-      item.type === "ordering"
-        ? selectedAnswerIds.length === correctAnswerIds.length &&
-          selectedAnswerIds.every((value, index) => value === correctAnswerIds[index])
-        : sameSet(selectedAnswerIds, correctAnswerIds);
+    const isCorrect = needsExactOrder(item)
+      ? selectedAnswerIds.length === correctAnswerIds.length &&
+        selectedAnswerIds.every((value, index) => value === correctAnswerIds[index])
+      : sameSet(selectedAnswerIds, correctAnswerIds);
 
     return {
       itemId: item.id,

@@ -1,17 +1,64 @@
 import type { LucideIcon } from "lucide-react";
 import unitIconsSheet from "@/assets/unit-icons-sheet.png";
 import {
-  Bone, Brain, HeartPulse, Dumbbell, Footprints,
-  Wind, Utensils, Type, Dna, Pencil, Microscope,
-  Sprout, Stethoscope, Puzzle, Sparkles,
-  SprayCan, Ambulance, Trash2, HardHat, TriangleAlert, MessagesSquare,
-  ClipboardList, Compass, Siren, Phone, Zap, Droplets,
-  BedDouble, Baby, PersonStanding, Scale, FileText, Bandage,
-  Flame, TestTube, FlaskConical,
-  Package, Gift, Trophy, GraduationCap, LifeBuoy, Star,
-  Coins, Crown, ShieldCheck, Palette, Layers, Award,
-  Medal, Target, Rocket, Book, Check, X, ThumbsUp,
-  User, Shield, Gem,
+  Bone,
+  Brain,
+  HeartPulse,
+  Dumbbell,
+  Footprints,
+  Wind,
+  Utensils,
+  Type,
+  Dna,
+  Pencil,
+  Microscope,
+  Sprout,
+  Stethoscope,
+  Puzzle,
+  Sparkles,
+  SprayCan,
+  Ambulance,
+  Trash2,
+  HardHat,
+  TriangleAlert,
+  MessagesSquare,
+  ClipboardList,
+  Compass,
+  Siren,
+  Phone,
+  Zap,
+  Droplets,
+  BedDouble,
+  Baby,
+  PersonStanding,
+  Scale,
+  FileText,
+  Bandage,
+  Flame,
+  TestTube,
+  FlaskConical,
+  Package,
+  Gift,
+  Trophy,
+  GraduationCap,
+  LifeBuoy,
+  Star,
+  Coins,
+  Crown,
+  ShieldCheck,
+  Palette,
+  Layers,
+  Award,
+  Medal,
+  Target,
+  Rocket,
+  Book,
+  Check,
+  X,
+  ThumbsUp,
+  User,
+  Shield,
+  Gem,
 } from "lucide-react";
 
 // -------- Units --------
@@ -32,6 +79,7 @@ const UNIT_ICONS: Record<string, LucideIcon> = {
   "dea-trauma": Bandage,
   "dea-spe": Baby,
   "dea-regl": Scale,
+  "b1-u1-communication": MessagesSquare,
 };
 
 // The unit artwork is supplied as one consistent MedLingo sprite sheet.  Keeping
@@ -61,12 +109,25 @@ const UNIT_ARTWORK_SHEET_SIZE = { width: 1536, height: 1024 };
 
 // -------- Lessons (id → icon) --------
 const LESSON_ICONS: Record<string, LucideIcon> = {
-  "os-1": Brain, "os-2": Bone, "os-3": Dumbbell, "os-4": Footprints,
-  "org-1": HeartPulse, "org-2": Wind, "org-3": Utensils, "org-4": Brain,
-  "pref-1": Type, "pref-2": Dna,
-  "suf-1": Stethoscope, "suf-2": Microscope,
-  "rad-1": Sprout, "rad-2": Dna,
-  "pat-1": HeartPulse, "pat-2": Stethoscope, "pat-3": Bone, "pat-4": Puzzle,
+  "b1-u1-l1": MessagesSquare,
+  "os-1": Brain,
+  "os-2": Bone,
+  "os-3": Dumbbell,
+  "os-4": Footprints,
+  "org-1": HeartPulse,
+  "org-2": Wind,
+  "org-3": Utensils,
+  "org-4": Brain,
+  "pref-1": Type,
+  "pref-2": Dna,
+  "suf-1": Stethoscope,
+  "suf-2": Microscope,
+  "rad-1": Sprout,
+  "rad-2": Dna,
+  "pat-1": HeartPulse,
+  "pat-2": Stethoscope,
+  "pat-3": Bone,
+  "pat-4": Puzzle,
 };
 
 // -------- Missions --------
@@ -81,9 +142,16 @@ const MISSION_ICONS: Record<string, LucideIcon> = {
 // -------- Badges --------
 const BADGE_ICONS: Record<string, LucideIcon> = {
   first_lesson: GraduationCap,
-  streak_3: Flame, streak_7: Flame, streak_30: Trophy, streak_100: Crown,
-  xp_100: Star, xp_1000: Sparkles, xp_10000: Award,
-  level_10: Medal, level_25: Medal, level_50: Trophy,
+  streak_3: Flame,
+  streak_7: Flame,
+  streak_30: Trophy,
+  streak_100: Crown,
+  xp_100: Star,
+  xp_1000: Sparkles,
+  xp_10000: Award,
+  level_10: Medal,
+  level_25: Medal,
+  level_50: Trophy,
   perfect_lesson: Target,
   anatomy_expert: Bone,
   vocab_master: Type,
@@ -92,18 +160,40 @@ const BADGE_ICONS: Record<string, LucideIcon> = {
 
 // -------- Shop item icons by code prefix / code --------
 const SHOP_ICONS: Record<string, LucideIcon> = {
-  av_stethoscope: Stethoscope, av_ambulance: Ambulance, av_heart: HeartPulse,
-  av_brain: Brain, av_lungs: Wind, av_dna: Dna, av_syringe: Zap,
-  av_microscope: Microscope, av_crown: Crown, av_dragon: Sparkles,
-  fr_bronze: Medal, fr_silver: Medal, fr_gold: Trophy, fr_diamond: Gem,
-  bg_hospital: ShieldCheck, bg_ecg: HeartPulse, bg_xray: Bone, bg_aurora: Sparkles,
-  chest_small: Package, chest_big: Gift, chest_epic: Trophy,
-  ti_novice: GraduationCap, ti_secouriste: LifeBuoy, ti_legend: Crown,
+  av_stethoscope: Stethoscope,
+  av_ambulance: Ambulance,
+  av_heart: HeartPulse,
+  av_brain: Brain,
+  av_lungs: Wind,
+  av_dna: Dna,
+  av_syringe: Zap,
+  av_microscope: Microscope,
+  av_crown: Crown,
+  av_dragon: Sparkles,
+  fr_bronze: Medal,
+  fr_silver: Medal,
+  fr_gold: Trophy,
+  fr_diamond: Gem,
+  bg_hospital: ShieldCheck,
+  bg_ecg: HeartPulse,
+  bg_xray: Bone,
+  bg_aurora: Sparkles,
+  chest_small: Package,
+  chest_big: Gift,
+  chest_epic: Trophy,
+  ti_novice: GraduationCap,
+  ti_secouriste: LifeBuoy,
+  ti_legend: Crown,
 };
 
 const SHOP_TYPE_FALLBACK: Record<string, LucideIcon> = {
-  avatar: User, frame: Shield, background: Layers, badge: Award,
-  booster: Zap, chest: Package, title: GraduationCap,
+  avatar: User,
+  frame: Shield,
+  background: Layers,
+  badge: Award,
+  booster: Zap,
+  chest: Package,
+  title: GraduationCap,
 };
 
 // -------- Components --------
@@ -119,7 +209,9 @@ export function UnitArtwork({ unitId, className = "" }: { unitId: string; classN
 
   if (!artwork) {
     return (
-      <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)] ${className}`}>
+      <div
+        className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)] ${className}`}
+      >
         <UnitIcon unitId={unitId} className="h-7 w-7" strokeWidth={2.25} />
       </div>
     );
@@ -145,10 +237,7 @@ export function LessonIcon({
   className,
   strokeWidth,
 }: IconProps & { lessonId: string; unitId?: string }) {
-  const Icon =
-    LESSON_ICONS[lessonId] ??
-    (unitId ? UNIT_ICONS[unitId] : undefined) ??
-    Book;
+  const Icon = LESSON_ICONS[lessonId] ?? (unitId ? UNIT_ICONS[unitId] : undefined) ?? Book;
   return <Icon className={className} strokeWidth={strokeWidth ?? 2} />;
 }
 
@@ -174,6 +263,17 @@ export function ShopItemIcon({
 
 // Re-export commonly used icons for scoreboard/result screens
 export {
-  Trophy, ThumbsUp, Star, Check, X, Coins, Sparkles, Crown, Palette,
-  Stethoscope, GraduationCap, HeartPulse, Ambulance,
+  Trophy,
+  ThumbsUp,
+  Star,
+  Check,
+  X,
+  Coins,
+  Sparkles,
+  Crown,
+  Palette,
+  Stethoscope,
+  GraduationCap,
+  HeartPulse,
+  Ambulance,
 };
