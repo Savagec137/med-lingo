@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
-import { Ambulance, ChevronRight, Radio, ShieldCheck } from "lucide-react";
+import { Ambulance, CheckCircle2, ChevronRight, Radio, ShieldCheck } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { InterventionDebrief } from "@/components/InterventionDebrief";
 import { InterventionDecisionScreen } from "@/components/InterventionDecisionScreen";
 import { InterventionMissionAlert } from "@/components/InterventionMissionAlert";
 import { InterventionMissionCard } from "@/components/InterventionMissionCard";
 import { getMissionState } from "@/features/intervention-engine";
-import { INTERVENTION_SCENARIOS } from "@/features/intervention-scenarios";
+import { INTERVENTION_SCENARIOS } from "@/features/intervention-official-scenarios";
 import { useInterventionSession } from "@/hooks/use-intervention-session";
 
 export const Route = createFileRoute("/intervention")({ component: InterventionRoute });
@@ -15,6 +15,9 @@ export const Route = createFileRoute("/intervention")({ component: InterventionR
 function InterventionRoute() {
   const reducedMotion = Boolean(useReducedMotion());
   const intervention = useInterventionSession();
+  const completedMissionCount = INTERVENTION_SCENARIOS.filter(
+    (scenario) => intervention.progress[scenario.id]?.completed,
+  ).length;
 
   return (
     <div className="min-h-screen bg-[#030d1a] pb-24 text-slate-100">
@@ -68,9 +71,16 @@ function InterventionRoute() {
                   Du premier bilan au transport régulé
                 </div>
                 <p className="mt-1 text-xs text-slate-400">
-                  Une réussite déverrouille la mission suivante. Ton meilleur score est conservé sur
-                  cet appareil.
+                  15 missions officielles. Une réussite déverrouille la suivante et ton meilleur
+                  score est conservé sur cet appareil.
                 </p>
+              </div>
+              <div
+                className="ml-auto hidden shrink-0 items-center gap-2 rounded-xl border border-emerald-300/15 bg-emerald-300/[0.06] px-3 py-2 text-xs font-black text-emerald-200 sm:flex"
+                aria-label={`${completedMissionCount} missions réussies sur ${INTERVENTION_SCENARIOS.length}`}
+              >
+                <CheckCircle2 className="h-4 w-4" />
+                {completedMissionCount}/{INTERVENTION_SCENARIOS.length}
               </div>
               <ChevronRight className="hidden h-6 w-6 text-cyan-300 sm:block" />
             </motion.div>

@@ -82,8 +82,8 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
-  '/inventaire': typeof InventaireRoute
   '/intervention': typeof InterventionRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -95,8 +95,8 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
-  '/inventaire': typeof InventaireRoute
   '/intervention': typeof InterventionRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -109,8 +109,8 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
-  '/inventaire': typeof InventaireRoute
   '/intervention': typeof InterventionRoute
+  '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -124,8 +124,8 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
-    | '/inventaire'
     | '/intervention'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -137,8 +137,8 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
-    | '/inventaire'
     | '/intervention'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -150,8 +150,8 @@ export interface FileRouteTypes {
     | '/auth'
     | '/boutique'
     | '/classement'
-    | '/inventaire'
     | '/intervention'
+    | '/inventaire'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -164,8 +164,8 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   BoutiqueRoute: typeof BoutiqueRoute
   ClassementRoute: typeof ClassementRoute
-  InventaireRoute: typeof InventaireRoute
   InterventionRoute: typeof InterventionRoute
+  InventaireRoute: typeof InventaireRoute
   OnboardingRoute: typeof OnboardingRoute
   ProfilRoute: typeof ProfilRoute
   PulseRoute: typeof PulseRoute
@@ -260,8 +260,8 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   BoutiqueRoute: BoutiqueRoute,
   ClassementRoute: ClassementRoute,
-  InventaireRoute: InventaireRoute,
   InterventionRoute: InterventionRoute,
+  InventaireRoute: InventaireRoute,
   OnboardingRoute: OnboardingRoute,
   ProfilRoute: ProfilRoute,
   PulseRoute: PulseRoute,
@@ -271,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

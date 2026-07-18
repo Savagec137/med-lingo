@@ -143,3 +143,17 @@ test("une mission dépendante reste verrouillée jusqu'à la réussite requise",
     "new",
   );
 });
+
+test("un score inférieur à 60 ne déverrouille pas la suite", () => {
+  const failedProgress = mergeMissionProgress(undefined, {
+    score: 42,
+    grade: "D",
+    xp: 20,
+    coins: 0,
+    patientState: 35,
+    errors: [],
+    goodDecisions: [],
+    elapsedSeconds: 120,
+  });
+  assert.equal(failedProgress.completed, false);
+});

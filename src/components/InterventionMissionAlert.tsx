@@ -3,6 +3,7 @@ import {
   AlarmClock,
   ArrowLeft,
   Clock3,
+  Hourglass,
   MapPin,
   Navigation,
   Radio,
@@ -21,7 +22,11 @@ interface Props {
 export function InterventionMissionAlert({ scenario, reducedMotion, onAccept, onBack }: Props) {
   const items = [
     { Icon: UserRound, label: "Patient", value: scenario.alert.patient },
+    ...(scenario.alert.age ? [{ Icon: UserRound, label: "Âge", value: scenario.alert.age }] : []),
     { Icon: Siren, label: "Motif", value: scenario.alert.reason },
+    ...(scenario.alert.elapsed
+      ? [{ Icon: Hourglass, label: "Temps écoulé", value: scenario.alert.elapsed }]
+      : []),
     { Icon: Radio, label: "Priorité", value: scenario.alert.priority },
     { Icon: Navigation, label: "Distance", value: scenario.alert.distance },
     { Icon: MapPin, label: "Lieu", value: scenario.alert.location },

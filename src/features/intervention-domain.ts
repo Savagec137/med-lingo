@@ -11,9 +11,21 @@ export const INTERVENTION_PHASES = [
 
 export type InterventionPhase = (typeof INTERVENTION_PHASES)[number];
 export type MissionDifficulty = "initiation" | "intermediate" | "advanced";
+export type MissionDifficultyStars = 1 | 2 | 3 | 4 | 5;
 export type MissionState = "new" | "completed" | "locked";
 export type PatientTone = "stable" | "watch" | "critical";
-export type ScenarioIllustration = "cardiac" | "metabolic" | "trauma";
+export type ScenarioIllustration =
+  | "general"
+  | "cardiac"
+  | "respiratory"
+  | "neurology"
+  | "metabolic"
+  | "trauma"
+  | "allergy"
+  | "pediatric"
+  | "maternity"
+  | "toxicology"
+  | "complex";
 
 export interface MissionReward {
   coins: number;
@@ -25,11 +37,13 @@ export interface MissionReward {
 
 export interface MissionAlert {
   patient: string;
+  age?: string;
   reason: string;
   priority: string;
   distance: string;
   location: string;
   time: string;
+  elapsed?: string;
   dispatchNote: string;
 }
 
@@ -83,6 +97,8 @@ export interface InterventionScenario {
   title: string;
   summary: string;
   difficulty: MissionDifficulty;
+  difficultyStars?: MissionDifficultyStars;
+  minimumLevel?: number;
   estimatedMinutes: number;
   baseXp: number;
   illustration: ScenarioIllustration;

@@ -152,9 +152,10 @@ export function mergeMissionProgress(
   previous: MissionProgress | undefined,
   result: MissionResult,
 ): MissionProgress {
+  const succeeded = result.score >= 60;
   return {
     attempts: (previous?.attempts ?? 0) + 1,
-    completed: true,
+    completed: Boolean(previous?.completed || succeeded),
     bestScore: Math.max(previous?.bestScore ?? 0, result.score),
     bestGrade: previous && previous.bestScore > result.score ? previous.bestGrade : result.grade,
     bestTimeSeconds:
