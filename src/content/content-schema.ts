@@ -27,10 +27,11 @@ const contentMetadataSchema = z
     lessonId: z.string().trim().min(1).optional(),
     sourceDocument: z.string().trim().min(1).optional(),
     sourcePages: z.string().trim().min(1).optional(),
+    competencyIds: z.array(z.string().trim().min(1)).min(1).optional(),
     associationMode: z.literal("matching").optional(),
     requiredSelections: z.number().int().positive().optional(),
   })
-  .catchall(z.union([z.string(), z.number(), z.boolean()]));
+  .catchall(z.union([z.string(), z.number(), z.boolean(), z.array(z.string())]));
 
 const contentItemSchema = z
   .object({

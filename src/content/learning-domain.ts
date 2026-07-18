@@ -32,6 +32,7 @@ export interface LearningContentItem {
   explanation: string;
   priorityReminder?: string;
   tags: string[];
+  competencyIds: string[];
   pedagogicalReference?: string;
   level?: number;
   xp?: number;

@@ -38,9 +38,10 @@ export interface ContentMetadata {
   lessonId?: string;
   sourceDocument?: string;
   sourcePages?: string;
+  competencyIds?: string[];
   associationMode?: "matching";
   requiredSelections?: number;
-  [key: string]: string | number | boolean | undefined;
+  [key: string]: string | number | boolean | string[] | undefined;
 }
 
 export interface ContentItem {

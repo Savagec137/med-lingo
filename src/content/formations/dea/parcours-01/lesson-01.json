@@ -5,14 +5,2017 @@
   "id": "dea-p01-l01",
   "title": "Pourquoi apprendre l'anatomie ?",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
-  "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "status": "published",
+  "difficulty": "easy",
+  "estimatedMinutes": 3,
+  "level": 1,
+  "xp": 25,
+  "tags": ["anatomie", "physiologie", "pathologie", "organisation-du-corps", "dea"],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7-9, 13, 15-16",
+  "pulse": "Avant de comprendre les maladies, découvre comment le corps est organisé : structure, fonctionnement et repères.",
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "items": [
+    {
+      "id": "dea-p1-l1-mcq-01",
+      "difficulty": "easy",
+      "question": "Qu’étudie principalement l’anatomie ?",
+      "explanation": "L’anatomie décrit les structures du corps humain et leurs relations.",
+      "tags": ["definition", "anatomie"],
+      "competencyIds": ["anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Les médicaments utilisés pour traiter une maladie",
+          "explanation": "Les médicaments relèvent surtout de la pharmacologie."
+        },
+        {
+          "id": "b",
+          "text": "La structure du corps et les relations entre ses parties",
+          "explanation": "Exact : l’anatomie décrit l’organisation du corps."
+        },
+        {
+          "id": "c",
+          "text": "Les mécanismes normaux de fonctionnement des organes",
+          "explanation": "Il s’agit plutôt de la physiologie."
+        },
+        {
+          "id": "d",
+          "text": "Les maladies et les lésions qu’elles provoquent",
+          "explanation": "Il s’agit plutôt de la pathologie."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-02",
+      "difficulty": "easy",
+      "question": "La physiologie étudie principalement :",
+      "explanation": "La physiologie aide à comprendre comment les organes et les systèmes fonctionnent à l’état normal.",
+      "tags": ["definition", "physiologie"],
+      "competencyIds": ["physiology.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le fonctionnement normal de l’organisme et de ses organes",
+          "explanation": "Exact : la physiologie s’intéresse au fonctionnement normal."
+        },
+        {
+          "id": "b",
+          "text": "La forme et les rapports des structures du corps",
+          "explanation": "La localisation des structures relève de l’anatomie."
+        },
+        {
+          "id": "c",
+          "text": "Les mécanismes qui produisent les lésions lors d'une maladie",
+          "explanation": "Cela relève du cadre professionnel et réglementaire."
+        },
+        {
+          "id": "d",
+          "text": "Les signes cliniques recueillis au cours du bilan",
+          "explanation": "Cela relève de la pathologie."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-mcq-03",
+      "difficulty": "easy",
+      "question": "Dans ce parcours, une pathologie correspond le mieux à :",
+      "explanation": "La pathologie étudie les maladies ainsi que les altérations et lésions qui leur sont associées.",
+      "tags": ["definition", "pathologie"],
+      "competencyIds": ["pathology.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Une variation normale de la structure d'un organe",
+          "explanation": "Une position anatomique est un repère descriptif."
+        },
+        {
+          "id": "b",
+          "text": "Le fonctionnement normal d'un appareil",
+          "explanation": "C’est la définition d’un système."
+        },
+        {
+          "id": "c",
+          "text": "Une maladie ou les lésions associées à une maladie",
+          "explanation": "Exact : la pathologie concerne les maladies et leurs lésions."
+        },
+        {
+          "id": "d",
+          "text": "Un signe isolé sans recherche de sa cause",
+          "explanation": "Un examen n’est pas une pathologie."
+        }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": "dea-p1-l1-mcq-04",
+      "difficulty": "easy",
+      "question": "Pourquoi les repères anatomiques sont-ils utiles dans la communication professionnelle ?",
+      "explanation": "Les repères anatomiques permettent une description précise et compréhensible par les professionnels.",
+      "tags": ["anatomie", "communication", "transmission"],
+      "competencyIds": [
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ils remplacent l’évaluation du patient",
+          "explanation": "Les repères complètent l’évaluation ; ils ne la remplacent pas."
+        },
+        {
+          "id": "b",
+          "text": "Ils permettent de décrire plus précisément une zone du corps",
+          "explanation": "Exact : un vocabulaire partagé rend la description plus précise."
+        },
+        {
+          "id": "c",
+          "text": "Ils permettent de poser seul un diagnostic",
+          "explanation": "Décrire une zone n’équivaut pas à poser un diagnostic."
+        },
+        {
+          "id": "d",
+          "text": "Ils rendent inutile la transmission orale",
+          "explanation": "La transmission reste indispensable."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-05",
+      "difficulty": "medium",
+      "question": "Quel ordre d’apprentissage est le plus logique pour comprendre une maladie ?",
+      "explanation": "La structure normale aide à comprendre le fonctionnement normal, puis les conséquences d’une maladie.",
+      "tags": ["raisonnement", "anatomie", "physiologie", "pathologie"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Pathologie, puis anatomie, puis fonctionnement normal",
+          "explanation": "Comprendre la structure et le fonctionnement normal aide à comprendre les altérations."
+        },
+        {
+          "id": "b",
+          "text": "Anatomie, puis physiologie, puis pathologie",
+          "explanation": "Exact : structure, fonctionnement normal, puis altérations."
+        },
+        {
+          "id": "c",
+          "text": "Réglementation, puis pathologie, puis anatomie",
+          "explanation": "Ces domaines sont importants mais cet ordre ne suit pas la logique structure-fonction-altération."
+        },
+        {
+          "id": "d",
+          "text": "Pathologie uniquement",
+          "explanation": "Une pathologie se comprend mieux avec les bases anatomiques et physiologiques."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-06",
+      "difficulty": "easy",
+      "question": "Un organe est le mieux défini comme :",
+      "explanation": "Un organe est formé de plusieurs tissus organisés pour participer à une ou plusieurs fonctions.",
+      "tags": ["organisation-du-corps", "organe"],
+      "competencyIds": ["body.organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Une structure constituée de plusieurs tissus qui participe à une fonction",
+          "explanation": "Exact : un organe associe différents tissus pour assurer des fonctions."
+        },
+        {
+          "id": "b",
+          "text": "Un groupe de cellules semblables assurant une même fonction",
+          "explanation": "Une cellule est une unité plus petite d’organisation du vivant."
+        },
+        {
+          "id": "c",
+          "text": "Un ensemble d'organes coordonnés autour d'une grande fonction",
+          "explanation": "Les maladies ne définissent pas un organe."
+        },
+        {
+          "id": "d",
+          "text": "Une partie du corps définie uniquement par sa localisation",
+          "explanation": "Un protocole n’est pas une structure biologique."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-mcq-07",
+      "difficulty": "easy",
+      "question": "Un système du corps humain correspond à :",
+      "explanation": "Les systèmes regroupent des organes qui coopèrent pour assurer de grandes fonctions de l’organisme.",
+      "tags": ["organisation-du-corps", "systeme"],
+      "competencyIds": ["body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Un organe capable d'assurer seul toutes les fonctions vitales",
+          "explanation": "Un organe peut faire partie d’un système, mais ne constitue pas seul un système."
+        },
+        {
+          "id": "b",
+          "text": "Un ensemble de tissus semblables constituant une même structure",
+          "explanation": "Cela décrit plutôt un tissu."
+        },
+        {
+          "id": "c",
+          "text": "Un ensemble d’organes qui coopèrent pour une fonction",
+          "explanation": "Exact : les systèmes regroupent des organes qui contribuent à de grandes fonctions."
+        },
+        {
+          "id": "d",
+          "text": "Plusieurs organes proches, même s'ils n'assurent aucune fonction commune",
+          "explanation": "Les médicaments ne constituent pas un système anatomique."
+        }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": "dea-p1-l1-mcq-08",
+      "difficulty": "medium",
+      "question": "Quelle formulation décrit le mieux une douleur sans poser de diagnostic ?",
+      "explanation": "Les connaissances anatomiques aident à décrire une zone, sans transformer la description en diagnostic.",
+      "tags": ["communication", "anatomie", "limites-professionnelles"],
+      "competencyIds": ["pathology.definition", "anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le patient présente une atteinte certaine de l'organe situé sous la douleur",
+          "explanation": "Cette formulation pose un diagnostic et dépasse une simple description."
+        },
+        {
+          "id": "b",
+          "text": "Le patient rapporte une douleur localisée dans une région précise",
+          "explanation": "Exact : on décrit ce que rapporte et présente le patient, sans conclure au diagnostic."
+        },
+        {
+          "id": "c",
+          "text": "La localisation de la douleur suffit à identifier son origine",
+          "explanation": "Une douleur ne suffit pas à prouver une origine précise."
+        },
+        {
+          "id": "d",
+          "text": "La douleur est diffuse, donc aucune précision complémentaire n'est utile",
+          "explanation": "La localisation est une information utile à la description et à la transmission."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-09",
+      "difficulty": "easy",
+      "question": "Quel niveau d’organisation vient juste après la cellule ?",
+      "explanation": "Les cellules se regroupent pour former des tissus, qui composent ensuite les organes.",
+      "tags": ["organisation-du-corps", "cellule", "tissu"],
+      "competencyIds": ["body.cell", "body.tissue"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le tissu",
+          "explanation": "Exact : des cellules organisées forment des tissus."
+        },
+        {
+          "id": "b",
+          "text": "L'organe",
+          "explanation": "L’organisme est le niveau le plus global de cette chaîne."
+        },
+        {
+          "id": "c",
+          "text": "L'appareil ou le système",
+          "explanation": "Un système regroupe des organes ; il vient plus tard dans l’organisation."
+        },
+        {
+          "id": "d",
+          "text": "L'organisme",
+          "explanation": "Une pathologie n’est pas un niveau d’organisation du corps."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-mcq-10",
+      "difficulty": "medium",
+      "question": "Quelle information décrit le mieux l’intérêt de connaître l’anatomie dans un bilan ?",
+      "explanation": "Connaître l’anatomie aide à situer les observations et à les transmettre de façon claire.",
+      "tags": ["anatomie", "bilan", "transmission"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Elle permet d'interpréter seule la cause des signes observés",
+          "explanation": "Les paramètres et l’évaluation clinique restent nécessaires."
+        },
+        {
+          "id": "b",
+          "text": "Elle aide à situer, décrire et transmettre les observations de façon précise",
+          "explanation": "Exact : l’anatomie fournit un langage descriptif commun."
+        },
+        {
+          "id": "c",
+          "text": "Elle rend secondaire le recueil des symptômes décrits par le patient",
+          "explanation": "La connaissance anatomique ne donne pas un droit de prescription."
+        },
+        {
+          "id": "d",
+          "text": "Elle remplace l'évaluation du fonctionnement des organes",
+          "explanation": "L’écoute du patient reste essentielle."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-11",
+      "difficulty": "easy",
+      "question": "Laquelle de ces disciplines s’intéresse d’abord aux lésions provoquées par une maladie ?",
+      "explanation": "La pathologie s’intéresse aux maladies et aux lésions ou altérations qui leur sont associées.",
+      "tags": ["pathologie", "definition"],
+      "competencyIds": ["pathology.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La physiologie, qui décrit les fonctions normales",
+          "explanation": "La physiologie s’intéresse d’abord au fonctionnement normal."
+        },
+        {
+          "id": "b",
+          "text": "L'anatomie, qui décrit la structure normale",
+          "explanation": "L’anatomie descriptive s’intéresse d’abord à la structure normale."
+        },
+        {
+          "id": "c",
+          "text": "La pathologie",
+          "explanation": "Exact : la pathologie étudie les maladies et les lésions associées."
+        },
+        {
+          "id": "d",
+          "text": "La sémiologie, qui recueille les signes et symptômes",
+          "explanation": "Cette discipline ne concerne pas les lésions du corps humain."
+        }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": "dea-p1-l1-mcq-12",
+      "difficulty": "medium",
+      "question": "Pourquoi faut-il employer un vocabulaire anatomique partagé entre professionnels ?",
+      "explanation": "Un vocabulaire partagé permet de décrire une localisation de manière plus précise et moins ambiguë.",
+      "tags": ["communication", "anatomie", "transmission"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Pour transmettre une hypothèse diagnostique plutôt qu'une observation",
+          "explanation": "Le but est la précision professionnelle, tout en adaptant l’explication au patient."
+        },
+        {
+          "id": "b",
+          "text": "Pour transmettre une information claire et éviter les ambiguïtés de localisation",
+          "explanation": "Exact : un vocabulaire commun améliore la précision des échanges."
+        },
+        {
+          "id": "c",
+          "text": "Pour remplacer les mots du patient par une interprétation technique",
+          "explanation": "La description des symptômes reste nécessaire."
+        },
+        {
+          "id": "d",
+          "text": "Pour limiter la transmission aux seules régions déjà examinées",
+          "explanation": "Le vocabulaire anatomique ne remplace pas l’évaluation médicale."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-13",
+      "difficulty": "easy",
+      "question": "Quelle proposition associe correctement une discipline à son objet d’étude ?",
+      "explanation": "Anatomie, physiologie et pathologie sont complémentaires : structure, fonctionnement, altérations.",
+      "tags": ["anatomie", "physiologie", "pathologie"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Physiologie : structure des organes ; anatomie : fonctionnement normal",
+          "explanation": "Les objets d’étude sont inversés."
+        },
+        {
+          "id": "b",
+          "text": "Pathologie : maladies ; physiologie : fonctionnement normal",
+          "explanation": "Exact : la pathologie traite des maladies et la physiologie du fonctionnement normal."
+        },
+        {
+          "id": "c",
+          "text": "Anatomie : maladies ; pathologie : structure normale",
+          "explanation": "Ces associations ne correspondent pas aux définitions."
+        },
+        {
+          "id": "d",
+          "text": "Pathologie : fonctionnement normal ; physiologie : lésions",
+          "explanation": "Ces associations sont incorrectes."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-mcq-14",
+      "difficulty": "easy",
+      "question": "Quel énoncé est le plus juste à propos de l’anatomie ?",
+      "explanation": "L’anatomie fournit un socle descriptif avant l’étude du fonctionnement et des pathologies.",
+      "tags": ["anatomie", "raisonnement"],
+      "competencyIds": ["anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Elle décrit surtout les conséquences fonctionnelles des maladies",
+          "explanation": "La connaissance de la structure aide à comprendre les pathologies."
+        },
+        {
+          "id": "b",
+          "text": "Elle se limite à nommer les organes sans préciser leurs rapports",
+          "explanation": "Elle aide surtout à comprendre l’organisation du corps et à communiquer précisément."
+        },
+        {
+          "id": "c",
+          "text": "Elle constitue une base pour décrire le corps et comprendre les autres notions médicales",
+          "explanation": "Exact : elle constitue un socle pour de nombreux apprentissages médicaux."
+        },
+        {
+          "id": "d",
+          "text": "Elle suffit à expliquer le fonctionnement normal d'un organe",
+          "explanation": "Ces disciplines sont complémentaires."
+        }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": "dea-p1-l1-mcq-15",
+      "difficulty": "medium",
+      "question": "Quel est le meilleur exemple d’une information anatomique ?",
+      "explanation": "Une information anatomique situe une structure ou une zone du corps.",
+      "tags": ["anatomie", "description"],
+      "competencyIds": ["anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La douleur augmente lors de l'inspiration",
+          "explanation": "C’est une observation relationnelle, pas un repère anatomique."
+        },
+        {
+          "id": "b",
+          "text": "Le patient décrit une sensation de brûlure",
+          "explanation": "C’est une information thérapeutique."
+        },
+        {
+          "id": "c",
+          "text": "La douleur est située dans une région corporelle précisément décrite",
+          "explanation": "Exact : une localisation corporelle est une information anatomique."
+        },
+        {
+          "id": "d",
+          "text": "Le pouls est mesuré à 96 battements par minute",
+          "explanation": "C’est une information environnementale."
+        }
+      ],
+      "correctAnswer": "c"
+    },
+    {
+      "id": "dea-p1-l1-tf-01",
+      "difficulty": "easy",
+      "question": "L’anatomie décrit l’organisation et les structures du corps humain.",
+      "explanation": "L’anatomie décrit les différentes structures du corps et leurs relations.",
+      "tags": ["anatomie", "definition"],
+      "competencyIds": ["anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : l’anatomie décrit les structures du corps."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "L’énoncé est correct."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-02",
+      "difficulty": "easy",
+      "question": "La physiologie étudie principalement le fonctionnement normal des organes.",
+      "explanation": "La physiologie s’intéresse au fonctionnement normal de l’organisme et de ses organes.",
+      "tags": ["physiologie", "definition"],
+      "competencyIds": ["physiology.definition", "body.organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "L’énoncé est correct : la physiologie étudie le fonctionnement normal."
+        },
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : la physiologie étudie le fonctionnement normal."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-03",
+      "difficulty": "easy",
+      "question": "Une pathologie désigne le fonctionnement normal d’un organe.",
+      "explanation": "La pathologie concerne les maladies et les altérations associées ; le fonctionnement normal relève de la physiologie.",
+      "tags": ["pathologie", "physiologie"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "body.organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "La pathologie concerne les maladies et les lésions, non le fonctionnement normal."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Exact : le fonctionnement normal relève de la physiologie."
+        }
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": "dea-p1-l1-tf-04",
+      "difficulty": "easy",
+      "question": "Un organe peut être constitué de plusieurs tissus.",
+      "explanation": "Un organe associe plusieurs tissus organisés pour participer à une ou plusieurs fonctions.",
+      "tags": ["organe", "tissu"],
+      "competencyIds": ["body.tissue", "body.organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : un organe associe plusieurs tissus."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Un organe associe généralement plusieurs tissus organisés."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-05",
+      "difficulty": "easy",
+      "question": "Connaître des repères anatomiques permet de décrire plus précisément une localisation.",
+      "explanation": "Les repères anatomiques permettent une description corporelle plus précise et partageable.",
+      "tags": ["anatomie", "communication"],
+      "competencyIds": [
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Les repères anatomiques améliorent justement la précision de la description."
+        },
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : ils donnent un langage commun pour localiser une observation."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-06",
+      "difficulty": "medium",
+      "question": "Décrire une douleur dans une région anatomique suffit à poser un diagnostic médical.",
+      "explanation": "La localisation est une information descriptive utile, sans constituer à elle seule un diagnostic.",
+      "tags": ["limites-professionnelles", "anatomie"],
+      "competencyIds": [
+        "pathology.definition",
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Une localisation aide à décrire une situation, mais ne suffit pas à poser un diagnostic."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Exact : une description anatomique ne remplace pas une évaluation diagnostique."
+        }
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": "dea-p1-l1-tf-07",
+      "difficulty": "easy",
+      "question": "Un système regroupe des organes qui coopèrent pour assurer de grandes fonctions.",
+      "explanation": "Un système regroupe plusieurs organes qui coopèrent pour des fonctions de l’organisme.",
+      "tags": ["systeme", "organisation-du-corps"],
+      "competencyIds": ["body.organ", "body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : les systèmes organisent la coopération de plusieurs organes."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "L’énoncé est correct."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-08",
+      "difficulty": "medium",
+      "question": "Pour comprendre une pathologie, il est inutile de connaître la structure et le fonctionnement normal de l’organe concerné.",
+      "explanation": "La compréhension de la structure et du fonctionnement normal facilite la compréhension des pathologies.",
+      "tags": ["raisonnement", "anatomie", "physiologie", "pathologie"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "body.organ",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Exact : la structure et le fonctionnement normal aident à comprendre une altération."
+        },
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Ces bases sont utiles pour comprendre une altération liée à une maladie."
+        }
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": "dea-p1-l1-tf-09",
+      "difficulty": "easy",
+      "question": "La cellule est un niveau d’organisation plus petit qu’un tissu.",
+      "explanation": "Les cellules constituent des tissus ; les tissus participent ensuite à la constitution des organes.",
+      "tags": ["cellule", "tissu", "organisation-du-corps"],
+      "competencyIds": ["body.cell", "body.tissue"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "Exact : les cellules se regroupent pour former des tissus."
+        },
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "La cellule est bien un niveau d’organisation plus petit qu’un tissu."
+        }
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": "dea-p1-l1-tf-10",
+      "difficulty": "easy",
+      "question": "L’anatomie n’est utile que pour les chirurgiens.",
+      "explanation": "Les repères anatomiques sont utiles à de nombreux professionnels pour observer, décrire et communiquer.",
+      "tags": ["anatomie", "professionnels-de-sante"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "false",
+          "text": "Faux",
+          "explanation": "Exact : les repères anatomiques sont utiles à de nombreux professionnels de santé."
+        },
+        {
+          "id": "true",
+          "text": "Vrai",
+          "explanation": "L’anatomie est utile dans de nombreuses situations de soins et de communication."
+        }
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": "dea-p1-l1-match-01",
+      "difficulty": "easy",
+      "question": "Associe chaque discipline à ce qu’elle étudie principalement.",
+      "explanation": "Ces trois disciplines sont complémentaires : structure, fonctionnement et altérations liées aux maladies.",
+      "tags": ["anatomie", "physiologie", "pathologie"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "anatomie",
+          "text": "Anatomie",
+          "match": "Structure du corps",
+          "explanation": "Anatomie correspond à : Structure du corps."
+        },
+        {
+          "id": "physiologie",
+          "text": "Physiologie",
+          "match": "Fonctionnement normal",
+          "explanation": "Physiologie correspond à : Fonctionnement normal."
+        },
+        {
+          "id": "pathologie",
+          "text": "Pathologie",
+          "match": "Maladies et lésions associées",
+          "explanation": "Pathologie correspond à : Maladies et lésions associées."
+        }
+      ],
+      "correctAnswer": ["anatomie", "physiologie", "pathologie"]
+    },
+    {
+      "id": "dea-p1-l1-match-02",
+      "difficulty": "easy",
+      "question": "Associe chaque niveau d’organisation à sa description.",
+      "explanation": "Le corps s’organise progressivement : cellules, tissus, organes, systèmes, organisme.",
+      "tags": ["organisation-du-corps", "cellule", "tissu", "organe"],
+      "competencyIds": ["body.cell", "body.tissue", "body.organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "cellule",
+          "text": "Cellule",
+          "match": "Unité vivante de base",
+          "explanation": "Cellule correspond à : Unité vivante de base."
+        },
+        {
+          "id": "tissu",
+          "text": "Tissu",
+          "match": "Ensemble organisé de cellules",
+          "explanation": "Tissu correspond à : Ensemble organisé de cellules."
+        },
+        {
+          "id": "organe",
+          "text": "Organe",
+          "match": "Structure constituée de plusieurs tissus",
+          "explanation": "Organe correspond à : Structure constituée de plusieurs tissus."
+        }
+      ],
+      "correctAnswer": ["cellule", "tissu", "organe"]
+    },
+    {
+      "id": "dea-p1-l1-match-03",
+      "difficulty": "easy",
+      "question": "Associe chaque élément à la catégorie la plus adaptée.",
+      "explanation": "Un organe, un système et un tissu n’ont pas le même niveau d’organisation.",
+      "tags": ["organisation-du-corps", "organe", "systeme", "tissu"],
+      "competencyIds": ["body.tissue", "body.organ", "body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "heart",
+          "text": "Cœur",
+          "match": "Organe",
+          "explanation": "Cœur correspond à : Organe."
+        },
+        {
+          "id": "circulatory",
+          "text": "Système circulatoire",
+          "match": "Système",
+          "explanation": "Système circulatoire correspond à : Système."
+        },
+        {
+          "id": "muscle-tissue",
+          "text": "Tissu musculaire",
+          "match": "Tissu",
+          "explanation": "Tissu musculaire correspond à : Tissu."
+        }
+      ],
+      "correctAnswer": ["heart", "circulatory", "muscle-tissue"]
+    },
+    {
+      "id": "dea-p1-l1-match-04",
+      "difficulty": "medium",
+      "question": "Associe chaque objectif à la connaissance la plus utile.",
+      "explanation": "Les disciplines se complètent : anatomie pour situer, physiologie pour comprendre le normal, pathologie pour les altérations.",
+      "tags": ["raisonnement", "anatomie", "physiologie", "pathologie"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "body.organ",
+        "anatomy.anatomical-landmarks",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "locate",
+          "text": "Décrire précisément une zone douloureuse",
+          "match": "Repères anatomiques",
+          "explanation": "Décrire précisément une zone douloureuse correspond à : Repères anatomiques."
+        },
+        {
+          "id": "normal",
+          "text": "Comprendre comment un organe fonctionne normalement",
+          "match": "Physiologie",
+          "explanation": "Comprendre comment un organe fonctionne normalement correspond à : Physiologie."
+        },
+        {
+          "id": "alteration",
+          "text": "Comprendre les altérations liées à une maladie",
+          "match": "Pathologie",
+          "explanation": "Comprendre les altérations liées à une maladie correspond à : Pathologie."
+        }
+      ],
+      "correctAnswer": ["locate", "normal", "alteration"]
+    },
+    {
+      "id": "dea-p1-l1-match-05",
+      "difficulty": "easy",
+      "question": "Associe chaque terme à son niveau d’organisation.",
+      "explanation": "L’organisme est composé de systèmes, eux-mêmes composés d’organes.",
+      "tags": ["organisation-du-corps"],
+      "competencyIds": ["body.organ", "body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "human",
+          "text": "Être humain",
+          "match": "Organisme",
+          "explanation": "Être humain correspond à : Organisme."
+        },
+        {
+          "id": "digestive",
+          "text": "Système digestif",
+          "match": "Système",
+          "explanation": "Système digestif correspond à : Système."
+        },
+        {
+          "id": "stomach",
+          "text": "Estomac",
+          "match": "Organe",
+          "explanation": "Estomac correspond à : Organe."
+        }
+      ],
+      "correctAnswer": ["human", "digestive", "stomach"]
+    },
+    {
+      "id": "dea-p1-l1-match-06",
+      "difficulty": "medium",
+      "question": "Associe chaque situation au but de l’information anatomique.",
+      "explanation": "L’anatomie sert autant à observer et transmettre qu’à construire les bases de la compréhension des pathologies.",
+      "tags": ["anatomie", "transmission", "raisonnement"],
+      "competencyIds": [
+        "pathology.definition",
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "report",
+          "text": "Transmission à un professionnel",
+          "match": "Décrire précisément une localisation",
+          "explanation": "Transmission à un professionnel correspond à : Décrire précisément une localisation."
+        },
+        {
+          "id": "observe",
+          "text": "Observation du patient",
+          "match": "Situer une zone corporelle",
+          "explanation": "Observation du patient correspond à : Situer une zone corporelle."
+        },
+        {
+          "id": "learn",
+          "text": "Étude d’une maladie",
+          "match": "Comprendre la structure normale avant l’altération",
+          "explanation": "Étude d’une maladie correspond à : Comprendre la structure normale avant l’altération."
+        }
+      ],
+      "correctAnswer": ["report", "observe", "learn"]
+    },
+    {
+      "id": "dea-p1-l1-match-07",
+      "difficulty": "easy",
+      "question": "Associe chaque mot à sa définition courte.",
+      "explanation": "Structure, fonction et lésion sont des notions clés pour distinguer anatomie, physiologie et pathologie.",
+      "tags": ["vocabulaire-medical", "anatomie", "physiologie", "pathologie"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "body.tissue",
+        "body.organ",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "structure",
+          "text": "Structure",
+          "match": "Organisation matérielle d’une partie du corps",
+          "explanation": "Structure correspond à : Organisation matérielle d’une partie du corps."
+        },
+        {
+          "id": "function",
+          "text": "Fonction",
+          "match": "Rôle assuré par une structure",
+          "explanation": "Fonction correspond à : Rôle assuré par une structure."
+        },
+        {
+          "id": "lesion",
+          "text": "Lésion",
+          "match": "Altération d’un tissu ou d’un organe",
+          "explanation": "Lésion correspond à : Altération d’un tissu ou d’un organe."
+        }
+      ],
+      "correctAnswer": ["structure", "function", "lesion"]
+    },
+    {
+      "id": "dea-p1-l1-match-08",
+      "difficulty": "easy",
+      "question": "Associe chaque phrase à la discipline correspondante.",
+      "explanation": "Une même structure peut être étudiée sous l’angle de sa localisation, de son fonctionnement ou de ses altérations.",
+      "tags": ["anatomie", "physiologie", "pathologie"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "body.organ",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "where",
+          "text": "Où se situe cette structure ?",
+          "match": "Anatomie",
+          "explanation": "Où se situe cette structure ? correspond à : Anatomie."
+        },
+        {
+          "id": "how",
+          "text": "Comment fonctionne normalement cet organe ?",
+          "match": "Physiologie",
+          "explanation": "Comment fonctionne normalement cet organe ? correspond à : Physiologie."
+        },
+        {
+          "id": "what",
+          "text": "Quelles altérations sont liées à cette maladie ?",
+          "match": "Pathologie",
+          "explanation": "Quelles altérations sont liées à cette maladie ? correspond à : Pathologie."
+        }
+      ],
+      "correctAnswer": ["where", "how", "what"]
+    },
+    {
+      "id": "dea-p1-l1-match-09",
+      "difficulty": "medium",
+      "question": "Associe chaque formulation à son niveau de précision.",
+      "explanation": "Une description anatomique précise est utile ; elle ne doit pas être confondue avec un diagnostic.",
+      "tags": ["communication", "anatomie", "limites-professionnelles"],
+      "competencyIds": [
+        "pathology.definition",
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "precise",
+          "text": "Douleur décrite dans une région corporelle identifiée",
+          "match": "Description anatomique précise",
+          "explanation": "Douleur décrite dans une région corporelle identifiée correspond à : Description anatomique précise."
+        },
+        {
+          "id": "vague",
+          "text": "Douleur “quelque part dans le ventre”",
+          "match": "Description imprécise",
+          "explanation": "Douleur “quelque part dans le ventre” correspond à : Description imprécise."
+        },
+        {
+          "id": "diagnosis",
+          "text": "Affirmer une maladie sans évaluation",
+          "match": "Conclusion non justifiée",
+          "explanation": "Affirmer une maladie sans évaluation correspond à : Conclusion non justifiée."
+        }
+      ],
+      "correctAnswer": ["precise", "vague", "diagnosis"]
+    },
+    {
+      "id": "dea-p1-l1-match-10",
+      "difficulty": "easy",
+      "question": "Associe chaque étape à ce qu’elle prépare.",
+      "explanation": "Le parcours suit une logique : connaître la structure, comprendre sa fonction, puis comprendre ses altérations.",
+      "tags": ["progression", "raisonnement"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "anatomy",
+          "text": "Anatomie",
+          "match": "Comprendre le fonctionnement d’une structure connue",
+          "explanation": "Anatomie correspond à : Comprendre le fonctionnement d’une structure connue."
+        },
+        {
+          "id": "physiology",
+          "text": "Physiologie",
+          "match": "Comprendre l’altération du fonctionnement normal",
+          "explanation": "Physiologie correspond à : Comprendre l’altération du fonctionnement normal."
+        },
+        {
+          "id": "pathology",
+          "text": "Pathologie",
+          "match": "Mieux interpréter les conséquences d’une maladie",
+          "explanation": "Pathologie correspond à : Mieux interpréter les conséquences d’une maladie."
+        }
+      ],
+      "correctAnswer": ["anatomy", "physiology", "pathology"]
+    },
+    {
+      "id": "dea-p1-l1-order-01",
+      "difficulty": "easy",
+      "question": "Replace les niveaux d’organisation du plus petit au plus global.",
+      "explanation": "L’organisation du corps progresse de la cellule vers le tissu, l’organe, le système puis l’organisme.",
+      "tags": ["organisation-du-corps"],
+      "competencyIds": ["body.cell", "body.tissue", "body.organ", "body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "instruction": "Place les éléments dans l'ordre demandé.",
+      "answers": [
+        {
+          "id": "organism",
+          "text": "Organisme",
+          "explanation": "Organisme occupe la position 5 dans cet ordre.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "cell",
+          "text": "Cellule",
+          "explanation": "Cellule occupe la position 1 dans cet ordre.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "system",
+          "text": "Système",
+          "explanation": "Système occupe la position 4 dans cet ordre.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "tissue",
+          "text": "Tissu",
+          "explanation": "Tissu occupe la position 2 dans cet ordre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "organ",
+          "text": "Organe",
+          "explanation": "Organe occupe la position 3 dans cet ordre.",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": ["cell", "tissue", "organ", "system", "organism"]
+    },
+    {
+      "id": "dea-p1-l1-order-02",
+      "difficulty": "easy",
+      "question": "Replace ces domaines dans l’ordre logique d’apprentissage proposé par MedLingo.",
+      "explanation": "On commence par la structure, puis le fonctionnement normal, avant les altérations liées aux maladies.",
+      "tags": ["progression", "anatomie", "physiologie", "pathologie"],
+      "competencyIds": ["physiology.definition", "pathology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "instruction": "Place les éléments dans l'ordre demandé.",
+      "answers": [
+        {
+          "id": "pathology",
+          "text": "Pathologie",
+          "explanation": "Pathologie occupe la position 3 dans cet ordre.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "physiology",
+          "text": "Physiologie",
+          "explanation": "Physiologie occupe la position 2 dans cet ordre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "anatomy",
+          "text": "Anatomie",
+          "explanation": "Anatomie occupe la position 1 dans cet ordre.",
+          "sequenceRank": 1
+        }
+      ],
+      "correctAnswer": ["anatomy", "physiology", "pathology"]
+    },
+    {
+      "id": "dea-p1-l1-order-03",
+      "difficulty": "medium",
+      "question": "Replace ces étapes dans l’ordre logique pour construire une description rigoureuse d’une zone corporelle.",
+      "explanation": "On recueille d’abord les éléments observables, on les situe, puis on les transmet clairement.",
+      "tags": ["communication", "anatomie", "transmission"],
+      "competencyIds": [
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "instruction": "Place les éléments dans l'ordre demandé.",
+      "answers": [
+        {
+          "id": "transmit",
+          "text": "Transmettre une description précise",
+          "explanation": "Transmettre une description précise occupe la position 3 dans cet ordre.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "locate",
+          "text": "Situer la zone avec des repères anatomiques",
+          "explanation": "Situer la zone avec des repères anatomiques occupe la position 2 dans cet ordre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "observe",
+          "text": "Observer et écouter ce que rapporte le patient",
+          "explanation": "Observer et écouter ce que rapporte le patient occupe la position 1 dans cet ordre.",
+          "sequenceRank": 1
+        }
+      ],
+      "correctAnswer": ["observe", "locate", "transmit"]
+    },
+    {
+      "id": "dea-p1-l1-order-04",
+      "difficulty": "easy",
+      "question": "Replace les éléments du plus simple au plus complexe dans l’organisation du vivant.",
+      "explanation": "Des cellules constituent des tissus ; des tissus participent à la formation d’organes ; des organes composent des systèmes.",
+      "tags": ["organisation-du-corps"],
+      "competencyIds": ["body.cell", "body.tissue", "body.organ", "body.system"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15, 16",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 15, 16",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "instruction": "Place les éléments dans l'ordre demandé.",
+      "answers": [
+        {
+          "id": "organ",
+          "text": "Organe",
+          "explanation": "Organe occupe la position 3 dans cet ordre.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "tissue",
+          "text": "Tissu",
+          "explanation": "Tissu occupe la position 2 dans cet ordre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "cell",
+          "text": "Cellule",
+          "explanation": "Cellule occupe la position 1 dans cet ordre.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "system",
+          "text": "Système",
+          "explanation": "Système occupe la position 4 dans cet ordre.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": ["cell", "tissue", "organ", "system"]
+    },
+    {
+      "id": "dea-p1-l1-order-05",
+      "difficulty": "medium",
+      "question": "Replace ces objectifs dans l’ordre pédagogique le plus cohérent pour un nouveau sujet médical.",
+      "explanation": "La compréhension d’une altération repose sur la connaissance de la structure et du fonctionnement normal.",
+      "tags": ["raisonnement", "progression"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "anatomy.anatomical-landmarks"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "instruction": "Place les éléments dans l'ordre demandé.",
+      "answers": [
+        {
+          "id": "identify-disease",
+          "text": "Étudier les altérations liées à une maladie",
+          "explanation": "Étudier les altérations liées à une maladie occupe la position 3 dans cet ordre.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "understand-function",
+          "text": "Comprendre le fonctionnement normal",
+          "explanation": "Comprendre le fonctionnement normal occupe la position 2 dans cet ordre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "identify-structure",
+          "text": "Identifier la structure et sa localisation",
+          "explanation": "Identifier la structure et sa localisation occupe la position 1 dans cet ordre.",
+          "sequenceRank": 1
+        }
+      ],
+      "correctAnswer": ["identify-structure", "understand-function", "identify-disease"]
+    },
+    {
+      "id": "dea-p1-l1-case-01",
+      "difficulty": "easy",
+      "question": "Lors d’un échange, une personne indique une douleur située “juste sous les côtes à droite”.\n\nPourquoi la connaissance des repères anatomiques est-elle utile dans cette situation ?",
+      "explanation": "Les connaissances anatomiques aident à situer et à transmettre une observation, sans poser de diagnostic.",
+      "tags": ["cas-clinique", "anatomie", "transmission"],
+      "competencyIds": [
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Pour décrire précisément la localisation rapportée avant la transmission",
+          "explanation": "Exact : les repères aident à décrire la zone avec précision."
+        },
+        {
+          "id": "b",
+          "text": "Pour orienter la transmission vers l'organe le plus probablement atteint",
+          "explanation": "Une localisation ne suffit pas à poser un diagnostic."
+        },
+        {
+          "id": "c",
+          "text": "Pour remplacer le recueil des signes associés par la seule localisation",
+          "explanation": "Les repères anatomiques n’autorisent pas une décision thérapeutique autonome."
+        },
+        {
+          "id": "d",
+          "text": "Pour reformuler la douleur avec un terme diagnostique plus précis",
+          "explanation": "Il reste utile de recueillir et préciser les informations."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-case-02",
+      "difficulty": "medium",
+      "question": "Un collègue dit seulement : “Le patient a mal au ventre.”\n\nQuelle amélioration apporte le mieux un vocabulaire anatomique ?",
+      "explanation": "Une localisation anatomique précise rend la description plus utile, sans remplacer l’évaluation.",
+      "tags": ["cas-clinique", "anatomie", "communication"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Remplacer les mots du patient par le nom d'un organe supposé atteint",
+          "explanation": "Le vocabulaire doit améliorer la précision, sans empêcher le dialogue."
+        },
+        {
+          "id": "b",
+          "text": "Préciser la région de la douleur telle qu’elle est décrite et observée",
+          "explanation": "Exact : on cherche une description plus précise de la localisation."
+        },
+        {
+          "id": "c",
+          "text": "Interpréter la région douloureuse comme une origine digestive certaine",
+          "explanation": "La localisation ne permet pas à elle seule de conclure à une cause."
+        },
+        {
+          "id": "d",
+          "text": "Décrire uniquement l'intensité, car la localisation est secondaire",
+          "explanation": "L’âge est utile, mais ne remplace pas la localisation."
+        }
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": "dea-p1-l1-case-03",
+      "difficulty": "medium",
+      "question": "Tu apprends qu’un organe ne fonctionne pas normalement chez un patient.\n\nQuelle base faut-il d’abord maîtriser pour comprendre ce qui peut être altéré ?",
+      "explanation": "L’anatomie et la physiologie constituent des bases pour comprendre les altérations étudiées en pathologie.",
+      "tags": ["cas-clinique", "raisonnement", "physiologie", "pathologie"],
+      "competencyIds": [
+        "physiology.definition",
+        "pathology.definition",
+        "body.organ",
+        "anatomy.dea-relevance"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La structure de l’organe et son fonctionnement normal",
+          "explanation": "Exact : ces deux bases aident à comprendre une altération."
+        },
+        {
+          "id": "b",
+          "text": "Le nom de la maladie avant le fonctionnement habituel de l'organe",
+          "explanation": "Le nom seul ne permet pas de comprendre le mécanisme."
+        },
+        {
+          "id": "c",
+          "text": "Les signes possibles de la maladie sans connaître l'organisation de l'organe",
+          "explanation": "Cela ne concerne pas le raisonnement médical."
+        },
+        {
+          "id": "d",
+          "text": "Les traitements usuels avant d'identifier la structure concernée",
+          "explanation": "Cette information ne permet pas de comprendre un fonctionnement d’organe."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-case-04",
+      "difficulty": "easy",
+      "question": "Pendant une transmission, tu dois expliquer où le patient ressent une gêne.\n\nQuel objectif est le plus approprié ?",
+      "explanation": "Le vocabulaire anatomique sert à transmettre une localisation claire et partagée.",
+      "tags": ["cas-clinique", "transmission", "anatomie"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Décrire la zone corporelle avec des termes compris par les professionnels",
+          "explanation": "Exact : une description précise soutient une transmission claire."
+        },
+        {
+          "id": "b",
+          "text": "Décrire uniquement l'intensité de la douleur, sans préciser sa région",
+          "explanation": "Une description vague peut créer des ambiguïtés."
+        },
+        {
+          "id": "c",
+          "text": "Associer immédiatement la zone douloureuse à un organe atteint",
+          "explanation": "La transmission doit distinguer l’observation de l’interprétation diagnostique."
+        },
+        {
+          "id": "d",
+          "text": "Reprendre un terme vague si l'équipe connaît déjà le contexte",
+          "explanation": "La localisation peut être une information utile à transmettre."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-case-05",
+      "difficulty": "medium",
+      "question": "Un étudiant sait citer des maladies mais ne sait pas localiser les grands organes.\n\nQuelle étape d’apprentissage doit-il renforcer en priorité ?",
+      "explanation": "Les bases anatomiques sont nécessaires pour comprendre et décrire les organes, puis les pathologies associées.",
+      "tags": ["cas-clinique", "progression", "anatomie"],
+      "competencyIds": [
+        "pathology.definition",
+        "body.organ",
+        "anatomy.anatomical-landmarks",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Les bases d’anatomie et d’organisation du corps",
+          "explanation": "Exact : connaître les structures aide à comprendre les maladies qui les concernent."
+        },
+        {
+          "id": "b",
+          "text": "Les pathologies rares, avant les niveaux d'organisation du corps",
+          "explanation": "Les récompenses ne remplacent pas les bases de connaissances."
+        },
+        {
+          "id": "c",
+          "text": "Les traitements, avant la structure et le fonctionnement normal",
+          "explanation": "Ce n’est pas la priorité de cette lacune précise."
+        },
+        {
+          "id": "d",
+          "text": "Les cas complexes, sans reprendre les relations entre cellules, tissus et organes",
+          "explanation": "Les cas complexes reposent sur des bases solides."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-priority-01",
+      "difficulty": "easy",
+      "question": "Avant d’étudier une maladie d’un organe, quelle connaissance est la plus fondamentale ?",
+      "explanation": "La connaissance de la structure constitue une base avant l’étude de son fonctionnement ou de ses pathologies.",
+      "tags": ["priorisation", "anatomie", "progression"],
+      "competencyIds": ["pathology.definition", "body.organ", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 7, 8, 9, 13, 15",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "7, 8, 9, 13, 15",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sa structure et sa localisation",
+          "explanation": "Exact : il faut d’abord connaître la structure concernée."
+        },
+        {
+          "id": "b",
+          "text": "Les signes habituels de la maladie, avant la structure normale de l'organe",
+          "explanation": "Ce choix ne participe pas à la compréhension médicale."
+        },
+        {
+          "id": "c",
+          "text": "Une hypothèse diagnostique, avant d'identifier la région concernée",
+          "explanation": "Le diagnostic ne précède pas les bases de compréhension."
+        },
+        {
+          "id": "d",
+          "text": "Les traitements possibles, avant le fonctionnement normal de l'organe",
+          "explanation": "Ce choix ne répond pas à l’objectif d’apprentissage."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-priority-02",
+      "difficulty": "medium",
+      "question": "Lorsqu’une localisation corporelle doit être transmise, quelle action améliore le plus la qualité de l’information ?",
+      "explanation": "Une description anatomique précise et factuelle est plus utile qu’une interprétation non confirmée.",
+      "tags": ["priorisation", "transmission", "anatomie"],
+      "competencyIds": [
+        "anatomy.anatomical-landmarks",
+        "anatomy.dea-relevance",
+        "anatomy.definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Employer une description anatomique précise et factuelle",
+          "explanation": "Exact : précision et faits observés améliorent la transmission."
+        },
+        {
+          "id": "b",
+          "text": "Transmettre d'abord l'hypothèse la plus probable, puis préciser la localisation",
+          "explanation": "Une hypothèse non confirmée ne remplace pas une description factuelle."
+        },
+        {
+          "id": "c",
+          "text": "Employer le terme donné par le patient sans vérifier la région désignée",
+          "explanation": "La localisation peut être une information importante."
+        },
+        {
+          "id": "d",
+          "text": "Décrire l'organe supposé atteint plutôt que la zone observée",
+          "explanation": "Un vocabulaire partagé limite les ambiguïtés."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-priority-03",
+      "difficulty": "easy",
+      "question": "Pour apprendre le corps humain de façon logique, quelle étape vient en premier ?",
+      "explanation": "Le parcours commence par l’organisation du corps, avant le fonctionnement et les pathologies.",
+      "tags": ["priorisation", "progression", "organisation-du-corps"],
+      "competencyIds": ["anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Identifier comment le corps est organisé",
+          "explanation": "Exact : l’organisation du corps est la première base du parcours."
+        },
+        {
+          "id": "b",
+          "text": "Étudier les maladies avant de distinguer cellules, tissus et organes",
+          "explanation": "Les maladies se comprennent mieux après les bases structurelles et fonctionnelles."
+        },
+        {
+          "id": "c",
+          "text": "Mémoriser les noms d'organes sans comprendre leurs relations",
+          "explanation": "Les cas complexes doivent s’appuyer sur des bases solides."
+        },
+        {
+          "id": "d",
+          "text": "Apprendre le fonctionnement avant de repérer les structures concernées",
+          "explanation": "Le vocabulaire anatomique permet de décrire précisément le corps."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-priority-04",
+      "difficulty": "medium",
+      "question": "Quelle distinction est prioritaire à comprendre pour ne pas confondre structure et fonctionnement ?",
+      "explanation": "Distinguer structure et fonctionnement normal est indispensable avant d’aborder les pathologies.",
+      "tags": ["priorisation", "anatomie", "physiologie"],
+      "competencyIds": ["physiology.definition", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Anatomie = structure ; physiologie = fonctionnement",
+          "explanation": "Exact : cette distinction est fondamentale."
+        },
+        {
+          "id": "b",
+          "text": "Anatomie = fonctionnement ; physiologie = structure",
+          "explanation": "Cette association est erronée."
+        },
+        {
+          "id": "c",
+          "text": "Anatomie = lésions ; physiologie = maladies",
+          "explanation": "Le fonctionnement normal et les maladies sont deux notions distinctes."
+        },
+        {
+          "id": "d",
+          "text": "Anatomie = symptômes ; physiologie = localisation",
+          "explanation": "Distinguer structure, fonctionnement et pathologie aide à organiser les connaissances."
+        }
+      ],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "dea-p1-l1-priority-05",
+      "difficulty": "medium",
+      "question": "Un étudiant doit améliorer la précision de ses transmissions. Quel apprentissage doit-il prioriser dans ce parcours ?",
+      "explanation": "Les repères anatomiques et un vocabulaire précis améliorent la qualité descriptive des transmissions.",
+      "tags": ["priorisation", "anatomie", "transmission"],
+      "competencyIds": ["anatomy.dea-relevance", "anatomy.definition"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Les repères anatomiques et le vocabulaire descriptif",
+          "explanation": "Exact : ils aident à situer et décrire les observations."
+        },
+        {
+          "id": "b",
+          "text": "Les hypothèses diagnostiques associées à chaque région du corps",
+          "explanation": "Cela n’améliore pas la précision d’une transmission."
+        },
+        {
+          "id": "c",
+          "text": "Les traitements possibles avant la description factuelle des observations",
+          "explanation": "Une transmission doit distinguer les faits observés des conclusions non confirmées."
+        },
+        {
+          "id": "d",
+          "text": "Les abréviations locales, même si elles ne sont pas partagées par l'équipe",
+          "explanation": "La personnalisation n’améliore pas le contenu de la transmission."
+        }
+      ],
+      "correctAnswer": "a"
+    }
+  ]
 }

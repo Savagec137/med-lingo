@@ -72,7 +72,7 @@ test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () =>
   assert.equal(DEA_FORMATION.parcours[1]?.lessons.at(-1)?.kind, "boss");
 });
 
-test("chaque future leçon possède un JSON indépendant sans unit ni chapter", () => {
+test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
   for (const parcours of DEA_FORMATION.parcours.slice(0, 2)) {
     for (const reference of parcours.lessons) {
       const url = new URL(`./formations/dea/${reference.file}`, import.meta.url);
@@ -81,8 +81,14 @@ test("chaque future leçon possède un JSON indépendant sans unit ni chapter", 
       assert.equal(lesson.id, reference.id);
       assert.equal(lesson.parcours, parcours.id);
       assert.equal(lesson.title, reference.title);
-      assert.equal(lesson.status, "awaiting_content");
-      assert.deepEqual(lesson.items, []);
+      if (lesson.id === "dea-p01-l01") {
+        assert.equal(lesson.status, "published");
+        assert.equal(lesson.items.length, 50);
+        assert.deepEqual(lesson.selection, { strategy: "random", count: 10 });
+      } else {
+        assert.equal(lesson.status, "awaiting_content");
+        assert.deepEqual(lesson.items, []);
+      }
       const keys = allKeys(raw);
       assert.equal(keys.includes("unit"), false, reference.file);
       assert.equal(keys.includes("chapter"), false, reference.file);
@@ -93,7 +99,7 @@ test("chaque future leçon possède un JSON indépendant sans unit ni chapter", 
 test("une banque vide ou incomplète ne peut jamais être publiée", () => {
   const draftUrl = new URL("./formations/dea/parcours-01/lesson-01.json", import.meta.url);
   const draft = JSON.parse(readFileSync(draftUrl, "utf8")) as Record<string, unknown>;
-  assert.throws(() => parseLessonContentFile({ ...draft, status: "published" }));
+  assert.throws(() => parseLessonContentFile({ ...draft, status: "published", items: [] }));
 });
 
 test("le dépôt charge une banque publiée une seule fois et la conserve en cache", async () => {
@@ -126,6 +132,7 @@ test("le dépôt charge une banque publiée une seule fois et la conserve en cac
         correctAnswer: "answer-b",
         explanation: "Explication validée",
         tags: ["validation"],
+        competencyIds: ["test.competency"],
       },
     ],
   };

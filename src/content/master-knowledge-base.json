@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "1.0",
+  "formations": ["dea"],
+  "lessonRegistry": ["dea-p01-l01"],
+  "supportedExerciseTypes": [
+    "mcq",
+    "true_false",
+    "matching",
+    "ordering",
+    "clinical_case",
+    "prioritization"
+  ],
+  "competencies": [
+    {
+      "id": "anatomy.definition",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "foundations",
+      "competence": "Définition de l'anatomie",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Définir l'anatomie comme la désignation et la description des organes constituant le corps humain.",
+        "Distinguer l'anatomie des autres domaines présentés dans le support."
+      ],
+      "recommendedQuestionPool": 8,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["anatomie", "bases", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [13],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-01",
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-10",
+        "dea-p1-l1-mcq-12",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-mcq-14",
+        "dea-p1-l1-mcq-15",
+        "dea-p1-l1-tf-01",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-tf-10",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-02",
+        "dea-p1-l1-case-04",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01",
+        "dea-p1-l1-priority-02",
+        "dea-p1-l1-priority-03",
+        "dea-p1-l1-priority-04",
+        "dea-p1-l1-priority-05"
+      ]
+    },
+    {
+      "id": "anatomy.dea-relevance",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "anatomical-landmarks",
+      "competence": "Intérêt des repères anatomiques pour le DEA",
+      "prerequisites": ["anatomy.definition", "anatomy.anatomical-landmarks"],
+      "learningObjectives": [
+        "Expliquer l'intérêt d'identifier précisément un organe ou une région anatomique.",
+        "Relier les repères anatomiques à la transmission d'un bilan exploitable pour le médecin."
+      ],
+      "recommendedQuestionPool": 8,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "clinical_case"]
+      },
+      "tags": ["anatomie", "repères-anatomiques", "transmission", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [13],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-10",
+        "dea-p1-l1-mcq-12",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-10",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-02",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-04",
+        "dea-p1-l1-priority-02",
+        "dea-p1-l1-priority-05"
+      ]
+    },
+    {
+      "id": "physiology.definition",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "physiology",
+      "subdomain": "foundations",
+      "competence": "Définition de la physiologie",
+      "prerequisites": ["anatomy.definition"],
+      "learningObjectives": [
+        "Définir la physiologie comme l'étude du fonctionnement normal des différents appareils.",
+        "Différencier le fonctionnement normal de l'organisation anatomique."
+      ],
+      "recommendedQuestionPool": 6,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["physiologie", "bases", "appareils", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [13],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-02",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-tf-02",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-priority-04"
+      ]
+    },
+    {
+      "id": "pathology.definition",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "pathology",
+      "subdomain": "foundations",
+      "competence": "Définition de la pathologie et du processus pathologique",
+      "prerequisites": ["anatomy.definition", "physiology.definition"],
+      "learningObjectives": [
+        "Différencier l'état de santé et la maladie selon le support.",
+        "Identifier les étapes générales d'un processus pathologique : facteurs, mécanismes physiopathologiques, lésions, conséquences physiologiques et signes cliniques.",
+        "Distinguer une lésion de ses conséquences physiologiques."
+      ],
+      "recommendedQuestionPool": 8,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "ordering"]
+      },
+      "tags": ["pathologie", "physiopathologie", "lésion", "bases", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [7, 8, 9],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-03",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-11",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01"
+      ]
+    },
+    {
+      "id": "body.cell",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "body-organization",
+      "competence": "La cellule dans l'organisation du corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Identifier la cellule comme l'élément de base de l'organisation du corps humain.",
+        "Citer les principaux éléments de la cellule présentés dans le support : membrane, cytoplasme et noyau."
+      ],
+      "recommendedQuestionPool": 5,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["cellule", "organisation-du-corps", "bases", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [15, 16],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-09",
+        "dea-p1-l1-tf-09",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
+    },
+    {
+      "id": "body.tissue",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "body-organization",
+      "competence": "Le tissu dans l'organisation du corps humain",
+      "prerequisites": ["body.cell"],
+      "learningObjectives": [
+        "Situer le tissu dans la hiérarchie cellule, tissu, organe, appareil ou système, organisme.",
+        "Expliquer que les cellules sont organisées en tissus selon le support."
+      ],
+      "recommendedQuestionPool": 4,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "ordering"]
+      },
+      "tags": ["tissu", "cellule", "organisation-du-corps", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [15],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-09",
+        "dea-p1-l1-tf-04",
+        "dea-p1-l1-tf-09",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
+    },
+    {
+      "id": "body.organ",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "body-organization",
+      "competence": "L'organe dans l'organisation du corps humain",
+      "prerequisites": ["body.tissue"],
+      "learningObjectives": [
+        "Situer l'organe dans la hiérarchie de l'organisation du corps humain.",
+        "Identifier que l'anatomie désigne et décrit les organes constituant le corps humain."
+      ],
+      "recommendedQuestionPool": 4,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["organe", "anatomie", "organisation-du-corps", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [13, 15],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-06",
+        "dea-p1-l1-tf-02",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-04",
+        "dea-p1-l1-tf-07",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-05",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01"
+      ]
+    },
+    {
+      "id": "body.system",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "body-organization",
+      "competence": "Appareils et systèmes du corps humain",
+      "prerequisites": ["body.organ"],
+      "learningObjectives": [
+        "Situer un appareil ou système dans l'organisation du corps humain.",
+        "Associer les principaux appareils présentés à leur fonction générale."
+      ],
+      "recommendedQuestionPool": 5,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["appareil", "système", "fonctions-vitales", "organisation-du-corps", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [15, 16],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-07",
+        "dea-p1-l1-tf-07",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-05",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
+    },
+    {
+      "id": "anatomy.anatomical-landmarks",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "anatomy",
+      "subdomain": "anatomical-landmarks",
+      "competence": "Régions et repères anatomiques",
+      "prerequisites": ["anatomy.definition"],
+      "learningObjectives": [
+        "Identifier l'utilité des régions anatomiques pour désigner une zone du corps.",
+        "Employer des repères anatomiques pour localiser une information lors d'un bilan."
+      ],
+      "recommendedQuestionPool": 6,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "matching", "clinical_case"]
+      },
+      "tags": ["anatomie", "régions-anatomiques", "repères-anatomiques", "transmission", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [13],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": [
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-02"
+      ]
+    },
+    {
+      "id": "medical-vocabulary.radical",
+      "parcours": 1,
+      "formationIds": ["dea"],
+      "domain": "medical-terminology",
+      "subdomain": "word-building",
+      "competence": "Le radical dans la construction d'un mot médical",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Identifier le radical comme la partie centrale d'un mot médical qui donne son sens principal.",
+        "Reconnaître que préfixe, radical et suffixe occupent des positions différentes dans un mot médical."
+      ],
+      "recommendedQuestionPool": 6,
+      "difficulty": "easy",
+      "masteryCriteria": {
+        "minimumAccuracy": 0.8,
+        "minimumAttempts": 2,
+        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+      },
+      "tags": ["vocabulaire-médical", "radical", "terminologie", "dea"],
+      "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+      "sourcePages": [4, 6],
+      "reviewStatus": "source_verified",
+      "lessonIds": ["dea-p01-l01"],
+      "questionIds": []
+    }
+  ]
+}

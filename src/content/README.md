@@ -18,6 +18,21 @@ Les nouvelles banques utilisent la V2 décrite dans [`formations/README.md`](./f
 - `lesson-content-repository.ts` charge chaque fichier de leçon à la demande et le met en cache.
 - `formations/<formation>/formation.json` définit les parcours, leçons, quiz et boss.
 - `formations/<formation>/parcours-XX/lesson-XX.json` contient une seule banque indépendante.
+- `master-knowledge-base.json` décrit les compétences, leurs prérequis et leurs sources.
+- `master-knowledge-catalog.ts` retrouve les compétences d'une leçon ou d'une question.
+
+## Banque maîtresse et traçabilité
+
+Chaque nouvel exercice V2 déclare `competencyIds`. Ces identifiants doivent exister dans
+`master-knowledge-base.json`, et la compétence doit réciproquement référencer la question dans
+`questionIds`. Les champs `metadata.sourceDocument`, `metadata.sourcePages` et
+`metadata.reviewStatus` conservent la provenance et le niveau de validation.
+
+La leçon `dea-p01-l01` contient un vivier de 50 exercices et en sélectionne 10 aléatoirement à
+chaque tentative. Son contenu a été rapproché des pages 7 à 9, 13, 15 et 16 du support
+`B2.M4 - Support Etudiant.pdf`. Le statut `source_verified` confirme ce rapprochement ; une
+validation par un formateur reste distincte et pourra faire passer une compétence à
+`trainer_validated`.
 
 ## Ajouter une question
 
