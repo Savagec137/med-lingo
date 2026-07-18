@@ -13,6 +13,7 @@ import { Route as PulseRouteImport } from './routes/pulse'
 import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as InventaireRouteImport } from './routes/inventaire'
+import { Route as InterventionRouteImport } from './routes/intervention'
 import { Route as ClassementRouteImport } from './routes/classement'
 import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -38,6 +39,11 @@ const OnboardingRoute = OnboardingRouteImport.update({
 const InventaireRoute = InventaireRouteImport.update({
   id: '/inventaire',
   path: '/inventaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterventionRoute = InterventionRouteImport.update({
+  id: '/intervention',
+  path: '/intervention',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClassementRoute = ClassementRouteImport.update({
@@ -77,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
   '/inventaire': typeof InventaireRoute
+  '/intervention': typeof InterventionRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
   '/inventaire': typeof InventaireRoute
+  '/intervention': typeof InterventionRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
   '/inventaire': typeof InventaireRoute
+  '/intervention': typeof InterventionRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
   '/pulse': typeof PulseRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/boutique'
     | '/classement'
     | '/inventaire'
+    | '/intervention'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/boutique'
     | '/classement'
     | '/inventaire'
+    | '/intervention'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/boutique'
     | '/classement'
     | '/inventaire'
+    | '/intervention'
     | '/onboarding'
     | '/profil'
     | '/pulse'
@@ -153,6 +165,7 @@ export interface RootRouteChildren {
   BoutiqueRoute: typeof BoutiqueRoute
   ClassementRoute: typeof ClassementRoute
   InventaireRoute: typeof InventaireRoute
+  InterventionRoute: typeof InterventionRoute
   OnboardingRoute: typeof OnboardingRoute
   ProfilRoute: typeof ProfilRoute
   PulseRoute: typeof PulseRoute
@@ -188,6 +201,13 @@ declare module '@tanstack/react-router' {
       path: '/inventaire'
       fullPath: '/inventaire'
       preLoaderRoute: typeof InventaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intervention': {
+      id: '/intervention'
+      path: '/intervention'
+      fullPath: '/intervention'
+      preLoaderRoute: typeof InterventionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/classement': {
@@ -241,6 +261,7 @@ const rootRouteChildren: RootRouteChildren = {
   BoutiqueRoute: BoutiqueRoute,
   ClassementRoute: ClassementRoute,
   InventaireRoute: InventaireRoute,
+  InterventionRoute: InterventionRoute,
   OnboardingRoute: OnboardingRoute,
   ProfilRoute: ProfilRoute,
   PulseRoute: PulseRoute,

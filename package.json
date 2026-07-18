@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
-    "test": "node --experimental-strip-types --test src/features/gamification/components/chest-opening-sequence.test.ts",
+    "test": "node --experimental-strip-types --test src/features/gamification/components/chest-opening-sequence.test.ts src/features/intervention-engine.test.ts",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

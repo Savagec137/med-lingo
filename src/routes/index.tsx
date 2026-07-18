@@ -1,6 +1,18 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo } from "react";
-import { Star, Lock, Check, Sparkles, Zap, Flame, Trophy, Target, ChevronRight, User as UserIcon } from "lucide-react";
+import {
+  Star,
+  Lock,
+  Check,
+  Sparkles,
+  Zap,
+  Flame,
+  Trophy,
+  Target,
+  ChevronRight,
+  User as UserIcon,
+  Ambulance,
+} from "lucide-react";
 import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { UNITS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
@@ -155,6 +167,25 @@ function Home() {
             <ChevronRight className="h-6 w-6 text-[color:var(--color-primary)]" />
           </Link>
         )}
+
+        <Link
+          to="/intervention"
+          className="mb-4 flex items-center gap-3 overflow-hidden rounded-2xl border border-cyan-300/20 bg-slate-950 p-4 text-slate-100 shadow-[0_4px_0_0_rgba(34,211,238,.18)] transition hover:border-cyan-300/45 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(34,211,238,.18)]"
+        >
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 text-slate-950">
+            <Ambulance className="h-7 w-7" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-300">
+              Nouveau mode
+            </div>
+            <div className="font-display text-base font-extrabold text-white">Mode Intervention</div>
+            <div className="text-[11px] text-slate-400">
+              Missions préhospitalières et décisions immersives
+            </div>
+          </div>
+          <ChevronRight className="h-6 w-6 text-cyan-300" />
+        </Link>
 
         {/* Daily missions */}
         {user && dailyMissions.length > 0 && (
