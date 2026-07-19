@@ -188,13 +188,16 @@ function Boutique() {
 
 function ChestCollectionBanner() {
   return (
-    <section className="relative mb-5 overflow-hidden rounded-3xl border border-[color:var(--color-primary)]/30 bg-slate-950 shadow-[0_16px_38px_rgba(0,0,0,0.22)]">
+    <section className="relative mb-5 overflow-hidden rounded-3xl border border-[color:var(--color-primary)]/30 bg-slate-950 shadow-[0_16px_38px_rgba(0,0,0,0.22)] animate-bounce-in">
       <img
         src={CHEST_PACK_PREMIUM}
         alt="Collection des coffres MedLingo : Bronze, Argent, Or, Légendaire et Mythique"
-        className="h-44 w-full object-cover object-[center_31%] opacity-90 sm:h-52"
+        loading="lazy"
+        decoding="async"
+        className="h-44 w-full object-cover object-[center_31%] opacity-90 transition-transform duration-700 ease-out hover:scale-[1.03] sm:h-52"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+      <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[color:var(--color-primary)]/25 blur-3xl animate-pulse-glow" />
       <div className="absolute inset-x-4 bottom-3 flex items-end justify-between gap-3">
         <div>
           <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/65">
