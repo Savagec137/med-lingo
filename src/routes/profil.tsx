@@ -221,9 +221,27 @@ function ProfilPage() {
 
         {/* Badges gallery */}
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-          <div className="mb-3 flex items-center justify-between">
-            <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges</h2>
-            <span className="text-[11px] font-bold text-muted-foreground">{userBadges.length}/{badges.length}</span>
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-3">
+              <img
+                src={BADGE_GOLD}
+                alt=""
+                width={44}
+                height={44}
+                loading="lazy"
+                decoding="async"
+                className={`h-11 w-11 shrink-0 object-contain drop-shadow-[0_4px_10px_rgba(245,158,11,0.45)] ${
+                  userBadges.length > 0 ? "animate-float-slow" : "opacity-40 grayscale"
+                }`}
+              />
+              <div className="min-w-0">
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges</h2>
+                <p className="text-[11px] font-bold text-muted-foreground">
+                  {userBadges.length > 0 ? "Ta vitrine s'agrandit" : "Termine une leçon pour débloquer ton premier badge"}
+                </p>
+              </div>
+            </div>
+            <span className="shrink-0 text-[11px] font-bold text-muted-foreground tabular-nums">{userBadges.length}/{badges.length}</span>
           </div>
           <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4">
             {badges.map((b) => {
@@ -231,8 +249,10 @@ function ProfilPage() {
               return (
                 <div
                   key={b.code}
-                  className={`flex flex-col items-center rounded-xl border-2 p-3 text-center transition ${
-                    earned ? rarityBorder(b.rarity) : "border-dashed border-border bg-secondary/50 opacity-60 grayscale"
+                  className={`flex flex-col items-center rounded-xl border-2 p-3 text-center transition-all duration-200 ${
+                    earned
+                      ? `${rarityBorder(b.rarity)} hover:-translate-y-0.5 hover:shadow-md`
+                      : "border-dashed border-border bg-secondary/50 opacity-60 grayscale"
                   }`}
                   title={b.description}
                 >
