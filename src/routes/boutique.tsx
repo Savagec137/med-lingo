@@ -245,7 +245,7 @@ function ShopCard({
   onPremium: () => void;
 }) {
   return (
-    <article className={`relative rounded-2xl border-2 p-3 ${RARITY_STYLES[item.rarity]}`}>
+    <article className={`group relative rounded-2xl border-2 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${RARITY_STYLES[item.rarity]}`}>
       {item.premium_only && (
         <span className="absolute -right-1 -top-1 rounded-full bg-amber-500 px-2 py-0.5 text-[9px] font-extrabold text-white">
           PREMIUM
