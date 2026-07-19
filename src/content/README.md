@@ -17,9 +17,20 @@ Les nouvelles banques utilisent la V2 décrite dans [`formations/README.md`](./f
 - `formation-registry.ts` découvre automatiquement toutes les formations et leurs parcours.
 - `lesson-content-repository.ts` charge chaque fichier de leçon à la demande et le met en cache.
 - `formations/<formation>/formation.json` définit les parcours, leçons, quiz et boss.
+- `formations/<formation>/parcours-XX/lesson-XX.specification.json` est la source officielle exhaustive d'une leçon.
 - `formations/<formation>/parcours-XX/lesson-XX.json` contient une seule banque indépendante.
+- `pedagogical-specification-schema.ts` valide la conservation, les identifiants et l'état de projection de chaque contenu officiel.
+- `pedagogical-specification-merge.ts` fusionne les révisions par identifiant stable et refuse tout remplacement silencieux.
 - `master-knowledge-base.json` décrit les compétences, leurs prérequis et leurs sources.
 - `master-knowledge-catalog.ts` retrouve les compétences d'une leçon ou d'une question.
+
+## Spécification officielle et projection
+
+La spécification `lesson-XX.specification.json` est la vérité métier. Elle conserve sans limitation le cours, les objectifs, le vocabulaire, les flashcards, les exercices, les cas, les pièges, les anecdotes, le quiz, le boss et les extensions futures. Un contenu incomplet garde son texte et reçoit le statut `pending_content` ; il n'est jamais complété automatiquement.
+
+Le fichier `lesson-XX.json` est seulement la projection que le moteur actuel sait exécuter. Les identifiants `integration.projectedContentIds` et `integration.nonProjectedContentIds` garantissent que chaque contenu officiel est suivi exactement une fois. Un élément non projeté reste dans la spécification et pourra être activé par une version future du moteur.
+
+Les révisions utilisent `specificationVersion`, `contentRevision` et `mergeStrategy: "merge_by_stable_id"`. Une nouvelle révision peut ajouter un contenu ou compléter un élément `pending_content`, mais une divergence sur un texte déjà fourni provoque une erreur au lieu de remplacer la source.
 
 ## Banque maîtresse et traçabilité
 
@@ -28,11 +39,7 @@ Chaque nouvel exercice V2 déclare `competencyIds`. Ces identifiants doivent exi
 `questionIds`. Les champs `metadata.sourceDocument`, `metadata.sourcePages` et
 `metadata.reviewStatus` conservent la provenance et le niveau de validation.
 
-La leçon `dea-p01-l01` contient un vivier de 50 exercices et en sélectionne 10 aléatoirement à
-chaque tentative. Son contenu a été rapproché des pages 7 à 9, 13, 15 et 16 du support
-`B2.M4 - Support Etudiant.pdf`. Le statut `source_verified` confirme ce rapprochement ; une
-validation par un formateur reste distincte et pourra faire passer une compétence à
-`trainer_validated`.
+La leçon `dea-p01-l01` est reliée à sa spécification pédagogique officielle. Sa projection active contient uniquement les neuf exercices fournis que le moteur sait actuellement exécuter. Les autres éléments restent suivis comme non projetés. L'ancienne banque générée de 50 exercices et l'ancienne Master Knowledge Base sont conservées sous `archive/` pour audit, mais ne sont plus des sources actives.
 
 ## Ajouter une question
 

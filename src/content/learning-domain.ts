@@ -49,12 +49,18 @@ export interface LessonContentFile {
   status: LessonContentStatus;
   difficulty: ContentDifficulty | null;
   estimatedMinutes: number | null;
+  estimatedDuration?: {
+    minimumMinutes: number;
+    maximumMinutes: number;
+    label: string;
+  };
   level: number | null;
   xp: number | null;
   tags: string[];
   pedagogicalReference: string | null;
   pulse: string | null;
   selection: LessonSelectionPolicy;
+  specificationFile?: string;
   items: LearningContentItem[];
 }
 
@@ -64,6 +70,7 @@ export interface FormationLessonReference {
   kind: LessonKind;
   status: LessonContentStatus;
   file: string;
+  specificationFile?: string;
 }
 
 export interface ParcoursDefinition {

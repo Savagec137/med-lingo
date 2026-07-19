@@ -3,18 +3,12 @@
   "formations": ["dea"],
   "lessonRegistry": ["dea-p01-l01"],
   "supportedExerciseTypes": [
-    "flashcard",
     "mcq",
     "true_false",
     "matching",
     "ordering",
     "clinical_case",
-    "open_question",
-    "trap",
-    "anecdote",
-    "illustration",
-    "quiz",
-    "boss"
+    "prioritization"
   ],
   "competencies": [
     {
@@ -41,8 +35,40 @@
       "sourcePages": [13],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["Q001"],
-      "contentIds": ["F001", "Q001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-01",
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-10",
+        "dea-p1-l1-mcq-12",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-mcq-14",
+        "dea-p1-l1-mcq-15",
+        "dea-p1-l1-tf-01",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-tf-10",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-02",
+        "dea-p1-l1-case-04",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01",
+        "dea-p1-l1-priority-02",
+        "dea-p1-l1-priority-03",
+        "dea-p1-l1-priority-04",
+        "dea-p1-l1-priority-05"
+      ]
     },
     {
       "id": "anatomy.dea-relevance",
@@ -68,8 +94,24 @@
       "sourcePages": [13],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["CAS-001"],
-      "contentIds": ["F005", "CAS-001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-10",
+        "dea-p1-l1-mcq-12",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-10",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-02",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-04",
+        "dea-p1-l1-priority-02",
+        "dea-p1-l1-priority-05"
+      ]
     },
     {
       "id": "physiology.definition",
@@ -95,8 +137,23 @@
       "sourcePages": [13],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["Q002", "VF003"],
-      "contentIds": ["F002", "Q002", "VF003"]
+      "questionIds": [
+        "dea-p1-l1-mcq-02",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-tf-02",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-priority-04"
+      ]
     },
     {
       "id": "pathology.definition",
@@ -123,8 +180,28 @@
       "sourcePages": [7, 8, 9],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": [],
-      "contentIds": ["F005"]
+      "questionIds": [
+        "dea-p1-l1-mcq-03",
+        "dea-p1-l1-mcq-05",
+        "dea-p1-l1-mcq-08",
+        "dea-p1-l1-mcq-11",
+        "dea-p1-l1-mcq-13",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-01",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-match-10",
+        "dea-p1-l1-order-02",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01"
+      ]
     },
     {
       "id": "body.cell",
@@ -150,8 +227,13 @@
       "sourcePages": [15, 16],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["Q003", "VF004", "ASSOCIATION-001", "GLISSER-DEPOSER-001"],
-      "contentIds": ["F003", "Q003", "VF004", "ASSOCIATION-001", "GLISSER-DEPOSER-001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-09",
+        "dea-p1-l1-tf-09",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
     },
     {
       "id": "body.tissue",
@@ -177,8 +259,16 @@
       "sourcePages": [15],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["VF002", "ASSOCIATION-001", "GLISSER-DEPOSER-001"],
-      "contentIds": ["F004", "VF002", "ASSOCIATION-001", "GLISSER-DEPOSER-001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-09",
+        "dea-p1-l1-tf-04",
+        "dea-p1-l1-tf-09",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
     },
     {
       "id": "body.organ",
@@ -205,22 +295,23 @@
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
       "questionIds": [
-        "VF001",
-        "VF002",
-        "VF003",
-        "ASSOCIATION-001",
-        "GLISSER-DEPOSER-001",
-        "PIEGE-001"
-      ],
-      "contentIds": [
-        "F004",
-        "VF001",
-        "VF002",
-        "VF003",
-        "ASSOCIATION-001",
-        "GLISSER-DEPOSER-001",
-        "PIEGE-001",
-        "ANECDOTE-001"
+        "dea-p1-l1-mcq-06",
+        "dea-p1-l1-tf-02",
+        "dea-p1-l1-tf-03",
+        "dea-p1-l1-tf-04",
+        "dea-p1-l1-tf-07",
+        "dea-p1-l1-tf-08",
+        "dea-p1-l1-match-02",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-05",
+        "dea-p1-l1-match-07",
+        "dea-p1-l1-match-08",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04",
+        "dea-p1-l1-case-03",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-01"
       ]
     },
     {
@@ -247,8 +338,14 @@
       "sourcePages": [15, 16],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["ASSOCIATION-001", "GLISSER-DEPOSER-001"],
-      "contentIds": ["ASSOCIATION-001", "GLISSER-DEPOSER-001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-07",
+        "dea-p1-l1-tf-07",
+        "dea-p1-l1-match-03",
+        "dea-p1-l1-match-05",
+        "dea-p1-l1-order-01",
+        "dea-p1-l1-order-04"
+      ]
     },
     {
       "id": "anatomy.anatomical-landmarks",
@@ -274,8 +371,19 @@
       "sourcePages": [13],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": ["CAS-001"],
-      "contentIds": ["F005", "CAS-001"]
+      "questionIds": [
+        "dea-p1-l1-mcq-04",
+        "dea-p1-l1-tf-05",
+        "dea-p1-l1-tf-06",
+        "dea-p1-l1-match-04",
+        "dea-p1-l1-match-06",
+        "dea-p1-l1-match-09",
+        "dea-p1-l1-order-03",
+        "dea-p1-l1-order-05",
+        "dea-p1-l1-case-01",
+        "dea-p1-l1-case-05",
+        "dea-p1-l1-priority-02"
+      ]
     },
     {
       "id": "medical-vocabulary.radical",
@@ -301,79 +409,7 @@
       "sourcePages": [4, 6],
       "reviewStatus": "source_verified",
       "lessonIds": ["dea-p01-l01"],
-      "questionIds": [],
-      "contentIds": []
-    },
-    {
-      "id": "dea.p01.l01.anatomy-foundations",
-      "parcours": 1,
-      "formationIds": ["dea"],
-      "domain": "anatomy",
-      "subdomain": "foundations",
-      "competence": "Comprendre les bases de l'anatomie humaine.",
-      "prerequisites": [],
-      "learningObjectives": [
-        "Définir l'anatomie.",
-        "Définir la physiologie.",
-        "Différencier anatomie et physiologie.",
-        "Expliquer pourquoi un ambulancier doit maîtriser l'anatomie.",
-        "Décrire les niveaux d'organisation du corps humain."
-      ],
-      "recommendedQuestionPool": 16,
-      "difficulty": "easy",
-      "masteryCriteria": {
-        "minimumAccuracy": 0.8,
-        "minimumAttempts": 1,
-        "requiredExerciseTypes": [
-          "flashcard",
-          "mcq",
-          "true_false",
-          "matching",
-          "ordering",
-          "clinical_case",
-          "trap"
-        ]
-      },
-      "tags": ["anatomie", "physiologie", "organisation-du-corps", "dea"],
-      "sourceDocument": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01",
-      "sourcePages": [],
-      "sourceLocation": "dea-p01-l01",
-      "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
-      "questionIds": [
-        "Q001",
-        "Q002",
-        "Q003",
-        "VF001",
-        "VF002",
-        "VF003",
-        "VF004",
-        "ASSOCIATION-001",
-        "GLISSER-DEPOSER-001",
-        "CAS-001",
-        "PIEGE-001"
-      ],
-      "contentIds": [
-        "F001",
-        "F002",
-        "F003",
-        "F004",
-        "F005",
-        "Q001",
-        "Q002",
-        "Q003",
-        "VF001",
-        "VF002",
-        "VF003",
-        "VF004",
-        "ASSOCIATION-001",
-        "GLISSER-DEPOSER-001",
-        "CAS-001",
-        "PIEGE-001",
-        "ANECDOTE-001",
-        "QUIZ-FINAL",
-        "BOSS"
-      ]
+      "questionIds": []
     }
   ]
 }

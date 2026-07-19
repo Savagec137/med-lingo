@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "specificationVersion": "1.0.0",
+  "contentRevision": 1,
+  "id": "dea-p01-l01-specification",
+  "formation": "dea",
+  "parcours": "parcours-01",
+  "lesson": "dea-p01-l01",
+  "title": "Pourquoi apprendre l'anatomie ?",
+  "duration": {
+    "minimumMinutes": 10,
+    "maximumMinutes": 15,
+    "label": "10 à 15 minutes"
+  },
+  "difficulty": {
+    "id": "easy",
+    "label": "Débutant"
+  },
+  "prerequisites": [],
+  "primaryCompetency": {
+    "id": "dea.p01.l01.anatomy-foundations",
+    "text": "Comprendre les bases de l'anatomie humaine."
+  },
+  "learningObjectives": [
+    "Définir l'anatomie.",
+    "Définir la physiologie.",
+    "Différencier anatomie et physiologie.",
+    "Expliquer pourquoi un ambulancier doit maîtriser l'anatomie.",
+    "Décrire les niveaux d'organisation du corps humain."
+  ],
+  "introduction": {
+    "title": "INTRODUCTION",
+    "hookTitle": "Situation d'accroche",
+    "quote": "« J'ai une douleur très forte sous les côtes à droite. »",
+    "paragraphs": [
+      "Tu arrives chez un patient qui dit :",
+      "Pour transmettre correctement ton bilan, tu dois être capable de localiser précisément cette douleur.",
+      "C'est exactement ce que permet l'anatomie.",
+      "Pendant cette leçon, tu vas apprendre les bases indispensables qui serviront tout au long de ta formation DEA."
+    ]
+  },
+  "course": {
+    "title": "COURS",
+    "sections": [
+      {
+        "id": "SECTION-01",
+        "label": "Section 1",
+        "title": "Qu'est-ce que l'anatomie ?",
+        "paragraphs": [
+          "L'anatomie est la science qui décrit la structure du corps humain.",
+          "Elle répond notamment aux questions :",
+          "Elle ne décrit pas le fonctionnement."
+        ],
+        "questions": [
+          "Où se trouve un organe ?",
+          "Comment est-il constitué ?",
+          "Quelles sont ses relations avec les autres structures ?"
+        ],
+        "examples": [],
+        "list": [],
+        "sequence": [],
+        "blocks": [
+          {
+            "id": "SECTION-01-PARAGRAPH-001",
+            "type": "paragraph",
+            "text": "L'anatomie est la science qui décrit la structure du corps humain."
+          },
+          {
+            "id": "SECTION-01-PARAGRAPH-002",
+            "type": "paragraph",
+            "text": "Elle répond notamment aux questions :"
+          },
+          {
+            "id": "SECTION-01-QUESTIONS-001",
+            "type": "questions",
+            "items": [
+              "Où se trouve un organe ?",
+              "Comment est-il constitué ?",
+              "Quelles sont ses relations avec les autres structures ?"
+            ]
+          },
+          {
+            "id": "SECTION-01-PARAGRAPH-003",
+            "type": "paragraph",
+            "text": "Elle ne décrit pas le fonctionnement."
+          }
+        ]
+      },
+      {
+        "id": "SECTION-02",
+        "label": "Section 2",
+        "title": "La physiologie",
+        "paragraphs": [
+          "La physiologie étudie le fonctionnement des organes.",
+          "Exemple :",
+          "Les deux disciplines sont complémentaires."
+        ],
+        "questions": [],
+        "examples": [
+          {
+            "label": "Anatomie :",
+            "text": "Le cœur possède quatre cavités."
+          },
+          {
+            "label": "Physiologie :",
+            "text": "Le cœur propulse le sang dans l'organisme."
+          }
+        ],
+        "list": [],
+        "sequence": [],
+        "blocks": [
+          {
+            "id": "SECTION-02-PARAGRAPH-001",
+            "type": "paragraph",
+            "text": "La physiologie étudie le fonctionnement des organes."
+          },
+          {
+            "id": "SECTION-02-PARAGRAPH-002",
+            "type": "paragraph",
+            "text": "Exemple :"
+          },
+          {
+            "id": "SECTION-02-EXAMPLE-001",
+            "type": "example",
+            "label": "Anatomie :",
+            "text": "Le cœur possède quatre cavités."
+          },
+          {
+            "id": "SECTION-02-EXAMPLE-002",
+            "type": "example",
+            "label": "Physiologie :",
+            "text": "Le cœur propulse le sang dans l'organisme."
+          },
+          {
+            "id": "SECTION-02-PARAGRAPH-003",
+            "type": "paragraph",
+            "text": "Les deux disciplines sont complémentaires."
+          }
+        ]
+      },
+      {
+        "id": "SECTION-03",
+        "label": "Section 3",
+        "title": "Pourquoi un ambulancier apprend-il l'anatomie ?",
+        "paragraphs": ["Cette connaissance permet notamment de :"],
+        "questions": [],
+        "examples": [],
+        "list": [
+          "localiser une douleur ;",
+          "comprendre les lésions ;",
+          "réaliser un bilan précis ;",
+          "communiquer efficacement avec les autres professionnels de santé ;",
+          "améliorer la sécurité du patient."
+        ],
+        "sequence": [],
+        "blocks": [
+          {
+            "id": "SECTION-03-PARAGRAPH-001",
+            "type": "paragraph",
+            "text": "Cette connaissance permet notamment de :"
+          },
+          {
+            "id": "SECTION-03-LIST-001",
+            "type": "list",
+            "items": [
+              "localiser une douleur ;",
+              "comprendre les lésions ;",
+              "réaliser un bilan précis ;",
+              "communiquer efficacement avec les autres professionnels de santé ;",
+              "améliorer la sécurité du patient."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SECTION-04",
+        "label": "Section 4",
+        "title": "Organisation du corps humain",
+        "paragraphs": ["Ordre à connaître :"],
+        "questions": [],
+        "examples": [],
+        "list": [],
+        "sequence": ["Cellule", "Tissu", "Organe", "Système", "Organisme"],
+        "blocks": [
+          {
+            "id": "SECTION-04-PARAGRAPH-001",
+            "type": "paragraph",
+            "text": "Ordre à connaître :"
+          },
+          {
+            "id": "SECTION-04-SEQUENCE-001",
+            "type": "sequence",
+            "items": ["Cellule", "Tissu", "Organe", "Système", "Organisme"]
+          }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "title": "VOCABULAIRE",
+    "terms": [
+      "Anatomie",
+      "Physiologie",
+      "Cellule",
+      "Tissu",
+      "Organe",
+      "Système",
+      "Organisme",
+      "Structure",
+      "Fonction"
+    ]
+  },
+  "flashcards": {
+    "title": "FLASHCARDS",
+    "items": [
+      {
+        "id": "F001",
+        "question": "Qu'est-ce que l'anatomie ?",
+        "answer": "Science décrivant la structure du corps humain."
+      },
+      {
+        "id": "F002",
+        "question": "Qu'étudie la physiologie ?",
+        "answer": "Le fonctionnement normal des organes."
+      },
+      {
+        "id": "F003",
+        "question": "Quel est le plus petit niveau d'organisation ?",
+        "answer": "La cellule."
+      },
+      {
+        "id": "F004",
+        "question": "Un organe est constitué de quoi ?",
+        "answer": "De plusieurs tissus spécialisés."
+      },
+      {
+        "id": "F005",
+        "question": "Pourquoi l'anatomie est-elle indispensable à l'ambulancier ?",
+        "answer": "Pour localiser une douleur, comprendre les lésions et transmettre un bilan précis."
+      }
+    ]
+  },
+  "exercises": {
+    "title": "EXERCICES",
+    "mcq": [
+      {
+        "id": "Q001",
+        "question": "L'anatomie étudie :",
+        "options": [
+          {
+            "id": "Q001-A",
+            "label": "A",
+            "text": "Le fonctionnement des organes"
+          },
+          {
+            "id": "Q001-B",
+            "label": "B",
+            "text": "La structure du corps humain"
+          },
+          {
+            "id": "Q001-C",
+            "label": "C",
+            "text": "Les maladies"
+          },
+          {
+            "id": "Q001-D",
+            "label": "D",
+            "text": "Les médicaments"
+          }
+        ],
+        "correctAnswerId": "Q001-B",
+        "explanation": "L'anatomie décrit les structures du corps humain."
+      },
+      {
+        "id": "Q002",
+        "question": "La physiologie étudie principalement :",
+        "options": [
+          {
+            "id": "Q002-A",
+            "label": "A",
+            "text": "La structure"
+          },
+          {
+            "id": "Q002-B",
+            "label": "B",
+            "text": "Le fonctionnement"
+          },
+          {
+            "id": "Q002-C",
+            "label": "C",
+            "text": "Les fractures"
+          },
+          {
+            "id": "Q002-D",
+            "label": "D",
+            "text": "Les bactéries"
+          }
+        ],
+        "correctAnswerId": "Q002-B",
+        "explanation": null
+      },
+      {
+        "id": "Q003",
+        "question": "Quel est le premier niveau d'organisation du corps humain ?",
+        "options": [
+          {
+            "id": "Q003-A",
+            "label": "A",
+            "text": "Organe"
+          },
+          {
+            "id": "Q003-B",
+            "label": "B",
+            "text": "Tissu"
+          },
+          {
+            "id": "Q003-C",
+            "label": "C",
+            "text": "Cellule"
+          },
+          {
+            "id": "Q003-D",
+            "label": "D",
+            "text": "Système"
+          }
+        ],
+        "correctAnswerId": "Q003-C",
+        "explanation": null
+      }
+    ],
+    "trueFalse": [
+      {
+        "id": "VF001",
+        "statement": "Le cerveau est un organe.",
+        "correctAnswer": true
+      },
+      {
+        "id": "VF002",
+        "statement": "Le cœur est un tissu.",
+        "correctAnswer": false
+      },
+      {
+        "id": "VF003",
+        "statement": "La physiologie décrit le fonctionnement des organes.",
+        "correctAnswer": true
+      },
+      {
+        "id": "VF004",
+        "statement": "Toutes les cellules remplissent exactement la même fonction.",
+        "correctAnswer": false
+      }
+    ],
+    "associations": [
+      {
+        "id": "ASSOCIATION-001",
+        "prompt": "Associer :",
+        "pairs": [
+          {
+            "left": "Cellule",
+            "right": "Plus petite unité vivante"
+          },
+          {
+            "left": "Tissu",
+            "right": "Ensemble de cellules"
+          },
+          {
+            "left": "Organe",
+            "right": "Ensemble de tissus"
+          },
+          {
+            "left": "Système",
+            "right": "Ensemble d'organes"
+          }
+        ]
+      }
+    ],
+    "dragAndDrop": [
+      {
+        "id": "GLISSER-DEPOSER-001",
+        "prompt": "Remettre dans l'ordre :",
+        "presentedOrder": ["Organisme", "Organe", "Tissu", "Cellule", "Système"],
+        "correctOrder": ["Cellule", "Tissu", "Organe", "Système", "Organisme"]
+      }
+    ],
+    "clinicalCases": [
+      {
+        "id": "CAS-001",
+        "label": "Cas 1",
+        "context": "Le patient décrit une douleur située sous les côtes droites.",
+        "objective": "Identifier la région anatomique avant de transmettre le bilan.",
+        "correctAnswer": "Utiliser les repères anatomiques pour localiser précisément la douleur."
+      }
+    ],
+    "traps": [
+      {
+        "id": "PIEGE-001",
+        "question": "Le cœur est-il un muscle ?",
+        "expectedAnswer": "Oui.",
+        "explanation": "Le cœur est un organe constitué principalement d'un tissu musculaire appelé myocarde."
+      }
+    ]
+  },
+  "anecdote": {
+    "id": "ANECDOTE-001",
+    "title": "ANECDOTE",
+    "text": "La peau est le plus grand organe du corps humain."
+  },
+  "finalQuiz": {
+    "id": "QUIZ-FINAL",
+    "title": "QUIZ FINAL",
+    "questionCount": 20,
+    "distribution": [
+      {
+        "label": "10 QCM",
+        "type": "mcq",
+        "count": 10
+      },
+      {
+        "label": "4 Vrai/Faux",
+        "type": "true_false",
+        "count": 4
+      },
+      {
+        "label": "2 Associations",
+        "type": "association",
+        "count": 2
+      },
+      {
+        "label": "2 Glisser-déposer",
+        "type": "drag_and_drop",
+        "count": 2
+      },
+      {
+        "label": "2 Cas pratiques",
+        "type": "clinical_case",
+        "count": 2
+      }
+    ],
+    "objective": "Validation de la leçon.",
+    "status": "pending_content"
+  },
+  "boss": {
+    "id": "BOSS",
+    "title": "BOSS",
+    "situation": "Le joueur intervient auprès d'un patient présentant une douleur thoracique.",
+    "requirements": [
+      "l",
+      "Premiers repères anatomiques.ocaliser la douleur ;",
+      "reconnaître les structures anatomiques concernées ;",
+      "sélectionner les informations utiles pour le bilan ;",
+      "réaliser une transmission anatomiquement correcte."
+    ],
+    "minimumSuccessPercent": 80,
+    "reward": {
+      "xp": 100,
+      "badge": null
+    },
+    "status": "pending_content",
+    "unresolvedSourceFragments": [
+      "l\nPremiers repères anatomiques.ocaliser la douleur ;",
+      "Badge :"
+    ]
+  },
+  "illustrations": [],
+  "openQuestions": [],
+  "rewards": [],
+  "additionalContent": [],
+  "integration": {
+    "sourceStatus": "official",
+    "mergeStrategy": "merge_by_stable_id",
+    "projectedContentIds": [
+      "Q001",
+      "Q002",
+      "Q003",
+      "VF001",
+      "VF002",
+      "VF003",
+      "VF004",
+      "ASSOCIATION-001",
+      "GLISSER-DEPOSER-001"
+    ],
+    "nonProjectedContentIds": [
+      "F001",
+      "F002",
+      "F003",
+      "F004",
+      "F005",
+      "CAS-001",
+      "PIEGE-001",
+      "ANECDOTE-001",
+      "QUIZ-FINAL",
+      "BOSS"
+    ]
+  }
+}

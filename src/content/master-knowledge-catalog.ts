@@ -29,4 +29,10 @@ export class MasterKnowledgeCatalog {
       competency.questionIds.includes(questionId),
     );
   }
+
+  forContent(contentId: string): CompetencyDefinition[] {
+    return this.knowledgeBase.competencies.filter((competency) =>
+      competency.contentIds.includes(contentId),
+    );
+  }
 }

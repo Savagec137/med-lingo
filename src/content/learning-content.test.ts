@@ -83,8 +83,14 @@ test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
       assert.equal(lesson.title, reference.title);
       if (lesson.id === "dea-p01-l01") {
         assert.equal(lesson.status, "published");
-        assert.equal(lesson.items.length, 50);
-        assert.deepEqual(lesson.selection, { strategy: "random", count: 10 });
+        assert.equal(lesson.items.length, 9);
+        assert.deepEqual(lesson.selection, { strategy: "all", count: null });
+        assert.deepEqual(lesson.estimatedDuration, {
+          minimumMinutes: 10,
+          maximumMinutes: 15,
+          label: "10 à 15 minutes",
+        });
+        assert.equal(lesson.specificationFile, "parcours-01/lesson-01.specification.json");
       } else {
         assert.equal(lesson.status, "awaiting_content");
         assert.deepEqual(lesson.items, []);

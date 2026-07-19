@@ -6,7 +6,7 @@ const contentAnswerSchema = z.object({
   text: z.string().trim().min(1),
   match: z.string().trim().min(1).optional(),
   detail: z.string().trim().min(1).optional(),
-  explanation: z.string().trim().min(1),
+  explanation: z.string(),
   distractorType: z
     .enum([
       "frequent-error",
@@ -44,7 +44,7 @@ const contentItemSchema = z
     instruction: z.string().trim().min(1).optional(),
     answers: z.array(contentAnswerSchema).min(2),
     correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
-    explanation: z.string().trim().min(1),
+    explanation: z.string(),
     priorityReminder: z.string().trim().min(1).optional(),
     tags: z.array(z.string().trim().min(1)).min(1),
     metadata: contentMetadataSchema.optional(),

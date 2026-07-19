@@ -22,10 +22,12 @@ const competencySchema = z.object({
   masteryCriteria: masteryCriteriaSchema,
   tags: z.array(z.string().trim().min(1)).min(1),
   sourceDocument: z.string().trim().min(1),
-  sourcePages: z.array(z.number().int().positive()).min(1),
+  sourcePages: z.array(z.number().int().positive()),
+  sourceLocation: z.string().trim().min(1).optional(),
   reviewStatus: z.enum(KNOWLEDGE_REVIEW_STATUSES),
   lessonIds: z.array(z.string().trim().min(1)).min(1),
   questionIds: z.array(z.string().trim().min(1)),
+  contentIds: z.array(z.string().trim().min(1)),
 });
 
 const masterKnowledgeSchema = z

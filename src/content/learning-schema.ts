@@ -14,7 +14,7 @@ const answerSchema = z.object({
   text: z.string().trim().min(1),
   match: z.string().trim().min(1).optional(),
   detail: z.string().trim().min(1).optional(),
-  explanation: z.string().trim().min(1),
+  explanation: z.string(),
   distractorType: z
     .enum([
       "frequent-error",
@@ -39,7 +39,7 @@ const learningItemSchema = z.object({
   instruction: z.string().trim().min(1).optional(),
   answers: z.array(answerSchema).min(2),
   correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
-  explanation: z.string().trim().min(1),
+  explanation: z.string(),
   priorityReminder: z.string().trim().min(1).optional(),
   tags: z.array(z.string().trim().min(1)).min(1),
   competencyIds: z.array(z.string().trim().min(1)).min(1),
@@ -60,6 +60,13 @@ const lessonContentSchema = z
     status: z.enum(LESSON_CONTENT_STATUSES),
     difficulty: z.enum(CONTENT_DIFFICULTIES).nullable(),
     estimatedMinutes: z.number().int().positive().nullable(),
+    estimatedDuration: z
+      .object({
+        minimumMinutes: z.number().int().positive(),
+        maximumMinutes: z.number().int().positive(),
+        label: z.string().trim().min(1),
+      })
+      .optional(),
     level: z.number().int().positive().nullable(),
     xp: z.number().int().nonnegative().nullable(),
     tags: z.array(z.string().trim().min(1)),
@@ -69,6 +76,11 @@ const lessonContentSchema = z
       strategy: z.enum(["all", "random"]),
       count: z.number().int().positive().nullable(),
     }),
+    specificationFile: z
+      .string()
+      .trim()
+      .regex(/^parcours-\d{2}\/lesson-\d{2}\.specification\.json$/)
+      .optional(),
     items: z.array(learningItemSchema),
   })
   .superRefine((lesson, context) => {
@@ -128,6 +140,11 @@ const lessonReferenceSchema = z.object({
     .string()
     .trim()
     .regex(/^parcours-\d{2}\/lesson-\d{2}\.json$/),
+  specificationFile: z
+    .string()
+    .trim()
+    .regex(/^parcours-\d{2}\/lesson-\d{2}\.specification\.json$/)
+    .optional(),
 });
 
 const parcoursSchema = z.object({

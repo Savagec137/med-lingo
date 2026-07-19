@@ -31,9 +31,11 @@ export interface CompetencyDefinition {
   tags: string[];
   sourceDocument: string;
   sourcePages: number[];
+  sourceLocation?: string;
   reviewStatus: KnowledgeReviewStatus;
   lessonIds: string[];
   questionIds: string[];
+  contentIds: string[];
 }
 
 export interface MasterKnowledgeBase {

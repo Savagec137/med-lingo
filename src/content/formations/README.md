@@ -9,11 +9,14 @@ formations/
   dea/
     formation.json
     parcours-01/
+      lesson-01.specification.json
       lesson-01.json
       lesson-02.json
 ```
 
 `formation.json` décrit l'ordre des parcours et référence chaque fichier de leçon. Ajouter une nouvelle formation consiste à ajouter un manifeste et ses dossiers ; aucun composant React n'est modifié.
+
+Lorsqu'une spécification pédagogique officielle existe, `lesson-XX.specification.json` constitue la source exhaustive et `lesson-XX.json` sa projection exécutable. Le manifeste référence les deux fichiers. Les contenus non encore supportés restent dans la spécification avec un suivi `nonProjectedContentIds` ; ils ne sont jamais supprimés de la source.
 
 ## Cycle d'une banque
 

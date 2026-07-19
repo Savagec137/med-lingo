@@ -15,7 +15,8 @@
           "title": "Pourquoi apprendre l'anatomie ?",
           "kind": "lesson",
           "status": "published",
-          "file": "parcours-01/lesson-01.json"
+          "file": "parcours-01/lesson-01.json",
+          "specificationFile": "parcours-01/lesson-01.specification.json"
         },
         {
           "id": "dea-p01-l02",
