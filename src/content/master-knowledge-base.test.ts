@@ -4,6 +4,7 @@ import test from "node:test";
 import archivedBankInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
 import officialProjectionInput from "./formations/dea/parcours-01/archive/lesson-01.official-projection-v1.json" with { type: "json" };
 import lessonInput from "./formations/dea/parcours-01/lesson-01.json" with { type: "json" };
+import lessonThreeInput from "./formations/dea/parcours-01/lesson-03.json" with { type: "json" };
 import parcoursInput from "./formations/dea/parcours-01/parcours.json" with { type: "json" };
 import specificationInput from "./formations/dea/parcours-01/lesson-01.specification.json" with { type: "json" };
 import { parseLessonContentFile } from "./learning-schema.ts";
@@ -12,6 +13,7 @@ import { MasterKnowledgeCatalog } from "./master-knowledge-catalog.ts";
 import { PedagogicalSpecificationCatalog } from "./pedagogical-specification-catalog.ts";
 
 const lesson = parseLessonContentFile(lessonInput);
+const lessonThree = parseLessonContentFile(lessonThreeInput);
 const officialProjection = parseLessonContentFile(officialProjectionInput);
 const specification = new PedagogicalSpecificationCatalog([specificationInput]).get(lesson.id);
 const catalog = new MasterKnowledgeCatalog(knowledgeInput);
@@ -20,11 +22,11 @@ const trackedSpecificationIds = new Set([
   ...specification.integration.projectedContentIds,
   ...specification.integration.nonProjectedContentIds,
 ]);
-const activeQuestionIds = new Set(lesson.items.map((item) => item.id));
+const activeQuestionIds = new Set([...lesson.items, ...lessonThree.items].map((item) => item.id));
 const knownContentIds = new Set([...trackedSpecificationIds, ...activeQuestionIds]);
 
 test("la base maîtresse couvre le Parcours 1 et sa spécification officielle", () => {
-  assert.equal(knowledgeBase.competencies.length, 60);
+  assert.equal(knowledgeBase.competencies.length, 61);
   assert.deepEqual(knowledgeBase.formations, ["dea"]);
   assert.deepEqual(knowledgeBase.lessonRegistry, parcoursInput.completion.orderedEntryIds);
 
@@ -35,9 +37,9 @@ test("la base maîtresse couvre le Parcours 1 et sa spécification officielle", 
   assert.equal(primary.sourceLocation, lesson.id);
 });
 
-test("les cinquante exercices actifs référencent uniquement des compétences existantes", () => {
-  assert.equal(lesson.items.length, 50);
-  for (const item of lesson.items) {
+test("les banques publiées référencent uniquement des compétences existantes", () => {
+  assert.equal(lesson.items.length + lessonThree.items.length, 100);
+  for (const item of [...lesson.items, ...lessonThree.items]) {
     for (const competencyId of item.competencyIds) {
       assert.doesNotThrow(() => catalog.get(competencyId), `${item.id} -> ${competencyId}`);
       assert.ok(catalog.get(competencyId).questionIds.includes(item.id));
@@ -65,7 +67,7 @@ test("les nouvelles compétences sans support DEA confirmé restent explicitemen
   const pending = knowledgeBase.competencies.filter(
     (competency) => competency.sourceConfirmationRequired,
   );
-  assert.equal(pending.length, 49);
+  assert.equal(pending.length, 45);
   for (const competency of pending) {
     assert.equal(competency.reviewStatus, "draft");
     assert.deepEqual(competency.sourcePages, []);

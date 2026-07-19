@@ -62,18 +62,19 @@
       "order": 3,
       "title": "Les organes",
       "type": "lesson",
-      "status": "draft",
+      "status": "published",
       "bankFile": "parcours-01/lesson-03.json",
       "learningObjectives": [
-        "définir un organe ;",
-        "comprendre qu’un organe est constitué de plusieurs tissus ;",
-        "distinguer organe, tissu et système ;",
-        "reconnaître la fonction générale d’un organe."
+        "Définir un organe",
+        "Comprendre sa composition",
+        "Différencier organe et système",
+        "Comprendre son rôle"
       ],
       "competencyIds": [
         "body.organ.definition",
         "body.organ.composition",
         "body.organ.function",
+        "body.organ.location",
         "body.organization.tissue-to-organ"
       ],
       "prerequisiteIds": ["dea-p01-l02"]

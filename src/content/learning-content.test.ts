@@ -75,6 +75,10 @@ test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () =>
 });
 
 test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
+  const publishedItemCounts = new Map([
+    ["dea-p01-l01", 50],
+    ["dea-p01-l03", 50],
+  ]);
   for (const parcours of DEA_FORMATION.parcours.slice(0, 2)) {
     for (const reference of parcours.lessons) {
       const url = new URL(`./formations/dea/${reference.file}`, import.meta.url);
@@ -83,11 +87,13 @@ test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
       assert.equal(lesson.id, reference.id);
       assert.equal(lesson.parcours, parcours.id);
       assert.equal(lesson.title, reference.title);
-      if (lesson.id === "dea-p01-l01") {
+      if (publishedItemCounts.has(lesson.id)) {
         assert.equal(lesson.status, "published");
-        assert.equal(lesson.items.length, 50);
+        assert.equal(lesson.items.length, publishedItemCounts.get(lesson.id));
         assert.deepEqual(lesson.selection, { strategy: "random", count: 10 });
-        assert.equal(reference.specificationFile, "parcours-01/lesson-01.specification.json");
+        if (lesson.id === "dea-p01-l01") {
+          assert.equal(reference.specificationFile, "parcours-01/lesson-01.specification.json");
+        }
       } else {
         assert.equal(lesson.status, "awaiting_content");
         assert.deepEqual(lesson.items, []);

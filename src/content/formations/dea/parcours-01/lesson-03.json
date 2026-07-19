@@ -2,33 +2,2175 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
-  "pulse": null,
-  "selection": {
-    "strategy": "all",
-    "count": null
-  },
-  "items": [],
   "id": "dea-p01-l03",
   "title": "Les organes",
   "kind": "lesson",
+  "status": "published",
+  "difficulty": "easy",
+  "estimatedMinutes": 3,
+  "level": 1,
+  "xp": 25,
+  "tags": ["organes", "tissus", "appareils", "fonctions", "localisation", "dea"],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 15-16",
+  "pulse": "Un organe est constitué de tissus et s’intègre à un appareil qui assure une grande fonction du corps.",
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
   "learningObjectives": [
-    "définir un organe ;",
-    "comprendre qu’un organe est constitué de plusieurs tissus ;",
-    "distinguer organe, tissu et système ;",
-    "reconnaître la fonction générale d’un organe."
+    "Définir un organe",
+    "Comprendre sa composition",
+    "Différencier organe et système",
+    "Comprendre son rôle"
   ],
   "competencyIds": [
     "body.organ.definition",
     "body.organ.composition",
     "body.organ.function",
+    "body.organ.location",
     "body.organization.tissue-to-organ"
   ],
-  "prerequisiteIds": ["dea-p01-l02"]
+  "prerequisiteIds": ["dea-p01-l02"],
+  "items": [
+    {
+      "id": "dea-p1-l3-mcq-01",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Dans l’organisation générale du corps, quelle proposition définit le mieux un organe ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Un ensemble de plusieurs appareils assurant une même fonction",
+          "explanation": "Plusieurs appareils ne définissent pas un organe.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Une structure constituée de tissus et intégrée à un appareil",
+          "explanation": "Exact : les tissus constituent des organes, qui forment des appareils."
+        },
+        {
+          "id": "c",
+          "text": "Une région anatomique définie uniquement par sa position",
+          "explanation": "Une région anatomique sert à localiser ; elle ne définit pas un organe.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Une fonction indispensable à la vie sans structure associée",
+          "explanation": "Une fonction n’est pas une structure anatomique.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Le support présente les tissus comme constituant des organes, eux-mêmes regroupés en appareils ou systèmes.",
+      "tags": ["organe", "definition", "organisation"],
+      "competencyIds": [
+        "body.organ.definition",
+        "body.organ.composition",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-02",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quel niveau d’organisation vient immédiatement après le tissu ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La cellule",
+          "explanation": "La cellule précède le tissu dans l’organisation présentée.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "La fonction",
+          "explanation": "La fonction est assurée par un appareil ; ce n’est pas le niveau suivant.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "L’appareil",
+          "explanation": "L’appareil vient après l’organe.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "L’organe",
+          "explanation": "Exact : les tissus constituent des organes."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "L’ordre présenté est cellule, tissu, organe, puis appareil ou système.",
+      "tags": ["tissu", "organe", "hierarchie"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-03",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quelle affirmation distingue correctement un organe d’un système ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le cœur est un organe ; l’appareil circulatoire regroupe plusieurs éléments",
+          "explanation": "Exact : le cœur figure parmi les organes de l’appareil circulatoire."
+        },
+        {
+          "id": "b",
+          "text": "Le cœur est un système ; la circulation est un tissu",
+          "explanation": "Le cœur est classé comme organe, pas comme système.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Le système est constitué d’un seul tissu",
+          "explanation": "Le support indique que des organes forment les appareils ou systèmes.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Un organe et un système désignent toujours le même niveau",
+          "explanation": "Ces termes correspondent à deux niveaux différents.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Un organe appartient à un appareil ou système qui regroupe plusieurs organes ou éléments associés.",
+      "tags": ["organe", "systeme", "circulatoire"],
+      "competencyIds": ["body.organ.definition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-04",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quelle relation entre organes et appareils est décrite dans le support ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Les appareils constituent les tissus",
+          "explanation": "Les tissus se situent avant les organes dans l’organisation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Chaque tissu forme directement un organisme complet",
+          "explanation": "Le support décrit plusieurs niveaux intermédiaires.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Les organes forment des appareils ou systèmes",
+          "explanation": "Exact : les organes s’organisent en appareils ou systèmes."
+        },
+        {
+          "id": "d",
+          "text": "Les fonctions vitales constituent les organes",
+          "explanation": "Les appareils assurent des fonctions ; les fonctions ne constituent pas les organes.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Les organes sont regroupés en appareils ou systèmes assurant de grandes fonctions.",
+      "tags": ["organe", "appareil", "systeme"],
+      "competencyIds": ["body.organ.definition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-05",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Lequel de ces éléments appartient à la liste des organes de l’appareil respiratoire ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La vessie",
+          "explanation": "La vessie figure avec l’appareil excréteur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "L’estomac",
+          "explanation": "L’estomac figure avec l’appareil digestif.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Le cœur",
+          "explanation": "Le cœur figure avec l’appareil circulatoire.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Les bronches",
+          "explanation": "Exact : les bronches sont citées dans l’appareil respiratoire."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Le support associe nez, trachée, bronches et poumons à l’appareil respiratoire.",
+      "tags": ["organe", "respiratoire", "bronches"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-06",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "À quel appareil le cœur est-il associé dans le tableau du support ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Appareil neurologique",
+          "explanation": "L’appareil neurologique comprend notamment cerveau, moelle épinière et nerfs.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Appareil circulatoire",
+          "explanation": "Exact : le cœur est cité avec les vaisseaux et le sang."
+        },
+        {
+          "id": "c",
+          "text": "Appareil excréteur",
+          "explanation": "L’appareil excréteur comprend notamment reins et vessie.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Appareil locomoteur",
+          "explanation": "L’appareil locomoteur comprend notamment os, muscles et ligaments.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Le cœur, les vaisseaux et le sang sont rattachés à l’appareil circulatoire.",
+      "tags": ["coeur", "circulatoire", "organe"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-07",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quel élément est présenté parmi les organes de l’appareil digestif ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La trachée",
+          "explanation": "La trachée est associée à l’appareil respiratoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "La moelle épinière",
+          "explanation": "La moelle épinière est associée à l’appareil neurologique.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "L’estomac",
+          "explanation": "Exact : l’estomac figure dans l’appareil digestif."
+        },
+        {
+          "id": "d",
+          "text": "La vessie",
+          "explanation": "La vessie est associée à l’appareil excréteur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Le tableau cite bouche, œsophage, estomac et intestins pour l’appareil digestif.",
+      "tags": ["estomac", "digestif", "organe"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-08",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quel couple est rattaché à l’appareil excréteur ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Reins et vessie",
+          "explanation": "Exact : ce couple figure dans la ligne de l’appareil excréteur."
+        },
+        {
+          "id": "b",
+          "text": "Cœur et vaisseaux",
+          "explanation": "Ce couple appartient à l’appareil circulatoire.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Bouche et œsophage",
+          "explanation": "Ce couple appartient à l’appareil digestif.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Os et ligaments",
+          "explanation": "Ces éléments appartiennent à l’appareil locomoteur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Le support associe les reins et la vessie à l’appareil excréteur.",
+      "tags": ["reins", "vessie", "excreteur"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-09",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quels éléments sont regroupés dans l’appareil locomoteur ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Cerveau, moelle épinière et nerfs",
+          "explanation": "Ces éléments sont associés à l’appareil neurologique.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Os, muscles et ligaments",
+          "explanation": "Exact : ils figurent dans la ligne de l’appareil locomoteur."
+        },
+        {
+          "id": "c",
+          "text": "Reins, vessie et intestins",
+          "explanation": "Les reins et la vessie sont excréteurs, tandis que les intestins sont digestifs.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Nez, trachée et cœur",
+          "explanation": "Le nez et la trachée sont respiratoires, tandis que le cœur est circulatoire.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Le tableau associe os, muscles et ligaments à l’appareil locomoteur.",
+      "tags": ["locomoteur", "os", "muscles", "ligaments"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-10",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Quel ensemble est associé aux fonctions de commande, d’information et de coordination ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Reins et vessie",
+          "explanation": "Ils sont associés à la filtration et à l’élimination.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Cœur, vaisseaux et sang",
+          "explanation": "Ils sont associés à la distribution et à la récupération.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Bouche, œsophage, estomac et intestins",
+          "explanation": "Ils sont associés à la digestion et à l’assimilation.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Cerveau, moelle épinière et nerfs",
+          "explanation": "Exact : ces éléments composent l’appareil neurologique dans le tableau."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Le support relie l’appareil neurologique aux commandes, à l’information et à la coordination.",
+      "tags": ["neurologique", "cerveau", "fonction"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-11",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Quelle fonction est associée à l’appareil respiratoire ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Inspiration de l’O2 et expiration du CO2",
+          "explanation": "Exact : cette fonction est indiquée pour l’appareil respiratoire."
+        },
+        {
+          "id": "b",
+          "text": "Filtration et élimination",
+          "explanation": "Cette fonction est associée à l’appareil excréteur.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Digestion et assimilation",
+          "explanation": "Cette fonction est associée à l’appareil digestif.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Déplacement et action",
+          "explanation": "Cette fonction est associée à l’appareil locomoteur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Le tableau relie l’appareil respiratoire à l’inspiration de l’O2 et à l’expiration du CO2.",
+      "tags": ["respiratoire", "fonction", "oxygene"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-12",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Quelle proposition distingue correctement une région anatomique d’un organe ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "L’abdomen et l’estomac sont deux appareils",
+          "explanation": "L’abdomen est une région et l’estomac un organe.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "L’estomac est une région et l’abdomen un tissu",
+          "explanation": "Cette proposition inverse les catégories.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "L’abdomen est une région ; l’estomac est un organe digestif",
+          "explanation": "Exact : le support présente l’abdomen comme région et l’estomac comme organe digestif."
+        },
+        {
+          "id": "d",
+          "text": "Une région et un organe sont toujours synonymes",
+          "explanation": "Une région sert à localiser et ne désigne pas nécessairement un organe.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Le support distingue les grandes régions anatomiques des organes listés dans les appareils.",
+      "tags": ["region", "organe", "abdomen", "estomac"],
+      "competencyIds": ["body.organ.definition", "body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-13",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Quelle formulation respecte la relation entre tissu et organe présentée dans le support ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Un tissu est formé de plusieurs appareils",
+          "explanation": "L’appareil se situe à un niveau plus global.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Des cellules s’agencent en tissus, qui constituent des organes",
+          "explanation": "Exact : cette succession reprend l’organisation décrite."
+        },
+        {
+          "id": "c",
+          "text": "Un organe constitue toujours une cellule unique",
+          "explanation": "Le support décrit un organe comme issu de tissus.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Un système se transforme directement en tissu",
+          "explanation": "Cette proposition inverse l’ordre d’organisation.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Le support décrit une progression des cellules vers les tissus, puis les organes.",
+      "tags": ["cellule", "tissu", "organe", "composition"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-14",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Un patient désigne son abdomen. Quelle information reste strictement anatomique et exploitable ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La région abdominale désignée par le patient",
+          "explanation": "Cette description reste factuelle et localise la région."
+        },
+        {
+          "id": "b",
+          "text": "L’estomac est nécessairement l’organe concerné",
+          "explanation": "La région abdominale ne permet pas d’identifier à elle seule un organe atteint.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "L’appareil digestif est nécessairement en cause",
+          "explanation": "La localisation ne permet pas d’attribuer une cause certaine.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "La région n’a pas d’intérêt si l’organe n’est pas connu",
+          "explanation": "Le support souligne l’intérêt de désigner précisément l’organe ou la région.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Une région anatomique peut être transmise précisément sans conclure sur l’organe concerné.",
+      "tags": ["localisation", "abdomen", "transmission"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-mcq-15",
+      "difficulty": "hard",
+      "type": "mcq",
+      "question": "Quelle chaîne appareil → organes → fonctions correspond entièrement au tableau du support ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Excréteur → reins et vessie → filtration et élimination",
+          "explanation": "Exact : les trois éléments correspondent à la même ligne du tableau."
+        },
+        {
+          "id": "b",
+          "text": "Digestif → reins et vessie → digestion et assimilation",
+          "explanation": "Les reins et la vessie sont rattachés à l’appareil excréteur.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Neurologique → cœur et vaisseaux → information et coordination",
+          "explanation": "Le cœur et les vaisseaux appartiennent à l’appareil circulatoire.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Respiratoire → os et muscles → inspiration et expiration",
+          "explanation": "Les os et les muscles sont rattachés à l’appareil locomoteur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "L’appareil excréteur est associé aux reins et à la vessie, ainsi qu’aux fonctions de filtration et d’élimination.",
+      "tags": ["excreteur", "organe", "fonction", "raisonnement"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "mcq",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-01",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Les tissus constituent des organes.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Le support indique que les cellules s’agencent en tissus, lesquels constituent des organes."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Le support indique que les cellules s’agencent en tissus, lesquels constituent des organes.",
+      "tags": ["vrai-faux", "tissu", "organe"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-02",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Un système du corps correspond à un tissu isolé.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cette proposition ne correspond pas au support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Un appareil ou système regroupe des organes ; il ne correspond pas à un tissu isolé."
+        }
+      ],
+      "correctAnswer": "faux",
+      "explanation": "Un appareil ou système regroupe des organes ; il ne correspond pas à un tissu isolé.",
+      "tags": ["vrai-faux", "systeme", "tissu"],
+      "competencyIds": ["body.organ.definition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-03",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Les organes forment des appareils ou systèmes.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cette relation est explicitement présentée dans l’organisation générale du corps."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Cette relation est explicitement présentée dans l’organisation générale du corps.",
+      "tags": ["vrai-faux", "organe", "appareil"],
+      "competencyIds": ["body.organ.definition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-04",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "L’abdomen est présenté comme un organe digestif.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cette proposition ne correspond pas au support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "L’abdomen est une région anatomique ; l’estomac et les intestins sont des organes digestifs cités."
+        }
+      ],
+      "correctAnswer": "faux",
+      "explanation": "L’abdomen est une région anatomique ; l’estomac et les intestins sont des organes digestifs cités.",
+      "tags": ["vrai-faux", "abdomen", "region"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-05",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Le cœur est associé à l’appareil circulatoire.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Le tableau place le cœur avec les vaisseaux et le sang dans l’appareil circulatoire."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Le tableau place le cœur avec les vaisseaux et le sang dans l’appareil circulatoire.",
+      "tags": ["vrai-faux", "coeur", "circulatoire"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-06",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Les reins sont classés parmi les organes de l’appareil respiratoire.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cette proposition ne correspond pas au support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Les reins et la vessie sont associés à l’appareil excréteur."
+        }
+      ],
+      "correctAnswer": "faux",
+      "explanation": "Les reins et la vessie sont associés à l’appareil excréteur.",
+      "tags": ["vrai-faux", "reins", "excreteur"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-07",
+      "difficulty": "medium",
+      "type": "true_false_contextual",
+      "question": "Les poumons figurent dans la liste des organes respiratoires.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Le support cite nez, trachée, bronches et poumons pour l’appareil respiratoire."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Le support cite nez, trachée, bronches et poumons pour l’appareil respiratoire.",
+      "tags": ["vrai-faux", "poumons", "respiratoire"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-08",
+      "difficulty": "medium",
+      "type": "true_false_contextual",
+      "question": "Les nerfs sont rattachés à l’appareil digestif.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cette proposition ne correspond pas au support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Les nerfs sont associés à l’appareil neurologique."
+        }
+      ],
+      "correctAnswer": "faux",
+      "explanation": "Les nerfs sont associés à l’appareil neurologique.",
+      "tags": ["vrai-faux", "nerfs", "neurologique"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-09",
+      "difficulty": "medium",
+      "type": "true_false_contextual",
+      "question": "Os, muscles et ligaments sont associés à l’appareil locomoteur.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Ces trois éléments sont regroupés dans la ligne de l’appareil locomoteur."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Ces trois éléments sont regroupés dans la ligne de l’appareil locomoteur.",
+      "tags": ["vrai-faux", "locomoteur", "muscles"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-tf-10",
+      "difficulty": "hard",
+      "type": "true_false_contextual",
+      "question": "Le tableau associe bouche, œsophage, estomac et intestins aux fonctions de digestion et d’assimilation.",
+      "answers": [
+        {
+          "id": "vrai",
+          "text": "Vrai",
+          "explanation": "Cet ensemble d’organes et ces fonctions correspondent à l’appareil digestif."
+        },
+        {
+          "id": "faux",
+          "text": "Faux",
+          "explanation": "Cette proposition correspond au support.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "vrai",
+      "explanation": "Cet ensemble d’organes et ces fonctions correspondent à l’appareil digestif.",
+      "tags": ["vrai-faux", "digestif", "fonction"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "true_false",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-01",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque niveau d’organisation à ce qui le constitue ou le regroupe.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "tissu",
+          "text": "Tissu",
+          "match": "Cellules agencées",
+          "explanation": "Tissu correspond à : Cellules agencées."
+        },
+        {
+          "id": "organe",
+          "text": "Organe",
+          "match": "Tissus constituants",
+          "explanation": "Organe correspond à : Tissus constituants."
+        },
+        {
+          "id": "systeme",
+          "text": "Appareil ou système",
+          "match": "Organes regroupés",
+          "explanation": "Appareil ou système correspond à : Organes regroupés."
+        }
+      ],
+      "correctAnswer": ["tissu", "organe", "systeme"],
+      "explanation": "Le support présente l’enchaînement cellule, tissu, organe puis appareil ou système.",
+      "tags": ["association", "organisation"],
+      "competencyIds": [
+        "body.organ.definition",
+        "body.organ.composition",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-02",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque appareil à un organe qui lui appartient.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "respiratoire",
+          "text": "Appareil respiratoire",
+          "match": "Poumons",
+          "explanation": "Appareil respiratoire correspond à : Poumons."
+        },
+        {
+          "id": "circulatoire",
+          "text": "Appareil circulatoire",
+          "match": "Cœur",
+          "explanation": "Appareil circulatoire correspond à : Cœur."
+        },
+        {
+          "id": "digestif",
+          "text": "Appareil digestif",
+          "match": "Estomac",
+          "explanation": "Appareil digestif correspond à : Estomac."
+        }
+      ],
+      "correctAnswer": ["respiratoire", "circulatoire", "digestif"],
+      "explanation": "Chaque organe proposé figure dans la ligne correspondante du tableau.",
+      "tags": ["association", "appareil", "organe"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-03",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque appareil à sa fonction générale.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "respiratoire",
+          "text": "Respiratoire",
+          "match": "Inspiration O2 et expiration CO2",
+          "explanation": "Respiratoire correspond à : Inspiration O2 et expiration CO2."
+        },
+        {
+          "id": "circulatoire",
+          "text": "Circulatoire",
+          "match": "Distribution et récupération",
+          "explanation": "Circulatoire correspond à : Distribution et récupération."
+        },
+        {
+          "id": "neurologique",
+          "text": "Neurologique",
+          "match": "Commandes, information et coordination",
+          "explanation": "Neurologique correspond à : Commandes, information et coordination."
+        }
+      ],
+      "correctAnswer": ["respiratoire", "circulatoire", "neurologique"],
+      "explanation": "Le tableau relie chaque appareil à ses fonctions générales.",
+      "tags": ["association", "fonction"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-04",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque appareil au groupe d’organes ou d’éléments indiqué.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "excreteur",
+          "text": "Excréteur",
+          "match": "Reins et vessie",
+          "explanation": "Excréteur correspond à : Reins et vessie."
+        },
+        {
+          "id": "locomoteur",
+          "text": "Locomoteur",
+          "match": "Os, muscles et ligaments",
+          "explanation": "Locomoteur correspond à : Os, muscles et ligaments."
+        },
+        {
+          "id": "reproducteur",
+          "text": "Reproducteur",
+          "match": "Ovaires, testicules, utérus et pénis",
+          "explanation": "Reproducteur correspond à : Ovaires, testicules, utérus et pénis."
+        }
+      ],
+      "correctAnswer": ["excreteur", "locomoteur", "reproducteur"],
+      "explanation": "Ces groupes reprennent les associations du tableau des sept appareils.",
+      "tags": ["association", "organes"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-05",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque terme à sa catégorie anatomique.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "abdomen",
+          "text": "Abdomen",
+          "match": "Région anatomique",
+          "explanation": "Abdomen correspond à : Région anatomique."
+        },
+        {
+          "id": "estomac",
+          "text": "Estomac",
+          "match": "Organe digestif",
+          "explanation": "Estomac correspond à : Organe digestif."
+        },
+        {
+          "id": "digestif",
+          "text": "Appareil digestif",
+          "match": "Groupe d’organes",
+          "explanation": "Appareil digestif correspond à : Groupe d’organes."
+        }
+      ],
+      "correctAnswer": ["abdomen", "estomac", "digestif"],
+      "explanation": "Une région, un organe et un appareil correspondent à des catégories différentes.",
+      "tags": ["association", "region", "organe"],
+      "competencyIds": [
+        "body.organ.definition",
+        "body.organ.location",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-06",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associe chaque organe ou élément à son appareil.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "trachee",
+          "text": "Trachée",
+          "match": "Respiratoire",
+          "explanation": "Trachée correspond à : Respiratoire."
+        },
+        {
+          "id": "vaisseaux",
+          "text": "Vaisseaux",
+          "match": "Circulatoire",
+          "explanation": "Vaisseaux correspond à : Circulatoire."
+        },
+        {
+          "id": "nerfs",
+          "text": "Nerfs",
+          "match": "Neurologique",
+          "explanation": "Nerfs correspond à : Neurologique."
+        },
+        {
+          "id": "intestins",
+          "text": "Intestins",
+          "match": "Digestif",
+          "explanation": "Intestins correspond à : Digestif."
+        }
+      ],
+      "correctAnswer": ["trachee", "vaisseaux", "nerfs", "intestins"],
+      "explanation": "Chaque élément est classé dans l’appareil correspondant par le support.",
+      "tags": ["association", "classement"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-07",
+      "difficulty": "medium",
+      "type": "association",
+      "question": "Associe chaque organe à la fonction générale de son appareil.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "poumons",
+          "text": "Poumons",
+          "match": "Inspiration O2 et expiration CO2",
+          "explanation": "Poumons correspond à : Inspiration O2 et expiration CO2."
+        },
+        {
+          "id": "coeur",
+          "text": "Cœur",
+          "match": "Distribution et récupération",
+          "explanation": "Cœur correspond à : Distribution et récupération."
+        },
+        {
+          "id": "estomac",
+          "text": "Estomac",
+          "match": "Digestion et assimilation",
+          "explanation": "Estomac correspond à : Digestion et assimilation."
+        },
+        {
+          "id": "reins",
+          "text": "Reins",
+          "match": "Filtration et élimination",
+          "explanation": "Reins correspond à : Filtration et élimination."
+        }
+      ],
+      "correctAnswer": ["poumons", "coeur", "estomac", "reins"],
+      "explanation": "La fonction est celle de l’appareil auquel chaque organe est rattaché.",
+      "tags": ["association", "organe", "fonction"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-08",
+      "difficulty": "medium",
+      "type": "association",
+      "question": "Associe chaque ensemble à l’appareil exact.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "nez-bronches",
+          "text": "Nez, trachée, bronches, poumons",
+          "match": "Respiratoire",
+          "explanation": "Nez, trachée, bronches, poumons correspond à : Respiratoire."
+        },
+        {
+          "id": "cerveau-nerfs",
+          "text": "Cerveau, moelle épinière, nerfs",
+          "match": "Neurologique",
+          "explanation": "Cerveau, moelle épinière, nerfs correspond à : Neurologique."
+        },
+        {
+          "id": "os-ligaments",
+          "text": "Os, muscles, ligaments",
+          "match": "Locomoteur",
+          "explanation": "Os, muscles, ligaments correspond à : Locomoteur."
+        }
+      ],
+      "correctAnswer": ["nez-bronches", "cerveau-nerfs", "os-ligaments"],
+      "explanation": "Les ensembles proposés reprennent les regroupements du tableau.",
+      "tags": ["association", "appareil", "raisonnement"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-09",
+      "difficulty": "medium",
+      "type": "association",
+      "question": "Associe chaque formulation au niveau d’organisation correspondant.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "cellules",
+          "text": "Cellules qui s’agencent",
+          "match": "Tissu",
+          "explanation": "Cellules qui s’agencent correspond à : Tissu."
+        },
+        {
+          "id": "tissus",
+          "text": "Tissus qui se regroupent",
+          "match": "Organe",
+          "explanation": "Tissus qui se regroupent correspond à : Organe."
+        },
+        {
+          "id": "organes",
+          "text": "Organes qui coopèrent",
+          "match": "Appareil ou système",
+          "explanation": "Organes qui coopèrent correspond à : Appareil ou système."
+        }
+      ],
+      "correctAnswer": ["cellules", "tissus", "organes"],
+      "explanation": "Cette association suit la progression structurelle décrite page 15.",
+      "tags": ["association", "hierarchie", "composition"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-match-10",
+      "difficulty": "hard",
+      "type": "association",
+      "question": "Associe chacun des sept appareils au groupe d’organes ou d’éléments correspondant.",
+      "instruction": "Associe chaque élément à la proposition correspondante.",
+      "answers": [
+        {
+          "id": "resp",
+          "text": "Respiratoire",
+          "match": "Nez, trachée, bronches, poumons",
+          "explanation": "Respiratoire correspond à : Nez, trachée, bronches, poumons."
+        },
+        {
+          "id": "circ",
+          "text": "Circulatoire",
+          "match": "Cœur, vaisseaux, sang",
+          "explanation": "Circulatoire correspond à : Cœur, vaisseaux, sang."
+        },
+        {
+          "id": "neuro",
+          "text": "Neurologique",
+          "match": "Cerveau, moelle épinière, nerfs",
+          "explanation": "Neurologique correspond à : Cerveau, moelle épinière, nerfs."
+        },
+        {
+          "id": "dig",
+          "text": "Digestif",
+          "match": "Bouche, œsophage, estomac, intestins",
+          "explanation": "Digestif correspond à : Bouche, œsophage, estomac, intestins."
+        },
+        {
+          "id": "exc",
+          "text": "Excréteur",
+          "match": "Reins, vessie",
+          "explanation": "Excréteur correspond à : Reins, vessie."
+        },
+        {
+          "id": "loco",
+          "text": "Locomoteur",
+          "match": "Os, muscles, ligaments",
+          "explanation": "Locomoteur correspond à : Os, muscles, ligaments."
+        },
+        {
+          "id": "repr",
+          "text": "Reproducteur",
+          "match": "Ovaires, testicules, utérus, pénis",
+          "explanation": "Reproducteur correspond à : Ovaires, testicules, utérus, pénis."
+        }
+      ],
+      "correctAnswer": ["resp", "circ", "neuro", "dig", "exc", "loco", "repr"],
+      "explanation": "Les sept correspondances reproduisent l’organisation présentée dans le tableau du support.",
+      "tags": ["association", "sept-appareils", "synthese"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "matching",
+        "reviewStatus": "source_verified",
+        "associationMode": "matching",
+        "requiredSelections": 7
+      }
+    },
+    {
+      "id": "dea-p1-l3-order-01",
+      "difficulty": "easy",
+      "type": "ordering",
+      "question": "Classe les niveaux du plus élémentaire au plus global.",
+      "instruction": "Place les éléments dans l’ordre demandé.",
+      "answers": [
+        {
+          "id": "organe",
+          "text": "Organe",
+          "sequenceRank": 3,
+          "explanation": "Organe occupe la position 3 dans cet ordre."
+        },
+        {
+          "id": "cellule",
+          "text": "Cellule",
+          "sequenceRank": 1,
+          "explanation": "Cellule occupe la position 1 dans cet ordre."
+        },
+        {
+          "id": "systeme",
+          "text": "Appareil ou système",
+          "sequenceRank": 4,
+          "explanation": "Appareil ou système occupe la position 4 dans cet ordre."
+        },
+        {
+          "id": "tissu",
+          "text": "Tissu",
+          "sequenceRank": 2,
+          "explanation": "Tissu occupe la position 2 dans cet ordre."
+        }
+      ],
+      "correctAnswer": ["cellule", "tissu", "organe", "systeme"],
+      "explanation": "L’ordre structurel est cellule, tissu, organe, puis appareil ou système.",
+      "tags": ["ordre", "organisation"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p1-l3-order-02",
+      "difficulty": "easy",
+      "type": "ordering",
+      "question": "Replace les étapes de construction d’un appareil dans l’ordre logique.",
+      "instruction": "Place les éléments dans l’ordre demandé.",
+      "answers": [
+        {
+          "id": "organes",
+          "text": "Les organes forment un appareil",
+          "sequenceRank": 3,
+          "explanation": "Les organes forment un appareil occupe la position 3 dans cet ordre."
+        },
+        {
+          "id": "cellules",
+          "text": "Les cellules s’agencent",
+          "sequenceRank": 1,
+          "explanation": "Les cellules s’agencent occupe la position 1 dans cet ordre."
+        },
+        {
+          "id": "tissus",
+          "text": "Les tissus constituent des organes",
+          "sequenceRank": 2,
+          "explanation": "Les tissus constituent des organes occupe la position 2 dans cet ordre."
+        },
+        {
+          "id": "fonction",
+          "text": "L’appareil assure une grande fonction",
+          "sequenceRank": 4,
+          "explanation": "L’appareil assure une grande fonction occupe la position 4 dans cet ordre."
+        }
+      ],
+      "correctAnswer": ["cellules", "tissus", "organes", "fonction"],
+      "explanation": "Le support relie l’organisation structurelle aux grandes fonctions du corps.",
+      "tags": ["ordre", "construction", "fonction"],
+      "competencyIds": [
+        "body.organ.composition",
+        "body.organ.function",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p1-l3-order-03",
+      "difficulty": "easy",
+      "type": "ordering",
+      "question": "Pour transmettre une localisation sans conclure sur l’organe atteint, remets les actions dans l’ordre.",
+      "instruction": "Place les éléments dans l’ordre demandé.",
+      "answers": [
+        {
+          "id": "transmettre",
+          "text": "Transmettre la localisation anatomique",
+          "sequenceRank": 3,
+          "explanation": "Transmettre la localisation anatomique occupe la position 3 dans cet ordre."
+        },
+        {
+          "id": "identifier",
+          "text": "Identifier la région désignée",
+          "sequenceRank": 1,
+          "explanation": "Identifier la région désignée occupe la position 1 dans cet ordre."
+        },
+        {
+          "id": "decrire",
+          "text": "Décrire factuellement cette région",
+          "sequenceRank": 2,
+          "explanation": "Décrire factuellement cette région occupe la position 2 dans cet ordre."
+        }
+      ],
+      "correctAnswer": ["identifier", "decrire", "transmettre"],
+      "explanation": "Le support demande de s’entendre sur l’organe ou la région afin de transmettre un bilan exploitable.",
+      "tags": ["ordre", "localisation", "transmission"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p1-l3-order-04",
+      "difficulty": "medium",
+      "type": "ordering",
+      "question": "Classe ces niveaux du plus global au plus élémentaire.",
+      "instruction": "Place les éléments dans l’ordre demandé.",
+      "answers": [
+        {
+          "id": "tissu",
+          "text": "Tissu",
+          "sequenceRank": 3,
+          "explanation": "Tissu occupe la position 3 dans cet ordre."
+        },
+        {
+          "id": "systeme",
+          "text": "Appareil ou système",
+          "sequenceRank": 1,
+          "explanation": "Appareil ou système occupe la position 1 dans cet ordre."
+        },
+        {
+          "id": "cellule",
+          "text": "Cellule",
+          "sequenceRank": 4,
+          "explanation": "Cellule occupe la position 4 dans cet ordre."
+        },
+        {
+          "id": "organe",
+          "text": "Organe",
+          "sequenceRank": 2,
+          "explanation": "Organe occupe la position 2 dans cet ordre."
+        }
+      ],
+      "correctAnswer": ["systeme", "organe", "tissu", "cellule"],
+      "explanation": "En ordre inverse, on passe de l’appareil à l’organe, puis au tissu et à la cellule.",
+      "tags": ["ordre", "hierarchie", "inverse"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p1-l3-order-05",
+      "difficulty": "hard",
+      "type": "ordering",
+      "question": "Reconstitue la chaîne complète allant des unités du corps aux fonctions indispensables à la vie.",
+      "instruction": "Place les éléments dans l’ordre demandé.",
+      "answers": [
+        {
+          "id": "fonctions",
+          "text": "Fonctions indispensables à la vie",
+          "sequenceRank": 5,
+          "explanation": "Fonctions indispensables à la vie occupe la position 5 dans cet ordre."
+        },
+        {
+          "id": "tissus",
+          "text": "Tissus",
+          "sequenceRank": 2,
+          "explanation": "Tissus occupe la position 2 dans cet ordre."
+        },
+        {
+          "id": "cellules",
+          "text": "Cellules",
+          "sequenceRank": 1,
+          "explanation": "Cellules occupe la position 1 dans cet ordre."
+        },
+        {
+          "id": "appareils",
+          "text": "Appareils ou systèmes",
+          "sequenceRank": 4,
+          "explanation": "Appareils ou systèmes occupe la position 4 dans cet ordre."
+        },
+        {
+          "id": "organes",
+          "text": "Organes",
+          "sequenceRank": 3,
+          "explanation": "Organes occupe la position 3 dans cet ordre."
+        }
+      ],
+      "correctAnswer": ["cellules", "tissus", "organes", "appareils", "fonctions"],
+      "explanation": "Les cellules forment des tissus, puis des organes et des appareils assurant les grandes fonctions.",
+      "tags": ["ordre", "synthese", "fonctions"],
+      "competencyIds": [
+        "body.organ.composition",
+        "body.organ.function",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "ordering",
+        "reviewStatus": "source_verified",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p1-l3-case-01",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Un patient conscient montre son abdomen et décrit une douleur. Quelle formulation respecte le mieux les informations disponibles ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "L’estomac est atteint",
+          "explanation": "La région montrée ne permet pas de conclure sur un organe précis.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Le patient localise sa douleur dans la région abdominale",
+          "explanation": "Exact : cette formulation décrit la région sans poser de diagnostic."
+        },
+        {
+          "id": "c",
+          "text": "L’appareil digestif est défaillant",
+          "explanation": "La localisation seule ne permet pas d’affirmer un dysfonctionnement.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "La douleur correspond nécessairement aux intestins",
+          "explanation": "Plusieurs organes sont associés à l’appareil digestif ; aucune certitude n’est fournie.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "La transmission doit identifier la région anatomique de façon exploitable sans attribuer une cause.",
+      "tags": ["cas-clinique", "abdomen", "localisation"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 16",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-case-02",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Pendant une révision, un étudiant affirme : « Le cœur est l’appareil circulatoire. » Quelle correction est la plus précise ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le cœur est un tissu de l’appareil respiratoire",
+          "explanation": "Le cœur est classé comme organe circulatoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Le cœur est une région anatomique",
+          "explanation": "Le cœur est présenté comme un organe.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Le cœur est un organe de l’appareil circulatoire",
+          "explanation": "Exact : il figure avec les vaisseaux et le sang dans cet appareil."
+        },
+        {
+          "id": "d",
+          "text": "Le cœur est une fonction de récupération",
+          "explanation": "La récupération est une fonction associée à l’appareil, pas un organe.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Le cœur est un organe rattaché à l’appareil circulatoire.",
+      "tags": ["cas-clinique", "coeur", "systeme"],
+      "competencyIds": [
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organization.tissue-to-organ"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-case-03",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Une fiche cite « reins et vessie ». Quelle information du support permet de classer correctement cet ensemble ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Il appartient à l’appareil digestif et assure l’assimilation",
+          "explanation": "L’assimilation est associée à l’appareil digestif.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Il appartient à l’appareil respiratoire et assure les échanges gazeux",
+          "explanation": "Les organes respiratoires cités sont différents.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Il appartient à l’appareil circulatoire et assure la distribution",
+          "explanation": "Le cœur, les vaisseaux et le sang sont associés à la distribution.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Il appartient à l’appareil excréteur et assure filtration et élimination",
+          "explanation": "Exact : organes et fonctions correspondent à la même ligne du tableau."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Les reins et la vessie sont associés à l’appareil excréteur et à ses fonctions.",
+      "tags": ["cas-clinique", "reins", "vessie"],
+      "competencyIds": ["body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-case-04",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Lors d’une transmission, un collègue hésite entre nommer une région observée et un organe supposé. Quelle donnée doit-il transmettre ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La région anatomique réellement désignée ou observée",
+          "explanation": "Exact : elle constitue une localisation factuelle et exploitable."
+        },
+        {
+          "id": "b",
+          "text": "L’organe le plus proche, même s’il n’est pas identifié",
+          "explanation": "La proximité ne prouve pas qu’un organe est concerné.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "La fonction supposée altérée, sans localisation",
+          "explanation": "Le support insiste sur l’identification de l’organe ou de la région.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Le nom complet d’un appareil choisi à partir d’un seul signe",
+          "explanation": "Un appareil ne doit pas être déduit sans information suffisante.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "La localisation factuelle doit être distinguée d’une interprétation sur l’organe concerné.",
+      "tags": ["cas-clinique", "transmission", "region"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-case-05",
+      "difficulty": "hard",
+      "type": "mcq",
+      "question": "Un patient présente une gêne dans la région abdominale. Quelle synthèse reste fidèle au support sans demander de diagnostic ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "L’appareil digestif est nécessairement concerné car l’abdomen est un organe",
+          "explanation": "L’abdomen est une région et non un organe.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "L’estomac est nécessairement concerné car il assure l’assimilation",
+          "explanation": "La localisation ne permet pas d’identifier avec certitude l’organe concerné.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "La région est abdominale ; plusieurs organes digestifs sont cités dans le support, sans pouvoir conclure lequel est concerné",
+          "explanation": "Exact : la région est décrite et la limite de l’information est respectée."
+        },
+        {
+          "id": "d",
+          "text": "La fonction de filtration est nécessairement atteinte",
+          "explanation": "La filtration est associée à l’appareil excréteur, mais rien ne permet de conclure ici.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Une localisation précise n’autorise pas à identifier un organe atteint ni à poser un diagnostic.",
+      "tags": ["cas-clinique", "raisonnement", "limite"],
+      "competencyIds": ["body.organ.location", "body.organ.function"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13, 16",
+        "originalType": "clinical_case",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-priority-01",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Avant de transmettre une douleur corporelle, quelle action est prioritaire dans le cadre de cette leçon ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Choisir immédiatement l’appareil probablement concerné",
+          "explanation": "Une hypothèse ne remplace pas la localisation factuelle.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Associer la douleur à l’organe le plus connu",
+          "explanation": "Cette association peut être inexacte.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "Décrire d’abord la fonction supposée altérée",
+          "explanation": "La fonction ne précise pas la localisation.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Identifier précisément l’organe ou la région désignée",
+          "explanation": "Exact : cette précision rend le bilan exploitable."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Le support souligne la nécessité de s’entendre sur l’organe ou la région avant la transmission.",
+      "priorityReminder": "Priorité : localiser et décrire avant d’interpréter.",
+      "tags": ["priorisation", "localisation", "transmission"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-priority-02",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Pour comprendre la composition d’un organe, quel niveau faut-il identifier juste avant lui ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Le tissu",
+          "explanation": "Exact : les tissus constituent les organes."
+        },
+        {
+          "id": "b",
+          "text": "L’appareil",
+          "explanation": "L’appareil vient après l’organe.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "La fonction vitale",
+          "explanation": "La fonction est assurée par l’appareil.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "L’organisme entier",
+          "explanation": "Ce niveau est plus global que l’organe.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Le tissu est le niveau immédiatement antérieur à l’organe dans l’organisation présentée.",
+      "priorityReminder": "Priorité : respecter l’ordre cellule, tissu, organe, système.",
+      "tags": ["priorisation", "tissu", "organe"],
+      "competencyIds": ["body.organ.composition", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-priority-03",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Après avoir identifié un organe, quel niveau d’organisation faut-il rechercher pour comprendre la grande fonction associée ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Une région anatomique",
+          "explanation": "Une région localise mais ne regroupe pas nécessairement des organes par fonction.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "L’appareil ou système auquel il appartient",
+          "explanation": "Exact : l’appareil relie plusieurs organes à une grande fonction."
+        },
+        {
+          "id": "c",
+          "text": "Une cellule isolée",
+          "explanation": "La cellule se situe à un niveau plus élémentaire.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Un autre organe choisi au hasard",
+          "explanation": "La relation utile est celle de l’appareil ou du système.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Les appareils regroupent les organes et assurent les fonctions indispensables à la vie.",
+      "priorityReminder": "Priorité : relier l’organe à son appareil avant d’interpréter sa fonction générale.",
+      "tags": ["priorisation", "systeme", "fonction"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 15, 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "15, 16",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-priority-04",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Pour exploiter le tableau des sept appareils, quelle lecture réduit le mieux le risque de mélanger les catégories ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Commencer par la fonction et choisir ensuite n’importe quel organe voisin",
+          "explanation": "La proximité anatomique ne suffit pas à classer un organe.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Identifier l’appareil, vérifier ses organes, puis relier sa fonction",
+          "explanation": "Exact : cette lecture respecte les trois colonnes du tableau."
+        },
+        {
+          "id": "c",
+          "text": "Mémoriser uniquement les fonctions sans les organes",
+          "explanation": "Cela ne permet pas de distinguer les niveaux demandés.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "Regrouper tous les organes par région corporelle",
+          "explanation": "Le tableau les regroupe par appareil et fonction, pas uniquement par région.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "b",
+      "explanation": "La lecture appareil, organes, fonctions conserve la relation exacte présentée dans le tableau.",
+      "priorityReminder": "Priorité : vérifier la cohérence appareil, organes et fonctions.",
+      "tags": ["priorisation", "tableau", "raisonnement"],
+      "competencyIds": ["body.organ.function", "body.organization.tissue-to-organ"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "16",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      }
+    },
+    {
+      "id": "dea-p1-l3-priority-05",
+      "difficulty": "medium",
+      "type": "mcq",
+      "question": "Un patient montre une zone du tronc. Quelle donnée doit être clarifiée avant d’associer cette zone à un organe ?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "La fonction de l’appareil supposé",
+          "explanation": "Cette fonction ne précise pas la zone réellement désignée.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "b",
+          "text": "Le nom de la pathologie la plus fréquente",
+          "explanation": "Le support ne demande pas de poser un diagnostic.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "c",
+          "text": "La liste complète des organes du corps",
+          "explanation": "Une liste générale ne remplace pas la localisation précise.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "d",
+          "text": "La région anatomique exacte désignée",
+          "explanation": "Exact : il faut d’abord préciser la localisation factuelle."
+        }
+      ],
+      "correctAnswer": "d",
+      "explanation": "L’identification précise de la région précède toute interprétation sur un organe concerné.",
+      "priorityReminder": "Priorité : préciser la région avant toute association avec un organe.",
+      "tags": ["priorisation", "region", "organe"],
+      "competencyIds": ["body.organ.location"],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 13",
+      "level": 1,
+      "metadata": {
+        "lessonId": "dea-p01-l03",
+        "sourceDocument": "B2.M4 - Support Etudiant.pdf",
+        "sourcePages": "13",
+        "originalType": "prioritization",
+        "reviewStatus": "source_verified"
+      }
+    }
+  ]
 }

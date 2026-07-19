@@ -5,7 +5,9 @@ import test from "node:test";
 import deaFormation from "./formations/dea/formation.json" with { type: "json" };
 import archivedBankInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
 import lessonOneInput from "./formations/dea/parcours-01/lesson-01.json" with { type: "json" };
+import lessonThreeInput from "./formations/dea/parcours-01/lesson-03.json" with { type: "json" };
 import parcoursInput from "./formations/dea/parcours-01/parcours.json" with { type: "json" };
+import { createContentCatalog } from "./content-engine.ts";
 import { FormationCatalog } from "./formation-catalog.ts";
 import { normalizeLearningItem, parseLessonContentFile } from "./learning-schema.ts";
 import knowledgeInput from "./master-knowledge-base.json" with { type: "json" };
@@ -19,6 +21,10 @@ const manifest = parseParcoursManifest(parcoursInput);
 const knowledge = new MasterKnowledgeCatalog(knowledgeInput);
 const lessonOne = parseLessonContentFile(lessonOneInput);
 const lessonOneInteractions = lessonOne.items.map((item) => normalizeLearningItem(lessonOne, item));
+const lessonThree = parseLessonContentFile(lessonThreeInput);
+const lessonThreeInteractions = lessonThree.items.map((item) =>
+  normalizeLearningItem(lessonThree, item),
+);
 
 test("le manifeste enregistre dix leçons, un quiz et un Boss dans l'ordre imposé", () => {
   assert.equal(manifest.id, "dea-p01");
@@ -58,7 +64,7 @@ test("les prérequis forment une chaîne stricte et le Boss débloque le Parcour
 });
 
 test("toutes les banques sont valides et seuls les contenus publiables sont visibles", () => {
-  for (const [index, reference] of parcours.lessons.entries()) {
+  for (const reference of parcours.lessons) {
     const input = JSON.parse(
       readFileSync(new URL(`./formations/dea/${reference.file}`, import.meta.url), "utf8"),
     ) as unknown;
@@ -66,7 +72,7 @@ test("toutes les banques sont valides et seuls les contenus publiables sont visi
     assert.equal(bank.id, reference.id);
     assert.equal(bank.kind, reference.kind);
     assert.equal(bank.status, reference.status);
-    if (index === 0) {
+    if (["dea-p01-l01", "dea-p01-l03"].includes(bank.id)) {
       assert.equal(bank.status, "published");
       assert.equal(bank.items.length, 50);
     } else {
@@ -76,8 +82,77 @@ test("toutes les banques sont valides et seuls les contenus publiables sont visi
   }
   assert.deepEqual(
     parcours.lessons.filter((entry) => entry.status === "published").map((entry) => entry.id),
-    ["dea-p01-l01"],
+    ["dea-p01-l01", "dea-p01-l03"],
   );
+});
+
+test("la banque officielle des organes respecte le contrat de contenu V1", () => {
+  assert.equal(lessonThree.items.length, 50);
+  assert.deepEqual(lessonThree.selection, { strategy: "random", count: 10 });
+  assert.deepEqual(
+    Object.fromEntries(
+      ["mcq", "true_false", "matching", "ordering", "clinical_case", "prioritization"].map(
+        (type) => [
+          type,
+          lessonThree.items.filter((item) => item.metadata?.originalType === type).length,
+        ],
+      ),
+    ),
+    { mcq: 15, true_false: 10, matching: 10, ordering: 5, clinical_case: 5, prioritization: 5 },
+  );
+  assert.deepEqual(
+    Object.fromEntries(
+      ["easy", "medium", "hard"].map((difficulty) => [
+        difficulty,
+        lessonThree.items.filter((item) => item.difficulty === difficulty).length,
+      ]),
+    ),
+    { easy: 30, medium: 15, hard: 5 },
+  );
+
+  const competencyIds = new Set(lessonThree.competencyIds);
+  assert.equal(new Set(lessonThree.items.map((item) => item.question)).size, 50);
+  for (const competencyId of competencyIds) {
+    assert.ok(
+      lessonThree.items.some((item) => item.competencyIds.includes(competencyId)),
+      competencyId,
+    );
+  }
+  for (const item of lessonThree.items) {
+    assert.equal(item.metadata?.sourceDocument, "B2.M4 - Support Etudiant.pdf");
+    assert.equal(item.metadata?.reviewStatus, "source_verified");
+    assert.ok(
+      typeof item.metadata?.sourcePages === "string" && item.metadata.sourcePages.length > 0,
+    );
+    assert.ok(
+      item.metadata.sourcePages
+        .split(",")
+        .map((page) => Number(page.trim()))
+        .every((page) => [13, 15, 16].includes(page)),
+    );
+    assert.equal(new Set(item.answers.map((answer) => answer.id)).size, item.answers.length);
+    assert.ok(item.competencyIds.every((competencyId) => competencyIds.has(competencyId)));
+    for (const competencyId of item.competencyIds) {
+      assert.ok(knowledge.get(competencyId).questionIds.includes(item.id));
+    }
+  }
+});
+
+test("la correction de la leçon 3 dépend des identifiants et non de la position visuelle", () => {
+  const shuffledBank = {
+    schemaVersion: 1 as const,
+    items: lessonThreeInteractions.map((item) => ({
+      ...item,
+      answers: item.type === "association" ? [...item.answers] : [...item.answers].reverse(),
+    })),
+  };
+  const catalog = createContentCatalog(shuffledBank);
+  for (const item of lessonThreeInteractions) {
+    const correctIds = Array.isArray(item.correctAnswer)
+      ? item.correctAnswer
+      : [item.correctAnswer];
+    assert.equal(catalog.evaluate(item.id, correctIds).isCorrect, true, item.id);
+  }
 });
 
 test("chaque leçon directe référence des compétences existantes", () => {
