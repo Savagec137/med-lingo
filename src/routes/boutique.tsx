@@ -251,12 +251,12 @@ function ShopCard({
           PREMIUM
         </span>
       )}
-      <div className="mb-2 flex h-20 items-center justify-center text-[color:var(--color-primary)]">
+      <div className="mb-2 flex h-20 items-center justify-center text-[color:var(--color-primary)] transition-transform duration-300 group-hover:scale-105">
         <ShopItemArtwork
           code={item.code}
           fallback={
             SHOP_IMAGE[item.code] ? (
-              <img src={SHOP_IMAGE[item.code]} alt="" className="h-20 w-20 object-contain" />
+              <img src={SHOP_IMAGE[item.code]} alt="" loading="lazy" decoding="async" className="h-20 w-20 object-contain drop-shadow-md" />
             ) : (
               <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
             )
