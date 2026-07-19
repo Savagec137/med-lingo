@@ -367,7 +367,9 @@ function PremiumPanel() {
           alt=""
           width={64}
           height={64}
-          className="h-16 w-16 object-contain"
+          loading="lazy"
+          decoding="async"
+          className="h-16 w-16 object-contain animate-float-slow drop-shadow-[0_6px_18px_rgba(245,158,11,0.45)]"
         />
         <div>
           <h2 className="font-display text-2xl font-extrabold">MedLingo Premium</h2>
