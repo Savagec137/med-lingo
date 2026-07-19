@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l10",
-  "title": "Quiz",
-  "kind": "quiz",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,38 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l10",
+  "title": "Révision du corps humain",
+  "kind": "review",
+  "learningObjectives": [
+    "revoir les compétences principales des leçons 1 à 9 ;",
+    "mélanger les types d’exercices ;",
+    "cibler prioritairement les compétences les moins maîtrisées lorsque le moteur le permettra."
+  ],
+  "competencyIds": [],
+  "prerequisiteIds": ["dea-p01-l09"],
+  "contentPool": {
+    "sourceLessonIds": [
+      "dea-p01-l01",
+      "dea-p01-l02",
+      "dea-p01-l03",
+      "dea-p01-l04",
+      "dea-p01-l05",
+      "dea-p01-l06",
+      "dea-p01-l07",
+      "dea-p01-l08",
+      "dea-p01-l09"
+    ],
+    "strategy": "adaptive_review",
+    "minimumItems": null,
+    "maximumItems": null,
+    "coverage": "balanced_by_lesson",
+    "deduplicateBy": "id",
+    "futurePriority": "least_mastered"
+  }
 }

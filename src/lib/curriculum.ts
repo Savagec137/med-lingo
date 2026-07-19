@@ -15,7 +15,7 @@ export interface Lesson {
   title: string;
   emoji: string;
   questions: Question[];
-  kind?: "lesson" | "quiz" | "boss";
+  kind?: "lesson" | "review" | "quiz" | "boss";
   formationId?: string;
   parcoursId?: string;
   contentLessonId?: string;

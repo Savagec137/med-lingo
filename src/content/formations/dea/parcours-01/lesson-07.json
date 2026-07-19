@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l07",
-  "title": "Tissus",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,30 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l07",
+  "title": "L’orientation anatomique",
+  "kind": "lesson",
+  "learningObjectives": [
+    "distinguer supérieur et inférieur ;",
+    "distinguer antérieur et postérieur ;",
+    "distinguer médial et latéral ;",
+    "distinguer proximal et distal ;",
+    "appliquer ces termes à des situations simples."
+  ],
+  "competencyIds": [
+    "anatomy.direction.superior",
+    "anatomy.direction.inferior",
+    "anatomy.direction.anterior",
+    "anatomy.direction.posterior",
+    "anatomy.direction.medial",
+    "anatomy.direction.lateral",
+    "anatomy.direction.proximal",
+    "anatomy.direction.distal"
+  ],
+  "prerequisiteIds": ["dea-p01-l06"]
 }

@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l06",
-  "title": "Cellules",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,26 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l06",
+  "title": "Les plans anatomiques",
+  "kind": "lesson",
+  "learningObjectives": [
+    "définir un plan anatomique ;",
+    "distinguer sagittal, frontal et transversal ;",
+    "comprendre comment ces plans divisent le corps ;",
+    "utiliser ces plans pour décrire une localisation."
+  ],
+  "competencyIds": [
+    "anatomy.plane.definition",
+    "anatomy.plane.sagittal",
+    "anatomy.plane.frontal",
+    "anatomy.plane.transverse",
+    "anatomy.plane.application"
+  ],
+  "prerequisiteIds": ["dea-p01-l05"]
 }

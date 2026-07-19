@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "id": "dea-p01",
+  "internalId": "parcours-01",
+  "formationId": "dea",
+  "title": "Découvrir le corps humain",
+  "subtitle": "Les bases indispensables de l’anatomie",
+  "globalObjective": "Permettre à l’apprenant de comprendre l’organisation générale du corps humain, les niveaux d’organisation biologique, la position anatomique, les plans, les directions et les principales régions du corps avant d’aborder le vocabulaire médical, la physiologie et les pathologies.",
+  "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
+  "sourcePages": [],
+  "sourceReviewStatus": "draft",
+  "entries": [
+    {
+      "id": "dea-p01-l01",
+      "order": 1,
+      "title": "Pourquoi apprendre l'anatomie ?",
+      "type": "lesson",
+      "status": "published",
+      "bankFile": "parcours-01/lesson-01.json",
+      "learningObjectives": [
+        "définir l’anatomie ;",
+        "distinguer anatomie, physiologie et pathologie ;",
+        "comprendre l’intérêt de l’anatomie pour le DEA ;",
+        "comprendre l’organisation générale du corps humain."
+      ],
+      "competencyIds": [
+        "anatomy.definition",
+        "anatomy.dea-relevance",
+        "physiology.definition",
+        "pathology.definition",
+        "body.organization"
+      ],
+      "prerequisiteIds": []
+    },
+    {
+      "id": "dea-p01-l02",
+      "order": 2,
+      "title": "Cellules et tissus",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-02.json",
+      "learningObjectives": [
+        "définir une cellule ;",
+        "identifier ses éléments essentiels au niveau DEA ;",
+        "comprendre le rôle général de la cellule ;",
+        "définir un tissu ;",
+        "reconnaître les grandes catégories de tissus ;",
+        "comprendre la relation cellule → tissu."
+      ],
+      "competencyIds": [
+        "body.cell.definition",
+        "body.cell.structure",
+        "body.cell.function",
+        "body.tissue.definition",
+        "body.tissue.types",
+        "body.organization.cell-to-tissue"
+      ],
+      "prerequisiteIds": ["dea-p01-l01"]
+    },
+    {
+      "id": "dea-p01-l03",
+      "order": 3,
+      "title": "Les organes",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-03.json",
+      "learningObjectives": [
+        "définir un organe ;",
+        "comprendre qu’un organe est constitué de plusieurs tissus ;",
+        "distinguer organe, tissu et système ;",
+        "reconnaître la fonction générale d’un organe."
+      ],
+      "competencyIds": [
+        "body.organ.definition",
+        "body.organ.composition",
+        "body.organ.function",
+        "body.organization.tissue-to-organ"
+      ],
+      "prerequisiteIds": ["dea-p01-l02"]
+    },
+    {
+      "id": "dea-p01-l04",
+      "order": 4,
+      "title": "Les systèmes du corps",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-04.json",
+      "learningObjectives": [
+        "définir un système ou appareil ;",
+        "comprendre qu’un système regroupe plusieurs organes ;",
+        "identifier les principaux systèmes ;",
+        "relier chaque système à sa fonction générale."
+      ],
+      "competencyIds": [
+        "body.system.definition",
+        "body.system.cardiovascular",
+        "body.system.respiratory",
+        "body.system.digestive",
+        "body.system.urinary",
+        "body.system.nervous",
+        "body.system.locomotor",
+        "body.organization.organ-to-system"
+      ],
+      "prerequisiteIds": ["dea-p01-l03"]
+    },
+    {
+      "id": "dea-p01-l05",
+      "order": 5,
+      "title": "La position anatomique",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-05.json",
+      "learningObjectives": [
+        "décrire la position anatomique de référence ;",
+        "comprendre son rôle comme référence universelle ;",
+        "identifier l’orientation du regard, des membres et des paumes."
+      ],
+      "competencyIds": [
+        "anatomy.position.definition",
+        "anatomy.position.posture",
+        "anatomy.position.upper-limbs",
+        "anatomy.position.palms",
+        "anatomy.position.reference-use"
+      ],
+      "prerequisiteIds": ["dea-p01-l04"]
+    },
+    {
+      "id": "dea-p01-l06",
+      "order": 6,
+      "title": "Les plans anatomiques",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-06.json",
+      "learningObjectives": [
+        "définir un plan anatomique ;",
+        "distinguer sagittal, frontal et transversal ;",
+        "comprendre comment ces plans divisent le corps ;",
+        "utiliser ces plans pour décrire une localisation."
+      ],
+      "competencyIds": [
+        "anatomy.plane.definition",
+        "anatomy.plane.sagittal",
+        "anatomy.plane.frontal",
+        "anatomy.plane.transverse",
+        "anatomy.plane.application"
+      ],
+      "prerequisiteIds": ["dea-p01-l05"]
+    },
+    {
+      "id": "dea-p01-l07",
+      "order": 7,
+      "title": "L’orientation anatomique",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-07.json",
+      "learningObjectives": [
+        "distinguer supérieur et inférieur ;",
+        "distinguer antérieur et postérieur ;",
+        "distinguer médial et latéral ;",
+        "distinguer proximal et distal ;",
+        "appliquer ces termes à des situations simples."
+      ],
+      "competencyIds": [
+        "anatomy.direction.superior",
+        "anatomy.direction.inferior",
+        "anatomy.direction.anterior",
+        "anatomy.direction.posterior",
+        "anatomy.direction.medial",
+        "anatomy.direction.lateral",
+        "anatomy.direction.proximal",
+        "anatomy.direction.distal"
+      ],
+      "prerequisiteIds": ["dea-p01-l06"]
+    },
+    {
+      "id": "dea-p01-l08",
+      "order": 8,
+      "title": "Les régions du corps",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-08.json",
+      "learningObjectives": [
+        "reconnaître les grandes régions du corps ;",
+        "localiser tête, cou, thorax, abdomen, bassin et membres ;",
+        "utiliser les bons termes pour décrire une douleur ou une lésion."
+      ],
+      "competencyIds": [
+        "anatomy.region.head",
+        "anatomy.region.neck",
+        "anatomy.region.thorax",
+        "anatomy.region.abdomen",
+        "anatomy.region.pelvis",
+        "anatomy.region.upper-limb",
+        "anatomy.region.lower-limb"
+      ],
+      "prerequisiteIds": ["dea-p01-l07"]
+    },
+    {
+      "id": "dea-p01-l09",
+      "order": 9,
+      "title": "Les repères anatomiques en intervention",
+      "type": "lesson",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-09.json",
+      "learningObjectives": [
+        "localiser une douleur ;",
+        "décrire une lésion ;",
+        "utiliser un vocabulaire anatomique précis ;",
+        "transmettre une localisation exploitable ;",
+        "éviter les descriptions vagues."
+      ],
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.pain",
+        "anatomy.location.injury",
+        "anatomy.location.transmission",
+        "anatomy.dea-relevance"
+      ],
+      "prerequisiteIds": ["dea-p01-l08"]
+    },
+    {
+      "id": "dea-p01-l10",
+      "order": 10,
+      "title": "Révision du corps humain",
+      "type": "review",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-10.json",
+      "learningObjectives": [
+        "revoir les compétences principales des leçons 1 à 9 ;",
+        "mélanger les types d’exercices ;",
+        "cibler prioritairement les compétences les moins maîtrisées lorsque le moteur le permettra."
+      ],
+      "competencyIds": [],
+      "prerequisiteIds": ["dea-p01-l09"],
+      "contentPool": {
+        "sourceLessonIds": [
+          "dea-p01-l01",
+          "dea-p01-l02",
+          "dea-p01-l03",
+          "dea-p01-l04",
+          "dea-p01-l05",
+          "dea-p01-l06",
+          "dea-p01-l07",
+          "dea-p01-l08",
+          "dea-p01-l09"
+        ],
+        "strategy": "adaptive_review",
+        "minimumItems": null,
+        "maximumItems": null,
+        "coverage": "balanced_by_lesson",
+        "deduplicateBy": "id",
+        "futurePriority": "least_mastered"
+      }
+    },
+    {
+      "id": "dea-p01-quiz",
+      "order": 11,
+      "title": "Quiz final — Découvrir le corps humain",
+      "type": "quiz",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-11.json",
+      "learningObjectives": [],
+      "competencyIds": [],
+      "prerequisiteIds": ["dea-p01-l10"],
+      "contentPool": {
+        "sourceLessonIds": [
+          "dea-p01-l01",
+          "dea-p01-l02",
+          "dea-p01-l03",
+          "dea-p01-l04",
+          "dea-p01-l05",
+          "dea-p01-l06",
+          "dea-p01-l07",
+          "dea-p01-l08",
+          "dea-p01-l09"
+        ],
+        "strategy": "balanced_random",
+        "minimumItems": 20,
+        "maximumItems": 30,
+        "coverage": "balanced_by_lesson",
+        "deduplicateBy": "id"
+      },
+      "quizConfiguration": {
+        "successThreshold": null,
+        "successThresholdConfigurable": true,
+        "rewardConfigurable": true
+      }
+    },
+    {
+      "id": "dea-p01-boss",
+      "order": 12,
+      "title": "Boss — Localiser et transmettre",
+      "type": "boss",
+      "status": "draft",
+      "bankFile": "parcours-01/lesson-12.json",
+      "learningObjectives": [
+        "Valider l’application des notions du parcours à travers une situation courte."
+      ],
+      "competencyIds": [],
+      "prerequisiteIds": ["dea-p01-quiz"],
+      "contentPool": {
+        "sourceLessonIds": [
+          "dea-p01-l01",
+          "dea-p01-l02",
+          "dea-p01-l03",
+          "dea-p01-l04",
+          "dea-p01-l05",
+          "dea-p01-l06",
+          "dea-p01-l07",
+          "dea-p01-l08",
+          "dea-p01-l09"
+        ],
+        "strategy": "balanced_random",
+        "minimumItems": null,
+        "maximumItems": null,
+        "coverage": "balanced_by_lesson",
+        "deduplicateBy": "id"
+      },
+      "bossConfiguration": {
+        "objective": "Valider l’application des notions du parcours à travers une situation courte.",
+        "scenario": "Un patient conscient décrit une douleur ou présente une lésion.",
+        "tasks": [
+          "identifier la région anatomique ;",
+          "utiliser une direction anatomique adaptée ;",
+          "distinguer une description précise d’une formulation vague ;",
+          "choisir la meilleure transmission ;",
+          "replacer les niveaux cellule, tissu, organe et système dans le bon ordre lorsque pertinent."
+        ],
+        "engine": "existing_lesson_engine",
+        "excludedEngine": "mode_intervention",
+        "successThreshold": null,
+        "rewardConfigurable": true
+      }
+    }
+  ],
+  "completion": {
+    "orderedEntryIds": [
+      "dea-p01-l01",
+      "dea-p01-l02",
+      "dea-p01-l03",
+      "dea-p01-l04",
+      "dea-p01-l05",
+      "dea-p01-l06",
+      "dea-p01-l07",
+      "dea-p01-l08",
+      "dea-p01-l09",
+      "dea-p01-l10",
+      "dea-p01-quiz",
+      "dea-p01-boss"
+    ],
+    "unlocksParcoursId": "dea-p02"
+  }
+}

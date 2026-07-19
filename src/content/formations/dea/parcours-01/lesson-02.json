@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l02",
-  "title": "Position anatomique",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,29 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l02",
+  "title": "Cellules et tissus",
+  "kind": "lesson",
+  "learningObjectives": [
+    "définir une cellule ;",
+    "identifier ses éléments essentiels au niveau DEA ;",
+    "comprendre le rôle général de la cellule ;",
+    "définir un tissu ;",
+    "reconnaître les grandes catégories de tissus ;",
+    "comprendre la relation cellule → tissu."
+  ],
+  "competencyIds": [
+    "body.cell.definition",
+    "body.cell.structure",
+    "body.cell.function",
+    "body.tissue.definition",
+    "body.tissue.types",
+    "body.organization.cell-to-tissue"
+  ],
+  "prerequisiteIds": ["dea-p01-l01"]
 }

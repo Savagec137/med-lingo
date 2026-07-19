@@ -5,7 +5,7 @@ import type {
   ContentType,
 } from "./content-domain.ts";
 
-export const LESSON_KINDS = ["lesson", "quiz", "boss"] as const;
+export const LESSON_KINDS = ["lesson", "review", "quiz", "boss"] as const;
 export type LessonKind = (typeof LESSON_KINDS)[number];
 
 export const LESSON_CONTENT_STATUSES = [
@@ -19,6 +19,35 @@ export type LessonContentStatus = (typeof LESSON_CONTENT_STATUSES)[number];
 export interface LessonSelectionPolicy {
   strategy: "all" | "random";
   count: number | null;
+}
+
+export const CONTENT_POOL_STRATEGIES = ["balanced_random", "adaptive_review"] as const;
+export type ContentPoolStrategy = (typeof CONTENT_POOL_STRATEGIES)[number];
+
+export interface LessonContentPool {
+  sourceLessonIds: string[];
+  strategy: ContentPoolStrategy;
+  minimumItems: number | null;
+  maximumItems: number | null;
+  coverage: "balanced_by_lesson";
+  deduplicateBy: "id";
+  futurePriority?: "least_mastered";
+}
+
+export interface LessonQuizConfiguration {
+  successThreshold: number | null;
+  successThresholdConfigurable: boolean;
+  rewardConfigurable: boolean;
+}
+
+export interface LessonBossConfiguration {
+  objective: string;
+  scenario: string;
+  tasks: string[];
+  engine: "existing_lesson_engine";
+  excludedEngine: "mode_intervention";
+  successThreshold: number | null;
+  rewardConfigurable: boolean;
 }
 
 export interface LearningContentItem {
@@ -61,6 +90,12 @@ export interface LessonContentFile {
   pulse: string | null;
   selection: LessonSelectionPolicy;
   specificationFile?: string;
+  learningObjectives?: string[];
+  competencyIds?: string[];
+  prerequisiteIds?: string[];
+  contentPool?: LessonContentPool;
+  quizConfiguration?: LessonQuizConfiguration;
+  bossConfiguration?: LessonBossConfiguration;
   items: LearningContentItem[];
 }
 
@@ -75,9 +110,13 @@ export interface FormationLessonReference {
 
 export interface ParcoursDefinition {
   id: string;
+  contentId?: string;
   order: number;
   title: string;
   subtitle: string;
+  objective?: string;
+  manifestFile?: string;
+  unlocksParcoursId?: string;
   theme:
     | "green"
     | "blue"

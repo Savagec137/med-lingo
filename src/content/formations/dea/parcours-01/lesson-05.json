@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l05",
-  "title": "Orientation (antérieur, postérieur…)",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,25 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l05",
+  "title": "La position anatomique",
+  "kind": "lesson",
+  "learningObjectives": [
+    "décrire la position anatomique de référence ;",
+    "comprendre son rôle comme référence universelle ;",
+    "identifier l’orientation du regard, des membres et des paumes."
+  ],
+  "competencyIds": [
+    "anatomy.position.definition",
+    "anatomy.position.posture",
+    "anatomy.position.upper-limbs",
+    "anatomy.position.palms",
+    "anatomy.position.reference-use"
+  ],
+  "prerequisiteIds": ["dea-p01-l04"]
 }

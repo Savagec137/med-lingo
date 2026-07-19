@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-01",
+  "status": "awaiting_content",
+  "difficulty": null,
+  "estimatedMinutes": null,
+  "level": null,
+  "xp": null,
+  "tags": [],
+  "pedagogicalReference": null,
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-boss",
+  "title": "Boss — Localiser et transmettre",
+  "kind": "boss",
+  "learningObjectives": [
+    "Valider l’application des notions du parcours à travers une situation courte."
+  ],
+  "competencyIds": [],
+  "prerequisiteIds": ["dea-p01-quiz"],
+  "contentPool": {
+    "sourceLessonIds": [
+      "dea-p01-l01",
+      "dea-p01-l02",
+      "dea-p01-l03",
+      "dea-p01-l04",
+      "dea-p01-l05",
+      "dea-p01-l06",
+      "dea-p01-l07",
+      "dea-p01-l08",
+      "dea-p01-l09"
+    ],
+    "strategy": "balanced_random",
+    "minimumItems": null,
+    "maximumItems": null,
+    "coverage": "balanced_by_lesson",
+    "deduplicateBy": "id"
+  },
+  "bossConfiguration": {
+    "objective": "Valider l’application des notions du parcours à travers une situation courte.",
+    "scenario": "Un patient conscient décrit une douleur ou présente une lésion.",
+    "tasks": [
+      "identifier la région anatomique ;",
+      "utiliser une direction anatomique adaptée ;",
+      "distinguer une description précise d’une formulation vague ;",
+      "choisir la meilleure transmission ;",
+      "replacer les niveaux cellule, tissu, organe et système dans le bon ordre lorsque pertinent."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": null,
+    "rewardConfigurable": true
+  }
+}

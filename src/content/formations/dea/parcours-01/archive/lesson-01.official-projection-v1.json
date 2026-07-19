@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-01",
+  "id": "dea-p01-l01",
+  "title": "Pourquoi apprendre l'anatomie ?",
+  "kind": "lesson",
+  "status": "published",
+  "difficulty": "easy",
+  "estimatedMinutes": 15,
+  "estimatedDuration": {
+    "minimumMinutes": 10,
+    "maximumMinutes": 15,
+    "label": "10 à 15 minutes"
+  },
+  "level": 1,
+  "xp": 0,
+  "tags": ["anatomie", "physiologie", "organisation-du-corps", "dea"],
+  "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "specificationFile": "parcours-01/lesson-01.specification.json",
+  "items": [
+    {
+      "id": "dea-p01-l01-Q001",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "L'anatomie étudie :",
+      "answers": [
+        {
+          "id": "Q001-A",
+          "text": "Le fonctionnement des organes",
+          "explanation": ""
+        },
+        {
+          "id": "Q001-B",
+          "text": "La structure du corps humain",
+          "explanation": ""
+        },
+        {
+          "id": "Q001-C",
+          "text": "Les maladies",
+          "explanation": ""
+        },
+        {
+          "id": "Q001-D",
+          "text": "Les médicaments",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "Q001-B",
+      "explanation": "L'anatomie décrit les structures du corps humain.",
+      "tags": ["anatomie", "structure"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "anatomy.definition"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — Q001",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "Q001",
+        "originalType": "mcq",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-Q002",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "La physiologie étudie principalement :",
+      "answers": [
+        {
+          "id": "Q002-A",
+          "text": "La structure",
+          "explanation": ""
+        },
+        {
+          "id": "Q002-B",
+          "text": "Le fonctionnement",
+          "explanation": ""
+        },
+        {
+          "id": "Q002-C",
+          "text": "Les fractures",
+          "explanation": ""
+        },
+        {
+          "id": "Q002-D",
+          "text": "Les bactéries",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "Q002-B",
+      "explanation": "",
+      "tags": ["physiologie", "fonctionnement"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "physiology.definition"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — Q002",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "Q002",
+        "originalType": "mcq",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-Q003",
+      "difficulty": "easy",
+      "type": "mcq",
+      "question": "Quel est le premier niveau d'organisation du corps humain ?",
+      "answers": [
+        {
+          "id": "Q003-A",
+          "text": "Organe",
+          "explanation": ""
+        },
+        {
+          "id": "Q003-B",
+          "text": "Tissu",
+          "explanation": ""
+        },
+        {
+          "id": "Q003-C",
+          "text": "Cellule",
+          "explanation": ""
+        },
+        {
+          "id": "Q003-D",
+          "text": "Système",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "Q003-C",
+      "explanation": "",
+      "tags": ["organisation-du-corps", "cellule"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "body.cell"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — Q003",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "Q003",
+        "originalType": "mcq",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-VF001",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Le cerveau est un organe.",
+      "answers": [
+        {
+          "id": "VF001-VRAI",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "VF001-FAUX",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "VF001-VRAI",
+      "explanation": "",
+      "tags": ["organe", "cerveau"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "body.organ"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — VF001",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "VF001",
+        "originalType": "true_false",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-VF002",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Le cœur est un tissu.",
+      "answers": [
+        {
+          "id": "VF002-VRAI",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "VF002-FAUX",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "VF002-FAUX",
+      "explanation": "",
+      "tags": ["organe", "tissu", "cœur"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "body.tissue", "body.organ"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — VF002",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "VF002",
+        "originalType": "true_false",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-VF003",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "La physiologie décrit le fonctionnement des organes.",
+      "answers": [
+        {
+          "id": "VF003-VRAI",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "VF003-FAUX",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "VF003-VRAI",
+      "explanation": "",
+      "tags": ["physiologie", "fonctionnement", "organe"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "physiology.definition", "body.organ"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — VF003",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "VF003",
+        "originalType": "true_false",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-VF004",
+      "difficulty": "easy",
+      "type": "true_false_contextual",
+      "question": "Toutes les cellules remplissent exactement la même fonction.",
+      "answers": [
+        {
+          "id": "VF004-VRAI",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "VF004-FAUX",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "VF004-FAUX",
+      "explanation": "",
+      "tags": ["cellule", "fonction"],
+      "competencyIds": ["dea.p01.l01.anatomy-foundations", "body.cell"],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — VF004",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "VF004",
+        "originalType": "true_false",
+        "reviewStatus": "source_official"
+      }
+    },
+    {
+      "id": "dea-p01-l01-ASSOCIATION-001",
+      "difficulty": "easy",
+      "type": "association",
+      "question": "Associer :",
+      "instruction": "Associer :",
+      "answers": [
+        {
+          "id": "ASSOCIATION-001-CELLULE",
+          "text": "Cellule",
+          "match": "Plus petite unité vivante",
+          "explanation": ""
+        },
+        {
+          "id": "ASSOCIATION-001-TISSU",
+          "text": "Tissu",
+          "match": "Ensemble de cellules",
+          "explanation": ""
+        },
+        {
+          "id": "ASSOCIATION-001-ORGANE",
+          "text": "Organe",
+          "match": "Ensemble de tissus",
+          "explanation": ""
+        },
+        {
+          "id": "ASSOCIATION-001-SYSTEME",
+          "text": "Système",
+          "match": "Ensemble d'organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "ASSOCIATION-001-CELLULE",
+        "ASSOCIATION-001-TISSU",
+        "ASSOCIATION-001-ORGANE",
+        "ASSOCIATION-001-SYSTEME"
+      ],
+      "explanation": "",
+      "tags": ["cellule", "tissu", "organe", "système"],
+      "competencyIds": [
+        "dea.p01.l01.anatomy-foundations",
+        "body.cell",
+        "body.tissue",
+        "body.organ",
+        "body.system"
+      ],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — ASSOCIATION",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "ASSOCIATION-001",
+        "originalType": "association",
+        "reviewStatus": "source_official",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p01-l01-GLISSER-DEPOSER-001",
+      "difficulty": "easy",
+      "type": "ordering",
+      "question": "Remettre dans l'ordre :",
+      "instruction": "Remettre dans l'ordre :",
+      "answers": [
+        {
+          "id": "GLISSER-DEPOSER-001-ORGANISME",
+          "text": "Organisme",
+          "explanation": "",
+          "sequenceRank": 5
+        },
+        {
+          "id": "GLISSER-DEPOSER-001-ORGANE",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "GLISSER-DEPOSER-001-TISSU",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "GLISSER-DEPOSER-001-CELLULE",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "GLISSER-DEPOSER-001-SYSTEME",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "GLISSER-DEPOSER-001-CELLULE",
+        "GLISSER-DEPOSER-001-TISSU",
+        "GLISSER-DEPOSER-001-ORGANE",
+        "GLISSER-DEPOSER-001-SYSTEME",
+        "GLISSER-DEPOSER-001-ORGANISME"
+      ],
+      "explanation": "",
+      "tags": ["organisation-du-corps", "ordre"],
+      "competencyIds": [
+        "dea.p01.l01.anatomy-foundations",
+        "body.cell",
+        "body.tissue",
+        "body.organ",
+        "body.system"
+      ],
+      "pedagogicalReference": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01 — GLISSER-DÉPOSER",
+      "level": 1,
+      "metadata": {
+        "sourceSpecification": "dea-p01-l01-specification",
+        "sourceId": "GLISSER-DEPOSER-001",
+        "originalType": "drag_and_drop",
+        "reviewStatus": "source_official",
+        "requiredSelections": 5
+      }
+    }
+  ]
+}

@@ -2,11 +2,27 @@ import { z } from "zod";
 import { CONTENT_DIFFICULTIES } from "./content-domain.ts";
 import { KNOWLEDGE_REVIEW_STATUSES, type MasterKnowledgeBase } from "./master-knowledge-domain.ts";
 
-const masteryCriteriaSchema = z.object({
-  minimumAccuracy: z.number().min(0).max(1),
-  minimumAttempts: z.number().int().min(1),
-  requiredExerciseTypes: z.array(z.string().trim().min(1)).min(1),
-});
+const masteryCriteriaSchema = z
+  .object({
+    status: z.enum(["configured", "pending_confirmation"]).optional(),
+    minimumAccuracy: z.number().min(0).max(1).nullable(),
+    minimumAttempts: z.number().int().min(1).nullable(),
+    requiredExerciseTypes: z.array(z.string().trim().min(1)),
+  })
+  .superRefine((criteria, context) => {
+    if (
+      criteria.status !== "pending_confirmation" &&
+      (criteria.minimumAccuracy === null ||
+        criteria.minimumAttempts === null ||
+        criteria.requiredExerciseTypes.length === 0)
+    ) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: [],
+        message: "Des critères configurés doivent être complets.",
+      });
+    }
+  });
 
 const competencySchema = z.object({
   id: z.string().trim().min(1),
@@ -17,13 +33,14 @@ const competencySchema = z.object({
   competence: z.string().trim().min(1),
   prerequisites: z.array(z.string().trim().min(1)),
   learningObjectives: z.array(z.string().trim().min(1)).min(1),
-  recommendedQuestionPool: z.number().int().positive(),
+  recommendedQuestionPool: z.number().int().nonnegative(),
   difficulty: z.enum(CONTENT_DIFFICULTIES),
   masteryCriteria: masteryCriteriaSchema,
   tags: z.array(z.string().trim().min(1)).min(1),
   sourceDocument: z.string().trim().min(1),
   sourcePages: z.array(z.number().int().positive()),
   sourceLocation: z.string().trim().min(1).optional(),
+  sourceConfirmationRequired: z.boolean().optional(),
   reviewStatus: z.enum(KNOWLEDGE_REVIEW_STATUSES),
   lessonIds: z.array(z.string().trim().min(1)).min(1),
   questionIds: z.array(z.string().trim().min(1)),

@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l08",
-  "title": "Organes",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,27 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l08",
+  "title": "Les régions du corps",
+  "kind": "lesson",
+  "learningObjectives": [
+    "reconnaître les grandes régions du corps ;",
+    "localiser tête, cou, thorax, abdomen, bassin et membres ;",
+    "utiliser les bons termes pour décrire une douleur ou une lésion."
+  ],
+  "competencyIds": [
+    "anatomy.region.head",
+    "anatomy.region.neck",
+    "anatomy.region.thorax",
+    "anatomy.region.abdomen",
+    "anatomy.region.pelvis",
+    "anatomy.region.upper-limb",
+    "anatomy.region.lower-limb"
+  ],
+  "prerequisiteIds": ["dea-p01-l07"]
 }

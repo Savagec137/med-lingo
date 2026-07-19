@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l04",
-  "title": "Régions du corps",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,29 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l04",
+  "title": "Les systèmes du corps",
+  "kind": "lesson",
+  "learningObjectives": [
+    "définir un système ou appareil ;",
+    "comprendre qu’un système regroupe plusieurs organes ;",
+    "identifier les principaux systèmes ;",
+    "relier chaque système à sa fonction générale."
+  ],
+  "competencyIds": [
+    "body.system.definition",
+    "body.system.cardiovascular",
+    "body.system.respiratory",
+    "body.system.digestive",
+    "body.system.urinary",
+    "body.system.nervous",
+    "body.system.locomotor",
+    "body.organization.organ-to-system"
+  ],
+  "prerequisiteIds": ["dea-p01-l03"]
 }

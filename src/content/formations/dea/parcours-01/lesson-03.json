@@ -2,9 +2,6 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "id": "dea-p01-l03",
-  "title": "Plans anatomiques",
-  "kind": "lesson",
   "status": "awaiting_content",
   "difficulty": null,
   "estimatedMinutes": null,
@@ -13,6 +10,25 @@
   "tags": [],
   "pedagogicalReference": null,
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": [],
+  "id": "dea-p01-l03",
+  "title": "Les organes",
+  "kind": "lesson",
+  "learningObjectives": [
+    "définir un organe ;",
+    "comprendre qu’un organe est constitué de plusieurs tissus ;",
+    "distinguer organe, tissu et système ;",
+    "reconnaître la fonction générale d’un organe."
+  ],
+  "competencyIds": [
+    "body.organ.definition",
+    "body.organ.composition",
+    "body.organ.function",
+    "body.organization.tissue-to-organ"
+  ],
+  "prerequisiteIds": ["dea-p01-l02"]
 }

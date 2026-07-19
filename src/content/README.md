@@ -17,10 +17,13 @@ Les nouvelles banques utilisent la V2 décrite dans [`formations/README.md`](./f
 - `formation-registry.ts` découvre automatiquement toutes les formations et leurs parcours.
 - `lesson-content-repository.ts` charge chaque fichier de leçon à la demande et le met en cache.
 - `formations/<formation>/formation.json` définit les parcours, leçons, quiz et boss.
+- `formations/<formation>/parcours-XX/parcours.json` décrit l'objectif global, l'ordre, les prérequis, les compétences et les pools de révision d'un parcours.
 - `formations/<formation>/parcours-XX/lesson-XX.specification.json` est la source officielle exhaustive d'une leçon.
 - `formations/<formation>/parcours-XX/lesson-XX.json` contient une seule banque indépendante.
 - `pedagogical-specification-schema.ts` valide la conservation, les identifiants et l'état de projection de chaque contenu officiel.
 - `pedagogical-specification-merge.ts` fusionne les révisions par identifiant stable et refuse tout remplacement silencieux.
+- `parcours-manifest-schema.ts` valide la progression complète d'un parcours et ses banques sources.
+- `lesson-runtime.ts` fournit aussi une sélection équilibrée multi-banques avec déduplication par identifiant.
 - `master-knowledge-base.json` décrit les compétences, leurs prérequis et leurs sources.
 - `master-knowledge-catalog.ts` retrouve les compétences d'une leçon ou d'une question.
 
@@ -39,7 +42,9 @@ Chaque nouvel exercice V2 déclare `competencyIds`. Ces identifiants doivent exi
 `questionIds`. Les champs `metadata.sourceDocument`, `metadata.sourcePages` et
 `metadata.reviewStatus` conservent la provenance et le niveau de validation.
 
-La leçon `dea-p01-l01` est reliée à sa spécification pédagogique officielle. Sa projection active contient uniquement les neuf exercices fournis que le moteur sait actuellement exécuter. Les autres éléments restent suivis comme non projetés. L'ancienne banque générée de 50 exercices et l'ancienne Master Knowledge Base sont conservées sous `archive/` pour audit, mais ne sont plus des sources actives.
+La leçon `dea-p01-l01` reste reliée à sa spécification pédagogique officielle. La banque existante de 50 exercices est reconnectée sans réécriture conformément au manifeste du Parcours 1. Sa copie immuable et la première projection officielle de neuf exercices restent conservées sous `archive/` pour audit.
+
+Les leçons 2 à 9, la révision, le quiz et le Boss du Parcours 1 restent invisibles avec le statut `awaiting_content`. La révision et le quiz ne dupliquent aucune question : leurs fichiers déclarent les leçons sources dans `contentPool`. Les compétences sans support DEA confirmé restent en `draft`, avec `sourceConfirmationRequired: true` et des critères de maîtrise `pending_confirmation`.
 
 ## Ajouter une question
 

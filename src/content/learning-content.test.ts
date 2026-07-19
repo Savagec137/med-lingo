@@ -13,16 +13,17 @@ const DEA_FORMATION = new FormationCatalog([deaFormation]).getFormation("dea");
 
 const PARCOURS_01_TITLES = [
   "Pourquoi apprendre l'anatomie ?",
-  "Position anatomique",
-  "Plans anatomiques",
-  "Régions du corps",
-  "Orientation (antérieur, postérieur…)",
-  "Cellules",
-  "Tissus",
-  "Organes",
-  "Systèmes",
-  "Quiz",
-  "Boss",
+  "Cellules et tissus",
+  "Les organes",
+  "Les systèmes du corps",
+  "La position anatomique",
+  "Les plans anatomiques",
+  "L’orientation anatomique",
+  "Les régions du corps",
+  "Les repères anatomiques en intervention",
+  "Révision du corps humain",
+  "Quiz final — Découvrir le corps humain",
+  "Boss — Localiser et transmettre",
 ];
 
 const PARCOURS_02_TITLES = [
@@ -68,6 +69,7 @@ test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () =>
   );
   assert.equal(DEA_FORMATION.parcours[0]?.lessons.at(-2)?.kind, "quiz");
   assert.equal(DEA_FORMATION.parcours[0]?.lessons.at(-1)?.kind, "boss");
+  assert.equal(DEA_FORMATION.parcours[0]?.lessons[9]?.kind, "review");
   assert.equal(DEA_FORMATION.parcours[1]?.lessons.at(-2)?.kind, "quiz");
   assert.equal(DEA_FORMATION.parcours[1]?.lessons.at(-1)?.kind, "boss");
 });
@@ -83,14 +85,9 @@ test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
       assert.equal(lesson.title, reference.title);
       if (lesson.id === "dea-p01-l01") {
         assert.equal(lesson.status, "published");
-        assert.equal(lesson.items.length, 9);
-        assert.deepEqual(lesson.selection, { strategy: "all", count: null });
-        assert.deepEqual(lesson.estimatedDuration, {
-          minimumMinutes: 10,
-          maximumMinutes: 15,
-          label: "10 à 15 minutes",
-        });
-        assert.equal(lesson.specificationFile, "parcours-01/lesson-01.specification.json");
+        assert.equal(lesson.items.length, 50);
+        assert.deepEqual(lesson.selection, { strategy: "random", count: 10 });
+        assert.equal(reference.specificationFile, "parcours-01/lesson-01.specification.json");
       } else {
         assert.equal(lesson.status, "awaiting_content");
         assert.deepEqual(lesson.items, []);

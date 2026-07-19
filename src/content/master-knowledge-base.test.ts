@@ -1,90 +1,90 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import archivedLessonInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
+import archivedBankInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
+import officialProjectionInput from "./formations/dea/parcours-01/archive/lesson-01.official-projection-v1.json" with { type: "json" };
 import lessonInput from "./formations/dea/parcours-01/lesson-01.json" with { type: "json" };
+import parcoursInput from "./formations/dea/parcours-01/parcours.json" with { type: "json" };
 import specificationInput from "./formations/dea/parcours-01/lesson-01.specification.json" with { type: "json" };
 import { parseLessonContentFile } from "./learning-schema.ts";
 import knowledgeInput from "./master-knowledge-base.json" with { type: "json" };
 import { MasterKnowledgeCatalog } from "./master-knowledge-catalog.ts";
-import {
-  PedagogicalSpecificationCatalog,
-  specificationContentIds,
-} from "./pedagogical-specification-catalog.ts";
+import { PedagogicalSpecificationCatalog } from "./pedagogical-specification-catalog.ts";
 
 const lesson = parseLessonContentFile(lessonInput);
+const officialProjection = parseLessonContentFile(officialProjectionInput);
 const specification = new PedagogicalSpecificationCatalog([specificationInput]).get(lesson.id);
 const catalog = new MasterKnowledgeCatalog(knowledgeInput);
 const knowledgeBase = catalog.knowledgeBase;
-const trackedIds = new Set([
+const trackedSpecificationIds = new Set([
   ...specification.integration.projectedContentIds,
   ...specification.integration.nonProjectedContentIds,
 ]);
+const activeQuestionIds = new Set(lesson.items.map((item) => item.id));
+const knownContentIds = new Set([...trackedSpecificationIds, ...activeQuestionIds]);
 
-test("la base maîtresse référence la spécification officielle de dea-p01-l01", () => {
-  assert.equal(knowledgeBase.competencies.length, 11);
+test("la base maîtresse couvre le Parcours 1 et sa spécification officielle", () => {
+  assert.equal(knowledgeBase.competencies.length, 60);
   assert.deepEqual(knowledgeBase.formations, ["dea"]);
-  assert.deepEqual(knowledgeBase.lessonRegistry, [lesson.id]);
+  assert.deepEqual(knowledgeBase.lessonRegistry, parcoursInput.completion.orderedEntryIds);
 
   const primary = catalog.get("dea.p01.l01.anatomy-foundations");
   assert.equal(primary.competence, "Comprendre les bases de l'anatomie humaine.");
   assert.deepEqual(primary.learningObjectives, specification.learningObjectives);
-  assert.deepEqual(new Set(primary.contentIds), trackedIds);
+  assert.deepEqual(new Set(primary.contentIds), trackedSpecificationIds);
   assert.equal(primary.sourceLocation, lesson.id);
-  assert.deepEqual(primary.sourcePages, []);
 });
 
-test("chaque référence active de la Master Knowledge Base existe dans la source officielle", () => {
-  const officialIds = trackedIds;
+test("les cinquante exercices actifs référencent uniquement des compétences existantes", () => {
+  assert.equal(lesson.items.length, 50);
+  for (const item of lesson.items) {
+    for (const competencyId of item.competencyIds) {
+      assert.doesNotThrow(() => catalog.get(competencyId), `${item.id} -> ${competencyId}`);
+      assert.ok(catalog.get(competencyId).questionIds.includes(item.id));
+    }
+  }
+});
+
+test("chaque référence active de la Master Knowledge Base reste adressable", () => {
+  const lessonIds = new Set(knowledgeBase.lessonRegistry);
   for (const competency of knowledgeBase.competencies) {
     assert.deepEqual(competency.formationIds, ["dea"]);
-    assert.deepEqual(competency.lessonIds, [lesson.id]);
-    for (const contentId of competency.contentIds) {
-      assert.ok(officialIds.has(contentId), `${competency.id} -> ${contentId}`);
-    }
+    assert.ok(competency.sourceDocument.length > 0);
+    assert.ok(Array.isArray(competency.sourcePages));
+    for (const lessonId of competency.lessonIds) assert.ok(lessonIds.has(lessonId));
     for (const questionId of competency.questionIds) {
-      assert.ok(officialIds.has(questionId), `${competency.id} -> ${questionId}`);
+      assert.ok(knownContentIds.has(questionId), `${competency.id} -> ${questionId}`);
+    }
+    for (const contentId of competency.contentIds) {
+      assert.ok(knownContentIds.has(contentId), `${competency.id} -> ${contentId}`);
     }
   }
 });
 
-test("la projection exécutable ne contient que les neuf exercices officiellement projetés", () => {
-  assert.equal(lesson.items.length, 9);
-  assert.deepEqual(
-    lesson.items.map((item) => item.metadata?.sourceId),
-    specification.integration.projectedContentIds,
+test("les nouvelles compétences sans support DEA confirmé restent explicitement en draft", () => {
+  const pending = knowledgeBase.competencies.filter(
+    (competency) => competency.sourceConfirmationRequired,
   );
-  for (const item of lesson.items) {
-    assert.equal(item.metadata?.sourceSpecification, specification.id);
-    assert.ok(item.competencyIds.includes(specification.primaryCompetency.id));
+  assert.equal(pending.length, 49);
+  for (const competency of pending) {
+    assert.equal(competency.reviewStatus, "draft");
+    assert.deepEqual(competency.sourcePages, []);
+    assert.equal(competency.masteryCriteria.status, "pending_confirmation");
+    assert.equal(competency.masteryCriteria.minimumAccuracy, null);
   }
-});
-
-test("les seize contenus interactifs officiels restent adressables par identifiant stable", () => {
-  assert.deepEqual(specificationContentIds(specification), [
-    "F001",
-    "F002",
-    "F003",
-    "F004",
-    "F005",
-    "Q001",
-    "Q002",
-    "Q003",
-    "VF001",
-    "VF002",
-    "VF003",
-    "VF004",
-    "ASSOCIATION-001",
-    "GLISSER-DEPOSER-001",
-    "CAS-001",
-    "PIEGE-001",
-  ]);
-});
-
-test("l'ancienne banque générée reste archivée sans être chargée comme source officielle", () => {
-  assert.equal(archivedLessonInput.items.length, 50);
   assert.equal(
-    lesson.items.some((item) => item.id === "dea-p1-l1-mcq-01"),
+    knowledgeBase.competencies.some(
+      (competency) => competency.reviewStatus === "trainer_validated",
+    ),
     false,
+  );
+});
+
+test("la banque de 50 exercices et la projection officielle V1 sont conservées sans réécriture", () => {
+  assert.deepEqual(lessonInput, archivedBankInput);
+  assert.equal(officialProjection.items.length, 9);
+  assert.deepEqual(
+    officialProjection.items.map((item) => item.metadata?.sourceId),
+    specification.integration.projectedContentIds,
   );
 });

@@ -2,6 +2,7 @@ import { z } from "zod";
 import { CONTENT_DIFFICULTIES, CONTENT_TYPES, type ContentItem } from "./content-domain.ts";
 import { parseContentBank } from "./content-schema.ts";
 import {
+  CONTENT_POOL_STRATEGIES,
   LESSON_CONTENT_STATUSES,
   LESSON_KINDS,
   type FormationDefinition,
@@ -30,6 +31,37 @@ const answerSchema = z.object({
 const metadataSchema = z
   .record(z.string(), z.union([z.string(), z.number(), z.boolean()]))
   .optional();
+
+const contentPoolSchema = z
+  .object({
+    sourceLessonIds: z.array(z.string().trim().min(1)).min(1),
+    strategy: z.enum(CONTENT_POOL_STRATEGIES),
+    minimumItems: z.number().int().positive().nullable(),
+    maximumItems: z.number().int().positive().nullable(),
+    coverage: z.literal("balanced_by_lesson"),
+    deduplicateBy: z.literal("id"),
+    futurePriority: z.literal("least_mastered").optional(),
+  })
+  .superRefine((pool, context) => {
+    if (new Set(pool.sourceLessonIds).size !== pool.sourceLessonIds.length) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["sourceLessonIds"],
+        message: "Une source de contenu ne peut être référencée qu'une fois.",
+      });
+    }
+    if (
+      pool.minimumItems !== null &&
+      pool.maximumItems !== null &&
+      pool.minimumItems > pool.maximumItems
+    ) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["minimumItems"],
+        message: "Le minimum du pool ne peut pas dépasser son maximum.",
+      });
+    }
+  });
 
 const learningItemSchema = z.object({
   id: z.string().trim().min(1),
@@ -81,6 +113,28 @@ const lessonContentSchema = z
       .trim()
       .regex(/^parcours-\d{2}\/lesson-\d{2}\.specification\.json$/)
       .optional(),
+    learningObjectives: z.array(z.string().trim().min(1)).optional(),
+    competencyIds: z.array(z.string().trim().min(1)).optional(),
+    prerequisiteIds: z.array(z.string().trim().min(1)).optional(),
+    contentPool: contentPoolSchema.optional(),
+    quizConfiguration: z
+      .object({
+        successThreshold: z.number().min(0).max(1).nullable(),
+        successThresholdConfigurable: z.boolean(),
+        rewardConfigurable: z.boolean(),
+      })
+      .optional(),
+    bossConfiguration: z
+      .object({
+        objective: z.string().trim().min(1),
+        scenario: z.string().trim().min(1),
+        tasks: z.array(z.string().trim().min(1)).min(1),
+        engine: z.literal("existing_lesson_engine"),
+        excludedEngine: z.literal("mode_intervention"),
+        successThreshold: z.number().min(0).max(1).nullable(),
+        rewardConfigurable: z.boolean(),
+      })
+      .optional(),
     items: z.array(learningItemSchema),
   })
   .superRefine((lesson, context) => {
@@ -98,6 +152,14 @@ const lessonContentSchema = z
         code: z.ZodIssueCode.custom,
         path: ["items"],
         message: "Une banque en attente de contenu doit rester vide.",
+      });
+    }
+
+    if (lesson.contentPool?.sourceLessonIds.includes(lesson.id)) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["contentPool", "sourceLessonIds"],
+        message: "Un contenu ne peut pas utiliser sa propre banque comme source externe.",
       });
     }
 
@@ -152,9 +214,21 @@ const parcoursSchema = z.object({
     .string()
     .trim()
     .regex(/^parcours-\d{2}$/),
+  contentId: z
+    .string()
+    .trim()
+    .regex(/^[a-z0-9]+-p\d{2}$/)
+    .optional(),
   order: z.number().int().positive(),
   title: z.string().trim().min(1),
   subtitle: z.string().trim().min(1),
+  objective: z.string().trim().min(1).optional(),
+  manifestFile: z
+    .string()
+    .trim()
+    .regex(/^parcours-\d{2}\/parcours\.json$/)
+    .optional(),
+  unlocksParcoursId: z.string().trim().min(1).optional(),
   theme: z.enum([
     "green",
     "blue",

@@ -11,8 +11,9 @@ export const KNOWLEDGE_REVIEW_STATUSES = [
 export type KnowledgeReviewStatus = (typeof KNOWLEDGE_REVIEW_STATUSES)[number];
 
 export interface MasteryCriteria {
-  minimumAccuracy: number;
-  minimumAttempts: number;
+  status?: "configured" | "pending_confirmation";
+  minimumAccuracy: number | null;
+  minimumAttempts: number | null;
   requiredExerciseTypes: string[];
 }
 
@@ -32,6 +33,7 @@ export interface CompetencyDefinition {
   sourceDocument: string;
   sourcePages: number[];
   sourceLocation?: string;
+  sourceConfirmationRequired?: boolean;
   reviewStatus: KnowledgeReviewStatus;
   lessonIds: string[];
   questionIds: string[];

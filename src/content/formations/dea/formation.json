@@ -7,7 +7,7 @@
       "id": "parcours-01",
       "order": 1,
       "title": "Découvrir le corps humain",
-      "subtitle": "Les bases de l'anatomie",
+      "subtitle": "Les bases indispensables de l’anatomie",
       "theme": "green",
       "lessons": [
         {
@@ -20,75 +20,86 @@
         },
         {
           "id": "dea-p01-l02",
-          "title": "Position anatomique",
+          "title": "Cellules et tissus",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-02.json"
         },
         {
           "id": "dea-p01-l03",
-          "title": "Plans anatomiques",
+          "title": "Les organes",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-03.json"
         },
         {
           "id": "dea-p01-l04",
-          "title": "Régions du corps",
+          "title": "Les systèmes du corps",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-04.json"
         },
         {
           "id": "dea-p01-l05",
-          "title": "Orientation (antérieur, postérieur…)",
+          "title": "La position anatomique",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-05.json"
         },
         {
           "id": "dea-p01-l06",
-          "title": "Cellules",
+          "title": "Les plans anatomiques",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-06.json"
         },
         {
           "id": "dea-p01-l07",
-          "title": "Tissus",
+          "title": "L’orientation anatomique",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-07.json"
         },
         {
           "id": "dea-p01-l08",
-          "title": "Organes",
+          "title": "Les régions du corps",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-08.json"
         },
         {
           "id": "dea-p01-l09",
-          "title": "Systèmes",
+          "title": "Les repères anatomiques en intervention",
           "kind": "lesson",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-09.json"
         },
         {
           "id": "dea-p01-l10",
-          "title": "Quiz",
-          "kind": "quiz",
+          "title": "Révision du corps humain",
+          "kind": "review",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-10.json"
         },
         {
-          "id": "dea-p01-l11",
-          "title": "Boss",
-          "kind": "boss",
+          "id": "dea-p01-quiz",
+          "title": "Quiz final — Découvrir le corps humain",
+          "kind": "quiz",
           "status": "awaiting_content",
           "file": "parcours-01/lesson-11.json"
+        },
+        {
+          "id": "dea-p01-boss",
+          "title": "Boss — Localiser et transmettre",
+          "kind": "boss",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-12.json"
         }
-      ]
+      ],
+      "contentId": "dea-p01",
+      "objective": "Permettre à l’apprenant de comprendre l’organisation générale du corps humain, les niveaux d’organisation biologique, la position anatomique, les plans, les directions et les principales régions du corps avant d’aborder le vocabulaire médical, la physiologie et les pathologies.",
+      "manifestFile": "parcours-01/parcours.json",
+      "unlocksParcoursId": "dea-p02"
     },
     {
       "id": "parcours-02",
