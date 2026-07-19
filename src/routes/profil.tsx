@@ -8,6 +8,7 @@ import { levelProgress } from "@/lib/gamification";
 import { UNITS } from "@/lib/curriculum";
 import { useBadgesCatalog, useUserBadges, useXpHistory } from "@/lib/use-gamification";
 import { BadgeIcon } from "@/lib/icon-map";
+import { BADGE_GOLD } from "@/lib/asset-map";
 import { ProfileVisitCard } from "@/features/gamification/components/ProfileVisitCard";
 import { DEFAULT_PROFILE_CARD, PROFILE_CARD_CATALOG } from "@/features/gamification/domain/profile-cards";
 import { useProfileCard } from "@/features/gamification/hooks/use-profile-card";
