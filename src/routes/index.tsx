@@ -14,7 +14,6 @@ import {
   Ambulance,
 } from "lucide-react";
 import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
-import parcoursHero from "@/assets/parcours-hero.png";
 import { PARCOURS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -164,33 +163,6 @@ function Home() {
                 style={{ width: `${dailyPct * 100}%` }}
               />
             </div>
-          </div>
-        </section>
-
-        {/* Parcours hero visuel */}
-        <section
-          aria-label="Ton parcours MedLingo"
-          className="mb-4 overflow-hidden rounded-3xl border border-white/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,.5)]"
-        >
-          <div className="relative w-full">
-            <img
-              src={parcoursHero}
-              alt="Parcours MedLingo — Découvrir le corps humain, Préfixes"
-              className="block h-auto w-full select-none"
-              draggable={false}
-              loading="lazy"
-              decoding="async"
-            />
-            {currentLesson && (
-              <Link
-                to="/lecon/$lessonId"
-                params={{ lessonId: currentLesson.lesson.id }}
-                aria-label={`Continuer : ${currentLesson.lesson.title}`}
-                className="absolute left-1/2 top-[38%] h-[14%] w-[38%] -translate-x-1/2 rounded-full press"
-              >
-                <span className="sr-only">Continuer la leçon en cours</span>
-              </Link>
-            )}
           </div>
         </section>
 
