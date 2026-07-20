@@ -1,88 +1,56 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, Sparkles, ShoppingBag, Trophy, User as UserIcon } from "lucide-react";
-import type { ComponentType, SVGProps } from "react";
+import bottomBar from "@/assets/bottom-nav-bar.png";
 
-type NavItem = {
-  to: "/" | "/pulse" | "/boutique" | "/classement" | "/profil";
-  label: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
-  match: (path: string) => boolean;
-};
-
-const ITEMS: NavItem[] = [
-  { to: "/", label: "Accueil", icon: Home, match: (path) => path === "/" },
-  { to: "/pulse", label: "Pulse", icon: Sparkles, match: (path) => path.startsWith("/pulse") },
+const ITEMS = [
+  { to: "/", label: "Accueil", match: (p: string) => p === "/" },
+  { to: "/pulse", label: "Pulse", match: (p: string) => p.startsWith("/pulse") },
   {
-    to: "/boutique",
-    label: "Boutique",
-    icon: ShoppingBag,
-    match: (path) => path.startsWith("/boutique") || path.startsWith("/inventaire"),
+    to: "/",
+    label: "MedLingo",
+    match: (p: string) => p === "/",
   },
-  {
-    to: "/classement",
-    label: "Ligue",
-    icon: Trophy,
-    match: (path) => path.startsWith("/classement"),
-  },
-  { to: "/profil", label: "Profil", icon: UserIcon, match: (path) => path.startsWith("/profil") },
-];
+  { to: "/classement", label: "Ligue", match: (p: string) => p.startsWith("/classement") },
+  { to: "/profil", label: "Profil", match: (p: string) => p.startsWith("/profil") },
+] as const;
 
 const HIDDEN_PREFIXES = ["/lecon", "/auth", "/onboarding"];
 
 export function BottomNav() {
-  const pathname = useRouterState({ select: (state) => state.location.pathname });
-
-  if (HIDDEN_PREFIXES.some((prefix) => pathname.startsWith(prefix))) return null;
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  if (HIDDEN_PREFIXES.some((p) => pathname.startsWith(p))) return null;
 
   return (
     <nav
       aria-label="Navigation principale"
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-background/70 backdrop-blur-xl"
+      className="fixed inset-x-0 bottom-0 z-30"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <ul className="mx-auto grid max-w-2xl grid-cols-5 px-2 py-1.5">
-        {ITEMS.map((item) => {
-          const active = item.match(pathname);
-          const Icon = item.icon;
-
-          return (
-            <li key={item.to} className="flex">
-              <Link
-                to={item.to}
-                aria-current={active ? "page" : undefined}
-                className="group relative flex flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 press"
-              >
-                <span
-                  className={`relative flex h-9 w-14 items-center justify-center rounded-2xl transition-all ${
-                    active
-                      ? "bg-[color:var(--color-primary)]/20 text-[color:var(--color-primary)]"
-                      : "text-muted-foreground group-hover:text-foreground"
-                  }`}
+      <div className="relative mx-auto w-full max-w-3xl">
+        <img
+          src={bottomBar}
+          alt=""
+          aria-hidden
+          className="block h-auto w-full select-none"
+          draggable={false}
+        />
+        <ul className="absolute inset-0 grid grid-cols-5">
+          {ITEMS.map((item, i) => {
+            const active = item.match(pathname);
+            return (
+              <li key={i} className="flex">
+                <Link
+                  to={item.to}
+                  aria-label={item.label}
+                  aria-current={active ? "page" : undefined}
+                  className="flex-1 press"
                 >
-                  <Icon
-                    className={`h-5 w-5 transition-transform ${active ? "scale-110" : ""}`}
-                    strokeWidth={active ? 2.6 : 2.1}
-                  />
-                  {active ? (
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute inset-0 rounded-2xl"
-                      style={{ boxShadow: "var(--glow-primary)" }}
-                    />
-                  ) : null}
-                </span>
-                <span
-                  className={`text-[10px] font-extrabold uppercase tracking-wider transition-colors ${
-                    active ? "text-[color:var(--color-primary)]" : "text-muted-foreground"
-                  }`}
-                >
-                  {item.label}
-                </span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                  <span className="sr-only">{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }
