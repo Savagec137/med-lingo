@@ -81,26 +81,41 @@ function Home() {
       <TopBar />
 
       <main className="mx-auto max-w-2xl px-4 pt-4">
-        {/* Greeting */}
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <h1 className="font-display text-2xl font-extrabold leading-tight">
-              Bonjour {firstName}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              {progress.streak > 0
-                ? `${progress.streak} jour${progress.streak > 1 ? "s" : ""} de série — continue !`
-                : "Prêt pour ta première leçon du jour ?"}
-            </p>
+        {/* Hero SAMU */}
+        <section className="relative mb-4 overflow-hidden rounded-3xl border border-white/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
+          <img
+            src="/samu-regulation-bg.jpg"
+            alt="Salle de régulation SAMU"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/60 to-slate-950/90" />
+          <div className="relative flex items-start justify-between gap-3 p-5 sm:p-6">
+            <div className="min-w-0 flex-1">
+              <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-cyan-300/40 bg-cyan-300/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-200 backdrop-blur">
+                <Sparkles className="h-3 w-3" />
+                MedLingo
+              </div>
+              <h1 className="font-display text-2xl font-extrabold leading-tight text-white sm:text-3xl">
+                Bonjour {firstName}
+              </h1>
+              <p className="mt-1 text-xs text-slate-200/90 sm:text-sm">
+                {progress.streak > 0
+                  ? `${progress.streak} jour${progress.streak > 1 ? "s" : ""} de série — continue !`
+                  : "Prêt pour ta première leçon du jour ?"}
+              </p>
+            </div>
+            <Link
+              to="/profil"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20"
+              aria-label="Profil"
+            >
+              <UserIcon className="h-5 w-5" />
+            </Link>
           </div>
-          <Link
-            to="/profil"
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-border bg-card text-foreground shadow-[0_3px_0_0_var(--color-border)] hover:border-[color:var(--color-primary)]"
-            aria-label="Profil"
-          >
-            <UserIcon className="h-5 w-5" />
-          </Link>
-        </div>
+        </section>
+
 
         {/* Level + Daily goal card */}
         <section
