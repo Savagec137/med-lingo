@@ -77,19 +77,19 @@ function Home() {
   const recentBadges = userBadges.slice(0, 5);
 
   return (
-    <div className="relative min-h-screen pb-24">
-      {/* Fond SAMU global */}
-      <div
-        aria-hidden
-        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/samu-regulation-bg.jpg')" }}
-      />
-      <div
-        aria-hidden
-        className="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950/70 via-slate-950/80 to-slate-950/95"
-      />
-
+    <div
+      className="min-h-screen pb-24"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(2,6,23,0.78), rgba(2,6,23,0.88) 45%, rgba(2,6,23,0.96)), url('/samu-regulation-bg.jpg')",
+        backgroundSize: "cover, cover",
+        backgroundPosition: "center, center",
+        backgroundAttachment: "fixed, fixed",
+        backgroundRepeat: "no-repeat, no-repeat",
+      }}
+    >
       <TopBar />
+
 
       <main className="mx-auto max-w-2xl px-4 pt-4">
         {/* Greeting */}
