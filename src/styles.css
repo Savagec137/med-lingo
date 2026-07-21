@@ -238,6 +238,13 @@
 @utility animate-flame        { animation: flame-flicker 1.6s ease-in-out infinite; }
 @utility animate-xp-rise      { animation: xp-rise 1.6s cubic-bezier(.2,.7,.3,1) forwards; }
 
+@keyframes bg-kenburns {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.15) translate3d(-2%, -1.5%, 0); }
+  100% { transform: scale(1.05) translate3d(0, 0, 0); }
+}
+@utility animate-bg-kenburns { animation: bg-kenburns 30s ease-in-out infinite; }
+
 @utility press { transition: transform 0.08s ease, filter 0.15s ease, box-shadow 0.15s ease; }
 .press:active { transform: translateY(1px) scale(0.98); filter: brightness(0.95); }
 
