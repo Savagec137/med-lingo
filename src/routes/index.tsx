@@ -77,18 +77,18 @@ function Home() {
   const recentBadges = userBadges.slice(0, 5);
 
   return (
-    <div
-      className="min-h-screen pb-24"
-      style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(2,6,23,0.78), rgba(2,6,23,0.88) 45%, rgba(2,6,23,0.96)), url('/samu-regulation-bg.jpg')",
-        backgroundSize: "cover, cover",
-        backgroundPosition: "center, center",
-        backgroundAttachment: "fixed, fixed",
-        backgroundRepeat: "no-repeat, no-repeat",
-      }}
-    >
+    <div className="relative min-h-screen pb-24">
+      {/* Animated SAMU background */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div
+          className="absolute -inset-[6%] animate-bg-kenburns bg-cover bg-center"
+          style={{ backgroundImage: "url('/samu-regulation-bg.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-slate-950/55 to-slate-950/80" />
+      </div>
+
       <TopBar />
+
 
 
       <main className="mx-auto max-w-2xl px-4 pt-4">
