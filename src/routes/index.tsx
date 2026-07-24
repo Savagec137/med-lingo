@@ -14,7 +14,13 @@ import {
   Ambulance as AmbulanceIcon,
   BookOpen,
 } from "lucide-react";
-import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
+import {
+  LessonIcon,
+  MissionIcon,
+  BadgeIcon,
+  RoadmapBlockArtwork,
+  RoadmapParcoursArtwork,
+} from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { OFFICIAL_ROADMAP_BLOCS } from "@/content/curriculum-content";
 import { useProgress } from "@/lib/use-progress";
@@ -371,9 +377,7 @@ function Home() {
             {OFFICIAL_ROADMAP_BLOCS.map((bloc) => (
               <section key={bloc.id} aria-labelledby={`${bloc.id}-title`}>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/15 text-sm font-extrabold text-cyan-300">
-                    {bloc.order}
-                  </div>
+                  <RoadmapBlockArtwork blocId={bloc.id} order={bloc.order} />
                   <div className="min-w-0">
                     <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-400">
                       Bloc {bloc.order}
@@ -399,17 +403,11 @@ function Home() {
                               : "border-white/10 bg-slate-950/35"
                           }`}
                         >
-                          <div className="relative shrink-0">
-                            <UnitArtwork
-                              unitId={parcours.id}
-                              className={hasPublishedLessons ? "" : "opacity-45 grayscale"}
-                            />
-                            {!hasPublishedLessons && (
-                              <div className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-white/60">
-                                <Lock className="h-3.5 w-3.5" aria-hidden="true" />
-                              </div>
-                            )}
-                          </div>
+                          <RoadmapParcoursArtwork
+                            parcoursId={parcours.id}
+                            blocId={bloc.id}
+                            locked={!hasPublishedLessons}
+                          />
 
                           <div className="min-w-0 flex-1">
                             <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">

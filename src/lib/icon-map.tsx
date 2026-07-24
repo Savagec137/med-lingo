@@ -1,10 +1,21 @@
 import type { LucideIcon } from "lucide-react";
 import unitIconsSheet from "@/assets/unit-icons-sheet.png";
 import {
+  ROADMAP_BLOCK_VISUALS,
+  ROADMAP_PARCOURS_VISUALS,
+  type RoadmapIconName,
+  type RoadmapPalette,
+} from "@/lib/roadmap-visuals";
+import {
+  Activity,
   Bone,
   Brain,
+  BriefcaseMedical,
+  BookOpen,
+  CarFront,
   HeartPulse,
   Dumbbell,
+  Eye,
   Footprints,
   Wind,
   Utensils,
@@ -31,6 +42,12 @@ import {
   BedDouble,
   Baby,
   PersonStanding,
+  HandHeart,
+  HeartHandshake,
+  Navigation,
+  ShieldAlert,
+  ShieldPlus,
+  UsersRound,
   Scale,
   FileText,
   Bandage,
@@ -59,6 +76,7 @@ import {
   User,
   Shield,
   Gem,
+  Lock,
 } from "lucide-react";
 
 // -------- Units --------
@@ -106,6 +124,113 @@ const UNIT_ARTWORK: Record<string, { x: number; y: number }> = {
 
 const UNIT_ARTWORK_SCALE = 0.74;
 const UNIT_ARTWORK_SHEET_SIZE = { width: 1536, height: 1024 };
+
+const ROADMAP_ICONS: Record<RoadmapIconName, LucideIcon> = {
+  activity: Activity,
+  ambulance: Ambulance,
+  baby: Baby,
+  bandage: Bandage,
+  bone: Bone,
+  "book-open": BookOpen,
+  brain: Brain,
+  "briefcase-medical": BriefcaseMedical,
+  "car-front": CarFront,
+  "clipboard-list": ClipboardList,
+  dna: Dna,
+  droplets: Droplets,
+  eye: Eye,
+  flame: Flame,
+  flask: FlaskConical,
+  "hand-heart": HandHeart,
+  "hard-hat": HardHat,
+  "heart-handshake": HeartHandshake,
+  "heart-pulse": HeartPulse,
+  messages: MessagesSquare,
+  microscope: Microscope,
+  navigation: Navigation,
+  "person-standing": PersonStanding,
+  phone: Phone,
+  scale: Scale,
+  "shield-alert": ShieldAlert,
+  "shield-check": ShieldCheck,
+  "shield-plus": ShieldPlus,
+  siren: Siren,
+  "spray-can": SprayCan,
+  stethoscope: Stethoscope,
+  "test-tube": TestTube,
+  trophy: Trophy,
+  type: Type,
+  "users-round": UsersRound,
+  utensils: Utensils,
+  wind: Wind,
+  zap: Zap,
+};
+
+const ROADMAP_PALETTE_CLASSES: Record<
+  RoadmapPalette,
+  { frame: string; icon: string; badge: string }
+> = {
+  emerald: {
+    frame:
+      "border-emerald-300/40 bg-gradient-to-br from-emerald-300/30 via-emerald-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(52,211,153,0.14)]",
+    icon: "text-emerald-200",
+    badge: "border-emerald-300/40 bg-emerald-400 text-emerald-950",
+  },
+  cyan: {
+    frame:
+      "border-cyan-300/40 bg-gradient-to-br from-cyan-300/30 via-cyan-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(34,211,238,0.14)]",
+    icon: "text-cyan-200",
+    badge: "border-cyan-300/40 bg-cyan-400 text-cyan-950",
+  },
+  violet: {
+    frame:
+      "border-violet-300/40 bg-gradient-to-br from-violet-300/30 via-violet-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(167,139,250,0.14)]",
+    icon: "text-violet-200",
+    badge: "border-violet-300/40 bg-violet-400 text-violet-950",
+  },
+  teal: {
+    frame:
+      "border-teal-300/40 bg-gradient-to-br from-teal-300/30 via-teal-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(45,212,191,0.14)]",
+    icon: "text-teal-200",
+    badge: "border-teal-300/40 bg-teal-400 text-teal-950",
+  },
+  amber: {
+    frame:
+      "border-amber-300/40 bg-gradient-to-br from-amber-300/30 via-amber-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(251,191,36,0.14)]",
+    icon: "text-amber-200",
+    badge: "border-amber-300/40 bg-amber-400 text-amber-950",
+  },
+  red: {
+    frame:
+      "border-red-300/40 bg-gradient-to-br from-red-300/30 via-red-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(248,113,113,0.14)]",
+    icon: "text-red-200",
+    badge: "border-red-300/40 bg-red-400 text-red-950",
+  },
+  fuchsia: {
+    frame:
+      "border-fuchsia-300/40 bg-gradient-to-br from-fuchsia-300/30 via-fuchsia-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(232,121,249,0.14)]",
+    icon: "text-fuchsia-200",
+    badge: "border-fuchsia-300/40 bg-fuchsia-400 text-fuchsia-950",
+  },
+  orange: {
+    frame:
+      "border-orange-300/40 bg-gradient-to-br from-orange-300/30 via-orange-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(251,146,60,0.14)]",
+    icon: "text-orange-200",
+    badge: "border-orange-300/40 bg-orange-400 text-orange-950",
+  },
+  pink: {
+    frame:
+      "border-pink-300/40 bg-gradient-to-br from-pink-300/30 via-pink-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(244,114,182,0.14)]",
+    icon: "text-pink-200",
+    badge: "border-pink-300/40 bg-pink-400 text-pink-950",
+  },
+  blue: {
+    frame:
+      "border-blue-300/40 bg-gradient-to-br from-blue-300/30 via-blue-500/15 to-slate-950/70 shadow-[0_0_28px_rgba(96,165,250,0.14)]",
+    icon: "text-blue-200",
+    badge: "border-blue-300/40 bg-blue-400 text-blue-950",
+  },
+};
 
 // -------- Lessons (id → icon) --------
 const LESSON_ICONS: Record<string, LucideIcon> = {
@@ -228,6 +353,65 @@ export function UnitArtwork({ unitId, className = "" }: { unitId: string; classN
         backgroundSize: `${UNIT_ARTWORK_SHEET_SIZE.width * UNIT_ARTWORK_SCALE}px ${UNIT_ARTWORK_SHEET_SIZE.height * UNIT_ARTWORK_SCALE}px`,
       }}
     />
+  );
+}
+
+export function RoadmapBlockArtwork({ blocId, order }: { blocId: string; order: number }) {
+  const visual = ROADMAP_BLOCK_VISUALS[blocId] ?? {
+    icon: "book-open" as const,
+    palette: "cyan" as const,
+  };
+  const Icon = ROADMAP_ICONS[visual.icon];
+  const palette = ROADMAP_PALETTE_CLASSES[visual.palette];
+
+  return (
+    <div
+      aria-hidden="true"
+      className={`relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl border ${palette.frame}`}
+    >
+      <div className="absolute inset-x-2 top-0 h-px bg-white/60" />
+      <Icon className={`relative z-10 h-6 w-6 ${palette.icon}`} strokeWidth={2.2} />
+      <span
+        className={`absolute -bottom-px -right-px flex h-5 min-w-5 items-center justify-center rounded-tl-lg border px-1 text-[10px] font-black ${palette.badge}`}
+      >
+        {order}
+      </span>
+    </div>
+  );
+}
+
+export function RoadmapParcoursArtwork({
+  parcoursId,
+  blocId,
+  locked = false,
+}: {
+  parcoursId: string;
+  blocId: string;
+  locked?: boolean;
+}) {
+  const blockVisual = ROADMAP_BLOCK_VISUALS[blocId] ?? {
+    icon: "book-open" as const,
+    palette: "cyan" as const,
+  };
+  const iconName = ROADMAP_PARCOURS_VISUALS[parcoursId] ?? blockVisual.icon;
+  const Icon = ROADMAP_ICONS[iconName];
+  const palette = ROADMAP_PALETTE_CLASSES[blockVisual.palette];
+
+  return (
+    <div
+      aria-hidden="true"
+      className={`relative flex h-14 w-14 shrink-0 items-center justify-center overflow-visible rounded-2xl border transition-opacity ${palette.frame} ${
+        locked ? "opacity-75 saturate-75" : ""
+      }`}
+    >
+      <div className="absolute inset-1 rounded-xl border border-white/10 bg-white/5" />
+      <Icon className={`relative z-10 h-7 w-7 ${palette.icon}`} strokeWidth={2.15} />
+      {locked && (
+        <span className="absolute -bottom-1.5 -right-1.5 z-20 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-slate-950 text-white/65 shadow-lg">
+          <Lock className="h-3.5 w-3.5" strokeWidth={2.3} />
+        </span>
+      )}
+    </div>
   );
 }
 
