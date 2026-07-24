@@ -12,9 +12,11 @@ import {
   ChevronRight,
   User as UserIcon,
   Ambulance as AmbulanceIcon,
+  BookOpen,
 } from "lucide-react";
 import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
-import { PARCOURS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
+import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
+import { OFFICIAL_ROADMAP_BLOCS } from "@/content/curriculum-content";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
@@ -83,15 +85,11 @@ function Home() {
   const recentBadges = userBadges.slice(0, 5);
 
   return (
-    <div className="relative min-h-screen overflow-hidden" style={{ minHeight: '100vh' }}>
-      
+    <div className="relative min-h-screen overflow-hidden" style={{ minHeight: "100vh" }}>
       {/* ========================================== */}
       {/* BACKGROUND ENGINE — SAMU REGULATION CENTER */}
       {/* ========================================== */}
-      <BackgroundEngine
-        theme={THEMES.samu}
-        intensity="medium"
-      />
+      <BackgroundEngine theme={THEMES.samu} intensity="medium" />
 
       {/* ========================================== */}
       {/* CONTENU PRINCIPAL (par-dessus le décor)    */}
@@ -126,7 +124,9 @@ function Home() {
             <div className="flex items-center gap-4">
               <ProgressRing pct={lp.pct} size={72} color="#22d3ee">
                 <div className="text-center leading-none">
-                  <div className="text-[10px] font-bold uppercase text-slate-300 tracking-wider">Niv</div>
+                  <div className="text-[10px] font-bold uppercase text-slate-300 tracking-wider">
+                    Niv
+                  </div>
                   <div className="font-display text-2xl font-extrabold text-white">{lp.level}</div>
                 </div>
               </ProgressRing>
@@ -203,9 +203,7 @@ function Home() {
                 <div className="truncate font-display text-base font-extrabold text-white">
                   {currentLesson.lesson.title}
                 </div>
-                <div className="truncate text-sm text-white/60">
-                  {currentLesson.unit.title}
-                </div>
+                <div className="truncate text-sm text-white/60">{currentLesson.unit.title}</div>
               </div>
               <ChevronRight className="h-6 w-6 text-[#22d3ee]" />
             </Link>
@@ -270,7 +268,9 @@ function Home() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-baseline justify-between gap-2">
-                          <div className="truncate font-display font-extrabold text-white">{m.title}</div>
+                          <div className="truncate font-display font-extrabold text-white">
+                            {m.title}
+                          </div>
                           <div className="shrink-0 text-sm font-bold text-white/60">
                             {prog}/{m.target} · +{m.xp_reward}XP
                           </div>
@@ -311,10 +311,7 @@ function Home() {
                 <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
                   Badges récents
                 </h2>
-                <Link
-                  to="/profil"
-                  className="text-sm font-bold text-cyan-400 hover:text-cyan-300"
-                >
+                <Link to="/profil" className="text-sm font-bold text-cyan-400 hover:text-cyan-300">
                   Tout voir →
                 </Link>
               </div>
@@ -355,45 +352,124 @@ function Home() {
             <ChevronRight className="h-5 w-5 text-[#22d3ee]" />
           </Link>
 
-          {/* Parcours */}
-          <h2 className="mb-4 font-display text-lg font-extrabold text-white drop-shadow-lg">Ton parcours</h2>
-          <div className="space-y-8">
-            {PARCOURS.map((parcours, parcoursIdx) => (
-              <section key={parcours.id}>
-                <div className="mb-4 flex items-center gap-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
-                  <UnitArtwork unitId={parcours.id} />
+          {/* Feuille de route officielle */}
+          <div className="mb-5 flex items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-extrabold uppercase tracking-[0.16em] text-cyan-400">
+                Formation DEA
+              </div>
+              <h2 className="font-display text-xl font-extrabold text-white drop-shadow-lg">
+                Ton parcours de formation
+              </h2>
+            </div>
+            <div className="shrink-0 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold text-white/70 backdrop-blur">
+              50 parcours
+            </div>
+          </div>
+
+          <div className="space-y-10">
+            {OFFICIAL_ROADMAP_BLOCS.map((bloc) => (
+              <section key={bloc.id} aria-labelledby={`${bloc.id}-title`}>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/15 text-sm font-extrabold text-cyan-300">
+                    {bloc.order}
+                  </div>
                   <div className="min-w-0">
-                    <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">
-                      Parcours {parcoursIdx + 1}
+                    <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-400">
+                      Bloc {bloc.order}
                     </p>
-                    <h2 className="truncate font-display text-lg font-extrabold text-white">{parcours.title}</h2>
-                    <p className="truncate text-sm text-white/60">{parcours.subtitle}</p>
+                    <h3
+                      id={`${bloc.id}-title`}
+                      className="truncate font-display text-lg font-extrabold text-white"
+                    >
+                      {bloc.title}
+                    </h3>
                   </div>
                 </div>
 
-                <div className="relative mx-auto flex flex-col items-center gap-6 py-2">
-                  {parcours.lessons.map((lesson, i) => {
-                    const done = hydrated ? progress.completedLessons[lesson.id] : undefined;
-                    const unlocked = !hydrated ? false : unlockedSet.has(lesson.id);
-                    const stars = done?.stars ?? 0;
-                    const isCurrent = lesson.id === currentLessonId;
-                    const offset = OFFSETS[i % OFFSETS.length];
+                <div className="space-y-5">
+                  {bloc.parcours.map((parcours) => {
+                    const hasPublishedLessons = parcours.publishedLessonCount > 0;
                     return (
-                      <div
-                        key={lesson.id}
-                        className="relative flex flex-col items-center"
-                        style={{ transform: `translateX(${offset}px)` }}
-                      >
-                        <LessonNode
-                          lessonId={lesson.id}
-                          unitId={parcours.id}
-                          title={lesson.title}
-                          unlocked={unlocked}
-                          done={!!done}
-                          stars={stars}
-                          isCurrent={isCurrent}
-                        />
-                      </div>
+                      <article key={parcours.id}>
+                        <div
+                          className={`flex items-center gap-4 rounded-xl border p-4 shadow-xl backdrop-blur-md ${
+                            hasPublishedLessons
+                              ? "border-cyan-400/35 bg-white/10"
+                              : "border-white/10 bg-slate-950/35"
+                          }`}
+                        >
+                          <div className="relative shrink-0">
+                            <UnitArtwork
+                              unitId={parcours.id}
+                              className={hasPublishedLessons ? "" : "opacity-45 grayscale"}
+                            />
+                            {!hasPublishedLessons && (
+                              <div className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-white/60">
+                                <Lock className="h-3.5 w-3.5" aria-hidden="true" />
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="min-w-0 flex-1">
+                            <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">
+                              Parcours {parcours.order}
+                            </p>
+                            <h4 className="font-display text-base font-extrabold text-white">
+                              {parcours.title}
+                            </h4>
+                            <p className="text-sm text-white/55">{parcours.subtitle}</p>
+                          </div>
+
+                          <div
+                            className={`hidden shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-bold sm:flex ${
+                              hasPublishedLessons
+                                ? "bg-emerald-400/15 text-emerald-300"
+                                : "bg-white/5 text-white/45"
+                            }`}
+                          >
+                            {hasPublishedLessons ? (
+                              <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+                            ) : (
+                              <Lock className="h-3.5 w-3.5" aria-hidden="true" />
+                            )}
+                            {hasPublishedLessons
+                              ? `${parcours.publishedLessonCount}/${parcours.plannedLessonCount} disponibles`
+                              : "En préparation"}
+                          </div>
+                        </div>
+
+                        {hasPublishedLessons && (
+                          <div className="relative mx-auto flex flex-col items-center gap-6 py-5">
+                            {parcours.lessons.map((lesson, index) => {
+                              const done = hydrated
+                                ? progress.completedLessons[lesson.id]
+                                : undefined;
+                              const unlocked = hydrated && unlockedSet.has(lesson.id);
+                              const stars = done?.stars ?? 0;
+                              const isCurrent = lesson.id === currentLessonId;
+                              const offset = OFFSETS[index % OFFSETS.length];
+                              return (
+                                <div
+                                  key={lesson.id}
+                                  className="relative flex flex-col items-center"
+                                  style={{ transform: `translateX(${offset}px)` }}
+                                >
+                                  <LessonNode
+                                    lessonId={lesson.id}
+                                    unitId={parcours.id}
+                                    title={lesson.title}
+                                    unlocked={unlocked}
+                                    done={!!done}
+                                    stars={stars}
+                                    isCurrent={isCurrent}
+                                  />
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </article>
                     );
                   })}
                 </div>
@@ -472,11 +548,7 @@ function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal
             <div className="relative flex h-full w-full items-end">
               <div
                 className={`w-full rounded-t-md ${
-                  met
-                    ? "bg-emerald-400"
-                    : d.xp > 0
-                    ? "bg-cyan-400"
-                    : "bg-white/10"
+                  met ? "bg-emerald-400" : d.xp > 0 ? "bg-cyan-400" : "bg-white/10"
                 }`}
                 style={{ height: `${Math.max(h, 4)}%` }}
               />
@@ -522,10 +594,10 @@ function LessonNode({
           !unlocked
             ? "cursor-not-allowed border-2 border-dashed border-white/20 bg-white/5 text-white/30"
             : done
-            ? "border-2 border-emerald-400 bg-emerald-400/20 text-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.2)] hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] active:scale-95"
-            : isCurrent
-            ? "border-2 border-cyan-400 bg-cyan-400/20 text-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.3)] ring-4 ring-cyan-400/30 active:scale-95"
-            : "border-2 border-white/20 bg-white/10 text-white/60 hover:border-white/40 active:scale-95"
+              ? "border-2 border-emerald-400 bg-emerald-400/20 text-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.2)] hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] active:scale-95"
+              : isCurrent
+                ? "border-2 border-cyan-400 bg-cyan-400/20 text-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.3)] ring-4 ring-cyan-400/30 active:scale-95"
+                : "border-2 border-white/20 bg-white/10 text-white/60 hover:border-white/40 active:scale-95"
         }`}
       >
         {!unlocked ? (
@@ -541,9 +613,7 @@ function LessonNode({
               <Star
                 key={s}
                 className={`h-3 w-3 ${
-                  s < stars
-                    ? "fill-amber-400 text-amber-400"
-                    : "text-white/20"
+                  s < stars ? "fill-amber-400 text-amber-400" : "text-white/20"
                 }`}
               />
             ))}

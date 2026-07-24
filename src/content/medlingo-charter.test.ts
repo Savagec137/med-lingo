@@ -45,7 +45,7 @@ test("la feuille de route DEA contient 10 blocs et 50 parcours uniques", () => {
   assert.deepEqual(counts, EXPECTED_BLOC_COUNTS);
 });
 
-test("les contenus actifs existants sont conservés et les nouveaux parcours restent invisibles", () => {
+test("les contenus actifs sont conservés et les banques futures restent non publiées", () => {
   assert.equal(formation.parcours[0]?.lessons.length, 12);
   assert.equal(formation.parcours[1]?.lessons.length, 13);
   assert.equal(formation.parcours[0]?.lessons[0]?.id, "dea-p01-l01");
