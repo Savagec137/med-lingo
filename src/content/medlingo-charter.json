@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "id": "medlingo-official-charter",
+  "version": "1.0.0",
+  "status": "official",
+  "effectiveDate": "2026-07-24",
+  "terminology": {
+    "group": "bloc",
+    "parcours": "parcours",
+    "lesson": "lesson",
+    "review": "review",
+    "quiz": "quiz",
+    "boss": "boss"
+  },
+  "structures": {
+    "parcours": {
+      "requiredFields": ["id", "order", "blocId", "title", "subtitle", "theme", "lessons"],
+      "completionMode": "sequential",
+      "bossUnlocksNextParcours": true,
+      "draftWithoutPublishedLessonsIsVisible": false
+    },
+    "lesson": {
+      "kinds": ["lesson", "review", "quiz", "boss"],
+      "statuses": ["awaiting_content", "review", "published", "archived"],
+      "sessionExerciseMinimum": 8,
+      "sessionExerciseMaximum": 12,
+      "defaultSessionExerciseCount": 10,
+      "correctionKey": "answer_id",
+      "pulseCardIsScored": false
+    }
+  },
+  "exerciseTypes": [
+    {
+      "id": "mcq",
+      "label": "Choix unique",
+      "answerMode": "single"
+    },
+    {
+      "id": "multiple_choice",
+      "label": "Choix multiples",
+      "answerMode": "multiple"
+    },
+    {
+      "id": "ordering",
+      "label": "Ordre chronologique",
+      "answerMode": "ordered"
+    },
+    {
+      "id": "true_false_contextual",
+      "label": "Vrai ou faux contextualisé",
+      "answerMode": "single"
+    },
+    {
+      "id": "equipment",
+      "label": "Sélection du matériel",
+      "answerMode": "multiple"
+    },
+    {
+      "id": "association",
+      "label": "Association",
+      "answerMode": "matching"
+    },
+    {
+      "id": "error_identification",
+      "label": "Identification d'une erreur",
+      "answerMode": "single"
+    },
+    {
+      "id": "regulatory",
+      "label": "Décision réglementaire",
+      "answerMode": "single"
+    },
+    {
+      "id": "handover",
+      "label": "Transmission au SAMU",
+      "answerMode": "single"
+    }
+  ],
+  "exerciseContexts": [
+    {
+      "id": "clinical_case",
+      "compatibleTypes": ["mcq", "multiple_choice", "equipment", "handover"]
+    },
+    {
+      "id": "prioritization",
+      "compatibleTypes": [
+        "mcq",
+        "multiple_choice",
+        "ordering",
+        "equipment",
+        "regulatory",
+        "handover"
+      ]
+    },
+    {
+      "id": "synthesis",
+      "compatibleTypes": ["mcq", "multiple_choice", "ordering", "association"]
+    }
+  ],
+  "difficultyLevels": [
+    {
+      "id": "easy",
+      "order": 1,
+      "minimumAnswers": 3,
+      "maximumAnswers": 3,
+      "description": "Indices explicites et un seul distracteur proche."
+    },
+    {
+      "id": "medium",
+      "order": 2,
+      "minimumAnswers": 4,
+      "maximumAnswers": 4,
+      "description": "Plusieurs réponses plausibles avec une priorité à identifier."
+    },
+    {
+      "id": "hard",
+      "order": 3,
+      "minimumAnswers": 4,
+      "maximumAnswers": 5,
+      "description": "Raisonnement fondé sur le timing, la hiérarchisation ou la synthèse."
+    },
+    {
+      "id": "expert",
+      "order": 4,
+      "minimumAnswers": 4,
+      "maximumAnswers": 5,
+      "description": "Situation complexe exigeant de distinguer compétences, réglementation et état du patient."
+    }
+  ],
+  "progression": {
+    "storageKey": "lesson_id",
+    "unlockMode": "sequential",
+    "stars": [
+      {
+        "stars": 0,
+        "minimumAccuracy": 0
+      },
+      {
+        "stars": 1,
+        "minimumAccuracy": 0.5
+      },
+      {
+        "stars": 2,
+        "minimumAccuracy": 0.75
+      },
+      {
+        "stars": 3,
+        "minimumAccuracy": 0.95
+      }
+    ],
+    "successCriteria": {
+      "lessonMinimumAccuracy": 0.5,
+      "quizMinimumAccuracy": 0.75,
+      "bossMinimumAccuracy": 0.8,
+      "masteryMinimumAccuracy": 0.8,
+      "masteryMinimumAttempts": 2
+    },
+    "dailyGoalXp": {
+      "minimum": 10,
+      "maximum": 200,
+      "default": 30
+    },
+    "hearts": {
+      "maximum": 5,
+      "regenerationMinutes": 15
+    }
+  },
+  "rewards": {
+    "rewardTypes": ["xp", "coins", "gems", "keys", "tickets", "energy", "item"],
+    "inventoryItemTypes": ["chest", "xp_boost", "avatar", "profile_card", "badge", "ticket"],
+    "lesson": {
+      "xpMultiplierByStars": {
+        "0": 0.4,
+        "1": 0.6,
+        "2": 0.8,
+        "3": 1
+      },
+      "coinsBase": 5,
+      "coinsPerStar": 5
+    }
+  },
+  "badges": {
+    "identifierPolicy": "stable_code",
+    "duplicatePolicy": "unique_per_user",
+    "categories": ["progression", "mastery", "streak", "xp", "boss", "special"]
+  },
+  "chests": {
+    "probabilitySource": "supabase_loot_tables",
+    "historySource": "supabase_chest_openings",
+    "rarities": ["common", "rare", "epic", "legendary", "mythic"],
+    "tiers": [
+      {
+        "id": "bronze",
+        "rarity": "common"
+      },
+      {
+        "id": "silver",
+        "rarity": "rare"
+      },
+      {
+        "id": "gold",
+        "rarity": "epic"
+      },
+      {
+        "id": "legendary",
+        "rarity": "legendary"
+      },
+      {
+        "id": "mythic",
+        "rarity": "mythic"
+      }
+    ]
+  },
+  "boss": {
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "unlocksNextParcours": true,
+    "minimumAccuracy": 0.8,
+    "rewardConfigurable": true
+  },
+  "srs": {
+    "status": "contract_ready",
+    "scheduleDays": [1, 3, 7, 14, 30, 90],
+    "minimumAccuracy": 0.8,
+    "minimumAttempts": 2,
+    "successPolicy": "advance_one_stage",
+    "failurePolicy": "move_back_one_stage",
+    "selectionPriority": "least_mastered_then_overdue"
+  },
+  "publication": {
+    "questionsInReactForbidden": true,
+    "emptyPublishedBankForbidden": true,
+    "sourceMetadataRequired": true,
+    "trainerValidationIsDistinctFromSourceVerification": true
+  }
+}

@@ -26,6 +26,19 @@ Les nouvelles banques utilisent la V2 décrite dans [`formations/README.md`](./f
 - `lesson-runtime.ts` fournit aussi une sélection équilibrée multi-banques avec déduplication par identifiant.
 - `master-knowledge-base.json` décrit les compétences, leurs prérequis et leurs sources.
 - `master-knowledge-catalog.ts` retrouve les compétences d'une leçon ou d'une question.
+- `medlingo-charter.json` fixe le contrat officiel des parcours, leçons, exercices,
+  niveaux, critères de réussite, récompenses, badges, coffres, Boss et révisions SRS.
+- `medlingo-charter-schema.ts` empêche une évolution silencieuse de cette charte.
+
+## Charte officielle et feuille de route DEA
+
+La charte `medlingo-official-charter` est versionnée indépendamment du contenu médical.
+Le manifeste DEA référence cette charte et enregistre dix blocs pour cinquante parcours.
+Un parcours sans leçon publiée reste volontairement invisible : sa présence dans la
+feuille de route ne crée ni question temporaire ni écran vide.
+
+Les parcours 1 et 2 conservent leurs références de leçons existantes. Les parcours 3 à
+50 sont uniquement des emplacements structurels jusqu'à réception de banques officielles.
 
 ## Spécification officielle et projection
 

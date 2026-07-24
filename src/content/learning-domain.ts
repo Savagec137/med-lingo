@@ -108,9 +108,16 @@ export interface FormationLessonReference {
   specificationFile?: string;
 }
 
+export interface FormationBlocDefinition {
+  id: string;
+  order: number;
+  title: string;
+}
+
 export interface ParcoursDefinition {
   id: string;
   contentId?: string;
+  blocId?: string;
   order: number;
   title: string;
   subtitle: string;
@@ -136,6 +143,8 @@ export interface FormationDefinition {
   schemaVersion: 2;
   id: string;
   title: string;
+  charterId?: string;
+  blocs?: FormationBlocDefinition[];
   parcours: ParcoursDefinition[];
 }
 

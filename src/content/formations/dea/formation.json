@@ -2,85 +2,691 @@
   "schemaVersion": 2,
   "id": "dea",
   "title": "Diplôme d'État d'Ambulancier",
+  "charterId": "medlingo-official-charter",
   "blocs": [
-    { "id": "bloc-01", "order": 1, "title": "Fondamentaux médicaux" },
-    { "id": "bloc-02", "order": 2, "title": "Anatomie" },
-    { "id": "bloc-03", "order": 3, "title": "Communication" },
-    { "id": "bloc-04", "order": 4, "title": "Hygiène" },
-    { "id": "bloc-05", "order": 5, "title": "Intervention" },
-    { "id": "bloc-06", "order": 6, "title": "Urgences" },
-    { "id": "bloc-07", "order": 7, "title": "Pathologies" },
-    { "id": "bloc-08", "order": 8, "title": "Traumatologie" },
-    { "id": "bloc-09", "order": 9, "title": "Situations particulières" },
-    { "id": "bloc-10", "order": 10, "title": "Métier d'ambulancier" }
+    {
+      "id": "bloc-01",
+      "order": 1,
+      "title": "Fondamentaux médicaux"
+    },
+    {
+      "id": "bloc-02",
+      "order": 2,
+      "title": "Anatomie"
+    },
+    {
+      "id": "bloc-03",
+      "order": 3,
+      "title": "Communication"
+    },
+    {
+      "id": "bloc-04",
+      "order": 4,
+      "title": "Hygiène"
+    },
+    {
+      "id": "bloc-05",
+      "order": 5,
+      "title": "Intervention"
+    },
+    {
+      "id": "bloc-06",
+      "order": 6,
+      "title": "Urgences"
+    },
+    {
+      "id": "bloc-07",
+      "order": 7,
+      "title": "Pathologies"
+    },
+    {
+      "id": "bloc-08",
+      "order": 8,
+      "title": "Traumatologie"
+    },
+    {
+      "id": "bloc-09",
+      "order": 9,
+      "title": "Situations particulières"
+    },
+    {
+      "id": "bloc-10",
+      "order": 10,
+      "title": "Métier d'ambulancier"
+    }
   ],
-  "parcours": [    {
-      "id": "parcours-01", "order": 1, "blocId": "bloc-01", "blocOrder": 1, "blocTitle": "Fondamentaux médicaux",
-      "title": "Découvrir le corps humain", "subtitle": "Les bases indispensables de l’anatomie", "theme": "green",
-      "lessons": [
-        { "id": "dea-p01-l01", "title": "Pourquoi apprendre l'anatomie ?", "kind": "lesson", "status": "published", "file": "parcours-01/lesson-01.json", "specificationFile": "parcours-01/lesson-01.specification.json" },
-        { "id": "dea-p01-l02", "title": "Cellules et tissus", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-02.json" },
-        { "id": "dea-p01-l03", "title": "Les organes", "kind": "lesson", "status": "published", "file": "parcours-01/lesson-03.json" },
-        { "id": "dea-p01-l04", "title": "Les systèmes du corps", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-04.json" },
-        { "id": "dea-p01-l05", "title": "La position anatomique", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-05.json" },
-        { "id": "dea-p01-l06", "title": "Les plans anatomiques", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-06.json" },
-        { "id": "dea-p01-l07", "title": "L’orientation anatomique", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-07.json" },
-        { "id": "dea-p01-l08", "title": "Les régions du corps", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-08.json" },
-        { "id": "dea-p01-l09", "title": "Les repères anatomiques en intervention", "kind": "lesson", "status": "awaiting_content", "file": "parcours-01/lesson-09.json" },
-        { "id": "dea-p01-l10", "title": "Révision du corps humain", "kind": "review", "status": "awaiting_content", "file": "parcours-01/lesson-10.json" },
-        { "id": "dea-p01-quiz", "title": "Quiz final — Découvrir le corps humain", "kind": "quiz", "status": "awaiting_content", "file": "parcours-01/lesson-11.json" },
-        { "id": "dea-p01-boss", "title": "Boss — Localiser et transmettre", "kind": "boss", "status": "awaiting_content", "file": "parcours-01/lesson-12.json" }
-      ],
+  "parcours": [
+    {
+      "id": "parcours-01",
       "contentId": "dea-p01",
+      "blocId": "bloc-01",
+      "order": 1,
+      "title": "Découvrir le corps humain",
+      "subtitle": "Les bases indispensables de l’anatomie",
       "objective": "Permettre à l’apprenant de comprendre l’organisation générale du corps humain, les niveaux d’organisation biologique, la position anatomique, les plans, les directions et les principales régions du corps avant d’aborder le vocabulaire médical, la physiologie et les pathologies.",
       "manifestFile": "parcours-01/parcours.json",
-      "unlocksParcoursId": "dea-p02"
-    },    { "id": "parcours-02", "order": 2, "blocId": "bloc-01", "blocOrder": 1, "blocTitle": "Fondamentaux médicaux", "title": "Langage médical", "subtitle": "Comprendre et décoder les mots médicaux", "theme": "green", "lessons": [] },
-    { "id": "parcours-03", "order": 3, "blocId": "bloc-01", "blocOrder": 1, "blocTitle": "Fondamentaux médicaux", "title": "Anatomie générale", "subtitle": "Comprendre les grands systèmes du corps humain", "theme": "green", "lessons": [] },
-    { "id": "parcours-04", "order": 4, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système locomoteur", "subtitle": "Le squelette, les muscles et les articulations", "theme": "blue", "lessons": [] },
-    { "id": "parcours-05", "order": 5, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système cardiovasculaire", "subtitle": "Le moteur de la circulation sanguine", "theme": "blue", "lessons": [] },
-    { "id": "parcours-06", "order": 6, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système respiratoire", "subtitle": "Respirer pour vivre", "theme": "blue", "lessons": [] },
-    { "id": "parcours-07", "order": 7, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système digestif", "subtitle": "Transformer les aliments en énergie", "theme": "blue", "lessons": [] },
-    { "id": "parcours-08", "order": 8, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système nerveux", "subtitle": "Le centre de commande du corps humain", "theme": "blue", "lessons": [] },
-    { "id": "parcours-09", "order": 9, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système urinaire", "subtitle": "Filtrer et équilibrer l’organisme", "theme": "blue", "lessons": [] },
-    { "id": "parcours-10", "order": 10, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Système endocrinien", "subtitle": "Les hormones qui régulent le corps", "theme": "blue", "lessons": [] },
-    { "id": "parcours-11", "order": 11, "blocId": "bloc-02", "blocOrder": 2, "blocTitle": "Anatomie", "title": "Les organes des sens", "subtitle": "Observer le monde grâce aux cinq sens", "theme": "blue", "lessons": [] },
-    { "id": "parcours-12", "order": 12, "blocId": "bloc-03", "blocOrder": 3, "blocTitle": "Communication", "title": "Communication professionnelle", "subtitle": "Créer une relation de confiance avec le patient", "theme": "purple", "lessons": [] },
-    { "id": "parcours-13", "order": 13, "blocId": "bloc-03", "blocOrder": 3, "blocTitle": "Communication", "title": "Psychologie du patient", "subtitle": "Comprendre les réactions humaines face à la maladie et à l’urgence", "theme": "purple", "lessons": [] },
-    { "id": "parcours-14", "order": 14, "blocId": "bloc-04", "blocOrder": 4, "blocTitle": "Hygiène", "title": "Hygiène & asepsie", "subtitle": "Les fondamentaux de la prévention du risque infectieux", "theme": "teal", "lessons": [] },
-    { "id": "parcours-15", "order": 15, "blocId": "bloc-04", "blocOrder": 4, "blocTitle": "Hygiène", "title": "Prévention des infections", "subtitle": "Nettoyage, désinfection et gestion des déchets médicaux", "theme": "teal", "lessons": [] },
-    { "id": "parcours-16", "order": 16, "blocId": "bloc-05", "blocOrder": 5, "blocTitle": "Intervention", "title": "Sécurité d'intervention", "subtitle": "Protéger avant d'agir", "theme": "orange", "lessons": [] },
-    { "id": "parcours-17", "order": 17, "blocId": "bloc-05", "blocOrder": 5, "blocTitle": "Intervention", "title": "Les bilans", "subtitle": "Observer, analyser et transmettre", "theme": "orange", "lessons": [] },
-    { "id": "parcours-18", "order": 18, "blocId": "bloc-05", "blocOrder": 5, "blocTitle": "Intervention", "title": "Paramètres vitaux", "subtitle": "Mesurer, comprendre et interpréter les constantes", "theme": "orange", "lessons": [] },
-    { "id": "parcours-19", "order": 19, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Détresses respiratoires", "subtitle": "Reconnaître une urgence respiratoire et agir rapidement", "theme": "red", "lessons": [] },
-    { "id": "parcours-20", "order": 20, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Détresses circulatoires", "subtitle": "Comprendre les urgences cardiovasculaires et les états de choc", "theme": "red", "lessons": [] },
-    { "id": "parcours-21", "order": 21, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Détresses neurologiques", "subtitle": "Reconnaître une urgence neurologique et réagir vite", "theme": "red", "lessons": [] },
-    { "id": "parcours-22", "order": 22, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Gestes d'urgence", "subtitle": "Les gestes qui sauvent", "theme": "red", "lessons": [] },
-    { "id": "parcours-23", "order": 23, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Oxygénothérapie", "subtitle": "Administrer l'oxygène selon les bons protocoles", "theme": "red", "lessons": [] },
-    { "id": "parcours-24", "order": 24, "blocId": "bloc-06", "blocOrder": 6, "blocTitle": "Urgences", "title": "Matériel d'urgence", "subtitle": "Connaître et utiliser le matériel de secours", "theme": "red", "lessons": [] },    { "id": "parcours-25", "order": 25, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Cardiologie", "subtitle": "Les maladies du cœur et de la circulation", "theme": "pink", "lessons": [] },
-    { "id": "parcours-26", "order": 26, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Pneumologie", "subtitle": "Les maladies respiratoires", "theme": "pink", "lessons": [] },
-    { "id": "parcours-27", "order": 27, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Neurologie", "subtitle": "Les pathologies du système nerveux", "theme": "pink", "lessons": [] },
-    { "id": "parcours-28", "order": 28, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Gastro-entérologie", "subtitle": "Les pathologies digestives", "theme": "pink", "lessons": [] },
-    { "id": "parcours-29", "order": 29, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Endocrinologie", "subtitle": "Les pathologies hormonales et métaboliques", "theme": "pink", "lessons": [] },
-    { "id": "parcours-30", "order": 30, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Urologie", "subtitle": "Les pathologies rénales et urinaires", "theme": "pink", "lessons": [] },
-    { "id": "parcours-31", "order": 31, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Infectiologie", "subtitle": "Comprendre et reconnaître les maladies infectieuses", "theme": "pink", "lessons": [] },
-    { "id": "parcours-32", "order": 32, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Toxicologie", "subtitle": "Intoxications et prises en charge", "theme": "pink", "lessons": [] },
-    { "id": "parcours-33", "order": 33, "blocId": "bloc-07", "blocOrder": 7, "blocTitle": "Pathologies", "title": "Allergies & anaphylaxie", "subtitle": "Reconnaître et réagir face à une réaction allergique grave", "theme": "pink", "lessons": [] },
-    { "id": "parcours-34", "order": 34, "blocId": "bloc-08", "blocOrder": 8, "blocTitle": "Traumatologie", "title": "Traumatismes des membres", "subtitle": "Fractures, entorses et luxations", "theme": "yellow", "lessons": [] },
-    { "id": "parcours-35", "order": 35, "blocId": "bloc-08", "blocOrder": 8, "blocTitle": "Traumatologie", "title": "Traumatisme crânien", "subtitle": "Reconnaître et prendre en charge un traumatisme crânien", "theme": "yellow", "lessons": [] },
-    { "id": "parcours-36", "order": 36, "blocId": "bloc-08", "blocOrder": 8, "blocTitle": "Traumatologie", "title": "Traumatisme du rachis", "subtitle": "Protéger la colonne vertébrale", "theme": "yellow", "lessons": [] },
-    { "id": "parcours-37", "order": 37, "blocId": "bloc-08", "blocOrder": 8, "blocTitle": "Traumatologie", "title": "Brûlures", "subtitle": "Évaluer et prendre en charge une brûlure", "theme": "yellow", "lessons": [] },
-    { "id": "parcours-38", "order": 38, "blocId": "bloc-08", "blocOrder": 8, "blocTitle": "Traumatologie", "title": "Plaies et hémorragies", "subtitle": "Contrôler une plaie ou une hémorragie", "theme": "yellow", "lessons": [] },    { "id": "parcours-39", "order": 39, "blocId": "bloc-09", "blocOrder": 9, "blocTitle": "Situations particulières", "title": "Pédiatrie", "subtitle": "Adapter sa prise en charge à l'enfant", "theme": "indigo", "lessons": [] },
-    { "id": "parcours-40", "order": 40, "blocId": "bloc-09", "blocOrder": 9, "blocTitle": "Situations particulières", "title": "Obstétrique", "subtitle": "Grossesse, accouchement et urgences obstétricales", "theme": "indigo", "lessons": [] },
-    { "id": "parcours-41", "order": 41, "blocId": "bloc-09", "blocOrder": 9, "blocTitle": "Situations particulières", "title": "Gériatrie", "subtitle": "Adapter sa prise en charge à la personne âgée", "theme": "indigo", "lessons": [] },
-    { "id": "parcours-42", "order": 42, "blocId": "bloc-09", "blocOrder": 9, "blocTitle": "Situations particulières", "title": "Psychiatrie", "subtitle": "Comprendre et prendre en charge les troubles psychiatriques", "theme": "indigo", "lessons": [] },
-    { "id": "parcours-43", "order": 43, "blocId": "bloc-09", "blocOrder": 9, "blocTitle": "Situations particulières", "title": "Situations sociales et vulnérabilité", "subtitle": "Repérer et accompagner les situations de vulnérabilité", "theme": "indigo", "lessons": [] },
-    { "id": "parcours-44", "order": 44, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Cadre légal", "subtitle": "Le cadre réglementaire du métier d'ambulancier", "theme": "slate", "lessons": [] },
-    { "id": "parcours-45", "order": 45, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Transport sanitaire", "subtitle": "Les catégories et règles du transport sanitaire", "theme": "slate", "lessons": [] },
-    { "id": "parcours-46", "order": 46, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Véhicules et matériel d'ambulance", "subtitle": "Connaître son véhicule et son équipement", "theme": "slate", "lessons": [] },
-    { "id": "parcours-47", "order": 47, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Régulation SAMU – Centre 15", "subtitle": "Communiquer avec la régulation médicale", "theme": "slate", "lessons": [] },
-    { "id": "parcours-48", "order": 48, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Conduite en intervention", "subtitle": "Conduire en sécurité en intervention", "theme": "slate", "lessons": [] },
-    { "id": "parcours-49", "order": 49, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Travail en équipe et coordination", "subtitle": "Coordination et travail d'équipe sur le terrain", "theme": "slate", "lessons": [] },
-    { "id": "parcours-50", "order": 50, "blocId": "bloc-10", "blocOrder": 10, "blocTitle": "Métier d'ambulancier", "title": "Cas cliniques complets DEA (Boss final)", "subtitle": "L'épreuve finale : mobiliser tout ce qui a été appris", "theme": "slate", "lessons": [] }
+      "unlocksParcoursId": "dea-p02",
+      "theme": "green",
+      "lessons": [
+        {
+          "id": "dea-p01-l01",
+          "title": "Pourquoi apprendre l'anatomie ?",
+          "kind": "lesson",
+          "status": "published",
+          "file": "parcours-01/lesson-01.json",
+          "specificationFile": "parcours-01/lesson-01.specification.json"
+        },
+        {
+          "id": "dea-p01-l02",
+          "title": "Cellules et tissus",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-02.json"
+        },
+        {
+          "id": "dea-p01-l03",
+          "title": "Les organes",
+          "kind": "lesson",
+          "status": "published",
+          "file": "parcours-01/lesson-03.json"
+        },
+        {
+          "id": "dea-p01-l04",
+          "title": "Les systèmes du corps",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-04.json"
+        },
+        {
+          "id": "dea-p01-l05",
+          "title": "La position anatomique",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-05.json"
+        },
+        {
+          "id": "dea-p01-l06",
+          "title": "Les plans anatomiques",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-06.json"
+        },
+        {
+          "id": "dea-p01-l07",
+          "title": "L’orientation anatomique",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-07.json"
+        },
+        {
+          "id": "dea-p01-l08",
+          "title": "Les régions du corps",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-08.json"
+        },
+        {
+          "id": "dea-p01-l09",
+          "title": "Les repères anatomiques en intervention",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-09.json"
+        },
+        {
+          "id": "dea-p01-l10",
+          "title": "Révision du corps humain",
+          "kind": "review",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-10.json"
+        },
+        {
+          "id": "dea-p01-quiz",
+          "title": "Quiz final — Découvrir le corps humain",
+          "kind": "quiz",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-11.json"
+        },
+        {
+          "id": "dea-p01-boss",
+          "title": "Boss — Localiser et transmettre",
+          "kind": "boss",
+          "status": "awaiting_content",
+          "file": "parcours-01/lesson-12.json"
+        }
+      ]
+    },
+    {
+      "id": "parcours-02",
+      "blocId": "bloc-01",
+      "order": 2,
+      "title": "Langage médical",
+      "subtitle": "Comprendre et décoder les mots médicaux",
+      "theme": "green",
+      "lessons": [
+        {
+          "id": "dea-p02-l01",
+          "title": "Construire un mot médical",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-01.json"
+        },
+        {
+          "id": "dea-p02-l02",
+          "title": "Préfixes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-02.json"
+        },
+        {
+          "id": "dea-p02-l03",
+          "title": "Préfixes quantité",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-03.json"
+        },
+        {
+          "id": "dea-p02-l04",
+          "title": "Préfixes position",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-04.json"
+        },
+        {
+          "id": "dea-p02-l05",
+          "title": "Suffixes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-05.json"
+        },
+        {
+          "id": "dea-p02-l06",
+          "title": "Suffixes pathologie",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-06.json"
+        },
+        {
+          "id": "dea-p02-l07",
+          "title": "Suffixes chirurgie",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-07.json"
+        },
+        {
+          "id": "dea-p02-l08",
+          "title": "Radicaux",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-08.json"
+        },
+        {
+          "id": "dea-p02-l09",
+          "title": "Radicaux organes",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-09.json"
+        },
+        {
+          "id": "dea-p02-l10",
+          "title": "Radicaux tissus",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-10.json"
+        },
+        {
+          "id": "dea-p02-l11",
+          "title": "Décoder un mot complexe",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-11.json"
+        },
+        {
+          "id": "dea-p02-l12",
+          "title": "Quiz",
+          "kind": "quiz",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-12.json"
+        },
+        {
+          "id": "dea-p02-l13",
+          "title": "Boss",
+          "kind": "boss",
+          "status": "awaiting_content",
+          "file": "parcours-02/lesson-13.json"
+        }
+      ]
+    },
+    {
+      "id": "parcours-03",
+      "blocId": "bloc-01",
+      "order": 3,
+      "title": "Anatomie générale",
+      "subtitle": "Comprendre les grands systèmes du corps humain",
+      "theme": "green",
+      "lessons": []
+    },
+    {
+      "id": "parcours-04",
+      "blocId": "bloc-02",
+      "order": 4,
+      "title": "Système locomoteur",
+      "subtitle": "Le squelette, les muscles et les articulations",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-05",
+      "blocId": "bloc-02",
+      "order": 5,
+      "title": "Système cardiovasculaire",
+      "subtitle": "Le moteur de la circulation sanguine",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-06",
+      "blocId": "bloc-02",
+      "order": 6,
+      "title": "Système respiratoire",
+      "subtitle": "Respirer pour vivre",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-07",
+      "blocId": "bloc-02",
+      "order": 7,
+      "title": "Système digestif",
+      "subtitle": "Transformer les aliments en énergie",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-08",
+      "blocId": "bloc-02",
+      "order": 8,
+      "title": "Système nerveux",
+      "subtitle": "Le centre de commande du corps humain",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-09",
+      "blocId": "bloc-02",
+      "order": 9,
+      "title": "Système urinaire",
+      "subtitle": "Filtrer et équilibrer l’organisme",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-10",
+      "blocId": "bloc-02",
+      "order": 10,
+      "title": "Système endocrinien",
+      "subtitle": "Les hormones qui régulent le corps",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-11",
+      "blocId": "bloc-02",
+      "order": 11,
+      "title": "Les organes des sens",
+      "subtitle": "Observer le monde grâce aux cinq sens",
+      "theme": "blue",
+      "lessons": []
+    },
+    {
+      "id": "parcours-12",
+      "blocId": "bloc-03",
+      "order": 12,
+      "title": "Communication professionnelle",
+      "subtitle": "Créer une relation de confiance avec le patient",
+      "theme": "purple",
+      "lessons": []
+    },
+    {
+      "id": "parcours-13",
+      "blocId": "bloc-03",
+      "order": 13,
+      "title": "Psychologie du patient",
+      "subtitle": "Comprendre les réactions humaines face à la maladie et à l’urgence",
+      "theme": "purple",
+      "lessons": []
+    },
+    {
+      "id": "parcours-14",
+      "blocId": "bloc-04",
+      "order": 14,
+      "title": "Hygiène & asepsie",
+      "subtitle": "Les fondamentaux de la prévention du risque infectieux",
+      "theme": "teal",
+      "lessons": []
+    },
+    {
+      "id": "parcours-15",
+      "blocId": "bloc-04",
+      "order": 15,
+      "title": "Prévention des infections",
+      "subtitle": "Nettoyage, désinfection et gestion des déchets médicaux",
+      "theme": "teal",
+      "lessons": []
+    },
+    {
+      "id": "parcours-16",
+      "blocId": "bloc-05",
+      "order": 16,
+      "title": "Sécurité d'intervention",
+      "subtitle": "Protéger avant d'agir",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-17",
+      "blocId": "bloc-05",
+      "order": 17,
+      "title": "Les bilans",
+      "subtitle": "Observer, analyser et transmettre",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-18",
+      "blocId": "bloc-05",
+      "order": 18,
+      "title": "Paramètres vitaux",
+      "subtitle": "Mesurer, comprendre et interpréter les constantes",
+      "theme": "orange",
+      "lessons": []
+    },
+    {
+      "id": "parcours-19",
+      "blocId": "bloc-06",
+      "order": 19,
+      "title": "Détresses respiratoires",
+      "subtitle": "Reconnaître une urgence respiratoire et agir rapidement",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-20",
+      "blocId": "bloc-06",
+      "order": 20,
+      "title": "Détresses circulatoires",
+      "subtitle": "Comprendre les urgences cardiovasculaires et les états de choc",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-21",
+      "blocId": "bloc-06",
+      "order": 21,
+      "title": "Détresses neurologiques",
+      "subtitle": "Reconnaître une urgence neurologique et réagir vite",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-22",
+      "blocId": "bloc-06",
+      "order": 22,
+      "title": "Gestes d'urgence",
+      "subtitle": "Les gestes qui sauvent",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-23",
+      "blocId": "bloc-06",
+      "order": 23,
+      "title": "Oxygénothérapie",
+      "subtitle": "Administrer l'oxygène selon les bons protocoles",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-24",
+      "blocId": "bloc-06",
+      "order": 24,
+      "title": "Matériel d'urgence",
+      "subtitle": "Connaître et utiliser le matériel de secours",
+      "theme": "red",
+      "lessons": []
+    },
+    {
+      "id": "parcours-25",
+      "blocId": "bloc-07",
+      "order": 25,
+      "title": "Cardiologie",
+      "subtitle": "Les maladies du cœur et de la circulation",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-26",
+      "blocId": "bloc-07",
+      "order": 26,
+      "title": "Pneumologie",
+      "subtitle": "Les maladies respiratoires",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-27",
+      "blocId": "bloc-07",
+      "order": 27,
+      "title": "Neurologie",
+      "subtitle": "Les pathologies du système nerveux",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-28",
+      "blocId": "bloc-07",
+      "order": 28,
+      "title": "Gastro-entérologie",
+      "subtitle": "Les pathologies digestives",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-29",
+      "blocId": "bloc-07",
+      "order": 29,
+      "title": "Endocrinologie",
+      "subtitle": "Les pathologies hormonales et métaboliques",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-30",
+      "blocId": "bloc-07",
+      "order": 30,
+      "title": "Urologie",
+      "subtitle": "Les pathologies rénales et urinaires",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-31",
+      "blocId": "bloc-07",
+      "order": 31,
+      "title": "Infectiologie",
+      "subtitle": "Comprendre et reconnaître les maladies infectieuses",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-32",
+      "blocId": "bloc-07",
+      "order": 32,
+      "title": "Toxicologie",
+      "subtitle": "Intoxications et prises en charge",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-33",
+      "blocId": "bloc-07",
+      "order": 33,
+      "title": "Allergies & anaphylaxie",
+      "subtitle": "Reconnaître et réagir face à une réaction allergique grave",
+      "theme": "pink",
+      "lessons": []
+    },
+    {
+      "id": "parcours-34",
+      "blocId": "bloc-08",
+      "order": 34,
+      "title": "Traumatismes des membres",
+      "subtitle": "Fractures, entorses et luxations",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-35",
+      "blocId": "bloc-08",
+      "order": 35,
+      "title": "Traumatisme crânien",
+      "subtitle": "Reconnaître et prendre en charge un traumatisme crânien",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-36",
+      "blocId": "bloc-08",
+      "order": 36,
+      "title": "Traumatisme du rachis",
+      "subtitle": "Protéger la colonne vertébrale",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-37",
+      "blocId": "bloc-08",
+      "order": 37,
+      "title": "Brûlures",
+      "subtitle": "Évaluer et prendre en charge une brûlure",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-38",
+      "blocId": "bloc-08",
+      "order": 38,
+      "title": "Plaies et hémorragies",
+      "subtitle": "Contrôler une plaie ou une hémorragie",
+      "theme": "yellow",
+      "lessons": []
+    },
+    {
+      "id": "parcours-39",
+      "blocId": "bloc-09",
+      "order": 39,
+      "title": "Pédiatrie",
+      "subtitle": "Adapter sa prise en charge à l'enfant",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-40",
+      "blocId": "bloc-09",
+      "order": 40,
+      "title": "Obstétrique",
+      "subtitle": "Grossesse, accouchement et urgences obstétricales",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-41",
+      "blocId": "bloc-09",
+      "order": 41,
+      "title": "Gériatrie",
+      "subtitle": "Adapter sa prise en charge à la personne âgée",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-42",
+      "blocId": "bloc-09",
+      "order": 42,
+      "title": "Psychiatrie",
+      "subtitle": "Comprendre et prendre en charge les troubles psychiatriques",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-43",
+      "blocId": "bloc-09",
+      "order": 43,
+      "title": "Situations sociales et vulnérabilité",
+      "subtitle": "Repérer et accompagner les situations de vulnérabilité",
+      "theme": "indigo",
+      "lessons": []
+    },
+    {
+      "id": "parcours-44",
+      "blocId": "bloc-10",
+      "order": 44,
+      "title": "Cadre légal",
+      "subtitle": "Le cadre réglementaire du métier d'ambulancier",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-45",
+      "blocId": "bloc-10",
+      "order": 45,
+      "title": "Transport sanitaire",
+      "subtitle": "Les catégories et règles du transport sanitaire",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-46",
+      "blocId": "bloc-10",
+      "order": 46,
+      "title": "Véhicules et matériel d'ambulance",
+      "subtitle": "Connaître son véhicule et son équipement",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-47",
+      "blocId": "bloc-10",
+      "order": 47,
+      "title": "Régulation SAMU – Centre 15",
+      "subtitle": "Communiquer avec la régulation médicale",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-48",
+      "blocId": "bloc-10",
+      "order": 48,
+      "title": "Conduite en intervention",
+      "subtitle": "Conduire en sécurité en intervention",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-49",
+      "blocId": "bloc-10",
+      "order": 49,
+      "title": "Travail en équipe et coordination",
+      "subtitle": "Coordination et travail d'équipe sur le terrain",
+      "theme": "slate",
+      "lessons": []
+    },
+    {
+      "id": "parcours-50",
+      "blocId": "bloc-10",
+      "order": 50,
+      "title": "Cas cliniques complets DEA (Boss final)",
+      "subtitle": "L'épreuve finale : mobiliser tout ce qui a été appris",
+      "theme": "slate",
+      "lessons": []
+    }
   ]
 }

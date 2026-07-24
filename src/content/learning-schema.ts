@@ -219,6 +219,11 @@ const parcoursSchema = z.object({
     .trim()
     .regex(/^[a-z0-9]+-p\d{2}$/)
     .optional(),
+  blocId: z
+    .string()
+    .trim()
+    .regex(/^bloc-\d{2}$/)
+    .optional(),
   order: z.number().int().positive(),
   title: z.string().trim().min(1),
   subtitle: z.string().trim().min(1),
@@ -250,6 +255,19 @@ const formationSchema = z
     schemaVersion: z.literal(2),
     id: z.string().trim().min(1),
     title: z.string().trim().min(1),
+    charterId: z.string().trim().min(1).optional(),
+    blocs: z
+      .array(
+        z.object({
+          id: z
+            .string()
+            .trim()
+            .regex(/^bloc-\d{2}$/),
+          order: z.number().int().positive(),
+          title: z.string().trim().min(1),
+        }),
+      )
+      .optional(),
     parcours: z.array(parcoursSchema).min(1),
   })
   .superRefine((formation, context) => {
@@ -285,6 +303,33 @@ const formationSchema = z
         path: ["parcours"],
         message: "Les parcours doivent être classés dans un ordre continu.",
       });
+    }
+
+    if (!formation.blocs) return;
+
+    const blocIds = formation.blocs.map((bloc) => bloc.id);
+    const blocOrders = formation.blocs.map((bloc) => bloc.order);
+    if (
+      new Set(blocIds).size !== blocIds.length ||
+      new Set(blocOrders).size !== blocOrders.length ||
+      blocOrders.some((order, index) => order !== index + 1)
+    ) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["blocs"],
+        message: "Les blocs doivent avoir des identifiants uniques et un ordre continu.",
+      });
+    }
+
+    const blocIdSet = new Set(blocIds);
+    for (const [index, parcours] of formation.parcours.entries()) {
+      if (!parcours.blocId || !blocIdSet.has(parcours.blocId)) {
+        context.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["parcours", index, "blocId"],
+          message: `Le parcours ${parcours.id} doit référencer un bloc existant.`,
+        });
+      }
     }
   });
 

@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
-    "test": "node --experimental-strip-types --test src/content/content-engine.test.ts src/content/pedagogical-content.test.ts src/content/learning-content.test.ts src/content/master-knowledge-base.test.ts src/content/pedagogical-specification.test.ts src/content/parcours-01.test.ts src/features/gamification/components/chest-opening-sequence.test.ts src/features/intervention-engine.test.ts src/features/intervention-catalog.test.ts src/features/intervention-question-quality.test.ts",
+    "test": "node --experimental-strip-types --test src/content/content-engine.test.ts src/content/pedagogical-content.test.ts src/content/learning-content.test.ts src/content/master-knowledge-base.test.ts src/content/pedagogical-specification.test.ts src/content/parcours-01.test.ts src/content/medlingo-charter.test.ts src/features/gamification/components/chest-opening-sequence.test.ts src/features/intervention-engine.test.ts src/features/intervention-catalog.test.ts src/features/intervention-question-quality.test.ts",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

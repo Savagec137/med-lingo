@@ -11,7 +11,7 @@ import {
   Target,
   ChevronRight,
   User as UserIcon,
-  Ambulance,
+  Ambulance as AmbulanceIcon,
 } from "lucide-react";
 import { UnitArtwork, LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { PARCOURS, allLessonsInOrder, findLesson } from "@/lib/curriculum";
@@ -26,6 +26,12 @@ import {
   useUserMissions,
   useXpHistory,
 } from "@/lib/use-gamification";
+
+// ============================================
+// BACKGROUND ENGINE — IMPORTS
+// ============================================
+import { BackgroundEngine } from "@/features/background/BackgroundEngine";
+import { THEMES } from "@/features/background/themes";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -77,329 +83,346 @@ function Home() {
   const recentBadges = userBadges.slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-background pb-24">
-      <TopBar />
+    <div className="relative min-h-screen overflow-hidden" style={{ minHeight: '100vh' }}>
+      
+      {/* ========================================== */}
+      {/* BACKGROUND ENGINE — SAMU REGULATION CENTER */}
+      {/* ========================================== */}
+      <BackgroundEngine
+        theme={THEMES.samu}
+        intensity="medium"
+      />
 
-      <main className="mx-auto max-w-2xl px-4 pt-4">
-        {/* Greeting */}
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <h1 className="font-display text-2xl font-extrabold leading-tight">
-              Bonjour {firstName}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              {progress.streak > 0
-                ? `${progress.streak} jour${progress.streak > 1 ? "s" : ""} de série — continue !`
-                : "Prêt pour ta première leçon du jour ?"}
-            </p>
+      {/* ========================================== */}
+      {/* CONTENU PRINCIPAL (par-dessus le décor)    */}
+      {/* ========================================== */}
+      <div className="relative z-10 min-h-screen pb-24">
+        <TopBar />
+
+        <main className="mx-auto max-w-2xl px-4 pt-4">
+          {/* Greeting */}
+          <div className="mb-4 flex items-center justify-between">
+            <div>
+              <h1 className="font-display text-2xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Bonjour {firstName}
+              </h1>
+              <p className="text-sm text-slate-300 drop-shadow-md">
+                {progress.streak > 0
+                  ? `${progress.streak} jour${progress.streak > 1 ? "s" : ""} de série — continue !`
+                  : "Prêt pour ta première leçon du jour ?"}
+              </p>
+            </div>
+            <Link
+              to="/profil"
+              className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all"
+              aria-label="Profil"
+            >
+              <UserIcon className="h-5 w-5" />
+            </Link>
           </div>
-          <Link
-            to="/profil"
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-border bg-card text-foreground shadow-[0_3px_0_0_var(--color-border)] hover:border-[color:var(--color-primary)]"
-            aria-label="Profil"
-          >
-            <UserIcon className="h-5 w-5" />
-          </Link>
-        </div>
 
-        {/* Level + Daily goal card */}
-        <section
-          className="mb-4 rounded-3xl border border-white/10 p-5 text-primary-foreground glow-primary"
-          style={{ backgroundImage: "var(--gradient-primary)" }}
-        >
-          <div className="flex items-center gap-4">
-            {/* Level ring */}
-            <ProgressRing pct={lp.pct} size={72}>
-              <div className="text-center leading-none">
-                <div className="text-[10px] font-bold uppercase opacity-80">Niv</div>
-                <div className="font-display text-2xl font-extrabold">{lp.level}</div>
-              </div>
-            </ProgressRing>
-            <div className="min-w-0 flex-1">
-              <div className="flex items-baseline justify-between gap-2">
-                <div className="font-display text-sm font-extrabold uppercase tracking-wider">
-                  Niveau {lp.level}
+          {/* Level + Daily goal card - Glassmorphism */}
+          <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-5 shadow-xl">
+            <div className="flex items-center gap-4">
+              <ProgressRing pct={lp.pct} size={72} color="#22d3ee">
+                <div className="text-center leading-none">
+                  <div className="text-[10px] font-bold uppercase text-slate-300 tracking-wider">Niv</div>
+                  <div className="font-display text-2xl font-extrabold text-white">{lp.level}</div>
                 </div>
-                <div className="text-[11px] font-bold opacity-90">
-                  {lp.xpIntoLevel}/{lp.xpForNextLevel} XP
+              </ProgressRing>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-baseline justify-between gap-2">
+                  <div className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
+                    Niveau {lp.level}
+                  </div>
+                  <div className="text-sm font-bold text-white/70">
+                    {lp.xpIntoLevel}/{lp.xpForNextLevel} XP
+                  </div>
+                </div>
+                <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/20">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-[#22d3ee] to-[#34d399] transition-all"
+                    style={{ width: `${lp.pct * 100}%` }}
+                  />
+                </div>
+                <div className="mt-2 flex items-center gap-4 text-sm font-bold text-white/80">
+                  <span className="inline-flex items-center gap-1">
+                    <Flame className="h-4 w-4 text-orange-400" />
+                    {progress.streak}j
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Zap className="h-4 w-4 text-cyan-400" />
+                    {progress.xp} XP
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Trophy className="h-4 w-4 text-amber-400" />
+                    {userBadges.length}
+                  </span>
                 </div>
               </div>
-              <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/25">
+            </div>
+
+            <div className="mt-4 rounded-lg bg-white/10 p-3 backdrop-blur-sm">
+              <div className="flex items-center justify-between text-sm font-extrabold uppercase tracking-wider text-white/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <Target className="h-4 w-4" />
+                  Objectif du jour
+                </span>
+                <span>
+                  {progress.xpToday}/{progress.dailyGoalXp} XP
+                </span>
+              </div>
+              <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/20">
                 <div
-                  className="h-full rounded-full bg-white transition-all"
-                  style={{ width: `${lp.pct * 100}%` }}
+                  className="h-full rounded-full bg-[#34d399] transition-all"
+                  style={{ width: `${dailyPct * 100}%` }}
                 />
               </div>
-              <div className="mt-2 flex items-center gap-3 text-[11px] font-bold opacity-95">
-                <span className="inline-flex items-center gap-1">
-                  <Flame className="h-3.5 w-3.5" />
-                  {progress.streak}j
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Zap className="h-3.5 w-3.5" />
-                  {progress.xp} XP
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Trophy className="h-3.5 w-3.5" />
-                  {userBadges.length}
-                </span>
+            </div>
+          </div>
+
+          {/* Continue lesson CTA */}
+          {currentLesson && (
+            <Link
+              to="/lecon/$lessonId"
+              params={{ lessonId: currentLesson.lesson.id }}
+              className="mb-4 flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl hover:bg-white/20 transition-all active:scale-95"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#22d3ee]/20 text-[#22d3ee]">
+                <LessonIcon
+                  lessonId={currentLesson.lesson.id}
+                  unitId={currentLesson.unit.id}
+                  className="h-7 w-7"
+                  strokeWidth={2.25}
+                />
               </div>
-            </div>
-          </div>
-
-          <div className="mt-4 rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
-            <div className="flex items-center justify-between text-[11px] font-extrabold uppercase tracking-wider">
-              <span className="inline-flex items-center gap-1.5">
-                <Target className="h-3.5 w-3.5" />
-                Objectif du jour
-              </span>
-              <span>
-                {progress.xpToday}/{progress.dailyGoalXp} XP
-              </span>
-            </div>
-            <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/30">
-              <div
-                className="h-full rounded-full bg-[color:var(--color-warning)] transition-all"
-                style={{ width: `${dailyPct * 100}%` }}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Continue lesson CTA */}
-        {currentLesson && (
-          <Link
-            to="/lecon/$lessonId"
-            params={{ lessonId: currentLesson.lesson.id }}
-            className="mb-4 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_4px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)] active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-border)]"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
-              <LessonIcon
-                lessonId={currentLesson.lesson.id}
-                unitId={currentLesson.unit.id}
-                className="h-7 w-7"
-                strokeWidth={2.25}
-              />
-            </div>
-            <div className="min-w-0 flex-1">
-              <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
-                Continuer
-              </div>
-              <div className="truncate font-display text-base font-extrabold">
-                {currentLesson.lesson.title}
-              </div>
-              <div className="truncate text-[11px] text-muted-foreground">
-                {currentLesson.unit.title}
-              </div>
-            </div>
-            <ChevronRight className="h-6 w-6 text-[color:var(--color-primary)]" />
-          </Link>
-        )}
-
-        <Link
-          to="/intervention"
-          className="mb-4 flex items-center gap-3 overflow-hidden rounded-2xl border border-cyan-300/20 bg-slate-950 p-4 text-slate-100 shadow-[0_4px_0_0_rgba(34,211,238,.18)] transition hover:border-cyan-300/45 active:translate-y-[2px] active:shadow-[0_2px_0_0_rgba(34,211,238,.18)]"
-        >
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 text-slate-950">
-            <Ambulance className="h-7 w-7" />
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-300">
-              Nouveau mode
-            </div>
-            <div className="font-display text-base font-extrabold text-white">
-              Mode Intervention
-            </div>
-            <div className="text-[11px] text-slate-400">
-              Missions préhospitalières et décisions immersives
-            </div>
-          </div>
-          <ChevronRight className="h-6 w-6 text-cyan-300" />
-        </Link>
-
-        {/* Daily missions */}
-        {user && dailyMissions.length > 0 && (
-          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
-                Missions du jour
-              </h2>
-              <span className="text-[10px] font-bold text-muted-foreground">
-                {
-                  userMissions.filter(
-                    (um) => um.completed && dailyMissions.some((m) => m.code === um.mission_code),
-                  ).length
-                }
-                /{dailyMissions.length}
-              </span>
-            </div>
-            <div className="space-y-2.5">
-              {dailyMissions.map((m) => {
-                const um = userMissions.find((u) => u.mission_code === m.code);
-                const done = um?.completed ?? false;
-                const prog = Math.min(m.target, um?.progress ?? 0);
-                const pct = (prog / m.target) * 100;
-                return (
-                  <div key={m.code} className="flex items-center gap-3">
-                    <div
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${done ? "bg-[color:var(--color-success)]/20 text-[color:var(--color-success)]" : "bg-secondary text-foreground"}`}
-                    >
-                      {done ? (
-                        <Check className="h-5 w-5" strokeWidth={3} />
-                      ) : (
-                        <MissionIcon code={m.code} className="h-5 w-5" strokeWidth={2.25} />
-                      )}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-baseline justify-between gap-2">
-                        <div className="truncate text-sm font-extrabold">{m.title}</div>
-                        <div className="shrink-0 text-[11px] font-bold text-muted-foreground">
-                          {prog}/{m.target} · +{m.xp_reward}XP
-                        </div>
-                      </div>
-                      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-secondary">
-                        <div
-                          className={`h-full rounded-full ${done ? "bg-[color:var(--color-success)]" : "bg-[color:var(--color-primary)]"} transition-all`}
-                          style={{ width: `${pct}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        )}
-
-        {/* Weekly XP */}
-        {xpHistory.length > 0 && (
-          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
-                Cette semaine
-              </h2>
-              <span className="text-[11px] font-bold text-[color:var(--color-primary)]">
-                {xpHistory.reduce((s, d) => s + d.xp, 0)} XP
-              </span>
-            </div>
-            <WeeklyBars data={xpHistory} goal={progress.dailyGoalXp} />
-          </section>
-        )}
-
-        {/* Recent badges */}
-        {recentBadges.length > 0 && (
-          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
-                Badges récents
-              </h2>
-              <Link
-                to="/profil"
-                className="text-[11px] font-bold text-[color:var(--color-primary)]"
-              >
-                Tout voir →
-              </Link>
-            </div>
-            <div className="flex gap-2 overflow-x-auto pb-1">
-              {recentBadges.map((ub) => {
-                const b = badgeMap.get(ub.badge_code);
-                if (!b) return null;
-                return (
-                  <div
-                    key={ub.badge_code}
-                    className={`flex w-20 shrink-0 flex-col items-center rounded-xl border-2 p-2 ${rarityBorder(b.rarity)}`}
-                  >
-                    <BadgeIcon code={ub.badge_code} className="h-7 w-7" strokeWidth={2.25} />
-                    <div className="mt-1 line-clamp-2 text-center text-[10px] font-bold leading-tight">
-                      {b.title}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        )}
-
-        {/* Pulse CTA */}
-        <Link
-          to="/pulse"
-          className="mb-8 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)] transition hover:border-[color:var(--color-primary)]"
-        >
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[color:var(--color-primary)]/15 text-[color:var(--color-primary)]">
-            <Sparkles className="h-6 w-6" />
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="font-display text-sm font-extrabold">Pulse IA</div>
-            <div className="truncate text-xs text-muted-foreground">
-              Ton tuteur médical — demande-lui n'importe quoi.
-            </div>
-          </div>
-          <ChevronRight className="h-5 w-5 text-[color:var(--color-primary)]" />
-        </Link>
-
-        {/* Parcours */}
-        <h2 className="mb-4 font-display text-lg font-extrabold">Ton parcours</h2>
-        <div className="space-y-14">
-          {PARCOURS.map((parcours, parcoursIdx) => (
-            <section key={parcours.id}>
-              <div className="mb-6 flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-                <UnitArtwork unitId={parcours.id} />
-                <div className="min-w-0">
-                  <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
-                    Parcours {parcoursIdx + 1}
-                  </p>
-                  <h2 className="truncate font-display text-lg font-extrabold">{parcours.title}</h2>
-                  <p className="truncate text-xs text-muted-foreground">{parcours.subtitle}</p>
+              <div className="min-w-0 flex-1">
+                <div className="text-xs font-extrabold uppercase tracking-wider text-[#22d3ee]">
+                  Continuer
+                </div>
+                <div className="truncate font-display text-base font-extrabold text-white">
+                  {currentLesson.lesson.title}
+                </div>
+                <div className="truncate text-sm text-white/60">
+                  {currentLesson.unit.title}
                 </div>
               </div>
+              <ChevronRight className="h-6 w-6 text-[#22d3ee]" />
+            </Link>
+          )}
 
-              <div className="relative mx-auto flex flex-col items-center gap-6 py-2">
-                {parcours.lessons.map((lesson, i) => {
-                  const done = hydrated ? progress.completedLessons[lesson.id] : undefined;
-                  const unlocked = !hydrated ? false : unlockedSet.has(lesson.id);
-                  const stars = done?.stars ?? 0;
-                  const isCurrent = lesson.id === currentLessonId;
-                  const offset = OFFSETS[i % OFFSETS.length];
+          {/* Mode Intervention CTA */}
+          <Link
+            to="/intervention"
+            className="mb-4 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 backdrop-blur-md border border-cyan-400/30 p-4 shadow-xl hover:shadow-2xl transition-all active:scale-95"
+          >
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-cyan-400 text-slate-900">
+              <AmbulanceIcon className="h-7 w-7" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-xs font-extrabold uppercase tracking-wider text-cyan-300">
+                Nouveau mode
+              </div>
+              <div className="font-display text-base font-extrabold text-white">
+                Mode Intervention
+              </div>
+              <div className="text-sm text-cyan-200/70">
+                Missions préhospitalières et décisions immersives
+              </div>
+            </div>
+            <ChevronRight className="h-6 w-6 text-cyan-300" />
+          </Link>
+
+          {/* Daily missions */}
+          {user && dailyMissions.length > 0 && (
+            <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
+              <div className="mb-3 flex items-center justify-between">
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
+                  Missions du jour
+                </h2>
+                <span className="text-sm font-bold text-white/60">
+                  {
+                    userMissions.filter(
+                      (um) => um.completed && dailyMissions.some((m) => m.code === um.mission_code),
+                    ).length
+                  }
+                  /{dailyMissions.length}
+                </span>
+              </div>
+              <div className="space-y-2.5">
+                {dailyMissions.map((m) => {
+                  const um = userMissions.find((u) => u.mission_code === m.code);
+                  const done = um?.completed ?? false;
+                  const prog = Math.min(m.target, um?.progress ?? 0);
+                  const pct = (prog / m.target) * 100;
                   return (
-                    <div
-                      key={lesson.id}
-                      className="relative flex flex-col items-center"
-                      style={{ transform: `translateX(${offset}px)` }}
-                    >
-                      <LessonNode
-                        lessonId={lesson.id}
-                        unitId={parcours.id}
-                        title={lesson.title}
-                        unlocked={unlocked}
-                        done={!!done}
-                        stars={stars}
-                        isCurrent={isCurrent}
-                      />
+                    <div key={m.code} className="flex items-center gap-3">
+                      <div
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
+                          done ? "bg-emerald-500/30 text-emerald-400" : "bg-white/10 text-white/60"
+                        }`}
+                      >
+                        {done ? (
+                          <Check className="h-5 w-5" strokeWidth={3} />
+                        ) : (
+                          <MissionIcon code={m.code} className="h-5 w-5" strokeWidth={2.25} />
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-baseline justify-between gap-2">
+                          <div className="truncate font-display font-extrabold text-white">{m.title}</div>
+                          <div className="shrink-0 text-sm font-bold text-white/60">
+                            {prog}/{m.target} · +{m.xp_reward}XP
+                          </div>
+                        </div>
+                        <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-white/20">
+                          <div
+                            className={`h-full rounded-full ${done ? "bg-emerald-400" : "bg-cyan-400"} transition-all`}
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                      </div>
                     </div>
                   );
                 })}
               </div>
-            </section>
-          ))}
-        </div>
+            </div>
+          )}
 
-        <p className="mt-14 text-center text-xs text-muted-foreground">
-          Contenu à visée éducative — ne remplace pas un cours ou un avis médical.
-        </p>
-      </main>
+          {/* Weekly XP */}
+          {xpHistory.length > 0 && (
+            <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
+              <div className="mb-3 flex items-center justify-between">
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
+                  Cette semaine
+                </h2>
+                <span className="text-sm font-bold text-cyan-400">
+                  {xpHistory.reduce((s, d) => s + d.xp, 0)} XP
+                </span>
+              </div>
+              <WeeklyBars data={xpHistory} goal={progress.dailyGoalXp} />
+            </div>
+          )}
+
+          {/* Recent badges */}
+          {recentBadges.length > 0 && (
+            <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
+              <div className="mb-3 flex items-center justify-between">
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
+                  Badges récents
+                </h2>
+                <Link
+                  to="/profil"
+                  className="text-sm font-bold text-cyan-400 hover:text-cyan-300"
+                >
+                  Tout voir →
+                </Link>
+              </div>
+              <div className="flex gap-2 overflow-x-auto pb-1">
+                {recentBadges.map((ub) => {
+                  const b = badgeMap.get(ub.badge_code);
+                  if (!b) return null;
+                  return (
+                    <div
+                      key={ub.badge_code}
+                      className="flex w-20 shrink-0 flex-col items-center rounded-lg border border-white/20 bg-white/10 p-2"
+                    >
+                      <BadgeIcon code={ub.badge_code} className="h-8 w-8" strokeWidth={2.25} />
+                      <div className="mt-1 line-clamp-2 text-center text-xs font-bold leading-tight text-white">
+                        {b.title}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Pulse CTA */}
+          <Link
+            to="/pulse"
+            className="mb-8 flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl hover:bg-white/20 transition-all"
+          >
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#22d3ee]/20 text-[#22d3ee]">
+              <Sparkles className="h-6 w-6" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="font-display font-extrabold text-white">Pulse IA</div>
+              <div className="truncate text-sm text-white/60">
+                Ton tuteur médical — demande-lui n'importe quoi.
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-[#22d3ee]" />
+          </Link>
+
+          {/* Parcours */}
+          <h2 className="mb-4 font-display text-lg font-extrabold text-white drop-shadow-lg">Ton parcours</h2>
+          <div className="space-y-8">
+            {PARCOURS.map((parcours, parcoursIdx) => (
+              <section key={parcours.id}>
+                <div className="mb-4 flex items-center gap-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
+                  <UnitArtwork unitId={parcours.id} />
+                  <div className="min-w-0">
+                    <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">
+                      Parcours {parcoursIdx + 1}
+                    </p>
+                    <h2 className="truncate font-display text-lg font-extrabold text-white">{parcours.title}</h2>
+                    <p className="truncate text-sm text-white/60">{parcours.subtitle}</p>
+                  </div>
+                </div>
+
+                <div className="relative mx-auto flex flex-col items-center gap-6 py-2">
+                  {parcours.lessons.map((lesson, i) => {
+                    const done = hydrated ? progress.completedLessons[lesson.id] : undefined;
+                    const unlocked = !hydrated ? false : unlockedSet.has(lesson.id);
+                    const stars = done?.stars ?? 0;
+                    const isCurrent = lesson.id === currentLessonId;
+                    const offset = OFFSETS[i % OFFSETS.length];
+                    return (
+                      <div
+                        key={lesson.id}
+                        className="relative flex flex-col items-center"
+                        style={{ transform: `translateX(${offset}px)` }}
+                      >
+                        <LessonNode
+                          lessonId={lesson.id}
+                          unitId={parcours.id}
+                          title={lesson.title}
+                          unlocked={unlocked}
+                          done={!!done}
+                          stars={stars}
+                          isCurrent={isCurrent}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <p className="mt-14 text-center text-sm text-white/40 drop-shadow-md">
+            Contenu à visée éducative — ne remplace pas un cours ou un avis médical.
+          </p>
+        </main>
+      </div>
     </div>
   );
 }
 
-// -------- UI bits --------
+// ============================================
+// COMPOSANTS UI
+// ============================================
 
 function ProgressRing({
   pct,
   size = 64,
+  color = "#22d3ee",
   children,
 }: {
   pct: number;
   size?: number;
+  color?: string;
   children?: React.ReactNode;
 }) {
   const stroke = 6;
@@ -413,7 +436,7 @@ function ProgressRing({
           cy={size / 2}
           r={r}
           fill="none"
-          stroke="rgba(255,255,255,0.25)"
+          stroke="rgba(255,255,255,0.2)"
           strokeWidth={stroke}
         />
         <circle
@@ -421,7 +444,7 @@ function ProgressRing({
           cy={size / 2}
           r={r}
           fill="none"
-          stroke="#fff"
+          stroke={color}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeDasharray={c}
@@ -448,29 +471,22 @@ function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal
           <div key={d.date} className="flex flex-1 flex-col items-center gap-1">
             <div className="relative flex h-full w-full items-end">
               <div
-                className={`w-full rounded-t-md ${met ? "bg-[color:var(--color-success)]" : d.xp > 0 ? "bg-[color:var(--color-primary)]" : "bg-secondary"}`}
+                className={`w-full rounded-t-md ${
+                  met
+                    ? "bg-emerald-400"
+                    : d.xp > 0
+                    ? "bg-cyan-400"
+                    : "bg-white/10"
+                }`}
                 style={{ height: `${Math.max(h, 4)}%` }}
               />
             </div>
-            <div className="text-[10px] font-bold text-muted-foreground">{labels[li]}</div>
+            <div className="text-xs font-bold text-white/40">{labels[li]}</div>
           </div>
         );
       })}
     </div>
   );
-}
-
-function rarityBorder(rarity: string): string {
-  switch (rarity) {
-    case "legendary":
-      return "rarity-legendary bg-[color:var(--color-legendary)]/10";
-    case "epic":
-      return "rarity-epic bg-[color:var(--color-epic)]/10";
-    case "rare":
-      return "rarity-rare bg-[color:var(--color-rare)]/10";
-    default:
-      return "rarity-common bg-white/5";
-  }
 }
 
 function LessonNode({
@@ -494,7 +510,7 @@ function LessonNode({
     <div className="group relative flex flex-col items-center">
       {isCurrent && (
         <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="whitespace-nowrap rounded-full bg-[color:var(--color-foreground)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-background shadow">
+          <div className="whitespace-nowrap rounded-lg bg-cyan-400 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-slate-900 shadow-lg">
             À toi !
           </div>
         </div>
@@ -502,32 +518,32 @@ function LessonNode({
       <button
         type="button"
         disabled={!unlocked}
-        className={`relative flex h-20 w-20 items-center justify-center rounded-full transition-transform ${
+        className={`relative flex h-16 w-16 items-center justify-center rounded-xl transition-all ${
           !unlocked
-            ? "cursor-not-allowed border-2 border-dashed border-border bg-muted text-muted-foreground"
+            ? "cursor-not-allowed border-2 border-dashed border-white/20 bg-white/5 text-white/30"
             : done
-              ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-success)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
-              : isCurrent
-                ? "border-2 border-[oklch(0.55_0.17_145)] bg-[color:var(--color-primary)] text-primary-foreground shadow-[0_5px_0_0_oklch(0.55_0.17_145)] ring-4 ring-[color:var(--color-primary)]/25 active:translate-y-[3px] active:shadow-[0_2px_0_0_oklch(0.55_0.17_145)]"
-                : "border-2 border-border bg-card text-[color:var(--color-primary)] shadow-[0_5px_0_0_var(--color-border)] active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-border)]"
+            ? "border-2 border-emerald-400 bg-emerald-400/20 text-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.2)] hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] active:scale-95"
+            : isCurrent
+            ? "border-2 border-cyan-400 bg-cyan-400/20 text-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.3)] ring-4 ring-cyan-400/30 active:scale-95"
+            : "border-2 border-white/20 bg-white/10 text-white/60 hover:border-white/40 active:scale-95"
         }`}
       >
         {!unlocked ? (
-          <Lock className="h-6 w-6" />
+          <Lock className="h-5 w-5" />
         ) : done ? (
-          <Check className="h-8 w-8" strokeWidth={3.5} />
+          <Check className="h-7 w-7" strokeWidth={3.5} />
         ) : (
-          <LessonIcon lessonId={lessonId} unitId={unitId} className="h-8 w-8" strokeWidth={2.25} />
+          <LessonIcon lessonId={lessonId} unitId={unitId} className="h-7 w-7" strokeWidth={2.25} />
         )}
         {done && stars > 0 && (
-          <div className="absolute -bottom-2 flex items-center gap-0.5 rounded-full bg-card px-1.5 py-0.5 shadow">
+          <div className="absolute -bottom-2 flex items-center gap-0.5 rounded-full bg-white/20 backdrop-blur-sm px-1.5 py-0.5 shadow-md">
             {[0, 1, 2].map((s) => (
               <Star
                 key={s}
                 className={`h-3 w-3 ${
                   s < stars
-                    ? "fill-[color:var(--color-warning)] text-[color:var(--color-warning)]"
-                    : "text-border"
+                    ? "fill-amber-400 text-amber-400"
+                    : "text-white/20"
                 }`}
               />
             ))}
@@ -535,7 +551,9 @@ function LessonNode({
         )}
       </button>
       <p
-        className={`mt-3 max-w-[160px] text-center text-xs font-bold leading-tight ${unlocked ? "text-foreground" : "text-muted-foreground"}`}
+        className={`mt-3 max-w-[160px] text-center text-xs font-bold leading-tight ${
+          unlocked ? "text-white drop-shadow-md" : "text-white/40"
+        }`}
       >
         {title}
       </p>

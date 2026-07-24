@@ -48,14 +48,14 @@ function allKeys(value: unknown): string[] {
   return Object.entries(value).flatMap(([key, child]) => [key, ...allKeys(child)]);
 }
 
-test("la formation DEA expose les 17 parcours dans le nouvel ordre", () => {
-  assert.equal(DEA_FORMATION.parcours.length, 17);
+test("la formation DEA expose les 50 parcours officiels dans le nouvel ordre", () => {
+  assert.equal(DEA_FORMATION.parcours.length, 50);
   assert.deepEqual(
     DEA_FORMATION.parcours.map((parcours) => parcours.order),
-    Array.from({ length: 17 }, (_, index) => index + 1),
+    Array.from({ length: 50 }, (_, index) => index + 1),
   );
   assert.equal(DEA_FORMATION.parcours[0]?.title, "Découvrir le corps humain");
-  assert.equal(DEA_FORMATION.parcours[16]?.title, "Exercer comme professionnel");
+  assert.equal(DEA_FORMATION.parcours[49]?.title, "Cas cliniques complets DEA (Boss final)");
 });
 
 test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () => {
