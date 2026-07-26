@@ -1,7 +1,7 @@
 import { PerformanceMetrics } from './types';
 
 export class PerformanceMonitor {
-  private fps = 60;
+  fps = 60;
   private frameCount = 0;
   private lastUpdate = 0;
   private updateInterval = 500;
