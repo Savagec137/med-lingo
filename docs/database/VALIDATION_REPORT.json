@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-07-26T10:54:25.911Z",
+  "sqlFiles": [
+    "00_foundation.sql",
+    "10_identity.sql",
+    "20_content_knowledge.sql",
+    "30_learning_delivery.sql",
+    "40_progress_srs.sql",
+    "50_gamification_commerce.sql",
+    "60_ai_engagement_analytics.sql",
+    "70_governance_operations.sql",
+    "75_foreign_key_indexes.sql",
+    "80_functions_views.sql",
+    "85_reference_data.sql",
+    "90_rls_realtime_storage.sql"
+  ],
+  "logicalTableCount": 195,
+  "physicalPartitionCount": 2,
+  "explicitIndexCount": 337,
+  "tableCommentCount": 195,
+  "foreignKeyIndexGapCount": 0,
+  "foreignKeyIndexGaps": [],
+  "domainCounts": [
+    {
+      "domain": "ai",
+      "count": 9
+    },
+    {
+      "domain": "analytics",
+      "count": 9
+    },
+    {
+      "domain": "anatomy",
+      "count": 6
+    },
+    {
+      "domain": "clinical",
+      "count": 9
+    },
+    {
+      "domain": "commerce",
+      "count": 23
+    },
+    {
+      "domain": "engagement",
+      "count": 8
+    },
+    {
+      "domain": "gamification",
+      "count": 23
+    },
+    {
+      "domain": "governance",
+      "count": 8
+    },
+    {
+      "domain": "iam",
+      "count": 16
+    },
+    {
+      "domain": "knowledge",
+      "count": 13
+    },
+    {
+      "domain": "learning",
+      "count": 17
+    },
+    {
+      "domain": "media",
+      "count": 4
+    },
+    {
+      "domain": "operations",
+      "count": 11
+    },
+    {
+      "domain": "practice",
+      "count": 22
+    },
+    {
+      "domain": "progress",
+      "count": 17
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}
