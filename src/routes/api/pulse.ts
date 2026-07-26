@@ -10,10 +10,11 @@ Décompose systématiquement les termes médicaux (préfixe / radical / suffixe)
 Rappelle sobrement, quand la question est clinique, que tu ne remplaces pas un avis médical ni un cours officiel.
 Refuse tout diagnostic personnel : oriente vers un professionnel de santé ou le 15 / 112 en cas d'urgence.`;
 
-export const Route = createFileRoute("/api/pulse")({
-  server: {
-    handlers: {
-      POST: async ({ request }) => {
+async function handlePulse({ request }: { request: Request }): Promise<Response> {
+  {
+    {
+      {
+
         let body: { messages?: ChatMsg[] };
         try {
           body = (await request.json()) as { messages?: ChatMsg[] };
