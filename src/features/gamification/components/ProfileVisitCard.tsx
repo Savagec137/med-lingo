@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { BookOpen, Flame, Target, Trophy } from "lucide-react";
 import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 import { getProfileCard } from "@/features/gamification/domain/profile-cards";
@@ -14,6 +15,8 @@ type ProfileVisitCardProps = {
   ranks: number;
   lessons: number;
   compact?: boolean;
+  avatarSlot?: ReactNode;
+  badgeSlot?: ReactNode;
 };
 
 export function ProfileVisitCard({
@@ -28,6 +31,8 @@ export function ProfileVisitCard({
   ranks,
   lessons,
   compact = false,
+  avatarSlot,
+  badgeSlot,
 }: ProfileVisitCardProps) {
   const card = getProfileCard(code);
   const Icon = card.Icon;
@@ -47,11 +52,21 @@ export function ProfileVisitCard({
       />
       <div className="relative flex items-start justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
-          <div
-            className={`${compact ? "h-11 w-11 text-base" : "h-16 w-16 text-2xl"} flex shrink-0 items-center justify-center rounded-full border-2 font-display font-extrabold`}
-            style={{ borderColor: card.accent, backgroundColor: `${card.accent}26`, color: card.foreground }}
-          >
-            {initials}
+          <div className="relative shrink-0">
+            <div
+              className={`${compact ? "h-11 w-11 text-base" : "h-16 w-16 text-2xl"} flex items-center justify-center overflow-hidden rounded-full border-2 font-display font-extrabold`}
+              style={{ borderColor: card.accent, backgroundColor: `${card.accent}26`, color: card.foreground }}
+            >
+              {avatarSlot ?? initials}
+            </div>
+            {badgeSlot ? (
+              <div
+                className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border shadow-lg"
+                style={{ borderColor: `${card.foreground}22`, backgroundColor: `${card.accent}36`, color: card.foreground }}
+              >
+                {badgeSlot}
+              </div>
+            ) : null}
           </div>
           <div className="min-w-0">
             <p className="truncate font-display text-lg font-extrabold sm:text-xl">{displayName}</p>
