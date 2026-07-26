@@ -71,7 +71,12 @@ async function handlePulse({ request }: { request: Request }): Promise<Response>
             { status: 500 },
           );
         }
-      },
-    },
-  },
-});
+      }
+    }
+  }
+}
+
+export const Route = createFileRoute("/api/pulse")({
+  server: { handlers: { POST: handlePulse } },
+} as never);
+
