@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { BadgeCheck, Check, Coins, Crown, Gem, Lock, PackageOpen, Sparkles, UserRound } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { CHEST_PACK_PREMIUM, PREMIUM_CROWN } from "@/lib/asset-map";
@@ -222,7 +222,7 @@ function ChestCollectionBanner() {
   );
 }
 
-function Balance({ icon, value, color }: { icon: React.ReactNode; value: number; color: string }) {
+function Balance({ icon, value, color }: { icon: ReactNode; value: number; color: string }) {
   return (
     <div className="flex items-center gap-2 rounded-full border border-white/10 bg-card px-3 py-1.5 text-sm font-extrabold" style={{ color }}>
       {icon}

@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { ArrowLeft, LogOut, Flame, Zap, Trophy, Target, Award, TrendingUp, BadgeCheck, UserRound } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { useProgress } from "@/lib/use-progress";
@@ -437,7 +437,7 @@ function CosmeticTile({
   onClick,
 }: {
   label: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   selected: boolean;
   onClick: () => void;
 }) {
@@ -460,7 +460,7 @@ function CosmeticTile({
   );
 }
 
-function StatCard({ icon, label, value, color }: { icon: React.ReactNode; label: string; value: string; color: string }) {
+function StatCard({ icon, label, value, color }: { icon: ReactNode; label: string; value: string; color: string }) {
   return (
     <div className="rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
       <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider" style={{ color }}>
