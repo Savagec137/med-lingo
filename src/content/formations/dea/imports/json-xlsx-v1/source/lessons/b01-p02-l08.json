@@ -1,0 +1,168 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L08",
+  "lesson_title": "Les principaux termes cliniques",
+  "knowledge": [
+    {
+      "id": "K107",
+      "title": "Dyspnée",
+      "content": "La dyspnée est une difficulté à respirer."
+    },
+    {
+      "id": "K108",
+      "title": "Apnée",
+      "content": "L'apnée est un arrêt temporaire de la respiration."
+    },
+    {
+      "id": "K109",
+      "title": "Cyanose",
+      "content": "La cyanose est une coloration bleuâtre de la peau ou des muqueuses liée à une diminution de l'oxygénation."
+    },
+    {
+      "id": "K110",
+      "title": "Œdème",
+      "content": "L'œdème correspond à une accumulation de liquide dans les tissus."
+    },
+    {
+      "id": "K111",
+      "title": "Hémorragie",
+      "content": "Une hémorragie est une perte de sang provenant d'un vaisseau sanguin."
+    },
+    {
+      "id": "K112",
+      "title": "Traumatisme",
+      "content": "Un traumatisme est une lésion provoquée par une action extérieure."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q171",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La dyspnée correspond à :",
+      "options": [
+        "Une difficulté respiratoire",
+        "Une douleur thoracique",
+        "Une perte de sang",
+        "Une fracture"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q172",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'apnée correspond à :",
+      "options": [
+        "Un arrêt temporaire de la respiration",
+        "Une respiration rapide",
+        "Une respiration lente",
+        "Une toux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q173",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La cyanose se traduit par une coloration bleuâtre.",
+      "answer": true
+    },
+    {
+      "id": "Q174",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Un œdème correspond à une fracture.",
+      "answer": false
+    },
+    {
+      "id": "Q175",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Dyspnée",
+          "Difficulté respiratoire"
+        ],
+        [
+          "Apnée",
+          "Arrêt respiratoire"
+        ],
+        [
+          "Cyanose",
+          "Coloration bleutée"
+        ],
+        [
+          "Œdème",
+          "Accumulation de liquide"
+        ],
+        [
+          "Hémorragie",
+          "Perte de sang"
+        ]
+      ]
+    },
+    {
+      "id": "Q176",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Une coloration bleuâtre des lèvres est appelée ______.",
+      "answers": [
+        "cyanose"
+      ]
+    },
+    {
+      "id": "Q177",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel terme décrit une accumulation de liquide dans les tissus ?",
+      "options": [
+        "Œdème",
+        "Hématome",
+        "Plaie",
+        "Luxation"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q178",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "À votre arrivée, le patient présente une coloration bleutée des lèvres et des extrémités. Quel terme médical utilisez-vous ?",
+      "options": [
+        "Cyanose",
+        "Érythème",
+        "Œdème",
+        "Ecchymose"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q179",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel terme désigne une perte de sang provenant d'un vaisseau ?",
+      "options": [
+        "Hémorragie",
+        "Dyspnée",
+        "Œdème",
+        "Apnée"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q180",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les événements respiratoires du plus favorable au plus critique.",
+      "solution": [
+        "Normopnée",
+        "Dyspnée",
+        "Apnée"
+      ]
+    }
+  ]
+}

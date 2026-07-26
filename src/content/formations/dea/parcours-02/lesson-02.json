@@ -3,16 +3,534 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l02",
-  "title": "Préfixes",
+  "title": "Les préfixes",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Les préfixes médicaux"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l02"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l01"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l02-q111",
+      "difficulty": "easy",
+      "question": "Le préfixe brady- signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q111",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q111-answer-01",
+          "text": "Lent",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q111-answer-02",
+          "text": "Rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q111-answer-03",
+          "text": "Absence",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q111-answer-04",
+          "text": "Excès",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q111-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l02-q112",
+      "difficulty": "easy",
+      "question": "Le préfixe tachy- signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q112",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q112-answer-01",
+          "text": "Rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q112-answer-02",
+          "text": "Lent",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q112-answer-03",
+          "text": "Petit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q112-answer-04",
+          "text": "Grand",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q112-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l02-q113",
+      "difficulty": "easy",
+      "question": "Hypoglycémie signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q113",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q113-answer-01",
+          "text": "Diminution du taux de glucose",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q113-answer-02",
+          "text": "Augmentation du taux de glucose",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q113-answer-03",
+          "text": "Absence de glucose",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q113-answer-04",
+          "text": "Excès d'oxygène",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q113-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l02-q114",
+      "difficulty": "easy",
+      "question": "Hyper- indique une augmentation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q114",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q114-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q114-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q114-true"
+    },
+    {
+      "id": "import-b01-p02-l02-q115",
+      "difficulty": "easy",
+      "question": "Le préfixe A- signifie rapide.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q115",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q115-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q115-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q115-false"
+    },
+    {
+      "id": "import-b01-p02-l02-q116",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q116",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q116-pair-01",
+          "text": "Brady-",
+          "match": "Lent",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q116-pair-02",
+          "text": "Tachy-",
+          "match": "Rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q116-pair-03",
+          "text": "Hypo-",
+          "match": "Diminution",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q116-pair-04",
+          "text": "Hyper-",
+          "match": "Excès",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q116-pair-05",
+          "text": "A-",
+          "match": "Absence",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l02-q116-pair-01",
+        "import-b01-p02-l02-q116-pair-02",
+        "import-b01-p02-l02-q116-pair-03",
+        "import-b01-p02-l02-q116-pair-04",
+        "import-b01-p02-l02-q116-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l02-q117",
+      "difficulty": "medium",
+      "question": "Le préfixe ______ signifie augmentation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q117",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "hyper"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q117-accepted-01",
+          "text": "hyper",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l02-q117-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l02-q118",
+      "difficulty": "hard",
+      "question": "Une tachycardie correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q118",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q118-answer-01",
+          "text": "Une fréquence cardiaque rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q118-answer-02",
+          "text": "Une fréquence cardiaque lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q118-answer-03",
+          "text": "Une absence de rythme cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q118-answer-04",
+          "text": "Une douleur thoracique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q118-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l02-q119",
+      "difficulty": "hard",
+      "question": "Le médecin annonce une bradypnée. Comment interprétez-vous ce terme ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q119",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q119-answer-01",
+          "text": "Respiration anormalement lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q119-answer-02",
+          "text": "Respiration rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q119-answer-03",
+          "text": "Absence de respiration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l02-q119-answer-04",
+          "text": "Respiration douloureuse",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l02-q119-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l02-q120",
+      "difficulty": "medium",
+      "question": "Complète correctement la structure du mot 'tachy-card-ie'.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q120",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l02-q120-step-01",
+          "text": "Préfixe",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l02-q120-step-02",
+          "text": "Racine",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-l02-q120-step-03",
+          "text": "Suffixe",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l02-q120-step-01",
+        "import-b01-p02-l02-q120-step-02",
+        "import-b01-p02-l02-q120-step-03"
+      ]
+    }
+  ]
 }

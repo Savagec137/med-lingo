@@ -1,0 +1,169 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L06",
+  "lesson_title": "Les systèmes du corps humain",
+  "knowledge": [
+    {
+      "id": "K034",
+      "title": "Système cardiovasculaire",
+      "content": "Assure la circulation du sang grâce au cœur et aux vaisseaux sanguins."
+    },
+    {
+      "id": "K035",
+      "title": "Système respiratoire",
+      "content": "Assure les échanges gazeux entre l'air et le sang."
+    },
+    {
+      "id": "K036",
+      "title": "Système nerveux",
+      "content": "Coordonne les fonctions de l'organisme grâce au cerveau, à la moelle épinière et aux nerfs."
+    },
+    {
+      "id": "K037",
+      "title": "Système digestif",
+      "content": "Transforme les aliments en nutriments assimilables."
+    },
+    {
+      "id": "K038",
+      "title": "Système urinaire",
+      "content": "Élimine les déchets et participe à l'équilibre hydrique."
+    },
+    {
+      "id": "K039",
+      "title": "Système locomoteur",
+      "content": "Permet les mouvements grâce aux os, muscles et articulations."
+    },
+    {
+      "id": "K040",
+      "title": "Homéostasie",
+      "content": "Tous les systèmes travaillent ensemble pour maintenir l'équilibre interne de l'organisme."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q051",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel système assure la circulation du sang ?",
+      "options": [
+        "Cardiovasculaire",
+        "Digestif",
+        "Urinaire",
+        "Endocrinien"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q052",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel système réalise les échanges d'oxygène et de dioxyde de carbone ?",
+      "options": [
+        "Respiratoire",
+        "Digestif",
+        "Locomoteur",
+        "Tégumentaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q053",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel système contrôle les fonctions volontaires et involontaires ?",
+      "options": [
+        "Nerveux",
+        "Digestif",
+        "Lymphatique",
+        "Urinaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q054",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le système digestif transforme les aliments en nutriments.",
+      "answer": true
+    },
+    {
+      "id": "Q055",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le système urinaire assure principalement la respiration.",
+      "answer": false
+    },
+    {
+      "id": "Q056",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Cardiovasculaire",
+          "Circulation du sang"
+        ],
+        [
+          "Respiratoire",
+          "Échanges gazeux"
+        ],
+        [
+          "Digestif",
+          "Digestion"
+        ],
+        [
+          "Urinaire",
+          "Élimination des déchets"
+        ],
+        [
+          "Nerveux",
+          "Coordination des fonctions"
+        ]
+      ]
+    },
+    {
+      "id": "Q057",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le système ______ permet les mouvements grâce aux muscles, os et articulations.",
+      "answers": [
+        "locomoteur"
+      ]
+    },
+    {
+      "id": "Q058",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le cœur.",
+      "target": "heart"
+    },
+    {
+      "id": "Q059",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel système est directement responsable du maintien de l'équilibre hydrique ?",
+      "options": [
+        "Urinaire",
+        "Respiratoire",
+        "Digestif",
+        "Locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q060",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient présente une douleur thoracique accompagnée de difficultés respiratoires. Quels sont les deux systèmes principalement concernés ?",
+      "options": [
+        "Cardiovasculaire et respiratoire",
+        "Digestif et urinaire",
+        "Locomoteur et digestif",
+        "Endocrinien et tégumentaire"
+      ],
+      "correct": 0
+    }
+  ]
+}

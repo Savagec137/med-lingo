@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 7,
+  "level": 1,
+  "xp": 27,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 9
+  },
+  "learningObjectives": [
+    "Physiologie du système nerveux"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l05"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l05-q342",
+      "difficulty": "easy",
+      "question": "Le système nerveux central comprend :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q342",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q342-answer-01",
+          "text": "Le cerveau et la moelle épinière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q342-answer-02",
+          "text": "Les nerfs uniquement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q342-answer-03",
+          "text": "Les muscles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q342-answer-04",
+          "text": "Le cœur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l05-q342-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l05-q343",
+      "difficulty": "easy",
+      "question": "Les réflexes sont des réponses rapides et automatiques.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q343",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q343-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q343-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l05-q343-true"
+    },
+    {
+      "id": "import-b01-p04-l05-q344",
+      "difficulty": "easy",
+      "question": "Les nerfs appartiennent au système digestif.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q344",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q344-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q344-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l05-q344-false"
+    },
+    {
+      "id": "import-b01-p04-l05-q345",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q345",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q345-pair-01",
+          "text": "Neurone",
+          "match": "Transmission de l'information",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q345-pair-02",
+          "text": "Cerveau",
+          "match": "Analyse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q345-pair-03",
+          "text": "Moelle épinière",
+          "match": "Relais nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q345-pair-04",
+          "text": "Nerf",
+          "match": "Communication avec les organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l05-q345-pair-01",
+        "import-b01-p04-l05-q345-pair-02",
+        "import-b01-p04-l05-q345-pair-03",
+        "import-b01-p04-l05-q345-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l05-q346",
+      "difficulty": "medium",
+      "question": "La ______ épinière fait partie du système nerveux central.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q346",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "moelle"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q346-accepted-01",
+          "text": "moelle",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l05-q346-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l05-q347",
+      "difficulty": "hard",
+      "question": "Quel est l'objectif principal d'un bilan neurologique chez un patient ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q347",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q347-answer-01",
+          "text": "Évaluer l'état neurologique et la conscience",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q347-answer-02",
+          "text": "Mesurer la glycémie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q347-answer-03",
+          "text": "Évaluer la digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q347-answer-04",
+          "text": "Mesurer la température",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l05-q347-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l05-q348",
+      "difficulty": "hard",
+      "question": "Un patient ne répond plus aux stimulations verbales. Quel système est prioritairement évalué ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q348",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q348-answer-01",
+          "text": "Le système nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q348-answer-02",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q348-answer-03",
+          "text": "Le système urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l05-q348-answer-04",
+          "text": "Le système cutané",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l05-q348-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l05-q349",
+      "difficulty": "medium",
+      "question": "Replace le trajet d'un réflexe simple.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q349",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 6
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l05-q349-step-01",
+          "text": "Stimulus",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l05-q349-step-02",
+          "text": "Récepteur",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l05-q349-step-03",
+          "text": "Nerf sensitif",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l05-q349-step-04",
+          "text": "Moelle épinière",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-l05-q349-step-05",
+          "text": "Nerf moteur",
+          "explanation": "",
+          "sequenceRank": 5
+        },
+        {
+          "id": "import-b01-p04-l05-q349-step-06",
+          "text": "Muscle",
+          "explanation": "",
+          "sequenceRank": 6
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l05-q349-step-01",
+        "import-b01-p04-l05-q349-step-02",
+        "import-b01-p04-l05-q349-step-03",
+        "import-b01-p04-l05-q349-step-04",
+        "import-b01-p04-l05-q349-step-05",
+        "import-b01-p04-l05-q349-step-06"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l05-q350",
+      "difficulty": "medium",
+      "question": "Clique sur la moelle épinière.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q350",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "spinal_cord"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_ventricle",
+          "text": "Ventricule gauche",
+          "detail": "0.56,0.34",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-spinal_cord"
+    }
+  ]
+}

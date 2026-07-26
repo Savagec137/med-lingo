@@ -1,0 +1,158 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L01",
+  "lesson_title": "Introduction au langage médical",
+  "knowledge": [
+    {
+      "id": "K065",
+      "title": "Définition",
+      "content": "Le langage médical est un vocabulaire normalisé permettant aux professionnels de santé de communiquer sans ambiguïté."
+    },
+    {
+      "id": "K066",
+      "title": "Universalité",
+      "content": "La terminologie médicale est utilisée par l'ensemble des professionnels de santé."
+    },
+    {
+      "id": "K067",
+      "title": "Origine",
+      "content": "La majorité des termes médicaux proviennent du grec et du latin."
+    },
+    {
+      "id": "K068",
+      "title": "Structure",
+      "content": "Un mot médical peut être composé d'un préfixe, d'une racine et d'un suffixe."
+    },
+    {
+      "id": "K069",
+      "title": "Transmission",
+      "content": "Une terminologie précise limite les erreurs lors des transmissions."
+    },
+    {
+      "id": "K070",
+      "title": "Utilisation",
+      "content": "L'ambulancier doit comprendre les principaux termes médicaux utilisés lors des bilans et transmissions."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q101",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le langage médical sert principalement à :",
+      "options": [
+        "Communiquer précisément entre professionnels",
+        "Créer des diagnostics",
+        "Prescrire des traitements",
+        "Réaliser des analyses biologiques"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q102",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La majorité des termes médicaux proviennent :",
+      "options": [
+        "Du grec et du latin",
+        "De l'anglais",
+        "De l'allemand",
+        "De l'espagnol"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q103",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une terminologie commune réduit les erreurs de communication.",
+      "answer": true
+    },
+    {
+      "id": "Q104",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les mots médicaux sont toujours composés d'un préfixe.",
+      "answer": false
+    },
+    {
+      "id": "Q105",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Préfixe",
+          "Début du mot"
+        ],
+        [
+          "Racine",
+          "Sens principal"
+        ],
+        [
+          "Suffixe",
+          "Fin du mot"
+        ],
+        [
+          "Terminologie",
+          "Langage médical"
+        ]
+      ]
+    },
+    {
+      "id": "Q106",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La majorité des termes médicaux proviennent du grec et du ______.",
+      "answers": [
+        "latin"
+      ]
+    },
+    {
+      "id": "Q107",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les éléments d'un mot médical.",
+      "solution": [
+        "Préfixe",
+        "Racine",
+        "Suffixe"
+      ]
+    },
+    {
+      "id": "Q108",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Pourquoi le langage médical est-il standardisé ?",
+      "options": [
+        "Pour éviter les ambiguïtés",
+        "Pour compliquer les échanges",
+        "Pour remplacer les protocoles",
+        "Pour limiter les dossiers patients"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q109",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'une transmission au SAMU, quel est l'intérêt d'utiliser les termes médicaux adaptés ?",
+      "options": [
+        "Faciliter une compréhension rapide et précise",
+        "Allonger le bilan",
+        "Éviter de prendre les constantes",
+        "Remplacer le bilan clinique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q110",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "L'ambulancier doit comprendre les principaux termes médicaux utilisés lors des transmissions.",
+      "answer": true
+    }
+  ]
+}

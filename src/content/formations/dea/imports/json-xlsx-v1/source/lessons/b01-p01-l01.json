@@ -1,0 +1,195 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L01",
+  "lesson_title": "Position anatomique",
+  "knowledge": [
+    {
+      "id": "K001",
+      "title": "Position anatomique",
+      "content": "La position anatomique est la position de référence utilisée pour décrire le corps humain : sujet debout, regard horizontal, bras le long du corps, paumes orientées vers l'avant, pieds parallèles."
+    },
+    {
+      "id": "K002",
+      "title": "Orientation",
+      "content": "Toutes les descriptions anatomiques sont réalisées en prenant la position anatomique comme référence."
+    },
+    {
+      "id": "K003",
+      "title": "Supérieur",
+      "content": "Situé vers la tête."
+    },
+    {
+      "id": "K004",
+      "title": "Inférieur",
+      "content": "Situé vers les pieds."
+    },
+    {
+      "id": "K005",
+      "title": "Antérieur",
+      "content": "Situé vers l'avant du corps."
+    },
+    {
+      "id": "K006",
+      "title": "Postérieur",
+      "content": "Situé vers l'arrière du corps."
+    },
+    {
+      "id": "K007",
+      "title": "Médial",
+      "content": "Proche de la ligne médiane."
+    },
+    {
+      "id": "K008",
+      "title": "Latéral",
+      "content": "Éloigné de la ligne médiane."
+    },
+    {
+      "id": "K009",
+      "title": "Proximal",
+      "content": "Proche de l'origine d'un membre."
+    },
+    {
+      "id": "K010",
+      "title": "Distal",
+      "content": "Éloigné de l'origine d'un membre."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q001",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle est la position anatomique de référence ?",
+      "options": [
+        "Debout, paumes vers l'avant",
+        "Assis",
+        "Allongé",
+        "Debout, paumes vers l'arrière"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q002",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les paumes sont orientées vers l'avant.",
+      "answer": true
+    },
+    {
+      "id": "Q003",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme 'supérieur' signifie :",
+      "options": [
+        "Vers la tête",
+        "Vers les pieds",
+        "Vers l'arrière",
+        "Vers l'extérieur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q004",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme 'antérieur' désigne :",
+      "options": [
+        "L'avant",
+        "L'arrière",
+        "Le haut",
+        "Le bas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q005",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le terme postérieur désigne l'avant du corps.",
+      "answer": false
+    },
+    {
+      "id": "Q006",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Supérieur",
+          "Vers la tête"
+        ],
+        [
+          "Inférieur",
+          "Vers les pieds"
+        ],
+        [
+          "Antérieur",
+          "Avant"
+        ],
+        [
+          "Postérieur",
+          "Arrière"
+        ]
+      ]
+    },
+    {
+      "id": "Q007",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Médial",
+          "Proche de la ligne médiane"
+        ],
+        [
+          "Latéral",
+          "Éloigné de la ligne médiane"
+        ],
+        [
+          "Proximal",
+          "Près du tronc"
+        ],
+        [
+          "Distal",
+          "Éloigné du tronc"
+        ]
+      ]
+    },
+    {
+      "id": "Q008",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le terme ______ désigne une structure proche de la ligne médiane.",
+      "answers": [
+        "médial"
+      ]
+    },
+    {
+      "id": "Q009",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe du plus proximal au plus distal.",
+      "solution": [
+        "Épaule",
+        "Bras",
+        "Avant-bras",
+        "Main"
+      ]
+    },
+    {
+      "id": "Q010",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le patient présente une douleur sur la face antérieure du bras droit. Où est localisée la douleur ?",
+      "options": [
+        "À l'avant du bras droit",
+        "À l'arrière du bras droit",
+        "À l'avant-bras gauche",
+        "À l'épaule gauche"
+      ],
+      "correct": 0
+    }
+  ]
+}

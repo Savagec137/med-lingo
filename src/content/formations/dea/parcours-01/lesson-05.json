@@ -2,33 +2,549 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-l05",
+  "title": "Les cavités du corps",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 10
   },
-  "items": [],
-  "id": "dea-p01-l05",
-  "title": "La position anatomique",
-  "kind": "lesson",
   "learningObjectives": [
-    "décrire la position anatomique de référence ;",
-    "comprendre son rôle comme référence universelle ;",
-    "identifier l’orientation du regard, des membres et des paumes."
+    "Les cavités du corps humain"
   ],
   "competencyIds": [
-    "anatomy.position.definition",
-    "anatomy.position.posture",
-    "anatomy.position.upper-limbs",
-    "anatomy.position.palms",
-    "anatomy.position.reference-use"
+    "import.json-xlsx.b01.p01.l05"
   ],
-  "prerequisiteIds": ["dea-p01-l04"]
+  "prerequisiteIds": [
+    "dea-p01-l04"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p01-l05-q041",
+      "difficulty": "easy",
+      "question": "Quel organe est contenu dans la cavité crânienne ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q041",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q041-answer-01",
+          "text": "Le cerveau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q041-answer-02",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q041-answer-03",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q041-answer-04",
+          "text": "Le pancréas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q041-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l05-q042",
+      "difficulty": "easy",
+      "question": "La moelle épinière est située dans :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q042",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q042-answer-01",
+          "text": "Le canal rachidien",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q042-answer-02",
+          "text": "La cavité abdominale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q042-answer-03",
+          "text": "La cavité thoracique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q042-answer-04",
+          "text": "Le bassin",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q042-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l05-q043",
+      "difficulty": "easy",
+      "question": "Le diaphragme sépare :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q043",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q043-answer-01",
+          "text": "Le thorax de l'abdomen",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q043-answer-02",
+          "text": "La tête du cou",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q043-answer-03",
+          "text": "Le bassin des jambes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q043-answer-04",
+          "text": "Le bras de l'avant-bras",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q043-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l05-q044",
+      "difficulty": "easy",
+      "question": "Les poumons sont situés dans la cavité thoracique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q044",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q044-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q044-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q044-true"
+    },
+    {
+      "id": "import-b01-p01-l05-q045",
+      "difficulty": "easy",
+      "question": "La vessie est située dans la cavité thoracique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q045",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q045-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q045-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q045-false"
+    },
+    {
+      "id": "import-b01-p01-l05-q046",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q046",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q046-pair-01",
+          "text": "Cavité crânienne",
+          "match": "Encéphale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q046-pair-02",
+          "text": "Canal rachidien",
+          "match": "Moelle épinière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q046-pair-03",
+          "text": "Cavité thoracique",
+          "match": "Poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q046-pair-04",
+          "text": "Cavité abdominale",
+          "match": "Foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q046-pair-05",
+          "text": "Cavité pelvienne",
+          "match": "Vessie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l05-q046-pair-01",
+        "import-b01-p01-l05-q046-pair-02",
+        "import-b01-p01-l05-q046-pair-03",
+        "import-b01-p01-l05-q046-pair-04",
+        "import-b01-p01-l05-q046-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l05-q047",
+      "difficulty": "medium",
+      "question": "Le ______ sépare le thorax de l'abdomen.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q047",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "diaphragme"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q047-accepted-01",
+          "text": "diaphragme",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l05-q047-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l05-q048",
+      "difficulty": "medium",
+      "question": "Clique sur la cavité thoracique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q048",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "thoracic_cavity"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_kidney",
+          "text": "Rein droit",
+          "detail": "0.58,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdominal_cavity",
+          "text": "Cavité abdominale",
+          "detail": "0.5,0.5",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-thoracic_cavity"
+    },
+    {
+      "id": "import-b01-p01-l05-q049",
+      "difficulty": "hard",
+      "question": "Une perforation de la cavité abdominale peut concerner principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q049",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q049-answer-01",
+          "text": "Les organes digestifs",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q049-answer-02",
+          "text": "Le cerveau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q049-answer-03",
+          "text": "La moelle épinière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q049-answer-04",
+          "text": "Les poumons uniquement",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q049-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l05-q050",
+      "difficulty": "hard",
+      "question": "Lors d'un traumatisme thoracique, quelles structures sont principalement menacées ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q050",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l05-q050-answer-01",
+          "text": "Le cœur et les poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q050-answer-02",
+          "text": "Le foie uniquement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q050-answer-03",
+          "text": "La vessie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l05-q050-answer-04",
+          "text": "Le cerveau",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l05-q050-answer-01"
+    }
+  ]
 }

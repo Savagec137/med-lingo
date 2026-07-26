@@ -1,0 +1,1518 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l01",
+  "title": "Le système locomoteur",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 22,
+  "level": 1,
+  "xp": 87,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Le système squelettique",
+    "Les articulations",
+    "Le système musculaire"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l03",
+    "import.json-xlsx.b01.p03.l04",
+    "import.json-xlsx.b01.p03.l05"
+  ],
+  "prerequisiteIds": [],
+  "items": [
+    {
+      "id": "import-b01-p03-l03-q221",
+      "difficulty": "easy",
+      "question": "Combien d'os possède approximativement un adulte ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q221",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q221-answer-01",
+          "text": "206",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q221-answer-02",
+          "text": "180",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q221-answer-03",
+          "text": "240",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q221-answer-04",
+          "text": "150",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q221-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l03-q222",
+      "difficulty": "easy",
+      "question": "Quelle structure produit les cellules sanguines ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q222",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q222-answer-01",
+          "text": "Moelle osseuse rouge",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q222-answer-02",
+          "text": "Cartilage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q222-answer-03",
+          "text": "Ligament",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q222-answer-04",
+          "text": "Périoste",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q222-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l03-q223",
+      "difficulty": "easy",
+      "question": "Les os participent au stockage des minéraux.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q223",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q223-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q223-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q223-true"
+    },
+    {
+      "id": "import-b01-p03-l03-q224",
+      "difficulty": "easy",
+      "question": "Le sternum est un os long.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q224",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q224-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q224-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q224-false"
+    },
+    {
+      "id": "import-b01-p03-l03-q225",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q225",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q225-pair-01",
+          "text": "Crâne",
+          "match": "Protection du cerveau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q225-pair-02",
+          "text": "Fémur",
+          "match": "Os long",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q225-pair-03",
+          "text": "Sternum",
+          "match": "Os plat",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q225-pair-04",
+          "text": "Moelle rouge",
+          "match": "Production des cellules sanguines",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l03-q225-pair-01",
+        "import-b01-p03-l03-q225-pair-02",
+        "import-b01-p03-l03-q225-pair-03",
+        "import-b01-p03-l03-q225-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l03-q226",
+      "difficulty": "medium",
+      "question": "Le squelette adulte comporte environ ______ os.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q226",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "206"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q226-accepted-01",
+          "text": "206",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l03-q226-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l03-q227",
+      "difficulty": "hard",
+      "question": "Quelle est la principale fonction du crâne ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q227",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q227-answer-01",
+          "text": "Protéger l'encéphale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q227-answer-02",
+          "text": "Produire des hormones",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q227-answer-03",
+          "text": "Permettre la digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q227-answer-04",
+          "text": "Stocker le glucose",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q227-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l03-q228",
+      "difficulty": "hard",
+      "question": "Une victime présente une douleur importante après une chute sur la cuisse. Quel os est le plus probablement concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q228",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q228-answer-01",
+          "text": "Fémur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q228-answer-02",
+          "text": "Humérus",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q228-answer-03",
+          "text": "Radius",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l03-q228-answer-04",
+          "text": "Scapula",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l03-q228-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l03-q229",
+      "difficulty": "medium",
+      "question": "Clique sur le fémur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q229",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "femur"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-lungs",
+          "text": "Poumons",
+          "detail": "0.43,0.29",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-femur"
+    },
+    {
+      "id": "import-b01-p03-l03-q230",
+      "difficulty": "medium",
+      "question": "Classe les structures suivantes.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q230",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l03-q230-step-01",
+          "text": "Moelle osseuse",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l03-q230-step-02",
+          "text": "Os",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l03-q230-step-03",
+          "text": "Squelette",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l03-q230-step-01",
+        "import-b01-p03-l03-q230-step-02",
+        "import-b01-p03-l03-q230-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l04-q231",
+      "difficulty": "easy",
+      "question": "Quel est le type d'articulation le plus mobile ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q231",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q231-answer-01",
+          "text": "Synoviale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q231-answer-02",
+          "text": "Fibreuse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q231-answer-03",
+          "text": "Cartilagineuse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q231-answer-04",
+          "text": "Fixe",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q231-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l04-q232",
+      "difficulty": "easy",
+      "question": "Quel élément relie les os entre eux ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q232",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q232-answer-01",
+          "text": "Ligament",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q232-answer-02",
+          "text": "Tendon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q232-answer-03",
+          "text": "Muscle",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q232-answer-04",
+          "text": "Nerf",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q232-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l04-q233",
+      "difficulty": "easy",
+      "question": "Le liquide synovial facilite les mouvements.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q233",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q233-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q233-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q233-true"
+    },
+    {
+      "id": "import-b01-p03-l04-q234",
+      "difficulty": "easy",
+      "question": "Les sutures du crâne sont des articulations très mobiles.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q234",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q234-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q234-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q234-false"
+    },
+    {
+      "id": "import-b01-p03-l04-q235",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q235",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q235-pair-01",
+          "text": "Ligament",
+          "match": "Relie deux os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q235-pair-02",
+          "text": "Cartilage",
+          "match": "Réduit les frottements",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q235-pair-03",
+          "text": "Liquide synovial",
+          "match": "Lubrifie l'articulation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q235-pair-04",
+          "text": "Capsule",
+          "match": "Entoure l'articulation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l04-q235-pair-01",
+        "import-b01-p03-l04-q235-pair-02",
+        "import-b01-p03-l04-q235-pair-03",
+        "import-b01-p03-l04-q235-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l04-q236",
+      "difficulty": "medium",
+      "question": "Les articulations les plus mobiles sont les articulations ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q236",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "synoviales"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q236-accepted-01",
+          "text": "synoviales",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l04-q236-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l04-q237",
+      "difficulty": "hard",
+      "question": "Quelle articulation est un exemple d'articulation synoviale ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q237",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q237-answer-01",
+          "text": "Genou",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q237-answer-02",
+          "text": "Sutures du crâne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q237-answer-03",
+          "text": "Disques intervertébraux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q237-answer-04",
+          "text": "Symphyse pubienne",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q237-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l04-q238",
+      "difficulty": "hard",
+      "question": "Une entorse de la cheville atteint principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q238",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q238-answer-01",
+          "text": "Les ligaments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q238-answer-02",
+          "text": "Les os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q238-answer-03",
+          "text": "Les muscles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l04-q238-answer-04",
+          "text": "Les nerfs",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l04-q238-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l04-q239",
+      "difficulty": "medium",
+      "question": "Clique sur le genou.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q239",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "knee"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "detail": "0.5,0.08",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-knee"
+    },
+    {
+      "id": "import-b01-p03-l04-q240",
+      "difficulty": "medium",
+      "question": "Classe les articulations de la moins mobile à la plus mobile.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q240",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l04-q240-step-01",
+          "text": "Fibreuse",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l04-q240-step-02",
+          "text": "Cartilagineuse",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l04-q240-step-03",
+          "text": "Synoviale",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l04-q240-step-01",
+        "import-b01-p03-l04-q240-step-02",
+        "import-b01-p03-l04-q240-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l05-q241",
+      "difficulty": "easy",
+      "question": "Quel type de muscle est volontaire ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q241",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q241-answer-01",
+          "text": "Muscle squelettique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q241-answer-02",
+          "text": "Muscle cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q241-answer-03",
+          "text": "Muscle lisse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q241-answer-04",
+          "text": "Myocarde",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q241-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l05-q242",
+      "difficulty": "easy",
+      "question": "Le myocarde correspond :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q242",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q242-answer-01",
+          "text": "Au muscle du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q242-answer-02",
+          "text": "À un tendon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q242-answer-03",
+          "text": "À un ligament",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q242-answer-04",
+          "text": "À un cartilage",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q242-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l05-q243",
+      "difficulty": "easy",
+      "question": "Les muscles lisses sont involontaires.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q243",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q243-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q243-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q243-true"
+    },
+    {
+      "id": "import-b01-p03-l05-q244",
+      "difficulty": "easy",
+      "question": "Les tendons relient deux os entre eux.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q244",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q244-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q244-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q244-false"
+    },
+    {
+      "id": "import-b01-p03-l05-q245",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q245",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q245-pair-01",
+          "text": "Muscle squelettique",
+          "match": "Mouvement volontaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q245-pair-02",
+          "text": "Muscle cardiaque",
+          "match": "Cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q245-pair-03",
+          "text": "Muscle lisse",
+          "match": "Organes internes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q245-pair-04",
+          "text": "Tendon",
+          "match": "Relie muscle et os",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l05-q245-pair-01",
+        "import-b01-p03-l05-q245-pair-02",
+        "import-b01-p03-l05-q245-pair-03",
+        "import-b01-p03-l05-q245-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l05-q246",
+      "difficulty": "medium",
+      "question": "Le muscle du cœur est appelé ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q246",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "myocarde"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q246-accepted-01",
+          "text": "myocarde",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l05-q246-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l05-q247",
+      "difficulty": "hard",
+      "question": "Quelle structure transmet la force du muscle vers l'os ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q247",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q247-answer-01",
+          "text": "Le tendon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q247-answer-02",
+          "text": "Le ligament",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q247-answer-03",
+          "text": "Le cartilage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q247-answer-04",
+          "text": "Le nerf",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q247-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l05-q248",
+      "difficulty": "hard",
+      "question": "Lors d'un effort intense, quelle fonction musculaire contribue au maintien de la température corporelle ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q248",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l05-q248-answer-01",
+          "text": "Production de chaleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q248-answer-02",
+          "text": "Production de globules rouges",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q248-answer-03",
+          "text": "Filtration sanguine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l05-q248-answer-04",
+          "text": "Digestion",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l05-q248-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l05-q249",
+      "difficulty": "medium",
+      "question": "Clique sur le biceps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l05"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l05"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L05",
+        "originalQuestionId": "Q249",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "biceps"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdominal_cavity",
+          "text": "Cavité abdominale",
+          "detail": "0.5,0.5",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidneys",
+          "text": "Reins",
+          "detail": "0.5,0.46",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-biceps"
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l03",
+  "title": "Le système respiratoire",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Le système respiratoire"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l08"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l02"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p03-l08-q271",
+      "difficulty": "easy",
+      "question": "Quel muscle est le principal muscle respiratoire ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q271",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q271-answer-01",
+          "text": "Le diaphragme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q271-answer-02",
+          "text": "Le biceps",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q271-answer-03",
+          "text": "Le triceps",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q271-answer-04",
+          "text": "Le quadriceps",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q271-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l08-q272",
+      "difficulty": "easy",
+      "question": "Où ont lieu les échanges gazeux ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q272",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q272-answer-01",
+          "text": "Dans les alvéoles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q272-answer-02",
+          "text": "Dans la trachée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q272-answer-03",
+          "text": "Dans les bronches",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q272-answer-04",
+          "text": "Dans le pharynx",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q272-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l08-q273",
+      "difficulty": "easy",
+      "question": "Le dioxyde de carbone quitte le sang au niveau des alvéoles.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q273",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q273-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q273-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q273-true"
+    },
+    {
+      "id": "import-b01-p03-l08-q274",
+      "difficulty": "easy",
+      "question": "Les bronches sont situées après les alvéoles.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q274",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q274-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q274-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q274-false"
+    },
+    {
+      "id": "import-b01-p03-l08-q275",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q275",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q275-pair-01",
+          "text": "Trachée",
+          "match": "Conduit aérien",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q275-pair-02",
+          "text": "Bronches",
+          "match": "Distribution de l'air",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q275-pair-03",
+          "text": "Alvéoles",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q275-pair-04",
+          "text": "Diaphragme",
+          "match": "Respiration",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l08-q275-pair-01",
+        "import-b01-p03-l08-q275-pair-02",
+        "import-b01-p03-l08-q275-pair-03",
+        "import-b01-p03-l08-q275-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l08-q276",
+      "difficulty": "medium",
+      "question": "Le principal muscle respiratoire est le ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q276",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "diaphragme"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q276-accepted-01",
+          "text": "diaphragme",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l08-q276-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l08-q277",
+      "difficulty": "hard",
+      "question": "Quel gaz diffuse normalement des alvéoles vers le sang ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q277",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q277-answer-01",
+          "text": "L'oxygène",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q277-answer-02",
+          "text": "Le dioxyde de carbone",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q277-answer-03",
+          "text": "L'azote",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q277-answer-04",
+          "text": "L'hélium",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q277-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l08-q278",
+      "difficulty": "hard",
+      "question": "Lors du bilan d'une victime présentant une dyspnée, quel système est principalement concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q278",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q278-answer-01",
+          "text": "Le système respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q278-answer-02",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q278-answer-03",
+          "text": "Le système urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l08-q278-answer-04",
+          "text": "Le système endocrinien",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l08-q278-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l08-q279",
+      "difficulty": "medium",
+      "question": "Clique sur les poumons.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q279",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "lungs"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-lungs",
+          "text": "Poumons",
+          "detail": "0.43,0.29",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidneys",
+          "text": "Reins",
+          "detail": "0.5,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_ventricle",
+          "text": "Ventricule gauche",
+          "detail": "0.56,0.34",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-lungs"
+    },
+    {
+      "id": "import-b01-p03-l08-q280",
+      "difficulty": "medium",
+      "question": "Classe le trajet de l'air inspiré.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q280",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 6
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l08-q280-step-01",
+          "text": "Nez/Bouche",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l08-q280-step-02",
+          "text": "Pharynx",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l08-q280-step-03",
+          "text": "Larynx",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l08-q280-step-04",
+          "text": "Trachée",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p03-l08-q280-step-05",
+          "text": "Bronches",
+          "explanation": "",
+          "sequenceRank": 5
+        },
+        {
+          "id": "import-b01-p03-l08-q280-step-06",
+          "text": "Alvéoles",
+          "explanation": "",
+          "sequenceRank": 6
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l08-q280-step-01",
+        "import-b01-p03-l08-q280-step-02",
+        "import-b01-p03-l08-q280-step-03",
+        "import-b01-p03-l08-q280-step-04",
+        "import-b01-p03-l08-q280-step-05",
+        "import-b01-p03-l08-q280-step-06"
+      ]
+    }
+  ]
+}

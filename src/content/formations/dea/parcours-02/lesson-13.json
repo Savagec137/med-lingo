@@ -2,17 +2,819 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-02",
-  "id": "dea-p02-l13",
-  "title": "Boss",
+  "id": "dea-p02-boss",
+  "title": "Boss — Langage médical",
   "kind": "boss",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "expert",
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": 300,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 12
+  },
+  "learningObjectives": [
+    "Boss - Langage médical"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.boss"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Langage médical",
+    "scenario": "Lire un compte rendu médical simplifié. Retrouver la signification des termes.",
+    "tasks": [
+      "Lire un compte rendu médical simplifié.",
+      "Retrouver la signification des termes."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true
+  },
+  "items": [
+    {
+      "id": "import-b01-p02-boss-bq016",
+      "difficulty": "hard",
+      "question": "Le préfixe hypo- signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ016",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq016-answer-01",
+          "text": "Diminution",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq016-answer-02",
+          "text": "Augmentation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq016-answer-03",
+          "text": "Absence",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq016-answer-04",
+          "text": "Rapidité",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq016-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq017",
+      "difficulty": "hard",
+      "question": "Le suffixe -ite désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ017",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq017-answer-01",
+          "text": "Une inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq017-answer-02",
+          "text": "Une douleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq017-answer-03",
+          "text": "Une chirurgie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq017-answer-04",
+          "text": "Une étude",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq017-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq018",
+      "difficulty": "hard",
+      "question": "La racine néphro désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ018",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq018-answer-01",
+          "text": "Le rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq018-answer-02",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq018-answer-03",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq018-answer-04",
+          "text": "Le cerveau",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq018-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq019",
+      "difficulty": "hard",
+      "question": "Une tachypnée correspond à une respiration rapide.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ019",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq019-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq019-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq019-true"
+    },
+    {
+      "id": "import-b01-p02-boss-bq020",
+      "difficulty": "hard",
+      "question": "La cyanose correspond à une rougeur cutanée.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ020",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq020-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq020-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq020-false"
+    },
+    {
+      "id": "import-b01-p02-boss-bq021",
+      "difficulty": "expert",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ021",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq021-pair-01",
+          "text": "Bradycardie",
+          "match": "Fréquence cardiaque lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq021-pair-02",
+          "text": "Dyspnée",
+          "match": "Difficulté respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq021-pair-03",
+          "text": "Œdème",
+          "match": "Accumulation de liquide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq021-pair-04",
+          "text": "ECG",
+          "match": "Activité électrique du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq021-pair-05",
+          "text": "SpO₂",
+          "match": "Saturation en oxygène",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-boss-bq021-pair-01",
+        "import-b01-p02-boss-bq021-pair-02",
+        "import-b01-p02-boss-bq021-pair-03",
+        "import-b01-p02-boss-bq021-pair-04",
+        "import-b01-p02-boss-bq021-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-boss-bq022",
+      "difficulty": "expert",
+      "question": "Le suffixe ______ signifie douleur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ022",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "algie"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq022-accepted-01",
+          "text": "algie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-boss-bq022-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-boss-bq023",
+      "difficulty": "expert",
+      "question": "Le terme cardiologie désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ023",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq023-answer-01",
+          "text": "L'étude du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq023-answer-02",
+          "text": "Une chirurgie cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq023-answer-03",
+          "text": "Une maladie cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq023-answer-04",
+          "text": "Une douleur cardiaque",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq023-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq024",
+      "difficulty": "expert",
+      "question": "Lors de votre bilan, le médecin vous demande la FR, la FC, la TA et la SpO₂. À quoi correspondent ces quatre abréviations ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ024",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq024-answer-01",
+          "text": "Fréquence respiratoire, fréquence cardiaque, tension artérielle, saturation en oxygène",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq024-answer-02",
+          "text": "Fonction respiratoire, fréquence cardiaque, température axillaire, saturation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq024-answer-03",
+          "text": "Fréquence respiratoire, fonction cardiaque, tension abdominale, saturation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq024-answer-04",
+          "text": "Fréquence respiratoire, fréquence cardiaque, température, glycémie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq024-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq025",
+      "difficulty": "expert",
+      "question": "Replace les éléments constituant un mot médical.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ025",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq025-step-01",
+          "text": "Préfixe",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-boss-bq025-step-02",
+          "text": "Racine",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-boss-bq025-step-03",
+          "text": "Suffixe",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-boss-bq025-step-01",
+        "import-b01-p02-boss-bq025-step-02",
+        "import-b01-p02-boss-bq025-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p02-boss-bq026",
+      "difficulty": "expert",
+      "question": "Quel examen utilise un champ magnétique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ026",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq026-answer-01",
+          "text": "IRM",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq026-answer-02",
+          "text": "Scanner",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq026-answer-03",
+          "text": "Radiographie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq026-answer-04",
+          "text": "ECG",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq026-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq027",
+      "difficulty": "expert",
+      "question": "Une transmission mentionne : 'patient dyspnéique, tachycarde, SpO₂ à 88 %'. Quelle interprétation est correcte ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ027",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq027-answer-01",
+          "text": "Le patient présente une difficulté respiratoire, un rythme cardiaque rapide et une saturation basse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq027-answer-02",
+          "text": "Le patient présente une respiration normale et un rythme lent",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq027-answer-03",
+          "text": "Le patient est uniquement hypertendu",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq027-answer-04",
+          "text": "Le patient présente uniquement une douleur thoracique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq027-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq028",
+      "difficulty": "expert",
+      "question": "Clique sur l'organe correspondant à la racine 'cardio'.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ028",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "heart"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-lungs",
+          "text": "Poumons",
+          "detail": "0.43,0.29",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-heart"
+    },
+    {
+      "id": "import-b01-p02-boss-bq029",
+      "difficulty": "expert",
+      "question": "Quel est l'objectif principal du langage médical ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ029",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq029-answer-01",
+          "text": "Communiquer de manière standardisée entre professionnels",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq029-answer-02",
+          "text": "Établir un diagnostic médical",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq029-answer-03",
+          "text": "Prescrire un traitement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq029-answer-04",
+          "text": "Remplacer le dossier patient",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq029-answer-01"
+    },
+    {
+      "id": "import-b01-p02-boss-bq030",
+      "difficulty": "expert",
+      "question": "Pourquoi l'utilisation d'une terminologie médicale normalisée est-elle essentielle lors d'une régulation SAMU ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "BOSS_P02",
+        "originalQuestionId": "BQ030",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-boss-bq030-answer-01",
+          "text": "Pour transmettre des informations précises et limiter les erreurs",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq030-answer-02",
+          "text": "Pour réduire le temps de transport",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq030-answer-03",
+          "text": "Pour éviter le bilan clinique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-boss-bq030-answer-04",
+          "text": "Pour remplacer les constantes vitales",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-boss-bq030-answer-01"
+    }
+  ]
 }

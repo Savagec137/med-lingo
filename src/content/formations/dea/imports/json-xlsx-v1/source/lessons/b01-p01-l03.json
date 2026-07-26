@@ -1,0 +1,155 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L03",
+  "lesson_title": "Axes anatomiques",
+  "knowledge": [
+    {
+      "id": "K016",
+      "title": "Axe longitudinal",
+      "content": "L'axe longitudinal est un axe vertical allant de la tête vers les pieds."
+    },
+    {
+      "id": "K017",
+      "title": "Axe sagittal",
+      "content": "L'axe sagittal est orienté d'avant en arrière."
+    },
+    {
+      "id": "K018",
+      "title": "Axe transversal",
+      "content": "L'axe transversal est orienté de droite à gauche."
+    },
+    {
+      "id": "K019",
+      "title": "Relation plan/axe",
+      "content": "Chaque mouvement s'effectue autour d'un axe et dans un plan anatomique."
+    },
+    {
+      "id": "K020",
+      "title": "Utilité clinique",
+      "content": "Les axes anatomiques permettent de décrire précisément les mouvements articulaires."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q021",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'axe longitudinal est orienté :",
+      "options": [
+        "De la tête vers les pieds",
+        "De droite à gauche",
+        "D'avant en arrière",
+        "Du thorax vers l'abdomen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q022",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'axe transversal est orienté :",
+      "options": [
+        "De droite à gauche",
+        "De haut en bas",
+        "D'avant en arrière",
+        "Vers la ligne médiane"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q023",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'axe sagittal est orienté :",
+      "options": [
+        "D'avant en arrière",
+        "De droite à gauche",
+        "De haut en bas",
+        "En diagonale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q024",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'axe longitudinal est vertical.",
+      "answer": true
+    },
+    {
+      "id": "Q025",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'axe transversal est vertical.",
+      "answer": false
+    },
+    {
+      "id": "Q026",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Longitudinal",
+          "Tête ↔ Pieds"
+        ],
+        [
+          "Sagittal",
+          "Avant ↔ Arrière"
+        ],
+        [
+          "Transversal",
+          "Droite ↔ Gauche"
+        ]
+      ]
+    },
+    {
+      "id": "Q027",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "L'axe ______ est orienté d'avant en arrière.",
+      "answers": [
+        "sagittal"
+      ]
+    },
+    {
+      "id": "Q028",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les axes selon leur orientation.",
+      "solution": [
+        "Longitudinal → Haut/Bas",
+        "Sagittal → Avant/Arrière",
+        "Transversal → Droite/Gauche"
+      ]
+    },
+    {
+      "id": "Q029",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "La flexion du coude s'effectue principalement dans quel plan ?",
+      "options": [
+        "Plan sagittal",
+        "Plan frontal",
+        "Plan transversal",
+        "Plan oblique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q030",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un bilan traumatique, le médecin demande d'évaluer un mouvement autour de l'axe transversal. Quel mouvement est le plus concerné ?",
+      "options": [
+        "Flexion / Extension",
+        "Rotation",
+        "Abduction / Adduction",
+        "Pronation"
+      ],
+      "correct": 0
+    }
+  ]
+}

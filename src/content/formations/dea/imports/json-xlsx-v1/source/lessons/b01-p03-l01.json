@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L01",
+  "lesson_title": "Introduction à l'anatomie générale",
+  "knowledge": [
+    {
+      "id": "K125",
+      "title": "Anatomie",
+      "content": "L'anatomie est la science qui étudie la structure du corps humain."
+    },
+    {
+      "id": "K126",
+      "title": "Physiologie",
+      "content": "La physiologie étudie le fonctionnement des organes et des systèmes."
+    },
+    {
+      "id": "K127",
+      "title": "Organisation",
+      "content": "Le corps humain est constitué d'organes regroupés en systèmes."
+    },
+    {
+      "id": "K128",
+      "title": "Objectif",
+      "content": "La connaissance anatomique permet de mieux comprendre les pathologies et les bilans cliniques."
+    },
+    {
+      "id": "K129",
+      "title": "Observation",
+      "content": "L'observation anatomique est indispensable lors d'un examen clinique."
+    },
+    {
+      "id": "K130",
+      "title": "Application",
+      "content": "L'ambulancier utilise quotidiennement les repères anatomiques pour réaliser son bilan."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q201",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'anatomie étudie principalement :",
+      "options": [
+        "La structure du corps humain",
+        "Les traitements",
+        "Les médicaments",
+        "Les maladies infectieuses"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q202",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La physiologie étudie :",
+      "options": [
+        "Le fonctionnement des organes",
+        "La structure des os",
+        "Les analyses biologiques",
+        "Les traitements chirurgicaux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q203",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les organes sont regroupés en systèmes.",
+      "answer": true
+    },
+    {
+      "id": "Q204",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'anatomie ne sert pas lors du bilan clinique.",
+      "answer": false
+    },
+    {
+      "id": "Q205",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Anatomie",
+          "Structure"
+        ],
+        [
+          "Physiologie",
+          "Fonctionnement"
+        ],
+        [
+          "Organe",
+          "Structure spécialisée"
+        ],
+        [
+          "Système",
+          "Ensemble d'organes"
+        ]
+      ]
+    },
+    {
+      "id": "Q206",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La ______ étudie le fonctionnement des organes.",
+      "answers": [
+        "physiologie"
+      ]
+    },
+    {
+      "id": "Q207",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Pourquoi l'anatomie est-elle indispensable à l'ambulancier ?",
+      "options": [
+        "Pour localiser correctement les lésions et réaliser un bilan précis",
+        "Pour prescrire des médicaments",
+        "Pour interpréter une radiographie",
+        "Pour réaliser une intervention chirurgicale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q208",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Vous décrivez une douleur thoracique localisée. Quelle connaissance vous permet de communiquer précisément ?",
+      "options": [
+        "L'anatomie",
+        "La pharmacologie",
+        "La microbiologie",
+        "La génétique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q209",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le thorax.",
+      "target": "thorax"
+    },
+    {
+      "id": "Q210",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les niveaux d'organisation du corps.",
+      "solution": [
+        "Cellule",
+        "Tissu",
+        "Organe",
+        "Système",
+        "Organisme"
+      ]
+    }
+  ]
+}

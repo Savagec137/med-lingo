@@ -6,3 +6,7 @@ export { DragDropZone, type DragItem } from "./DragDropZone";
 export { ImageHotspot, type Hotspot } from "./ImageHotspot";
 export { ClinicalCaseCard } from "./ClinicalCaseCard";
 export { BossBattleCard } from "./BossBattleCard";
+export { CalculationCard } from "./CalculationCard";
+export { FillBlankCard } from "./FillBlankCard";
+export { AnatomyLocationQuestion } from "./AnatomyLocationQuestion";
+export { EXERCISE_RENDERER_REGISTRY, getExerciseRenderer } from "./exercise-renderer-registry";

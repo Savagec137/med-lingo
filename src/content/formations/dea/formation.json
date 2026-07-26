@@ -3,56 +3,142 @@
   "id": "dea",
   "title": "Diplôme d'État d'Ambulancier",
   "charterId": "medlingo-official-charter",
+  "roadmapFile": "roadmap-v2.json",
   "blocs": [
     {
       "id": "bloc-01",
       "order": 1,
-      "title": "Fondamentaux médicaux"
+      "title": "Fondamentaux médicaux",
+      "description": null,
+      "stage": "core_dea",
+      "theme": "green",
+      "sourceAnchor": "BLOC 1 — Fondamentaux médicaux"
     },
     {
       "id": "bloc-02",
       "order": 2,
-      "title": "Anatomie"
+      "title": "Anatomie par système",
+      "description": "Comprendre le fonctionnement des principaux systèmes du corps humain, savoir localiser leurs organes, connaître leur rôle et faire le lien avec les situations rencontrées en intervention préhospitalière.",
+      "stage": "core_dea",
+      "theme": "blue",
+      "sourceAnchor": "BLOC 2 — Anatomie par système"
     },
     {
       "id": "bloc-03",
       "order": 3,
-      "title": "Communication"
+      "title": "Communication & Relation Patient",
+      "description": "Former l'apprenant à communiquer efficacement avec le patient, son entourage, les équipes de soins et le SAMU. La communication est une compétence fondamentale du métier d'ambulancier, au même titre que les gestes techniques.",
+      "stage": "core_dea",
+      "theme": "purple",
+      "sourceAnchor": "BLOC 3 — Communication & Relation Patient"
     },
     {
       "id": "bloc-04",
       "order": 4,
-      "title": "Hygiène"
+      "title": "Hygiène & Prévention des infections",
+      "description": "Former l'apprenant aux règles d'hygiène, d'asepsie et de prévention des infections afin de protéger le patient, l'équipage et lui-même.",
+      "stage": "core_dea",
+      "theme": "teal",
+      "sourceAnchor": "BLOC 4 — Hygiène & Prévention des infections"
     },
     {
       "id": "bloc-05",
       "order": 5,
-      "title": "Intervention"
+      "title": "Intervention préhospitalière",
+      "description": "Former l'apprenant à sécuriser une intervention, réaliser un bilan complet et recueillir les paramètres vitaux indispensables à la prise de décision médicale.",
+      "stage": "core_dea",
+      "theme": "orange",
+      "sourceAnchor": "BLOC 5 — Intervention préhospitalière"
     },
     {
       "id": "bloc-06",
       "order": 6,
-      "title": "Urgences"
+      "title": "Urgences vitales",
+      "description": "Apprendre à reconnaître rapidement une urgence vitale, comprendre ses mécanismes et appliquer les premiers gestes adaptés dans le cadre des compétences de l'ambulancier.",
+      "stage": "core_dea",
+      "theme": "red",
+      "sourceAnchor": "BLOC 6 — Urgences vitales"
     },
     {
       "id": "bloc-07",
       "order": 7,
-      "title": "Pathologies"
+      "title": "Pathologies",
+      "description": "Identifier les principales pathologies rencontrées en transport sanitaire, comprendre leurs mécanismes, reconnaître leurs signes cliniques et adapter sa prise en charge dans le cadre des compétences de l'ambulancier.",
+      "stage": "core_dea",
+      "theme": "pink",
+      "sourceAnchor": "BLOC 7 — Pathologies"
     },
     {
       "id": "bloc-08",
       "order": 8,
-      "title": "Traumatologie"
+      "title": "Traumatologie",
+      "description": "Apprendre à reconnaître les différents traumatismes, évaluer leur gravité, protéger la victime et réaliser une prise en charge adaptée dans le respect des compétences de l'ambulancier.",
+      "stage": "core_dea",
+      "theme": "yellow",
+      "sourceAnchor": "BLOC 8 — Traumatologie"
     },
     {
       "id": "bloc-09",
       "order": 9,
-      "title": "Situations particulières"
+      "title": "Situations particulières",
+      "description": "Adapter sa prise en charge selon l'âge, l'état physiologique, le contexte psychologique ou social du patient.",
+      "stage": "core_dea",
+      "theme": "indigo",
+      "sourceAnchor": "BLOC 9 — Situations particulières"
     },
     {
       "id": "bloc-10",
       "order": 10,
-      "title": "Métier d'ambulancier"
+      "title": "Le métier d'Ambulancier",
+      "description": "Comprendre l'ensemble de l'environnement professionnel de l'ambulancier : ses responsabilités, le fonctionnement des services d'urgence, les aspects réglementaires, le matériel, la conduite et la coordination avec les autres acteurs de santé.",
+      "stage": "core_dea",
+      "theme": "slate",
+      "sourceAnchor": "BLOC 10 — Le métier d'Ambulancier"
+    },
+    {
+      "id": "bloc-11",
+      "order": 11,
+      "title": "Cardiologie avancée",
+      "description": "Approfondir les connaissances cardiovasculaires afin de reconnaître rapidement les pathologies cardiaques graves, comprendre leur physiopathologie et adapter la prise en charge préhospitalière dans le respect des compétences de l'ambulancier.",
+      "stage": "advanced",
+      "theme": "red",
+      "sourceAnchor": "BLOC 11 — Cardiologie avancée"
+    },
+    {
+      "id": "bloc-12",
+      "order": 12,
+      "title": "Pneumologie avancée",
+      "description": "Comprendre les principales pathologies respiratoires rencontrées en préhospitalier, savoir reconnaître une détresse respiratoire complexe, évaluer sa gravité et adapter la prise en charge en collaboration avec le SAMU et le SMUR.",
+      "stage": "advanced",
+      "theme": "cyan",
+      "sourceAnchor": "BLOC 12 — Pneumologie avancée"
+    },
+    {
+      "id": "bloc-13",
+      "order": 13,
+      "title": "Neurologie avancée",
+      "description": "Approfondir les connaissances sur les urgences neurologiques afin de reconnaître rapidement une atteinte du système nerveux central ou périphérique, évaluer la gravité, réaliser un bilan neurologique structuré et optimiser la transmission au SAMU.",
+      "stage": "advanced",
+      "theme": "purple",
+      "sourceAnchor": "BLOC 13 — Neurologie avancée"
+    },
+    {
+      "id": "bloc-14",
+      "order": 14,
+      "title": "Endocrinologie & Diabétologie",
+      "description": "Comprendre les principales pathologies endocriniennes rencontrées en préhospitalier, reconnaître rapidement les déséquilibres métaboliques, évaluer leur gravité et participer efficacement à leur prise en charge.",
+      "stage": "advanced",
+      "theme": "pink",
+      "sourceAnchor": "BLOC 14 — Endocrinologie & Diabétologie"
+    },
+    {
+      "id": "bloc-15",
+      "order": 15,
+      "title": "Infectiologie avancée",
+      "description": "Comprendre les principales infections graves rencontrées en préhospitalier, reconnaître les signes de sepsis et de choc septique, appliquer les mesures de protection adaptées et participer efficacement à la prise en charge des patients infectieux.",
+      "stage": "advanced",
+      "theme": "teal",
+      "sourceAnchor": "BLOC 15 — Infectiologie avancée"
     }
   ],
   "parcours": [
@@ -65,8 +151,22 @@
       "subtitle": "Les bases indispensables de l’anatomie",
       "objective": "Permettre à l’apprenant de comprendre l’organisation générale du corps humain, les niveaux d’organisation biologique, la position anatomique, les plans, les directions et les principales régions du corps avant d’aborder le vocabulaire médical, la physiologie et les pathologies.",
       "manifestFile": "parcours-01/parcours.json",
-      "unlocksParcoursId": "dea-p02",
+      "unlocksParcoursId": "parcours-02",
       "theme": "green",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 45,
+      "xp": 600,
+      "badge": "Premier Pas en Anatomie",
+      "chest": "bronze",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p01-boss",
+      "prerequisiteIds": [],
+      "contentStatus": "partial",
+      "metadataStatus": "complete",
+      "pendingFields": [],
+      "sourceAnchor": "Parcours 1 — Découvrir le corps humain",
       "lessons": [
         {
           "id": "dea-p01-l01",
@@ -78,614 +178,2657 @@
         },
         {
           "id": "dea-p01-l02",
-          "title": "Cellules et tissus",
+          "title": "Organisation du corps humain",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-02.json"
         },
         {
           "id": "dea-p01-l03",
-          "title": "Les organes",
+          "title": "Les régions anatomiques",
           "kind": "lesson",
-          "status": "published",
+          "status": "review",
           "file": "parcours-01/lesson-03.json"
         },
         {
           "id": "dea-p01-l04",
-          "title": "Les systèmes du corps",
+          "title": "Les positions anatomiques",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-04.json"
         },
         {
           "id": "dea-p01-l05",
-          "title": "La position anatomique",
+          "title": "Les cavités du corps",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-05.json"
         },
         {
           "id": "dea-p01-l06",
-          "title": "Les plans anatomiques",
+          "title": "Les principaux organes",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "published",
           "file": "parcours-01/lesson-06.json"
         },
         {
           "id": "dea-p01-l07",
-          "title": "L’orientation anatomique",
+          "title": "Les grands systèmes",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-07.json"
         },
         {
           "id": "dea-p01-l08",
-          "title": "Les régions du corps",
+          "title": "Synthèse",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-08.json"
         },
         {
-          "id": "dea-p01-l09",
-          "title": "Les repères anatomiques en intervention",
-          "kind": "lesson",
-          "status": "awaiting_content",
-          "file": "parcours-01/lesson-09.json"
-        },
-        {
-          "id": "dea-p01-l10",
-          "title": "Révision du corps humain",
-          "kind": "review",
-          "status": "awaiting_content",
-          "file": "parcours-01/lesson-10.json"
-        },
-        {
-          "id": "dea-p01-quiz",
-          "title": "Quiz final — Découvrir le corps humain",
-          "kind": "quiz",
-          "status": "awaiting_content",
-          "file": "parcours-01/lesson-11.json"
-        },
-        {
           "id": "dea-p01-boss",
-          "title": "Boss — Localiser et transmettre",
+          "title": "Boss — Découvrir le corps humain",
           "kind": "boss",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-01/lesson-12.json"
         }
       ]
     },
     {
       "id": "parcours-02",
+      "contentId": "dea-p02",
       "blocId": "bloc-01",
       "order": 2,
       "title": "Langage médical",
-      "subtitle": "Comprendre et décoder les mots médicaux",
+      "subtitle": "Comprendre et décoder les mots médicaux.",
+      "objective": "Savoir lire, comprendre et interpréter les principaux termes médicaux utilisés quotidiennement.",
+      "unlocksParcoursId": "parcours-03",
       "theme": "green",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 60,
+      "xp": 700,
+      "badge": "Décodeur Médical",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p02-boss",
+      "prerequisiteIds": [
+        "dea-p01-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 2 — Langage médical",
       "lessons": [
         {
           "id": "dea-p02-l01",
-          "title": "Construire un mot médical",
+          "title": "Pourquoi le langage médical ?",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-01.json"
         },
         {
           "id": "dea-p02-l02",
-          "title": "Préfixes",
+          "title": "Les préfixes",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-02.json"
         },
         {
           "id": "dea-p02-l03",
-          "title": "Préfixes quantité",
+          "title": "Les radicaux",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-03.json"
         },
         {
           "id": "dea-p02-l04",
-          "title": "Préfixes position",
+          "title": "Les suffixes",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-04.json"
         },
         {
           "id": "dea-p02-l05",
-          "title": "Suffixes",
+          "title": "Construire un mot",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-05.json"
         },
         {
           "id": "dea-p02-l06",
-          "title": "Suffixes pathologie",
+          "title": "Décrypter un diagnostic",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-06.json"
         },
         {
           "id": "dea-p02-l07",
-          "title": "Suffixes chirurgie",
+          "title": "Les abréviations médicales",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-07.json"
         },
         {
           "id": "dea-p02-l08",
-          "title": "Radicaux",
+          "title": "Synthèse",
           "kind": "lesson",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-08.json"
         },
         {
-          "id": "dea-p02-l09",
-          "title": "Radicaux organes",
-          "kind": "lesson",
-          "status": "awaiting_content",
-          "file": "parcours-02/lesson-09.json"
-        },
-        {
-          "id": "dea-p02-l10",
-          "title": "Radicaux tissus",
-          "kind": "lesson",
-          "status": "awaiting_content",
-          "file": "parcours-02/lesson-10.json"
-        },
-        {
-          "id": "dea-p02-l11",
-          "title": "Décoder un mot complexe",
-          "kind": "lesson",
-          "status": "awaiting_content",
-          "file": "parcours-02/lesson-11.json"
-        },
-        {
-          "id": "dea-p02-l12",
-          "title": "Quiz",
-          "kind": "quiz",
-          "status": "awaiting_content",
-          "file": "parcours-02/lesson-12.json"
-        },
-        {
-          "id": "dea-p02-l13",
-          "title": "Boss",
+          "id": "dea-p02-boss",
+          "title": "Boss — Langage médical",
           "kind": "boss",
-          "status": "awaiting_content",
+          "status": "review",
           "file": "parcours-02/lesson-13.json"
         }
       ]
     },
     {
       "id": "parcours-03",
+      "contentId": "dea-p03",
       "blocId": "bloc-01",
       "order": 3,
       "title": "Anatomie générale",
-      "subtitle": "Comprendre les grands systèmes du corps humain",
+      "subtitle": "Comprendre les grands systèmes du corps humain.",
+      "objective": "Acquérir une vision globale de l'anatomie humaine avant d'étudier chaque système en détail.",
+      "unlocksParcoursId": "parcours-04",
       "theme": "green",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
+      "xp": 800,
+      "badge": "Fondations Médicales",
+      "chest": "silver",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p03-boss",
+      "prerequisiteIds": [
+        "dea-p02-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "complete",
+      "pendingFields": [],
+      "sourceAnchor": "Parcours 3 — Anatomie générale",
+      "lessons": [
+        {
+          "id": "dea-p03-l01",
+          "title": "Le système locomoteur",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-01.json"
+        },
+        {
+          "id": "dea-p03-l02",
+          "title": "Le système cardiovasculaire",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-02.json"
+        },
+        {
+          "id": "dea-p03-l03",
+          "title": "Le système respiratoire",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-03.json"
+        },
+        {
+          "id": "dea-p03-l04",
+          "title": "Le système digestif",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-04.json"
+        },
+        {
+          "id": "dea-p03-l05",
+          "title": "Le système nerveux",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-05.json"
+        },
+        {
+          "id": "dea-p03-l06",
+          "title": "Le système urinaire",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-06.json"
+        },
+        {
+          "id": "dea-p03-l07",
+          "title": "Le système endocrinien",
+          "kind": "lesson",
+          "status": "awaiting_content",
+          "file": "parcours-03/lesson-07.json"
+        },
+        {
+          "id": "dea-p03-l08",
+          "title": "Comment tous les systèmes travaillent ensemble ?",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-03/lesson-08.json"
+        },
+        {
+          "id": "dea-p03-boss",
+          "title": "Boss — Anatomie générale",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-03/lesson-09.json"
+        }
+      ]
     },
     {
       "id": "parcours-04",
+      "contentId": "dea-p04",
       "blocId": "bloc-02",
       "order": 4,
       "title": "Système locomoteur",
-      "subtitle": "Le squelette, les muscles et les articulations",
+      "subtitle": "Le squelette, les muscles et les articulations.",
+      "objective": "Comprendre comment le corps humain se soutient, se protège et se déplace.",
+      "unlocksParcoursId": "parcours-05",
       "theme": "blue",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
+      "xp": null,
+      "badge": ": Apprenti Anatomiste",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p04-boss",
+      "prerequisiteIds": [
+        "dea-p03-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 4 — Système locomoteur",
       "lessons": []
     },
     {
       "id": "parcours-05",
+      "contentId": "dea-p05",
       "blocId": "bloc-02",
       "order": 5,
       "title": "Système cardiovasculaire",
-      "subtitle": "Le moteur de la circulation sanguine",
+      "subtitle": "Le moteur de la circulation sanguine.",
+      "objective": "Comprendre le rôle du cœur et de la circulation.",
+      "unlocksParcoursId": "parcours-06",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Cœur en Action",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p05-boss",
+      "prerequisiteIds": [
+        "dea-p04-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 5 — Système cardiovasculaire",
+      "lessons": [
+        {
+          "id": "dea-p05-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-06",
+      "contentId": "dea-p06",
       "blocId": "bloc-02",
       "order": 6,
       "title": "Système respiratoire",
-      "subtitle": "Respirer pour vivre",
+      "subtitle": "Respirer pour vivre.",
+      "objective": "Comprendre le fonctionnement de la respiration.",
+      "unlocksParcoursId": "parcours-07",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Maître du Souffle",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p06-boss",
+      "prerequisiteIds": [
+        "dea-p05-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 6 — Système respiratoire",
+      "lessons": [
+        {
+          "id": "dea-p06-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-07",
+      "contentId": "dea-p07",
       "blocId": "bloc-02",
       "order": 7,
       "title": "Système digestif",
-      "subtitle": "Transformer les aliments en énergie",
+      "subtitle": "Transformer les aliments en énergie.",
+      "objective": "Comprendre le fonctionnement de la digestion.",
+      "unlocksParcoursId": "parcours-08",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Explorateur Digestif",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p07-boss",
+      "prerequisiteIds": [
+        "dea-p06-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 7 — Système digestif",
+      "lessons": [
+        {
+          "id": "dea-p07-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-08",
+      "contentId": "dea-p08",
       "blocId": "bloc-02",
       "order": 8,
       "title": "Système nerveux",
-      "subtitle": "Le centre de commande du corps humain",
+      "subtitle": "Le centre de commande du corps humain.",
+      "objective": "Comprendre le fonctionnement du cerveau et des nerfs.",
+      "unlocksParcoursId": "parcours-09",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Neuro Explorer",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p08-boss",
+      "prerequisiteIds": [
+        "dea-p07-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 8 — Système nerveux",
+      "lessons": [
+        {
+          "id": "dea-p08-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-09",
+      "contentId": "dea-p09",
       "blocId": "bloc-02",
       "order": 9,
       "title": "Système urinaire",
-      "subtitle": "Filtrer et équilibrer l’organisme",
+      "subtitle": "Filtrer et équilibrer l'organisme.",
+      "objective": "Comprendre le rôle des reins et des voies urinaires.",
+      "unlocksParcoursId": "parcours-10",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Gardien des Reins",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p09-boss",
+      "prerequisiteIds": [
+        "dea-p08-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 9 — Système urinaire",
+      "lessons": [
+        {
+          "id": "dea-p09-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-10",
+      "contentId": "dea-p10",
       "blocId": "bloc-02",
       "order": 10,
       "title": "Système endocrinien",
-      "subtitle": "Les hormones qui régulent le corps",
+      "subtitle": "Les hormones qui régulent le corps.",
+      "objective": "Découvrir les principales glandes endocrines et leur rôle.",
+      "unlocksParcoursId": "parcours-11",
       "theme": "blue",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Messager Hormonal",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p10-boss",
+      "prerequisiteIds": [
+        "dea-p09-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 10 — Système endocrinien",
+      "lessons": [
+        {
+          "id": "dea-p10-l08",
+          "title": "Synthèse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-08.json"
+        }
+      ]
     },
     {
       "id": "parcours-11",
+      "contentId": "dea-p11",
       "blocId": "bloc-02",
       "order": 11,
       "title": "Les organes des sens",
-      "subtitle": "Observer le monde grâce aux cinq sens",
+      "subtitle": "Observer le monde grâce aux cinq sens.",
+      "objective": "Comprendre le fonctionnement des organes sensoriels et leur importance lors des bilans.",
+      "unlocksParcoursId": "parcours-12",
       "theme": "blue",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": ": Observateur Clinique🟢",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p11-boss",
+      "prerequisiteIds": [
+        "dea-p10-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 11 — Les organes des sens",
       "lessons": []
     },
     {
       "id": "parcours-12",
+      "contentId": "dea-p12",
       "blocId": "bloc-03",
       "order": 12,
       "title": "Communication professionnelle",
-      "subtitle": "Créer une relation de confiance avec le patient",
+      "subtitle": "Créer une relation de confiance avec le patient.",
+      "objective": "Développer une communication adaptée à chaque situation rencontrée sur le terrain.",
+      "unlocksParcoursId": "parcours-13",
       "theme": "purple",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
+      "xp": null,
+      "badge": "Communicant Professionnel",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p12-boss",
+      "prerequisiteIds": [
+        "dea-p11-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 12 — Communication professionnelle",
       "lessons": []
     },
     {
       "id": "parcours-13",
+      "contentId": "dea-p13",
       "blocId": "bloc-03",
       "order": 13,
       "title": "Psychologie du patient",
-      "subtitle": "Comprendre les réactions humaines face à la maladie et à l’urgence",
+      "subtitle": "Comprendre les réactions humaines face à la maladie et à l'urgence.",
+      "objective": "Comprendre le comportement du patient afin d'adapter sa prise en charge.",
+      "unlocksParcoursId": "parcours-14",
       "theme": "purple",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "medium",
+      "estimatedMinutes": 80,
+      "xp": null,
+      "badge": "Empathie Clinique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p13-boss",
+      "prerequisiteIds": [
+        "dea-p12-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 13 — Psychologie du patient",
       "lessons": []
     },
     {
       "id": "parcours-14",
+      "contentId": "dea-p14",
       "blocId": "bloc-04",
       "order": 14,
       "title": "Hygiène & asepsie",
-      "subtitle": "Les fondamentaux de la prévention du risque infectieux",
+      "subtitle": "Les fondamentaux de la prévention du risque infectieux.",
+      "objective": "Comprendre les principes de l'hygiène en transport sanitaire et appliquer les bonnes pratiques lors de chaque intervention.",
+      "unlocksParcoursId": "parcours-15",
       "theme": "teal",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
+      "xp": null,
+      "badge": "Protection Sanitaire",
+      "chest": "bronze",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p14-boss",
+      "prerequisiteIds": [
+        "dea-p13-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 14 — Hygiène & asepsie",
       "lessons": []
     },
     {
       "id": "parcours-15",
+      "contentId": "dea-p15",
       "blocId": "bloc-04",
       "order": 15,
       "title": "Prévention des infections",
-      "subtitle": "Nettoyage, désinfection et gestion des déchets médicaux",
+      "subtitle": "Nettoyage, désinfection et gestion des déchets médicaux.",
+      "objective": "Maîtriser les procédures de nettoyage, de désinfection et de gestion du matériel après chaque intervention.",
+      "unlocksParcoursId": "parcours-16",
       "theme": "teal",
+      "stage": "core_dea",
+      "pedagogicalScope": "foundation",
+      "difficulty": "medium",
+      "estimatedMinutes": 80,
+      "xp": null,
+      "badge": "Expert en Hygiène",
+      "chest": "silver",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p15-boss",
+      "prerequisiteIds": [
+        "dea-p14-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 15 — Prévention des infections",
       "lessons": []
     },
     {
       "id": "parcours-16",
+      "contentId": "dea-p16",
       "blocId": "bloc-05",
       "order": 16,
       "title": "Sécurité d'intervention",
-      "subtitle": "Protéger avant d'agir",
+      "subtitle": "Protéger avant d'agir.",
+      "objective": "Apprendre à intervenir sans mettre en danger le patient, l'équipe ou les témoins.",
+      "unlocksParcoursId": "parcours-17",
       "theme": "orange",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": "easy",
+      "estimatedMinutes": 70,
+      "xp": null,
+      "badge": "Sécurité Avant Tout",
+      "chest": "bronze",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p16-boss",
+      "prerequisiteIds": [
+        "dea-p15-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 16 — Sécurité d'intervention",
       "lessons": []
     },
     {
       "id": "parcours-17",
+      "contentId": "dea-p17",
       "blocId": "bloc-05",
       "order": 17,
       "title": "Les bilans",
-      "subtitle": "Observer, analyser et transmettre",
+      "subtitle": "Observer, analyser et transmettre.",
+      "objective": "Maîtriser le déroulement complet d'un bilan ambulancier.",
+      "unlocksParcoursId": "parcours-18",
       "theme": "orange",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": "medium",
+      "estimatedMinutes": 90,
+      "xp": null,
+      "badge": "Expert du Bilan",
+      "chest": "silver",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p17-boss",
+      "prerequisiteIds": [
+        "dea-p16-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 17 — Les bilans",
       "lessons": []
     },
     {
       "id": "parcours-18",
+      "contentId": "dea-p18",
       "blocId": "bloc-05",
       "order": 18,
       "title": "Paramètres vitaux",
-      "subtitle": "Mesurer, comprendre et interpréter les constantes",
+      "subtitle": "Mesurer, comprendre et interpréter les constantes.",
+      "objective": "Savoir mesurer les paramètres vitaux, reconnaître une valeur anormale et comprendre leur importance dans la prise en charge.",
+      "unlocksParcoursId": "parcours-19",
       "theme": "orange",
-      "lessons": []
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": "medium",
+      "estimatedMinutes": 90,
+      "xp": null,
+      "badge": "Maître des Constantes",
+      "chest": "silver",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p18-boss",
+      "prerequisiteIds": [
+        "dea-p17-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 18 — Paramètres vitaux",
+      "lessons": [
+        {
+          "id": "dea-p18-l08",
+          "title": "Synthèse et interprétation",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-18/lesson-08.json"
+        },
+        {
+          "id": "dea-p18-boss",
+          "title": "Boss — Paramètres vitaux",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-18/lesson-09.json"
+        }
+      ]
     },
     {
       "id": "parcours-19",
+      "contentId": "dea-p19",
       "blocId": "bloc-06",
       "order": 19,
       "title": "Détresses respiratoires",
-      "subtitle": "Reconnaître une urgence respiratoire et agir rapidement",
+      "subtitle": "Reconnaître une urgence respiratoire et agir rapidement.",
+      "objective": "Identifier les principales détresses respiratoires et connaître la conduite à tenir.",
+      "unlocksParcoursId": "parcours-20",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Premier Souffle",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p19-boss",
+      "prerequisiteIds": [
+        "dea-p18-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 19 — Détresses respiratoires",
       "lessons": []
     },
     {
       "id": "parcours-20",
+      "contentId": "dea-p20",
       "blocId": "bloc-06",
       "order": 20,
       "title": "Détresses circulatoires",
-      "subtitle": "Comprendre les urgences cardiovasculaires et les états de choc",
+      "subtitle": "Comprendre les urgences cardiovasculaires et les états de choc.",
+      "objective": "Reconnaître une défaillance circulatoire et agir rapidement.",
+      "unlocksParcoursId": "parcours-21",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Gardien de la Circulation",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p20-boss",
+      "prerequisiteIds": [
+        "dea-p19-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 20 — Détresses circulatoires",
       "lessons": []
     },
     {
       "id": "parcours-21",
+      "contentId": "dea-p21",
       "blocId": "bloc-06",
       "order": 21,
       "title": "Détresses neurologiques",
-      "subtitle": "Reconnaître une urgence neurologique et réagir vite",
+      "subtitle": "Reconnaître une urgence neurologique.",
+      "objective": "Identifier rapidement les principales urgences neurologiques.",
+      "unlocksParcoursId": "parcours-22",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Alerte Neuro",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p21-boss",
+      "prerequisiteIds": [
+        "dea-p20-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 21 — Détresses neurologiques",
       "lessons": []
     },
     {
       "id": "parcours-22",
+      "contentId": "dea-p22",
       "blocId": "bloc-06",
       "order": 22,
       "title": "Gestes d'urgence",
-      "subtitle": "Les gestes qui sauvent",
+      "subtitle": "Les gestes qui sauvent.",
+      "objective": "Maîtriser les gestes d'urgence réalisés quotidiennement par les ambulanciers.",
+      "unlocksParcoursId": "parcours-23",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Héros du Quotidien",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p22-boss",
+      "prerequisiteIds": [
+        "dea-p21-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 22 — Gestes d'urgence",
       "lessons": []
     },
     {
       "id": "parcours-23",
+      "contentId": "dea-p23",
       "blocId": "bloc-06",
       "order": 23,
       "title": "Oxygénothérapie",
-      "subtitle": "Administrer l'oxygène selon les bons protocoles",
+      "subtitle": "Maîtriser l'utilisation de l'oxygène en préhospitalier.",
+      "objective": "Comprendre quand, comment et pourquoi administrer de l'oxygène.",
+      "unlocksParcoursId": "parcours-24",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Expert O₂",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p23-boss",
+      "prerequisiteIds": [
+        "dea-p22-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 23 — Oxygénothérapie",
       "lessons": []
     },
     {
       "id": "parcours-24",
+      "contentId": "dea-p24",
       "blocId": "bloc-06",
       "order": 24,
       "title": "Matériel d'urgence",
-      "subtitle": "Connaître et utiliser le matériel de secours",
+      "subtitle": "Connaître le matériel utilisé lors des interventions.",
+      "objective": "Découvrir le matériel embarqué dans une ambulance et savoir l'utiliser correctement.",
+      "unlocksParcoursId": "parcours-25",
       "theme": "red",
+      "stage": "core_dea",
+      "pedagogicalScope": "emergency_recognition",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Ambulance Ready",
+      "chest": "gold",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p24-boss",
+      "prerequisiteIds": [
+        "dea-p23-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 24 — Matériel d'urgence",
       "lessons": []
     },
     {
       "id": "parcours-25",
+      "contentId": "dea-p25",
       "blocId": "bloc-07",
       "order": 25,
-      "title": "Cardiologie",
-      "subtitle": "Les maladies du cœur et de la circulation",
+      "title": "Pathologies cardiovasculaires",
+      "subtitle": "Reconnaître les urgences du cœur et de la circulation.",
+      "objective": "Comprendre les principales maladies cardiovasculaires et savoir reconnaître leurs signes.",
+      "unlocksParcoursId": "parcours-26",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Cardio Expert",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p25-boss",
+      "prerequisiteIds": [
+        "dea-p24-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 25 — Pathologies cardiovasculaires",
       "lessons": []
     },
     {
       "id": "parcours-26",
+      "contentId": "dea-p26",
       "blocId": "bloc-07",
       "order": 26,
-      "title": "Pneumologie",
-      "subtitle": "Les maladies respiratoires",
+      "title": "Pathologies respiratoires",
+      "subtitle": "Identifier les maladies respiratoires les plus fréquentes.",
+      "objective": "Reconnaître les principales pathologies respiratoires rencontrées en préhospitalier.",
+      "unlocksParcoursId": "parcours-27",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Respiration Maîtrisée",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p26-boss",
+      "prerequisiteIds": [
+        "dea-p25-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 26 — Pathologies respiratoires",
       "lessons": []
     },
     {
       "id": "parcours-27",
+      "contentId": "dea-p27",
       "blocId": "bloc-07",
       "order": 27,
-      "title": "Neurologie",
-      "subtitle": "Les pathologies du système nerveux",
+      "title": "Pathologies neurologiques",
+      "subtitle": "Comprendre les urgences neurologiques.",
+      "unlocksParcoursId": "parcours-28",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Neuro Vigilant",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p27-boss",
+      "prerequisiteIds": [
+        "dea-p26-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 27 — Pathologies neurologiques",
       "lessons": []
     },
     {
       "id": "parcours-28",
+      "contentId": "dea-p28",
       "blocId": "bloc-07",
       "order": 28,
-      "title": "Gastro-entérologie",
-      "subtitle": "Les pathologies digestives",
+      "title": "Pathologies digestives",
+      "subtitle": "Reconnaître les urgences abdominales.",
+      "unlocksParcoursId": "parcours-29",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Diagnostic Digestif",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p28-boss",
+      "prerequisiteIds": [
+        "dea-p27-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 28 — Pathologies digestives",
       "lessons": []
     },
     {
       "id": "parcours-29",
+      "contentId": "dea-p29",
       "blocId": "bloc-07",
       "order": 29,
-      "title": "Endocrinologie",
-      "subtitle": "Les pathologies hormonales et métaboliques",
+      "title": "Pathologies endocriniennes & métaboliques",
+      "subtitle": "Les déséquilibres hormonaux et métaboliques.",
+      "unlocksParcoursId": "parcours-30",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Équilibre Métabolique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p29-boss",
+      "prerequisiteIds": [
+        "dea-p28-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 29 — Pathologies endocriniennes & métaboliques",
       "lessons": []
     },
     {
       "id": "parcours-30",
+      "contentId": "dea-p30",
       "blocId": "bloc-07",
       "order": 30,
-      "title": "Urologie",
-      "subtitle": "Les pathologies rénales et urinaires",
+      "title": "Pathologies urinaires",
+      "subtitle": "Comprendre les maladies du système urinaire.",
+      "unlocksParcoursId": "parcours-31",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Expert Rénal",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p30-boss",
+      "prerequisiteIds": [
+        "dea-p29-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 30 — Pathologies urinaires",
       "lessons": []
     },
     {
       "id": "parcours-31",
+      "contentId": "dea-p31",
       "blocId": "bloc-07",
       "order": 31,
-      "title": "Infectiologie",
-      "subtitle": "Comprendre et reconnaître les maladies infectieuses",
+      "title": "Maladies infectieuses",
+      "subtitle": "Reconnaître les principales infections.",
+      "unlocksParcoursId": "parcours-32",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Vigilance Infectieuse",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p31-boss",
+      "prerequisiteIds": [
+        "dea-p30-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 31 — Maladies infectieuses",
       "lessons": []
     },
     {
       "id": "parcours-32",
+      "contentId": "dea-p32",
       "blocId": "bloc-07",
       "order": 32,
-      "title": "Toxicologie",
-      "subtitle": "Intoxications et prises en charge",
+      "title": "Intoxications & empoisonnements",
+      "subtitle": "Reconnaître les intoxications et agir rapidement.",
+      "unlocksParcoursId": "parcours-33",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Toxicologie",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p32-boss",
+      "prerequisiteIds": [
+        "dea-p31-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 32 — Intoxications & empoisonnements",
       "lessons": []
     },
     {
       "id": "parcours-33",
+      "contentId": "dea-p33",
       "blocId": "bloc-07",
       "order": 33,
       "title": "Allergies & anaphylaxie",
-      "subtitle": "Reconnaître et réagir face à une réaction allergique grave",
+      "subtitle": "Des réactions bénignes au choc anaphylactique.",
+      "unlocksParcoursId": "parcours-34",
       "theme": "pink",
+      "stage": "core_dea",
+      "pedagogicalScope": "pathology",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Réaction Immédiate",
+      "chest": "gold",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p33-boss",
+      "prerequisiteIds": [
+        "dea-p32-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "objectives",
+        "competencies",
+        "difficulty",
+        "duration",
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 33 — Allergies & anaphylaxie",
       "lessons": []
     },
     {
       "id": "parcours-34",
+      "contentId": "dea-p34",
       "blocId": "bloc-08",
       "order": 34,
       "title": "Traumatismes des membres",
-      "subtitle": "Fractures, entorses et luxations",
+      "subtitle": "Fractures, entorses, luxations et immobilisation.",
+      "objective": "Identifier les traumatismes des membres et appliquer les principes d'immobilisation.",
+      "unlocksParcoursId": "parcours-35",
       "theme": "yellow",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Immobilisation Expert",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p34-boss",
+      "prerequisiteIds": [
+        "dea-p33-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 34 — Traumatismes des membres",
       "lessons": []
     },
     {
       "id": "parcours-35",
+      "contentId": "dea-p35",
       "blocId": "bloc-08",
       "order": 35,
       "title": "Traumatisme crânien",
-      "subtitle": "Reconnaître et prendre en charge un traumatisme crânien",
+      "subtitle": "Reconnaître une urgence neurologique traumatique.",
+      "objective": "Identifier un traumatisme crânien et détecter les signes de gravité.",
+      "unlocksParcoursId": "parcours-36",
       "theme": "yellow",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Neuro Trauma",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p35-boss",
+      "prerequisiteIds": [
+        "dea-p34-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 35 — Traumatisme crânien",
       "lessons": []
     },
     {
       "id": "parcours-36",
+      "contentId": "dea-p36",
       "blocId": "bloc-08",
       "order": 36,
       "title": "Traumatisme du rachis",
-      "subtitle": "Protéger la colonne vertébrale",
+      "subtitle": "Protéger la colonne vertébrale.",
+      "objective": "Reconnaître une suspicion de traumatisme rachidien et appliquer les mesures de protection.",
+      "unlocksParcoursId": "parcours-37",
       "theme": "yellow",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Protection Rachidienne",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p36-boss",
+      "prerequisiteIds": [
+        "dea-p35-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 36 — Traumatisme du rachis",
       "lessons": []
     },
     {
       "id": "parcours-37",
+      "contentId": "dea-p37",
       "blocId": "bloc-08",
       "order": 37,
       "title": "Brûlures",
-      "subtitle": "Évaluer et prendre en charge une brûlure",
+      "subtitle": "Évaluer une brûlure et agir sans aggraver.",
+      "objective": "Reconnaître les différents types de brûlures et adapter la prise en charge.",
+      "unlocksParcoursId": "parcours-38",
       "theme": "yellow",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Gestion des Brûlures",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p37-boss",
+      "prerequisiteIds": [
+        "dea-p36-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 37 — Brûlures",
       "lessons": []
     },
     {
       "id": "parcours-38",
+      "contentId": "dea-p38",
       "blocId": "bloc-08",
       "order": 38,
       "title": "Plaies et hémorragies",
-      "subtitle": "Contrôler une plaie ou une hémorragie",
+      "subtitle": "Contrôler les saignements et protéger la victime.",
+      "objective": "Identifier les différents types de plaies et maîtriser les techniques d'arrêt d'une hémorragie.",
+      "unlocksParcoursId": "parcours-39",
       "theme": "yellow",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Maître des Hémorragies",
+      "chest": "gold",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p38-boss",
+      "prerequisiteIds": [
+        "dea-p37-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 38 — Plaies et hémorragies",
       "lessons": []
     },
     {
       "id": "parcours-39",
+      "contentId": "dea-p39",
       "blocId": "bloc-09",
       "order": 39,
       "title": "Pédiatrie",
-      "subtitle": "Adapter sa prise en charge à l'enfant",
+      "subtitle": "Prendre en charge un nourrisson et un enfant en sécurité.",
+      "objective": "Comprendre les spécificités anatomiques, physiologiques et psychologiques de l'enfant.",
+      "unlocksParcoursId": "parcours-40",
       "theme": "indigo",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Petit Patient",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p39-boss",
+      "prerequisiteIds": [
+        "dea-p38-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 39 — Pédiatrie",
       "lessons": []
     },
     {
       "id": "parcours-40",
+      "contentId": "dea-p40",
       "blocId": "bloc-09",
       "order": 40,
-      "title": "Obstétrique",
-      "subtitle": "Grossesse, accouchement et urgences obstétricales",
+      "title": "Obstétrique d'urgence",
+      "subtitle": "Comprendre les urgences liées à la grossesse et à l'accouchement.",
+      "objective": "Reconnaître les principales situations obstétricales rencontrées en préhospitalier.",
+      "unlocksParcoursId": "parcours-41",
       "theme": "indigo",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Naissance Assistée",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p40-boss",
+      "prerequisiteIds": [
+        "dea-p39-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 40 — Obstétrique d'urgence",
       "lessons": []
     },
     {
       "id": "parcours-41",
+      "contentId": "dea-p41",
       "blocId": "bloc-09",
       "order": 41,
       "title": "Gériatrie",
-      "subtitle": "Adapter sa prise en charge à la personne âgée",
+      "subtitle": "Comprendre les spécificités du patient âgé.",
+      "objective": "Adapter sa prise en charge aux personnes âgées.",
+      "unlocksParcoursId": "parcours-42",
       "theme": "indigo",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Prise en Charge Senior",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p41-boss",
+      "prerequisiteIds": [
+        "dea-p40-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 41 — Gériatrie",
       "lessons": []
     },
     {
       "id": "parcours-42",
+      "contentId": "dea-p42",
       "blocId": "bloc-09",
       "order": 42,
-      "title": "Psychiatrie",
-      "subtitle": "Comprendre et prendre en charge les troubles psychiatriques",
+      "title": "Psychiatrie et urgences comportementales",
+      "subtitle": "Intervenir avec calme et sécurité face aux troubles du comportement.",
+      "objective": "Reconnaître les principales situations psychiatriques et adapter son intervention.",
+      "unlocksParcoursId": "parcours-43",
       "theme": "indigo",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Gestion de Crise",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p42-boss",
+      "prerequisiteIds": [
+        "dea-p41-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 42 — Psychiatrie et urgences comportementales",
       "lessons": []
     },
     {
       "id": "parcours-43",
+      "contentId": "dea-p43",
       "blocId": "bloc-09",
       "order": 43,
       "title": "Situations sociales et vulnérabilité",
-      "subtitle": "Repérer et accompagner les situations de vulnérabilité",
+      "subtitle": "Prendre en charge le patient dans toutes ses dimensions.",
+      "objective": "Identifier les situations de vulnérabilité et adopter une attitude professionnelle et respectueuse.",
+      "unlocksParcoursId": "parcours-44",
       "theme": "indigo",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Professionnel Responsable",
+      "chest": "gold",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p43-boss",
+      "prerequisiteIds": [
+        "dea-p42-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 43 — Situations sociales et vulnérabilité",
       "lessons": []
     },
     {
       "id": "parcours-44",
+      "contentId": "dea-p44",
       "blocId": "bloc-10",
       "order": 44,
-      "title": "Cadre légal",
-      "subtitle": "Le cadre réglementaire du métier d'ambulancier",
+      "title": "Cadre légal, déontologie et responsabilités",
+      "subtitle": "Exercer dans le respect de la loi et de l'éthique.",
+      "objective": "Comprendre les responsabilités civiles, pénales et professionnelles de l'ambulancier.",
+      "unlocksParcoursId": "parcours-45",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": "medium",
+      "estimatedMinutes": 80,
+      "xp": null,
+      "badge": "Professionnel Responsable",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p44-boss",
+      "prerequisiteIds": [
+        "dea-p43-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 44 — Cadre légal, déontologie et responsabilités",
       "lessons": []
     },
     {
       "id": "parcours-45",
+      "contentId": "dea-p45",
       "blocId": "bloc-10",
       "order": 45,
-      "title": "Transport sanitaire",
-      "subtitle": "Les catégories et règles du transport sanitaire",
+      "title": "Le transport sanitaire",
+      "subtitle": "Assurer un transport sûr, confortable et adapté au patient.",
+      "objective": "Maîtriser les différents types de transports sanitaires et leurs spécificités.",
+      "unlocksParcoursId": "parcours-46",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Transport Expert",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p45-boss",
+      "prerequisiteIds": [
+        "dea-p44-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 45 — Le transport sanitaire",
       "lessons": []
     },
     {
       "id": "parcours-46",
+      "contentId": "dea-p46",
       "blocId": "bloc-10",
       "order": 46,
-      "title": "Véhicules et matériel d'ambulance",
-      "subtitle": "Connaître son véhicule et son équipement",
+      "title": "Véhicules et matériel ambulancier",
+      "subtitle": "Connaître parfaitement son outil de travail.",
+      "objective": "Découvrir les différents véhicules sanitaires et le matériel obligatoire.",
+      "unlocksParcoursId": "parcours-47",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Ambulance Master",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p46-boss",
+      "prerequisiteIds": [
+        "dea-p45-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 46 — Véhicules et matériel ambulancier",
       "lessons": []
     },
     {
       "id": "parcours-47",
+      "contentId": "dea-p47",
       "blocId": "bloc-10",
       "order": 47,
       "title": "Régulation SAMU – Centre 15",
-      "subtitle": "Communiquer avec la régulation médicale",
+      "subtitle": "Comprendre le fonctionnement de la chaîne de secours.",
+      "objective": "Comprendre le rôle du SAMU et apprendre à transmettre un bilan structuré.",
+      "unlocksParcoursId": "parcours-48",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Voix du Terrain",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p47-boss",
+      "prerequisiteIds": [
+        "dea-p46-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 47 — Régulation SAMU – Centre 15",
       "lessons": []
     },
     {
       "id": "parcours-48",
+      "contentId": "dea-p48",
       "blocId": "bloc-10",
       "order": 48,
-      "title": "Conduite en intervention",
-      "subtitle": "Conduire en sécurité en intervention",
+      "title": "Conduite d'urgence",
+      "subtitle": "Conduire rapidement sans compromettre la sécurité.",
+      "objective": "Comprendre les principes de la conduite d'urgence et de la sécurité routière.",
+      "unlocksParcoursId": "parcours-49",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Pilote Sanitaire",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p48-boss",
+      "prerequisiteIds": [
+        "dea-p47-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 48 — Conduite d'urgence",
       "lessons": []
     },
     {
       "id": "parcours-49",
+      "contentId": "dea-p49",
       "blocId": "bloc-10",
       "order": 49,
       "title": "Travail en équipe et coordination",
-      "subtitle": "Coordination et travail d'équipe sur le terrain",
+      "subtitle": "La qualité d'une intervention repose sur la coopération.",
+      "objective": "Développer les compétences de communication et de coordination avec les autres professionnels.",
+      "unlocksParcoursId": "parcours-50",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Esprit d'Équipe",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p49-boss",
+      "prerequisiteIds": [
+        "dea-p48-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 49 — Travail en équipe et coordination",
       "lessons": []
     },
     {
       "id": "parcours-50",
+      "contentId": "dea-p50",
       "blocId": "bloc-10",
       "order": 50,
-      "title": "Cas cliniques complets DEA (Boss final)",
-      "subtitle": "L'épreuve finale : mobiliser tout ce qui a été appris",
+      "title": "Mission Finale DEA",
+      "subtitle": "La synthèse de toute la formation.",
+      "objective": "Mobiliser l'ensemble des compétences acquises dans les 49 parcours précédents.",
+      "unlocksParcoursId": "parcours-51",
       "theme": "slate",
+      "stage": "core_dea",
+      "pedagogicalScope": "professional_practice",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Diplômé MedLingo DEA",
+      "chest": "legendary",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p50-boss",
+      "prerequisiteIds": [
+        "dea-p49-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp"
+      ],
+      "sourceAnchor": "Parcours 50 — Mission Finale DEA",
+      "lessons": []
+    },
+    {
+      "id": "parcours-51",
+      "contentId": "dea-p51",
+      "blocId": "bloc-11",
+      "order": 51,
+      "title": "Insuffisance cardiaque",
+      "subtitle": "Quand le cœur ne pompe plus efficacement.",
+      "objective": "Comprendre l'insuffisance cardiaque, reconnaître ses signes et participer à sa prise en charge.",
+      "unlocksParcoursId": "parcours-52",
+      "theme": "red",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": "medium",
+      "estimatedMinutes": 90,
+      "xp": null,
+      "badge": "Cœur Défaillant",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p51-boss",
+      "prerequisiteIds": [
+        "dea-p50-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 51 — Insuffisance cardiaque",
+      "lessons": []
+    },
+    {
+      "id": "parcours-52",
+      "contentId": "dea-p52",
+      "blocId": "bloc-11",
+      "order": 52,
+      "title": "Troubles du rythme",
+      "subtitle": "Quand le cœur perd son rythme.",
+      "objective": "Reconnaître les principaux troubles du rythme et leurs conséquences.",
+      "unlocksParcoursId": "parcours-53",
+      "theme": "red",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Maître du Rythme",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p52-boss",
+      "prerequisiteIds": [
+        "dea-p51-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 52 — Troubles du rythme",
+      "lessons": []
+    },
+    {
+      "id": "parcours-53",
+      "contentId": "dea-p53",
+      "blocId": "bloc-11",
+      "order": 53,
+      "title": "Syndrome coronarien aigu",
+      "subtitle": "Reconnaître un infarctus sans perdre une minute.",
+      "objective": "Identifier rapidement un syndrome coronarien aigu et comprendre l'urgence de sa prise en charge.",
+      "unlocksParcoursId": "parcours-54",
+      "theme": "red",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Chasseur d'IDM",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p53-boss",
+      "prerequisiteIds": [
+        "dea-p52-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 53 — Syndrome coronarien aigu",
+      "lessons": []
+    },
+    {
+      "id": "parcours-54",
+      "contentId": "dea-p54",
+      "blocId": "bloc-11",
+      "order": 54,
+      "title": "Choc cardiogénique",
+      "subtitle": "Quand le cœur ne peut plus assurer la circulation.",
+      "objective": "Comprendre le choc cardiogénique et reconnaître ses signes précoces.",
+      "unlocksParcoursId": "parcours-55",
+      "theme": "red",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Circulation Critique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p54-boss",
+      "prerequisiteIds": [
+        "dea-p53-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 54 — Choc cardiogénique",
+      "lessons": []
+    },
+    {
+      "id": "parcours-55",
+      "contentId": "dea-p55",
+      "blocId": "bloc-11",
+      "order": 55,
+      "title": "ECG pour ambulanciers",
+      "subtitle": "Comprendre un électrocardiogramme sans être cardiologue.",
+      "objective": "Découvrir les bases de l'ECG afin de mieux comprendre les informations transmises par les équipes médicales.",
+      "unlocksParcoursId": "parcours-56",
+      "theme": "red",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Lecture ECG – Niveau 1",
+      "chest": "platinum",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p55-boss",
+      "prerequisiteIds": [
+        "dea-p54-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 55 — ECG pour ambulanciers",
+      "lessons": []
+    },
+    {
+      "id": "parcours-56",
+      "contentId": "dea-p56",
+      "blocId": "bloc-12",
+      "order": 56,
+      "title": "Asthme sévère",
+      "subtitle": "Quand respirer devient un combat.",
+      "objective": "Comprendre les mécanismes de la crise d'asthme sévère et reconnaître les critères de gravité.",
+      "unlocksParcoursId": "parcours-57",
+      "theme": "cyan",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": "medium",
+      "estimatedMinutes": 90,
+      "xp": null,
+      "badge": "Bronches Libérées",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p56-boss",
+      "prerequisiteIds": [
+        "dea-p55-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 56 — Asthme sévère",
+      "lessons": []
+    },
+    {
+      "id": "parcours-57",
+      "contentId": "dea-p57",
+      "blocId": "bloc-12",
+      "order": 57,
+      "title": "BPCO avancée",
+      "subtitle": "Comprendre la maladie respiratoire chronique la plus fréquente.",
+      "objective": "Reconnaître une décompensation de BPCO et éviter les erreurs de prise en charge.",
+      "unlocksParcoursId": "parcours-58",
+      "theme": "cyan",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Respiration Chronique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p57-boss",
+      "prerequisiteIds": [
+        "dea-p56-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 57 — BPCO avancée",
+      "lessons": []
+    },
+    {
+      "id": "parcours-58",
+      "contentId": "dea-p58",
+      "blocId": "bloc-12",
+      "order": 58,
+      "title": "Embolie pulmonaire",
+      "subtitle": "Une urgence souvent difficile à reconnaître.",
+      "objective": "Comprendre les mécanismes de l'embolie pulmonaire et reconnaître ses signes.",
+      "unlocksParcoursId": "parcours-59",
+      "theme": "cyan",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Chasseur d'Embolies",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p58-boss",
+      "prerequisiteIds": [
+        "dea-p57-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 58 — Embolie pulmonaire",
+      "lessons": []
+    },
+    {
+      "id": "parcours-59",
+      "contentId": "dea-p59",
+      "blocId": "bloc-12",
+      "order": 59,
+      "title": "Pneumothorax",
+      "subtitle": "Quand le poumon se dégonfle.",
+      "objective": "Comprendre les différents pneumothorax et leurs conséquences.",
+      "unlocksParcoursId": "parcours-60",
+      "theme": "cyan",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Poumon Protégé",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p59-boss",
+      "prerequisiteIds": [
+        "dea-p58-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 59 — Pneumothorax",
+      "lessons": []
+    },
+    {
+      "id": "parcours-60",
+      "contentId": "dea-p60",
+      "blocId": "bloc-12",
+      "order": 60,
+      "title": "Détresses respiratoires complexes",
+      "subtitle": "Associer les symptômes pour prendre la bonne décision.",
+      "objective": "Apprendre à différencier les principales détresses respiratoires rencontrées en intervention.",
+      "unlocksParcoursId": "parcours-61",
+      "theme": "cyan",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Expert Pneumologie",
+      "chest": "platinum",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p60-boss",
+      "prerequisiteIds": [
+        "dea-p59-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 60 — Détresses respiratoires complexes",
+      "lessons": []
+    },
+    {
+      "id": "parcours-61",
+      "contentId": "dea-p61",
+      "blocId": "bloc-13",
+      "order": 61,
+      "title": "AVC ischémique",
+      "subtitle": "Chaque minute compte : le cerveau perd près de deux millions de neurones par minute lors d'un AVC ischémique non traité.",
+      "objective": "Reconnaître précocement un AVC ischémique et comprendre l'importance de la rapidité de prise en charge.",
+      "unlocksParcoursId": "parcours-62",
+      "theme": "purple",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": "medium",
+      "estimatedMinutes": 95,
+      "xp": null,
+      "badge": "Stroke Hunter",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p61-boss",
+      "prerequisiteIds": [
+        "dea-p60-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 61 — AVC ischémique",
+      "lessons": []
+    },
+    {
+      "id": "parcours-62",
+      "contentId": "dea-p62",
+      "blocId": "bloc-13",
+      "order": 62,
+      "title": "AVC hémorragique",
+      "subtitle": "Quand un vaisseau cérébral se rompt.",
+      "objective": "Différencier un AVC hémorragique d'un AVC ischémique et reconnaître les signes d'alerte.",
+      "unlocksParcoursId": "parcours-63",
+      "theme": "purple",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Hémorragie Cérébrale",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p62-boss",
+      "prerequisiteIds": [
+        "dea-p61-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 62 — AVC hémorragique",
+      "lessons": []
+    },
+    {
+      "id": "parcours-63",
+      "contentId": "dea-p63",
+      "blocId": "bloc-13",
+      "order": 63,
+      "title": "Convulsions complexes",
+      "subtitle": "Comprendre et sécuriser une crise convulsive.",
+      "objective": "Reconnaître les différents types de crises convulsives et assurer la sécurité du patient.",
+      "unlocksParcoursId": "parcours-64",
+      "theme": "purple",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Gestionnaire des Convulsions",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p63-boss",
+      "prerequisiteIds": [
+        "dea-p62-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 63 — Convulsions complexes",
+      "lessons": []
+    },
+    {
+      "id": "parcours-64",
+      "contentId": "dea-p64",
+      "blocId": "bloc-13",
+      "order": 64,
+      "title": "États comateux",
+      "subtitle": "Comprendre les troubles majeurs de la conscience.",
+      "objective": "Identifier les principales causes de coma et réaliser un bilan neurologique structuré.",
+      "unlocksParcoursId": "parcours-65",
+      "theme": "purple",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Vigilance Maximale",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p64-boss",
+      "prerequisiteIds": [
+        "dea-p63-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 64 — États comateux",
+      "lessons": []
+    },
+    {
+      "id": "parcours-65",
+      "contentId": "dea-p65",
+      "blocId": "bloc-13",
+      "order": 65,
+      "title": "Glasgow Expert",
+      "subtitle": "Maîtriser l'évaluation neurologique de référence.",
+      "objective": "Savoir utiliser avec précision l'échelle de Glasgow et interpréter son évolution.",
+      "unlocksParcoursId": "parcours-66",
+      "theme": "purple",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Neurologue du Terrain",
+      "chest": "platinum",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p65-boss",
+      "prerequisiteIds": [
+        "dea-p64-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 65 — Glasgow Expert",
+      "lessons": []
+    },
+    {
+      "id": "parcours-66",
+      "contentId": "dea-p66",
+      "blocId": "bloc-14",
+      "order": 66,
+      "title": "Hypoglycémie",
+      "subtitle": "Quand le cerveau manque de carburant.",
+      "objective": "Comprendre les mécanismes de l'hypoglycémie, reconnaître rapidement ses manifestations et assurer une prise en charge sécurisée.",
+      "unlocksParcoursId": "parcours-67",
+      "theme": "pink",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": "easy",
+      "estimatedMinutes": 90,
+      "xp": null,
+      "badge": "Gardien du Glucose",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p66-boss",
+      "prerequisiteIds": [
+        "dea-p65-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 66 — Hypoglycémie",
+      "lessons": []
+    },
+    {
+      "id": "parcours-67",
+      "contentId": "dea-p67",
+      "blocId": "bloc-14",
+      "order": 67,
+      "title": "Hyperglycémie",
+      "subtitle": "Quand le sucre devient un danger silencieux.",
+      "objective": "Reconnaître une hyperglycémie et comprendre ses complications.",
+      "unlocksParcoursId": "parcours-68",
+      "theme": "pink",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Surveillance Glycémique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p67-boss",
+      "prerequisiteIds": [
+        "dea-p66-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 67 — Hyperglycémie",
+      "lessons": []
+    },
+    {
+      "id": "parcours-68",
+      "contentId": "dea-p68",
+      "blocId": "bloc-14",
+      "order": 68,
+      "title": "Acidocétose diabétique",
+      "subtitle": "Une urgence métabolique à reconnaître rapidement.",
+      "objective": "Comprendre les mécanismes de l'acidocétose diabétique et identifier les signes de gravité.",
+      "unlocksParcoursId": "parcours-69",
+      "theme": "pink",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Expert Acidocétose",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p68-boss",
+      "prerequisiteIds": [
+        "dea-p67-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 68 — Acidocétose diabétique",
+      "lessons": []
+    },
+    {
+      "id": "parcours-69",
+      "contentId": "dea-p69",
+      "blocId": "bloc-14",
+      "order": 69,
+      "title": "Syndrome hyperosmolaire",
+      "subtitle": "Une urgence souvent méconnue.",
+      "objective": "Reconnaître un syndrome hyperosmolaire hyperglycémique et distinguer cette urgence de l'acidocétose.",
+      "unlocksParcoursId": "parcours-70",
+      "theme": "pink",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Hyperosmolarité",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p69-boss",
+      "prerequisiteIds": [
+        "dea-p68-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 69 — Syndrome hyperosmolaire",
+      "lessons": []
+    },
+    {
+      "id": "parcours-70",
+      "contentId": "dea-p70",
+      "blocId": "bloc-14",
+      "order": 70,
+      "title": "Pathologies endocriniennes fréquentes",
+      "subtitle": "Quand les hormones influencent l'urgence.",
+      "objective": "Découvrir les principales maladies endocriniennes pouvant modifier une prise en charge préhospitalière.",
+      "unlocksParcoursId": "parcours-71",
+      "theme": "pink",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Maître des Hormones",
+      "chest": "platinum",
+      "plannedLessonCount": 8,
+      "bossId": "dea-p70-boss",
+      "prerequisiteIds": [
+        "dea-p69-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 70 — Pathologies endocriniennes fréquentes",
+      "lessons": []
+    },
+    {
+      "id": "parcours-71",
+      "contentId": "dea-p71",
+      "blocId": "bloc-15",
+      "order": 71,
+      "title": "Le Sepsis",
+      "subtitle": "Quand une infection devient une urgence vitale.",
+      "objective": "Comprendre le sepsis, reconnaître ses premiers signes et mesurer l'importance d'une prise en charge rapide.",
+      "unlocksParcoursId": "parcours-72",
+      "theme": "teal",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": "medium",
+      "estimatedMinutes": 95,
+      "xp": null,
+      "badge": "Détecteur de Sepsis",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p71-boss",
+      "prerequisiteIds": [
+        "dea-p70-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 71 — Le Sepsis",
+      "lessons": []
+    },
+    {
+      "id": "parcours-72",
+      "contentId": "dea-p72",
+      "blocId": "bloc-15",
+      "order": 72,
+      "title": "Choc septique",
+      "subtitle": "La complication la plus grave du sepsis.",
+      "objective": "Reconnaître rapidement un choc septique et comprendre les conséquences sur les organes.",
+      "unlocksParcoursId": "parcours-73",
+      "theme": "teal",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Choc Septique",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p72-boss",
+      "prerequisiteIds": [
+        "dea-p71-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 72 — Choc septique",
+      "lessons": []
+    },
+    {
+      "id": "parcours-73",
+      "contentId": "dea-p73",
+      "blocId": "bloc-15",
+      "order": 73,
+      "title": "Infections respiratoires",
+      "subtitle": "Des infections fréquentes pouvant devenir graves.",
+      "objective": "Identifier les principales infections respiratoires rencontrées en préhospitalier.",
+      "unlocksParcoursId": "parcours-74",
+      "theme": "teal",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Protection Respiratoire",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p73-boss",
+      "prerequisiteIds": [
+        "dea-p72-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 73 — Infections respiratoires",
+      "lessons": []
+    },
+    {
+      "id": "parcours-74",
+      "contentId": "dea-p74",
+      "blocId": "bloc-15",
+      "order": 74,
+      "title": "Infections digestives",
+      "subtitle": "Quand une simple gastro-entérite peut devenir une urgence.",
+      "objective": "Comprendre les infections digestives et leurs complications potentielles.",
+      "unlocksParcoursId": "parcours-75",
+      "theme": "teal",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Hydratation Prioritaire",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p74-boss",
+      "prerequisiteIds": [
+        "dea-p73-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 74 — Infections digestives",
+      "lessons": []
+    },
+    {
+      "id": "parcours-75",
+      "contentId": "dea-p75",
+      "blocId": "bloc-15",
+      "order": 75,
+      "title": "Maladies infectieuses émergentes",
+      "subtitle": "Se préparer aux risques infectieux d'aujourd'hui et de demain.",
+      "objective": "Comprendre les principes généraux des maladies infectieuses émergentes et les mesures de protection des professionnels de santé.",
+      "theme": "teal",
+      "stage": "advanced",
+      "pedagogicalScope": "advanced_differential",
+      "difficulty": null,
+      "estimatedMinutes": null,
+      "xp": null,
+      "badge": "Expert Infectiologie",
+      "chest": null,
+      "plannedLessonCount": 8,
+      "bossId": "dea-p75-boss",
+      "prerequisiteIds": [
+        "dea-p74-boss"
+      ],
+      "contentStatus": "awaiting_content",
+      "metadataStatus": "pending_specification",
+      "pendingFields": [
+        "difficulty",
+        "duration",
+        "xp",
+        "chest"
+      ],
+      "sourceAnchor": "Parcours 75 — Maladies infectieuses émergentes",
       "lessons": []
     }
   ]

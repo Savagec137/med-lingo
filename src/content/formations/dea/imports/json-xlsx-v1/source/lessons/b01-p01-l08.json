@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L08",
+  "lesson_title": "Introduction à la terminologie anatomique",
+  "knowledge": [
+    {
+      "id": "K047",
+      "title": "Terminologie anatomique",
+      "content": "La terminologie anatomique est un langage universel permettant de décrire précisément les structures du corps humain."
+    },
+    {
+      "id": "K048",
+      "title": "Ipsilatéral",
+      "content": "Situé du même côté du corps."
+    },
+    {
+      "id": "K049",
+      "title": "Controlatéral",
+      "content": "Situé du côté opposé du corps."
+    },
+    {
+      "id": "K050",
+      "title": "Superficiel",
+      "content": "Situé près de la surface du corps."
+    },
+    {
+      "id": "K051",
+      "title": "Profond",
+      "content": "Situé éloigné de la surface du corps."
+    },
+    {
+      "id": "K052",
+      "title": "Importance clinique",
+      "content": "L'utilisation d'une terminologie anatomique précise améliore la qualité des transmissions et réduit les erreurs."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q071",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme ipsilatéral signifie :",
+      "options": [
+        "Du même côté",
+        "Du côté opposé",
+        "Vers le haut",
+        "Vers le bas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q072",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme controlatéral signifie :",
+      "options": [
+        "Du côté opposé",
+        "Du même côté",
+        "Proche de la tête",
+        "Proche des pieds"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q073",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une structure superficielle est proche de la peau.",
+      "answer": true
+    },
+    {
+      "id": "Q074",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une structure profonde est située près de la surface du corps.",
+      "answer": false
+    },
+    {
+      "id": "Q075",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Ipsilatéral",
+          "Même côté"
+        ],
+        [
+          "Controlatéral",
+          "Côté opposé"
+        ],
+        [
+          "Superficiel",
+          "Près de la peau"
+        ],
+        [
+          "Profond",
+          "Éloigné de la peau"
+        ]
+      ]
+    },
+    {
+      "id": "Q076",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le terme ______ désigne une structure située près de la surface du corps.",
+      "answers": [
+        "superficiel"
+      ]
+    },
+    {
+      "id": "Q077",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le membre supérieur gauche.",
+      "target": "left_upper_limb"
+    },
+    {
+      "id": "Q078",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les structures de la plus superficielle à la plus profonde.",
+      "solution": [
+        "Peau",
+        "Tissu sous-cutané",
+        "Muscle",
+        "Os"
+      ]
+    },
+    {
+      "id": "Q079",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une douleur controlatérale à une fracture du bras droit est localisée :",
+      "options": [
+        "Au bras gauche",
+        "Au bras droit",
+        "Aux deux bras",
+        "Au thorax"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q080",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors de la transmission au SAMU, quel intérêt présente l'utilisation de la terminologie anatomique ?",
+      "options": [
+        "Décrire précisément la localisation d'une lésion",
+        "Accélérer uniquement le transport",
+        "Remplacer le bilan clinique",
+        "Éviter la prise des constantes"
+      ],
+      "correct": 0
+    }
+  ]
+}

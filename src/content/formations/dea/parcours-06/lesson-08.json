@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Physiologie respiratoire"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l04"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l04-q331",
+      "difficulty": "easy",
+      "question": "Les échanges gazeux ont lieu principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q331",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q331-answer-01",
+          "text": "Dans les alvéoles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q331-answer-02",
+          "text": "Dans la trachée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q331-answer-03",
+          "text": "Dans le pharynx",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q331-answer-04",
+          "text": "Dans les bronches",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q331-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l04-q332",
+      "difficulty": "easy",
+      "question": "L'oxygène est principalement transporté par :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q332",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q332-answer-01",
+          "text": "L'hémoglobine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q332-answer-02",
+          "text": "Le plasma uniquement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q332-answer-03",
+          "text": "Les plaquettes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q332-answer-04",
+          "text": "Les leucocytes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q332-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l04-q333",
+      "difficulty": "easy",
+      "question": "Une fréquence respiratoire de 16/min est normale chez un adulte au repos.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q333",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q333-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q333-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q333-true"
+    },
+    {
+      "id": "import-b01-p04-l04-q334",
+      "difficulty": "easy",
+      "question": "Le dioxyde de carbone est absorbé par les poumons.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q334",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q334-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q334-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q334-false"
+    },
+    {
+      "id": "import-b01-p04-l04-q335",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q335",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q335-pair-01",
+          "text": "Inspiration",
+          "match": "Entrée de l'air",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q335-pair-02",
+          "text": "Expiration",
+          "match": "Sortie de l'air",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q335-pair-03",
+          "text": "Alvéoles",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q335-pair-04",
+          "text": "Hémoglobine",
+          "match": "Transport de l'oxygène",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l04-q335-pair-01",
+        "import-b01-p04-l04-q335-pair-02",
+        "import-b01-p04-l04-q335-pair-03",
+        "import-b01-p04-l04-q335-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l04-q336",
+      "difficulty": "medium",
+      "question": "Les échanges gazeux ont lieu dans les ______ pulmonaires.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q336",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "alvéoles"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q336-accepted-01",
+          "text": "alvéoles",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l04-q336-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l04-q337",
+      "difficulty": "hard",
+      "question": "Une baisse importante de la ventilation entraîne principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q337",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q337-answer-01",
+          "text": "Une diminution de l'apport en oxygène",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q337-answer-02",
+          "text": "Une augmentation de la glycémie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q337-answer-03",
+          "text": "Une augmentation de la filtration rénale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q337-answer-04",
+          "text": "Une augmentation du débit cardiaque",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q337-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l04-q338",
+      "difficulty": "hard",
+      "question": "Une SpO₂ à 86 % est mesurée chez un patient dyspnéique. Quel mécanisme physiologique est le plus probablement perturbé ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q338",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q338-answer-01",
+          "text": "Les échanges gazeux pulmonaires",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q338-answer-02",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q338-answer-03",
+          "text": "La coagulation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l04-q338-answer-04",
+          "text": "La filtration rénale",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l04-q338-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l04-q339",
+      "difficulty": "medium",
+      "question": "Replace le trajet de l'oxygène jusqu'au sang.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q339",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l04-q339-step-01",
+          "text": "Air inspiré",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l04-q339-step-02",
+          "text": "Alvéoles",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l04-q339-step-03",
+          "text": "Capillaires pulmonaires",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l04-q339-step-04",
+          "text": "Hémoglobine",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l04-q339-step-01",
+        "import-b01-p04-l04-q339-step-02",
+        "import-b01-p04-l04-q339-step-03",
+        "import-b01-p04-l04-q339-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l04-q340",
+      "difficulty": "medium",
+      "question": "Clique sur une alvéole pulmonaire.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q340",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "alveolus"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-alveolus"
+    }
+  ]
+}

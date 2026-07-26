@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L09",
+  "lesson_title": "Adaptation à l'effort et au stress",
+  "knowledge": [
+    {
+      "id": "K233",
+      "title": "Objectif",
+      "content": "Lors d'un effort ou d'un stress, l'organisme adapte rapidement son fonctionnement afin de maintenir un apport suffisant en oxygène et en énergie."
+    },
+    {
+      "id": "K234",
+      "title": "Réponse cardiovasculaire",
+      "content": "La fréquence cardiaque et le débit cardiaque augmentent afin d'améliorer la perfusion des muscles."
+    },
+    {
+      "id": "K235",
+      "title": "Réponse respiratoire",
+      "content": "La fréquence respiratoire augmente afin d'améliorer les échanges gazeux."
+    },
+    {
+      "id": "K236",
+      "title": "Adrénaline",
+      "content": "L'adrénaline participe à la réponse immédiate au stress en augmentant notamment la fréquence cardiaque."
+    },
+    {
+      "id": "K237",
+      "title": "Retour au repos",
+      "content": "Après l'effort, les constantes vitales reviennent progressivement vers leurs valeurs habituelles."
+    },
+    {
+      "id": "K238",
+      "title": "Application DEA",
+      "content": "L'interprétation des constantes vitales doit toujours tenir compte du contexte clinique, notamment d'un effort récent ou d'une situation de stress."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q381",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Pendant un effort, la fréquence cardiaque :",
+      "options": [
+        "Augmente",
+        "Diminue",
+        "Reste identique",
+        "S'arrête"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q382",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle hormone intervient rapidement lors d'un stress aigu ?",
+      "options": [
+        "Adrénaline",
+        "Insuline",
+        "Thyroxine",
+        "Mélatonine"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q383",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La fréquence respiratoire augmente généralement pendant un effort.",
+      "answer": true
+    },
+    {
+      "id": "Q384",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les constantes vitales restent toujours identiques pendant un exercice physique.",
+      "answer": false
+    },
+    {
+      "id": "Q385",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Effort",
+          "Augmentation du débit cardiaque"
+        ],
+        [
+          "Stress",
+          "Adrénaline"
+        ],
+        [
+          "Respiration",
+          "Hausse de la ventilation"
+        ],
+        [
+          "Repos",
+          "Retour progressif des constantes"
+        ]
+      ]
+    },
+    {
+      "id": "Q386",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Après un effort, les constantes reviennent progressivement vers leur valeur de ______.",
+      "answers": [
+        "repos"
+      ]
+    },
+    {
+      "id": "Q387",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Pourquoi le débit cardiaque augmente-t-il pendant un effort ?",
+      "options": [
+        "Pour augmenter l'apport d'oxygène aux tissus",
+        "Pour ralentir la digestion",
+        "Pour diminuer la température",
+        "Pour produire davantage d'urine"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q388",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient arrive après avoir monté quatre étages rapidement. Sa fréquence cardiaque est à 120/min. Quelle est l'interprétation la plus probable ?",
+      "options": [
+        "Une adaptation physiologique à l'effort",
+        "Un arrêt cardiaque",
+        "Une hypothermie",
+        "Une insuffisance rénale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q389",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les événements lors d'un effort physique.",
+      "solution": [
+        "Début de l'effort",
+        "Augmentation de la fréquence cardiaque",
+        "Augmentation de la ventilation",
+        "Apport accru en oxygène",
+        "Retour progressif au repos"
+      ]
+    },
+    {
+      "id": "Q390",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur les glandes surrénales.",
+      "target": "adrenal_glands"
+    }
+  ]
+}

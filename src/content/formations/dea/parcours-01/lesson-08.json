@@ -2,35 +2,2514 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 36,
+  "level": 1,
+  "xp": 144,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 10
   },
-  "items": [],
-  "id": "dea-p01-l08",
-  "title": "Les régions du corps",
-  "kind": "lesson",
   "learningObjectives": [
-    "reconnaître les grandes régions du corps ;",
-    "localiser tête, cou, thorax, abdomen, bassin et membres ;",
-    "utiliser les bons termes pour décrire une douleur ou une lésion."
+    "Introduction à l'homéostasie",
+    "Introduction à la terminologie anatomique",
+    "Révision générale du parcours 1",
+    "Introduction à la physiologie",
+    "L'homéostasie"
   ],
   "competencyIds": [
-    "anatomy.region.head",
-    "anatomy.region.neck",
-    "anatomy.region.thorax",
-    "anatomy.region.abdomen",
-    "anatomy.region.pelvis",
-    "anatomy.region.upper-limb",
-    "anatomy.region.lower-limb"
+    "import.json-xlsx.b01.p01.l07",
+    "import.json-xlsx.b01.p01.l08",
+    "import.json-xlsx.b01.p01.l10",
+    "import.json-xlsx.b01.p04.l01",
+    "import.json-xlsx.b01.p04.l02"
   ],
-  "prerequisiteIds": ["dea-p01-l07"]
+  "prerequisiteIds": [
+    "dea-p01-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p01-l07-q061",
+      "difficulty": "easy",
+      "question": "L'homéostasie correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q061",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q061-answer-01",
+          "text": "Le maintien de l'équilibre interne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q061-answer-02",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q061-answer-03",
+          "text": "La croissance osseuse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q061-answer-04",
+          "text": "La reproduction",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q061-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l07-q062",
+      "difficulty": "easy",
+      "question": "Quel système participe directement au transport de l'oxygène ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q062",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q062-answer-01",
+          "text": "Cardiovasculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q062-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q062-answer-03",
+          "text": "Tégumentaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q062-answer-04",
+          "text": "Locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q062-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l07-q063",
+      "difficulty": "easy",
+      "question": "L'homéostasie permet de maintenir un environnement interne stable.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q063",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q063-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q063-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q063-true"
+    },
+    {
+      "id": "import-b01-p01-l07-q064",
+      "difficulty": "easy",
+      "question": "Les reins ne participent pas à l'équilibre hydrique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q064",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q064-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q064-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q064-false"
+    },
+    {
+      "id": "import-b01-p01-l07-q065",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q065",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q065-pair-01",
+          "text": "Homéostasie",
+          "match": "Équilibre interne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q065-pair-02",
+          "text": "Reins",
+          "match": "Équilibre hydrique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q065-pair-03",
+          "text": "Poumons",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q065-pair-04",
+          "text": "Cœur",
+          "match": "Circulation sanguine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l07-q065-pair-01",
+        "import-b01-p01-l07-q065-pair-02",
+        "import-b01-p01-l07-q065-pair-03",
+        "import-b01-p01-l07-q065-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l07-q066",
+      "difficulty": "medium",
+      "question": "Les ______ participent principalement à la régulation de l'eau dans l'organisme.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q066",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "reins"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q066-accepted-01",
+          "text": "reins",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l07-q066-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l07-q067",
+      "difficulty": "medium",
+      "question": "Clique sur les reins.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q067",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "kidneys"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-kidneys",
+          "text": "Reins",
+          "detail": "0.5,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_kidney",
+          "text": "Rein droit",
+          "detail": "0.58,0.46",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-kidneys"
+    },
+    {
+      "id": "import-b01-p01-l07-q068",
+      "difficulty": "medium",
+      "question": "Remets les systèmes dans un ordre logique de transport de l'oxygène.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q068",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q068-step-01",
+          "text": "Poumons",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l07-q068-step-02",
+          "text": "Cœur",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l07-q068-step-03",
+          "text": "Artères",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-l07-q068-step-04",
+          "text": "Cellules",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l07-q068-step-01",
+        "import-b01-p01-l07-q068-step-02",
+        "import-b01-p01-l07-q068-step-03",
+        "import-b01-p01-l07-q068-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l07-q069",
+      "difficulty": "hard",
+      "question": "Quel ensemble participe principalement au maintien de l'homéostasie ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q069",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q069-answer-01",
+          "text": "Tous les systèmes de l'organisme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q069-answer-02",
+          "text": "Uniquement le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q069-answer-03",
+          "text": "Uniquement le système nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q069-answer-04",
+          "text": "Uniquement le système locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q069-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l07-q070",
+      "difficulty": "hard",
+      "question": "Lors d'un bilan, un patient présente une déshydratation importante. Quel système contribue principalement au maintien de l'équilibre hydrique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q070",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l07-q070-answer-01",
+          "text": "Le système urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q070-answer-02",
+          "text": "Le système respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q070-answer-03",
+          "text": "Le système locomoteur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l07-q070-answer-04",
+          "text": "Le système tégumentaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l07-q070-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l08-q071",
+      "difficulty": "easy",
+      "question": "Le terme ipsilatéral signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q071",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q071-answer-01",
+          "text": "Du même côté",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q071-answer-02",
+          "text": "Du côté opposé",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q071-answer-03",
+          "text": "Vers le haut",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q071-answer-04",
+          "text": "Vers le bas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q071-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l08-q072",
+      "difficulty": "easy",
+      "question": "Le terme controlatéral signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q072",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q072-answer-01",
+          "text": "Du côté opposé",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q072-answer-02",
+          "text": "Du même côté",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q072-answer-03",
+          "text": "Proche de la tête",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q072-answer-04",
+          "text": "Proche des pieds",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q072-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l08-q073",
+      "difficulty": "easy",
+      "question": "Une structure superficielle est proche de la peau.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q073",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q073-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q073-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q073-true"
+    },
+    {
+      "id": "import-b01-p01-l08-q074",
+      "difficulty": "easy",
+      "question": "Une structure profonde est située près de la surface du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q074",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q074-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q074-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q074-false"
+    },
+    {
+      "id": "import-b01-p01-l08-q075",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q075",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q075-pair-01",
+          "text": "Ipsilatéral",
+          "match": "Même côté",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q075-pair-02",
+          "text": "Controlatéral",
+          "match": "Côté opposé",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q075-pair-03",
+          "text": "Superficiel",
+          "match": "Près de la peau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q075-pair-04",
+          "text": "Profond",
+          "match": "Éloigné de la peau",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l08-q075-pair-01",
+        "import-b01-p01-l08-q075-pair-02",
+        "import-b01-p01-l08-q075-pair-03",
+        "import-b01-p01-l08-q075-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l08-q076",
+      "difficulty": "medium",
+      "question": "Le terme ______ désigne une structure située près de la surface du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q076",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "superficiel"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q076-accepted-01",
+          "text": "superficiel",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l08-q076-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l08-q077",
+      "difficulty": "medium",
+      "question": "Clique sur le membre supérieur gauche.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q077",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "left_upper_limb"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-left_upper_limb"
+    },
+    {
+      "id": "import-b01-p01-l08-q078",
+      "difficulty": "medium",
+      "question": "Classe les structures de la plus superficielle à la plus profonde.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q078",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q078-step-01",
+          "text": "Peau",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l08-q078-step-02",
+          "text": "Tissu sous-cutané",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l08-q078-step-03",
+          "text": "Muscle",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-l08-q078-step-04",
+          "text": "Os",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l08-q078-step-01",
+        "import-b01-p01-l08-q078-step-02",
+        "import-b01-p01-l08-q078-step-03",
+        "import-b01-p01-l08-q078-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l08-q079",
+      "difficulty": "hard",
+      "question": "Une douleur controlatérale à une fracture du bras droit est localisée :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q079",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q079-answer-01",
+          "text": "Au bras gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q079-answer-02",
+          "text": "Au bras droit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q079-answer-03",
+          "text": "Aux deux bras",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q079-answer-04",
+          "text": "Au thorax",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q079-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l08-q080",
+      "difficulty": "hard",
+      "question": "Lors de la transmission au SAMU, quel intérêt présente l'utilisation de la terminologie anatomique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q080",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l08-q080-answer-01",
+          "text": "Décrire précisément la localisation d'une lésion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q080-answer-02",
+          "text": "Accélérer uniquement le transport",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q080-answer-03",
+          "text": "Remplacer le bilan clinique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l08-q080-answer-04",
+          "text": "Éviter la prise des constantes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l08-q080-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l10-q091",
+      "difficulty": "easy",
+      "question": "Quel plan sépare le corps en une partie droite et une partie gauche ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q091",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q091-answer-01",
+          "text": "Plan sagittal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q091-answer-02",
+          "text": "Plan frontal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q091-answer-03",
+          "text": "Plan transversal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q091-answer-04",
+          "text": "Plan oblique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q091-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l10-q092",
+      "difficulty": "easy",
+      "question": "Quel organe est situé dans la cavité thoracique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q092",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q092-answer-01",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q092-answer-02",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q092-answer-03",
+          "text": "La vessie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q092-answer-04",
+          "text": "Le rectum",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q092-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l10-q093",
+      "difficulty": "easy",
+      "question": "Le diaphragme sépare le thorax de l'abdomen.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q093",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q093-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q093-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q093-true"
+    },
+    {
+      "id": "import-b01-p01-l10-q094",
+      "difficulty": "easy",
+      "question": "Le cerveau est situé dans la cavité abdominale.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q094",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q094-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q094-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q094-false"
+    },
+    {
+      "id": "import-b01-p01-l10-q095",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q095",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q095-pair-01",
+          "text": "Thorax",
+          "match": "Poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q095-pair-02",
+          "text": "Crâne",
+          "match": "Encéphale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q095-pair-03",
+          "text": "Bassin",
+          "match": "Vessie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q095-pair-04",
+          "text": "Abdomen",
+          "match": "Foie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l10-q095-pair-01",
+        "import-b01-p01-l10-q095-pair-02",
+        "import-b01-p01-l10-q095-pair-03",
+        "import-b01-p01-l10-q095-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l10-q096",
+      "difficulty": "medium",
+      "question": "Le ______ protège l'encéphale.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q096",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "crâne"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q096-accepted-01",
+          "text": "crâne",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l10-q096-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l10-q097",
+      "difficulty": "medium",
+      "question": "Replace les niveaux d'organisation dans le bon ordre.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q097",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q097-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l10-q097-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l10-q097-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-l10-q097-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p01-l10-q097-step-05",
+          "text": "Organisme",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l10-q097-step-01",
+        "import-b01-p01-l10-q097-step-02",
+        "import-b01-p01-l10-q097-step-03",
+        "import-b01-p01-l10-q097-step-04",
+        "import-b01-p01-l10-q097-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l10-q098",
+      "difficulty": "medium",
+      "question": "Clique sur l'abdomen.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q098",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "abdomen"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_kidney",
+          "text": "Rein droit",
+          "detail": "0.58,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-abdomen"
+    },
+    {
+      "id": "import-b01-p01-l10-q099",
+      "difficulty": "hard",
+      "question": "Quel terme désigne une structure située loin du point d'attache d'un membre ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q099",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q099-answer-01",
+          "text": "Distal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q099-answer-02",
+          "text": "Proximal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q099-answer-03",
+          "text": "Médial",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q099-answer-04",
+          "text": "Supérieur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q099-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l10-q100",
+      "difficulty": "hard",
+      "question": "Lors d'une transmission au SAMU, quel est l'intérêt principal d'utiliser une terminologie anatomique précise ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q100",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l10-q100-answer-01",
+          "text": "Localiser précisément une lésion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q100-answer-02",
+          "text": "Réduire le temps de transport",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q100-answer-03",
+          "text": "Éviter le bilan clinique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l10-q100-answer-04",
+          "text": "Remplacer les constantes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l10-q100-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l01-q301",
+      "difficulty": "easy",
+      "question": "La physiologie étudie principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q301",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q301-answer-01",
+          "text": "Le fonctionnement du corps humain",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q301-answer-02",
+          "text": "La forme des os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q301-answer-03",
+          "text": "Les médicaments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q301-answer-04",
+          "text": "Les bactéries",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q301-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l01-q302",
+      "difficulty": "easy",
+      "question": "L'anatomie décrit :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q302",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q302-answer-01",
+          "text": "Les structures",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q302-answer-02",
+          "text": "Le fonctionnement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q302-answer-03",
+          "text": "Les traitements",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q302-answer-04",
+          "text": "Les analyses biologiques",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q302-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l01-q303",
+      "difficulty": "easy",
+      "question": "Tous les organes travaillent indépendamment les uns des autres.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q303",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q303-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q303-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q303-false"
+    },
+    {
+      "id": "import-b01-p04-l01-q304",
+      "difficulty": "easy",
+      "question": "La physiologie aide à comprendre les constantes vitales.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q304",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q304-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q304-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q304-true"
+    },
+    {
+      "id": "import-b01-p04-l01-q305",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q305",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q305-pair-01",
+          "text": "Anatomie",
+          "match": "Structure",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q305-pair-02",
+          "text": "Physiologie",
+          "match": "Fonctionnement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q305-pair-03",
+          "text": "Organe",
+          "match": "Fonction spécifique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q305-pair-04",
+          "text": "Système",
+          "match": "Ensemble d'organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l01-q305-pair-01",
+        "import-b01-p04-l01-q305-pair-02",
+        "import-b01-p04-l01-q305-pair-03",
+        "import-b01-p04-l01-q305-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l01-q306",
+      "difficulty": "medium",
+      "question": "La physiologie étudie le ______ des organes.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q306",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "fonctionnement"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q306-accepted-01",
+          "text": "fonctionnement",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l01-q306-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l01-q307",
+      "difficulty": "hard",
+      "question": "Pourquoi la physiologie est-elle essentielle pour un DEA ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q307",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q307-answer-01",
+          "text": "Comprendre les mécanismes normaux avant d'identifier une anomalie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q307-answer-02",
+          "text": "Apprendre la chirurgie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q307-answer-03",
+          "text": "Lire les radiographies",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q307-answer-04",
+          "text": "Prescrire un traitement",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q307-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l01-q308",
+      "difficulty": "hard",
+      "question": "Une fréquence respiratoire élevée est observée chez un patient. Quelle discipline permet d'interpréter cette modification ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q308",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q308-answer-01",
+          "text": "La physiologie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q308-answer-02",
+          "text": "La pharmacologie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q308-answer-03",
+          "text": "La microbiologie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l01-q308-answer-04",
+          "text": "La génétique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l01-q308-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l01-q309",
+      "difficulty": "medium",
+      "question": "Classe ces niveaux d'organisation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q309",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l01-q309-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l01-q309-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l01-q309-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l01-q309-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l01-q309-step-01",
+        "import-b01-p04-l01-q309-step-02",
+        "import-b01-p04-l01-q309-step-03",
+        "import-b01-p04-l01-q309-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l02-q311",
+      "difficulty": "easy",
+      "question": "L'homéostasie correspond :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q311",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q311-answer-01",
+          "text": "Au maintien de l'équilibre interne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q311-answer-02",
+          "text": "À la croissance des os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q311-answer-03",
+          "text": "À la digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q311-answer-04",
+          "text": "À la coagulation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q311-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l02-q312",
+      "difficulty": "easy",
+      "question": "Quel organe participe principalement à l'équilibre hydrique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q312",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q312-answer-01",
+          "text": "Les reins",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q312-answer-02",
+          "text": "Les poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q312-answer-03",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q312-answer-04",
+          "text": "La rate",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q312-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l02-q313",
+      "difficulty": "easy",
+      "question": "Le maintien d'une température stable participe à l'homéostasie.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q313",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q313-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q313-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q313-true"
+    },
+    {
+      "id": "import-b01-p04-l02-q314",
+      "difficulty": "easy",
+      "question": "L'homéostasie signifie que les constantes ne varient jamais.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q314",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q314-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q314-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q314-false"
+    },
+    {
+      "id": "import-b01-p04-l02-q315",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q315",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q315-pair-01",
+          "text": "Température",
+          "match": "Thermorégulation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q315-pair-02",
+          "text": "Glycémie",
+          "match": "Équilibre énergétique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q315-pair-03",
+          "text": "Reins",
+          "match": "Équilibre hydrique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q315-pair-04",
+          "text": "Pression artérielle",
+          "match": "Perfusion des organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l02-q315-pair-01",
+        "import-b01-p04-l02-q315-pair-02",
+        "import-b01-p04-l02-q315-pair-03",
+        "import-b01-p04-l02-q315-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l02-q316",
+      "difficulty": "medium",
+      "question": "L'organisme cherche à maintenir un ______ interne stable.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q316",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "équilibre"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q316-accepted-01",
+          "text": "équilibre",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l02-q316-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l02-q317",
+      "difficulty": "hard",
+      "question": "Pourquoi l'homéostasie est-elle essentielle ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q317",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q317-answer-01",
+          "text": "Elle permet le fonctionnement normal des cellules",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q317-answer-02",
+          "text": "Elle augmente la taille des muscles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q317-answer-03",
+          "text": "Elle remplace le système immunitaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q317-answer-04",
+          "text": "Elle produit les globules rouges",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q317-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l02-q318",
+      "difficulty": "hard",
+      "question": "Une victime présente une température corporelle à 40 °C. Quel mécanisme physiologique est principalement perturbé ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q318",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q318-answer-01",
+          "text": "La thermorégulation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q318-answer-02",
+          "text": "La coagulation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q318-answer-03",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l02-q318-answer-04",
+          "text": "La filtration rénale",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l02-q318-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l02-q319",
+      "difficulty": "medium",
+      "question": "Replace les étapes d'un mécanisme de régulation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q319",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l02-q319-step-01",
+          "text": "Stimulus",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l02-q319-step-02",
+          "text": "Récepteur",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l02-q319-step-03",
+          "text": "Centre de régulation",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l02-q319-step-04",
+          "text": "Effecteur",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-l02-q319-step-05",
+          "text": "Retour à l'équilibre",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l02-q319-step-01",
+        "import-b01-p04-l02-q319-step-02",
+        "import-b01-p04-l02-q319-step-03",
+        "import-b01-p04-l02-q319-step-04",
+        "import-b01-p04-l02-q319-step-05"
+      ]
+    }
+  ]
 }

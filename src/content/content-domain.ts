@@ -12,6 +12,9 @@ export const CONTENT_TYPES = [
   "error_identification",
   "regulatory",
   "handover",
+  "clinical_case",
+  "fill_blank",
+  "anatomy_location",
 ] as const;
 
 export type ContentType = (typeof CONTENT_TYPES)[number];

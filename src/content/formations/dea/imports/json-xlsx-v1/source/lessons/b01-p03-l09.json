@@ -1,0 +1,162 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L09",
+  "lesson_title": "Le système digestif",
+  "knowledge": [
+    {
+      "id": "K173",
+      "title": "Définition",
+      "content": "Le système digestif transforme les aliments en nutriments utilisables par l'organisme."
+    },
+    {
+      "id": "K174",
+      "title": "Trajet des aliments",
+      "content": "Les aliments passent successivement par la bouche, le pharynx, l'œsophage, l'estomac, l'intestin grêle, le côlon, le rectum puis l'anus."
+    },
+    {
+      "id": "K175",
+      "title": "Estomac",
+      "content": "L'estomac mélange les aliments avec les sucs gastriques afin de débuter leur digestion."
+    },
+    {
+      "id": "K176",
+      "title": "Intestin grêle",
+      "content": "La majorité de l'absorption des nutriments se réalise dans l'intestin grêle."
+    },
+    {
+      "id": "K177",
+      "title": "Foie",
+      "content": "Le foie produit la bile, participe au métabolisme et au stockage de nombreuses substances."
+    },
+    {
+      "id": "K178",
+      "title": "Pancréas",
+      "content": "Le pancréas sécrète des enzymes digestives et des hormones comme l'insuline."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q281",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Où débute la digestion ?",
+      "options": [
+        "Dans la bouche",
+        "Dans l'estomac",
+        "Dans le côlon",
+        "Dans le foie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q282",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe absorbe principalement les nutriments ?",
+      "options": [
+        "L'intestin grêle",
+        "Le rectum",
+        "L'œsophage",
+        "Le côlon"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q283",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le foie produit la bile.",
+      "answer": true
+    },
+    {
+      "id": "Q284",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'œsophage assure l'absorption des nutriments.",
+      "answer": false
+    },
+    {
+      "id": "Q285",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Estomac",
+          "Début de la digestion chimique"
+        ],
+        [
+          "Intestin grêle",
+          "Absorption"
+        ],
+        [
+          "Foie",
+          "Production de bile"
+        ],
+        [
+          "Pancréas",
+          "Enzymes digestives"
+        ]
+      ]
+    },
+    {
+      "id": "Q286",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le ______ produit la bile.",
+      "answers": [
+        "foie"
+      ]
+    },
+    {
+      "id": "Q287",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel organe sécrète l'insuline ?",
+      "options": [
+        "Le pancréas",
+        "Le foie",
+        "L'estomac",
+        "Le côlon"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q288",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une douleur localisée en région épigastrique après un repas oriente principalement vers quel système ?",
+      "options": [
+        "Digestif",
+        "Respiratoire",
+        "Nerveux",
+        "Urinaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q289",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur l'estomac.",
+      "target": "stomach"
+    },
+    {
+      "id": "Q290",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet des aliments.",
+      "solution": [
+        "Bouche",
+        "Œsophage",
+        "Estomac",
+        "Intestin grêle",
+        "Côlon",
+        "Rectum",
+        "Anus"
+      ]
+    }
+  ]
+}

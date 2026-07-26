@@ -1,0 +1,1020 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-18",
+  "id": "dea-p18-l08",
+  "title": "Synthèse et interprétation",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 15,
+  "level": 1,
+  "xp": 57,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Adaptation à l'effort et au stress",
+    "Révision générale de physiologie"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l09",
+    "import.json-xlsx.b01.p04.l10"
+  ],
+  "prerequisiteIds": [
+    "dea-p18-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l09-q381",
+      "difficulty": "easy",
+      "question": "Pendant un effort, la fréquence cardiaque :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q381",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q381-answer-01",
+          "text": "Augmente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q381-answer-02",
+          "text": "Diminue",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q381-answer-03",
+          "text": "Reste identique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q381-answer-04",
+          "text": "S'arrête",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q381-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l09-q382",
+      "difficulty": "easy",
+      "question": "Quelle hormone intervient rapidement lors d'un stress aigu ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q382",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q382-answer-01",
+          "text": "Adrénaline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q382-answer-02",
+          "text": "Insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q382-answer-03",
+          "text": "Thyroxine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q382-answer-04",
+          "text": "Mélatonine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q382-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l09-q383",
+      "difficulty": "easy",
+      "question": "La fréquence respiratoire augmente généralement pendant un effort.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q383",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q383-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q383-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q383-true"
+    },
+    {
+      "id": "import-b01-p04-l09-q384",
+      "difficulty": "easy",
+      "question": "Les constantes vitales restent toujours identiques pendant un exercice physique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q384",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q384-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q384-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q384-false"
+    },
+    {
+      "id": "import-b01-p04-l09-q385",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q385",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q385-pair-01",
+          "text": "Effort",
+          "match": "Augmentation du débit cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q385-pair-02",
+          "text": "Stress",
+          "match": "Adrénaline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q385-pair-03",
+          "text": "Respiration",
+          "match": "Hausse de la ventilation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q385-pair-04",
+          "text": "Repos",
+          "match": "Retour progressif des constantes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l09-q385-pair-01",
+        "import-b01-p04-l09-q385-pair-02",
+        "import-b01-p04-l09-q385-pair-03",
+        "import-b01-p04-l09-q385-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l09-q386",
+      "difficulty": "medium",
+      "question": "Après un effort, les constantes reviennent progressivement vers leur valeur de ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q386",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "repos"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q386-accepted-01",
+          "text": "repos",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l09-q386-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l09-q387",
+      "difficulty": "hard",
+      "question": "Pourquoi le débit cardiaque augmente-t-il pendant un effort ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q387",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q387-answer-01",
+          "text": "Pour augmenter l'apport d'oxygène aux tissus",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q387-answer-02",
+          "text": "Pour ralentir la digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q387-answer-03",
+          "text": "Pour diminuer la température",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q387-answer-04",
+          "text": "Pour produire davantage d'urine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q387-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l09-q388",
+      "difficulty": "hard",
+      "question": "Un patient arrive après avoir monté quatre étages rapidement. Sa fréquence cardiaque est à 120/min. Quelle est l'interprétation la plus probable ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q388",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q388-answer-01",
+          "text": "Une adaptation physiologique à l'effort",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q388-answer-02",
+          "text": "Un arrêt cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q388-answer-03",
+          "text": "Une hypothermie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l09-q388-answer-04",
+          "text": "Une insuffisance rénale",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l09-q388-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l09-q389",
+      "difficulty": "medium",
+      "question": "Replace les événements lors d'un effort physique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q389",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l09-q389-step-01",
+          "text": "Début de l'effort",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l09-q389-step-02",
+          "text": "Augmentation de la fréquence cardiaque",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l09-q389-step-03",
+          "text": "Augmentation de la ventilation",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l09-q389-step-04",
+          "text": "Apport accru en oxygène",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-l09-q389-step-05",
+          "text": "Retour progressif au repos",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l09-q389-step-01",
+        "import-b01-p04-l09-q389-step-02",
+        "import-b01-p04-l09-q389-step-03",
+        "import-b01-p04-l09-q389-step-04",
+        "import-b01-p04-l09-q389-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l09-q390",
+      "difficulty": "medium",
+      "question": "Clique sur les glandes surrénales.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q390",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "adrenal_glands"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "detail": "0.5,0.08",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-adrenal_glands"
+    },
+    {
+      "id": "import-b01-p04-l10-q391",
+      "difficulty": "medium",
+      "question": "Les constantes vitales permettent principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q391",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q391-answer-01",
+          "text": "D'évaluer le fonctionnement de l'organisme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q391-answer-02",
+          "text": "De mesurer la taille des organes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q391-answer-03",
+          "text": "D'identifier le groupe sanguin",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q391-answer-04",
+          "text": "De connaître le poids",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q391-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l10-q392",
+      "difficulty": "medium",
+      "question": "Une défaillance d'un système peut :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q392",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q392-answer-01",
+          "text": "Retentir sur d'autres systèmes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q392-answer-02",
+          "text": "Ne concerner qu'un seul organe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q392-answer-03",
+          "text": "N'avoir aucune conséquence",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q392-answer-04",
+          "text": "Modifier uniquement la peau",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q392-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l10-q393",
+      "difficulty": "medium",
+      "question": "L'organisme possède des mécanismes de compensation avant certaines défaillances.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q393",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q393-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q393-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q393-true"
+    },
+    {
+      "id": "import-b01-p04-l10-q394",
+      "difficulty": "medium",
+      "question": "Les constantes vitales sont inutiles dans le bilan clinique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q394",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q394-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q394-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q394-false"
+    },
+    {
+      "id": "import-b01-p04-l10-q395",
+      "difficulty": "hard",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q395",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q395-pair-01",
+          "text": "Cœur",
+          "match": "Perfusion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q395-pair-02",
+          "text": "Poumons",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q395-pair-03",
+          "text": "Reins",
+          "match": "Filtration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q395-pair-04",
+          "text": "Cerveau",
+          "match": "Commande nerveuse",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l10-q395-pair-01",
+        "import-b01-p04-l10-q395-pair-02",
+        "import-b01-p04-l10-q395-pair-03",
+        "import-b01-p04-l10-q395-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l10-q396",
+      "difficulty": "medium",
+      "question": "L'observation clinique permet une ______ précoce des anomalies.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q396",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "détection"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q396-accepted-01",
+          "text": "détection",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l10-q396-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l10-q397",
+      "difficulty": "expert",
+      "question": "Un patient présente une hypotension, une tachycardie et une polypnée. Quelle affirmation est la plus juste ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q397",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q397-answer-01",
+          "text": "Plusieurs systèmes physiologiques sont impliqués",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q397-answer-02",
+          "text": "Seul le système digestif est concerné",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q397-answer-03",
+          "text": "Il s'agit obligatoirement d'une maladie endocrinienne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q397-answer-04",
+          "text": "Les constantes sont normales",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q397-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l10-q398",
+      "difficulty": "hard",
+      "question": "Replace les étapes d'une surveillance clinique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q398",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q398-step-01",
+          "text": "Observation",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l10-q398-step-02",
+          "text": "Mesure des constantes",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l10-q398-step-03",
+          "text": "Analyse",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l10-q398-step-04",
+          "text": "Transmission",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-l10-q398-step-05",
+          "text": "Surveillance continue",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l10-q398-step-01",
+        "import-b01-p04-l10-q398-step-02",
+        "import-b01-p04-l10-q398-step-03",
+        "import-b01-p04-l10-q398-step-04",
+        "import-b01-p04-l10-q398-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l10-q400",
+      "difficulty": "expert",
+      "question": "Chez un patient instable, quel est l'objectif principal de l'évaluation physiologique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q400",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l10-q400-answer-01",
+          "text": "Identifier rapidement une défaillance et adapter la prise en charge",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q400-answer-02",
+          "text": "Déterminer son groupe sanguin",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q400-answer-03",
+          "text": "Évaluer son niveau sportif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l10-q400-answer-04",
+          "text": "Mesurer sa masse musculaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l10-q400-answer-01"
+    }
+  ]
+}

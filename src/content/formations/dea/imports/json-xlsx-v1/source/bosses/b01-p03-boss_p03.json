@@ -1,0 +1,199 @@
+{
+  "block_id": "B01",
+  "path_id": "P03",
+  "boss_id": "BOSS_P03",
+  "title": "Boss - Anatomie générale",
+  "description": "Évaluation finale du parcours Anatomie générale",
+  "unlock_after": "L10",
+  "passing_score": 80,
+  "questions": [
+    {
+      "id": "BQ031",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Combien d'os possède approximativement un adulte ?",
+      "options": [
+        "206",
+        "180",
+        "250",
+        "150"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ032",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Quel tissu est responsable de la contraction ?",
+      "options": [
+        "Musculaire",
+        "Épithélial",
+        "Conjonctif",
+        "Nerveux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ033",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Les ligaments relient deux os entre eux.",
+      "answer": true
+    },
+    {
+      "id": "BQ034",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Le myocarde est un muscle volontaire.",
+      "answer": false
+    },
+    {
+      "id": "BQ035",
+      "type": "matching",
+      "difficulty": 3,
+      "pairs": [
+        [
+          "Fémur",
+          "Os long"
+        ],
+        [
+          "Sternum",
+          "Os plat"
+        ],
+        [
+          "Crâne",
+          "Protection de l'encéphale"
+        ],
+        [
+          "Vertèbres",
+          "Protection de la moelle épinière"
+        ]
+      ]
+    },
+    {
+      "id": "BQ036",
+      "type": "fill_blank",
+      "difficulty": 3,
+      "question": "Le principal muscle de la respiration est le ______.",
+      "answers": [
+        "diaphragme"
+      ]
+    },
+    {
+      "id": "BQ037",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle structure assure les échanges entre le sang et les tissus ?",
+      "options": [
+        "Les capillaires",
+        "Les artères",
+        "Les veines",
+        "L'aorte"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ038",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Dans quel organe se déroule principalement l'absorption des nutriments ?",
+      "options": [
+        "Intestin grêle",
+        "Estomac",
+        "Côlon",
+        "Œsophage"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ039",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel organe filtre le sang pour produire l'urine ?",
+      "options": [
+        "Le rein",
+        "La vessie",
+        "Le foie",
+        "Le pancréas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ040",
+      "type": "ordering",
+      "difficulty": 4,
+      "question": "Classe le trajet de l'air inspiré.",
+      "solution": [
+        "Nez/Bouche",
+        "Pharynx",
+        "Larynx",
+        "Trachée",
+        "Bronches",
+        "Alvéoles"
+      ]
+    },
+    {
+      "id": "BQ041",
+      "type": "ordering",
+      "difficulty": 4,
+      "question": "Replace le trajet de l'urine.",
+      "solution": [
+        "Rein",
+        "Uretère",
+        "Vessie",
+        "Urètre"
+      ]
+    },
+    {
+      "id": "BQ042",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Une victime présente une douleur brutale du thorax accompagnée d'une dyspnée. Quels sont les deux systèmes principalement concernés ?",
+      "options": [
+        "Cardiovasculaire et respiratoire",
+        "Digestif et urinaire",
+        "Musculaire et digestif",
+        "Endocrinien et cutané"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ043",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Après une chute, une victime présente une déformation de la cuisse. Quelle structure est probablement atteinte ?",
+      "options": [
+        "Le fémur",
+        "Le tibia",
+        "L'humérus",
+        "Le radius"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ044",
+      "type": "anatomy_click",
+      "difficulty": 4,
+      "question": "Clique sur le diaphragme.",
+      "target": "diaphragm"
+    },
+    {
+      "id": "BQ045",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Lors d'un bilan, une victime présente une douleur lombaire associée à une hématurie. Quel système est prioritairement concerné ?",
+      "options": [
+        "Le système urinaire",
+        "Le système digestif",
+        "Le système nerveux",
+        "Le système respiratoire"
+      ],
+      "correct": 0
+    }
+  ],
+  "reward": {
+    "xp": 350,
+    "coins": 200,
+    "badge": "anatomy_master_bronze"
+  }
+}

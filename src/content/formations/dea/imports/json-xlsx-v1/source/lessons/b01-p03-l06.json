@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L06",
+  "lesson_title": "Le système nerveux",
+  "knowledge": [
+    {
+      "id": "K155",
+      "title": "Définition",
+      "content": "Le système nerveux coordonne les fonctions du corps et assure la transmission des informations."
+    },
+    {
+      "id": "K156",
+      "title": "Système nerveux central",
+      "content": "Il est composé de l'encéphale et de la moelle épinière."
+    },
+    {
+      "id": "K157",
+      "title": "Système nerveux périphérique",
+      "content": "Il comprend les nerfs reliant le système nerveux central au reste du corps."
+    },
+    {
+      "id": "K158",
+      "title": "Neurone",
+      "content": "Le neurone est la cellule spécialisée dans la transmission de l'influx nerveux."
+    },
+    {
+      "id": "K159",
+      "title": "Fonctions",
+      "content": "Le système nerveux permet la perception, la motricité, les réflexes et la régulation de nombreuses fonctions vitales."
+    },
+    {
+      "id": "K160",
+      "title": "Réflexe",
+      "content": "Un réflexe est une réponse automatique, rapide et involontaire à un stimulus."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q251",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le système nerveux central est constitué :",
+      "options": [
+        "De l'encéphale et de la moelle épinière",
+        "Des muscles et des os",
+        "Du cœur et des poumons",
+        "Des artères et des veines"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q252",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle cellule transmet l'influx nerveux ?",
+      "options": [
+        "Le neurone",
+        "L'hématie",
+        "Le myocyte",
+        "Le fibroblaste"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q253",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les nerfs appartiennent au système nerveux périphérique.",
+      "answer": true
+    },
+    {
+      "id": "Q254",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La moelle épinière appartient au système nerveux périphérique.",
+      "answer": false
+    },
+    {
+      "id": "Q255",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Encéphale",
+          "Centre de commande"
+        ],
+        [
+          "Moelle épinière",
+          "Transmission des informations"
+        ],
+        [
+          "Nerfs",
+          "Connexion avec les organes"
+        ],
+        [
+          "Neurone",
+          "Cellule nerveuse"
+        ]
+      ]
+    },
+    {
+      "id": "Q256",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le système nerveux central comprend l'encéphale et la ______ épinière.",
+      "answers": [
+        "moelle"
+      ]
+    },
+    {
+      "id": "Q257",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle structure relie le cerveau aux nerfs périphériques ?",
+      "options": [
+        "La moelle épinière",
+        "Le diaphragme",
+        "Le sternum",
+        "Le foie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q258",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lorsqu'un patient retire immédiatement sa main après avoir touché un objet brûlant, il s'agit principalement :",
+      "options": [
+        "D'un réflexe",
+        "D'un mouvement volontaire",
+        "D'une contraction cardiaque",
+        "D'une réaction hormonale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q259",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le cerveau.",
+      "target": "brain"
+    },
+    {
+      "id": "Q260",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe le trajet de l'information nerveuse.",
+      "solution": [
+        "Récepteur",
+        "Nerf",
+        "Moelle épinière",
+        "Encéphale"
+      ]
+    }
+  ]
+}

@@ -30,13 +30,15 @@ export function buildOfficialRoadmap(
     parcours: parcours
       .filter((item) => item.blocId === bloc.id)
       .map((item) => {
-        const publishedLessons = item.lessons.filter((lesson) => lesson.status === "published");
+        const publishedLessons = item.lessons.filter(
+          (lesson) => lesson.status === "published" || lesson.status === "review",
+        );
         return {
           ...item,
           blocOrder: bloc.order,
           blocTitle: bloc.title,
-          plannedLessonCount: item.lessons.length,
-          publishedLessonCount: publishedLessons.length,
+          plannedLessonCount: item.lessons.filter((lesson) => lesson.kind !== "boss").length,
+          publishedLessonCount: publishedLessons.filter((lesson) => lesson.kind !== "boss").length,
           publishedLessons,
         };
       }),

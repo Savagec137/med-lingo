@@ -1,0 +1,171 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L04",
+  "lesson_title": "Les principales racines médicales",
+  "knowledge": [
+    {
+      "id": "K083",
+      "title": "Cardio",
+      "content": "Cardio désigne le cœur."
+    },
+    {
+      "id": "K084",
+      "title": "Pneumo",
+      "content": "Pneumo désigne les poumons ou l'air."
+    },
+    {
+      "id": "K085",
+      "title": "Neuro",
+      "content": "Neuro désigne le système nerveux ou les nerfs."
+    },
+    {
+      "id": "K086",
+      "title": "Gastro",
+      "content": "Gastro désigne l'estomac."
+    },
+    {
+      "id": "K087",
+      "title": "Hépato",
+      "content": "Hépato désigne le foie."
+    },
+    {
+      "id": "K088",
+      "title": "Néphro",
+      "content": "Néphro désigne le rein."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q131",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La racine cardio désigne :",
+      "options": [
+        "Le cœur",
+        "Le cerveau",
+        "Le foie",
+        "Le rein"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q132",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La racine neuro désigne :",
+      "options": [
+        "Les nerfs",
+        "Les muscles",
+        "Les os",
+        "La peau"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q133",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La racine gastro fait référence à l'estomac.",
+      "answer": true
+    },
+    {
+      "id": "Q134",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La racine hépato désigne le rein.",
+      "answer": false
+    },
+    {
+      "id": "Q135",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Cardio",
+          "Cœur"
+        ],
+        [
+          "Pneumo",
+          "Poumons"
+        ],
+        [
+          "Neuro",
+          "Nerfs"
+        ],
+        [
+          "Gastro",
+          "Estomac"
+        ],
+        [
+          "Hépato",
+          "Foie"
+        ],
+        [
+          "Néphro",
+          "Rein"
+        ]
+      ]
+    },
+    {
+      "id": "Q136",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La racine ______ désigne le foie.",
+      "answers": [
+        "hépato"
+      ]
+    },
+    {
+      "id": "Q137",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le terme cardiologie désigne :",
+      "options": [
+        "L'étude du cœur",
+        "La chirurgie du cœur",
+        "La douleur du cœur",
+        "L'inflammation du cœur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q138",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une néphropathie est une affection :",
+      "options": [
+        "Du rein",
+        "Du foie",
+        "Du cerveau",
+        "Du poumon"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q139",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le compte-rendu mentionne une pathologie hépatique. Quel organe est concerné ?",
+      "options": [
+        "Le foie",
+        "Le rein",
+        "Le cœur",
+        "Le poumon"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q140",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les éléments du mot 'cardiologie'.",
+      "solution": [
+        "Racine",
+        "Suffixe"
+      ]
+    }
+  ]
+}

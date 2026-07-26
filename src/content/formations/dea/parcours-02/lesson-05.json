@@ -3,16 +3,466 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l05",
-  "title": "Suffixes",
+  "title": "Construire un mot",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 7,
+  "level": 1,
+  "xp": 27,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 9
+  },
+  "learningObjectives": [
+    "Les termes médicaux de fréquence"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l07"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l04"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l07-q162",
+      "difficulty": "easy",
+      "question": "Une bradypnée correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q162",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q162-answer-01",
+          "text": "Une respiration lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q162-answer-02",
+          "text": "Une respiration rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q162-answer-03",
+          "text": "Une fréquence cardiaque lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q162-answer-04",
+          "text": "Une absence de respiration",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q162-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l07-q163",
+      "difficulty": "easy",
+      "question": "Une tachypnée correspond à une respiration rapide.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q163",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q163-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q163-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q163-true"
+    },
+    {
+      "id": "import-b01-p02-l07-q164",
+      "difficulty": "easy",
+      "question": "Une bradycardie correspond à une fréquence cardiaque rapide.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q164",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q164-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q164-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q164-false"
+    },
+    {
+      "id": "import-b01-p02-l07-q165",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q165",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q165-pair-01",
+          "text": "Bradycardie",
+          "match": "Cœur lent",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q165-pair-02",
+          "text": "Tachycardie",
+          "match": "Cœur rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q165-pair-03",
+          "text": "Bradypnée",
+          "match": "Respiration lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q165-pair-04",
+          "text": "Tachypnée",
+          "match": "Respiration rapide",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l07-q165-pair-01",
+        "import-b01-p02-l07-q165-pair-02",
+        "import-b01-p02-l07-q165-pair-03",
+        "import-b01-p02-l07-q165-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l07-q166",
+      "difficulty": "medium",
+      "question": "Une fréquence respiratoire rapide est appelée ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q166",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "tachypnée"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q166-accepted-01",
+          "text": "tachypnée",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l07-q166-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l07-q167",
+      "difficulty": "hard",
+      "question": "Un patient présente une FC à 145/min. Le terme adapté est :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q167",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q167-answer-01",
+          "text": "Tachycardie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q167-answer-02",
+          "text": "Bradycardie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q167-answer-03",
+          "text": "Normocardie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q167-answer-04",
+          "text": "Bradypnée",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q167-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l07-q168",
+      "difficulty": "medium",
+      "question": "Classe les états de la fréquence cardiaque.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q168",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q168-step-01",
+          "text": "Bradycardie",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l07-q168-step-02",
+          "text": "Normocardie",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-l07-q168-step-03",
+          "text": "Tachycardie",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l07-q168-step-01",
+        "import-b01-p02-l07-q168-step-02",
+        "import-b01-p02-l07-q168-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l07-q169",
+      "difficulty": "hard",
+      "question": "Votre bilan retrouve une FR à 32/min chez un adulte. Quel terme utilisez-vous ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q169",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q169-answer-01",
+          "text": "Tachypnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q169-answer-02",
+          "text": "Bradypnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q169-answer-03",
+          "text": "Normopnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q169-answer-04",
+          "text": "Apnée",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q169-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l07-q170",
+      "difficulty": "medium",
+      "question": "Normopnée signifie respiration normale.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q170",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l07-q170-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l07-q170-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l07-q170-true"
+    }
+  ]
 }

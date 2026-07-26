@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-boss",
+  "title": "Boss — Anatomie générale",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "hard",
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": 350,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 12
+  },
+  "learningObjectives": [
+    "Boss - Anatomie générale"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.boss"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Anatomie générale",
+    "scenario": "Cas clinique interactif : Une victime présente plusieurs symptômes. Le joueur doit : identifier le système concerné ; retrouver les organes impliqués ; expliquer le rôle général de ce système.",
+    "tasks": [
+      "Cas clinique interactif :",
+      "Une victime présente plusieurs symptômes.",
+      "Le joueur doit :",
+      "identifier le système concerné ;",
+      "retrouver les organes impliqués ;",
+      "expliquer le rôle général de ce système."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true
+  },
+  "items": [
+    {
+      "id": "import-b01-p03-boss-bq031",
+      "difficulty": "medium",
+      "question": "Combien d'os possède approximativement un adulte ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ031",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq031-answer-01",
+          "text": "206",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq031-answer-02",
+          "text": "180",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq031-answer-03",
+          "text": "250",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq031-answer-04",
+          "text": "150",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq031-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq032",
+      "difficulty": "medium",
+      "question": "Quel tissu est responsable de la contraction ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ032",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq032-answer-01",
+          "text": "Musculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq032-answer-02",
+          "text": "Épithélial",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq032-answer-03",
+          "text": "Conjonctif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq032-answer-04",
+          "text": "Nerveux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq032-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq033",
+      "difficulty": "medium",
+      "question": "Les ligaments relient deux os entre eux.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ033",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq033-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq033-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq033-true"
+    },
+    {
+      "id": "import-b01-p03-boss-bq034",
+      "difficulty": "medium",
+      "question": "Le myocarde est un muscle volontaire.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ034",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq034-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq034-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq034-false"
+    },
+    {
+      "id": "import-b01-p03-boss-bq035",
+      "difficulty": "hard",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ035",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq035-pair-01",
+          "text": "Fémur",
+          "match": "Os long",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq035-pair-02",
+          "text": "Sternum",
+          "match": "Os plat",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq035-pair-03",
+          "text": "Crâne",
+          "match": "Protection de l'encéphale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq035-pair-04",
+          "text": "Vertèbres",
+          "match": "Protection de la moelle épinière",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-boss-bq035-pair-01",
+        "import-b01-p03-boss-bq035-pair-02",
+        "import-b01-p03-boss-bq035-pair-03",
+        "import-b01-p03-boss-bq035-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-boss-bq036",
+      "difficulty": "hard",
+      "question": "Le principal muscle de la respiration est le ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ036",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "diaphragme"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq036-accepted-01",
+          "text": "diaphragme",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-boss-bq036-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-boss-bq037",
+      "difficulty": "hard",
+      "question": "Quelle structure assure les échanges entre le sang et les tissus ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ037",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq037-answer-01",
+          "text": "Les capillaires",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq037-answer-02",
+          "text": "Les artères",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq037-answer-03",
+          "text": "Les veines",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq037-answer-04",
+          "text": "L'aorte",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq037-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq038",
+      "difficulty": "hard",
+      "question": "Dans quel organe se déroule principalement l'absorption des nutriments ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ038",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq038-answer-01",
+          "text": "Intestin grêle",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq038-answer-02",
+          "text": "Estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq038-answer-03",
+          "text": "Côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq038-answer-04",
+          "text": "Œsophage",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq038-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq039",
+      "difficulty": "hard",
+      "question": "Quel organe filtre le sang pour produire l'urine ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ039",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq039-answer-01",
+          "text": "Le rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq039-answer-02",
+          "text": "La vessie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq039-answer-03",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq039-answer-04",
+          "text": "Le pancréas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq039-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq040",
+      "difficulty": "expert",
+      "question": "Classe le trajet de l'air inspiré.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ040",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 6
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq040-step-01",
+          "text": "Nez/Bouche",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-boss-bq040-step-02",
+          "text": "Pharynx",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-boss-bq040-step-03",
+          "text": "Larynx",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-boss-bq040-step-04",
+          "text": "Trachée",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p03-boss-bq040-step-05",
+          "text": "Bronches",
+          "explanation": "",
+          "sequenceRank": 5
+        },
+        {
+          "id": "import-b01-p03-boss-bq040-step-06",
+          "text": "Alvéoles",
+          "explanation": "",
+          "sequenceRank": 6
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-boss-bq040-step-01",
+        "import-b01-p03-boss-bq040-step-02",
+        "import-b01-p03-boss-bq040-step-03",
+        "import-b01-p03-boss-bq040-step-04",
+        "import-b01-p03-boss-bq040-step-05",
+        "import-b01-p03-boss-bq040-step-06"
+      ]
+    },
+    {
+      "id": "import-b01-p03-boss-bq041",
+      "difficulty": "expert",
+      "question": "Replace le trajet de l'urine.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ041",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq041-step-01",
+          "text": "Rein",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-boss-bq041-step-02",
+          "text": "Uretère",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-boss-bq041-step-03",
+          "text": "Vessie",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-boss-bq041-step-04",
+          "text": "Urètre",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-boss-bq041-step-01",
+        "import-b01-p03-boss-bq041-step-02",
+        "import-b01-p03-boss-bq041-step-03",
+        "import-b01-p03-boss-bq041-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-boss-bq042",
+      "difficulty": "expert",
+      "question": "Une victime présente une douleur brutale du thorax accompagnée d'une dyspnée. Quels sont les deux systèmes principalement concernés ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ042",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq042-answer-01",
+          "text": "Cardiovasculaire et respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq042-answer-02",
+          "text": "Digestif et urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq042-answer-03",
+          "text": "Musculaire et digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq042-answer-04",
+          "text": "Endocrinien et cutané",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq042-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq043",
+      "difficulty": "expert",
+      "question": "Après une chute, une victime présente une déformation de la cuisse. Quelle structure est probablement atteinte ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ043",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq043-answer-01",
+          "text": "Le fémur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq043-answer-02",
+          "text": "Le tibia",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq043-answer-03",
+          "text": "L'humérus",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq043-answer-04",
+          "text": "Le radius",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq043-answer-01"
+    },
+    {
+      "id": "import-b01-p03-boss-bq044",
+      "difficulty": "expert",
+      "question": "Clique sur le diaphragme.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ044",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "diaphragm"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-diaphragm",
+          "text": "Diaphragme",
+          "detail": "0.5,0.39",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-lungs",
+          "text": "Poumons",
+          "detail": "0.43,0.29",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "detail": "0.5,0.08",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-diaphragm"
+    },
+    {
+      "id": "import-b01-p03-boss-bq045",
+      "difficulty": "expert",
+      "question": "Lors d'un bilan, une victime présente une douleur lombaire associée à une hématurie. Quel système est prioritairement concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "BOSS_P03",
+        "originalQuestionId": "BQ045",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-boss-bq045-answer-01",
+          "text": "Le système urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq045-answer-02",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq045-answer-03",
+          "text": "Le système nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-boss-bq045-answer-04",
+          "text": "Le système respiratoire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-boss-bq045-answer-01"
+    }
+  ]
+}

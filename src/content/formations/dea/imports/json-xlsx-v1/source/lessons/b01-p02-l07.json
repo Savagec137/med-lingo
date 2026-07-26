@@ -1,0 +1,158 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L07",
+  "lesson_title": "Les termes médicaux de fréquence",
+  "knowledge": [
+    {
+      "id": "K101",
+      "title": "Bradycardie",
+      "content": "Une bradycardie correspond à une fréquence cardiaque anormalement lente."
+    },
+    {
+      "id": "K102",
+      "title": "Tachycardie",
+      "content": "Une tachycardie correspond à une fréquence cardiaque anormalement rapide."
+    },
+    {
+      "id": "K103",
+      "title": "Bradypnée",
+      "content": "Une bradypnée correspond à une fréquence respiratoire anormalement lente."
+    },
+    {
+      "id": "K104",
+      "title": "Tachypnée",
+      "content": "Une tachypnée correspond à une fréquence respiratoire anormalement rapide."
+    },
+    {
+      "id": "K105",
+      "title": "Normocarde",
+      "content": "Une fréquence cardiaque normale est qualifiée de normocarde."
+    },
+    {
+      "id": "K106",
+      "title": "Normopnée",
+      "content": "Une fréquence respiratoire normale est qualifiée de normopnée."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q161",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Une tachycardie correspond à :",
+      "options": [
+        "Une fréquence cardiaque rapide",
+        "Une fréquence cardiaque lente",
+        "Une respiration rapide",
+        "Une respiration lente"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q162",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Une bradypnée correspond à :",
+      "options": [
+        "Une respiration lente",
+        "Une respiration rapide",
+        "Une fréquence cardiaque lente",
+        "Une absence de respiration"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q163",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une tachypnée correspond à une respiration rapide.",
+      "answer": true
+    },
+    {
+      "id": "Q164",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une bradycardie correspond à une fréquence cardiaque rapide.",
+      "answer": false
+    },
+    {
+      "id": "Q165",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Bradycardie",
+          "Cœur lent"
+        ],
+        [
+          "Tachycardie",
+          "Cœur rapide"
+        ],
+        [
+          "Bradypnée",
+          "Respiration lente"
+        ],
+        [
+          "Tachypnée",
+          "Respiration rapide"
+        ]
+      ]
+    },
+    {
+      "id": "Q166",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Une fréquence respiratoire rapide est appelée ______.",
+      "answers": [
+        "tachypnée"
+      ]
+    },
+    {
+      "id": "Q167",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Un patient présente une FC à 145/min. Le terme adapté est :",
+      "options": [
+        "Tachycardie",
+        "Bradycardie",
+        "Normocardie",
+        "Bradypnée"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q168",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les états de la fréquence cardiaque.",
+      "solution": [
+        "Bradycardie",
+        "Normocardie",
+        "Tachycardie"
+      ]
+    },
+    {
+      "id": "Q169",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Votre bilan retrouve une FR à 32/min chez un adulte. Quel terme utilisez-vous ?",
+      "options": [
+        "Tachypnée",
+        "Bradypnée",
+        "Normopnée",
+        "Apnée"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q170",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Normopnée signifie respiration normale.",
+      "answer": true
+    }
+  ]
+}

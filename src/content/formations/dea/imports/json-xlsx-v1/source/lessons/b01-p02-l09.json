@@ -1,0 +1,163 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L09",
+  "lesson_title": "Les principaux examens médicaux",
+  "knowledge": [
+    {
+      "id": "K113",
+      "title": "Radiographie",
+      "content": "La radiographie utilise les rayons X pour visualiser principalement les structures osseuses."
+    },
+    {
+      "id": "K114",
+      "title": "Scanner",
+      "content": "Le scanner (TDM) produit des images en coupe du corps grâce aux rayons X."
+    },
+    {
+      "id": "K115",
+      "title": "IRM",
+      "content": "L'IRM utilise un champ magnétique et des ondes radio pour obtenir des images détaillées des tissus."
+    },
+    {
+      "id": "K116",
+      "title": "Échographie",
+      "content": "L'échographie utilise les ultrasons pour explorer différents organes."
+    },
+    {
+      "id": "K117",
+      "title": "ECG",
+      "content": "L'électrocardiogramme enregistre l'activité électrique du cœur."
+    },
+    {
+      "id": "K118",
+      "title": "Choix de l'examen",
+      "content": "Le choix de l'examen dépend de la situation clinique et de la prescription médicale."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q181",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel examen enregistre l'activité électrique du cœur ?",
+      "options": [
+        "ECG",
+        "IRM",
+        "Scanner",
+        "Échographie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q182",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel examen utilise les ultrasons ?",
+      "options": [
+        "Échographie",
+        "Radiographie",
+        "Scanner",
+        "ECG"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q183",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le scanner utilise les rayons X.",
+      "answer": true
+    },
+    {
+      "id": "Q184",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'IRM utilise des rayons X.",
+      "answer": false
+    },
+    {
+      "id": "Q185",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Radiographie",
+          "Os"
+        ],
+        [
+          "Scanner",
+          "Images en coupe"
+        ],
+        [
+          "IRM",
+          "Champ magnétique"
+        ],
+        [
+          "Échographie",
+          "Ultrasons"
+        ],
+        [
+          "ECG",
+          "Activité électrique du cœur"
+        ]
+      ]
+    },
+    {
+      "id": "Q186",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "L'______ utilise les ultrasons.",
+      "answers": [
+        "échographie"
+      ]
+    },
+    {
+      "id": "Q187",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel examen est abrégé ECG ?",
+      "options": [
+        "Électrocardiogramme",
+        "Électroencéphalogramme",
+        "Échocardiographie",
+        "Électromyogramme"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q188",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le médecin demande un ECG après une douleur thoracique. Quel est l'objectif principal de cet examen ?",
+      "options": [
+        "Analyser l'activité électrique du cœur",
+        "Visualiser une fracture",
+        "Observer les poumons",
+        "Mesurer la glycémie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q189",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Associe chaque examen à sa technologie.",
+      "solution": [
+        "Échographie → Ultrasons",
+        "IRM → Champ magnétique",
+        "Scanner → Rayons X",
+        "ECG → Activité électrique"
+      ]
+    },
+    {
+      "id": "Q190",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Le choix d'un examen dépend de la situation clinique.",
+      "answer": true
+    }
+  ]
+}

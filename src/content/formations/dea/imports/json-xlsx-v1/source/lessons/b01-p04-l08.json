@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L08",
+  "lesson_title": "Physiologie du système endocrinien",
+  "knowledge": [
+    {
+      "id": "K227",
+      "title": "Définition",
+      "content": "Le système endocrinien regroupe les glandes qui sécrètent des hormones directement dans le sang."
+    },
+    {
+      "id": "K228",
+      "title": "Hormones",
+      "content": "Les hormones sont des messagers chimiques qui régulent le fonctionnement de nombreux organes."
+    },
+    {
+      "id": "K229",
+      "title": "Pancréas",
+      "content": "Le pancréas produit notamment l'insuline et le glucagon, qui participent à la régulation de la glycémie."
+    },
+    {
+      "id": "K230",
+      "title": "Thyroïde",
+      "content": "La thyroïde intervient dans la régulation du métabolisme grâce aux hormones thyroïdiennes."
+    },
+    {
+      "id": "K231",
+      "title": "Glandes surrénales",
+      "content": "Les glandes surrénales sécrètent notamment l'adrénaline et le cortisol, impliqués dans la réponse au stress."
+    },
+    {
+      "id": "K232",
+      "title": "Application DEA",
+      "content": "Les déséquilibres hormonaux peuvent modifier rapidement l'état clinique d'un patient, notamment lors des hypoglycémies ou des hyperglycémies."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q371",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Les hormones sont :",
+      "options": [
+        "Des messagers chimiques",
+        "Des cellules sanguines",
+        "Des enzymes digestives",
+        "Des fibres musculaires"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q372",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle hormone fait diminuer la glycémie ?",
+      "options": [
+        "L'insuline",
+        "Le glucagon",
+        "L'adrénaline",
+        "Le cortisol"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q373",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La thyroïde participe à la régulation du métabolisme.",
+      "answer": true
+    },
+    {
+      "id": "Q374",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les hormones circulent principalement dans les bronches.",
+      "answer": false
+    },
+    {
+      "id": "Q375",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Pancréas",
+          "Insuline"
+        ],
+        [
+          "Thyroïde",
+          "Métabolisme"
+        ],
+        [
+          "Surrénales",
+          "Adrénaline"
+        ],
+        [
+          "Hormones",
+          "Messagers chimiques"
+        ]
+      ]
+    },
+    {
+      "id": "Q376",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "L'hormone qui diminue la glycémie est l'______.",
+      "answers": [
+        "insuline"
+      ]
+    },
+    {
+      "id": "Q377",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel est le rôle principal du système endocrinien ?",
+      "options": [
+        "Réguler les fonctions de l'organisme grâce aux hormones",
+        "Transporter l'oxygène",
+        "Assurer la digestion",
+        "Produire les cellules sanguines"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q378",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient présente une hypoglycémie symptomatique. Quelle hormone est directement impliquée dans cette régulation ?",
+      "options": [
+        "L'insuline",
+        "La thyroxine",
+        "L'aldostérone",
+        "La mélatonine"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q379",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les étapes d'une régulation hormonale.",
+      "solution": [
+        "Stimulus",
+        "Sécrétion hormonale",
+        "Transport sanguin",
+        "Organe cible",
+        "Réponse physiologique"
+      ]
+    },
+    {
+      "id": "Q380",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur la thyroïde.",
+      "target": "thyroid"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L04",
+  "lesson_title": "Les articulations",
+  "knowledge": [
+    {
+      "id": "K143",
+      "title": "Définition",
+      "content": "Une articulation relie deux ou plusieurs os et permet différents degrés de mobilité."
+    },
+    {
+      "id": "K144",
+      "title": "Articulations fixes",
+      "content": "Les articulations fibreuses sont pratiquement immobiles, comme les sutures du crâne."
+    },
+    {
+      "id": "K145",
+      "title": "Articulations semi-mobiles",
+      "content": "Les articulations cartilagineuses permettent une mobilité limitée."
+    },
+    {
+      "id": "K146",
+      "title": "Articulations synoviales",
+      "content": "Les articulations synoviales sont les plus mobiles et possèdent une capsule articulaire remplie de liquide synovial."
+    },
+    {
+      "id": "K147",
+      "title": "Ligaments",
+      "content": "Les ligaments stabilisent les articulations en reliant les os entre eux."
+    },
+    {
+      "id": "K148",
+      "title": "Cartilage articulaire",
+      "content": "Le cartilage diminue les frottements et amortit les contraintes mécaniques."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q231",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel est le type d'articulation le plus mobile ?",
+      "options": [
+        "Synoviale",
+        "Fibreuse",
+        "Cartilagineuse",
+        "Fixe"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q232",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel élément relie les os entre eux ?",
+      "options": [
+        "Ligament",
+        "Tendon",
+        "Muscle",
+        "Nerf"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q233",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le liquide synovial facilite les mouvements.",
+      "answer": true
+    },
+    {
+      "id": "Q234",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les sutures du crâne sont des articulations très mobiles.",
+      "answer": false
+    },
+    {
+      "id": "Q235",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Ligament",
+          "Relie deux os"
+        ],
+        [
+          "Cartilage",
+          "Réduit les frottements"
+        ],
+        [
+          "Liquide synovial",
+          "Lubrifie l'articulation"
+        ],
+        [
+          "Capsule",
+          "Entoure l'articulation"
+        ]
+      ]
+    },
+    {
+      "id": "Q236",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Les articulations les plus mobiles sont les articulations ______.",
+      "answers": [
+        "synoviales"
+      ]
+    },
+    {
+      "id": "Q237",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle articulation est un exemple d'articulation synoviale ?",
+      "options": [
+        "Genou",
+        "Sutures du crâne",
+        "Disques intervertébraux",
+        "Symphyse pubienne"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q238",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une entorse de la cheville atteint principalement :",
+      "options": [
+        "Les ligaments",
+        "Les os",
+        "Les muscles",
+        "Les nerfs"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q239",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le genou.",
+      "target": "knee"
+    },
+    {
+      "id": "Q240",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les articulations de la moins mobile à la plus mobile.",
+      "solution": [
+        "Fibreuse",
+        "Cartilagineuse",
+        "Synoviale"
+      ]
+    }
+  ]
+}

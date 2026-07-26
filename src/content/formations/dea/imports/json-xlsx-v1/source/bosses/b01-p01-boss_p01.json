@@ -1,0 +1,199 @@
+{
+  "block_id": "B01",
+  "path_id": "P01",
+  "boss_id": "BOSS_P01",
+  "title": "Boss - Le corps humain",
+  "description": "Évaluation finale du parcours 1",
+  "unlock_after": "L10",
+  "passing_score": 80,
+  "questions": [
+    {
+      "id": "BQ001",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel plan anatomique sépare le corps en une partie antérieure et une partie postérieure ?",
+      "options": [
+        "Plan frontal",
+        "Plan sagittal",
+        "Plan transversal",
+        "Plan médian"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ002",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le terme distal signifie :",
+      "options": [
+        "Éloigné du point d'attache",
+        "Proche du point d'attache",
+        "Vers la ligne médiane",
+        "Vers la tête"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ003",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle structure sépare la cavité thoracique de la cavité abdominale ?",
+      "options": [
+        "Le diaphragme",
+        "Le sternum",
+        "Le médiastin",
+        "Le péritoine"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ004",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le cerveau est situé dans :",
+      "options": [
+        "La cavité crânienne",
+        "La cavité thoracique",
+        "La cavité abdominale",
+        "La cavité pelvienne"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ005",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel système assure principalement les échanges gazeux ?",
+      "options": [
+        "Respiratoire",
+        "Digestif",
+        "Urinaire",
+        "Locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ006",
+      "type": "true_false",
+      "difficulty": 3,
+      "question": "Le terme médial signifie proche de la ligne médiane.",
+      "answer": true
+    },
+    {
+      "id": "BQ007",
+      "type": "true_false",
+      "difficulty": 3,
+      "question": "Les reins sont situés dans la cavité thoracique.",
+      "answer": false
+    },
+    {
+      "id": "BQ008",
+      "type": "matching",
+      "difficulty": 4,
+      "pairs": [
+        [
+          "Encéphale",
+          "Cavité crânienne"
+        ],
+        [
+          "Poumons",
+          "Cavité thoracique"
+        ],
+        [
+          "Foie",
+          "Cavité abdominale"
+        ],
+        [
+          "Vessie",
+          "Cavité pelvienne"
+        ]
+      ]
+    },
+    {
+      "id": "BQ009",
+      "type": "ordering",
+      "difficulty": 4,
+      "question": "Classe les niveaux d'organisation du plus simple au plus complexe.",
+      "solution": [
+        "Cellule",
+        "Tissu",
+        "Organe",
+        "Système",
+        "Organisme"
+      ]
+    },
+    {
+      "id": "BQ010",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Lors d'un traumatisme thoracique, quelles structures sont les plus directement exposées ?",
+      "options": [
+        "Le cœur et les poumons",
+        "Le foie et la rate",
+        "Les reins",
+        "La vessie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ011",
+      "type": "anatomy_click",
+      "difficulty": 4,
+      "question": "Clique sur la cavité abdominale.",
+      "target": "abdominal_cavity"
+    },
+    {
+      "id": "BQ012",
+      "type": "fill_blank",
+      "difficulty": 4,
+      "question": "Le terme ______ désigne une structure située près de la ligne médiane du corps.",
+      "answers": [
+        "médial"
+      ]
+    },
+    {
+      "id": "BQ013",
+      "type": "multiple_choice",
+      "difficulty": 4,
+      "question": "Quel système participe principalement à la régulation de l'équilibre hydrique ?",
+      "options": [
+        "Urinaire",
+        "Digestif",
+        "Respiratoire",
+        "Locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ014",
+      "type": "multiple_choice",
+      "difficulty": 4,
+      "question": "Une structure controlatérale est située :",
+      "options": [
+        "Du côté opposé",
+        "Du même côté",
+        "Vers la tête",
+        "Vers les pieds"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ015",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Pendant votre bilan, vous décrivez une douleur localisée dans le quadrant supérieur droit de l'abdomen. Quel est le principal intérêt d'utiliser cette terminologie anatomique ?",
+      "options": [
+        "Communiquer une localisation précise aux autres professionnels",
+        "Réduire la durée du transport",
+        "Éviter la réalisation du bilan",
+        "Remplacer les constantes vitales"
+      ],
+      "correct": 0
+    }
+  ],
+  "reward": {
+    "xp": 250,
+    "coins": 150,
+    "badge": "body_explorer_bronze"
+  }
+}

@@ -2,58 +2,830 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-boss",
+  "title": "Boss — Découvrir le corps humain",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "expert",
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": 250,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 12
   },
-  "items": [],
-  "id": "dea-p01-boss",
-  "title": "Boss — Localiser et transmettre",
-  "kind": "boss",
   "learningObjectives": [
-    "Valider l’application des notions du parcours à travers une situation courte."
+    "Boss - Le corps humain"
   ],
-  "competencyIds": [],
-  "prerequisiteIds": ["dea-p01-quiz"],
-  "contentPool": {
-    "sourceLessonIds": [
-      "dea-p01-l01",
-      "dea-p01-l02",
-      "dea-p01-l03",
-      "dea-p01-l04",
-      "dea-p01-l05",
-      "dea-p01-l06",
-      "dea-p01-l07",
-      "dea-p01-l08",
-      "dea-p01-l09"
-    ],
-    "strategy": "balanced_random",
-    "minimumItems": null,
-    "maximumItems": null,
-    "coverage": "balanced_by_lesson",
-    "deduplicateBy": "id"
-  },
+  "competencyIds": [
+    "import.json-xlsx.b01.p01.boss"
+  ],
+  "prerequisiteIds": [
+    "dea-p01-l08"
+  ],
   "bossConfiguration": {
-    "objective": "Valider l’application des notions du parcours à travers une situation courte.",
-    "scenario": "Un patient conscient décrit une douleur ou présente une lésion.",
+    "objective": "Boss — Découvrir le corps humain",
+    "scenario": "Mission : Une victime présente différentes douleurs. Le joueur doit : localiser les régions anatomiques ; identifier les organes concernés ; associer les systèmes concernés.",
     "tasks": [
-      "identifier la région anatomique ;",
-      "utiliser une direction anatomique adaptée ;",
-      "distinguer une description précise d’une formulation vague ;",
-      "choisir la meilleure transmission ;",
-      "replacer les niveaux cellule, tissu, organe et système dans le bon ordre lorsque pertinent."
+      "Mission :",
+      "Une victime présente différentes douleurs.",
+      "Le joueur doit :",
+      "localiser les régions anatomiques ;",
+      "identifier les organes concernés ;",
+      "associer les systèmes concernés."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
-    "successThreshold": null,
+    "successThreshold": 0.8,
     "rewardConfigurable": true
-  }
+  },
+  "items": [
+    {
+      "id": "import-b01-p01-boss-bq001",
+      "difficulty": "hard",
+      "question": "Quel plan anatomique sépare le corps en une partie antérieure et une partie postérieure ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ001",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq001-answer-01",
+          "text": "Plan frontal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq001-answer-02",
+          "text": "Plan sagittal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq001-answer-03",
+          "text": "Plan transversal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq001-answer-04",
+          "text": "Plan médian",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq001-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq002",
+      "difficulty": "hard",
+      "question": "Le terme distal signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ002",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq002-answer-01",
+          "text": "Éloigné du point d'attache",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq002-answer-02",
+          "text": "Proche du point d'attache",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq002-answer-03",
+          "text": "Vers la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq002-answer-04",
+          "text": "Vers la tête",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq002-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq003",
+      "difficulty": "hard",
+      "question": "Quelle structure sépare la cavité thoracique de la cavité abdominale ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ003",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq003-answer-01",
+          "text": "Le diaphragme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq003-answer-02",
+          "text": "Le sternum",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq003-answer-03",
+          "text": "Le médiastin",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq003-answer-04",
+          "text": "Le péritoine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq003-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq004",
+      "difficulty": "hard",
+      "question": "Le cerveau est situé dans :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ004",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq004-answer-01",
+          "text": "La cavité crânienne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq004-answer-02",
+          "text": "La cavité thoracique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq004-answer-03",
+          "text": "La cavité abdominale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq004-answer-04",
+          "text": "La cavité pelvienne",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq004-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq005",
+      "difficulty": "hard",
+      "question": "Quel système assure principalement les échanges gazeux ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ005",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq005-answer-01",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq005-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq005-answer-03",
+          "text": "Urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq005-answer-04",
+          "text": "Locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq005-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq006",
+      "difficulty": "hard",
+      "question": "Le terme médial signifie proche de la ligne médiane.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ006",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq006-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq006-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq006-true"
+    },
+    {
+      "id": "import-b01-p01-boss-bq007",
+      "difficulty": "hard",
+      "question": "Les reins sont situés dans la cavité thoracique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ007",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq007-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq007-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq007-false"
+    },
+    {
+      "id": "import-b01-p01-boss-bq008",
+      "difficulty": "expert",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ008",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq008-pair-01",
+          "text": "Encéphale",
+          "match": "Cavité crânienne",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq008-pair-02",
+          "text": "Poumons",
+          "match": "Cavité thoracique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq008-pair-03",
+          "text": "Foie",
+          "match": "Cavité abdominale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq008-pair-04",
+          "text": "Vessie",
+          "match": "Cavité pelvienne",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-boss-bq008-pair-01",
+        "import-b01-p01-boss-bq008-pair-02",
+        "import-b01-p01-boss-bq008-pair-03",
+        "import-b01-p01-boss-bq008-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-boss-bq009",
+      "difficulty": "expert",
+      "question": "Classe les niveaux d'organisation du plus simple au plus complexe.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ009",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq009-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-boss-bq009-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-boss-bq009-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-boss-bq009-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p01-boss-bq009-step-05",
+          "text": "Organisme",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-boss-bq009-step-01",
+        "import-b01-p01-boss-bq009-step-02",
+        "import-b01-p01-boss-bq009-step-03",
+        "import-b01-p01-boss-bq009-step-04",
+        "import-b01-p01-boss-bq009-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p01-boss-bq010",
+      "difficulty": "expert",
+      "question": "Lors d'un traumatisme thoracique, quelles structures sont les plus directement exposées ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ010",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq010-answer-01",
+          "text": "Le cœur et les poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq010-answer-02",
+          "text": "Le foie et la rate",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq010-answer-03",
+          "text": "Les reins",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq010-answer-04",
+          "text": "La vessie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq010-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq011",
+      "difficulty": "expert",
+      "question": "Clique sur la cavité abdominale.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ011",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "abdominal_cavity"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-abdominal_cavity",
+          "text": "Cavité abdominale",
+          "detail": "0.5,0.5",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_ventricle",
+          "text": "Ventricule gauche",
+          "detail": "0.56,0.34",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-abdominal_cavity"
+    },
+    {
+      "id": "import-b01-p01-boss-bq012",
+      "difficulty": "expert",
+      "question": "Le terme ______ désigne une structure située près de la ligne médiane du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ012",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "médial"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq012-accepted-01",
+          "text": "médial",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-boss-bq012-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-boss-bq013",
+      "difficulty": "expert",
+      "question": "Quel système participe principalement à la régulation de l'équilibre hydrique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ013",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq013-answer-01",
+          "text": "Urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq013-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq013-answer-03",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq013-answer-04",
+          "text": "Locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq013-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq014",
+      "difficulty": "expert",
+      "question": "Une structure controlatérale est située :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ014",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq014-answer-01",
+          "text": "Du côté opposé",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq014-answer-02",
+          "text": "Du même côté",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq014-answer-03",
+          "text": "Vers la tête",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq014-answer-04",
+          "text": "Vers les pieds",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq014-answer-01"
+    },
+    {
+      "id": "import-b01-p01-boss-bq015",
+      "difficulty": "expert",
+      "question": "Pendant votre bilan, vous décrivez une douleur localisée dans le quadrant supérieur droit de l'abdomen. Quel est le principal intérêt d'utiliser cette terminologie anatomique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "BOSS_P01",
+        "originalQuestionId": "BQ015",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-boss-bq015-answer-01",
+          "text": "Communiquer une localisation précise aux autres professionnels",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq015-answer-02",
+          "text": "Réduire la durée du transport",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq015-answer-03",
+          "text": "Éviter la réalisation du bilan",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-boss-bq015-answer-04",
+          "text": "Remplacer les constantes vitales",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-boss-bq015-answer-01"
+    }
+  ]
 }

@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L04",
+  "lesson_title": "Physiologie respiratoire",
+  "knowledge": [
+    {
+      "id": "K203",
+      "title": "Fonction principale",
+      "content": "La respiration assure les échanges d'oxygène et de dioxyde de carbone entre l'organisme et l'environnement."
+    },
+    {
+      "id": "K204",
+      "title": "Ventilation",
+      "content": "La ventilation pulmonaire comprend l'inspiration et l'expiration."
+    },
+    {
+      "id": "K205",
+      "title": "Diffusion",
+      "content": "Les échanges gazeux se réalisent par diffusion au niveau des alvéoles pulmonaires."
+    },
+    {
+      "id": "K206",
+      "title": "Transport de l'oxygène",
+      "content": "L'oxygène est principalement transporté dans le sang grâce à l'hémoglobine."
+    },
+    {
+      "id": "K207",
+      "title": "Transport du dioxyde de carbone",
+      "content": "Le dioxyde de carbone est transporté sous différentes formes jusqu'aux poumons où il est éliminé."
+    },
+    {
+      "id": "K208",
+      "title": "Fréquence respiratoire",
+      "content": "Chez un adulte au repos, la fréquence respiratoire est généralement comprise entre 12 et 20 mouvements par minute."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q331",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Les échanges gazeux ont lieu principalement :",
+      "options": [
+        "Dans les alvéoles",
+        "Dans la trachée",
+        "Dans le pharynx",
+        "Dans les bronches"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q332",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'oxygène est principalement transporté par :",
+      "options": [
+        "L'hémoglobine",
+        "Le plasma uniquement",
+        "Les plaquettes",
+        "Les leucocytes"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q333",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une fréquence respiratoire de 16/min est normale chez un adulte au repos.",
+      "answer": true
+    },
+    {
+      "id": "Q334",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le dioxyde de carbone est absorbé par les poumons.",
+      "answer": false
+    },
+    {
+      "id": "Q335",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Inspiration",
+          "Entrée de l'air"
+        ],
+        [
+          "Expiration",
+          "Sortie de l'air"
+        ],
+        [
+          "Alvéoles",
+          "Échanges gazeux"
+        ],
+        [
+          "Hémoglobine",
+          "Transport de l'oxygène"
+        ]
+      ]
+    },
+    {
+      "id": "Q336",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Les échanges gazeux ont lieu dans les ______ pulmonaires.",
+      "answers": [
+        "alvéoles"
+      ]
+    },
+    {
+      "id": "Q337",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une baisse importante de la ventilation entraîne principalement :",
+      "options": [
+        "Une diminution de l'apport en oxygène",
+        "Une augmentation de la glycémie",
+        "Une augmentation de la filtration rénale",
+        "Une augmentation du débit cardiaque"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q338",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une SpO₂ à 86 % est mesurée chez un patient dyspnéique. Quel mécanisme physiologique est le plus probablement perturbé ?",
+      "options": [
+        "Les échanges gazeux pulmonaires",
+        "La digestion",
+        "La coagulation",
+        "La filtration rénale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q339",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet de l'oxygène jusqu'au sang.",
+      "solution": [
+        "Air inspiré",
+        "Alvéoles",
+        "Capillaires pulmonaires",
+        "Hémoglobine"
+      ]
+    },
+    {
+      "id": "Q340",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur une alvéole pulmonaire.",
+      "target": "alveolus"
+    }
+  ]
+}

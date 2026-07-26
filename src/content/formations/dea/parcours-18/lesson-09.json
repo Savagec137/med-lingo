@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-18",
+  "id": "dea-p18-boss",
+  "title": "Boss — Paramètres vitaux",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "expert",
+  "estimatedMinutes": 11,
+  "level": 3,
+  "xp": 500,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 12
+  },
+  "learningObjectives": [
+    "Boss - Physiologie humaine"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.boss"
+  ],
+  "prerequisiteIds": [
+    "dea-p18-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Paramètres vitaux",
+    "scenario": "Mission immersive : Le joueur intervient auprès d'un patient présentant plusieurs symptômes. Il doit : mesurer toutes les constantes ; identifier les anomalies ; interpréter les résultats ; transmettre les données au SAMU.",
+    "tasks": [
+      "Mission immersive :",
+      "Le joueur intervient auprès d'un patient présentant plusieurs symptômes.",
+      "Il doit :",
+      "mesurer toutes les constantes ;",
+      "identifier les anomalies ;",
+      "interpréter les résultats ;",
+      "transmettre les données au SAMU."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true
+  },
+  "items": [
+    {
+      "id": "import-b01-p04-boss-bq046",
+      "difficulty": "medium",
+      "question": "La physiologie étudie principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ046",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq046-answer-01",
+          "text": "Le fonctionnement de l'organisme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq046-answer-02",
+          "text": "La forme des os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq046-answer-03",
+          "text": "Les maladies infectieuses",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq046-answer-04",
+          "text": "Les médicaments",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq046-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq047",
+      "difficulty": "medium",
+      "question": "L'homéostasie correspond au maintien d'un équilibre interne stable.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ047",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq047-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq047-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq047-true"
+    },
+    {
+      "id": "import-b01-p04-boss-bq048",
+      "difficulty": "medium",
+      "question": "Quel système assure principalement le transport de l'oxygène vers les tissus ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ048",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq048-answer-01",
+          "text": "Le système cardiovasculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq048-answer-02",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq048-answer-03",
+          "text": "Le système endocrinien",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq048-answer-04",
+          "text": "Le système urinaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq048-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq049",
+      "difficulty": "medium",
+      "question": "Les échanges gazeux se réalisent principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ049",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq049-answer-01",
+          "text": "Au niveau des alvéoles pulmonaires",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq049-answer-02",
+          "text": "Dans la trachée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq049-answer-03",
+          "text": "Dans le larynx",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq049-answer-04",
+          "text": "Dans les bronches",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq049-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq050",
+      "difficulty": "hard",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ050",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq050-pair-01",
+          "text": "Rein",
+          "match": "Filtration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq050-pair-02",
+          "text": "Poumon",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq050-pair-03",
+          "text": "Cœur",
+          "match": "Pompe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq050-pair-04",
+          "text": "Cerveau",
+          "match": "Commande",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-boss-bq050-pair-01",
+        "import-b01-p04-boss-bq050-pair-02",
+        "import-b01-p04-boss-bq050-pair-03",
+        "import-b01-p04-boss-bq050-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-boss-bq052",
+      "difficulty": "hard",
+      "question": "Quelle hormone fait diminuer la glycémie ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ052",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq052-answer-01",
+          "text": "L'insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq052-answer-02",
+          "text": "Le glucagon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq052-answer-03",
+          "text": "L'adrénaline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq052-answer-04",
+          "text": "Le cortisol",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq052-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq053",
+      "difficulty": "hard",
+      "question": "Replace les étapes d'un mécanisme de régulation physiologique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ053",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq053-step-01",
+          "text": "Stimulus",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-boss-bq053-step-02",
+          "text": "Récepteur",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-boss-bq053-step-03",
+          "text": "Centre de régulation",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-boss-bq053-step-04",
+          "text": "Effecteur",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-boss-bq053-step-05",
+          "text": "Retour à l'équilibre",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-boss-bq053-step-01",
+        "import-b01-p04-boss-bq053-step-02",
+        "import-b01-p04-boss-bq053-step-03",
+        "import-b01-p04-boss-bq053-step-04",
+        "import-b01-p04-boss-bq053-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p04-boss-bq054",
+      "difficulty": "expert",
+      "question": "Une victime présente une fréquence respiratoire de 32/min, une SpO₂ à 84 % et une cyanose. Quel système est principalement défaillant ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ054",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq054-answer-01",
+          "text": "Le système respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq054-answer-02",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq054-answer-03",
+          "text": "Le système endocrinien",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq054-answer-04",
+          "text": "Le système urinaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq054-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq055",
+      "difficulty": "expert",
+      "question": "Une hypotension associée à une tachycardie traduit principalement une diminution de :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ055",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq055-answer-01",
+          "text": "La perfusion tissulaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq055-answer-02",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq055-answer-03",
+          "text": "La filtration digestive",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq055-answer-04",
+          "text": "La ventilation alvéolaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq055-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq056",
+      "difficulty": "expert",
+      "question": "Une victime présente une diurèse très faible après plusieurs heures d'hypotension. Quel organe est particulièrement à risque ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ056",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq056-answer-01",
+          "text": "Le rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq056-answer-02",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq056-answer-03",
+          "text": "Le pancréas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq056-answer-04",
+          "text": "La rate",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq056-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq057",
+      "difficulty": "expert",
+      "question": "Après un effort intense, un patient présente une fréquence cardiaque à 145/min et une fréquence respiratoire à 30/min sans autre signe d'alerte. Quelle interprétation est la plus probable ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ057",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq057-answer-01",
+          "text": "Une adaptation physiologique à l'effort",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq057-answer-02",
+          "text": "Un arrêt cardiaque",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq057-answer-03",
+          "text": "Une hypoglycémie sévère",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq057-answer-04",
+          "text": "Une insuffisance rénale aiguë",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq057-answer-01"
+    },
+    {
+      "id": "import-b01-p04-boss-bq058",
+      "difficulty": "expert",
+      "question": "Clique sur la thyroïde.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ058",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "thyroid"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-thyroid"
+    },
+    {
+      "id": "import-b01-p04-boss-bq059",
+      "difficulty": "expert",
+      "question": "Clique sur le rein droit.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ059",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "right_kidney"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-right_kidney",
+          "text": "Rein droit",
+          "detail": "0.58,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidneys",
+          "text": "Reins",
+          "detail": "0.5,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-right_kidney"
+    },
+    {
+      "id": "import-b01-p04-boss-bq060",
+      "difficulty": "expert",
+      "question": "Chez une victime présentant une altération de l'état de conscience, une polypnée, une tachycardie et une hypotension, quelle affirmation est la plus juste ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "boss"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.boss"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "BOSS_P04",
+        "originalQuestionId": "BQ060",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-boss-bq060-answer-01",
+          "text": "Plusieurs systèmes physiologiques sont simultanément perturbés et une prise en charge urgente est nécessaire.",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq060-answer-02",
+          "text": "Seul le système digestif est concerné.",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq060-answer-03",
+          "text": "Les constantes sont compatibles avec un fonctionnement normal.",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-boss-bq060-answer-04",
+          "text": "Aucun bilan complémentaire n'est nécessaire.",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-boss-bq060-answer-01"
+    }
+  ]
+}

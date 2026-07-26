@@ -13,28 +13,45 @@ import {
   Sparkles,
   ChevronUp,
   ChevronDown,
+  BookOpen,
+  Lock,
 } from "lucide-react";
+import { AnatomyLocationQuestion } from "@/components/exercises";
 import { findLesson, type Question } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
+import { useLearningHistory } from "@/lib/use-learning-history";
 import { getPedagogicalLesson, PEDAGOGICAL_CONTENT_CATALOG } from "@/content/pedagogical-content";
 import { createContentCatalog } from "@/content/content-engine";
 import { loadPedagogicalLessonV2 } from "@/content/pedagogical-content-v2";
 import {
+  createSeededRandom,
   prepareContentInteraction,
   selectContentItems,
   type PreparedLessonInteraction,
 } from "@/content/lesson-runtime";
+import { getLessonBlueprint, getRoadmapParcours } from "@/content/roadmap-registry";
 
 export const Route = createFileRoute("/lecon/$lessonId")({
   loader: async ({ params }) => {
     const found = findLesson(params.lessonId);
-    if (!found?.lesson.contentFile || !found.lesson.formationId) return null;
-    return loadPedagogicalLessonV2(found.lesson.formationId, found.lesson.id);
+    const attemptSeed = Math.floor(Math.random() * 4_294_967_296);
+    if (!found?.lesson.contentFile || !found.lesson.formationId) {
+      return { contentLesson: null, attemptSeed };
+    }
+    return {
+      contentLesson: await loadPedagogicalLessonV2(found.lesson.formationId, found.lesson.id),
+      attemptSeed,
+    };
   },
   component: LessonPage,
   head: ({ params }) => {
     const found = findLesson(params.lessonId);
-    const title = found ? `${found.lesson.title} — MedLingo` : "Leçon — MedLingo";
+    const blueprint = getLessonBlueprint(params.lessonId);
+    const title = found
+      ? `${found.lesson.title} — MedLingo`
+      : blueprint
+        ? `${blueprint.title} — MedLingo`
+        : "Leçon — MedLingo";
     return {
       meta: [
         { title },
@@ -45,10 +62,10 @@ export const Route = createFileRoute("/lecon/$lessonId")({
   },
 });
 
-function shuffle<T>(arr: T[]): T[] {
+function shuffle<T>(arr: T[], random: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
@@ -58,29 +75,49 @@ interface PlayableInteraction extends PreparedLessonInteraction {
   contentDriven: boolean;
 }
 
-function legacyInteractions(questions: Question[]): PlayableInteraction[] {
-  return shuffle(questions).map((question) => ({
-    id: question.id,
-    type: "choice",
-    question: question.question,
-    answers: question.choices.map((choice, index) => ({
-      id: `${question.id}-answer-${index}`,
-      text: choice,
-      explanation: question.explanation ?? "",
-    })),
-    matchOptions: [],
-    correctAnswerIds: [`${question.id}-answer-${question.answer}`],
-    requiredSelections: 1,
-    explanation: question.explanation,
-    contentDriven: false,
-  }));
+function normalizeTextAnswer(value: string) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("fr")
+    .replace(/[’']/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function legacyInteractions(questions: Question[], random: () => number): PlayableInteraction[] {
+  return shuffle(questions, random).map((question) => {
+    const answers = shuffle(
+      question.choices.map((choice, index) => ({
+        id: `${question.id}-answer-${index}`,
+        text: choice,
+        explanation: question.explanation ?? "",
+      })),
+      random,
+    );
+    return {
+      id: question.id,
+      type: "choice",
+      question: question.question,
+      answers,
+      matchOptions: [],
+      correctAnswerIds: [`${question.id}-answer-${question.answer}`],
+      requiredSelections: 1,
+      explanation: question.explanation,
+      contentDriven: false,
+    };
+  });
 }
 
 function LessonPage() {
   const { lessonId } = Route.useParams();
   const navigate = useNavigate();
   const found = findLesson(lessonId);
-  const contentLessonV2 = Route.useLoaderData();
+  const blueprint = getLessonBlueprint(lessonId);
+  const blueprintParcours = blueprint ? getRoadmapParcours(blueprint.parcoursId) : null;
+  const loaderData = Route.useLoaderData();
+  const contentLessonV2 = loaderData.contentLesson;
+  const attemptSeed = loaderData.attemptSeed;
   const legacyContentLesson =
     found?.lesson.contentLessonId && !found.lesson.contentFile
       ? getPedagogicalLesson(found.lesson.contentLessonId)
@@ -95,24 +132,30 @@ function LessonPage() {
   );
   const contentCatalog = contentCatalogV2 ?? PEDAGOGICAL_CONTENT_CATALOG;
   const { progress, hydrated, completeLesson, loseHeart } = useProgress();
+  const { recordAttempt } = useLearningHistory();
 
   // Les questions historiques conservent leur comportement. Les nouvelles
   // leçons gardent leur ordre pédagogique et mélangent seulement les réponses.
   const questions = useMemo<PlayableInteraction[]>(
-    () =>
-      contentLesson
+    () => {
+      const random = createSeededRandom(attemptSeed);
+      return contentLesson
         ? (contentLessonV2
-            ? selectContentItems(contentLessonV2.interactions, contentLessonV2.selection)
+            ? selectContentItems(contentLessonV2.interactions, contentLessonV2.selection, random)
             : contentLesson.interactions
           ).map((item: unknown) => ({
-            ...prepareContentInteraction(item as Parameters<typeof prepareContentInteraction>[0]),
+            ...prepareContentInteraction(
+              item as Parameters<typeof prepareContentInteraction>[0],
+              random,
+            ),
             contentDriven: true,
           }))
         : found
-          ? legacyInteractions(found.lesson.questions)
-          : [],
+          ? legacyInteractions(found.lesson.questions, random)
+          : [];
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [lessonId, contentLesson, contentLessonV2],
+    [lessonId, contentLesson, contentLessonV2, attemptSeed],
   );
 
   const [idx, setIdx] = useState(0);
@@ -120,6 +163,7 @@ function LessonPage() {
   const [selectedMultiple, setSelectedMultiple] = useState<string[]>([]);
   const [orderedIds, setOrderedIds] = useState<string[]>([]);
   const [associations, setAssociations] = useState<Record<string, string>>({});
+  const [textAnswer, setTextAnswer] = useState("");
   const [checked, setChecked] = useState(false);
   const [responseCorrect, setResponseCorrect] = useState<boolean | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -135,6 +179,34 @@ function LessonPage() {
   useEffect(() => {
     setPulseDismissed(false);
   }, [lessonId]);
+
+  if (!found && blueprint && blueprintParcours) {
+    return (
+      <div className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center px-4 py-10 text-center">
+        <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-300">
+          <BookOpen className="h-10 w-10" aria-hidden="true" />
+        </div>
+        <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-400">
+          {blueprintParcours.title} · Leçon {blueprint.order}
+        </p>
+        <h1 className="mt-2 font-display text-3xl font-black">{blueprint.title}</h1>
+        <div className="mt-6 rounded-3xl border border-white/10 bg-white/[0.05] p-6">
+          <Lock className="mx-auto h-7 w-7 text-white/35" aria-hidden="true" />
+          <p className="mt-3 font-extrabold">Banque pédagogique en attente</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            La structure de cette leçon est enregistrée. Elle deviendra jouable dès que ses
+            exercices auront été reliés à une source DEA et validés.
+          </p>
+        </div>
+        <a
+          href={`/parcours/${blueprintParcours.id}`}
+          className="mt-6 rounded-2xl bg-primary px-6 py-3 font-extrabold text-primary-foreground"
+        >
+          Retour au parcours
+        </a>
+      </div>
+    );
+  }
 
   if (!found) {
     return (
@@ -162,9 +234,11 @@ function LessonPage() {
       ? current.answers.every((answer) => Boolean(associations[answer.id]))
       : current.type === "multiple_choice"
         ? selectedMultiple.length === current.requiredSelections
-        : current.type === "ordering"
-          ? current.answers.length > 0
-          : selected !== null
+        : current.type === "fill_blank"
+          ? textAnswer.trim().length > 0
+          : current.type === "ordering"
+            ? current.answers.length > 0
+            : selected !== null
     : false;
 
   const onCheck = () => {
@@ -181,11 +255,23 @@ function LessonPage() {
             : selected
               ? [selected]
               : [];
-    const isCorrect = current.contentDriven
-      ? contentCatalog.evaluate(current.id, selectedIds).isCorrect
-      : selectedIds.length === 1 && current.correctAnswerIds.includes(selectedIds[0]);
+    const matchingTextAnswer =
+      current.type === "fill_blank"
+        ? current.answers.find(
+            (answer) => normalizeTextAnswer(answer.text) === normalizeTextAnswer(textAnswer),
+          )
+        : null;
+    const evaluatedIds =
+      current.type === "fill_blank" && matchingTextAnswer ? [matchingTextAnswer.id] : selectedIds;
+    const isCorrect =
+      current.type === "fill_blank"
+        ? Boolean(matchingTextAnswer && current.correctAnswerIds.includes(matchingTextAnswer.id))
+        : current.contentDriven
+          ? contentCatalog.evaluate(current.id, evaluatedIds).isCorrect
+          : evaluatedIds.length === 1 && current.correctAnswerIds.includes(evaluatedIds[0]);
     setChecked(true);
     setResponseCorrect(isCorrect);
+    recordAttempt(current.id, isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
     else {
       setWrongCount((c) => c + 1);
@@ -205,6 +291,7 @@ function LessonPage() {
     setSelectedMultiple([]);
     setOrderedIds([]);
     setAssociations({});
+    setTextAnswer("");
     setChecked(false);
     setResponseCorrect(null);
   };
@@ -334,6 +421,7 @@ function LessonPage() {
                 setSelectedMultiple([]);
                 setOrderedIds([]);
                 setAssociations({});
+                setTextAnswer("");
                 setChecked(false);
                 setResponseCorrect(null);
                 setCorrectCount(0);
@@ -354,7 +442,7 @@ function LessonPage() {
   const isCorrect = checked && responseCorrect === true;
   const isWrong = checked && responseCorrect === false;
   const selectedAnswer =
-    current.type === "choice"
+    current.type === "choice" || current.type === "anatomy_location"
       ? current.answers.find((answer) => answer.id === selected)
       : undefined;
   const correctAnswer = current.answers.find((answer) => answer.id === current.correctAnswerIds[0]);
@@ -394,7 +482,30 @@ function LessonPage() {
           {current.question}
         </h1>
 
-        {current.type === "association" ? (
+        {current.type === "fill_blank" ? (
+          <div className="grid gap-3">
+            <label htmlFor="lesson-fill-blank" className="text-sm font-bold text-muted-foreground">
+              Saisis le terme manquant
+            </label>
+            <input
+              id="lesson-fill-blank"
+              type="text"
+              autoComplete="off"
+              value={textAnswer}
+              disabled={checked}
+              onChange={(event) => setTextAnswer(event.target.value)}
+              className="rounded-2xl border-2 border-border bg-card px-4 py-4 text-lg font-bold outline-none focus:border-primary"
+            />
+          </div>
+        ) : current.type === "anatomy_location" ? (
+          <AnatomyLocationQuestion
+            answers={current.answers}
+            selectedId={selected}
+            correctAnswerIds={current.correctAnswerIds}
+            checked={checked}
+            onSelect={setSelected}
+          />
+        ) : current.type === "association" ? (
           <div className="grid gap-3">
             {current.answers.map((answer) => {
               const selectedMatch = associations[answer.id] ?? "";
@@ -561,11 +672,15 @@ function LessonPage() {
                 {isCorrect ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
                 {isCorrect ? "Bonne réponse !" : "Pas tout à fait"}
               </p>
-              {!isCorrect && current.type === "choice" && correctAnswer && (
-                <p className="mt-1 text-sm">
-                  Bonne réponse : <span className="font-bold">{correctAnswer.text}</span>
-                </p>
-              )}
+              {!isCorrect &&
+                (current.type === "choice" ||
+                  current.type === "fill_blank" ||
+                  current.type === "anatomy_location") &&
+                correctAnswer && (
+                  <p className="mt-1 text-sm">
+                    Bonne réponse : <span className="font-bold">{correctAnswer.text}</span>
+                  </p>
+                )}
               {isWrong && selectedAnswer?.explanation && (
                 <p className="mt-1 text-sm text-muted-foreground">{selectedAnswer.explanation}</p>
               )}

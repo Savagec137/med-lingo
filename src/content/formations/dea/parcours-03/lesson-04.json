@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l04",
+  "title": "Le système digestif",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Le système digestif"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l09"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l03"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p03-l09-q281",
+      "difficulty": "easy",
+      "question": "Où débute la digestion ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q281",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q281-answer-01",
+          "text": "Dans la bouche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q281-answer-02",
+          "text": "Dans l'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q281-answer-03",
+          "text": "Dans le côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q281-answer-04",
+          "text": "Dans le foie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q281-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l09-q282",
+      "difficulty": "easy",
+      "question": "Quel organe absorbe principalement les nutriments ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q282",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q282-answer-01",
+          "text": "L'intestin grêle",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q282-answer-02",
+          "text": "Le rectum",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q282-answer-03",
+          "text": "L'œsophage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q282-answer-04",
+          "text": "Le côlon",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q282-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l09-q283",
+      "difficulty": "easy",
+      "question": "Le foie produit la bile.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q283",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q283-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q283-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q283-true"
+    },
+    {
+      "id": "import-b01-p03-l09-q284",
+      "difficulty": "easy",
+      "question": "L'œsophage assure l'absorption des nutriments.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q284",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q284-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q284-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q284-false"
+    },
+    {
+      "id": "import-b01-p03-l09-q285",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q285",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q285-pair-01",
+          "text": "Estomac",
+          "match": "Début de la digestion chimique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q285-pair-02",
+          "text": "Intestin grêle",
+          "match": "Absorption",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q285-pair-03",
+          "text": "Foie",
+          "match": "Production de bile",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q285-pair-04",
+          "text": "Pancréas",
+          "match": "Enzymes digestives",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l09-q285-pair-01",
+        "import-b01-p03-l09-q285-pair-02",
+        "import-b01-p03-l09-q285-pair-03",
+        "import-b01-p03-l09-q285-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l09-q286",
+      "difficulty": "medium",
+      "question": "Le ______ produit la bile.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q286",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "foie"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q286-accepted-01",
+          "text": "foie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l09-q286-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l09-q287",
+      "difficulty": "hard",
+      "question": "Quel organe sécrète l'insuline ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q287",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q287-answer-01",
+          "text": "Le pancréas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q287-answer-02",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q287-answer-03",
+          "text": "L'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q287-answer-04",
+          "text": "Le côlon",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q287-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l09-q288",
+      "difficulty": "hard",
+      "question": "Une douleur localisée en région épigastrique après un repas oriente principalement vers quel système ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q288",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q288-answer-01",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q288-answer-02",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q288-answer-03",
+          "text": "Nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l09-q288-answer-04",
+          "text": "Urinaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l09-q288-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l09-q289",
+      "difficulty": "medium",
+      "question": "Clique sur l'estomac.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q289",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "stomach"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-diaphragm",
+          "text": "Diaphragme",
+          "detail": "0.5,0.39",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_ventricle",
+          "text": "Ventricule gauche",
+          "detail": "0.56,0.34",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-stomach"
+    },
+    {
+      "id": "import-b01-p03-l09-q290",
+      "difficulty": "medium",
+      "question": "Replace le trajet des aliments.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q290",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 7
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l09-q290-step-01",
+          "text": "Bouche",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-02",
+          "text": "Œsophage",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-03",
+          "text": "Estomac",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-04",
+          "text": "Intestin grêle",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-05",
+          "text": "Côlon",
+          "explanation": "",
+          "sequenceRank": 5
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-06",
+          "text": "Rectum",
+          "explanation": "",
+          "sequenceRank": 6
+        },
+        {
+          "id": "import-b01-p03-l09-q290-step-07",
+          "text": "Anus",
+          "explanation": "",
+          "sequenceRank": 7
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l09-q290-step-01",
+        "import-b01-p03-l09-q290-step-02",
+        "import-b01-p03-l09-q290-step-03",
+        "import-b01-p03-l09-q290-step-04",
+        "import-b01-p03-l09-q290-step-05",
+        "import-b01-p03-l09-q290-step-06",
+        "import-b01-p03-l09-q290-step-07"
+      ]
+    }
+  ]
+}

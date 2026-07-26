@@ -13,7 +13,7 @@ import {
 const formation = new FormationCatalog([formationInput]).getFormation("dea");
 
 test("chaque bloc officiel possède une identité visuelle cohérente", () => {
-  assert.equal(Object.keys(ROADMAP_BLOCK_VISUALS).length, 10);
+  assert.equal(Object.keys(ROADMAP_BLOCK_VISUALS).length, 15);
   for (const bloc of formation.blocs ?? []) {
     const visual = ROADMAP_BLOCK_VISUALS[bloc.id];
     assert.ok(visual, `Identité visuelle absente pour ${bloc.id}`);
@@ -22,8 +22,8 @@ test("chaque bloc officiel possède une identité visuelle cohérente", () => {
   }
 });
 
-test("chacun des 50 parcours possède un asset vectoriel dédié", () => {
-  assert.equal(Object.keys(ROADMAP_PARCOURS_VISUALS).length, 50);
+test("chacun des 75 parcours possède un asset vectoriel dédié", () => {
+  assert.equal(Object.keys(ROADMAP_PARCOURS_VISUALS).length, 75);
   for (const parcours of formation.parcours) {
     const icon = ROADMAP_PARCOURS_VISUALS[parcours.id];
     assert.ok(icon, `Asset absent pour ${parcours.id}`);

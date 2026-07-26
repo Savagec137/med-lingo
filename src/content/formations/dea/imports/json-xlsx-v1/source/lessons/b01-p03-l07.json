@@ -1,0 +1,161 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L07",
+  "lesson_title": "Le système cardiovasculaire",
+  "knowledge": [
+    {
+      "id": "K161",
+      "title": "Définition",
+      "content": "Le système cardiovasculaire assure la circulation du sang afin d'apporter l'oxygène et les nutriments aux tissus et d'éliminer les déchets métaboliques."
+    },
+    {
+      "id": "K162",
+      "title": "Le cœur",
+      "content": "Le cœur est un muscle creux constitué de quatre cavités : deux oreillettes et deux ventricules."
+    },
+    {
+      "id": "K163",
+      "title": "Les artères",
+      "content": "Les artères transportent le sang du cœur vers les organes."
+    },
+    {
+      "id": "K164",
+      "title": "Les veines",
+      "content": "Les veines ramènent le sang des organes vers le cœur."
+    },
+    {
+      "id": "K165",
+      "title": "Les capillaires",
+      "content": "Les capillaires permettent les échanges entre le sang et les tissus."
+    },
+    {
+      "id": "K166",
+      "title": "Double circulation",
+      "content": "La circulation sanguine comprend une circulation pulmonaire et une circulation systémique."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q261",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Combien de cavités possède le cœur ?",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q262",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Les artères transportent le sang :",
+      "options": [
+        "Du cœur vers les organes",
+        "Des organes vers le cœur",
+        "Vers les poumons uniquement",
+        "Vers le foie uniquement"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q263",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les veines ramènent le sang vers le cœur.",
+      "answer": true
+    },
+    {
+      "id": "Q264",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les capillaires sont les plus gros vaisseaux sanguins.",
+      "answer": false
+    },
+    {
+      "id": "Q265",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Artère",
+          "Du cœur vers les organes"
+        ],
+        [
+          "Veine",
+          "Vers le cœur"
+        ],
+        [
+          "Capillaire",
+          "Échanges"
+        ],
+        [
+          "Cœur",
+          "Pompe sanguine"
+        ]
+      ]
+    },
+    {
+      "id": "Q266",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le cœur possède ______ cavités.",
+      "answers": [
+        "4",
+        "quatre"
+      ]
+    },
+    {
+      "id": "Q267",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel vaisseau réalise les échanges d'oxygène et de nutriments ?",
+      "options": [
+        "Les capillaires",
+        "Les artères",
+        "Les veines",
+        "L'aorte"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q268",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un bilan, un patient présente un pouls radial perceptible. Cette information renseigne principalement sur :",
+      "options": [
+        "L'activité circulatoire",
+        "La digestion",
+        "La ventilation",
+        "Le système urinaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q269",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le cœur.",
+      "target": "heart"
+    },
+    {
+      "id": "Q270",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe le trajet du sang.",
+      "solution": [
+        "Cœur",
+        "Artères",
+        "Capillaires",
+        "Veines",
+        "Cœur"
+      ]
+    }
+  ]
+}

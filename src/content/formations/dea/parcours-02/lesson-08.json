@@ -3,16 +3,903 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l08",
-  "title": "Radicaux",
+  "title": "Synthèse",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "level": 1,
+  "xp": 51,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Les directions et localisations médicales",
+    "Révision générale du langage médical"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l06",
+    "import.json-xlsx.b01.p02.l10"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l06-q151",
+      "difficulty": "easy",
+      "question": "Le terme médial signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q151",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q151-answer-01",
+          "text": "Proche de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q151-answer-02",
+          "text": "Éloigné de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q151-answer-03",
+          "text": "Vers l'arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q151-answer-04",
+          "text": "Vers le bas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q151-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l06-q152",
+      "difficulty": "easy",
+      "question": "Le terme distal signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q152",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q152-answer-01",
+          "text": "Éloigné de l'origine du membre",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q152-answer-02",
+          "text": "Proche de l'origine du membre",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q152-answer-03",
+          "text": "Vers la tête",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q152-answer-04",
+          "text": "Vers le thorax",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q152-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l06-q153",
+      "difficulty": "easy",
+      "question": "Le nez est situé en avant des oreilles.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q153",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q153-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q153-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q153-true"
+    },
+    {
+      "id": "import-b01-p02-l06-q154",
+      "difficulty": "easy",
+      "question": "Le coude est distal par rapport au poignet.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q154",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q154-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q154-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q154-false"
+    },
+    {
+      "id": "import-b01-p02-l06-q155",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q155",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 6
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q155-pair-01",
+          "text": "Antérieur",
+          "match": "Avant",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q155-pair-02",
+          "text": "Postérieur",
+          "match": "Arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q155-pair-03",
+          "text": "Médial",
+          "match": "Près de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q155-pair-04",
+          "text": "Latéral",
+          "match": "Éloigné de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q155-pair-05",
+          "text": "Proximal",
+          "match": "Près de l'origine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q155-pair-06",
+          "text": "Distal",
+          "match": "Éloigné de l'origine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l06-q155-pair-01",
+        "import-b01-p02-l06-q155-pair-02",
+        "import-b01-p02-l06-q155-pair-03",
+        "import-b01-p02-l06-q155-pair-04",
+        "import-b01-p02-l06-q155-pair-05",
+        "import-b01-p02-l06-q155-pair-06"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l06-q156",
+      "difficulty": "medium",
+      "question": "Le genou est ______ par rapport à la hanche.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q156",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "distal"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q156-accepted-01",
+          "text": "distal",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l06-q156-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l06-q157",
+      "difficulty": "hard",
+      "question": "L'épaule est ______ par rapport au poignet.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q157",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q157-answer-01",
+          "text": "Proximale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q157-answer-02",
+          "text": "Distale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q157-answer-03",
+          "text": "Latérale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q157-answer-04",
+          "text": "Postérieure",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q157-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l06-q159",
+      "difficulty": "hard",
+      "question": "Le médecin décrit une plaie sur la face antérieure de l'avant-bras droit. Où se situe-t-elle ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q159",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l06-q159-answer-01",
+          "text": "Sur l'avant de l'avant-bras droit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q159-answer-02",
+          "text": "Sur l'arrière de l'avant-bras droit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q159-answer-03",
+          "text": "Sur la main droite",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l06-q159-answer-04",
+          "text": "Sur le bras gauche",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l06-q159-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l06-q160",
+      "difficulty": "medium",
+      "question": "Clique sur le membre supérieur droit.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q160",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "right_upper_limb"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidneys",
+          "text": "Reins",
+          "detail": "0.5,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-right_upper_limb"
+    },
+    {
+      "id": "import-b01-p02-l10-q192",
+      "difficulty": "easy",
+      "question": "Le suffixe -algie signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q192",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q192-answer-01",
+          "text": "Douleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q192-answer-02",
+          "text": "Inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q192-answer-03",
+          "text": "Étude",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q192-answer-04",
+          "text": "Ablation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q192-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l10-q193",
+      "difficulty": "easy",
+      "question": "Cardio désigne le cœur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q193",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q193-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q193-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q193-true"
+    },
+    {
+      "id": "import-b01-p02-l10-q194",
+      "difficulty": "easy",
+      "question": "TA signifie température axillaire.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q194",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q194-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q194-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q194-false"
+    },
+    {
+      "id": "import-b01-p02-l10-q195",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q195",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q195-pair-01",
+          "text": "Hyper-",
+          "match": "Augmentation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q195-pair-02",
+          "text": "Hypo-",
+          "match": "Diminution",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q195-pair-03",
+          "text": "-ite",
+          "match": "Inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q195-pair-04",
+          "text": "Neuro",
+          "match": "Nerfs",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q195-pair-05",
+          "text": "FC",
+          "match": "Fréquence cardiaque",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l10-q195-pair-01",
+        "import-b01-p02-l10-q195-pair-02",
+        "import-b01-p02-l10-q195-pair-03",
+        "import-b01-p02-l10-q195-pair-04",
+        "import-b01-p02-l10-q195-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l10-q196",
+      "difficulty": "medium",
+      "question": "Le suffixe ______ désigne une inflammation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q196",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "ite"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q196-accepted-01",
+          "text": "ite",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l10-q196-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l10-q197",
+      "difficulty": "hard",
+      "question": "Quel terme décrit une difficulté à respirer ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q197",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q197-answer-01",
+          "text": "Dyspnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q197-answer-02",
+          "text": "Apnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q197-answer-03",
+          "text": "Tachycardie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q197-answer-04",
+          "text": "Bradycardie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q197-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l10-q198",
+      "difficulty": "hard",
+      "question": "Lors d'une transmission, le médecin indique une tachycardie. Quelle est la bonne interprétation ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q198",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q198-answer-01",
+          "text": "Fréquence cardiaque élevée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q198-answer-02",
+          "text": "Respiration rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q198-answer-03",
+          "text": "Pression artérielle basse",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q198-answer-04",
+          "text": "Absence de respiration",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q198-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l10-q200",
+      "difficulty": "hard",
+      "question": "Quel est le principal objectif du langage médical ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q200",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l10-q200-answer-01",
+          "text": "Communiquer de façon précise et sans ambiguïté",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q200-answer-02",
+          "text": "Créer des diagnostics",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q200-answer-03",
+          "text": "Remplacer les protocoles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l10-q200-answer-04",
+          "text": "Éviter les transmissions",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l10-q200-answer-01"
+    }
+  ]
 }

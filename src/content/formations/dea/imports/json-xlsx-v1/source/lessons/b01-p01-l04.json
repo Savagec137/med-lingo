@@ -1,0 +1,165 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L04",
+  "lesson_title": "Les régions anatomiques",
+  "knowledge": [
+    {
+      "id": "K021",
+      "title": "Tête",
+      "content": "La tête comprend le crâne et le visage."
+    },
+    {
+      "id": "K022",
+      "title": "Cou",
+      "content": "Le cou relie la tête au thorax."
+    },
+    {
+      "id": "K023",
+      "title": "Thorax",
+      "content": "Le thorax contient principalement le cœur et les poumons."
+    },
+    {
+      "id": "K024",
+      "title": "Abdomen",
+      "content": "L'abdomen contient la majorité des organes digestifs."
+    },
+    {
+      "id": "K025",
+      "title": "Bassin",
+      "content": "Le bassin relie le tronc aux membres inférieurs."
+    },
+    {
+      "id": "K026",
+      "title": "Membre supérieur",
+      "content": "Le membre supérieur comprend l'épaule, le bras, l'avant-bras et la main."
+    },
+    {
+      "id": "K027",
+      "title": "Membre inférieur",
+      "content": "Le membre inférieur comprend la hanche, la cuisse, la jambe et le pied."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q031",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe se situe dans le thorax ?",
+      "options": [
+        "Le cœur",
+        "Le foie",
+        "La vessie",
+        "Le pancréas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q032",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe est principalement situé dans l'abdomen ?",
+      "options": [
+        "Le foie",
+        "Le cerveau",
+        "La trachée",
+        "Le larynx"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q033",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le bassin relie le tronc aux membres inférieurs.",
+      "answer": true
+    },
+    {
+      "id": "Q034",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le cœur est situé dans l'abdomen.",
+      "answer": false
+    },
+    {
+      "id": "Q035",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Thorax",
+          "Cœur"
+        ],
+        [
+          "Abdomen",
+          "Foie"
+        ],
+        [
+          "Crâne",
+          "Cerveau"
+        ],
+        [
+          "Main",
+          "Membre supérieur"
+        ]
+      ]
+    },
+    {
+      "id": "Q036",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Les poumons sont situés dans le ______.",
+      "answers": [
+        "thorax"
+      ]
+    },
+    {
+      "id": "Q037",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur la région abdominale.",
+      "target": "abdomen"
+    },
+    {
+      "id": "Q038",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les régions anatomiques de haut en bas.",
+      "solution": [
+        "Tête",
+        "Cou",
+        "Thorax",
+        "Abdomen",
+        "Bassin"
+      ]
+    },
+    {
+      "id": "Q039",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une douleur de l'hypochondre droit correspond principalement à quelle région anatomique ?",
+      "options": [
+        "Partie supérieure droite de l'abdomen",
+        "Thorax gauche",
+        "Bassin",
+        "Cou"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q040",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le patient indique une douleur sous les dernières côtes droites. Cette douleur est localisée dans :",
+      "options": [
+        "L'abdomen",
+        "Le bassin",
+        "Le membre supérieur",
+        "Le cou"
+      ],
+      "correct": 0
+    }
+  ]
+}

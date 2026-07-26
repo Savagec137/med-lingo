@@ -2,37 +2,1080 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-l02",
+  "title": "Organisation du corps humain",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 15,
+  "level": 1,
+  "xp": 60,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 10
   },
-  "items": [],
-  "id": "dea-p01-l02",
-  "title": "Cellules et tissus",
-  "kind": "lesson",
   "learningObjectives": [
-    "définir une cellule ;",
-    "identifier ses éléments essentiels au niveau DEA ;",
-    "comprendre le rôle général de la cellule ;",
-    "définir un tissu ;",
-    "reconnaître les grandes catégories de tissus ;",
-    "comprendre la relation cellule → tissu."
+    "Les niveaux d'organisation du corps humain",
+    "Les tissus du corps humain"
   ],
   "competencyIds": [
-    "body.cell.definition",
-    "body.cell.structure",
-    "body.cell.function",
-    "body.tissue.definition",
-    "body.tissue.types",
-    "body.organization.cell-to-tissue"
+    "import.json-xlsx.b01.p01.l09",
+    "import.json-xlsx.b01.p03.l02"
   ],
-  "prerequisiteIds": ["dea-p01-l01"]
+  "prerequisiteIds": [
+    "dea-p01-l01"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p01-l09-q081",
+      "difficulty": "easy",
+      "question": "Quelle est la plus petite unité vivante du corps humain ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q081",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q081-answer-01",
+          "text": "La cellule",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q081-answer-02",
+          "text": "Le tissu",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q081-answer-03",
+          "text": "L'organe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q081-answer-04",
+          "text": "Le système",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q081-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l09-q082",
+      "difficulty": "easy",
+      "question": "Un ensemble de tissus forme :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q082",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q082-answer-01",
+          "text": "Un organe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q082-answer-02",
+          "text": "Une cellule",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q082-answer-03",
+          "text": "Un système",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q082-answer-04",
+          "text": "Une cavité",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q082-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l09-q083",
+      "difficulty": "easy",
+      "question": "Plusieurs organes peuvent former un système.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q083",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q083-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q083-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q083-true"
+    },
+    {
+      "id": "import-b01-p01-l09-q084",
+      "difficulty": "easy",
+      "question": "Une cellule est composée de plusieurs organes.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q084",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q084-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q084-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q084-false"
+    },
+    {
+      "id": "import-b01-p01-l09-q085",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q085",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q085-pair-01",
+          "text": "Cellule",
+          "match": "Unité vivante",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q085-pair-02",
+          "text": "Tissu",
+          "match": "Ensemble de cellules",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q085-pair-03",
+          "text": "Organe",
+          "match": "Ensemble de tissus",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q085-pair-04",
+          "text": "Système",
+          "match": "Ensemble d'organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l09-q085-pair-01",
+        "import-b01-p01-l09-q085-pair-02",
+        "import-b01-p01-l09-q085-pair-03",
+        "import-b01-p01-l09-q085-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l09-q086",
+      "difficulty": "medium",
+      "question": "Un ______ est constitué de plusieurs tissus.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q086",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "organe"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q086-accepted-01",
+          "text": "organe",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l09-q086-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l09-q087",
+      "difficulty": "medium",
+      "question": "Classe les niveaux d'organisation du plus petit au plus grand.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q087",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q087-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l09-q087-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l09-q087-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-l09-q087-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p01-l09-q087-step-05",
+          "text": "Organisme",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l09-q087-step-01",
+        "import-b01-p01-l09-q087-step-02",
+        "import-b01-p01-l09-q087-step-03",
+        "import-b01-p01-l09-q087-step-04",
+        "import-b01-p01-l09-q087-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l09-q088",
+      "difficulty": "medium",
+      "question": "Clique sur un organe du système digestif.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q088",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "stomach"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_kidney",
+          "text": "Rein droit",
+          "detail": "0.58,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-diaphragm",
+          "text": "Diaphragme",
+          "detail": "0.5,0.39",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-stomach"
+    },
+    {
+      "id": "import-b01-p01-l09-q089",
+      "difficulty": "hard",
+      "question": "Le cœur est :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q089",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q089-answer-01",
+          "text": "Un organe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q089-answer-02",
+          "text": "Un tissu",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q089-answer-03",
+          "text": "Une cellule",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q089-answer-04",
+          "text": "Un système",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q089-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l09-q090",
+      "difficulty": "hard",
+      "question": "Lors d'un bilan, l'ambulancier décrit une atteinte du système respiratoire. Cela signifie que :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q090",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l09-q090-answer-01",
+          "text": "Plusieurs organes liés à la respiration peuvent être concernés",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q090-answer-02",
+          "text": "Une seule cellule est atteinte",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q090-answer-03",
+          "text": "Un seul tissu est atteint",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l09-q090-answer-04",
+          "text": "Le système digestif est concerné",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l09-q090-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l02-q211",
+      "difficulty": "easy",
+      "question": "Combien existe-t-il de grands types de tissus dans le corps humain ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q211",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q211-answer-01",
+          "text": "4",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q211-answer-02",
+          "text": "2",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q211-answer-03",
+          "text": "6",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q211-answer-04",
+          "text": "8",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q211-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l02-q212",
+      "difficulty": "easy",
+      "question": "Quel tissu assure principalement la contraction ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q212",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q212-answer-01",
+          "text": "Musculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q212-answer-02",
+          "text": "Épithélial",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q212-answer-03",
+          "text": "Conjonctif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q212-answer-04",
+          "text": "Nerveux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q212-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l02-q213",
+      "difficulty": "easy",
+      "question": "Le tissu nerveux transmet les informations.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q213",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q213-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q213-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q213-true"
+    },
+    {
+      "id": "import-b01-p03-l02-q214",
+      "difficulty": "easy",
+      "question": "Le tissu musculaire protège principalement la peau.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q214",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q214-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q214-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q214-false"
+    },
+    {
+      "id": "import-b01-p03-l02-q215",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q215",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q215-pair-01",
+          "text": "Épithélial",
+          "match": "Protection",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q215-pair-02",
+          "text": "Conjonctif",
+          "match": "Soutien",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q215-pair-03",
+          "text": "Musculaire",
+          "match": "Contraction",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q215-pair-04",
+          "text": "Nerveux",
+          "match": "Transmission de l'information",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l02-q215-pair-01",
+        "import-b01-p03-l02-q215-pair-02",
+        "import-b01-p03-l02-q215-pair-03",
+        "import-b01-p03-l02-q215-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l02-q216",
+      "difficulty": "medium",
+      "question": "Le tissu __________ permet le mouvement du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q216",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "musculaire"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q216-accepted-01",
+          "text": "musculaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l02-q216-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l02-q217",
+      "difficulty": "hard",
+      "question": "Quel tissu est le plus directement impliqué dans la cicatrisation ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q217",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q217-answer-01",
+          "text": "Conjonctif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q217-answer-02",
+          "text": "Musculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q217-answer-03",
+          "text": "Nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q217-answer-04",
+          "text": "Cartilagineux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q217-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l02-q218",
+      "difficulty": "hard",
+      "question": "Après une coupure superficielle, quel tissu est touché en premier ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q218",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q218-answer-01",
+          "text": "Épithélial",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q218-answer-02",
+          "text": "Musculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q218-answer-03",
+          "text": "Osseux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l02-q218-answer-04",
+          "text": "Nerveux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l02-q218-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l02-q219",
+      "difficulty": "medium",
+      "question": "Classe ces structures du plus petit au plus grand.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q219",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l02-q219-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l02-q219-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l02-q219-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l02-q219-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l02-q219-step-01",
+        "import-b01-p03-l02-q219-step-02",
+        "import-b01-p03-l02-q219-step-03",
+        "import-b01-p03-l02-q219-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l02-q220",
+      "difficulty": "medium",
+      "question": "Clique sur un muscle du bras.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q220",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "biceps"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdominal_cavity",
+          "text": "Cavité abdominale",
+          "detail": "0.5,0.5",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thoracic_cavity",
+          "text": "Cavité thoracique",
+          "detail": "0.5,0.3",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_ventricle",
+          "text": "Ventricule gauche",
+          "detail": "0.56,0.34",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "detail": "0.5,0.43",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-biceps"
+    }
+  ]
 }

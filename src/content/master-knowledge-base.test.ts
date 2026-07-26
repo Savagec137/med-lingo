@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import archivedBankInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
 import officialProjectionInput from "./formations/dea/parcours-01/archive/lesson-01.official-projection-v1.json" with { type: "json" };
 import lessonInput from "./formations/dea/parcours-01/lesson-01.json" with { type: "json" };
-import lessonThreeInput from "./formations/dea/parcours-01/lesson-03.json" with { type: "json" };
+import lessonSixInput from "./formations/dea/parcours-01/lesson-06.json" with { type: "json" };
+import importManifest from "./formations/dea/imports/json-xlsx-v1/import-manifest.json" with { type: "json" };
 import parcoursInput from "./formations/dea/parcours-01/parcours.json" with { type: "json" };
 import specificationInput from "./formations/dea/parcours-01/lesson-01.specification.json" with { type: "json" };
 import { parseLessonContentFile } from "./learning-schema.ts";
@@ -13,7 +15,7 @@ import { MasterKnowledgeCatalog } from "./master-knowledge-catalog.ts";
 import { PedagogicalSpecificationCatalog } from "./pedagogical-specification-catalog.ts";
 
 const lesson = parseLessonContentFile(lessonInput);
-const lessonThree = parseLessonContentFile(lessonThreeInput);
+const lessonSix = parseLessonContentFile(lessonSixInput);
 const officialProjection = parseLessonContentFile(officialProjectionInput);
 const specification = new PedagogicalSpecificationCatalog([specificationInput]).get(lesson.id);
 const catalog = new MasterKnowledgeCatalog(knowledgeInput);
@@ -22,13 +24,30 @@ const trackedSpecificationIds = new Set([
   ...specification.integration.projectedContentIds,
   ...specification.integration.nonProjectedContentIds,
 ]);
-const activeQuestionIds = new Set([...lesson.items, ...lessonThree.items].map((item) => item.id));
+const importedQuestionIds = importManifest.generatedTargets.flatMap((target) => {
+  const raw = JSON.parse(
+    readFileSync(new URL(`./formations/dea/${target.file}`, import.meta.url), "utf8"),
+  ) as unknown;
+  return parseLessonContentFile(raw).items.map((item) => item.id);
+});
+const activeQuestionIds = new Set(
+  [...lesson.items, ...lessonSix.items].map((item) => item.id).concat(importedQuestionIds),
+);
 const knownContentIds = new Set([...trackedSpecificationIds, ...activeQuestionIds]);
 
 test("la base maîtresse couvre le Parcours 1 et sa spécification officielle", () => {
-  assert.equal(knowledgeBase.competencies.length, 61);
+  assert.equal(knowledgeBase.competencies.length, 105);
+  assert.equal(
+    knowledgeBase.competencies.filter((entry) => entry.id.startsWith("import.json-xlsx.")).length,
+    44,
+  );
   assert.deepEqual(knowledgeBase.formations, ["dea"]);
-  assert.deepEqual(knowledgeBase.lessonRegistry, parcoursInput.completion.orderedEntryIds);
+  for (const lessonId of parcoursInput.completion.orderedEntryIds) {
+    assert.ok(knowledgeBase.lessonRegistry.includes(lessonId), lessonId);
+  }
+  for (const target of importManifest.generatedTargets) {
+    assert.ok(knowledgeBase.lessonRegistry.includes(target.id), target.id);
+  }
 
   const primary = catalog.get("dea.p01.l01.anatomy-foundations");
   assert.equal(primary.competence, "Comprendre les bases de l'anatomie humaine.");
@@ -37,9 +56,9 @@ test("la base maîtresse couvre le Parcours 1 et sa spécification officielle", 
   assert.equal(primary.sourceLocation, lesson.id);
 });
 
-test("les banques publiées référencent uniquement des compétences existantes", () => {
-  assert.equal(lesson.items.length + lessonThree.items.length, 100);
-  for (const item of [...lesson.items, ...lessonThree.items]) {
+test("les banques officielles publiées référencent uniquement des compétences existantes", () => {
+  assert.equal(lesson.items.length + lessonSix.items.length, 100);
+  for (const item of [...lesson.items, ...lessonSix.items]) {
     for (const competencyId of item.competencyIds) {
       assert.doesNotThrow(() => catalog.get(competencyId), `${item.id} -> ${competencyId}`);
       assert.ok(catalog.get(competencyId).questionIds.includes(item.id));
@@ -67,7 +86,7 @@ test("les nouvelles compétences sans support DEA confirmé restent explicitemen
   const pending = knowledgeBase.competencies.filter(
     (competency) => competency.sourceConfirmationRequired,
   );
-  assert.equal(pending.length, 45);
+  assert.equal(pending.length, 89);
   for (const competency of pending) {
     assert.equal(competency.reviewStatus, "draft");
     assert.deepEqual(competency.sourcePages, []);
@@ -79,6 +98,10 @@ test("les nouvelles compétences sans support DEA confirmé restent explicitemen
       (competency) => competency.reviewStatus === "trainer_validated",
     ),
     false,
+  );
+  assert.equal(
+    pending.filter((competency) => competency.id.startsWith("import.json-xlsx.")).length,
+    44,
   );
 });
 

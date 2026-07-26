@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L07",
+  "lesson_title": "Introduction à l'homéostasie",
+  "knowledge": [
+    {
+      "id": "K041",
+      "title": "Homéostasie",
+      "content": "L'homéostasie est la capacité de l'organisme à maintenir un équilibre interne malgré les variations du milieu extérieur."
+    },
+    {
+      "id": "K042",
+      "title": "Température corporelle",
+      "content": "L'organisme régule sa température grâce à différents mécanismes physiologiques."
+    },
+    {
+      "id": "K043",
+      "title": "Respiration",
+      "content": "La respiration participe au maintien de l'équilibre en oxygène et en dioxyde de carbone."
+    },
+    {
+      "id": "K044",
+      "title": "Circulation",
+      "content": "Le système cardiovasculaire transporte l'oxygène, les nutriments et élimine certains déchets."
+    },
+    {
+      "id": "K045",
+      "title": "Coordination",
+      "content": "Les systèmes nerveux et endocrinien participent à la régulation de nombreuses fonctions."
+    },
+    {
+      "id": "K046",
+      "title": "Équilibre hydrique",
+      "content": "L'eau et les électrolytes sont régulés principalement par les reins."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q061",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'homéostasie correspond à :",
+      "options": [
+        "Le maintien de l'équilibre interne",
+        "La digestion",
+        "La croissance osseuse",
+        "La reproduction"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q062",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel système participe directement au transport de l'oxygène ?",
+      "options": [
+        "Cardiovasculaire",
+        "Digestif",
+        "Tégumentaire",
+        "Locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q063",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'homéostasie permet de maintenir un environnement interne stable.",
+      "answer": true
+    },
+    {
+      "id": "Q064",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les reins ne participent pas à l'équilibre hydrique.",
+      "answer": false
+    },
+    {
+      "id": "Q065",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Homéostasie",
+          "Équilibre interne"
+        ],
+        [
+          "Reins",
+          "Équilibre hydrique"
+        ],
+        [
+          "Poumons",
+          "Échanges gazeux"
+        ],
+        [
+          "Cœur",
+          "Circulation sanguine"
+        ]
+      ]
+    },
+    {
+      "id": "Q066",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Les ______ participent principalement à la régulation de l'eau dans l'organisme.",
+      "answers": [
+        "reins"
+      ]
+    },
+    {
+      "id": "Q067",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur les reins.",
+      "target": "kidneys"
+    },
+    {
+      "id": "Q068",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Remets les systèmes dans un ordre logique de transport de l'oxygène.",
+      "solution": [
+        "Poumons",
+        "Cœur",
+        "Artères",
+        "Cellules"
+      ]
+    },
+    {
+      "id": "Q069",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel ensemble participe principalement au maintien de l'homéostasie ?",
+      "options": [
+        "Tous les systèmes de l'organisme",
+        "Uniquement le système digestif",
+        "Uniquement le système nerveux",
+        "Uniquement le système locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q070",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un bilan, un patient présente une déshydratation importante. Quel système contribue principalement au maintien de l'équilibre hydrique ?",
+      "options": [
+        "Le système urinaire",
+        "Le système respiratoire",
+        "Le système locomoteur",
+        "Le système tégumentaire"
+      ],
+      "correct": 0
+    }
+  ]
+}

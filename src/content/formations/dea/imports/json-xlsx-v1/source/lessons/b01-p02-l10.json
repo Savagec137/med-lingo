@@ -1,0 +1,168 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L10",
+  "lesson_title": "Révision générale du langage médical",
+  "knowledge": [
+    {
+      "id": "K119",
+      "title": "Préfixes",
+      "content": "Les préfixes modifient le sens d'un terme médical."
+    },
+    {
+      "id": "K120",
+      "title": "Suffixes",
+      "content": "Les suffixes précisent souvent une maladie, une douleur ou une intervention."
+    },
+    {
+      "id": "K121",
+      "title": "Racines",
+      "content": "Les racines désignent généralement un organe ou une structure anatomique."
+    },
+    {
+      "id": "K122",
+      "title": "Abréviations",
+      "content": "Les abréviations facilitent les transmissions entre professionnels."
+    },
+    {
+      "id": "K123",
+      "title": "Terminologie clinique",
+      "content": "La compréhension des principaux termes cliniques est indispensable pour l'ambulancier."
+    },
+    {
+      "id": "K124",
+      "title": "Communication",
+      "content": "Une terminologie normalisée améliore la sécurité des soins."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q191",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le préfixe tachy- signifie :",
+      "options": [
+        "Rapide",
+        "Lent",
+        "Absence",
+        "Douleur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q192",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le suffixe -algie signifie :",
+      "options": [
+        "Douleur",
+        "Inflammation",
+        "Étude",
+        "Ablation"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q193",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Cardio désigne le cœur.",
+      "answer": true
+    },
+    {
+      "id": "Q194",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "TA signifie température axillaire.",
+      "answer": false
+    },
+    {
+      "id": "Q195",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Hyper-",
+          "Augmentation"
+        ],
+        [
+          "Hypo-",
+          "Diminution"
+        ],
+        [
+          "-ite",
+          "Inflammation"
+        ],
+        [
+          "Neuro",
+          "Nerfs"
+        ],
+        [
+          "FC",
+          "Fréquence cardiaque"
+        ]
+      ]
+    },
+    {
+      "id": "Q196",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le suffixe ______ désigne une inflammation.",
+      "answers": [
+        "ite"
+      ]
+    },
+    {
+      "id": "Q197",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel terme décrit une difficulté à respirer ?",
+      "options": [
+        "Dyspnée",
+        "Apnée",
+        "Tachycardie",
+        "Bradycardie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q198",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'une transmission, le médecin indique une tachycardie. Quelle est la bonne interprétation ?",
+      "options": [
+        "Fréquence cardiaque élevée",
+        "Respiration rapide",
+        "Pression artérielle basse",
+        "Absence de respiration"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q199",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les éléments d'un mot médical.",
+      "solution": [
+        "Préfixe",
+        "Racine",
+        "Suffixe"
+      ]
+    },
+    {
+      "id": "Q200",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel est le principal objectif du langage médical ?",
+      "options": [
+        "Communiquer de façon précise et sans ambiguïté",
+        "Créer des diagnostics",
+        "Remplacer les protocoles",
+        "Éviter les transmissions"
+      ],
+      "correct": 0
+    }
+  ]
+}

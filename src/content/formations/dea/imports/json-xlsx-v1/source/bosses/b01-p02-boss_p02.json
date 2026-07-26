@@ -1,0 +1,201 @@
+{
+  "block_id": "B01",
+  "path_id": "P02",
+  "boss_id": "BOSS_P02",
+  "title": "Boss - Langage médical",
+  "description": "Évaluation finale du parcours Langage médical",
+  "unlock_after": "L10",
+  "passing_score": 80,
+  "questions": [
+    {
+      "id": "BQ016",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le préfixe hypo- signifie :",
+      "options": [
+        "Diminution",
+        "Augmentation",
+        "Absence",
+        "Rapidité"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ017",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le suffixe -ite désigne :",
+      "options": [
+        "Une inflammation",
+        "Une douleur",
+        "Une chirurgie",
+        "Une étude"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ018",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "La racine néphro désigne :",
+      "options": [
+        "Le rein",
+        "Le foie",
+        "Le cœur",
+        "Le cerveau"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ019",
+      "type": "true_false",
+      "difficulty": 3,
+      "question": "Une tachypnée correspond à une respiration rapide.",
+      "answer": true
+    },
+    {
+      "id": "BQ020",
+      "type": "true_false",
+      "difficulty": 3,
+      "question": "La cyanose correspond à une rougeur cutanée.",
+      "answer": false
+    },
+    {
+      "id": "BQ021",
+      "type": "matching",
+      "difficulty": 4,
+      "pairs": [
+        [
+          "Bradycardie",
+          "Fréquence cardiaque lente"
+        ],
+        [
+          "Dyspnée",
+          "Difficulté respiratoire"
+        ],
+        [
+          "Œdème",
+          "Accumulation de liquide"
+        ],
+        [
+          "ECG",
+          "Activité électrique du cœur"
+        ],
+        [
+          "SpO₂",
+          "Saturation en oxygène"
+        ]
+      ]
+    },
+    {
+      "id": "BQ022",
+      "type": "fill_blank",
+      "difficulty": 4,
+      "question": "Le suffixe ______ signifie douleur.",
+      "answers": [
+        "algie"
+      ]
+    },
+    {
+      "id": "BQ023",
+      "type": "multiple_choice",
+      "difficulty": 4,
+      "question": "Le terme cardiologie désigne :",
+      "options": [
+        "L'étude du cœur",
+        "Une chirurgie cardiaque",
+        "Une maladie cardiaque",
+        "Une douleur cardiaque"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ024",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Lors de votre bilan, le médecin vous demande la FR, la FC, la TA et la SpO₂. À quoi correspondent ces quatre abréviations ?",
+      "options": [
+        "Fréquence respiratoire, fréquence cardiaque, tension artérielle, saturation en oxygène",
+        "Fonction respiratoire, fréquence cardiaque, température axillaire, saturation",
+        "Fréquence respiratoire, fonction cardiaque, tension abdominale, saturation",
+        "Fréquence respiratoire, fréquence cardiaque, température, glycémie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ025",
+      "type": "ordering",
+      "difficulty": 4,
+      "question": "Replace les éléments constituant un mot médical.",
+      "solution": [
+        "Préfixe",
+        "Racine",
+        "Suffixe"
+      ]
+    },
+    {
+      "id": "BQ026",
+      "type": "multiple_choice",
+      "difficulty": 4,
+      "question": "Quel examen utilise un champ magnétique ?",
+      "options": [
+        "IRM",
+        "Scanner",
+        "Radiographie",
+        "ECG"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ027",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Une transmission mentionne : 'patient dyspnéique, tachycarde, SpO₂ à 88 %'. Quelle interprétation est correcte ?",
+      "options": [
+        "Le patient présente une difficulté respiratoire, un rythme cardiaque rapide et une saturation basse",
+        "Le patient présente une respiration normale et un rythme lent",
+        "Le patient est uniquement hypertendu",
+        "Le patient présente uniquement une douleur thoracique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ028",
+      "type": "anatomy_click",
+      "difficulty": 4,
+      "question": "Clique sur l'organe correspondant à la racine 'cardio'.",
+      "target": "heart"
+    },
+    {
+      "id": "BQ029",
+      "type": "multiple_choice",
+      "difficulty": 4,
+      "question": "Quel est l'objectif principal du langage médical ?",
+      "options": [
+        "Communiquer de manière standardisée entre professionnels",
+        "Établir un diagnostic médical",
+        "Prescrire un traitement",
+        "Remplacer le dossier patient"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ030",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Pourquoi l'utilisation d'une terminologie médicale normalisée est-elle essentielle lors d'une régulation SAMU ?",
+      "options": [
+        "Pour transmettre des informations précises et limiter les erreurs",
+        "Pour réduire le temps de transport",
+        "Pour éviter le bilan clinique",
+        "Pour remplacer les constantes vitales"
+      ],
+      "correct": 0
+    }
+  ],
+  "reward": {
+    "xp": 300,
+    "coins": 175,
+    "badge": "medical_language_bronze"
+  }
+}

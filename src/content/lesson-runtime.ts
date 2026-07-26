@@ -10,17 +10,30 @@ export interface PreparedLessonAnswer {
   text: string;
   explanation: string;
   match?: string;
+  detail?: string;
 }
 
 export interface PreparedLessonInteraction {
   id: string;
-  type: "choice" | "multiple_choice" | "association" | "ordering";
+  type:
+    "choice" | "multiple_choice" | "association" | "ordering" | "fill_blank" | "anatomy_location";
   question: string;
   answers: PreparedLessonAnswer[];
   matchOptions: Array<{ id: string; text: string }>;
   correctAnswerIds: string[];
   requiredSelections: number;
   explanation?: string;
+}
+
+export function createSeededRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state += 0x6d2b79f5;
+    let value = state;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4_294_967_296;
+  };
 }
 
 export function shuffled<T>(values: T[], random: () => number = Math.random): T[] {
@@ -39,6 +52,8 @@ export function prepareContentInteraction(
   const association = isMatchingAssociation(item);
   const ordering = item.type === "ordering";
   const multipleChoice = item.type === "multiple_choice";
+  const fillBlank = item.type === "fill_blank";
+  const anatomyLocation = item.type === "anatomy_location";
   const answers = association ? item.answers : shuffled(item.answers, random);
   return {
     id: item.id,
@@ -48,13 +63,18 @@ export function prepareContentInteraction(
         ? "ordering"
         : multipleChoice
           ? "multiple_choice"
-          : "choice",
+          : fillBlank
+            ? "fill_blank"
+            : anatomyLocation
+              ? "anatomy_location"
+              : "choice",
     question: item.question,
     answers: answers.map((answer) => ({
       id: answer.id,
       text: answer.text,
       explanation: answer.explanation,
       match: answer.match,
+      detail: answer.detail,
     })),
     matchOptions: association
       ? shuffled(
@@ -66,7 +86,11 @@ export function prepareContentInteraction(
         )
       : [],
     correctAnswerIds: Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer],
-    requiredSelections: Array.isArray(item.correctAnswer) ? item.correctAnswer.length : 1,
+    requiredSelections: fillBlank
+      ? 1
+      : Array.isArray(item.correctAnswer)
+        ? item.correctAnswer.length
+        : 1,
     explanation: item.explanation,
   };
 }

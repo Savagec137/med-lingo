@@ -1,0 +1,167 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L03",
+  "lesson_title": "Les suffixes médicaux",
+  "knowledge": [
+    {
+      "id": "K077",
+      "title": "-ite",
+      "content": "Le suffixe -ite désigne une inflammation."
+    },
+    {
+      "id": "K078",
+      "title": "-algie",
+      "content": "Le suffixe -algie désigne une douleur."
+    },
+    {
+      "id": "K079",
+      "title": "-pathie",
+      "content": "Le suffixe -pathie désigne une maladie ou une affection."
+    },
+    {
+      "id": "K080",
+      "title": "-logie",
+      "content": "Le suffixe -logie désigne l'étude d'un domaine."
+    },
+    {
+      "id": "K081",
+      "title": "-scopie",
+      "content": "Le suffixe -scopie désigne un examen visuel réalisé avec un endoscope."
+    },
+    {
+      "id": "K082",
+      "title": "-ectomie",
+      "content": "Le suffixe -ectomie désigne l'ablation chirurgicale d'un organe ou d'une structure."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q121",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le suffixe -ite signifie :",
+      "options": [
+        "Inflammation",
+        "Douleur",
+        "Étude",
+        "Ablation"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q122",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le suffixe -algie correspond à :",
+      "options": [
+        "Douleur",
+        "Inflammation",
+        "Maladie",
+        "Examen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q123",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le suffixe -logie désigne l'étude d'un domaine.",
+      "answer": true
+    },
+    {
+      "id": "Q124",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le suffixe -ectomie signifie inflammation.",
+      "answer": false
+    },
+    {
+      "id": "Q125",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "-ite",
+          "Inflammation"
+        ],
+        [
+          "-algie",
+          "Douleur"
+        ],
+        [
+          "-pathie",
+          "Maladie"
+        ],
+        [
+          "-logie",
+          "Étude"
+        ],
+        [
+          "-ectomie",
+          "Ablation"
+        ]
+      ]
+    },
+    {
+      "id": "Q126",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le suffixe ______ désigne une douleur.",
+      "answers": [
+        "algie"
+      ]
+    },
+    {
+      "id": "Q127",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une gastrite est :",
+      "options": [
+        "Une inflammation de l'estomac",
+        "Une douleur de l'estomac",
+        "Une ablation de l'estomac",
+        "Une étude de l'estomac"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q128",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une coloscopie est :",
+      "options": [
+        "Un examen visuel du côlon",
+        "Une chirurgie du côlon",
+        "Une maladie du côlon",
+        "Une douleur du côlon"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q129",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le médecin évoque une arthralgie. Quelle est la bonne interprétation ?",
+      "options": [
+        "Une douleur articulaire",
+        "Une inflammation articulaire",
+        "Une fracture",
+        "Une chirurgie articulaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q130",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Identifie les éléments du mot 'arthr-algie'.",
+      "solution": [
+        "Racine",
+        "Suffixe"
+      ]
+    }
+  ]
+}

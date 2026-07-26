@@ -5,7 +5,7 @@ import test from "node:test";
 import deaFormation from "./formations/dea/formation.json" with { type: "json" };
 import archivedBankInput from "./formations/dea/parcours-01/archive/lesson-01.generated-question-bank.json" with { type: "json" };
 import lessonOneInput from "./formations/dea/parcours-01/lesson-01.json" with { type: "json" };
-import lessonThreeInput from "./formations/dea/parcours-01/lesson-03.json" with { type: "json" };
+import lessonSixInput from "./formations/dea/parcours-01/lesson-06.json" with { type: "json" };
 import parcoursInput from "./formations/dea/parcours-01/parcours.json" with { type: "json" };
 import { createContentCatalog } from "./content-engine.ts";
 import { FormationCatalog } from "./formation-catalog.ts";
@@ -21,10 +21,8 @@ const manifest = parseParcoursManifest(parcoursInput);
 const knowledge = new MasterKnowledgeCatalog(knowledgeInput);
 const lessonOne = parseLessonContentFile(lessonOneInput);
 const lessonOneInteractions = lessonOne.items.map((item) => normalizeLearningItem(lessonOne, item));
-const lessonThree = parseLessonContentFile(lessonThreeInput);
-const lessonThreeInteractions = lessonThree.items.map((item) =>
-  normalizeLearningItem(lessonThree, item),
-);
+const lessonSix = parseLessonContentFile(lessonSixInput);
+const lessonSixInteractions = lessonSix.items.map((item) => normalizeLearningItem(lessonSix, item));
 
 test("le manifeste enregistre dix leçons, un quiz et un Boss dans l'ordre imposé", () => {
   assert.equal(manifest.id, "dea-p01");
@@ -45,14 +43,24 @@ test("le manifeste enregistre dix leçons, un quiz et un Boss dans l'ordre impos
   assert.equal(manifest.completion.unlocksParcoursId, "dea-p02");
 });
 
-test("formation.json référence le manifeste et les douze contenus du Parcours 1", () => {
+test("formation.json conserve le manifeste historique et expose le nouveau parcours jouable", () => {
   assert.equal(parcours.contentId, manifest.id);
   assert.equal(parcours.manifestFile, "parcours-01/parcours.json");
   assert.equal(parcours.objective, manifest.globalObjective);
   assert.equal(parcours.subtitle, "Les bases indispensables de l’anatomie");
   assert.deepEqual(
     parcours.lessons.map((entry) => entry.id),
-    manifest.entries.map((entry) => entry.id),
+    [
+      "dea-p01-l01",
+      "dea-p01-l02",
+      "dea-p01-l03",
+      "dea-p01-l04",
+      "dea-p01-l05",
+      "dea-p01-l06",
+      "dea-p01-l07",
+      "dea-p01-l08",
+      "dea-p01-boss",
+    ],
   );
 });
 
@@ -72,9 +80,12 @@ test("toutes les banques sont valides et seuls les contenus publiables sont visi
     assert.equal(bank.id, reference.id);
     assert.equal(bank.kind, reference.kind);
     assert.equal(bank.status, reference.status);
-    if (["dea-p01-l01", "dea-p01-l03"].includes(bank.id)) {
+    if (["dea-p01-l01", "dea-p01-l06"].includes(bank.id)) {
       assert.equal(bank.status, "published");
       assert.equal(bank.items.length, 50);
+    } else if (bank.status === "review") {
+      assert.ok(bank.items.length > 0, bank.id);
+      assert.ok(bank.items.every((item) => item.metadata?.reviewStatus === "draft"));
     } else {
       assert.equal(bank.status, "awaiting_content");
       assert.deepEqual(bank.items, []);
@@ -82,19 +93,19 @@ test("toutes les banques sont valides et seuls les contenus publiables sont visi
   }
   assert.deepEqual(
     parcours.lessons.filter((entry) => entry.status === "published").map((entry) => entry.id),
-    ["dea-p01-l01", "dea-p01-l03"],
+    ["dea-p01-l01", "dea-p01-l06"],
   );
 });
 
 test("la banque officielle des organes respecte le contrat de contenu V1", () => {
-  assert.equal(lessonThree.items.length, 50);
-  assert.deepEqual(lessonThree.selection, { strategy: "random", count: 10 });
+  assert.equal(lessonSix.items.length, 50);
+  assert.deepEqual(lessonSix.selection, { strategy: "random", count: 10 });
   assert.deepEqual(
     Object.fromEntries(
       ["mcq", "true_false", "matching", "ordering", "clinical_case", "prioritization"].map(
         (type) => [
           type,
-          lessonThree.items.filter((item) => item.metadata?.originalType === type).length,
+          lessonSix.items.filter((item) => item.metadata?.originalType === type).length,
         ],
       ),
     ),
@@ -104,21 +115,21 @@ test("la banque officielle des organes respecte le contrat de contenu V1", () =>
     Object.fromEntries(
       ["easy", "medium", "hard"].map((difficulty) => [
         difficulty,
-        lessonThree.items.filter((item) => item.difficulty === difficulty).length,
+        lessonSix.items.filter((item) => item.difficulty === difficulty).length,
       ]),
     ),
     { easy: 30, medium: 15, hard: 5 },
   );
 
-  const competencyIds = new Set(lessonThree.competencyIds);
-  assert.equal(new Set(lessonThree.items.map((item) => item.question)).size, 50);
+  const competencyIds = new Set(lessonSix.competencyIds);
+  assert.equal(new Set(lessonSix.items.map((item) => item.question)).size, 50);
   for (const competencyId of competencyIds) {
     assert.ok(
-      lessonThree.items.some((item) => item.competencyIds.includes(competencyId)),
+      lessonSix.items.some((item) => item.competencyIds.includes(competencyId)),
       competencyId,
     );
   }
-  for (const item of lessonThree.items) {
+  for (const item of lessonSix.items) {
     assert.equal(item.metadata?.sourceDocument, "B2.M4 - Support Etudiant.pdf");
     assert.equal(item.metadata?.reviewStatus, "source_verified");
     assert.ok(
@@ -138,16 +149,16 @@ test("la banque officielle des organes respecte le contrat de contenu V1", () =>
   }
 });
 
-test("la correction de la leçon 3 dépend des identifiants et non de la position visuelle", () => {
+test("la correction de la banque officielle des organes dépend des identifiants", () => {
   const shuffledBank = {
     schemaVersion: 1 as const,
-    items: lessonThreeInteractions.map((item) => ({
+    items: lessonSixInteractions.map((item) => ({
       ...item,
       answers: item.type === "association" ? [...item.answers] : [...item.answers].reverse(),
     })),
   };
   const catalog = createContentCatalog(shuffledBank);
-  for (const item of lessonThreeInteractions) {
+  for (const item of lessonSixInteractions) {
     const correctIds = Array.isArray(item.correctAnswer)
       ? item.correctAnswer
       : [item.correctAnswer];

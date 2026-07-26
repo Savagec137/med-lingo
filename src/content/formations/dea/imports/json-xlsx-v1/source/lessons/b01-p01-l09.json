@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L09",
+  "lesson_title": "Les niveaux d'organisation du corps humain",
+  "knowledge": [
+    {
+      "id": "K053",
+      "title": "Cellule",
+      "content": "La cellule est la plus petite unité vivante de l'organisme."
+    },
+    {
+      "id": "K054",
+      "title": "Tissu",
+      "content": "Un tissu est un ensemble de cellules ayant une même fonction."
+    },
+    {
+      "id": "K055",
+      "title": "Organe",
+      "content": "Un organe est constitué de plusieurs tissus assurant une fonction précise."
+    },
+    {
+      "id": "K056",
+      "title": "Système",
+      "content": "Un système est un ensemble d'organes travaillant ensemble."
+    },
+    {
+      "id": "K057",
+      "title": "Organisme",
+      "content": "L'ensemble des systèmes constitue l'organisme."
+    },
+    {
+      "id": "K058",
+      "title": "Hiérarchie biologique",
+      "content": "Cellule → Tissu → Organe → Système → Organisme."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q081",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle est la plus petite unité vivante du corps humain ?",
+      "options": [
+        "La cellule",
+        "Le tissu",
+        "L'organe",
+        "Le système"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q082",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Un ensemble de tissus forme :",
+      "options": [
+        "Un organe",
+        "Une cellule",
+        "Un système",
+        "Une cavité"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q083",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Plusieurs organes peuvent former un système.",
+      "answer": true
+    },
+    {
+      "id": "Q084",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une cellule est composée de plusieurs organes.",
+      "answer": false
+    },
+    {
+      "id": "Q085",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Cellule",
+          "Unité vivante"
+        ],
+        [
+          "Tissu",
+          "Ensemble de cellules"
+        ],
+        [
+          "Organe",
+          "Ensemble de tissus"
+        ],
+        [
+          "Système",
+          "Ensemble d'organes"
+        ]
+      ]
+    },
+    {
+      "id": "Q086",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Un ______ est constitué de plusieurs tissus.",
+      "answers": [
+        "organe"
+      ]
+    },
+    {
+      "id": "Q087",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les niveaux d'organisation du plus petit au plus grand.",
+      "solution": [
+        "Cellule",
+        "Tissu",
+        "Organe",
+        "Système",
+        "Organisme"
+      ]
+    },
+    {
+      "id": "Q088",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur un organe du système digestif.",
+      "target": "stomach"
+    },
+    {
+      "id": "Q089",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Le cœur est :",
+      "options": [
+        "Un organe",
+        "Un tissu",
+        "Une cellule",
+        "Un système"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q090",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un bilan, l'ambulancier décrit une atteinte du système respiratoire. Cela signifie que :",
+      "options": [
+        "Plusieurs organes liés à la respiration peuvent être concernés",
+        "Une seule cellule est atteinte",
+        "Un seul tissu est atteint",
+        "Le système digestif est concerné"
+      ],
+      "correct": 0
+    }
+  ]
+}

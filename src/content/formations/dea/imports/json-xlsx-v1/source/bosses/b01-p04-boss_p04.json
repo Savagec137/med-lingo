@@ -1,0 +1,200 @@
+{
+  "block_id": "B01",
+  "path_id": "P04",
+  "boss_id": "BOSS_P04",
+  "title": "Boss - Physiologie humaine",
+  "description": "Évaluation finale du parcours Physiologie humaine",
+  "unlock_after": "L10",
+  "passing_score": 80,
+  "questions": [
+    {
+      "id": "BQ046",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "La physiologie étudie principalement :",
+      "options": [
+        "Le fonctionnement de l'organisme",
+        "La forme des os",
+        "Les maladies infectieuses",
+        "Les médicaments"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ047",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "L'homéostasie correspond au maintien d'un équilibre interne stable.",
+      "answer": true
+    },
+    {
+      "id": "BQ048",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Quel système assure principalement le transport de l'oxygène vers les tissus ?",
+      "options": [
+        "Le système cardiovasculaire",
+        "Le système digestif",
+        "Le système endocrinien",
+        "Le système urinaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ049",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Les échanges gazeux se réalisent principalement :",
+      "options": [
+        "Au niveau des alvéoles pulmonaires",
+        "Dans la trachée",
+        "Dans le larynx",
+        "Dans les bronches"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ050",
+      "type": "matching",
+      "difficulty": 3,
+      "pairs": [
+        [
+          "Rein",
+          "Filtration"
+        ],
+        [
+          "Poumon",
+          "Échanges gazeux"
+        ],
+        [
+          "Cœur",
+          "Pompe"
+        ],
+        [
+          "Cerveau",
+          "Commande"
+        ]
+      ]
+    },
+    {
+      "id": "BQ051",
+      "type": "fill_blank",
+      "difficulty": 3,
+      "question": "Le principal muscle de la respiration est le ______.",
+      "answers": [
+        "diaphragme"
+      ]
+    },
+    {
+      "id": "BQ052",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle hormone fait diminuer la glycémie ?",
+      "options": [
+        "L'insuline",
+        "Le glucagon",
+        "L'adrénaline",
+        "Le cortisol"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ053",
+      "type": "ordering",
+      "difficulty": 3,
+      "question": "Replace les étapes d'un mécanisme de régulation physiologique.",
+      "solution": [
+        "Stimulus",
+        "Récepteur",
+        "Centre de régulation",
+        "Effecteur",
+        "Retour à l'équilibre"
+      ]
+    },
+    {
+      "id": "BQ054",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Une victime présente une fréquence respiratoire de 32/min, une SpO₂ à 84 % et une cyanose. Quel système est principalement défaillant ?",
+      "options": [
+        "Le système respiratoire",
+        "Le système digestif",
+        "Le système endocrinien",
+        "Le système urinaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ055",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Une hypotension associée à une tachycardie traduit principalement une diminution de :",
+      "options": [
+        "La perfusion tissulaire",
+        "La digestion",
+        "La filtration digestive",
+        "La ventilation alvéolaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ056",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Une victime présente une diurèse très faible après plusieurs heures d'hypotension. Quel organe est particulièrement à risque ?",
+      "options": [
+        "Le rein",
+        "Le foie",
+        "Le pancréas",
+        "La rate"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ057",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Après un effort intense, un patient présente une fréquence cardiaque à 145/min et une fréquence respiratoire à 30/min sans autre signe d'alerte. Quelle interprétation est la plus probable ?",
+      "options": [
+        "Une adaptation physiologique à l'effort",
+        "Un arrêt cardiaque",
+        "Une hypoglycémie sévère",
+        "Une insuffisance rénale aiguë"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "BQ058",
+      "type": "anatomy_click",
+      "difficulty": 4,
+      "question": "Clique sur la thyroïde.",
+      "target": "thyroid"
+    },
+    {
+      "id": "BQ059",
+      "type": "anatomy_click",
+      "difficulty": 4,
+      "question": "Clique sur le rein droit.",
+      "target": "right_kidney"
+    },
+    {
+      "id": "BQ060",
+      "type": "clinical_case",
+      "difficulty": 5,
+      "question": "Chez une victime présentant une altération de l'état de conscience, une polypnée, une tachycardie et une hypotension, quelle affirmation est la plus juste ?",
+      "options": [
+        "Plusieurs systèmes physiologiques sont simultanément perturbés et une prise en charge urgente est nécessaire.",
+        "Seul le système digestif est concerné.",
+        "Les constantes sont compatibles avec un fonctionnement normal.",
+        "Aucun bilan complémentaire n'est nécessaire."
+      ],
+      "correct": 0
+    }
+  ],
+  "reward": {
+    "xp": 500,
+    "coins": 300,
+    "badge": "physiology_master_bronze",
+    "unlock": "BLOCK_02"
+  }
+}

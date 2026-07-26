@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l06",
+  "title": "Le système urinaire",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Le système urinaire et révision"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l10"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l05"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p03-l10-q291",
+      "difficulty": "easy",
+      "question": "Quel organe filtre le sang ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q291",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q291-answer-01",
+          "text": "Le rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q291-answer-02",
+          "text": "La vessie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q291-answer-03",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q291-answer-04",
+          "text": "Le pancréas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q291-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l10-q292",
+      "difficulty": "easy",
+      "question": "Quel conduit transporte l'urine vers la vessie ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q292",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q292-answer-01",
+          "text": "L'uretère",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q292-answer-02",
+          "text": "L'urètre",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q292-answer-03",
+          "text": "L'œsophage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q292-answer-04",
+          "text": "La trachée",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q292-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l10-q293",
+      "difficulty": "easy",
+      "question": "La vessie stocke l'urine.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q293",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q293-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q293-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q293-true"
+    },
+    {
+      "id": "import-b01-p03-l10-q294",
+      "difficulty": "easy",
+      "question": "L'urètre relie les reins à la vessie.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q294",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q294-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q294-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q294-false"
+    },
+    {
+      "id": "import-b01-p03-l10-q295",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q295",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q295-pair-01",
+          "text": "Rein",
+          "match": "Filtration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q295-pair-02",
+          "text": "Uretère",
+          "match": "Transport",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q295-pair-03",
+          "text": "Vessie",
+          "match": "Stockage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q295-pair-04",
+          "text": "Urètre",
+          "match": "Évacuation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l10-q295-pair-01",
+        "import-b01-p03-l10-q295-pair-02",
+        "import-b01-p03-l10-q295-pair-03",
+        "import-b01-p03-l10-q295-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l10-q296",
+      "difficulty": "medium",
+      "question": "Les ______ filtrent le sang.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q296",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "reins"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q296-accepted-01",
+          "text": "reins",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l10-q296-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l10-q297",
+      "difficulty": "hard",
+      "question": "Quelle est la fonction principale du système urinaire ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q297",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q297-answer-01",
+          "text": "Éliminer les déchets et maintenir l'équilibre hydrique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q297-answer-02",
+          "text": "Digérer les aliments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q297-answer-03",
+          "text": "Produire les hormones digestives",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q297-answer-04",
+          "text": "Transporter l'oxygène",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q297-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l10-q298",
+      "difficulty": "hard",
+      "question": "Une douleur lombaire intense associée à des difficultés urinaires oriente principalement vers quel système ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q298",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q298-answer-01",
+          "text": "Urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q298-answer-02",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q298-answer-03",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l10-q298-answer-04",
+          "text": "Musculaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l10-q298-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l10-q299",
+      "difficulty": "medium",
+      "question": "Clique sur un rein.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q299",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "kidney"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-diaphragm",
+          "text": "Diaphragme",
+          "detail": "0.5,0.39",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-alveolus",
+          "text": "Alvéole pulmonaire",
+          "detail": "0.38,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-kidney"
+    },
+    {
+      "id": "import-b01-p03-l10-q300",
+      "difficulty": "medium",
+      "question": "Replace le trajet de l'urine.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l10"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l10"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L10",
+        "originalQuestionId": "Q300",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l10-q300-step-01",
+          "text": "Rein",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l10-q300-step-02",
+          "text": "Uretère",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l10-q300-step-03",
+          "text": "Vessie",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l10-q300-step-04",
+          "text": "Urètre",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l10-q300-step-01",
+        "import-b01-p03-l10-q300-step-02",
+        "import-b01-p03-l10-q300-step-03",
+        "import-b01-p03-l10-q300-step-04"
+      ]
+    }
+  ]
+}

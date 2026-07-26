@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L02",
+  "lesson_title": "Les tissus du corps humain",
+  "knowledge": [
+    {
+      "id": "K131",
+      "title": "Définition",
+      "content": "Un tissu est un ensemble de cellules spécialisées assurant une même fonction."
+    },
+    {
+      "id": "K132",
+      "title": "Les quatre tissus fondamentaux",
+      "content": "Le corps humain possède quatre grands types de tissus : épithélial, conjonctif, musculaire et nerveux."
+    },
+    {
+      "id": "K133",
+      "title": "Tissu épithélial",
+      "content": "Il recouvre les surfaces du corps, protège les organes et participe aux échanges."
+    },
+    {
+      "id": "K134",
+      "title": "Tissu conjonctif",
+      "content": "Il soutient, relie et protège les différents organes."
+    },
+    {
+      "id": "K135",
+      "title": "Tissu musculaire",
+      "content": "Il est responsable de la contraction permettant le mouvement."
+    },
+    {
+      "id": "K136",
+      "title": "Tissu nerveux",
+      "content": "Il reçoit, traite et transmet les informations dans l'organisme."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q211",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Combien existe-t-il de grands types de tissus dans le corps humain ?",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "8"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q212",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel tissu assure principalement la contraction ?",
+      "options": [
+        "Musculaire",
+        "Épithélial",
+        "Conjonctif",
+        "Nerveux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q213",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le tissu nerveux transmet les informations.",
+      "answer": true
+    },
+    {
+      "id": "Q214",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le tissu musculaire protège principalement la peau.",
+      "answer": false
+    },
+    {
+      "id": "Q215",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Épithélial",
+          "Protection"
+        ],
+        [
+          "Conjonctif",
+          "Soutien"
+        ],
+        [
+          "Musculaire",
+          "Contraction"
+        ],
+        [
+          "Nerveux",
+          "Transmission de l'information"
+        ]
+      ]
+    },
+    {
+      "id": "Q216",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le tissu __________ permet le mouvement du corps.",
+      "answers": [
+        "musculaire"
+      ]
+    },
+    {
+      "id": "Q217",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel tissu est le plus directement impliqué dans la cicatrisation ?",
+      "options": [
+        "Conjonctif",
+        "Musculaire",
+        "Nerveux",
+        "Cartilagineux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q218",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Après une coupure superficielle, quel tissu est touché en premier ?",
+      "options": [
+        "Épithélial",
+        "Musculaire",
+        "Osseux",
+        "Nerveux"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q219",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe ces structures du plus petit au plus grand.",
+      "solution": [
+        "Cellule",
+        "Tissu",
+        "Organe",
+        "Système"
+      ]
+    },
+    {
+      "id": "Q220",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur un muscle du bras.",
+      "target": "biceps"
+    }
+  ]
+}

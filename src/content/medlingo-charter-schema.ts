@@ -48,7 +48,7 @@ const charterSchema = z
       z.object({
         id: contentTypeSchema,
         label: nonEmptyString,
-        answerMode: z.enum(["single", "multiple", "ordered", "matching"]),
+        answerMode: z.enum(["single", "multiple", "ordered", "matching", "text"]),
       }),
     ),
     exerciseContexts: z.array(
