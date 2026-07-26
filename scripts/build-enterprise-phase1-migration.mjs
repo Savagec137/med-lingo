@@ -1,0 +1,229 @@
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const scriptDirectory = dirname(fileURLToPath(import.meta.url));
+const repositoryRoot = resolve(scriptDirectory, "..");
+const architectureDirectory = join(repositoryRoot, "supabase", "architecture", "v1");
+const migrationPath = join(
+  repositoryRoot,
+  "supabase",
+  "migrations",
+  "20260726120000_enterprise_phase1_foundation.sql",
+);
+
+const readArchitectureFile = (name) =>
+  readFileSync(join(architectureDirectory, name), "utf8").trim();
+
+const splitSqlStatements = (sql) => {
+  const statements = [];
+  let buffer = "";
+  let singleQuoted = false;
+  let doubleQuoted = false;
+  let lineComment = false;
+  let blockCommentDepth = 0;
+  let dollarTag = null;
+
+  for (let index = 0; index < sql.length; index += 1) {
+    const character = sql[index];
+    const nextCharacter = sql[index + 1];
+
+    if (lineComment) {
+      buffer += character;
+      if (character === "\n") lineComment = false;
+      continue;
+    }
+    if (blockCommentDepth > 0) {
+      buffer += character;
+      if (character === "/" && nextCharacter === "*") {
+        buffer += nextCharacter;
+        blockCommentDepth += 1;
+        index += 1;
+      } else if (character === "*" && nextCharacter === "/") {
+        buffer += nextCharacter;
+        blockCommentDepth -= 1;
+        index += 1;
+      }
+      continue;
+    }
+    if (dollarTag !== null) {
+      if (sql.startsWith(dollarTag, index)) {
+        buffer += dollarTag;
+        index += dollarTag.length - 1;
+        dollarTag = null;
+      } else {
+        buffer += character;
+      }
+      continue;
+    }
+    if (singleQuoted) {
+      buffer += character;
+      if (character === "'" && nextCharacter === "'") {
+        buffer += nextCharacter;
+        index += 1;
+      } else if (character === "'") {
+        singleQuoted = false;
+      }
+      continue;
+    }
+    if (doubleQuoted) {
+      buffer += character;
+      if (character === '"' && nextCharacter === '"') {
+        buffer += nextCharacter;
+        index += 1;
+      } else if (character === '"') {
+        doubleQuoted = false;
+      }
+      continue;
+    }
+    if (character === "-" && nextCharacter === "-") {
+      buffer += `${character}${nextCharacter}`;
+      lineComment = true;
+      index += 1;
+      continue;
+    }
+    if (character === "/" && nextCharacter === "*") {
+      buffer += `${character}${nextCharacter}`;
+      blockCommentDepth = 1;
+      index += 1;
+      continue;
+    }
+    if (character === "'") {
+      buffer += character;
+      singleQuoted = true;
+      continue;
+    }
+    if (character === '"') {
+      buffer += character;
+      doubleQuoted = true;
+      continue;
+    }
+    if (character === "$") {
+      const match = sql.slice(index).match(/^(\$[A-Za-z_][A-Za-z0-9_]*\$|\$\$)/);
+      if (match) {
+        dollarTag = match[1];
+        buffer += dollarTag;
+        index += dollarTag.length - 1;
+        continue;
+      }
+    }
+
+    buffer += character;
+    if (character === ";") {
+      if (buffer.trim()) statements.push(buffer.trim());
+      buffer = "";
+    }
+  }
+
+  if (buffer.trim()) statements.push(buffer.trim());
+  return statements;
+};
+
+const findStatement = (statements, pattern, label) => {
+  const statement = statements.find((candidate) => pattern.test(candidate));
+  if (!statement) throw new Error(`Unable to find ${label}`);
+  return statement;
+};
+
+const runtimeTemplate = readArchitectureFile("phases/phase1_runtime_template.sql");
+const functionStatements = splitSqlStatements(readArchitectureFile("80_functions_views.sql"));
+const extractedRuntime = [
+  findStatement(
+    functionStatements,
+    /CREATE OR REPLACE FUNCTION practice\.grade_response\s*\(/,
+    "practice.grade_response",
+  ),
+  findStatement(
+    functionStatements,
+    /CREATE OR REPLACE VIEW api\.published_curriculum\b/,
+    "api.published_curriculum",
+  ),
+  findStatement(
+    functionStatements,
+    /COMMENT ON VIEW api\.published_curriculum\b/,
+    "api.published_curriculum comment",
+  ),
+  findStatement(
+    functionStatements,
+    /CREATE OR REPLACE FUNCTION api\.search_medical_concepts\s*\(/,
+    "api.search_medical_concepts",
+  ),
+].join("\n\n");
+
+const phaseOneSchemas = new Set([
+  "iam",
+  "media",
+  "knowledge",
+  "learning",
+  "practice",
+  "anatomy",
+  "clinical",
+]);
+const supportingIndexes = splitSqlStatements(readArchitectureFile("75_foreign_key_indexes.sql"))
+  .filter((statement) => {
+    const match = statement.match(/\bON\s+([a-z_]+)\.[a-z_]+\s*\(/i);
+    return match && phaseOneSchemas.has(match[1].toLowerCase());
+  })
+  .join("\n");
+const generatedRuntime = runtimeTemplate.replace(
+  "-- __EXTRACTED_PHASE1_RUNTIME__",
+  () => extractedRuntime,
+);
+
+const migration = `-- Generated by scripts/build-enterprise-phase1-migration.mjs
+-- MedLingo enterprise architecture - additive Phase 1.
+-- This migration intentionally leaves every legacy public table untouched.
+
+BEGIN;
+SET LOCAL lock_timeout = '10s';
+SET LOCAL statement_timeout = '15min';
+SELECT pg_advisory_xact_lock(
+  hashtextextended('medlingo.enterprise.phase1.foundation', 0)
+);
+
+${readArchitectureFile("00_foundation.sql")}
+
+${readArchitectureFile("10_identity.sql")}
+
+${readArchitectureFile("20_content_knowledge.sql")}
+
+${readArchitectureFile("30_learning_delivery.sql")}
+
+-- Foreign-key support indexes for the Phase 1 schemas.
+${supportingIndexes}
+
+${generatedRuntime}
+
+COMMIT;
+`;
+
+mkdirSync(dirname(migrationPath), { recursive: true });
+writeFileSync(migrationPath, migration, "utf8");
+
+const destructivePatterns = [
+  /\bDROP\s+(TABLE|SCHEMA|COLUMN)\b/i,
+  /\bTRUNCATE\b/i,
+  /\bDELETE\s+FROM\b/i,
+  /\bALTER\s+TABLE\s+public\./i,
+  /\bUPDATE\s+public\./i,
+  /\bINSERT\s+INTO\s+public\./i,
+];
+for (const pattern of destructivePatterns) {
+  if (pattern.test(migration)) {
+    throw new Error(`Generated migration violates additive contract: ${pattern}`);
+  }
+}
+
+console.log(
+  JSON.stringify(
+    {
+      migrationPath,
+      bytes: Buffer.byteLength(migration, "utf8"),
+      statements: splitSqlStatements(migration).length,
+      phaseOneSchemas: [...phaseOneSchemas],
+      legacyPublicTablesTouched: false,
+    },
+    null,
+    2,
+  ),
+);
