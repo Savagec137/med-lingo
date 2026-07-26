@@ -1,32 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { BadgeCheck, Check, Coins, Crown, Gem, Lock, PackageOpen, Sparkles } from "lucide-react";
+import { useMemo, useState, type ReactNode } from "react";
+import { BadgeCheck, Check, Coins, Crown, Gem, Lock, PackageOpen, Sparkles, UserRound } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
-import { CHEST_PACK_PREMIUM, PREMIUM_CROWN, SHOP_IMAGE } from "@/lib/asset-map";
-import { ShopItemIcon } from "@/lib/icon-map";
+import { CHEST_PACK_PREMIUM, PREMIUM_CROWN } from "@/lib/asset-map";
 import { useAuth } from "@/lib/use-auth";
-import {
-  equipItem,
-  purchaseItem,
-  type ShopItem,
-  useInventory,
-  useInvalidateWallet,
-  useShopCatalog,
-  useWallet,
-} from "@/lib/use-wallet";
+import { equipItem, purchaseItem, type ShopItem, useInventory, useInvalidateWallet, useShopCatalog, useWallet } from "@/lib/use-wallet";
 import { useGameChests } from "@/features/gamification/hooks/use-game-chests";
-import { ShopItemArtwork } from "@/features/gamification/components/ShopItemArtwork";
+import { useGameInventory, useInvalidateGameEconomy } from "@/features/gamification/hooks/use-game-inventory";
+import { useProfileCard } from "@/features/gamification/hooks/use-profile-card";
+import { useProfileCosmetics } from "@/features/gamification/hooks/use-profile-cosmetics";
+import { GameItemArtwork } from "@/features/gamification/components/GameItemArtwork";
+import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 
 export const Route = createFileRoute("/boutique")({ component: Boutique });
 
 type Tab = "coffres" | "gemmes" | "premium" | "avatars" | "cartes" | "badges";
-const TABS: { id: Tab; label: string }[] = [
-  { id: "coffres", label: "Coffres" },
-  { id: "gemmes", label: "Gemmes" },
-  { id: "premium", label: "Premium" },
-  { id: "avatars", label: "Avatars" },
-  { id: "cartes", label: "Cartes" },
-  { id: "badges", label: "Badges" },
+const TABS: { id: Tab; label: string; icon: typeof PackageOpen }[] = [
+  { id: "coffres", label: "Coffres", icon: PackageOpen },
+  { id: "gemmes", label: "Gemmes", icon: Gem },
+  { id: "premium", label: "Premium", icon: Crown },
+  { id: "avatars", label: "Avatars", icon: UserRound },
+  { id: "cartes", label: "Cartes", icon: Sparkles },
+  { id: "badges", label: "Badges", icon: BadgeCheck },
 ];
 const RARITY_STYLES: Record<string, string> = {
   common: "border-slate-300 bg-slate-50 text-slate-700",
@@ -44,17 +39,33 @@ function Boutique() {
   const { data: catalog = [] } = useShopCatalog();
   const { data: wallet } = useWallet();
   const { data: inventory = [] } = useInventory();
-  const invalidate = useInvalidateWallet();
+  const { data: gameInventory = [] } = useGameInventory();
+  const invalidateWallet = useInvalidateWallet();
+  const invalidateGameEconomy = useInvalidateGameEconomy();
   const gameChests = useGameChests();
-  const owned = new Set(inventory.map((item) => item.item_code));
-  const equipped = new Set(inventory.filter((item) => item.equipped).map((item) => item.item_code));
+  const profileCard = useProfileCard();
+  const profileCosmetics = useProfileCosmetics();
+
+  const owned = useMemo(() => {
+    const codes = new Set<string>();
+    for (const item of inventory) codes.add(item.item_code);
+    for (const item of gameInventory) codes.add(item.itemCode);
+    return codes;
+  }, [inventory, gameInventory]);
+
+  const equipped = useMemo(() => {
+    const codes = new Set(inventory.filter((item) => item.equipped).map((item) => item.item_code));
+    if (profileCard.data) codes.add(profileCard.data);
+    if (profileCosmetics.avatarCode) codes.add(profileCosmetics.avatarCode);
+    if (profileCosmetics.badgeCode) codes.add(profileCosmetics.badgeCode);
+    return codes;
+  }, [inventory, profileCard.data, profileCosmetics.avatarCode, profileCosmetics.badgeCode]);
 
   const items = catalog.filter((item) => {
     if (tab === "coffres") return item.type === "chest" && item.code.startsWith("game_chest_");
     if (tab === "gemmes") return item.type === "gem_pack";
     if (tab === "avatars") return item.type === "avatar";
-    if (tab === "cartes")
-      return ["frame", "background", "profile_card", "title"].includes(item.type);
+    if (tab === "cartes") return ["frame", "background", "profile_card", "title"].includes(item.type);
     if (tab === "badges") return item.type === "badge";
     return false;
   });
@@ -64,9 +75,13 @@ function Boutique() {
     setBusy(item.code);
     setMessage(null);
     try {
-      if (item.code.startsWith("game_chest_")) await gameChests.purchase(item.code);
-      else await purchaseItem(item.code);
-      invalidate();
+      if (item.code.startsWith("game_chest_")) {
+        await gameChests.purchase(item.code);
+      } else {
+        await purchaseItem(item.code);
+      }
+      invalidateWallet();
+      invalidateGameEconomy();
       setMessage(`${item.name} a été ajouté à ton inventaire.`);
     } catch (error) {
       const raw = error instanceof Error ? error.message : "Erreur";
@@ -84,9 +99,23 @@ function Boutique() {
 
   async function equip(item: ShopItem) {
     setBusy(item.code);
+    setMessage(null);
     try {
-      await equipItem(item.code, item.type);
-      invalidate();
+      if (item.type === "avatar") {
+        profileCosmetics.equipAvatar(item.code);
+        setMessage(`${item.name} est maintenant ton avatar actif.`);
+      } else if (item.type === "badge") {
+        profileCosmetics.equipBadge(item.code);
+        setMessage(`${item.name} est maintenant affiché sur ton profil.`);
+      } else if (item.type === "profile_card") {
+        await profileCard.equip(item.code as ProfileCardCode);
+        setMessage(`${item.name} est maintenant ta carte active.`);
+      } else {
+        await equipItem(item.code, item.type);
+        invalidateWallet();
+        setMessage(`${item.name} a été activé.`);
+      }
+      invalidateGameEconomy();
     } finally {
       setBusy(null);
     }
@@ -98,13 +127,9 @@ function Boutique() {
       <main className="mx-auto max-w-3xl px-4 py-6">
         <header className="mb-5 flex items-end justify-between gap-3">
           <div>
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
-              Économie MedLingo
-            </p>
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">Économie MedLingo</p>
             <h1 className="font-display text-3xl font-extrabold">Boutique</h1>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Choisis des récompenses utiles à ta progression.
-            </p>
+            <p className="mt-1 text-sm text-muted-foreground">Choisis des récompenses utiles à ta progression.</p>
           </div>
           <Link
             to="/inventaire"
@@ -114,16 +139,8 @@ function Boutique() {
           </Link>
         </header>
         <section className="mb-5 flex gap-2">
-          <Balance
-            icon={<Coins className="h-4 w-4" />}
-            value={wallet?.coins ?? 0}
-            color="var(--color-warning)"
-          />
-          <Balance
-            icon={<Gem className="h-4 w-4" />}
-            value={wallet?.gems ?? 0}
-            color="var(--color-accent)"
-          />
+          <Balance icon={<Coins className="h-4 w-4" />} value={wallet?.coins ?? 0} color="var(--color-warning)" />
+          <Balance icon={<Gem className="h-4 w-4" />} value={wallet?.gems ?? 0} color="var(--color-accent)" />
         </section>
         {!user && (
           <div className="mb-4 rounded-xl border border-border bg-card p-4 text-sm">
@@ -134,22 +151,20 @@ function Boutique() {
           </div>
         )}
         <nav className="mb-5 flex gap-1 overflow-x-auto rounded-full bg-secondary p-1">
-          {TABS.map(({ id, label }) => (
+          {TABS.map(({ id, label, icon: Icon }) => (
             <button
               key={id}
+              type="button"
               onClick={() => setTab(id)}
-              className={`whitespace-nowrap rounded-full px-3 py-2 text-xs font-extrabold uppercase tracking-wide transition ${tab === id ? "bg-background text-foreground shadow" : "text-muted-foreground"}`}
+              className={`inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-xs font-extrabold uppercase tracking-wide transition ${tab === id ? "bg-background text-foreground shadow" : "text-muted-foreground"}`}
             >
+              <Icon className="h-3.5 w-3.5" />
               {label}
             </button>
           ))}
         </nav>
         {tab === "coffres" && <ChestCollectionBanner />}
-        {message && (
-          <div className="mb-4 rounded-xl border border-border bg-card px-3 py-2 text-sm font-semibold">
-            {message}
-          </div>
-        )}
+        {message && <div className="mb-4 rounded-xl border border-border bg-card px-3 py-2 text-sm font-semibold">{message}</div>}
         {tab === "premium" ? (
           <PremiumPanel />
         ) : tab === "gemmes" ? (
@@ -162,10 +177,8 @@ function Boutique() {
                 item={item}
                 owned={owned.has(item.code)}
                 equipped={equipped.has(item.code)}
-                busy={busy === item.code || gameChests.busy}
-                canAfford={
-                  (wallet?.coins ?? 0) >= item.price_coins && (wallet?.gems ?? 0) >= item.price_gems
-                }
+                busy={busy === item.code || gameChests.busy || profileCard.isEquipping}
+                canAfford={(wallet?.coins ?? 0) >= item.price_coins && (wallet?.gems ?? 0) >= item.price_gems}
                 onBuy={buy}
                 onEquip={equip}
                 onPremium={() => setTab("premium")}
@@ -178,9 +191,7 @@ function Boutique() {
             )}
           </div>
         )}
-        {gameChests.error && (
-          <p className="mt-4 text-center text-xs font-bold text-destructive">{gameChests.error}</p>
-        )}
+        {gameChests.error && <p className="mt-4 text-center text-xs font-bold text-destructive">{gameChests.error}</p>}
       </main>
     </div>
   );
@@ -200,9 +211,7 @@ function ChestCollectionBanner() {
       <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[color:var(--color-primary)]/25 blur-3xl animate-pulse-glow" />
       <div className="absolute inset-x-4 bottom-3 flex items-end justify-between gap-3">
         <div>
-          <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/65">
-            Collection premium
-          </p>
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/65">Collection premium</p>
           <h2 className="font-display text-lg font-extrabold text-white">Cinq coffres, cinq raretés</h2>
         </div>
         <span className="rounded-full border border-white/20 bg-black/25 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white backdrop-blur">
@@ -213,12 +222,9 @@ function ChestCollectionBanner() {
   );
 }
 
-function Balance({ icon, value, color }: { icon: React.ReactNode; value: number; color: string }) {
+function Balance({ icon, value, color }: { icon: ReactNode; value: number; color: string }) {
   return (
-    <div
-      className="flex items-center gap-2 rounded-full border border-white/10 bg-card px-3 py-1.5 text-sm font-extrabold"
-      style={{ color }}
-    >
+    <div className="flex items-center gap-2 rounded-full border border-white/10 bg-card px-3 py-1.5 text-sm font-extrabold" style={{ color }}>
       {icon}
       <span className="tabular-nums">{value.toLocaleString("fr-FR")}</span>
     </div>
@@ -247,26 +253,16 @@ function ShopCard({
   return (
     <article className={`group relative rounded-2xl border-2 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${RARITY_STYLES[item.rarity]}`}>
       {item.premium_only && (
-        <span className="absolute -right-1 -top-1 rounded-full bg-amber-500 px-2 py-0.5 text-[9px] font-extrabold text-white">
-          PREMIUM
-        </span>
+        <span className="absolute -right-1 -top-1 rounded-full bg-amber-500 px-2 py-0.5 text-[9px] font-extrabold text-white">PREMIUM</span>
       )}
       <div className="mb-2 flex h-20 items-center justify-center text-[color:var(--color-primary)] transition-transform duration-300 group-hover:scale-105">
-        <ShopItemArtwork
-          code={item.code}
-          fallback={
-            SHOP_IMAGE[item.code] ? (
-              <img src={SHOP_IMAGE[item.code]} alt="" loading="lazy" decoding="async" className="h-20 w-20 object-contain drop-shadow-md" />
-            ) : (
-              <ShopItemIcon code={item.code} type={item.type} className="h-9 w-9" strokeWidth={2.25} />
-            )
-          }
-        />
+        <GameItemArtwork code={item.code} type={item.type} label={item.name} className="h-20 w-20" fallbackClassName="h-20 w-20 object-contain drop-shadow-md" />
       </div>
       <div className="text-sm font-extrabold leading-tight">{item.name}</div>
       <div className="mb-3 mt-1 line-clamp-2 text-[11px] opacity-70">{item.description}</div>
       {item.code.startsWith("game_chest_") ? (
         <button
+          type="button"
           disabled={busy || !canAfford}
           onClick={() => onBuy(item)}
           className="flex w-full items-center justify-center gap-1 rounded-full bg-[color:var(--color-primary)] px-2 py-1.5 text-xs font-extrabold text-primary-foreground disabled:opacity-40"
@@ -286,6 +282,7 @@ function ShopCard({
         </button>
       ) : owned ? (
         <button
+          type="button"
           disabled={busy || equipped}
           onClick={() => onEquip(item)}
           className={`w-full rounded-full px-2 py-1.5 text-xs font-extrabold ${equipped ? "bg-emerald-500 text-white" : "bg-foreground text-background"}`}
@@ -300,15 +297,13 @@ function ShopCard({
           )}
         </button>
       ) : item.premium_only ? (
-        <button
-          onClick={onPremium}
-          className="w-full rounded-full bg-amber-500 px-2 py-1.5 text-xs font-extrabold text-white"
-        >
+        <button type="button" onClick={onPremium} className="w-full rounded-full bg-amber-500 px-2 py-1.5 text-xs font-extrabold text-white">
           <Lock className="mr-1 inline h-3 w-3" />
           Premium
         </button>
       ) : (
         <button
+          type="button"
           disabled={busy || !canAfford}
           onClick={() => onBuy(item)}
           className="flex w-full items-center justify-center gap-1 rounded-full bg-[color:var(--color-primary)] px-2 py-1.5 text-xs font-extrabold text-primary-foreground disabled:opacity-40"
@@ -334,14 +329,12 @@ function GemPanel({ items }: { items: ShopItem[] }) {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       {items.map((item) => (
-        <article
-          key={item.code}
-          className="rounded-3xl border-2 border-[color:var(--color-accent)]/40 bg-[color:var(--color-accent)]/10 p-5"
-        >
+        <article key={item.code} className="rounded-3xl border-2 border-[color:var(--color-accent)]/40 bg-[color:var(--color-accent)]/10 p-5">
           <Gem className="h-9 w-9 text-[color:var(--color-accent)]" />
           <h2 className="mt-3 font-display text-xl font-extrabold">{item.name}</h2>
           <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
           <button
+            type="button"
             disabled
             className="mt-4 w-full rounded-xl bg-[color:var(--color-accent)] py-2.5 text-sm font-extrabold text-primary-foreground opacity-70"
           >
@@ -390,10 +383,7 @@ function PremiumPanel() {
           Paiement sécurisé à intégrer dans un prochain sprint
         </li>
       </ul>
-      <button
-        disabled
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-amber-500 py-3 text-sm font-extrabold text-white opacity-75"
-      >
+      <button type="button" disabled className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-amber-500 py-3 text-sm font-extrabold text-white opacity-75">
         <Crown className="h-4 w-4" />
         Bientôt disponible
       </button>

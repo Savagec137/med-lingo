@@ -1,18 +1,20 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { ArrowLeft, LogOut, Flame, Zap, Trophy, Target, Award, TrendingUp } from "lucide-react";
+import { useMemo, useState, type ReactNode } from "react";
+import { ArrowLeft, LogOut, Flame, Zap, Trophy, Target, Award, TrendingUp, BadgeCheck, UserRound } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { useProgress } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
 import { levelProgress } from "@/lib/gamification";
 import { UNITS } from "@/lib/curriculum";
 import { useBadgesCatalog, useUserBadges, useXpHistory } from "@/lib/use-gamification";
-import { BadgeIcon } from "@/lib/icon-map";
+import { useInventory } from "@/lib/use-wallet";
 import { BADGE_GOLD } from "@/lib/asset-map";
 import { ProfileVisitCard } from "@/features/gamification/components/ProfileVisitCard";
-import { DEFAULT_PROFILE_CARD, PROFILE_CARD_CATALOG } from "@/features/gamification/domain/profile-cards";
+import { GameItemArtwork } from "@/features/gamification/components/GameItemArtwork";
+import { DEFAULT_PROFILE_CARD, PROFILE_CARD_CATALOG, type ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 import { useProfileCard } from "@/features/gamification/hooks/use-profile-card";
 import { useGameInventory } from "@/features/gamification/hooks/use-game-inventory";
+import { useProfileCosmetics } from "@/features/gamification/hooks/use-profile-cosmetics";
 
 export const Route = createFileRoute("/profil")({
   component: ProfilPage,
@@ -27,7 +29,7 @@ export const Route = createFileRoute("/profil")({
 
 function ProfilPage() {
   const { user } = useAuth();
-  const { progress, hydrated, setDailyGoal } = useProgress();
+  const { progress, setDailyGoal } = useProgress();
   const navigate = useNavigate();
   const lp = levelProgress(progress.xp);
 
@@ -35,11 +37,14 @@ function ProfilPage() {
   const { data: userBadges = [] } = useUserBadges();
   const { data: xpHistory = [] } = useXpHistory(30);
   const { data: gameInventory = [] } = useGameInventory();
+  const { data: legacyInventory = [] } = useInventory();
   const profileCard = useProfileCard();
+  const profileCosmetics = useProfileCosmetics();
 
   const earnedSet = useMemo(() => new Set(userBadges.map((b) => b.badge_code)), [userBadges]);
   const [goalEdit, setGoalEdit] = useState(false);
   const [cardPickerOpen, setCardPickerOpen] = useState(false);
+  const [cosmeticsPickerOpen, setCosmeticsPickerOpen] = useState(false);
 
   const totalLessons = UNITS.reduce((s, u) => s + u.lessons.length, 0);
   const doneLessons = Object.keys(progress.completedLessons).length;
@@ -52,12 +57,87 @@ function ProfilPage() {
     (user?.user_metadata?.name as string) ||
     user?.email?.split("@")[0] ||
     "Invité";
-  const ownedProfileCards = useMemo(
-    () => new Set(gameInventory.filter((item) => item.itemType === "profile_card").map((item) => item.itemCode)),
-    [gameInventory],
-  );
+
+  const mergedOwnedCodes = useMemo(() => {
+    const codes = new Set<string>();
+    for (const item of gameInventory) codes.add(item.itemCode);
+    for (const item of legacyInventory) codes.add(item.item_code);
+    return codes;
+  }, [gameInventory, legacyInventory]);
+
+  const ownedProfileCards = useMemo(() => {
+    const codes = new Set<string>([DEFAULT_PROFILE_CARD]);
+    for (const code of mergedOwnedCodes) {
+      if (code.startsWith("game_card_")) codes.add(code);
+    }
+    return codes;
+  }, [mergedOwnedCodes]);
+
+  const avatarItems = useMemo(() => {
+    const byCode = new Map<string, { code: string; name: string }>();
+    for (const item of gameInventory) {
+      if (item.itemType === "avatar") {
+        byCode.set(item.itemCode, {
+          code: item.itemCode,
+          name: String(item.metadata.name ?? formatCosmeticName(item.itemCode)),
+        });
+      }
+    }
+    for (const item of legacyInventory) {
+      if (item.item_code.startsWith("avatar_") || item.item_code.startsWith("av_")) {
+        byCode.set(item.item_code, {
+          code: item.item_code,
+          name: formatCosmeticName(item.item_code),
+        });
+      }
+    }
+    return Array.from(byCode.values()).sort((a, b) => a.name.localeCompare(b.name, "fr"));
+  }, [gameInventory, legacyInventory]);
+
+  const badgeItems = useMemo(() => {
+    const byCode = new Map<string, { code: string; name: string }>();
+    for (const item of gameInventory) {
+      if (item.itemType === "badge") {
+        byCode.set(item.itemCode, {
+          code: item.itemCode,
+          name: String(item.metadata.name ?? formatCosmeticName(item.itemCode)),
+        });
+      }
+    }
+    for (const item of legacyInventory) {
+      if (item.item_code.startsWith("badge_") || item.item_code.startsWith("game_badge_")) {
+        byCode.set(item.item_code, {
+          code: item.item_code,
+          name: formatCosmeticName(item.item_code),
+        });
+      }
+    }
+    return Array.from(byCode.values()).sort((a, b) => a.name.localeCompare(b.name, "fr"));
+  }, [gameInventory, legacyInventory]);
+
   const equippedCard = profileCard.data ?? DEFAULT_PROFILE_CARD;
-  const initials = displayName.trim().charAt(0).toUpperCase();
+  const equippedAvatar = mergedOwnedCodes.has(profileCosmetics.avatarCode ?? "") ? profileCosmetics.avatarCode : null;
+  const equippedBadge = mergedOwnedCodes.has(profileCosmetics.badgeCode ?? "") ? profileCosmetics.badgeCode : null;
+
+  const avatarSlot = equippedAvatar ? (
+    <GameItemArtwork
+      code={equippedAvatar}
+      type="avatar"
+      label={formatCosmeticName(equippedAvatar)}
+      className="h-full w-full"
+      fallbackClassName="h-[72%] w-[72%] object-contain"
+    />
+  ) : undefined;
+
+  const badgeSlot = equippedBadge ? (
+    <GameItemArtwork
+      code={equippedBadge}
+      type="badge"
+      label={formatCosmeticName(equippedBadge)}
+      className="h-4 w-4"
+      fallbackClassName="h-4 w-4 object-contain"
+    />
+  ) : undefined;
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -79,18 +159,36 @@ function ProfilPage() {
             streak={progress.streak}
             ranks={userBadges.length}
             lessons={doneLessons}
+            avatarSlot={avatarSlot}
+            badgeSlot={badgeSlot}
           />
-          <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
-            <div>
-              <p className="text-sm font-extrabold">Carte de visite</p>
-              <p className="text-xs text-muted-foreground">Debloque des designs dans les coffres et selectionne ton favori.</p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
+              <div className="min-w-0">
+                <p className="text-sm font-extrabold">Carte de visite</p>
+                <p className="text-xs text-muted-foreground">Débloque des designs et sélectionne ton style actif.</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setCardPickerOpen((open) => !open)}
+                className="shrink-0 rounded-xl bg-[color:var(--color-primary)] px-3 py-2 text-xs font-extrabold text-primary-foreground"
+              >
+                {cardPickerOpen ? "Fermer" : "Personnaliser"}
+              </button>
             </div>
-            <button
-              onClick={() => setCardPickerOpen((open) => !open)}
-              className="shrink-0 rounded-xl bg-[color:var(--color-primary)] px-3 py-2 text-xs font-extrabold text-primary-foreground"
-            >
-              {cardPickerOpen ? "Fermer" : "Personnaliser"}
-            </button>
+            <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
+              <div className="min-w-0">
+                <p className="text-sm font-extrabold">Avatar & badge</p>
+                <p className="text-xs text-muted-foreground">Équipe les cosmétiques gagnés dans tes coffres et achats.</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setCosmeticsPickerOpen((open) => !open)}
+                className="shrink-0 rounded-xl bg-[color:var(--color-primary)] px-3 py-2 text-xs font-extrabold text-primary-foreground"
+              >
+                {cosmeticsPickerOpen ? "Fermer" : "Choisir"}
+              </button>
+            </div>
           </div>
         </section>
 
@@ -99,15 +197,15 @@ function ProfilPage() {
             <div className="mb-3 flex items-center justify-between gap-3">
               <div>
                 <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Choisir une carte</h2>
-                <p className="mt-0.5 text-xs text-muted-foreground">Les cartes verrouillees peuvent etre gagnees dans les coffres ou achetees dans la boutique.</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">Les cartes verrouillées peuvent être gagnées dans les coffres ou achetées dans la boutique.</p>
               </div>
               <span className="shrink-0 text-xs font-bold text-muted-foreground">
-                {ownedProfileCards.size + 1}/{PROFILE_CARD_CATALOG.length}
+                {ownedProfileCards.size}/{PROFILE_CARD_CATALOG.length}
               </span>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {PROFILE_CARD_CATALOG.map((card) => {
-                const owned = card.code === DEFAULT_PROFILE_CARD || ownedProfileCards.has(card.code);
+                const owned = ownedProfileCards.has(card.code);
                 const selected = card.code === equippedCard;
                 return (
                   <button
@@ -130,46 +228,81 @@ function ProfilPage() {
                       streak={progress.streak}
                       ranks={userBadges.length}
                       lessons={doneLessons}
+                      avatarSlot={avatarSlot}
+                      badgeSlot={badgeSlot}
                     />
                     <span className="absolute right-3 top-3 rounded-full bg-black/45 px-2 py-1 text-[9px] font-extrabold uppercase tracking-wide text-white backdrop-blur">
-                      {selected ? "Equipee" : owned ? "Selectionner" : "Verrouillee"}
+                      {selected ? "Équipée" : owned ? "Sélectionner" : "Verrouillée"}
                     </span>
                   </button>
                 );
               })}
             </div>
             {profileCard.equipError && (
-              <p className="mt-3 text-xs font-bold text-destructive">Impossible d'equiper cette carte pour le moment.</p>
+              <p className="mt-3 text-xs font-bold text-destructive">Impossible d'équiper cette carte pour le moment.</p>
             )}
           </section>
         )}
 
-        {/* Legacy identity card kept for backwards-compatible markup. */}
-        <section className="hidden mb-4 rounded-3xl border-2 border-[color:var(--color-primary)] bg-gradient-to-br from-[oklch(0.78_0.19_145)] to-[color:var(--color-primary)] p-5 text-primary-foreground shadow-[0_6px_0_0_oklch(0.55_0.17_145)]">
-          <div className="flex items-center gap-4">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white/40 bg-white/20 font-display text-3xl font-extrabold">
-              {initials}
-            </div>
-            <div className="min-w-0 flex-1">
-              <div className="truncate font-display text-xl font-extrabold">{displayName}</div>
-              <div className="truncate text-xs opacity-90">{user?.email ?? "Non connecté"}</div>
-              <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-white/25 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider">
-                <Trophy className="h-3.5 w-3.5" /> Niveau {lp.level}
+        {cosmeticsPickerOpen && (
+          <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <UserRound className="h-4 w-4 text-[color:var(--color-primary)]" />
+                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Avatars</h2>
+                  </div>
+                  <span className="text-xs font-bold text-muted-foreground">{avatarItems.length}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <CosmeticTile
+                    label="Initiales"
+                    selected={!equippedAvatar}
+                    onClick={() => profileCosmetics.equipAvatar(null)}
+                    icon={<span className="font-display text-lg font-extrabold">{displayName.trim().slice(0, 2).toUpperCase()}</span>}
+                  />
+                  {avatarItems.map((item) => (
+                    <CosmeticTile
+                      key={item.code}
+                      label={item.name}
+                      selected={equippedAvatar === item.code}
+                      onClick={() => profileCosmetics.equipAvatar(item.code)}
+                      icon={<GameItemArtwork code={item.code} type="avatar" label={item.name} className="h-12 w-12" fallbackClassName="h-10 w-10 object-contain" />}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div>
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <BadgeCheck className="h-4 w-4 text-[color:var(--color-warning)]" />
+                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges cosmétiques</h2>
+                  </div>
+                  <span className="text-xs font-bold text-muted-foreground">{badgeItems.length}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <CosmeticTile
+                    label="Aucun badge"
+                    selected={!equippedBadge}
+                    onClick={() => profileCosmetics.equipBadge(null)}
+                    icon={<BadgeCheck className="h-8 w-8 text-muted-foreground" />}
+                  />
+                  {badgeItems.map((item) => (
+                    <CosmeticTile
+                      key={item.code}
+                      label={item.name}
+                      selected={equippedBadge === item.code}
+                      onClick={() => profileCosmetics.equipBadge(item.code)}
+                      icon={<GameItemArtwork code={item.code} type="badge" label={item.name} className="h-12 w-12" fallbackClassName="h-10 w-10 object-contain" />}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mt-4">
-            <div className="flex items-baseline justify-between text-[11px] font-bold">
-              <span>Progression vers Niv {lp.level + 1}</span>
-              <span>{lp.xpIntoLevel}/{lp.xpForNextLevel} XP</span>
-            </div>
-            <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/25">
-              <div className="h-full rounded-full bg-white" style={{ width: `${lp.pct * 100}%` }} />
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Stats grid */}
         <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <StatCard icon={<Zap className="h-4 w-4" />} label="XP total" value={progress.xp.toLocaleString("fr-FR")} color="var(--color-primary)" />
           <StatCard icon={<Flame className="h-4 w-4" />} label="Série" value={`${progress.streak}j`} color="var(--color-warning)" />
@@ -177,13 +310,12 @@ function ProfilPage() {
           <StatCard icon={<TrendingUp className="h-4 w-4" />} label="Leçons" value={`${doneLessons}/${totalLessons}`} color="var(--color-success)" />
         </div>
 
-        {/* Daily goal */}
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <div className="mb-2 flex items-center justify-between">
             <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
               <Target className="mr-1 inline h-4 w-4" /> Objectif quotidien
             </h2>
-            <button onClick={() => setGoalEdit((v) => !v)} className="text-[11px] font-bold text-[color:var(--color-primary)]">
+            <button type="button" onClick={() => setGoalEdit((v) => !v)} className="text-[11px] font-bold text-[color:var(--color-primary)]">
               {goalEdit ? "Fermer" : "Modifier"}
             </button>
           </div>
@@ -192,9 +324,15 @@ function ProfilPage() {
               {[10, 20, 30, 50].map((v) => (
                 <button
                   key={v}
-                  onClick={() => { setDailyGoal(v); setGoalEdit(false); }}
+                  type="button"
+                  onClick={() => {
+                    setDailyGoal(v);
+                    setGoalEdit(false);
+                  }}
                   className={`rounded-xl border-2 py-3 text-sm font-extrabold ${
-                    progress.dailyGoalXp === v ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10 text-[color:var(--color-primary)]" : "border-border bg-secondary"
+                    progress.dailyGoalXp === v
+                      ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10 text-[color:var(--color-primary)]"
+                      : "border-border bg-secondary"
                   }`}
                 >
                   {v} XP
@@ -208,7 +346,6 @@ function ProfilPage() {
           )}
         </section>
 
-        {/* Activity 30 days */}
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">30 derniers jours</h2>
@@ -219,7 +356,6 @@ function ProfilPage() {
           <ActivityHeatmap data={xpHistory} goal={progress.dailyGoalXp} />
         </section>
 
-        {/* Badges gallery */}
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <div className="mb-3 flex items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">
@@ -256,7 +392,7 @@ function ProfilPage() {
                   }`}
                   title={b.description}
                 >
-                  <BadgeIcon code={b.code} className={`h-7 w-7 ${earned ? "text-[color:var(--color-primary)]" : "text-muted-foreground"}`} strokeWidth={2.25} />
+                  <GameItemArtwork code={b.code} type="badge" label={b.title} className="h-10 w-10" fallbackClassName={`h-7 w-7 ${earned ? "text-[color:var(--color-primary)]" : "text-muted-foreground"}`} />
                   <div className="mt-1 line-clamp-2 text-[11px] font-extrabold leading-tight">{b.title}</div>
                   <div className="mt-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
                     {earned ? b.rarity : "Verrouillé"}
@@ -267,12 +403,15 @@ function ProfilPage() {
           </div>
         </section>
 
-        {/* Account */}
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <h2 className="mb-3 font-display text-sm font-extrabold uppercase tracking-wider">Compte</h2>
           {user ? (
             <button
-              onClick={async () => { await signOut(); navigate({ to: "/" }); }}
+              type="button"
+              onClick={async () => {
+                await signOut();
+                navigate({ to: "/" });
+              }}
               className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[color:var(--color-destructive)] bg-[color:var(--color-destructive)]/10 py-3 text-sm font-extrabold text-[color:var(--color-destructive)]"
             >
               <LogOut className="h-4 w-4" /> Se déconnecter
@@ -291,7 +430,37 @@ function ProfilPage() {
   );
 }
 
-function StatCard({ icon, label, value, color }: { icon: React.ReactNode; label: string; value: string; color: string }) {
+function CosmeticTile({
+  label,
+  icon,
+  selected,
+  onClick,
+}: {
+  label: string;
+  icon: ReactNode;
+  selected: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-2xl border-2 p-3 text-left transition hover:-translate-y-0.5 ${
+        selected
+          ? "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10 shadow-[0_6px_20px_rgba(0,0,0,0.18)]"
+          : "border-border bg-secondary/40"
+      }`}
+    >
+      <div className="flex h-14 items-center justify-center rounded-2xl bg-card/70">{icon}</div>
+      <div className="mt-2 truncate text-xs font-extrabold">{label}</div>
+      <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+        {selected ? "Équipé" : "Choisir"}
+      </div>
+    </button>
+  );
+}
+
+function StatCard({ icon, label, value, color }: { icon: ReactNode; label: string; value: string; color: string }) {
   return (
     <div className="rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
       <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider" style={{ color }}>
@@ -309,13 +478,7 @@ function ActivityHeatmap({ data, goal }: { data: { date: string; xp: number }[];
       {data.map((d) => {
         const level = d.xp === 0 ? 0 : d.xp < goal / 2 ? 1 : d.xp < goal ? 2 : d.xp < goal * 2 ? 3 : 4;
         const bg = ["bg-secondary", "bg-[color:var(--color-primary)]/25", "bg-[color:var(--color-primary)]/50", "bg-[color:var(--color-primary)]/80", "bg-[color:var(--color-primary)]"][level];
-        return (
-          <div
-            key={d.date}
-            className={`aspect-square rounded-md ${bg}`}
-            title={`${d.date} — ${d.xp} XP`}
-          />
-        );
+        return <div key={d.date} className={`aspect-square rounded-md ${bg}`} title={`${d.date} — ${d.xp} XP`} />;
       })}
     </div>
   );
@@ -323,9 +486,22 @@ function ActivityHeatmap({ data, goal }: { data: { date: string; xp: number }[];
 
 function rarityBorder(rarity: string): string {
   switch (rarity) {
-    case "legendary": return "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/10";
-    case "epic": return "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10";
-    case "rare": return "border-[color:var(--color-info,#3B82F6)] bg-[color:var(--color-info,#3B82F6)]/10";
-    default: return "border-border bg-secondary";
+    case "legendary":
+      return "border-[color:var(--color-warning)] bg-[color:var(--color-warning)]/10";
+    case "epic":
+      return "border-[color:var(--color-primary)] bg-[color:var(--color-primary)]/10";
+    case "rare":
+      return "border-[color:var(--color-info,#3B82F6)] bg-[color:var(--color-info,#3B82F6)]/10";
+    default:
+      return "border-border bg-secondary";
   }
+}
+
+function formatCosmeticName(code: string): string {
+  return code
+    .replace(/^game_/, "")
+    .replace(/^av_/, "")
+    .replace(/^fr_/, "")
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }

@@ -45,9 +45,10 @@ const SHEET_HEIGHT = 940;
 type ShopItemArtworkProps = {
   code: string;
   fallback: ReactNode;
+  className?: string;
 };
 
-export function ShopItemArtwork({ code, fallback }: ShopItemArtworkProps) {
+export function ShopItemArtwork({ code, fallback, className = "h-20 w-20" }: ShopItemArtworkProps) {
   const sprite = SPRITES[code];
 
   if (!sprite) return <>{fallback}</>;
@@ -55,7 +56,7 @@ export function ShopItemArtwork({ code, fallback }: ShopItemArtworkProps) {
   return (
     <span
       aria-hidden="true"
-      className="h-20 w-20 shrink-0 rounded-2xl"
+      className={`block shrink-0 rounded-2xl ${className}`}
       style={{
         backgroundImage: `url(${shopArtworkSheet})`,
         backgroundPosition: `${-sprite.x * SCALE}px ${-sprite.y * SCALE}px`,
