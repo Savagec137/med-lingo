@@ -42,7 +42,7 @@ const contentItemSchema = z
     type: z.enum(CONTENT_TYPES),
     question: z.string().trim().min(1),
     instruction: z.string().trim().min(1).optional(),
-    answers: z.array(contentAnswerSchema).min(2),
+    answers: z.array(contentAnswerSchema).min(1),
     correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
     explanation: z.string(),
     priorityReminder: z.string().trim().min(1).optional(),
@@ -50,6 +50,13 @@ const contentItemSchema = z
     metadata: contentMetadataSchema.optional(),
   })
   .superRefine((item, context) => {
+    if (item.type !== "fill_blank" && item.answers.length < 2) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["answers"],
+        message: "Ce type d'exercice exige au moins deux réponses.",
+      });
+    }
     const answerIds = item.answers.map((answer) => answer.id);
     const answerIdSet = new Set(answerIds);
     if (answerIdSet.size !== answerIds.length) {
@@ -84,6 +91,7 @@ const contentItemSchema = z
       item.type === "association" && item.metadata?.associationMode === "matching";
     const expectsSeveral =
       item.type === "multiple_choice" || item.type === "ordering" || isMatchingAssociation;
+    const acceptsAlternatives = item.type === "fill_blank";
     if (expectsSeveral && !Array.isArray(item.correctAnswer)) {
       context.addIssue({
         code: z.ZodIssueCode.custom,
@@ -91,7 +99,7 @@ const contentItemSchema = z
         message: `Le type ${item.type} exige un tableau de réponses.`,
       });
     }
-    if (!expectsSeveral && Array.isArray(item.correctAnswer)) {
+    if (!expectsSeveral && !acceptsAlternatives && Array.isArray(item.correctAnswer)) {
       context.addIssue({
         code: z.ZodIssueCode.custom,
         path: ["correctAnswer"],

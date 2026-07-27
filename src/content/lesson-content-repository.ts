@@ -23,7 +23,7 @@ export class LessonContentRepository {
   load(formationId: string, lessonId: string): Promise<LoadedPedagogicalLesson> {
     const reference = this.formations.findLesson(formationId, lessonId);
     if (!reference) return Promise.reject(new Error(`Leçon inconnue : ${formationId}/${lessonId}`));
-    if (reference.lesson.status !== "published") {
+    if (reference.lesson.status !== "published" && reference.lesson.status !== "review") {
       return Promise.reject(new Error(`La leçon ${lessonId} n'est pas encore publiée.`));
     }
 

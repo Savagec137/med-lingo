@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L10",
+  "lesson_title": "Révision générale de physiologie",
+  "knowledge": [
+    {
+      "id": "K239",
+      "title": "Vision globale",
+      "content": "Les différents systèmes physiologiques fonctionnent de manière coordonnée afin d'assurer le maintien de la vie."
+    },
+    {
+      "id": "K240",
+      "title": "Constantes vitales",
+      "content": "Les constantes vitales reflètent le fonctionnement des principaux systèmes de l'organisme."
+    },
+    {
+      "id": "K241",
+      "title": "Interactions",
+      "content": "Une perturbation d'un système peut avoir des conséquences sur plusieurs autres systèmes."
+    },
+    {
+      "id": "K242",
+      "title": "Compensation",
+      "content": "L'organisme met en œuvre des mécanismes compensateurs avant l'apparition d'une défaillance."
+    },
+    {
+      "id": "K243",
+      "title": "Surveillance",
+      "content": "L'observation clinique régulière permet de détecter précocement une rupture de l'équilibre physiologique."
+    },
+    {
+      "id": "K244",
+      "title": "Synthèse DEA",
+      "content": "La compréhension de la physiologie est indispensable pour interpréter les constantes vitales, réaliser un bilan clinique pertinent et assurer une surveillance adaptée."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q391",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Les constantes vitales permettent principalement :",
+      "options": [
+        "D'évaluer le fonctionnement de l'organisme",
+        "De mesurer la taille des organes",
+        "D'identifier le groupe sanguin",
+        "De connaître le poids"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q392",
+      "type": "multiple_choice",
+      "difficulty": 2,
+      "question": "Une défaillance d'un système peut :",
+      "options": [
+        "Retentir sur d'autres systèmes",
+        "Ne concerner qu'un seul organe",
+        "N'avoir aucune conséquence",
+        "Modifier uniquement la peau"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q393",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "L'organisme possède des mécanismes de compensation avant certaines défaillances.",
+      "answer": true
+    },
+    {
+      "id": "Q394",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Les constantes vitales sont inutiles dans le bilan clinique.",
+      "answer": false
+    },
+    {
+      "id": "Q395",
+      "type": "matching",
+      "difficulty": 3,
+      "pairs": [
+        [
+          "Cœur",
+          "Perfusion"
+        ],
+        [
+          "Poumons",
+          "Échanges gazeux"
+        ],
+        [
+          "Reins",
+          "Filtration"
+        ],
+        [
+          "Cerveau",
+          "Commande nerveuse"
+        ]
+      ]
+    },
+    {
+      "id": "Q396",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "L'observation clinique permet une ______ précoce des anomalies.",
+      "answers": [
+        "détection"
+      ]
+    },
+    {
+      "id": "Q397",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Un patient présente une hypotension, une tachycardie et une polypnée. Quelle affirmation est la plus juste ?",
+      "options": [
+        "Plusieurs systèmes physiologiques sont impliqués",
+        "Seul le système digestif est concerné",
+        "Il s'agit obligatoirement d'une maladie endocrinienne",
+        "Les constantes sont normales"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q398",
+      "type": "ordering",
+      "difficulty": 3,
+      "question": "Replace les étapes d'une surveillance clinique.",
+      "solution": [
+        "Observation",
+        "Mesure des constantes",
+        "Analyse",
+        "Transmission",
+        "Surveillance continue"
+      ]
+    },
+    {
+      "id": "Q399",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le cerveau.",
+      "target": "brain"
+    },
+    {
+      "id": "Q400",
+      "type": "clinical_case",
+      "difficulty": 4,
+      "question": "Chez un patient instable, quel est l'objectif principal de l'évaluation physiologique ?",
+      "options": [
+        "Identifier rapidement une défaillance et adapter la prise en charge",
+        "Déterminer son groupe sanguin",
+        "Évaluer son niveau sportif",
+        "Mesurer sa masse musculaire"
+      ],
+      "correct": 0
+    }
+  ]
+}

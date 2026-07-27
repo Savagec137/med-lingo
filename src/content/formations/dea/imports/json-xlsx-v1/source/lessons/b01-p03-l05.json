@@ -1,0 +1,158 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L05",
+  "lesson_title": "Le système musculaire",
+  "knowledge": [
+    {
+      "id": "K149",
+      "title": "Définition",
+      "content": "Le système musculaire est constitué des muscles squelettiques, cardiaque et lisses."
+    },
+    {
+      "id": "K150",
+      "title": "Muscles squelettiques",
+      "content": "Ils sont sous contrôle volontaire et permettent les mouvements du corps."
+    },
+    {
+      "id": "K151",
+      "title": "Muscle cardiaque",
+      "content": "Le myocarde est un muscle involontaire responsable des contractions du cœur."
+    },
+    {
+      "id": "K152",
+      "title": "Muscles lisses",
+      "content": "Ils sont présents dans les organes creux comme l'intestin, les vaisseaux et la vessie."
+    },
+    {
+      "id": "K153",
+      "title": "Tendons",
+      "content": "Les tendons relient les muscles aux os afin de transmettre la force musculaire."
+    },
+    {
+      "id": "K154",
+      "title": "Fonctions",
+      "content": "Les muscles assurent le mouvement, le maintien de la posture et participent à la production de chaleur."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q241",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel type de muscle est volontaire ?",
+      "options": [
+        "Muscle squelettique",
+        "Muscle cardiaque",
+        "Muscle lisse",
+        "Myocarde"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q242",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le myocarde correspond :",
+      "options": [
+        "Au muscle du cœur",
+        "À un tendon",
+        "À un ligament",
+        "À un cartilage"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q243",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les muscles lisses sont involontaires.",
+      "answer": true
+    },
+    {
+      "id": "Q244",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les tendons relient deux os entre eux.",
+      "answer": false
+    },
+    {
+      "id": "Q245",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Muscle squelettique",
+          "Mouvement volontaire"
+        ],
+        [
+          "Muscle cardiaque",
+          "Cœur"
+        ],
+        [
+          "Muscle lisse",
+          "Organes internes"
+        ],
+        [
+          "Tendon",
+          "Relie muscle et os"
+        ]
+      ]
+    },
+    {
+      "id": "Q246",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le muscle du cœur est appelé ______.",
+      "answers": [
+        "myocarde"
+      ]
+    },
+    {
+      "id": "Q247",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle structure transmet la force du muscle vers l'os ?",
+      "options": [
+        "Le tendon",
+        "Le ligament",
+        "Le cartilage",
+        "Le nerf"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q248",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un effort intense, quelle fonction musculaire contribue au maintien de la température corporelle ?",
+      "options": [
+        "Production de chaleur",
+        "Production de globules rouges",
+        "Filtration sanguine",
+        "Digestion"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q249",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le biceps.",
+      "target": "biceps"
+    },
+    {
+      "id": "Q250",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les structures suivantes.",
+      "solution": [
+        "Muscle",
+        "Tendon",
+        "Os"
+      ]
+    }
+  ]
+}

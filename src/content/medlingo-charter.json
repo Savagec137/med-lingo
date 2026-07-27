@@ -74,6 +74,21 @@
       "id": "handover",
       "label": "Transmission au SAMU",
       "answerMode": "single"
+    },
+    {
+      "id": "clinical_case",
+      "label": "Cas clinique",
+      "answerMode": "single"
+    },
+    {
+      "id": "fill_blank",
+      "label": "Texte à trous",
+      "answerMode": "text"
+    },
+    {
+      "id": "anatomy_location",
+      "label": "Localisation anatomique",
+      "answerMode": "single"
     }
   ],
   "exerciseContexts": [

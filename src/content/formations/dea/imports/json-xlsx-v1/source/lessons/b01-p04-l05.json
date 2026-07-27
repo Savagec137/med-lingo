@@ -1,0 +1,161 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L05",
+  "lesson_title": "Physiologie du système nerveux",
+  "knowledge": [
+    {
+      "id": "K209",
+      "title": "Fonction générale",
+      "content": "Le système nerveux reçoit les informations, les analyse puis élabore une réponse adaptée."
+    },
+    {
+      "id": "K210",
+      "title": "Neurones",
+      "content": "Les neurones transmettent l'influx nerveux grâce à des signaux électriques et chimiques."
+    },
+    {
+      "id": "K211",
+      "title": "Système nerveux central",
+      "content": "Le cerveau et la moelle épinière assurent le traitement des informations nerveuses."
+    },
+    {
+      "id": "K212",
+      "title": "Système nerveux périphérique",
+      "content": "Les nerfs transmettent les informations entre les organes et le système nerveux central."
+    },
+    {
+      "id": "K213",
+      "title": "Réflexes",
+      "content": "Les réflexes sont des réponses automatiques rapides ne nécessitant pas toujours l'intervention consciente du cerveau."
+    },
+    {
+      "id": "K214",
+      "title": "Application DEA",
+      "content": "L'évaluation neurologique permet d'apprécier rapidement l'état de conscience et de détecter une atteinte neurologique."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q341",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle cellule transmet l'influx nerveux ?",
+      "options": [
+        "Le neurone",
+        "L'hématie",
+        "Le myocyte",
+        "Le fibroblaste"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q342",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le système nerveux central comprend :",
+      "options": [
+        "Le cerveau et la moelle épinière",
+        "Les nerfs uniquement",
+        "Les muscles",
+        "Le cœur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q343",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les réflexes sont des réponses rapides et automatiques.",
+      "answer": true
+    },
+    {
+      "id": "Q344",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les nerfs appartiennent au système digestif.",
+      "answer": false
+    },
+    {
+      "id": "Q345",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Neurone",
+          "Transmission de l'information"
+        ],
+        [
+          "Cerveau",
+          "Analyse"
+        ],
+        [
+          "Moelle épinière",
+          "Relais nerveux"
+        ],
+        [
+          "Nerf",
+          "Communication avec les organes"
+        ]
+      ]
+    },
+    {
+      "id": "Q346",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La ______ épinière fait partie du système nerveux central.",
+      "answers": [
+        "moelle"
+      ]
+    },
+    {
+      "id": "Q347",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel est l'objectif principal d'un bilan neurologique chez un patient ?",
+      "options": [
+        "Évaluer l'état neurologique et la conscience",
+        "Mesurer la glycémie",
+        "Évaluer la digestion",
+        "Mesurer la température"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q348",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient ne répond plus aux stimulations verbales. Quel système est prioritairement évalué ?",
+      "options": [
+        "Le système nerveux",
+        "Le système digestif",
+        "Le système urinaire",
+        "Le système cutané"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q349",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet d'un réflexe simple.",
+      "solution": [
+        "Stimulus",
+        "Récepteur",
+        "Nerf sensitif",
+        "Moelle épinière",
+        "Nerf moteur",
+        "Muscle"
+      ]
+    },
+    {
+      "id": "Q350",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur la moelle épinière.",
+      "target": "spinal_cord"
+    }
+  ]
+}

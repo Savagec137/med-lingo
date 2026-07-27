@@ -13,33 +13,26 @@ const DEA_FORMATION = new FormationCatalog([deaFormation]).getFormation("dea");
 
 const PARCOURS_01_TITLES = [
   "Pourquoi apprendre l'anatomie ?",
-  "Cellules et tissus",
-  "Les organes",
-  "Les systèmes du corps",
-  "La position anatomique",
-  "Les plans anatomiques",
-  "L’orientation anatomique",
-  "Les régions du corps",
-  "Les repères anatomiques en intervention",
-  "Révision du corps humain",
-  "Quiz final — Découvrir le corps humain",
-  "Boss — Localiser et transmettre",
+  "Organisation du corps humain",
+  "Les régions anatomiques",
+  "Les positions anatomiques",
+  "Les cavités du corps",
+  "Les principaux organes",
+  "Les grands systèmes",
+  "Synthèse",
+  "Boss — Découvrir le corps humain",
 ];
 
 const PARCOURS_02_TITLES = [
-  "Construire un mot médical",
-  "Préfixes",
-  "Préfixes quantité",
-  "Préfixes position",
-  "Suffixes",
-  "Suffixes pathologie",
-  "Suffixes chirurgie",
-  "Radicaux",
-  "Radicaux organes",
-  "Radicaux tissus",
-  "Décoder un mot complexe",
-  "Quiz",
-  "Boss",
+  "Pourquoi le langage médical ?",
+  "Les préfixes",
+  "Les radicaux",
+  "Les suffixes",
+  "Construire un mot",
+  "Décrypter un diagnostic",
+  "Les abréviations médicales",
+  "Synthèse",
+  "Boss — Langage médical",
 ];
 
 function allKeys(value: unknown): string[] {
@@ -48,17 +41,18 @@ function allKeys(value: unknown): string[] {
   return Object.entries(value).flatMap(([key, child]) => [key, ...allKeys(child)]);
 }
 
-test("la formation DEA expose les 50 parcours officiels dans le nouvel ordre", () => {
-  assert.equal(DEA_FORMATION.parcours.length, 50);
+test("la formation DEA expose les 75 parcours officiels dans le nouvel ordre", () => {
+  assert.equal(DEA_FORMATION.parcours.length, 75);
   assert.deepEqual(
     DEA_FORMATION.parcours.map((parcours) => parcours.order),
-    Array.from({ length: 50 }, (_, index) => index + 1),
+    Array.from({ length: 75 }, (_, index) => index + 1),
   );
   assert.equal(DEA_FORMATION.parcours[0]?.title, "Découvrir le corps humain");
-  assert.equal(DEA_FORMATION.parcours[49]?.title, "Cas cliniques complets DEA (Boss final)");
+  assert.equal(DEA_FORMATION.parcours[49]?.title, "Mission Finale DEA");
+  assert.equal(DEA_FORMATION.parcours[74]?.title, "Maladies infectieuses émergentes");
 });
 
-test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () => {
+test("les parcours 1 et 2 possèdent leurs huit leçons et leur Boss", () => {
   assert.deepEqual(
     DEA_FORMATION.parcours[0]?.lessons.map((lesson) => lesson.title),
     PARCOURS_01_TITLES,
@@ -67,17 +61,14 @@ test("les parcours 1 et 2 possèdent les leçons, quiz et boss demandés", () =>
     DEA_FORMATION.parcours[1]?.lessons.map((lesson) => lesson.title),
     PARCOURS_02_TITLES,
   );
-  assert.equal(DEA_FORMATION.parcours[0]?.lessons.at(-2)?.kind, "quiz");
   assert.equal(DEA_FORMATION.parcours[0]?.lessons.at(-1)?.kind, "boss");
-  assert.equal(DEA_FORMATION.parcours[0]?.lessons[9]?.kind, "review");
-  assert.equal(DEA_FORMATION.parcours[1]?.lessons.at(-2)?.kind, "quiz");
   assert.equal(DEA_FORMATION.parcours[1]?.lessons.at(-1)?.kind, "boss");
 });
 
 test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
   const publishedItemCounts = new Map([
     ["dea-p01-l01", 50],
-    ["dea-p01-l03", 50],
+    ["dea-p01-l06", 50],
   ]);
   for (const parcours of DEA_FORMATION.parcours.slice(0, 2)) {
     for (const reference of parcours.lessons) {
@@ -94,6 +85,9 @@ test("chaque leçon possède un JSON indépendant sans unit ni chapter", () => {
         if (lesson.id === "dea-p01-l01") {
           assert.equal(reference.specificationFile, "parcours-01/lesson-01.specification.json");
         }
+      } else if (lesson.status === "review") {
+        assert.ok(lesson.items.length > 0, lesson.id);
+        assert.ok(lesson.items.every((item) => item.metadata?.reviewStatus === "draft"));
       } else {
         assert.equal(lesson.status, "awaiting_content");
         assert.deepEqual(lesson.items, []);

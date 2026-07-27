@@ -1,6 +1,7 @@
 import { DEA_FORMATION } from "./formation-registry";
 import type { Parcours } from "@/lib/curriculum";
 import { buildOfficialRoadmap } from "./curriculum-roadmap";
+import { getRoadmapParcours } from "./roadmap-registry";
 
 const THEME_COLOR: Record<string, string> = {
   green: "success",
@@ -44,7 +45,8 @@ export const OFFICIAL_ROADMAP_BLOCS: OfficialRoadmapBloc[] = roadmap.map((bloc) 
     icon: parcours.id,
     order: parcours.order,
     blocId: bloc.id,
-    plannedLessonCount: parcours.plannedLessonCount,
+    plannedLessonCount:
+      getRoadmapParcours(parcours.id)?.plannedLessonCount ?? parcours.plannedLessonCount,
     publishedLessonCount: parcours.publishedLessonCount,
     lessons: parcours.publishedLessons.map((lesson) => ({
       id: lesson.id,

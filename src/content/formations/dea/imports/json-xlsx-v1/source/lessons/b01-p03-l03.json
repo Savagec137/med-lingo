@@ -1,0 +1,158 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L03",
+  "lesson_title": "Le système squelettique",
+  "knowledge": [
+    {
+      "id": "K137",
+      "title": "Définition",
+      "content": "Le système squelettique est constitué des os, des cartilages, des articulations et des ligaments."
+    },
+    {
+      "id": "K138",
+      "title": "Nombre d'os",
+      "content": "Le squelette d'un adulte comprend environ 206 os."
+    },
+    {
+      "id": "K139",
+      "title": "Fonctions",
+      "content": "Les os assurent le soutien, la protection des organes, le mouvement, le stockage des minéraux et l'hématopoïèse."
+    },
+    {
+      "id": "K140",
+      "title": "Os longs",
+      "content": "Les os longs participent principalement aux mouvements des membres."
+    },
+    {
+      "id": "K141",
+      "title": "Os plats",
+      "content": "Les os plats protègent les organes vitaux, comme le crâne et le sternum."
+    },
+    {
+      "id": "K142",
+      "title": "Moelle osseuse",
+      "content": "La moelle osseuse rouge produit les cellules sanguines."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q221",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Combien d'os possède approximativement un adulte ?",
+      "options": [
+        "206",
+        "180",
+        "240",
+        "150"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q222",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quelle structure produit les cellules sanguines ?",
+      "options": [
+        "Moelle osseuse rouge",
+        "Cartilage",
+        "Ligament",
+        "Périoste"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q223",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les os participent au stockage des minéraux.",
+      "answer": true
+    },
+    {
+      "id": "Q224",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le sternum est un os long.",
+      "answer": false
+    },
+    {
+      "id": "Q225",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Crâne",
+          "Protection du cerveau"
+        ],
+        [
+          "Fémur",
+          "Os long"
+        ],
+        [
+          "Sternum",
+          "Os plat"
+        ],
+        [
+          "Moelle rouge",
+          "Production des cellules sanguines"
+        ]
+      ]
+    },
+    {
+      "id": "Q226",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le squelette adulte comporte environ ______ os.",
+      "answers": [
+        "206"
+      ]
+    },
+    {
+      "id": "Q227",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle est la principale fonction du crâne ?",
+      "options": [
+        "Protéger l'encéphale",
+        "Produire des hormones",
+        "Permettre la digestion",
+        "Stocker le glucose"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q228",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une victime présente une douleur importante après une chute sur la cuisse. Quel os est le plus probablement concerné ?",
+      "options": [
+        "Fémur",
+        "Humérus",
+        "Radius",
+        "Scapula"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q229",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le fémur.",
+      "target": "femur"
+    },
+    {
+      "id": "Q230",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe les structures suivantes.",
+      "solution": [
+        "Moelle osseuse",
+        "Os",
+        "Squelette"
+      ]
+    }
+  ]
+}

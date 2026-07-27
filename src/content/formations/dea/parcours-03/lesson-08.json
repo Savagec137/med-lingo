@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l08",
+  "title": "Comment tous les systèmes travaillent ensemble ?",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Introduction à l'anatomie générale"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l01"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p03-l01-q201",
+      "difficulty": "easy",
+      "question": "L'anatomie étudie principalement :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q201",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q201-answer-01",
+          "text": "La structure du corps humain",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q201-answer-02",
+          "text": "Les traitements",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q201-answer-03",
+          "text": "Les médicaments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q201-answer-04",
+          "text": "Les maladies infectieuses",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q201-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l01-q202",
+      "difficulty": "easy",
+      "question": "La physiologie étudie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q202",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q202-answer-01",
+          "text": "Le fonctionnement des organes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q202-answer-02",
+          "text": "La structure des os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q202-answer-03",
+          "text": "Les analyses biologiques",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q202-answer-04",
+          "text": "Les traitements chirurgicaux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q202-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l01-q203",
+      "difficulty": "easy",
+      "question": "Les organes sont regroupés en systèmes.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q203",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q203-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q203-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q203-true"
+    },
+    {
+      "id": "import-b01-p03-l01-q204",
+      "difficulty": "easy",
+      "question": "L'anatomie ne sert pas lors du bilan clinique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q204",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q204-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q204-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q204-false"
+    },
+    {
+      "id": "import-b01-p03-l01-q205",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q205",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q205-pair-01",
+          "text": "Anatomie",
+          "match": "Structure",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q205-pair-02",
+          "text": "Physiologie",
+          "match": "Fonctionnement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q205-pair-03",
+          "text": "Organe",
+          "match": "Structure spécialisée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q205-pair-04",
+          "text": "Système",
+          "match": "Ensemble d'organes",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l01-q205-pair-01",
+        "import-b01-p03-l01-q205-pair-02",
+        "import-b01-p03-l01-q205-pair-03",
+        "import-b01-p03-l01-q205-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l01-q206",
+      "difficulty": "medium",
+      "question": "La ______ étudie le fonctionnement des organes.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q206",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "physiologie"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q206-accepted-01",
+          "text": "physiologie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l01-q206-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l01-q207",
+      "difficulty": "hard",
+      "question": "Pourquoi l'anatomie est-elle indispensable à l'ambulancier ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q207",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q207-answer-01",
+          "text": "Pour localiser correctement les lésions et réaliser un bilan précis",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q207-answer-02",
+          "text": "Pour prescrire des médicaments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q207-answer-03",
+          "text": "Pour interpréter une radiographie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q207-answer-04",
+          "text": "Pour réaliser une intervention chirurgicale",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q207-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l01-q208",
+      "difficulty": "hard",
+      "question": "Vous décrivez une douleur thoracique localisée. Quelle connaissance vous permet de communiquer précisément ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q208",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q208-answer-01",
+          "text": "L'anatomie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q208-answer-02",
+          "text": "La pharmacologie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q208-answer-03",
+          "text": "La microbiologie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l01-q208-answer-04",
+          "text": "La génétique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l01-q208-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l01-q209",
+      "difficulty": "medium",
+      "question": "Clique sur le thorax.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q209",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "thorax"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "detail": "0.5,0.08",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-biceps",
+          "text": "Biceps",
+          "detail": "0.23,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-thorax"
+    },
+    {
+      "id": "import-b01-p03-l01-q210",
+      "difficulty": "medium",
+      "question": "Classe les niveaux d'organisation du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q210",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l01-q210-step-01",
+          "text": "Cellule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l01-q210-step-02",
+          "text": "Tissu",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l01-q210-step-03",
+          "text": "Organe",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l01-q210-step-04",
+          "text": "Système",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p03-l01-q210-step-05",
+          "text": "Organisme",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l01-q210-step-01",
+        "import-b01-p03-l01-q210-step-02",
+        "import-b01-p03-l01-q210-step-03",
+        "import-b01-p03-l01-q210-step-04",
+        "import-b01-p03-l01-q210-step-05"
+      ]
+    }
+  ]
+}

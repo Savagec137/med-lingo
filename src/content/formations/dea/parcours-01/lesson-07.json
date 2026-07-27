@@ -2,38 +2,549 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-l07",
+  "title": "Les grands systèmes",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 10
   },
-  "items": [],
-  "id": "dea-p01-l07",
-  "title": "L’orientation anatomique",
-  "kind": "lesson",
   "learningObjectives": [
-    "distinguer supérieur et inférieur ;",
-    "distinguer antérieur et postérieur ;",
-    "distinguer médial et latéral ;",
-    "distinguer proximal et distal ;",
-    "appliquer ces termes à des situations simples."
+    "Les systèmes du corps humain"
   ],
   "competencyIds": [
-    "anatomy.direction.superior",
-    "anatomy.direction.inferior",
-    "anatomy.direction.anterior",
-    "anatomy.direction.posterior",
-    "anatomy.direction.medial",
-    "anatomy.direction.lateral",
-    "anatomy.direction.proximal",
-    "anatomy.direction.distal"
+    "import.json-xlsx.b01.p01.l06"
   ],
-  "prerequisiteIds": ["dea-p01-l06"]
+  "prerequisiteIds": [
+    "dea-p01-l06"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p01-l06-q051",
+      "difficulty": "easy",
+      "question": "Quel système assure la circulation du sang ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q051",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q051-answer-01",
+          "text": "Cardiovasculaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q051-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q051-answer-03",
+          "text": "Urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q051-answer-04",
+          "text": "Endocrinien",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q051-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l06-q052",
+      "difficulty": "easy",
+      "question": "Quel système réalise les échanges d'oxygène et de dioxyde de carbone ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q052",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q052-answer-01",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q052-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q052-answer-03",
+          "text": "Locomoteur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q052-answer-04",
+          "text": "Tégumentaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q052-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l06-q053",
+      "difficulty": "easy",
+      "question": "Quel système contrôle les fonctions volontaires et involontaires ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q053",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q053-answer-01",
+          "text": "Nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q053-answer-02",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q053-answer-03",
+          "text": "Lymphatique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q053-answer-04",
+          "text": "Urinaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q053-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l06-q054",
+      "difficulty": "easy",
+      "question": "Le système digestif transforme les aliments en nutriments.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q054",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q054-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q054-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q054-true"
+    },
+    {
+      "id": "import-b01-p01-l06-q055",
+      "difficulty": "easy",
+      "question": "Le système urinaire assure principalement la respiration.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q055",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q055-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q055-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q055-false"
+    },
+    {
+      "id": "import-b01-p01-l06-q056",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q056",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q056-pair-01",
+          "text": "Cardiovasculaire",
+          "match": "Circulation du sang",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q056-pair-02",
+          "text": "Respiratoire",
+          "match": "Échanges gazeux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q056-pair-03",
+          "text": "Digestif",
+          "match": "Digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q056-pair-04",
+          "text": "Urinaire",
+          "match": "Élimination des déchets",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q056-pair-05",
+          "text": "Nerveux",
+          "match": "Coordination des fonctions",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l06-q056-pair-01",
+        "import-b01-p01-l06-q056-pair-02",
+        "import-b01-p01-l06-q056-pair-03",
+        "import-b01-p01-l06-q056-pair-04",
+        "import-b01-p01-l06-q056-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l06-q057",
+      "difficulty": "medium",
+      "question": "Le système ______ permet les mouvements grâce aux muscles, os et articulations.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q057",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "locomoteur"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q057-accepted-01",
+          "text": "locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l06-q057-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l06-q058",
+      "difficulty": "medium",
+      "question": "Clique sur le cœur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q058",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "heart"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "detail": "0.54,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-diaphragm",
+          "text": "Diaphragme",
+          "detail": "0.5,0.39",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "detail": "0.45,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "detail": "0.5,0.08",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "detail": "0.5,0.49",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-heart"
+    },
+    {
+      "id": "import-b01-p01-l06-q059",
+      "difficulty": "hard",
+      "question": "Quel système est directement responsable du maintien de l'équilibre hydrique ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q059",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q059-answer-01",
+          "text": "Urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q059-answer-02",
+          "text": "Respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q059-answer-03",
+          "text": "Digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q059-answer-04",
+          "text": "Locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q059-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l06-q060",
+      "difficulty": "hard",
+      "question": "Un patient présente une douleur thoracique accompagnée de difficultés respiratoires. Quels sont les deux systèmes principalement concernés ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q060",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l06-q060-answer-01",
+          "text": "Cardiovasculaire et respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q060-answer-02",
+          "text": "Digestif et urinaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q060-answer-03",
+          "text": "Locomoteur et digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l06-q060-answer-04",
+          "text": "Endocrinien et tégumentaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l06-q060-answer-01"
+    }
+  ]
 }

@@ -4,6 +4,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
 import { UNITS, findLesson } from "@/lib/curriculum";
 import { lessonXpForResult } from "@/content/learning-rewards";
+import { getRoadmapParcours } from "@/content/roadmap-registry";
+import { grantRoadmapBossRewards } from "@/content/roadmap-rewards";
 import { awardBadges, bumpMissions, logXpTransaction } from "@/lib/use-gamification";
 import { awardCoins } from "@/lib/use-wallet";
 import { badgesToAward, levelFromXp, todayIso } from "@/lib/gamification";
@@ -21,6 +23,7 @@ export interface Progress {
   dailyGoalXp: number;
   xpToday: number;
   xpTodayDate: string;
+  roadmapRewards: Record<string, { badge: string | null; chest: string | null; earnedAt: string }>;
 }
 
 const DEFAULT: Progress = {
@@ -34,6 +37,7 @@ const DEFAULT: Progress = {
   dailyGoalXp: 30,
   xpToday: 0,
   xpTodayDate: todayIso(),
+  roadmapRewards: {},
 };
 
 const HEART_REGEN_MS = 15 * 60 * 1000;
@@ -101,6 +105,7 @@ function rowToProgress(r: Row): Progress {
     dailyGoalXp: r.daily_goal_xp ?? 30,
     xpToday: r.xp_today ?? 0,
     xpTodayDate: r.xp_today_date ?? todayIso(),
+    roadmapRewards: {},
   };
 }
 function progressToRow(p: Progress) {
@@ -148,6 +153,7 @@ function mergeProgress(a: Progress, b: Progress): Progress {
           ? a.xpToday
           : b.xpToday,
     xpTodayDate: a.xpTodayDate > b.xpTodayDate ? a.xpTodayDate : b.xpTodayDate,
+    roadmapRewards: { ...a.roadmapRewards, ...b.roadmapRewards },
   };
 }
 
@@ -226,6 +232,10 @@ export function useProgress() {
       const stars = score >= 0.95 ? 3 : score >= 0.75 ? 2 : score >= 0.5 ? 1 : 0;
       const gainedXp = lessonXpForResult(stars, configuredXp);
       const t = todayIso();
+      const foundLesson = findLesson(lessonId);
+      const roadmapParcours =
+        foundLesson?.lesson.kind === "boss" ? getRoadmapParcours(foundLesson.parcours.id) : null;
+      const bossPassed = Boolean(roadmapParcours && score >= 0.8);
 
       let nextProgress: Progress = DEFAULT;
       setProgress((p) => {
@@ -248,6 +258,17 @@ export function useProgress() {
           xpToday: rolled.xpToday + gainedXp,
           streak,
           lastStudyDate: t,
+          roadmapRewards:
+            bossPassed && roadmapParcours
+              ? {
+                  ...rolled.roadmapRewards,
+                  [roadmapParcours.bossId]: rolled.roadmapRewards[roadmapParcours.bossId] ?? {
+                    badge: roadmapParcours.badge,
+                    chest: roadmapParcours.chest,
+                    earnedAt: new Date().toISOString(),
+                  },
+                }
+              : rolled.roadmapRewards,
         };
         nextProgress = updated;
         return updated;
@@ -269,7 +290,7 @@ export function useProgress() {
         if (isNewDay) bumpMissions(uid, "study_days", 1);
 
         // Badges
-        const found = findLesson(lessonId);
+        const found = foundLesson;
         const completedIds = Object.keys(nextProgress.completedLessons);
         const anatomyDone =
           allLessonIdsForUnit("os").every((id) => completedIds.includes(id)) &&
@@ -297,6 +318,14 @@ export function useProgress() {
             qc.invalidateQueries({ queryKey: ["wallet"] });
           })
           .catch(() => {});
+        if (bossPassed && roadmapParcours) {
+          grantRoadmapBossRewards(roadmapParcours)
+            .then(() => {
+              qc.invalidateQueries({ queryKey: ["game-inventory"] });
+              qc.invalidateQueries({ queryKey: ["inventory"] });
+            })
+            .catch(() => {});
+        }
       }
       return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
     },

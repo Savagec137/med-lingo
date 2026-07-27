@@ -3,16 +3,515 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l01",
-  "title": "Construire un mot médical",
+  "title": "Pourquoi le langage médical ?",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Introduction au langage médical"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l01"
+  ],
+  "prerequisiteIds": [],
+  "items": [
+    {
+      "id": "import-b01-p02-l01-q101",
+      "difficulty": "easy",
+      "question": "Le langage médical sert principalement à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q101",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q101-answer-01",
+          "text": "Communiquer précisément entre professionnels",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q101-answer-02",
+          "text": "Créer des diagnostics",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q101-answer-03",
+          "text": "Prescrire des traitements",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q101-answer-04",
+          "text": "Réaliser des analyses biologiques",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q101-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l01-q102",
+      "difficulty": "easy",
+      "question": "La majorité des termes médicaux proviennent :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q102",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q102-answer-01",
+          "text": "Du grec et du latin",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q102-answer-02",
+          "text": "De l'anglais",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q102-answer-03",
+          "text": "De l'allemand",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q102-answer-04",
+          "text": "De l'espagnol",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q102-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l01-q103",
+      "difficulty": "easy",
+      "question": "Une terminologie commune réduit les erreurs de communication.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q103",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q103-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q103-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q103-true"
+    },
+    {
+      "id": "import-b01-p02-l01-q104",
+      "difficulty": "easy",
+      "question": "Les mots médicaux sont toujours composés d'un préfixe.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q104",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q104-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q104-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q104-false"
+    },
+    {
+      "id": "import-b01-p02-l01-q105",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q105",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q105-pair-01",
+          "text": "Préfixe",
+          "match": "Début du mot",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q105-pair-02",
+          "text": "Racine",
+          "match": "Sens principal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q105-pair-03",
+          "text": "Suffixe",
+          "match": "Fin du mot",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q105-pair-04",
+          "text": "Terminologie",
+          "match": "Langage médical",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l01-q105-pair-01",
+        "import-b01-p02-l01-q105-pair-02",
+        "import-b01-p02-l01-q105-pair-03",
+        "import-b01-p02-l01-q105-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l01-q106",
+      "difficulty": "medium",
+      "question": "La majorité des termes médicaux proviennent du grec et du ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q106",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "latin"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q106-accepted-01",
+          "text": "latin",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l01-q106-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l01-q107",
+      "difficulty": "medium",
+      "question": "Replace les éléments d'un mot médical.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q107",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q107-step-01",
+          "text": "Préfixe",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l01-q107-step-02",
+          "text": "Racine",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-l01-q107-step-03",
+          "text": "Suffixe",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l01-q107-step-01",
+        "import-b01-p02-l01-q107-step-02",
+        "import-b01-p02-l01-q107-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l01-q108",
+      "difficulty": "hard",
+      "question": "Pourquoi le langage médical est-il standardisé ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q108",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q108-answer-01",
+          "text": "Pour éviter les ambiguïtés",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q108-answer-02",
+          "text": "Pour compliquer les échanges",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q108-answer-03",
+          "text": "Pour remplacer les protocoles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q108-answer-04",
+          "text": "Pour limiter les dossiers patients",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q108-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l01-q109",
+      "difficulty": "hard",
+      "question": "Lors d'une transmission au SAMU, quel est l'intérêt d'utiliser les termes médicaux adaptés ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q109",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q109-answer-01",
+          "text": "Faciliter une compréhension rapide et précise",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q109-answer-02",
+          "text": "Allonger le bilan",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q109-answer-03",
+          "text": "Éviter de prendre les constantes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q109-answer-04",
+          "text": "Remplacer le bilan clinique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q109-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l01-q110",
+      "difficulty": "medium",
+      "question": "L'ambulancier doit comprendre les principaux termes médicaux utilisés lors des transmissions.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q110",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l01-q110-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l01-q110-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l01-q110-true"
+    }
+  ]
 }

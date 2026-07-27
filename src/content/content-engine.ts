@@ -75,10 +75,13 @@ export class ContentCatalog {
     }
 
     const correctAnswerIds = answerIds(item);
-    const isCorrect = needsExactOrder(item)
-      ? selectedAnswerIds.length === correctAnswerIds.length &&
-        selectedAnswerIds.every((value, index) => value === correctAnswerIds[index])
-      : sameSet(selectedAnswerIds, correctAnswerIds);
+    const isCorrect =
+      item.type === "fill_blank"
+        ? selectedAnswerIds.length === 1 && correctAnswerIds.includes(selectedAnswerIds[0]!)
+        : needsExactOrder(item)
+          ? selectedAnswerIds.length === correctAnswerIds.length &&
+            selectedAnswerIds.every((value, index) => value === correctAnswerIds[index])
+          : sameSet(selectedAnswerIds, correctAnswerIds);
 
     return {
       itemId: item.id,

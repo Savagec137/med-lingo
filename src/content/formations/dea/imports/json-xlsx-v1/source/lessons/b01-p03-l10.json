@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L10",
+  "lesson_title": "Le système urinaire et révision",
+  "knowledge": [
+    {
+      "id": "K179",
+      "title": "Définition",
+      "content": "Le système urinaire élimine les déchets du sang et participe à l'équilibre hydrique et électrolytique."
+    },
+    {
+      "id": "K180",
+      "title": "Reins",
+      "content": "Les reins filtrent le sang afin de produire l'urine."
+    },
+    {
+      "id": "K181",
+      "title": "Uretères",
+      "content": "Les uretères transportent l'urine des reins vers la vessie."
+    },
+    {
+      "id": "K182",
+      "title": "Vessie",
+      "content": "La vessie stocke temporairement l'urine avant son élimination."
+    },
+    {
+      "id": "K183",
+      "title": "Urètre",
+      "content": "L'urètre permet l'évacuation de l'urine vers l'extérieur."
+    },
+    {
+      "id": "K184",
+      "title": "Révision",
+      "content": "L'ensemble des systèmes étudiés fonctionnent de manière coordonnée afin d'assurer le maintien de l'homéostasie."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q291",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe filtre le sang ?",
+      "options": [
+        "Le rein",
+        "La vessie",
+        "Le foie",
+        "Le pancréas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q292",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel conduit transporte l'urine vers la vessie ?",
+      "options": [
+        "L'uretère",
+        "L'urètre",
+        "L'œsophage",
+        "La trachée"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q293",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La vessie stocke l'urine.",
+      "answer": true
+    },
+    {
+      "id": "Q294",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'urètre relie les reins à la vessie.",
+      "answer": false
+    },
+    {
+      "id": "Q295",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Rein",
+          "Filtration"
+        ],
+        [
+          "Uretère",
+          "Transport"
+        ],
+        [
+          "Vessie",
+          "Stockage"
+        ],
+        [
+          "Urètre",
+          "Évacuation"
+        ]
+      ]
+    },
+    {
+      "id": "Q296",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Les ______ filtrent le sang.",
+      "answers": [
+        "reins"
+      ]
+    },
+    {
+      "id": "Q297",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle est la fonction principale du système urinaire ?",
+      "options": [
+        "Éliminer les déchets et maintenir l'équilibre hydrique",
+        "Digérer les aliments",
+        "Produire les hormones digestives",
+        "Transporter l'oxygène"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q298",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une douleur lombaire intense associée à des difficultés urinaires oriente principalement vers quel système ?",
+      "options": [
+        "Urinaire",
+        "Respiratoire",
+        "Digestif",
+        "Musculaire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q299",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur un rein.",
+      "target": "kidney"
+    },
+    {
+      "id": "Q300",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet de l'urine.",
+      "solution": [
+        "Rein",
+        "Uretère",
+        "Vessie",
+        "Urètre"
+      ]
+    }
+  ]
+}

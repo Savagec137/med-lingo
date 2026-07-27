@@ -1,0 +1,159 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L07",
+  "lesson_title": "Physiologie du système rénal",
+  "knowledge": [
+    {
+      "id": "K221",
+      "title": "Fonction principale",
+      "content": "Les reins filtrent le sang afin d'éliminer les déchets métaboliques et de produire l'urine."
+    },
+    {
+      "id": "K222",
+      "title": "Le néphron",
+      "content": "Le néphron est l'unité fonctionnelle du rein. Chaque rein contient environ un million de néphrons."
+    },
+    {
+      "id": "K223",
+      "title": "Filtration",
+      "content": "La filtration glomérulaire constitue la première étape de la formation de l'urine."
+    },
+    {
+      "id": "K224",
+      "title": "Réabsorption",
+      "content": "La majorité de l'eau et des substances utiles est réabsorbée avant l'élimination de l'urine."
+    },
+    {
+      "id": "K225",
+      "title": "Équilibre",
+      "content": "Les reins participent au maintien de l'équilibre hydrique, électrolytique et acido-basique."
+    },
+    {
+      "id": "K226",
+      "title": "Application DEA",
+      "content": "Une diminution importante de la diurèse peut traduire une atteinte rénale ou une hypoperfusion nécessitant une surveillance."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q361",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel est le rôle principal des reins ?",
+      "options": [
+        "Filtrer le sang",
+        "Produire les globules rouges",
+        "Digérer les aliments",
+        "Ventiler les poumons"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q362",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Comment s'appelle l'unité fonctionnelle du rein ?",
+      "options": [
+        "Le néphron",
+        "Le neurone",
+        "L'alvéole",
+        "Le glomus"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q363",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les reins participent au maintien de l'équilibre hydrique.",
+      "answer": true
+    },
+    {
+      "id": "Q364",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Toute l'eau filtrée est éliminée dans l'urine.",
+      "answer": false
+    },
+    {
+      "id": "Q365",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Néphron",
+          "Unité fonctionnelle"
+        ],
+        [
+          "Glomérule",
+          "Filtration"
+        ],
+        [
+          "Tubule rénal",
+          "Réabsorption"
+        ],
+        [
+          "Rein",
+          "Équilibre interne"
+        ]
+      ]
+    },
+    {
+      "id": "Q366",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La première étape de la formation de l'urine est la ______ glomérulaire.",
+      "answers": [
+        "filtration"
+      ]
+    },
+    {
+      "id": "Q367",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle fonction est assurée par les reins ?",
+      "options": [
+        "Maintenir l'équilibre hydro-électrolytique",
+        "Produire l'insuline",
+        "Fabriquer l'hémoglobine",
+        "Contrôler la digestion"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q368",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient présente une absence quasi complète d'urines depuis plusieurs heures. Quelle fonction physiologique semble principalement altérée ?",
+      "options": [
+        "La filtration rénale",
+        "La ventilation pulmonaire",
+        "La digestion",
+        "La conduction nerveuse"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q369",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet de l'urine.",
+      "solution": [
+        "Rein",
+        "Uretère",
+        "Vessie",
+        "Urètre"
+      ]
+    },
+    {
+      "id": "Q370",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur un rein.",
+      "target": "kidney"
+    }
+  ]
+}

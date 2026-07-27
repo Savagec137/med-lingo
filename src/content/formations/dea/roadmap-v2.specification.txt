@@ -1,0 +1,2563 @@
+🟢 BLOC 1 — Fondamentaux médicaux
+Objectif du bloc :
+Donner à l'étudiant toutes les bases nécessaires avant d'aborder les systèmes anatomiques, les pathologies et les situations d'urgence.
+À la fin de ce bloc, l'étudiant doit être capable de comprendre le vocabulaire médical, de se repérer dans le corps humain et de connaître les grands systèmes anatomiques.
+
+🧬 Parcours 1 — Découvrir le corps humain
+Sous-titre
+Les bases indispensables de l'anatomie.
+Objectif du parcours
+Comprendre comment le corps humain est organisé et pourquoi cette connaissance est indispensable pour exercer le métier d'ambulancier.
+Compétences développées
+Comprendre l'organisation générale du corps.
+Identifier les grandes régions anatomiques.
+Reconnaître les principaux organes.
+Comprendre les grands systèmes du corps.
+Se préparer aux parcours d'anatomie.
+Difficulté
+🟢 Débutant
+Durée estimée
+45 minutes
+XP
+≈ 600 XP
+Leçons
+Leçon 1 — Pourquoi apprendre l'anatomie ?
+Découvrir :
+Le rôle de l'anatomie.
+Pourquoi un ambulancier doit connaître le corps humain.
+Les situations où l'anatomie est indispensable.
+Leçon 2 — Organisation du corps humain
+Découvrir :
+Cellule
+Tissu
+Organe
+Système
+Organisme
+Leçon 3 — Les régions anatomiques
+Apprendre :
+Tête
+Cou
+Thorax
+Abdomen
+Bassin
+Membres supérieurs
+Membres inférieurs
+Leçon 4 — Les positions anatomiques
+Découvrir :
+Position anatomique
+Gauche / Droite
+Antérieur / Postérieur
+Supérieur / Inférieur
+Médial / Latéral
+Proximal / Distal
+Leçon 5 — Les cavités du corps
+Découvrir :
+Cavité crânienne
+Thorax
+Abdomen
+Bassin
+Leçon 6 — Les principaux organes
+Présentation générale :
+Cerveau
+Cœur
+Poumons
+Foie
+Estomac
+Intestins
+Reins
+Leçon 7 — Les grands systèmes
+Présentation générale :
+Cardiovasculaire
+Respiratoire
+Digestif
+Nerveux
+Urinaire
+Locomoteur
+Endocrinien
+Leçon 8 — Synthèse
+Relier :
+Organe → Système → Corps humain.
+Boss Final
+Mission :
+Une victime présente différentes douleurs.
+Le joueur doit :
+localiser les régions anatomiques ;
+identifier les organes concernés ;
+associer les systèmes concernés.
+Récompenses
+🏅 Badge
+Premier Pas en Anatomie
+📦 Coffre Bronze
+Déblocage du Parcours 2
+📖 Parcours 2 — Langage médical
+Sous-titre
+Comprendre et décoder les mots médicaux.
+Objectif
+Savoir lire, comprendre et interpréter les principaux termes médicaux utilisés quotidiennement.
+Compétences
+Comprendre un terme médical.
+Identifier un préfixe.
+Identifier un radical.
+Identifier un suffixe.
+Construire un mot médical.
+Difficulté
+🟢 Débutant
+Durée
+60 minutes
+XP
+≈ 700 XP
+Leçons
+Leçon 1 — Pourquoi le langage médical ?
+Pourquoi tous les soignants utilisent cette terminologie.
+Leçon 2 — Les préfixes
+Exemples :
+Hyper
+Hypo
+Brady
+Tachy
+Poly
+Oligo
+Dys
+Leçon 3 — Les radicaux
+Exemples :
+Cardio
+Pneumo
+Hépato
+Néphro
+Gastro
+Neuro
+Dermato
+Leçon 4 — Les suffixes
+Exemples :
+ite
+algie
+ose
+ectomie
+plastie
+tomie
+scopie
+Leçon 5 — Construire un mot
+Exemples :
+Cardiologie
+↓
+Cardio + Logie
+Leçon 6 — Décrypter un diagnostic
+Exemples :
+Gastro-entérite
+↓
+Gastro + Entéro + Ite
+Leçon 7 — Les abréviations médicales
+AVC
+IDM
+HTA
+TA
+FC
+FR
+ECG
+SpO₂
+Leçon 8 — Synthèse
+Décrypter des dizaines de termes médicaux.
+Boss
+Lire un compte rendu médical simplifié.
+Retrouver la signification des termes.
+Récompense
+🏅 Badge
+Décodeur Médical
+🫀 Parcours 3 — Anatomie générale
+Sous-titre
+Comprendre les grands systèmes du corps humain.
+Objectif
+Acquérir une vision globale de l'anatomie humaine avant d'étudier chaque système en détail.
+Compétences
+Comprendre les grands appareils.
+Situer chaque système.
+Comprendre leurs interactions.
+Préparer les parcours 4 à 11.
+Difficulté
+🟢 Débutant
+Durée
+75 minutes
+XP
+≈ 800 XP
+Leçons
+Leçon 1 — Le système locomoteur
+Présentation générale.
+Leçon 2 — Le système cardiovasculaire
+Présentation générale.
+Leçon 3 — Le système respiratoire
+Présentation générale.
+Leçon 4 — Le système digestif
+Présentation générale.
+Leçon 5 — Le système nerveux
+Présentation générale.
+Leçon 6 — Le système urinaire
+Présentation générale.
+Leçon 7 — Le système endocrinien
+Présentation générale.
+Leçon 8 — Comment tous les systèmes travaillent ensemble ?
+Comprendre :
+circulation
+respiration
+digestion
+mouvement
+communication nerveuse
+hormones
+Tout est relié.
+Boss Final
+Cas clinique interactif :
+Une victime présente plusieurs symptômes.
+Le joueur doit :
+identifier le système concerné ;
+retrouver les organes impliqués ;
+expliquer le rôle général de ce système.
+Récompenses
+🏅 Badge
+Fondations Médicales
+📦 Coffre Argent
+Déblocage du Bloc 2 – Anatomie par système.🟢 BLOC 2 — Anatomie par système
+Objectif du bloc
+Comprendre le fonctionnement des principaux systèmes du corps humain, savoir localiser leurs organes, connaître leur rôle et faire le lien avec les situations rencontrées en intervention préhospitalière.
+
+🦴 Parcours 4 — Système locomoteur
+Sous-titre
+Le squelette, les muscles et les articulations.
+Objectif
+Comprendre comment le corps humain se soutient, se protège et se déplace.
+Compétences développées
+Identifier les principaux os.
+Comprendre le rôle des articulations.
+Comprendre le fonctionnement des muscles.
+Repérer rapidement une zone traumatique.
+Difficulté
+🟢 Débutant
+Durée
+≈ 75 minutes
+Leçons
+Le squelette humain
+Les principaux os
+Les articulations
+Les muscles
+Le rachis
+Les membres supérieurs
+Les membres inférieurs
+Synthèse
+Boss
+Identifier un traumatisme sur une victime et localiser précisément les structures atteintes.
+Récompense
+🏅 Badge : Apprenti Anatomiste
+❤️ Parcours 5 — Système cardiovasculaire
+Sous-titre
+Le moteur de la circulation sanguine.
+Objectif
+Comprendre le rôle du cœur et de la circulation.
+Compétences
+Identifier les cavités cardiaques.
+Comprendre la circulation pulmonaire et générale.
+Comprendre le rôle du sang.
+Identifier les gros vaisseaux.
+Leçons
+Le cœur
+Les vaisseaux
+Le sang
+Petite circulation
+Grande circulation
+La pression artérielle
+Le pouls
+Synthèse
+Boss
+Retrouver le trajet complet d'une goutte de sang dans l'organisme.
+Récompense
+🏅 Badge : Cœur en Action
+🫁 Parcours 6 — Système respiratoire
+Sous-titre
+Respirer pour vivre.
+Objectif
+Comprendre le fonctionnement de la respiration.
+Compétences
+Identifier les voies aériennes.
+Comprendre la ventilation.
+Comprendre les échanges gazeux.
+Comprendre l'oxygénation.
+Leçons
+Les voies aériennes
+Les poumons
+Le diaphragme
+La ventilation
+Les échanges gazeux
+L'oxygène
+Les principales valeurs normales
+Synthèse
+Boss
+Identifier où se situe une obstruction respiratoire et expliquer ses conséquences.
+Récompense
+🏅 Badge : Maître du Souffle
+🍽️ Parcours 7 — Système digestif
+Sous-titre
+Transformer les aliments en énergie.
+Objectif
+Comprendre le fonctionnement de la digestion.
+Compétences
+Identifier les organes digestifs.
+Comprendre la digestion.
+Comprendre l'absorption des nutriments.
+Leçons
+La bouche
+L'œsophage
+L'estomac
+Le foie et le pancréas
+L'intestin grêle
+Le côlon
+La digestion complète
+Synthèse
+Boss
+Suivre le trajet complet d'un aliment dans le corps.
+Récompense
+🏅 Badge : Explorateur Digestif
+🧠 Parcours 8 — Système nerveux
+Sous-titre
+Le centre de commande du corps humain.
+Objectif
+Comprendre le fonctionnement du cerveau et des nerfs.
+Compétences
+Identifier les grandes parties du cerveau.
+Comprendre la moelle épinière.
+Comprendre le rôle des nerfs.
+Leçons
+Le cerveau
+Le cervelet
+Le tronc cérébral
+La moelle épinière
+Les nerfs
+Le système autonome
+Les réflexes
+Synthèse
+Boss
+Relier une fonction (parler, marcher, respirer...) à la structure nerveuse correspondante.
+Récompense
+🏅 Badge : Neuro Explorer
+🚰 Parcours 9 — Système urinaire
+Sous-titre
+Filtrer et équilibrer l'organisme.
+Objectif
+Comprendre le rôle des reins et des voies urinaires.
+Leçons
+Les reins
+Les uretères
+La vessie
+L'urètre
+Formation de l'urine
+Équilibre hydrique
+Fonctions rénales
+Synthèse
+Boss
+Comprendre le trajet de l'urine et le rôle des reins.
+Récompense
+🏅 Badge : Gardien des Reins
+🧪 Parcours 10 — Système endocrinien
+Sous-titre
+Les hormones qui régulent le corps.
+Objectif
+Découvrir les principales glandes endocrines et leur rôle.
+Leçons
+Les hormones
+L'hypophyse
+La thyroïde
+Le pancréas endocrine
+Les surrénales
+Les hormones sexuelles
+Les grands équilibres hormonaux
+Synthèse
+Boss
+Associer une glande à son hormone principale et à sa fonction.
+Récompense
+🏅 Badge : Messager Hormonal
+👁️ Parcours 11 — Les organes des sens
+Sous-titre
+Observer le monde grâce aux cinq sens.
+Objectif
+Comprendre le fonctionnement des organes sensoriels et leur importance lors des bilans.
+Leçons
+La vision
+L'audition
+L'odorat
+Le goût
+Le toucher
+Les récepteurs sensoriels
+Les réflexes sensoriels
+Synthèse
+Boss
+Identifier quel organe des sens est impliqué dans différents symptômes ou situations cliniques.
+Récompense
+🏅 Badge : Observateur Clinique🟢 BLOC 3 — Communication & Relation Patient
+Objectif du bloc
+Former l'apprenant à communiquer efficacement avec le patient, son entourage, les équipes de soins et le SAMU. La communication est une compétence fondamentale du métier d'ambulancier, au même titre que les gestes techniques.
+
+🗣️ Parcours 12 — Communication professionnelle
+Sous-titre
+Créer une relation de confiance avec le patient.
+Objectif
+Développer une communication adaptée à chaque situation rencontrée sur le terrain.
+Compétences développées
+Se présenter professionnellement.
+Établir une relation de confiance.
+Adapter son langage.
+Pratiquer l'écoute active.
+Gérer les émotions du patient.
+Communiquer avec les proches.
+Travailler avec les autres professionnels de santé.
+Difficulté
+🟢 Débutant
+Durée
+≈ 75 minutes
+Leçons
+Leçon 1 — Le rôle de la communication
+Pourquoi bien communiquer sauve des vies.
+Leçon 2 — La première prise de contact
+Se présenter
+Rassurer
+Observer
+Créer un climat de confiance
+Leçon 3 — L'écoute active
+Reformulation
+Questions ouvertes
+Questions fermées
+Empathie
+Leçon 4 — Adapter son discours
+Selon :
+enfant
+adulte
+personne âgée
+personne anxieuse
+personne en situation de handicap
+Leçon 5 — Les proches
+Comment communiquer avec la famille.
+Leçon 6 — Les situations difficiles
+colère
+panique
+agressivité
+refus de soins
+Leçon 7 — Communication avec les équipes
+IDE
+Médecins
+SMUR
+SAMU
+Pompiers
+Leçon 8 — Synthèse
+Boss
+Simulation immersive :
+Tu arrives chez une victime anxieuse.
+Tu dois :
+te présenter ;
+poser les bonnes questions ;
+rassurer ;
+obtenir les bonnes informations.
+Récompense
+🏅 Badge
+Communicant Professionnel
+🧠 Parcours 13 — Psychologie du patient
+Sous-titre
+Comprendre les réactions humaines face à la maladie et à l'urgence.
+Objectif
+Comprendre le comportement du patient afin d'adapter sa prise en charge.
+Compétences développées
+Comprendre les réactions émotionnelles.
+Identifier les situations psychologiques particulières.
+Adapter son attitude.
+Gérer son propre stress.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 80 minutes
+Leçons
+Leçon 1 — Les émotions
+peur
+stress
+douleur
+anxiété
+Leçon 2 — Les réactions face à l'urgence
+sidération
+agitation
+déni
+panique
+Leçon 3 — Les patients vulnérables
+enfant
+personne âgée
+personne handicapée
+patient désorienté
+Leçon 4 — La douleur psychologique
+annonce difficile
+décès
+détresse émotionnelle
+Leçon 5 — Les troubles psychiatriques courants
+Présentation générale :
+anxiété
+dépression
+troubles psychotiques
+troubles bipolaires
+(Sans entrer dans le détail clinique, qui sera abordé plus tard.)
+Leçon 6 — Gérer son propre stress
+respiration
+recul
+concentration
+travail en équipe
+Leçon 7 — Les erreurs de communication
+juger
+interrompre
+banaliser
+mentir
+promettre
+Leçon 8 — Synthèse
+Boss
+Mission immersive :
+Une personne âgée est très désorientée.
+Le joueur doit adapter :
+son langage ;
+son attitude ;
+sa communication ;
+son comportement.
+Récompense
+🏅 Badge
+Empathie Clinique
+🎯 Fin du Bloc 3
+À la fin de ce bloc, l'apprenant est capable de communiquer efficacement avec des patients de profils variés, de gérer des situations émotionnellement difficiles et de collaborer avec les autres professionnels de santé.🟢 BLOC 4 — Hygiène & Prévention des infections
+Objectif du bloc
+Former l'apprenant aux règles d'hygiène, d'asepsie et de prévention des infections afin de protéger le patient, l'équipage et lui-même.
+
+🧼 Parcours 14 — Hygiène & asepsie
+Sous-titre
+Les fondamentaux de la prévention du risque infectieux.
+Objectif
+Comprendre les principes de l'hygiène en transport sanitaire et appliquer les bonnes pratiques lors de chaque intervention.
+Compétences développées
+Identifier les risques infectieux.
+Appliquer les précautions standard.
+Réaliser une hygiène des mains efficace.
+Choisir les EPI adaptés.
+Prévenir la contamination croisée.
+Difficulté
+🟢 Débutant
+Durée
+≈ 75 minutes
+Leçons
+Leçon 1 — Pourquoi l'hygiène est-elle essentielle ?
+Les infections associées aux soins
+Les chaînes de transmission
+Le rôle de l'ambulancier
+Leçon 2 — Les micro-organismes
+Virus
+Bactéries
+Champignons
+Parasites
+Présentation générale.
+Leçon 3 — Les modes de transmission
+Contact
+Gouttelettes
+Air
+Sang
+Liquides biologiques
+Leçon 4 — L'hygiène des mains
+Lavage simple
+Friction hydroalcoolique
+Les 5 moments clés
+Erreurs fréquentes
+Leçon 5 — Les équipements de protection individuelle (EPI)
+Gants
+Masque chirurgical
+FFP2
+Lunettes
+Surblouse
+Quand et pourquoi les utiliser.
+Leçon 6 — L'asepsie
+Asepsie
+Antisepsie
+Désinfection
+Stérilisation
+Différences et applications.
+Leçon 7 — Prévenir la contamination croisée
+Gestes à éviter
+Bonnes pratiques
+Organisation d'une intervention
+Leçon 8 — Synthèse
+Boss
+Mission :
+Intervention chez un patient atteint d'une maladie contagieuse.
+Le joueur doit :
+choisir les bons EPI ;
+réaliser correctement l'hygiène des mains ;
+éviter toute contamination ;
+retirer son équipement dans le bon ordre.
+Récompenses
+🏅 Badge
+Protection Sanitaire
+📦 Coffre Bronze
+🦠 Parcours 15 — Prévention des infections
+Sous-titre
+Nettoyage, désinfection et gestion des déchets médicaux.
+Objectif
+Maîtriser les procédures de nettoyage, de désinfection et de gestion du matériel après chaque intervention.
+Compétences développées
+Nettoyer une ambulance.
+Désinfecter le matériel.
+Gérer les DASRI.
+Prévenir les infections nosocomiales.
+Appliquer les protocoles réglementaires.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 80 minutes
+Leçons
+Leçon 1 — Les précautions standard
+Protocoles nationaux
+Obligations
+Leçon 2 — Nettoyage de l'ambulance
+Cellule sanitaire
+Cabine
+Surfaces
+Fréquence
+Leçon 3 — Désinfection du matériel
+Brancard
+Matelas coquille
+Attelles
+Tensiomètre
+Oxymètre
+Aspirateur de mucosités
+Leçon 4 — Les produits de désinfection
+Détergent
+Désinfectant
+Virucide
+Bactéricide
+Fongicide
+Leçon 5 — Les DASRI
+Tri
+Collecte
+Transport
+Élimination
+Leçon 6 — Accident d'exposition au sang (AES)
+Définition
+Conduite à tenir
+Déclaration
+Suivi
+Leçon 7 — Situations particulières
+Gale
+Tuberculose
+COVID
+Méningite
+Gastro-entérite
+Présentation des précautions adaptées.
+Leçon 8 — Synthèse
+Boss
+Mission immersive :
+Après une intervention à risque infectieux, le joueur doit remettre l'ambulance en conformité.
+Il devra :
+trier les déchets ;
+désinfecter correctement chaque équipement ;
+choisir les bons produits ;
+respecter le protocole.
+Récompenses
+🏅 Badge
+Expert en Hygiène
+📦 Coffre Argent
+🎯 Fin du Bloc 4
+À la fin de ce bloc, l'apprenant est capable de :
+protéger le patient et son équipage ;
+appliquer les précautions standard ;
+utiliser correctement les EPI ;
+nettoyer et désinfecter une ambulance ;
+gérer les déchets médicaux conformément à la réglementation ;
+réagir correctement face à un accident d'exposition au sang.🟢 BLOC 5 — Intervention préhospitalière
+Objectif du bloc
+Former l'apprenant à sécuriser une intervention, réaliser un bilan complet et recueillir les paramètres vitaux indispensables à la prise de décision médicale.
+
+🚑 Parcours 16 — Sécurité d'intervention
+Sous-titre
+Protéger avant d'agir.
+Objectif
+Apprendre à intervenir sans mettre en danger le patient, l'équipe ou les témoins.
+Compétences développées
+Évaluer les dangers.
+Sécuriser une zone d'intervention.
+Utiliser les équipements de sécurité.
+Adapter son comportement selon l'environnement.
+Travailler en coordination avec les secours.
+Difficulté
+🟢 Débutant
+Durée
+≈ 70 minutes
+Leçons
+Leçon 1 — Les principes de sécurité
+Se protéger
+Protéger
+Alerter
+Secourir
+Leçon 2 — Les différents environnements
+Domicile
+Voie publique
+Autoroute
+Industrie
+ERP
+Milieu rural
+Leçon 3 — Les risques
+Incendie
+Gaz
+Électricité
+Produits chimiques
+Violence
+Circulation
+Leçon 4 — Le balisage
+Véhicule
+Cônes
+Gilet
+Éclairage
+Leçon 5 — Les équipements de sécurité
+Gants
+Casque
+Gilet haute visibilité
+Chaussures
+Leçon 6 — Les situations particulières
+Accident de la route
+Feu
+Explosion
+Matières dangereuses
+Leçon 7 — Coordination avec les autres services
+Pompiers
+Police
+SMUR
+SAMU
+Leçon 8 — Synthèse
+Boss
+Le joueur arrive sur un accident de la circulation.
+Il doit :
+analyser les dangers ;
+sécuriser les lieux ;
+demander les renforts adaptés ;
+protéger son équipage.
+Récompenses
+🏅 Badge
+Sécurité Avant Tout
+📦 Coffre Bronze
+🩺 Parcours 17 — Les bilans
+Sous-titre
+Observer, analyser et transmettre.
+Objectif
+Maîtriser le déroulement complet d'un bilan ambulancier.
+Compétences développées
+Réaliser un bilan circonstanciel.
+Réaliser un bilan primaire (ABCDE).
+Réaliser un bilan secondaire.
+Identifier une urgence vitale.
+Transmettre un bilan clair au SAMU.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 90 minutes
+Leçons
+Leçon 1 — Pourquoi réaliser un bilan ?
+Leçon 2 — Le bilan circonstanciel
+Contexte
+Mécanisme
+Témoins
+Antécédents
+Leçon 3 — Le bilan primaire (ABCDE)
+Airway
+Breathing
+Circulation
+Disability
+Exposure
+Leçon 4 — Le bilan secondaire
+Douleur
+Examen complémentaire
+Recherche de lésions
+Leçon 5 — Les antécédents (SAMPLE)
+Signes
+Allergies
+Médicaments
+Passé médical
+Last meal
+Évènement
+Leçon 6 — Les constantes
+Présentation générale avant le parcours suivant.
+Leçon 7 — Transmission au SAMU
+Structurer son bilan
+Prioriser les informations
+Utiliser un vocabulaire professionnel
+Leçon 8 — Synthèse
+Boss
+Le joueur reçoit une intervention complète.
+Il doit réaliser seul :
+le bilan circonstanciel ;
+l'ABCDE ;
+le bilan secondaire ;
+la transmission au médecin régulateur.
+Récompenses
+🏅 Badge
+Expert du Bilan
+📦 Coffre Argent
+❤️ Parcours 18 — Paramètres vitaux
+Sous-titre
+Mesurer, comprendre et interpréter les constantes.
+Objectif
+Savoir mesurer les paramètres vitaux, reconnaître une valeur anormale et comprendre leur importance dans la prise en charge.
+Compétences développées
+Mesurer correctement les constantes.
+Identifier les valeurs normales.
+Détecter une anomalie.
+Comprendre leur signification clinique.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 90 minutes
+Leçons
+Leçon 1 — Les constantes vitales
+Présentation générale.
+Leçon 2 — La fréquence cardiaque (FC)
+Mesure
+Valeurs normales
+Tachycardie
+Bradycardie
+Leçon 3 — La pression artérielle (TA)
+Technique
+Valeurs normales
+Hypotension
+Hypertension
+Leçon 4 — La fréquence respiratoire (FR)
+Comptage
+Valeurs normales
+Tachypnée
+Bradypnée
+Leçon 5 — La saturation en oxygène (SpO₂)
+Oxymètre
+Valeurs normales
+Limites de mesure
+Leçon 6 — La température
+Méthodes de mesure
+Fièvre
+Hypothermie
+Leçon 7 — La glycémie capillaire
+Indications
+Valeurs normales
+Hypoglycémie
+Hyperglycémie
+Leçon 8 — Synthèse et interprétation
+Associer plusieurs constantes pour orienter la prise en charge.
+Boss
+Mission immersive :
+Le joueur intervient auprès d'un patient présentant plusieurs symptômes.
+Il doit :
+mesurer toutes les constantes ;
+identifier les anomalies ;
+interpréter les résultats ;
+transmettre les données au SAMU.
+Récompenses
+🏅 Badge
+Maître des Constantes
+📦 Coffre Argent
+Déblocage du Bloc 6 – Urgences vitales.
+🎯 Fin du Bloc 5
+À la fin de ce bloc, l'apprenant est capable de :
+sécuriser une intervention ;
+réaliser un bilan complet et structuré ;
+mesurer les paramètres vitaux essentiels ;
+détecter les signes d'une urgence vitale ;
+transmettre un bilan fiable au médecin régulateur.🟢 BLOC 6 — Urgences vitales
+Objectif du bloc
+Apprendre à reconnaître rapidement une urgence vitale, comprendre ses mécanismes et appliquer les premiers gestes adaptés dans le cadre des compétences de l'ambulancier.
+
+À la fin de ce bloc, l'étudiant doit être capable de :
+reconnaître une détresse vitale ;
+comprendre son origine ;
+effectuer les premiers gestes adaptés ;
+transmettre un bilan pertinent au SAMU.
+🫁 Parcours 19 — Détresses respiratoires
+Sous-titre
+Reconnaître une urgence respiratoire et agir rapidement.
+Objectif
+Identifier les principales détresses respiratoires et connaître la conduite à tenir.
+Compétences développées
+Reconnaître une détresse respiratoire.
+Identifier les signes de gravité.
+Adapter la prise en charge.
+Surveiller l'évolution du patient.
+Leçons
+Leçon 1 — Physiologie de la respiration
+Leçon 2 — Les signes de détresse respiratoire
+Dyspnée
+Cyanose
+Tirage
+Polypnée
+Bradypnée
+Silence auscultatoire
+Leçon 3 — Asthme aigu
+Leçon 4 — BPCO
+Leçon 5 — Œdème aigu du poumon
+Leçon 6 — Obstruction des voies aériennes
+Leçon 7 — Oxygénothérapie adaptée
+Leçon 8 — Synthèse
+Boss
+Intervention chez un patient présentant une détresse respiratoire aiguë.
+Le joueur doit :
+reconnaître les signes ;
+mesurer les constantes ;
+installer correctement le patient ;
+administrer l'oxygène selon les protocoles ;
+transmettre un bilan complet.
+Récompense
+🏅 Badge
+Premier Souffle
+❤️ Parcours 20 — Détresses circulatoires
+Sous-titre
+Comprendre les urgences cardiovasculaires et les états de choc.
+Objectif
+Reconnaître une défaillance circulatoire et agir rapidement.
+Compétences
+Identifier les états de choc.
+Reconnaître une hémorragie.
+Détecter un infarctus.
+Surveiller la perfusion.
+Leçons
+Leçon 1 — Physiologie de la circulation
+Leçon 2 — Les différents états de choc
+Hypovolémique
+Cardiogénique
+Septique
+Anaphylactique
+Leçon 3 — Hémorragies
+Leçon 4 — Infarctus du myocarde
+Leçon 5 — Malaise cardiovasculaire
+Leçon 6 — Surveillance du patient
+Leçon 7 — Transmission au SAMU
+Leçon 8 — Synthèse
+Boss
+Intervention sur une douleur thoracique.
+Décider rapidement de la conduite à tenir.
+Récompense
+🏅 Badge
+Gardien de la Circulation
+🧠 Parcours 21 — Détresses neurologiques
+Sous-titre
+Reconnaître une urgence neurologique.
+Objectif
+Identifier rapidement les principales urgences neurologiques.
+Compétences
+Détecter un AVC.
+Identifier une crise convulsive.
+Évaluer la conscience.
+Utiliser l'échelle de Glasgow.
+Leçons
+Leçon 1 — Les fonctions neurologiques
+Leçon 2 — Les troubles de conscience
+Leçon 3 — AVC
+Leçon 4 — Convulsions
+Leçon 5 — Coma
+Leçon 6 — Glasgow
+Leçon 7 — Surveillance neurologique
+Leçon 8 — Synthèse
+Boss
+Patient présentant une hémiplégie brutale.
+Le joueur doit identifier l'AVC et alerter rapidement.
+Récompense
+🏅 Badge
+Alerte Neuro
+🚑 Parcours 22 — Gestes d'urgence
+Sous-titre
+Les gestes qui sauvent.
+Objectif
+Maîtriser les gestes d'urgence réalisés quotidiennement par les ambulanciers.
+Compétences
+Réaliser une PLS.
+Réaliser une RCP.
+Utiliser un DAE.
+Contrôler une hémorragie.
+Leçons
+Leçon 1 — Protection
+Leçon 2 — Position Latérale de Sécurité
+Leçon 3 — Arrêt Cardio-Respiratoire
+Leçon 4 — Massage cardiaque
+Leçon 5 — Défibrillateur Automatisé Externe
+Leçon 6 — Garrot
+Leçon 7 — Compression directe
+Leçon 8 — Synthèse
+Boss
+Intervention complète sur un arrêt cardio-respiratoire.
+Le joueur réalise toute la chaîne de survie.
+Récompense
+🏅 Badge
+Héros du Quotidien
+🫧 Parcours 23 — Oxygénothérapie
+Sous-titre
+Maîtriser l'utilisation de l'oxygène en préhospitalier.
+Objectif
+Comprendre quand, comment et pourquoi administrer de l'oxygène.
+Compétences
+Choisir le bon dispositif.
+Régler le débit.
+Identifier les indications.
+Reconnaître les contre-indications.
+Leçons
+L'oxygène médical
+Les indications
+Les contre-indications
+Lunettes, masque simple, haute concentration
+Les débits
+Surveillance
+Erreurs fréquentes
+Synthèse
+Boss
+Choisir le bon matériel d'oxygénothérapie selon plusieurs scénarios.
+Récompense
+🏅 Badge
+Expert O₂
+🩺 Parcours 24 — Matériel d'urgence
+Sous-titre
+Connaître le matériel utilisé lors des interventions.
+Objectif
+Découvrir le matériel embarqué dans une ambulance et savoir l'utiliser correctement.
+Compétences
+Identifier le matériel.
+Comprendre son utilité.
+Vérifier son état.
+Préparer une intervention.
+Leçons
+Sac d'urgence
+Aspirateur de mucosités
+BAVU
+Oxymètre
+Tensiomètre
+Glucomètre
+Attelles et matériel d'immobilisation
+Vérification quotidienne
+Boss
+Préparer une ambulance avant une prise de service en vérifiant que tout le matériel est conforme et opérationnel.
+Récompense
+🏅 Badge
+Ambulance Ready
+📦 Coffre Or
+Déblocage du Bloc 7 – Pathologies.
+🎯 Fin du Bloc 6
+À ce stade, l'apprenant est capable de reconnaître les principales urgences vitales, de réaliser les gestes d'urgence relevant de ses compétences, d'utiliser le matériel de base et de collaborer efficacement avec le SAMU et les autres secours.🟢 BLOC 7 — Pathologies
+Objectif du bloc
+Identifier les principales pathologies rencontrées en transport sanitaire, comprendre leurs mécanismes, reconnaître leurs signes cliniques et adapter sa prise en charge dans le cadre des compétences de l'ambulancier.
+
+❤️ Parcours 25 — Pathologies cardiovasculaires
+Sous-titre
+Reconnaître les urgences du cœur et de la circulation.
+Objectif
+Comprendre les principales maladies cardiovasculaires et savoir reconnaître leurs signes.
+Compétences développées
+Identifier une douleur thoracique.
+Reconnaître un infarctus.
+Reconnaître une insuffisance cardiaque.
+Identifier une urgence hypertensive.
+Adapter son bilan.
+Leçons
+Rappel du système cardiovasculaire
+Douleur thoracique
+Infarctus du myocarde (IDM)
+Insuffisance cardiaque
+Hypertension artérielle
+Malaise cardiovasculaire
+Surveillance et prise en charge
+Synthèse
+Boss
+Intervention chez un homme de 58 ans présentant une douleur thoracique brutale.
+Récompense
+🏅 Badge Cardio Expert
+🫁 Parcours 26 — Pathologies respiratoires
+Sous-titre
+Identifier les maladies respiratoires les plus fréquentes.
+Objectif
+Reconnaître les principales pathologies respiratoires rencontrées en préhospitalier.
+Leçons
+Asthme
+BPCO
+Pneumonie
+Embolie pulmonaire
+Pneumothorax
+Œdème aigu pulmonaire
+Surveillance respiratoire
+Synthèse
+Boss
+Patient très essoufflé avec saturation basse.
+Récompense
+🏅 Badge Respiration Maîtrisée
+🧠 Parcours 27 — Pathologies neurologiques
+Sous-titre
+Comprendre les urgences neurologiques.
+Leçons
+AVC
+AIT
+Épilepsie
+Méningite
+Traumatisme neurologique
+Troubles de conscience
+Surveillance neurologique
+Synthèse
+Boss
+Patient présentant une paralysie faciale brutale.
+Récompense
+🏅 Badge Neuro Vigilant
+🍽️ Parcours 28 — Pathologies digestives
+Sous-titre
+Reconnaître les urgences abdominales.
+Leçons
+Douleur abdominale
+Appendicite
+Occlusion intestinale
+Péritonite
+Hémorragie digestive
+Vomissements et diarrhées
+Surveillance
+Synthèse
+Boss
+Patient avec douleur abdominale intense et défense abdominale.
+Récompense
+🏅 Badge Diagnostic Digestif
+🧪 Parcours 29 — Pathologies endocriniennes & métaboliques
+Sous-titre
+Les déséquilibres hormonaux et métaboliques.
+Leçons
+Diabète
+Hypoglycémie
+Hyperglycémie
+Acidocétose
+Thyroïde
+Déshydratation
+Troubles métaboliques
+Synthèse
+Boss
+Patient diabétique inconscient.
+Récompense
+🏅 Badge Équilibre Métabolique
+🚰 Parcours 30 — Pathologies urinaires
+Sous-titre
+Comprendre les maladies du système urinaire.
+Leçons
+Colique néphrétique
+Infection urinaire
+Rétention aiguë d'urine
+Insuffisance rénale
+Hématurie
+Dialyse
+Surveillance
+Synthèse
+Boss
+Patient souffrant d'une douleur lombaire intense.
+Récompense
+🏅 Badge Expert Rénal
+🦠 Parcours 31 — Maladies infectieuses
+Sous-titre
+Reconnaître les principales infections.
+Leçons
+Fièvre
+Sepsis
+COVID
+Méningite
+Tuberculose
+Gastro-entérite
+Isolement
+Synthèse
+Boss
+Patient fébrile avec suspicion de sepsis.
+Récompense
+🏅 Badge Vigilance Infectieuse
+☠️ Parcours 32 — Intoxications & empoisonnements
+Sous-titre
+Reconnaître les intoxications et agir rapidement.
+Leçons
+Médicaments
+Monoxyde de carbone
+Drogues
+Alcool
+Produits ménagers
+Champignons
+Centre antipoison
+Synthèse
+Boss
+Famille intoxiquée au monoxyde de carbone.
+Récompense
+🏅 Badge Toxicologie
+🌼 Parcours 33 — Allergies & anaphylaxie
+Sous-titre
+Des réactions bénignes au choc anaphylactique.
+Leçons
+Réaction allergique
+Urticaire
+Œdème de Quincke
+Choc anaphylactique
+Adrénaline
+Surveillance
+Prévention
+Synthèse
+Boss
+Patient piqué par une guêpe avec détresse respiratoire.
+Récompense
+🏅 Badge Réaction Immédiate
+📦 Coffre Or
+Déblocage du Bloc 8 – Traumatologie.
+🎯 Fin du Bloc 7
+À la fin de ce bloc, l'apprenant sait reconnaître les principales pathologies rencontrées en intervention, évaluer leur gravité et adapter sa prise en charge dans le respect des compétences de l'ambulancier.🟢 BLOC 8 — Traumatologie
+Objectif du bloc
+Apprendre à reconnaître les différents traumatismes, évaluer leur gravité, protéger la victime et réaliser une prise en charge adaptée dans le respect des compétences de l'ambulancier.
+
+À la fin de ce bloc, l'apprenant devra être capable de :
+reconnaître un traumatisme ;
+rechercher les signes de gravité ;
+immobiliser correctement une victime ;
+prévenir l'aggravation des lésions ;
+transmettre un bilan précis.
+🦴 Parcours 34 — Traumatismes des membres
+Sous-titre
+Fractures, entorses, luxations et immobilisation.
+Objectif
+Identifier les traumatismes des membres et appliquer les principes d'immobilisation.
+Compétences développées
+Reconnaître une fracture.
+Différencier fracture, entorse et luxation.
+Rechercher une atteinte vasculo-nerveuse.
+Utiliser les attelles.
+Surveiller le membre traumatisé.
+Leçons
+Les différents traumatismes
+Les fractures
+Les entorses
+Les luxations
+Les attelles
+Surveillance vasculo-nerveuse
+Relevage et transport
+Synthèse
+Boss
+Patient tombé d'une échelle avec suspicion de fracture du tibia.
+Récompense
+🏅 Badge Immobilisation Expert
+🧠 Parcours 35 — Traumatisme crânien
+Sous-titre
+Reconnaître une urgence neurologique traumatique.
+Objectif
+Identifier un traumatisme crânien et détecter les signes de gravité.
+Compétences
+Reconnaître un traumatisme crânien.
+Utiliser l'échelle de Glasgow.
+Détecter les signes d'alerte.
+Assurer une surveillance neurologique.
+Leçons
+Anatomie du crâne
+Traumatisme léger
+Traumatisme grave
+Glasgow
+Signes de gravité
+Surveillance
+Immobilisation
+Synthèse
+Boss
+Victime d'un accident de trottinette présentant une perte de connaissance.
+Récompense
+🏅 Badge Neuro Trauma
+🦴 Parcours 36 — Traumatisme du rachis
+Sous-titre
+Protéger la colonne vertébrale.
+Objectif
+Reconnaître une suspicion de traumatisme rachidien et appliquer les mesures de protection.
+Compétences
+Identifier un traumatisme du rachis.
+Immobiliser correctement.
+Prévenir une aggravation neurologique.
+Travailler en équipe lors des relevages.
+Leçons
+Anatomie du rachis
+Mécanismes de traumatisme
+Signes neurologiques
+Immobilisation
+Matelas coquille
+Relevage
+Transport
+Synthèse
+Boss
+Victime d'un accident de la route avec suspicion de lésion cervicale.
+Récompense
+🏅 Badge Protection Rachidienne
+🔥 Parcours 37 — Brûlures
+Sous-titre
+Évaluer une brûlure et agir sans aggraver.
+Objectif
+Reconnaître les différents types de brûlures et adapter la prise en charge.
+Compétences
+Identifier les degrés de brûlure.
+Évaluer la surface brûlée.
+Refroidir correctement une brûlure.
+Prévenir les complications.
+Leçons
+Physiopathologie des brûlures
+Les différents degrés
+Évaluation de la gravité
+Refroidissement
+Brûlures chimiques
+Brûlures électriques
+Surveillance
+Synthèse
+Boss
+Victime d'une brûlure domestique avec atteinte du visage et du thorax.
+Récompense
+🏅 Badge Gestion des Brûlures
+🩸 Parcours 38 — Plaies et hémorragies
+Sous-titre
+Contrôler les saignements et protéger la victime.
+Objectif
+Identifier les différents types de plaies et maîtriser les techniques d'arrêt d'une hémorragie.
+Compétences
+Différencier les plaies.
+Reconnaître une hémorragie grave.
+Réaliser une compression efficace.
+Poser un garrot lorsque cela est indiqué.
+Surveiller la victime.
+Leçons
+Les différents types de plaies
+Les hémorragies externes
+Compression directe
+Pansement compressif
+Garrot
+Corps étrangers
+Surveillance
+Synthèse
+Boss
+Accident de chantier avec hémorragie massive d'un membre inférieur.
+Récompense
+🏅 Badge Maître des Hémorragies
+📦 Coffre Or
+Déblocage du Bloc 9 – Situations particulières.
+🎯 Fin du Bloc 8
+À la fin de ce bloc, l'apprenant est capable de reconnaître les principaux traumatismes, de mettre en œuvre les techniques d'immobilisation et de contrôle des hémorragies, tout en assurant une prise en charge sécurisée jusqu'à l'arrivée à l'hôpital.🟢 BLOC 9 — Situations particulières
+Objectif du bloc
+Adapter sa prise en charge selon l'âge, l'état physiologique, le contexte psychologique ou social du patient.
+À la fin de ce bloc, l'apprenant devra savoir adapter son comportement, son bilan et sa communication en fonction du type de patient rencontré.
+
+👶 Parcours 39 — Pédiatrie
+Sous-titre
+Prendre en charge un nourrisson et un enfant en sécurité.
+Objectif
+Comprendre les spécificités anatomiques, physiologiques et psychologiques de l'enfant.
+Compétences développées
+Adapter son approche.
+Réaliser un bilan pédiatrique.
+Reconnaître les urgences pédiatriques.
+Communiquer avec les parents.
+Adapter les constantes selon l'âge.
+Leçons
+Leçon 1 — Particularités de l'enfant
+Leçon 2 — Les constantes pédiatriques
+Leçon 3 — Les urgences pédiatriques
+Leçon 4 — Convulsions fébriles
+Leçon 5 — Détresse respiratoire du nourrisson
+Leçon 6 — Communication avec l'enfant
+Leçon 7 — Communication avec les parents
+Leçon 8 — Synthèse
+Boss
+Intervention chez un nourrisson présentant une forte fièvre et des convulsions.
+Récompense
+🏅 Badge Petit Patient
+🤰 Parcours 40 — Obstétrique d'urgence
+Sous-titre
+Comprendre les urgences liées à la grossesse et à l'accouchement.
+Objectif
+Reconnaître les principales situations obstétricales rencontrées en préhospitalier.
+Compétences
+Identifier une urgence obstétricale.
+Accompagner un accouchement inopiné.
+Reconnaître les signes de gravité.
+Assurer la sécurité de la mère et du nouveau-né.
+Leçons
+Physiologie de la grossesse
+Le travail
+Accouchement inopiné
+Hémorragie de la délivrance
+Pré-éclampsie
+Surveillance mère-enfant
+Situations d'urgence
+Synthèse
+Boss
+Accouchement inopiné à domicile.
+Récompense
+🏅 Badge Naissance Assistée
+👴 Parcours 41 — Gériatrie
+Sous-titre
+Comprendre les spécificités du patient âgé.
+Objectif
+Adapter sa prise en charge aux personnes âgées.
+Compétences
+Identifier la fragilité.
+Prévenir les chutes.
+Adapter la communication.
+Reconnaître les syndromes gériatriques.
+Leçons
+Vieillissement normal
+Fragilité
+Chutes
+Désorientation
+Polymédication
+Communication
+Surveillance
+Synthèse
+Boss
+Personne âgée retrouvée au sol après une chute.
+Récompense
+🏅 Badge Prise en Charge Senior
+🧠 Parcours 42 — Psychiatrie et urgences comportementales
+Sous-titre
+Intervenir avec calme et sécurité face aux troubles du comportement.
+Objectif
+Reconnaître les principales situations psychiatriques et adapter son intervention.
+Compétences
+Évaluer une situation à risque.
+Communiquer avec un patient agité.
+Préserver la sécurité de tous.
+Coopérer avec les forces de l'ordre et le SAMU si nécessaire.
+Leçons
+Les troubles psychiatriques fréquents
+Agitation et agressivité
+Crise d'angoisse
+Idées suicidaires
+Évaluation du risque
+Communication adaptée
+Sécurité de l'intervention
+Synthèse
+Boss
+Patient en crise dans un lieu public avec comportement agressif.
+Récompense
+🏅 Badge Gestion de Crise
+🤝 Parcours 43 — Situations sociales et vulnérabilité
+Sous-titre
+Prendre en charge le patient dans toutes ses dimensions.
+Objectif
+Identifier les situations de vulnérabilité et adopter une attitude professionnelle et respectueuse.
+Compétences
+Repérer les violences.
+Identifier les situations de précarité.
+Respecter la confidentialité.
+Orienter vers les bons interlocuteurs.
+Comprendre les obligations de signalement.
+Leçons
+Vulnérabilité sociale
+Violences intrafamiliales
+Maltraitance des enfants
+Maltraitance des personnes âgées
+Handicap et inclusion
+Secret professionnel
+Signalement et protection
+Synthèse
+Boss
+Intervention à domicile où plusieurs indices évoquent une situation de maltraitance.
+Le joueur doit :
+repérer les signaux d'alerte ;
+adopter la bonne posture professionnelle ;
+respecter le cadre légal ;
+transmettre les informations de manière adaptée.
+Récompense
+🏅 Badge Professionnel Responsable
+📦 Coffre Or
+Déblocage du Bloc 10 – Métier d'ambulancier
+🎯 Fin du Bloc 9
+À la fin de ce bloc, l'apprenant est capable d'adapter sa prise en charge aux patients les plus vulnérables, de communiquer avec empathie, de respecter les obligations légales et de gérer des situations humaines parfois complexes.🟢 BLOC 10 — Le métier d'Ambulancier
+Objectif du bloc
+Comprendre l'ensemble de l'environnement professionnel de l'ambulancier : ses responsabilités, le fonctionnement des services d'urgence, les aspects réglementaires, le matériel, la conduite et la coordination avec les autres acteurs de santé.
+Ce bloc constitue la conclusion de la Formation DEA V1 et prépare l'apprenant à entrer dans une pratique professionnelle réaliste.
+
+⚖️ Parcours 44 — Cadre légal, déontologie et responsabilités
+Sous-titre
+Exercer dans le respect de la loi et de l'éthique.
+Objectif
+Comprendre les responsabilités civiles, pénales et professionnelles de l'ambulancier.
+Compétences développées
+Connaître les obligations professionnelles.
+Respecter le secret professionnel.
+Identifier les responsabilités juridiques.
+Comprendre les droits du patient.
+Adopter une attitude éthique.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 80 minutes
+Leçons
+Leçon 1 — Le métier d'ambulancier
+Les missions
+Les compétences
+Les limites d'intervention
+Leçon 2 — Le secret professionnel
+Secret partagé
+Confidentialité
+Respect des données
+Leçon 3 — Consentement du patient
+Refus de soins
+Patient conscient
+Patient inconscient
+Leçon 4 — Responsabilités
+Civile
+Pénale
+Disciplinaire
+Leçon 5 — Les droits du patient
+Dignité
+Respect
+Intimité
+Information
+Leçon 6 — Éthique professionnelle
+Neutralité
+Respect
+Bienveillance
+Leçon 7 — Situations complexes
+Mineur
+Tutelle
+Patient violent
+Fin de vie
+Leçon 8 — Synthèse
+Boss
+Intervention avec plusieurs dilemmes éthiques.
+Le joueur devra :
+prendre les bonnes décisions ;
+respecter la réglementation ;
+justifier chacun de ses choix.
+Récompense
+🏅 Badge
+Professionnel Responsable
+🚑 Parcours 45 — Le transport sanitaire
+Sous-titre
+Assurer un transport sûr, confortable et adapté au patient.
+Objectif
+Maîtriser les différents types de transports sanitaires et leurs spécificités.
+Compétences
+Préparer un transport.
+Installer un patient.
+Adapter la conduite.
+Assurer le confort.
+Prévenir les risques.
+Leçons
+Les différents transports
+Les indications
+Installation du patient
+Surveillance durant le trajet
+Transports spécialisés
+Gestion des incidents
+Traçabilité
+Synthèse
+Boss
+Transport inter-hospitalier d'un patient sous oxygène nécessitant une surveillance continue.
+Récompense
+🏅 Badge
+Transport Expert
+🚐 Parcours 46 — Véhicules et matériel ambulancier
+Sous-titre
+Connaître parfaitement son outil de travail.
+Objectif
+Découvrir les différents véhicules sanitaires et le matériel obligatoire.
+Compétences
+Identifier chaque véhicule.
+Contrôler le matériel.
+Réaliser les vérifications quotidiennes.
+Préparer une intervention.
+Leçons
+Les différents véhicules sanitaires
+Les équipements obligatoires
+Le matériel embarqué
+Vérifications avant départ
+Entretien
+Gestion des stocks
+Procédure de désinfection
+Synthèse
+Boss
+Préparer une ambulance avant une garde complète.
+Récompense
+🏅 Badge
+Ambulance Master
+📞 Parcours 47 — Régulation SAMU – Centre 15
+Sous-titre
+Comprendre le fonctionnement de la chaîne de secours.
+Objectif
+Comprendre le rôle du SAMU et apprendre à transmettre un bilan structuré.
+Compétences
+Comprendre la régulation médicale.
+Communiquer efficacement.
+Structurer un bilan.
+Appliquer les décisions médicales.
+Leçons
+Le rôle du Centre 15
+Le médecin régulateur
+Les ARM
+La régulation médicale
+Le bilan radio/téléphonique
+Les décisions du SAMU
+Coordination avec les secours
+Synthèse
+Boss
+Le joueur doit transmettre un bilan complet au médecin régulateur après une intervention complexe.
+Récompense
+🏅 Badge
+Voix du Terrain
+🚨 Parcours 48 — Conduite d'urgence
+Sous-titre
+Conduire rapidement sans compromettre la sécurité.
+Objectif
+Comprendre les principes de la conduite d'urgence et de la sécurité routière.
+Compétences
+Adapter sa conduite.
+Anticiper les risques.
+Utiliser les avertisseurs spéciaux.
+Sécuriser le transport.
+Leçons
+Réglementation routière
+Priorités et facilités de passage
+Conduite préventive
+Conduite d'urgence
+Conditions météorologiques
+Fatigue et vigilance
+Accidents impliquant l'ambulance
+Synthèse
+Boss
+Conduire une ambulance sur un trajet urbain en urgence tout en respectant les règles de sécurité.
+Récompense
+🏅 Badge
+Pilote Sanitaire
+🤝 Parcours 49 — Travail en équipe et coordination
+Sous-titre
+La qualité d'une intervention repose sur la coopération.
+Objectif
+Développer les compétences de communication et de coordination avec les autres professionnels.
+Compétences
+Répartir les rôles.
+Communiquer efficacement.
+Travailler avec les différents services.
+Gérer les conflits.
+Leçons
+Travail en binôme
+Communication interne
+Coordination avec les pompiers
+Coordination avec le SMUR
+Coordination avec les urgences
+Gestion des conflits
+Débriefing après intervention
+Synthèse
+Boss
+Intervention multi-victimes impliquant plusieurs services de secours.
+Récompense
+🏅 Badge
+Esprit d'Équipe
+🏆 Parcours 50 — Mission Finale DEA
+Sous-titre
+La synthèse de toute la formation.
+Objectif
+Mobiliser l'ensemble des compétences acquises dans les 49 parcours précédents.
+Compétences évaluées
+Analyse de situation.
+Sécurité.
+Bilan complet.
+Constantes.
+Communication.
+Gestes techniques.
+Travail en équipe.
+Réglementation.
+Décision clinique.
+Transmission au SAMU.
+Leçons
+Les 8 leçons sont remplacées par 8 missions progressives :
+Mission 1 — Malaise à domicile
+Mission 2 — Accident de la circulation
+Mission 3 — Arrêt cardio-respiratoire
+Mission 4 — Enfant en détresse respiratoire
+Mission 5 — Accouchement inopiné
+Mission 6 — Traumatisme grave
+Mission 7 — Polytraumatisé avec plusieurs intervenants
+Mission 8 — Intervention libre avec événements aléatoires
+Chaque mission réutilise toutes les notions vues dans les 10 blocs précédents.
+Boss Final — L'Examen DEA MedLingo
+Le joueur devient ambulancier pour une journée complète.
+Au cours de cette garde virtuelle, il devra enchaîner plusieurs interventions sans connaître leur nature à l'avance.
+Les événements sont générés dynamiquement :
+malaise ;
+détresse respiratoire ;
+AVC ;
+accident de la route ;
+arrêt cardiaque ;
+urgence pédiatrique ;
+urgence obstétricale ;
+patient psychiatrique ;
+transport inter-hospitalier ;
+intervention de nuit ;
+conditions météo dégradées.
+À chaque étape, il devra :
+analyser la situation ;
+sécuriser les lieux ;
+réaliser le bilan ;
+mesurer les constantes ;
+choisir les bonnes actions ;
+communiquer avec le SAMU ;
+préparer le transport ;
+assurer le suivi du patient.
+Chaque décision influence le déroulement de la garde et le score final.
+Récompenses
+🏅 Badge légendaire
+Diplômé MedLingo DEA
+👨‍⚕️ Titre permanent
+Ambulancier DEA
+👕 Déblocage d'une tenue exclusive.
+🚑 Déblocage d'une ambulance exclusive.
+🏆 Trophée DEA V1 Complété
+📦 Coffre Légendaire.
+⭐ 5 000 XP.
+🎓 Fin de la Formation DEA V1
+À l'issue des 50 parcours, l'apprenant maîtrise les bases attendues d'un futur ambulancier diplômé d'État :
+anatomie et physiologie ;
+communication professionnelle ;
+hygiène et prévention ;
+bilan clinique ;
+paramètres vitaux ;
+urgences vitales ;
+pathologies courantes ;
+traumatologie ;
+situations particulières ;
+exercice professionnel, réglementation et coordination.🫀 BLOC 11 — Cardiologie avancée
+Objectif du bloc
+Approfondir les connaissances cardiovasculaires afin de reconnaître rapidement les pathologies cardiaques graves, comprendre leur physiopathologie et adapter la prise en charge préhospitalière dans le respect des compétences de l'ambulancier.
+
+❤️ Parcours 51 — Insuffisance cardiaque
+Sous-titre
+Quand le cœur ne pompe plus efficacement.
+Objectif
+Comprendre l'insuffisance cardiaque, reconnaître ses signes et participer à sa prise en charge.
+Compétences développées
+Comprendre le fonctionnement du cœur.
+Différencier insuffisance cardiaque droite et gauche.
+Identifier les signes d'alerte.
+Réaliser un bilan ciblé.
+Adapter la surveillance.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 90 minutes
+Leçons
+Leçon 1 — Physiologie cardiaque avancée
+Fonction de pompe
+Débit cardiaque
+Fraction d'éjection
+Leçon 2 — Insuffisance cardiaque gauche
+Physiopathologie
+Signes cliniques
+Complications
+Leçon 3 — Insuffisance cardiaque droite
+Causes
+Œdèmes
+Turgescence jugulaire
+Leçon 4 — Facteurs aggravants
+HTA
+IDM
+Arythmies
+Infection
+Leçon 5 — Le bilan ambulancier
+Dyspnée
+Saturation
+TA
+FC
+Leçon 6 — Prise en charge
+Position demi-assise
+Oxygénothérapie
+Surveillance
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient de 76 ans présentant une détresse respiratoire progressive.
+Le joueur doit différencier une insuffisance cardiaque d'une autre cause respiratoire.
+Récompense
+🏅 Badge
+Cœur Défaillant
+💓 Parcours 52 — Troubles du rythme
+Sous-titre
+Quand le cœur perd son rythme.
+Objectif
+Reconnaître les principaux troubles du rythme et leurs conséquences.
+Compétences
+Identifier tachycardie et bradycardie.
+Comprendre la fibrillation auriculaire.
+Évaluer la gravité.
+Adapter la surveillance.
+Leçons
+Le système électrique du cœur
+Tachycardies
+Bradycardies
+Fibrillation auriculaire
+Flutter auriculaire
+Bloc auriculo-ventriculaire
+Surveillance
+Synthèse
+Boss
+Patient présentant des palpitations avec malaise.
+Récompense
+🏅 Badge
+Maître du Rythme
+❤️‍🩹 Parcours 53 — Syndrome coronarien aigu
+Sous-titre
+Reconnaître un infarctus sans perdre une minute.
+Objectif
+Identifier rapidement un syndrome coronarien aigu et comprendre l'urgence de sa prise en charge.
+Compétences
+Identifier une douleur thoracique évocatrice.
+Reconnaître les signes atypiques.
+Réaliser un bilan précis.
+Comprendre le rôle de la reperfusion.
+Leçons
+Irrigation du cœur
+Athérosclérose
+Angor
+Infarctus STEMI
+Infarctus NSTEMI
+Complications
+Conduite préhospitalière
+Synthèse
+Boss
+Patient présentant une douleur thoracique irradiant dans le bras gauche avec sueurs et nausées.
+Récompense
+🏅 Badge
+Chasseur d'IDM
+💥 Parcours 54 — Choc cardiogénique
+Sous-titre
+Quand le cœur ne peut plus assurer la circulation.
+Objectif
+Comprendre le choc cardiogénique et reconnaître ses signes précoces.
+Compétences
+Identifier un état de choc.
+Différencier les différents chocs.
+Évaluer la perfusion.
+Surveiller les constantes.
+Leçons
+Physiopathologie du choc
+Les causes
+Les signes cliniques
+Défaillance circulatoire
+Surveillance
+Transmission
+Cas pratiques
+Synthèse
+Boss
+Patient en hypotension sévère après un infarctus.
+Récompense
+🏅 Badge
+Circulation Critique
+📈 Parcours 55 — ECG pour ambulanciers
+Sous-titre
+Comprendre un électrocardiogramme sans être cardiologue.
+Objectif
+Découvrir les bases de l'ECG afin de mieux comprendre les informations transmises par les équipes médicales.
+Remarque pédagogique : ce parcours a pour objectif la compréhension et l'interprétation de base. Il ne vise pas à former l'ambulancier au diagnostic électrocardiographique, qui relève des professionnels habilités.
+
+Compétences
+Comprendre ce que mesure un ECG.
+Identifier les principales ondes.
+Reconnaître un tracé normal.
+Repérer des anomalies majeures.
+Mieux communiquer avec le SMUR et le SAMU.
+Leçons
+Leçon 1 — Qu'est-ce qu'un ECG ?
+Activité électrique du cœur
+Principe de fonctionnement
+Leçon 2 — Les dérivations
+Membres
+Précordiales
+Vue du cœur
+Leçon 3 — Les ondes
+Onde P
+Complexe QRS
+Onde T
+Segment ST
+Leçon 4 — ECG normal
+Fréquence
+Rythme
+Intervalles
+Leçon 5 — Anomalies fréquentes
+Tachycardie
+Bradycardie
+Fibrillation auriculaire
+Élévation du ST (notions)
+Leçon 6 — Transmission d'un ECG
+Pourquoi l'ECG est important
+Communication avec le médecin régulateur
+Leçon 7 — Exercices interactifs
+Comparer plusieurs tracés simples et identifier s'ils paraissent normaux ou anormaux.
+Leçon 8 — Synthèse
+Boss
+Au cours d'une garde virtuelle, plusieurs ECG sont transmis au joueur.
+Sa mission n'est pas de poser un diagnostic, mais de :
+reconnaître un tracé manifestement normal ou anormal ;
+identifier les situations nécessitant une prise en charge urgente ;
+transmettre les informations pertinentes au médecin régulateur.
+Récompense
+🏅 Badge Lecture ECG – Niveau 1
+📦 Coffre Platine
+Déblocage du Bloc 12 – Pneumologie avancée.🫁 BLOC 12 — Pneumologie avancée
+Objectif du bloc
+Comprendre les principales pathologies respiratoires rencontrées en préhospitalier, savoir reconnaître une détresse respiratoire complexe, évaluer sa gravité et adapter la prise en charge en collaboration avec le SAMU et le SMUR.
+
+🫁 Parcours 56 — Asthme sévère
+Sous-titre
+Quand respirer devient un combat.
+Objectif
+Comprendre les mécanismes de la crise d'asthme sévère et reconnaître les critères de gravité.
+Compétences
+Comprendre l'asthme.
+Identifier les facteurs déclenchants.
+Reconnaître une crise grave.
+Évaluer l'efficacité de la prise en charge.
+Adapter la surveillance.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈90 minutes
+Les 8 leçons
+Leçon 1 — Physiologie des bronches
+Anatomie
+Fonctionnement
+Échanges gazeux
+Leçon 2 — L'asthme
+Définition
+Inflammation
+Bronchospasme
+Leçon 3 — Les facteurs déclenchants
+Allergènes
+Effort
+Infections
+Pollution
+Leçon 4 — Les signes de gravité
+Difficulté à parler
+Cyanose
+Silence auscultatoire
+Fatigue respiratoire
+Leçon 5 — Évaluation clinique
+SpO₂
+FR
+Tirage
+Position spontanée
+Leçon 6 — Prise en charge
+Installation
+Oxygène
+Surveillance
+Transmission
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Adolescent de 16 ans en crise d'asthme sévère après un entraînement sportif.
+Récompense
+🏅 Badge
+Bronches Libérées
+🫁 Parcours 57 — BPCO avancée
+Sous-titre
+Comprendre la maladie respiratoire chronique la plus fréquente.
+Objectif
+Reconnaître une décompensation de BPCO et éviter les erreurs de prise en charge.
+Compétences
+Comprendre la BPCO.
+Identifier une exacerbation.
+Différencier asthme et BPCO.
+Adapter la surveillance.
+Les 8 leçons
+Physiopathologie
+Les différents stades
+Exacerbation
+Oxygénothérapie chez le patient BPCO
+Surveillance clinique
+Complications
+Cas pratiques
+Synthèse
+Boss
+Patient de 72 ans très essoufflé avec antécédents de tabagisme.
+Récompense
+🏅 Badge
+Respiration Chronique
+🩸 Parcours 58 — Embolie pulmonaire
+Sous-titre
+Une urgence souvent difficile à reconnaître.
+Objectif
+Comprendre les mécanismes de l'embolie pulmonaire et reconnaître ses signes.
+Compétences
+Identifier les facteurs de risque.
+Reconnaître les symptômes.
+Réaliser un bilan ciblé.
+Prioriser la prise en charge.
+Les 8 leçons
+Formation d'un caillot
+Migration vers le poumon
+Facteurs de risque
+Douleur thoracique
+Dyspnée brutale
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Patient revenant d'un long voyage avec douleur thoracique et essoufflement brutal.
+Récompense
+🏅 Badge
+Chasseur d'Embolies
+💨 Parcours 59 — Pneumothorax
+Sous-titre
+Quand le poumon se dégonfle.
+Objectif
+Comprendre les différents pneumothorax et leurs conséquences.
+Compétences
+Reconnaître un pneumothorax.
+Identifier les formes graves.
+Réaliser un bilan adapté.
+Assurer une surveillance continue.
+Les 8 leçons
+Anatomie pleurale
+Pneumothorax spontané
+Pneumothorax traumatique
+Pneumothorax compressif
+Signes de gravité
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Jeune homme présentant une douleur thoracique brutale après un match de basket.
+Récompense
+🏅 Badge
+Poumon Protégé
+🚑 Parcours 60 — Détresses respiratoires complexes
+Sous-titre
+Associer les symptômes pour prendre la bonne décision.
+Objectif
+Apprendre à différencier les principales détresses respiratoires rencontrées en intervention.
+Compétences
+Comparer plusieurs pathologies.
+Identifier les critères de gravité.
+Prioriser les actions.
+Adapter la transmission au SAMU.
+Les 8 leçons
+Leçon 1 — Dyspnée : les grandes causes
+Leçon 2 — Asthme ou BPCO ?
+Leçon 3 — Embolie ou infarctus ?
+Leçon 4 — OAP ou pneumonie ?
+Leçon 5 — Pneumothorax ou traumatisme thoracique ?
+Leçon 6 — Cas complexes
+Leçon 7 — Décision clinique
+Leçon 8 — Synthèse générale
+Boss Final
+Le joueur enchaîne 5 interventions respiratoires différentes.
+À chaque mission, il doit :
+identifier la pathologie la plus probable ;
+réaliser le bilan complet ;
+reconnaître les signes de gravité ;
+transmettre un bilan structuré ;
+assurer une surveillance continue.
+Récompenses
+🏅 Badge Expert Pneumologie
+📦 Coffre Platine
+⭐ +2 000 XP
+🎯 Fin du Bloc 12
+À l'issue de ce bloc, l'apprenant est capable de distinguer les principales urgences respiratoires, d'en reconnaître les signes de gravité et de participer efficacement à leur prise en charge préhospitalière.🧠 BLOC 13 — Neurologie avancée
+Objectif du bloc
+Approfondir les connaissances sur les urgences neurologiques afin de reconnaître rapidement une atteinte du système nerveux central ou périphérique, évaluer la gravité, réaliser un bilan neurologique structuré et optimiser la transmission au SAMU.
+
+🧠 Parcours 61 — AVC ischémique
+Sous-titre
+Chaque minute compte : le cerveau perd près de deux millions de neurones par minute lors d'un AVC ischémique non traité.
+Objectif
+Reconnaître précocement un AVC ischémique et comprendre l'importance de la rapidité de prise en charge.
+Compétences développées
+Identifier les signes d'un AVC.
+Réaliser un bilan neurologique ciblé.
+Déterminer l'heure de début des symptômes.
+Prioriser le transport.
+Transmettre un bilan neurologique précis.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 95 minutes
+Les 8 leçons
+Leçon 1 — Anatomie cérébrale fonctionnelle
+Lobes cérébraux
+Tronc cérébral
+Cervelet
+Vascularisation
+Leçon 2 — Physiopathologie de l'AVC
+Obstruction artérielle
+Ischémie
+Pénombre cérébrale
+Leçon 3 — Reconnaître un AVC
+Paralysie faciale
+Déficit moteur
+Trouble de la parole
+Trouble visuel
+Leçon 4 — FAST et BE-FAST
+Face
+Bras
+Parole
+Temps
+Équilibre
+Vision
+Leçon 5 — Heure de début
+Dernière heure normale connue
+Fenêtre thérapeutique
+Leçon 6 — Conduite préhospitalière
+Surveillance
+Positionnement
+Transmission
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient de 69 ans présentant une paralysie du bras droit et un trouble du langage apparus il y a 30 minutes.
+Le joueur doit :
+reconnaître immédiatement l'AVC ;
+déterminer l'heure de début ;
+réaliser le bilan neurologique ;
+transmettre un message d'alerte complet au Centre 15.
+Récompense
+🏅 Badge
+Stroke Hunter
+🩸 Parcours 62 — AVC hémorragique
+Sous-titre
+Quand un vaisseau cérébral se rompt.
+Objectif
+Différencier un AVC hémorragique d'un AVC ischémique et reconnaître les signes d'alerte.
+Compétences
+Comprendre les mécanismes.
+Identifier les signes de gravité.
+Réaliser une surveillance neurologique.
+Adapter la transmission.
+Les 8 leçons
+Les hémorragies cérébrales
+Causes principales
+Céphalée brutale
+Hypertension intracrânienne
+Dégradation neurologique
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Patient présentant une céphalée explosive suivie d'une perte de connaissance.
+Récompense
+🏅 Badge
+Hémorragie Cérébrale
+⚡ Parcours 63 — Convulsions complexes
+Sous-titre
+Comprendre et sécuriser une crise convulsive.
+Objectif
+Reconnaître les différents types de crises convulsives et assurer la sécurité du patient.
+Compétences
+Identifier une crise généralisée.
+Identifier une crise focale.
+Chronométrer une crise.
+Prévenir les traumatismes.
+Surveiller la phase post-critique.
+Les 8 leçons
+Leçon 1 — Épilepsie
+Leçon 2 — Les différents types de crises
+Leçon 3 — État de mal épileptique
+Leçon 4 — Gestes à réaliser
+Leçon 5 — Gestes à éviter
+Leçon 6 — Surveillance post-critique
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient présentant plusieurs crises convulsives successives sans reprise de conscience.
+Récompense
+🏅 Badge
+Gestionnaire des Convulsions
+😴 Parcours 64 — États comateux
+Sous-titre
+Comprendre les troubles majeurs de la conscience.
+Objectif
+Identifier les principales causes de coma et réaliser un bilan neurologique structuré.
+Compétences
+Évaluer la conscience.
+Identifier une urgence vitale.
+Comprendre les différentes causes de coma.
+Prioriser la prise en charge.
+Les 8 leçons
+Les niveaux de conscience
+Définition du coma
+Causes neurologiques
+Causes métaboliques
+Causes toxiques
+Surveillance neurologique
+Cas pratiques
+Synthèse
+Boss
+Patient retrouvé inconscient à son domicile.
+Le joueur doit rechercher méthodiquement les causes les plus probables.
+Récompense
+🏅 Badge
+Vigilance Maximale
+👁️ Parcours 65 — Glasgow Expert
+Sous-titre
+Maîtriser l'évaluation neurologique de référence.
+Objectif
+Savoir utiliser avec précision l'échelle de Glasgow et interpréter son évolution.
+Compétences
+Évaluer l'ouverture des yeux.
+Évaluer la réponse verbale.
+Évaluer la réponse motrice.
+Calculer un score.
+Suivre l'évolution d'un patient.
+Les 8 leçons
+Leçon 1 — Historique de l'échelle
+Leçon 2 — Ouverture des yeux
+Leçon 3 — Réponse verbale
+Leçon 4 — Réponse motrice
+Leçon 5 — Calcul du score
+Leçon 6 — Interprétation clinique
+Leçon 7 — Exercices interactifs
+L'utilisateur calcule plusieurs scores de Glasgow à partir de vidéos ou de scénarios.
+Leçon 8 — Synthèse
+Boss Final
+Une garde virtuelle comporte plusieurs patients présentant des états neurologiques différents.
+Le joueur doit :
+calculer correctement chaque score de Glasgow ;
+détecter toute aggravation neurologique ;
+adapter sa surveillance ;
+transmettre un bilan précis et chronologique.
+Récompenses
+🏅 Badge Neurologue du Terrain
+📦 Coffre Platine
+⭐ +2 500 XP
+Déblocage du Bloc 14 – Endocrinologie & Diabétologie.
+🎯 Fin du Bloc 13
+À l'issue de ce bloc, l'apprenant est capable d'identifier les principales urgences neurologiques, de réaliser un examen neurologique structuré, d'utiliser l'échelle de Glasgow avec précision et de reconnaître les situations nécessitant une prise en charge immédiate.🩸 BLOC 14 — Endocrinologie & Diabétologie
+Objectif du bloc
+Comprendre les principales pathologies endocriniennes rencontrées en préhospitalier, reconnaître rapidement les déséquilibres métaboliques, évaluer leur gravité et participer efficacement à leur prise en charge.
+
+Les maladies endocriniennes peuvent évoluer progressivement ou provoquer des urgences vitales. L'ambulancier doit être capable d'identifier les signes d'alerte, d'effectuer les contrôles nécessaires et de transmettre un bilan précis.
+🍬 Parcours 66 — Hypoglycémie
+Sous-titre
+Quand le cerveau manque de carburant.
+Objectif
+Comprendre les mécanismes de l'hypoglycémie, reconnaître rapidement ses manifestations et assurer une prise en charge sécurisée.
+Compétences développées
+Comprendre le rôle du glucose.
+Identifier une hypoglycémie.
+Réaliser une glycémie capillaire.
+Évaluer la gravité.
+Adapter la surveillance.
+Difficulté
+🟢 Débutant
+Durée
+≈ 90 minutes
+Les 8 leçons
+Leçon 1 — Le glucose
+Source d'énergie
+Fonction cérébrale
+Régulation
+Leçon 2 — L'insuline
+Production
+Fonction
+Équilibre glycémique
+Leçon 3 — Causes d'hypoglycémie
+Surdosage d'insuline
+Repas insuffisant
+Effort physique
+Consommation d'alcool
+Leçon 4 — Les signes cliniques
+Sueurs
+Tremblements
+Faim
+Confusion
+Troubles du comportement
+Leçon 5 — Les formes graves
+Convulsions
+Perte de connaissance
+Coma
+Leçon 6 — La glycémie capillaire
+Matériel
+Technique
+Valeurs normales
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient diabétique retrouvé désorienté dans un supermarché.
+Le joueur doit :
+suspecter une hypoglycémie ;
+contrôler la glycémie ;
+assurer la surveillance ;
+transmettre un bilan structuré.
+Récompense
+🏅 Badge
+Gardien du Glucose
+🍭 Parcours 67 — Hyperglycémie
+Sous-titre
+Quand le sucre devient un danger silencieux.
+Objectif
+Reconnaître une hyperglycémie et comprendre ses complications.
+Compétences
+Comprendre l'hyperglycémie.
+Identifier les symptômes.
+Différencier les urgences diabétiques.
+Réaliser une surveillance adaptée.
+Les 8 leçons
+Définition
+Les causes
+Les signes cliniques
+Déshydratation
+Glycémie capillaire
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Patient diabétique présentant une soif intense, une fatigue importante et des glycémies très élevées.
+Récompense
+🏅 Badge
+Surveillance Glycémique
+🧪 Parcours 68 — Acidocétose diabétique
+Sous-titre
+Une urgence métabolique à reconnaître rapidement.
+Objectif
+Comprendre les mécanismes de l'acidocétose diabétique et identifier les signes de gravité.
+Compétences
+Comprendre la production des corps cétoniques.
+Reconnaître les signes cliniques.
+Identifier les facteurs déclenchants.
+Prioriser le transport.
+Les 8 leçons
+Leçon 1 — Physiopathologie
+Leçon 2 — Corps cétoniques
+Leçon 3 — Déshydratation sévère
+Leçon 4 — Respiration de Kussmaul
+Leçon 5 — Haleine cétonique
+Leçon 6 — Complications
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Jeune adulte diabétique présentant une respiration ample, une haleine fruitée et une altération progressive de la conscience.
+Récompense
+🏅 Badge
+Expert Acidocétose
+🌊 Parcours 69 — Syndrome hyperosmolaire
+Sous-titre
+Une urgence souvent méconnue.
+Objectif
+Reconnaître un syndrome hyperosmolaire hyperglycémique et distinguer cette urgence de l'acidocétose.
+Compétences
+Identifier les patients à risque.
+Comprendre les différences entre les deux urgences.
+Évaluer la déshydratation.
+Adapter la surveillance.
+Les 8 leçons
+Définition
+Physiopathologie
+Facteurs favorisants
+Signes neurologiques
+Déshydratation sévère
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Patient âgé retrouvé confus après plusieurs jours de fièvre et de faible hydratation.
+Récompense
+🏅 Badge
+Hyperosmolarité
+🧬 Parcours 70 — Pathologies endocriniennes fréquentes
+Sous-titre
+Quand les hormones influencent l'urgence.
+Objectif
+Découvrir les principales maladies endocriniennes pouvant modifier une prise en charge préhospitalière.
+Compétences
+Comprendre le rôle des hormones.
+Identifier certaines pathologies endocriniennes.
+Reconnaître leurs conséquences cliniques.
+Adapter le bilan.
+Les 8 leçons
+Leçon 1 — Le système endocrinien
+Hypophyse
+Thyroïde
+Surrénales
+Pancréas
+Leçon 2 — Hyperthyroïdie
+Signes
+Risques
+Leçon 3 — Hypothyroïdie
+Présentation clinique
+Complications
+Leçon 4 — Insuffisance surrénalienne
+Causes
+Crise aiguë
+Leçon 5 — Syndrome de Cushing
+Manifestations
+Retentissement
+Leçon 6 — Maladie d'Addison
+Signes d'alerte
+Prise en charge
+Leçon 7 — Cas cliniques
+Le joueur compare plusieurs situations endocriniennes afin d'identifier les éléments orientant le bilan.
+Leçon 8 — Synthèse
+Boss Final
+Une garde virtuelle présente cinq patients souffrant de troubles endocriniens différents.
+Le joueur doit :
+reconnaître les symptômes principaux ;
+choisir les constantes pertinentes à contrôler ;
+distinguer une urgence d'une situation stable ;
+transmettre un bilan complet au médecin régulateur.
+Récompenses
+🏅 Badge Maître des Hormones
+📦 Coffre Platine
+⭐ +2 500 XP
+Déblocage du Bloc 15 – Infectiologie avancée.
+🎯 Fin du Bloc 14
+À l'issue de ce bloc, l'apprenant est capable d'identifier les principales urgences métaboliques et endocriniennes, d'en comprendre les mécanismes, de reconnaître leurs manifestations cliniques et d'assurer une prise en charge préhospitalière adaptée.🦠 BLOC 15 — Infectiologie avancée
+Objectif du bloc
+Comprendre les principales infections graves rencontrées en préhospitalier, reconnaître les signes de sepsis et de choc septique, appliquer les mesures de protection adaptées et participer efficacement à la prise en charge des patients infectieux.
+
+🦠 Parcours 71 — Le Sepsis
+Sous-titre
+Quand une infection devient une urgence vitale.
+Objectif
+Comprendre le sepsis, reconnaître ses premiers signes et mesurer l'importance d'une prise en charge rapide.
+Compétences développées
+Comprendre la réponse inflammatoire.
+Identifier un sepsis.
+Reconnaître les facteurs de risque.
+Réaliser un bilan ciblé.
+Prioriser le transport.
+Difficulté
+🟡 Intermédiaire
+Durée
+≈ 95 minutes
+Les 8 leçons
+Leçon 1 — Qu'est-ce qu'une infection ?
+Virus
+Bactéries
+Champignons
+Parasites
+Leçon 2 — Réponse immunitaire
+Inflammation
+Défenses naturelles
+Cytokines
+Leçon 3 — Définition du sepsis
+Infection
+Dysfonction d'organe
+Urgence médicale
+Leçon 4 — Signes d'alerte
+Fièvre
+Hypothermie
+Tachycardie
+Tachypnée
+Altération neurologique
+Leçon 5 — Les patients à risque
+Personnes âgées
+Immunodéprimés
+Diabétiques
+Nourrissons
+Leçon 6 — Bilan préhospitalier
+Constantes
+Recherche du foyer infectieux
+Transmission
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient de 81 ans présentant de la fièvre, une confusion brutale et une hypotension.
+Le joueur doit reconnaître un sepsis probable et transmettre une alerte adaptée.
+Récompense
+🏅 Badge
+Détecteur de Sepsis
+🩸 Parcours 72 — Choc septique
+Sous-titre
+La complication la plus grave du sepsis.
+Objectif
+Reconnaître rapidement un choc septique et comprendre les conséquences sur les organes.
+Compétences
+Comprendre le choc septique.
+Identifier les signes de gravité.
+Évaluer la perfusion.
+Adapter la surveillance.
+Les 8 leçons
+Physiopathologie
+Défaillance circulatoire
+Défaillance multiviscérale
+Hypotension persistante
+Lactates (notions)
+Surveillance
+Cas pratiques
+Synthèse
+Boss
+Patient avec une infection pulmonaire évoluant vers un état de choc.
+Récompense
+🏅 Badge
+Choc Septique
+🫁 Parcours 73 — Infections respiratoires
+Sous-titre
+Des infections fréquentes pouvant devenir graves.
+Objectif
+Identifier les principales infections respiratoires rencontrées en préhospitalier.
+Compétences
+Différencier les infections hautes et basses.
+Reconnaître une pneumonie sévère.
+Identifier les signes de gravité.
+Adapter les mesures de protection.
+Les 8 leçons
+Leçon 1 — Rhinopharyngite
+Leçon 2 — Grippe
+Leçon 3 — COVID-19
+Leçon 4 — Pneumonie
+Leçon 5 — Tuberculose
+Leçon 6 — Isolement respiratoire
+Leçon 7 — Cas cliniques
+Leçon 8 — Synthèse
+Boss
+Patient présentant une détresse respiratoire avec forte fièvre et suspicion de pneumonie.
+Récompense
+🏅 Badge
+Protection Respiratoire
+🦠 Parcours 74 — Infections digestives
+Sous-titre
+Quand une simple gastro-entérite peut devenir une urgence.
+Objectif
+Comprendre les infections digestives et leurs complications potentielles.
+Compétences
+Identifier une gastro-entérite.
+Évaluer la déshydratation.
+Reconnaître les signes de gravité.
+Adapter la surveillance.
+Les 8 leçons
+Les infections digestives
+Gastro-entérite
+Déshydratation
+Vomissements
+Diarrhées sévères
+Mesures d'hygiène
+Cas pratiques
+Synthèse
+Boss
+Enfant de 3 ans présentant des diarrhées abondantes, des vomissements et des signes de déshydratation.
+Récompense
+🏅 Badge
+Hydratation Prioritaire
+🌍 Parcours 75 — Maladies infectieuses émergentes
+Sous-titre
+Se préparer aux risques infectieux d'aujourd'hui et de demain.
+Objectif
+Comprendre les principes généraux des maladies infectieuses émergentes et les mesures de protection des professionnels de santé.
+Compétences
+Identifier une situation à risque infectieux.
+Appliquer les précautions adaptées.
+Comprendre les circuits d'alerte.
+Collaborer avec les autorités sanitaires.
+Les 8 leçons
+Leçon 1 — Qu'est-ce qu'une maladie émergente ?
+Leçon 2 — Modes de transmission
+Contact
+Gouttelettes
+Aérienne
+Vectorielle
+Leçon 3 — Les équipements de protection
+Gants
+Masques
+Lunettes
+Surblouses
+Leçon 4 — Isolement des patients
+Leçon 5 — Décontamination du matériel
+Leçon 6 — Signalement et veille sanitaire
+Leçon 7 — Études de cas
+Scénarios inspirés de différentes situations épidémiques afin d'appliquer les principes généraux de protection, sans se limiter à une maladie particulière.
+Leçon 8 — Synthèse
+Boss Final
+Une journée de garde comprend plusieurs patients présentant des tableaux infectieux différents.
+Le joueur doit :
+identifier le niveau de risque infectieux ;
+choisir les équipements de protection adaptés ;
+appliquer les précautions appropriées ;
+transmettre les informations utiles au SAMU et à l'établissement receveur.
+Récompenses
+🏅 Badge Expert Infectiologie
+📦 Coffre Diamant
+⭐ +3 000 XP
+🏆 Déblocage du LOT 4 – Traumatologie avancée
+🎯 Fin du Bloc 15
+À l'issue de ce bloc, l'apprenant est capable de reconnaître les infections graves, d'identifier un sepsis ou un choc septique, d'appliquer les précautions adaptées et de contribuer à une prise en charge préhospitalière sécurisée.

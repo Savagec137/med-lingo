@@ -3,16 +3,527 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l04",
-  "title": "Préfixes position",
+  "title": "Les suffixes",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Les suffixes médicaux"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l03"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l03"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l03-q121",
+      "difficulty": "easy",
+      "question": "Le suffixe -ite signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q121",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q121-answer-01",
+          "text": "Inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q121-answer-02",
+          "text": "Douleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q121-answer-03",
+          "text": "Étude",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q121-answer-04",
+          "text": "Ablation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q121-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l03-q122",
+      "difficulty": "easy",
+      "question": "Le suffixe -algie correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q122",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q122-answer-01",
+          "text": "Douleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q122-answer-02",
+          "text": "Inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q122-answer-03",
+          "text": "Maladie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q122-answer-04",
+          "text": "Examen",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q122-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l03-q123",
+      "difficulty": "easy",
+      "question": "Le suffixe -logie désigne l'étude d'un domaine.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q123",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q123-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q123-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q123-true"
+    },
+    {
+      "id": "import-b01-p02-l03-q124",
+      "difficulty": "easy",
+      "question": "Le suffixe -ectomie signifie inflammation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q124",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q124-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q124-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q124-false"
+    },
+    {
+      "id": "import-b01-p02-l03-q125",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q125",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q125-pair-01",
+          "text": "-ite",
+          "match": "Inflammation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q125-pair-02",
+          "text": "-algie",
+          "match": "Douleur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q125-pair-03",
+          "text": "-pathie",
+          "match": "Maladie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q125-pair-04",
+          "text": "-logie",
+          "match": "Étude",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q125-pair-05",
+          "text": "-ectomie",
+          "match": "Ablation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l03-q125-pair-01",
+        "import-b01-p02-l03-q125-pair-02",
+        "import-b01-p02-l03-q125-pair-03",
+        "import-b01-p02-l03-q125-pair-04",
+        "import-b01-p02-l03-q125-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l03-q126",
+      "difficulty": "medium",
+      "question": "Le suffixe ______ désigne une douleur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q126",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "algie"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q126-accepted-01",
+          "text": "algie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l03-q126-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l03-q127",
+      "difficulty": "hard",
+      "question": "Une gastrite est :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q127",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q127-answer-01",
+          "text": "Une inflammation de l'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q127-answer-02",
+          "text": "Une douleur de l'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q127-answer-03",
+          "text": "Une ablation de l'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q127-answer-04",
+          "text": "Une étude de l'estomac",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q127-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l03-q128",
+      "difficulty": "hard",
+      "question": "Une coloscopie est :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q128",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q128-answer-01",
+          "text": "Un examen visuel du côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q128-answer-02",
+          "text": "Une chirurgie du côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q128-answer-03",
+          "text": "Une maladie du côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q128-answer-04",
+          "text": "Une douleur du côlon",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q128-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l03-q129",
+      "difficulty": "hard",
+      "question": "Le médecin évoque une arthralgie. Quelle est la bonne interprétation ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q129",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q129-answer-01",
+          "text": "Une douleur articulaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q129-answer-02",
+          "text": "Une inflammation articulaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q129-answer-03",
+          "text": "Une fracture",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l03-q129-answer-04",
+          "text": "Une chirurgie articulaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l03-q129-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l03-q130",
+      "difficulty": "medium",
+      "question": "Identifie les éléments du mot 'arthr-algie'.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q130",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 2
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l03-q130-step-01",
+          "text": "Racine",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l03-q130-step-02",
+          "text": "Suffixe",
+          "explanation": "",
+          "sequenceRank": 2
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l03-q130-step-01",
+        "import-b01-p02-l03-q130-step-02"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L10",
+  "lesson_title": "Révision générale du parcours 1",
+  "knowledge": [
+    {
+      "id": "K059",
+      "title": "Position anatomique",
+      "content": "Toutes les descriptions anatomiques utilisent la position anatomique comme référence."
+    },
+    {
+      "id": "K060",
+      "title": "Plans anatomiques",
+      "content": "Les plans anatomiques permettent de décrire des coupes du corps."
+    },
+    {
+      "id": "K061",
+      "title": "Régions anatomiques",
+      "content": "Le corps est divisé en régions permettant une localisation précise."
+    },
+    {
+      "id": "K062",
+      "title": "Cavités",
+      "content": "Les cavités protègent les principaux organes."
+    },
+    {
+      "id": "K063",
+      "title": "Systèmes",
+      "content": "Les systèmes assurent les grandes fonctions de l'organisme."
+    },
+    {
+      "id": "K064",
+      "title": "Organisation",
+      "content": "Le corps humain suit une organisation hiérarchique allant de la cellule à l'organisme."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q091",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel plan sépare le corps en une partie droite et une partie gauche ?",
+      "options": [
+        "Plan sagittal",
+        "Plan frontal",
+        "Plan transversal",
+        "Plan oblique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q092",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe est situé dans la cavité thoracique ?",
+      "options": [
+        "Le cœur",
+        "Le foie",
+        "La vessie",
+        "Le rectum"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q093",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le diaphragme sépare le thorax de l'abdomen.",
+      "answer": true
+    },
+    {
+      "id": "Q094",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le cerveau est situé dans la cavité abdominale.",
+      "answer": false
+    },
+    {
+      "id": "Q095",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Thorax",
+          "Poumons"
+        ],
+        [
+          "Crâne",
+          "Encéphale"
+        ],
+        [
+          "Bassin",
+          "Vessie"
+        ],
+        [
+          "Abdomen",
+          "Foie"
+        ]
+      ]
+    },
+    {
+      "id": "Q096",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le ______ protège l'encéphale.",
+      "answers": [
+        "crâne"
+      ]
+    },
+    {
+      "id": "Q097",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les niveaux d'organisation dans le bon ordre.",
+      "solution": [
+        "Cellule",
+        "Tissu",
+        "Organe",
+        "Système",
+        "Organisme"
+      ]
+    },
+    {
+      "id": "Q098",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur l'abdomen.",
+      "target": "abdomen"
+    },
+    {
+      "id": "Q099",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel terme désigne une structure située loin du point d'attache d'un membre ?",
+      "options": [
+        "Distal",
+        "Proximal",
+        "Médial",
+        "Supérieur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q100",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'une transmission au SAMU, quel est l'intérêt principal d'utiliser une terminologie anatomique précise ?",
+      "options": [
+        "Localiser précisément une lésion",
+        "Réduire le temps de transport",
+        "Éviter le bilan clinique",
+        "Remplacer les constantes"
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -3,16 +3,1035 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l06",
-  "title": "Suffixes pathologie",
+  "title": "Décrypter un diagnostic",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 15,
+  "level": 1,
+  "xp": 60,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Les principaux termes cliniques",
+    "Les principaux examens médicaux"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l08",
+    "import.json-xlsx.b01.p02.l09"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l05"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l08-q171",
+      "difficulty": "easy",
+      "question": "La dyspnée correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q171",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q171-answer-01",
+          "text": "Une difficulté respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q171-answer-02",
+          "text": "Une douleur thoracique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q171-answer-03",
+          "text": "Une perte de sang",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q171-answer-04",
+          "text": "Une fracture",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q171-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l08-q172",
+      "difficulty": "easy",
+      "question": "L'apnée correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q172",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q172-answer-01",
+          "text": "Un arrêt temporaire de la respiration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q172-answer-02",
+          "text": "Une respiration rapide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q172-answer-03",
+          "text": "Une respiration lente",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q172-answer-04",
+          "text": "Une toux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q172-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l08-q173",
+      "difficulty": "easy",
+      "question": "La cyanose se traduit par une coloration bleuâtre.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q173",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q173-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q173-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q173-true"
+    },
+    {
+      "id": "import-b01-p02-l08-q174",
+      "difficulty": "easy",
+      "question": "Un œdème correspond à une fracture.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q174",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q174-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q174-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q174-false"
+    },
+    {
+      "id": "import-b01-p02-l08-q175",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q175",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q175-pair-01",
+          "text": "Dyspnée",
+          "match": "Difficulté respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q175-pair-02",
+          "text": "Apnée",
+          "match": "Arrêt respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q175-pair-03",
+          "text": "Cyanose",
+          "match": "Coloration bleutée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q175-pair-04",
+          "text": "Œdème",
+          "match": "Accumulation de liquide",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q175-pair-05",
+          "text": "Hémorragie",
+          "match": "Perte de sang",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l08-q175-pair-01",
+        "import-b01-p02-l08-q175-pair-02",
+        "import-b01-p02-l08-q175-pair-03",
+        "import-b01-p02-l08-q175-pair-04",
+        "import-b01-p02-l08-q175-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l08-q176",
+      "difficulty": "medium",
+      "question": "Une coloration bleuâtre des lèvres est appelée ______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q176",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "cyanose"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q176-accepted-01",
+          "text": "cyanose",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l08-q176-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l08-q177",
+      "difficulty": "hard",
+      "question": "Quel terme décrit une accumulation de liquide dans les tissus ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q177",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q177-answer-01",
+          "text": "Œdème",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q177-answer-02",
+          "text": "Hématome",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q177-answer-03",
+          "text": "Plaie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q177-answer-04",
+          "text": "Luxation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q177-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l08-q178",
+      "difficulty": "hard",
+      "question": "À votre arrivée, le patient présente une coloration bleutée des lèvres et des extrémités. Quel terme médical utilisez-vous ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q178",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q178-answer-01",
+          "text": "Cyanose",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q178-answer-02",
+          "text": "Érythème",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q178-answer-03",
+          "text": "Œdème",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q178-answer-04",
+          "text": "Ecchymose",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q178-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l08-q179",
+      "difficulty": "hard",
+      "question": "Quel terme désigne une perte de sang provenant d'un vaisseau ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q179",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q179-answer-01",
+          "text": "Hémorragie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q179-answer-02",
+          "text": "Dyspnée",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q179-answer-03",
+          "text": "Œdème",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l08-q179-answer-04",
+          "text": "Apnée",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l08-q179-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l08-q180",
+      "difficulty": "medium",
+      "question": "Classe les événements respiratoires du plus favorable au plus critique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q180",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l08-q180-step-01",
+          "text": "Normopnée",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l08-q180-step-02",
+          "text": "Dyspnée",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-l08-q180-step-03",
+          "text": "Apnée",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l08-q180-step-01",
+        "import-b01-p02-l08-q180-step-02",
+        "import-b01-p02-l08-q180-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l09-q181",
+      "difficulty": "easy",
+      "question": "Quel examen enregistre l'activité électrique du cœur ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q181",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q181-answer-01",
+          "text": "ECG",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q181-answer-02",
+          "text": "IRM",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q181-answer-03",
+          "text": "Scanner",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q181-answer-04",
+          "text": "Échographie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q181-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l09-q182",
+      "difficulty": "easy",
+      "question": "Quel examen utilise les ultrasons ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q182",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q182-answer-01",
+          "text": "Échographie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q182-answer-02",
+          "text": "Radiographie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q182-answer-03",
+          "text": "Scanner",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q182-answer-04",
+          "text": "ECG",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q182-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l09-q183",
+      "difficulty": "easy",
+      "question": "Le scanner utilise les rayons X.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q183",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q183-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q183-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q183-true"
+    },
+    {
+      "id": "import-b01-p02-l09-q184",
+      "difficulty": "easy",
+      "question": "L'IRM utilise des rayons X.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q184",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q184-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q184-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q184-false"
+    },
+    {
+      "id": "import-b01-p02-l09-q185",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q185",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 5
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q185-pair-01",
+          "text": "Radiographie",
+          "match": "Os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q185-pair-02",
+          "text": "Scanner",
+          "match": "Images en coupe",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q185-pair-03",
+          "text": "IRM",
+          "match": "Champ magnétique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q185-pair-04",
+          "text": "Échographie",
+          "match": "Ultrasons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q185-pair-05",
+          "text": "ECG",
+          "match": "Activité électrique du cœur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l09-q185-pair-01",
+        "import-b01-p02-l09-q185-pair-02",
+        "import-b01-p02-l09-q185-pair-03",
+        "import-b01-p02-l09-q185-pair-04",
+        "import-b01-p02-l09-q185-pair-05"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l09-q186",
+      "difficulty": "medium",
+      "question": "L'______ utilise les ultrasons.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q186",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "échographie"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q186-accepted-01",
+          "text": "échographie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l09-q186-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l09-q187",
+      "difficulty": "hard",
+      "question": "Quel examen est abrégé ECG ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q187",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q187-answer-01",
+          "text": "Électrocardiogramme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q187-answer-02",
+          "text": "Électroencéphalogramme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q187-answer-03",
+          "text": "Échocardiographie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q187-answer-04",
+          "text": "Électromyogramme",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q187-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l09-q188",
+      "difficulty": "hard",
+      "question": "Le médecin demande un ECG après une douleur thoracique. Quel est l'objectif principal de cet examen ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q188",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q188-answer-01",
+          "text": "Analyser l'activité électrique du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q188-answer-02",
+          "text": "Visualiser une fracture",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q188-answer-03",
+          "text": "Observer les poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q188-answer-04",
+          "text": "Mesurer la glycémie",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q188-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l09-q189",
+      "difficulty": "medium",
+      "question": "Associe chaque examen à sa technologie.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q189",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q189-step-01",
+          "text": "Échographie → Ultrasons",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l09-q189-step-02",
+          "text": "IRM → Champ magnétique",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p02-l09-q189-step-03",
+          "text": "Scanner → Rayons X",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p02-l09-q189-step-04",
+          "text": "ECG → Activité électrique",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l09-q189-step-01",
+        "import-b01-p02-l09-q189-step-02",
+        "import-b01-p02-l09-q189-step-03",
+        "import-b01-p02-l09-q189-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l09-q190",
+      "difficulty": "medium",
+      "question": "Le choix d'un examen dépend de la situation clinique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l09"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l09"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L09",
+        "originalQuestionId": "Q190",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l09-q190-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l09-q190-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l09-q190-true"
+    }
+  ]
 }

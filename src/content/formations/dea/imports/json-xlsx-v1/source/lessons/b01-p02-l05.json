@@ -1,0 +1,164 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L05",
+  "lesson_title": "Les abréviations médicales courantes",
+  "knowledge": [
+    {
+      "id": "K089",
+      "title": "TA",
+      "content": "TA signifie tension artérielle."
+    },
+    {
+      "id": "K090",
+      "title": "FC",
+      "content": "FC signifie fréquence cardiaque."
+    },
+    {
+      "id": "K091",
+      "title": "FR",
+      "content": "FR signifie fréquence respiratoire."
+    },
+    {
+      "id": "K092",
+      "title": "SpO₂",
+      "content": "SpO₂ désigne la saturation pulsée en oxygène."
+    },
+    {
+      "id": "K093",
+      "title": "GCS",
+      "content": "GCS signifie Glasgow Coma Scale, utilisée pour évaluer le niveau de conscience."
+    },
+    {
+      "id": "K094",
+      "title": "Bilan",
+      "content": "Les abréviations permettent des transmissions rapides et normalisées."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q141",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "TA signifie :",
+      "options": [
+        "Tension artérielle",
+        "Température axillaire",
+        "Traumatisme abdominal",
+        "Temps d'arrêt"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q142",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "FC correspond à :",
+      "options": [
+        "Fréquence cardiaque",
+        "Fréquence capillaire",
+        "Fonction cardiaque",
+        "Force circulatoire"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q143",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "FR signifie fréquence respiratoire.",
+      "answer": true
+    },
+    {
+      "id": "Q144",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "GCS mesure la glycémie.",
+      "answer": false
+    },
+    {
+      "id": "Q145",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "TA",
+          "Tension artérielle"
+        ],
+        [
+          "FC",
+          "Fréquence cardiaque"
+        ],
+        [
+          "FR",
+          "Fréquence respiratoire"
+        ],
+        [
+          "SpO₂",
+          "Saturation en oxygène"
+        ],
+        [
+          "GCS",
+          "Niveau de conscience"
+        ]
+      ]
+    },
+    {
+      "id": "Q146",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La ______ mesure le pourcentage d'oxygène transporté par l'hémoglobine.",
+      "answers": [
+        "SpO₂"
+      ]
+    },
+    {
+      "id": "Q147",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quelle constante permet d'évaluer la fréquence des respirations ?",
+      "options": [
+        "FR",
+        "FC",
+        "TA",
+        "GCS"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q148",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe ces constantes dans l'ordre habituel d'un bilan primaire.",
+      "solution": [
+        "Conscience",
+        "FR",
+        "FC",
+        "TA",
+        "SpO₂"
+      ]
+    },
+    {
+      "id": "Q149",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le bilan mentionne : FC 130/min, FR 28/min. Que signifient ces deux abréviations ?",
+      "options": [
+        "Fréquence cardiaque et fréquence respiratoire",
+        "Fonction cardiaque et fonction respiratoire",
+        "Force circulatoire et fréquence respiratoire",
+        "Fréquence cardiaque et tension artérielle"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q150",
+      "type": "true_false",
+      "difficulty": 2,
+      "question": "Les abréviations médicales permettent de standardiser les transmissions.",
+      "answer": true
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 {
   "schemaVersion": "1.0",
-  "formations": ["dea"],
+  "formations": [
+    "dea"
+  ],
   "lessonRegistry": [
     "dea-p01-l01",
     "dea-p01-l02",
@@ -13,7 +15,33 @@
     "dea-p01-l09",
     "dea-p01-l10",
     "dea-p01-quiz",
-    "dea-p01-boss"
+    "dea-p01-boss",
+    "dea-p02-l01",
+    "dea-p02-l02",
+    "dea-p02-l03",
+    "dea-p02-l04",
+    "dea-p02-l05",
+    "dea-p02-l06",
+    "dea-p02-l07",
+    "dea-p02-l08",
+    "dea-p03-l01",
+    "dea-p03-l02",
+    "dea-p03-l03",
+    "dea-p03-l04",
+    "dea-p03-l05",
+    "dea-p03-l06",
+    "dea-p03-l08",
+    "dea-p05-l08",
+    "dea-p06-l08",
+    "dea-p07-l08",
+    "dea-p08-l08",
+    "dea-p09-l08",
+    "dea-p10-l08",
+    "dea-p18-l08",
+    "dea-p02-boss",
+    "dea-p03-boss",
+    "dea-p18-boss",
+    "dea-p03-l07"
   ],
   "supportedExerciseTypes": [
     "flashcard",
@@ -27,13 +55,17 @@
     "anecdote",
     "illustration",
     "quiz",
-    "boss"
+    "boss",
+    "fill_blank",
+    "anatomy_location"
   ],
   "competencies": [
     {
       "id": "anatomy.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "foundations",
       "competence": "Définition de l'anatomie",
@@ -47,14 +79,26 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["anatomie", "bases", "dea"],
+      "tags": [
+        "anatomie",
+        "bases",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13],
+      "sourcePages": [
+        13
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "Q001",
         "dea-p1-l1-mcq-01",
@@ -131,11 +175,16 @@
     {
       "id": "anatomy.dea-relevance",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "anatomical-landmarks",
       "competence": "Intérêt des repères anatomiques pour le DEA",
-      "prerequisites": ["anatomy.definition", "anatomy.anatomical-landmarks"],
+      "prerequisites": [
+        "anatomy.definition",
+        "anatomy.anatomical-landmarks"
+      ],
       "learningObjectives": [
         "Expliquer l'intérêt d'identifier précisément un organe ou une région anatomique.",
         "Relier les repères anatomiques à la transmission d'un bilan exploitable pour le médecin."
@@ -145,14 +194,28 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "clinical_case"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "clinical_case"
+        ],
         "status": "configured"
       },
-      "tags": ["anatomie", "repères-anatomiques", "transmission", "dea"],
+      "tags": [
+        "anatomie",
+        "repères-anatomiques",
+        "transmission",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13],
+      "sourcePages": [
+        13
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01", "dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l01",
+        "dea-p01-l09"
+      ],
       "questionIds": [
         "CAS-001",
         "dea-p1-l1-mcq-04",
@@ -197,11 +260,15 @@
     {
       "id": "physiology.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "physiology",
       "subdomain": "foundations",
       "competence": "Définition de la physiologie",
-      "prerequisites": ["anatomy.definition"],
+      "prerequisites": [
+        "anatomy.definition"
+      ],
       "learningObjectives": [
         "Définir la physiologie comme l'étude du fonctionnement normal des différents appareils.",
         "Différencier le fonctionnement normal de l'organisation anatomique."
@@ -211,14 +278,27 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["physiologie", "bases", "appareils", "dea"],
+      "tags": [
+        "physiologie",
+        "bases",
+        "appareils",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13],
+      "sourcePages": [
+        13
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "Q002",
         "VF003",
@@ -263,11 +343,16 @@
     {
       "id": "pathology.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "pathology",
       "subdomain": "foundations",
       "competence": "Définition de la pathologie et du processus pathologique",
-      "prerequisites": ["anatomy.definition", "physiology.definition"],
+      "prerequisites": [
+        "anatomy.definition",
+        "physiology.definition"
+      ],
       "learningObjectives": [
         "Différencier l'état de santé et la maladie selon le support.",
         "Identifier les étapes générales d'un processus pathologique : facteurs, mécanismes physiopathologiques, lésions, conséquences physiologiques et signes cliniques.",
@@ -278,14 +363,30 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "ordering"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "ordering"
+        ],
         "status": "configured"
       },
-      "tags": ["pathologie", "physiopathologie", "lésion", "bases", "dea"],
+      "tags": [
+        "pathologie",
+        "physiopathologie",
+        "lésion",
+        "bases",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [7, 8, 9],
+      "sourcePages": [
+        7,
+        8,
+        9
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "dea-p1-l1-mcq-03",
         "dea-p1-l1-mcq-05",
@@ -336,7 +437,9 @@
     {
       "id": "body.cell",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "body-organization",
       "competence": "La cellule dans l'organisation du corps humain",
@@ -350,14 +453,28 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["cellule", "organisation-du-corps", "bases", "dea"],
+      "tags": [
+        "cellule",
+        "organisation-du-corps",
+        "bases",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15, 16],
+      "sourcePages": [
+        15,
+        16
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "Q003",
         "VF004",
@@ -386,11 +503,15 @@
     {
       "id": "body.tissue",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "body-organization",
       "competence": "Le tissu dans l'organisation du corps humain",
-      "prerequisites": ["body.cell"],
+      "prerequisites": [
+        "body.cell"
+      ],
       "learningObjectives": [
         "Situer le tissu dans la hiérarchie cellule, tissu, organe, appareil ou système, organisme.",
         "Expliquer que les cellules sont organisées en tissus selon le support."
@@ -400,14 +521,27 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "ordering"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "ordering"
+        ],
         "status": "configured"
       },
-      "tags": ["tissu", "cellule", "organisation-du-corps", "dea"],
+      "tags": [
+        "tissu",
+        "cellule",
+        "organisation-du-corps",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15],
+      "sourcePages": [
+        15
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "VF002",
         "ASSOCIATION-001",
@@ -440,11 +574,15 @@
     {
       "id": "body.organ",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "body-organization",
       "competence": "L'organe dans l'organisation du corps humain",
-      "prerequisites": ["body.tissue"],
+      "prerequisites": [
+        "body.tissue"
+      ],
       "learningObjectives": [
         "Situer l'organe dans la hiérarchie de l'organisation du corps humain.",
         "Identifier que l'anatomie désigne et décrit les organes constituant le corps humain."
@@ -454,14 +592,28 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["organe", "anatomie", "organisation-du-corps", "dea"],
+      "tags": [
+        "organe",
+        "anatomie",
+        "organisation-du-corps",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13, 15],
+      "sourcePages": [
+        13,
+        15
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "VF001",
         "VF002",
@@ -519,11 +671,15 @@
     {
       "id": "body.system",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "body-organization",
       "competence": "Appareils et systèmes du corps humain",
-      "prerequisites": ["body.organ"],
+      "prerequisites": [
+        "body.organ"
+      ],
       "learningObjectives": [
         "Situer un appareil ou système dans l'organisation du corps humain.",
         "Associer les principaux appareils présentés à leur fonction générale."
@@ -533,14 +689,29 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["appareil", "système", "fonctions-vitales", "organisation-du-corps", "dea"],
+      "tags": [
+        "appareil",
+        "système",
+        "fonctions-vitales",
+        "organisation-du-corps",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15, 16],
+      "sourcePages": [
+        15,
+        16
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "ASSOCIATION-001",
         "GLISSER-DEPOSER-001",
@@ -566,11 +737,15 @@
     {
       "id": "anatomy.anatomical-landmarks",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "anatomical-landmarks",
       "competence": "Régions et repères anatomiques",
-      "prerequisites": ["anatomy.definition"],
+      "prerequisites": [
+        "anatomy.definition"
+      ],
       "learningObjectives": [
         "Identifier l'utilité des régions anatomiques pour désigner une zone du corps.",
         "Employer des repères anatomiques pour localiser une information lors d'un bilan."
@@ -580,14 +755,28 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "matching", "clinical_case"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "matching",
+          "clinical_case"
+        ],
         "status": "configured"
       },
-      "tags": ["anatomie", "régions-anatomiques", "repères-anatomiques", "transmission", "dea"],
+      "tags": [
+        "anatomie",
+        "régions-anatomiques",
+        "repères-anatomiques",
+        "transmission",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13],
+      "sourcePages": [
+        13
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "CAS-001",
         "dea-p1-l1-mcq-04",
@@ -622,7 +811,9 @@
     {
       "id": "medical-vocabulary.radical",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "medical-terminology",
       "subdomain": "word-building",
       "competence": "Le radical dans la construction d'un mot médical",
@@ -636,14 +827,28 @@
       "masteryCriteria": {
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"],
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ],
         "status": "configured"
       },
-      "tags": ["vocabulaire-médical", "radical", "terminologie", "dea"],
+      "tags": [
+        "vocabulaire-médical",
+        "radical",
+        "terminologie",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [4, 6],
+      "sourcePages": [
+        4,
+        6
+      ],
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [],
       "contentIds": [],
       "sourceConfirmationRequired": false
@@ -651,7 +856,9 @@
     {
       "id": "dea.p01.l01.anatomy-foundations",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "foundations",
       "competence": "Comprendre les bases de l'anatomie humaine.",
@@ -679,12 +886,19 @@
         ],
         "status": "configured"
       },
-      "tags": ["anatomie", "physiologie", "organisation-du-corps", "dea"],
+      "tags": [
+        "anatomie",
+        "physiologie",
+        "organisation-du-corps",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO - SPÉCIFICATION PÉDAGOGIQUE — dea-p01-l01",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l01",
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [
         "Q001",
         "Q002",
@@ -724,12 +938,16 @@
     {
       "id": "body.organization",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "body",
       "competence": "comprendre l’organisation générale du corps humain.",
       "prerequisites": [],
-      "learningObjectives": ["comprendre l’organisation générale du corps humain."],
+      "learningObjectives": [
+        "comprendre l’organisation générale du corps humain."
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -738,25 +956,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "organization", "dea"],
+      "tags": [
+        "body",
+        "organization",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l01",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l01"],
+      "lessonIds": [
+        "dea-p01-l01"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.cell.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "cell",
       "competence": "définir une cellule ;",
       "prerequisites": [],
-      "learningObjectives": ["définir une cellule ;"],
+      "learningObjectives": [
+        "définir une cellule ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -765,25 +993,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "cell", "dea"],
+      "tags": [
+        "body",
+        "cell",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.cell.structure",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "cell",
       "competence": "identifier ses éléments essentiels au niveau DEA ;",
       "prerequisites": [],
-      "learningObjectives": ["identifier ses éléments essentiels au niveau DEA ;"],
+      "learningObjectives": [
+        "identifier ses éléments essentiels au niveau DEA ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -792,25 +1030,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "cell", "dea"],
+      "tags": [
+        "body",
+        "cell",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.cell.function",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "cell",
       "competence": "comprendre le rôle général de la cellule ;",
       "prerequisites": [],
-      "learningObjectives": ["comprendre le rôle général de la cellule ;"],
+      "learningObjectives": [
+        "comprendre le rôle général de la cellule ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -819,25 +1067,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "cell", "dea"],
+      "tags": [
+        "body",
+        "cell",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.tissue.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "tissue",
       "competence": "définir un tissu ;",
       "prerequisites": [],
-      "learningObjectives": ["définir un tissu ;"],
+      "learningObjectives": [
+        "définir un tissu ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -846,25 +1104,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "tissue", "dea"],
+      "tags": [
+        "body",
+        "tissue",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.tissue.types",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "tissue",
       "competence": "reconnaître les grandes catégories de tissus ;",
       "prerequisites": [],
-      "learningObjectives": ["reconnaître les grandes catégories de tissus ;"],
+      "learningObjectives": [
+        "reconnaître les grandes catégories de tissus ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -873,25 +1141,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "tissue", "dea"],
+      "tags": [
+        "body",
+        "tissue",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.organization.cell-to-tissue",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organization",
       "competence": "comprendre la relation cellule → tissu.",
       "prerequisites": [],
-      "learningObjectives": ["comprendre la relation cellule → tissu."],
+      "learningObjectives": [
+        "comprendre la relation cellule → tissu."
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -900,40 +1178,62 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "organization", "dea"],
+      "tags": [
+        "body",
+        "organization",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l02",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l02"],
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.organ.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organ",
       "competence": "Définir un organe.",
       "prerequisites": [],
-      "learningObjectives": ["Définir un organe"],
+      "learningObjectives": [
+        "Définir un organe"
+      ],
       "recommendedQuestionPool": 9,
       "difficulty": "easy",
       "masteryCriteria": {
         "status": "configured",
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ]
       },
-      "tags": ["body", "organ", "dea"],
+      "tags": [
+        "body",
+        "organ",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15],
-      "sourceLocation": "dea-p01-l03",
+      "sourcePages": [
+        15
+      ],
+      "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": false,
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l03"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [
         "dea-p1-l3-mcq-01",
         "dea-p1-l3-mcq-03",
@@ -960,27 +1260,45 @@
     {
       "id": "body.organ.composition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organ",
       "competence": "Comprendre la composition d’un organe.",
-      "prerequisites": ["body.organ.definition"],
-      "learningObjectives": ["Comprendre sa composition"],
+      "prerequisites": [
+        "body.organ.definition"
+      ],
+      "learningObjectives": [
+        "Comprendre sa composition"
+      ],
       "recommendedQuestionPool": 11,
       "difficulty": "easy",
       "masteryCriteria": {
         "status": "configured",
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ]
       },
-      "tags": ["body", "organ", "dea"],
+      "tags": [
+        "body",
+        "organ",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15],
-      "sourceLocation": "dea-p01-l03",
+      "sourcePages": [
+        15
+      ],
+      "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": false,
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l03"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [
         "dea-p1-l3-mcq-01",
         "dea-p1-l3-mcq-02",
@@ -1011,27 +1329,45 @@
     {
       "id": "body.organ.function",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organ",
       "competence": "Relier un organe à la fonction générale de son appareil.",
-      "prerequisites": ["body.organ.definition"],
-      "learningObjectives": ["Comprendre son rôle"],
+      "prerequisites": [
+        "body.organ.definition"
+      ],
+      "learningObjectives": [
+        "Comprendre son rôle"
+      ],
       "recommendedQuestionPool": 28,
       "difficulty": "medium",
       "masteryCriteria": {
         "status": "configured",
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ]
       },
-      "tags": ["body", "organ", "dea"],
+      "tags": [
+        "body",
+        "organ",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [16],
-      "sourceLocation": "dea-p01-l03",
+      "sourcePages": [
+        16
+      ],
+      "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": false,
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l03"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [
         "dea-p1-l3-mcq-05",
         "dea-p1-l3-mcq-06",
@@ -1096,27 +1432,47 @@
     {
       "id": "body.organization.tissue-to-organ",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organization",
       "competence": "Différencier organe, tissu et système.",
-      "prerequisites": ["body.organ.definition"],
-      "learningObjectives": ["Différencier organe et système", "Comprendre sa composition"],
+      "prerequisites": [
+        "body.organ.definition"
+      ],
+      "learningObjectives": [
+        "Différencier organe et système",
+        "Comprendre sa composition"
+      ],
       "recommendedQuestionPool": 23,
       "difficulty": "medium",
       "masteryCriteria": {
         "status": "configured",
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ]
       },
-      "tags": ["body", "organ", "dea"],
+      "tags": [
+        "body",
+        "organ",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [15, 16],
-      "sourceLocation": "dea-p01-l03",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": false,
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l03"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [
         "dea-p1-l3-mcq-01",
         "dea-p1-l3-mcq-02",
@@ -1171,12 +1527,16 @@
     {
       "id": "body.system.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "définir un système ou appareil ;",
       "prerequisites": [],
-      "learningObjectives": ["définir un système ou appareil ;"],
+      "learningObjectives": [
+        "définir un système ou appareil ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1185,20 +1545,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.cardiovascular",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1215,20 +1583,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.respiratory",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1245,20 +1621,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.digestive",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1275,20 +1659,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.urinary",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1305,20 +1697,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.nervous",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1335,20 +1735,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.system.locomotor",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "system",
       "competence": "identifier les principaux systèmes ;",
@@ -1365,25 +1773,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "system", "dea"],
+      "tags": [
+        "body",
+        "system",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.organization.organ-to-system",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organization",
       "competence": "comprendre qu’un système regroupe plusieurs organes ;",
       "prerequisites": [],
-      "learningObjectives": ["comprendre qu’un système regroupe plusieurs organes ;"],
+      "learningObjectives": [
+        "comprendre qu’un système regroupe plusieurs organes ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1392,25 +1810,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["body", "organization", "dea"],
+      "tags": [
+        "body",
+        "organization",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l04",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l04"],
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.position.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "position",
       "competence": "décrire la position anatomique de référence ;",
       "prerequisites": [],
-      "learningObjectives": ["décrire la position anatomique de référence ;"],
+      "learningObjectives": [
+        "décrire la position anatomique de référence ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1419,25 +1847,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "position", "dea"],
+      "tags": [
+        "anatomy",
+        "position",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l05",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l05"],
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.position.posture",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "position",
       "competence": "décrire la position anatomique de référence ;",
       "prerequisites": [],
-      "learningObjectives": ["décrire la position anatomique de référence ;"],
+      "learningObjectives": [
+        "décrire la position anatomique de référence ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1446,25 +1884,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "position", "dea"],
+      "tags": [
+        "anatomy",
+        "position",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l05",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l05"],
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.position.upper-limbs",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "position",
       "competence": "identifier l’orientation du regard, des membres et des paumes.",
       "prerequisites": [],
-      "learningObjectives": ["identifier l’orientation du regard, des membres et des paumes."],
+      "learningObjectives": [
+        "identifier l’orientation du regard, des membres et des paumes."
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1473,25 +1921,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "position", "dea"],
+      "tags": [
+        "anatomy",
+        "position",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l05",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l05"],
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.position.palms",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "position",
       "competence": "identifier l’orientation du regard, des membres et des paumes.",
       "prerequisites": [],
-      "learningObjectives": ["identifier l’orientation du regard, des membres et des paumes."],
+      "learningObjectives": [
+        "identifier l’orientation du regard, des membres et des paumes."
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1500,25 +1958,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "position", "dea"],
+      "tags": [
+        "anatomy",
+        "position",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l05",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l05"],
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.position.reference-use",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "position",
       "competence": "comprendre son rôle comme référence universelle ;",
       "prerequisites": [],
-      "learningObjectives": ["comprendre son rôle comme référence universelle ;"],
+      "learningObjectives": [
+        "comprendre son rôle comme référence universelle ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1527,25 +1995,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "position", "dea"],
+      "tags": [
+        "anatomy",
+        "position",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l05",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l05"],
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.plane.definition",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "plane",
       "competence": "définir un plan anatomique ;",
       "prerequisites": [],
-      "learningObjectives": ["définir un plan anatomique ;"],
+      "learningObjectives": [
+        "définir un plan anatomique ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1554,25 +2032,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "plane", "dea"],
+      "tags": [
+        "anatomy",
+        "plane",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l06"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.plane.sagittal",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "plane",
       "competence": "distinguer sagittal, frontal et transversal ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer sagittal, frontal et transversal ;"],
+      "learningObjectives": [
+        "distinguer sagittal, frontal et transversal ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1581,25 +2069,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "plane", "dea"],
+      "tags": [
+        "anatomy",
+        "plane",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l06"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.plane.frontal",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "plane",
       "competence": "distinguer sagittal, frontal et transversal ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer sagittal, frontal et transversal ;"],
+      "learningObjectives": [
+        "distinguer sagittal, frontal et transversal ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1608,25 +2106,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "plane", "dea"],
+      "tags": [
+        "anatomy",
+        "plane",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l06"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.plane.transverse",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "plane",
       "competence": "distinguer sagittal, frontal et transversal ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer sagittal, frontal et transversal ;"],
+      "learningObjectives": [
+        "distinguer sagittal, frontal et transversal ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1635,20 +2143,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "plane", "dea"],
+      "tags": [
+        "anatomy",
+        "plane",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l06"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.plane.application",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "plane",
       "competence": "comprendre comment ces plans divisent le corps ;",
@@ -1665,25 +2181,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "plane", "dea"],
+      "tags": [
+        "anatomy",
+        "plane",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l06"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.superior",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer supérieur et inférieur ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer supérieur et inférieur ;"],
+      "learningObjectives": [
+        "distinguer supérieur et inférieur ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1692,25 +2218,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.inferior",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer supérieur et inférieur ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer supérieur et inférieur ;"],
+      "learningObjectives": [
+        "distinguer supérieur et inférieur ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1719,25 +2255,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.anterior",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer antérieur et postérieur ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer antérieur et postérieur ;"],
+      "learningObjectives": [
+        "distinguer antérieur et postérieur ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1746,25 +2292,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.posterior",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer antérieur et postérieur ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer antérieur et postérieur ;"],
+      "learningObjectives": [
+        "distinguer antérieur et postérieur ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1773,25 +2329,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.medial",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer médial et latéral ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer médial et latéral ;"],
+      "learningObjectives": [
+        "distinguer médial et latéral ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1800,25 +2366,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.lateral",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer médial et latéral ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer médial et latéral ;"],
+      "learningObjectives": [
+        "distinguer médial et latéral ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1827,25 +2403,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.proximal",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer proximal et distal ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer proximal et distal ;"],
+      "learningObjectives": [
+        "distinguer proximal et distal ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1854,25 +2440,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.direction.distal",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "direction",
       "competence": "distinguer proximal et distal ;",
       "prerequisites": [],
-      "learningObjectives": ["distinguer proximal et distal ;"],
+      "learningObjectives": [
+        "distinguer proximal et distal ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -1881,20 +2477,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "direction", "dea"],
+      "tags": [
+        "anatomy",
+        "direction",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l07",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l07"],
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.head",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -1911,20 +2515,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.neck",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -1941,20 +2553,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.thorax",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -1971,20 +2591,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.abdomen",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -2001,20 +2629,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.pelvis",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -2031,20 +2667,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.upper-limb",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -2061,20 +2705,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.region.lower-limb",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "region",
       "competence": "reconnaître les grandes régions du corps ;",
@@ -2091,20 +2743,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "region", "dea"],
+      "tags": [
+        "anatomy",
+        "region",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l08",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l08"],
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.landmarks",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "anatomy",
       "competence": "localiser une douleur ;",
@@ -2121,20 +2781,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "landmarks", "dea"],
+      "tags": [
+        "anatomy",
+        "landmarks",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l09",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l09"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.location.description",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "location",
       "competence": "décrire une lésion ;",
@@ -2152,25 +2820,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "location", "dea"],
+      "tags": [
+        "anatomy",
+        "location",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l09",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l09"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.location.pain",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "location",
       "competence": "localiser une douleur ;",
       "prerequisites": [],
-      "learningObjectives": ["localiser une douleur ;"],
+      "learningObjectives": [
+        "localiser une douleur ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -2179,25 +2857,35 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "location", "dea"],
+      "tags": [
+        "anatomy",
+        "location",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l09",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l09"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.location.injury",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "location",
       "competence": "décrire une lésion ;",
       "prerequisites": [],
-      "learningObjectives": ["décrire une lésion ;"],
+      "learningObjectives": [
+        "décrire une lésion ;"
+      ],
       "recommendedQuestionPool": 0,
       "difficulty": "easy",
       "masteryCriteria": {
@@ -2206,20 +2894,28 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "location", "dea"],
+      "tags": [
+        "anatomy",
+        "location",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l09",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l09"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "anatomy.location.transmission",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "anatomy",
       "subdomain": "location",
       "competence": "utiliser un vocabulaire anatomique précis ;",
@@ -2237,24 +2933,34 @@
         "minimumAttempts": null,
         "requiredExerciseTypes": []
       },
-      "tags": ["anatomy", "location", "dea"],
+      "tags": [
+        "anatomy",
+        "location",
+        "dea"
+      ],
       "sourceDocument": "MEDLINGO — SPRINT PÉDAGOGIQUE — PARCOURS 1 COMPLET",
       "sourcePages": [],
       "sourceLocation": "dea-p01-l09",
       "sourceConfirmationRequired": true,
       "reviewStatus": "draft",
-      "lessonIds": ["dea-p01-l09"],
+      "lessonIds": [
+        "dea-p01-l09"
+      ],
       "questionIds": [],
       "contentIds": []
     },
     {
       "id": "body.organ.location",
       "parcours": 1,
-      "formationIds": ["dea"],
+      "formationIds": [
+        "dea"
+      ],
       "domain": "body",
       "subdomain": "organ",
       "competence": "Identifier l’organe ou la région anatomique désignée.",
-      "prerequisites": ["body.organ.definition"],
+      "prerequisites": [
+        "body.organ.definition"
+      ],
       "learningObjectives": [
         "Identifier l’organe ou la région anatomique désignée afin de transmettre un bilan exploitable.",
         "Distinguer une région anatomique d’un organe supposé."
@@ -2265,15 +2971,27 @@
         "status": "configured",
         "minimumAccuracy": 0.8,
         "minimumAttempts": 2,
-        "requiredExerciseTypes": ["mcq", "true_false", "matching"]
+        "requiredExerciseTypes": [
+          "mcq",
+          "true_false",
+          "matching"
+        ]
       },
-      "tags": ["body", "organ", "dea"],
+      "tags": [
+        "body",
+        "organ",
+        "dea"
+      ],
       "sourceDocument": "B2.M4 - Support Etudiant.pdf",
-      "sourcePages": [13],
-      "sourceLocation": "dea-p01-l03",
+      "sourcePages": [
+        13
+      ],
+      "sourceLocation": "dea-p01-l06",
       "sourceConfirmationRequired": false,
       "reviewStatus": "source_verified",
-      "lessonIds": ["dea-p01-l03"],
+      "lessonIds": [
+        "dea-p01-l06"
+      ],
       "questionIds": [
         "dea-p1-l3-mcq-12",
         "dea-p1-l3-mcq-14",
@@ -2297,6 +3015,2614 @@
         "dea-p1-l3-case-05",
         "dea-p1-l3-priority-01",
         "dea-p1-l3-priority-05"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l01",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "position-anatomique",
+      "competence": "Position anatomique",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Position anatomique"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l01"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l01.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
+      "questionIds": [
+        "import-b01-p01-l01-q001",
+        "import-b01-p01-l01-q002",
+        "import-b01-p01-l01-q003",
+        "import-b01-p01-l01-q004",
+        "import-b01-p01-l01-q005",
+        "import-b01-p01-l01-q006",
+        "import-b01-p01-l01-q007",
+        "import-b01-p01-l01-q008",
+        "import-b01-p01-l01-q009",
+        "import-b01-p01-l01-q010"
+      ],
+      "contentIds": [
+        "import-b01-p01-l01-q001",
+        "import-b01-p01-l01-q002",
+        "import-b01-p01-l01-q003",
+        "import-b01-p01-l01-q004",
+        "import-b01-p01-l01-q005",
+        "import-b01-p01-l01-q006",
+        "import-b01-p01-l01-q007",
+        "import-b01-p01-l01-q008",
+        "import-b01-p01-l01-q009",
+        "import-b01-p01-l01-q010"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l02",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "plans-anatomiques",
+      "competence": "Plans anatomiques",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Plans anatomiques"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l02"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l02.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
+      "questionIds": [
+        "import-b01-p01-l02-q011",
+        "import-b01-p01-l02-q012",
+        "import-b01-p01-l02-q013",
+        "import-b01-p01-l02-q014",
+        "import-b01-p01-l02-q015",
+        "import-b01-p01-l02-q016",
+        "import-b01-p01-l02-q017",
+        "import-b01-p01-l02-q018",
+        "import-b01-p01-l02-q019",
+        "import-b01-p01-l02-q020"
+      ],
+      "contentIds": [
+        "import-b01-p01-l02-q011",
+        "import-b01-p01-l02-q012",
+        "import-b01-p01-l02-q013",
+        "import-b01-p01-l02-q014",
+        "import-b01-p01-l02-q015",
+        "import-b01-p01-l02-q016",
+        "import-b01-p01-l02-q017",
+        "import-b01-p01-l02-q018",
+        "import-b01-p01-l02-q019",
+        "import-b01-p01-l02-q020"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l03",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "axes-anatomiques",
+      "competence": "Axes anatomiques",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Axes anatomiques"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l03"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l03.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l04"
+      ],
+      "questionIds": [
+        "import-b01-p01-l03-q021",
+        "import-b01-p01-l03-q022",
+        "import-b01-p01-l03-q023",
+        "import-b01-p01-l03-q024",
+        "import-b01-p01-l03-q025",
+        "import-b01-p01-l03-q026",
+        "import-b01-p01-l03-q027",
+        "import-b01-p01-l03-q028",
+        "import-b01-p01-l03-q029",
+        "import-b01-p01-l03-q030"
+      ],
+      "contentIds": [
+        "import-b01-p01-l03-q021",
+        "import-b01-p01-l03-q022",
+        "import-b01-p01-l03-q023",
+        "import-b01-p01-l03-q024",
+        "import-b01-p01-l03-q025",
+        "import-b01-p01-l03-q026",
+        "import-b01-p01-l03-q027",
+        "import-b01-p01-l03-q028",
+        "import-b01-p01-l03-q029",
+        "import-b01-p01-l03-q030"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l04",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "les-regions-anatomiques",
+      "competence": "Les régions anatomiques",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les régions anatomiques"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l04"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l04.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l03"
+      ],
+      "questionIds": [
+        "import-b01-p01-l04-q031",
+        "import-b01-p01-l04-q032",
+        "import-b01-p01-l04-q033",
+        "import-b01-p01-l04-q034",
+        "import-b01-p01-l04-q035",
+        "import-b01-p01-l04-q036",
+        "import-b01-p01-l04-q037",
+        "import-b01-p01-l04-q038",
+        "import-b01-p01-l04-q039",
+        "import-b01-p01-l04-q040"
+      ],
+      "contentIds": [
+        "import-b01-p01-l04-q031",
+        "import-b01-p01-l04-q032",
+        "import-b01-p01-l04-q033",
+        "import-b01-p01-l04-q034",
+        "import-b01-p01-l04-q035",
+        "import-b01-p01-l04-q036",
+        "import-b01-p01-l04-q037",
+        "import-b01-p01-l04-q038",
+        "import-b01-p01-l04-q039",
+        "import-b01-p01-l04-q040"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l05",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "les-cavites-du-corps-humain",
+      "competence": "Les cavités du corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les cavités du corps humain"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l05"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l05.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l05"
+      ],
+      "questionIds": [
+        "import-b01-p01-l05-q041",
+        "import-b01-p01-l05-q042",
+        "import-b01-p01-l05-q043",
+        "import-b01-p01-l05-q044",
+        "import-b01-p01-l05-q045",
+        "import-b01-p01-l05-q046",
+        "import-b01-p01-l05-q047",
+        "import-b01-p01-l05-q048",
+        "import-b01-p01-l05-q049",
+        "import-b01-p01-l05-q050"
+      ],
+      "contentIds": [
+        "import-b01-p01-l05-q041",
+        "import-b01-p01-l05-q042",
+        "import-b01-p01-l05-q043",
+        "import-b01-p01-l05-q044",
+        "import-b01-p01-l05-q045",
+        "import-b01-p01-l05-q046",
+        "import-b01-p01-l05-q047",
+        "import-b01-p01-l05-q048",
+        "import-b01-p01-l05-q049",
+        "import-b01-p01-l05-q050"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l06",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "les-systemes-du-corps-humain",
+      "competence": "Les systèmes du corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les systèmes du corps humain"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l06"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l06.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l07"
+      ],
+      "questionIds": [
+        "import-b01-p01-l06-q051",
+        "import-b01-p01-l06-q052",
+        "import-b01-p01-l06-q053",
+        "import-b01-p01-l06-q054",
+        "import-b01-p01-l06-q055",
+        "import-b01-p01-l06-q056",
+        "import-b01-p01-l06-q057",
+        "import-b01-p01-l06-q058",
+        "import-b01-p01-l06-q059",
+        "import-b01-p01-l06-q060"
+      ],
+      "contentIds": [
+        "import-b01-p01-l06-q051",
+        "import-b01-p01-l06-q052",
+        "import-b01-p01-l06-q053",
+        "import-b01-p01-l06-q054",
+        "import-b01-p01-l06-q055",
+        "import-b01-p01-l06-q056",
+        "import-b01-p01-l06-q057",
+        "import-b01-p01-l06-q058",
+        "import-b01-p01-l06-q059",
+        "import-b01-p01-l06-q060"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l07",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "introduction-a-l-homeostasie",
+      "competence": "Introduction à l'homéostasie",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Introduction à l'homéostasie"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l07"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l07.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
+      "questionIds": [
+        "import-b01-p01-l07-q061",
+        "import-b01-p01-l07-q062",
+        "import-b01-p01-l07-q063",
+        "import-b01-p01-l07-q064",
+        "import-b01-p01-l07-q065",
+        "import-b01-p01-l07-q066",
+        "import-b01-p01-l07-q067",
+        "import-b01-p01-l07-q068",
+        "import-b01-p01-l07-q069",
+        "import-b01-p01-l07-q070"
+      ],
+      "contentIds": [
+        "import-b01-p01-l07-q061",
+        "import-b01-p01-l07-q062",
+        "import-b01-p01-l07-q063",
+        "import-b01-p01-l07-q064",
+        "import-b01-p01-l07-q065",
+        "import-b01-p01-l07-q066",
+        "import-b01-p01-l07-q067",
+        "import-b01-p01-l07-q068",
+        "import-b01-p01-l07-q069",
+        "import-b01-p01-l07-q070"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l08",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "introduction-a-la-terminologie-anatomique",
+      "competence": "Introduction à la terminologie anatomique",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Introduction à la terminologie anatomique"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l08"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l08.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
+      "questionIds": [
+        "import-b01-p01-l08-q071",
+        "import-b01-p01-l08-q072",
+        "import-b01-p01-l08-q073",
+        "import-b01-p01-l08-q074",
+        "import-b01-p01-l08-q075",
+        "import-b01-p01-l08-q076",
+        "import-b01-p01-l08-q077",
+        "import-b01-p01-l08-q078",
+        "import-b01-p01-l08-q079",
+        "import-b01-p01-l08-q080"
+      ],
+      "contentIds": [
+        "import-b01-p01-l08-q071",
+        "import-b01-p01-l08-q072",
+        "import-b01-p01-l08-q073",
+        "import-b01-p01-l08-q074",
+        "import-b01-p01-l08-q075",
+        "import-b01-p01-l08-q076",
+        "import-b01-p01-l08-q077",
+        "import-b01-p01-l08-q078",
+        "import-b01-p01-l08-q079",
+        "import-b01-p01-l08-q080"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l09",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "les-niveaux-d-organisation-du-corps-humain",
+      "competence": "Les niveaux d'organisation du corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les niveaux d'organisation du corps humain"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l09"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l09.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
+      "questionIds": [
+        "import-b01-p01-l09-q081",
+        "import-b01-p01-l09-q082",
+        "import-b01-p01-l09-q083",
+        "import-b01-p01-l09-q084",
+        "import-b01-p01-l09-q085",
+        "import-b01-p01-l09-q086",
+        "import-b01-p01-l09-q087",
+        "import-b01-p01-l09-q088",
+        "import-b01-p01-l09-q089",
+        "import-b01-p01-l09-q090"
+      ],
+      "contentIds": [
+        "import-b01-p01-l09-q081",
+        "import-b01-p01-l09-q082",
+        "import-b01-p01-l09-q083",
+        "import-b01-p01-l09-q084",
+        "import-b01-p01-l09-q085",
+        "import-b01-p01-l09-q086",
+        "import-b01-p01-l09-q087",
+        "import-b01-p01-l09-q088",
+        "import-b01-p01-l09-q089",
+        "import-b01-p01-l09-q090"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.l10",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "revision-generale-du-parcours-1",
+      "competence": "Révision générale du parcours 1",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Révision générale du parcours 1"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "l10"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p01-l10.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
+      "questionIds": [
+        "import-b01-p01-l10-q091",
+        "import-b01-p01-l10-q092",
+        "import-b01-p01-l10-q093",
+        "import-b01-p01-l10-q094",
+        "import-b01-p01-l10-q095",
+        "import-b01-p01-l10-q096",
+        "import-b01-p01-l10-q097",
+        "import-b01-p01-l10-q098",
+        "import-b01-p01-l10-q099",
+        "import-b01-p01-l10-q100"
+      ],
+      "contentIds": [
+        "import-b01-p01-l10-q091",
+        "import-b01-p01-l10-q092",
+        "import-b01-p01-l10-q093",
+        "import-b01-p01-l10-q094",
+        "import-b01-p01-l10-q095",
+        "import-b01-p01-l10-q096",
+        "import-b01-p01-l10-q097",
+        "import-b01-p01-l10-q098",
+        "import-b01-p01-l10-q099",
+        "import-b01-p01-l10-q100"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l01",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "introduction-au-langage-medical",
+      "competence": "Introduction au langage médical",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Introduction au langage médical"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l01"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l01.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l01"
+      ],
+      "questionIds": [
+        "import-b01-p02-l01-q101",
+        "import-b01-p02-l01-q102",
+        "import-b01-p02-l01-q103",
+        "import-b01-p02-l01-q104",
+        "import-b01-p02-l01-q105",
+        "import-b01-p02-l01-q106",
+        "import-b01-p02-l01-q107",
+        "import-b01-p02-l01-q108",
+        "import-b01-p02-l01-q109",
+        "import-b01-p02-l01-q110"
+      ],
+      "contentIds": [
+        "import-b01-p02-l01-q101",
+        "import-b01-p02-l01-q102",
+        "import-b01-p02-l01-q103",
+        "import-b01-p02-l01-q104",
+        "import-b01-p02-l01-q105",
+        "import-b01-p02-l01-q106",
+        "import-b01-p02-l01-q107",
+        "import-b01-p02-l01-q108",
+        "import-b01-p02-l01-q109",
+        "import-b01-p02-l01-q110"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l02",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-prefixes-medicaux",
+      "competence": "Les préfixes médicaux",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les préfixes médicaux"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l02"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l02.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l02"
+      ],
+      "questionIds": [
+        "import-b01-p02-l02-q111",
+        "import-b01-p02-l02-q112",
+        "import-b01-p02-l02-q113",
+        "import-b01-p02-l02-q114",
+        "import-b01-p02-l02-q115",
+        "import-b01-p02-l02-q116",
+        "import-b01-p02-l02-q117",
+        "import-b01-p02-l02-q118",
+        "import-b01-p02-l02-q119",
+        "import-b01-p02-l02-q120"
+      ],
+      "contentIds": [
+        "import-b01-p02-l02-q111",
+        "import-b01-p02-l02-q112",
+        "import-b01-p02-l02-q113",
+        "import-b01-p02-l02-q114",
+        "import-b01-p02-l02-q115",
+        "import-b01-p02-l02-q116",
+        "import-b01-p02-l02-q117",
+        "import-b01-p02-l02-q118",
+        "import-b01-p02-l02-q119",
+        "import-b01-p02-l02-q120"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l03",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-suffixes-medicaux",
+      "competence": "Les suffixes médicaux",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les suffixes médicaux"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l03"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l03.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l04"
+      ],
+      "questionIds": [
+        "import-b01-p02-l03-q121",
+        "import-b01-p02-l03-q122",
+        "import-b01-p02-l03-q123",
+        "import-b01-p02-l03-q124",
+        "import-b01-p02-l03-q125",
+        "import-b01-p02-l03-q126",
+        "import-b01-p02-l03-q127",
+        "import-b01-p02-l03-q128",
+        "import-b01-p02-l03-q129",
+        "import-b01-p02-l03-q130"
+      ],
+      "contentIds": [
+        "import-b01-p02-l03-q121",
+        "import-b01-p02-l03-q122",
+        "import-b01-p02-l03-q123",
+        "import-b01-p02-l03-q124",
+        "import-b01-p02-l03-q125",
+        "import-b01-p02-l03-q126",
+        "import-b01-p02-l03-q127",
+        "import-b01-p02-l03-q128",
+        "import-b01-p02-l03-q129",
+        "import-b01-p02-l03-q130"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l04",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-principales-racines-medicales",
+      "competence": "Les principales racines médicales",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les principales racines médicales"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l04"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l04.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l03"
+      ],
+      "questionIds": [
+        "import-b01-p02-l04-q131",
+        "import-b01-p02-l04-q132",
+        "import-b01-p02-l04-q133",
+        "import-b01-p02-l04-q134",
+        "import-b01-p02-l04-q135",
+        "import-b01-p02-l04-q136",
+        "import-b01-p02-l04-q137",
+        "import-b01-p02-l04-q138",
+        "import-b01-p02-l04-q139",
+        "import-b01-p02-l04-q140"
+      ],
+      "contentIds": [
+        "import-b01-p02-l04-q131",
+        "import-b01-p02-l04-q132",
+        "import-b01-p02-l04-q133",
+        "import-b01-p02-l04-q134",
+        "import-b01-p02-l04-q135",
+        "import-b01-p02-l04-q136",
+        "import-b01-p02-l04-q137",
+        "import-b01-p02-l04-q138",
+        "import-b01-p02-l04-q139",
+        "import-b01-p02-l04-q140"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l05",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-abreviations-medicales-courantes",
+      "competence": "Les abréviations médicales courantes",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les abréviations médicales courantes"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l05"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l05.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l07"
+      ],
+      "questionIds": [
+        "import-b01-p02-l05-q141",
+        "import-b01-p02-l05-q142",
+        "import-b01-p02-l05-q143",
+        "import-b01-p02-l05-q144",
+        "import-b01-p02-l05-q145",
+        "import-b01-p02-l05-q146",
+        "import-b01-p02-l05-q147",
+        "import-b01-p02-l05-q148",
+        "import-b01-p02-l05-q149",
+        "import-b01-p02-l05-q150"
+      ],
+      "contentIds": [
+        "import-b01-p02-l05-q141",
+        "import-b01-p02-l05-q142",
+        "import-b01-p02-l05-q143",
+        "import-b01-p02-l05-q144",
+        "import-b01-p02-l05-q145",
+        "import-b01-p02-l05-q146",
+        "import-b01-p02-l05-q147",
+        "import-b01-p02-l05-q148",
+        "import-b01-p02-l05-q149",
+        "import-b01-p02-l05-q150"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l06",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-directions-et-localisations-medicales",
+      "competence": "Les directions et localisations médicales",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les directions et localisations médicales"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l06"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l06.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l08"
+      ],
+      "questionIds": [
+        "import-b01-p02-l06-q151",
+        "import-b01-p02-l06-q152",
+        "import-b01-p02-l06-q153",
+        "import-b01-p02-l06-q154",
+        "import-b01-p02-l06-q155",
+        "import-b01-p02-l06-q156",
+        "import-b01-p02-l06-q157",
+        "import-b01-p02-l06-q159",
+        "import-b01-p02-l06-q160"
+      ],
+      "contentIds": [
+        "import-b01-p02-l06-q151",
+        "import-b01-p02-l06-q152",
+        "import-b01-p02-l06-q153",
+        "import-b01-p02-l06-q154",
+        "import-b01-p02-l06-q155",
+        "import-b01-p02-l06-q156",
+        "import-b01-p02-l06-q157",
+        "import-b01-p02-l06-q159",
+        "import-b01-p02-l06-q160"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l07",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-termes-medicaux-de-frequence",
+      "competence": "Les termes médicaux de fréquence",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les termes médicaux de fréquence"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l07"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l07.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l05"
+      ],
+      "questionIds": [
+        "import-b01-p02-l07-q162",
+        "import-b01-p02-l07-q163",
+        "import-b01-p02-l07-q164",
+        "import-b01-p02-l07-q165",
+        "import-b01-p02-l07-q166",
+        "import-b01-p02-l07-q167",
+        "import-b01-p02-l07-q168",
+        "import-b01-p02-l07-q169",
+        "import-b01-p02-l07-q170"
+      ],
+      "contentIds": [
+        "import-b01-p02-l07-q162",
+        "import-b01-p02-l07-q163",
+        "import-b01-p02-l07-q164",
+        "import-b01-p02-l07-q165",
+        "import-b01-p02-l07-q166",
+        "import-b01-p02-l07-q167",
+        "import-b01-p02-l07-q168",
+        "import-b01-p02-l07-q169",
+        "import-b01-p02-l07-q170"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l08",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-principaux-termes-cliniques",
+      "competence": "Les principaux termes cliniques",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les principaux termes cliniques"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l08"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l08.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l06"
+      ],
+      "questionIds": [
+        "import-b01-p02-l08-q171",
+        "import-b01-p02-l08-q172",
+        "import-b01-p02-l08-q173",
+        "import-b01-p02-l08-q174",
+        "import-b01-p02-l08-q175",
+        "import-b01-p02-l08-q176",
+        "import-b01-p02-l08-q177",
+        "import-b01-p02-l08-q178",
+        "import-b01-p02-l08-q179",
+        "import-b01-p02-l08-q180"
+      ],
+      "contentIds": [
+        "import-b01-p02-l08-q171",
+        "import-b01-p02-l08-q172",
+        "import-b01-p02-l08-q173",
+        "import-b01-p02-l08-q174",
+        "import-b01-p02-l08-q175",
+        "import-b01-p02-l08-q176",
+        "import-b01-p02-l08-q177",
+        "import-b01-p02-l08-q178",
+        "import-b01-p02-l08-q179",
+        "import-b01-p02-l08-q180"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l09",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "les-principaux-examens-medicaux",
+      "competence": "Les principaux examens médicaux",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les principaux examens médicaux"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l09"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l09.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l06"
+      ],
+      "questionIds": [
+        "import-b01-p02-l09-q181",
+        "import-b01-p02-l09-q182",
+        "import-b01-p02-l09-q183",
+        "import-b01-p02-l09-q184",
+        "import-b01-p02-l09-q185",
+        "import-b01-p02-l09-q186",
+        "import-b01-p02-l09-q187",
+        "import-b01-p02-l09-q188",
+        "import-b01-p02-l09-q189",
+        "import-b01-p02-l09-q190"
+      ],
+      "contentIds": [
+        "import-b01-p02-l09-q181",
+        "import-b01-p02-l09-q182",
+        "import-b01-p02-l09-q183",
+        "import-b01-p02-l09-q184",
+        "import-b01-p02-l09-q185",
+        "import-b01-p02-l09-q186",
+        "import-b01-p02-l09-q187",
+        "import-b01-p02-l09-q188",
+        "import-b01-p02-l09-q189",
+        "import-b01-p02-l09-q190"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.l10",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "revision-generale-du-langage-medical",
+      "competence": "Révision générale du langage médical",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Révision générale du langage médical"
+      ],
+      "recommendedQuestionPool": 8,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "l10"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p02-l10.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-l08"
+      ],
+      "questionIds": [
+        "import-b01-p02-l10-q192",
+        "import-b01-p02-l10-q193",
+        "import-b01-p02-l10-q194",
+        "import-b01-p02-l10-q195",
+        "import-b01-p02-l10-q196",
+        "import-b01-p02-l10-q197",
+        "import-b01-p02-l10-q198",
+        "import-b01-p02-l10-q200"
+      ],
+      "contentIds": [
+        "import-b01-p02-l10-q192",
+        "import-b01-p02-l10-q193",
+        "import-b01-p02-l10-q194",
+        "import-b01-p02-l10-q195",
+        "import-b01-p02-l10-q196",
+        "import-b01-p02-l10-q197",
+        "import-b01-p02-l10-q198",
+        "import-b01-p02-l10-q200"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l01",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "introduction-a-l-anatomie-generale",
+      "competence": "Introduction à l'anatomie générale",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Introduction à l'anatomie générale"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l01"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l01.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l08"
+      ],
+      "questionIds": [
+        "import-b01-p03-l01-q201",
+        "import-b01-p03-l01-q202",
+        "import-b01-p03-l01-q203",
+        "import-b01-p03-l01-q204",
+        "import-b01-p03-l01-q205",
+        "import-b01-p03-l01-q206",
+        "import-b01-p03-l01-q207",
+        "import-b01-p03-l01-q208",
+        "import-b01-p03-l01-q209",
+        "import-b01-p03-l01-q210"
+      ],
+      "contentIds": [
+        "import-b01-p03-l01-q201",
+        "import-b01-p03-l01-q202",
+        "import-b01-p03-l01-q203",
+        "import-b01-p03-l01-q204",
+        "import-b01-p03-l01-q205",
+        "import-b01-p03-l01-q206",
+        "import-b01-p03-l01-q207",
+        "import-b01-p03-l01-q208",
+        "import-b01-p03-l01-q209",
+        "import-b01-p03-l01-q210"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l02",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "les-tissus-du-corps-humain",
+      "competence": "Les tissus du corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les tissus du corps humain"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l02"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l02.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l02"
+      ],
+      "questionIds": [
+        "import-b01-p03-l02-q211",
+        "import-b01-p03-l02-q212",
+        "import-b01-p03-l02-q213",
+        "import-b01-p03-l02-q214",
+        "import-b01-p03-l02-q215",
+        "import-b01-p03-l02-q216",
+        "import-b01-p03-l02-q217",
+        "import-b01-p03-l02-q218",
+        "import-b01-p03-l02-q219",
+        "import-b01-p03-l02-q220"
+      ],
+      "contentIds": [
+        "import-b01-p03-l02-q211",
+        "import-b01-p03-l02-q212",
+        "import-b01-p03-l02-q213",
+        "import-b01-p03-l02-q214",
+        "import-b01-p03-l02-q215",
+        "import-b01-p03-l02-q216",
+        "import-b01-p03-l02-q217",
+        "import-b01-p03-l02-q218",
+        "import-b01-p03-l02-q219",
+        "import-b01-p03-l02-q220"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l03",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-squelettique",
+      "competence": "Le système squelettique",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système squelettique"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l03"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l03.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l01"
+      ],
+      "questionIds": [
+        "import-b01-p03-l03-q221",
+        "import-b01-p03-l03-q222",
+        "import-b01-p03-l03-q223",
+        "import-b01-p03-l03-q224",
+        "import-b01-p03-l03-q225",
+        "import-b01-p03-l03-q226",
+        "import-b01-p03-l03-q227",
+        "import-b01-p03-l03-q228",
+        "import-b01-p03-l03-q229",
+        "import-b01-p03-l03-q230"
+      ],
+      "contentIds": [
+        "import-b01-p03-l03-q221",
+        "import-b01-p03-l03-q222",
+        "import-b01-p03-l03-q223",
+        "import-b01-p03-l03-q224",
+        "import-b01-p03-l03-q225",
+        "import-b01-p03-l03-q226",
+        "import-b01-p03-l03-q227",
+        "import-b01-p03-l03-q228",
+        "import-b01-p03-l03-q229",
+        "import-b01-p03-l03-q230"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l04",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "les-articulations",
+      "competence": "Les articulations",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Les articulations"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l04"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l04.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l01"
+      ],
+      "questionIds": [
+        "import-b01-p03-l04-q231",
+        "import-b01-p03-l04-q232",
+        "import-b01-p03-l04-q233",
+        "import-b01-p03-l04-q234",
+        "import-b01-p03-l04-q235",
+        "import-b01-p03-l04-q236",
+        "import-b01-p03-l04-q237",
+        "import-b01-p03-l04-q238",
+        "import-b01-p03-l04-q239",
+        "import-b01-p03-l04-q240"
+      ],
+      "contentIds": [
+        "import-b01-p03-l04-q231",
+        "import-b01-p03-l04-q232",
+        "import-b01-p03-l04-q233",
+        "import-b01-p03-l04-q234",
+        "import-b01-p03-l04-q235",
+        "import-b01-p03-l04-q236",
+        "import-b01-p03-l04-q237",
+        "import-b01-p03-l04-q238",
+        "import-b01-p03-l04-q239",
+        "import-b01-p03-l04-q240"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l05",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-musculaire",
+      "competence": "Le système musculaire",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système musculaire"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l05"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l05.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l01"
+      ],
+      "questionIds": [
+        "import-b01-p03-l05-q241",
+        "import-b01-p03-l05-q242",
+        "import-b01-p03-l05-q243",
+        "import-b01-p03-l05-q244",
+        "import-b01-p03-l05-q245",
+        "import-b01-p03-l05-q246",
+        "import-b01-p03-l05-q247",
+        "import-b01-p03-l05-q248",
+        "import-b01-p03-l05-q249"
+      ],
+      "contentIds": [
+        "import-b01-p03-l05-q241",
+        "import-b01-p03-l05-q242",
+        "import-b01-p03-l05-q243",
+        "import-b01-p03-l05-q244",
+        "import-b01-p03-l05-q245",
+        "import-b01-p03-l05-q246",
+        "import-b01-p03-l05-q247",
+        "import-b01-p03-l05-q248",
+        "import-b01-p03-l05-q249"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l06",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-nerveux",
+      "competence": "Le système nerveux",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système nerveux"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l06"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l06.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l05"
+      ],
+      "questionIds": [
+        "import-b01-p03-l06-q251",
+        "import-b01-p03-l06-q252",
+        "import-b01-p03-l06-q253",
+        "import-b01-p03-l06-q254",
+        "import-b01-p03-l06-q255",
+        "import-b01-p03-l06-q256",
+        "import-b01-p03-l06-q257",
+        "import-b01-p03-l06-q258",
+        "import-b01-p03-l06-q259",
+        "import-b01-p03-l06-q260"
+      ],
+      "contentIds": [
+        "import-b01-p03-l06-q251",
+        "import-b01-p03-l06-q252",
+        "import-b01-p03-l06-q253",
+        "import-b01-p03-l06-q254",
+        "import-b01-p03-l06-q255",
+        "import-b01-p03-l06-q256",
+        "import-b01-p03-l06-q257",
+        "import-b01-p03-l06-q258",
+        "import-b01-p03-l06-q259",
+        "import-b01-p03-l06-q260"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l07",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-cardiovasculaire",
+      "competence": "Le système cardiovasculaire",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système cardiovasculaire"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l07"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l07.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l02"
+      ],
+      "questionIds": [
+        "import-b01-p03-l07-q261",
+        "import-b01-p03-l07-q262",
+        "import-b01-p03-l07-q263",
+        "import-b01-p03-l07-q264",
+        "import-b01-p03-l07-q265",
+        "import-b01-p03-l07-q266",
+        "import-b01-p03-l07-q267",
+        "import-b01-p03-l07-q268",
+        "import-b01-p03-l07-q270"
+      ],
+      "contentIds": [
+        "import-b01-p03-l07-q261",
+        "import-b01-p03-l07-q262",
+        "import-b01-p03-l07-q263",
+        "import-b01-p03-l07-q264",
+        "import-b01-p03-l07-q265",
+        "import-b01-p03-l07-q266",
+        "import-b01-p03-l07-q267",
+        "import-b01-p03-l07-q268",
+        "import-b01-p03-l07-q270"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l08",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-respiratoire",
+      "competence": "Le système respiratoire",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système respiratoire"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l08"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l08.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l03"
+      ],
+      "questionIds": [
+        "import-b01-p03-l08-q271",
+        "import-b01-p03-l08-q272",
+        "import-b01-p03-l08-q273",
+        "import-b01-p03-l08-q274",
+        "import-b01-p03-l08-q275",
+        "import-b01-p03-l08-q276",
+        "import-b01-p03-l08-q277",
+        "import-b01-p03-l08-q278",
+        "import-b01-p03-l08-q279",
+        "import-b01-p03-l08-q280"
+      ],
+      "contentIds": [
+        "import-b01-p03-l08-q271",
+        "import-b01-p03-l08-q272",
+        "import-b01-p03-l08-q273",
+        "import-b01-p03-l08-q274",
+        "import-b01-p03-l08-q275",
+        "import-b01-p03-l08-q276",
+        "import-b01-p03-l08-q277",
+        "import-b01-p03-l08-q278",
+        "import-b01-p03-l08-q279",
+        "import-b01-p03-l08-q280"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l09",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-digestif",
+      "competence": "Le système digestif",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système digestif"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l09"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l09.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l04"
+      ],
+      "questionIds": [
+        "import-b01-p03-l09-q281",
+        "import-b01-p03-l09-q282",
+        "import-b01-p03-l09-q283",
+        "import-b01-p03-l09-q284",
+        "import-b01-p03-l09-q285",
+        "import-b01-p03-l09-q286",
+        "import-b01-p03-l09-q287",
+        "import-b01-p03-l09-q288",
+        "import-b01-p03-l09-q289",
+        "import-b01-p03-l09-q290"
+      ],
+      "contentIds": [
+        "import-b01-p03-l09-q281",
+        "import-b01-p03-l09-q282",
+        "import-b01-p03-l09-q283",
+        "import-b01-p03-l09-q284",
+        "import-b01-p03-l09-q285",
+        "import-b01-p03-l09-q286",
+        "import-b01-p03-l09-q287",
+        "import-b01-p03-l09-q288",
+        "import-b01-p03-l09-q289",
+        "import-b01-p03-l09-q290"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.l10",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "le-systeme-urinaire-et-revision",
+      "competence": "Le système urinaire et révision",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Le système urinaire et révision"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "l10"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p03-l10.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-l06"
+      ],
+      "questionIds": [
+        "import-b01-p03-l10-q291",
+        "import-b01-p03-l10-q292",
+        "import-b01-p03-l10-q293",
+        "import-b01-p03-l10-q294",
+        "import-b01-p03-l10-q295",
+        "import-b01-p03-l10-q296",
+        "import-b01-p03-l10-q297",
+        "import-b01-p03-l10-q298",
+        "import-b01-p03-l10-q299",
+        "import-b01-p03-l10-q300"
+      ],
+      "contentIds": [
+        "import-b01-p03-l10-q291",
+        "import-b01-p03-l10-q292",
+        "import-b01-p03-l10-q293",
+        "import-b01-p03-l10-q294",
+        "import-b01-p03-l10-q295",
+        "import-b01-p03-l10-q296",
+        "import-b01-p03-l10-q297",
+        "import-b01-p03-l10-q298",
+        "import-b01-p03-l10-q299",
+        "import-b01-p03-l10-q300"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l01",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "introduction-a-la-physiologie",
+      "competence": "Introduction à la physiologie",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Introduction à la physiologie"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l01"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l01.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l01-q301",
+        "import-b01-p04-l01-q302",
+        "import-b01-p04-l01-q303",
+        "import-b01-p04-l01-q304",
+        "import-b01-p04-l01-q305",
+        "import-b01-p04-l01-q306",
+        "import-b01-p04-l01-q307",
+        "import-b01-p04-l01-q308",
+        "import-b01-p04-l01-q309"
+      ],
+      "contentIds": [
+        "import-b01-p04-l01-q301",
+        "import-b01-p04-l01-q302",
+        "import-b01-p04-l01-q303",
+        "import-b01-p04-l01-q304",
+        "import-b01-p04-l01-q305",
+        "import-b01-p04-l01-q306",
+        "import-b01-p04-l01-q307",
+        "import-b01-p04-l01-q308",
+        "import-b01-p04-l01-q309"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l02",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "l-homeostasie",
+      "competence": "L'homéostasie",
+      "prerequisites": [],
+      "learningObjectives": [
+        "L'homéostasie"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l02"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l02.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l02-q311",
+        "import-b01-p04-l02-q312",
+        "import-b01-p04-l02-q313",
+        "import-b01-p04-l02-q314",
+        "import-b01-p04-l02-q315",
+        "import-b01-p04-l02-q316",
+        "import-b01-p04-l02-q317",
+        "import-b01-p04-l02-q318",
+        "import-b01-p04-l02-q319"
+      ],
+      "contentIds": [
+        "import-b01-p04-l02-q311",
+        "import-b01-p04-l02-q312",
+        "import-b01-p04-l02-q313",
+        "import-b01-p04-l02-q314",
+        "import-b01-p04-l02-q315",
+        "import-b01-p04-l02-q316",
+        "import-b01-p04-l02-q317",
+        "import-b01-p04-l02-q318",
+        "import-b01-p04-l02-q319"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l03",
+      "parcours": 5,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-cardiovasculaire",
+      "competence": "Physiologie cardiovasculaire",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie cardiovasculaire"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l03"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l03.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p05-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l03-q321",
+        "import-b01-p04-l03-q322",
+        "import-b01-p04-l03-q323",
+        "import-b01-p04-l03-q324",
+        "import-b01-p04-l03-q325",
+        "import-b01-p04-l03-q326",
+        "import-b01-p04-l03-q327",
+        "import-b01-p04-l03-q328",
+        "import-b01-p04-l03-q329",
+        "import-b01-p04-l03-q330"
+      ],
+      "contentIds": [
+        "import-b01-p04-l03-q321",
+        "import-b01-p04-l03-q322",
+        "import-b01-p04-l03-q323",
+        "import-b01-p04-l03-q324",
+        "import-b01-p04-l03-q325",
+        "import-b01-p04-l03-q326",
+        "import-b01-p04-l03-q327",
+        "import-b01-p04-l03-q328",
+        "import-b01-p04-l03-q329",
+        "import-b01-p04-l03-q330"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l04",
+      "parcours": 6,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-respiratoire",
+      "competence": "Physiologie respiratoire",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie respiratoire"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l04"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l04.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p06-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l04-q331",
+        "import-b01-p04-l04-q332",
+        "import-b01-p04-l04-q333",
+        "import-b01-p04-l04-q334",
+        "import-b01-p04-l04-q335",
+        "import-b01-p04-l04-q336",
+        "import-b01-p04-l04-q337",
+        "import-b01-p04-l04-q338",
+        "import-b01-p04-l04-q339",
+        "import-b01-p04-l04-q340"
+      ],
+      "contentIds": [
+        "import-b01-p04-l04-q331",
+        "import-b01-p04-l04-q332",
+        "import-b01-p04-l04-q333",
+        "import-b01-p04-l04-q334",
+        "import-b01-p04-l04-q335",
+        "import-b01-p04-l04-q336",
+        "import-b01-p04-l04-q337",
+        "import-b01-p04-l04-q338",
+        "import-b01-p04-l04-q339",
+        "import-b01-p04-l04-q340"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l05",
+      "parcours": 8,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-du-systeme-nerveux",
+      "competence": "Physiologie du système nerveux",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie du système nerveux"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l05"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l05.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p08-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l05-q342",
+        "import-b01-p04-l05-q343",
+        "import-b01-p04-l05-q344",
+        "import-b01-p04-l05-q345",
+        "import-b01-p04-l05-q346",
+        "import-b01-p04-l05-q347",
+        "import-b01-p04-l05-q348",
+        "import-b01-p04-l05-q349",
+        "import-b01-p04-l05-q350"
+      ],
+      "contentIds": [
+        "import-b01-p04-l05-q342",
+        "import-b01-p04-l05-q343",
+        "import-b01-p04-l05-q344",
+        "import-b01-p04-l05-q345",
+        "import-b01-p04-l05-q346",
+        "import-b01-p04-l05-q347",
+        "import-b01-p04-l05-q348",
+        "import-b01-p04-l05-q349",
+        "import-b01-p04-l05-q350"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l06",
+      "parcours": 7,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-du-systeme-digestif",
+      "competence": "Physiologie du système digestif",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie du système digestif"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l06"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l06.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p07-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l06-q351",
+        "import-b01-p04-l06-q352",
+        "import-b01-p04-l06-q353",
+        "import-b01-p04-l06-q354",
+        "import-b01-p04-l06-q355",
+        "import-b01-p04-l06-q356",
+        "import-b01-p04-l06-q357",
+        "import-b01-p04-l06-q358",
+        "import-b01-p04-l06-q360"
+      ],
+      "contentIds": [
+        "import-b01-p04-l06-q351",
+        "import-b01-p04-l06-q352",
+        "import-b01-p04-l06-q353",
+        "import-b01-p04-l06-q354",
+        "import-b01-p04-l06-q355",
+        "import-b01-p04-l06-q356",
+        "import-b01-p04-l06-q357",
+        "import-b01-p04-l06-q358",
+        "import-b01-p04-l06-q360"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l07",
+      "parcours": 9,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-du-systeme-renal",
+      "competence": "Physiologie du système rénal",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie du système rénal"
+      ],
+      "recommendedQuestionPool": 8,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l07"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l07.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p09-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l07-q361",
+        "import-b01-p04-l07-q362",
+        "import-b01-p04-l07-q363",
+        "import-b01-p04-l07-q364",
+        "import-b01-p04-l07-q365",
+        "import-b01-p04-l07-q366",
+        "import-b01-p04-l07-q367",
+        "import-b01-p04-l07-q368"
+      ],
+      "contentIds": [
+        "import-b01-p04-l07-q361",
+        "import-b01-p04-l07-q362",
+        "import-b01-p04-l07-q363",
+        "import-b01-p04-l07-q364",
+        "import-b01-p04-l07-q365",
+        "import-b01-p04-l07-q366",
+        "import-b01-p04-l07-q367",
+        "import-b01-p04-l07-q368"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l08",
+      "parcours": 10,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "physiologie-du-systeme-endocrinien",
+      "competence": "Physiologie du système endocrinien",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Physiologie du système endocrinien"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l08"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l08.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p10-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l08-q371",
+        "import-b01-p04-l08-q372",
+        "import-b01-p04-l08-q373",
+        "import-b01-p04-l08-q374",
+        "import-b01-p04-l08-q375",
+        "import-b01-p04-l08-q376",
+        "import-b01-p04-l08-q377",
+        "import-b01-p04-l08-q378",
+        "import-b01-p04-l08-q379",
+        "import-b01-p04-l08-q380"
+      ],
+      "contentIds": [
+        "import-b01-p04-l08-q371",
+        "import-b01-p04-l08-q372",
+        "import-b01-p04-l08-q373",
+        "import-b01-p04-l08-q374",
+        "import-b01-p04-l08-q375",
+        "import-b01-p04-l08-q376",
+        "import-b01-p04-l08-q377",
+        "import-b01-p04-l08-q378",
+        "import-b01-p04-l08-q379",
+        "import-b01-p04-l08-q380"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l09",
+      "parcours": 18,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "adaptation-a-l-effort-et-au-stress",
+      "competence": "Adaptation à l'effort et au stress",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Adaptation à l'effort et au stress"
+      ],
+      "recommendedQuestionPool": 10,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l09"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l09.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p18-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l09-q381",
+        "import-b01-p04-l09-q382",
+        "import-b01-p04-l09-q383",
+        "import-b01-p04-l09-q384",
+        "import-b01-p04-l09-q385",
+        "import-b01-p04-l09-q386",
+        "import-b01-p04-l09-q387",
+        "import-b01-p04-l09-q388",
+        "import-b01-p04-l09-q389",
+        "import-b01-p04-l09-q390"
+      ],
+      "contentIds": [
+        "import-b01-p04-l09-q381",
+        "import-b01-p04-l09-q382",
+        "import-b01-p04-l09-q383",
+        "import-b01-p04-l09-q384",
+        "import-b01-p04-l09-q385",
+        "import-b01-p04-l09-q386",
+        "import-b01-p04-l09-q387",
+        "import-b01-p04-l09-q388",
+        "import-b01-p04-l09-q389",
+        "import-b01-p04-l09-q390"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.l10",
+      "parcours": 18,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "revision-generale-de-physiologie",
+      "competence": "Révision générale de physiologie",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Révision générale de physiologie"
+      ],
+      "recommendedQuestionPool": 9,
+      "difficulty": "medium",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "l10"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/lessons/b01-p04-l10.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p18-l08"
+      ],
+      "questionIds": [
+        "import-b01-p04-l10-q391",
+        "import-b01-p04-l10-q392",
+        "import-b01-p04-l10-q393",
+        "import-b01-p04-l10-q394",
+        "import-b01-p04-l10-q395",
+        "import-b01-p04-l10-q396",
+        "import-b01-p04-l10-q397",
+        "import-b01-p04-l10-q398",
+        "import-b01-p04-l10-q400"
+      ],
+      "contentIds": [
+        "import-b01-p04-l10-q391",
+        "import-b01-p04-l10-q392",
+        "import-b01-p04-l10-q393",
+        "import-b01-p04-l10-q394",
+        "import-b01-p04-l10-q395",
+        "import-b01-p04-l10-q396",
+        "import-b01-p04-l10-q397",
+        "import-b01-p04-l10-q398",
+        "import-b01-p04-l10-q400"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p01.boss",
+      "parcours": 1,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "body-foundations",
+      "subdomain": "boss-le-corps-humain",
+      "competence": "Boss - Le corps humain",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Évaluation finale du parcours 1"
+      ],
+      "recommendedQuestionPool": 15,
+      "difficulty": "expert",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p01",
+        "boss"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/bosses/b01-p01-boss_p01.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p01-boss"
+      ],
+      "questionIds": [
+        "import-b01-p01-boss-bq001",
+        "import-b01-p01-boss-bq002",
+        "import-b01-p01-boss-bq003",
+        "import-b01-p01-boss-bq004",
+        "import-b01-p01-boss-bq005",
+        "import-b01-p01-boss-bq006",
+        "import-b01-p01-boss-bq007",
+        "import-b01-p01-boss-bq008",
+        "import-b01-p01-boss-bq009",
+        "import-b01-p01-boss-bq010",
+        "import-b01-p01-boss-bq011",
+        "import-b01-p01-boss-bq012",
+        "import-b01-p01-boss-bq013",
+        "import-b01-p01-boss-bq014",
+        "import-b01-p01-boss-bq015"
+      ],
+      "contentIds": [
+        "import-b01-p01-boss-bq001",
+        "import-b01-p01-boss-bq002",
+        "import-b01-p01-boss-bq003",
+        "import-b01-p01-boss-bq004",
+        "import-b01-p01-boss-bq005",
+        "import-b01-p01-boss-bq006",
+        "import-b01-p01-boss-bq007",
+        "import-b01-p01-boss-bq008",
+        "import-b01-p01-boss-bq009",
+        "import-b01-p01-boss-bq010",
+        "import-b01-p01-boss-bq011",
+        "import-b01-p01-boss-bq012",
+        "import-b01-p01-boss-bq013",
+        "import-b01-p01-boss-bq014",
+        "import-b01-p01-boss-bq015"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p02.boss",
+      "parcours": 2,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "medical-language",
+      "subdomain": "boss-langage-medical",
+      "competence": "Boss - Langage médical",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Évaluation finale du parcours Langage médical"
+      ],
+      "recommendedQuestionPool": 15,
+      "difficulty": "expert",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p02",
+        "boss"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/bosses/b01-p02-boss_p02.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p02-boss"
+      ],
+      "questionIds": [
+        "import-b01-p02-boss-bq016",
+        "import-b01-p02-boss-bq017",
+        "import-b01-p02-boss-bq018",
+        "import-b01-p02-boss-bq019",
+        "import-b01-p02-boss-bq020",
+        "import-b01-p02-boss-bq021",
+        "import-b01-p02-boss-bq022",
+        "import-b01-p02-boss-bq023",
+        "import-b01-p02-boss-bq024",
+        "import-b01-p02-boss-bq025",
+        "import-b01-p02-boss-bq026",
+        "import-b01-p02-boss-bq027",
+        "import-b01-p02-boss-bq028",
+        "import-b01-p02-boss-bq029",
+        "import-b01-p02-boss-bq030"
+      ],
+      "contentIds": [
+        "import-b01-p02-boss-bq016",
+        "import-b01-p02-boss-bq017",
+        "import-b01-p02-boss-bq018",
+        "import-b01-p02-boss-bq019",
+        "import-b01-p02-boss-bq020",
+        "import-b01-p02-boss-bq021",
+        "import-b01-p02-boss-bq022",
+        "import-b01-p02-boss-bq023",
+        "import-b01-p02-boss-bq024",
+        "import-b01-p02-boss-bq025",
+        "import-b01-p02-boss-bq026",
+        "import-b01-p02-boss-bq027",
+        "import-b01-p02-boss-bq028",
+        "import-b01-p02-boss-bq029",
+        "import-b01-p02-boss-bq030"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p03.boss",
+      "parcours": 3,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "anatomy",
+      "subdomain": "boss-anatomie-generale",
+      "competence": "Boss - Anatomie générale",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Évaluation finale du parcours Anatomie générale"
+      ],
+      "recommendedQuestionPool": 15,
+      "difficulty": "hard",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p03",
+        "boss"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/bosses/b01-p03-boss_p03.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p03-boss"
+      ],
+      "questionIds": [
+        "import-b01-p03-boss-bq031",
+        "import-b01-p03-boss-bq032",
+        "import-b01-p03-boss-bq033",
+        "import-b01-p03-boss-bq034",
+        "import-b01-p03-boss-bq035",
+        "import-b01-p03-boss-bq036",
+        "import-b01-p03-boss-bq037",
+        "import-b01-p03-boss-bq038",
+        "import-b01-p03-boss-bq039",
+        "import-b01-p03-boss-bq040",
+        "import-b01-p03-boss-bq041",
+        "import-b01-p03-boss-bq042",
+        "import-b01-p03-boss-bq043",
+        "import-b01-p03-boss-bq044",
+        "import-b01-p03-boss-bq045"
+      ],
+      "contentIds": [
+        "import-b01-p03-boss-bq031",
+        "import-b01-p03-boss-bq032",
+        "import-b01-p03-boss-bq033",
+        "import-b01-p03-boss-bq034",
+        "import-b01-p03-boss-bq035",
+        "import-b01-p03-boss-bq036",
+        "import-b01-p03-boss-bq037",
+        "import-b01-p03-boss-bq038",
+        "import-b01-p03-boss-bq039",
+        "import-b01-p03-boss-bq040",
+        "import-b01-p03-boss-bq041",
+        "import-b01-p03-boss-bq042",
+        "import-b01-p03-boss-bq043",
+        "import-b01-p03-boss-bq044",
+        "import-b01-p03-boss-bq045"
+      ]
+    },
+    {
+      "id": "import.json-xlsx.b01.p04.boss",
+      "parcours": 18,
+      "formationIds": [
+        "dea"
+      ],
+      "domain": "physiology",
+      "subdomain": "boss-physiologie-humaine",
+      "competence": "Boss - Physiologie humaine",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Évaluation finale du parcours Physiologie humaine"
+      ],
+      "recommendedQuestionPool": 14,
+      "difficulty": "hard",
+      "masteryCriteria": {
+        "status": "pending_confirmation",
+        "minimumAccuracy": null,
+        "minimumAttempts": null,
+        "requiredExerciseTypes": []
+      },
+      "tags": [
+        "import-json-xlsx",
+        "p04",
+        "boss"
+      ],
+      "sourceDocument": "JSON.xlsx",
+      "sourcePages": [],
+      "sourceLocation": "imports/json-xlsx-v1/source/bosses/b01-p04-boss_p04.json",
+      "sourceConfirmationRequired": true,
+      "reviewStatus": "draft",
+      "lessonIds": [
+        "dea-p18-boss"
+      ],
+      "questionIds": [
+        "import-b01-p04-boss-bq046",
+        "import-b01-p04-boss-bq047",
+        "import-b01-p04-boss-bq048",
+        "import-b01-p04-boss-bq049",
+        "import-b01-p04-boss-bq050",
+        "import-b01-p04-boss-bq052",
+        "import-b01-p04-boss-bq053",
+        "import-b01-p04-boss-bq054",
+        "import-b01-p04-boss-bq055",
+        "import-b01-p04-boss-bq056",
+        "import-b01-p04-boss-bq057",
+        "import-b01-p04-boss-bq058",
+        "import-b01-p04-boss-bq059",
+        "import-b01-p04-boss-bq060"
+      ],
+      "contentIds": [
+        "import-b01-p04-boss-bq046",
+        "import-b01-p04-boss-bq047",
+        "import-b01-p04-boss-bq048",
+        "import-b01-p04-boss-bq049",
+        "import-b01-p04-boss-bq050",
+        "import-b01-p04-boss-bq052",
+        "import-b01-p04-boss-bq053",
+        "import-b01-p04-boss-bq054",
+        "import-b01-p04-boss-bq055",
+        "import-b01-p04-boss-bq056",
+        "import-b01-p04-boss-bq057",
+        "import-b01-p04-boss-bq058",
+        "import-b01-p04-boss-bq059",
+        "import-b01-p04-boss-bq060"
       ]
     }
   ]

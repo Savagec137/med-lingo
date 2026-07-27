@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l02",
+  "title": "Le système cardiovasculaire",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 7,
+  "level": 1,
+  "xp": 27,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 9
+  },
+  "learningObjectives": [
+    "Le système cardiovasculaire"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p03.l07"
+  ],
+  "prerequisiteIds": [
+    "dea-p03-l01"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p03-l07-q261",
+      "difficulty": "easy",
+      "question": "Combien de cavités possède le cœur ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q261",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q261-answer-01",
+          "text": "4",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q261-answer-02",
+          "text": "2",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q261-answer-03",
+          "text": "3",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q261-answer-04",
+          "text": "5",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q261-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l07-q262",
+      "difficulty": "easy",
+      "question": "Les artères transportent le sang :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q262",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q262-answer-01",
+          "text": "Du cœur vers les organes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q262-answer-02",
+          "text": "Des organes vers le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q262-answer-03",
+          "text": "Vers les poumons uniquement",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q262-answer-04",
+          "text": "Vers le foie uniquement",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q262-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l07-q263",
+      "difficulty": "easy",
+      "question": "Les veines ramènent le sang vers le cœur.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q263",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q263-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q263-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q263-true"
+    },
+    {
+      "id": "import-b01-p03-l07-q264",
+      "difficulty": "easy",
+      "question": "Les capillaires sont les plus gros vaisseaux sanguins.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q264",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q264-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q264-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q264-false"
+    },
+    {
+      "id": "import-b01-p03-l07-q265",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q265",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q265-pair-01",
+          "text": "Artère",
+          "match": "Du cœur vers les organes",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q265-pair-02",
+          "text": "Veine",
+          "match": "Vers le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q265-pair-03",
+          "text": "Capillaire",
+          "match": "Échanges",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q265-pair-04",
+          "text": "Cœur",
+          "match": "Pompe sanguine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l07-q265-pair-01",
+        "import-b01-p03-l07-q265-pair-02",
+        "import-b01-p03-l07-q265-pair-03",
+        "import-b01-p03-l07-q265-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l07-q266",
+      "difficulty": "medium",
+      "question": "Le cœur possède ______ cavités.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q266",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "4",
+          "quatre"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q266-accepted-01",
+          "text": "4",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q266-accepted-02",
+          "text": "quatre",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l07-q266-accepted-01",
+        "import-b01-p03-l07-q266-accepted-02"
+      ]
+    },
+    {
+      "id": "import-b01-p03-l07-q267",
+      "difficulty": "hard",
+      "question": "Quel vaisseau réalise les échanges d'oxygène et de nutriments ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q267",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q267-answer-01",
+          "text": "Les capillaires",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q267-answer-02",
+          "text": "Les artères",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q267-answer-03",
+          "text": "Les veines",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q267-answer-04",
+          "text": "L'aorte",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q267-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l07-q268",
+      "difficulty": "hard",
+      "question": "Lors d'un bilan, un patient présente un pouls radial perceptible. Cette information renseigne principalement sur :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q268",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q268-answer-01",
+          "text": "L'activité circulatoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q268-answer-02",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q268-answer-03",
+          "text": "La ventilation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p03-l07-q268-answer-04",
+          "text": "Le système urinaire",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p03-l07-q268-answer-01"
+    },
+    {
+      "id": "import-b01-p03-l07-q270",
+      "difficulty": "medium",
+      "question": "Classe le trajet du sang.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p03",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p03.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P03",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q270",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p03-l07-q270-step-01",
+          "text": "Cœur",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p03-l07-q270-step-02",
+          "text": "Artères",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p03-l07-q270-step-03",
+          "text": "Capillaires",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p03-l07-q270-step-04",
+          "text": "Veines",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p03-l07-q270-step-05",
+          "text": "Cœur",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p03-l07-q270-step-01",
+        "import-b01-p03-l07-q270-step-02",
+        "import-b01-p03-l07-q270-step-03",
+        "import-b01-p03-l07-q270-step-04",
+        "import-b01-p03-l07-q270-step-05"
+      ]
+    }
+  ]
+}

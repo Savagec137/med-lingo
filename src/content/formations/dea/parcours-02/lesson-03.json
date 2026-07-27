@@ -3,16 +3,534 @@
   "formation": "dea",
   "parcours": "parcours-02",
   "id": "dea-p02-l03",
-  "title": "Préfixes quantité",
+  "title": "Les radicaux",
   "kind": "lesson",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
-  "selection": { "strategy": "random", "count": null },
-  "items": []
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Les principales racines médicales"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p02.l04"
+  ],
+  "prerequisiteIds": [
+    "dea-p02-l02"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p02-l04-q131",
+      "difficulty": "easy",
+      "question": "La racine cardio désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q131",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q131-answer-01",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q131-answer-02",
+          "text": "Le cerveau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q131-answer-03",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q131-answer-04",
+          "text": "Le rein",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q131-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l04-q132",
+      "difficulty": "easy",
+      "question": "La racine neuro désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q132",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q132-answer-01",
+          "text": "Les nerfs",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q132-answer-02",
+          "text": "Les muscles",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q132-answer-03",
+          "text": "Les os",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q132-answer-04",
+          "text": "La peau",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q132-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l04-q133",
+      "difficulty": "easy",
+      "question": "La racine gastro fait référence à l'estomac.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q133",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q133-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q133-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q133-true"
+    },
+    {
+      "id": "import-b01-p02-l04-q134",
+      "difficulty": "easy",
+      "question": "La racine hépato désigne le rein.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q134",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q134-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q134-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q134-false"
+    },
+    {
+      "id": "import-b01-p02-l04-q135",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q135",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 6
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q135-pair-01",
+          "text": "Cardio",
+          "match": "Cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q135-pair-02",
+          "text": "Pneumo",
+          "match": "Poumons",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q135-pair-03",
+          "text": "Neuro",
+          "match": "Nerfs",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q135-pair-04",
+          "text": "Gastro",
+          "match": "Estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q135-pair-05",
+          "text": "Hépato",
+          "match": "Foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q135-pair-06",
+          "text": "Néphro",
+          "match": "Rein",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l04-q135-pair-01",
+        "import-b01-p02-l04-q135-pair-02",
+        "import-b01-p02-l04-q135-pair-03",
+        "import-b01-p02-l04-q135-pair-04",
+        "import-b01-p02-l04-q135-pair-05",
+        "import-b01-p02-l04-q135-pair-06"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l04-q136",
+      "difficulty": "medium",
+      "question": "La racine ______ désigne le foie.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q136",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "hépato"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q136-accepted-01",
+          "text": "hépato",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l04-q136-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p02-l04-q137",
+      "difficulty": "hard",
+      "question": "Le terme cardiologie désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q137",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q137-answer-01",
+          "text": "L'étude du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q137-answer-02",
+          "text": "La chirurgie du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q137-answer-03",
+          "text": "La douleur du cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q137-answer-04",
+          "text": "L'inflammation du cœur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q137-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l04-q138",
+      "difficulty": "hard",
+      "question": "Une néphropathie est une affection :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q138",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q138-answer-01",
+          "text": "Du rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q138-answer-02",
+          "text": "Du foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q138-answer-03",
+          "text": "Du cerveau",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q138-answer-04",
+          "text": "Du poumon",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q138-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l04-q139",
+      "difficulty": "hard",
+      "question": "Le compte-rendu mentionne une pathologie hépatique. Quel organe est concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q139",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q139-answer-01",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q139-answer-02",
+          "text": "Le rein",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q139-answer-03",
+          "text": "Le cœur",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p02-l04-q139-answer-04",
+          "text": "Le poumon",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p02-l04-q139-answer-01"
+    },
+    {
+      "id": "import-b01-p02-l04-q140",
+      "difficulty": "medium",
+      "question": "Replace les éléments du mot 'cardiologie'.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p02",
+        "l04"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p02.l04"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P02",
+        "originalLessonId": "L04",
+        "originalQuestionId": "Q140",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 2
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p02-l04-q140-step-01",
+          "text": "Racine",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p02-l04-q140-step-02",
+          "text": "Suffixe",
+          "explanation": "",
+          "sequenceRank": 2
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p02-l04-q140-step-01",
+        "import-b01-p02-l04-q140-step-02"
+      ]
+    }
+  ]
 }

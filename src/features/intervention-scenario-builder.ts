@@ -121,6 +121,9 @@ const INTERVENTION_FORMAT_BY_CONTENT_TYPE: Record<ContentType, InterventionQuest
   error_identification: "error-identification",
   regulatory: "regulatory",
   handover: "handover",
+  clinical_case: "single",
+  fill_blank: "single",
+  anatomy_location: "single",
 };
 
 function questionContent(profile: OfficialMissionProfile, phase: InterventionPhase): ContentItem {

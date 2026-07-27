@@ -1,0 +1,161 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L03",
+  "lesson_title": "Physiologie cardiovasculaire",
+  "knowledge": [
+    {
+      "id": "K197",
+      "title": "Rôle du système cardiovasculaire",
+      "content": "Le système cardiovasculaire assure le transport de l'oxygène, des nutriments, des hormones et l'élimination des déchets métaboliques."
+    },
+    {
+      "id": "K198",
+      "title": "Cycle cardiaque",
+      "content": "Le cycle cardiaque alterne une phase de contraction (systole) et une phase de relâchement (diastole)."
+    },
+    {
+      "id": "K199",
+      "title": "Débit cardiaque",
+      "content": "Le débit cardiaque correspond au volume de sang éjecté par le cœur en une minute."
+    },
+    {
+      "id": "K200",
+      "title": "Fréquence cardiaque",
+      "content": "Chez un adulte au repos, la fréquence cardiaque est généralement comprise entre 60 et 100 battements par minute."
+    },
+    {
+      "id": "K201",
+      "title": "Pression artérielle",
+      "content": "La pression artérielle dépend principalement du débit cardiaque et des résistances vasculaires."
+    },
+    {
+      "id": "K202",
+      "title": "Perfusion",
+      "content": "Une perfusion suffisante garantit l'apport d'oxygène aux tissus."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q321",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La systole correspond :",
+      "options": [
+        "À la contraction du cœur",
+        "Au remplissage du cœur",
+        "À l'arrêt du cœur",
+        "À la fermeture des valves"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q322",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le débit cardiaque correspond :",
+      "options": [
+        "Au volume de sang éjecté par minute",
+        "À la pression artérielle",
+        "Au volume pulmonaire",
+        "À la saturation en oxygène"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q323",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Une fréquence cardiaque de 80 bpm est physiologique chez un adulte au repos.",
+      "answer": true
+    },
+    {
+      "id": "Q324",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La diastole correspond à la contraction des ventricules.",
+      "answer": false
+    },
+    {
+      "id": "Q325",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Systole",
+          "Contraction"
+        ],
+        [
+          "Diastole",
+          "Relâchement"
+        ],
+        [
+          "Débit cardiaque",
+          "Volume par minute"
+        ],
+        [
+          "Perfusion",
+          "Apport d'oxygène"
+        ]
+      ]
+    },
+    {
+      "id": "Q326",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le débit cardiaque est exprimé par ______.",
+      "answers": [
+        "minute",
+        "volume de sang par minute"
+      ]
+    },
+    {
+      "id": "Q327",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une diminution importante du débit cardiaque entraîne principalement :",
+      "options": [
+        "Une baisse de la perfusion des organes",
+        "Une augmentation de la digestion",
+        "Une augmentation de la filtration rénale",
+        "Une augmentation de la glycémie"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q328",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors du bilan, une hypotension est associée à une peau froide et marbrée. Quel mécanisme physiologique est principalement altéré ?",
+      "options": [
+        "La perfusion tissulaire",
+        "La digestion",
+        "La coagulation",
+        "La ventilation"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q329",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les étapes du trajet du sang.",
+      "solution": [
+        "Oreillette",
+        "Ventricule",
+        "Artère",
+        "Capillaires",
+        "Veine"
+      ]
+    },
+    {
+      "id": "Q330",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le ventricule gauche.",
+      "target": "left_ventricle"
+    }
+  ]
+}

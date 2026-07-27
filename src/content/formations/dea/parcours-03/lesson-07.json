@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-03",
+  "id": "dea-p03-l07",
+  "title": "Le système endocrinien",
+  "kind": "lesson",
+  "status": "awaiting_content",
+  "difficulty": null,
+  "estimatedMinutes": null,
+  "level": null,
+  "xp": null,
+  "tags": [],
+  "pedagogicalReference": null,
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": null
+  },
+  "items": []
+}

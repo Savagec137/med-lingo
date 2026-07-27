@@ -1,0 +1,155 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L02",
+  "lesson_title": "Plans anatomiques",
+  "knowledge": [
+    {
+      "id": "K011",
+      "title": "Plan sagittal",
+      "content": "Le plan sagittal divise le corps en une partie droite et une partie gauche."
+    },
+    {
+      "id": "K012",
+      "title": "Plan médian",
+      "content": "Le plan médian est un plan sagittal passant exactement par le milieu du corps."
+    },
+    {
+      "id": "K013",
+      "title": "Plan frontal",
+      "content": "Le plan frontal divise le corps en une partie antérieure et une partie postérieure."
+    },
+    {
+      "id": "K014",
+      "title": "Plan transversal",
+      "content": "Le plan transversal divise le corps en une partie supérieure et une partie inférieure."
+    },
+    {
+      "id": "K015",
+      "title": "Utilité",
+      "content": "Les plans anatomiques servent à localiser précisément les structures et les lésions."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q011",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le plan sagittal sépare le corps en :",
+      "options": [
+        "Droite et gauche",
+        "Avant et arrière",
+        "Haut et bas",
+        "Intérieur et extérieur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q012",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le plan frontal sépare le corps en :",
+      "options": [
+        "Avant et arrière",
+        "Droite et gauche",
+        "Haut et bas",
+        "Médial et latéral"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q013",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le plan transversal sépare le corps en :",
+      "options": [
+        "Partie supérieure et partie inférieure",
+        "Droite et gauche",
+        "Avant et arrière",
+        "Médial et latéral"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q014",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le plan médian est un plan sagittal particulier.",
+      "answer": true
+    },
+    {
+      "id": "Q015",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le plan frontal sépare le corps en droite et gauche.",
+      "answer": false
+    },
+    {
+      "id": "Q016",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Plan sagittal",
+          "Droite / Gauche"
+        ],
+        [
+          "Plan frontal",
+          "Avant / Arrière"
+        ],
+        [
+          "Plan transversal",
+          "Haut / Bas"
+        ]
+      ]
+    },
+    {
+      "id": "Q017",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le plan ______ sépare le corps en une partie supérieure et une partie inférieure.",
+      "answers": [
+        "transversal"
+      ]
+    },
+    {
+      "id": "Q018",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Associe chaque plan à sa séparation.",
+      "solution": [
+        "Sagittal → Droite/Gauche",
+        "Frontal → Avant/Arrière",
+        "Transversal → Haut/Bas"
+      ]
+    },
+    {
+      "id": "Q019",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une coupe IRM montrant simultanément les deux hémisphères cérébraux de face correspond généralement à :",
+      "options": [
+        "Une coupe frontale",
+        "Une coupe sagittale",
+        "Une coupe transversale",
+        "Une coupe oblique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q020",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un bilan, une plaie est décrite sur la face postérieure du thorax. Cette localisation correspond à :",
+      "options": [
+        "Le dos",
+        "Le sternum",
+        "L'abdomen",
+        "La clavicule"
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P03",
+  "path_title": "Anatomie générale",
+  "lesson_id": "L08",
+  "lesson_title": "Le système respiratoire",
+  "knowledge": [
+    {
+      "id": "K167",
+      "title": "Définition",
+      "content": "Le système respiratoire permet les échanges gazeux entre l'air et le sang."
+    },
+    {
+      "id": "K168",
+      "title": "Voies aériennes",
+      "content": "L'air circule par le nez ou la bouche, puis traverse le pharynx, le larynx, la trachée et les bronches."
+    },
+    {
+      "id": "K169",
+      "title": "Poumons",
+      "content": "Les poumons contiennent des millions d'alvéoles où se déroulent les échanges gazeux."
+    },
+    {
+      "id": "K170",
+      "title": "Diaphragme",
+      "content": "Le diaphragme est le principal muscle de la respiration."
+    },
+    {
+      "id": "K171",
+      "title": "Oxygène",
+      "content": "L'oxygène diffuse des alvéoles vers le sang tandis que le dioxyde de carbone suit le trajet inverse."
+    },
+    {
+      "id": "K172",
+      "title": "Ventilation",
+      "content": "La ventilation comprend l'inspiration et l'expiration."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q271",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel muscle est le principal muscle respiratoire ?",
+      "options": [
+        "Le diaphragme",
+        "Le biceps",
+        "Le triceps",
+        "Le quadriceps"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q272",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Où ont lieu les échanges gazeux ?",
+      "options": [
+        "Dans les alvéoles",
+        "Dans la trachée",
+        "Dans les bronches",
+        "Dans le pharynx"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q273",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le dioxyde de carbone quitte le sang au niveau des alvéoles.",
+      "answer": true
+    },
+    {
+      "id": "Q274",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les bronches sont situées après les alvéoles.",
+      "answer": false
+    },
+    {
+      "id": "Q275",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Trachée",
+          "Conduit aérien"
+        ],
+        [
+          "Bronches",
+          "Distribution de l'air"
+        ],
+        [
+          "Alvéoles",
+          "Échanges gazeux"
+        ],
+        [
+          "Diaphragme",
+          "Respiration"
+        ]
+      ]
+    },
+    {
+      "id": "Q276",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le principal muscle respiratoire est le ______.",
+      "answers": [
+        "diaphragme"
+      ]
+    },
+    {
+      "id": "Q277",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel gaz diffuse normalement des alvéoles vers le sang ?",
+      "options": [
+        "L'oxygène",
+        "Le dioxyde de carbone",
+        "L'azote",
+        "L'hélium"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q278",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors du bilan d'une victime présentant une dyspnée, quel système est principalement concerné ?",
+      "options": [
+        "Le système respiratoire",
+        "Le système digestif",
+        "Le système urinaire",
+        "Le système endocrinien"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q279",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur les poumons.",
+      "target": "lungs"
+    },
+    {
+      "id": "Q280",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe le trajet de l'air inspiré.",
+      "solution": [
+        "Nez/Bouche",
+        "Pharynx",
+        "Larynx",
+        "Trachée",
+        "Bronches",
+        "Alvéoles"
+      ]
+    }
+  ]
+}

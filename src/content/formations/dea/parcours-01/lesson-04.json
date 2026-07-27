@@ -2,37 +2,1527 @@
   "schemaVersion": 2,
   "formation": "dea",
   "parcours": "parcours-01",
-  "status": "awaiting_content",
-  "difficulty": null,
-  "estimatedMinutes": null,
-  "level": null,
-  "xp": null,
-  "tags": [],
-  "pedagogicalReference": null,
+  "id": "dea-p01-l04",
+  "title": "Les positions anatomiques",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 23,
+  "level": 1,
+  "xp": 90,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
   "pulse": null,
   "selection": {
-    "strategy": "all",
-    "count": null
+    "strategy": "random",
+    "count": 10
   },
-  "items": [],
-  "id": "dea-p01-l04",
-  "title": "Les systèmes du corps",
-  "kind": "lesson",
   "learningObjectives": [
-    "définir un système ou appareil ;",
-    "comprendre qu’un système regroupe plusieurs organes ;",
-    "identifier les principaux systèmes ;",
-    "relier chaque système à sa fonction générale."
+    "Position anatomique",
+    "Plans anatomiques",
+    "Axes anatomiques"
   ],
   "competencyIds": [
-    "body.system.definition",
-    "body.system.cardiovascular",
-    "body.system.respiratory",
-    "body.system.digestive",
-    "body.system.urinary",
-    "body.system.nervous",
-    "body.system.locomotor",
-    "body.organization.organ-to-system"
+    "import.json-xlsx.b01.p01.l01",
+    "import.json-xlsx.b01.p01.l02",
+    "import.json-xlsx.b01.p01.l03"
   ],
-  "prerequisiteIds": ["dea-p01-l03"]
+  "prerequisiteIds": [
+    "dea-p01-l03"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p01-l01-q001",
+      "difficulty": "easy",
+      "question": "Quelle est la position anatomique de référence ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q001",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q001-answer-01",
+          "text": "Debout, paumes vers l'avant",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q001-answer-02",
+          "text": "Assis",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q001-answer-03",
+          "text": "Allongé",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q001-answer-04",
+          "text": "Debout, paumes vers l'arrière",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q001-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l01-q002",
+      "difficulty": "easy",
+      "question": "Les paumes sont orientées vers l'avant.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q002",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q002-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q002-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q002-true"
+    },
+    {
+      "id": "import-b01-p01-l01-q003",
+      "difficulty": "easy",
+      "question": "Le terme 'supérieur' signifie :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q003",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q003-answer-01",
+          "text": "Vers la tête",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q003-answer-02",
+          "text": "Vers les pieds",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q003-answer-03",
+          "text": "Vers l'arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q003-answer-04",
+          "text": "Vers l'extérieur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q003-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l01-q004",
+      "difficulty": "easy",
+      "question": "Le terme 'antérieur' désigne :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q004",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q004-answer-01",
+          "text": "L'avant",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q004-answer-02",
+          "text": "L'arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q004-answer-03",
+          "text": "Le haut",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q004-answer-04",
+          "text": "Le bas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q004-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l01-q005",
+      "difficulty": "easy",
+      "question": "Le terme postérieur désigne l'avant du corps.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q005",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q005-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q005-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q005-false"
+    },
+    {
+      "id": "import-b01-p01-l01-q006",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q006",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q006-pair-01",
+          "text": "Supérieur",
+          "match": "Vers la tête",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q006-pair-02",
+          "text": "Inférieur",
+          "match": "Vers les pieds",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q006-pair-03",
+          "text": "Antérieur",
+          "match": "Avant",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q006-pair-04",
+          "text": "Postérieur",
+          "match": "Arrière",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l01-q006-pair-01",
+        "import-b01-p01-l01-q006-pair-02",
+        "import-b01-p01-l01-q006-pair-03",
+        "import-b01-p01-l01-q006-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l01-q007",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q007",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q007-pair-01",
+          "text": "Médial",
+          "match": "Proche de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q007-pair-02",
+          "text": "Latéral",
+          "match": "Éloigné de la ligne médiane",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q007-pair-03",
+          "text": "Proximal",
+          "match": "Près du tronc",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q007-pair-04",
+          "text": "Distal",
+          "match": "Éloigné du tronc",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l01-q007-pair-01",
+        "import-b01-p01-l01-q007-pair-02",
+        "import-b01-p01-l01-q007-pair-03",
+        "import-b01-p01-l01-q007-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l01-q008",
+      "difficulty": "medium",
+      "question": "Le terme ______ désigne une structure proche de la ligne médiane.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q008",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "médial"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q008-accepted-01",
+          "text": "médial",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l01-q008-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l01-q009",
+      "difficulty": "medium",
+      "question": "Classe du plus proximal au plus distal.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q009",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 4
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q009-step-01",
+          "text": "Épaule",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l01-q009-step-02",
+          "text": "Bras",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l01-q009-step-03",
+          "text": "Avant-bras",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p01-l01-q009-step-04",
+          "text": "Main",
+          "explanation": "",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l01-q009-step-01",
+        "import-b01-p01-l01-q009-step-02",
+        "import-b01-p01-l01-q009-step-03",
+        "import-b01-p01-l01-q009-step-04"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l01-q010",
+      "difficulty": "hard",
+      "question": "Le patient présente une douleur sur la face antérieure du bras droit. Où est localisée la douleur ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l01"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l01"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L01",
+        "originalQuestionId": "Q010",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l01-q010-answer-01",
+          "text": "À l'avant du bras droit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q010-answer-02",
+          "text": "À l'arrière du bras droit",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q010-answer-03",
+          "text": "À l'avant-bras gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l01-q010-answer-04",
+          "text": "À l'épaule gauche",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l01-q010-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l02-q011",
+      "difficulty": "easy",
+      "question": "Le plan sagittal sépare le corps en :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q011",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q011-answer-01",
+          "text": "Droite et gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q011-answer-02",
+          "text": "Avant et arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q011-answer-03",
+          "text": "Haut et bas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q011-answer-04",
+          "text": "Intérieur et extérieur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q011-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l02-q012",
+      "difficulty": "easy",
+      "question": "Le plan frontal sépare le corps en :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q012",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q012-answer-01",
+          "text": "Avant et arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q012-answer-02",
+          "text": "Droite et gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q012-answer-03",
+          "text": "Haut et bas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q012-answer-04",
+          "text": "Médial et latéral",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q012-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l02-q013",
+      "difficulty": "easy",
+      "question": "Le plan transversal sépare le corps en :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q013",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q013-answer-01",
+          "text": "Partie supérieure et partie inférieure",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q013-answer-02",
+          "text": "Droite et gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q013-answer-03",
+          "text": "Avant et arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q013-answer-04",
+          "text": "Médial et latéral",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q013-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l02-q014",
+      "difficulty": "easy",
+      "question": "Le plan médian est un plan sagittal particulier.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q014",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q014-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q014-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q014-true"
+    },
+    {
+      "id": "import-b01-p01-l02-q015",
+      "difficulty": "easy",
+      "question": "Le plan frontal sépare le corps en droite et gauche.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q015",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q015-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q015-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q015-false"
+    },
+    {
+      "id": "import-b01-p01-l02-q016",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q016",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q016-pair-01",
+          "text": "Plan sagittal",
+          "match": "Droite / Gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q016-pair-02",
+          "text": "Plan frontal",
+          "match": "Avant / Arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q016-pair-03",
+          "text": "Plan transversal",
+          "match": "Haut / Bas",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l02-q016-pair-01",
+        "import-b01-p01-l02-q016-pair-02",
+        "import-b01-p01-l02-q016-pair-03"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l02-q017",
+      "difficulty": "medium",
+      "question": "Le plan ______ sépare le corps en une partie supérieure et une partie inférieure.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q017",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "transversal"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q017-accepted-01",
+          "text": "transversal",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l02-q017-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l02-q018",
+      "difficulty": "medium",
+      "question": "Associe chaque plan à sa séparation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q018",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q018-step-01",
+          "text": "Sagittal → Droite/Gauche",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l02-q018-step-02",
+          "text": "Frontal → Avant/Arrière",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l02-q018-step-03",
+          "text": "Transversal → Haut/Bas",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l02-q018-step-01",
+        "import-b01-p01-l02-q018-step-02",
+        "import-b01-p01-l02-q018-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l02-q019",
+      "difficulty": "hard",
+      "question": "Une coupe IRM montrant simultanément les deux hémisphères cérébraux de face correspond généralement à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q019",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q019-answer-01",
+          "text": "Une coupe frontale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q019-answer-02",
+          "text": "Une coupe sagittale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q019-answer-03",
+          "text": "Une coupe transversale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q019-answer-04",
+          "text": "Une coupe oblique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q019-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l02-q020",
+      "difficulty": "hard",
+      "question": "Lors d'un bilan, une plaie est décrite sur la face postérieure du thorax. Cette localisation correspond à :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l02"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l02"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L02",
+        "originalQuestionId": "Q020",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l02-q020-answer-01",
+          "text": "Le dos",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q020-answer-02",
+          "text": "Le sternum",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q020-answer-03",
+          "text": "L'abdomen",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l02-q020-answer-04",
+          "text": "La clavicule",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l02-q020-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l03-q021",
+      "difficulty": "easy",
+      "question": "L'axe longitudinal est orienté :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q021",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q021-answer-01",
+          "text": "De la tête vers les pieds",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q021-answer-02",
+          "text": "De droite à gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q021-answer-03",
+          "text": "D'avant en arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q021-answer-04",
+          "text": "Du thorax vers l'abdomen",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q021-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l03-q022",
+      "difficulty": "easy",
+      "question": "L'axe transversal est orienté :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q022",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q022-answer-01",
+          "text": "De droite à gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q022-answer-02",
+          "text": "De haut en bas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q022-answer-03",
+          "text": "D'avant en arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q022-answer-04",
+          "text": "Vers la ligne médiane",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q022-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l03-q023",
+      "difficulty": "easy",
+      "question": "L'axe sagittal est orienté :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q023",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q023-answer-01",
+          "text": "D'avant en arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q023-answer-02",
+          "text": "De droite à gauche",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q023-answer-03",
+          "text": "De haut en bas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q023-answer-04",
+          "text": "En diagonale",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q023-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l03-q024",
+      "difficulty": "easy",
+      "question": "L'axe longitudinal est vertical.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q024",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q024-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q024-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q024-true"
+    },
+    {
+      "id": "import-b01-p01-l03-q025",
+      "difficulty": "easy",
+      "question": "L'axe transversal est vertical.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q025",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q025-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q025-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q025-false"
+    },
+    {
+      "id": "import-b01-p01-l03-q026",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q026",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q026-pair-01",
+          "text": "Longitudinal",
+          "match": "Tête ↔ Pieds",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q026-pair-02",
+          "text": "Sagittal",
+          "match": "Avant ↔ Arrière",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q026-pair-03",
+          "text": "Transversal",
+          "match": "Droite ↔ Gauche",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l03-q026-pair-01",
+        "import-b01-p01-l03-q026-pair-02",
+        "import-b01-p01-l03-q026-pair-03"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l03-q027",
+      "difficulty": "medium",
+      "question": "L'axe ______ est orienté d'avant en arrière.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q027",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "sagittal"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q027-accepted-01",
+          "text": "sagittal",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l03-q027-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l03-q028",
+      "difficulty": "medium",
+      "question": "Classe les axes selon leur orientation.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q028",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 3
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q028-step-01",
+          "text": "Longitudinal → Haut/Bas",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p01-l03-q028-step-02",
+          "text": "Sagittal → Avant/Arrière",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p01-l03-q028-step-03",
+          "text": "Transversal → Droite/Gauche",
+          "explanation": "",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p01-l03-q028-step-01",
+        "import-b01-p01-l03-q028-step-02",
+        "import-b01-p01-l03-q028-step-03"
+      ]
+    },
+    {
+      "id": "import-b01-p01-l03-q029",
+      "difficulty": "hard",
+      "question": "La flexion du coude s'effectue principalement dans quel plan ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q029",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q029-answer-01",
+          "text": "Plan sagittal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q029-answer-02",
+          "text": "Plan frontal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q029-answer-03",
+          "text": "Plan transversal",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q029-answer-04",
+          "text": "Plan oblique",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q029-answer-01"
+    },
+    {
+      "id": "import-b01-p01-l03-q030",
+      "difficulty": "hard",
+      "question": "Lors d'un bilan traumatique, le médecin demande d'évaluer un mouvement autour de l'axe transversal. Quel mouvement est le plus concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p01",
+        "l03"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p01.l03"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P01",
+        "originalLessonId": "L03",
+        "originalQuestionId": "Q030",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p01-l03-q030-answer-01",
+          "text": "Flexion / Extension",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q030-answer-02",
+          "text": "Rotation",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q030-answer-03",
+          "text": "Abduction / Adduction",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p01-l03-q030-answer-04",
+          "text": "Pronation",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p01-l03-q030-answer-01"
+    }
+  ]
 }

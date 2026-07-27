@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 7,
+  "level": 1,
+  "xp": 27,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 9
+  },
+  "learningObjectives": [
+    "Physiologie du système digestif"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l06"
+  ],
+  "prerequisiteIds": [
+    "dea-p07-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l06-q351",
+      "difficulty": "easy",
+      "question": "Où est absorbée la majorité des nutriments ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q351",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q351-answer-01",
+          "text": "Dans l'intestin grêle",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q351-answer-02",
+          "text": "Dans l'œsophage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q351-answer-03",
+          "text": "Dans le côlon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q351-answer-04",
+          "text": "Dans l'estomac",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q351-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l06-q352",
+      "difficulty": "easy",
+      "question": "Quel organe produit la bile ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q352",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q352-answer-01",
+          "text": "Le foie",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q352-answer-02",
+          "text": "Le pancréas",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q352-answer-03",
+          "text": "L'estomac",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q352-answer-04",
+          "text": "La rate",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q352-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l06-q353",
+      "difficulty": "easy",
+      "question": "Les enzymes digestives participent à la digestion chimique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q353",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q353-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q353-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q353-true"
+    },
+    {
+      "id": "import-b01-p04-l06-q354",
+      "difficulty": "easy",
+      "question": "La digestion débute dans l'estomac.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q354",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q354-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q354-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q354-false"
+    },
+    {
+      "id": "import-b01-p04-l06-q355",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q355",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q355-pair-01",
+          "text": "Bouche",
+          "match": "Mastication",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q355-pair-02",
+          "text": "Estomac",
+          "match": "Brassage",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q355-pair-03",
+          "text": "Intestin grêle",
+          "match": "Absorption",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q355-pair-04",
+          "text": "Pancréas",
+          "match": "Enzymes digestives",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l06-q355-pair-01",
+        "import-b01-p04-l06-q355-pair-02",
+        "import-b01-p04-l06-q355-pair-03",
+        "import-b01-p04-l06-q355-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l06-q356",
+      "difficulty": "medium",
+      "question": "La majorité de l'absorption des nutriments se fait dans l'______ grêle.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q356",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "intestin"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q356-accepted-01",
+          "text": "intestin",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l06-q356-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l06-q357",
+      "difficulty": "hard",
+      "question": "Quel est le rôle principal des enzymes digestives ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q357",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q357-answer-01",
+          "text": "Décomposer les aliments en nutriments absorbables",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q357-answer-02",
+          "text": "Transporter l'oxygène",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q357-answer-03",
+          "text": "Filtrer le sang",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q357-answer-04",
+          "text": "Produire des globules rouges",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q357-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l06-q358",
+      "difficulty": "hard",
+      "question": "Un patient présente des vomissements répétés et des douleurs épigastriques. Quel système est principalement concerné ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q358",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l06-q358-answer-01",
+          "text": "Le système digestif",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q358-answer-02",
+          "text": "Le système nerveux",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q358-answer-03",
+          "text": "Le système respiratoire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l06-q358-answer-04",
+          "text": "Le système locomoteur",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l06-q358-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l06-q360",
+      "difficulty": "medium",
+      "question": "Clique sur l'intestin grêle.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l06"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l06"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L06",
+        "originalQuestionId": "Q360",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "small_intestine"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-small_intestine",
+          "text": "Intestin grêle",
+          "detail": "0.5,0.54",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-knee",
+          "text": "Genou",
+          "detail": "0.59,0.8",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-femur",
+          "text": "Fémur",
+          "detail": "0.59,0.69",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-small_intestine"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L06",
+  "lesson_title": "Physiologie du système digestif",
+  "knowledge": [
+    {
+      "id": "K215",
+      "title": "Fonction principale",
+      "content": "Le système digestif transforme les aliments en nutriments absorbables et élimine les déchets non digestibles."
+    },
+    {
+      "id": "K216",
+      "title": "Digestion mécanique",
+      "content": "La mastication et le brassage gastrique fragmentent les aliments."
+    },
+    {
+      "id": "K217",
+      "title": "Digestion chimique",
+      "content": "Les enzymes digestives décomposent les nutriments en molécules absorbables."
+    },
+    {
+      "id": "K218",
+      "title": "Absorption",
+      "content": "La majorité de l'absorption des nutriments se déroule dans l'intestin grêle."
+    },
+    {
+      "id": "K219",
+      "title": "Foie et pancréas",
+      "content": "Le foie produit la bile tandis que le pancréas sécrète des enzymes digestives favorisant la digestion."
+    },
+    {
+      "id": "K220",
+      "title": "Application DEA",
+      "content": "Comprendre la physiologie digestive aide à interpréter les douleurs abdominales, les vomissements et certains signes cliniques."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q351",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Où est absorbée la majorité des nutriments ?",
+      "options": [
+        "Dans l'intestin grêle",
+        "Dans l'œsophage",
+        "Dans le côlon",
+        "Dans l'estomac"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q352",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe produit la bile ?",
+      "options": [
+        "Le foie",
+        "Le pancréas",
+        "L'estomac",
+        "La rate"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q353",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les enzymes digestives participent à la digestion chimique.",
+      "answer": true
+    },
+    {
+      "id": "Q354",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La digestion débute dans l'estomac.",
+      "answer": false
+    },
+    {
+      "id": "Q355",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Bouche",
+          "Mastication"
+        ],
+        [
+          "Estomac",
+          "Brassage"
+        ],
+        [
+          "Intestin grêle",
+          "Absorption"
+        ],
+        [
+          "Pancréas",
+          "Enzymes digestives"
+        ]
+      ]
+    },
+    {
+      "id": "Q356",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "La majorité de l'absorption des nutriments se fait dans l'______ grêle.",
+      "answers": [
+        "intestin"
+      ]
+    },
+    {
+      "id": "Q357",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Quel est le rôle principal des enzymes digestives ?",
+      "options": [
+        "Décomposer les aliments en nutriments absorbables",
+        "Transporter l'oxygène",
+        "Filtrer le sang",
+        "Produire des globules rouges"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q358",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Un patient présente des vomissements répétés et des douleurs épigastriques. Quel système est principalement concerné ?",
+      "options": [
+        "Le système digestif",
+        "Le système nerveux",
+        "Le système respiratoire",
+        "Le système locomoteur"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q359",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace le trajet des aliments.",
+      "solution": [
+        "Bouche",
+        "Œsophage",
+        "Estomac",
+        "Intestin grêle",
+        "Côlon",
+        "Rectum"
+      ]
+    },
+    {
+      "id": "Q360",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur l'intestin grêle.",
+      "target": "small_intestine"
+    }
+  ]
+}

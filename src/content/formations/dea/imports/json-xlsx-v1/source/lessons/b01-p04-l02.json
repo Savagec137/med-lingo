@@ -1,0 +1,160 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P04",
+  "path_title": "Physiologie humaine",
+  "lesson_id": "L02",
+  "lesson_title": "L'homéostasie",
+  "knowledge": [
+    {
+      "id": "K191",
+      "title": "Définition",
+      "content": "L'homéostasie est la capacité de l'organisme à maintenir un environnement interne stable malgré les variations extérieures."
+    },
+    {
+      "id": "K192",
+      "title": "Température",
+      "content": "Le corps régule sa température afin de maintenir un fonctionnement optimal des cellules."
+    },
+    {
+      "id": "K193",
+      "title": "Glycémie",
+      "content": "La glycémie est maintenue dans des limites physiologiques grâce à plusieurs mécanismes de régulation."
+    },
+    {
+      "id": "K194",
+      "title": "Pression artérielle",
+      "content": "La pression artérielle est continuellement ajustée pour assurer une perfusion suffisante des organes."
+    },
+    {
+      "id": "K195",
+      "title": "Équilibre hydrique",
+      "content": "Les reins participent au maintien de l'équilibre en eau et en électrolytes."
+    },
+    {
+      "id": "K196",
+      "title": "Importance clinique",
+      "content": "Une rupture de l'homéostasie peut entraîner une détérioration rapide de l'état du patient."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q311",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "L'homéostasie correspond :",
+      "options": [
+        "Au maintien de l'équilibre interne",
+        "À la croissance des os",
+        "À la digestion",
+        "À la coagulation"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q312",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe participe principalement à l'équilibre hydrique ?",
+      "options": [
+        "Les reins",
+        "Les poumons",
+        "Le cœur",
+        "La rate"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q313",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le maintien d'une température stable participe à l'homéostasie.",
+      "answer": true
+    },
+    {
+      "id": "Q314",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "L'homéostasie signifie que les constantes ne varient jamais.",
+      "answer": false
+    },
+    {
+      "id": "Q315",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Température",
+          "Thermorégulation"
+        ],
+        [
+          "Glycémie",
+          "Équilibre énergétique"
+        ],
+        [
+          "Reins",
+          "Équilibre hydrique"
+        ],
+        [
+          "Pression artérielle",
+          "Perfusion des organes"
+        ]
+      ]
+    },
+    {
+      "id": "Q316",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "L'organisme cherche à maintenir un ______ interne stable.",
+      "answers": [
+        "équilibre"
+      ]
+    },
+    {
+      "id": "Q317",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Pourquoi l'homéostasie est-elle essentielle ?",
+      "options": [
+        "Elle permet le fonctionnement normal des cellules",
+        "Elle augmente la taille des muscles",
+        "Elle remplace le système immunitaire",
+        "Elle produit les globules rouges"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q318",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Une victime présente une température corporelle à 40 °C. Quel mécanisme physiologique est principalement perturbé ?",
+      "options": [
+        "La thermorégulation",
+        "La coagulation",
+        "La digestion",
+        "La filtration rénale"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q319",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Replace les étapes d'un mécanisme de régulation.",
+      "solution": [
+        "Stimulus",
+        "Récepteur",
+        "Centre de régulation",
+        "Effecteur",
+        "Retour à l'équilibre"
+      ]
+    },
+    {
+      "id": "Q320",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur les reins.",
+      "target": "kidneys"
+    }
+  ]
+}

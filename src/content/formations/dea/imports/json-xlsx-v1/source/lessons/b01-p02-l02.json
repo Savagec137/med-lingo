@@ -1,0 +1,168 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L02",
+  "lesson_title": "Les préfixes médicaux",
+  "knowledge": [
+    {
+      "id": "K071",
+      "title": "Préfixe",
+      "content": "Le préfixe est placé au début d'un mot médical et en modifie le sens."
+    },
+    {
+      "id": "K072",
+      "title": "Brady-",
+      "content": "Brady- signifie lent."
+    },
+    {
+      "id": "K073",
+      "title": "Tachy-",
+      "content": "Tachy- signifie rapide."
+    },
+    {
+      "id": "K074",
+      "title": "Hypo-",
+      "content": "Hypo- signifie diminution ou insuffisance."
+    },
+    {
+      "id": "K075",
+      "title": "Hyper-",
+      "content": "Hyper- signifie augmentation ou excès."
+    },
+    {
+      "id": "K076",
+      "title": "A- / An-",
+      "content": "A- ou An- signifie absence ou privation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q111",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le préfixe brady- signifie :",
+      "options": [
+        "Lent",
+        "Rapide",
+        "Absence",
+        "Excès"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q112",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le préfixe tachy- signifie :",
+      "options": [
+        "Rapide",
+        "Lent",
+        "Petit",
+        "Grand"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q113",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Hypoglycémie signifie :",
+      "options": [
+        "Diminution du taux de glucose",
+        "Augmentation du taux de glucose",
+        "Absence de glucose",
+        "Excès d'oxygène"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q114",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Hyper- indique une augmentation.",
+      "answer": true
+    },
+    {
+      "id": "Q115",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le préfixe A- signifie rapide.",
+      "answer": false
+    },
+    {
+      "id": "Q116",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Brady-",
+          "Lent"
+        ],
+        [
+          "Tachy-",
+          "Rapide"
+        ],
+        [
+          "Hypo-",
+          "Diminution"
+        ],
+        [
+          "Hyper-",
+          "Excès"
+        ],
+        [
+          "A-",
+          "Absence"
+        ]
+      ]
+    },
+    {
+      "id": "Q117",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le préfixe ______ signifie augmentation.",
+      "answers": [
+        "hyper"
+      ]
+    },
+    {
+      "id": "Q118",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une tachycardie correspond à :",
+      "options": [
+        "Une fréquence cardiaque rapide",
+        "Une fréquence cardiaque lente",
+        "Une absence de rythme cardiaque",
+        "Une douleur thoracique"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q119",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le médecin annonce une bradypnée. Comment interprétez-vous ce terme ?",
+      "options": [
+        "Respiration anormalement lente",
+        "Respiration rapide",
+        "Absence de respiration",
+        "Respiration douloureuse"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q120",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Complète correctement la structure du mot 'tachy-card-ie'.",
+      "solution": [
+        "Préfixe",
+        "Racine",
+        "Suffixe"
+      ]
+    }
+  ]
+}

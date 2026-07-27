@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "db:validate": "node scripts/validate-enterprise-database.mjs --write",
-    "test": "node --experimental-strip-types --test src/content/content-engine.test.ts src/content/pedagogical-content.test.ts src/content/learning-content.test.ts src/content/master-knowledge-base.test.ts src/content/pedagogical-specification.test.ts src/content/parcours-01.test.ts src/content/medlingo-charter.test.ts src/content/curriculum-roadmap.test.ts src/lib/roadmap-visuals.test.ts src/features/gamification/components/chest-opening-sequence.test.ts src/features/intervention-engine.test.ts src/features/intervention-catalog.test.ts src/features/intervention-question-quality.test.ts",
+    "test": "node --experimental-strip-types --test src/content/content-engine.test.ts src/content/pedagogical-content.test.ts src/content/learning-content.test.ts src/content/master-knowledge-base.test.ts src/content/pedagogical-specification.test.ts src/content/parcours-01.test.ts src/content/json-xlsx-import.test.ts src/content/medlingo-charter.test.ts src/content/curriculum-roadmap.test.ts src/content/roadmap-v2.test.ts src/content/roadmap-progress.test.ts src/content/learning-activity.test.ts src/lib/roadmap-visuals.test.ts src/lib/use-learning-history.test.ts src/features/gamification/components/chest-opening-sequence.test.ts src/features/intervention-engine.test.ts src/features/intervention-catalog.test.ts src/features/intervention-question-quality.test.ts",
     "lint": "eslint .",
     "format": "prettier --write .",
     "db:phase1": "node scripts/build-enterprise-phase1-migration.mjs"

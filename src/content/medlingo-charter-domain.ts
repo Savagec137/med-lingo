@@ -10,7 +10,7 @@ import type { LessonKind, LessonContentStatus } from "./learning-domain.ts";
 export interface CharterExerciseType {
   id: ContentType;
   label: string;
-  answerMode: "single" | "multiple" | "ordered" | "matching";
+  answerMode: "single" | "multiple" | "ordered" | "matching" | "text";
 }
 
 export interface CharterDifficultyLevel {

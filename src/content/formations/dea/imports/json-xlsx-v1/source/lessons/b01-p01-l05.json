@@ -1,0 +1,164 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P01",
+  "path_title": "Le corps humain",
+  "lesson_id": "L05",
+  "lesson_title": "Les cavités du corps humain",
+  "knowledge": [
+    {
+      "id": "K028",
+      "title": "Cavité crânienne",
+      "content": "La cavité crânienne contient l'encéphale."
+    },
+    {
+      "id": "K029",
+      "title": "Canal rachidien",
+      "content": "Le canal rachidien contient la moelle épinière."
+    },
+    {
+      "id": "K030",
+      "title": "Cavité thoracique",
+      "content": "La cavité thoracique contient le cœur, les poumons et les gros vaisseaux."
+    },
+    {
+      "id": "K031",
+      "title": "Cavité abdominale",
+      "content": "La cavité abdominale contient la majorité des organes digestifs."
+    },
+    {
+      "id": "K032",
+      "title": "Cavité pelvienne",
+      "content": "La cavité pelvienne contient notamment la vessie, le rectum et les organes génitaux internes."
+    },
+    {
+      "id": "K033",
+      "title": "Diaphragme",
+      "content": "Le diaphragme sépare la cavité thoracique de la cavité abdominale."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q041",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Quel organe est contenu dans la cavité crânienne ?",
+      "options": [
+        "Le cerveau",
+        "Le foie",
+        "Le cœur",
+        "Le pancréas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q042",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "La moelle épinière est située dans :",
+      "options": [
+        "Le canal rachidien",
+        "La cavité abdominale",
+        "La cavité thoracique",
+        "Le bassin"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q043",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le diaphragme sépare :",
+      "options": [
+        "Le thorax de l'abdomen",
+        "La tête du cou",
+        "Le bassin des jambes",
+        "Le bras de l'avant-bras"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q044",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Les poumons sont situés dans la cavité thoracique.",
+      "answer": true
+    },
+    {
+      "id": "Q045",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "La vessie est située dans la cavité thoracique.",
+      "answer": false
+    },
+    {
+      "id": "Q046",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Cavité crânienne",
+          "Encéphale"
+        ],
+        [
+          "Canal rachidien",
+          "Moelle épinière"
+        ],
+        [
+          "Cavité thoracique",
+          "Poumons"
+        ],
+        [
+          "Cavité abdominale",
+          "Foie"
+        ],
+        [
+          "Cavité pelvienne",
+          "Vessie"
+        ]
+      ]
+    },
+    {
+      "id": "Q047",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le ______ sépare le thorax de l'abdomen.",
+      "answers": [
+        "diaphragme"
+      ]
+    },
+    {
+      "id": "Q048",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur la cavité thoracique.",
+      "target": "thoracic_cavity"
+    },
+    {
+      "id": "Q049",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "Une perforation de la cavité abdominale peut concerner principalement :",
+      "options": [
+        "Les organes digestifs",
+        "Le cerveau",
+        "La moelle épinière",
+        "Les poumons uniquement"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q050",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Lors d'un traumatisme thoracique, quelles structures sont principalement menacées ?",
+      "options": [
+        "Le cœur et les poumons",
+        "Le foie uniquement",
+        "La vessie",
+        "Le cerveau"
+      ],
+      "correct": 0
+    }
+  ]
+}

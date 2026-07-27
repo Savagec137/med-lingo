@@ -1,0 +1,169 @@
+{
+  "block_id": "B01",
+  "block_title": "Fondamentaux",
+  "path_id": "P02",
+  "path_title": "Langage médical",
+  "lesson_id": "L06",
+  "lesson_title": "Les directions et localisations médicales",
+  "knowledge": [
+    {
+      "id": "K095",
+      "title": "Antériorité",
+      "content": "Antérieur signifie situé vers l'avant du corps."
+    },
+    {
+      "id": "K096",
+      "title": "Postériorité",
+      "content": "Postérieur signifie situé vers l'arrière du corps."
+    },
+    {
+      "id": "K097",
+      "title": "Médial",
+      "content": "Médial signifie proche de la ligne médiane."
+    },
+    {
+      "id": "K098",
+      "title": "Latéral",
+      "content": "Latéral signifie éloigné de la ligne médiane."
+    },
+    {
+      "id": "K099",
+      "title": "Proximal",
+      "content": "Proximal signifie proche de l'origine d'un membre."
+    },
+    {
+      "id": "K100",
+      "title": "Distal",
+      "content": "Distal signifie éloigné de l'origine d'un membre."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q151",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme médial signifie :",
+      "options": [
+        "Proche de la ligne médiane",
+        "Éloigné de la ligne médiane",
+        "Vers l'arrière",
+        "Vers le bas"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q152",
+      "type": "multiple_choice",
+      "difficulty": 1,
+      "question": "Le terme distal signifie :",
+      "options": [
+        "Éloigné de l'origine du membre",
+        "Proche de l'origine du membre",
+        "Vers la tête",
+        "Vers le thorax"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q153",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le nez est situé en avant des oreilles.",
+      "answer": true
+    },
+    {
+      "id": "Q154",
+      "type": "true_false",
+      "difficulty": 1,
+      "question": "Le coude est distal par rapport au poignet.",
+      "answer": false
+    },
+    {
+      "id": "Q155",
+      "type": "matching",
+      "difficulty": 2,
+      "pairs": [
+        [
+          "Antérieur",
+          "Avant"
+        ],
+        [
+          "Postérieur",
+          "Arrière"
+        ],
+        [
+          "Médial",
+          "Près de la ligne médiane"
+        ],
+        [
+          "Latéral",
+          "Éloigné de la ligne médiane"
+        ],
+        [
+          "Proximal",
+          "Près de l'origine"
+        ],
+        [
+          "Distal",
+          "Éloigné de l'origine"
+        ]
+      ]
+    },
+    {
+      "id": "Q156",
+      "type": "fill_blank",
+      "difficulty": 2,
+      "question": "Le genou est ______ par rapport à la hanche.",
+      "answers": [
+        "distal"
+      ]
+    },
+    {
+      "id": "Q157",
+      "type": "multiple_choice",
+      "difficulty": 3,
+      "question": "L'épaule est ______ par rapport au poignet.",
+      "options": [
+        "Proximale",
+        "Distale",
+        "Latérale",
+        "Postérieure"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q158",
+      "type": "ordering",
+      "difficulty": 2,
+      "question": "Classe du plus proximal au plus distal.",
+      "solution": [
+        "Épaule",
+        "Bras",
+        "Coude",
+        "Avant-bras",
+        "Poignet",
+        "Main"
+      ]
+    },
+    {
+      "id": "Q159",
+      "type": "clinical_case",
+      "difficulty": 3,
+      "question": "Le médecin décrit une plaie sur la face antérieure de l'avant-bras droit. Où se situe-t-elle ?",
+      "options": [
+        "Sur l'avant de l'avant-bras droit",
+        "Sur l'arrière de l'avant-bras droit",
+        "Sur la main droite",
+        "Sur le bras gauche"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "Q160",
+      "type": "anatomy_click",
+      "difficulty": 2,
+      "question": "Clique sur le membre supérieur droit.",
+      "target": "right_upper_limb"
+    }
+  ]
+}

@@ -22,7 +22,7 @@ import {
   RoadmapParcoursArtwork,
 } from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
-import { OFFICIAL_ROADMAP_BLOCS } from "@/content/curriculum-content";
+import { OFFICIAL_ROADMAP_BLOCS, OFFICIAL_ROADMAP_PARCOURS } from "@/content/curriculum-content";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
@@ -369,7 +369,7 @@ function Home() {
               </h2>
             </div>
             <div className="shrink-0 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold text-white/70 backdrop-blur">
-              50 parcours
+              {OFFICIAL_ROADMAP_PARCOURS.length} parcours
             </div>
           </div>
 
@@ -396,7 +396,9 @@ function Home() {
                     const hasPublishedLessons = parcours.publishedLessonCount > 0;
                     return (
                       <article key={parcours.id}>
-                        <div
+                        <Link
+                          to="/parcours/$parcoursId"
+                          params={{ parcoursId: parcours.id }}
                           className={`flex items-center gap-4 rounded-xl border p-4 shadow-xl backdrop-blur-md ${
                             hasPublishedLessons
                               ? "border-cyan-400/35 bg-white/10"
@@ -435,7 +437,7 @@ function Home() {
                               ? `${parcours.publishedLessonCount}/${parcours.plannedLessonCount} disponibles`
                               : "En préparation"}
                           </div>
-                        </div>
+                        </Link>
 
                         {hasPublishedLessons && (
                           <div className="relative mx-auto flex flex-col items-center gap-6 py-5">

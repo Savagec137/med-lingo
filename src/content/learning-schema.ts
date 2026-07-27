@@ -29,7 +29,7 @@ const answerSchema = z.object({
 });
 
 const metadataSchema = z
-  .record(z.string(), z.union([z.string(), z.number(), z.boolean()]))
+  .record(z.string(), z.union([z.string(), z.number(), z.boolean(), z.array(z.string())]))
   .optional();
 
 const contentPoolSchema = z
@@ -69,7 +69,7 @@ const learningItemSchema = z.object({
   type: z.enum(CONTENT_TYPES),
   question: z.string().trim().min(1),
   instruction: z.string().trim().min(1).optional(),
-  answers: z.array(answerSchema).min(2),
+  answers: z.array(answerSchema).min(1),
   correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
   explanation: z.string(),
   priorityReminder: z.string().trim().min(1).optional(),
@@ -153,6 +153,16 @@ const lessonContentSchema = z
         path: ["items"],
         message: "Une banque en attente de contenu doit rester vide.",
       });
+    }
+
+    for (const [index, item] of lesson.items.entries()) {
+      if (item.type !== "fill_blank" && item.answers.length < 2) {
+        context.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["items", index, "answers"],
+          message: "Ce type d'exercice exige au moins deux réponses.",
+        });
+      }
     }
 
     if (lesson.contentPool?.sourceLessonIds.includes(lesson.id)) {
