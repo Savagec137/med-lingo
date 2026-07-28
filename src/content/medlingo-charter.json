@@ -177,7 +177,7 @@
     },
     "hearts": {
       "maximum": 5,
-      "regenerationMinutes": 15
+      "regenerationMinutes": 2
     }
   },
   "rewards": {

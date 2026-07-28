@@ -20,6 +20,7 @@ import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
 import { useWallet, type Wallet } from "@/lib/use-wallet";
 import { useChest } from "@/lib/use-chest";
+import { APP_NAME } from "@/lib/brand";
 
 const LazyChestOpeningModal = lazy(() =>
   import("@/components/ChestOpeningModal").then((module) => ({
@@ -80,7 +81,7 @@ export const TopBar = memo(function TopBar({ wallet: walletOverride }: TopBarPro
             <Stethoscope className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span className="font-display text-lg font-extrabold tracking-tight text-gradient-primary">
-            MedLingo
+            {APP_NAME}
           </span>
         </Link>
         <div className="flex items-center gap-2 text-sm font-bold sm:gap-3">

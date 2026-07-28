@@ -1,6 +1,22 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState, type ReactNode } from "react";
-import { ArrowLeft, LogOut, Flame, Zap, Trophy, Target, Award, TrendingUp, BadgeCheck, UserRound } from "lucide-react";
+import {
+  ArrowLeft,
+  LogOut,
+  Flame,
+  Zap,
+  Trophy,
+  Target,
+  Award,
+  TrendingUp,
+  BadgeCheck,
+  UserRound,
+  BookOpen,
+  ChevronRight,
+  Package,
+  ShoppingBag,
+  Sparkles,
+} from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { useProgress } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
@@ -11,16 +27,21 @@ import { useInventory } from "@/lib/use-wallet";
 import { BADGE_GOLD } from "@/lib/asset-map";
 import { ProfileVisitCard } from "@/features/gamification/components/ProfileVisitCard";
 import { GameItemArtwork } from "@/features/gamification/components/GameItemArtwork";
-import { DEFAULT_PROFILE_CARD, PROFILE_CARD_CATALOG, type ProfileCardCode } from "@/features/gamification/domain/profile-cards";
+import {
+  DEFAULT_PROFILE_CARD,
+  PROFILE_CARD_CATALOG,
+  type ProfileCardCode,
+} from "@/features/gamification/domain/profile-cards";
 import { useProfileCard } from "@/features/gamification/hooks/use-profile-card";
 import { useGameInventory } from "@/features/gamification/hooks/use-game-inventory";
 import { useProfileCosmetics } from "@/features/gamification/hooks/use-profile-cosmetics";
+import { APP_NAME } from "@/lib/brand";
 
 export const Route = createFileRoute("/profil")({
   component: ProfilPage,
   head: () => ({
     meta: [
-      { title: "Profil — MedLingo" },
+      { title: `Profil — ${APP_NAME}` },
       { name: "description", content: "Ton avatar, ton niveau, tes badges et ta progression." },
       { name: "robots", content: "noindex" },
     ],
@@ -48,7 +69,9 @@ function ProfilPage() {
 
   const totalLessons = UNITS.reduce((s, u) => s + u.lessons.length, 0);
   const doneLessons = Object.keys(progress.completedLessons).length;
-  const perfectLessons = Object.values(progress.completedLessons).filter((c) => c.stars === 3).length;
+  const perfectLessons = Object.values(progress.completedLessons).filter(
+    (c) => c.stars === 3,
+  ).length;
   const totalXp = xpHistory.reduce((s, d) => s + d.xp, 0);
   const activeDays = xpHistory.filter((d) => d.xp > 0).length;
 
@@ -116,8 +139,12 @@ function ProfilPage() {
   }, [gameInventory, legacyInventory]);
 
   const equippedCard = profileCard.data ?? DEFAULT_PROFILE_CARD;
-  const equippedAvatar = mergedOwnedCodes.has(profileCosmetics.avatarCode ?? "") ? profileCosmetics.avatarCode : null;
-  const equippedBadge = mergedOwnedCodes.has(profileCosmetics.badgeCode ?? "") ? profileCosmetics.badgeCode : null;
+  const equippedAvatar = mergedOwnedCodes.has(profileCosmetics.avatarCode ?? "")
+    ? profileCosmetics.avatarCode
+    : null;
+  const equippedBadge = mergedOwnedCodes.has(profileCosmetics.badgeCode ?? "")
+    ? profileCosmetics.badgeCode
+    : null;
 
   const avatarSlot = equippedAvatar ? (
     <GameItemArtwork
@@ -143,7 +170,10 @@ function ProfilPage() {
     <div className="min-h-screen bg-background pb-24">
       <TopBar />
       <main className="mx-auto max-w-2xl px-4 pt-4">
-        <Link to="/" className="mb-4 inline-flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-foreground">
+        <Link
+          to="/"
+          className="mb-4 inline-flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-foreground"
+        >
           <ArrowLeft className="h-4 w-4" /> Accueil
         </Link>
 
@@ -166,7 +196,9 @@ function ProfilPage() {
             <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
               <div className="min-w-0">
                 <p className="text-sm font-extrabold">Carte de visite</p>
-                <p className="text-xs text-muted-foreground">Débloque des designs et sélectionne ton style actif.</p>
+                <p className="text-xs text-muted-foreground">
+                  Débloque des designs et sélectionne ton style actif.
+                </p>
               </div>
               <button
                 type="button"
@@ -179,7 +211,9 @@ function ProfilPage() {
             <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
               <div className="min-w-0">
                 <p className="text-sm font-extrabold">Avatar & badge</p>
-                <p className="text-xs text-muted-foreground">Équipe les cosmétiques gagnés dans tes coffres et achats.</p>
+                <p className="text-xs text-muted-foreground">
+                  Équipe les cosmétiques gagnés dans tes coffres et achats.
+                </p>
               </div>
               <button
                 type="button"
@@ -196,8 +230,13 @@ function ProfilPage() {
           <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div>
-                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Choisir une carte</h2>
-                <p className="mt-0.5 text-xs text-muted-foreground">Les cartes verrouillées peuvent être gagnées dans les coffres ou achetées dans la boutique.</p>
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
+                  Choisir une carte
+                </h2>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  Les cartes verrouillées peuvent être gagnées dans les coffres ou achetées dans la
+                  boutique.
+                </p>
               </div>
               <span className="shrink-0 text-xs font-bold text-muted-foreground">
                 {ownedProfileCards.size}/{PROFILE_CARD_CATALOG.length}
@@ -214,7 +253,9 @@ function ProfilPage() {
                     disabled={!owned || profileCard.isEquipping}
                     onClick={() => profileCard.equip(card.code)}
                     className={`relative overflow-hidden rounded-2xl text-left transition ${
-                      selected ? "ring-2 ring-[color:var(--color-primary)] ring-offset-2 ring-offset-background" : ""
+                      selected
+                        ? "ring-2 ring-[color:var(--color-primary)] ring-offset-2 ring-offset-background"
+                        : ""
                     } ${owned ? "hover:-translate-y-0.5" : "cursor-not-allowed opacity-45 grayscale"}`}
                   >
                     <ProfileVisitCard
@@ -239,7 +280,9 @@ function ProfilPage() {
               })}
             </div>
             {profileCard.equipError && (
-              <p className="mt-3 text-xs font-bold text-destructive">Impossible d'équiper cette carte pour le moment.</p>
+              <p className="mt-3 text-xs font-bold text-destructive">
+                Impossible d'équiper cette carte pour le moment.
+              </p>
             )}
           </section>
         )}
@@ -251,16 +294,24 @@ function ProfilPage() {
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <UserRound className="h-4 w-4 text-[color:var(--color-primary)]" />
-                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Avatars</h2>
+                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
+                      Avatars
+                    </h2>
                   </div>
-                  <span className="text-xs font-bold text-muted-foreground">{avatarItems.length}</span>
+                  <span className="text-xs font-bold text-muted-foreground">
+                    {avatarItems.length}
+                  </span>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <CosmeticTile
                     label="Initiales"
                     selected={!equippedAvatar}
                     onClick={() => profileCosmetics.equipAvatar(null)}
-                    icon={<span className="font-display text-lg font-extrabold">{displayName.trim().slice(0, 2).toUpperCase()}</span>}
+                    icon={
+                      <span className="font-display text-lg font-extrabold">
+                        {displayName.trim().slice(0, 2).toUpperCase()}
+                      </span>
+                    }
                   />
                   {avatarItems.map((item) => (
                     <CosmeticTile
@@ -268,7 +319,15 @@ function ProfilPage() {
                       label={item.name}
                       selected={equippedAvatar === item.code}
                       onClick={() => profileCosmetics.equipAvatar(item.code)}
-                      icon={<GameItemArtwork code={item.code} type="avatar" label={item.name} className="h-12 w-12" fallbackClassName="h-10 w-10 object-contain" />}
+                      icon={
+                        <GameItemArtwork
+                          code={item.code}
+                          type="avatar"
+                          label={item.name}
+                          className="h-12 w-12"
+                          fallbackClassName="h-10 w-10 object-contain"
+                        />
+                      }
                     />
                   ))}
                 </div>
@@ -277,9 +336,13 @@ function ProfilPage() {
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <BadgeCheck className="h-4 w-4 text-[color:var(--color-warning)]" />
-                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges cosmétiques</h2>
+                    <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
+                      Badges cosmétiques
+                    </h2>
                   </div>
-                  <span className="text-xs font-bold text-muted-foreground">{badgeItems.length}</span>
+                  <span className="text-xs font-bold text-muted-foreground">
+                    {badgeItems.length}
+                  </span>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <CosmeticTile
@@ -294,7 +357,15 @@ function ProfilPage() {
                       label={item.name}
                       selected={equippedBadge === item.code}
                       onClick={() => profileCosmetics.equipBadge(item.code)}
-                      icon={<GameItemArtwork code={item.code} type="badge" label={item.name} className="h-12 w-12" fallbackClassName="h-10 w-10 object-contain" />}
+                      icon={
+                        <GameItemArtwork
+                          code={item.code}
+                          type="badge"
+                          label={item.name}
+                          className="h-12 w-12"
+                          fallbackClassName="h-10 w-10 object-contain"
+                        />
+                      }
                     />
                   ))}
                 </div>
@@ -304,18 +375,86 @@ function ProfilPage() {
         )}
 
         <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <StatCard icon={<Zap className="h-4 w-4" />} label="XP total" value={progress.xp.toLocaleString("fr-FR")} color="var(--color-primary)" />
-          <StatCard icon={<Flame className="h-4 w-4" />} label="Série" value={`${progress.streak}j`} color="var(--color-warning)" />
-          <StatCard icon={<Award className="h-4 w-4" />} label="Badges" value={`${userBadges.length}/${badges.length}`} color="var(--color-info,#3B82F6)" />
-          <StatCard icon={<TrendingUp className="h-4 w-4" />} label="Leçons" value={`${doneLessons}/${totalLessons}`} color="var(--color-success)" />
+          <StatCard
+            icon={<Zap className="h-4 w-4" />}
+            label="XP total"
+            value={progress.xp.toLocaleString("fr-FR")}
+            color="var(--color-primary)"
+          />
+          <StatCard
+            icon={<Flame className="h-4 w-4" />}
+            label="Série"
+            value={`${progress.streak}j`}
+            color="var(--color-warning)"
+          />
+          <StatCard
+            icon={<Award className="h-4 w-4" />}
+            label="Badges"
+            value={`${userBadges.length}/${badges.length}`}
+            color="var(--color-info,#3B82F6)"
+          />
+          <StatCard
+            icon={<TrendingUp className="h-4 w-4" />}
+            label="Leçons"
+            value={`${doneLessons}/${totalLessons}`}
+            color="var(--color-success)"
+          />
         </div>
+
+        <section className="mb-4 overflow-hidden rounded-3xl border border-cyan-400/25 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 p-4 text-white shadow-[0_18px_45px_rgba(8,145,178,0.16)] sm:p-5">
+          <div className="mb-4 flex items-end justify-between gap-3">
+            <div>
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-300">
+                Espace personnel
+              </p>
+              <h2 className="font-display text-xl font-extrabold">Que veux-tu faire ?</h2>
+            </div>
+            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-bold text-white/65">
+              Niveau {lp.level}
+            </span>
+          </div>
+          <div className="grid grid-cols-2 gap-2.5">
+            <ProfileAction
+              to="/"
+              icon={<BookOpen className="h-5 w-5" />}
+              label="Continuer"
+              description="Reprendre le parcours"
+              accent="cyan"
+            />
+            <ProfileAction
+              to="/inventaire"
+              icon={<Package className="h-5 w-5" />}
+              label="Collection"
+              description={`${mergedOwnedCodes.size} objets débloqués`}
+              accent="violet"
+            />
+            <ProfileAction
+              to="/boutique"
+              icon={<ShoppingBag className="h-5 w-5" />}
+              label="Personnaliser"
+              description="Cartes, avatars et badges"
+              accent="amber"
+            />
+            <ProfileAction
+              to="/pulse"
+              icon={<Sparkles className="h-5 w-5" />}
+              label="Demander à Pulse"
+              description="Conseils et révisions"
+              accent="emerald"
+            />
+          </div>
+        </section>
 
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <div className="mb-2 flex items-center justify-between">
             <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
               <Target className="mr-1 inline h-4 w-4" /> Objectif quotidien
             </h2>
-            <button type="button" onClick={() => setGoalEdit((v) => !v)} className="text-[11px] font-bold text-[color:var(--color-primary)]">
+            <button
+              type="button"
+              onClick={() => setGoalEdit((v) => !v)}
+              className="text-[11px] font-bold text-[color:var(--color-primary)]"
+            >
               {goalEdit ? "Fermer" : "Modifier"}
             </button>
           </div>
@@ -341,14 +480,17 @@ function ProfilPage() {
             </div>
           ) : (
             <div className="text-sm">
-              <span className="font-extrabold">{progress.xpToday}</span> / {progress.dailyGoalXp} XP aujourd'hui
+              <span className="font-extrabold">{progress.xpToday}</span> / {progress.dailyGoalXp} XP
+              aujourd'hui
             </div>
           )}
         </section>
 
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
           <div className="mb-3 flex items-center justify-between">
-            <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">30 derniers jours</h2>
+            <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
+              30 derniers jours
+            </h2>
             <span className="text-[11px] font-bold text-muted-foreground">
               {totalXp} XP · {activeDays}j actifs · {perfectLessons} leçons parfaites
             </span>
@@ -371,13 +513,19 @@ function ProfilPage() {
                 }`}
               />
               <div className="min-w-0">
-                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">Badges</h2>
+                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider">
+                  Badges
+                </h2>
                 <p className="text-[11px] font-bold text-muted-foreground">
-                  {userBadges.length > 0 ? "Ta vitrine s'agrandit" : "Termine une leçon pour débloquer ton premier badge"}
+                  {userBadges.length > 0
+                    ? "Ta vitrine s'agrandit"
+                    : "Termine une leçon pour débloquer ton premier badge"}
                 </p>
               </div>
             </div>
-            <span className="shrink-0 text-[11px] font-bold text-muted-foreground tabular-nums">{userBadges.length}/{badges.length}</span>
+            <span className="shrink-0 text-[11px] font-bold text-muted-foreground tabular-nums">
+              {userBadges.length}/{badges.length}
+            </span>
           </div>
           <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4">
             {badges.map((b) => {
@@ -392,8 +540,16 @@ function ProfilPage() {
                   }`}
                   title={b.description}
                 >
-                  <GameItemArtwork code={b.code} type="badge" label={b.title} className="h-10 w-10" fallbackClassName={`h-7 w-7 ${earned ? "text-[color:var(--color-primary)]" : "text-muted-foreground"}`} />
-                  <div className="mt-1 line-clamp-2 text-[11px] font-extrabold leading-tight">{b.title}</div>
+                  <GameItemArtwork
+                    code={b.code}
+                    type="badge"
+                    label={b.title}
+                    className="h-10 w-10"
+                    fallbackClassName={`h-7 w-7 ${earned ? "text-[color:var(--color-primary)]" : "text-muted-foreground"}`}
+                  />
+                  <div className="mt-1 line-clamp-2 text-[11px] font-extrabold leading-tight">
+                    {b.title}
+                  </div>
                   <div className="mt-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
                     {earned ? b.rarity : "Verrouillé"}
                   </div>
@@ -404,7 +560,9 @@ function ProfilPage() {
         </section>
 
         <section className="mb-4 rounded-2xl border-2 border-border bg-card p-4 shadow-[0_3px_0_0_var(--color-border)]">
-          <h2 className="mb-3 font-display text-sm font-extrabold uppercase tracking-wider">Compte</h2>
+          <h2 className="mb-3 font-display text-sm font-extrabold uppercase tracking-wider">
+            Compte
+          </h2>
           {user ? (
             <button
               type="button"
@@ -460,10 +618,23 @@ function CosmeticTile({
   );
 }
 
-function StatCard({ icon, label, value, color }: { icon: ReactNode; label: string; value: string; color: string }) {
+function StatCard({
+  icon,
+  label,
+  value,
+  color,
+}: {
+  icon: ReactNode;
+  label: string;
+  value: string;
+  color: string;
+}) {
   return (
     <div className="rounded-2xl border-2 border-border bg-card p-3 shadow-[0_3px_0_0_var(--color-border)]">
-      <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider" style={{ color }}>
+      <div
+        className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider"
+        style={{ color }}
+      >
         {icon}
         {label}
       </div>
@@ -472,13 +643,67 @@ function StatCard({ icon, label, value, color }: { icon: ReactNode; label: strin
   );
 }
 
+function ProfileAction({
+  to,
+  icon,
+  label,
+  description,
+  accent,
+}: {
+  to: "/" | "/inventaire" | "/boutique" | "/pulse";
+  icon: ReactNode;
+  label: string;
+  description: string;
+  accent: "cyan" | "violet" | "amber" | "emerald";
+}) {
+  const accents = {
+    cyan: "bg-cyan-400/15 text-cyan-300",
+    violet: "bg-violet-400/15 text-violet-300",
+    amber: "bg-amber-400/15 text-amber-300",
+    emerald: "bg-emerald-400/15 text-emerald-300",
+  };
+
+  return (
+    <Link
+      to={to}
+      className="group flex min-h-24 items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.06] p-3 transition hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10"
+    >
+      <span
+        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${accents[accent]}`}
+      >
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="flex items-center justify-between gap-1 font-display text-sm font-extrabold">
+          {label}
+          <ChevronRight className="h-4 w-4 text-white/35 transition group-hover:translate-x-0.5 group-hover:text-white" />
+        </span>
+        <span className="mt-1 block text-[11px] leading-snug text-white/55">{description}</span>
+      </span>
+    </Link>
+  );
+}
+
 function ActivityHeatmap({ data, goal }: { data: { date: string; xp: number }[]; goal: number }) {
   return (
     <div className="grid grid-cols-10 gap-1.5">
       {data.map((d) => {
-        const level = d.xp === 0 ? 0 : d.xp < goal / 2 ? 1 : d.xp < goal ? 2 : d.xp < goal * 2 ? 3 : 4;
-        const bg = ["bg-secondary", "bg-[color:var(--color-primary)]/25", "bg-[color:var(--color-primary)]/50", "bg-[color:var(--color-primary)]/80", "bg-[color:var(--color-primary)]"][level];
-        return <div key={d.date} className={`aspect-square rounded-md ${bg}`} title={`${d.date} — ${d.xp} XP`} />;
+        const level =
+          d.xp === 0 ? 0 : d.xp < goal / 2 ? 1 : d.xp < goal ? 2 : d.xp < goal * 2 ? 3 : 4;
+        const bg = [
+          "bg-secondary",
+          "bg-[color:var(--color-primary)]/25",
+          "bg-[color:var(--color-primary)]/50",
+          "bg-[color:var(--color-primary)]/80",
+          "bg-[color:var(--color-primary)]",
+        ][level];
+        return (
+          <div
+            key={d.date}
+            className={`aspect-square rounded-md ${bg}`}
+            title={`${d.date} — ${d.xp} XP`}
+          />
+        );
       })}
     </div>
   );

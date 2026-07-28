@@ -7,7 +7,6 @@ import chestBronze from "@/assets/chest-bronze.png";
 import chestLegendary from "@/assets/chest-legendary.png";
 import badgeGold from "@/assets/badge-gold.png";
 import premiumCrown from "@/assets/premium-crown.png";
-import chestPackPremium from "@/assets/chest-pack-premium.webp";
 
 export const SHOP_IMAGE: Record<string, string> = {
   av_stethoscope: stethoscope,
@@ -20,6 +19,11 @@ export const SHOP_IMAGE: Record<string, string> = {
   fr_gold: badgeGold,
   fr_diamond: premiumCrown,
   av_crown: premiumCrown,
+  game_chest_bronze: chestBronze,
+  game_chest_silver: chestBronze,
+  game_chest_gold: chestLegendary,
+  game_chest_legendary: chestLegendary,
+  game_chest_mythic: chestLegendary,
 };
 
 export const CHEST_IMAGE: Record<string, string> = {
@@ -34,4 +38,3 @@ export const CHEST_IMAGE: Record<string, string> = {
 
 export const PREMIUM_CROWN = premiumCrown;
 export const BADGE_GOLD = badgeGold;
-export const CHEST_PACK_PREMIUM = chestPackPremium;

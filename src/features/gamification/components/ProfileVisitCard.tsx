@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { BookOpen, Flame, Target, Trophy } from "lucide-react";
 import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 import { getProfileCard } from "@/features/gamification/domain/profile-cards";
+import { APP_NAME } from "@/lib/brand";
 
 type ProfileVisitCardProps = {
   code?: ProfileCardCode | string | null;
@@ -42,7 +43,11 @@ export function ProfileVisitCard({
   return (
     <section
       className={`relative overflow-hidden rounded-3xl border p-4 shadow-[0_12px_32px_rgba(0,0,0,0.2)] ${compact ? "min-h-40" : "min-h-56 sm:p-5"}`}
-      style={{ background: card.background, borderColor: `${card.accent}88`, color: card.foreground }}
+      style={{
+        background: card.background,
+        borderColor: `${card.accent}88`,
+        color: card.foreground,
+      }}
     >
       <Icon
         aria-hidden="true"
@@ -55,14 +60,22 @@ export function ProfileVisitCard({
           <div className="relative shrink-0">
             <div
               className={`${compact ? "h-11 w-11 text-base" : "h-16 w-16 text-2xl"} flex items-center justify-center overflow-hidden rounded-full border-2 font-display font-extrabold`}
-              style={{ borderColor: card.accent, backgroundColor: `${card.accent}26`, color: card.foreground }}
+              style={{
+                borderColor: card.accent,
+                backgroundColor: `${card.accent}26`,
+                color: card.foreground,
+              }}
             >
               {avatarSlot ?? initials}
             </div>
             {badgeSlot ? (
               <div
                 className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border shadow-lg"
-                style={{ borderColor: `${card.foreground}22`, backgroundColor: `${card.accent}36`, color: card.foreground }}
+                style={{
+                  borderColor: `${card.foreground}22`,
+                  backgroundColor: `${card.accent}36`,
+                  color: card.foreground,
+                }}
               >
                 {badgeSlot}
               </div>
@@ -70,7 +83,11 @@ export function ProfileVisitCard({
           </div>
           <div className="min-w-0">
             <p className="truncate font-display text-lg font-extrabold sm:text-xl">{displayName}</p>
-            {!compact && <p className="truncate text-xs" style={{ color: card.muted }}>{email ?? "Profil MedLingo"}</p>}
+            {!compact && (
+              <p className="truncate text-xs" style={{ color: card.muted }}>
+                {email ?? `Profil ${APP_NAME}`}
+              </p>
+            )}
             <span
               className="mt-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide"
               style={{ backgroundColor: `${card.accent}2e`, color: card.foreground }}
@@ -87,14 +104,28 @@ export function ProfileVisitCard({
           <span className="truncate">{progressLabel}</span>
           {!compact && <span>{Math.round(progress * 100)}%</span>}
         </div>
-        <div className="h-2 overflow-hidden rounded-full" style={{ backgroundColor: `${card.foreground}24` }}>
-          <div className="h-full rounded-full" style={{ width: `${progress * 100}%`, backgroundColor: card.accent }} />
+        <div
+          className="h-2 overflow-hidden rounded-full"
+          style={{ backgroundColor: `${card.foreground}24` }}
+        >
+          <div
+            className="h-full rounded-full"
+            style={{ width: `${progress * 100}%`, backgroundColor: card.accent }}
+          />
         </div>
       </div>
 
       {!compact && (
-        <div className="relative mt-5 grid grid-cols-4 gap-2 border-t pt-3 text-center" style={{ borderColor: `${card.foreground}22` }}>
-          <CardStat Icon={Flame} label="XP" value={xp.toLocaleString("fr-FR")} color={card.accent} />
+        <div
+          className="relative mt-5 grid grid-cols-4 gap-2 border-t pt-3 text-center"
+          style={{ borderColor: `${card.foreground}22` }}
+        >
+          <CardStat
+            Icon={Flame}
+            label="XP"
+            value={xp.toLocaleString("fr-FR")}
+            color={card.accent}
+          />
           <CardStat Icon={Trophy} label="Série" value={`${streak}j`} color={card.accent} />
           <CardStat Icon={BookOpen} label="Rangs" value={String(ranks)} color={card.accent} />
           <CardStat Icon={Target} label="Leçons" value={String(lessons)} color={card.accent} />
@@ -104,7 +135,17 @@ export function ProfileVisitCard({
   );
 }
 
-function CardStat({ Icon, label, value, color }: { Icon: typeof Flame; label: string; value: string; color: string }) {
+function CardStat({
+  Icon,
+  label,
+  value,
+  color,
+}: {
+  Icon: typeof Flame;
+  label: string;
+  value: string;
+  color: string;
+}) {
   return (
     <div className="min-w-0">
       <Icon className="mx-auto h-3.5 w-3.5" style={{ color }} />

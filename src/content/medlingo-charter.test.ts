@@ -78,6 +78,7 @@ test("les seuils de réussite, le SRS et les récompenses sont déterministes", 
   assert.equal(charter.progression.successCriteria.lessonMinimumAccuracy, 0.5);
   assert.equal(charter.progression.successCriteria.quizMinimumAccuracy, 0.75);
   assert.equal(charter.progression.successCriteria.bossMinimumAccuracy, 0.8);
+  assert.equal(charter.progression.hearts.regenerationMinutes, 2);
   assert.deepEqual(charter.srs.scheduleDays, [1, 3, 7, 14, 30, 90]);
   assert.deepEqual(charter.rewards.lesson.xpMultiplierByStars, {
     "0": 0.4,
