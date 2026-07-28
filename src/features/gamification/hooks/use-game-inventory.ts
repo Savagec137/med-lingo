@@ -11,6 +11,8 @@ export function useGameCurrency() {
     queryKey: ["game-currency", user?.id ?? "anon"],
     enabled: Boolean(user),
     queryFn: fetchGameCurrency,
+    staleTime: 30_000,
+    gcTime: 10 * 60_000,
   });
 }
 
@@ -20,6 +22,8 @@ export function useGameInventory() {
     queryKey: ["game-inventory", user?.id ?? "anon"],
     enabled: Boolean(user),
     queryFn: fetchGameInventory,
+    staleTime: 5 * 60_000,
+    gcTime: 30 * 60_000,
   });
 }
 
@@ -30,5 +34,6 @@ export function useInvalidateGameEconomy() {
     queryClient.invalidateQueries({ queryKey: ["game-inventory"] });
     queryClient.invalidateQueries({ queryKey: ["wallet"] });
     queryClient.invalidateQueries({ queryKey: ["inventory"] });
+    queryClient.invalidateQueries({ queryKey: ["home-dashboard"] });
   };
 }

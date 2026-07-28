@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import unitIconsSheet from "@/assets/unit-icons-sheet.png";
+import unitIconsSheet from "@/assets/unit-icons-sheet.webp";
 import {
   ROADMAP_BLOCK_VISUALS,
   ROADMAP_PARCOURS_VISUALS,

@@ -7,7 +7,7 @@ import chestBronze from "@/assets/chest-bronze.png";
 import chestLegendary from "@/assets/chest-legendary.png";
 import badgeGold from "@/assets/badge-gold.png";
 import premiumCrown from "@/assets/premium-crown.png";
-import chestPackPremium from "@/assets/chest-pack-premium.png";
+import chestPackPremium from "@/assets/chest-pack-premium.webp";
 
 export const SHOP_IMAGE: Record<string, string> = {
   av_stethoscope: stethoscope,

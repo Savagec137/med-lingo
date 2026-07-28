@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import shopArtworkSheet from "@/assets/shop-artwork-sheet.png";
+import shopArtworkSheet from "@/assets/shop-artwork-sheet.webp";
 
 type Sprite = { x: number; y: number };
 

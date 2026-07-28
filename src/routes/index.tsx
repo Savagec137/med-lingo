@@ -1,8 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo } from "react";
+import { lazy, memo, Suspense, useEffect, useMemo } from "react";
 import {
-  Star,
-  Lock,
   Check,
   Sparkles,
   Zap,
@@ -12,42 +10,39 @@ import {
   ChevronRight,
   User as UserIcon,
   Ambulance as AmbulanceIcon,
-  BookOpen,
 } from "lucide-react";
-import {
-  LessonIcon,
-  MissionIcon,
-  BadgeIcon,
-  RoadmapBlockArtwork,
-  RoadmapParcoursArtwork,
-} from "@/lib/icon-map";
+import { LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
-import { OFFICIAL_ROADMAP_BLOCS, OFFICIAL_ROADMAP_PARCOURS } from "@/content/curriculum-content";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
 import { useAuth } from "@/lib/use-auth";
 import { levelProgress } from "@/lib/gamification";
-import {
-  useBadgesCatalog,
-  useUserBadges,
-  useMissionsCatalog,
-  useUserMissions,
-  useXpHistory,
-} from "@/lib/use-gamification";
+import { useDeferredHomeData, useHomeDashboard } from "@/features/home/home-dashboard";
 
 // ============================================
 // BACKGROUND ENGINE — IMPORTS
 // ============================================
-import { BackgroundEngine } from "@/features/background/BackgroundEngine";
-import { THEMES } from "@/features/background/themes";
+const LazyHomeBackground = lazy(() =>
+  import("@/features/home/HomeBackground").then((module) => ({
+    default: module.HomeBackground,
+  })),
+);
+const LazyHomeRoadmap = lazy(() =>
+  import("@/features/home/HomeRoadmap").then((module) => ({
+    default: module.HomeRoadmap,
+  })),
+);
+const LESSON_ORDER = allLessonsInOrder();
 
 export const Route = createFileRoute("/")({
-  component: Home,
+  component: HomeRoute,
 });
 
-const OFFSETS = [0, 64, 96, 64, 0, -64, -96, -64];
+function HomeRoute() {
+  return <Home />;
+}
 
-function Home() {
+const Home = memo(function Home() {
   const { progress, hydrated } = useProgress();
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -56,12 +51,16 @@ function Home() {
     if (hydrated && !progress.onboarded) navigate({ to: "/onboarding" });
   }, [hydrated, progress.onboarded, navigate]);
 
-  const order = allLessonsInOrder();
-  const unlockedSet = new Set<string>();
-  if (order.length > 0) unlockedSet.add(order[0].lessonId);
-  for (let i = 0; i < order.length - 1; i++) {
-    if (progress.completedLessons[order[i].lessonId]) unlockedSet.add(order[i + 1].lessonId);
-  }
+  const order = LESSON_ORDER;
+  const unlockedLessonIds = useMemo(() => {
+    const ids: string[] = [];
+    if (order.length > 0) ids.push(order[0].lessonId);
+    for (let i = 0; i < order.length - 1; i++) {
+      if (progress.completedLessons[order[i].lessonId]) ids.push(order[i + 1].lessonId);
+    }
+    return ids;
+  }, [order, progress.completedLessons]);
+  const unlockedSet = useMemo(() => new Set(unlockedLessonIds), [unlockedLessonIds]);
   const currentLessonId = hydrated
     ? order.find((l) => unlockedSet.has(l.lessonId) && !progress.completedLessons[l.lessonId])
         ?.lessonId
@@ -77,31 +76,37 @@ function Home() {
     return "toi";
   }, [user]);
 
-  const lp = levelProgress(progress.xp);
-  const dailyPct = Math.min(1, progress.xpToday / Math.max(1, progress.dailyGoalXp));
-
-  const { data: badges = [] } = useBadgesCatalog();
-  const { data: userBadges = [] } = useUserBadges();
-  const { data: missions = [] } = useMissionsCatalog();
-  const { data: userMissions = [] } = useUserMissions();
-  const { data: xpHistory = [] } = useXpHistory(7);
-
-  const dailyMissions = missions.filter((m) => m.period === "daily").slice(0, 3);
-  const badgeMap = new Map(badges.map((b) => [b.code, b]));
-  const recentBadges = userBadges.slice(0, 5);
+  const lp = useMemo(() => levelProgress(progress.xp), [progress.xp]);
+  const dailyPct = useMemo(
+    () => Math.min(1, progress.xpToday / Math.max(1, progress.dailyGoalXp)),
+    [progress.dailyGoalXp, progress.xpToday],
+  );
+  const deferredHomeData = useDeferredHomeData();
+  const { data: dashboard } = useHomeDashboard(deferredHomeData);
+  const dailyMissions = dashboard?.dailyMissions ?? [];
+  const recentBadges = dashboard?.recentBadges ?? [];
+  const xpHistory = dashboard?.xpHistory ?? [];
 
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ minHeight: "100vh" }}>
       {/* ========================================== */}
       {/* BACKGROUND ENGINE — SAMU REGULATION CENTER */}
       {/* ========================================== */}
-      <BackgroundEngine theme={THEMES.samu} intensity="medium" />
+      <div
+        aria-hidden
+        className="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-950 to-cyan-950"
+      />
+      {deferredHomeData && (
+        <Suspense fallback={null}>
+          <LazyHomeBackground />
+        </Suspense>
+      )}
 
       {/* ========================================== */}
       {/* CONTENU PRINCIPAL (par-dessus le décor)    */}
       {/* ========================================== */}
       <div className="relative z-10 min-h-screen pb-24">
-        <TopBar />
+        <TopBar wallet={dashboard?.wallet ?? null} />
 
         <main className="mx-auto max-w-2xl px-4 pt-4">
           {/* Greeting */}
@@ -162,7 +167,7 @@ function Home() {
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <Trophy className="h-4 w-4 text-amber-400" />
-                    {userBadges.length}
+                    {dashboard?.badgeCount ?? 0}
                   </span>
                 </div>
               </div>
@@ -245,19 +250,14 @@ function Home() {
                   Missions du jour
                 </h2>
                 <span className="text-sm font-bold text-white/60">
-                  {
-                    userMissions.filter(
-                      (um) => um.completed && dailyMissions.some((m) => m.code === um.mission_code),
-                    ).length
-                  }
-                  /{dailyMissions.length}
+                  {dailyMissions.filter((mission) => mission.completed).length}/
+                  {dailyMissions.length}
                 </span>
               </div>
               <div className="space-y-2.5">
                 {dailyMissions.map((m) => {
-                  const um = userMissions.find((u) => u.mission_code === m.code);
-                  const done = um?.completed ?? false;
-                  const prog = Math.min(m.target, um?.progress ?? 0);
+                  const done = m.completed;
+                  const prog = Math.min(m.target, m.progress);
                   const pct = (prog / m.target) * 100;
                   return (
                     <div key={m.code} className="flex items-center gap-3">
@@ -323,8 +323,7 @@ function Home() {
               </div>
               <div className="flex gap-2 overflow-x-auto pb-1">
                 {recentBadges.map((ub) => {
-                  const b = badgeMap.get(ub.badge_code);
-                  if (!b) return null;
+                  const b = ub.badge;
                   return (
                     <div
                       key={ub.badge_code}
@@ -358,124 +357,16 @@ function Home() {
             <ChevronRight className="h-5 w-5 text-[#22d3ee]" />
           </Link>
 
-          {/* Feuille de route officielle */}
-          <div className="mb-5 flex items-end justify-between gap-4">
-            <div>
-              <div className="text-xs font-extrabold uppercase tracking-[0.16em] text-cyan-400">
-                Formation DEA
-              </div>
-              <h2 className="font-display text-xl font-extrabold text-white drop-shadow-lg">
-                Ton parcours de formation
-              </h2>
-            </div>
-            <div className="shrink-0 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold text-white/70 backdrop-blur">
-              {OFFICIAL_ROADMAP_PARCOURS.length} parcours
-            </div>
-          </div>
-
-          <div className="space-y-10">
-            {OFFICIAL_ROADMAP_BLOCS.map((bloc) => (
-              <section key={bloc.id} aria-labelledby={`${bloc.id}-title`}>
-                <div className="mb-4 flex items-center gap-3">
-                  <RoadmapBlockArtwork blocId={bloc.id} order={bloc.order} />
-                  <div className="min-w-0">
-                    <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-cyan-400">
-                      Bloc {bloc.order}
-                    </p>
-                    <h3
-                      id={`${bloc.id}-title`}
-                      className="truncate font-display text-lg font-extrabold text-white"
-                    >
-                      {bloc.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="space-y-5">
-                  {bloc.parcours.map((parcours) => {
-                    const hasPublishedLessons = parcours.publishedLessonCount > 0;
-                    return (
-                      <article key={parcours.id}>
-                        <Link
-                          to="/parcours/$parcoursId"
-                          params={{ parcoursId: parcours.id }}
-                          className={`flex items-center gap-4 rounded-xl border p-4 shadow-xl backdrop-blur-md ${
-                            hasPublishedLessons
-                              ? "border-cyan-400/35 bg-white/10"
-                              : "border-white/10 bg-slate-950/35"
-                          }`}
-                        >
-                          <RoadmapParcoursArtwork
-                            parcoursId={parcours.id}
-                            blocId={bloc.id}
-                            locked={!hasPublishedLessons}
-                          />
-
-                          <div className="min-w-0 flex-1">
-                            <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">
-                              Parcours {parcours.order}
-                            </p>
-                            <h4 className="font-display text-base font-extrabold text-white">
-                              {parcours.title}
-                            </h4>
-                            <p className="text-sm text-white/55">{parcours.subtitle}</p>
-                          </div>
-
-                          <div
-                            className={`hidden shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-bold sm:flex ${
-                              hasPublishedLessons
-                                ? "bg-emerald-400/15 text-emerald-300"
-                                : "bg-white/5 text-white/45"
-                            }`}
-                          >
-                            {hasPublishedLessons ? (
-                              <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
-                            ) : (
-                              <Lock className="h-3.5 w-3.5" aria-hidden="true" />
-                            )}
-                            {hasPublishedLessons
-                              ? `${parcours.publishedLessonCount}/${parcours.plannedLessonCount} disponibles`
-                              : "En préparation"}
-                          </div>
-                        </Link>
-
-                        {hasPublishedLessons && (
-                          <div className="relative mx-auto flex flex-col items-center gap-6 py-5">
-                            {parcours.lessons.map((lesson, index) => {
-                              const done = hydrated
-                                ? progress.completedLessons[lesson.id]
-                                : undefined;
-                              const unlocked = hydrated && unlockedSet.has(lesson.id);
-                              const stars = done?.stars ?? 0;
-                              const isCurrent = lesson.id === currentLessonId;
-                              const offset = OFFSETS[index % OFFSETS.length];
-                              return (
-                                <div
-                                  key={lesson.id}
-                                  className="relative flex flex-col items-center"
-                                  style={{ transform: `translateX(${offset}px)` }}
-                                >
-                                  <LessonNode
-                                    lessonId={lesson.id}
-                                    unitId={parcours.id}
-                                    title={lesson.title}
-                                    unlocked={unlocked}
-                                    done={!!done}
-                                    stars={stars}
-                                    isCurrent={isCurrent}
-                                  />
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </article>
-                    );
-                  })}
-                </div>
-              </section>
-            ))}
-          </div>
+          {deferredHomeData && (
+            <Suspense fallback={null}>
+              <LazyHomeRoadmap
+                completedLessons={progress.completedLessons}
+                currentLessonId={currentLessonId}
+                hydrated={hydrated}
+                unlockedLessonIds={unlockedLessonIds}
+              />
+            </Suspense>
+          )}
 
           <p className="mt-14 text-center text-sm text-white/40 drop-shadow-md">
             Contenu à visée éducative — ne remplace pas un cours ou un avis médical.
@@ -484,7 +375,7 @@ function Home() {
       </div>
     </div>
   );
-}
+});
 
 // ============================================
 // COMPOSANTS UI
@@ -558,81 +449,5 @@ function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal
         );
       })}
     </div>
-  );
-}
-
-function LessonNode({
-  lessonId,
-  unitId,
-  title,
-  unlocked,
-  done,
-  stars,
-  isCurrent,
-}: {
-  lessonId: string;
-  unitId: string;
-  title: string;
-  unlocked: boolean;
-  done: boolean;
-  stars: number;
-  isCurrent: boolean;
-}) {
-  const bubble = (
-    <div className="group relative flex flex-col items-center">
-      {isCurrent && (
-        <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="whitespace-nowrap rounded-lg bg-cyan-400 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-slate-900 shadow-lg">
-            À toi !
-          </div>
-        </div>
-      )}
-      <button
-        type="button"
-        disabled={!unlocked}
-        className={`relative flex h-16 w-16 items-center justify-center rounded-xl transition-all ${
-          !unlocked
-            ? "cursor-not-allowed border-2 border-dashed border-white/20 bg-white/5 text-white/30"
-            : done
-              ? "border-2 border-emerald-400 bg-emerald-400/20 text-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.2)] hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] active:scale-95"
-              : isCurrent
-                ? "border-2 border-cyan-400 bg-cyan-400/20 text-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.3)] ring-4 ring-cyan-400/30 active:scale-95"
-                : "border-2 border-white/20 bg-white/10 text-white/60 hover:border-white/40 active:scale-95"
-        }`}
-      >
-        {!unlocked ? (
-          <Lock className="h-5 w-5" />
-        ) : done ? (
-          <Check className="h-7 w-7" strokeWidth={3.5} />
-        ) : (
-          <LessonIcon lessonId={lessonId} unitId={unitId} className="h-7 w-7" strokeWidth={2.25} />
-        )}
-        {done && stars > 0 && (
-          <div className="absolute -bottom-2 flex items-center gap-0.5 rounded-full bg-white/20 backdrop-blur-sm px-1.5 py-0.5 shadow-md">
-            {[0, 1, 2].map((s) => (
-              <Star
-                key={s}
-                className={`h-3 w-3 ${
-                  s < stars ? "fill-amber-400 text-amber-400" : "text-white/20"
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </button>
-      <p
-        className={`mt-3 max-w-[160px] text-center text-xs font-bold leading-tight ${
-          unlocked ? "text-white drop-shadow-md" : "text-white/40"
-        }`}
-      >
-        {title}
-      </p>
-    </div>
-  );
-  if (!unlocked) return bubble;
-  return (
-    <Link to="/lecon/$lessonId" params={{ lessonId }} className="block">
-      {bubble}
-    </Link>
   );
 }

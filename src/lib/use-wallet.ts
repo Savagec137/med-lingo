@@ -11,12 +11,15 @@ export interface Wallet {
   energy_updated_at: string;
 }
 
-export function useWallet() {
+export function useWallet(options: { enabled?: boolean } = {}) {
   const { user } = useAuth();
   return useQuery({
     queryKey: ["wallet", user?.id ?? "anon"],
-    enabled: !!user,
-    refetchInterval: 60_000, // refresh so energy regen visible
+    enabled: !!user && options.enabled !== false,
+    staleTime: 30_000,
+    gcTime: 10 * 60_000,
+    refetchInterval: options.enabled === false ? false : 60_000,
+    refetchIntervalInBackground: false,
     queryFn: async (): Promise<Wallet> => {
       const { data, error } = await supabase
         .from("wallets" as never)
@@ -111,6 +114,7 @@ export function useInvalidateWallet() {
   return () => {
     qc.invalidateQueries({ queryKey: ["wallet"] });
     qc.invalidateQueries({ queryKey: ["inventory"] });
+    qc.invalidateQueries({ queryKey: ["home-dashboard"] });
   };
 }
 
@@ -125,6 +129,8 @@ export function useInventory() {
   return useQuery({
     queryKey: ["inventory", user?.id ?? "anon"],
     enabled: !!user,
+    staleTime: 5 * 60_000,
+    gcTime: 30 * 60_000,
     queryFn: async () => {
       const { data, error } = await supabase
         .from("user_inventory" as never)
@@ -169,7 +175,8 @@ export function useShopCatalog() {
       if (error) throw error;
       return (data ?? []) as unknown as ShopItem[];
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 24 * 60 * 60_000,
+    gcTime: 24 * 60 * 60_000,
   });
 }
 
