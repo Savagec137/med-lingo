@@ -50,7 +50,7 @@ const DEFAULT: Progress = {
   roadmapRewards: {},
 };
 
-const HEART_REGEN_MS = 15 * 60 * 1000;
+const HEART_REGEN_MS = 2 * 60 * 1000;
 const MAX_HEARTS = 5;
 
 function daysBetween(a: string, b: string): number {

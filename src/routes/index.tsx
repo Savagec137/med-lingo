@@ -11,7 +11,7 @@ import {
   User as UserIcon,
   Ambulance as AmbulanceIcon,
 } from "lucide-react";
-import { LessonIcon, MissionIcon, BadgeIcon } from "@/lib/icon-map";
+import { LessonIcon, MissionIcon } from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
 import { useProgress } from "@/lib/use-progress";
 import { TopBar } from "@/components/TopBar";
@@ -84,8 +84,6 @@ const Home = memo(function Home() {
   const deferredHomeData = useDeferredHomeData();
   const { data: dashboard } = useHomeDashboard(deferredHomeData);
   const dailyMissions = dashboard?.dailyMissions ?? [];
-  const recentBadges = dashboard?.recentBadges ?? [];
-  const xpHistory = dashboard?.xpHistory ?? [];
 
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ minHeight: "100vh" }}>
@@ -295,51 +293,6 @@ const Home = memo(function Home() {
             </div>
           )}
 
-          {/* Weekly XP */}
-          {xpHistory.length > 0 && (
-            <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
-              <div className="mb-3 flex items-center justify-between">
-                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
-                  Cette semaine
-                </h2>
-                <span className="text-sm font-bold text-cyan-400">
-                  {xpHistory.reduce((s, d) => s + d.xp, 0)} XP
-                </span>
-              </div>
-              <WeeklyBars data={xpHistory} goal={progress.dailyGoalXp} />
-            </div>
-          )}
-
-          {/* Recent badges */}
-          {recentBadges.length > 0 && (
-            <div className="mb-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl">
-              <div className="mb-3 flex items-center justify-between">
-                <h2 className="font-display text-sm font-extrabold uppercase tracking-wider text-white/80">
-                  Badges récents
-                </h2>
-                <Link to="/profil" className="text-sm font-bold text-cyan-400 hover:text-cyan-300">
-                  Tout voir →
-                </Link>
-              </div>
-              <div className="flex gap-2 overflow-x-auto pb-1">
-                {recentBadges.map((ub) => {
-                  const b = ub.badge;
-                  return (
-                    <div
-                      key={ub.badge_code}
-                      className="flex w-20 shrink-0 flex-col items-center rounded-lg border border-white/20 bg-white/10 p-2"
-                    >
-                      <BadgeIcon code={ub.badge_code} className="h-8 w-8" strokeWidth={2.25} />
-                      <div className="mt-1 line-clamp-2 text-center text-xs font-bold leading-tight text-white">
-                        {b.title}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
           {/* Pulse CTA */}
           <Link
             to="/pulse"
@@ -420,34 +373,6 @@ function ProgressRing({
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">{children}</div>
-    </div>
-  );
-}
-
-function WeeklyBars({ data, goal }: { data: { date: string; xp: number }[]; goal: number }) {
-  const max = Math.max(goal, ...data.map((d) => d.xp), 10);
-  const labels = ["L", "M", "M", "J", "V", "S", "D"];
-  return (
-    <div className="flex items-end justify-between gap-1.5 h-24">
-      {data.map((d, i) => {
-        const day = new Date(d.date + "T00:00:00").getDay();
-        const li = day === 0 ? 6 : day - 1;
-        const h = (d.xp / max) * 100;
-        const met = d.xp >= goal;
-        return (
-          <div key={d.date} className="flex flex-1 flex-col items-center gap-1">
-            <div className="relative flex h-full w-full items-end">
-              <div
-                className={`w-full rounded-t-md ${
-                  met ? "bg-emerald-400" : d.xp > 0 ? "bg-cyan-400" : "bg-white/10"
-                }`}
-                style={{ height: `${Math.max(h, 4)}%` }}
-              />
-            </div>
-            <div className="text-xs font-bold text-white/40">{labels[li]}</div>
-          </div>
-        );
-      })}
     </div>
   );
 }

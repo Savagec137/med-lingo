@@ -302,7 +302,7 @@ function LessonPage() {
         <Heart className="mb-4 h-16 w-16 text-[color:var(--color-destructive)]" />
         <h1 className="mb-2 text-2xl font-extrabold">Plus de cœurs !</h1>
         <p className="mb-6 text-muted-foreground">
-          Reviens dans quelques minutes — un cœur se régénère toutes les 15 min.
+          Reviens dans 2 minutes — un cœur se régénère toutes les 2 min.
         </p>
         <Link
           to="/"

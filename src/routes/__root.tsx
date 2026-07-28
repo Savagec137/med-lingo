@@ -15,6 +15,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { BottomNav } from "@/components/BottomNav";
 import { useAuth } from "@/lib/use-auth";
 import { ProgressProvider } from "@/lib/use-progress";
+import { APP_NAME, APP_TAGLINE } from "@/lib/brand";
 
 function NotFoundComponent() {
   return (
@@ -81,13 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MedLingo — Apprends le vocabulaire médical en t'amusant" },
+      { title: `${APP_NAME} — ${APP_TAGLINE}` },
       {
         name: "description",
         content:
           "Apprends les os, les organes, les préfixes, suffixes, radicaux et pathologies du corps humain avec des leçons courtes et ludiques.",
       },
-      { property: "og:title", content: "MedLingo — Vocabulaire médical ludique" },
+      { property: "og:title", content: `${APP_NAME} — Vocabulaire médical ludique` },
       {
         property: "og:description",
         content:
@@ -99,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
-      { name: "apple-mobile-web-app-title", content: "MedLingo" },
+      { name: "apple-mobile-web-app-title", content: APP_NAME },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
