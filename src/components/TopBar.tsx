@@ -15,17 +15,27 @@ import {
   Trophy,
   Package,
 } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { lazy, memo, Suspense, useState, useRef, useEffect } from "react";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useAuth, signOut } from "@/lib/use-auth";
-import { useWallet } from "@/lib/use-wallet";
+import { useWallet, type Wallet } from "@/lib/use-wallet";
 import { useChest } from "@/lib/use-chest";
-import { ChestOpeningModal } from "@/components/ChestOpeningModal";
 
-export function TopBar() {
+const LazyChestOpeningModal = lazy(() =>
+  import("@/components/ChestOpeningModal").then((module) => ({
+    default: module.ChestOpeningModal,
+  })),
+);
+
+interface TopBarProps {
+  wallet?: Wallet | null;
+}
+
+export const TopBar = memo(function TopBar({ wallet: walletOverride }: TopBarProps) {
   const { progress, hydrated } = useProgress();
   const { user } = useAuth();
-  const { data: wallet } = useWallet();
+  const { data: queriedWallet } = useWallet({ enabled: walletOverride === undefined });
+  const wallet = walletOverride ?? queriedWallet;
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -194,7 +204,11 @@ export function TopBar() {
           )}
         </div>
       </div>
-      <ChestOpeningModal result={chest.pending} onClose={chest.close} />
+      {chest.pending && (
+        <Suspense fallback={null}>
+          <LazyChestOpeningModal result={chest.pending} onClose={chest.close} />
+        </Suspense>
+      )}
     </header>
   );
-}
+});

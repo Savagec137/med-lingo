@@ -1,5 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useQueryClient } from "@tanstack/react-query";
+import {
+  createContext,
+  createElement,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/use-auth";
 import { UNITS, findLesson } from "@/lib/curriculum";
@@ -162,55 +172,74 @@ function allLessonIdsForUnit(unitId: string): string[] {
   return u ? u.lessons.map((l) => l.id) : [];
 }
 
-export function useProgress() {
+interface ProgressContextValue {
+  progress: Progress;
+  hydrated: boolean;
+  completeLesson: (
+    lessonId: string,
+    correct: number,
+    total: number,
+    configuredXp?: number,
+  ) => {
+    stars: number;
+    score: number;
+    xpGained: number;
+    coinsGained: number;
+  };
+  loseHeart: () => void;
+  resetAll: () => void;
+  applyPlacement: (lessonIds: string[]) => void;
+  markOnboarded: () => void;
+  setDailyGoal: (xp: number) => void;
+}
+
+const ProgressContext = createContext<ProgressContextValue | null>(null);
+
+export function ProgressProvider({ children }: { children: ReactNode }) {
   const { user, loading: authLoading } = useAuth();
   const qc = useQueryClient();
   const [hydrated, setHydrated] = useState(false);
   const [progress, setProgress] = useState<Progress>(DEFAULT);
-  const cloudSyncing = useRef(false);
   const userIdRef = useRef<string | null>(null);
+  const localScopeRef = useRef<string | null>(null);
+
+  const cloudProgress = useQuery({
+    queryKey: ["progress", user?.id ?? "anon"],
+    enabled: !authLoading && !!user,
+    staleTime: 2 * 60_000,
+    gcTime: 30 * 60_000,
+    queryFn: async (): Promise<Row | null> => {
+      if (!user) return null;
+      const { data, error } = await supabase
+        .from("user_progress")
+        .select(
+          "xp, streak, last_study_date, hearts, hearts_updated_at, completed_lessons, onboarded, daily_goal_xp, xp_today, xp_today_date",
+        )
+        .eq("user_id", user.id)
+        .maybeSingle();
+      if (error) throw error;
+      return data as unknown as Row | null;
+    },
+  });
 
   useEffect(() => {
     if (authLoading) return;
-    let cancelled = false;
+    const scope = user?.id ?? "anon";
+    if (localScopeRef.current === scope) return;
+    localScopeRef.current = scope;
+    userIdRef.current = user?.id ?? null;
+    setProgress(rollDaily(regenHearts(loadLocal())));
+    setHydrated(true);
+  }, [authLoading, user?.id]);
 
-    (async () => {
-      const local = rollDaily(regenHearts(loadLocal()));
-      if (!user) {
-        if (!cancelled) {
-          setProgress(local);
-          setHydrated(true);
-          userIdRef.current = null;
-        }
-        return;
-      }
-      userIdRef.current = user.id;
-      const { data, error } = await supabase
-        .from("user_progress")
-        .select("*")
-        .eq("user_id", user.id)
-        .maybeSingle();
-      if (cancelled) return;
-      if (error || !data) {
-        setProgress(local);
-        setHydrated(true);
-        return;
-      }
-      const cloud = rollDaily(regenHearts(rowToProgress(data as unknown as Row)));
+  useEffect(() => {
+    if (!hydrated || !user || !cloudProgress.data) return;
+    const cloud = rollDaily(regenHearts(rowToProgress(cloudProgress.data)));
+    setProgress((local) => {
       const merged = mergeProgress(cloud, local);
-      setProgress(merged);
-      setHydrated(true);
-      if (JSON.stringify(merged) !== JSON.stringify(cloud)) {
-        cloudSyncing.current = true;
-        await supabase.from("user_progress").upsert({ user_id: user.id, ...progressToRow(merged) });
-        cloudSyncing.current = false;
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [user, authLoading]);
+      return JSON.stringify(merged) === JSON.stringify(local) ? local : merged;
+    });
+  }, [cloudProgress.data, hydrated, user]);
 
   useEffect(() => {
     if (!hydrated) return;
@@ -219,12 +248,19 @@ export function useProgress() {
 
   useEffect(() => {
     if (!hydrated || !userIdRef.current) return;
+    if (!cloudProgress.isFetched && !cloudProgress.isError) return;
     const uid = userIdRef.current;
     const t = setTimeout(() => {
-      supabase.from("user_progress").upsert({ user_id: uid, ...progressToRow(progress) });
+      const row = progressToRow(progress);
+      void supabase
+        .from("user_progress")
+        .upsert({ user_id: uid, ...row })
+        .then(({ error }) => {
+          if (!error) qc.setQueryData(["progress", uid], row as unknown as Row);
+        });
     }, 500);
     return () => clearTimeout(t);
-  }, [progress, hydrated]);
+  }, [cloudProgress.isError, cloudProgress.isFetched, hydrated, progress, qc]);
 
   const completeLesson = useCallback(
     (lessonId: string, correct: number, total: number, configuredXp?: number) => {
@@ -326,6 +362,7 @@ export function useProgress() {
             })
             .catch(() => {});
         }
+        void qc.invalidateQueries({ queryKey: ["home-dashboard"] });
       }
       return { stars, score, xpGained: gainedXp, coinsGained: 5 + stars * 5 };
     },
@@ -370,16 +407,38 @@ export function useProgress() {
     setProgress((p) => ({ ...p, dailyGoalXp: Math.max(10, Math.min(200, xp)) }));
   }, []);
 
-  return {
-    progress,
-    hydrated,
-    completeLesson,
-    loseHeart,
-    resetAll,
-    applyPlacement,
-    markOnboarded,
-    setDailyGoal,
-  };
+  const value = useMemo<ProgressContextValue>(
+    () => ({
+      progress,
+      hydrated,
+      completeLesson,
+      loseHeart,
+      resetAll,
+      applyPlacement,
+      markOnboarded,
+      setDailyGoal,
+    }),
+    [
+      applyPlacement,
+      completeLesson,
+      hydrated,
+      loseHeart,
+      markOnboarded,
+      progress,
+      resetAll,
+      setDailyGoal,
+    ],
+  );
+
+  return createElement(ProgressContext.Provider, { value }, children);
+}
+
+export function useProgress() {
+  const value = useContext(ProgressContext);
+  if (!value) {
+    throw new Error("useProgress doit être utilisé dans ProgressProvider");
+  }
+  return value;
 }
 
 export { MAX_HEARTS };

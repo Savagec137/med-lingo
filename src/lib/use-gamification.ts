@@ -42,7 +42,8 @@ export function useBadgesCatalog() {
       if (error) throw error;
       return (data ?? []) as unknown as Badge[];
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 24 * 60 * 60_000,
+    gcTime: 24 * 60 * 60_000,
   });
 }
 
@@ -51,6 +52,8 @@ export function useUserBadges() {
   return useQuery({
     queryKey: ["user_badges", user?.id ?? "anon"],
     enabled: !!user,
+    staleTime: 5 * 60_000,
+    gcTime: 30 * 60_000,
     queryFn: async () => {
       const { data, error } = await supabase
         .from("user_badges" as never)
@@ -70,7 +73,8 @@ export function useMissionsCatalog() {
       if (error) throw error;
       return (data ?? []) as unknown as Mission[];
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 60 * 60_000,
+    gcTime: 6 * 60 * 60_000,
   });
 }
 
@@ -81,6 +85,8 @@ export function useUserMissions() {
   return useQuery({
     queryKey: ["user_missions", user?.id ?? "anon", today, monday],
     enabled: !!user,
+    staleTime: 60_000,
+    gcTime: 15 * 60_000,
     queryFn: async () => {
       const { data, error } = await supabase
         .from("user_missions" as never)
@@ -97,6 +103,8 @@ export function useXpHistory(days = 7) {
   return useQuery({
     queryKey: ["xp_history", user?.id ?? "anon", days],
     enabled: !!user,
+    staleTime: 60_000,
+    gcTime: 15 * 60_000,
     queryFn: async () => {
       const since = new Date();
       since.setDate(since.getDate() - days + 1);
@@ -209,5 +217,6 @@ export function useInvalidateGamification() {
     qc.invalidateQueries({ queryKey: ["user_badges"] });
     qc.invalidateQueries({ queryKey: ["user_missions"] });
     qc.invalidateQueries({ queryKey: ["xp_history"] });
+    qc.invalidateQueries({ queryKey: ["home-dashboard"] });
   };
 }

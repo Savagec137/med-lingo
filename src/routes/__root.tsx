@@ -7,13 +7,14 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
-import { supabase } from "@/integrations/supabase/client";
 import { BottomNav } from "@/components/BottomNav";
+import { useAuth } from "@/lib/use-auth";
+import { ProgressProvider } from "@/lib/use-progress";
 
 function NotFoundComponent() {
   return (
@@ -136,57 +137,65 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
+  const { user, loading } = useAuth();
+  const previousUserId = useRef<string | null | undefined>(undefined);
 
   useEffect(() => {
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
-      router.invalidate();
-      if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
-    });
-    return () => sub.subscription.unsubscribe();
-  }, [router, queryClient]);
+    if (loading) return;
+    const userId = user?.id ?? null;
+    if (previousUserId.current === userId) return;
+    previousUserId.current = userId;
+    void router.invalidate();
+    if (userId) {
+      void queryClient.invalidateQueries();
+    } else {
+      queryClient.clear();
+    }
+  }, [loading, queryClient, router, user?.id]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Ambient neon orbs — decoration */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div
-          className="orb animate-float-slow"
-          style={{
-            width: 420,
-            height: 420,
-            top: -120,
-            left: -120,
-            background: "radial-gradient(circle, oklch(0.55 0.22 300 / 0.7), transparent 70%)",
-          }}
-        />
-        <div
-          className="orb animate-float-slow"
-          style={{
-            width: 520,
-            height: 520,
-            top: 120,
-            right: -180,
-            background: "radial-gradient(circle, oklch(0.55 0.2 210 / 0.6), transparent 70%)",
-            animationDelay: "-3s",
-          }}
-        />
-        <div
-          className="orb animate-float-slow"
-          style={{
-            width: 380,
-            height: 380,
-            bottom: -140,
-            left: "30%",
-            background: "radial-gradient(circle, oklch(0.55 0.22 350 / 0.5), transparent 70%)",
-            animationDelay: "-6s",
-          }}
-        />
-      </div>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-      <BottomNav />
-      <Toaster />
+      <ProgressProvider>
+        {/* Ambient neon orbs — decoration */}
+        <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+          <div
+            className="orb animate-float-slow"
+            style={{
+              width: 420,
+              height: 420,
+              top: -120,
+              left: -120,
+              background: "radial-gradient(circle, oklch(0.55 0.22 300 / 0.7), transparent 70%)",
+            }}
+          />
+          <div
+            className="orb animate-float-slow"
+            style={{
+              width: 520,
+              height: 520,
+              top: 120,
+              right: -180,
+              background: "radial-gradient(circle, oklch(0.55 0.2 210 / 0.6), transparent 70%)",
+              animationDelay: "-3s",
+            }}
+          />
+          <div
+            className="orb animate-float-slow"
+            style={{
+              width: 380,
+              height: 380,
+              bottom: -140,
+              left: "30%",
+              background: "radial-gradient(circle, oklch(0.55 0.22 350 / 0.5), transparent 70%)",
+              animationDelay: "-6s",
+            }}
+          />
+        </div>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+        <BottomNav />
+        <Toaster />
+      </ProgressProvider>
     </QueryClientProvider>
   );
 }

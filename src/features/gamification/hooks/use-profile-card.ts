@@ -1,7 +1,10 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@/lib/use-auth";
 import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
-import { equipProfileCard, fetchEquippedProfileCard } from "@/features/gamification/services/profile-card-service";
+import {
+  equipProfileCard,
+  fetchEquippedProfileCard,
+} from "@/features/gamification/services/profile-card-service";
 
 export function useProfileCard() {
   const { user } = useAuth();
@@ -12,6 +15,8 @@ export function useProfileCard() {
     queryKey,
     enabled: Boolean(user),
     queryFn: fetchEquippedProfileCard,
+    staleTime: 15 * 60_000,
+    gcTime: 60 * 60_000,
   });
 
   const mutation = useMutation({
