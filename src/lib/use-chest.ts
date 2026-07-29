@@ -3,7 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 
 export type LootItem =
-  | { type: "coins" | "gems" | "keys"; amount: number }
+  | { type: "coins" | "gems"; amount: number }
   | { type: "cosmetic"; rarity: "common" | "rare" | "epic" | "legendary" };
 
 export type ChestTier = "bronze" | "silver" | "gold" | "epic" | "mythic";

@@ -9,8 +9,6 @@ import type {
 type CurrencyRow = {
   coins: number;
   gems: number;
-  keys: number;
-  tickets: number;
   energy: number;
   energy_max: number;
 };
@@ -43,15 +41,13 @@ type ShopRow = {
 export async function fetchGameCurrency(): Promise<GameCurrency> {
   const { data, error } = await supabase
     .from("user_currency" as never)
-    .select("coins, gems, keys, tickets, energy, energy_max")
+    .select("coins, gems, energy, energy_max")
     .maybeSingle();
   if (error) throw error;
   const row = data as unknown as CurrencyRow | null;
   return {
     coins: row?.coins ?? 0,
     gems: row?.gems ?? 0,
-    keys: row?.keys ?? 0,
-    tickets: row?.tickets ?? 0,
     energy: row?.energy ?? 5,
     energyMax: row?.energy_max ?? 5,
   };

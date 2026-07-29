@@ -7,7 +7,7 @@ import { FormationCatalog } from "./formation-catalog.ts";
 import { LessonContentRepository } from "./lesson-content-repository.ts";
 import { lessonXpForResult } from "./learning-rewards.ts";
 import { parseLessonContentFile } from "./learning-schema.ts";
-import { selectContentItems } from "./lesson-runtime.ts";
+import { selectContentItems, selectProgressiveContentItems } from "./lesson-runtime.ts";
 
 const DEA_FORMATION = new FormationCatalog([deaFormation]).getFormation("dea");
 
@@ -184,6 +184,72 @@ test("la sélection de questions respecte la politique JSON", () => {
   const selected = selectContentItems(items, { strategy: "random", count: 5 }, () => 0.25);
   assert.equal(selected.length, 5);
   assert.equal(new Set(selected.map((item) => item.id)).size, 5);
+});
+
+test("les deux premières leçons protègent les débutants des questions difficiles", () => {
+  const items = ["easy", "medium", "hard", "expert"].flatMap((difficulty) =>
+    Array.from({ length: 12 }, (_, index) => ({
+      id: `${difficulty}-${index}`,
+      difficulty,
+    })),
+  ) as never[];
+
+  const firstLesson = selectProgressiveContentItems(
+    items,
+    { strategy: "random", count: 10 },
+    { lessonOrder: 1, kind: "lesson" },
+    () => 0.37,
+  );
+  assert.deepEqual(new Set(firstLesson.map((item) => item.difficulty)), new Set(["easy"]));
+
+  const secondLesson = selectProgressiveContentItems(
+    items,
+    { strategy: "random", count: 10 },
+    { lessonOrder: 2, kind: "lesson" },
+    () => 0.37,
+  );
+  assert.equal(secondLesson.filter((item) => item.difficulty === "easy").length, 8);
+  assert.equal(secondLesson.filter((item) => item.difficulty === "medium").length, 2);
+  assert.equal(
+    secondLesson.some((item) => ["hard", "expert"].includes(item.difficulty)),
+    false,
+  );
+});
+
+test("la tentative monte progressivement en difficulté et les Boss gardent toute la banque", () => {
+  const items = ["easy", "medium", "hard", "expert"].flatMap((difficulty) =>
+    Array.from({ length: 10 }, (_, index) => ({
+      id: `${difficulty}-${index}`,
+      difficulty,
+    })),
+  ) as never[];
+  const rank = { easy: 0, medium: 1, hard: 2, expert: 3 } as const;
+
+  const lesson = selectProgressiveContentItems(
+    items,
+    { strategy: "random", count: 10 },
+    { lessonOrder: 7, kind: "lesson" },
+    () => 0.42,
+  );
+  assert.deepEqual(
+    lesson.map((item) => item.difficulty),
+    [...lesson]
+      .sort((left, right) => rank[left.difficulty] - rank[right.difficulty])
+      .map((item) => item.difficulty),
+  );
+  assert.equal(
+    lesson.some((item) => item.difficulty === "expert"),
+    false,
+  );
+
+  const boss = selectProgressiveContentItems(
+    items,
+    { strategy: "random", count: 12 },
+    { lessonOrder: 12, kind: "boss" },
+    () => 0.42,
+  );
+  assert.equal(boss.length, 12);
+  assert.equal(new Set(boss.map((item) => item.difficulty)).size > 1, true);
 });
 
 test("les anciennes récompenses XP restent inchangées et les nouvelles utilisent le JSON", () => {

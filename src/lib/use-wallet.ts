@@ -5,7 +5,6 @@ import { useAuth } from "@/lib/use-auth";
 export interface Wallet {
   coins: number;
   gems: number;
-  keys: number;
   energy: number;
   energy_max: number;
   energy_updated_at: string;
@@ -23,7 +22,7 @@ export function useWallet(options: { enabled?: boolean } = {}) {
     queryFn: async (): Promise<Wallet> => {
       const { data, error } = await supabase
         .from("wallets" as never)
-        .select("coins, gems, keys, energy, energy_max, energy_updated_at")
+        .select("coins, gems, energy, energy_max, energy_updated_at")
         .maybeSingle();
       if (error) throw error;
       const row = data as unknown as Wallet | null;
@@ -31,7 +30,6 @@ export function useWallet(options: { enabled?: boolean } = {}) {
         row ?? {
           coins: 0,
           gems: 0,
-          keys: 0,
           energy: 5,
           energy_max: 5,
           energy_updated_at: new Date().toISOString(),
@@ -57,19 +55,6 @@ export async function awardCoins(amount: number, source: string, reference?: str
 export async function awardGems(amount: number, source: string, reference?: string) {
   const { data, error } = await supabase.rpc(
     "award_gems" as never,
-    {
-      _amount: amount,
-      _source: source,
-      _reference: reference ?? null,
-    } as never,
-  );
-  if (error) throw error;
-  return data as unknown as number;
-}
-
-export async function awardKeys(amount: number, source: string, reference?: string) {
-  const { data, error } = await supabase.rpc(
-    "award_keys" as never,
     {
       _amount: amount,
       _source: source,

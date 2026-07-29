@@ -181,8 +181,8 @@
     }
   },
   "rewards": {
-    "rewardTypes": ["xp", "coins", "gems", "keys", "tickets", "energy", "item"],
-    "inventoryItemTypes": ["chest", "xp_boost", "avatar", "profile_card", "badge", "ticket"],
+    "rewardTypes": ["xp", "coins", "gems", "energy", "item"],
+    "inventoryItemTypes": ["chest", "xp_boost", "avatar", "profile_card", "badge"],
     "lesson": {
       "xpMultiplierByStars": {
         "0": 0.4,
