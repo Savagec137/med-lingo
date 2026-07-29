@@ -83,7 +83,7 @@ async function fetchHomeDashboardFallback(days: number): Promise<HomeDashboard> 
     await Promise.all([
       supabase
         .from("wallets" as never)
-        .select("coins, gems, keys, energy, energy_max, energy_updated_at")
+        .select("coins, gems, energy, energy_max, energy_updated_at")
         .maybeSingle(),
       supabase
         .from("user_badges" as never)

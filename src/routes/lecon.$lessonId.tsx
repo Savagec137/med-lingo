@@ -17,6 +17,7 @@ import {
   Lock,
 } from "lucide-react";
 import { AnatomyLocationQuestion } from "@/components/exercises";
+import { AnswerSummaryBar } from "@/components/lesson/AnswerSummaryBar";
 import { findLesson, type Question } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useLearningHistory } from "@/lib/use-learning-history";
@@ -26,7 +27,7 @@ import { loadPedagogicalLessonV2 } from "@/content/pedagogical-content-v2";
 import {
   createSeededRandom,
   prepareContentInteraction,
-  selectContentItems,
+  selectProgressiveContentItems,
   type PreparedLessonInteraction,
 } from "@/content/lesson-runtime";
 import { getLessonBlueprint, getRoadmapParcours } from "@/content/roadmap-registry";
@@ -133,6 +134,9 @@ function LessonPage() {
   const contentCatalog = contentCatalogV2 ?? PEDAGOGICAL_CONTENT_CATALOG;
   const { progress, hydrated, completeLesson, loseHeart } = useProgress();
   const { recordAttempt } = useLearningHistory();
+  const lessonOrder = found
+    ? Math.max(1, found.parcours.lessons.findIndex((lesson) => lesson.id === found.lesson.id) + 1)
+    : 1;
 
   // Les questions historiques conservent leur comportement. Les nouvelles
   // leçons gardent leur ordre pédagogique et mélangent seulement les réponses.
@@ -141,7 +145,12 @@ function LessonPage() {
       const random = createSeededRandom(attemptSeed);
       return contentLesson
         ? (contentLessonV2
-            ? selectContentItems(contentLessonV2.interactions, contentLessonV2.selection, random)
+            ? selectProgressiveContentItems(
+                contentLessonV2.interactions,
+                contentLessonV2.selection,
+                { lessonOrder, kind: contentLessonV2.kind },
+                random,
+              )
             : contentLesson.interactions
           ).map((item: unknown) => ({
             ...prepareContentInteraction(
@@ -155,7 +164,7 @@ function LessonPage() {
           : [];
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [lessonId, contentLesson, contentLessonV2, attemptSeed],
+    [lessonId, contentLesson, contentLessonV2, attemptSeed, lessonOrder],
   );
 
   const [idx, setIdx] = useState(0);
@@ -446,6 +455,12 @@ function LessonPage() {
       ? current.answers.find((answer) => answer.id === selected)
       : undefined;
   const correctAnswer = current.answers.find((answer) => answer.id === current.correctAnswerIds[0]);
+  const answerSummary =
+    current.explanation?.trim() ||
+    correctAnswer?.explanation?.trim() ||
+    (correctAnswer
+      ? `La réponse attendue est « ${correctAnswer.text} ».`
+      : "Observe la correction affichée avant de poursuivre.");
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -684,12 +699,7 @@ function LessonPage() {
               {isWrong && selectedAnswer?.explanation && (
                 <p className="mt-1 text-sm text-muted-foreground">{selectedAnswer.explanation}</p>
               )}
-              {current.explanation && (
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {isWrong && selectedAnswer?.explanation ? "À retenir : " : ""}
-                  {current.explanation}
-                </p>
-              )}
+              <AnswerSummaryBar summary={answerSummary} />
             </div>
           )}
           {!checked ? (

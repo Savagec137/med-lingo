@@ -9,7 +9,6 @@ import {
   Sparkles,
   Coins,
   Gem,
-  Key,
   Stethoscope,
   Battery,
   Trophy,
@@ -116,14 +115,6 @@ export const TopBar = memo(function TopBar({ wallet: walletOverride }: TopBarPro
           >
             <Gem className="h-4 w-4" />
             <span className="tabular-nums">{wallet?.gems ?? 0}</span>
-          </Link>
-          <Link
-            to="/boutique"
-            aria-label="Clés"
-            className="hidden items-center gap-1 rounded-full bg-[color:var(--color-info)]/15 px-2.5 py-1 text-[color:var(--color-info)] hover:bg-[color:var(--color-info)]/25 sm:inline-flex"
-          >
-            <Key className="h-4 w-4" />
-            <span className="tabular-nums">{wallet?.keys ?? 0}</span>
           </Link>
           <span
             className="hidden items-center gap-1 rounded-full bg-[color:var(--color-success)]/15 px-2.5 py-1 text-[color:var(--color-success)] sm:inline-flex"

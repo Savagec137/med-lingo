@@ -7,15 +7,12 @@ export type ChestTier = (typeof CHEST_TIERS)[number];
 export const SHOP_TABS = ["chests", "gems", "premium", "avatars", "cards", "badges"] as const;
 export type ShopTab = (typeof SHOP_TABS)[number];
 
-export type InventoryItemType =
-  "chest" | "xp_boost" | "avatar" | "profile_card" | "badge" | "ticket";
-export type RewardType = "xp" | "coins" | "gems" | "keys" | "tickets" | "energy" | "item";
+export type InventoryItemType = "chest" | "xp_boost" | "avatar" | "profile_card" | "badge";
+export type RewardType = "xp" | "coins" | "gems" | "energy" | "item";
 
 export interface GameCurrency {
   coins: number;
   gems: number;
-  keys: number;
-  tickets: number;
   energy: number;
   energyMax: number;
 }

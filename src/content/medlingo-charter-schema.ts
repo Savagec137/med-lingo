@@ -93,10 +93,8 @@ const charterSchema = z
       }),
     }),
     rewards: z.object({
-      rewardTypes: z.array(z.enum(["xp", "coins", "gems", "keys", "tickets", "energy", "item"])),
-      inventoryItemTypes: z.array(
-        z.enum(["chest", "xp_boost", "avatar", "profile_card", "badge", "ticket"]),
-      ),
+      rewardTypes: z.array(z.enum(["xp", "coins", "gems", "energy", "item"])),
+      inventoryItemTypes: z.array(z.enum(["chest", "xp_boost", "avatar", "profile_card", "badge"])),
       lesson: z.object({
         xpMultiplierByStars: z.object({
           "0": z.number().positive(),

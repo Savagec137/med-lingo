@@ -1,5 +1,5 @@
-import type { ContentItem } from "./content-domain.ts";
-import type { LessonContentPool, LessonSelectionPolicy } from "./learning-domain.ts";
+import type { ContentDifficulty, ContentItem } from "./content-domain.ts";
+import type { LessonContentPool, LessonKind, LessonSelectionPolicy } from "./learning-domain.ts";
 
 function isMatchingAssociation(item: ContentItem) {
   return item.type === "association" && item.metadata?.associationMode === "matching";
@@ -103,6 +103,86 @@ export function selectContentItems(
   if (policy.strategy === "all") return [...items];
   const count = Math.min(policy.count ?? items.length, items.length);
   return shuffled(items, random).slice(0, count);
+}
+
+const DIFFICULTY_ORDER: Record<ContentDifficulty, number> = {
+  easy: 0,
+  medium: 1,
+  hard: 2,
+  expert: 3,
+};
+
+export interface LessonDifficultyContext {
+  lessonOrder: number;
+  kind: LessonKind;
+}
+
+function difficultyDistribution(context: LessonDifficultyContext) {
+  if (context.kind !== "lesson") return null;
+  if (context.lessonOrder <= 1) return { easy: 1, medium: 0, hard: 0, expert: 0 };
+  if (context.lessonOrder <= 2) return { easy: 0.8, medium: 0.2, hard: 0, expert: 0 };
+  if (context.lessonOrder <= 5) return { easy: 0.65, medium: 0.35, hard: 0, expert: 0 };
+  return { easy: 0.5, medium: 0.4, hard: 0.1, expert: 0 };
+}
+
+/**
+ * Construit une tentative avec une difficulté progressive.
+ *
+ * Les premières leçons ne peuvent plus tirer une question difficile au hasard.
+ * Les évaluations conservent toute la banque, tandis que les leçons ordinaires
+ * commencent par les notions accessibles puis montent graduellement.
+ */
+export function selectProgressiveContentItems(
+  items: ContentItem[],
+  policy: LessonSelectionPolicy,
+  context: LessonDifficultyContext,
+  random: () => number = Math.random,
+): ContentItem[] {
+  if (policy.strategy === "all") {
+    return [...items].sort(
+      (left, right) => DIFFICULTY_ORDER[left.difficulty] - DIFFICULTY_ORDER[right.difficulty],
+    );
+  }
+
+  const distribution = difficultyDistribution(context);
+  if (!distribution) return selectContentItems(items, policy, random);
+
+  const requestedCount = Math.min(policy.count ?? items.length, items.length);
+  const selected: ContentItem[] = [];
+  const selectedIds = new Set<string>();
+  const queues = Object.fromEntries(
+    (Object.keys(DIFFICULTY_ORDER) as ContentDifficulty[]).map((difficulty) => [
+      difficulty,
+      shuffled(
+        items.filter((item) => item.difficulty === difficulty),
+        random,
+      ),
+    ]),
+  ) as Record<ContentDifficulty, ContentItem[]>;
+
+  for (const difficulty of Object.keys(DIFFICULTY_ORDER) as ContentDifficulty[]) {
+    const target = Math.floor(requestedCount * distribution[difficulty]);
+    for (const item of queues[difficulty].slice(0, target)) {
+      selected.push(item);
+      selectedIds.add(item.id);
+    }
+  }
+
+  const permittedDifficulties = (Object.keys(DIFFICULTY_ORDER) as ContentDifficulty[]).filter(
+    (difficulty) => distribution[difficulty] > 0,
+  );
+  for (const difficulty of permittedDifficulties) {
+    for (const item of queues[difficulty]) {
+      if (selected.length >= requestedCount) break;
+      if (selectedIds.has(item.id)) continue;
+      selected.push(item);
+      selectedIds.add(item.id);
+    }
+  }
+
+  return selected.sort(
+    (left, right) => DIFFICULTY_ORDER[left.difficulty] - DIFFICULTY_ORDER[right.difficulty],
+  );
 }
 
 export interface ContentPoolSource {
