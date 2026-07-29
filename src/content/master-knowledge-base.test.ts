@@ -16,7 +16,10 @@ import { PedagogicalSpecificationCatalog } from "./pedagogical-specification-cat
 
 const lesson = parseLessonContentFile(lessonInput);
 const lessonSix = parseLessonContentFile(lessonSixInput);
-const officialProjection = parseLessonContentFile(officialProjectionInput);
+const officialProjection = parseLessonContentFile({
+  ...officialProjectionInput,
+  status: "review",
+});
 const specification = new PedagogicalSpecificationCatalog([specificationInput]).get(lesson.id);
 const catalog = new MasterKnowledgeCatalog(knowledgeInput);
 const knowledgeBase = catalog.knowledgeBase;

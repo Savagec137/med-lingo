@@ -34,6 +34,13 @@ export interface ContentAnswer {
   sequenceRank?: number;
 }
 
+export interface ContentPedagogicalFeedback {
+  correctExplanation: string;
+  commonErrorExplanation?: string;
+  takeaway: string;
+  mnemonic?: string;
+}
+
 export interface ContentMetadata {
   missionId?: string;
   phase?: string;
@@ -59,6 +66,7 @@ export interface ContentItem {
   correctAnswer: string | string[];
   explanation: string;
   priorityReminder?: string;
+  pedagogicalFeedback?: ContentPedagogicalFeedback;
   tags: string[];
   metadata?: ContentMetadata;
 }
@@ -84,6 +92,7 @@ export interface ContentEvaluation {
   correctAnswerIds: string[];
   explanation: string;
   priorityReminder?: string;
+  pedagogicalFeedback: ContentPedagogicalFeedback;
   answerFeedback: Array<{
     answerId: string;
     selected: boolean;

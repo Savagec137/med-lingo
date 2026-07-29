@@ -1,4 +1,4 @@
-import { PerformanceMetrics } from './types';
+import type { PerformanceMetrics } from "./type";
 
 export class PerformanceMonitor {
   fps = 60;
@@ -6,7 +6,7 @@ export class PerformanceMonitor {
   private lastUpdate = 0;
   private updateInterval = 500;
 
-  update(delta: number): void {
+  update(_delta: number): void {
     this.frameCount++;
     const now = performance.now();
     if (now - this.lastUpdate >= this.updateInterval) {

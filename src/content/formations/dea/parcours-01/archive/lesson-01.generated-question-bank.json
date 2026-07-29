@@ -297,7 +297,7 @@
         {
           "id": "d",
           "text": "Plusieurs organes proches, même s'ils n'assurent aucune fonction commune",
-          "explanation": "Les médicaments ne constituent pas un système anatomique."
+          "explanation": "La proximité anatomique ne suffit pas : un système réunit des organes qui coopèrent pour une même grande fonction."
         }
       ],
       "correctAnswer": "c"

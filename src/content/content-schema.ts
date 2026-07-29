@@ -19,6 +19,13 @@ const contentAnswerSchema = z.object({
   sequenceRank: z.number().int().positive().optional(),
 });
 
+const pedagogicalFeedbackSchema = z.object({
+  correctExplanation: z.string().trim().min(1),
+  commonErrorExplanation: z.string().trim().min(1).optional(),
+  takeaway: z.string().trim().min(1),
+  mnemonic: z.string().trim().min(1).optional(),
+});
+
 const contentMetadataSchema = z
   .object({
     missionId: z.string().trim().min(1).optional(),
@@ -46,6 +53,7 @@ const contentItemSchema = z
     correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
     explanation: z.string(),
     priorityReminder: z.string().trim().min(1).optional(),
+    pedagogicalFeedback: pedagogicalFeedbackSchema.optional(),
     tags: z.array(z.string().trim().min(1)).min(1),
     metadata: contentMetadataSchema.optional(),
   })
