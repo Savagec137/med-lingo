@@ -17,7 +17,7 @@ import {
   Lock,
 } from "lucide-react";
 import { AnatomyLocationQuestion } from "@/components/exercises";
-import { AnswerSummaryBar } from "@/components/lesson/AnswerSummaryBar";
+import { AnswerLearningPanel } from "@/components/lesson/AnswerLearningPanel";
 import { findLesson, type Question } from "@/lib/curriculum";
 import { useProgress, MAX_HEARTS } from "@/lib/use-progress";
 import { useLearningHistory } from "@/lib/use-learning-history";
@@ -30,6 +30,10 @@ import {
   selectProgressiveContentItems,
   type PreparedLessonInteraction,
 } from "@/content/lesson-runtime";
+import {
+  derivePedagogicalFeedback,
+  responseErrorExplanation,
+} from "@/content/pedagogical-feedback";
 import { getLessonBlueprint, getRoadmapParcours } from "@/content/roadmap-registry";
 
 export const Route = createFileRoute("/lecon/$lessonId")({
@@ -96,15 +100,22 @@ function legacyInteractions(questions: Question[], random: () => number): Playab
       })),
       random,
     );
+    const correctAnswerId = `${question.id}-answer-${question.answer}`;
     return {
       id: question.id,
       type: "choice",
       question: question.question,
       answers,
       matchOptions: [],
-      correctAnswerIds: [`${question.id}-answer-${question.answer}`],
+      correctAnswerIds: [correctAnswerId],
       requiredSelections: 1,
       explanation: question.explanation,
+      pedagogicalFeedback: derivePedagogicalFeedback({
+        type: "mcq",
+        answers,
+        correctAnswer: correctAnswerId,
+        explanation: question.explanation ?? "",
+      }),
       contentDriven: false,
     };
   });
@@ -175,6 +186,7 @@ function LessonPage() {
   const [textAnswer, setTextAnswer] = useState("");
   const [checked, setChecked] = useState(false);
   const [responseCorrect, setResponseCorrect] = useState<boolean | null>(null);
+  const [submittedAnswerIds, setSubmittedAnswerIds] = useState<string[]>([]);
   const [correctCount, setCorrectCount] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
   const [finished, setFinished] = useState(false);
@@ -280,6 +292,7 @@ function LessonPage() {
           : evaluatedIds.length === 1 && current.correctAnswerIds.includes(evaluatedIds[0]);
     setChecked(true);
     setResponseCorrect(isCorrect);
+    setSubmittedAnswerIds(evaluatedIds);
     recordAttempt(current.id, isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
     else {
@@ -303,6 +316,7 @@ function LessonPage() {
     setTextAnswer("");
     setChecked(false);
     setResponseCorrect(null);
+    setSubmittedAnswerIds([]);
   };
 
   if (outOfHearts) {
@@ -433,6 +447,7 @@ function LessonPage() {
                 setTextAnswer("");
                 setChecked(false);
                 setResponseCorrect(null);
+                setSubmittedAnswerIds([]);
                 setCorrectCount(0);
                 setWrongCount(0);
                 setFinished(false);
@@ -450,17 +465,14 @@ function LessonPage() {
 
   const isCorrect = checked && responseCorrect === true;
   const isWrong = checked && responseCorrect === false;
-  const selectedAnswer =
-    current.type === "choice" || current.type === "anatomy_location"
-      ? current.answers.find((answer) => answer.id === selected)
-      : undefined;
   const correctAnswer = current.answers.find((answer) => answer.id === current.correctAnswerIds[0]);
-  const answerSummary =
-    current.explanation?.trim() ||
-    correctAnswer?.explanation?.trim() ||
-    (correctAnswer
-      ? `La réponse attendue est « ${correctAnswer.text} ».`
-      : "Observe la correction affichée avant de poursuivre.");
+  const mistakeExplanation = responseErrorExplanation({
+    answers: current.answers,
+    correctAnswerIds: current.correctAnswerIds,
+    selectedAnswerIds: submittedAnswerIds,
+    isCorrect,
+    commonErrorExplanation: current.pedagogicalFeedback.commonErrorExplanation,
+  });
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -696,10 +708,12 @@ function LessonPage() {
                     Bonne réponse : <span className="font-bold">{correctAnswer.text}</span>
                   </p>
                 )}
-              {isWrong && selectedAnswer?.explanation && (
-                <p className="mt-1 text-sm text-muted-foreground">{selectedAnswer.explanation}</p>
-              )}
-              <AnswerSummaryBar summary={answerSummary} />
+              <AnswerLearningPanel
+                key={current.id}
+                feedback={current.pedagogicalFeedback}
+                mistakeExplanation={mistakeExplanation}
+                isCorrect={isCorrect}
+              />
             </div>
           )}
           {!checked ? (

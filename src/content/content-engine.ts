@@ -5,6 +5,7 @@ import type {
   ContentQuery,
 } from "./content-domain.ts";
 import { parseContentBank } from "./content-schema.ts";
+import { derivePedagogicalFeedback } from "./pedagogical-feedback.ts";
 
 function answerIds(item: ContentItem) {
   return Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer];
@@ -90,6 +91,7 @@ export class ContentCatalog {
       correctAnswerIds: [...correctAnswerIds],
       explanation: item.explanation,
       priorityReminder: item.priorityReminder,
+      pedagogicalFeedback: derivePedagogicalFeedback(item),
       answerFeedback: item.answers.map((answer) => ({
         answerId: answer.id,
         selected: uniqueSelected.has(answer.id),

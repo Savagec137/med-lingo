@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { sceneEngine } from '../engine/SceneEngine';
-import { SceneEntity } from '../engine/types';
+import { useEffect, useState } from "react";
+import type { SceneEntity } from "../engine/type";
+import { sceneEngine } from "../engine/SceneEngine";
 
 export function useSceneEngine() {
   const [fps, setFps] = useState(60);

@@ -1,5 +1,10 @@
-import type { ContentDifficulty, ContentItem } from "./content-domain.ts";
+import type {
+  ContentDifficulty,
+  ContentItem,
+  ContentPedagogicalFeedback,
+} from "./content-domain.ts";
 import type { LessonContentPool, LessonKind, LessonSelectionPolicy } from "./learning-domain.ts";
+import { derivePedagogicalFeedback } from "./pedagogical-feedback.ts";
 
 function isMatchingAssociation(item: ContentItem) {
   return item.type === "association" && item.metadata?.associationMode === "matching";
@@ -11,6 +16,7 @@ export interface PreparedLessonAnswer {
   explanation: string;
   match?: string;
   detail?: string;
+  distractorType?: ContentItem["answers"][number]["distractorType"];
 }
 
 export interface PreparedLessonInteraction {
@@ -23,6 +29,7 @@ export interface PreparedLessonInteraction {
   correctAnswerIds: string[];
   requiredSelections: number;
   explanation?: string;
+  pedagogicalFeedback: ContentPedagogicalFeedback;
 }
 
 export function createSeededRandom(seed: number): () => number {
@@ -75,6 +82,7 @@ export function prepareContentInteraction(
       explanation: answer.explanation,
       match: answer.match,
       detail: answer.detail,
+      distractorType: answer.distractorType,
     })),
     matchOptions: association
       ? shuffled(
@@ -92,6 +100,7 @@ export function prepareContentInteraction(
         ? item.correctAnswer.length
         : 1,
     explanation: item.explanation,
+    pedagogicalFeedback: derivePedagogicalFeedback(item),
   };
 }
 

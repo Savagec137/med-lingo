@@ -1,4 +1,4 @@
-import { AnimationConfig, SceneEntity } from './types';
+import type { AnimationConfig, SceneEntity } from "./type";
 
 export abstract class BaseSceneEntity implements SceneEntity {
   id: string;
@@ -15,7 +15,7 @@ export abstract class BaseSceneEntity implements SceneEntity {
       speed: config.speed ?? 1,
       delay: config.delay ?? 0,
       frequency: config.frequency ?? 1,
-      priority: config.priority ?? 'medium',
+      priority: config.priority ?? "medium",
       enabled: config.enabled ?? true,
     };
   }

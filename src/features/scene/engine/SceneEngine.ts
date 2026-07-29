@@ -1,5 +1,5 @@
-import { SceneEntity, SceneState, PerformanceMetrics } from './types';
-import { PerformanceMonitor } from './PerformanceMonitor';
+import type { PerformanceMetrics, SceneEntity, SceneState } from "./type";
+import { PerformanceMonitor } from "./PerformanceMonitor";
 
 export class SceneEngine {
   private state: SceneState;
@@ -11,7 +11,7 @@ export class SceneEngine {
     this.state = {
       entities: new Map(),
       isReducedMotion: false,
-      performanceMode: 'high',
+      performanceMode: "high",
       fps: 60,
     };
     this.performanceMonitor = new PerformanceMonitor();
@@ -45,11 +45,11 @@ export class SceneEngine {
     const delta = Math.min((timestamp - this.lastTime) / 16.667, 3);
     this.lastTime = timestamp;
     this.performanceMonitor.update(delta);
-    this.state.fps = this.performanceMonitor.fps;
+    this.state.fps = this.performanceMonitor.getMetrics().fps;
     this.updatePerformanceMode();
 
     for (const entity of this.state.entities.values()) {
-      if (this.state.isReducedMotion && entity.config.priority === 'low') continue;
+      if (this.state.isReducedMotion && entity.config.priority === "low") continue;
       if (entity.config.enabled) {
         entity.animate(delta, timestamp / 1000);
       }
@@ -63,21 +63,21 @@ export class SceneEngine {
     const entityCount = this.state.entities.size;
 
     if (this.state.isReducedMotion) {
-      this.state.performanceMode = 'low';
+      this.state.performanceMode = "low";
       return;
     }
 
     if (metrics.fps < 45 || entityCount > 50) {
-      this.state.performanceMode = 'low';
+      this.state.performanceMode = "low";
     } else if (metrics.fps < 55 || entityCount > 30) {
-      this.state.performanceMode = 'medium';
+      this.state.performanceMode = "medium";
     } else {
-      this.state.performanceMode = 'high';
+      this.state.performanceMode = "high";
     }
 
-    if (this.state.performanceMode === 'low') {
+    if (this.state.performanceMode === "low") {
       for (const entity of this.state.entities.values()) {
-        entity.config.enabled = entity.config.priority !== 'low';
+        entity.config.enabled = entity.config.priority !== "low";
       }
     } else {
       for (const entity of this.state.entities.values()) {
@@ -92,7 +92,12 @@ export class SceneEngine {
   }
 
   getMetrics(): PerformanceMetrics {
-    return this.performanceMonitor.getMetrics();
+    return {
+      ...this.performanceMonitor.getMetrics(),
+      entityCount: this.state.entities.size,
+      activeAnimations: [...this.state.entities.values()].filter((entity) => entity.config.enabled)
+        .length,
+    };
   }
 }
 

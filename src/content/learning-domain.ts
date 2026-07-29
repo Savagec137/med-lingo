@@ -2,6 +2,7 @@ import type {
   ContentAnswer,
   ContentDifficulty,
   ContentItem,
+  ContentPedagogicalFeedback,
   ContentType,
 } from "./content-domain.ts";
 
@@ -60,6 +61,7 @@ export interface LearningContentItem {
   correctAnswer: string | string[];
   explanation: string;
   priorityReminder?: string;
+  pedagogicalFeedback?: ContentPedagogicalFeedback;
   tags: string[];
   competencyIds: string[];
   pedagogicalReference?: string;

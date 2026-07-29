@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { CONTENT_DIFFICULTIES, CONTENT_TYPES, type ContentItem } from "./content-domain.ts";
 import { parseContentBank } from "./content-schema.ts";
+import { isAnswerTextCopy } from "./pedagogical-feedback.ts";
 import {
   CONTENT_POOL_STRATEGIES,
   LESSON_CONTENT_STATUSES,
@@ -26,6 +27,13 @@ const answerSchema = z.object({
     ])
     .optional(),
   sequenceRank: z.number().int().positive().optional(),
+});
+
+const pedagogicalFeedbackSchema = z.object({
+  correctExplanation: z.string().trim().min(1),
+  commonErrorExplanation: z.string().trim().min(1).optional(),
+  takeaway: z.string().trim().min(1),
+  mnemonic: z.string().trim().min(1).optional(),
 });
 
 const metadataSchema = z
@@ -73,6 +81,7 @@ const learningItemSchema = z.object({
   correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
   explanation: z.string(),
   priorityReminder: z.string().trim().min(1).optional(),
+  pedagogicalFeedback: pedagogicalFeedbackSchema.optional(),
   tags: z.array(z.string().trim().min(1)).min(1),
   competencyIds: z.array(z.string().trim().min(1)).min(1),
   pedagogicalReference: z.string().trim().min(1).optional(),
@@ -162,6 +171,52 @@ const lessonContentSchema = z
           path: ["items", index, "answers"],
           message: "Ce type d'exercice exige au moins deux réponses.",
         });
+      }
+
+      if (lesson.status === "published") {
+        const correctIds = Array.isArray(item.correctAnswer)
+          ? item.correctAnswer
+          : [item.correctAnswer];
+        const correctAnswers = item.answers.filter((answer) => correctIds.includes(answer.id));
+        const correctExplanation =
+          item.pedagogicalFeedback?.correctExplanation ??
+          correctAnswers.find((answer) => answer.explanation.trim())?.explanation;
+        const takeaway = item.pedagogicalFeedback?.takeaway ?? item.explanation;
+
+        if (!correctExplanation?.trim()) {
+          context.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["items", index, "explanation"],
+            message: "Une question publiée exige une explication de la bonne réponse.",
+          });
+        }
+        if (!takeaway?.trim()) {
+          context.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["items", index, "explanation"],
+            message: "Une question publiée exige un contenu « À retenir ».",
+          });
+        }
+        if (item.answers.some((answer) => !answer.explanation.trim())) {
+          context.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["items", index, "answers"],
+            message: "Chaque réponse publiée exige une explication pédagogique.",
+          });
+        }
+        if (
+          correctAnswers.some(
+            (answer) => correctExplanation && isAnswerTextCopy(correctExplanation, answer.text),
+          ) ||
+          correctAnswers.some((answer) => takeaway && isAnswerTextCopy(takeaway, answer.text))
+        ) {
+          context.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["items", index, "pedagogicalFeedback"],
+            message:
+              "L’explication et le contenu « À retenir » ne peuvent pas recopier la bonne réponse.",
+          });
+        }
       }
     }
 
@@ -359,6 +414,7 @@ export function normalizeLearningItem(
     correctAnswer: item.correctAnswer,
     explanation: item.explanation,
     priorityReminder: item.priorityReminder,
+    pedagogicalFeedback: item.pedagogicalFeedback,
     tags: item.tags,
     metadata: {
       ...item.metadata,
