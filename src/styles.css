@@ -263,3 +263,26 @@
   .shimmer { animation: none !important; }
   .press { transition: none; }
 }
+
+/* ==== Performance mobile ====
+   Le flou d'arrière-plan (backdrop-filter) est recalculé à chaque frame de scroll
+   au-dessus du décor animé : très coûteux sur téléphone. On le désactive sous 900px
+   et on remplace par un fond opaque équivalent visuellement. */
+@media (max-width: 900px) {
+  [class*="backdrop-blur"],
+  .glass,
+  .glass-strong {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 900px) and (hover: none) {
+  .card-interactive:hover {
+    transform: none;
+  }
+}
+
