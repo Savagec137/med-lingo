@@ -728,6 +728,7 @@ export type Database = {
       claim_daily_reward: { Args: never; Returns: Json }
       equip_game_profile_card: { Args: { _item_code: string }; Returns: Json }
       game_level_from_xp: { Args: { total_xp: number }; Returns: number }
+      get_home_dashboard: { Args: { _days?: number }; Returns: Json }
       get_my_weekly_rank: {
         Args: never
         Returns: {

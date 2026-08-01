@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { SceneEntity } from "../engine/type";
+import type { SceneEntity } from "../engine/types";
 import { sceneEngine } from "../engine/SceneEngine";
 
 export function useSceneEngine() {

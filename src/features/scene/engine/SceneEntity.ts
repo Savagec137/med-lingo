@@ -1,4 +1,4 @@
-import type { AnimationConfig, SceneEntity } from "./type";
+import type { AnimationConfig, SceneEntity } from "./types";
 
 export abstract class BaseSceneEntity implements SceneEntity {
   id: string;
