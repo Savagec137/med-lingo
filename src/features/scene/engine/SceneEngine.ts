@@ -1,4 +1,4 @@
-import type { PerformanceMetrics, SceneEntity, SceneState } from "./type";
+import type { PerformanceMetrics, SceneEntity, SceneState } from "./types";
 import { PerformanceMonitor } from "./PerformanceMonitor";
 
 export class SceneEngine {

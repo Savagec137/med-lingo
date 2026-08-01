@@ -1,4 +1,4 @@
-import type { PerformanceMetrics } from "./type";
+import type { PerformanceMetrics } from "./types";
 
 export class PerformanceMonitor {
   fps = 60;
