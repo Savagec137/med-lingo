@@ -30,7 +30,11 @@ export const BackgroundEngine = memo(function BackgroundEngine({
       className={`fixed inset-0 -z-10 overflow-hidden ${
         reducedMotion ? "home-reduced-motion" : ""
       } ${className}`}
-      style={{ opacity: OPACITY_BY_INTENSITY[intensity] }}
+      style={{
+        opacity: OPACITY_BY_INTENSITY[intensity],
+        contain: "strict",
+        transform: "translateZ(0)",
+      }}
     >
       <div className="pointer-events-none absolute inset-0 z-10 bg-black/40" />
       <div className="absolute inset-0 h-full w-full">{theme.component}</div>
