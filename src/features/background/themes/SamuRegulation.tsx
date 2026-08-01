@@ -1,6 +1,12 @@
 // ============================================
 // STYLES DES ANIMATIONS
 // ============================================
+import { useSceneQuality, type SceneQuality } from "../hooks/useSceneQuality";
+
+interface LayerProps {
+  quality: SceneQuality;
+}
+
 const styles = `
 @keyframes pulse-glow-samu {
   0%, 100% { opacity: 0.3; transform: scale(1); }
@@ -85,7 +91,8 @@ if (typeof document !== "undefined") {
 // ============================================
 
 // 1. Arrière-plan : Ville nocturne
-function CityLayer() {
+function CityLayer({ quality }: LayerProps) {
+  const windows = quality === "high" ? CITY_WINDOWS : CITY_WINDOWS.slice(0, 10);
   return (
     <div className="absolute inset-0 pointer-events-none">
       {/* Ciel nocturne */}
@@ -113,7 +120,7 @@ function CityLayer() {
       </div>
 
       {/* Fenêtres allumées */}
-      {CITY_WINDOWS.map((windowLight, i) => {
+      {windows.map((windowLight, i) => {
         return (
           <div
             key={`window-${i}`}
@@ -144,7 +151,7 @@ function ScreensLayer() {
   return (
     <div className="absolute inset-0 pointer-events-none opacity-70">
       {/* Grand écran principal */}
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[80%] max-w-[800px] h-[140px] bg-black/60 backdrop-blur-sm border border-cyan-500/10 rounded-xl shadow-[0_0_80px_rgba(6,182,212,0.05)] overflow-hidden">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[80%] max-w-[800px] h-[140px] bg-black/70 border border-cyan-500/10 rounded-xl shadow-[0_0_80px_rgba(6,182,212,0.05)] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent scanline-samu" />
 
         <div className="flex items-center justify-around h-full px-6">
@@ -181,7 +188,7 @@ function ScreensLayer() {
       </div>
 
       {/* Écran secondaire gauche : activité par heure */}
-      <div className="absolute top-44 left-6 w-48 h-28 bg-black/60 backdrop-blur-sm border border-cyan-500/10 rounded-lg overflow-hidden">
+      <div className="absolute top-44 left-6 w-48 h-28 bg-black/70 border border-cyan-500/10 rounded-lg overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <div className="text-[8px] font-mono text-cyan-400/30 tracking-wider">
@@ -201,7 +208,7 @@ function ScreensLayer() {
       </div>
 
       {/* Écran secondaire droit : constantes vitales */}
-      <div className="absolute top-44 right-6 w-48 h-28 bg-black/60 backdrop-blur-sm border border-cyan-500/10 rounded-lg overflow-hidden">
+      <div className="absolute top-44 right-6 w-48 h-28 bg-black/70 border border-cyan-500/10 rounded-lg overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <div className="text-[8px] font-mono text-cyan-400/30 tracking-wider">
@@ -226,7 +233,7 @@ function ScreensLayer() {
       </div>
 
       {/* Écran des interventions */}
-      <div className="absolute top-44 left-1/2 -translate-x-1/2 w-64 h-28 bg-black/60 backdrop-blur-sm border border-cyan-500/10 rounded-lg overflow-hidden">
+      <div className="absolute top-44 left-1/2 -translate-x-1/2 w-64 h-28 bg-black/70 border border-cyan-500/10 rounded-lg overflow-hidden">
         <div className="absolute inset-0 p-3">
           <div className="text-[8px] font-mono text-cyan-400/30 tracking-wider text-center">
             INTERVENTIONS EN COURS
@@ -373,13 +380,19 @@ function RainLayer() {
 }
 
 // 6. Lumières et effets
-function LightsLayer() {
+function LightsLayer({ quality }: LayerProps) {
   return (
     <div className="absolute inset-0 pointer-events-none">
       {/* Gyrophares */}
-      <div className="absolute bottom-32 left-[6%] w-20 h-20 bg-red-500/10 rounded-full blur-2xl pulse-glow-samu" />
       <div
-        className="absolute bottom-32 left-[10%] w-20 h-20 bg-blue-500/10 rounded-full blur-2xl pulse-glow-samu"
+        className={`absolute bottom-32 left-[6%] w-20 h-20 bg-red-500/10 rounded-full blur-2xl ${
+          quality === "high" ? "pulse-glow-samu" : ""
+        }`}
+      />
+      <div
+        className={`absolute bottom-32 left-[10%] w-20 h-20 bg-blue-500/10 rounded-full blur-2xl ${
+          quality === "high" ? "pulse-glow-samu" : ""
+        }`}
         style={{ animationDelay: "1.2s" }}
       />
 
@@ -400,14 +413,15 @@ function LightsLayer() {
 // ============================================
 
 export function SamuRegulationTheme() {
+  const quality = useSceneQuality();
   return (
     <>
-      <CityLayer />
+      <CityLayer quality={quality} />
       <ScreensLayer />
       <ControlRoomLayer />
       <AmbulanceLayer />
-      <RainLayer />
-      <LightsLayer />
+      {quality === "high" && <RainLayer />}
+      <LightsLayer quality={quality} />
     </>
   );
 }
