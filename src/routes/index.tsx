@@ -87,18 +87,12 @@ const Home = memo(function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ minHeight: "100vh" }}>
-      {/* ========================================== */}
-      {/* BACKGROUND ENGINE — SAMU REGULATION CENTER */}
-      {/* ========================================== */}
+      {/* Fond statique sobre (décor animé SAMU retiré) */}
       <div
         aria-hidden
         className="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-950 to-cyan-950"
       />
-      {deferredHomeData && (
-        <Suspense fallback={null}>
-          <LazyHomeBackground />
-        </Suspense>
-      )}
+
 
       {/* ========================================== */}
       {/* CONTENU PRINCIPAL (par-dessus le décor)    */}
