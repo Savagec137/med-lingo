@@ -20,13 +20,9 @@ import { levelProgress } from "@/lib/gamification";
 import { useDeferredHomeData, useHomeDashboard } from "@/features/home/home-dashboard";
 
 // ============================================
-// BACKGROUND ENGINE — IMPORTS
+// ROADMAP — IMPORT DIFFÉRÉ
 // ============================================
-const LazyHomeBackground = lazy(() =>
-  import("@/features/home/HomeBackground").then((module) => ({
-    default: module.HomeBackground,
-  })),
-);
+
 const LazyHomeRoadmap = lazy(() =>
   import("@/features/home/HomeRoadmap").then((module) => ({
     default: module.HomeRoadmap,
