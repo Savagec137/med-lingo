@@ -286,3 +286,32 @@
   }
 }
 
+
+/* ==== Carte de visite premium ==== */
+@keyframes holo-sweep {
+  0%   { transform: translateX(-120%) rotate(8deg); }
+  100% { transform: translateX(220%) rotate(8deg); }
+}
+@keyframes card-icon-drift {
+  0%, 100% { transform: translate3d(0,0,0) rotate(0deg); }
+  50%      { transform: translate3d(-6px,6px,0) rotate(-4deg); }
+}
+@keyframes ecg-trace {
+  0%   { stroke-dashoffset: 420; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes rarity-halo {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 0.85; }
+}
+.animate-holo-sweep { animation: holo-sweep 5.5s ease-in-out infinite; }
+.animate-card-icon  { animation: card-icon-drift 11s ease-in-out infinite; }
+.animate-ecg-trace  { stroke-dasharray: 420; animation: ecg-trace 4.5s linear infinite; }
+.animate-rarity-halo { animation: rarity-halo 3s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-holo-sweep,
+  .animate-card-icon,
+  .animate-ecg-trace,
+  .animate-rarity-halo { animation: none; }
+}
