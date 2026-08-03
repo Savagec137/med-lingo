@@ -2,7 +2,9 @@ import type { ReactNode } from "react";
 import { BookOpen, Flame, Target, Trophy } from "lucide-react";
 import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 import { getProfileCard } from "@/features/gamification/domain/profile-cards";
+import { ProfileCardScene } from "@/features/gamification/components/ProfileCardScene";
 import { APP_NAME } from "@/lib/brand";
+
 
 type ProfileVisitCardProps = {
   code?: ProfileCardCode | string | null;
@@ -47,6 +49,12 @@ export function ProfileVisitCard({
   const Icon = card.Icon;
   const initials = displayName.trim().slice(0, 2).toUpperCase();
   const progress = Math.max(0, Math.min(1, progressValue));
+  const serial = `ML-${card.code.replace("game_card_", "").slice(0, 3).toUpperCase()}-${String(
+    Math.abs(
+      displayName.split("").reduce((acc, char) => (acc * 31 + char.charCodeAt(0)) % 100000, 7),
+    ),
+  ).padStart(5, "0")}`;
+
 
   return (
     <section
@@ -65,50 +73,46 @@ export function ProfileVisitCard({
         className="animate-rarity-halo pointer-events-none absolute inset-0 -z-10 rounded-[26px]"
         style={{ boxShadow: `inset 0 0 60px -12px ${card.accent}` }}
       />
-      {/* grille technique */}
+      {/* décor thématique animé */}
+      <ProfileCardScene
+        theme={card.theme}
+        accent={card.accent}
+        accentAlt={card.accentAlt}
+        foreground={card.foreground}
+        compact={compact}
+      />
+      {/* voile de lisibilité */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.14]"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          backgroundImage: `linear-gradient(${card.foreground}55 1px, transparent 1px), linear-gradient(90deg, ${card.foreground}55 1px, transparent 1px)`,
-          backgroundSize: "26px 26px",
-          maskImage: "radial-gradient(circle at 20% 20%, #000 10%, transparent 78%)",
-          WebkitMaskImage: "radial-gradient(circle at 20% 20%, #000 10%, transparent 78%)",
+          background: `linear-gradient(160deg, ${card.foreground}00 30%, ${card.background.includes("#f8fafc") || card.background.includes("#ecfeff") ? "rgba(255,255,255,0.55)" : "rgba(2,6,23,0.55)"} 100%)`,
         }}
       />
-      {/* tracé ECG */}
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 420 60"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-16 w-full opacity-30"
-      >
-        <path
-          d="M0 40 H70 l10 -22 l10 44 l12 -30 l10 8 H190 l12 -26 l10 48 l12 -34 l10 12 H420"
-          fill="none"
-          stroke={card.accent}
-          strokeWidth="2"
-          strokeLinecap="round"
-          className="animate-ecg-trace"
-        />
-      </svg>
-      {/* icône signature */}
+      {/* icône signature en filigrane */}
       <Icon
         aria-hidden="true"
-        className={`animate-card-icon pointer-events-none absolute -right-4 -top-4 -z-10 opacity-[0.18] ${
+        className={`animate-card-icon pointer-events-none absolute -right-6 -top-6 -z-10 opacity-[0.13] ${
           compact ? "h-28 w-28" : "h-44 w-44"
         }`}
         style={{ color: card.accent }}
-        strokeWidth={1.1}
+        strokeWidth={0.9}
+      />
+      {/* liseré intérieur premium */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-[6px] rounded-[20px] border"
+        style={{ borderColor: `${card.foreground}1f` }}
       />
       {/* reflet holographique */}
       <span
         aria-hidden="true"
-        className="animate-holo-sweep pointer-events-none absolute -inset-y-10 left-0 -z-10 w-1/3 blur-[6px]"
+        className="animate-holo-sweep pointer-events-none absolute -inset-y-10 left-0 z-0 w-1/3 blur-[6px]"
         style={{
           background: `linear-gradient(90deg, transparent, ${card.foreground}30, transparent)`,
         }}
       />
+
 
       <div className="relative flex items-start justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
@@ -157,6 +161,12 @@ export function ProfileVisitCard({
                 {email ?? `Profil ${APP_NAME}`}
               </p>
             )}
+            <p
+              className="mt-0.5 truncate text-[9px] font-extrabold uppercase tracking-[0.22em]"
+              style={{ color: card.accent }}
+            >
+              {card.tagline}
+            </p>
             <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
               <span
                 className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide"
@@ -175,15 +185,17 @@ export function ProfileVisitCard({
         </div>
         {!compact && (
           <div
-            className="shrink-0 rounded-xl border px-2 py-1 text-right"
+            className="shrink-0 rounded-xl border px-2 py-1.5 text-right"
             style={{ borderColor: `${card.foreground}22`, backgroundColor: `${card.foreground}0f` }}
           >
             <Icon className="ml-auto h-5 w-5" style={{ color: card.accent }} />
             <p className="mt-0.5 text-[8px] font-extrabold uppercase tracking-[0.16em] opacity-70">
               {APP_NAME}
             </p>
+            <p className="text-[7px] font-bold tabular-nums opacity-55">{serial}</p>
           </div>
         )}
+
       </div>
 
       <div className={`${compact ? "mt-4" : "mt-6"} relative`}>
