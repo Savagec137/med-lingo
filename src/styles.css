@@ -309,9 +309,50 @@
 .animate-ecg-trace  { stroke-dasharray: 420; animation: ecg-trace 4.5s linear infinite; }
 .animate-rarity-halo { animation: rarity-halo 3s ease-in-out infinite; }
 
+/* ==== Décors de carte ==== */
+@keyframes scene-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -8px, 0); }
+}
+@keyframes scene-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.9); transform-box: fill-box; transform-origin: center; }
+  50%      { opacity: 1;    transform: scale(1.25); transform-box: fill-box; transform-origin: center; }
+}
+@keyframes scene-ring {
+  0%   { opacity: 0.55; transform: scale(0.7); }
+  100% { opacity: 0;    transform: scale(1.35); }
+}
+@keyframes scene-beat {
+  0%, 100% { transform: scale(1); }
+  18%      { transform: scale(1.14); }
+  36%      { transform: scale(0.98); }
+}
+@keyframes scene-scan {
+  0%   { transform: translateY(-20px); opacity: 0; }
+  25%  { opacity: 1; }
+  100% { transform: translateY(240px); opacity: 0; }
+}
+@keyframes scene-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-scene-drift { animation: scene-drift 9s ease-in-out infinite; }
+.animate-scene-pulse { animation: scene-pulse 3.4s ease-in-out infinite; }
+.animate-scene-ring  { animation: scene-ring 3.6s ease-out infinite; }
+.animate-scene-beat  { animation: scene-beat 1.6s ease-in-out infinite; }
+.animate-scene-scan  { animation: scene-scan 6s ease-in-out infinite; }
+.animate-scene-spin  { animation: scene-spin 26s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   .animate-holo-sweep,
   .animate-card-icon,
   .animate-ecg-trace,
+  .animate-scene-drift,
+  .animate-scene-pulse,
+  .animate-scene-ring,
+  .animate-scene-beat,
+  .animate-scene-scan,
+  .animate-scene-spin,
   .animate-rarity-halo { animation: none; }
 }
+
