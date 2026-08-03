@@ -49,6 +49,12 @@ export function ProfileVisitCard({
   const Icon = card.Icon;
   const initials = displayName.trim().slice(0, 2).toUpperCase();
   const progress = Math.max(0, Math.min(1, progressValue));
+  const serial = `ML-${card.code.replace("game_card_", "").slice(0, 3).toUpperCase()}-${String(
+    Math.abs(
+      displayName.split("").reduce((acc, char) => (acc * 31 + char.charCodeAt(0)) % 100000, 7),
+    ),
+  ).padStart(5, "0")}`;
+
 
   return (
     <section
