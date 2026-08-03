@@ -161,10 +161,11 @@ function ProfilPage() {
       code={equippedBadge}
       type="badge"
       label={formatCosmeticName(equippedBadge)}
-      className="h-4 w-4"
-      fallbackClassName="h-4 w-4 object-contain"
+      className="h-full w-full"
+      fallbackClassName="h-full w-full object-contain"
     />
   ) : undefined;
+
 
   return (
     <div className="min-h-screen bg-background pb-24">
