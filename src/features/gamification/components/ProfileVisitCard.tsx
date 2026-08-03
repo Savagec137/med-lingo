@@ -155,6 +155,12 @@ export function ProfileVisitCard({
                 {email ?? `Profil ${APP_NAME}`}
               </p>
             )}
+            <p
+              className="mt-0.5 truncate text-[9px] font-extrabold uppercase tracking-[0.22em]"
+              style={{ color: card.accent }}
+            >
+              {card.tagline}
+            </p>
             <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
               <span
                 className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide"
@@ -173,15 +179,17 @@ export function ProfileVisitCard({
         </div>
         {!compact && (
           <div
-            className="shrink-0 rounded-xl border px-2 py-1 text-right"
+            className="shrink-0 rounded-xl border px-2 py-1.5 text-right"
             style={{ borderColor: `${card.foreground}22`, backgroundColor: `${card.foreground}0f` }}
           >
             <Icon className="ml-auto h-5 w-5" style={{ color: card.accent }} />
             <p className="mt-0.5 text-[8px] font-extrabold uppercase tracking-[0.16em] opacity-70">
               {APP_NAME}
             </p>
+            <p className="text-[7px] font-bold tabular-nums opacity-55">{serial}</p>
           </div>
         )}
+
       </div>
 
       <div className={`${compact ? "mt-4" : "mt-6"} relative`}>
