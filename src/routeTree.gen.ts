@@ -9,61 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PulseRouteImport } from './routes/pulse'
-import { Route as ProfilRouteImport } from './routes/profil'
-import { Route as OnboardingRouteImport } from './routes/onboarding'
-import { Route as InventaireRouteImport } from './routes/inventaire'
-import { Route as InterventionRouteImport } from './routes/intervention'
-import { Route as ClassementRouteImport } from './routes/classement'
-import { Route as BoutiqueRouteImport } from './routes/boutique'
-import { Route as BlocsRouteImport } from './routes/blocs'
-import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ParcoursParcoursIdRouteImport } from './routes/parcours.$parcoursId'
-import { Route as LeconLessonIdRouteImport } from './routes/lecon.$lessonId'
-import { Route as BossBossIdRouteImport } from './routes/boss.$bossId'
-import { Route as BlocBlocIdRouteImport } from './routes/bloc.$blocId'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BlocsRouteImport } from './routes/blocs'
+import { Route as BoutiqueRouteImport } from './routes/boutique'
+import { Route as ClassementRouteImport } from './routes/classement'
+import { Route as InterventionRouteImport } from './routes/intervention'
+import { Route as InventaireRouteImport } from './routes/inventaire'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as ProfilRouteImport } from './routes/profil'
+import { Route as PulseRouteImport } from './routes/pulse'
 import { Route as ApiPulseRouteImport } from './routes/api/pulse'
+import { Route as BlocBlocIdRouteImport } from './routes/bloc.$blocId'
+import { Route as BossBossIdRouteImport } from './routes/boss.$bossId'
+import { Route as LeconLessonIdRouteImport } from './routes/lecon.$lessonId'
+import { Route as ParcoursParcoursIdRouteImport } from './routes/parcours.$parcoursId'
 import { Route as BlocBlocIdFinRouteImport } from './routes/bloc.$blocId.fin'
 
-const PulseRoute = PulseRouteImport.update({
-  id: '/pulse',
-  path: '/pulse',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProfilRoute = ProfilRouteImport.update({
-  id: '/profil',
-  path: '/profil',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OnboardingRoute = OnboardingRouteImport.update({
-  id: '/onboarding',
-  path: '/onboarding',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InventaireRoute = InventaireRouteImport.update({
-  id: '/inventaire',
-  path: '/inventaire',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InterventionRoute = InterventionRouteImport.update({
-  id: '/intervention',
-  path: '/intervention',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ClassementRoute = ClassementRouteImport.update({
-  id: '/classement',
-  path: '/classement',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoutiqueRoute = BoutiqueRouteImport.update({
-  id: '/boutique',
-  path: '/boutique',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlocsRoute = BlocsRouteImport.update({
-  id: '/blocs',
-  path: '/blocs',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -71,24 +36,49 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BlocsRoute = BlocsRouteImport.update({
+  id: '/blocs',
+  path: '/blocs',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ParcoursParcoursIdRoute = ParcoursParcoursIdRouteImport.update({
-  id: '/parcours/$parcoursId',
-  path: '/parcours/$parcoursId',
+const BoutiqueRoute = BoutiqueRouteImport.update({
+  id: '/boutique',
+  path: '/boutique',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LeconLessonIdRoute = LeconLessonIdRouteImport.update({
-  id: '/lecon/$lessonId',
-  path: '/lecon/$lessonId',
+const ClassementRoute = ClassementRouteImport.update({
+  id: '/classement',
+  path: '/classement',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BossBossIdRoute = BossBossIdRouteImport.update({
-  id: '/boss/$bossId',
-  path: '/boss/$bossId',
+const InterventionRoute = InterventionRouteImport.update({
+  id: '/intervention',
+  path: '/intervention',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InventaireRoute = InventaireRouteImport.update({
+  id: '/inventaire',
+  path: '/inventaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfilRoute = ProfilRouteImport.update({
+  id: '/profil',
+  path: '/profil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PulseRoute = PulseRouteImport.update({
+  id: '/pulse',
+  path: '/pulse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPulseRoute = ApiPulseRouteImport.update({
+  id: '/api/pulse',
+  path: '/api/pulse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlocBlocIdRoute = BlocBlocIdRouteImport.update({
@@ -96,9 +86,19 @@ const BlocBlocIdRoute = BlocBlocIdRouteImport.update({
   path: '/bloc/$blocId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPulseRoute = ApiPulseRouteImport.update({
-  id: '/api/pulse',
-  path: '/api/pulse',
+const BossBossIdRoute = BossBossIdRouteImport.update({
+  id: '/boss/$bossId',
+  path: '/boss/$bossId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeconLessonIdRoute = LeconLessonIdRouteImport.update({
+  id: '/lecon/$lessonId',
+  path: '/lecon/$lessonId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParcoursParcoursIdRoute = ParcoursParcoursIdRouteImport.update({
+  id: '/parcours/$parcoursId',
+  path: '/parcours/$parcoursId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlocBlocIdFinRoute = BlocBlocIdFinRouteImport.update({
@@ -239,60 +239,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/pulse': {
-      id: '/pulse'
-      path: '/pulse'
-      fullPath: '/pulse'
-      preLoaderRoute: typeof PulseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/profil': {
-      id: '/profil'
-      path: '/profil'
-      fullPath: '/profil'
-      preLoaderRoute: typeof ProfilRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/onboarding': {
-      id: '/onboarding'
-      path: '/onboarding'
-      fullPath: '/onboarding'
-      preLoaderRoute: typeof OnboardingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/inventaire': {
-      id: '/inventaire'
-      path: '/inventaire'
-      fullPath: '/inventaire'
-      preLoaderRoute: typeof InventaireRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/intervention': {
-      id: '/intervention'
-      path: '/intervention'
-      fullPath: '/intervention'
-      preLoaderRoute: typeof InterventionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/classement': {
-      id: '/classement'
-      path: '/classement'
-      fullPath: '/classement'
-      preLoaderRoute: typeof ClassementRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/boutique': {
-      id: '/boutique'
-      path: '/boutique'
-      fullPath: '/boutique'
-      preLoaderRoute: typeof BoutiqueRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blocs': {
-      id: '/blocs'
-      path: '/blocs'
-      fullPath: '/blocs'
-      preLoaderRoute: typeof BlocsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -302,32 +253,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blocs': {
+      id: '/blocs'
+      path: '/blocs'
+      fullPath: '/blocs'
+      preLoaderRoute: typeof BlocsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/parcours/$parcoursId': {
-      id: '/parcours/$parcoursId'
-      path: '/parcours/$parcoursId'
-      fullPath: '/parcours/$parcoursId'
-      preLoaderRoute: typeof ParcoursParcoursIdRouteImport
+    '/boutique': {
+      id: '/boutique'
+      path: '/boutique'
+      fullPath: '/boutique'
+      preLoaderRoute: typeof BoutiqueRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lecon/$lessonId': {
-      id: '/lecon/$lessonId'
-      path: '/lecon/$lessonId'
-      fullPath: '/lecon/$lessonId'
-      preLoaderRoute: typeof LeconLessonIdRouteImport
+    '/classement': {
+      id: '/classement'
+      path: '/classement'
+      fullPath: '/classement'
+      preLoaderRoute: typeof ClassementRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/boss/$bossId': {
-      id: '/boss/$bossId'
-      path: '/boss/$bossId'
-      fullPath: '/boss/$bossId'
-      preLoaderRoute: typeof BossBossIdRouteImport
+    '/intervention': {
+      id: '/intervention'
+      path: '/intervention'
+      fullPath: '/intervention'
+      preLoaderRoute: typeof InterventionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inventaire': {
+      id: '/inventaire'
+      path: '/inventaire'
+      fullPath: '/inventaire'
+      preLoaderRoute: typeof InventaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profil': {
+      id: '/profil'
+      path: '/profil'
+      fullPath: '/profil'
+      preLoaderRoute: typeof ProfilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pulse': {
+      id: '/pulse'
+      path: '/pulse'
+      fullPath: '/pulse'
+      preLoaderRoute: typeof PulseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/pulse': {
+      id: '/api/pulse'
+      path: '/api/pulse'
+      fullPath: '/api/pulse'
+      preLoaderRoute: typeof ApiPulseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bloc/$blocId': {
@@ -337,11 +323,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlocBlocIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/pulse': {
-      id: '/api/pulse'
-      path: '/api/pulse'
-      fullPath: '/api/pulse'
-      preLoaderRoute: typeof ApiPulseRouteImport
+    '/boss/$bossId': {
+      id: '/boss/$bossId'
+      path: '/boss/$bossId'
+      fullPath: '/boss/$bossId'
+      preLoaderRoute: typeof BossBossIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lecon/$lessonId': {
+      id: '/lecon/$lessonId'
+      path: '/lecon/$lessonId'
+      fullPath: '/lecon/$lessonId'
+      preLoaderRoute: typeof LeconLessonIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parcours/$parcoursId': {
+      id: '/parcours/$parcoursId'
+      path: '/parcours/$parcoursId'
+      fullPath: '/parcours/$parcoursId'
+      preLoaderRoute: typeof ParcoursParcoursIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bloc/$blocId/fin': {
@@ -386,3 +386,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
