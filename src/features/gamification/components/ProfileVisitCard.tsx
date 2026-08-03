@@ -2,7 +2,9 @@ import type { ReactNode } from "react";
 import { BookOpen, Flame, Target, Trophy } from "lucide-react";
 import type { ProfileCardCode } from "@/features/gamification/domain/profile-cards";
 import { getProfileCard } from "@/features/gamification/domain/profile-cards";
+import { ProfileCardScene } from "@/features/gamification/components/ProfileCardScene";
 import { APP_NAME } from "@/lib/brand";
+
 
 type ProfileVisitCardProps = {
   code?: ProfileCardCode | string | null;
