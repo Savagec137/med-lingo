@@ -1,5 +1,9 @@
 import { BadgeIcon, ShopItemIcon } from "@/lib/icon-map";
 import { ShopItemArtwork } from "@/features/gamification/components/ShopItemArtwork";
+import {
+  ProfileCardThumb,
+  isProfileCardCode,
+} from "@/features/gamification/components/ProfileCardThumb";
 
 type GameItemArtworkProps = {
   code: string;
@@ -16,6 +20,11 @@ export function GameItemArtwork({
   className = "h-20 w-20 rounded-2xl",
   fallbackClassName = "h-full w-full object-contain",
 }: GameItemArtworkProps) {
+  if (isProfileCardCode(code)) {
+    return <ProfileCardThumb code={code} className={className} />;
+  }
+
+
   return (
     <ShopItemArtwork
       code={code}
