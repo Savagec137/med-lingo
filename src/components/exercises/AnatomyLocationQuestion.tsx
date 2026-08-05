@@ -1,3 +1,5 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Minus, Plus, RotateCcw } from "lucide-react";
 import type { PreparedLessonAnswer } from "@/content/lesson-runtime";
 
 function coordinates(answer: PreparedLessonAnswer) {
