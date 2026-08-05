@@ -14,6 +14,7 @@ import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as InventaireRouteImport } from './routes/inventaire'
 import { Route as InterventionRouteImport } from './routes/intervention'
+import { Route as GardeRouteImport } from './routes/garde'
 import { Route as ClassementRouteImport } from './routes/classement'
 import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as BlocsRouteImport } from './routes/blocs'
@@ -49,6 +50,11 @@ const InventaireRoute = InventaireRouteImport.update({
 const InterventionRoute = InterventionRouteImport.update({
   id: '/intervention',
   path: '/intervention',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GardeRoute = GardeRouteImport.update({
+  id: '/garde',
+  path: '/garde',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClassementRoute = ClassementRouteImport.update({
@@ -113,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByTo {
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
@@ -150,6 +158,7 @@ export interface FileRoutesById {
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
+  '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/blocs'
     | '/boutique'
     | '/classement'
+    | '/garde'
     | '/intervention'
     | '/inventaire'
     | '/onboarding'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
     | '/blocs'
     | '/boutique'
     | '/classement'
+    | '/garde'
     | '/intervention'
     | '/inventaire'
     | '/onboarding'
@@ -206,6 +217,7 @@ export interface FileRouteTypes {
     | '/blocs'
     | '/boutique'
     | '/classement'
+    | '/garde'
     | '/intervention'
     | '/inventaire'
     | '/onboarding'
@@ -225,6 +237,7 @@ export interface RootRouteChildren {
   BlocsRoute: typeof BlocsRoute
   BoutiqueRoute: typeof BoutiqueRoute
   ClassementRoute: typeof ClassementRoute
+  GardeRoute: typeof GardeRoute
   InterventionRoute: typeof InterventionRoute
   InventaireRoute: typeof InventaireRoute
   OnboardingRoute: typeof OnboardingRoute
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       path: '/intervention'
       fullPath: '/intervention'
       preLoaderRoute: typeof InterventionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/garde': {
+      id: '/garde'
+      path: '/garde'
+      fullPath: '/garde'
+      preLoaderRoute: typeof GardeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/classement': {
@@ -372,6 +392,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlocsRoute: BlocsRoute,
   BoutiqueRoute: BoutiqueRoute,
   ClassementRoute: ClassementRoute,
+  GardeRoute: GardeRoute,
   InterventionRoute: InterventionRoute,
   InventaireRoute: InventaireRoute,
   OnboardingRoute: OnboardingRoute,
