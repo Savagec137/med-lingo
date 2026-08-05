@@ -135,6 +135,9 @@ function HumanBodyPlate() {
   );
 }
 
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 4;
+
 export function AnatomyLocationQuestion({
   answers,
   selectedId,
@@ -148,53 +151,184 @@ export function AnatomyLocationQuestion({
   checked: boolean;
   onSelect: (id: string) => void;
 }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [zoom, setZoom] = useState(1);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const viewRef = useRef({ zoom: 1, offset: { x: 0, y: 0 } });
+  viewRef.current = { zoom, offset };
+
+  const dragRef = useRef<{ id: number; x: number; y: number; moved: boolean } | null>(null);
+  const [dragging, setDragging] = useState(false);
+
+  const clampOffset = useCallback((next: { x: number; y: number }, z: number) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return next;
+    const maxX = rect.width * (z - 1);
+    const maxY = rect.height * (z - 1);
+    return {
+      x: Math.min(0, Math.max(-maxX, next.x)),
+      y: Math.min(0, Math.max(-maxY, next.y)),
+    };
+  }, []);
+
+  const zoomAt = useCallback(
+    (nextZoomRaw: number, px: number, py: number) => {
+      const { zoom: z, offset: o } = viewRef.current;
+      const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, nextZoomRaw));
+      if (next === z) return;
+      const k = next / z;
+      const candidate = { x: px - (px - o.x) * k, y: py - (py - o.y) * k };
+      setZoom(next);
+      setOffset(clampOffset(candidate, next));
+    },
+    [clampOffset],
+  );
+
+  const zoomAtRef = useRef(zoomAt);
+  zoomAtRef.current = zoomAt;
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const onWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const rect = el.getBoundingClientRect();
+      const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? 100 : 1);
+      zoomAtRef.current(
+        viewRef.current.zoom * Math.exp(-dy * 0.0018),
+        event.clientX - rect.left,
+        event.clientY - rect.top,
+      );
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
+  const step = (factor: number) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    zoomAt(viewRef.current.zoom * factor, (rect?.width ?? 0) / 2, (rect?.height ?? 0) / 2);
+  };
+
+  const reset = () => {
+    setZoom(1);
+    setOffset({ x: 0, y: 0 });
+  };
+
+  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (viewRef.current.zoom <= 1) return;
+    dragRef.current = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    if (!drag || drag.id !== event.pointerId) return;
+    const dx = event.clientX - drag.x;
+    const dy = event.clientY - drag.y;
+    if (!drag.moved && Math.hypot(dx, dy) < 4) return;
+    drag.moved = true;
+    setDragging(true);
+    drag.x = event.clientX;
+    drag.y = event.clientY;
+    setOffset((current) =>
+      clampOffset({ x: current.x + dx, y: current.y + dy }, viewRef.current.zoom),
+    );
+  };
+
+  const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (dragRef.current?.id !== event.pointerId) return;
+    dragRef.current = null;
+    setDragging(false);
+  };
+
   return (
     <div className="mx-auto w-full max-w-sm">
       <div
-        className="relative aspect-[2/3] overflow-hidden rounded-[2rem] border border-cyan-300/25 bg-[radial-gradient(circle_at_50%_18%,rgba(34,211,238,0.14),transparent_60%),linear-gradient(180deg,#04121f_0%,#061a2b_55%,#0b1030_100%)] shadow-[0_24px_60px_-30px_rgba(34,211,238,0.7)]"
+        ref={containerRef}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+        className="relative aspect-[2/3] touch-none overflow-hidden rounded-[2rem] border border-cyan-300/25 bg-[radial-gradient(circle_at_50%_18%,rgba(34,211,238,0.14),transparent_60%),linear-gradient(180deg,#04121f_0%,#061a2b_55%,#0b1030_100%)] shadow-[0_24px_60px_-30px_rgba(34,211,238,0.7)]"
+        style={{ cursor: zoom > 1 ? (dragging ? "grabbing" : "grab") : "default" }}
         role="group"
-        aria-label="Schéma anatomique interactif"
+        aria-label="Schéma anatomique interactif, zoom et déplacement disponibles"
       >
-        <HumanBodyPlate />
+        <div
+          className="absolute inset-0"
+          style={{
+            transform: `translate3d(${offset.x}px, ${offset.y}px, 0) scale(${zoom})`,
+            transformOrigin: "0 0",
+            transition: dragging ? "none" : "transform 160ms ease-out",
+          }}
+        >
+          <HumanBodyPlate />
 
-        {answers.map((answer, index) => {
-          const point = coordinates(answer);
-          const selected = selectedId === answer.id;
-          const correct = checked && correctAnswerIds.includes(answer.id);
-          const wrong = checked && selected && !correct;
-          return (
+          {answers.map((answer, index) => {
+            const point = coordinates(answer);
+            const selected = selectedId === answer.id;
+            const correct = checked && correctAnswerIds.includes(answer.id);
+            const wrong = checked && selected && !correct;
+            return (
+              <button
+                key={answer.id}
+                type="button"
+                disabled={checked}
+                onClick={() => {
+                  if (dragRef.current?.moved) return;
+                  onSelect(answer.id);
+                }}
+                aria-label={
+                  checked ? answer.text : `Zone anatomique ${index + 1} sur ${answers.length}`
+                }
+                aria-pressed={selected}
+                className={`absolute grid h-9 w-9 place-items-center rounded-full border-2 text-xs font-black backdrop-blur-sm transition-colors duration-200 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                  correct
+                    ? "z-20 border-emerald-200 bg-emerald-500 text-white shadow-[0_0_22px_rgba(16,185,129,0.75)]"
+                    : wrong
+                      ? "z-20 border-red-200 bg-red-500 text-white shadow-[0_0_22px_rgba(239,68,68,0.7)]"
+                      : selected
+                        ? "z-10 border-white bg-cyan-400 text-slate-950 shadow-[0_0_26px_rgba(34,211,238,0.85)]"
+                        : "border-cyan-200/60 bg-slate-950/70 text-cyan-100 shadow-[0_0_14px_rgba(34,211,238,0.25)] hover:border-white hover:bg-cyan-400 hover:text-slate-950"
+                }`}
+                style={{
+                  left: `${point.x * 100}%`,
+                  top: `${point.y * 100}%`,
+                  transform: `translate(-50%, -50%) scale(${(selected || correct ? 1.12 : 1) / zoom})`,
+                }}
+              >
+                {index + 1}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="absolute right-3 top-3 z-30 flex flex-col gap-1.5">
+          {[
+            { icon: Plus, label: "Zoomer", action: () => step(1.4) },
+            { icon: Minus, label: "Dézoomer", action: () => step(1 / 1.4) },
+            { icon: RotateCcw, label: "Réinitialiser la vue", action: reset },
+          ].map(({ icon: Icon, label, action }) => (
             <button
-              key={answer.id}
+              key={label}
               type="button"
-              disabled={checked}
-              onClick={() => onSelect(answer.id)}
-              aria-label={
-                checked ? answer.text : `Zone anatomique ${index + 1} sur ${answers.length}`
-              }
-              aria-pressed={selected}
-              className={`absolute grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 text-xs font-black backdrop-blur-sm transition-all duration-200 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
-                correct
-                  ? "z-20 scale-115 border-emerald-200 bg-emerald-500 text-white shadow-[0_0_22px_rgba(16,185,129,0.75)]"
-                  : wrong
-                    ? "z-20 border-red-200 bg-red-500 text-white shadow-[0_0_22px_rgba(239,68,68,0.7)]"
-                    : selected
-                      ? "z-10 scale-115 border-white bg-cyan-400 text-slate-950 shadow-[0_0_26px_rgba(34,211,238,0.85)]"
-                      : "border-cyan-200/60 bg-slate-950/70 text-cyan-100 shadow-[0_0_14px_rgba(34,211,238,0.25)] hover:scale-110 hover:border-white hover:bg-cyan-400 hover:text-slate-950"
-              }`}
-              style={{ left: `${point.x * 100}%`, top: `${point.y * 100}%` }}
+              onClick={action}
+              aria-label={label}
+              className="grid h-9 w-9 place-items-center rounded-xl border border-cyan-300/30 bg-slate-950/70 text-cyan-100 backdrop-blur transition-colors hover:border-cyan-200 hover:text-white"
             >
-              {index + 1}
+              <Icon className="h-4 w-4" />
             </button>
-          );
-        })}
+          ))}
+        </div>
 
         <span className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/80 to-transparent" />
         <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-cyan-300/30 bg-slate-950/70 px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-cyan-200">
-          Planche anatomique
+          Planche anatomique · ×{zoom.toFixed(1)}
         </span>
       </div>
       <p className="mt-3 text-center text-xs font-semibold text-muted-foreground">
-        Sélectionne une zone sur le schéma. Les libellés sont révélés après la correction.
+        Zoome (molette ou pincement) et déplace la planche, puis touche une zone. Les libellés sont
+        révélés après la correction.
       </p>
       {checked ? (
         <div className="mt-3 flex flex-wrap justify-center gap-2">
