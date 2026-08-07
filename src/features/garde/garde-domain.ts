@@ -94,6 +94,7 @@ export interface GardeAnswer {
   wrong: number;
   accuracy: number;
   vitalsAfter: Vitals;
+  alerts: VitalAlert[];
 }
 
 export interface GardeCaseResult {
