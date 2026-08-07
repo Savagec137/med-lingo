@@ -31,19 +31,23 @@ export function GardeVitalsPanel({ vitals, compact = false }: Props) {
       aria-label="Constantes du patient"
       className={`grid gap-2 ${compact ? "grid-cols-3" : "grid-cols-2 sm:grid-cols-3"}`}
     >
-      {items.map((item) => (
-        <motion.div
-          key={item.label}
-          layout
-          className={`rounded-2xl border px-3 py-2 ${item.tone}`}
-        >
-          <div className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider opacity-80">
-            <item.Icon className="h-3 w-3" />
-            {item.label}
-          </div>
-          <div className="mt-0.5 font-display text-lg font-black tabular-nums">{item.value}</div>
-        </motion.div>
-      ))}
+      {items.map((item) => {
+        const severity = vitalSeverity(item.key, vitals[item.key]);
+        return (
+          <motion.div
+            key={item.label}
+            layout
+            aria-label={`${item.label} ${item.value}${severity === "critical" ? ", seuil critique" : severity === "warning" ? ", à surveiller" : ""}`}
+            className={`rounded-2xl border px-3 py-2 ${TONES[severity]} ${severity === "critical" ? "animate-pulse" : ""}`}
+          >
+            <div className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider opacity-80">
+              <item.Icon className="h-3 w-3" />
+              {item.label}
+            </div>
+            <div className="mt-0.5 font-display text-lg font-black tabular-nums">{item.value}</div>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
