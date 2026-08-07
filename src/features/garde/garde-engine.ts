@@ -84,7 +84,8 @@ export function answerQuestion(state: GardeState, selectedIds: string[]): GardeS
   const misses = correctIds.length - hits;
   const accuracy = clamp((hits - wrong * 0.5) / Math.max(1, correctIds.length), 0, 1);
 
-  const vitalsAfter = evolveVitals(state.vitals, accuracy, current.isCardiacArrest);
+  const vitalsAfter = evolveVitals(state.vitals, current, accuracy, question.timeCostMinutes);
+  const alerts = detectVitalAlerts(state.vitals, vitalsAfter);
   const answer: GardeAnswer = {
     phase: question.phase,
     selectedIds,
@@ -93,6 +94,7 @@ export function answerQuestion(state: GardeState, selectedIds: string[]): GardeS
     wrong,
     accuracy,
     vitalsAfter,
+    alerts,
   };
 
   return {
