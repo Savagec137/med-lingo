@@ -81,6 +81,50 @@ export function GardeQuestionScreen({
         </ol>
       </nav>
 
+      {question.phase === "transit" && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="overflow-hidden rounded-[1.5rem] border border-amber-300/25 bg-amber-300/[0.07]"
+        >
+          <div className="flex items-center gap-3 border-b border-amber-300/20 px-5 py-3.5">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-300/20 text-amber-200">
+              <Ambulance className="h-5 w-5" />
+            </span>
+            <div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-300">
+                Départ VSAV
+              </div>
+              <div className="font-display text-lg font-black text-white">
+                Arrivée estimée dans {gardeCase.etaMinutes} min
+              </div>
+            </div>
+          </div>
+          <ul className="grid grid-cols-3 divide-x divide-amber-300/15">
+            {[
+              { Icon: Navigation, label: "Distance", value: `${gardeCase.distanceKm} km` },
+              { Icon: Ambulance, label: "Trafic", value: gardeCase.trafficLabel },
+              { Icon: CloudRain, label: "Météo", value: gardeCase.weather },
+            ].map((item) => (
+              <li key={item.label} className="px-3 py-3 text-center">
+                <item.Icon className="mx-auto h-4 w-4 text-amber-200" />
+                <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-amber-200/70">
+                  {item.label}
+                </div>
+                <div className="truncate text-xs font-bold text-white">{item.value}</div>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-start gap-3 border-t border-amber-300/20 bg-rose-400/[0.08] px-5 py-3.5">
+            <Radio className="mt-0.5 h-4 w-4 shrink-0 animate-pulse text-rose-300" />
+            <div className="text-xs leading-relaxed text-rose-100">
+              <span className="font-black uppercase tracking-wider">Nouvel appel en route</span>
+              <p className="mt-1 opacity-90">{gardeCase.transitEvent}</p>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
       <GardeVitalsPanel vitals={vitals} />
 
       <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5">
