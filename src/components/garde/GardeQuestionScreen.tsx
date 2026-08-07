@@ -169,6 +169,37 @@ export function GardeQuestionScreen({
           )}
         </AnimatePresence>
 
+        <AnimatePresence>
+          {lastAnswer && lastAnswer.alerts.length > 0 && (
+            <motion.ul
+              key="alerts"
+              role="alert"
+              aria-label="Alertes de constantes"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="mt-3 space-y-2"
+            >
+              {lastAnswer.alerts.map((alert) => (
+                <li
+                  key={alert.key}
+                  className={`flex items-start gap-3 rounded-2xl border p-3.5 ${alert.severity === "critical" ? "border-rose-400/40 bg-rose-400/10 text-rose-100" : "border-amber-300/30 bg-amber-300/10 text-amber-100"}`}
+                >
+                  <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
+                  <div className="text-xs leading-relaxed">
+                    <span className="font-black uppercase tracking-wider">
+                      {alert.severity === "critical" ? "Seuil critique" : "Surveillance"} ·{" "}
+                      {alert.label}
+                    </span>
+                    <p className="mt-1 opacity-90">{alert.message}</p>
+                  </div>
+                </li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+
+
         <button
           type="button"
           onClick={() => (locked ? onNext() : onSubmit(selected))}
