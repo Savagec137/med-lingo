@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { AlertTriangle, ArrowRight, Check, CircleDot, Clock3, X } from "lucide-react";
+import {
+  AlertTriangle,
+  Ambulance,
+  ArrowRight,
+  Check,
+  CircleDot,
+  Clock3,
+  CloudRain,
+  Navigation,
+  Radio,
+  X,
+} from "lucide-react";
 import type { GardeAnswer, GardeCase, GardeQuestion } from "@/features/garde/garde-domain";
 import { GARDE_PHASES, GARDE_PHASE_LABELS, formatClock } from "@/features/garde/garde-domain";
 import { GardeVitalsPanel } from "./GardeVitalsPanel";
