@@ -34,6 +34,17 @@ export interface Vitals {
   glycemia: number;
 }
 
+export type VitalKey = keyof Vitals;
+export type VitalSeverity = "normal" | "warning" | "critical";
+
+export interface VitalAlert {
+  key: VitalKey;
+  label: string;
+  severity: VitalSeverity;
+  value: number;
+  message: string;
+}
+
 export interface GardeOption {
   id: string;
   label: string;
@@ -83,6 +94,7 @@ export interface GardeAnswer {
   wrong: number;
   accuracy: number;
   vitalsAfter: Vitals;
+  alerts: VitalAlert[];
 }
 
 export interface GardeCaseResult {

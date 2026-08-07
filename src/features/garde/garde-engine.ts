@@ -1,4 +1,5 @@
 import { generateGardeCase } from "./garde-case-generator";
+import { detectVitalAlerts, evolveVitals } from "./garde-vitals";
 import {
   MAX_INTERVENTIONS,
   SHIFT_END_MINUTES,
@@ -23,30 +24,6 @@ function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
-function evolveVitals(vitals: Vitals, accuracy: number, isArrest: boolean): Vitals {
-  if (isArrest) {
-    const gain = accuracy >= 0.75 ? 1 : 0;
-    return {
-      ...vitals,
-      spo2: clamp(vitals.spo2 + gain * 12, 0, 96),
-      sbp: clamp(vitals.sbp + gain * 25, 0, 120),
-      hr: clamp(vitals.hr + gain * 30, 0, 130),
-      rr: clamp(vitals.rr + gain * 6, 0, 24),
-      gcs: clamp(vitals.gcs + gain * 2, 3, 15),
-    };
-  }
-
-  const drift = accuracy >= 0.8 ? 1 : accuracy >= 0.5 ? 0 : -1;
-  return {
-    spo2: clamp(vitals.spo2 + drift * 3, 60, 100),
-    sbp: clamp(vitals.sbp + drift * (vitals.sbp < 110 ? 8 : -3), 55, 210),
-    hr: clamp(vitals.hr - drift * 7, 30, 180),
-    rr: clamp(vitals.rr - drift * 2, 4, 45),
-    gcs: clamp(vitals.gcs + drift, 3, 15),
-    pain: clamp(vitals.pain - drift * 2, 0, 10),
-    glycemia: Number(clamp(vitals.glycemia + (drift > 0 ? 0.6 : 0), 0.8, 25).toFixed(1)),
-  };
-}
 
 export function createGardeState(): GardeState {
   return {
@@ -107,7 +84,8 @@ export function answerQuestion(state: GardeState, selectedIds: string[]): GardeS
   const misses = correctIds.length - hits;
   const accuracy = clamp((hits - wrong * 0.5) / Math.max(1, correctIds.length), 0, 1);
 
-  const vitalsAfter = evolveVitals(state.vitals, accuracy, current.isCardiacArrest);
+  const vitalsAfter = evolveVitals(state.vitals, current, accuracy, question.timeCostMinutes);
+  const alerts = detectVitalAlerts(state.vitals, vitalsAfter);
   const answer: GardeAnswer = {
     phase: question.phase,
     selectedIds,
@@ -116,6 +94,7 @@ export function answerQuestion(state: GardeState, selectedIds: string[]): GardeS
     wrong,
     accuracy,
     vitalsAfter,
+    alerts,
   };
 
   return {
