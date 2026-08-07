@@ -1,60 +1,30 @@
 import { motion } from "framer-motion";
-import { Activity, Droplet, Gauge, HeartPulse, Thermometer, Wind } from "lucide-react";
-import type { Vitals } from "@/features/garde/garde-domain";
+import { Activity, Droplet, Gauge, HeartPulse, Thermometer, Wind, Zap } from "lucide-react";
+import type { VitalKey, VitalSeverity, Vitals } from "@/features/garde/garde-domain";
+import { vitalSeverity } from "@/features/garde/garde-vitals";
 
 interface Props {
   vitals: Vitals;
   compact?: boolean;
 }
 
-function tone(ok: boolean, warn: boolean) {
-  if (!ok && !warn) return "border-rose-400/30 bg-rose-400/10 text-rose-200";
-  if (warn) return "border-amber-300/30 bg-amber-300/10 text-amber-200";
-  return "border-emerald-400/25 bg-emerald-400/10 text-emerald-200";
-}
+const TONES: Record<VitalSeverity, string> = {
+  normal: "border-emerald-400/25 bg-emerald-400/10 text-emerald-200",
+  warning: "border-amber-300/30 bg-amber-300/10 text-amber-200",
+  critical: "border-rose-400/40 bg-rose-400/15 text-rose-200",
+};
 
 export function GardeVitalsPanel({ vitals, compact = false }: Props) {
-  const items = [
-    {
-      Icon: Wind,
-      label: "SpO₂",
-      value: `${vitals.spo2} %`,
-      tone: tone(vitals.spo2 >= 94, vitals.spo2 >= 90 && vitals.spo2 < 94),
-    },
-    {
-      Icon: Gauge,
-      label: "PAS",
-      value: `${vitals.sbp} mmHg`,
-      tone: tone(vitals.sbp >= 100, vitals.sbp >= 90 && vitals.sbp < 100),
-    },
-    {
-      Icon: HeartPulse,
-      label: "FC",
-      value: `${vitals.hr} /min`,
-      tone: tone(vitals.hr >= 50 && vitals.hr <= 100, vitals.hr > 100 && vitals.hr <= 120),
-    },
-    {
-      Icon: Activity,
-      label: "FR",
-      value: `${vitals.rr} /min`,
-      tone: tone(vitals.rr >= 12 && vitals.rr <= 20, vitals.rr > 20 && vitals.rr <= 25),
-    },
-    {
-      Icon: Thermometer,
-      label: "Glasgow",
-      value: `${vitals.gcs}/15`,
-      tone: tone(vitals.gcs >= 14, vitals.gcs >= 12 && vitals.gcs < 14),
-    },
-    {
-      Icon: Droplet,
-      label: "Glycémie",
-      value: `${vitals.glycemia} mmol/L`,
-      tone: tone(
-        vitals.glycemia >= 4 && vitals.glycemia <= 11,
-        vitals.glycemia >= 3 && vitals.glycemia < 4,
-      ),
-    },
+  const items: Array<{ key: VitalKey; Icon: typeof Wind; label: string; value: string }> = [
+    { key: "spo2", Icon: Wind, label: "SpO₂", value: `${vitals.spo2} %` },
+    { key: "sbp", Icon: Gauge, label: "PAS", value: `${vitals.sbp} mmHg` },
+    { key: "hr", Icon: HeartPulse, label: "FC", value: `${vitals.hr} /min` },
+    { key: "rr", Icon: Activity, label: "FR", value: `${vitals.rr} /min` },
+    { key: "gcs", Icon: Thermometer, label: "Glasgow", value: `${vitals.gcs}/15` },
+    { key: "pain", Icon: Zap, label: "Douleur", value: `${vitals.pain}/10` },
+    { key: "glycemia", Icon: Droplet, label: "Glycémie", value: `${vitals.glycemia} mmol/L` },
   ];
+
 
   return (
     <div
