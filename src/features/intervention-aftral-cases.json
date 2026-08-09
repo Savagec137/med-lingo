@@ -1,0 +1,182 @@
+{
+  "source": "IFA AFTRAL",
+  "version": 1,
+  "cases": [
+    {
+      "id": "ifa-aftral-01-troubles-conscience-vp",
+      "order": 1,
+      "title": "Troubles de la conscience sur la voie publique",
+      "specialty": "Neurologie",
+      "mappedScenarioId": "mission-01-malaise-domicile",
+      "availability": "playable",
+      "tags": ["conscience", "voie-publique", "malaise"]
+    },
+    {
+      "id": "ifa-aftral-02-detresse-respiratoire-asthme",
+      "order": 2,
+      "title": "Détresse respiratoire sur asthme",
+      "specialty": "Respiratoire",
+      "mappedScenarioId": "mission-03-detresse-respiratoire",
+      "availability": "playable",
+      "tags": ["asthme", "detresse-respiratoire"]
+    },
+    {
+      "id": "ifa-aftral-03-acr-infarctus",
+      "order": 3,
+      "title": "ACR sur infarctus du myocarde",
+      "specialty": "Cardiologie",
+      "mappedScenarioId": "mission-07-arret-cardio-respiratoire",
+      "availability": "playable",
+      "tags": ["acr", "infarctus", "cardiologie"]
+    },
+    {
+      "id": "ifa-aftral-04-ima-alcool-homme",
+      "order": 4,
+      "title": "IMA associé à l’alcool chez un homme",
+      "specialty": "Cardiologie",
+      "mappedScenarioId": "mission-02-douleur-thoracique",
+      "availability": "playable",
+      "tags": ["ima", "alcool", "douleur-thoracique"]
+    },
+    {
+      "id": "ifa-aftral-05-etat-choc-agression",
+      "order": 5,
+      "title": "État de choc chez un homme agressé",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-13-polytraumatise",
+      "availability": "playable",
+      "tags": ["choc", "agression", "traumatisme"]
+    },
+    {
+      "id": "ifa-aftral-06-rachis-chute",
+      "order": 6,
+      "title": "Atteinte du rachis sur chute",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-05-chute-fracture",
+      "availability": "playable",
+      "tags": ["rachis", "chute", "traumatisme"]
+    },
+    {
+      "id": "ifa-aftral-07-tachycardie-malaise",
+      "order": 7,
+      "title": "Troubles du rythme avec tachycardie et malaise associé",
+      "specialty": "Cardiologie",
+      "mappedScenarioId": "mission-01-malaise-domicile",
+      "availability": "playable",
+      "tags": ["tachycardie", "trouble-du-rythme", "malaise"]
+    },
+    {
+      "id": "ifa-aftral-08-traumatisme-cranien-chute",
+      "order": 8,
+      "title": "Traumatisme crânien sur chute avec inconscience",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-13-polytraumatise",
+      "availability": "playable",
+      "tags": ["traumatisme-cranien", "chute", "inconscience"]
+    },
+    {
+      "id": "ifa-aftral-09-choc-septique-abdominal",
+      "order": 9,
+      "title": "Choc septique sur douleur abdominale",
+      "specialty": "Infectiologie",
+      "availability": "requires-validated-content",
+      "tags": ["sepsis", "choc", "douleur-abdominale"]
+    },
+    {
+      "id": "ifa-aftral-10-oap-dialyse",
+      "order": 10,
+      "title": "OAP chez un patient dialysé",
+      "specialty": "Respiratoire",
+      "mappedScenarioId": "mission-03-detresse-respiratoire",
+      "availability": "playable",
+      "tags": ["oap", "dialyse", "detresse-respiratoire"]
+    },
+    {
+      "id": "ifa-aftral-11-overdose-mineur",
+      "order": 11,
+      "title": "Overdose chez un mineur",
+      "specialty": "Toxicologie",
+      "mappedScenarioId": "mission-14-intoxication",
+      "availability": "playable",
+      "tags": ["overdose", "mineur", "toxicologie"]
+    },
+    {
+      "id": "ifa-aftral-12-arret-respiratoire-pendaison",
+      "order": 12,
+      "title": "Arrêt respiratoire sur pendaison",
+      "specialty": "Réanimation",
+      "availability": "requires-validated-content",
+      "tags": ["arret-respiratoire", "pendaison", "reanimation"]
+    },
+    {
+      "id": "ifa-aftral-13-plaie-hemorragique-membre-inferieur",
+      "order": 13,
+      "title": "Plaie hémorragique du membre inférieur sans corps étranger",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-06-hemorragie-externe",
+      "availability": "playable",
+      "tags": ["hemorragie", "membre-inferieur", "plaie"]
+    },
+    {
+      "id": "ifa-aftral-14-avc-inhalation",
+      "order": 14,
+      "title": "AVC avec détresse respiratoire sur inhalation",
+      "specialty": "Neurologie",
+      "mappedScenarioId": "mission-04-avc-suspect",
+      "availability": "playable",
+      "tags": ["avc", "inhalation", "detresse-respiratoire"]
+    },
+    {
+      "id": "ifa-aftral-15-acr-douleur-thoracique",
+      "order": 15,
+      "title": "ACR sur douleur thoracique",
+      "specialty": "Cardiologie",
+      "mappedScenarioId": "mission-07-arret-cardio-respiratoire",
+      "availability": "playable",
+      "tags": ["acr", "douleur-thoracique", "cardiologie"]
+    },
+    {
+      "id": "ifa-aftral-16-noyade-nourrisson",
+      "order": 16,
+      "title": "Noyade chez un nourrisson",
+      "specialty": "Pédiatrie",
+      "availability": "requires-validated-content",
+      "tags": ["noyade", "nourrisson", "pediatrie"]
+    },
+    {
+      "id": "ifa-aftral-17-plaie-hemorragique-corps-etranger",
+      "order": 17,
+      "title": "Plaie hémorragique avec corps étranger sur fracture ouverte",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-06-hemorragie-externe",
+      "availability": "playable",
+      "tags": ["hemorragie", "corps-etranger", "fracture-ouverte"]
+    },
+    {
+      "id": "ifa-aftral-18-hematemese-alcoolisme",
+      "order": 18,
+      "title": "Hématémèse chez un patient souffrant d’alcoolisme",
+      "specialty": "Gastro-entérologie",
+      "availability": "requires-validated-content",
+      "tags": ["hematemese", "alcoolisme", "hemorragie-digestive"]
+    },
+    {
+      "id": "ifa-aftral-19-rachis-avp-motard",
+      "order": 19,
+      "title": "Traumatisme du rachis sur AVP chez un motard",
+      "specialty": "Traumatologie",
+      "mappedScenarioId": "mission-08-accident-circulation",
+      "availability": "playable",
+      "tags": ["rachis", "avp", "motard"]
+    },
+    {
+      "id": "ifa-aftral-20-ovatc-adulte",
+      "order": 20,
+      "title": "OVATC chez un adulte",
+      "specialty": "Respiratoire",
+      "availability": "requires-validated-content",
+      "tags": ["ovatc", "adulte", "obstruction"]
+    }
+  ]
+}
+
