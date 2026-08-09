@@ -1,11 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
-import { Ambulance, CheckCircle2, ChevronRight, Radio, ShieldCheck } from "lucide-react";
+import {
+  Ambulance,
+  CheckCircle2,
+  ChevronRight,
+  ListChecks,
+  Radio,
+  ShieldCheck,
+} from "lucide-react";
+import { useState } from "react";
 import { TopBar } from "@/components/TopBar";
 import { InterventionDebrief } from "@/components/InterventionDebrief";
 import { InterventionDecisionScreen } from "@/components/InterventionDecisionScreen";
 import { InterventionMissionAlert } from "@/components/InterventionMissionAlert";
 import { InterventionMissionCard } from "@/components/InterventionMissionCard";
+import { InterventionShiftExperience } from "@/components/InterventionShiftExperience";
 import { getMissionState } from "@/features/intervention-engine";
 import { INTERVENTION_SCENARIOS } from "@/features/intervention-official-scenarios";
 import { useInterventionSession } from "@/hooks/use-intervention-session";
@@ -15,6 +24,7 @@ export const Route = createFileRoute("/intervention")({ component: InterventionR
 function InterventionRoute() {
   const reducedMotion = Boolean(useReducedMotion());
   const intervention = useInterventionSession();
+  const [mode, setMode] = useState<"guard" | "missions">("guard");
   const completedMissionCount = INTERVENTION_SCENARIOS.filter(
     (scenario) => intervention.progress[scenario.id]?.completed,
   ).length;
@@ -30,7 +40,7 @@ function InterventionRoute() {
 
         {!intervention.scenario && (
           <>
-            <header className="relative mb-8 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+            <header className="relative mb-6 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-300/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-cyan-300">
                   <Radio className="h-3.5 w-3.5" />
@@ -40,70 +50,107 @@ function InterventionRoute() {
                   Mode Intervention
                 </h1>
                 <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-400">
-                  Prends en charge des missions préhospitalières, adapte tes décisions à l'état du
-                  patient et analyse chaque action au débriefing.
+                  Prends une garde dynamique, enchaîne les appels et adapte chaque décision à
+                  l’évolution de la situation.
                 </p>
               </div>
               <div className="flex items-center gap-3 rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.05] p-4">
                 <ShieldCheck className="h-6 w-6 text-emerald-300" />
                 <div>
-                  <div className="text-sm font-black text-white">Environnement d'entraînement</div>
+                  <div className="text-sm font-black text-white">Environnement d’entraînement</div>
                   <div className="text-xs text-slate-400">
-                    Scénarios pédagogiques, sans impact sur les soins réels.
+                    Les décisions cliniques proviennent des scénarios pédagogiques existants.
                   </div>
                 </div>
               </div>
             </header>
 
-            <motion.div
-              initial={reducedMotion ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="relative mb-6 flex items-center gap-4 overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-r from-cyan-400/10 to-blue-500/5 p-5"
+            <div
+              role="tablist"
+              aria-label="Choisir le type d'intervention"
+              className="relative mb-6 grid gap-2 rounded-2xl border border-white/10 bg-slate-950/75 p-2 sm:grid-cols-2"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 text-slate-950">
-                <Ambulance className="h-7 w-7" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-[10px] font-black uppercase tracking-[0.18em] text-cyan-300">
-                  Parcours progressif
-                </div>
-                <div className="mt-1 font-display text-lg font-black text-white">
-                  Du premier bilan au transport régulé
-                </div>
-                <p className="mt-1 text-xs text-slate-400">
-                  15 missions officielles. Une réussite déverrouille la suivante et ton meilleur
-                  score est conservé sur cet appareil.
-                </p>
-              </div>
-              <div
-                className="ml-auto hidden shrink-0 items-center gap-2 rounded-xl border border-emerald-300/15 bg-emerald-300/[0.06] px-3 py-2 text-xs font-black text-emerald-200 sm:flex"
-                aria-label={`${completedMissionCount} missions réussies sur ${INTERVENTION_SCENARIOS.length}`}
+              <button
+                type="button"
+                role="tab"
+                aria-selected={mode === "guard"}
+                onClick={() => setMode("guard")}
+                className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-4 text-sm font-black outline-none transition focus-visible:ring-4 focus-visible:ring-cyan-300/25 ${mode === "guard" ? "bg-cyan-300 text-slate-950" : "text-slate-300 hover:bg-white/[0.06]"}`}
               >
-                <CheckCircle2 className="h-4 w-4" />
-                {completedMissionCount}/{INTERVENTION_SCENARIOS.length}
-              </div>
-              <ChevronRight className="hidden h-6 w-6 text-cyan-300 sm:block" />
-            </motion.div>
+                <Radio className="h-4 w-4" /> Garde dynamique
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={mode === "missions"}
+                onClick={() => setMode("missions")}
+                className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-4 text-sm font-black outline-none transition focus-visible:ring-4 focus-visible:ring-cyan-300/25 ${mode === "missions" ? "bg-cyan-300 text-slate-950" : "text-slate-300 hover:bg-white/[0.06]"}`}
+              >
+                <ListChecks className="h-4 w-4" /> Missions guidées
+              </button>
+            </div>
 
-            <section
-              aria-label="Missions disponibles"
-              className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3"
-            >
-              {INTERVENTION_SCENARIOS.map((scenario, index) => {
-                const state = getMissionState(scenario, intervention.progress);
-                return (
-                  <InterventionMissionCard
-                    key={scenario.id}
-                    scenario={scenario}
-                    state={state}
-                    progress={intervention.progress[scenario.id]}
-                    index={index}
-                    reducedMotion={reducedMotion}
-                    onSelect={() => intervention.selectMission(scenario)}
-                  />
-                );
-              })}
-            </section>
+            {mode === "guard" && (
+              <InterventionShiftExperience
+                scenarios={INTERVENTION_SCENARIOS}
+                reducedMotion={reducedMotion}
+                onOpenTraining={() => setMode("missions")}
+              />
+            )}
+
+            {mode === "missions" && (
+              <>
+                <motion.div
+                  initial={reducedMotion ? false : { opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="relative mb-6 flex items-center gap-4 overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-r from-cyan-400/10 to-blue-500/5 p-5"
+                >
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 text-slate-950">
+                    <Ambulance className="h-7 w-7" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[10px] font-black uppercase tracking-[0.18em] text-cyan-300">
+                      Entraînement ciblé
+                    </div>
+                    <div className="mt-1 font-display text-lg font-black text-white">
+                      Du premier bilan au transport régulé
+                    </div>
+                    <p className="mt-1 text-xs text-slate-400">
+                      Les 15 missions officielles et leur progression restent intégralement
+                      disponibles.
+                    </p>
+                  </div>
+                  <div
+                    className="ml-auto hidden shrink-0 items-center gap-2 rounded-xl border border-emerald-300/15 bg-emerald-300/[0.06] px-3 py-2 text-xs font-black text-emerald-200 sm:flex"
+                    aria-label={`${completedMissionCount} missions réussies sur ${INTERVENTION_SCENARIOS.length}`}
+                  >
+                    <CheckCircle2 className="h-4 w-4" />
+                    {completedMissionCount}/{INTERVENTION_SCENARIOS.length}
+                  </div>
+                  <ChevronRight className="hidden h-6 w-6 text-cyan-300 sm:block" />
+                </motion.div>
+
+                <section
+                  aria-label="Missions disponibles"
+                  className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3"
+                >
+                  {INTERVENTION_SCENARIOS.map((scenario, index) => {
+                    const state = getMissionState(scenario, intervention.progress);
+                    return (
+                      <InterventionMissionCard
+                        key={scenario.id}
+                        scenario={scenario}
+                        state={state}
+                        progress={intervention.progress[scenario.id]}
+                        index={index}
+                        reducedMotion={reducedMotion}
+                        onSelect={() => intervention.selectMission(scenario)}
+                      />
+                    );
+                  })}
+                </section>
+              </>
+            )}
           </>
         )}
 
@@ -144,3 +191,4 @@ function InterventionRoute() {
     </div>
   );
 }
+
