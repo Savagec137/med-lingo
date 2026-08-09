@@ -16,7 +16,10 @@ export function InterventionPhaseRail({ current, visited }: Props) {
       <ol className="flex min-w-max items-center gap-1">
         {INTERVENTION_PHASES.map((phase, index) => {
           const active = phase === current;
-          const done = visited.some((stepId) => stepId.startsWith(`${phase}-`));
+          const done = visited.some(
+            (stepId) =>
+              stepId === phase || stepId.startsWith(`${phase}-`) || stepId.endsWith(`-${phase}`),
+          );
           return (
             <li key={phase} className="flex items-center">
               <div
@@ -40,3 +43,4 @@ export function InterventionPhaseRail({ current, visited }: Props) {
     </nav>
   );
 }
+
