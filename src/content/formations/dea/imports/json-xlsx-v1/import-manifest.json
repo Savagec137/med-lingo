@@ -244,7 +244,10 @@
       "file": "parcours-06/lesson-08.json",
       "sourceKeys": ["P04:L04"],
       "questionCount": 10,
-      "status": "review"
+      "status": "review",
+      "archiveFile": "parcours-06/legacy-import-lesson-08.json",
+      "supersededBy": "parcours-06/lesson-08.json",
+      "publicationStatus": "archived_source_bank"
     },
     {
       "id": "dea-p07-l08",

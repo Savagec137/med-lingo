@@ -1,0 +1,739 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l03",
+  "title": "Le diaphragme",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier le rôle mécanique du diaphragme.",
+    "Associer contraction et inspiration.",
+    "Associer relâchement et expiration."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l02"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l03-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Que fait le diaphragme au début de l’inspiration décrite dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q01-a1",
+          "text": "Il se contracte et s’abaisse",
+          "explanation": "Sa contraction augmente le volume disponible dans la cage thoracique."
+        },
+        {
+          "id": "dea-p06-l03-q01-a2",
+          "text": "Il se relâche et remonte",
+          "explanation": "Ce mouvement accompagne l’expiration."
+        },
+        {
+          "id": "dea-p06-l03-q01-a3",
+          "text": "Il ferme les bronches",
+          "explanation": "Le diaphragme ne joue pas ce rôle."
+        },
+        {
+          "id": "dea-p06-l03-q01-a4",
+          "text": "Il réalise les échanges avec le sang",
+          "explanation": "Les échanges sont alvéolo-capillaires."
+        }
+      ],
+      "correctAnswer": "dea-p06-l03-q01-a1",
+      "explanation": "La contraction et l’abaissement du diaphragme participent à l’entrée d’air.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La contraction et l’abaissement du diaphragme participent à l’entrée d’air.",
+        "commonMistake": "Associer toute contraction à une diminution de volume conduit à inverser les phases.",
+        "keyTakeaway": "Inspiration : diaphragme contracté et abaissé.",
+        "fieldApplication": "Observer la dynamique thoraco-abdominale pendant la respiration.",
+        "memoryTip": "Il descend quand l’air entre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La contraction et l’abaissement du diaphragme participent à l’entrée d’air.",
+      "common_mistake": "Associer toute contraction à une diminution de volume conduit à inverser les phases.",
+      "key_takeaway": "Inspiration : diaphragme contracté et abaissé.",
+      "memory_tip": "Il descend quand l’air entre.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Lors de l’expiration calme, le diaphragme se relâche et remonte.",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition correspond à la phase expiratoire du support."
+        },
+        {
+          "id": "dea-p06-l03-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le diaphragme ne reste pas contracté pendant l’expiration calme."
+        }
+      ],
+      "correctAnswer": "dea-p06-l03-q02-true",
+      "explanation": "Le relâchement ramène le diaphragme vers sa position haute.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le relâchement ramène le diaphragme vers sa position haute.",
+        "commonMistake": "Inverser inspiration et expiration fait associer la remontée à l’entrée d’air.",
+        "keyTakeaway": "Expiration : relâchement et remontée.",
+        "fieldApplication": "Décrire le mouvement observé en plus de compter la fréquence."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le relâchement ramène le diaphragme vers sa position haute.",
+      "common_mistake": "Inverser inspiration et expiration fait associer la remontée à l’entrée d’air.",
+      "key_takeaway": "Expiration : relâchement et remontée.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque phase au mouvement principal décrit.",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q03-a1",
+          "text": "Inspiration",
+          "match": "Contraction et abaissement du diaphragme",
+          "explanation": "Le volume thoracique augmente."
+        },
+        {
+          "id": "dea-p06-l03-q03-a2",
+          "text": "Expiration",
+          "match": "Relâchement et remontée du diaphragme",
+          "explanation": "Le volume thoracique diminue."
+        },
+        {
+          "id": "dea-p06-l03-q03-a3",
+          "text": "Entrée de l’air",
+          "match": "Augmentation du volume thoracique",
+          "explanation": "Elle accompagne l’inspiration."
+        },
+        {
+          "id": "dea-p06-l03-q03-a4",
+          "text": "Sortie de l’air",
+          "match": "Diminution du volume thoracique",
+          "explanation": "Elle accompagne l’expiration."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l03-q03-a1",
+        "dea-p06-l03-q03-a2",
+        "dea-p06-l03-q03-a3",
+        "dea-p06-l03-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l03-q03-a1",
+        "dea-p06-l03-q03-a2",
+        "dea-p06-l03-q03-a3",
+        "dea-p06-l03-q03-a4"
+      ],
+      "explanation": "Les associations reconstruisent la mécanique des deux phases.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations reconstruisent la mécanique des deux phases.",
+        "commonMistake": "Mélanger mouvement musculaire et sens de l’air inverse le cycle.",
+        "keyTakeaway": "Contraction vers le bas : air entre ; relâchement vers le haut : air sort.",
+        "fieldApplication": "Repérer une asymétrie ou une difficulté de mouvement au bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations reconstruisent la mécanique des deux phases.",
+      "common_mistake": "Mélanger mouvement musculaire et sens de l’air inverse le cycle.",
+      "key_takeaway": "Contraction vers le bas : air entre ; relâchement vers le haut : air sort.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre les événements de l’inspiration.",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q04-a1",
+          "text": "Contraction du diaphragme",
+          "explanation": "Le mouvement débute par l’action musculaire.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l03-q04-a2",
+          "text": "Abaissement du diaphragme",
+          "explanation": "Il s’aplatit vers le bas.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l03-q04-a3",
+          "text": "Augmentation du volume thoracique",
+          "explanation": "La cage offre davantage de volume.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l03-q04-a4",
+          "text": "Entrée de l’air",
+          "explanation": "L’air pénètre dans les voies aériennes.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l03-q04-a1",
+        "dea-p06-l03-q04-a2",
+        "dea-p06-l03-q04-a3",
+        "dea-p06-l03-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l03-q04-a1",
+        "dea-p06-l03-q04-a2",
+        "dea-p06-l03-q04-a3",
+        "dea-p06-l03-q04-a4"
+      ],
+      "explanation": "L’ordre relie action musculaire, modification de volume et mouvement d’air.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre relie action musculaire, modification de volume et mouvement d’air.",
+        "commonMistake": "Commencer par l’air sans comprendre la mécanique fait perdre le lien causal décrit.",
+        "keyTakeaway": "Muscle, volume, air.",
+        "fieldApplication": "Utiliser cette séquence pour expliquer simplement la ventilation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre relie action musculaire, modification de volume et mouvement d’air.",
+      "common_mistake": "Commencer par l’air sans comprendre la mécanique fait perdre le lien causal décrit.",
+      "key_takeaway": "Muscle, volume, air.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : pendant l’inspiration, le diaphragme se contracte et s’______.",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q05-a1",
+          "text": "abaisse",
+          "explanation": "Le support décrit un diaphragme qui s’aplatit et s’abaisse."
+        },
+        {
+          "id": "dea-p06-l03-q05-a2",
+          "text": "élève",
+          "explanation": "La remontée accompagne le relâchement expiratoire."
+        },
+        {
+          "id": "dea-p06-l03-q05-a3",
+          "text": "immobilise",
+          "explanation": "Il réalise un mouvement pendant la phase."
+        },
+        {
+          "id": "dea-p06-l03-q05-a4",
+          "text": "épaissit",
+          "explanation": "Ce terme ne décrit pas le mouvement attendu."
+        }
+      ],
+      "correctAnswer": "dea-p06-l03-q05-a1",
+      "explanation": "Le verbe attendu décrit la direction du diaphragme.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le verbe attendu décrit la direction du diaphragme.",
+        "commonMistake": "Confondre la position finale avec la phase inverse conduit à choisir « élève ».",
+        "keyTakeaway": "À l’inspiration, le diaphragme descend.",
+        "fieldApplication": "Associer le mouvement observé à la phase ventilatoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le verbe attendu décrit la direction du diaphragme.",
+      "common_mistake": "Confondre la position finale avec la phase inverse conduit à choisir « élève ».",
+      "key_takeaway": "À l’inspiration, le diaphragme descend.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Au repos, tu observes surtout les mouvements de l’abdomen pour compter la respiration. Quelle structure contribue directement à ces mouvements ?",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q06-a1",
+          "text": "Le diaphragme",
+          "explanation": "Ses déplacements influencent les mouvements thoraco-abdominaux."
+        },
+        {
+          "id": "dea-p06-l03-q06-a2",
+          "text": "La plèvre seule",
+          "explanation": "La plèvre est une enveloppe, pas le muscle moteur décrit."
+        },
+        {
+          "id": "dea-p06-l03-q06-a3",
+          "text": "Le pharynx",
+          "explanation": "Il constitue un passage aérien."
+        },
+        {
+          "id": "dea-p06-l03-q06-a4",
+          "text": "Les alvéoles",
+          "explanation": "Elles participent aux échanges mais ne produisent pas ce mouvement."
+        }
+      ],
+      "correctAnswer": "dea-p06-l03-q06-a1",
+      "explanation": "Le diaphragme est le principal élément mécanique relié à cette observation.",
+      "knowledgeIds": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le diaphragme est le principal élément mécanique relié à cette observation.",
+        "commonMistake": "Confondre lieu d’échange et moteur ventilatoire fait choisir les alvéoles.",
+        "keyTakeaway": "Le diaphragme crée le mouvement ; les alvéoles assurent les échanges.",
+        "fieldApplication": "Observer thorax ou abdomen pendant une minute.",
+        "safetyPoint": "Une absence ou une anomalie de mouvement doit être intégrée au bilan global."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le diaphragme est le principal élément mécanique relié à cette observation.",
+      "common_mistake": "Confondre lieu d’échange et moteur ventilatoire fait choisir les alvéoles.",
+      "key_takeaway": "Le diaphragme crée le mouvement ; les alvéoles assurent les échanges.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005",
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles conséquences accompagnent la contraction du diaphragme pendant l’inspiration ?",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q07-a1",
+          "text": "Son abaissement",
+          "explanation": "Le diaphragme s’aplatit vers le bas."
+        },
+        {
+          "id": "dea-p06-l03-q07-a2",
+          "text": "L’augmentation du volume thoracique",
+          "explanation": "La cage thoracique offre davantage de volume."
+        },
+        {
+          "id": "dea-p06-l03-q07-a3",
+          "text": "L’entrée de l’air",
+          "explanation": "La variation de volume permet l’inspiration."
+        },
+        {
+          "id": "dea-p06-l03-q07-a4",
+          "text": "Sa remontée",
+          "explanation": "La remontée accompagne l’expiration."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l03-q07-a1",
+        "dea-p06-l03-q07-a2",
+        "dea-p06-l03-q07-a3"
+      ],
+      "correctAnswers": [
+        "dea-p06-l03-q07-a1",
+        "dea-p06-l03-q07-a2",
+        "dea-p06-l03-q07-a3"
+      ],
+      "explanation": "Les trois effets appartiennent à la même séquence inspiratoire.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les trois effets appartiennent à la même séquence inspiratoire.",
+        "commonMistake": "Ajouter la remontée mélange les deux phases opposées.",
+        "keyTakeaway": "À l’inspiration : contraction, descente, volume accru, air entrant.",
+        "fieldApplication": "Suivre la séquence plutôt que mémoriser des mots isolés."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les trois effets appartiennent à la même séquence inspiratoire.",
+      "common_mistake": "Ajouter la remontée mélange les deux phases opposées.",
+      "key_takeaway": "À l’inspiration : contraction, descente, volume accru, air entrant.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l03-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Pourquoi le diaphragme ne doit-il pas être présenté comme le lieu des échanges gazeux ?",
+      "answers": [
+        {
+          "id": "dea-p06-l03-q08-a1",
+          "text": "Parce qu’il assure surtout un rôle mécanique de ventilation",
+          "explanation": "Le muscle modifie le volume thoracique, tandis que les échanges ont lieu dans les alvéoles."
+        },
+        {
+          "id": "dea-p06-l03-q08-a2",
+          "text": "Parce qu’il appartient aux voies aériennes supérieures",
+          "explanation": "Le support ne le classe pas comme voie aérienne."
+        },
+        {
+          "id": "dea-p06-l03-q08-a3",
+          "text": "Parce qu’il contient les capillaires pulmonaires",
+          "explanation": "Les capillaires d’échange sont au contact des alvéoles."
+        },
+        {
+          "id": "dea-p06-l03-q08-a4",
+          "text": "Parce qu’il enveloppe les poumons",
+          "explanation": "Cette fonction correspond à la plèvre."
+        }
+      ],
+      "correctAnswer": "dea-p06-l03-q08-a1",
+      "explanation": "La fonction mécanique du diaphragme se distingue de la fonction d’échange des alvéoles.",
+      "knowledgeIds": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "sourcePages": "25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l03",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La fonction mécanique du diaphragme se distingue de la fonction d’échange des alvéoles.",
+        "commonMistake": "Toutes les structures respiratoires ne réalisent pas la même étape.",
+        "keyTakeaway": "Diaphragme : mouvement ; alvéoles : échanges.",
+        "fieldApplication": "Distinguer ventilation et oxygénation dans l’observation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La fonction mécanique du diaphragme se distingue de la fonction d’échange des alvéoles.",
+      "common_mistake": "Toutes les structures respiratoires ne réalisent pas la même étape.",
+      "key_takeaway": "Diaphragme : mouvement ; alvéoles : échanges.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+        "sourcePages": "25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

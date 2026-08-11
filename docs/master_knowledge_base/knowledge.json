@@ -27,7 +27,7 @@
     {
       "document_id": "DOC-AFTRAL-DEA-B2-M4-2022",
       "analysis_reference": "documents/DOC-AFTRAL-DEA-B2-M4-2022.json",
-      "knowledge_count": 27
+      "knowledge_count": 39
     }
   ],
   "knowledge": [
@@ -6164,6 +6164,579 @@
         "dea-p05-l07",
         "dea-p05-l08",
         "dea-p05-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-001",
+      "knowledge_type": "concept",
+      "title": "Organisation générale de l’appareil respiratoire",
+      "definition": "L’appareil respiratoire associe les voies aériennes, les alvéoles pulmonaires, la cage thoracique et les centres neurologiques de commande.",
+      "summary": "L’appareil respiratoire associe les voies aériennes, les alvéoles pulmonaires, la cage thoracique et les centres neurologiques de commande.",
+      "important_points": [
+        "Les voies aériennes sont des passages pour l’air.",
+        "Les alvéoles sont le lieu des échanges gazeux.",
+        "La cage thoracique participe aux mouvements ventilatoires.",
+        "Les centres neurologiques commandent la respiration."
+      ],
+      "clinical_examples": [
+        "Distinguer les quatre ensembles aide à décrire factuellement ce qui est observé sans poser de diagnostic."
+      ],
+      "common_errors": [
+        "Réduire l’appareil respiratoire aux seuls poumons.",
+        "Confondre passage de l’air et lieu des échanges."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - organisation générale",
+      "source_page": "24",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l01",
+        "dea-p06-l02",
+        "dea-p06-l04",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-002",
+      "knowledge_type": "concept",
+      "title": "Voies aériennes supérieures",
+      "definition": "Les fosses nasales et le pharynx appartiennent aux voies aériennes supérieures décrites dans le support.",
+      "summary": "Les fosses nasales et le pharynx appartiennent aux voies aériennes supérieures décrites dans le support.",
+      "important_points": [
+        "Les fosses nasales sont situées dans le massif facial.",
+        "Le pharynx est un conduit commun aux voies respiratoires et digestives."
+      ],
+      "clinical_examples": [
+        "Ces repères permettent de localiser une gêne ou une obstruction avec un vocabulaire précis."
+      ],
+      "common_errors": [
+        "Classer le larynx parmi les voies aériennes supérieures dans la nomenclature de ce support.",
+        "Confondre pharynx et trachée."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - voies aériennes supérieures",
+      "source_page": "23",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l01",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-003",
+      "knowledge_type": "concept",
+      "title": "Voies aériennes inférieures",
+      "definition": "Le support classe le larynx, la trachée, les bronches, les bronchioles et les poumons parmi les voies aériennes inférieures.",
+      "summary": "Le support classe le larynx, la trachée, les bronches, les bronchioles et les poumons parmi les voies aériennes inférieures.",
+      "important_points": [
+        "La trachée se divise en deux bronches principales.",
+        "Les bronches se ramifient en bronchioles.",
+        "Les bronchioles conduisent vers les alvéoles."
+      ],
+      "clinical_examples": [
+        "Suivre le trajet anatomique facilite une description structurée des voies aériennes."
+      ],
+      "common_errors": [
+        "Placer les échanges gazeux dans la trachée.",
+        "Inverser bronches et bronchioles dans le trajet de l’air."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - voies aériennes inférieures",
+      "source_page": "23",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l01",
+        "dea-p06-l02",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-004",
+      "knowledge_type": "concept",
+      "title": "Poumons, lobes et plèvre",
+      "definition": "Les deux poumons occupent la cage thoracique ; le poumon droit comporte trois lobes, le gauche deux, et chacun est entouré d’une double enveloppe appelée plèvre.",
+      "summary": "Les deux poumons occupent la cage thoracique ; le poumon droit comporte trois lobes, le gauche deux, et chacun est entouré d’une double enveloppe appelée plèvre.",
+      "important_points": [
+        "Le poumon droit comporte trois lobes.",
+        "Le poumon gauche comporte deux lobes.",
+        "La plèvre est décrite comme une double enveloppe."
+      ],
+      "clinical_examples": [
+        "Ces repères permettent de situer précisément le côté concerné lors d’un bilan."
+      ],
+      "common_errors": [
+        "Attribuer trois lobes aux deux poumons.",
+        "Confondre la plèvre avec une cavité pulmonaire."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - poumons et plèvre",
+      "source_page": "23",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l02",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-005",
+      "knowledge_type": "concept",
+      "title": "Diaphragme et cycle ventilatoire",
+      "definition": "Lors de l’inspiration, le diaphragme se contracte et s’abaisse ; lors de l’expiration, il se relâche et remonte.",
+      "summary": "Lors de l’inspiration, le diaphragme se contracte et s’abaisse ; lors de l’expiration, il se relâche et remonte.",
+      "important_points": [
+        "La contraction du diaphragme augmente le volume thoracique.",
+        "L’inspiration fait entrer l’air.",
+        "Le relâchement accompagne l’expiration."
+      ],
+      "clinical_examples": [
+        "Observer les mouvements thoraco-abdominaux aide à apprécier la ventilation."
+      ],
+      "common_errors": [
+        "Associer la contraction du diaphragme à l’expiration.",
+        "Présenter le diaphragme comme un organe d’échange gazeux."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - mouvements ventilatoires",
+      "source_page": "25",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l03",
+        "dea-p06-l04",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-006",
+      "knowledge_type": "concept",
+      "title": "Réflexes de protection des voies aériennes",
+      "definition": "La déglutition et la toux sont présentées comme des réflexes de sécurité protégeant les voies aériennes.",
+      "summary": "La déglutition et la toux sont présentées comme des réflexes de sécurité protégeant les voies aériennes.",
+      "important_points": [
+        "La déglutition oriente le bol alimentaire vers l’œsophage.",
+        "La toux cherche à expulser un corps étranger."
+      ],
+      "clinical_examples": [
+        "Repérer l’altération d’un réflexe de protection contribue à une observation factuelle et à une transmission rapide."
+      ],
+      "common_errors": [
+        "Confondre un réflexe de protection avec un mouvement ventilatoire.",
+        "Attribuer à la toux la fonction d’échange gazeux."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - réflexes de sécurité",
+      "source_page": "25",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l01",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-007",
+      "knowledge_type": "concept",
+      "title": "Finalité de la respiration et échanges gazeux",
+      "definition": "La respiration apporte de l’oxygène à l’organisme et élimine le dioxyde de carbone grâce aux échanges entre alvéoles et capillaires.",
+      "summary": "La respiration apporte de l’oxygène à l’organisme et élimine le dioxyde de carbone grâce aux échanges entre alvéoles et capillaires.",
+      "important_points": [
+        "L’oxygène passe de l’air alvéolaire vers le sang.",
+        "Le dioxyde de carbone suit le trajet inverse.",
+        "Les échanges ont lieu au niveau alvéolo-capillaire."
+      ],
+      "clinical_examples": [
+        "Relier ventilation et échanges aide à distinguer un mouvement d’air d’une oxygénation efficace."
+      ],
+      "common_errors": [
+        "Localiser les échanges dans les bronches.",
+        "Dire que le dioxyde de carbone est apporté aux cellules par l’inspiration."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24,25",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l05",
+        "dea-p06-l06",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-008",
+      "knowledge_type": "concept",
+      "title": "Composition de l’air et air alvéolaire",
+      "definition": "Le support indique environ 21 % d’oxygène dans l’air ambiant et environ 16 % dans l’air alvéolaire, où le dioxyde de carbone atteint environ 5 %.",
+      "summary": "Le support indique environ 21 % d’oxygène dans l’air ambiant et environ 16 % dans l’air alvéolaire, où le dioxyde de carbone atteint environ 5 %.",
+      "important_points": [
+        "L’azote représente environ 78 % de l’air.",
+        "L’oxygène représente environ 21 % de l’air ambiant.",
+        "L’air alvéolaire contient moins d’oxygène et davantage de dioxyde de carbone."
+      ],
+      "clinical_examples": [
+        "Comparer les compositions illustre les échanges sans permettre, à elle seule, un diagnostic."
+      ],
+      "common_errors": [
+        "Confondre air ambiant et air alvéolaire.",
+        "Présenter l’oxygène comme le gaz majoritaire de l’air."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - composition des gaz",
+      "source_page": "26",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l05",
+        "dea-p06-l06",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-009",
+      "knowledge_type": "concept",
+      "title": "Volumes et régulation de la respiration",
+      "definition": "Le support décrit un volume courant d’environ 0,5 litre et une régulation respiratoire influencée notamment par le dioxyde de carbone, l’oxygène, l’effort, le stress, la fièvre, le coma et certains médicaments.",
+      "summary": "Le support décrit un volume courant d’environ 0,5 litre et une régulation respiratoire influencée notamment par le dioxyde de carbone, l’oxygène, l’effort, le stress, la fièvre, le coma et certains médicaments.",
+      "important_points": [
+        "Le volume courant est l’air mobilisé lors d’une respiration calme.",
+        "La fréquence respiratoire s’adapte aux besoins.",
+        "Plusieurs situations peuvent modifier la respiration."
+      ],
+      "clinical_examples": [
+        "Ces données servent à observer une tendance et à transmettre le contexte, pas à poser un diagnostic isolé."
+      ],
+      "common_errors": [
+        "Confondre volume courant et capacité totale des poumons.",
+        "Interpréter une variation de fréquence sans contexte clinique."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Appareil respiratoire - volumes et régulation",
+      "source_page": "26",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l04",
+        "dea-p06-l07",
+        "dea-p06-l08"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-010",
+      "knowledge_type": "concept",
+      "title": "Mesure de la fréquence respiratoire",
+      "definition": "La fréquence respiratoire se mesure au repos en observant pendant une minute les mouvements du thorax ou de l’abdomen.",
+      "summary": "La fréquence respiratoire se mesure au repos en observant pendant une minute les mouvements du thorax ou de l’abdomen.",
+      "important_points": [
+        "Le patient doit être au repos.",
+        "La mesure dure une minute.",
+        "Il faut aussi apprécier amplitude et régularité."
+      ],
+      "clinical_examples": [
+        "Une mesure discrète et complète améliore la fiabilité du bilan transmis."
+      ],
+      "common_errors": [
+        "Compter trop brièvement une respiration irrégulière.",
+        "Se limiter au chiffre sans décrire rythme et amplitude."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire",
+      "source_page": "71,72",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l07",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-011",
+      "knowledge_type": "concept",
+      "title": "Repères de fréquence respiratoire",
+      "definition": "Le support donne au repos 12 à 20 cycles par minute après 14 ans, 20 à 30 de 2 à 12 ans, 30 à 60 de 1 mois à 2 ans et 40 à 60 avant 1 mois.",
+      "summary": "Le support donne au repos 12 à 20 cycles par minute après 14 ans, 20 à 30 de 2 à 12 ans, 30 à 60 de 1 mois à 2 ans et 40 à 60 avant 1 mois.",
+      "important_points": [
+        "Les valeurs dépendent de l’âge.",
+        "Une fréquence doit toujours être associée au contexte.",
+        "Amplitude et régularité complètent la mesure."
+      ],
+      "clinical_examples": [
+        "Transmettre âge, fréquence, rythme et amplitude évite une interprétation incomplète."
+      ],
+      "common_errors": [
+        "Appliquer la valeur adulte à un nourrisson.",
+        "Interpréter un chiffre isolé sans âge ni contexte."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Mesure des paramètres vitaux - valeurs respiratoires",
+      "source_page": "71,72",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l07",
+        "dea-p06-l08",
+        "dea-p06-boss"
+      ],
+      "version": "Version 1 - Août 2022",
+      "review_status": "source_verified",
+      "validation_status": "to_validate"
+    },
+    {
+      "knowledge_id": "K-DEA-P06-012",
+      "knowledge_type": "concept",
+      "title": "Oxymètre de pouls et SpO₂",
+      "definition": "L’oxymètre de pouls estime la saturation pulsée en oxygène ; le support situe la valeur normale entre 95 % et 100 %.",
+      "summary": "L’oxymètre de pouls estime la saturation pulsée en oxygène ; le support situe la valeur normale entre 95 % et 100 %.",
+      "important_points": [
+        "La mesure est non invasive.",
+        "La valeur affichée est une SpO₂.",
+        "La mesure complète l’observation clinique."
+      ],
+      "clinical_examples": [
+        "Une SpO₂ doit être transmise avec l’état clinique et les conditions de mesure."
+      ],
+      "common_errors": [
+        "Assimiler la SpO₂ à la fréquence respiratoire.",
+        "Décider sur la seule valeur sans vérifier le patient et la qualité de mesure."
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "DEA",
+        "parcours-06",
+        "système-respiratoire"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_chapter": "Module 4 - Appréciation de l’état clinique du patient",
+      "source_section": "Mesure des paramètres vitaux - oxymétrie de pouls",
+      "source_page": "72",
+      "page_status": "verified",
+      "source_type": "training_source",
+      "competency_ids": [
+        "body.system.respiratory"
+      ],
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "lesson_ids": [
+        "dea-p06-l06",
+        "dea-p06-l07",
+        "dea-p06-l08",
+        "dea-p06-boss"
       ],
       "version": "Version 1 - Août 2022",
       "review_status": "source_verified",

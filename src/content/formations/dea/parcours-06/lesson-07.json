@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l07",
+  "title": "Les principales valeurs normales",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Mesurer la fréquence respiratoire pendant une minute.",
+    "Utiliser les repères adaptés à l’âge.",
+    "Décrire rythme et amplitude avec la valeur."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle plage de fréquence respiratoire au repos le support donne-t-il après 14 ans ?",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q01-a1",
+          "text": "12 à 20 cycles par minute",
+          "explanation": "Cette plage est indiquée pour l’adulte et le jeune de plus de 14 ans."
+        },
+        {
+          "id": "dea-p06-l07-q01-a2",
+          "text": "20 à 30 cycles par minute",
+          "explanation": "Cette plage est donnée pour l’enfant de 2 à 12 ans."
+        },
+        {
+          "id": "dea-p06-l07-q01-a3",
+          "text": "30 à 60 cycles par minute",
+          "explanation": "Cette plage concerne le petit enfant de 1 mois à 2 ans."
+        },
+        {
+          "id": "dea-p06-l07-q01-a4",
+          "text": "40 à 60 cycles par minute",
+          "explanation": "Cette plage concerne le nouveau-né de moins d’un mois."
+        }
+      ],
+      "correctAnswer": "dea-p06-l07-q01-a1",
+      "explanation": "La réponse dépend de la tranche d’âge demandée.",
+      "knowledgeIds": [
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse dépend de la tranche d’âge demandée.",
+        "commonMistake": "Appliquer un repère pédiatrique à l’adulte fausse l’interprétation.",
+        "keyTakeaway": "Après 14 ans au repos : 12 à 20 cycles par minute.",
+        "fieldApplication": "Toujours transmettre l’âge et le contexte de repos.",
+        "memoryTip": "Adulte : entre douze et vingt."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse dépend de la tranche d’âge demandée.",
+      "common_mistake": "Appliquer un repère pédiatrique à l’adulte fausse l’interprétation.",
+      "key_takeaway": "Après 14 ans au repos : 12 à 20 cycles par minute.",
+      "memory_tip": "Adulte : entre douze et vingt.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La fréquence respiratoire doit être mesurée pendant une minute chez un patient au repos.",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition reprend la procédure complète."
+        },
+        {
+          "id": "dea-p06-l07-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : la mesure recommandée dure bien une minute."
+        }
+      ],
+      "correctAnswer": "dea-p06-l07-q02-true",
+      "explanation": "La durée et le repos font partie de la méthode décrite par le support.",
+      "knowledgeIds": [
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La durée et le repos font partie de la méthode décrite par le support.",
+        "commonMistake": "Multiplier un comptage trop court peut masquer une irrégularité.",
+        "keyTakeaway": "Repos, observation, une minute.",
+        "fieldApplication": "Observer discrètement le thorax ou l’abdomen."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La durée et le repos font partie de la méthode décrite par le support.",
+      "common_mistake": "Multiplier un comptage trop court peut masquer une irrégularité.",
+      "key_takeaway": "Repos, observation, une minute.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque tranche d’âge à la plage respiratoire du support.",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q03-a1",
+          "text": "Plus de 14 ans",
+          "match": "12 à 20 cycles/min",
+          "explanation": "C’est le repère adulte."
+        },
+        {
+          "id": "dea-p06-l07-q03-a2",
+          "text": "2 à 12 ans",
+          "match": "20 à 30 cycles/min",
+          "explanation": "C’est le repère de l’enfant."
+        },
+        {
+          "id": "dea-p06-l07-q03-a3",
+          "text": "1 mois à 2 ans",
+          "match": "30 à 60 cycles/min",
+          "explanation": "C’est le repère du petit enfant."
+        },
+        {
+          "id": "dea-p06-l07-q03-a4",
+          "text": "Moins de 1 mois",
+          "match": "40 à 60 cycles/min",
+          "explanation": "C’est le repère du nouveau-né."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l07-q03-a1",
+        "dea-p06-l07-q03-a2",
+        "dea-p06-l07-q03-a3",
+        "dea-p06-l07-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l07-q03-a1",
+        "dea-p06-l07-q03-a2",
+        "dea-p06-l07-q03-a3",
+        "dea-p06-l07-q03-a4"
+      ],
+      "explanation": "Les plages augmentent globalement lorsque l’âge diminue.",
+      "knowledgeIds": [
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les plages augmentent globalement lorsque l’âge diminue.",
+        "commonMistake": "Utiliser une seule norme pour tous les âges est l’erreur principale.",
+        "keyTakeaway": "Le repère respiratoire dépend de l’âge.",
+        "fieldApplication": "Vérifier l’âge avant de comparer une fréquence."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les plages augmentent globalement lorsque l’âge diminue.",
+      "common_mistake": "Utiliser une seule norme pour tous les âges est l’erreur principale.",
+      "key_takeaway": "Le repère respiratoire dépend de l’âge.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre la mesure de la fréquence respiratoire.",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q04-a1",
+          "text": "Installer ou observer le patient au repos",
+          "explanation": "Le contexte doit être stabilisé.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l07-q04-a2",
+          "text": "Observer thorax ou abdomen",
+          "explanation": "Le mouvement permet de compter les cycles.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l07-q04-a3",
+          "text": "Compter pendant une minute",
+          "explanation": "La durée améliore la fiabilité.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l07-q04-a4",
+          "text": "Noter fréquence, rythme et amplitude",
+          "explanation": "La transmission ne se limite pas au chiffre.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l07-q04-a1",
+        "dea-p06-l07-q04-a2",
+        "dea-p06-l07-q04-a3",
+        "dea-p06-l07-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l07-q04-a1",
+        "dea-p06-l07-q04-a2",
+        "dea-p06-l07-q04-a3",
+        "dea-p06-l07-q04-a4"
+      ],
+      "explanation": "La séquence prépare, mesure puis qualifie le résultat.",
+      "knowledgeIds": [
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence prépare, mesure puis qualifie le résultat.",
+        "commonMistake": "Annoncer un chiffre avant d’avoir vérifié rythme et amplitude produit un bilan incomplet.",
+        "keyTakeaway": "Repos, observation, une minute, description.",
+        "fieldApplication": "Appliquer la même séquence à chaque bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence prépare, mesure puis qualifie le résultat.",
+      "common_mistake": "Annoncer un chiffre avant d’avoir vérifié rythme et amplitude produit un bilan incomplet.",
+      "key_takeaway": "Repos, observation, une minute, description.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : chez l’adulte au repos, le support situe la fréquence respiratoire entre 12 et ______ cycles par minute.",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q05-a1",
+          "text": "20",
+          "explanation": "La limite supérieure de la plage adulte indiquée est 20."
+        },
+        {
+          "id": "dea-p06-l07-q05-a2",
+          "text": "30",
+          "explanation": "Cette valeur appartient à une plage pédiatrique."
+        },
+        {
+          "id": "dea-p06-l07-q05-a3",
+          "text": "60",
+          "explanation": "Cette valeur appartient aux tranches d’âge les plus jeunes."
+        },
+        {
+          "id": "dea-p06-l07-q05-a4",
+          "text": "100",
+          "explanation": "Cette valeur ne correspond pas au repère décrit."
+        }
+      ],
+      "correctAnswer": "dea-p06-l07-q05-a1",
+      "explanation": "Le nombre complète la plage spécifique demandée.",
+      "knowledgeIds": [
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le nombre complète la plage spécifique demandée.",
+        "commonMistake": "Mémoriser les valeurs sans leur tranche d’âge favorise les inversions.",
+        "keyTakeaway": "Adulte au repos : 12 à 20.",
+        "fieldApplication": "Associer toujours nombre, unité, âge et contexte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le nombre complète la plage spécifique demandée.",
+      "common_mistake": "Mémoriser les valeurs sans leur tranche d’âge favorise les inversions.",
+      "key_takeaway": "Adulte au repos : 12 à 20.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Un enfant de 6 ans au repos a une fréquence respiratoire de 24 cycles/min, régulière et d’amplitude normale. Quelle transmission est la plus complète ?",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q06-a1",
+          "text": "Enfant de 6 ans au repos : FR 24/min, régulière, amplitude normale",
+          "explanation": "La formulation contient âge, contexte, chiffre, rythme et amplitude."
+        },
+        {
+          "id": "dea-p06-l07-q06-a2",
+          "text": "Respiration normale",
+          "explanation": "Cette conclusion seule supprime les données mesurées."
+        },
+        {
+          "id": "dea-p06-l07-q06-a3",
+          "text": "FR 24",
+          "explanation": "Il manque unité, âge, repos, rythme et amplitude."
+        },
+        {
+          "id": "dea-p06-l07-q06-a4",
+          "text": "Patient sans problème respiratoire",
+          "explanation": "La mesure isolée ne permet pas cette conclusion générale."
+        }
+      ],
+      "correctAnswer": "dea-p06-l07-q06-a1",
+      "explanation": "La transmission factuelle permet au destinataire d’interpréter les données.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La transmission factuelle permet au destinataire d’interpréter les données.",
+        "commonMistake": "Remplacer les observations par « normal » masque les éléments utiles.",
+        "keyTakeaway": "Transmettre les faits avant l’interprétation.",
+        "fieldApplication": "Donner âge, contexte, valeur, rythme et amplitude.",
+        "safetyPoint": "Une valeur dans une plage ne suffit jamais à exclure une détresse si les signes cliniques sont inquiétants."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La transmission factuelle permet au destinataire d’interpréter les données.",
+      "common_mistake": "Remplacer les observations par « normal » masque les éléments utiles.",
+      "key_takeaway": "Transmettre les faits avant l’interprétation.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles caractéristiques faut-il observer en plus du nombre de cycles ?",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q07-a1",
+          "text": "La régularité",
+          "explanation": "Le rythme peut être régulier ou irrégulier."
+        },
+        {
+          "id": "dea-p06-l07-q07-a2",
+          "text": "L’amplitude",
+          "explanation": "Les mouvements peuvent être superficiels, normaux ou amples."
+        },
+        {
+          "id": "dea-p06-l07-q07-a3",
+          "text": "Les mouvements du thorax ou de l’abdomen",
+          "explanation": "Ils servent au comptage et à l’observation."
+        },
+        {
+          "id": "dea-p06-l07-q07-a4",
+          "text": "Le nombre de lobes pulmonaires",
+          "explanation": "Cette donnée anatomique ne varie pas pendant la mesure."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l07-q07-a1",
+        "dea-p06-l07-q07-a2",
+        "dea-p06-l07-q07-a3"
+      ],
+      "correctAnswers": [
+        "dea-p06-l07-q07-a1",
+        "dea-p06-l07-q07-a2",
+        "dea-p06-l07-q07-a3"
+      ],
+      "explanation": "Ces observations qualifient la mécanique respiratoire visible.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces observations qualifient la mécanique respiratoire visible.",
+        "commonMistake": "Un chiffre seul paraît précis mais peut cacher une respiration inefficace.",
+        "keyTakeaway": "Fréquence plus rythme plus amplitude.",
+        "fieldApplication": "Intégrer les trois éléments au bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces observations qualifient la mécanique respiratoire visible.",
+      "common_mistake": "Un chiffre seul paraît précis mais peut cacher une respiration inefficace.",
+      "key_takeaway": "Fréquence plus rythme plus amplitude.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l07-q08",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle plage de SpO₂ le support présente-t-il comme normale ?",
+      "answers": [
+        {
+          "id": "dea-p06-l07-q08-a1",
+          "text": "95 % à 100 %",
+          "explanation": "Cette plage est explicitement indiquée sur la page consacrée à l’oxymètre."
+        },
+        {
+          "id": "dea-p06-l07-q08-a2",
+          "text": "12 % à 20 %",
+          "explanation": "Ces nombres évoquent la fréquence adulte, pas une saturation."
+        },
+        {
+          "id": "dea-p06-l07-q08-a3",
+          "text": "20 % à 30 %",
+          "explanation": "Cette plage ne correspond pas à la SpO₂ normale."
+        },
+        {
+          "id": "dea-p06-l07-q08-a4",
+          "text": "40 % à 60 %",
+          "explanation": "Cette plage ne correspond pas à une valeur normale de SpO₂."
+        }
+      ],
+      "correctAnswer": "dea-p06-l07-q08-a1",
+      "explanation": "La plage demandée concerne la SpO₂ et non un nombre de cycles.",
+      "knowledgeIds": [
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "sourcePages": "71, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l07",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La plage demandée concerne la SpO₂ et non un nombre de cycles.",
+        "commonMistake": "Mélanger les unités fait choisir une plage respiratoire à la place d’une saturation.",
+        "keyTakeaway": "SpO₂ normale du support : 95 à 100 %.",
+        "fieldApplication": "Nommer le paramètre avec la valeur et le contexte.",
+        "safetyPoint": "Le support contient deux seuils différents pour l’hypoxémie ; aucune décision de seuil n’est enseignée ici avant validation formateur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La plage demandée concerne la SpO₂ et non un nombre de cycles.",
+      "common_mistake": "Mélanger les unités fait choisir une plage respiratoire à la place d’une saturation.",
+      "key_takeaway": "SpO₂ normale du support : 95 à 100 %.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 71, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+        "sourcePages": "71, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

@@ -1,0 +1,754 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l06",
+  "title": "L’oxygène",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Expliquer le rôle général de l’oxygène.",
+    "Relier oxygène et échanges pulmonaires.",
+    "Comprendre ce que mesure l’oxymètre de pouls."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l06-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle est la finalité générale de l’apport d’oxygène décrite par le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q01-a1",
+          "text": "Fournir aux cellules le gaz nécessaire au fonctionnement de l’organisme",
+          "explanation": "L’oxygène inspiré passe dans le sang puis est distribué aux cellules."
+        },
+        {
+          "id": "dea-p06-l06-q01-a2",
+          "text": "Remplacer le dioxyde de carbone dans les bronches",
+          "explanation": "Les échanges ont lieu au niveau alvéolaire."
+        },
+        {
+          "id": "dea-p06-l06-q01-a3",
+          "text": "Déclencher directement la contraction du diaphragme",
+          "explanation": "Le diaphragme assure la mécanique ventilatoire."
+        },
+        {
+          "id": "dea-p06-l06-q01-a4",
+          "text": "Former la plèvre autour des poumons",
+          "explanation": "La plèvre est une structure anatomique."
+        }
+      ],
+      "correctAnswer": "dea-p06-l06-q01-a1",
+      "explanation": "Le rôle de la respiration est relié aux besoins des cellules.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le rôle de la respiration est relié aux besoins des cellules.",
+        "commonMistake": "S’arrêter au poumon fait oublier que l’oxygène doit ensuite être distribué.",
+        "keyTakeaway": "L’oxygène va des alvéoles au sang puis aux cellules.",
+        "fieldApplication": "Relier la mesure respiratoire à l’état global du patient."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le rôle de la respiration est relié aux besoins des cellules.",
+      "common_mistake": "S’arrêter au poumon fait oublier que l’oxygène doit ensuite être distribué.",
+      "key_takeaway": "L’oxygène va des alvéoles au sang puis aux cellules.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "L’oxymètre de pouls estime une saturation pulsée en oxygène appelée SpO₂.",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition décrit le paramètre affiché."
+        },
+        {
+          "id": "dea-p06-l06-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : la SpO₂ est bien la mesure concernée."
+        }
+      ],
+      "correctAnswer": "dea-p06-l06-q02-true",
+      "explanation": "La SpO₂ est précisément la donnée estimée par cet appareil non invasif.",
+      "knowledgeIds": [
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La SpO₂ est précisément la donnée estimée par cet appareil non invasif.",
+        "commonMistake": "La confondre avec la fréquence respiratoire mélange deux paramètres différents.",
+        "keyTakeaway": "Oxymètre : SpO₂ ; observation : fréquence respiratoire.",
+        "fieldApplication": "Transmettre la valeur avec les signes et les conditions de mesure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La SpO₂ est précisément la donnée estimée par cet appareil non invasif.",
+      "common_mistake": "La confondre avec la fréquence respiratoire mélange deux paramètres différents.",
+      "key_takeaway": "Oxymètre : SpO₂ ; observation : fréquence respiratoire.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque donnée liée à l’oxygène à sa signification.",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q03-a1",
+          "text": "Oxygène de l’air ambiant",
+          "match": "Environ 21 %",
+          "explanation": "C’est la proportion indiquée dans le support."
+        },
+        {
+          "id": "dea-p06-l06-q03-a2",
+          "text": "Oxygène de l’air alvéolaire",
+          "match": "Environ 16 %",
+          "explanation": "La proportion baisse après les échanges."
+        },
+        {
+          "id": "dea-p06-l06-q03-a3",
+          "text": "SpO₂",
+          "match": "Estimation de la saturation pulsée",
+          "explanation": "Elle est affichée par l’oxymètre."
+        },
+        {
+          "id": "dea-p06-l06-q03-a4",
+          "text": "Alvéole",
+          "match": "Passage de l’oxygène vers le sang",
+          "explanation": "Elle constitue la zone d’échange."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l06-q03-a1",
+        "dea-p06-l06-q03-a2",
+        "dea-p06-l06-q03-a3",
+        "dea-p06-l06-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l06-q03-a1",
+        "dea-p06-l06-q03-a2",
+        "dea-p06-l06-q03-a3",
+        "dea-p06-l06-q03-a4"
+      ],
+      "explanation": "Les associations relient composition, mesure et lieu d’échange.",
+      "knowledgeIds": [
+        "K-DEA-P06-007",
+        "K-DEA-P06-008",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations relient composition, mesure et lieu d’échange.",
+        "commonMistake": "Confondre pourcentage de gaz dans l’air et saturation du sang mélange deux grandeurs.",
+        "keyTakeaway": "21 % décrit l’air ; la SpO₂ estime l’oxygénation pulsée.",
+        "fieldApplication": "Nommer la grandeur transmise et son unité."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations relient composition, mesure et lieu d’échange.",
+      "common_mistake": "Confondre pourcentage de gaz dans l’air et saturation du sang mélange deux grandeurs.",
+      "key_takeaway": "21 % décrit l’air ; la SpO₂ estime l’oxygénation pulsée.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007",
+          "K-DEA-P06-008",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le parcours général de l’oxygène.",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q04-a1",
+          "text": "Air ambiant",
+          "explanation": "L’oxygène est inspiré.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l06-q04-a2",
+          "text": "Alvéoles",
+          "explanation": "Il atteint la zone d’échange.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l06-q04-a3",
+          "text": "Sang capillaire",
+          "explanation": "Il traverse l’interface alvéolaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l06-q04-a4",
+          "text": "Cellules",
+          "explanation": "Il est distribué dans l’organisme.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l06-q04-a1",
+        "dea-p06-l06-q04-a2",
+        "dea-p06-l06-q04-a3",
+        "dea-p06-l06-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l06-q04-a1",
+        "dea-p06-l06-q04-a2",
+        "dea-p06-l06-q04-a3",
+        "dea-p06-l06-q04-a4"
+      ],
+      "explanation": "L’ordre suit le passage du milieu extérieur jusqu’aux cellules.",
+      "knowledgeIds": [
+        "K-DEA-P06-007",
+        "K-DEA-P06-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit le passage du milieu extérieur jusqu’aux cellules.",
+        "commonMistake": "Placer les cellules avant le sang omet le transport circulatoire.",
+        "keyTakeaway": "Air, alvéoles, sang, cellules.",
+        "fieldApplication": "Relier les étapes lors d’une synthèse respiratoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit le passage du milieu extérieur jusqu’aux cellules.",
+      "common_mistake": "Placer les cellules avant le sang omet le transport circulatoire.",
+      "key_takeaway": "Air, alvéoles, sang, cellules.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007",
+          "K-DEA-P06-008"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : l’oxymètre de pouls affiche une valeur appelée ______.",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q05-a1",
+          "text": "SpO₂",
+          "explanation": "Cette abréviation désigne la saturation pulsée estimée."
+        },
+        {
+          "id": "dea-p06-l06-q05-a2",
+          "text": "FR",
+          "explanation": "La FR est le nombre de cycles respiratoires par minute."
+        },
+        {
+          "id": "dea-p06-l06-q05-a3",
+          "text": "TA",
+          "explanation": "La TA correspond à la pression artérielle."
+        },
+        {
+          "id": "dea-p06-l06-q05-a4",
+          "text": "Glasgow",
+          "explanation": "Le Glasgow apprécie la conscience."
+        }
+      ],
+      "correctAnswer": "dea-p06-l06-q05-a1",
+      "explanation": "Le bon sigle permet de transmettre le paramètre sans ambiguïté.",
+      "knowledgeIds": [
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le bon sigle permet de transmettre le paramètre sans ambiguïté.",
+        "commonMistake": "Les appareils peuvent afficher plusieurs données, mais elles ne désignent pas la même mesure.",
+        "keyTakeaway": "SpO₂ : saturation pulsée en oxygène.",
+        "fieldApplication": "Annoncer le nom du paramètre et la valeur observée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le bon sigle permet de transmettre le paramètre sans ambiguïté.",
+      "common_mistake": "Les appareils peuvent afficher plusieurs données, mais elles ne désignent pas la même mesure.",
+      "key_takeaway": "SpO₂ : saturation pulsée en oxygène.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "L’oxymètre affiche une valeur inattendue chez un patient dont les doigts sont froids. Quelle attitude pédagogique est la plus sûre ?",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q06-a1",
+          "text": "Replacer la mesure dans l’examen clinique et vérifier les conditions de mesure",
+          "explanation": "Le support présente la SpO₂ comme une donnée qui complète l’observation."
+        },
+        {
+          "id": "dea-p06-l06-q06-a2",
+          "text": "Conclure immédiatement à un diagnostic précis",
+          "explanation": "Une valeur isolée ne suffit pas à établir une cause."
+        },
+        {
+          "id": "dea-p06-l06-q06-a3",
+          "text": "Ignorer systématiquement toute valeur de SpO₂",
+          "explanation": "La mesure reste utile lorsqu’elle est interprétée avec le contexte."
+        },
+        {
+          "id": "dea-p06-l06-q06-a4",
+          "text": "Remplacer le comptage de la fréquence par la SpO₂",
+          "explanation": "Les deux paramètres apportent des informations distinctes."
+        }
+      ],
+      "correctAnswer": "dea-p06-l06-q06-a1",
+      "explanation": "La mesure doit être cohérente avec le patient et les conditions techniques.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La mesure doit être cohérente avec le patient et les conditions techniques.",
+        "commonMistake": "Un chiffre précis peut donner une illusion de certitude.",
+        "keyTakeaway": "Vérifier la mesure, observer le patient, transmettre l’ensemble.",
+        "fieldApplication": "Croiser SpO₂, fréquence, rythme, amplitude et signes.",
+        "safetyPoint": "Une dégradation clinique prime sur la recherche d’une mesure parfaite."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La mesure doit être cohérente avec le patient et les conditions techniques.",
+      "common_mistake": "Un chiffre précis peut donner une illusion de certitude.",
+      "key_takeaway": "Vérifier la mesure, observer le patient, transmettre l’ensemble.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles données complètent utilement une SpO₂ dans un bilan respiratoire ?",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q07-a1",
+          "text": "La fréquence respiratoire",
+          "explanation": "Elle renseigne sur le nombre de cycles."
+        },
+        {
+          "id": "dea-p06-l06-q07-a2",
+          "text": "Le rythme respiratoire",
+          "explanation": "Il peut être régulier ou irrégulier."
+        },
+        {
+          "id": "dea-p06-l06-q07-a3",
+          "text": "L’amplitude des mouvements",
+          "explanation": "Elle peut être normale, superficielle ou ample."
+        },
+        {
+          "id": "dea-p06-l06-q07-a4",
+          "text": "Les signes cliniques observés",
+          "explanation": "Ils contextualisent la mesure."
+        },
+        {
+          "id": "dea-p06-l06-q07-a5",
+          "text": "Le nombre théorique de lobes uniquement",
+          "explanation": "Cette anatomie ne décrit pas l’état respiratoire instantané."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l06-q07-a1",
+        "dea-p06-l06-q07-a2",
+        "dea-p06-l06-q07-a3",
+        "dea-p06-l06-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l06-q07-a1",
+        "dea-p06-l06-q07-a2",
+        "dea-p06-l06-q07-a3",
+        "dea-p06-l06-q07-a4"
+      ],
+      "explanation": "Les paramètres sélectionnés construisent une observation respiratoire complète.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les paramètres sélectionnés construisent une observation respiratoire complète.",
+        "commonMistake": "Se fier à un seul écran fait perdre les signes visibles et la dynamique.",
+        "keyTakeaway": "SpO₂ plus fréquence, rythme, amplitude et clinique.",
+        "fieldApplication": "Transmettre un ensemble cohérent de données."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les paramètres sélectionnés construisent une observation respiratoire complète.",
+      "common_mistake": "Se fier à un seul écran fait perdre les signes visibles et la dynamique.",
+      "key_takeaway": "SpO₂ plus fréquence, rythme, amplitude et clinique.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l06-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Pourquoi ne doit-on pas confondre 21 % d’oxygène dans l’air et une SpO₂ ?",
+      "answers": [
+        {
+          "id": "dea-p06-l06-q08-a1",
+          "text": "Le premier décrit la composition d’un gaz, la seconde estime une saturation pulsée",
+          "explanation": "Les deux pourcentages portent sur des objets différents."
+        },
+        {
+          "id": "dea-p06-l06-q08-a2",
+          "text": "Les deux valeurs mesurent exactement la même chose",
+          "explanation": "Composition de l’air et saturation sanguine sont distinctes."
+        },
+        {
+          "id": "dea-p06-l06-q08-a3",
+          "text": "La SpO₂ mesure le nombre de respirations",
+          "explanation": "Cette donnée correspond à la fréquence respiratoire."
+        },
+        {
+          "id": "dea-p06-l06-q08-a4",
+          "text": "Les 21 % décrivent la quantité de dioxyde de carbone",
+          "explanation": "Ils correspondent à l’oxygène de l’air ambiant."
+        }
+      ],
+      "correctAnswer": "dea-p06-l06-q08-a1",
+      "explanation": "Le symbole pourcentage ne suffit pas à rendre deux mesures comparables.",
+      "knowledgeIds": [
+        "K-DEA-P06-008",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "sourcePages": "24-26, 72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l06",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le symbole pourcentage ne suffit pas à rendre deux mesures comparables.",
+        "commonMistake": "Comparer des nombres sans nommer leur grandeur produit une erreur de raisonnement.",
+        "keyTakeaway": "Toujours identifier ce que le pourcentage représente.",
+        "fieldApplication": "Annoncer « SpO₂ » plutôt qu’un pourcentage isolé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le symbole pourcentage ne suffit pas à rendre deux mesures comparables.",
+      "common_mistake": "Comparer des nombres sans nommer leur grandeur produit une erreur de raisonnement.",
+      "key_takeaway": "Toujours identifier ce que le pourcentage représente.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26, 72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+        "sourcePages": "24-26, 72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-008",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

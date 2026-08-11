@@ -622,10 +622,10 @@
         "Comprendre les échanges gazeux.",
         "Comprendre l'oxygénation."
       ],
-      "difficulty": null,
-      "difficultyLabel": null,
-      "estimatedMinutes": null,
-      "estimatedDurationLabel": null,
+      "difficulty": "easy",
+      "difficultyLabel": "Débutant",
+      "estimatedMinutes": 75,
+      "estimatedDurationLabel": "≈ 75 minutes",
       "xp": null,
       "badge": ": Maître du Souffle",
       "chest": null,
@@ -690,8 +690,6 @@
       "contentStatus": "partial",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],

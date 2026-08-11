@@ -622,8 +622,8 @@
       "theme": "blue",
       "stage": "core_dea",
       "pedagogicalScope": "foundation",
-      "difficulty": null,
-      "estimatedMinutes": null,
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
       "xp": null,
       "badge": ": Maître du Souffle",
       "chest": null,
@@ -632,22 +632,76 @@
       "prerequisiteIds": [
         "dea-p05-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],
       "sourceAnchor": "Parcours 6 — Système respiratoire",
       "lessons": [
         {
+          "id": "dea-p06-l01",
+          "title": "Les voies aériennes",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-01.json"
+        },
+        {
+          "id": "dea-p06-l02",
+          "title": "Les poumons",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-02.json"
+        },
+        {
+          "id": "dea-p06-l03",
+          "title": "Le diaphragme",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-03.json"
+        },
+        {
+          "id": "dea-p06-l04",
+          "title": "La ventilation",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-04.json"
+        },
+        {
+          "id": "dea-p06-l05",
+          "title": "Les échanges gazeux",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-05.json"
+        },
+        {
+          "id": "dea-p06-l06",
+          "title": "L’oxygène",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-06.json"
+        },
+        {
+          "id": "dea-p06-l07",
+          "title": "Les principales valeurs normales",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-06/lesson-07.json"
+        },
+        {
           "id": "dea-p06-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-06/lesson-08.json"
+        },
+        {
+          "id": "dea-p06-boss",
+          "title": "Boss - Système respiratoire",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-06/lesson-09.json"
         }
       ]
     },
