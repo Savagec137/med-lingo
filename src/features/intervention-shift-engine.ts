@@ -1,6 +1,13 @@
 import type { InterventionScenario, MissionResult } from "./intervention-domain.ts";
 import { acceptInterventionMission, createInterventionSession } from "./intervention-engine.ts";
 import {
+  applyClinicalDecision,
+  applyClinicalQualityToResult,
+  assessClinicalHandover,
+  buildClinicalDebrief,
+  createClinicalPatientState,
+} from "./intervention-clinical-engine.ts";
+import {
   AFTRAL_CASE_CATALOG,
   ENVIRONMENTS_BY_ILLUSTRATION,
   SHIFT_ADDRESSES,
@@ -9,12 +16,15 @@ import {
 } from "./intervention-shift-catalog.ts";
 import {
   EMPTY_SHIFT_STATS,
+  INTERVENTION_SIMULATION_LEVELS,
   INTERVENTION_SHIFT_END_MINUTE,
-  INTERVENTION_SHIFT_MAX_CALLS,
+  INTERVENTION_SIMULATION_MAX_CALLS,
   INTERVENTION_SHIFT_START_MINUTE,
   type DispatchActionId,
   type DynamicShiftCall,
   type InterventionShiftSession,
+  type InterventionSimulationLevel,
+  type ShiftCompletedIntervention,
   type ShiftSummary,
   type ShiftTraffic,
   type ShiftTravelDecision,
@@ -65,14 +75,17 @@ export function formatShiftMinute(minute: number) {
 export function createInterventionShift(
   seed: string,
   nowMs = Date.now(),
+  difficultyLevel: InterventionSimulationLevel = "beginner",
 ): InterventionShiftSession {
   if (!seed.trim()) throw new Error("Une graine est obligatoire pour générer la garde.");
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: `guard-${hashString(seed).toString(36)}`,
     seed,
     status: "briefing",
     roleScope: "hybrid-training",
+    difficultyLevel,
+    maxCalls: INTERVENTION_SIMULATION_MAX_CALLS[difficultyLevel],
     startMinute: INTERVENTION_SHIFT_START_MINUTE,
     endMinute: INTERVENTION_SHIFT_END_MINUTE,
     currentMinute: INTERVENTION_SHIFT_START_MINUTE,
@@ -89,12 +102,49 @@ export function createInterventionShift(
   };
 }
 
+export function configureShiftDifficulty(
+  session: InterventionShiftSession,
+  difficultyLevel: InterventionSimulationLevel,
+  nowMs = Date.now(),
+) {
+  if (session.status !== "briefing") return session;
+  return {
+    ...session,
+    difficultyLevel,
+    maxCalls: INTERVENTION_SIMULATION_MAX_CALLS[difficultyLevel],
+    updatedAtMs: nowMs,
+  };
+}
+
+export function getScenariosForSimulationLevel(
+  scenarios: readonly InterventionScenario[],
+  difficultyLevel: InterventionSimulationLevel,
+) {
+  if (difficultyLevel === "full-shift") return [...scenarios];
+  if (difficultyLevel === "critical") {
+    return scenarios.filter((scenario) => (scenario.difficultyStars ?? 1) >= 4);
+  }
+  const maximumStars: Record<
+    Exclude<InterventionSimulationLevel, "critical" | "full-shift">,
+    number
+  > = {
+    beginner: 1,
+    intermediate: 2,
+    advanced: 3,
+  };
+  const maximum = maximumStars[difficultyLevel];
+  return scenarios.filter((scenario) => (scenario.difficultyStars ?? 1) <= maximum);
+}
+
 function getScenarioPool(
   scenarios: readonly InterventionScenario[],
   usedScenarioIds: readonly string[],
+  difficultyLevel: InterventionSimulationLevel,
 ) {
-  const unused = scenarios.filter((scenario) => !usedScenarioIds.includes(scenario.id));
-  return unused.length > 0 ? unused : scenarios;
+  const eligible = getScenariosForSimulationLevel(scenarios, difficultyLevel);
+  const safePool = eligible.length > 0 ? eligible : [...scenarios];
+  const unused = safePool.filter((scenario) => !usedScenarioIds.includes(scenario.id));
+  return unused.length > 0 ? unused : safePool;
 }
 
 function getEnvironment(scenario: InterventionScenario, seed: string, callIndex: number) {
@@ -111,7 +161,7 @@ function generateCall(
   callIndex: number,
 ): DynamicShiftCall {
   if (scenarios.length === 0) throw new Error("Aucun scénario n'est disponible pour la garde.");
-  const pool = getScenarioPool(scenarios, shift.usedScenarioIds);
+  const pool = getScenarioPool(scenarios, shift.usedScenarioIds, shift.difficultyLevel);
   const scenario = pickByKey(pool, shift.seed, `call:${callIndex}:scenario`);
   const variants = getCaseVariantsForScenario(scenario.id);
   const variant =
@@ -358,6 +408,10 @@ export function arriveOnScene(
       call.context.etaMinutes * 60 +
       call.travelDecision.timeDeltaSeconds,
   };
+  const clinicalState = createClinicalPatientState(
+    scenario,
+    call.dispatchRecords.length === DISPATCH_ORDER.length,
+  );
   return {
     ...session,
     status: "mission" as const,
@@ -365,6 +419,7 @@ export function arriveOnScene(
     activeCall: {
       ...call,
       missionSession,
+      clinicalState,
       missionStartedAtMs: nowMs,
       missionElapsedSeconds: 0,
     },
@@ -404,12 +459,16 @@ export function completeShiftIntervention(
   const call = session.activeCall;
   if (session.status !== "mission" || !call?.missionSession) return session;
   if (session.completedInterventions.some((item) => item.callId === call.id)) return session;
-  const correctDecisions = result.goodDecisions.length;
-  const totalDecisions = correctDecisions + result.errors.length;
+  const clinicalState = call.clinicalState ?? createClinicalPatientState(scenario, true);
+  const adjusted = applyClinicalQualityToResult(result, clinicalState);
+  const finalResult = adjusted.result;
+  const debrief = buildClinicalDebrief(scenario, finalResult, clinicalState);
+  const correctDecisions = finalResult.goodDecisions.length;
+  const totalDecisions = correctDecisions + finalResult.errors.length;
   const patientCount = patientCountForScenario(scenario);
   const classification = classifyScenario(scenario);
   const interventionMinutes = clamp(
-    Math.max(scenario.estimatedMinutes, Math.ceil(result.elapsedSeconds / 60)) + 5,
+    Math.max(scenario.estimatedMinutes, Math.ceil(finalResult.elapsedSeconds / 60)) + 5,
     12,
     95,
   );
@@ -424,22 +483,28 @@ export function completeShiftIntervention(
     title: call.title,
     specialty: call.specialty,
     patientCount,
-    score: result.score,
-    grade: result.grade,
-    xp: result.xp,
-    coins: result.coins,
-    chest: result.chest,
-    badge: result.badge,
+    score: finalResult.score,
+    grade: finalResult.grade,
+    xp: finalResult.xp,
+    coins: finalResult.coins,
+    chest: finalResult.chest,
+    badge: finalResult.badge,
     correctDecisions,
     totalDecisions,
-    elapsedSeconds: result.elapsedSeconds,
+    elapsedSeconds: finalResult.elapsedSeconds,
     completedAtMinute,
+    clinicalOutcome: clinicalState.outcome,
+    clinicalScore: clinicalState.overallState,
+    rewardFactor: adjusted.rewardFactor,
+    debrief,
   };
   const nextInterventionCount = session.stats.interventions + 1;
   const weightedScore = Math.round(
-    (session.operationalScore * session.stats.interventions + result.score) / nextInterventionCount,
+    (session.operationalScore * session.stats.interventions + finalResult.score) /
+      nextInterventionCount,
   );
-  const vigilanceCost = 4 + (scenario.difficultyStars ?? 1) * 2 + Math.min(6, result.errors.length);
+  const vigilanceCost =
+    4 + (scenario.difficultyStars ?? 1) * 2 + Math.min(6, finalResult.errors.length);
 
   return {
     ...session,
@@ -449,7 +514,7 @@ export function completeShiftIntervention(
     operationalScore: clamp(weightedScore, 0, 100),
     completedInterventions: [...session.completedInterventions, completed],
     usedScenarioIds: Array.from(new Set([...session.usedScenarioIds, scenario.id])),
-    lastResult: result,
+    lastResult: finalResult,
     stats: {
       interventions: nextInterventionCount,
       patients: session.stats.patients + patientCount,
@@ -460,9 +525,10 @@ export function completeShiftIntervention(
       correctDecisions: session.stats.correctDecisions + correctDecisions,
       totalDecisions: session.stats.totalDecisions + totalDecisions,
       totalResponseMinutes: session.stats.totalResponseMinutes + call.context.etaMinutes,
-      xp: session.stats.xp + result.xp,
-      coins: session.stats.coins + result.coins,
-      chests: session.stats.chests + (result.chest ? 1 : 0),
+      xp: session.stats.xp + finalResult.xp,
+      coins: session.stats.coins + finalResult.coins,
+      chests: session.stats.chests + (finalResult.chest ? 1 : 0),
+      failures: session.stats.failures + (clinicalState.outcome === "failed" ? 1 : 0),
     },
     updatedAtMs: nowMs,
   };
@@ -476,7 +542,7 @@ export function requestNextShiftCall(
   if (session.status !== "intervention-summary") return session;
   if (
     session.currentMinute >= session.endMinute ||
-    session.completedInterventions.length >= INTERVENTION_SHIFT_MAX_CALLS
+    session.completedInterventions.length >= session.maxCalls
   ) {
     return {
       ...session,
@@ -561,10 +627,15 @@ export function isPersistedInterventionShift(value: unknown): value is Intervent
   if (!value || typeof value !== "object") return false;
   const candidate = value as Partial<InterventionShiftSession>;
   return (
-    candidate.schemaVersion === 1 &&
+    candidate.schemaVersion === 2 &&
     typeof candidate.id === "string" &&
     typeof candidate.seed === "string" &&
     typeof candidate.status === "string" &&
+    typeof candidate.difficultyLevel === "string" &&
+    INTERVENTION_SIMULATION_LEVELS.includes(candidate.difficultyLevel) &&
+    typeof candidate.maxCalls === "number" &&
+    Number.isInteger(candidate.maxCalls) &&
+    candidate.maxCalls >= 1 &&
     typeof candidate.currentMinute === "number" &&
     Number.isFinite(candidate.currentMinute) &&
     typeof candidate.vigilance === "number" &&
@@ -576,6 +647,96 @@ export function isPersistedInterventionShift(value: unknown): value is Intervent
   );
 }
 
+function hasLegacyShiftShape(value: unknown) {
+  if (!value || typeof value !== "object") return false;
+  const candidate = value as Record<string, unknown>;
+  return (
+    candidate.schemaVersion === 1 &&
+    typeof candidate.id === "string" &&
+    typeof candidate.seed === "string" &&
+    typeof candidate.status === "string" &&
+    typeof candidate.currentMinute === "number" &&
+    typeof candidate.vigilance === "number" &&
+    Array.isArray(candidate.completedInterventions) &&
+    Array.isArray(candidate.usedScenarioIds) &&
+    Boolean(candidate.stats)
+  );
+}
+
+/**
+ * Migre les gardes locales V1 sans toucher à Supabase. Une mission en cours
+ * reconstruit son état clinique à partir de l'historique de décisions déjà
+ * sauvegardé, afin de préserver la reprise après actualisation.
+ */
+export function restoreInterventionShift(
+  value: unknown,
+  scenarios: readonly InterventionScenario[],
+): InterventionShiftSession | null {
+  if (isPersistedInterventionShift(value)) return value;
+  if (!hasLegacyShiftShape(value)) return null;
+
+  const legacy = value as Record<string, unknown>;
+  const difficultyLevel: InterventionSimulationLevel = "full-shift";
+  const stats = legacy.stats as InterventionShiftSession["stats"];
+  const completedInterventions = (
+    legacy.completedInterventions as Array<
+      Omit<
+        ShiftCompletedIntervention,
+        "clinicalOutcome" | "clinicalScore" | "rewardFactor" | "debrief"
+      >
+    >
+  ).map((completed): ShiftCompletedIntervention => ({
+    ...completed,
+    clinicalOutcome: "unstable",
+    clinicalScore: completed.score,
+    rewardFactor: 1,
+    debrief: {
+      outcome: "unstable",
+      outcomeLabel: "Résultat antérieur conservé",
+      successfulActions: [],
+      errors: [],
+      consequences: [],
+      pulseLessons: [],
+      knowledgeReferences: [],
+      handover: assessClinicalHandover([], 0, false, "unstable"),
+    },
+  }));
+
+  let migrated = {
+    ...(legacy as unknown as InterventionShiftSession),
+    schemaVersion: 2 as const,
+    difficultyLevel,
+    maxCalls: INTERVENTION_SIMULATION_MAX_CALLS[difficultyLevel],
+    completedInterventions,
+    stats: { ...stats, failures: stats.failures ?? 0 },
+  };
+
+  const call = migrated.activeCall;
+  if (migrated.status === "mission" && call?.missionSession && !call.clinicalState) {
+    const scenario = scenarios.find((item) => item.id === call.scenarioId);
+    if (!scenario) return null;
+    let clinicalState = createClinicalPatientState(
+      scenario,
+      call.dispatchRecords.length === DISPATCH_ORDER.length,
+    );
+    for (const decision of call.missionSession.history) {
+      clinicalState = applyClinicalDecision(
+        clinicalState,
+        decision,
+        call.missionSession.history.filter(
+          (historyDecision) =>
+            call.missionSession!.history.indexOf(historyDecision) <=
+            call.missionSession!.history.indexOf(decision),
+        ),
+        call.dispatchRecords.length === DISPATCH_ORDER.length,
+        call.missionSession.simulatedTimeSeconds,
+      );
+    }
+    migrated = { ...migrated, activeCall: { ...call, clinicalState } };
+  }
+  return migrated;
+}
+
 export function validateAftralCatalog(scenarios: readonly InterventionScenario[]) {
   const scenarioIds = new Set(scenarios.map((scenario) => scenario.id));
   return AFTRAL_CASE_CATALOG.flatMap((item) => {
@@ -585,4 +746,3 @@ export function validateAftralCatalog(scenarios: readonly InterventionScenario[]
     return [];
   });
 }
-

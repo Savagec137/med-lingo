@@ -12,6 +12,10 @@ Le module est volontairement isolé des leçons, des quiz, de Pulse et de Supaba
 - `intervention-official-scenarios.ts` charge et expose le catalogue officiel à l'interface.
 - `intervention-scenarios.ts` conserve les trois scénarios historiques, mais n'alimente plus le chapitre officiel.
 - `intervention-engine.ts` applique les décisions, embranchements, scores et récompenses sans dépendre de React.
+- `intervention-clinical-engine.ts` projette les effets déjà présents dans les scénarios vers un état clinique, des constantes bornées, un état d’échec, une surveillance et un débrief. Il ne crée aucun protocole de soins.
+- `intervention-clinical-sources.ts` relie le débrief à des connaissances locales `source_verified` de la bibliothèque documentaire.
+- `intervention-shift-engine.ts` orchestre la garde, les cinq niveaux de simulation et la pondération des récompenses sans écrire dans Supabase.
+- `use-intervention-shift.ts` persiste et migre la garde locale, applique une décision clinique une seule fois et permet la réévaluation des constantes.
 - `use-intervention-session.ts` relie le moteur à l'interface et conserve les meilleurs résultats dans `localStorage`.
 - Les composants `Intervention*` rendent les quatre vues : catalogue, alerte, mission et débriefing.
 - `routes/intervention.tsx` orchestre ces vues sans contenir la logique métier.
@@ -34,8 +38,22 @@ Le test `../content/content-engine.test.ts` vérifie le schéma, les recherches 
 
 Les actions sont des boutons natifs, les étapes exposent `aria-current`, les changements déplacent le focus vers le nouveau titre et les retours sont annoncés avec `role=status`. `prefers-reduced-motion` désactive les transitions décoratives. Les animations utilisent seulement `transform` et `opacity`; aucun moteur 3D ni boucle de rendu n'est chargé.
 
-## Persistance
+## Simulation clinique et transmission
 
-Seuls les meilleurs scores, temps et notes sont enregistrés localement. Un score de 60 % minimum valide la mission et déverrouille la suivante. Les récompenses affichées sont des résultats d'entraînement et ne créditent pas l'inventaire Supabase. Une future intégration serveur pourra écouter la fin de mission sans modifier le moteur de scénarios.
+La garde dynamique conserve les quinze scénarios et leurs décisions validées. Les effets `patient` existants alimentent un état clinique séparé : amélioration, stabilisation, aggravation ou échec. Les valeurs numériques déjà présentes (FC, TA, SpO₂, FR, température, Glasgow, douleur et glycémie lorsqu’elles existent) évoluent dans des bornes de simulation. Une observation qualitative reste qualitative : le moteur n’invente jamais une constante absente.
+
+Le bouton de réévaluation ajoute un point à la chronologie et actualise le bilan. La transmission contrôle sept champs : contexte, sécurité, première impression/ABCDE, constantes et interrogatoire, gestes, évolution et décision attendue. Un champ manquant produit une question ciblée du médecin régulateur. Ce mécanisme est un retour pédagogique déterministe, pas un modèle physiologique ni une prescription.
+
+Les niveaux `beginner`, `intermediate`, `advanced`, `critical` et `full-shift` limitent le catalogue disponible et le nombre d’appels ; ils ne modifient jamais le contenu clinique d’un scénario.
+
+## Persistance et récompenses
+
+Les meilleurs scores des missions guidées et la garde dynamique en cours sont enregistrés localement. Les anciennes gardes locales sont migrées vers le schéma clinique lors de leur reprise. Un score de 60 % minimum valide une mission guidée et déverrouille la suivante.
+
+Dans une garde, l’XP et les pièces sont pondérés par l’état final du patient et la complétude du bilan. Un échec clinique plafonne le score sous 40, réduit fortement XP et pièces, et retire coffre et badge. Les récompenses affichées restent des résultats d’entraînement et ne créditent pas l’inventaire Supabase. Une future intégration serveur devra être idempotente et pourra écouter la fin de mission sans modifier le moteur de scénarios.
+
+## Audit
+
+`npm run audit:intervention` analyse les quinze scénarios, les phases, les choix, les constantes, les chemins d’échec et les références de connaissances. Il génère `INTERVENTION_MODE_AUDIT.md` et `INTERVENTION_MODE_AUDIT.json` sans modifier les données pédagogiques. Toute référence cassée ou absence de chemin d’échec doit bloquer la validation technique.
 
 Les contenus sensibles restant à faire valider avant publication sont listés dans `INTERVENTION_MEDICAL_REVIEW.md`.

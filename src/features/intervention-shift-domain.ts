@@ -1,8 +1,39 @@
 import type { InterventionSession, MissionResult, PatientTone } from "./intervention-domain.ts";
+import type {
+  ClinicalDebrief,
+  ClinicalOutcome,
+  ClinicalPatientState,
+} from "./intervention-clinical-domain.ts";
 
 export const INTERVENTION_SHIFT_START_MINUTE = 8 * 60;
 export const INTERVENTION_SHIFT_END_MINUTE = 20 * 60;
 export const INTERVENTION_SHIFT_MAX_CALLS = 14;
+
+export const INTERVENTION_SIMULATION_LEVELS = [
+  "beginner",
+  "intermediate",
+  "advanced",
+  "critical",
+  "full-shift",
+] as const;
+
+export type InterventionSimulationLevel = (typeof INTERVENTION_SIMULATION_LEVELS)[number];
+
+export const INTERVENTION_SIMULATION_LEVEL_LABELS: Record<InterventionSimulationLevel, string> = {
+  beginner: "Débutant",
+  intermediate: "Intermédiaire",
+  advanced: "Avancé",
+  critical: "Critique",
+  "full-shift": "Garde complète",
+};
+
+export const INTERVENTION_SIMULATION_MAX_CALLS: Record<InterventionSimulationLevel, number> = {
+  beginner: 1,
+  intermediate: 2,
+  advanced: 3,
+  critical: 4,
+  "full-shift": INTERVENTION_SHIFT_MAX_CALLS,
+};
 
 export type InterventionShiftStatus =
   | "briefing"
@@ -83,6 +114,7 @@ export interface DynamicShiftCall {
   travelUpdate: string;
   travelDecision?: ShiftTravelDecision;
   missionSession?: InterventionSession;
+  clinicalState?: ClinicalPatientState;
   missionStartedAtMs?: number;
   missionElapsedSeconds?: number;
 }
@@ -104,6 +136,10 @@ export interface ShiftCompletedIntervention {
   totalDecisions: number;
   elapsedSeconds: number;
   completedAtMinute: number;
+  clinicalOutcome: ClinicalOutcome;
+  clinicalScore: number;
+  rewardFactor: number;
+  debrief: ClinicalDebrief;
 }
 
 export interface InterventionShiftStats {
@@ -119,14 +155,17 @@ export interface InterventionShiftStats {
   xp: number;
   coins: number;
   chests: number;
+  failures: number;
 }
 
 export interface InterventionShiftSession {
-  schemaVersion: 1;
+  schemaVersion: 2;
   id: string;
   seed: string;
   status: InterventionShiftStatus;
   roleScope: "hybrid-training";
+  difficultyLevel: InterventionSimulationLevel;
+  maxCalls: number;
   startMinute: number;
   endMinute: number;
   currentMinute: number;
@@ -172,5 +211,5 @@ export const EMPTY_SHIFT_STATS: InterventionShiftStats = {
   xp: 0,
   coins: 0,
   chests: 0,
+  failures: 0,
 };
-

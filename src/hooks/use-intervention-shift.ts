@@ -7,20 +7,27 @@ import {
   submitInterventionAnswers,
 } from "@/features/intervention-engine";
 import {
+  applyClinicalDecision,
+  createClinicalPatientState,
+  reassessClinicalPatient,
+} from "@/features/intervention-clinical-engine";
+import {
   answerShiftCall,
   applyDispatchAction,
   arriveOnScene,
   completeShiftIntervention,
+  configureShiftDifficulty,
   createInterventionShift,
   departToCall,
   finishInterventionShift,
-  isPersistedInterventionShift,
+  restoreInterventionShift,
   requestNextShiftCall,
   selectTravelDecision,
   startInterventionShift,
 } from "@/features/intervention-shift-engine";
 import type {
   DispatchActionId,
+  InterventionSimulationLevel,
   InterventionShiftSession,
   TravelDecisionId,
 } from "@/features/intervention-shift-domain";
@@ -31,13 +38,15 @@ function createSeed() {
   return `medoka-${Date.now().toString(36)}-${Math.round(performance.now()).toString(36)}`;
 }
 
-function readPersistedShift(): InterventionShiftSession | null {
+function readPersistedShift(
+  scenarios: readonly InterventionScenario[],
+): InterventionShiftSession | null {
   if (typeof window === "undefined") return null;
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (!stored) return null;
     const parsed: unknown = JSON.parse(stored);
-    return isPersistedInterventionShift(parsed) ? parsed : null;
+    return restoreInterventionShift(parsed, scenarios);
   } catch {
     return null;
   }
@@ -50,9 +59,9 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
   const sessionRef = useRef<InterventionShiftSession | null>(null);
 
   useEffect(() => {
-    setSession(readPersistedShift() ?? createInterventionShift(createSeed()));
+    setSession(readPersistedShift(scenarios) ?? createInterventionShift(createSeed()));
     setHydrated(true);
-  }, []);
+  }, [scenarios]);
 
   useEffect(() => {
     sessionRef.current = session;
@@ -119,6 +128,12 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
     );
   }, [scenarios]);
 
+  const selectDifficulty = useCallback((difficultyLevel: InterventionSimulationLevel) => {
+    setSession((current) =>
+      current ? configureShiftDifficulty(current, difficultyLevel, Date.now()) : current,
+    );
+  }, []);
+
   const answerCall = useCallback(() => {
     setSession((current) => (current ? answerShiftCall(current, Date.now()) : current));
   }, []);
@@ -151,11 +166,27 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
         if (!current || current.status !== "mission" || !call?.missionSession) return current;
         const scenario = scenarios.find((item) => item.id === call.scenarioId);
         if (!scenario) return current;
+        const nextMissionSession = submitInterventionAnswers(
+          scenario,
+          call.missionSession,
+          choiceIds,
+        );
+        if (nextMissionSession === call.missionSession || !nextMissionSession.pendingDecision) {
+          return current;
+        }
+        const clinicalState = applyClinicalDecision(
+          call.clinicalState ?? createClinicalPatientState(scenario, true),
+          nextMissionSession.pendingDecision,
+          nextMissionSession.history,
+          call.dispatchRecords.length === 4,
+          nextMissionSession.simulatedTimeSeconds,
+        );
         return {
           ...current,
           activeCall: {
             ...call,
-            missionSession: submitInterventionAnswers(scenario, call.missionSession, choiceIds),
+            missionSession: nextMissionSession,
+            clinicalState,
           },
           updatedAtMs: Date.now(),
         };
@@ -164,13 +195,54 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
     [scenarios],
   );
 
+  const reassessPatient = useCallback(() => {
+    setSession((current) => {
+      const call = current?.activeCall;
+      if (
+        !current ||
+        current.status !== "mission" ||
+        !call?.missionSession ||
+        call.missionSession.pendingDecision
+      ) {
+        return current;
+      }
+      const scenario = scenarios.find((item) => item.id === call.scenarioId);
+      const step = scenario ? getCurrentScenarioStep(scenario, call.missionSession) : undefined;
+      if (!scenario || !step) return current;
+      const clinicalState = reassessClinicalPatient(
+        call.clinicalState ?? createClinicalPatientState(scenario, true),
+        step.phase,
+        step.id,
+        call.missionSession.history,
+        call.dispatchRecords.length === 4,
+        call.missionSession.simulatedTimeSeconds + 45,
+      );
+      return {
+        ...current,
+        activeCall: {
+          ...call,
+          clinicalState,
+          missionSession: {
+            ...call.missionSession,
+            simulatedTimeSeconds: call.missionSession.simulatedTimeSeconds + 45,
+          },
+        },
+        updatedAtMs: Date.now(),
+      };
+    });
+  }, [scenarios]);
+
   const continueMission = useCallback(() => {
     setSession((current) => {
       const call = current?.activeCall;
       if (!current || current.status !== "mission" || !call?.missionSession) return current;
       const scenario = scenarios.find((item) => item.id === call.scenarioId);
       if (!scenario) return current;
-      const nextMissionSession = continueIntervention(scenario, call.missionSession);
+      const continuedMissionSession = continueIntervention(scenario, call.missionSession);
+      const nextMissionSession =
+        call.clinicalState?.outcome === "failed"
+          ? { ...continuedMissionSession, status: "debrief" as const, pendingDecision: null }
+          : continuedMissionSession;
       const timestamp = Date.now();
       const elapsedSeconds =
         (call.missionElapsedSeconds ?? 0) +
@@ -199,8 +271,9 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
   }, []);
 
   const resetShift = useCallback(() => {
-    const fresh = createInterventionShift(createSeed());
-    setSession(fresh);
+    setSession((current) =>
+      createInterventionShift(createSeed(), Date.now(), current?.difficultyLevel ?? "beginner"),
+    );
     setNowMs(Date.now());
   }, []);
 
@@ -234,16 +307,17 @@ export function useInterventionShift(scenarios: readonly InterventionScenario[])
     currentStep,
     elapsedSeconds,
     startShift,
+    selectDifficulty,
     answerCall,
     selectDispatchAction,
     depart,
     chooseTravelDecision,
     arrive,
     submitMissionAnswers,
+    reassessPatient,
     continueMission,
     nextCall,
     finishShift,
     resetShift,
   };
 }
-
