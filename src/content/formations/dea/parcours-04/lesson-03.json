@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l03",
+  "title": "Les articulations",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Définir une articulation.",
+    "Distinguer cartilage, capsule synoviale et ligaments.",
+    "Reconnaître les mouvements et les degrés de mobilité cités."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l02"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l03-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où se situe une articulation ?",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q01-a1",
+          "text": "À l’union de deux os",
+          "explanation": "Le support définit l’articulation à l’union de deux os."
+        },
+        {
+          "id": "dea-p04-l03-q01-a2",
+          "text": "Au centre de la diaphyse",
+          "explanation": "La diaphyse est le corps d’un os long, pas l’union de deux os."
+        },
+        {
+          "id": "dea-p04-l03-q01-a3",
+          "text": "Entre un muscle et un tendon",
+          "explanation": "Le tendon relie le muscle au segment osseux dans la description du support."
+        },
+        {
+          "id": "dea-p04-l03-q01-a4",
+          "text": "Uniquement dans le rachis",
+          "explanation": "Les articulations existent dans de nombreuses régions du squelette."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q01-a1",
+      "explanation": "Une articulation correspond à la zone d’union entre deux os.",
+      "knowledgeIds": [
+        "K-DEA-P04-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une articulation correspond à la zone d’union entre deux os.",
+        "commonMistake": "La confondre avec une partie interne d’un os long fait perdre la notion d’union.",
+        "keyTakeaway": "Articulation = union entre deux os.",
+        "fieldApplication": "Repérer l’articulation avant de décrire précisément une douleur périarticulaire.",
+        "memoryTip": "Deux os qui se rencontrent : une articulation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une articulation correspond à la zone d’union entre deux os.",
+      "common_mistake": "La confondre avec une partie interne d’un os long fait perdre la notion d’union.",
+      "key_takeaway": "Articulation = union entre deux os.",
+      "memory_tip": "Deux os qui se rencontrent : une articulation.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "articulation",
+        "definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l03-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Les ligaments participent à la stabilité d’une articulation.",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q02-true",
+          "text": "Vrai",
+          "explanation": "Le support précise que l’articulation est stabilisée par des ligaments."
+        },
+        {
+          "id": "dea-p04-l03-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : la stabilité ligamentaire est explicitement citée."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q02-true",
+      "explanation": "Les ligaments contribuent à stabiliser l’union articulaire.",
+      "knowledgeIds": [
+        "K-DEA-P04-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les ligaments contribuent à stabiliser l’union articulaire.",
+        "commonMistake": "Une erreur fréquente consiste à attribuer ce rôle au tendon, dont la relation décrite est muscle-os.",
+        "keyTakeaway": "Ligament : stabilité articulaire ; tendon : insertion musculaire sur l’os.",
+        "fieldApplication": "Nommer la structure concernée sans conclure sur la nature d’une lésion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les ligaments contribuent à stabiliser l’union articulaire.",
+      "common_mistake": "Une erreur fréquente consiste à attribuer ce rôle au tendon, dont la relation décrite est muscle-os.",
+      "key_takeaway": "Ligament : stabilité articulaire ; tendon : insertion musculaire sur l’os.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "ligament",
+        "stabilite"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l03-q03",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque élément articulaire à son rôle ou à sa localisation décrite.",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q03-a1",
+          "text": "Cartilage articulaire",
+          "match": "Recouvre les surfaces articulaires",
+          "explanation": "Il recouvre les surfaces articulaires décrites."
+        },
+        {
+          "id": "dea-p04-l03-q03-a2",
+          "text": "Liquide synovial",
+          "match": "Présent dans la capsule synoviale",
+          "explanation": "Il est contenu dans la capsule synoviale."
+        },
+        {
+          "id": "dea-p04-l03-q03-a3",
+          "text": "Ligaments",
+          "match": "Stabilisent l’articulation",
+          "explanation": "Ils participent à la stabilité de l’articulation."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l03-q03-a1",
+        "dea-p04-l03-q03-a2",
+        "dea-p04-l03-q03-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l03-q03-a1",
+        "dea-p04-l03-q03-a2",
+        "dea-p04-l03-q03-a3"
+      ],
+      "explanation": "Les surfaces sont cartilagineuses, le liquide synovial est dans la capsule et les ligaments stabilisent l’ensemble.",
+      "knowledgeIds": [
+        "K-DEA-P04-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les surfaces sont cartilagineuses, le liquide synovial est dans la capsule et les ligaments stabilisent l’ensemble.",
+        "commonMistake": "Intervertir ligament et liquide synovial mélange une structure de stabilité et un contenu articulaire.",
+        "keyTakeaway": "Cartilage, synovie et ligaments ont des rôles distincts dans l’articulation.",
+        "fieldApplication": "Une description anatomique précise distingue ces éléments au lieu d’employer uniquement « l’articulation »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les surfaces sont cartilagineuses, le liquide synovial est dans la capsule et les ligaments stabilisent l’ensemble.",
+      "common_mistake": "Intervertir ligament et liquide synovial mélange une structure de stabilité et un contenu articulaire.",
+      "key_takeaway": "Cartilage, synovie et ligaments ont des rôles distincts dans l’articulation.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "articulation",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l03-q04",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels mouvements sont explicitement cités dans le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q04-a1",
+          "text": "Flexion",
+          "explanation": "La flexion est citée parmi les mouvements articulaires."
+        },
+        {
+          "id": "dea-p04-l03-q04-a2",
+          "text": "Extension",
+          "explanation": "L’extension est citée parmi les mouvements articulaires."
+        },
+        {
+          "id": "dea-p04-l03-q04-a3",
+          "text": "Rotation",
+          "explanation": "La rotation est citée parmi les mouvements articulaires."
+        },
+        {
+          "id": "dea-p04-l03-q04-a4",
+          "text": "Digestion",
+          "explanation": "La digestion est une fonction d’un autre appareil, pas un mouvement articulaire."
+        },
+        {
+          "id": "dea-p04-l03-q04-a5",
+          "text": "Ventilation",
+          "explanation": "La ventilation n’est pas donnée comme catégorie de mouvement articulaire."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l03-q04-a1",
+        "dea-p04-l03-q04-a2",
+        "dea-p04-l03-q04-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l03-q04-a1",
+        "dea-p04-l03-q04-a2",
+        "dea-p04-l03-q04-a3"
+      ],
+      "explanation": "Flexion, extension et rotation font partie des mouvements articulaires cités avec adduction et abduction.",
+      "knowledgeIds": [
+        "K-DEA-P04-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Flexion, extension et rotation font partie des mouvements articulaires cités avec adduction et abduction.",
+        "commonMistake": "Choisir une fonction physiologique générale à la place d’un mouvement articulaire confond deux niveaux de description.",
+        "keyTakeaway": "Les mouvements cités sont flexion, extension, adduction, abduction et rotation.",
+        "fieldApplication": "Décrire un mouvement observé complète le repérage sans imposer de mobilisation au patient.",
+        "safetyPoint": "Cette notion anatomique ne justifie pas de tester un mouvement douloureux ou traumatique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Flexion, extension et rotation font partie des mouvements articulaires cités avec adduction et abduction.",
+      "common_mistake": "Choisir une fonction physiologique générale à la place d’un mouvement articulaire confond deux niveaux de description.",
+      "key_takeaway": "Les mouvements cités sont flexion, extension, adduction, abduction et rotation.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "mouvement",
+        "articulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-007"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l03-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel exemple correspond à une articulation fixe dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q05-a1",
+          "text": "Les os du crâne",
+          "explanation": "Le support cite les os du crâne comme exemple d’articulation fixe."
+        },
+        {
+          "id": "dea-p04-l03-q05-a2",
+          "text": "Le coude",
+          "explanation": "Le coude est cité comme articulation mobile."
+        },
+        {
+          "id": "dea-p04-l03-q05-a3",
+          "text": "Le muscle strié",
+          "explanation": "Un muscle n’est pas une catégorie de mobilité articulaire."
+        },
+        {
+          "id": "dea-p04-l03-q05-a4",
+          "text": "La diaphyse",
+          "explanation": "La diaphyse est une partie d’un os long."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q05-a1",
+      "explanation": "Les os du crâne illustrent les articulations fixes dans ce support.",
+      "knowledgeIds": [
+        "K-DEA-P04-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les os du crâne illustrent les articulations fixes dans ce support.",
+        "commonMistake": "Le coude est plausible parce qu’il s’agit bien d’une articulation, mais il est mobile.",
+        "keyTakeaway": "Crâne : articulation fixe ; coude : articulation mobile.",
+        "fieldApplication": "Distinguer le degré de mobilité avant de décrire la fonction d’une articulation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les os du crâne illustrent les articulations fixes dans ce support.",
+      "common_mistake": "Le coude est plausible parce qu’il s’agit bien d’une articulation, mais il est mobile.",
+      "key_takeaway": "Crâne : articulation fixe ; coude : articulation mobile.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "articulation-fixe",
+        "crane"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-007"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l03-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une personne montre une douleur exactement au niveau du coude. Quelle structure générale faut-il d’abord identifier dans la transmission anatomique ?",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q06-a1",
+          "text": "Une articulation mobile",
+          "explanation": "Le support cite le coude comme exemple d’articulation mobile."
+        },
+        {
+          "id": "dea-p04-l03-q06-a2",
+          "text": "Une articulation fixe",
+          "explanation": "Le coude permet des mouvements et n’est pas classé fixe."
+        },
+        {
+          "id": "dea-p04-l03-q06-a3",
+          "text": "La diaphyse du fémur",
+          "explanation": "Le fémur appartient au membre inférieur et ne correspond pas au coude."
+        },
+        {
+          "id": "dea-p04-l03-q06-a4",
+          "text": "Un os du crâne",
+          "explanation": "Le crâne est sans rapport avec le repère indiqué."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q06-a1",
+      "explanation": "Le coude est un repère articulaire mobile du membre supérieur.",
+      "knowledgeIds": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-007",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le coude est un repère articulaire mobile du membre supérieur.",
+        "commonMistake": "Décrire toute la zone comme « bras » perd la précision apportée par le repère du coude.",
+        "keyTakeaway": "Nommer d’abord le segment ou l’articulation exacte, puis le côté.",
+        "fieldApplication": "Une formulation utile est « douleur au niveau de l’articulation du coude droit/gauche ».",
+        "safetyPoint": "Ne pas forcer la mobilité d’une articulation douloureuse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le coude est un repère articulaire mobile du membre supérieur.",
+      "common_mistake": "Décrire toute la zone comme « bras » perd la précision apportée par le repère du coude.",
+      "key_takeaway": "Nommer d’abord le segment ou l’articulation exacte, puis le côté.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "coude",
+        "cas",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006",
+          "K-DEA-P04-007",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l03-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le liquide présent dans la capsule articulaire est le liquide ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q07-a1",
+          "text": "synovial",
+          "explanation": "Le support nomme le liquide synovial."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q07-a1",
+      "explanation": "Le mot attendu est « synovial ».",
+      "knowledgeIds": [
+        "K-DEA-P04-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot attendu est « synovial ».",
+        "commonMistake": "Le cartilage recouvre les surfaces ; il ne désigne pas le liquide de la capsule.",
+        "keyTakeaway": "Capsule synoviale et liquide synovial sont liés dans la description de l’articulation.",
+        "fieldApplication": "Employer le vocabulaire exact évite de confondre les composants articulaires."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot attendu est « synovial ».",
+      "common_mistake": "Le cartilage recouvre les surfaces ; il ne désigne pas le liquide de la capsule.",
+      "key_takeaway": "Capsule synoviale et liquide synovial sont liés dans la description de l’articulation.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "synovie",
+        "articulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l03-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Toutes les articulations possèdent le même degré de mobilité.",
+      "answers": [
+        {
+          "id": "dea-p04-l03-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette affirmation efface les catégories fixe, semi-mobile et mobile."
+        },
+        {
+          "id": "dea-p04-l03-q08-false",
+          "text": "Faux",
+          "explanation": "Le support distingue des articulations fixes, semi-mobiles et mobiles."
+        }
+      ],
+      "correctAnswer": "dea-p04-l03-q08-false",
+      "explanation": "L’affirmation est fausse : le degré de mobilité varie selon l’articulation.",
+      "knowledgeIds": [
+        "K-DEA-P04-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les articulations",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l03",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : le degré de mobilité varie selon l’articulation.",
+        "commonMistake": "Prendre le coude comme modèle universel ferait croire que toutes les articulations sont mobiles.",
+        "keyTakeaway": "Trois degrés sont cités : fixe, semi-mobile et mobile.",
+        "fieldApplication": "Adapter la description au repère anatomique concerné, sans généraliser."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : le degré de mobilité varie selon l’articulation.",
+      "common_mistake": "Prendre le coude comme modèle universel ferait croire que toutes les articulations sont mobiles.",
+      "key_takeaway": "Trois degrés sont cités : fixe, semi-mobile et mobile.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "mobilite",
+        "articulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les articulations",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-007"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

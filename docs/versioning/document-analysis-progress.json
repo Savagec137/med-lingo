@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "strategy": "strict_sequential",
+  "active_document_id": null,
+  "last_completed_document_id": "DOC-SAMU-CENTRES-15-2015",
+  "updated_at": "2026-08-04T00:00:00.000Z",
+  "documents": [
+    {
+      "document_id": "DOC-JORF-2022-04-17-0091-0039",
+      "source_filename": "joe_20220417_0091_0039.pdf",
+      "source_path": "docs/official_sources/Code_Santé_Publique/joe_20220417_0091_0039.pdf",
+      "document_version": "2022-04-17",
+      "document_hash": "1495720C9B49765816866161475F9A7958477CB8571B7E3ADED96CA4FE1DE680",
+      "status": "completed",
+      "attempts": 1,
+      "started_at": "2026-08-01T00:00:00.000Z",
+      "completed_at": "2026-08-01T00:00:00.000Z",
+      "output_reference": "docs/master_knowledge_base/documents/DOC-JORF-2022-04-17-0091-0039.json",
+      "knowledge_count": 41,
+      "last_error": null
+    },
+    {
+      "document_id": "DOC-SECURITE-ROUTIERE-URGENCE-2026",
+      "source_filename": "VFF_Referentiel_formation_securite_routiere_et_conduite_en_intervention_urgence_ambulanciers_SMUR_SFMU_AFASH_ANCESU_2026.pdf",
+      "source_path": "docs/official_sources/Transport_Sanitaire/VFF_Referentiel_formation_securite_routiere_et_conduite_en_intervention_urgence_ambulanciers_SMUR_SFMU_AFASH_ANCESU_2026.pdf",
+      "document_version": "2026-01-20",
+      "document_hash": "D04E8064019729EB30F2185BF10B764A001150EDBDAC3F74FC7ED3AB1D58B35B",
+      "status": "completed",
+      "attempts": 1,
+      "started_at": "2026-08-01T00:00:00.000Z",
+      "completed_at": "2026-08-01T00:00:00.000Z",
+      "output_reference": "docs/master_knowledge_base/documents/DOC-SECURITE-ROUTIERE-URGENCE-2026.json",
+      "knowledge_count": 39,
+      "last_error": null
+    },
+    {
+      "document_id": "DOC-SMUR-REFERENTIEL-2013",
+      "source_filename": "Referentiel_SMUR_2013.pdf",
+      "source_path": "docs/official_sources/SMUR/Referentiel_SMUR_2013.pdf",
+      "document_version": "2013",
+      "document_hash": "F26BDD3EBA4660F7A251D4585482EEB15C898362CC1DF9A791CFE0711654D97C",
+      "status": "completed",
+      "attempts": 1,
+      "started_at": "2026-08-01T00:00:00.000Z",
+      "completed_at": "2026-08-01T00:00:00.000Z",
+      "output_reference": "docs/master_knowledge_base/documents/DOC-SMUR-REFERENTIEL-2013.json",
+      "knowledge_count": 35,
+      "last_error": null
+    },
+    {
+      "document_id": "DOC-SAMU-CENTRES-15-2015",
+      "source_filename": "sfmu-sudf_referentiel_samu_2015.pdf",
+      "source_path": "docs/official_sources/SAMU/sfmu-sudf_referentiel_samu_2015.pdf",
+      "document_version": "2015-03",
+      "document_hash": "2FD128293D5A48C79F1574E950EA64D4F454843BDAA4C6DB241E0244B8A7AEB6",
+      "status": "completed",
+      "attempts": 1,
+      "started_at": "2026-08-04T00:00:00.000Z",
+      "completed_at": "2026-08-04T00:00:00.000Z",
+      "output_reference": "docs/master_knowledge_base/documents/DOC-SAMU-CENTRES-15-2015.json",
+      "knowledge_count": 44,
+      "last_error": null
+    }
+  ]
+}

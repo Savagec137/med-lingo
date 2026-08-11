@@ -1,0 +1,876 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-boss",
+  "title": "Boss - Système cardiovasculaire",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 12,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "boss",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Relier cœur, vaisseaux et sang dans le circuit cardiovasculaire.",
+    "Distinguer la petite et la grande circulation.",
+    "Structurer les données essentielles d’une pression artérielle et d’un pouls."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular",
+    "body.organ.function",
+    "body.organization.organ-to-system"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Valider les bases du système cardiovasculaire au niveau DEA.",
+    "scenario": "L’apprenant analyse un schéma circulatoire et des mesures simples, puis sélectionne une transmission factuelle sans poser de diagnostic.",
+    "tasks": [
+      "Reconstituer les deux circulations.",
+      "Identifier les rôles du cœur, des vaisseaux et du sang.",
+      "Transmettre les paramètres observés avec précision."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-boss-q01",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque composant cardiovasculaire à sa fonction.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q01-a1",
+          "text": "Cœur",
+          "match": "Propulsion du sang",
+          "explanation": "Il agit comme une pompe."
+        },
+        {
+          "id": "dea-p05-boss-q01-a2",
+          "text": "Artères",
+          "match": "Départ vers les organes",
+          "explanation": "Elles conduisent depuis le cœur."
+        },
+        {
+          "id": "dea-p05-boss-q01-a3",
+          "text": "Capillaires",
+          "match": "Échanges cellulaires",
+          "explanation": "Ils permettent les échanges."
+        },
+        {
+          "id": "dea-p05-boss-q01-a4",
+          "text": "Veines",
+          "match": "Retour vers le cœur",
+          "explanation": "Elles assurent le retour."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-boss-q01-a1",
+        "dea-p05-boss-q01-a2",
+        "dea-p05-boss-q01-a3",
+        "dea-p05-boss-q01-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-boss-q01-a1",
+        "dea-p05-boss-q01-a2",
+        "dea-p05-boss-q01-a3",
+        "dea-p05-boss-q01-a4"
+      ],
+      "explanation": "Les quatre associations reconstruisent la logique du circuit fermé.",
+      "knowledgeIds": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre associations reconstruisent la logique du circuit fermé.",
+        "commonMistake": "Confondre départ, échange et retour empêche de suivre le flux.",
+        "keyTakeaway": "Pompe → départ → échanges → retour.",
+        "fieldApplication": "Lire le trajet de manière séquentielle."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre associations reconstruisent la logique du circuit fermé.",
+      "common_mistake": "Confondre départ, échange et retour empêche de suivre le flux.",
+      "key_takeaway": "Pompe → départ → échanges → retour.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "circuit"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-001",
+          "K-DEA-P05-005",
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-boss-q02",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue la petite circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q02-a1",
+          "text": "Ventricule droit",
+          "explanation": "Départ du petit circuit.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-boss-q02-a2",
+          "text": "Artère pulmonaire",
+          "explanation": "Conduit vers les poumons.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-boss-q02-a3",
+          "text": "Capillaires pulmonaires",
+          "explanation": "Réseau pulmonaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p05-boss-q02-a4",
+          "text": "Veines pulmonaires",
+          "explanation": "Retour vers le cœur.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p05-boss-q02-a5",
+          "text": "Oreillette gauche",
+          "explanation": "Arrivée du petit circuit.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-boss-q02-a1",
+        "dea-p05-boss-q02-a2",
+        "dea-p05-boss-q02-a3",
+        "dea-p05-boss-q02-a4",
+        "dea-p05-boss-q02-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-boss-q02-a1",
+        "dea-p05-boss-q02-a2",
+        "dea-p05-boss-q02-a3",
+        "dea-p05-boss-q02-a4",
+        "dea-p05-boss-q02-a5"
+      ],
+      "explanation": "Le trajet suit exactement l’ordre du support.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet suit exactement l’ordre du support.",
+        "commonMistake": "Les veines caves et l’aorte appartiennent à l’autre circuit.",
+        "keyTakeaway": "VD → artère pulmonaire → poumons → veines pulmonaires → OG.",
+        "fieldApplication": "Contrôler le départ et l’arrivée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet suit exactement l’ordre du support.",
+      "common_mistake": "Les veines caves et l’aorte appartiennent à l’autre circuit.",
+      "key_takeaway": "VD → artère pulmonaire → poumons → veines pulmonaires → OG.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "petite-circulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p05-boss-q03",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue la grande circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q03-a1",
+          "text": "Ventricule gauche",
+          "explanation": "Départ du grand circuit.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-boss-q03-a2",
+          "text": "Aorte",
+          "explanation": "Conduit vers les organes.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-boss-q03-a3",
+          "text": "Capillaires cellulaires",
+          "explanation": "Réseau tissulaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p05-boss-q03-a4",
+          "text": "Veines caves",
+          "explanation": "Retour vers le cœur.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p05-boss-q03-a5",
+          "text": "Oreillette droite",
+          "explanation": "Arrivée du grand circuit.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-boss-q03-a1",
+        "dea-p05-boss-q03-a2",
+        "dea-p05-boss-q03-a3",
+        "dea-p05-boss-q03-a4",
+        "dea-p05-boss-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-boss-q03-a1",
+        "dea-p05-boss-q03-a2",
+        "dea-p05-boss-q03-a3",
+        "dea-p05-boss-q03-a4",
+        "dea-p05-boss-q03-a5"
+      ],
+      "explanation": "Le trajet suit le ventricule gauche, les tissus puis l’oreillette droite.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet suit le ventricule gauche, les tissus puis l’oreillette droite.",
+        "commonMistake": "Insérer un vaisseau pulmonaire mélange les circuits.",
+        "keyTakeaway": "VG → aorte → tissus → veines caves → OD.",
+        "fieldApplication": "Identifier le territoire tissulaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet suit le ventricule gauche, les tissus puis l’oreillette droite.",
+      "common_mistake": "Insérer un vaisseau pulmonaire mélange les circuits.",
+      "key_takeaway": "VG → aorte → tissus → veines caves → OD.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "grande-circulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p05-boss-q04",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Pendant une mesure manuelle, le premier battement net est entendu. Quelle donnée vient d’être repérée ?",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q04-a1",
+          "text": "La valeur systolique",
+          "explanation": "Le premier battement net caractérise la systolique."
+        },
+        {
+          "id": "dea-p05-boss-q04-a2",
+          "text": "La valeur diastolique",
+          "explanation": "Elle correspond au dernier battement avant disparition.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-boss-q04-a3",
+          "text": "L’amplitude du pouls radial",
+          "explanation": "Il s’agit ici d’une auscultation tensionnelle.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-boss-q04-a4",
+          "text": "La saturation en oxygène",
+          "explanation": "Elle se mesure avec un oxymètre, pas par ce battement.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-boss-q04-a1",
+      "explanation": "Le premier battement net correspond à la valeur systolique.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "66",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le premier battement net correspond à la valeur systolique.",
+        "commonMistake": "Inverser premier et dernier battement inverse les deux valeurs transmises.",
+        "keyTakeaway": "Premier : systolique ; dernier : diastolique.",
+        "fieldApplication": "Noter immédiatement la valeur repérée.",
+        "safetyPoint": "Vérifier les conditions de mesure et l’état clinique global."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le premier battement net correspond à la valeur systolique.",
+      "common_mistake": "Inverser premier et dernier battement inverse les deux valeurs transmises.",
+      "key_takeaway": "Premier : systolique ; dernier : diastolique.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "pression-arterielle",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 66",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "66",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-boss-q05",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Le pouls radial est palpable. Quelle série d’éléments doit être recueillie avant la transmission ?",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q05-a1",
+          "text": "Fréquence, amplitude et rythme",
+          "explanation": "Ces trois caractères sont demandés dans le support."
+        },
+        {
+          "id": "dea-p05-boss-q05-a2",
+          "text": "Seulement la présence du pouls",
+          "explanation": "La présence seule est incomplète.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-boss-q05-a3",
+          "text": "Seulement le groupe sanguin",
+          "explanation": "Le pouls ne donne pas le groupe sanguin.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-boss-q05-a4",
+          "text": "Seulement la température",
+          "explanation": "La température est un autre paramètre.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-boss-q05-a1",
+      "explanation": "Fréquence, amplitude et rythme forment la description structurée du pouls.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Fréquence, amplitude et rythme forment la description structurée du pouls.",
+        "commonMistake": "Transmettre seulement « présent » perd des informations observables utiles.",
+        "keyTakeaway": "FAR : fréquence, amplitude, rythme.",
+        "fieldApplication": "Ajouter le site radial à la transmission.",
+        "safetyPoint": "Toute anomalie doit être confrontée au reste du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Fréquence, amplitude et rythme forment la description structurée du pouls.",
+      "common_mistake": "Transmettre seulement « présent » perd des informations observables utiles.",
+      "key_takeaway": "FAR : fréquence, amplitude, rythme.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "pouls",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-boss-q06",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quelles propositions décrivent correctement les cavités cardiaques ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q06-a1",
+          "text": "Le sang arrive par les veines dans les oreillettes",
+          "explanation": "Le support décrit ce sens d’arrivée."
+        },
+        {
+          "id": "dea-p05-boss-q06-a2",
+          "text": "Le sang part par les artères depuis les ventricules",
+          "explanation": "Le support décrit ce sens de départ."
+        },
+        {
+          "id": "dea-p05-boss-q06-a3",
+          "text": "Le sang arrive toujours directement dans les ventricules",
+          "explanation": "Cette proposition inverse l’arrivée décrite.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-boss-q06-a4",
+          "text": "Les côtés droit et gauche communiquent librement",
+          "explanation": "Le support exclut cette communication normale.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-boss-q06-a1",
+        "dea-p05-boss-q06-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-boss-q06-a1",
+        "dea-p05-boss-q06-a2"
+      ],
+      "explanation": "Oreillettes et ventricules sont respectivement cavités d’arrivée et de départ.",
+      "knowledgeIds": [
+        "K-DEA-P05-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "18",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Oreillettes et ventricules sont respectivement cavités d’arrivée et de départ.",
+        "commonMistake": "Inverser les cavités ou réunir les deux côtés détruit la logique du trajet.",
+        "keyTakeaway": "Veines → oreillettes ; ventricules → artères.",
+        "fieldApplication": "Suivre le flux sur chaque côté du cœur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Oreillettes et ventricules sont respectivement cavités d’arrivée et de départ.",
+      "common_mistake": "Inverser les cavités ou réunir les deux côtés détruit la logique du trajet.",
+      "key_takeaway": "Veines → oreillettes ; ventricules → artères.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "coeur"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "18",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-boss-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque constituant sanguin à sa fonction.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q07-a1",
+          "text": "Globules rouges",
+          "match": "Transport des gaz",
+          "explanation": "Ils transportent O2 et CO2."
+        },
+        {
+          "id": "dea-p05-boss-q07-a2",
+          "text": "Globules blancs",
+          "match": "Défense de l’organisme",
+          "explanation": "Ils participent à la défense."
+        },
+        {
+          "id": "dea-p05-boss-q07-a3",
+          "text": "Plaquettes",
+          "match": "Limitation des phénomènes hémorragiques",
+          "explanation": "Elles colmatent des brèches."
+        },
+        {
+          "id": "dea-p05-boss-q07-a4",
+          "text": "Plasma",
+          "match": "Phase liquide",
+          "explanation": "Il forme la phase liquide."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-boss-q07-a1",
+        "dea-p05-boss-q07-a2",
+        "dea-p05-boss-q07-a3",
+        "dea-p05-boss-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-boss-q07-a1",
+        "dea-p05-boss-q07-a2",
+        "dea-p05-boss-q07-a3",
+        "dea-p05-boss-q07-a4"
+      ],
+      "explanation": "Chaque élément retrouve la fonction décrite page 19.",
+      "knowledgeIds": [
+        "K-DEA-P05-008",
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque élément retrouve la fonction décrite page 19.",
+        "commonMistake": "Une fonction unique ne peut pas être attribuée indistinctement à tous les constituants.",
+        "keyTakeaway": "Gaz, défense, colmatage et phase liquide.",
+        "fieldApplication": "Décrire les fonctions sans interpréter une analyse biologique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque élément retrouve la fonction décrite page 19.",
+      "common_mistake": "Une fonction unique ne peut pas être attribuée indistinctement à tous les constituants.",
+      "key_takeaway": "Gaz, défense, colmatage et phase liquide.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "sang"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-008",
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-boss-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un étudiant affirme : « ce vaisseau est une artère parce que le sang y est riche en oxygène ». Quelle correction est la plus juste ?",
+      "answers": [
+        {
+          "id": "dea-p05-boss-q08-a1",
+          "text": "Une artère est définie par un flux qui part du cœur",
+          "explanation": "Le sens par rapport au cœur est le critère correct."
+        },
+        {
+          "id": "dea-p05-boss-q08-a2",
+          "text": "Toute artère transporte toujours un sang riche en oxygène",
+          "explanation": "L’artère pulmonaire constitue l’exception visible dans le support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-boss-q08-a3",
+          "text": "Une artère revient toujours vers une oreillette",
+          "explanation": "Ce sens définit plutôt le retour veineux.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-boss-q08-a4",
+          "text": "La couleur d’un schéma suffit à identifier le vaisseau",
+          "explanation": "La couleur seule peut induire en erreur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-boss-q08-a1",
+      "explanation": "Le critère fiable est le départ depuis le cœur, non la teneur en oxygène.",
+      "knowledgeIds": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Boss de synthèse",
+      "sourcePages": "18, 21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-boss",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le critère fiable est le départ depuis le cœur, non la teneur en oxygène.",
+        "commonMistake": "Une règle simplifiée sans exception conduit à mal classer l’artère pulmonaire.",
+        "keyTakeaway": "Artère part, veine revient.",
+        "fieldApplication": "S’appuyer sur le sens des flèches et les cavités."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le critère fiable est le départ depuis le cœur, non la teneur en oxygène.",
+      "common_mistake": "Une règle simplifiée sans exception conduit à mal classer l’artère pulmonaire.",
+      "key_takeaway": "Artère part, veine revient.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "boss",
+        "vaisseaux",
+        "raisonnement"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Boss de synthèse",
+        "sourcePages": "18, 21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005",
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

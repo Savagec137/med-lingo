@@ -442,14 +442,78 @@
       "prerequisiteIds": [
         "dea-p03-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
         "xp",
         "chest"
       ],
       "sourceAnchor": "Parcours 4 — Système locomoteur",
-      "lessons": []
+      "lessons": [
+        {
+          "id": "dea-p04-l01",
+          "title": "Le squelette humain",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-01.json"
+        },
+        {
+          "id": "dea-p04-l02",
+          "title": "Les principaux os",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-02.json"
+        },
+        {
+          "id": "dea-p04-l03",
+          "title": "Les articulations",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-03.json"
+        },
+        {
+          "id": "dea-p04-l04",
+          "title": "Les muscles",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-04.json"
+        },
+        {
+          "id": "dea-p04-l05",
+          "title": "Le rachis",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-05.json"
+        },
+        {
+          "id": "dea-p04-l06",
+          "title": "Les membres supérieurs",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-06.json"
+        },
+        {
+          "id": "dea-p04-l07",
+          "title": "Les membres inférieurs",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-07.json"
+        },
+        {
+          "id": "dea-p04-l08",
+          "title": "Synthèse du système locomoteur",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-04/lesson-08.json"
+        },
+        {
+          "id": "dea-p04-boss",
+          "title": "Boss — Système locomoteur",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-04/lesson-09.json"
+        }
+      ]
     },
     {
       "id": "parcours-05",
@@ -463,8 +527,8 @@
       "theme": "blue",
       "stage": "core_dea",
       "pedagogicalScope": "foundation",
-      "difficulty": null,
-      "estimatedMinutes": null,
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
       "xp": null,
       "badge": ": Cœur en Action",
       "chest": null,
@@ -473,22 +537,76 @@
       "prerequisiteIds": [
         "dea-p04-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],
       "sourceAnchor": "Parcours 5 — Système cardiovasculaire",
       "lessons": [
         {
+          "id": "dea-p05-l01",
+          "title": "Le cœur",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-01.json"
+        },
+        {
+          "id": "dea-p05-l02",
+          "title": "Les vaisseaux",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-02.json"
+        },
+        {
+          "id": "dea-p05-l03",
+          "title": "Le sang",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-03.json"
+        },
+        {
+          "id": "dea-p05-l04",
+          "title": "Petite circulation",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-04.json"
+        },
+        {
+          "id": "dea-p05-l05",
+          "title": "Grande circulation",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-05.json"
+        },
+        {
+          "id": "dea-p05-l06",
+          "title": "La pression artérielle",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-06.json"
+        },
+        {
+          "id": "dea-p05-l07",
+          "title": "Le pouls",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-05/lesson-07.json"
+        },
+        {
           "id": "dea-p05-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-05/lesson-08.json"
+        },
+        {
+          "id": "dea-p05-boss",
+          "title": "Boss - Système cardiovasculaire",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-05/lesson-09.json"
         }
       ]
     },

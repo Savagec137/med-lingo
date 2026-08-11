@@ -1,4 +1,4 @@
-import missionCatalog from "./intervention-missions.json";
+import missionCatalog from "./intervention-missions.json" with { type: "json" };
 import {
   buildOfficialCatalog,
   type OfficialMissionProfile,

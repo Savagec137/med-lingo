@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "formationId": "dea",
+  "blocId": "bloc-02",
+  "parcoursId": "parcours-04",
+  "contentId": "dea-p04",
+  "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "validationStatus": "to_validate",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P04-001",
+      "title": "Composition et rôle de l’appareil locomoteur",
+      "summary": "L’appareil locomoteur associe les os, les articulations, les muscles et leurs structures de liaison pour soutenir le corps et permettre le mouvement.",
+      "keyPoints": [
+        "Le squelette forme la charpente du corps.",
+        "Les articulations organisent la mobilité entre les os.",
+        "Les muscles produisent le mouvement des segments osseux."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil locomoteur aux seuls os.",
+        "Confondre articulation et muscle."
+      ],
+      "clinicalApplication": "Nommer séparément l’os, l’articulation et le segment corporel concernés améliore la précision d’un repérage.",
+      "section": "Appareil locomoteur - vue d’ensemble",
+      "pages": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-002",
+      "title": "Organisation générale du squelette",
+      "summary": "Le squelette compte plus de 200 os et s’organise en trois grandes parties : la tête, le tronc et les membres.",
+      "keyPoints": [
+        "La tête comprend le crâne et la face.",
+        "Le tronc comprend notamment le rachis, les côtes et le sternum.",
+        "Les membres comprennent les membres supérieurs et inférieurs."
+      ],
+      "commonErrors": [
+        "Classer le sternum ou les côtes parmi les membres."
+      ],
+      "clinicalApplication": "Cette organisation permet de situer d’abord une zone dans une grande partie du squelette.",
+      "section": "Appareil locomoteur - Les os",
+      "pages": [
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-003",
+      "title": "Catégories d’os",
+      "summary": "Le support distingue les os courts, les os plats et les os longs ; il identifie le sternum comme os plat et l’humérus comme os long.",
+      "keyPoints": [
+        "Trois catégories sont citées : courts, plats et longs.",
+        "Le sternum est explicitement présenté comme un os plat.",
+        "L’humérus illustre la structure d’un os long."
+      ],
+      "commonErrors": [
+        "Déduire du support un exemple d’os court qu’il ne précise pas explicitement."
+      ],
+      "clinicalApplication": "La catégorie d’un os aide à organiser les repères anatomiques sans remplacer l’identification précise de l’os.",
+      "section": "Appareil locomoteur - Les os",
+      "pages": [
+        35,
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-004",
+      "title": "Principaux os et repères du squelette",
+      "summary": "Le support localise notamment le crâne, les vertèbres, la clavicule, le sternum, les côtes, l’humérus, le radius, le cubitus, le fémur, la rotule, le tibia et le péroné.",
+      "keyPoints": [
+        "L’humérus appartient au bras.",
+        "Le radius et le cubitus appartiennent à l’avant-bras.",
+        "Le fémur appartient à la cuisse ; le tibia et le péroné à la jambe."
+      ],
+      "commonErrors": [
+        "Employer bras pour désigner tout le membre supérieur.",
+        "Employer jambe pour désigner tout le membre inférieur."
+      ],
+      "clinicalApplication": "Utiliser le nom du segment et de l’os visible sur le schéma rend une localisation moins vague.",
+      "section": "Appareil locomoteur - schéma des repères osseux",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-005",
+      "title": "Structure d’un os long",
+      "summary": "Un os long comprend une diaphyse centrale et deux épiphyses couvertes de cartilage articulaire.",
+      "keyPoints": [
+        "La diaphyse correspond au corps de l’os long.",
+        "Les épiphyses correspondent aux deux extrémités.",
+        "Le cartilage articulaire recouvre les extrémités décrites."
+      ],
+      "commonErrors": [
+        "Inverser diaphyse et épiphyses."
+      ],
+      "clinicalApplication": "Les termes diaphyse et épiphyse permettent de décrire plus précisément une zone d’un os long.",
+      "section": "Appareil locomoteur - Un os long",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-006",
+      "title": "Articulation, mobilité et stabilité",
+      "summary": "Une articulation se situe à l’union de deux os, organise leur mobilité et est stabilisée par des ligaments.",
+      "keyPoints": [
+        "Les surfaces articulaires sont cartilagineuses.",
+        "Le liquide synovial se trouve dans la capsule synoviale.",
+        "Les ligaments participent à la stabilité."
+      ],
+      "commonErrors": [
+        "Confondre ligament, qui stabilise l’articulation, et tendon."
+      ],
+      "clinicalApplication": "Repérer une articulation aide à distinguer une douleur articulaire d’une douleur située sur un segment osseux.",
+      "section": "Appareil locomoteur - Les articulations",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l03",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-007",
+      "title": "Mouvements articulaires",
+      "summary": "Le support cite la flexion, l’extension, l’adduction, l’abduction et la rotation parmi les mouvements permis par les articulations.",
+      "keyPoints": [
+        "Les articulations peuvent être fixes, semi-mobiles ou mobiles.",
+        "Les os du crâne illustrent les articulations fixes.",
+        "Le coude illustre une articulation mobile."
+      ],
+      "commonErrors": [
+        "Prendre un mouvement articulaire pour une région anatomique."
+      ],
+      "clinicalApplication": "Décrire le mouvement possible ou limité complète la localisation de l’articulation concernée.",
+      "section": "Appareil locomoteur - Les articulations",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l03",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-008",
+      "title": "Muscles et tendons",
+      "summary": "Les contractions et relaxations musculaires génèrent le mouvement des segments osseux, les muscles s’insérant sur eux par l’intermédiaire de tendons.",
+      "keyPoints": [
+        "Le tendon assure l’intermédiaire entre le muscle et le segment osseux.",
+        "Les muscles striés décrits obéissent à la volonté.",
+        "Les muscles lisses décrits n’obéissent pas à la volonté."
+      ],
+      "commonErrors": [
+        "Dire qu’un tendon relie deux os entre eux."
+      ],
+      "clinicalApplication": "Distinguer muscle, tendon et os évite de confondre les structures lors d’un repérage.",
+      "section": "Appareil locomoteur - Les muscles",
+      "pages": [
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l04",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-009",
+      "title": "Propriétés et rôles des muscles",
+      "summary": "Les muscles sont contractiles, élastiques et excitables ; ils participent au mouvement, au travail, à l’équilibre et à la production de chaleur.",
+      "keyPoints": [
+        "La contraction et la relaxation participent au mouvement.",
+        "Les muscles contribuent au maintien de l’équilibre.",
+        "Les muscles participent à la production de chaleur."
+      ],
+      "commonErrors": [
+        "Limiter le rôle musculaire à la seule pratique sportive."
+      ],
+      "clinicalApplication": "Connaître ces rôles aide à interpréter la fonction générale d’un groupe musculaire sans poser de diagnostic.",
+      "section": "Appareil locomoteur - Les muscles",
+      "pages": [
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l04",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-010",
+      "title": "Rachis et répartition des vertèbres",
+      "summary": "Le rachis appartient au tronc et le support le décrit comme une colonne de 33 vertèbres réparties en régions cervicale, dorsale, lombaire, sacrée et coccygienne.",
+      "keyPoints": [
+        "7 vertèbres cervicales.",
+        "12 vertèbres dorsales et 5 lombaires.",
+        "5 vertèbres sacrées et 4 à 6 coccygiennes dans le décompte présenté."
+      ],
+      "commonErrors": [
+        "Inverser le nombre de vertèbres cervicales et dorsales."
+      ],
+      "clinicalApplication": "Nommer la région cervicale, dorsale ou lombaire améliore la précision d’une localisation sur le rachis.",
+      "section": "Appareil locomoteur - Les os - Le tronc",
+      "pages": [
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l05",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-011",
+      "title": "Repères du membre supérieur",
+      "summary": "Le membre supérieur comprend la ceinture scapulaire, l’humérus, le cubitus, le radius, le carpe, les métacarpes et les phalanges.",
+      "keyPoints": [
+        "L’humérus correspond au bras.",
+        "Le cubitus et le radius correspondent à l’avant-bras.",
+        "Le carpe, les métacarpes et les phalanges structurent le poignet, la main et les doigts."
+      ],
+      "commonErrors": [
+        "Confondre bras et avant-bras."
+      ],
+      "clinicalApplication": "Situer un repère au bras, à l’avant-bras, au poignet, à la main ou aux doigts rend la description exploitable.",
+      "section": "Appareil locomoteur - schéma et membres supérieurs",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l06",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-012",
+      "title": "Repères du membre inférieur",
+      "summary": "Le membre inférieur comprend le bassin, le fémur, la rotule, le tibia, le péroné, le tarse, les métatarses et les phalanges.",
+      "keyPoints": [
+        "Le fémur correspond à la cuisse.",
+        "Le tibia et le péroné correspondent à la jambe.",
+        "Le tarse, les métatarses et les phalanges structurent la cheville, le pied et les orteils."
+      ],
+      "commonErrors": [
+        "Employer jambe pour désigner la cuisse ou tout le membre inférieur."
+      ],
+      "clinicalApplication": "Situer un repère à la cuisse, au genou, à la jambe, à la cheville ou au pied précise la transmission.",
+      "section": "Appareil locomoteur - schéma et membres inférieurs",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l07",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-013",
+      "title": "Repères anatomiques locomoteurs pour la description",
+      "summary": "Le schéma distingue les segments du membre supérieur et du membre inférieur ainsi que leurs principaux repères osseux et articulaires.",
+      "keyPoints": [
+        "Membre supérieur : épaule, bras, coude, avant-bras, poignet, main, doigts.",
+        "Membre inférieur : hanche, cuisse, genou, jambe, cheville, pied, orteils.",
+        "Un segment corporel et un repère osseux ne sont pas interchangeables."
+      ],
+      "commonErrors": [
+        "Décrire une localisation par des expressions vagues comme « en bas » ou « au bras » pour tout le membre supérieur."
+      ],
+      "clinicalApplication": "Associer segment, côté et repère anatomique améliore la précision du bilan descriptif.",
+      "section": "Appareil locomoteur - schéma des repères anatomiques",
+      "pages": [
+        34
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.injury",
+        "anatomy.location.transmission"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l06",
+        "dea-p04-l07",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

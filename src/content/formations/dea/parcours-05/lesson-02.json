@@ -1,0 +1,734 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l02",
+  "title": "Les vaisseaux",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Distinguer artères, veines et capillaires.",
+    "Décrire le sens de circulation par rapport au cœur.",
+    "Comprendre le rôle des capillaires et des valves veineuses."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel critère définit une artère dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q01-a1",
+          "text": "Elle conduit le sang du cœur vers les organes",
+          "explanation": "Le sens du cœur vers les organes définit l’artère."
+        },
+        {
+          "id": "dea-p05-l02-q01-a2",
+          "text": "Elle ramène toujours le sang vers le cœur",
+          "explanation": "Ce sens correspond aux veines.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l02-q01-a3",
+          "text": "Elle est toujours pauvre en oxygène",
+          "explanation": "La teneur en oxygène ne définit pas une artère.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l02-q01-a4",
+          "text": "Elle assure seule les échanges cellulaires",
+          "explanation": "Les capillaires sont le lieu d’échange décrit.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q01-a1",
+      "explanation": "Une artère conduit le sang du cœur vers les organes.",
+      "knowledgeIds": [
+        "K-DEA-P05-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une artère conduit le sang du cœur vers les organes.",
+        "commonMistake": "Associer artère à sang oxygéné sans considérer le sens conduit à une erreur avec l’artère pulmonaire.",
+        "keyTakeaway": "Artère = part du cœur.",
+        "fieldApplication": "Nommer le vaisseau à partir du sens de circulation.",
+        "memoryTip": "A comme Artère et Aller depuis le cœur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une artère conduit le sang du cœur vers les organes.",
+      "common_mistake": "Associer artère à sang oxygéné sans considérer le sens conduit à une erreur avec l’artère pulmonaire.",
+      "key_takeaway": "Artère = part du cœur.",
+      "memory_tip": "A comme Artère et Aller depuis le cœur.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "arteres"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l02-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel sens de circulation caractérise une veine ?",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q02-a1",
+          "text": "Des organes vers le cœur",
+          "explanation": "Les veines ramènent le sang vers le cœur."
+        },
+        {
+          "id": "dea-p05-l02-q02-a2",
+          "text": "Du cœur vers les organes",
+          "explanation": "Ce sens caractérise une artère.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l02-q02-a3",
+          "text": "Uniquement des poumons vers les cellules",
+          "explanation": "Cette formulation mélange les deux circulations.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l02-q02-a4",
+          "text": "Uniquement entre deux capillaires",
+          "explanation": "Le support ne définit pas ainsi les veines.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q02-a1",
+      "explanation": "Une veine ramène le sang des organes vers le cœur.",
+      "knowledgeIds": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une veine ramène le sang des organes vers le cœur.",
+        "commonMistake": "Le sens est parfois inversé en se fiant à la couleur d’un schéma plutôt qu’aux flèches.",
+        "keyTakeaway": "Veine = revient vers le cœur.",
+        "fieldApplication": "Suivre la direction des flèches sur un schéma de circulation.",
+        "memoryTip": "V comme Veine et Venir vers le cœur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une veine ramène le sang des organes vers le cœur.",
+      "common_mistake": "Le sens est parfois inversé en se fiant à la couleur d’un schéma plutôt qu’aux flèches.",
+      "key_takeaway": "Veine = revient vers le cœur.",
+      "memory_tip": "V comme Veine et Venir vers le cœur.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "veines"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005",
+          "K-DEA-P05-007"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l02-q03",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Les capillaires sont décrits comme le principal lieu d’échange avec les cellules.",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q03-true",
+          "text": "Vrai",
+          "explanation": "Le support situe les échanges avec les cellules dans les capillaires."
+        },
+        {
+          "id": "dea-p05-l02-q03-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : les capillaires sont explicitement le lieu d’échange."
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q03-true",
+      "explanation": "La proposition est vraie : fine paroi et circulation lente favorisent les échanges.",
+      "knowledgeIds": [
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition est vraie : fine paroi et circulation lente favorisent les échanges.",
+        "commonMistake": "Confondre transport et échange conduit à attribuer ce rôle aux gros vaisseaux.",
+        "keyTakeaway": "Les capillaires relient les réseaux et permettent les échanges cellulaires.",
+        "fieldApplication": "Relier un paramètre circulatoire à la perfusion tissulaire sans poser de diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition est vraie : fine paroi et circulation lente favorisent les échanges.",
+      "common_mistake": "Confondre transport et échange conduit à attribuer ce rôle aux gros vaisseaux.",
+      "key_takeaway": "Les capillaires relient les réseaux et permettent les échanges cellulaires.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "capillaires"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l02-q04",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque vaisseau à sa fonction générale.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q04-a1",
+          "text": "Artère",
+          "match": "Du cœur vers les organes",
+          "explanation": "Elle conduit le sang depuis le cœur."
+        },
+        {
+          "id": "dea-p05-l02-q04-a2",
+          "text": "Capillaire",
+          "match": "Jonction et échanges cellulaires",
+          "explanation": "Il permet les échanges avec les cellules."
+        },
+        {
+          "id": "dea-p05-l02-q04-a3",
+          "text": "Veine",
+          "match": "Des organes vers le cœur",
+          "explanation": "Elle ramène le sang vers le cœur."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l02-q04-a1",
+        "dea-p05-l02-q04-a2",
+        "dea-p05-l02-q04-a3"
+      ],
+      "correctAnswers": [
+        "dea-p05-l02-q04-a1",
+        "dea-p05-l02-q04-a2",
+        "dea-p05-l02-q04-a3"
+      ],
+      "explanation": "Les associations reposent sur le sens de circulation et la fonction d’échange.",
+      "knowledgeIds": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations reposent sur le sens de circulation et la fonction d’échange.",
+        "commonMistake": "L’erreur courante est de classer selon l’oxygénation au lieu du sens par rapport au cœur.",
+        "keyTakeaway": "Artère : départ ; capillaire : échange ; veine : retour.",
+        "fieldApplication": "Décrire le trajet d’un flux de manière ordonnée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations reposent sur le sens de circulation et la fonction d’échange.",
+      "common_mistake": "L’erreur courante est de classer selon l’oxygénation au lieu du sens par rapport au cœur.",
+      "key_takeaway": "Artère : départ ; capillaire : échange ; veine : retour.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005",
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p05-l02-q05",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet général du sang dans un circuit fermé.",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q05-a1",
+          "text": "Cœur",
+          "explanation": "Le cœur met le sang en mouvement.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-l02-q05-a2",
+          "text": "Artères",
+          "explanation": "Les artères conduisent le sang vers les organes.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-l02-q05-a3",
+          "text": "Capillaires",
+          "explanation": "Les échanges se font au niveau capillaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p05-l02-q05-a4",
+          "text": "Veines",
+          "explanation": "Les veines ramènent le sang.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p05-l02-q05-a5",
+          "text": "Retour au cœur",
+          "explanation": "Le circuit se referme au cœur.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l02-q05-a1",
+        "dea-p05-l02-q05-a2",
+        "dea-p05-l02-q05-a3",
+        "dea-p05-l02-q05-a4",
+        "dea-p05-l02-q05-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-l02-q05-a1",
+        "dea-p05-l02-q05-a2",
+        "dea-p05-l02-q05-a3",
+        "dea-p05-l02-q05-a4",
+        "dea-p05-l02-q05-a5"
+      ],
+      "explanation": "Le trajet général suit cœur, artères, capillaires, veines puis retour au cœur.",
+      "knowledgeIds": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet général suit cœur, artères, capillaires, veines puis retour au cœur.",
+        "commonMistake": "Placer les veines avant les capillaires inverse le sens général du réseau.",
+        "keyTakeaway": "Pompe, départ artériel, échanges capillaires, retour veineux.",
+        "fieldApplication": "Reconstituer un trajet avant d’interpréter un schéma plus détaillé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet général suit cœur, artères, capillaires, veines puis retour au cœur.",
+      "common_mistake": "Placer les veines avant les capillaires inverse le sens général du réseau.",
+      "key_takeaway": "Pompe, départ artériel, échanges capillaires, retour veineux.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-001",
+          "K-DEA-P05-005",
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p05-l02-q06",
+      "type": "true_false_contextual",
+      "difficulty": "hard",
+      "question": "Une veine est définie uniquement par le fait qu’elle transporte un sang pauvre en oxygène.",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q06-true",
+          "text": "Vrai",
+          "explanation": "Vrai serait incorrect : le support définit les veines par leur direction."
+        },
+        {
+          "id": "dea-p05-l02-q06-false",
+          "text": "Faux",
+          "explanation": "Les veines pulmonaires montrent qu’une veine peut transporter un sang riche en oxygène."
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q06-false",
+      "explanation": "L’affirmation est fausse : une veine est définie par le retour du sang vers le cœur.",
+      "knowledgeIds": [
+        "K-DEA-P05-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18-19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : une veine est définie par le retour du sang vers le cœur.",
+        "commonMistake": "La règle simplifiée oxygéné/désoxygéné échoue pour les vaisseaux pulmonaires.",
+        "keyTakeaway": "Le sens par rapport au cœur prime sur la teneur en oxygène.",
+        "fieldApplication": "Utiliser les termes artère et veine correctement dans une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : une veine est définie par le retour du sang vers le cœur.",
+      "common_mistake": "La règle simplifiée oxygéné/désoxygéné échoue pour les vaisseaux pulmonaires.",
+      "key_takeaway": "Le sens par rapport au cœur prime sur la teneur en oxygène.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18-19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l02-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Sur un schéma, un vaisseau ramène des poumons vers l’oreillette gauche un sang riche en oxygène. Comment le nommer correctement ?",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q07-a1",
+          "text": "Veine pulmonaire",
+          "explanation": "Elle revient des poumons vers le cœur : c’est une veine pulmonaire."
+        },
+        {
+          "id": "dea-p05-l02-q07-a2",
+          "text": "Artère pulmonaire",
+          "explanation": "L’artère pulmonaire part du ventricule droit vers les poumons.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l02-q07-a3",
+          "text": "Aorte",
+          "explanation": "L’aorte part du ventricule gauche vers la grande circulation.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l02-q07-a4",
+          "text": "Veine cave",
+          "explanation": "Les veines caves reviennent des tissus à l’oreillette droite.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q07-a1",
+      "explanation": "Le vaisseau revient au cœur depuis les poumons : il s’agit d’une veine pulmonaire.",
+      "knowledgeIds": [
+        "K-DEA-P05-003",
+        "K-DEA-P05-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "18",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le vaisseau revient au cœur depuis les poumons : il s’agit d’une veine pulmonaire.",
+        "commonMistake": "La richesse en oxygène peut faire choisir à tort une artère.",
+        "keyTakeaway": "Veine pulmonaire : retour des poumons vers l’oreillette gauche.",
+        "fieldApplication": "Se fonder sur le sens du flux et son point d’arrivée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le vaisseau revient au cœur depuis les poumons : il s’agit d’une veine pulmonaire.",
+      "common_mistake": "La richesse en oxygène peut faire choisir à tort une artère.",
+      "key_takeaway": "Veine pulmonaire : retour des poumons vers l’oreillette gauche.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "pulmonaire",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "18",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003",
+          "K-DEA-P05-005"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l02-q08",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : dans les veines, un système de ______ limite les retours à contre-courant.",
+      "answers": [
+        {
+          "id": "dea-p05-l02-q08-a1",
+          "text": "valves",
+          "explanation": "Les valves veineuses limitent le reflux à contre-courant."
+        }
+      ],
+      "correctAnswer": "dea-p05-l02-q08-a1",
+      "explanation": "Le mot attendu est « valves ».",
+      "knowledgeIds": [
+        "K-DEA-P05-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l02",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot attendu est « valves ».",
+        "commonMistake": "Les contractions musculaires aident le retour, mais ne remplacent pas les valves dans cette phrase.",
+        "keyTakeaway": "Les valves veineuses limitent le reflux.",
+        "fieldApplication": "Distinguer les mécanismes complémentaires du retour veineux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot attendu est « valves ».",
+      "common_mistake": "Les contractions musculaires aident le retour, mais ne remplacent pas les valves dans cette phrase.",
+      "key_takeaway": "Les valves veineuses limitent le reflux.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "vaisseaux",
+        "valves"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Les vaisseaux sanguins",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-007"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

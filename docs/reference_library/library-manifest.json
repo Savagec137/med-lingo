@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "library_id": "pulseeo-official-knowledge-library",
+  "library_version": "v1",
+  "language": "fr",
+  "status": "draft",
+  "retrieval_priority": [
+    "master_knowledge_base",
+    "official_sources",
+    "knowledge",
+    "questions",
+    "clinical_cases"
+  ],
+  "catalogs": {
+    "official_documents": "../official_sources/document_catalog.json",
+    "internal_documents": "../internal_sources/internal_source_catalog.json",
+    "knowledge": "../master_knowledge_base/knowledge.json",
+    "questions": "../questions/references.json",
+    "boss": "../boss/references.json",
+    "clinical_cases": "../clinical_cases/references.json",
+    "glossary": "../glossary/glossary.json",
+    "versions": "../versioning/library_versions.json"
+  }
+}

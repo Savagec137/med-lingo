@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l05",
+  "title": "Grande circulation",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Définir la circulation tissulaire.",
+    "Reconstituer son trajet du ventricule gauche à l’oreillette droite.",
+    "Distinguer ses vaisseaux de ceux de la petite circulation."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel autre nom le support donne-t-il à la grande circulation ?",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q01-a1",
+          "text": "Circulation tissulaire",
+          "explanation": "Le support emploie circulation tissulaire ou cellulaire."
+        },
+        {
+          "id": "dea-p05-l05-q01-a2",
+          "text": "Circulation pulmonaire",
+          "explanation": "Ce terme désigne la petite circulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l05-q01-a3",
+          "text": "Circulation péricardique",
+          "explanation": "Le support ne définit pas ce circuit.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l05-q01-a4",
+          "text": "Circulation auriculaire",
+          "explanation": "Ce nom ne correspond pas au grand circuit décrit.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q01-a1",
+      "explanation": "La grande circulation est aussi appelée circulation tissulaire ou cellulaire.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La grande circulation est aussi appelée circulation tissulaire ou cellulaire.",
+        "commonMistake": "Confondre tissulaire et pulmonaire inverse les deux circuits.",
+        "keyTakeaway": "Grande = tissulaire ou cellulaire.",
+        "fieldApplication": "Relier le nom du circuit au territoire desservi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La grande circulation est aussi appelée circulation tissulaire ou cellulaire.",
+      "common_mistake": "Confondre tissulaire et pulmonaire inverse les deux circuits.",
+      "key_takeaway": "Grande = tissulaire ou cellulaire.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Dans quelle cavité débute la grande circulation ?",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q02-a1",
+          "text": "Le ventricule gauche",
+          "explanation": "Il propulse le sang dans l’aorte."
+        },
+        {
+          "id": "dea-p05-l05-q02-a2",
+          "text": "Le ventricule droit",
+          "explanation": "Il débute la petite circulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l05-q02-a3",
+          "text": "L’oreillette droite",
+          "explanation": "Elle reçoit le retour de la grande circulation.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p05-l05-q02-a4",
+          "text": "L’oreillette gauche",
+          "explanation": "Elle reçoit le retour pulmonaire avant le ventricule gauche.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q02-a1",
+      "explanation": "La grande circulation part du ventricule gauche.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La grande circulation part du ventricule gauche.",
+        "commonMistake": "Confondre départ et arrivée fait choisir l’oreillette droite.",
+        "keyTakeaway": "Ventricule gauche : départ vers les tissus.",
+        "fieldApplication": "Repérer la cavité qui propulse dans l’aorte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La grande circulation part du ventricule gauche.",
+      "common_mistake": "Confondre départ et arrivée fait choisir l’oreillette droite.",
+      "key_takeaway": "Ventricule gauche : départ vers les tissus.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "ventricule-gauche"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q03",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet de la grande circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q03-a1",
+          "text": "Ventricule gauche",
+          "explanation": "Il propulse le sang dans l’aorte.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-l05-q03-a2",
+          "text": "Aorte",
+          "explanation": "Elle conduit le sang vers les organes.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-l05-q03-a3",
+          "text": "Capillaires cellulaires",
+          "explanation": "Ils constituent le réseau d’échange tissulaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p05-l05-q03-a4",
+          "text": "Veines caves",
+          "explanation": "Elles ramènent le sang vers le cœur.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p05-l05-q03-a5",
+          "text": "Oreillette droite",
+          "explanation": "Elle reçoit le retour systémique.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l05-q03-a1",
+        "dea-p05-l05-q03-a2",
+        "dea-p05-l05-q03-a3",
+        "dea-p05-l05-q03-a4",
+        "dea-p05-l05-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-l05-q03-a1",
+        "dea-p05-l05-q03-a2",
+        "dea-p05-l05-q03-a3",
+        "dea-p05-l05-q03-a4",
+        "dea-p05-l05-q03-a5"
+      ],
+      "explanation": "Le support donne cet ordre du ventricule gauche à l’oreillette droite.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support donne cet ordre du ventricule gauche à l’oreillette droite.",
+        "commonMistake": "Insérer des vaisseaux pulmonaires mélange grande et petite circulation.",
+        "keyTakeaway": "VG, aorte, capillaires cellulaires, veines caves, OD.",
+        "fieldApplication": "Reconstituer le trajet complet avant d’identifier un élément isolé.",
+        "memoryTip": "VG → tissus → OD."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support donne cet ordre du ventricule gauche à l’oreillette droite.",
+      "common_mistake": "Insérer des vaisseaux pulmonaires mélange grande et petite circulation.",
+      "key_takeaway": "VG, aorte, capillaires cellulaires, veines caves, OD.",
+      "memory_tip": "VG → tissus → OD.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p05-l05-q04",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "L’aorte appartient à la grande circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q04-true",
+          "text": "Vrai",
+          "explanation": "L’aorte figure dans le trajet de la grande circulation."
+        },
+        {
+          "id": "dea-p05-l05-q04-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support inclut explicitement l’aorte."
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q04-true",
+      "explanation": "La proposition est vraie : l’aorte suit le ventricule gauche dans ce circuit.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition est vraie : l’aorte suit le ventricule gauche dans ce circuit.",
+        "commonMistake": "La proximité du cœur peut faire oublier que l’aorte distribue vers les tissus.",
+        "keyTakeaway": "L’aorte est le grand vaisseau de départ du circuit tissulaire.",
+        "fieldApplication": "Classer le vaisseau dans le bon circuit avant de décrire son trajet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition est vraie : l’aorte suit le ventricule gauche dans ce circuit.",
+      "common_mistake": "La proximité du cœur peut faire oublier que l’aorte distribue vers les tissus.",
+      "key_takeaway": "L’aorte est le grand vaisseau de départ du circuit tissulaire.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "aorte"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel réseau suit l’aorte dans la description de la grande circulation ?",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q05-a1",
+          "text": "Les capillaires cellulaires",
+          "explanation": "Le grand circuit rejoint les capillaires des tissus."
+        },
+        {
+          "id": "dea-p05-l05-q05-a2",
+          "text": "Les capillaires pulmonaires",
+          "explanation": "Ils appartiennent à la petite circulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l05-q05-a3",
+          "text": "Les veines pulmonaires",
+          "explanation": "Elles ramènent le sang des poumons.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l05-q05-a4",
+          "text": "Le péricarde",
+          "explanation": "Le péricarde est l’enveloppe du cœur.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q05-a1",
+      "explanation": "Les capillaires cellulaires constituent le réseau d’échange du grand circuit.",
+      "knowledgeIds": [
+        "K-DEA-P05-006",
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les capillaires cellulaires constituent le réseau d’échange du grand circuit.",
+        "commonMistake": "Le mot capillaire doit toujours être complété par le territoire concerné.",
+        "keyTakeaway": "Capillaires cellulaires pour les tissus ; pulmonaires pour les poumons.",
+        "fieldApplication": "Préciser le territoire du réseau capillaire dans une explication."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les capillaires cellulaires constituent le réseau d’échange du grand circuit.",
+      "common_mistake": "Le mot capillaire doit toujours être complété par le territoire concerné.",
+      "key_takeaway": "Capillaires cellulaires pour les tissus ; pulmonaires pour les poumons.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "capillaires"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-006",
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les veines caves ramènent le sang vers l’oreillette ______.",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q06-a1",
+          "text": "droite",
+          "explanation": "Le trajet tissulaire se termine à l’oreillette droite."
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q06-a1",
+      "explanation": "Le mot attendu est « droite ».",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot attendu est « droite ».",
+        "commonMistake": "L’oreillette gauche reçoit le retour pulmonaire, pas le retour tissulaire.",
+        "keyTakeaway": "Grande circulation : ventricule gauche vers oreillette droite.",
+        "fieldApplication": "Vérifier la cavité de retour des veines caves."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot attendu est « droite ».",
+      "common_mistake": "L’oreillette gauche reçoit le retour pulmonaire, pas le retour tissulaire.",
+      "key_takeaway": "Grande circulation : ventricule gauche vers oreillette droite.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "oreillette-droite"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q07",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Les veines pulmonaires constituent le retour principal de la grande circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q07-true",
+          "text": "Vrai",
+          "explanation": "Vrai serait incorrect : les veines pulmonaires appartiennent au petit circuit."
+        },
+        {
+          "id": "dea-p05-l05-q07-false",
+          "text": "Faux",
+          "explanation": "Les veines caves assurent le retour tissulaire décrit."
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q07-false",
+      "explanation": "L’affirmation est fausse : le retour du grand circuit utilise les veines caves.",
+      "knowledgeIds": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : le retour du grand circuit utilise les veines caves.",
+        "commonMistake": "Le mot « veine » seul ne suffit pas à identifier le circuit.",
+        "keyTakeaway": "Veines caves : grande circulation ; veines pulmonaires : petite circulation.",
+        "fieldApplication": "Toujours préciser le nom complet du vaisseau."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : le retour du grand circuit utilise les veines caves.",
+      "common_mistake": "Le mot « veine » seul ne suffit pas à identifier le circuit.",
+      "key_takeaway": "Veines caves : grande circulation ; veines pulmonaires : petite circulation.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "comparaison"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010",
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l05-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un schéma suit le sang du ventricule gauche vers les tissus, puis jusqu’à l’oreillette droite. Quel circuit est représenté ?",
+      "answers": [
+        {
+          "id": "dea-p05-l05-q08-a1",
+          "text": "La grande circulation",
+          "explanation": "Ce trajet correspond au circuit tissulaire."
+        },
+        {
+          "id": "dea-p05-l05-q08-a2",
+          "text": "La petite circulation",
+          "explanation": "Elle relie le ventricule droit aux poumons puis à l’oreillette gauche.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l05-q08-a3",
+          "text": "Le cycle cardiaque",
+          "explanation": "Le cycle décrit des phases, pas le trajet dans les tissus.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l05-q08-a4",
+          "text": "Le retour pulmonaire seul",
+          "explanation": "Le trajet décrit ne passe pas par les poumons.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l05-q08-a1",
+      "explanation": "Le départ au ventricule gauche, le passage tissulaire et l’arrivée à l’oreillette droite identifient la grande circulation.",
+      "knowledgeIds": [
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Grande circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l05",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le départ au ventricule gauche, le passage tissulaire et l’arrivée à l’oreillette droite identifient la grande circulation.",
+        "commonMistake": "Se fier seulement au côté gauche du départ sans suivre le territoire peut créer une confusion.",
+        "keyTakeaway": "VG → tissus → OD = grande circulation.",
+        "fieldApplication": "Utiliser trois repères : départ, territoire, arrivée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le départ au ventricule gauche, le passage tissulaire et l’arrivée à l’oreillette droite identifient la grande circulation.",
+      "common_mistake": "Se fier seulement au côté gauche du départ sans suivre le territoire peut créer une confusion.",
+      "key_takeaway": "VG → tissus → OD = grande circulation.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "grande-circulation",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Grande circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

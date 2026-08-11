@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l04",
+  "title": "Les muscles",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Expliquer le rôle des muscles dans le mouvement.",
+    "Distinguer muscle, tendon et ligament.",
+    "Reconnaître les propriétés et rôles musculaires cités."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Comment les muscles produisent-ils le mouvement des segments osseux selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q01-a1",
+          "text": "Par leurs contractions et relaxations",
+          "explanation": "Le support relie contractions et relaxations au mouvement."
+        },
+        {
+          "id": "dea-p04-l04-q01-a2",
+          "text": "Par la seule présence du cartilage",
+          "explanation": "Le cartilage appartient aux surfaces articulaires, pas à la production musculaire du mouvement."
+        },
+        {
+          "id": "dea-p04-l04-q01-a3",
+          "text": "Par le liquide synovial uniquement",
+          "explanation": "Le liquide synovial est articulaire et ne remplace pas l’action musculaire."
+        },
+        {
+          "id": "dea-p04-l04-q01-a4",
+          "text": "Par l’immobilité des articulations",
+          "explanation": "Le mouvement suppose au contraire l’action coordonnée sur les segments."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q01-a1",
+      "explanation": "L’alternance contraction-relaxation des muscles génère le mouvement des segments osseux.",
+      "knowledgeIds": [
+        "K-DEA-P04-008",
+        "K-DEA-P04-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’alternance contraction-relaxation des muscles génère le mouvement des segments osseux.",
+        "commonMistake": "Attribuer ce mouvement au cartilage ou à la synovie confond composants articulaires et action musculaire.",
+        "keyTakeaway": "Contraction et relaxation musculaires participent au mouvement.",
+        "fieldApplication": "Identifier le groupe musculaire et le segment mobilisé permet une description fonctionnelle simple."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’alternance contraction-relaxation des muscles génère le mouvement des segments osseux.",
+      "common_mistake": "Attribuer ce mouvement au cartilage ou à la synovie confond composants articulaires et action musculaire.",
+      "key_takeaway": "Contraction et relaxation musculaires participent au mouvement.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle",
+        "mouvement"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-008",
+          "K-DEA-P04-009"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l04-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Les muscles s’insèrent sur les segments osseux par l’intermédiaire de tendons.",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q02-true",
+          "text": "Vrai",
+          "explanation": "Cette relation muscle-tendon-os est explicitement décrite page 37."
+        },
+        {
+          "id": "dea-p04-l04-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support nomme précisément les tendons comme intermédiaires."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q02-true",
+      "explanation": "Le tendon assure l’intermédiaire décrit entre le muscle et le segment osseux.",
+      "knowledgeIds": [
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le tendon assure l’intermédiaire décrit entre le muscle et le segment osseux.",
+        "commonMistake": "Le confondre avec un ligament revient à mélanger insertion musculaire et stabilité articulaire.",
+        "keyTakeaway": "Tendon : muscle vers os ; ligament : stabilité entre structures articulaires.",
+        "fieldApplication": "Nommer tendon ou ligament seulement lorsque la structure concernée est identifiée.",
+        "memoryTip": "Tendon : le muscle se tend vers l’os."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le tendon assure l’intermédiaire décrit entre le muscle et le segment osseux.",
+      "common_mistake": "Le confondre avec un ligament revient à mélanger insertion musculaire et stabilité articulaire.",
+      "key_takeaway": "Tendon : muscle vers os ; ligament : stabilité entre structures articulaires.",
+      "memory_tip": "Tendon : le muscle se tend vers l’os.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "tendon",
+        "muscle"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l04-q03",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque propriété musculaire à sa formulation.",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q03-a1",
+          "text": "Contractile",
+          "match": "Peut se contracter",
+          "explanation": "Capacité à se contracter."
+        },
+        {
+          "id": "dea-p04-l04-q03-a2",
+          "text": "Élastique",
+          "match": "Possède une élasticité",
+          "explanation": "Capacité à reprendre sa forme."
+        },
+        {
+          "id": "dea-p04-l04-q03-a3",
+          "text": "Excitable",
+          "match": "Peut être excité",
+          "explanation": "Capacité à répondre à une stimulation."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l04-q03-a1",
+        "dea-p04-l04-q03-a2",
+        "dea-p04-l04-q03-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l04-q03-a1",
+        "dea-p04-l04-q03-a2",
+        "dea-p04-l04-q03-a3"
+      ],
+      "explanation": "Le support qualifie les muscles de contractiles, élastiques et excitables.",
+      "knowledgeIds": [
+        "K-DEA-P04-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support qualifie les muscles de contractiles, élastiques et excitables.",
+        "commonMistake": "Ces propriétés ne sont pas des types de mouvements articulaires.",
+        "keyTakeaway": "Les trois propriétés citées sont contractilité, élasticité et excitabilité.",
+        "fieldApplication": "Les retenir aide à comprendre la fonction générale d’un muscle sans extrapolation clinique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support qualifie les muscles de contractiles, élastiques et excitables.",
+      "common_mistake": "Ces propriétés ne sont pas des types de mouvements articulaires.",
+      "key_takeaway": "Les trois propriétés citées sont contractilité, élasticité et excitabilité.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle",
+        "proprietes"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-009"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l04-q04",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels rôles des muscles sont cités dans le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q04-a1",
+          "text": "Participer au mouvement",
+          "explanation": "Le mouvement est un rôle musculaire central."
+        },
+        {
+          "id": "dea-p04-l04-q04-a2",
+          "text": "Contribuer à l’équilibre",
+          "explanation": "Le maintien de l’équilibre est cité."
+        },
+        {
+          "id": "dea-p04-l04-q04-a3",
+          "text": "Produire de la chaleur",
+          "explanation": "La production de chaleur est citée."
+        },
+        {
+          "id": "dea-p04-l04-q04-a4",
+          "text": "Former seuls le squelette",
+          "explanation": "Le squelette est formé d’os et d’articulations."
+        },
+        {
+          "id": "dea-p04-l04-q04-a5",
+          "text": "Remplacer les ligaments",
+          "explanation": "Muscles et ligaments sont des structures distinctes."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l04-q04-a1",
+        "dea-p04-l04-q04-a2",
+        "dea-p04-l04-q04-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l04-q04-a1",
+        "dea-p04-l04-q04-a2",
+        "dea-p04-l04-q04-a3"
+      ],
+      "explanation": "Les muscles participent au mouvement, à l’équilibre et à la production de chaleur, ainsi qu’au travail.",
+      "knowledgeIds": [
+        "K-DEA-P04-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les muscles participent au mouvement, à l’équilibre et à la production de chaleur, ainsi qu’au travail.",
+        "commonMistake": "Limiter le muscle au sport ou lui attribuer la formation du squelette déforme ses rôles.",
+        "keyTakeaway": "Muscles : mouvement, travail, équilibre et chaleur.",
+        "fieldApplication": "Observer la fonction globale sans transformer ces notions en diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les muscles participent au mouvement, à l’équilibre et à la production de chaleur, ainsi qu’au travail.",
+      "common_mistake": "Limiter le muscle au sport ou lui attribuer la formation du squelette déforme ses rôles.",
+      "key_takeaway": "Muscles : mouvement, travail, équilibre et chaleur.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle",
+        "roles"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-009"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l04-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel type de muscle décrit dans le support obéit à la volonté ?",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q05-a1",
+          "text": "Le muscle strié",
+          "explanation": "Le support précise que les muscles striés obéissent à la volonté."
+        },
+        {
+          "id": "dea-p04-l04-q05-a2",
+          "text": "Le muscle lisse",
+          "explanation": "Le support indique que les muscles lisses n’obéissent pas à la volonté."
+        },
+        {
+          "id": "dea-p04-l04-q05-a3",
+          "text": "Le ligament",
+          "explanation": "Le ligament n’est pas un muscle."
+        },
+        {
+          "id": "dea-p04-l04-q05-a4",
+          "text": "Le cartilage",
+          "explanation": "Le cartilage n’est pas un type de muscle."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q05-a1",
+      "explanation": "Dans la classification présentée, les muscles striés obéissent à la volonté.",
+      "knowledgeIds": [
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Dans la classification présentée, les muscles striés obéissent à la volonté.",
+        "commonMistake": "Le distracteur muscle lisse est crédible mais sa commande est décrite comme involontaire.",
+        "keyTakeaway": "Strié : volontaire ; lisse : involontaire dans ce support.",
+        "fieldApplication": "Utiliser cette distinction comme repère général au niveau DEA."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Dans la classification présentée, les muscles striés obéissent à la volonté.",
+      "common_mistake": "Le distracteur muscle lisse est crédible mais sa commande est décrite comme involontaire.",
+      "key_takeaway": "Strié : volontaire ; lisse : involontaire dans ce support.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle-strie",
+        "volontaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l04-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une victime localise une gêne sur le trajet entre un muscle et son insertion osseuse. Quelle structure de liaison le support décrit-il à cet endroit ?",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q06-a1",
+          "text": "Un tendon",
+          "explanation": "Le tendon relie le muscle au segment osseux dans la description fournie."
+        },
+        {
+          "id": "dea-p04-l04-q06-a2",
+          "text": "Un ligament",
+          "explanation": "Le ligament stabilise une articulation et ne correspond pas à la liaison muscle-os demandée."
+        },
+        {
+          "id": "dea-p04-l04-q06-a3",
+          "text": "Du liquide synovial",
+          "explanation": "Le liquide synovial est contenu dans la capsule articulaire."
+        },
+        {
+          "id": "dea-p04-l04-q06-a4",
+          "text": "Une épiphyse uniquement",
+          "explanation": "L’épiphyse est une extrémité d’os long, pas la structure de liaison demandée."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q06-a1",
+      "explanation": "La structure décrite entre muscle et os est le tendon.",
+      "knowledgeIds": [
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La structure décrite entre muscle et os est le tendon.",
+        "commonMistake": "Le ligament paraît proche parce qu’il appartient aussi au système locomoteur, mais son rôle articulaire diffère.",
+        "keyTakeaway": "Tendon et ligament ne sont pas interchangeables.",
+        "fieldApplication": "Décrire la zone et la structure supposée sans annoncer une lésion non établie.",
+        "safetyPoint": "Une localisation ne suffit pas à identifier la nature de la lésion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La structure décrite entre muscle et os est le tendon.",
+      "common_mistake": "Le ligament paraît proche parce qu’il appartient aussi au système locomoteur, mais son rôle articulaire diffère.",
+      "key_takeaway": "Tendon et ligament ne sont pas interchangeables.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "tendon",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l04-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : un muscle qui n’obéit pas à la volonté est qualifié de muscle ______ dans la classification du support.",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q07-a1",
+          "text": "lisse",
+          "explanation": "Le support oppose muscles lisses involontaires et muscles striés volontaires."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q07-a1",
+      "explanation": "Le terme attendu est « lisse ».",
+      "knowledgeIds": [
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « lisse ».",
+        "commonMistake": "Répondre strié inverse les deux catégories présentées.",
+        "keyTakeaway": "Muscle lisse : involontaire dans cette classification.",
+        "fieldApplication": "Cette distinction reste une base de vocabulaire, pas une évaluation clinique à elle seule."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « lisse ».",
+      "common_mistake": "Répondre strié inverse les deux catégories présentées.",
+      "key_takeaway": "Muscle lisse : involontaire dans cette classification.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle-lisse",
+        "involontaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l04-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le rôle des muscles se limite au déplacement volontaire des membres.",
+      "answers": [
+        {
+          "id": "dea-p04-l04-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette affirmation exclut l’équilibre, la chaleur et les autres rôles cités."
+        },
+        {
+          "id": "dea-p04-l04-q08-false",
+          "text": "Faux",
+          "explanation": "Les muscles contribuent aussi au travail, à l’équilibre et à la production de chaleur."
+        }
+      ],
+      "correctAnswer": "dea-p04-l04-q08-false",
+      "explanation": "L’affirmation est fausse : plusieurs rôles musculaires sont décrits au-delà du déplacement volontaire.",
+      "knowledgeIds": [
+        "K-DEA-P04-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les muscles",
+      "sourcePages": "37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l04",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : plusieurs rôles musculaires sont décrits au-delà du déplacement volontaire.",
+        "commonMistake": "Une vision centrée uniquement sur le mouvement des membres oublie équilibre et production de chaleur.",
+        "keyTakeaway": "Le rôle musculaire est pluriel.",
+        "fieldApplication": "Rechercher la fonction générale avant de réduire le muscle à un seul mouvement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : plusieurs rôles musculaires sont décrits au-delà du déplacement volontaire.",
+      "common_mistake": "Une vision centrée uniquement sur le mouvement des membres oublie équilibre et production de chaleur.",
+      "key_takeaway": "Le rôle musculaire est pluriel.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "muscle",
+        "roles"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les muscles",
+        "sourcePages": "37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-009"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

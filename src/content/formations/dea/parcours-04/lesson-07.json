@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l07",
+  "title": "Les membres inférieurs",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les segments du membre inférieur.",
+    "Associer les principaux os à leur segment.",
+    "Décrire un repère du membre inférieur avec précision."
+  ],
+  "competencyIds": [
+    "anatomy.region.lower-limb",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel os principal correspond à la cuisse ?",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q01-a1",
+          "text": "Le fémur",
+          "explanation": "Le support situe le fémur dans la cuisse."
+        },
+        {
+          "id": "dea-p04-l07-q01-a2",
+          "text": "Le tibia",
+          "explanation": "Le tibia appartient à la jambe."
+        },
+        {
+          "id": "dea-p04-l07-q01-a3",
+          "text": "Le péroné",
+          "explanation": "Le péroné appartient à la jambe."
+        },
+        {
+          "id": "dea-p04-l07-q01-a4",
+          "text": "L’humérus",
+          "explanation": "L’humérus appartient au bras."
+        }
+      ],
+      "correctAnswer": "dea-p04-l07-q01-a1",
+      "explanation": "Le fémur est l’os principal de la cuisse.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le fémur est l’os principal de la cuisse.",
+        "commonMistake": "Tibia et péroné sont proches mais appartiennent au segment situé sous le genou.",
+        "keyTakeaway": "Cuisse = fémur.",
+        "fieldApplication": "Distinguer cuisse et jambe avant de nommer l’os concerné.",
+        "memoryTip": "Fémur dans la cuisse ; tibia et péroné dans la jambe."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le fémur est l’os principal de la cuisse.",
+      "common_mistake": "Tibia et péroné sont proches mais appartiennent au segment situé sous le genou.",
+      "key_takeaway": "Cuisse = fémur.",
+      "memory_tip": "Fémur dans la cuisse ; tibia et péroné dans la jambe.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "cuisse",
+        "femur"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l07-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le tibia et le péroné appartiennent à la jambe.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q02-true",
+          "text": "Vrai",
+          "explanation": "Ces deux os sont situés dans la jambe sur le schéma."
+        },
+        {
+          "id": "dea-p04-l07-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support les associe à la jambe."
+        }
+      ],
+      "correctAnswer": "dea-p04-l07-q02-true",
+      "explanation": "Tibia et péroné sont les principaux repères osseux de la jambe décrits.",
+      "knowledgeIds": [
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Tibia et péroné sont les principaux repères osseux de la jambe décrits.",
+        "commonMistake": "Les placer dans la cuisse confond les segments séparés par le genou.",
+        "keyTakeaway": "Jambe = tibia et péroné.",
+        "fieldApplication": "Préciser le segment et le côté évite une localisation vague."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Tibia et péroné sont les principaux repères osseux de la jambe décrits.",
+      "common_mistake": "Les placer dans la cuisse confond les segments séparés par le genou.",
+      "key_takeaway": "Jambe = tibia et péroné.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "jambe",
+        "tibia",
+        "perone"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l07-q03",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque segment du membre inférieur à son repère osseux.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q03-a1",
+          "text": "Cuisse",
+          "match": "Fémur",
+          "explanation": "La cuisse correspond au fémur."
+        },
+        {
+          "id": "dea-p04-l07-q03-a2",
+          "text": "Genou",
+          "match": "Rotule",
+          "explanation": "La rotule est un repère du genou."
+        },
+        {
+          "id": "dea-p04-l07-q03-a3",
+          "text": "Jambe",
+          "match": "Tibia et péroné",
+          "explanation": "La jambe correspond au tibia et au péroné."
+        },
+        {
+          "id": "dea-p04-l07-q03-a4",
+          "text": "Orteils",
+          "match": "Phalanges",
+          "explanation": "Les orteils comportent des phalanges."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l07-q03-a1",
+        "dea-p04-l07-q03-a2",
+        "dea-p04-l07-q03-a3",
+        "dea-p04-l07-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-l07-q03-a1",
+        "dea-p04-l07-q03-a2",
+        "dea-p04-l07-q03-a3",
+        "dea-p04-l07-q03-a4"
+      ],
+      "explanation": "Chaque association correspond aux repères du membre inférieur présentés.",
+      "knowledgeIds": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association correspond aux repères du membre inférieur présentés.",
+        "commonMistake": "Le mot jambe est souvent étendu à tort à la cuisse et au pied.",
+        "keyTakeaway": "Cuisse-fémur ; genou-rotule ; jambe-tibia/péroné ; orteils-phalanges.",
+        "fieldApplication": "Nommer le segment exact avant le repère osseux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association correspond aux repères du membre inférieur présentés.",
+      "common_mistake": "Le mot jambe est souvent étendu à tort à la cuisse et au pied.",
+      "key_takeaway": "Cuisse-fémur ; genou-rotule ; jambe-tibia/péroné ; orteils-phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-inferieur",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-l07-q04",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe ces segments du membre inférieur du plus proximal au plus distal.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q04-a1",
+          "text": "Hanche",
+          "explanation": "La hanche relie le membre inférieur au bassin.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l07-q04-a2",
+          "text": "Cuisse",
+          "explanation": "La cuisse suit la hanche.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l07-q04-a3",
+          "text": "Genou",
+          "explanation": "Le genou sépare cuisse et jambe.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l07-q04-a4",
+          "text": "Jambe",
+          "explanation": "La jambe suit le genou.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l07-q04-a5",
+          "text": "Cheville",
+          "explanation": "La cheville précède le pied.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "dea-p04-l07-q04-a6",
+          "text": "Pied",
+          "explanation": "Le pied est la partie la plus distale de cette liste.",
+          "sequenceRank": 6
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l07-q04-a1",
+        "dea-p04-l07-q04-a2",
+        "dea-p04-l07-q04-a3",
+        "dea-p04-l07-q04-a4",
+        "dea-p04-l07-q04-a5",
+        "dea-p04-l07-q04-a6"
+      ],
+      "correctAnswers": [
+        "dea-p04-l07-q04-a1",
+        "dea-p04-l07-q04-a2",
+        "dea-p04-l07-q04-a3",
+        "dea-p04-l07-q04-a4",
+        "dea-p04-l07-q04-a5",
+        "dea-p04-l07-q04-a6"
+      ],
+      "explanation": "L’ordre suit le membre inférieur de la hanche au pied.",
+      "knowledgeIds": [
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit le membre inférieur de la hanche au pied.",
+        "commonMistake": "Placer la jambe avant le genou inverse le repère qui sépare cuisse et jambe.",
+        "keyTakeaway": "Hanche → cuisse → genou → jambe → cheville → pied.",
+        "fieldApplication": "Suivre mentalement le membre du bassin vers les orteils aide au repérage."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit le membre inférieur de la hanche au pied.",
+      "common_mistake": "Placer la jambe avant le genou inverse le repère qui sépare cuisse et jambe.",
+      "key_takeaway": "Hanche → cuisse → genou → jambe → cheville → pied.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-inferieur",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 6
+      }
+    },
+    {
+      "id": "dea-p04-l07-q05",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels éléments appartiennent au membre inférieur dans le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q05-a1",
+          "text": "Le bassin",
+          "explanation": "Le bassin est le repère proximal cité du membre inférieur."
+        },
+        {
+          "id": "dea-p04-l07-q05-a2",
+          "text": "Le fémur",
+          "explanation": "Le fémur appartient à la cuisse."
+        },
+        {
+          "id": "dea-p04-l07-q05-a3",
+          "text": "La rotule",
+          "explanation": "La rotule est située au genou."
+        },
+        {
+          "id": "dea-p04-l07-q05-a4",
+          "text": "L’humérus",
+          "explanation": "L’humérus appartient au membre supérieur."
+        },
+        {
+          "id": "dea-p04-l07-q05-a5",
+          "text": "Le carpe",
+          "explanation": "Le carpe appartient au poignet."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l07-q05-a1",
+        "dea-p04-l07-q05-a2",
+        "dea-p04-l07-q05-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l07-q05-a1",
+        "dea-p04-l07-q05-a2",
+        "dea-p04-l07-q05-a3"
+      ],
+      "explanation": "Bassin, fémur et rotule appartiennent aux repères du membre inférieur présentés.",
+      "knowledgeIds": [
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Bassin, fémur et rotule appartiennent aux repères du membre inférieur présentés.",
+        "commonMistake": "Humérus et carpe sont des repères du membre supérieur.",
+        "keyTakeaway": "Le membre inférieur s’organise du bassin jusqu’aux phalanges des orteils.",
+        "fieldApplication": "Vérifier le membre concerné avant de nommer une structure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Bassin, fémur et rotule appartiennent aux repères du membre inférieur présentés.",
+      "common_mistake": "Humérus et carpe sont des repères du membre supérieur.",
+      "key_takeaway": "Le membre inférieur s’organise du bassin jusqu’aux phalanges des orteils.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-inferieur",
+        "os"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l07-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une douleur est signalée entre la hanche et le genou droits. Quelle localisation est la plus précise ?",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q06-a1",
+          "text": "Cuisse droite, sur le trajet du fémur",
+          "explanation": "Le segment entre hanche et genou est la cuisse, où se situe le fémur."
+        },
+        {
+          "id": "dea-p04-l07-q06-a2",
+          "text": "Jambe droite, sur le tibia",
+          "explanation": "La jambe se situe entre genou et cheville."
+        },
+        {
+          "id": "dea-p04-l07-q06-a3",
+          "text": "Pied droit, au niveau du tarse",
+          "explanation": "Le tarse est situé au pied."
+        },
+        {
+          "id": "dea-p04-l07-q06-a4",
+          "text": "Bras droit, au niveau de l’humérus",
+          "explanation": "Le bras appartient au membre supérieur."
+        }
+      ],
+      "correctAnswer": "dea-p04-l07-q06-a1",
+      "explanation": "Entre hanche et genou, le segment correct est la cuisse ; son repère osseux principal est le fémur.",
+      "knowledgeIds": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Entre hanche et genou, le segment correct est la cuisse ; son repère osseux principal est le fémur.",
+        "commonMistake": "Employer jambe déplacerait la localisation sous le genou.",
+        "keyTakeaway": "Associer côté, segment et repère rend la description précise.",
+        "fieldApplication": "Transmettre « cuisse droite » plutôt que « jambe droite » si la zone est au-dessus du genou.",
+        "safetyPoint": "La douleur seule ne permet pas d’affirmer une fracture."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Entre hanche et genou, le segment correct est la cuisse ; son repère osseux principal est le fémur.",
+      "common_mistake": "Employer jambe déplacerait la localisation sous le genou.",
+      "key_takeaway": "Associer côté, segment et repère rend la description précise.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "cuisse",
+        "cas",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l07-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : l’os repéré au niveau du genou est la ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q07-a1",
+          "text": "rotule",
+          "explanation": "Le schéma situe la rotule au genou."
+        }
+      ],
+      "correctAnswer": "dea-p04-l07-q07-a1",
+      "explanation": "Le terme attendu est « rotule ».",
+      "knowledgeIds": [
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « rotule ».",
+        "commonMistake": "Le fémur et le tibia sont voisins du genou mais la question vise l’os explicitement repéré au genou.",
+        "keyTakeaway": "Genou : repère de la rotule.",
+        "fieldApplication": "Préciser la face et le côté si ces informations sont observables."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « rotule ».",
+      "common_mistake": "Le fémur et le tibia sont voisins du genou mais la question vise l’os explicitement repéré au genou.",
+      "key_takeaway": "Genou : repère de la rotule.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "genou",
+        "rotule"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l07-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le mot jambe désigne anatomiquement tout le membre inférieur, de la hanche au pied.",
+      "answers": [
+        {
+          "id": "dea-p04-l07-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette formulation étend à tort la jambe à tout le membre inférieur."
+        },
+        {
+          "id": "dea-p04-l07-q08-false",
+          "text": "Faux",
+          "explanation": "La jambe est le segment situé entre le genou et la cheville."
+        }
+      ],
+      "correctAnswer": "dea-p04-l07-q08-false",
+      "explanation": "L’affirmation est fausse : jambe et membre inférieur ne sont pas synonymes en anatomie.",
+      "knowledgeIds": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres inférieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l07",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : jambe et membre inférieur ne sont pas synonymes en anatomie.",
+        "commonMistake": "Le langage courant emploie parfois « jambe » pour tout le membre, ce qui rend le bilan imprécis.",
+        "keyTakeaway": "Cuisse : hanche-genou ; jambe : genou-cheville.",
+        "fieldApplication": "Cette distinction améliore directement la transmission d’une localisation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : jambe et membre inférieur ne sont pas synonymes en anatomie.",
+      "common_mistake": "Le langage courant emploie parfois « jambe » pour tout le membre, ce qui rend le bilan imprécis.",
+      "key_takeaway": "Cuisse : hanche-genou ; jambe : genou-cheville.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "jambe",
+        "precision"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres inférieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}
