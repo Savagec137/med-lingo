@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Activity,
+  AlertTriangle,
   Ambulance,
   ArrowRight,
   BadgeCheck,
@@ -25,7 +26,10 @@ import {
   Zap,
 } from "lucide-react";
 import { useEffect, useRef, type ReactNode, type RefObject } from "react";
-import type { InterventionScenario } from "@/features/intervention-domain";
+import type { InterventionPhase, InterventionScenario } from "@/features/intervention-domain";
+import type { ClinicalPatientState } from "@/features/intervention-clinical-domain";
+import { InterventionClinicalDebrief } from "@/components/InterventionClinicalDebrief";
+import { InterventionClinicalMonitor } from "@/components/InterventionClinicalMonitor";
 import {
   DISPATCH_ACTIONS,
   SHIFT_ENVIRONMENT_LABELS,
@@ -40,8 +44,13 @@ import {
 } from "@/features/intervention-shift-engine";
 import type {
   DynamicShiftCall,
+  InterventionSimulationLevel,
   InterventionShiftSession,
   ShiftCompletedIntervention,
+} from "@/features/intervention-shift-domain";
+import {
+  INTERVENTION_SIMULATION_LEVEL_LABELS,
+  INTERVENTION_SIMULATION_LEVELS,
 } from "@/features/intervention-shift-domain";
 import { useInterventionShift } from "@/hooks/use-intervention-shift";
 import { InterventionDecisionScreen } from "@/components/InterventionDecisionScreen";
@@ -89,6 +98,7 @@ export function InterventionShiftExperience({ scenarios, reducedMotion, onOpenTr
             titleRef={titleRef}
             session={session}
             onStart={shift.startShift}
+            onSelectDifficulty={shift.selectDifficulty}
             onOpenTraining={onOpenTraining}
           />
         )}
@@ -133,6 +143,10 @@ export function InterventionShiftExperience({ scenarios, reducedMotion, onOpenTr
               isHandover={shift.currentStep.format === "handover"}
               reducedMotion={reducedMotion}
               elapsedSeconds={shift.elapsedSeconds}
+              clinicalState={activeCall.clinicalState}
+              phase={shift.currentStep.phase}
+              canReassess={!activeCall.missionSession.pendingDecision}
+              onReassess={shift.reassessPatient}
             >
               <InterventionDecisionScreen
                 step={shift.currentStep}
@@ -168,15 +182,25 @@ export function InterventionShiftExperience({ scenarios, reducedMotion, onOpenTr
 
 type TitleRef = RefObject<HTMLHeadingElement | null>;
 
+const SIMULATION_LEVEL_DESCRIPTIONS: Record<InterventionSimulationLevel, string> = {
+  beginner: "Un appel guidé, scénarios d’initiation.",
+  intermediate: "Deux appels, priorités et surveillance renforcées.",
+  advanced: "Trois appels jusqu’aux missions trois étoiles.",
+  critical: "Quatre appels parmi les situations les plus complexes.",
+  "full-shift": "Garde 08:00–20:00 avec l’ensemble du catalogue validé.",
+};
+
 function BriefingScreen({
   titleRef,
   session,
   onStart,
+  onSelectDifficulty,
   onOpenTraining,
 }: {
   titleRef: TitleRef;
   session: InterventionShiftSession;
   onStart: () => void;
+  onSelectDifficulty: (level: InterventionSimulationLevel) => void;
   onOpenTraining: () => void;
 }) {
   const checks = [
@@ -226,9 +250,42 @@ function BriefingScreen({
               </div>
             ))}
           </div>
+          <fieldset className="mt-7">
+            <legend className="text-sm font-black text-white">Niveau de simulation</legend>
+            <p className="mt-1 text-xs text-slate-500">
+              La difficulté limite le catalogue et le nombre maximal d’appels sans modifier les
+              scénarios.
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+              {INTERVENTION_SIMULATION_LEVELS.map((level) => {
+                const selected = session.difficultyLevel === level;
+                return (
+                  <button
+                    key={level}
+                    type="button"
+                    aria-pressed={selected}
+                    onClick={() => onSelectDifficulty(level)}
+                    className={`min-h-24 rounded-2xl border p-3 text-left outline-none transition focus-visible:ring-4 focus-visible:ring-cyan-300/25 ${
+                      selected
+                        ? "border-cyan-300/40 bg-cyan-300/[0.12]"
+                        : "border-white/8 bg-white/[0.03] hover:bg-white/[0.06]"
+                    }`}
+                  >
+                    <span className="block text-sm font-black text-white">
+                      {INTERVENTION_SIMULATION_LEVEL_LABELS[level]}
+                    </span>
+                    <span className="mt-1 block text-[10px] leading-relaxed text-slate-400">
+                      {SIMULATION_LEVEL_DESCRIPTIONS[level]}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={onStart} className={primaryButtonClass}>
-              Prendre la garde <ArrowRight className="h-4 w-4" />
+              Lancer · {INTERVENTION_SIMULATION_LEVEL_LABELS[session.difficultyLevel]}{" "}
+              <ArrowRight className="h-4 w-4" />
             </button>
             <button type="button" onClick={onOpenTraining} className={secondaryButtonClass}>
               Missions guidées
@@ -500,6 +557,10 @@ function MissionScreen({
   isHandover,
   reducedMotion,
   elapsedSeconds,
+  clinicalState,
+  phase,
+  canReassess,
+  onReassess,
   children,
 }: {
   titleRef: TitleRef;
@@ -509,6 +570,10 @@ function MissionScreen({
   isHandover: boolean;
   reducedMotion: boolean;
   elapsedSeconds: number;
+  clinicalState?: ClinicalPatientState;
+  phase: InterventionPhase;
+  canReassess: boolean;
+  onReassess: () => void;
   children: ReactNode;
 }) {
   return (
@@ -531,6 +596,14 @@ function MissionScreen({
           <HeartPulse className="h-4 w-4" /> Patient suivi en continu
         </div>
       </div>
+      {clinicalState && (
+        <InterventionClinicalMonitor
+          clinicalState={clinicalState}
+          phase={phase}
+          canReassess={canReassess}
+          onReassess={onReassess}
+        />
+      )}
       {isHandover && (
         <motion.div
           initial={reducedMotion ? false : { opacity: 0, x: 20 }}
@@ -565,7 +638,9 @@ function InterventionSummaryScreen({
   onFinish: () => void;
 }) {
   if (!completed) return null;
-  const canContinue = session.currentMinute < session.endMinute;
+  const canContinue =
+    session.currentMinute < session.endMinute &&
+    session.completedInterventions.length < session.maxCalls;
   return (
     <section aria-labelledby="call-summary-title" className="mx-auto max-w-5xl">
       <InterventionShiftHud session={session} />
@@ -585,7 +660,9 @@ function InterventionSummaryScreen({
           >
             {completed.title}
           </h2>
-          <p className="mt-2 text-slate-400">Score {completed.score}/100 · patient transmis</p>
+          <p className="mt-2 text-slate-400">
+            Score {completed.score}/100 · {completed.debrief.outcomeLabel.toLocaleLowerCase("fr")}
+          </p>
         </div>
         <div className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <SummaryMetric
@@ -611,6 +688,7 @@ function InterventionSummaryScreen({
             )}
           </div>
         )}
+        <InterventionClinicalDebrief completed={completed} />
         <div className="mt-7 flex flex-col-reverse gap-3 sm:flex-row sm:justify-center">
           <button type="button" onClick={onFinish} className={secondaryButtonClass}>
             Terminer la garde
@@ -645,6 +723,7 @@ function ShiftSummaryScreen({
     { Icon: ShieldCheck, label: "Traumatismes", value: session.stats.traumas },
     { Icon: Activity, label: "AVC", value: session.stats.strokes },
     { Icon: Sparkles, label: "Naissances", value: session.stats.births },
+    { Icon: AlertTriangle, label: "Échecs cliniques", value: session.stats.failures },
     { Icon: Clock3, label: "Temps moyen", value: `${summary.averageResponseMinutes} min` },
     { Icon: BadgeCheck, label: "Décisions correctes", value: `${summary.accuracy}%` },
   ];
@@ -674,6 +753,9 @@ function ShiftSummaryScreen({
           <p className="mt-2 text-slate-400">
             {session.stats.xp} XP gagnés · {session.stats.coins} pièces · {session.stats.chests}{" "}
             coffre(s)
+          </p>
+          <p className="mt-1 text-xs font-bold text-violet-200/70">
+            Niveau : {INTERVENTION_SIMULATION_LEVEL_LABELS[session.difficultyLevel]}
           </p>
         </div>
         <div className="relative mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
@@ -731,4 +813,3 @@ const primaryButtonClass =
 
 const secondaryButtonClass =
   "inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-white/12 bg-white/[0.04] px-6 font-bold text-slate-200 outline-none transition hover:bg-white/[0.08] focus-visible:ring-4 focus-visible:ring-white/15";
-

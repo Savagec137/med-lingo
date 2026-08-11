@@ -13,9 +13,11 @@ import {
   arriveOnScene,
   calculateShiftSummary,
   completeShiftIntervention,
+  configureShiftDifficulty,
   createInterventionShift,
   departToCall,
   finishInterventionShift,
+  getScenariosForSimulationLevel,
   isPersistedInterventionShift,
   randomFloat,
   requestNextShiftCall,
@@ -23,15 +25,21 @@ import {
   startInterventionShift,
   validateAftralCatalog,
 } from "./intervention-shift-engine.ts";
-import type { InterventionShiftSession } from "./intervention-shift-domain.ts";
+import type {
+  InterventionShiftSession,
+  InterventionSimulationLevel,
+} from "./intervention-shift-domain.ts";
 
 const missionCatalog = JSON.parse(
   readFileSync(new URL("./intervention-missions.json", import.meta.url), "utf8"),
 ) as { missions: OfficialMissionProfile[] };
 const INTERVENTION_SCENARIOS = buildOfficialCatalog(missionCatalog.missions);
 
-function startPlayableShift(seed = "guard-test-seed") {
-  let shift = createInterventionShift(seed, 1000);
+function startPlayableShift(
+  seed = "guard-test-seed",
+  level: InterventionSimulationLevel = "beginner",
+) {
+  let shift = createInterventionShift(seed, 1000, level);
   shift = startInterventionShift(shift, INTERVENTION_SCENARIOS, 1100);
   shift = answerShiftCall(shift, 1200);
   for (const actionId of ["locate", "engage", "question", "advice"] as const) {
@@ -100,6 +108,25 @@ test("une même graine produit exactement le même premier appel", () => {
   assert.deepEqual(left.activeCall, right.activeCall);
 });
 
+test("les cinq niveaux limitent le nombre d’appels et le catalogue sans réécrire les scénarios", () => {
+  const expectations = [
+    ["beginner", 1, (stars: number) => stars <= 1],
+    ["intermediate", 2, (stars: number) => stars <= 2],
+    ["advanced", 3, (stars: number) => stars <= 3],
+    ["critical", 4, (stars: number) => stars >= 4],
+    ["full-shift", 14, () => true],
+  ] as const;
+
+  for (const [level, maxCalls, accepts] of expectations) {
+    const configured = configureShiftDifficulty(createInterventionShift("levels", 1), level, 2);
+    const available = getScenariosForSimulationLevel(INTERVENTION_SCENARIOS, level);
+    assert.equal(configured.difficultyLevel, level);
+    assert.equal(configured.maxCalls, maxCalls);
+    assert.ok(available.length > 0);
+    assert.ok(available.every((item) => accepts(item.difficultyStars ?? 1)));
+  }
+});
+
 test("les actions de qualification sont idempotentes", () => {
   let shift = startInterventionShift(
     createInterventionShift("idempotent", 1),
@@ -136,12 +163,13 @@ test("la fin d'une intervention n'est comptabilisée qu'une fois", () => {
   const duplicate = completeShiftIntervention(completed, scenario, successfulResult, 2100);
   assert.strictEqual(duplicate, completed);
   assert.equal(completed.stats.interventions, 1);
-  assert.equal(completed.stats.xp, successfulResult.xp);
+  assert.equal(completed.stats.xp, completed.completedInterventions[0]?.xp);
+  assert.ok(completed.stats.xp < successfulResult.xp);
   assert.ok(completed.vigilance < 100);
 });
 
 test("une garde enchaîne un nouvel appel et conserve ses agrégats", () => {
-  const active = startPlayableShift("next-call");
+  const active = startPlayableShift("next-call", "intermediate");
   const scenario = INTERVENTION_SCENARIOS.find((item) => item.id === active.activeCall?.scenarioId);
   assert.ok(scenario);
   const completed = completeShiftIntervention(active, scenario, successfulResult, 2000);
@@ -173,4 +201,3 @@ test("la validation de persistance rejette un snapshot incomplet", () => {
     false,
   );
 });
-
