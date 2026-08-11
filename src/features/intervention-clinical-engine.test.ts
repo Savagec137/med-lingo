@@ -93,6 +93,18 @@ test("une décision correcte améliore le patient et fait évoluer ses constante
   assert.ok(["improving", "stabilized"].includes(evolved.outcome));
 });
 
+test("le débrief évalue l'apprenant sans modifier rétroactivement le patient", () => {
+  const selected = scenario("mission-03-detresse-respiratoire");
+  const initial = createClinicalPatientState(selected, true);
+  const record = decision("debrief-error", "debrief", false, -20);
+  const evolved = applyClinicalDecision(initial, record, [record], true, 600);
+
+  assert.equal(evolved.overallState, initial.overallState);
+  assert.equal(evolved.timeline[0]?.patientDelta, 0);
+  assert.deepEqual(evolved.vitals, initial.vitals);
+  assert.notEqual(evolved.outcome, "deteriorating");
+});
+
 test("la fréquence respiratoire pédiatrique utilise la tranche d’âge du support DEA", () => {
   const selected = scenario("mission-11-enfant-febrile");
   const initial = createClinicalPatientState(selected, true);
@@ -150,8 +162,9 @@ test("une mauvaise prise en charge n’est plus rentable", () => {
   const adjusted = applyClinicalQualityToResult(baseResult, state);
 
   assert.equal(state.outcome, "failed");
-  assert.ok(adjusted.result.xp < baseResult.xp / 4);
-  assert.ok(adjusted.result.coins < baseResult.coins / 4);
+  assert.equal(adjusted.result.xp, 0);
+  assert.equal(adjusted.result.coins, 0);
+  assert.equal(adjusted.rewardFactor, 0);
   assert.equal(adjusted.result.chest, undefined);
   assert.equal(adjusted.result.badge, undefined);
   assert.ok(adjusted.result.score < 40);

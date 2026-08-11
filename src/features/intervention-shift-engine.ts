@@ -411,6 +411,7 @@ export function arriveOnScene(
   const clinicalState = createClinicalPatientState(
     scenario,
     call.dispatchRecords.length === DISPATCH_ORDER.length,
+    missionSession.patientState,
   );
   return {
     ...session,

@@ -1,0 +1,22 @@
+{
+  "mobile": {
+    "status": "automated_only",
+    "widths": [320, 360],
+    "blockingOverflow": "aucun risque bloquant détecté par les contrôles structurels",
+    "hudReadable": "structure responsive validée automatiquement",
+    "buttonsAccessible": "cibles tactiles et focus clavier validés automatiquement",
+    "reloadResume": "passed",
+    "deadScreens": 0,
+    "initialSsrStatus": 200,
+    "manualBrowser": "indisponible dans cet environnement de validation"
+  },
+  "automation": {
+    "status": "passed",
+    "typescript": "passed",
+    "eslint": "fichiers modifiés: passed; dépôt complet: dette CRLF préexistante",
+    "tests": "passed",
+    "testCount": 131,
+    "build": "passed",
+    "ssr": "passed (HTTP 200, contenu Mode Intervention présent)"
+  }
+}

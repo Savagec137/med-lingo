@@ -1,0 +1,692 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-11T12:55:08.429Z",
+  "scope": "Validation finale du Mode Intervention V2 — 15 scénarios, trois parcours chacun",
+  "counts": {
+    "scenarios": 15,
+    "replays": 45,
+    "validatedScenarios": 15,
+    "scenariosToCorrect": 0,
+    "sourceVerifiedReferences": 7,
+    "absoluteWindowsCitationPaths": 0,
+    "failedProfitable": 0,
+    "outOfScopeRecommendedActions": 0,
+    "deadScreens": 0
+  },
+  "maturityScore": 90,
+  "evidence": {
+    "mobile": {
+      "status": "automated_only",
+      "widths": [
+        320,
+        360
+      ],
+      "blockingOverflow": "aucun risque bloquant détecté par les contrôles structurels",
+      "hudReadable": "structure responsive validée automatiquement",
+      "buttonsAccessible": "cibles tactiles et focus clavier validés automatiquement",
+      "reloadResume": "passed",
+      "deadScreens": 0,
+      "initialSsrStatus": 200,
+      "manualBrowser": "indisponible dans cet environnement de validation"
+    },
+    "automation": {
+      "status": "passed",
+      "typescript": "passed",
+      "eslint": "fichiers modifiés: passed; dépôt complet: dette CRLF préexistante",
+      "tests": "passed",
+      "testCount": 131,
+      "build": "passed",
+      "ssr": "passed (HTTP 200, contenu Mode Intervention présent)"
+    }
+  },
+  "severityCounts": {
+    "INFO": 0,
+    "WARNING": 7,
+    "ERROR": 0,
+    "CRITICAL": 0
+  },
+  "issues": [
+    {
+      "level": "WARNING",
+      "code": "QUALITATIVE_VITALS_ONLY",
+      "scenarioId": "mission-04-avc-suspect",
+      "message": "Les observations restent qualitatives : aucune valeur chiffrée n’est inventée sans source exploitable."
+    },
+    {
+      "level": "WARNING",
+      "code": "QUALITATIVE_VITALS_ONLY",
+      "scenarioId": "mission-07-arret-cardio-respiratoire",
+      "message": "Les observations restent qualitatives : aucune valeur chiffrée n’est inventée sans source exploitable."
+    },
+    {
+      "level": "WARNING",
+      "code": "QUALITATIVE_VITALS_ONLY",
+      "scenarioId": "mission-12-accouchement-inopine",
+      "message": "Les observations restent qualitatives : aucune valeur chiffrée n’est inventée sans source exploitable."
+    },
+    {
+      "level": "WARNING",
+      "code": "QUALITATIVE_VITALS_ONLY",
+      "scenarioId": "mission-14-intoxication",
+      "message": "Les observations restent qualitatives : aucune valeur chiffrée n’est inventée sans source exploitable."
+    },
+    {
+      "level": "WARNING",
+      "code": "QUALITATIVE_VITALS_ONLY",
+      "scenarioId": "mission-15-intervention-complexe",
+      "message": "Les observations restent qualitatives : aucune valeur chiffrée n’est inventée sans source exploitable."
+    },
+    {
+      "level": "WARNING",
+      "code": "FORMAL_MEDICAL_VALIDATION_PENDING",
+      "message": "Les 120 interactions existantes conservent leur statut documentaire actuel et nécessitent la validation formelle d’un formateur DEA et d’un médecin référent avant qualification trainer_validated."
+    },
+    {
+      "level": "WARNING",
+      "code": "MANUAL_MOBILE_VALIDATION_PENDING",
+      "message": "Les contrôles mobiles automatisés passent, mais le replay manuel sur navigateur n’a pas pu être enregistré dans cet environnement."
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "mission-01-malaise-domicile",
+      "title": "Malaise à domicile",
+      "difficultyStars": 1,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 1,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 74,
+        "finalState": 100,
+        "score": 100,
+        "xp": 203,
+        "coins": 94,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 70,
+        "finalState": 93,
+        "score": 83,
+        "xp": 164,
+        "coins": 77,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 67,
+        "finalState": 25,
+        "score": 0,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 6
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-02-douleur-thoracique",
+      "title": "Douleur thoracique",
+      "difficultyStars": 1,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 3,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 62,
+        "finalState": 97,
+        "score": 100,
+        "xp": 223,
+        "coins": 114,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 58,
+        "finalState": 81,
+        "score": 83,
+        "xp": 182,
+        "coins": 95,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 55,
+        "finalState": 27,
+        "score": 13,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 4
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-03-detresse-respiratoire",
+      "title": "Détresse respiratoire",
+      "difficultyStars": 2,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 2,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 50,
+        "finalState": 92,
+        "score": 100,
+        "xp": 256,
+        "coins": 134,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 46,
+        "finalState": 74,
+        "score": 87,
+        "xp": 212,
+        "coins": 113,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 43,
+        "finalState": 19,
+        "score": 18,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-04-avc-suspect",
+      "title": "AVC suspect",
+      "difficultyStars": 2,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 0,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 56,
+        "finalState": 98,
+        "score": 100,
+        "xp": 266,
+        "coins": 149,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 52,
+        "finalState": 80,
+        "score": 87,
+        "xp": 221,
+        "coins": 127,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 49,
+        "finalState": 25,
+        "score": 18,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-05-chute-fracture",
+      "title": "Chute avec fracture",
+      "difficultyStars": 2,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 1,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 65,
+        "finalState": 100,
+        "score": 100,
+        "xp": 276,
+        "coins": 164,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 61,
+        "finalState": 89,
+        "score": 87,
+        "xp": 230,
+        "coins": 140,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 58,
+        "finalState": 26,
+        "score": 9,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 4
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-06-hemorragie-externe",
+      "title": "Hémorragie externe",
+      "difficultyStars": 3,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 2,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 44,
+        "finalState": 86,
+        "score": 100,
+        "xp": 304,
+        "coins": 189,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 40,
+        "finalState": 67,
+        "score": 90,
+        "xp": 255,
+        "coins": 163,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 37,
+        "finalState": 10,
+        "score": 15,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-07-arret-cardio-respiratoire",
+      "title": "Arrêt cardio-respiratoire",
+      "difficultyStars": 3,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 0,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 24,
+        "finalState": 66,
+        "score": 100,
+        "xp": 349,
+        "coins": 244,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "unstable",
+        "initialState": 20,
+        "finalState": 47,
+        "score": 90,
+        "xp": 131,
+        "coins": 94,
+        "rewardFactor": 0.4,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 17,
+        "finalState": 8,
+        "score": 35,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 1
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-08-accident-circulation",
+      "title": "Accident de circulation",
+      "difficultyStars": 3,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 2,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 48,
+        "finalState": 90,
+        "score": 100,
+        "xp": 339,
+        "coins": 224,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 44,
+        "finalState": 71,
+        "score": 90,
+        "xp": 286,
+        "coins": 194,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 41,
+        "finalState": 14,
+        "score": 15,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-09-allergie-severe",
+      "title": "Réaction allergique sévère",
+      "difficultyStars": 3,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 2,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 42,
+        "finalState": 84,
+        "score": 100,
+        "xp": 329,
+        "coins": 214,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 38,
+        "finalState": 65,
+        "score": 90,
+        "xp": 277,
+        "coins": 185,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 35,
+        "finalState": 8,
+        "score": 15,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-10-crise-convulsive",
+      "title": "Crise convulsive",
+      "difficultyStars": 3,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 1,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 54,
+        "finalState": 96,
+        "score": 100,
+        "xp": 334,
+        "coins": 219,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 50,
+        "finalState": 77,
+        "score": 90,
+        "xp": 282,
+        "coins": 190,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 47,
+        "finalState": 20,
+        "score": 15,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-11-enfant-febrile",
+      "title": "Enfant fébrile",
+      "difficultyStars": 4,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 1,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 46,
+        "finalState": 95,
+        "score": 100,
+        "xp": 377,
+        "coins": 259,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 42,
+        "finalState": 74,
+        "score": 89,
+        "xp": 318,
+        "coins": 226,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 39,
+        "finalState": 9,
+        "score": 12,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-12-accouchement-inopine",
+      "title": "Accouchement inopiné",
+      "difficultyStars": 4,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 0,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 59,
+        "finalState": 100,
+        "score": 100,
+        "xp": 407,
+        "coins": 294,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 55,
+        "finalState": 87,
+        "score": 89,
+        "xp": 345,
+        "coins": 257,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 52,
+        "finalState": 22,
+        "score": 12,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 3
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-13-polytraumatise",
+      "title": "Polytraumatisé",
+      "difficultyStars": 4,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 2,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 34,
+        "finalState": 83,
+        "score": 100,
+        "xp": 437,
+        "coins": 334,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 30,
+        "finalState": 62,
+        "score": 89,
+        "xp": 372,
+        "coins": 293,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 27,
+        "finalState": 7,
+        "score": 23,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 2
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-14-intoxication",
+      "title": "Intoxication",
+      "difficultyStars": 5,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 0,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 39,
+        "finalState": 88,
+        "score": 100,
+        "xp": 475,
+        "coins": 374,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "stabilized",
+        "initialState": 35,
+        "finalState": 66,
+        "score": 88,
+        "xp": 403,
+        "coins": 329,
+        "rewardFactor": 0.9,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 32,
+        "finalState": 10,
+        "score": 21,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 2
+      },
+      "status": "validated"
+    },
+    {
+      "scenarioId": "mission-15-intervention-complexe",
+      "title": "Intervention complexe",
+      "difficultyStars": 5,
+      "initialVitalCount": 3,
+      "dynamicVitalCount": 0,
+      "referenceCount": 7,
+      "outOfScopeActionCount": 0,
+      "ideal": {
+        "outcome": "stabilized",
+        "initialState": 32,
+        "finalState": 81,
+        "score": 100,
+        "xp": 535,
+        "coins": 474,
+        "rewardFactor": 1,
+        "decisions": 8
+      },
+      "average": {
+        "outcome": "unstable",
+        "initialState": 28,
+        "finalState": 59,
+        "score": 88,
+        "xp": 203,
+        "coins": 186,
+        "rewardFactor": 0.4,
+        "decisions": 8
+      },
+      "catastrophic": {
+        "outcome": "failed",
+        "initialState": 25,
+        "finalState": 3,
+        "score": 21,
+        "xp": 0,
+        "coins": 0,
+        "rewardFactor": 0,
+        "decisions": 2
+      },
+      "status": "validated"
+    }
+  ]
+}

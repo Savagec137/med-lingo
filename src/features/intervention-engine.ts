@@ -190,6 +190,7 @@ export function submitInterventionAnswers(
   const decision = {
     stepId: step.id,
     phase: step.phase,
+    interactionFormat: step.format,
     choiceId: choiceIds.join("|"),
     choiceLabel: selectedChoices.map((choice) => choice.label).join(" + "),
     selectedChoiceIds: choiceIds,

@@ -90,6 +90,8 @@ export interface ClinicalKnowledgeReference {
   title: string;
   sourceDocument: string;
   sourcePages: string;
+  repositoryPath: string;
+  sourceUrl?: string;
   reviewStatus: "source_verified";
   phases: InterventionPhase[];
   vitalIds?: ClinicalVitalId[];

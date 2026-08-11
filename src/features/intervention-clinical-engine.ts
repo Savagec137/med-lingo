@@ -347,7 +347,7 @@ function getOutcome(
 }
 
 function consequenceFor(
-  recommended: boolean,
+  decision: DecisionRecord,
   outcome: ClinicalOutcome,
   vitalChanges: readonly ClinicalVitalChange[],
 ) {
@@ -355,7 +355,10 @@ function consequenceFor(
   const changed = vitalChanges.filter((change) => change.before !== change.after);
   const monitored =
     changed.length > 0 ? ` ${changed.map((change) => change.label).join(", ")} évolue.` : "";
-  return recommended
+  if (decision.recommended && decision.interactionFormat === "error-identification") {
+    return `L’erreur de priorisation est correctement reconnue et n’est pas exécutée.${monitored}`;
+  }
+  return decision.recommended
     ? `La décision respecte la priorité attendue et favorise la stabilisation.${monitored}`
     : `La priorité inadéquate ou retardée entraîne une aggravation simulée.${monitored}`;
 }
@@ -452,8 +455,9 @@ function patientSnapshotVitals(scenario: InterventionScenario) {
 export function createClinicalPatientState(
   scenario: InterventionScenario,
   dispatchComplete = false,
+  initialOverallState = scenario.startingPatient,
 ): ClinicalPatientState {
-  const overallState = clamp(scenario.startingPatient, 0, 100);
+  const overallState = clamp(initialOverallState, 0, 100);
   const outcome: ClinicalOutcome = overallState >= 85 ? "stabilized" : "unstable";
   return {
     schemaVersion: 1,
@@ -479,26 +483,33 @@ export function applyClinicalDecision(
 ): ClinicalPatientState {
   if (state.outcome === "failed") return state;
   const stateBefore = state.overallState;
-  const stateAfter = clamp(stateBefore + decision.effect.patient, 0, 100);
+  const patientDelta = decision.phase === "debrief" ? 0 : decision.effect.patient;
+  const stateAfter = clamp(stateBefore + patientDelta, 0, 100);
   const consecutiveErrors = decision.recommended ? 0 : state.consecutiveErrors + 1;
   const criticalOmissions =
     !decision.recommended && CRITICAL_PHASES.has(decision.phase)
       ? Array.from(new Set([...state.criticalOmissions, decision.phase]))
       : state.criticalOmissions;
   const outcomeResult = getOutcome(stateBefore, stateAfter, consecutiveErrors, criticalOmissions);
-  const vitals = state.vitals.map((vital) => evolveVital(vital, decision.effect.patient));
+  const vitals =
+    decision.phase === "debrief"
+      ? state.vitals
+      : state.vitals.map((vital) => evolveVital(vital, patientDelta));
   const vitalChanges = changesBetween(state.vitals, vitals);
   const entry: ClinicalTimelineEntry = {
     id: `${decision.stepId}:${state.timeline.length + 1}`,
     stepId: decision.stepId,
     phase: decision.phase,
-    actionLabel: decision.choiceLabel,
+    actionLabel:
+      decision.recommended && decision.interactionFormat === "error-identification"
+        ? `Erreur correctement identifiée : ${decision.choiceLabel}`
+        : decision.choiceLabel,
     recommended: decision.recommended,
-    patientDelta: decision.effect.patient,
+    patientDelta,
     stateBefore,
     stateAfter,
     outcome: outcomeResult.outcome,
-    consequence: consequenceFor(decision.recommended, outcomeResult.outcome, vitalChanges),
+    consequence: consequenceFor(decision, outcomeResult.outcome, vitalChanges),
     vitalChanges,
     simulatedTimeSeconds,
   };
@@ -578,7 +589,7 @@ export function reassessClinicalPatient(
 
 export function applyClinicalQualityToResult(result: MissionResult, state: ClinicalPatientState) {
   const outcomeFactor: Record<ClinicalOutcome, number> = {
-    failed: 0.05,
+    failed: 0,
     deteriorating: 0.2,
     unstable: 0.45,
     improving: 0.8,
@@ -625,7 +636,11 @@ export function buildClinicalDebrief(
   return {
     outcome: state.outcome,
     outcomeLabel: OUTCOME_LABELS[state.outcome],
-    successfulActions: result.goodDecisions.map((decision) => decision.choiceLabel),
+    successfulActions: result.goodDecisions.map((decision) =>
+      decision.interactionFormat === "error-identification"
+        ? `Erreur correctement identifiée : ${decision.choiceLabel}`
+        : decision.choiceLabel,
+    ),
     errors: result.errors.map((decision) => `${decision.choiceLabel} — ${decision.feedback}`),
     consequences: state.timeline.map((entry) => ({
       action: entry.actionLabel,
