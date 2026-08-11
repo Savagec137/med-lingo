@@ -6,487 +6,815 @@
   "title": "Synthèse",
   "kind": "lesson",
   "status": "review",
-  "difficulty": "medium",
-  "estimatedMinutes": 7,
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
   "level": 1,
-  "xp": 27,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
   "pulse": null,
   "selection": {
-    "strategy": "random",
-    "count": 9
+    "strategy": "all",
+    "count": 8
   },
   "learningObjectives": [
-    "Physiologie du système digestif"
+    "Relier chaque organe digestif à son rôle général.",
+    "Reconstituer le trajet complet.",
+    "Distinguer tube digestif, glandes et enveloppe abdominale."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l06"
+    "body.system.digestive",
+    "body.organization.organ-to-system"
   ],
-  "prerequisiteIds": [
-    "dea-p07-l07"
-  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l06-q351",
-      "difficulty": "easy",
-      "question": "Où est absorbée la majorité des nutriments ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q351",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p07-l08-q01",
       "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle est la fonction générale de l’appareil digestif donnée par le support ?",
       "answers": [
         {
-          "id": "import-b01-p04-l06-q351-answer-01",
-          "text": "Dans l'intestin grêle",
-          "explanation": ""
+          "id": "dea-p07-l08-q01-a1",
+          "text": "Transformer les aliments absorbés en éléments assimilables par l’organisme",
+          "explanation": "Cette phrase résume le rôle général présenté."
         },
         {
-          "id": "import-b01-p04-l06-q351-answer-02",
-          "text": "Dans l'œsophage",
-          "explanation": ""
+          "id": "dea-p07-l08-q01-a2",
+          "text": "Transporter uniquement l’oxygène",
+          "explanation": "Cette fonction appartient au système respiratoire et circulatoire."
         },
         {
-          "id": "import-b01-p04-l06-q351-answer-03",
-          "text": "Dans le côlon",
-          "explanation": ""
+          "id": "dea-p07-l08-q01-a3",
+          "text": "Produire les mouvements volontaires",
+          "explanation": "Cette fonction appartient au système locomoteur."
         },
         {
-          "id": "import-b01-p04-l06-q351-answer-04",
-          "text": "Dans l'estomac",
-          "explanation": ""
+          "id": "dea-p07-l08-q01-a4",
+          "text": "Filtrer exclusivement les urines",
+          "explanation": "Cette fonction appartient au système urinaire."
         }
       ],
-      "correctAnswer": "import-b01-p04-l06-q351-answer-01"
+      "correctAnswer": "dea-p07-l08-q01-a1",
+      "explanation": "La réponse reprend l’objectif fonctionnel d’assimilation présenté page 39.",
+      "knowledgeIds": [
+        "K-DEA-P07-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse reprend l’objectif fonctionnel d’assimilation présenté page 39.",
+        "commonMistake": "Choisir une fonction d’un autre système confond les domaines anatomiques.",
+        "keyTakeaway": "Appareil digestif : transformer pour rendre assimilable.",
+        "fieldApplication": "Présenter la fonction générale avant le détail des organes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse reprend l’objectif fonctionnel d’assimilation présenté page 39.",
+      "common_mistake": "Choisir une fonction d’un autre système confond les domaines anatomiques.",
+      "key_takeaway": "Appareil digestif : transformer pour rendre assimilable.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l06-q352",
-      "difficulty": "easy",
-      "question": "Quel organe produit la bile ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q352",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l06-q352-answer-01",
-          "text": "Le foie",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q352-answer-02",
-          "text": "Le pancréas",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q352-answer-03",
-          "text": "L'estomac",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q352-answer-04",
-          "text": "La rate",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l06-q352-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l06-q353",
-      "difficulty": "easy",
-      "question": "Les enzymes digestives participent à la digestion chimique.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q353",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p07-l08-q02",
       "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l06-q353-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q353-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l06-q353-true"
-    },
-    {
-      "id": "import-b01-p04-l06-q354",
       "difficulty": "easy",
-      "question": "La digestion débute dans l'estomac.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q354",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
+      "question": "Le péritoine est un double feuillet protecteur et non une portion du tube digestif parcourue par les aliments.",
       "answers": [
         {
-          "id": "import-b01-p04-l06-q354-true",
+          "id": "dea-p07-l08-q02-true",
           "text": "Vrai",
-          "explanation": ""
+          "explanation": "La proposition distingue correctement enveloppe et tube digestif."
         },
         {
-          "id": "import-b01-p04-l06-q354-false",
+          "id": "dea-p07-l08-q02-false",
           "text": "Faux",
-          "explanation": ""
+          "explanation": "Faux serait incorrect : le péritoine protège les viscères sans conduire les aliments."
         }
       ],
-      "correctAnswer": "import-b01-p04-l06-q354-false"
+      "correctAnswer": "dea-p07-l08-q02-true",
+      "explanation": "Le support décrit le péritoine comme une enveloppe de la cavité abdominale protégeant les viscères.",
+      "knowledgeIds": [
+        "K-DEA-P07-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support décrit le péritoine comme une enveloppe de la cavité abdominale protégeant les viscères.",
+        "commonMistake": "Le placer dans le trajet alimentaire confond enveloppe et conduit.",
+        "keyTakeaway": "Péritoine : enveloppe protectrice des viscères.",
+        "fieldApplication": "Employer ce terme pour décrire une structure abdominale, pas une étape du transit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support décrit le péritoine comme une enveloppe de la cavité abdominale protégeant les viscères.",
+      "common_mistake": "Le placer dans le trajet alimentaire confond enveloppe et conduit.",
+      "key_takeaway": "Péritoine : enveloppe protectrice des viscères.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-012"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l06-q355",
-      "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q355",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "associationMode": "matching",
-        "requiredSelections": 4
-      },
+      "id": "dea-p07-l08-q03",
       "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
+      "difficulty": "medium",
+      "question": "Associe chaque organe à son rôle général.",
       "answers": [
         {
-          "id": "import-b01-p04-l06-q355-pair-01",
+          "id": "dea-p07-l08-q03-a1",
           "text": "Bouche",
-          "match": "Mastication",
-          "explanation": ""
+          "match": "Mastication, salivation et déglutition",
+          "explanation": "Ces phénomènes ouvrent le trajet digestif."
         },
         {
-          "id": "import-b01-p04-l06-q355-pair-02",
+          "id": "dea-p07-l08-q03-a2",
           "text": "Estomac",
-          "match": "Brassage",
-          "explanation": ""
+          "match": "Brassage et imprégnation par le suc gastrique",
+          "explanation": "Ces actions sont décrites dans la phase gastrique."
         },
         {
-          "id": "import-b01-p04-l06-q355-pair-03",
+          "id": "dea-p07-l08-q03-a3",
+          "text": "Foie",
+          "match": "Sécrétion de bile",
+          "explanation": "La bile se déverse dans l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l08-q03-a4",
           "text": "Intestin grêle",
-          "match": "Absorption",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q355-pair-04",
-          "text": "Pancréas",
-          "match": "Enzymes digestives",
-          "explanation": ""
+          "match": "Digestion poursuivie et absorption des nutriments",
+          "explanation": "Sa paroi permet le passage vers sang ou lymphe."
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l06-q355-pair-01",
-        "import-b01-p04-l06-q355-pair-02",
-        "import-b01-p04-l06-q355-pair-03",
-        "import-b01-p04-l06-q355-pair-04"
-      ]
+        "dea-p07-l08-q03-a1",
+        "dea-p07-l08-q03-a2",
+        "dea-p07-l08-q03-a3",
+        "dea-p07-l08-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l08-q03-a1",
+        "dea-p07-l08-q03-a2",
+        "dea-p07-l08-q03-a3",
+        "dea-p07-l08-q03-a4"
+      ],
+      "explanation": "Chaque organe est relié à la fonction décrite dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-002",
+        "K-DEA-P07-006",
+        "K-DEA-P07-008",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque organe est relié à la fonction décrite dans le support.",
+        "commonMistake": "Attribuer la bile à l’estomac ou l’absorption à la bouche confond les étapes.",
+        "keyTakeaway": "Chaque organe intervient à une étape précise.",
+        "fieldApplication": "Relier localisation et rôle pour structurer une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque organe est relié à la fonction décrite dans le support.",
+      "common_mistake": "Attribuer la bile à l’estomac ou l’absorption à la bouche confond les étapes.",
+      "key_takeaway": "Chaque organe intervient à une étape précise.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002",
+          "K-DEA-P07-006",
+          "K-DEA-P07-008",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l06-q356",
+      "id": "dea-p07-l08-q04",
+      "type": "ordering",
       "difficulty": "medium",
-      "question": "La majorité de l'absorption des nutriments se fait dans l'______ grêle.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
+      "question": "Reconstitue le trajet digestif sans inclure les glandes annexes.",
+      "answers": [
+        {
+          "id": "dea-p07-l08-q04-a1",
+          "text": "Bouche",
+          "explanation": "Première étape du trajet.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l08-q04-a2",
+          "text": "Pharynx",
+          "explanation": "Carrefour qui suit la bouche.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l08-q04-a3",
+          "text": "Œsophage",
+          "explanation": "Conduit vers l’estomac.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l08-q04-a4",
+          "text": "Estomac",
+          "explanation": "Poche de brassage et d’imprégnation.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p07-l08-q04-a5",
+          "text": "Intestin grêle",
+          "explanation": "Poursuite de la digestion et absorption.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "dea-p07-l08-q04-a6",
+          "text": "Gros intestin",
+          "explanation": "Transit des éléments non absorbés.",
+          "sequenceRank": 6
+        },
+        {
+          "id": "dea-p07-l08-q04-a7",
+          "text": "Évacuation",
+          "explanation": "Fin du trajet des résidus.",
+          "sequenceRank": 7
+        }
       ],
+      "correctAnswer": [
+        "dea-p07-l08-q04-a1",
+        "dea-p07-l08-q04-a2",
+        "dea-p07-l08-q04-a3",
+        "dea-p07-l08-q04-a4",
+        "dea-p07-l08-q04-a5",
+        "dea-p07-l08-q04-a6",
+        "dea-p07-l08-q04-a7"
+      ],
+      "correctAnswers": [
+        "dea-p07-l08-q04-a1",
+        "dea-p07-l08-q04-a2",
+        "dea-p07-l08-q04-a3",
+        "dea-p07-l08-q04-a4",
+        "dea-p07-l08-q04-a5",
+        "dea-p07-l08-q04-a6",
+        "dea-p07-l08-q04-a7"
+      ],
+      "explanation": "L’ordre conserve uniquement les segments parcourus par les aliments.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
       "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
+        "body.system.digestive",
+        "body.organization.organ-to-system"
       ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q356",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "intestin"
-        ]
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre conserve uniquement les segments parcourus par les aliments.",
+        "commonMistake": "Ajouter foie, vésicule ou pancréas dans la chaîne confond conduit et organes annexes.",
+        "keyTakeaway": "Le tube digestif forme un trajet continu.",
+        "fieldApplication": "Utiliser ce fil anatomique pour localiser une plainte."
       },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre conserve uniquement les segments parcourus par les aliments.",
+      "common_mistake": "Ajouter foie, vésicule ou pancréas dans la chaîne confond conduit et organes annexes.",
+      "key_takeaway": "Le tube digestif forme un trajet continu.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006",
+          "K-DEA-P07-007",
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l08-q05",
       "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : la bile est sécrétée par le foie et emmagasinée dans la ______ biliaire.",
       "answers": [
         {
-          "id": "import-b01-p04-l06-q356-accepted-01",
-          "text": "intestin",
-          "explanation": ""
+          "id": "dea-p07-l08-q05-a1",
+          "text": "vésicule",
+          "explanation": "La vésicule biliaire assure le stockage."
+        },
+        {
+          "id": "dea-p07-l08-q05-a2",
+          "text": "trachée",
+          "explanation": "La trachée appartient au système respiratoire."
+        },
+        {
+          "id": "dea-p07-l08-q05-a3",
+          "text": "plèvre",
+          "explanation": "La plèvre enveloppe les poumons."
+        },
+        {
+          "id": "dea-p07-l08-q05-a4",
+          "text": "vessie",
+          "explanation": "La vessie appartient au système urinaire."
+        }
+      ],
+      "correctAnswer": "dea-p07-l08-q05-a1",
+      "explanation": "Le foie produit la bile et la vésicule biliaire la stocke.",
+      "knowledgeIds": [
+        "K-DEA-P07-008",
+        "K-DEA-P07-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le foie produit la bile et la vésicule biliaire la stocke.",
+        "commonMistake": "La proximité sonore entre vésicule et vessie peut provoquer une confusion de système.",
+        "keyTakeaway": "Bile : foie puis vésicule biliaire.",
+        "fieldApplication": "Nommer complètement la vésicule biliaire dans une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le foie produit la bile et la vésicule biliaire la stocke.",
+      "common_mistake": "La proximité sonore entre vésicule et vessie peut provoquer une confusion de système.",
+      "key_takeaway": "Bile : foie puis vésicule biliaire.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-008",
+          "K-DEA-P07-009"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l08-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un apprenant décrit « un conduit qui traverse le foie puis le pancréas ». Quelle correction anatomique est la plus précise ?",
+      "answers": [
+        {
+          "id": "dea-p07-l08-q06-a1",
+          "text": "Les aliments traversent le tube digestif ; le foie et le pancréas agissent par leurs sécrétions vers l’intestin grêle",
+          "explanation": "Cette correction distingue trajet alimentaire et glandes annexes."
+        },
+        {
+          "id": "dea-p07-l08-q06-a2",
+          "text": "Les aliments traversent effectivement le foie et le pancréas",
+          "explanation": "Ces organes ne constituent pas le conduit parcouru par les aliments."
+        },
+        {
+          "id": "dea-p07-l08-q06-a3",
+          "text": "Le foie et le pancréas sont deux noms du côlon",
+          "explanation": "Ce sont des organes distincts."
+        },
+        {
+          "id": "dea-p07-l08-q06-a4",
+          "text": "Le péritoine transporte les aliments entre les deux",
+          "explanation": "Le péritoine est une enveloppe protectrice."
+        }
+      ],
+      "correctAnswer": "dea-p07-l08-q06-a1",
+      "explanation": "La réponse distingue organes traversés et organes qui délivrent des sécrétions.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-008",
+        "K-DEA-P07-010",
+        "K-DEA-P07-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse distingue organes traversés et organes qui délivrent des sécrétions.",
+        "commonMistake": "Un schéma rapproché peut faire croire que tout organe dessiné est traversé.",
+        "keyTakeaway": "Tube digestif traversé ; glandes annexes sécrétrices.",
+        "fieldApplication": "Corriger une description anatomique avant de l’utiliser dans un bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse distingue organes traversés et organes qui délivrent des sécrétions.",
+      "common_mistake": "Un schéma rapproché peut faire croire que tout organe dessiné est traversé.",
+      "key_takeaway": "Tube digestif traversé ; glandes annexes sécrétrices.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-008",
+          "K-DEA-P07-010",
+          "K-DEA-P07-012"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l08-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles structures participent à la digestion par une sécrétion citée dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l08-q07-a1",
+          "text": "Les glandes salivaires",
+          "explanation": "La salive contient une enzyme agissant sur les amidons."
+        },
+        {
+          "id": "dea-p07-l08-q07-a2",
+          "text": "L’estomac",
+          "explanation": "Ses glandes sécrètent le suc gastrique."
+        },
+        {
+          "id": "dea-p07-l08-q07-a3",
+          "text": "Le foie",
+          "explanation": "Il sécrète la bile."
+        },
+        {
+          "id": "dea-p07-l08-q07-a4",
+          "text": "Le pancréas",
+          "explanation": "Il sécrète le suc pancréatique."
+        },
+        {
+          "id": "dea-p07-l08-q07-a5",
+          "text": "Le péritoine",
+          "explanation": "Il protège les viscères mais n’est pas décrit comme une glande digestive."
+        },
+        {
+          "id": "dea-p07-l08-q07-a6",
+          "text": "L’œsophage",
+          "explanation": "Il est décrit comme un tube de passage."
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l06-q356-accepted-01"
-      ]
+        "dea-p07-l08-q07-a1",
+        "dea-p07-l08-q07-a2",
+        "dea-p07-l08-q07-a3",
+        "dea-p07-l08-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l08-q07-a1",
+        "dea-p07-l08-q07-a2",
+        "dea-p07-l08-q07-a3",
+        "dea-p07-l08-q07-a4"
+      ],
+      "explanation": "Les quatre structures sont reliées à une sécrétion digestive dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-003",
+        "K-DEA-P07-006",
+        "K-DEA-P07-008",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre structures sont reliées à une sécrétion digestive dans le support.",
+        "commonMistake": "Confondre conduit ou enveloppe avec glande ajoute des fonctions absentes.",
+        "keyTakeaway": "Salive, suc gastrique, bile et suc pancréatique participent aux transformations.",
+        "fieldApplication": "Associer chaque sécrétion à son origine correcte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre structures sont reliées à une sécrétion digestive dans le support.",
+      "common_mistake": "Confondre conduit ou enveloppe avec glande ajoute des fonctions absentes.",
+      "key_takeaway": "Salive, suc gastrique, bile et suc pancréatique participent aux transformations.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-003",
+          "K-DEA-P07-006",
+          "K-DEA-P07-008",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l06-q357",
-      "difficulty": "hard",
-      "question": "Quel est le rôle principal des enzymes digestives ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q357",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p07-l08-q08",
       "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l06-q357-answer-01",
-          "text": "Décomposer les aliments en nutriments absorbables",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q357-answer-02",
-          "text": "Transporter l'oxygène",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q357-answer-03",
-          "text": "Filtrer le sang",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q357-answer-04",
-          "text": "Produire des globules rouges",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l06-q357-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l06-q358",
-      "difficulty": "hard",
-      "question": "Un patient présente des vomissements répétés et des douleurs épigastriques. Quel système est principalement concerné ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q358",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
-      "answers": [
-        {
-          "id": "import-b01-p04-l06-q358-answer-01",
-          "text": "Le système digestif",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q358-answer-02",
-          "text": "Le système nerveux",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q358-answer-03",
-          "text": "Le système respiratoire",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l06-q358-answer-04",
-          "text": "Le système locomoteur",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l06-q358-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l06-q360",
       "difficulty": "medium",
-      "question": "Clique sur l'intestin grêle.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l06"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l06"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L06",
-        "originalQuestionId": "Q360",
-        "originalType": "anatomy_click",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "anatomyTarget": "small_intestine"
-      },
-      "type": "anatomy_location",
+      "question": "Quelle relation organe-sécrétion est incorrecte ?",
+      "instruction": "Sélectionne la relation incorrecte.",
       "answers": [
         {
-          "id": "hotspot-small_intestine",
-          "text": "Intestin grêle",
-          "detail": "0.5,0.54",
-          "explanation": ""
+          "id": "dea-p07-l08-q08-a1",
+          "text": "Vésicule biliaire — fabrication de la bile",
+          "explanation": "La vésicule stocke la bile ; le foie la sécrète."
         },
         {
-          "id": "hotspot-kidney",
-          "text": "Rein",
-          "detail": "0.42,0.46",
-          "explanation": ""
+          "id": "dea-p07-l08-q08-a2",
+          "text": "Foie — bile",
+          "explanation": "Cette relation est correcte."
         },
         {
-          "id": "hotspot-right_upper_limb",
-          "text": "Membre supérieur droit",
-          "detail": "0.18,0.36",
-          "explanation": ""
+          "id": "dea-p07-l08-q08-a3",
+          "text": "Pancréas — suc pancréatique",
+          "explanation": "Cette relation est correcte."
         },
         {
-          "id": "hotspot-spinal_cord",
-          "text": "Moelle épinière",
-          "detail": "0.5,0.27",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-knee",
-          "text": "Genou",
-          "detail": "0.59,0.8",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-femur",
-          "text": "Fémur",
-          "detail": "0.59,0.69",
-          "explanation": ""
+          "id": "dea-p07-l08-q08-a4",
+          "text": "Estomac — suc gastrique",
+          "explanation": "Cette relation est correcte."
         }
       ],
-      "correctAnswer": "hotspot-small_intestine"
+      "correctAnswer": "dea-p07-l08-q08-a1",
+      "explanation": "La vésicule biliaire est un réservoir, pas le site de fabrication de la bile.",
+      "knowledgeIds": [
+        "K-DEA-P07-006",
+        "K-DEA-P07-008",
+        "K-DEA-P07-009",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l08",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La vésicule biliaire est un réservoir, pas le site de fabrication de la bile.",
+        "commonMistake": "Production et stockage sont facilement intervertis.",
+        "keyTakeaway": "Foie produit ; vésicule stocke.",
+        "fieldApplication": "Vérifier le verbe associé à chaque organe."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La vésicule biliaire est un réservoir, pas le site de fabrication de la bile.",
+      "common_mistake": "Production et stockage sont facilement intervertis.",
+      "key_takeaway": "Foie produit ; vésicule stocke.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse anatomique et fonctionnelle",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006",
+          "K-DEA-P07-008",
+          "K-DEA-P07-009",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     }
   ]
 }

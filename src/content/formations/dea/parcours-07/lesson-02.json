@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l02",
+  "title": "L’œsophage",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier le pharynx comme carrefour aérodigestif.",
+    "Décrire le rôle général de l’œsophage.",
+    "Replacer l’œsophage entre pharynx et estomac."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel terme décrit le pharynx dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q01-a1",
+          "text": "Carrefour aérodigestif",
+          "explanation": "Le pharynx est commun au trajet respiratoire et digestif."
+        },
+        {
+          "id": "dea-p07-l02-q01-a2",
+          "text": "Réservoir de bile",
+          "explanation": "La bile est stockée dans la vésicule biliaire."
+        },
+        {
+          "id": "dea-p07-l02-q01-a3",
+          "text": "Lieu principal d’absorption",
+          "explanation": "L’absorption est décrite au niveau de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l02-q01-a4",
+          "text": "Sphincter de sortie de l’estomac",
+          "explanation": "Le pylore assure cette fonction."
+        }
+      ],
+      "correctAnswer": "dea-p07-l02-q01-a1",
+      "explanation": "Le qualificatif aérodigestif souligne le croisement des deux voies.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le qualificatif aérodigestif souligne le croisement des deux voies.",
+        "commonMistake": "Attribuer au pharynx une fonction abdominale confond les régions anatomiques.",
+        "keyTakeaway": "Pharynx : carrefour aérodigestif.",
+        "fieldApplication": "Nommer ce repère lors d’une difficulté située dans la gorge."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le qualificatif aérodigestif souligne le croisement des deux voies.",
+      "common_mistake": "Attribuer au pharynx une fonction abdominale confond les régions anatomiques.",
+      "key_takeaway": "Pharynx : carrefour aérodigestif.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "L’œsophage est un tube d’environ 25 cm servant au passage des aliments.",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q02-true",
+          "text": "Vrai",
+          "explanation": "La description correspond au texte source."
+        },
+        {
+          "id": "dea-p07-l02-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support donne bien environ 25 cm et un rôle de passage."
+        }
+      ],
+      "correctAnswer": "dea-p07-l02-q02-true",
+      "explanation": "La proposition reprend la longueur et le rôle général donnés par le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend la longueur et le rôle général donnés par le support.",
+        "commonMistake": "Confondre œsophage et trachée conduit à parler du passage de l’air.",
+        "keyTakeaway": "Œsophage : passage des aliments vers l’estomac.",
+        "fieldApplication": "Différencier trajet digestif et trajet respiratoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend la longueur et le rôle général donnés par le support.",
+      "common_mistake": "Confondre œsophage et trachée conduit à parler du passage de l’air.",
+      "key_takeaway": "Œsophage : passage des aliments vers l’estomac.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à son rôle ou à sa position dans le trajet.",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q03-a1",
+          "text": "Bouche",
+          "match": "Préparation initiale des aliments",
+          "explanation": "Elle associe mastication et salivation."
+        },
+        {
+          "id": "dea-p07-l02-q03-a2",
+          "text": "Pharynx",
+          "match": "Carrefour aérodigestif",
+          "explanation": "Il est commun aux deux voies."
+        },
+        {
+          "id": "dea-p07-l02-q03-a3",
+          "text": "Œsophage",
+          "match": "Passage vers l’estomac",
+          "explanation": "Il conduit les aliments."
+        },
+        {
+          "id": "dea-p07-l02-q03-a4",
+          "text": "Estomac",
+          "match": "Poche recevant le contenu après l’œsophage",
+          "explanation": "Il succède à l’œsophage."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l02-q03-a1",
+        "dea-p07-l02-q03-a2",
+        "dea-p07-l02-q03-a3",
+        "dea-p07-l02-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l02-q03-a1",
+        "dea-p07-l02-q03-a2",
+        "dea-p07-l02-q03-a3",
+        "dea-p07-l02-q03-a4"
+      ],
+      "explanation": "Chaque association replace la structure dans le trajet digestif supérieur.",
+      "knowledgeIds": [
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association replace la structure dans le trajet digestif supérieur.",
+        "commonMistake": "Intervertir pharynx et œsophage rompt la continuité anatomique.",
+        "keyTakeaway": "Bouche, pharynx, œsophage, estomac.",
+        "fieldApplication": "Structurer une transmission selon le trajet anatomique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association replace la structure dans le trajet digestif supérieur.",
+      "common_mistake": "Intervertir pharynx et œsophage rompt la continuité anatomique.",
+      "key_takeaway": "Bouche, pharynx, œsophage, estomac.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet des aliments jusqu’à l’estomac.",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q04-a1",
+          "text": "Bouche",
+          "explanation": "La préparation commence dans la bouche.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l02-q04-a2",
+          "text": "Pharynx",
+          "explanation": "Il suit la déglutition.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l02-q04-a3",
+          "text": "Œsophage",
+          "explanation": "Il conduit les aliments.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l02-q04-a4",
+          "text": "Estomac",
+          "explanation": "Il reçoit le contenu par le cardia.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l02-q04-a1",
+        "dea-p07-l02-q04-a2",
+        "dea-p07-l02-q04-a3",
+        "dea-p07-l02-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l02-q04-a1",
+        "dea-p07-l02-q04-a2",
+        "dea-p07-l02-q04-a3",
+        "dea-p07-l02-q04-a4"
+      ],
+      "explanation": "L’ordre suit le trajet anatomique décrit.",
+      "knowledgeIds": [
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit le trajet anatomique décrit.",
+        "commonMistake": "Placer l’estomac avant l’œsophage inverse le sens du passage.",
+        "keyTakeaway": "Bouche, pharynx, œsophage, estomac.",
+        "fieldApplication": "Utiliser cet ordre pour localiser une gêne rapportée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit le trajet anatomique décrit.",
+      "common_mistake": "Placer l’estomac avant l’œsophage inverse le sens du passage.",
+      "key_takeaway": "Bouche, pharynx, œsophage, estomac.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le tube qui conduit les aliments du pharynx vers l’estomac est l’______.",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q05-a1",
+          "text": "œsophage",
+          "explanation": "L’œsophage assure ce passage."
+        },
+        {
+          "id": "dea-p07-l02-q05-a2",
+          "text": "appendice",
+          "explanation": "L’appendice est associé au début du côlon."
+        },
+        {
+          "id": "dea-p07-l02-q05-a3",
+          "text": "duodénum",
+          "explanation": "Le duodénum est la première partie de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l02-q05-a4",
+          "text": "pylore",
+          "explanation": "Le pylore est le sphincter de sortie de l’estomac."
+        }
+      ],
+      "correctAnswer": "dea-p07-l02-q05-a1",
+      "explanation": "L’œsophage relie le pharynx à l’estomac.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’œsophage relie le pharynx à l’estomac.",
+        "commonMistake": "Choisir un organe abdominal méconnaît la position du conduit.",
+        "keyTakeaway": "Œsophage : pharynx vers estomac.",
+        "fieldApplication": "Employer le nom du conduit plutôt qu’une formule vague."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’œsophage relie le pharynx à l’estomac.",
+      "common_mistake": "Choisir un organe abdominal méconnaît la position du conduit.",
+      "key_takeaway": "Œsophage : pharynx vers estomac.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un patient conscient décrit une sensation sur le trajet entre la gorge et l’estomac. Quelle localisation anatomique est la plus adaptée ?",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q06-a1",
+          "text": "Le trajet œsophagien",
+          "explanation": "L’œsophage relie le pharynx à l’estomac."
+        },
+        {
+          "id": "dea-p07-l02-q06-a2",
+          "text": "Le côlon",
+          "explanation": "Le côlon appartient à la partie basse du trajet digestif."
+        },
+        {
+          "id": "dea-p07-l02-q06-a3",
+          "text": "La vésicule biliaire",
+          "explanation": "Elle stocke la bile et n’est pas ce conduit."
+        },
+        {
+          "id": "dea-p07-l02-q06-a4",
+          "text": "Le péritoine",
+          "explanation": "Il protège les viscères mais ne conduit pas les aliments."
+        }
+      ],
+      "correctAnswer": "dea-p07-l02-q06-a1",
+      "explanation": "La réponse localise le conduit concerné sans déterminer la cause.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse localise le conduit concerné sans déterminer la cause.",
+        "commonMistake": "Associer immédiatement la sensation à un diagnostic n’est pas demandé.",
+        "keyTakeaway": "Décrire le trajet œsophagien quand la zone est entre pharynx et estomac.",
+        "fieldApplication": "Transmettre localisation, début, intensité et signes associés.",
+        "safetyPoint": "Toute gêne doit rester intégrée au bilan complet du patient."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse localise le conduit concerné sans déterminer la cause.",
+      "common_mistake": "Associer immédiatement la sensation à un diagnostic n’est pas demandé.",
+      "key_takeaway": "Décrire le trajet œsophagien quand la zone est entre pharynx et estomac.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations correspondent à l’œsophage dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q07-a1",
+          "text": "Il mesure environ 25 cm",
+          "explanation": "Cette longueur est explicitement donnée."
+        },
+        {
+          "id": "dea-p07-l02-q07-a2",
+          "text": "Il sert au passage des aliments",
+          "explanation": "C’est son rôle général décrit."
+        },
+        {
+          "id": "dea-p07-l02-q07-a3",
+          "text": "Il stocke la bile",
+          "explanation": "Cette fonction appartient à la vésicule biliaire."
+        },
+        {
+          "id": "dea-p07-l02-q07-a4",
+          "text": "Il est le principal lieu d’absorption",
+          "explanation": "L’absorption intestinale concerne l’intestin grêle."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l02-q07-a1",
+        "dea-p07-l02-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p07-l02-q07-a1",
+        "dea-p07-l02-q07-a2"
+      ],
+      "explanation": "Les deux propositions exactes décrivent sa dimension et sa fonction.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux propositions exactes décrivent sa dimension et sa fonction.",
+        "commonMistake": "Lui attribuer une sécrétion ou une absorption confond les organes.",
+        "keyTakeaway": "Œsophage : tube de passage d’environ 25 cm.",
+        "fieldApplication": "Distinguer conduit et organe de transformation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux propositions exactes décrivent sa dimension et sa fonction.",
+      "common_mistake": "Lui attribuer une sécrétion ou une absorption confond les organes.",
+      "key_takeaway": "Œsophage : tube de passage d’environ 25 cm.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l02-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle différence entre pharynx et œsophage est correctement formulée ?",
+      "answers": [
+        {
+          "id": "dea-p07-l02-q08-a1",
+          "text": "Le pharynx est un carrefour aérodigestif, l’œsophage conduit les aliments vers l’estomac",
+          "explanation": "La formulation distingue leur position et leur rôle général."
+        },
+        {
+          "id": "dea-p07-l02-q08-a2",
+          "text": "Le pharynx stocke la bile, l’œsophage produit l’insuline",
+          "explanation": "Ces fonctions appartiennent à d’autres organes."
+        },
+        {
+          "id": "dea-p07-l02-q08-a3",
+          "text": "Le pharynx absorbe les nutriments, l’œsophage évacue les selles",
+          "explanation": "Ces étapes se déroulent plus loin dans le trajet."
+        },
+        {
+          "id": "dea-p07-l02-q08-a4",
+          "text": "Le pharynx est le pylore, l’œsophage est le cardia",
+          "explanation": "Cardia et pylore appartiennent à l’estomac."
+        }
+      ],
+      "correctAnswer": "dea-p07-l02-q08-a1",
+      "explanation": "La réponse respecte les descriptions distinctes des deux structures.",
+      "knowledgeIds": [
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - pharynx et œsophage",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l02",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse respecte les descriptions distinctes des deux structures.",
+        "commonMistake": "Mélanger des fonctions digestives abdominales crée une association anatomique fausse.",
+        "keyTakeaway": "Pharynx : carrefour ; œsophage : conduit.",
+        "fieldApplication": "Préciser la structure dans une transmission plutôt que dire seulement « gorge »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse respecte les descriptions distinctes des deux structures.",
+      "common_mistake": "Mélanger des fonctions digestives abdominales crée une association anatomique fausse.",
+      "key_takeaway": "Pharynx : carrefour ; œsophage : conduit.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - pharynx et œsophage",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

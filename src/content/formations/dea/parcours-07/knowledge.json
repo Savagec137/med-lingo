@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "formationId": "dea",
+  "blocId": "bloc-02",
+  "parcoursId": "parcours-07",
+  "contentId": "dea-p07",
+  "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "validationStatus": "to_validate",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P07-001",
+      "title": "Organisation générale de l’appareil digestif",
+      "summary": "L’appareil digestif transforme les aliments absorbés en éléments assimilables par l’organisme.",
+      "keyPoints": [
+        "Les aliments suivent un trajet organisé dans le tube digestif.",
+        "Plusieurs organes et glandes participent à leur transformation.",
+        "Les nutriments obtenus peuvent ensuite être absorbés."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil digestif au seul estomac.",
+        "Confondre transformation digestive et absorption intestinale."
+      ],
+      "clinicalApplication": "Suivre le trajet des aliments permet de localiser précisément une plainte digestive dans un bilan DEA.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - organisation générale",
+      "pages": [
+        39,
+        40,
+        41
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonIds": [
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-002",
+      "title": "Bouche et phénomènes mécaniques",
+      "summary": "Dans la bouche ont lieu la mastication, la salivation et la déglutition.",
+      "keyPoints": [
+        "La langue, les dents et les glandes salivaires appartiennent aux éléments cités pour la bouche.",
+        "La mastication fragmente les aliments.",
+        "La salivation accompagne la préparation du bol alimentaire.",
+        "La déglutition poursuit le trajet vers le pharynx."
+      ],
+      "commonErrors": [
+        "Placer l’absorption intestinale dans la bouche.",
+        "Confondre mastication et sécrétion de bile."
+      ],
+      "clinicalApplication": "Identifier la bouche comme première étape aide à décrire le début du trajet digestif.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - bouche",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p07-l01",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-003",
+      "title": "Salive et amidons",
+      "summary": "La salive contient une enzyme qui agit sur les amidons.",
+      "keyPoints": [
+        "Les glandes salivaires sont associées à la bouche.",
+        "L’action enzymatique salivaire débute pendant la phase buccale."
+      ],
+      "commonErrors": [
+        "Attribuer à la salive la production de bile.",
+        "Dire que toute la digestion est terminée dans la bouche."
+      ],
+      "clinicalApplication": "Cette notion aide à distinguer phénomènes mécaniques et action enzymatique dès la bouche.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - bouche et salive",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive"
+      ],
+      "lessonIds": [
+        "dea-p07-l01",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-004",
+      "title": "Dentition décrite dans le support",
+      "summary": "Le support décrit 32 dents, avec par mâchoire 4 incisives, 2 canines, 4 prémolaires et 6 molaires.",
+      "keyPoints": [
+        "Le total annoncé est de 32 dents.",
+        "La répartition est donnée pour chaque mâchoire."
+      ],
+      "commonErrors": [
+        "Additionner la répartition d’une seule mâchoire comme s’il s’agissait du total.",
+        "Inverser prémolaires et molaires."
+      ],
+      "clinicalApplication": "La dentition fait partie des repères anatomiques de la cavité buccale.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - bouche et dents",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p07-l01",
+        "dea-p07-l08"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-005",
+      "title": "Pharynx et œsophage",
+      "summary": "Le pharynx est un carrefour aérodigestif ; l’œsophage est un tube d’environ 25 cm servant au passage des aliments.",
+      "keyPoints": [
+        "Le pharynx appartient au trajet commun des voies aérienne et digestive.",
+        "L’œsophage conduit les aliments vers l’estomac.",
+        "Le support attribue à l’œsophage une longueur d’environ 25 cm."
+      ],
+      "commonErrors": [
+        "Confondre œsophage et trachée.",
+        "Attribuer l’absorption intestinale à l’œsophage."
+      ],
+      "clinicalApplication": "Nommer pharynx puis œsophage permet une transmission anatomique plus précise.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - pharynx et œsophage",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l02",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-006",
+      "title": "Estomac, cardia et pylore",
+      "summary": "L’estomac est une poche en J d’environ 2 litres, située entre le cardia à l’entrée et le pylore à la sortie.",
+      "keyPoints": [
+        "La paroi contient des muscles lisses.",
+        "Des glandes sécrètent un suc gastrique très acide agissant sur les protides.",
+        "Brassage, malaxage et imprégnation précèdent l’expulsion vers l’intestin."
+      ],
+      "commonErrors": [
+        "Inverser cardia et pylore.",
+        "Présenter l’estomac comme le principal lieu de l’absorption intestinale."
+      ],
+      "clinicalApplication": "Ces repères permettent de décrire la place et le rôle général de l’estomac sans poser de diagnostic.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - estomac",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p07-l03",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-007",
+      "title": "Intestin grêle et duodénum",
+      "summary": "L’intestin grêle est un tube replié en anses d’environ 8 mètres, dont la première partie est le duodénum.",
+      "keyPoints": [
+        "Des canaux provenant de la vésicule biliaire et du pancréas débouchent dans le duodénum.",
+        "Le suc intestinal et le suc pancréatique participent à la transformation des nutriments.",
+        "Le contenu poursuit ensuite son trajet vers le gros intestin."
+      ],
+      "commonErrors": [
+        "Confondre duodénum et côlon.",
+        "Placer l’intestin grêle avant l’estomac dans le trajet."
+      ],
+      "clinicalApplication": "Le duodénum est un repère utile pour comprendre l’arrivée des sécrétions digestives.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - intestin grêle",
+      "pages": [
+        39
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l04",
+        "dea-p07-l05",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-008",
+      "title": "Foie et bile",
+      "summary": "Le foie sécrète la bile, qui se déverse dans l’intestin grêle.",
+      "keyPoints": [
+        "Le foie est une glande digestive citée dans le support.",
+        "La bile participe au processus digestif dans l’intestin grêle."
+      ],
+      "commonErrors": [
+        "Dire que le foie stocke la bile à la place de la vésicule biliaire.",
+        "Attribuer la production du suc pancréatique au foie."
+      ],
+      "clinicalApplication": "Distinguer production et stockage évite une transmission anatomique imprécise.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - glandes digestives et foie",
+      "pages": [
+        40
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l04",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-009",
+      "title": "Vésicule biliaire",
+      "summary": "La vésicule biliaire est un petit sac qui emmagasine la bile.",
+      "keyPoints": [
+        "La bile est sécrétée par le foie.",
+        "La vésicule biliaire assure son stockage.",
+        "Un canal provenant de la vésicule débouche dans le duodénum."
+      ],
+      "commonErrors": [
+        "Présenter la vésicule biliaire comme la glande qui fabrique la bile.",
+        "Confondre vésicule biliaire et vessie."
+      ],
+      "clinicalApplication": "Ce repère aide à différencier le foie, la vésicule biliaire et le pancréas.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - glandes digestives et vésicule biliaire",
+      "pages": [
+        39,
+        40
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l04",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-010",
+      "title": "Pancréas et sécrétions",
+      "summary": "Le pancréas sécrète le suc pancréatique et fabrique l’insuline.",
+      "keyPoints": [
+        "Le suc pancréatique rejoint le duodénum.",
+        "Le support distingue cette sécrétion digestive de la fabrication d’insuline."
+      ],
+      "commonErrors": [
+        "Attribuer la bile au pancréas.",
+        "Réduire le pancréas à une seule fonction."
+      ],
+      "clinicalApplication": "Identifier les deux productions citées évite de confondre les rôles des glandes digestives.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - glandes digestives et pancréas",
+      "pages": [
+        39,
+        40
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l04",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-011",
+      "title": "Côlon et résidus non absorbés",
+      "summary": "Le côlon est un tube d’environ 1,5 mètre ; les aliments non absorbés deviennent des matières fécales qui transitent dans le gros intestin avant leur évacuation.",
+      "keyPoints": [
+        "Le côlon débute dans un cul-de-sac portant l’appendice selon le support.",
+        "Le gros intestin reçoit les éléments non absorbés.",
+        "L’évacuation termine le trajet digestif."
+      ],
+      "commonErrors": [
+        "Confondre gros intestin et intestin grêle.",
+        "Placer l’absorption principale des nutriments dans le côlon."
+      ],
+      "clinicalApplication": "Décrire le transit et ses anomalies observables contribue à un bilan factuel.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - côlon et transit",
+      "pages": [
+        40,
+        41
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l06",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-012",
+      "title": "Péritoine",
+      "summary": "Le péritoine est un double feuillet enveloppant la cavité abdominale et protégeant les viscères.",
+      "keyPoints": [
+        "Le péritoine est une enveloppe protectrice.",
+        "Il n’est pas une portion du tube digestif parcourue par les aliments."
+      ],
+      "commonErrors": [
+        "Placer le péritoine dans le trajet des aliments.",
+        "Confondre péritoine et côlon."
+      ],
+      "clinicalApplication": "Le terme permet de décrire correctement une structure de la cavité abdominale.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil digestif - péritoine",
+      "pages": [
+        40
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P07-013",
+      "title": "Digestion, nutriments et absorption intestinale",
+      "summary": "La digestion transforme certains aliments en petites molécules grâce aux enzymes des sucs digestifs ; les nutriments traversent ensuite la paroi de l’intestin grêle vers le sang ou la lymphe.",
+      "keyPoints": [
+        "Les nutriments sont des molécules utilisables par l’organisme.",
+        "La digestion a lieu dans le tube digestif avec l’action d’enzymes.",
+        "La grande surface et la faible épaisseur de la paroi de l’intestin grêle facilitent l’absorption.",
+        "Les éléments non absorbés poursuivent vers le gros intestin."
+      ],
+      "commonErrors": [
+        "Confondre digestion et absorption.",
+        "Dire que tous les aliments sont absorbés sans transformation."
+      ],
+      "clinicalApplication": "Distinguer transformation et passage vers le sang ou la lymphe clarifie le fonctionnement digestif.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Digestion - nutriments et absorption intestinale",
+      "pages": [
+        41
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive"
+      ],
+      "lessonIds": [
+        "dea-p07-l05",
+        "dea-p07-l07",
+        "dea-p07-l08",
+        "dea-p07-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

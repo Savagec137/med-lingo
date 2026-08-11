@@ -7,9 +7,9 @@
       "created_at": "2026-07-30T00:00:00.000Z",
       "status": "draft",
       "document_count": 5,
-      "knowledge_count": 198,
-      "question_count": 216,
-      "boss_count": 3,
+      "knowledge_count": 211,
+      "question_count": 288,
+      "boss_count": 4,
       "change_log": [
         "Création de l'architecture de la bibliothèque officielle Pulseeo.",
         "Ajout du référentiel historique Samu Centres 15 SUdF/SFMU de mars 2015 avec traçabilité page par page.",
@@ -17,7 +17,8 @@
         "Ajout du référentiel historique Samu Centres 15 SUdF/SFMU de mars 2015 avec traçabilité page par page.",
         "Ajout contrôlé du Parcours 4 — Système locomoteur : 13 connaissances, 64 questions de leçon et 8 questions de Boss, toutes à valider.",
         "Ajout contrôlé du Parcours 5 - Système cardiovasculaire : 14 connaissances, 64 questions de leçon et 8 questions de Boss, toutes à valider.",
-        "Ajout contrôlé du Parcours 6 - Système respiratoire : 12 connaissances, 64 questions de leçon et 8 questions de Boss, toutes à valider."
+        "Ajout contrôlé du Parcours 6 - Système respiratoire : 12 connaissances, 64 questions de leçon et 8 questions de Boss, toutes à valider.",
+        "Ajout contrôlé du Parcours 7 - Système digestif : 13 connaissances, 64 questions de leçon et 8 questions de Boss, toutes à valider."
       ]
     }
   ]

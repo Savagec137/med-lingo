@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l03",
+  "title": "L’estomac",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire les principaux repères de l’estomac.",
+    "Distinguer cardia et pylore.",
+    "Identifier les fonctions générales décrites."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.composition",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l03-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle description générale de l’estomac reprend le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q01-a1",
+          "text": "Une poche en J d’environ 2 litres",
+          "explanation": "La forme et la capacité sont celles indiquées."
+        },
+        {
+          "id": "dea-p07-l03-q01-a2",
+          "text": "Un tube de 25 cm",
+          "explanation": "Cette description correspond à l’œsophage."
+        },
+        {
+          "id": "dea-p07-l03-q01-a3",
+          "text": "Un tube de 1,5 mètre",
+          "explanation": "Cette longueur est donnée pour le côlon."
+        },
+        {
+          "id": "dea-p07-l03-q01-a4",
+          "text": "Un double feuillet protecteur",
+          "explanation": "Cette description correspond au péritoine."
+        }
+      ],
+      "correctAnswer": "dea-p07-l03-q01-a1",
+      "explanation": "La forme en J et la capacité de 2 litres sont explicitement citées.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La forme en J et la capacité de 2 litres sont explicitement citées.",
+        "commonMistake": "Les longueurs des autres organes sont des distracteurs proches.",
+        "keyTakeaway": "Estomac : poche en J, environ 2 litres.",
+        "fieldApplication": "Utiliser ces repères pour identifier l’organe dans un schéma."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La forme en J et la capacité de 2 litres sont explicitement citées.",
+      "common_mistake": "Les longueurs des autres organes sont des distracteurs proches.",
+      "key_takeaway": "Estomac : poche en J, environ 2 litres.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le cardia se situe à l’entrée de l’estomac et le pylore à sa sortie.",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q02-true",
+          "text": "Vrai",
+          "explanation": "La localisation des deux sphincters est correcte."
+        },
+        {
+          "id": "dea-p07-l03-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : cardia et pylore encadrent bien l’estomac dans cet ordre."
+        }
+      ],
+      "correctAnswer": "dea-p07-l03-q02-true",
+      "explanation": "Le support place les deux sphincters aux extrémités correspondantes.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support place les deux sphincters aux extrémités correspondantes.",
+        "commonMistake": "Les inverser est une erreur anatomique fréquente.",
+        "keyTakeaway": "Cardia entre, pylore sort.",
+        "fieldApplication": "Nommer le bon repère lors d’une description du trajet.",
+        "memoryTip": "C comme cardia et commencement ; P comme pylore et poursuite."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support place les deux sphincters aux extrémités correspondantes.",
+      "common_mistake": "Les inverser est une erreur anatomique fréquente.",
+      "key_takeaway": "Cardia entre, pylore sort.",
+      "memory_tip": "C comme cardia et commencement ; P comme pylore et poursuite.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément de l’estomac à sa description.",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q03-a1",
+          "text": "Cardia",
+          "match": "Entrée de l’estomac",
+          "explanation": "Il reçoit le contenu venant de l’œsophage."
+        },
+        {
+          "id": "dea-p07-l03-q03-a2",
+          "text": "Pylore",
+          "match": "Sortie de l’estomac",
+          "explanation": "Il ouvre vers l’intestin."
+        },
+        {
+          "id": "dea-p07-l03-q03-a3",
+          "text": "Muscles lisses",
+          "match": "Brassage et malaxage",
+          "explanation": "Ils participent aux mouvements de la paroi."
+        },
+        {
+          "id": "dea-p07-l03-q03-a4",
+          "text": "Glandes gastriques",
+          "match": "Sécrétion de suc gastrique",
+          "explanation": "Elles produisent le suc décrit comme très acide."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l03-q03-a1",
+        "dea-p07-l03-q03-a2",
+        "dea-p07-l03-q03-a3",
+        "dea-p07-l03-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l03-q03-a1",
+        "dea-p07-l03-q03-a2",
+        "dea-p07-l03-q03-a3",
+        "dea-p07-l03-q03-a4"
+      ],
+      "explanation": "Les associations distinguent repères, muscles et glandes.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations distinguent repères, muscles et glandes.",
+        "commonMistake": "Associer le pylore à l’entrée inverse le trajet digestif.",
+        "keyTakeaway": "Cardia, paroi gastrique, puis pylore.",
+        "fieldApplication": "Décrire la structure concernée avec son rôle général."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations distinguent repères, muscles et glandes.",
+      "common_mistake": "Associer le pylore à l’entrée inverse le trajet digestif.",
+      "key_takeaway": "Cardia, paroi gastrique, puis pylore.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le passage du contenu à travers l’estomac.",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q04-a1",
+          "text": "Entrée par le cardia",
+          "explanation": "Le cardia reçoit le contenu de l’œsophage.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l03-q04-a2",
+          "text": "Brassage et malaxage",
+          "explanation": "Les muscles lisses participent à ces mouvements.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l03-q04-a3",
+          "text": "Imprégnation par les sucs",
+          "explanation": "Le suc gastrique agit pendant la phase gastrique.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l03-q04-a4",
+          "text": "Sortie par le pylore",
+          "explanation": "Le pylore précède l’intestin.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l03-q04-a1",
+        "dea-p07-l03-q04-a2",
+        "dea-p07-l03-q04-a3",
+        "dea-p07-l03-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l03-q04-a1",
+        "dea-p07-l03-q04-a2",
+        "dea-p07-l03-q04-a3",
+        "dea-p07-l03-q04-a4"
+      ],
+      "explanation": "La séquence suit l’entrée, la transformation gastrique puis la sortie.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence suit l’entrée, la transformation gastrique puis la sortie.",
+        "commonMistake": "Placer le pylore avant le cardia inverse les extrémités.",
+        "keyTakeaway": "Cardia, brassage, sucs, pylore.",
+        "fieldApplication": "Reconstituer le trajet sans confondre les sphincters."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence suit l’entrée, la transformation gastrique puis la sortie.",
+      "common_mistake": "Placer le pylore avant le cardia inverse les extrémités.",
+      "key_takeaway": "Cardia, brassage, sucs, pylore.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le suc gastrique très acide agit notamment sur les ______.",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q05-a1",
+          "text": "protides",
+          "explanation": "Le support relie le suc gastrique aux protides."
+        },
+        {
+          "id": "dea-p07-l03-q05-a2",
+          "text": "gaz expirés",
+          "explanation": "Ils appartiennent au fonctionnement respiratoire."
+        },
+        {
+          "id": "dea-p07-l03-q05-a3",
+          "text": "os longs",
+          "explanation": "Ils relèvent du système locomoteur."
+        },
+        {
+          "id": "dea-p07-l03-q05-a4",
+          "text": "urines",
+          "explanation": "Elles appartiennent au système urinaire."
+        }
+      ],
+      "correctAnswer": "dea-p07-l03-q05-a1",
+      "explanation": "Le terme reprend la cible indiquée pour le suc gastrique.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme reprend la cible indiquée pour le suc gastrique.",
+        "commonMistake": "Choisir une fonction d’un autre système sort du périmètre digestif.",
+        "keyTakeaway": "Suc gastrique : très acide, action sur les protides.",
+        "fieldApplication": "Distinguer l’action des différentes sécrétions digestives."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme reprend la cible indiquée pour le suc gastrique.",
+      "common_mistake": "Choisir une fonction d’un autre système sort du périmètre digestif.",
+      "key_takeaway": "Suc gastrique : très acide, action sur les protides.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un schéma de bilan montre une structure en J entre l’œsophage et l’intestin. Quelle identification est correcte ?",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q06-a1",
+          "text": "L’estomac",
+          "explanation": "Sa forme et sa position correspondent à la description du support."
+        },
+        {
+          "id": "dea-p07-l03-q06-a2",
+          "text": "Le côlon",
+          "explanation": "Le côlon vient après l’intestin grêle et n’est pas décrit comme une poche en J."
+        },
+        {
+          "id": "dea-p07-l03-q06-a3",
+          "text": "La vésicule biliaire",
+          "explanation": "Elle est un petit sac de stockage de la bile."
+        },
+        {
+          "id": "dea-p07-l03-q06-a4",
+          "text": "Le pharynx",
+          "explanation": "Le pharynx se situe dans la région de la gorge."
+        }
+      ],
+      "correctAnswer": "dea-p07-l03-q06-a1",
+      "explanation": "La forme en J et la position entre œsophage et intestin identifient l’estomac.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La forme en J et la position entre œsophage et intestin identifient l’estomac.",
+        "commonMistake": "Se fier à un seul mot comme « poche » peut faire choisir la vésicule biliaire.",
+        "keyTakeaway": "Croiser forme, position et trajet.",
+        "fieldApplication": "Localiser correctement une région digestive dans un bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La forme en J et la position entre œsophage et intestin identifient l’estomac.",
+      "common_mistake": "Se fier à un seul mot comme « poche » peut faire choisir la vésicule biliaire.",
+      "key_takeaway": "Croiser forme, position et trajet.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles actions générales sont décrites dans l’estomac ?",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q07-a1",
+          "text": "Le brassage",
+          "explanation": "Il est assuré par les mouvements de la paroi."
+        },
+        {
+          "id": "dea-p07-l03-q07-a2",
+          "text": "Le malaxage",
+          "explanation": "Il participe au mélange du contenu."
+        },
+        {
+          "id": "dea-p07-l03-q07-a3",
+          "text": "L’imprégnation par les sucs",
+          "explanation": "Le contenu est mis en contact avec le suc gastrique."
+        },
+        {
+          "id": "dea-p07-l03-q07-a4",
+          "text": "L’expulsion vers l’intestin",
+          "explanation": "Elle suit la phase gastrique."
+        },
+        {
+          "id": "dea-p07-l03-q07-a5",
+          "text": "Le stockage de la bile",
+          "explanation": "Cette fonction appartient à la vésicule biliaire."
+        },
+        {
+          "id": "dea-p07-l03-q07-a6",
+          "text": "L’absorption des nutriments vers la lymphe",
+          "explanation": "Elle est décrite au niveau de l’intestin grêle."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l03-q07-a1",
+        "dea-p07-l03-q07-a2",
+        "dea-p07-l03-q07-a3",
+        "dea-p07-l03-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l03-q07-a1",
+        "dea-p07-l03-q07-a2",
+        "dea-p07-l03-q07-a3",
+        "dea-p07-l03-q07-a4"
+      ],
+      "explanation": "Les quatre actions correspondent au fonctionnement gastrique décrit.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre actions correspondent au fonctionnement gastrique décrit.",
+        "commonMistake": "Ajouter stockage de bile ou absorption confond les organes.",
+        "keyTakeaway": "L’estomac mélange, imprègne puis expulse vers l’intestin.",
+        "fieldApplication": "Distinguer rôle gastrique et rôle intestinal."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre actions correspondent au fonctionnement gastrique décrit.",
+      "common_mistake": "Ajouter stockage de bile ou absorption confond les organes.",
+      "key_takeaway": "L’estomac mélange, imprègne puis expulse vers l’intestin.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l03-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel organe reçoit les aliments après l’œsophage et avant l’intestin grêle ?",
+      "answers": [
+        {
+          "id": "dea-p07-l03-q08-a1",
+          "text": "L’estomac",
+          "explanation": "Il occupe cette position dans le trajet digestif."
+        },
+        {
+          "id": "dea-p07-l03-q08-a2",
+          "text": "Le foie",
+          "explanation": "Le foie sécrète la bile mais n’est pas traversé par les aliments."
+        },
+        {
+          "id": "dea-p07-l03-q08-a3",
+          "text": "Le pancréas",
+          "explanation": "Le pancréas sécrète un suc vers le duodénum."
+        },
+        {
+          "id": "dea-p07-l03-q08-a4",
+          "text": "Le péritoine",
+          "explanation": "Il enveloppe la cavité abdominale sans constituer un conduit alimentaire."
+        }
+      ],
+      "correctAnswer": "dea-p07-l03-q08-a1",
+      "explanation": "L’estomac se situe directement entre ces deux étapes.",
+      "knowledgeIds": [
+        "K-DEA-P07-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - estomac",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l03",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’estomac se situe directement entre ces deux étapes.",
+        "commonMistake": "Confondre organe traversé et glande annexe est une erreur courante.",
+        "keyTakeaway": "Œsophage, estomac, intestin grêle.",
+        "fieldApplication": "Situer la plainte dans la bonne portion du trajet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’estomac se situe directement entre ces deux étapes.",
+      "common_mistake": "Confondre organe traversé et glande annexe est une erreur courante.",
+      "key_takeaway": "Œsophage, estomac, intestin grêle.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - estomac",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}
