@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l06",
+  "title": "Les membres supérieurs",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les segments du membre supérieur.",
+    "Associer les principaux os à leur segment.",
+    "Décrire un repère du membre supérieur avec précision."
+  ],
+  "competencyIds": [
+    "anatomy.region.upper-limb",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l06-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel os principal correspond au bras ?",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q01-a1",
+          "text": "L’humérus",
+          "explanation": "Le support situe l’humérus dans le bras."
+        },
+        {
+          "id": "dea-p04-l06-q01-a2",
+          "text": "Le radius",
+          "explanation": "Le radius appartient à l’avant-bras."
+        },
+        {
+          "id": "dea-p04-l06-q01-a3",
+          "text": "Le cubitus",
+          "explanation": "Le cubitus appartient à l’avant-bras."
+        },
+        {
+          "id": "dea-p04-l06-q01-a4",
+          "text": "Le fémur",
+          "explanation": "Le fémur appartient à la cuisse."
+        }
+      ],
+      "correctAnswer": "dea-p04-l06-q01-a1",
+      "explanation": "L’humérus est l’os principal du bras.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’humérus est l’os principal du bras.",
+        "commonMistake": "Radius et cubitus sont proches mais appartiennent au segment inférieur : l’avant-bras.",
+        "keyTakeaway": "Bras = humérus.",
+        "fieldApplication": "Distinguer bras et avant-bras avant de nommer l’os concerné.",
+        "memoryTip": "Humérus dans le bras, fémur dans la cuisse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’humérus est l’os principal du bras.",
+      "common_mistake": "Radius et cubitus sont proches mais appartiennent au segment inférieur : l’avant-bras.",
+      "key_takeaway": "Bras = humérus.",
+      "memory_tip": "Humérus dans le bras, fémur dans la cuisse.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "bras",
+        "humerus"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-011"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l06-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le radius et le cubitus appartiennent à l’avant-bras.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q02-true",
+          "text": "Vrai",
+          "explanation": "Ces deux os sont situés dans l’avant-bras sur le schéma."
+        },
+        {
+          "id": "dea-p04-l06-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support les associe à l’avant-bras."
+        }
+      ],
+      "correctAnswer": "dea-p04-l06-q02-true",
+      "explanation": "Radius et cubitus constituent les repères osseux principaux de l’avant-bras décrits.",
+      "knowledgeIds": [
+        "K-DEA-P04-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Radius et cubitus constituent les repères osseux principaux de l’avant-bras décrits.",
+        "commonMistake": "Les placer dans le bras confond les segments séparés par le coude.",
+        "keyTakeaway": "Avant-bras = radius et cubitus.",
+        "fieldApplication": "Préciser le côté et le segment rend le bilan plus clair."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Radius et cubitus constituent les repères osseux principaux de l’avant-bras décrits.",
+      "common_mistake": "Les placer dans le bras confond les segments séparés par le coude.",
+      "key_takeaway": "Avant-bras = radius et cubitus.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "avant-bras",
+        "radius",
+        "cubitus"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l06-q03",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque segment du membre supérieur à son repère osseux.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q03-a1",
+          "text": "Bras",
+          "match": "Humérus",
+          "explanation": "Le bras correspond à l’humérus."
+        },
+        {
+          "id": "dea-p04-l06-q03-a2",
+          "text": "Avant-bras",
+          "match": "Radius et cubitus",
+          "explanation": "L’avant-bras correspond au radius et au cubitus."
+        },
+        {
+          "id": "dea-p04-l06-q03-a3",
+          "text": "Poignet",
+          "match": "Carpe",
+          "explanation": "Le carpe correspond au repère osseux du poignet."
+        },
+        {
+          "id": "dea-p04-l06-q03-a4",
+          "text": "Doigts",
+          "match": "Phalanges",
+          "explanation": "Les doigts sont structurés par des phalanges."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l06-q03-a1",
+        "dea-p04-l06-q03-a2",
+        "dea-p04-l06-q03-a3",
+        "dea-p04-l06-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-l06-q03-a1",
+        "dea-p04-l06-q03-a2",
+        "dea-p04-l06-q03-a3",
+        "dea-p04-l06-q03-a4"
+      ],
+      "explanation": "Chaque association relie le segment au repère osseux décrit dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association relie le segment au repère osseux décrit dans le support.",
+        "commonMistake": "Le mot main est parfois utilisé à tort pour inclure le poignet et l’avant-bras.",
+        "keyTakeaway": "Bras-humérus ; avant-bras-radius/cubitus ; poignet-carpe ; doigts-phalanges.",
+        "fieldApplication": "Décrire du segment général vers le repère précis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association relie le segment au repère osseux décrit dans le support.",
+      "common_mistake": "Le mot main est parfois utilisé à tort pour inclure le poignet et l’avant-bras.",
+      "key_takeaway": "Bras-humérus ; avant-bras-radius/cubitus ; poignet-carpe ; doigts-phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-superieur",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-l06-q04",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe ces segments du membre supérieur du plus proximal au plus distal.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q04-a1",
+          "text": "Épaule",
+          "explanation": "L’épaule relie le membre au tronc.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l06-q04-a2",
+          "text": "Bras",
+          "explanation": "Le bras suit l’épaule.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l06-q04-a3",
+          "text": "Coude",
+          "explanation": "Le coude sépare bras et avant-bras.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l06-q04-a4",
+          "text": "Avant-bras",
+          "explanation": "L’avant-bras suit le coude.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l06-q04-a5",
+          "text": "Poignet",
+          "explanation": "Le poignet précède la main.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "dea-p04-l06-q04-a6",
+          "text": "Main",
+          "explanation": "La main est la plus distale de cette liste.",
+          "sequenceRank": 6
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l06-q04-a1",
+        "dea-p04-l06-q04-a2",
+        "dea-p04-l06-q04-a3",
+        "dea-p04-l06-q04-a4",
+        "dea-p04-l06-q04-a5",
+        "dea-p04-l06-q04-a6"
+      ],
+      "correctAnswers": [
+        "dea-p04-l06-q04-a1",
+        "dea-p04-l06-q04-a2",
+        "dea-p04-l06-q04-a3",
+        "dea-p04-l06-q04-a4",
+        "dea-p04-l06-q04-a5",
+        "dea-p04-l06-q04-a6"
+      ],
+      "explanation": "L’ordre va de l’épaule vers la main en suivant le membre supérieur.",
+      "knowledgeIds": [
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre va de l’épaule vers la main en suivant le membre supérieur.",
+        "commonMistake": "Placer l’avant-bras avant le coude inverse le repère qui sépare bras et avant-bras.",
+        "keyTakeaway": "Épaule → bras → coude → avant-bras → poignet → main.",
+        "fieldApplication": "Parcourir visuellement le membre aide à structurer une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre va de l’épaule vers la main en suivant le membre supérieur.",
+      "common_mistake": "Placer l’avant-bras avant le coude inverse le repère qui sépare bras et avant-bras.",
+      "key_takeaway": "Épaule → bras → coude → avant-bras → poignet → main.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-superieur",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 6
+      }
+    },
+    {
+      "id": "dea-p04-l06-q05",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels éléments appartiennent au membre supérieur dans le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q05-a1",
+          "text": "La clavicule",
+          "explanation": "Elle participe à la ceinture scapulaire du membre supérieur."
+        },
+        {
+          "id": "dea-p04-l06-q05-a2",
+          "text": "L’omoplate",
+          "explanation": "Elle participe à la ceinture scapulaire du membre supérieur."
+        },
+        {
+          "id": "dea-p04-l06-q05-a3",
+          "text": "L’humérus",
+          "explanation": "Il constitue l’os du bras."
+        },
+        {
+          "id": "dea-p04-l06-q05-a4",
+          "text": "Le fémur",
+          "explanation": "Il appartient au membre inférieur."
+        },
+        {
+          "id": "dea-p04-l06-q05-a5",
+          "text": "La rotule",
+          "explanation": "Elle appartient à la région du genou."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l06-q05-a1",
+        "dea-p04-l06-q05-a2",
+        "dea-p04-l06-q05-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l06-q05-a1",
+        "dea-p04-l06-q05-a2",
+        "dea-p04-l06-q05-a3"
+      ],
+      "explanation": "Clavicule, omoplate et humérus appartiennent à l’organisation du membre supérieur décrite.",
+      "knowledgeIds": [
+        "K-DEA-P04-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Clavicule, omoplate et humérus appartiennent à l’organisation du membre supérieur décrite.",
+        "commonMistake": "Fémur et rotule sont des repères du membre inférieur.",
+        "keyTakeaway": "La ceinture scapulaire précède l’humérus dans le membre supérieur.",
+        "fieldApplication": "Vérifier le membre concerné avant de nommer une structure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Clavicule, omoplate et humérus appartiennent à l’organisation du membre supérieur décrite.",
+      "common_mistake": "Fémur et rotule sont des repères du membre inférieur.",
+      "key_takeaway": "La ceinture scapulaire précède l’humérus dans le membre supérieur.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-superieur",
+        "os"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l06-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une douleur est signalée entre l’épaule et le coude gauches. Quelle localisation est la plus précise ?",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q06-a1",
+          "text": "Bras gauche, sur le trajet de l’humérus",
+          "explanation": "Le segment entre épaule et coude est le bras, où se situe l’humérus."
+        },
+        {
+          "id": "dea-p04-l06-q06-a2",
+          "text": "Avant-bras gauche, sur le radius",
+          "explanation": "L’avant-bras se situe entre coude et poignet."
+        },
+        {
+          "id": "dea-p04-l06-q06-a3",
+          "text": "Main gauche, au niveau du carpe",
+          "explanation": "Le carpe se situe au poignet."
+        },
+        {
+          "id": "dea-p04-l06-q06-a4",
+          "text": "Cuisse gauche, au niveau du fémur",
+          "explanation": "La cuisse appartient au membre inférieur."
+        }
+      ],
+      "correctAnswer": "dea-p04-l06-q06-a1",
+      "explanation": "Entre épaule et coude, le segment correct est le bras ; son repère osseux est l’humérus.",
+      "knowledgeIds": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Entre épaule et coude, le segment correct est le bras ; son repère osseux est l’humérus.",
+        "commonMistake": "Employer avant-bras déplacerait la localisation sous le coude.",
+        "keyTakeaway": "Une description associe côté, segment et repère anatomique.",
+        "fieldApplication": "Transmettre « bras gauche » plutôt que « membre gauche » si cette précision est disponible.",
+        "safetyPoint": "Ne pas déduire une fracture de la seule localisation douloureuse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Entre épaule et coude, le segment correct est le bras ; son repère osseux est l’humérus.",
+      "common_mistake": "Employer avant-bras déplacerait la localisation sous le coude.",
+      "key_takeaway": "Une description associe côté, segment et repère anatomique.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "bras",
+        "cas",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l06-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les os des doigts sont les ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q07-a1",
+          "text": "phalanges",
+          "explanation": "Le support situe les phalanges au niveau des doigts."
+        }
+      ],
+      "correctAnswer": "dea-p04-l06-q07-a1",
+      "explanation": "Le terme attendu est « phalanges ».",
+      "knowledgeIds": [
+        "K-DEA-P04-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « phalanges ».",
+        "commonMistake": "Métacarpes et carpe sont des repères proches, mais ne désignent pas les os des doigts.",
+        "keyTakeaway": "Doigts = phalanges.",
+        "fieldApplication": "Préciser doigt et côté si le repérage le permet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « phalanges ».",
+      "common_mistake": "Métacarpes et carpe sont des repères proches, mais ne désignent pas les os des doigts.",
+      "key_takeaway": "Doigts = phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "doigts",
+        "phalanges"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l06-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le mot bras désigne anatomiquement tout le membre supérieur, de l’épaule aux doigts.",
+      "answers": [
+        {
+          "id": "dea-p04-l06-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette formulation élargit à tort le bras à tout le membre supérieur."
+        },
+        {
+          "id": "dea-p04-l06-q08-false",
+          "text": "Faux",
+          "explanation": "Le bras est le segment entre l’épaule et le coude."
+        }
+      ],
+      "correctAnswer": "dea-p04-l06-q08-false",
+      "explanation": "L’affirmation est fausse : bras et membre supérieur ne sont pas synonymes.",
+      "knowledgeIds": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Membres supérieurs",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l06",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : bras et membre supérieur ne sont pas synonymes.",
+        "commonMistake": "Dans le langage courant, « bras » peut être employé largement, mais la description anatomique doit distinguer les segments.",
+        "keyTakeaway": "Bras : épaule-coude ; avant-bras : coude-poignet.",
+        "fieldApplication": "Corriger ce vocabulaire améliore immédiatement la qualité d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : bras et membre supérieur ne sont pas synonymes.",
+      "common_mistake": "Dans le langage courant, « bras » peut être employé largement, mais la description anatomique doit distinguer les segments.",
+      "key_takeaway": "Bras : épaule-coude ; avant-bras : coude-poignet.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "bras",
+        "precision"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Membres supérieurs",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

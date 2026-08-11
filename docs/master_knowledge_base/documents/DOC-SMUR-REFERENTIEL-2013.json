@@ -1,0 +1,3682 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "DOC-SMUR-REFERENTIEL-2013",
+  "title": "SMUR — Référentiel et guide d’évaluation",
+  "organization": "Samu-Urgences de France (SUdF) et Société Française de Médecine d’Urgence (SFMU)",
+  "category": "SMUR",
+  "publication_date": "2013-06",
+  "document_date": "2013-06",
+  "date_precision": "month",
+  "version": "Juin 2013",
+  "language": "fr",
+  "status": "official",
+  "review_status": "source_verified",
+  "source_file": "docs/official_sources/SMUR/Referentiel_SMUR_2013.pdf",
+  "source_url": "https://www.sfmu.org/upload/referentielsSFMU/Referentiel_Smur_2013.pdf",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "F26BDD3EBA4660F7A251D4585482EEB15C898362CC1DF9A791CFE0711654D97C",
+  "pages": 43,
+  "analyzed_at": "2026-08-01T00:00:00.000Z",
+  "extraction_method": [
+    "pdfplumber_text_and_tables",
+    "pypdf_metadata",
+    "pypdfium2_visual_rendering",
+    "human_structural_review",
+    "official_source_url_verification"
+  ],
+  "scope": "Référentiel professionnel historique décrivant la terminologie, les ressources, l’organisation et les indicateurs d’évaluation des SMUR. Toute projection pédagogique ou opérationnelle doit faire l’objet d’une vérification de son actualité réglementaire.",
+  "chapters": [
+    {
+      "chapter_id": "SMUR-2013-CH-01",
+      "title": "Sommaire",
+      "page_range": "1-2",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-02",
+      "title": "Résumé",
+      "page_range": "3",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-02-S01",
+          "title": "Mission et objectifs du référentiel",
+          "page_range": "3",
+          "knowledge_ids": [
+            "K-SMUR-2013-001"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-03",
+      "title": "Définitions",
+      "page_range": "3-10",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-03-S01",
+          "title": "Types de missions",
+          "page_range": "4-6",
+          "knowledge_ids": [
+            "K-SMUR-2013-002",
+            "K-SMUR-2013-003",
+            "K-SMUR-2013-004",
+            "K-SMUR-2013-005",
+            "K-SMUR-2013-006",
+            "K-SMUR-2013-007",
+            "K-SMUR-2013-008",
+            "K-SMUR-2013-009"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-03-S02",
+          "title": "Caractéristiques des interventions",
+          "page_range": "6-7",
+          "knowledge_ids": [
+            "K-SMUR-2013-010",
+            "K-SMUR-2013-011",
+            "K-SMUR-2013-012"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-03-S03",
+          "title": "Dénombrement",
+          "page_range": "7",
+          "knowledge_ids": [
+            "K-SMUR-2013-013"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-03-S04",
+          "title": "Secteurs d’intervention",
+          "page_range": "7-8",
+          "knowledge_ids": [
+            "K-SMUR-2013-014",
+            "K-SMUR-2013-015"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-03-S05",
+          "title": "Horaires, status et durées",
+          "page_range": "8-10",
+          "knowledge_ids": [
+            "K-SMUR-2013-016",
+            "K-SMUR-2013-017"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-04",
+      "title": "Ressources",
+      "page_range": "11-19",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-04-S01",
+          "title": "Structures SMUR",
+          "page_range": "11",
+          "knowledge_ids": [
+            "K-SMUR-2013-018"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-04-S02",
+          "title": "Locaux",
+          "page_range": "11-13",
+          "knowledge_ids": [
+            "K-SMUR-2013-023"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-04-S03",
+          "title": "Vecteurs SMUR",
+          "page_range": "13-15",
+          "knowledge_ids": [
+            "K-SMUR-2013-019",
+            "K-SMUR-2013-020",
+            "K-SMUR-2013-021"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-04-S04",
+          "title": "Matériel médical",
+          "page_range": "15-18",
+          "knowledge_ids": [
+            "K-SMUR-2013-022",
+            "K-SMUR-2013-024"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-04-S05",
+          "title": "Personnels SMUR",
+          "page_range": "18-19",
+          "knowledge_ids": [
+            "K-SMUR-2013-025"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-05",
+      "title": "Organisation",
+      "page_range": "20-23",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S01",
+          "title": "Organisations opérationnelles",
+          "page_range": "20",
+          "knowledge_ids": [
+            "K-SMUR-2013-026"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S02",
+          "title": "Dossier médical et codage",
+          "page_range": "20-21",
+          "knowledge_ids": [
+            "K-SMUR-2013-027",
+            "K-SMUR-2013-028"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S03",
+          "title": "Performances thérapeutiques et pathologies traceuses",
+          "page_range": "21-22",
+          "knowledge_ids": [
+            "K-SMUR-2013-029"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S04",
+          "title": "Vigilances",
+          "page_range": "22",
+          "knowledge_ids": [
+            "K-SMUR-2013-030"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S05",
+          "title": "Activités non cliniques",
+          "page_range": "22-23",
+          "knowledge_ids": [
+            "K-SMUR-2013-031",
+            "K-SMUR-2013-032"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S06",
+          "title": "Plaintes, réclamations et dysfonctionnements",
+          "page_range": "23",
+          "knowledge_ids": [
+            "K-SMUR-2013-033"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-05-S07",
+          "title": "Informatisation",
+          "page_range": "23",
+          "knowledge_ids": [
+            "K-SMUR-2013-033"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-06",
+      "title": "Évaluation",
+      "page_range": "24-31",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S01",
+          "title": "Indicateurs incontournables",
+          "page_range": "24",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S02",
+          "title": "Effectifs du SMUR",
+          "page_range": "24-26",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S03",
+          "title": "Véhicules",
+          "page_range": "26",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S04",
+          "title": "Communication",
+          "page_range": "27",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S05",
+          "title": "Activité du SMUR",
+          "page_range": "27-29",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S06",
+          "title": "Délais et durées",
+          "page_range": "29",
+          "knowledge_ids": [
+            "K-SMUR-2013-017",
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S07",
+          "title": "Transport et destination du patient",
+          "page_range": "30",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-06-S08",
+          "title": "Activités institutionnelles, enseignement, recherche et formations",
+          "page_range": "31",
+          "knowledge_ids": [
+            "K-SMUR-2013-034"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-07",
+      "title": "Références",
+      "page_range": "32-33",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SMUR-2013-CH-08",
+      "title": "Annexes",
+      "page_range": "34-43",
+      "subchapters": [
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S01",
+          "title": "Annexe 1 — Contributeurs",
+          "page_range": "34",
+          "knowledge_ids": []
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S02",
+          "title": "Annexe 2 — Lexique",
+          "page_range": "35",
+          "knowledge_ids": []
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S03",
+          "title": "Annexe 3 — Status SMUR",
+          "page_range": "36",
+          "knowledge_ids": [
+            "K-SMUR-2013-016",
+            "K-SMUR-2013-035"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S04",
+          "title": "Annexe 4 — Status ANTARES",
+          "page_range": "37-38",
+          "knowledge_ids": [
+            "K-SMUR-2013-035"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S05",
+          "title": "Annexe 5 — Logigramme définissant les délais et durées",
+          "page_range": "39",
+          "knowledge_ids": [
+            "K-SMUR-2013-017"
+          ]
+        },
+        {
+          "subchapter_id": "SMUR-2013-CH-08-S06",
+          "title": "Annexe 6 — Ambulance de réanimation, norme EN 1789",
+          "page_range": "40-43",
+          "knowledge_ids": [
+            "K-SMUR-2013-020",
+            "K-SMUR-2013-022"
+          ]
+        }
+      ]
+    }
+  ],
+  "notions": [
+    "K-SMUR-2013-013",
+    "K-SMUR-2013-014",
+    "K-SMUR-2013-015",
+    "K-SMUR-2013-016",
+    "K-SMUR-2013-017",
+    "K-SMUR-2013-022",
+    "K-SMUR-2013-023",
+    "K-SMUR-2013-024",
+    "K-SMUR-2013-025",
+    "K-SMUR-2013-026",
+    "K-SMUR-2013-027",
+    "K-SMUR-2013-028",
+    "K-SMUR-2013-029",
+    "K-SMUR-2013-030",
+    "K-SMUR-2013-031",
+    "K-SMUR-2013-032",
+    "K-SMUR-2013-033",
+    "K-SMUR-2013-034",
+    "K-SMUR-2013-035"
+  ],
+  "definitions": [
+    "K-SMUR-2013-001",
+    "K-SMUR-2013-002",
+    "K-SMUR-2013-003",
+    "K-SMUR-2013-004",
+    "K-SMUR-2013-005",
+    "K-SMUR-2013-006",
+    "K-SMUR-2013-007",
+    "K-SMUR-2013-008",
+    "K-SMUR-2013-009",
+    "K-SMUR-2013-010",
+    "K-SMUR-2013-011",
+    "K-SMUR-2013-012",
+    "K-SMUR-2013-018",
+    "K-SMUR-2013-019",
+    "K-SMUR-2013-020",
+    "K-SMUR-2013-021"
+  ],
+  "procedures": [
+    {
+      "procedure_id": "SMUR-2013-PROC-001",
+      "title": "Recueil et contrôle des horaires",
+      "summary": "Recueillir les horaires à la seconde, distinguer saisies automatiques, manuelles et modifiées, détecter les écarts impossibles, synchroniser les dispositifs et assurer une traçabilité signée.",
+      "steps": [
+        "Recueil à la seconde avec la date",
+        "Identification du mode de saisie",
+        "Contrôle des écarts et interdiction des horaires impossibles",
+        "Synchronisation automatique sur un serveur de temps",
+        "Horodatage, signature et traçabilité des actions"
+      ],
+      "source_pages": "8-9",
+      "knowledge_ids": [
+        "K-SMUR-2013-016"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-002",
+      "title": "Engagement opérationnel d’une UMH",
+      "summary": "La décision est prise exclusivement par le SAMU ; le départ est prioritaire ; un bilan médical est transmis avant le départ des lieux sauf exception ; l’orientation est décidée avec la régulation.",
+      "steps": [
+        "Décision d’engagement par le SAMU",
+        "Départ prioritaire",
+        "Prise en charge et bilan",
+        "Transmission du bilan au SAMU",
+        "Orientation et accueil avec la régulation"
+      ],
+      "source_page": "20",
+      "knowledge_ids": [
+        "K-SMUR-2013-026"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-003",
+      "title": "Constitution du dossier médical SMUR",
+      "summary": "Créer un dossier lors de chaque intervention, documenter identité, acteurs, horaires, antécédents, évolution, surveillance, hypothèse, actes, traitements et orientation, puis transmettre les exemplaires prévus.",
+      "source_pages": "20-21",
+      "knowledge_ids": [
+        "K-SMUR-2013-027"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-004",
+      "title": "Codage minimal du dossier SMUR",
+      "summary": "Coder au minimum la gravité selon la CCMUm, l’hypothèse diagnostique à partir du thésaurus SFMU issu de la CIM-10 et les actes classants.",
+      "source_page": "21",
+      "knowledge_ids": [
+        "K-SMUR-2013-028"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-005",
+      "title": "Suivi du devenir du patient",
+      "summary": "Connaître le devenir des patients pris en charge et, pour les patients transportés, leur filière d’orientation.",
+      "source_page": "20",
+      "knowledge_ids": [
+        "K-SMUR-2013-028"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-006",
+      "title": "Démarche qualité régulière",
+      "summary": "Organiser des revues de dossiers quotidiennes, des staffs médicaux hebdomadaires et des revues de morbi-mortalité semestrielles.",
+      "source_page": "22",
+      "knowledge_ids": [
+        "K-SMUR-2013-031"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-007",
+      "title": "Organisation d’exercices",
+      "summary": "Organiser régulièrement des exercices de plan de secours, de simulation et de secours spécifiques.",
+      "source_page": "22",
+      "knowledge_ids": [
+        "K-SMUR-2013-031"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-008",
+      "title": "Gestion des plaintes et dysfonctionnements",
+      "summary": "Mettre en place une procédure dédiée aux plaintes, réclamations et dysfonctionnements.",
+      "source_page": "23",
+      "knowledge_ids": [
+        "K-SMUR-2013-033"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-009",
+      "title": "Calcul des délais et durées",
+      "summary": "Calculer les délais et durées à partir des différences entre les status normalisés décrits aux pages 9 et 10 et dans le logigramme de l’annexe 5.",
+      "source_pages": "9-10, 39",
+      "knowledge_ids": [
+        "K-SMUR-2013-017"
+      ]
+    },
+    {
+      "procedure_id": "SMUR-2013-PROC-010",
+      "title": "Évaluation de l’activité SMUR",
+      "summary": "Décrire ressources, effectifs, véhicules, communications, activité, délais, transport et activités institutionnelles au moyen d’indicateurs quantitatifs et qualitatifs classés E, S ou O.",
+      "source_pages": "24-31",
+      "knowledge_ids": [
+        "K-SMUR-2013-034"
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "protocol_id": "SMUR-2013-PROT-REF-001",
+      "title": "Procédures de déclenchement et procédure de secours",
+      "status": "referenced_not_defined",
+      "scope_note": "Le référentiel exige ces procédures mais ne fournit pas leur algorithme détaillé.",
+      "source_page": "20"
+    },
+    {
+      "protocol_id": "SMUR-2013-PROT-REF-002",
+      "title": "Procédures de prise en charge des pathologies traceuses",
+      "status": "referenced_not_defined",
+      "scope_note": "Le document exige des procédures conformes aux recommandations actualisées, sans publier les protocoles cliniques pas-à-pas.",
+      "source_pages": "21-22"
+    },
+    {
+      "protocol_id": "SMUR-2013-PROT-REF-003",
+      "title": "Procédures de vigilance",
+      "status": "referenced_not_defined",
+      "scope_note": "Matériovigilance, pharmacovigilance, hygiène hospitalière et expositions biologiques sont citées, sans protocole détaillé.",
+      "source_page": "22"
+    },
+    {
+      "protocol_id": "SMUR-2013-PROT-REF-004",
+      "title": "Procédure de gestion des plaintes, réclamations et dysfonctionnements",
+      "status": "referenced_not_defined",
+      "scope_note": "L’existence de la procédure est exigée mais son déroulement n’est pas décrit.",
+      "source_page": "23"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "SMUR-2013-TBL-001",
+      "title": "Caractéristiques des locaux SMUR",
+      "source_pages": "11-13",
+      "classification": "referential_requirements",
+      "raw_table_pages": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "table_id": "SMUR-2013-TBL-002",
+      "title": "Vecteurs terrestres, aériens et maritimes",
+      "source_pages": "13-15",
+      "classification": "referential_requirements"
+    },
+    {
+      "table_id": "SMUR-2013-TBL-003",
+      "title": "Matériel médical nécessaire par UMH",
+      "source_pages": "16-17",
+      "classification": "referential_requirements",
+      "raw_table_pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "table_id": "SMUR-2013-TBL-004",
+      "title": "Matériel spécialisé nouveau-nés et nourrissons",
+      "source_page": "18",
+      "classification": "referential_requirements",
+      "raw_table_pages": [
+        18
+      ]
+    },
+    {
+      "table_id": "SMUR-2013-TBL-005",
+      "title": "Pathologies traceuses",
+      "source_pages": "21-22",
+      "classification": "referential_topics"
+    },
+    {
+      "table_id": "SMUR-2013-TBL-006",
+      "title": "Indicateurs d’évaluation des effectifs, véhicules, communications, activité, délais, transports et activités institutionnelles",
+      "source_pages": "24-31",
+      "classification": "evaluation_indicators",
+      "raw_table_pages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "table_id": "SMUR-2013-TBL-007",
+      "title": "Status SMUR",
+      "source_page": "36",
+      "classification": "status_coding",
+      "raw_table_pages": [
+        36
+      ]
+    },
+    {
+      "table_id": "SMUR-2013-TBL-008",
+      "title": "Status ANTARES",
+      "source_pages": "37-38",
+      "classification": "status_coding"
+    },
+    {
+      "table_id": "SMUR-2013-TBL-009",
+      "title": "Logigramme définissant les délais et durées",
+      "source_page": "39",
+      "classification": "workflow"
+    },
+    {
+      "table_id": "SMUR-2013-TBL-010",
+      "title": "Équipement d’ambulance de réanimation selon la norme EN 1789",
+      "source_pages": "40-43",
+      "classification": "equipment_requirements",
+      "raw_table_pages": [
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  ],
+  "raw_tables": [
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-001",
+      "source_page": "11",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Localisation au sein d’un Établissement de Santé (ES)",
+          "E"
+        ],
+        [
+          "Pour les Samu sièges de Smur, locaux du Smur basés au sein du Samu",
+          "E"
+        ],
+        [
+          "Pour les Samu sièges de Smur, locaux du Smur basés à proximité du Service des Urgences",
+          "E"
+        ],
+        [
+          "Pour les Smur qui ne sont pas au sein d’un Samu, locaux du Smur basés à proximité du Service des Urgences",
+          "E"
+        ],
+        [
+          "Moyens de télécommunications lui permettant d'être en liaison permanente avec le Samu et avec ses propres équipes",
+          "E"
+        ],
+        [
+          "Salle équipée des moyens bureautiques à visée opérationnelle (communications, cartographie, codage, …)",
+          "E"
+        ],
+        [
+          "Garage destiné aux moyens de transports terrestres",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-002",
+      "source_page": "12",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Bornes d’alimentation électrique pour chaque véhicule",
+          "E"
+        ],
+        [
+          "Signalétique adaptée avec feux tricolores pour sécuriser la sortie d’urgence des véhicules d’intervention",
+          "E"
+        ],
+        [
+          "Accès et sortie du garage donnant directement sur la voie publique ou avec cheminement sécurisé et prioritaire",
+          "E"
+        ],
+        [
+          "Zone de déconditionnement et de décontamination",
+          "E"
+        ],
+        [
+          "Zone atelier permettant l’entretien courant des véhicules",
+          "S"
+        ],
+        [
+          "Aire de lavage des véhicules",
+          "S"
+        ],
+        [
+          "Local de décontamination pour les équipements et matériels au retour d’intervention",
+          "E"
+        ],
+        [
+          "Local dédié et sécurisé pour la pharmacie et le stockage du matériel biomédical",
+          "E"
+        ],
+        [
+          "Local dédié pour le stockage du matériel catastrophe (PSM, radiocommunication, matériel NBRC)",
+          "E"
+        ],
+        [
+          "Local dédié pour le stockage des gaz médicaux",
+          "E"
+        ],
+        [
+          "Local dédié pour les incubateurs de transport en cas de Smur ni pédiatrique, ni néonatal",
+          "S"
+        ],
+        [
+          "Local dédié pour les incubateurs de transport en cas de Smur pédiatrique ou néonatal",
+          "E"
+        ],
+        [
+          "Bureau médical ou espace de travail dédié aux médecins Smur",
+          "E"
+        ],
+        [
+          "Bureau infirmier ou espace de travail dédié aux taches IDE Smur",
+          "E"
+        ],
+        [
+          "Espace de travail dédié aux ambulanciers Smur (salle des cartes, …)",
+          "S"
+        ],
+        [
+          "Chambre de repos pour chaque médecin de garde",
+          "E"
+        ],
+        [
+          "Salle de repos (en attente opérationnelle)",
+          "S"
+        ],
+        [
+          "Salle de repas",
+          "E"
+        ],
+        [
+          "Vestiaire",
+          "E"
+        ],
+        [
+          "Sanitaire avec douche",
+          "E"
+        ],
+        [
+          "Accessibilité des locaux administratifs aux Personnes à Mobilité Réduite (PMR)",
+          "E"
+        ],
+        [
+          "Parking dédié aux personnels Smur",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-003",
+      "source_page": "13",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Pour les Smur disposant d’un HéliSmur",
+          null
+        ],
+        [
+          "Zone de poser sécurisée et accessible à pied par les équipes Smur",
+          "E"
+        ],
+        [
+          "Avitaillement sur la zone de poser",
+          "E"
+        ],
+        [
+          "Poste de travail dédié pour les pilotes",
+          "E"
+        ],
+        [
+          "Implantation de l’aire de poser permettant d’éviter tout recours à un vecteur terrestre pour le transport du patient",
+          "E"
+        ],
+        [
+          "Aire de stationnement",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-004",
+      "source_page": "16",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Équipement nécessaire dans chaque Smur - pour chaque UMH (ou au moins une unité par base Smur si tel est spécifié dans le texte)",
+          null
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "Réanimation respiratoire",
+          null
+        ],
+        [
+          "Respirateur de transport permettant les modes de VNI",
+          "E"
+        ],
+        [
+          "Système alternatif à l’intubation dans chaque véhicule opérationnel",
+          "E"
+        ],
+        [
+          "Manomètre pour le monitorage de la pression du ballonnet de la sonde d’intubation",
+          "E"
+        ],
+        [
+          "Appareil de mesure du monoxyde de carbone expiré ou Saturomètre HbCO",
+          "E"
+        ],
+        [
+          "Monitorage de l’oxymétrie pulsée",
+          "E"
+        ],
+        [
+          "Détecteurs de monoxyde de carbone atmosphérique",
+          "E"
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "Réanimation cardio-vasculaire",
+          null
+        ],
+        [
+          "Monitorage Scope / ECG, PNI",
+          "E"
+        ],
+        [
+          "Pousse seringue électrique (au moins trois)",
+          "E"
+        ],
+        [
+          "Pousse seringue électrique (au moins quatre)",
+          "S"
+        ],
+        [
+          "Dispositif de cathétérisme intra-osseux adulte et pédiatrique",
+          "E"
+        ],
+        [
+          "Dispositif permettant le monitorage de la pression artérielle invasive et de la pression intra crânienne",
+          "S"
+        ],
+        [
+          "Dispositif permettant le monitorage de la pression artérielle invasive et de la pression intra crânienne (au moins une unité par base Smur)",
+          "E"
+        ],
+        [
+          "Dispositif permettant le monitorage du CO2 expiré en continue avec représentation graphique",
+          "E"
+        ],
+        [
+          "Aimant pour contrôle des dispositifs implantés",
+          "E"
+        ],
+        [
+          "Planche à masser automatisée",
+          "S"
+        ],
+        [
+          "Dispositif d’assistance circulatoire transportable",
+          "O"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-005",
+      "source_page": "17",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Médicaments",
+          null
+        ],
+        [
+          "Médicaments et dispositifs médicaux pour la réanimation des défaillances respiratoires, circulatoires ou neurologiques",
+          "E"
+        ],
+        [
+          "Différents solutés de perfusion et de remplissage",
+          "E"
+        ],
+        [
+          "Analgésiques, sédatifs, antibiotiques, catécholamines, médicaments à visée cardio-vasculaire (thrombolytique, antiagrégant, anticoagulant, ...) et principaux antidotes",
+          "E"
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "Divers",
+          null
+        ],
+        [
+          "Dispositif de type réfrigérateur",
+          "E"
+        ],
+        [
+          "Appareil d’échographie portable",
+          "E"
+        ],
+        [
+          "Garrot pneumatique",
+          "E"
+        ],
+        [
+          "Dispositif permettant le monitorage continu du rythme cardiaque fœtal",
+          "S"
+        ],
+        [
+          "Appareil de mesure de la glycémie capillaire",
+          "E"
+        ],
+        [
+          "Appareil de mesure de l’hémoglobine capillaire type Hémocue®",
+          "E"
+        ],
+        [
+          "Appareil de biologie embarquée (kaliémie, lactates, gaz du sang)",
+          "S"
+        ],
+        [
+          "Thermomètre hypothermique",
+          "E"
+        ],
+        [
+          "Dispositif permettant le monitorage de la température centrale",
+          "E"
+        ],
+        [
+          "Thermomètre pour contrôle intérieur des véhicules",
+          "S"
+        ],
+        [
+          "Obus de MEOPA",
+          "S"
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "L’ensemble des consommables doivent être de plusieurs tailles",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-006",
+      "source_page": "18",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Matériel spécialisé pour la prise en charge des nouveau-nés et nourrissons",
+          null
+        ],
+        [
+          "Incubateur de transport avec servo-contrôle de la température",
+          "E"
+        ],
+        [
+          "Sacs en polyéthylène (lutte contre l’hypothermie), bonnets",
+          "E"
+        ],
+        [
+          "Défibrillateur avec palettes pédiatriques et énergie réglable en fonction du poids de l’enfant (atténuateur)",
+          "E"
+        ],
+        [
+          "Respirateur néonatal et pédiatrique de transport permettant la ventilation en pression et/ou volume contrôlé ainsi que la VNI",
+          "E"
+        ],
+        [
+          "Oxymètre de pouls (SpO2) avec capteur adapté pouvant être complété par un appareil de mesure des PO2 et PCO2 transcutanées pour le nouveau-né",
+          "E"
+        ],
+        [
+          "Dispositif de transillumination thoracique",
+          "S"
+        ],
+        [
+          "Cathéters ombilicaux et matériels pour mise en place",
+          "E"
+        ],
+        [
+          "Appareil de mesure du taux des lactates",
+          "S"
+        ],
+        [
+          "Obus de monoxyde d’azote et système de monitorage (NO et NO2)",
+          "S"
+        ],
+        [
+          "Médicaments spécifiques : Surfactant exogène, Prostine",
+          "E"
+        ],
+        [
+          "Matériels biomédical et consommables de tailles adaptées à la prise en charge des nouveau-nés et des nourrissons",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-007",
+      "source_page": "25",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Pyramide des âges",
+          ""
+        ],
+        [
+          "médecins de plus de 55 ans",
+          "S"
+        ],
+        [
+          "infirmières de plus de 55 ans",
+          "S"
+        ],
+        [
+          "ambulanciers de plus de 55 ans",
+          "S"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "médecins dans le service depuis moins de 5 ans",
+          "S"
+        ],
+        [
+          "infirmières dans le service depuis moins de 5 ans",
+          "S"
+        ],
+        [
+          "ambulanciers dans le service depuis moins de 5 ans",
+          "S"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "médecins dans le service depuis plus de 15 ans",
+          "S"
+        ],
+        [
+          "infirmières dans le service depuis plus de 15 ans",
+          "S"
+        ],
+        [
+          "ambulanciers dans le service depuis plus de 15 ans",
+          "S"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "médecins à statut non précaire (PUPH, MCUPH, PHU, PH, PHTP, CDI)",
+          "S"
+        ],
+        [
+          "médecins à activité partagée avec la régulation médicale du Samu",
+          "S"
+        ],
+        [
+          "médecins à activité partagée avec une Structure des Urgences",
+          "S"
+        ],
+        [
+          "recours aux médecins intérimaires",
+          "S"
+        ],
+        [
+          "infirmiers non permanent",
+          "S"
+        ],
+        [
+          "ambulanciers non permanent",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-008",
+      "source_page": "25",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Interventions primaires avec des équipes non-conformes à la réglementation",
+          "E"
+        ],
+        [
+          "interventions non conformes dû à l’absence d’un infirmier",
+          "S"
+        ],
+        [
+          "interventions non conformes dû à l’absence d’un ambulancier",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-009",
+      "source_page": "26",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "Absentéisme (nombre de jour par agent)",
+          "E"
+        ],
+        [
+          "par type d’agent : pour maladie et accident des médecins, des infirmiers, des ambulanciers",
+          "S"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "Recours à l’intérim (nombre de jour homme par an)",
+          "E"
+        ],
+        [
+          "pour les médecins, les infirmiers, les ambulanciers Smur",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-010",
+      "source_page": "26",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Nombre d’UMH (en distinguant : VML, AR, HéliSmur)",
+          "E"
+        ],
+        [
+          "Nombre de kilomètres parcourus annuellement (cumulé ; moyenne, médiane, minimum, maximum par UMH)",
+          "S"
+        ],
+        [
+          "Nombre d’interventions avec une UMH non conforme",
+          "E"
+        ],
+        [
+          "Nombre global de demi-journées (DJ) d’indisponibilité des UMH du Smur (toutes causes confondues)",
+          "S"
+        ],
+        [
+          "Nombre de DJ d’indisponibilité des AR",
+          "S"
+        ],
+        [
+          "Nombre de DJ d’indisponibilité des VML",
+          "S"
+        ],
+        [
+          "Nombre d’heures d’indisponibilité de l’HéliSmur",
+          "E"
+        ],
+        [
+          "Nombre d’heures d’indisponibilité de l’HéliSmur de cause technique",
+          "E"
+        ],
+        [
+          "Nombre d’heures d’indisponibilité de l’HéliSmur de cause météorologique",
+          "E"
+        ],
+        [
+          "Nombre de DJ d’indisponibilité des UMH du Smur pour cause d’indisponibilité de véhicule",
+          "S"
+        ],
+        [
+          "Nombre de DJ d’indisponibilité des UMH du Smur par manque de matériel biomédical essentiel",
+          "S"
+        ],
+        [
+          "Nombre et pourcentage de véhicule (VML et AR séparément) en surnombre pour remplacer une UMH en panne ou en entretien – indiquer également le nombre et pourcentage globale pour le département, tous Smur confondus",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-011",
+      "source_page": "27",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "UMH disposant de communication par GSM (taux d’équipement en % d’UMH)",
+          "E"
+        ],
+        [
+          "UMH disposant de moyen de communication par satellite (présence d’au moins un téléphone satellite par Smur) (Oui/Non)",
+          "E"
+        ],
+        [
+          "UMH disposant de communication par radio ANTARES (taux d’équipement en % d’UMH)",
+          "E"
+        ],
+        [
+          "Présence d’un système permettant la transmission des status sur ANTARES (Oui/Non)",
+          "E"
+        ],
+        [
+          "Taux d’intervention avec transmission de l’ensemble des status « principaux »",
+          "S"
+        ],
+        [
+          "Présence d’un système permettant la transmission messages courts data sur ANTARES (Oui/Non)",
+          "E"
+        ],
+        [
+          "Taux d’intervention avec transmission messages courts « data » sur ANTARES",
+          "S"
+        ],
+        [
+          "Informatisation du Smur : mise à disposition de dispositif type tablettes",
+          "E"
+        ],
+        [
+          "Informatisation du Smur : système communiquant entre Samu et Smur",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-012",
+      "source_page": "27",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Nombre total d’interventions Smur",
+          "E"
+        ],
+        [
+          "dont nombre d’interventions primaires par an",
+          "E"
+        ],
+        [
+          "dont nombre d’interventions en transferts par an",
+          "E"
+        ],
+        [
+          "dont nombre d’interventions du Smur pédiatrique par an (détailler les résultats par tranche d’âge : 0 à 28j ; >28j à 2 ans ; >2 à 15 ans ; >15 à 18 ans ; >18 à 40 ans ; 40 à 65 ans ; plus de 65 ans",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-013",
+      "source_page": "28",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Nombre d’interventions primaires par an : en VML en AR en hélicoptère (en distinguant les interventions en HéliSmur)",
+          "S"
+        ],
+        [
+          "Nombre d’interventions hors secteur",
+          "S"
+        ],
+        [
+          "Nombre d’interventions en fonction du lieu",
+          "S"
+        ],
+        [
+          "Nombre d’interventions en fonction du degré de gravité (CCMUm)",
+          "E"
+        ],
+        [
+          "Nombre d’interventions avec patient pris en charge vivant, décédant durant l’intervention",
+          "S"
+        ],
+        [
+          "Nombre d’interventions en fonction des classes de pathologie",
+          "S"
+        ],
+        [
+          "Nombre d’interventions en fonction du diagnostic Smur (classification SFMU/SUdF)",
+          "E"
+        ],
+        [
+          "Nombre d’interventions en fonction de l’âge : de 0 à 28j ; >28j à 2 ans ; >2 à 15 ans ; >15 à 18 ans ; >18 à 40 ans ; 40 à 65 ans ; plus de 65 ans",
+          "S"
+        ],
+        [
+          "Nombre d’interventions bariatriques (dont primaires / transferts)",
+          ""
+        ],
+        [
+          "Nombre d’interventions avec transport d’un patient vers la filière « accueil des urgences »",
+          "E"
+        ],
+        [
+          "Nombre d’interventions avec transport d’un patient vers la filière « soins critiques »",
+          "E"
+        ],
+        [
+          "Nombre d’interventions avec transport d’un patient vers la filière « MCO »",
+          "E"
+        ],
+        [
+          "Nombre d’interventions sans transport de patient (patient non décédé)",
+          "S"
+        ],
+        [
+          "Nombre d’interventions avec patient transporté sur un établissement de santé n’appartenant pas à la même entité juridique que le Smur",
+          "S"
+        ],
+        [
+          "Taux d’interventions avec un délai d’acheminement supérieur à 20 min",
+          "S"
+        ],
+        [
+          "Taux d’interventions avec un délai d’acheminement supérieur à 30 min",
+          "E"
+        ],
+        [
+          "Taux d’interventions avec un délai d’acheminement supérieur à 45 min",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-014",
+      "source_page": "28",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Nombre d’interventions de type inter-hospitalier, intra-hospitalier et de T2iH",
+          "E"
+        ],
+        [
+          "Nombre de patients transportés sous contre pulsion par ballonnet intra-aortique",
+          "S"
+        ],
+        [
+          "Nombre de patients transportés sous assistance circulatoire (ECMO)",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-015",
+      "source_page": "29",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Nombre d’interventions par an :",
+          "S"
+        ],
+        [
+          "en EVASAN",
+          "S"
+        ],
+        [
+          "en « Retour vers »",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-016",
+      "source_page": "29",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Délai de déclenchement",
+          "E"
+        ],
+        [
+          "Délai de départ",
+          "E"
+        ],
+        [
+          "Délai d’acheminement",
+          "S"
+        ],
+        [
+          "Durée d’intervention",
+          "S"
+        ],
+        [
+          "Durée de médicalisation",
+          "E"
+        ],
+        [
+          "Durée de conditionnement",
+          "E"
+        ],
+        [
+          "Durée d’occupation",
+          "O"
+        ],
+        [
+          "Délai d’orientation",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-017",
+      "source_page": "30",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Nombre de patients laissés sur place :",
+          "E"
+        ],
+        [
+          "par décision médicale",
+          "S"
+        ],
+        [
+          "par refus de transport",
+          "S"
+        ],
+        [
+          "par décès avant réanimation",
+          "S"
+        ],
+        [
+          "par décès après réanimation",
+          "S"
+        ],
+        [
+          "Filière d’orientation des patients ayant bénéficié d’un transport médicalisé dans le cadre d’une intervention primaire",
+          "E"
+        ],
+        [
+          "Filière d’accueil des urgences",
+          "E"
+        ],
+        [
+          "Filière soins critiques (Réanimation, USC, USI, imagerie interventionnelle, bloc opératoire)",
+          "E"
+        ],
+        [
+          "Filière spécialisée MCO",
+          "E"
+        ],
+        [
+          "Nombre transports non médicalisés après examen par le Smur",
+          "E"
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "Nombre de patients pris en charge par le Smur, décédés durant leur séjour aux urgences",
+          "S"
+        ],
+        [
+          "Nombre de patients pris en charge par le Smur et transférés secondairement dans une filière de soins critiques moins de 24 heures après leur prise en charge Smur",
+          "S"
+        ],
+        [
+          "Nombre de patients transférés par le Smur dans un autre établissement dans un délai de 4 heures après la fin de prise en charge initiale par le Smur",
+          "E"
+        ],
+        [
+          "Nombre de patients décédés à la 24ème heure",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-018",
+      "source_page": "31",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "% moyen de temps accordé par praticien pour l’activité non clinique",
+          "E"
+        ],
+        [
+          "Volume horaire annuel effectif représenté par l’activité non clinique et la charge institutionnelle par praticien",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-019",
+      "source_page": "31",
+      "page_table_index": 2,
+      "rows": [
+        [
+          "Nombre de publications scientifiques par an (dans le champ de la médecine d’urgence)",
+          "S"
+        ],
+        [
+          "Nombre d’études, de protocole de recherche clinique par an (dans le champ de la médecine d’urgence)",
+          "S"
+        ],
+        [
+          "% des médecins ayant participé dans l’année à au moins un congrès de médecine d’urgence",
+          "S"
+        ],
+        [
+          "Nombre de jour moyen de DPC par médecin",
+          "S"
+        ],
+        [
+          "Nombre d’exercice de secours auxquels a participé le Smur dans l’année",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-020",
+      "source_page": "31",
+      "page_table_index": 3,
+      "rows": [
+        [
+          "Nombre de staffs médicaux interne au service (dans le périmètre des différentes structures d’urgence de l’établissement) par mois",
+          "E"
+        ],
+        [
+          "Nombre de staffs médicaux inter services par mois",
+          "S"
+        ],
+        [
+          "Nombre des revues de morbi-mortalité par an",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-021",
+      "source_page": "36",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "Code ANTARES",
+          "Code Smur",
+          "Libellé",
+          "Définitions / Commentaires"
+        ],
+        [
+          "",
+          "DECISION",
+          "Décision",
+          "Heure de prise de décision de recours au Smur par le médecin régulateur de médecine d’urgence ou par l’ARM lors d’un départ réflexe"
+        ],
+        [
+          "",
+          "DECLENCHE",
+          "Déclenché",
+          "Heure de transmission de l’intervention par le Samu au Smur selon le dispositif habituel prévu"
+        ],
+        [
+          "",
+          "REFUS",
+          "Refus",
+          "Heure du refus de déclencher un moyen théoriquement disponible."
+        ],
+        [
+          "",
+          "CARENCE",
+          "Carence",
+          "Heure à laquelle une indisponibilité de l’ensemble des effecteurs du Smur sollicité est constatée quel qu’en soit le motif"
+        ],
+        [
+          "01-PARTI",
+          "DEPART",
+          "Début d’intervention",
+          "Heure de départ de la base ou de réengagement d’une UMH disponible pour une nouvelle intervention"
+        ],
+        [
+          "",
+          "ANNULE",
+          "Annulation de l’intervention",
+          "Heure d’annulation par le Samu d’un moyen Smur déjà parti"
+        ],
+        [
+          "02-SLL",
+          "ARRIVEE",
+          "Arrivée sur les lieux",
+          "Heure d’arrivée à l’adresse du lieu d’intervention"
+        ],
+        [
+          "",
+          "PEC",
+          "Début de médicalisation",
+          "Heure d’arrivée du médecin Smur auprès du patient. C’est le début de la facturation Smur (selon le dispositif actuellement en vigueur). En l’absence de ce status spécifique, il peut être assimilé au status « Arrivée sur les lieux »"
+        ],
+        [
+          "03-MESSAGE 04-MESS URG",
+          "BILAN",
+          "Transmission du bilan",
+          "Heure à laquelle le bilan médical en vue de l’orientation du patient est transmis au Samu"
+        ],
+        [
+          "",
+          "ORIENTATION",
+          "Transmission de la destination",
+          "Heure à laquelle l’orientation du patient est transmise à l’équipe Smur"
+        ],
+        [
+          "05-TRANS HOP",
+          "TRANSPORT",
+          "Départ des lieux",
+          "Heure de départ de l’adresse du lieu d’intervention du moyen assurant la médicalisation du transport du patient"
+        ],
+        [
+          "",
+          "ETAPE1",
+          "Etape de transit 1",
+          "Heure d’arrivée du moyen de transport, avec le patient en charge, à la première étape en cas de transit notamment vers un lieu d’examen ou d’imagerie"
+        ],
+        [
+          "",
+          "TRANSPORT2",
+          "Départ étape 1",
+          "Heure de départ du moyen de transport, en charge du patient, de la première étape"
+        ],
+        [
+          "",
+          "ETAPE2",
+          "Etape de transit 2",
+          "Heure d’arrivée du moyen de transport, avec le patient en charge, à la 2ème étape en cas de transit notamment vers un lieu d’examen ou d’imagerie"
+        ],
+        [
+          "",
+          "TRANSPORT3",
+          "Départ étape 2",
+          "Heure de départ du moyen de transport, en charge du patient, de la deuxième étape"
+        ],
+        [
+          "06-ARR HOP",
+          "DESTIN",
+          "Arrivée à destination",
+          "Heure d’arrivée à l’entrée du service ou se fera le relais de médicalisation du patient"
+        ],
+        [
+          "",
+          "FINMED",
+          "Fin de médicalisation",
+          "Heure à laquelle la responsabilité de la prise en charge médicale s’achève ou lorsqu'elle est confiée à un autre intervenant. C’est la fin de la médicalisation et de la facturation (selon le dispositif actuellement en vigueur). En l’absence de ce status spécifique, il peut être assimilé au status « Arrivée à destination » en cas de transport du patient. En cas d’absence de transport du patient ou sans médicalisation de son transport, le premier des 2 status « disponible » ou « indisponible » transmis sera pris en compte"
+        ],
+        [
+          "07-DISPO",
+          "DISPO",
+          "Disponible",
+          "Heure à laquelle le moyen est à nouveau disponible même s’il n’est pas de retour à la base. La disponibilité s’entend sur la faculté d’accepter une nouvelle mission sans aucune réserve"
+        ],
+        [
+          "08-INDISPO",
+          "INDISPO",
+          "indisponible",
+          "Heure à laquelle le moyen est indisponible même s’il n’est pas de retour à la base"
+        ],
+        [
+          "09-RENTRE",
+          "BASE",
+          "Arrivée à la base",
+          "Heure d’arrivée à la base sans précision sur la disponibilité ou non du moyen"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-022",
+      "source_page": "40",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "TYPES D'ÉQUIPEMENTS",
+          "NORME DE CONFORMITÉ",
+          "TYPE C"
+        ],
+        [
+          "Equipements de relevage et de brancardage du patient",
+          null,
+          null
+        ],
+        [
+          "Brancard principal / support brancard",
+          "EN 1865",
+          "1"
+        ],
+        [
+          "Portoir de type cuillère",
+          "EN 1865",
+          "1"
+        ],
+        [
+          "Matelas à dépression",
+          "EN 1865",
+          "1"
+        ],
+        [
+          "Dispositif de transport du patient en position assise (chaise portoir)",
+          "EN 1865",
+          "Optionnel"
+        ],
+        [
+          "Drap portoir ou matelas de transfert",
+          "EN 1865",
+          "Optionnel"
+        ],
+        [
+          "Plan dur complété d'une têtière d'immobilisation et de brides de sécurité",
+          "EN 1865",
+          "Optionnel"
+        ],
+        [
+          "Equipements d'immobilisation",
+          null,
+          null
+        ],
+        [
+          "Dispositif de traction",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Lot pour les fractures",
+          "",
+          "1"
+        ],
+        [
+          "Lot de colliers cervicaux (immobilisation du rachis cervical)",
+          "",
+          "1"
+        ],
+        [
+          "Immobilisation en extension de la partie haute du rachis : dispositif d'extraction ou plan dur court",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Equipements de ventilation / respiration",
+          null,
+          null
+        ],
+        [
+          "Station fixe d'oxygène, minimum 2 000 l, conditions normales de température et de pression, détendeur, débilitre avec robinet de régulation permettant un débit maximal d'au moins 15 l / min, (raccord rapide optionnel)",
+          "EN 737-1 : 1998",
+          "Optionnel"
+        ],
+        [
+          "Oxygène portable : capacité minimum, conditions normales de température et de pression, détendeur, débilitre avec robinet permettant un débit d'eau d'au moins 15 l / min, (raccord rapide optionnel sauf pour le type C)",
+          "EN 737-1 : 1998",
+          "3 000 l"
+        ],
+        [
+          "Insufflateurs manuels avec masques et canules pour tous les âges",
+          "",
+          "1"
+        ],
+        [
+          "Embout de ventilation bouche à masque avec entrée oxygène",
+          "",
+          "1"
+        ],
+        [
+          "Dispositif d'aspiration fixe de mucosités d'une pression minimale de 65 kPa avec une capacité minimale de 1 l",
+          "",
+          "1"
+        ],
+        [
+          "Dispositif portable d'aspiration des mucosités",
+          "EN ISO 10079-2 : 1999",
+          "1"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-023",
+      "source_page": "41",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "TYPES D'ÉQUIPEMENTS",
+          "NORME DE CONFORMITÉ",
+          "TYPE C"
+        ],
+        [
+          "Equipements de diagnostic",
+          null,
+          null
+        ],
+        [
+          "Appareil à tension manuel, taille de serrage 10 cm-66 cm",
+          "",
+          "1"
+        ],
+        [
+          "Appareil à tension automatique de type doppler, 10 cm-66 cm",
+          "",
+          "1"
+        ],
+        [
+          "Oxymètre",
+          "EN ISO 9919",
+          "1"
+        ],
+        [
+          "Stéthoscope",
+          "",
+          "1"
+        ],
+        [
+          "Thermomètre, mesures minimales : 28° C-42° C",
+          "",
+          "1"
+        ],
+        [
+          "Dispositif pour doser le sucre dans le sang",
+          "",
+          "1"
+        ],
+        [
+          "Lampe diagnostic",
+          "",
+          "1"
+        ],
+        [
+          "Médicaments",
+          null,
+          null
+        ],
+        [
+          "Solutés",
+          "",
+          "4 l"
+        ],
+        [
+          "Matériel pour perfusions et injections",
+          "",
+          "4 kits"
+        ],
+        [
+          "Dispositifs d'injection conçus pour permettre l'administration de liquide chauffé jusqu'à 37° C (+ ou-2° C), portable ou non,",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Supports solutés",
+          "",
+          "2"
+        ],
+        [
+          "Dispositifs pour perfusion sous pression",
+          "",
+          "1"
+        ],
+        [
+          "Équipements de réanimation",
+          null,
+          null
+        ],
+        [
+          "Défibrillateur avec enregistrement ECG des données patient",
+          "EN 60601-2-4",
+          ""
+        ],
+        [
+          "Moniteur cardiaque",
+          "",
+          "Obligatoire mais ces fonctions peuvent être combinées sur un dispositif"
+        ],
+        [
+          "Stimulateur cardiaque",
+          null,
+          null
+        ],
+        [
+          "Dispositif de réanimation respiratoire (PARS) : contenu des PACS, matériels de perfusion avec cathéters et perfuseurs, solutés, dispositifs de fixation adhésifs, matériel d'intubation avec laryngoscope et lames diverses, pinces de Magill, mandrins, sondes d'intubation avec embouts, clamps et seringues pour ballonnet, dispositifs de fixation pour sonde, stéthoscope, matériel pour administration de médicaments",
+          "",
+          "1"
+        ],
+        [
+          "Appareillage de nébulisation",
+          "EN 13544-1",
+          "1"
+        ],
+        [
+          "Lot de drainage thoracique",
+          "",
+          "1"
+        ],
+        [
+          "Dispositif pour perfusion volumétrique",
+          "",
+          "1"
+        ],
+        [
+          "Cathéters veineux centraux",
+          "",
+          "1"
+        ],
+        [
+          "Respirateur de transport",
+          "EN 794-3",
+          "1"
+        ],
+        [
+          "Valve de PEEP",
+          "",
+          "1"
+        ],
+        [
+          "Capnomètre",
+          "EN 864",
+          "1"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-024",
+      "source_page": "42",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "TYPES D'ÉQUIPEMENTS",
+          "NORME DE CONFORMITÉ",
+          "TYPE C"
+        ],
+        [
+          "Bandages et matériels d'hygiène",
+          null,
+          null
+        ],
+        [
+          "Matériels de couchage",
+          "",
+          "2"
+        ],
+        [
+          "Couverture bactériostatique",
+          "",
+          "1"
+        ],
+        [
+          "Matériel pour le traitement des plaies",
+          "",
+          "1"
+        ],
+        [
+          "Matériel pour le traitement des brûlures thermiques et chimiques",
+          "",
+          "1"
+        ],
+        [
+          "Récipient pour réimplantation permettant de maintenir la température interne à 4° C (+ ou-2° C) pendant au moins 2 heures",
+          "",
+          "1"
+        ],
+        [
+          "Haricot",
+          "",
+          "1"
+        ],
+        [
+          "Sac vomitoire",
+          "",
+          "1"
+        ],
+        [
+          "Bassin",
+          "",
+          "1"
+        ],
+        [
+          "Urinal (pas en verre)",
+          "",
+          "1"
+        ],
+        [
+          "Container à aiguilles usagées",
+          "",
+          "1"
+        ],
+        [
+          "Sondes gastriques (avec accessoires)",
+          "",
+          "1"
+        ],
+        [
+          "Paires de gants chirurgicaux stériles",
+          "EN 455-1,-2",
+          "5"
+        ],
+        [
+          "Gants non stériles à usage unique",
+          "EN 455-1,-2",
+          "100"
+        ],
+        [
+          "1 matériel d'accouchement d'urgence",
+          "",
+          "1"
+        ],
+        [
+          "Sacs poubelle",
+          "",
+          "5"
+        ],
+        [
+          "Container incinérable pour déchets médicaux",
+          "",
+          "2"
+        ],
+        [
+          "Draps à usage unique pour brancard",
+          "",
+          "1"
+        ],
+        [
+          "Équipements de protection individuelle (par membre d'équipage)",
+          null,
+          null
+        ],
+        [
+          "Chasuble réfléchissante",
+          "EN 471",
+          "1"
+        ],
+        [
+          "Vêtement de sécurité et de protection (blouson)",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Paire de gants de sécurité pour débris",
+          "EN 420",
+          "Optionnel"
+        ],
+        [
+          "Paire de chaussures de sécurité",
+          "EN ISO 20345",
+          "Optionnel"
+        ],
+        [
+          "Casque de sécurité",
+          "EN 14052",
+          "Optionnel"
+        ],
+        [
+          "Matériel de protection contre l'infection",
+          "",
+          "1"
+        ],
+        [
+          "Masques de type FFP2 à usage unique",
+          "",
+          "2"
+        ],
+        [
+          "Matériel de protection et de sauvetage",
+          null,
+          null
+        ],
+        [
+          "Matériel de nettoyage et de désinfection immédiate du matériel et du personnel",
+          "",
+          "1"
+        ],
+        [
+          "Lot de lampes et outils de sauvetage",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Coupe-ceinture de sécurité",
+          "",
+          "1"
+        ],
+        [
+          "Triangle ou lampe de présignalisation",
+          "",
+          "1"
+        ],
+        [
+          "Projecteur",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Extincteur",
+          "EN 3-7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "DOC-SMUR-REFERENTIEL-2013-RAW-TBL-025",
+      "source_page": "43",
+      "page_table_index": 1,
+      "rows": [
+        [
+          "TYPES D'ÉQUIPEMENTS",
+          "NORME DE CONFORMITÉ",
+          "TYPE C"
+        ],
+        [
+          "Communication",
+          null,
+          null
+        ],
+        [
+          "Emetteur-récepteur mobile",
+          "",
+          "1"
+        ],
+        [
+          "Emetteur-récepteur portable",
+          "",
+          "1"
+        ],
+        [
+          "Accès au réseau téléphonique public par l'émetteur-récepteur ou par un radiotéléphone mobile",
+          "",
+          "1"
+        ],
+        [
+          "Un système d'alerte portable par personne (peut être intégré au récepteur radio)",
+          "",
+          "Optionnel"
+        ],
+        [
+          "Communication interne entre le chauffeur et la cellule sanitaire",
+          "",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "ANTARES",
+      "definition": "Adaptation Nationale des Transmissions Aux Risques Et aux Secours",
+      "source_page": "35"
+    },
+    {
+      "term": "AR",
+      "definition": "Ambulance de Réanimation",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-020"
+    },
+    {
+      "term": "ARM",
+      "definition": "Assistant de Régulation Médicale",
+      "source_page": "35"
+    },
+    {
+      "term": "CCMUm",
+      "definition": "Classification Clinique des Malades aux Urgences, modifiée",
+      "source_page": "35"
+    },
+    {
+      "term": "CESU",
+      "definition": "Centre d’Enseignement des Soins Urgents",
+      "source_page": "35"
+    },
+    {
+      "term": "CH",
+      "definition": "Centre Hospitalier",
+      "source_page": "35"
+    },
+    {
+      "term": "CHU",
+      "definition": "Centre Hospitalier Universitaire",
+      "source_page": "35"
+    },
+    {
+      "term": "DJ",
+      "definition": "Demi-journée",
+      "source_page": "35"
+    },
+    {
+      "term": "DRM",
+      "definition": "Dossier de Régulation Médicale",
+      "source_page": "35"
+    },
+    {
+      "term": "ECG",
+      "definition": "Électrocardiogramme",
+      "source_page": "35"
+    },
+    {
+      "term": "ES",
+      "definition": "Établissement de Santé",
+      "source_page": "35"
+    },
+    {
+      "term": "ESPIC",
+      "definition": "Établissements de Santé Privés d’Intérêt Collectif",
+      "source_page": "35"
+    },
+    {
+      "term": "EVASAN",
+      "definition": "Évacuation sanitaire",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-008"
+    },
+    {
+      "term": "GT399",
+      "definition": "Groupe de travail chargé de définir les exigences d’interopérabilité des systèmes de secours à personnes dans le cas d’urgence, selon les règles de certification NF Logiciel sécurité civile (NF 399)",
+      "source_page": "35"
+    },
+    {
+      "term": "INS",
+      "definition": "Identifiant National de Santé",
+      "source_page": "35"
+    },
+    {
+      "term": "MCS",
+      "definition": "Médecin Correspondant de Samu",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-009"
+    },
+    {
+      "term": "MEOPA",
+      "definition": "Mélange Équimolaire d’Oxygène et de Protoxyde d’Azote",
+      "source_page": "35"
+    },
+    {
+      "term": "MG",
+      "definition": "Médecine Générale",
+      "source_page": "35"
+    },
+    {
+      "term": "MIG",
+      "definition": "Mission d’Intérêt Générale",
+      "source_page": "35"
+    },
+    {
+      "term": "MU",
+      "definition": "Médecine d’Urgence",
+      "source_page": "35"
+    },
+    {
+      "term": "NIR",
+      "definition": "Numéro d’Inscription au Répertoire de l’INSEE",
+      "source_page": "35"
+    },
+    {
+      "term": "PDS",
+      "definition": "Permanence De Soins",
+      "source_page": "35"
+    },
+    {
+      "term": "PNI",
+      "definition": "Pression non invasive",
+      "source_page": "35"
+    },
+    {
+      "term": "SAMU",
+      "definition": "Service d’Aide Médicale Urgente",
+      "source_page": "35"
+    },
+    {
+      "term": "SFMU",
+      "definition": "Société Française de Médecine d’Urgence",
+      "source_page": "35"
+    },
+    {
+      "term": "SI",
+      "definition": "Système d’Information",
+      "source_page": "35"
+    },
+    {
+      "term": "SMUR",
+      "definition": "Structure Mobile d’Urgence et de Réanimation",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-001"
+    },
+    {
+      "term": "SROS",
+      "definition": "Schéma Régional de l’Offre de Soins",
+      "source_page": "35"
+    },
+    {
+      "term": "SUdF",
+      "definition": "Samu-Urgences de France",
+      "source_page": "35"
+    },
+    {
+      "term": "T2iH",
+      "definition": "Transfert Infirmier Inter Hospitalier",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-006"
+    },
+    {
+      "term": "TiiH",
+      "definition": "Transfert Infirmier Inter Hospitalier",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-006"
+    },
+    {
+      "term": "UMH",
+      "definition": "Unité Mobile Hospitalière",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-019"
+    },
+    {
+      "term": "VL",
+      "definition": "Véhicule de Liaison",
+      "source_page": "35"
+    },
+    {
+      "term": "VML",
+      "definition": "Véhicule Médicalisé Léger, parfois également appelé VLM",
+      "source_page": "35",
+      "knowledge_id": "K-SMUR-2013-020"
+    },
+    {
+      "term": "VNI",
+      "definition": "Ventilation Non Invasive",
+      "source_page": "35"
+    },
+    {
+      "term": "VPC",
+      "definition": "Véhicule Poste de Commandement",
+      "source_page": "35"
+    }
+  ],
+  "constants": [
+    {
+      "constant_id": "SMUR-2013-CONST-001",
+      "label": "Disponibilité de la mission de médicalisation",
+      "value": 24,
+      "unit": "heures sur 24",
+      "source_page": "3",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-002",
+      "label": "Seuil minimal séparant une information de seconde intention de la régulation initiale",
+      "value": 10,
+      "unit": "minutes",
+      "source_page": "7",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-003",
+      "label": "Précision du recueil des horaires",
+      "value": 1,
+      "unit": "seconde",
+      "source_page": "8",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-004",
+      "label": "Capacité minimale d’une VML",
+      "value": 4,
+      "unit": "personnes",
+      "source_page": "14",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-005",
+      "label": "Capacité minimale d’une ambulance de réanimation",
+      "value": 5,
+      "unit": "personnes",
+      "source_page": "14",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-006",
+      "label": "Sièges accompagnants dans la cellule sanitaire d’une ambulance de réanimation",
+      "value": 3,
+      "unit": "sièges",
+      "source_page": "14",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-007",
+      "label": "Composition minimale de l’équipe d’intervention hors exceptions citées",
+      "value": 3,
+      "unit": "fonctions: médecin, infirmier, conducteur ou pilote",
+      "source_page": "18",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-008",
+      "label": "Fréquence des revues de dossiers",
+      "value": "quotidienne",
+      "unit": "fréquence",
+      "source_page": "22",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-009",
+      "label": "Fréquence des staffs médicaux",
+      "value": "hebdomadaire",
+      "unit": "fréquence",
+      "source_page": "22",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-010",
+      "label": "Fréquence des revues de morbi-mortalité",
+      "value": "semestrielle",
+      "unit": "fréquence",
+      "source_page": "22",
+      "classification": "historical_referential"
+    },
+    {
+      "constant_id": "SMUR-2013-CONST-011",
+      "label": "Niveaux de classement des recommandations",
+      "value": 3,
+      "unit": "niveaux E, S, O",
+      "source_pages": "15, 20, 24",
+      "classification": "historical_referential"
+    }
+  ],
+  "competencies": [
+    {
+      "competency_id": "SMUR-ORG-2013-C01",
+      "scope": "organizational",
+      "title": "Classer et dénombrer correctement missions et interventions SMUR",
+      "source_pages": "4-7",
+      "knowledge_ids": [
+        "K-SMUR-2013-002",
+        "K-SMUR-2013-003",
+        "K-SMUR-2013-013"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C02",
+      "scope": "organizational",
+      "title": "Tracer les status, horaires, délais et durées d’intervention",
+      "source_pages": "8-10, 36-39",
+      "knowledge_ids": [
+        "K-SMUR-2013-016",
+        "K-SMUR-2013-017",
+        "K-SMUR-2013-035"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C03",
+      "scope": "organizational",
+      "title": "Dimensionner locaux, vecteurs et équipements d’un SMUR",
+      "source_pages": "11-18, 40-43",
+      "knowledge_ids": [
+        "K-SMUR-2013-019",
+        "K-SMUR-2013-020",
+        "K-SMUR-2013-021",
+        "K-SMUR-2013-022",
+        "K-SMUR-2013-023",
+        "K-SMUR-2013-024"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C04",
+      "scope": "organizational",
+      "title": "Constituer une équipe qualifiée et dimensionnée pour l’activité",
+      "source_pages": "18-19",
+      "knowledge_ids": [
+        "K-SMUR-2013-025"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C05",
+      "scope": "organizational",
+      "title": "Engager une UMH et coordonner la mission avec la régulation SAMU",
+      "source_page": "20",
+      "knowledge_ids": [
+        "K-SMUR-2013-026"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C06",
+      "scope": "organizational",
+      "title": "Constituer, transmettre et conserver le dossier médical SMUR",
+      "source_pages": "20-21",
+      "knowledge_ids": [
+        "K-SMUR-2013-027"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C07",
+      "scope": "organizational",
+      "title": "Coder gravité, hypothèse diagnostique et actes classants",
+      "source_page": "21",
+      "knowledge_ids": [
+        "K-SMUR-2013-028"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C08",
+      "scope": "organizational",
+      "title": "Évaluer les prises en charge et les pathologies traceuses",
+      "source_pages": "21-22",
+      "knowledge_ids": [
+        "K-SMUR-2013-029"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C09",
+      "scope": "organizational",
+      "title": "Appliquer les vigilances de l’établissement de santé",
+      "source_page": "22",
+      "knowledge_ids": [
+        "K-SMUR-2013-030"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C10",
+      "scope": "organizational",
+      "title": "Organiser qualité, formation, exercices, enseignement et recherche",
+      "source_pages": "22-23",
+      "knowledge_ids": [
+        "K-SMUR-2013-031",
+        "K-SMUR-2013-032"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C11",
+      "scope": "organizational",
+      "title": "Gérer plaintes, réclamations, dysfonctionnements et informatisation",
+      "source_page": "23",
+      "knowledge_ids": [
+        "K-SMUR-2013-033"
+      ]
+    },
+    {
+      "competency_id": "SMUR-ORG-2013-C12",
+      "scope": "organizational",
+      "title": "Piloter l’activité par des indicateurs quantitatifs et qualitatifs",
+      "source_pages": "24-31",
+      "knowledge_ids": [
+        "K-SMUR-2013-034"
+      ]
+    }
+  ],
+  "knowledge_entries": [
+    {
+      "knowledge_id": "K-SMUR-2013-001",
+      "knowledge_type": "definition",
+      "title": "Structure mobile d’urgence et de réanimation",
+      "definition": "Le SMUR est une unité fonctionnelle située au sein d’un établissement de soins, rattachée opérationnellement à un SAMU et engagée à sa demande.",
+      "summary": "Il médicalise 24 h/24 les interventions auprès de patients nécessitant surveillance ou soins médicaux d’urgence et de réanimation.",
+      "important_points": [
+        "Unité fonctionnelle",
+        "Rattachement opérationnel au SAMU",
+        "Engagement par la régulation",
+        "Médicalisation urgente"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "SAMU",
+        "UMH",
+        "régulation"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "SMUR",
+        "définition",
+        "organisation"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Résumé et définitions",
+      "source_section": "Mission du SMUR",
+      "source_page": "3",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-002",
+      "knowledge_type": "definition",
+      "title": "Mission primaire",
+      "definition": "Prise en charge médicale spécialisée d’un ou plusieurs patients non admis dans un établissement de santé et nécessitant urgemment expertise, soins d’urgence ou réanimation et orientation.",
+      "summary": "Le type de mission ne préjuge ni de sa gravité ni de son urgence.",
+      "important_points": [
+        "Patient hors établissement",
+        "Prise en charge spécialisée",
+        "Orientation"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Déduire la gravité à partir du seul mot primaire"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "intervention",
+        "transfert"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "mission primaire",
+        "SMUR"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.1.1 Mission primaire",
+      "source_page": "4",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-003",
+      "knowledge_type": "definition",
+      "title": "Mission de transfert",
+      "definition": "Prise en charge médicale spécialisée d’un patient déjà hospitalisé ou pris en charge par un service afin d’assurer, si nécessaire, des soins complémentaires de réanimation et son transfert vers une structure adaptée.",
+      "summary": "Une mission de transfert ne concerne qu’un seul patient.",
+      "important_points": [
+        "Patient déjà pris en charge",
+        "Un seul patient",
+        "Plateau technique adapté"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Employer secondaire ou primo-secondaire comme synonymes sans précision"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "inter-hospitalier",
+        "intra-hospitalier"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "transfert",
+        "SMUR"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.1.2 Mission de transfert",
+      "source_page": "4",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-004",
+      "knowledge_type": "definition",
+      "title": "Transferts inter- et intra-hospitaliers",
+      "definition": "Le transfert est inter-hospitalier entre entités juridiques distinctes et intra-hospitalier au sein d’un même établissement ou entre établissements d’une même entité juridique.",
+      "summary": "Les missions de chaîne de survie intra-hospitalière sont comptabilisées séparément.",
+      "important_points": [
+        "Critère de l’entité juridique",
+        "Comptage séparé de la chaîne de survie"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre distance géographique et distinction juridique"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "mission de transfert"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "inter-hospitalier",
+        "intra-hospitalier"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "Transferts",
+      "source_page": "4-5",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-005",
+      "knowledge_type": "definition",
+      "title": "Transfert infirmier inter-hospitalier",
+      "definition": "Transfert entre deux établissements d’un patient ne nécessitant pas de prise en charge médicalisée SMUR mais relevant des compétences d’un infirmier.",
+      "summary": "Ces transferts, y compris pédiatriques, in utero ou psychiatriques, sont coordonnés et régulés par le SAMU compétent.",
+      "important_points": [
+        "Absence de médicalisation SMUR",
+        "Compétence infirmière",
+        "Régulation SAMU"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Compter un TiiH comme une intervention SMUR"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "TiiH",
+        "T2iH"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "transfert infirmier",
+        "SAMU"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "Transferts infirmiers inter-hospitaliers",
+      "source_page": "5",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-006",
+      "knowledge_type": "definition",
+      "title": "Terme primo-secondaire",
+      "definition": "Le référentiel indique que ce type de mission n’existe pas et que le terme ne doit plus être utilisé.",
+      "summary": "Les situations concernées relèvent au plus d’un transfert réalisé avec des moyens habituellement affectés aux missions primaires.",
+      "important_points": [
+        "Terminologie abandonnée",
+        "Reclasser en transfert"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Maintenir primo-secondaire comme catégorie officielle"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "mission de transfert"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "terminologie",
+        "primo-secondaire"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.1.3 Missions primo-secondaires",
+      "source_page": "5",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-007",
+      "knowledge_type": "definition",
+      "title": "Rapatriement et évacuation sanitaire",
+      "definition": "Le rapatriement vise le transport médicalisé d’un patient, souvent vers un établissement ; l’EVASAN désigne une extraction sanitaire, notamment aérienne selon les définitions citées.",
+      "summary": "Le document distingue EVASAN primaire, secondaire et tertiaire et précise que le rapatriement n’est pas une mission de service public du SMUR.",
+      "important_points": [
+        "Rapatriement",
+        "EVASAN",
+        "Trois classes citées",
+        "Contexte militaire cité"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Assimiler automatiquement rapatriement sanitaire et mission de service public SMUR"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "Rapasan",
+        "Medivac"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "EVASAN",
+        "rapatriement"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "Autres missions",
+      "source_page": "5",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-008",
+      "knowledge_type": "definition",
+      "title": "Mission de retour vers",
+      "definition": "Prise en charge spécialisée d’un patient hospitalisé en vue d’un retour au domicile ou dans une structure qui n’est pas un établissement de santé.",
+      "summary": "Elle relève du SMUR lorsque le niveau de soins requis est de type SMUR.",
+      "important_points": [
+        "Patient hospitalisé",
+        "Destination non hospitalière",
+        "Niveau de soins SMUR"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "transfert",
+        "orientation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "retour vers",
+        "SMUR"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "Retour vers",
+      "source_page": "6",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-009",
+      "knowledge_type": "definition",
+      "title": "Médecin correspondant du SAMU",
+      "definition": "Le référentiel précise que les médecins correspondants du SAMU ne sont pas des moyens du SMUR.",
+      "summary": "Leur participation à l’aide médicale urgente relève d’un cadre distinct cité dans le document.",
+      "important_points": [
+        "MCS distinct du SMUR"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Comptabiliser le MCS comme effecteur SMUR"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "SAMU",
+        "régulation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "MCS",
+        "périmètre"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "MCS",
+      "source_page": "6",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-010",
+      "knowledge_type": "definition",
+      "title": "Intervention SMUR",
+      "definition": "Engagement d’une UMH sur décision de la régulation médicale du SAMU, avec ou sans transport de patient.",
+      "summary": "Une même mission peut comporter plusieurs interventions.",
+      "important_points": [
+        "Engagement d’une UMH",
+        "Décision SAMU",
+        "Transport non obligatoire"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre mission et intervention"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "UMH",
+        "mission"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "intervention",
+        "UMH"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.2 Caractéristiques des interventions",
+      "source_page": "6",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-011",
+      "knowledge_type": "definition",
+      "title": "Renfort médical, matériel ou en vecteur",
+      "definition": "Un renfort complète une intervention en cours par une expertise médicale, du matériel ou un véhicule nécessaire à la mission.",
+      "summary": "Une équipe supplémentaire engagée pour d’autres patients n’est pas considérée comme un renfort.",
+      "important_points": [
+        "Complément à une intervention en cours",
+        "Patient particulier pour le renfort médical",
+        "Trois formes décrites"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Qualifier de renfort une équipe destinée à un autre patient"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "intervention",
+        "logistique"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "renfort",
+        "matériel",
+        "vecteur"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.2.1 Caractère renfort",
+      "source_page": "6",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-012",
+      "knowledge_type": "definition",
+      "title": "Intervention de première ou seconde intention",
+      "definition": "La première intention découle des informations initiales ; la seconde est déclenchée après une nouvelle information reçue au moins dix minutes après la fin de la régulation initiale.",
+      "summary": "La nouvelle information peut venir d’un nouvel appel ou du bilan d’un premier effecteur.",
+      "important_points": [
+        "Information initiale",
+        "Nouvelle information",
+        "Seuil de dix minutes"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre seconde intention et transfert"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "régulation",
+        "délai"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "première intention",
+        "seconde intention"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.2.2 Caractère délai",
+      "source_page": "7",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-013",
+      "knowledge_type": "notion",
+      "title": "Dénombrement des missions et interventions",
+      "definition": "Le nombre de missions correspond aux DRM ayant reçu au moins une équipe SMUR ; le nombre d’interventions correspond aux déclenchements d’équipes médicales de réanimation préhospitalière.",
+      "summary": "Renforts logistiques, T2iH et MCS sont comptés pour les moyens mais ne constituent pas des interventions SMUR.",
+      "important_points": [
+        "DRM pour la mission",
+        "Déclenchement pour l’intervention",
+        "Comptes distincts"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Additionner toutes les activités comme interventions SMUR"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "DRM",
+        "indicateurs"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "dénombrement",
+        "activité"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.3 Dénombrement",
+      "source_page": "7",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-014",
+      "knowledge_type": "notion",
+      "title": "Secteurs d’intervention",
+      "definition": "Le secteur primaire est la zone des missions primaires ; le secteur inter-hospitalier regroupe les établissements desservis pour les transferts.",
+      "summary": "Les secteurs reposent sur l’organisation territoriale et conventionnelle et peuvent varier selon besoins, filières et pathologies.",
+      "important_points": [
+        "Zone primaire",
+        "Réseau inter-hospitalier",
+        "Conventions"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "SROS",
+        "géolocalisation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "territoire",
+        "secteur"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.4 Secteurs d’intervention",
+      "source_page": "7-8",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-015",
+      "knowledge_type": "definition",
+      "title": "Bassin de population du SMUR",
+      "definition": "Population résidant sur le secteur d’intervention du SMUR.",
+      "summary": "Il sert de base territoriale à certains indicateurs d’activité.",
+      "important_points": [
+        "Population du secteur"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "secteur",
+        "indicateurs"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "population",
+        "territoire"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.4.3 Bassin de population",
+      "source_page": "8",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-016",
+      "knowledge_type": "notion",
+      "title": "Traçabilité des status et horaires",
+      "definition": "Les status suivent le déroulement d’une intervention et leurs horaires doivent être normalisés, contrôlés, synchronisés et tracés.",
+      "summary": "Les horaires sont recueillis à la seconde, les saisies et modifications distinguées, et les actes sur le DRM horodatés et signés.",
+      "important_points": [
+        "Précision à la seconde",
+        "Contrôle qualité",
+        "Serveur de temps",
+        "Traçabilité médico-légale"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Accepter des horaires impossibles ou non traçables"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "ANTARES",
+        "DRM"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "status",
+        "horodatage",
+        "traçabilité"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.5 Horaires, status, durées",
+      "source_page": "8-9",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-017",
+      "knowledge_type": "notion",
+      "title": "Délais et durées SMUR",
+      "definition": "Les délais et durées sont calculés par différences entre heures normalisées de décision, déclenchement, départ, arrivée, médicalisation, orientation et retour.",
+      "summary": "Le référentiel définit le délai de déclenchement, de départ, d’acheminement et d’orientation ainsi que les durées d’intervention, médicalisation, présence sur place, conditionnement et occupation.",
+      "important_points": [
+        "Formules explicites",
+        "Status source",
+        "Logigramme annexe 5"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Utiliser des points de départ différents de ceux définis"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "status",
+        "indicateurs"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "délai",
+        "durée",
+        "calcul"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Définitions",
+      "source_section": "3.5.3 Délais et durées",
+      "source_page": "9-10, 39",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-018",
+      "knowledge_type": "definition",
+      "title": "SMUR pédiatrique et antenne SMUR",
+      "definition": "Le SMUR pédiatrique est spécialisé dans l’urgence des enfants, nouveau-nés et nourrissons ; une antenne SMUR est une UMH dépendante implantée hors de l’établissement siège.",
+      "summary": "L’antenne peut fonctionner en continu ou de manière discontinue.",
+      "important_points": [
+        "Spécialisation pédiatrique",
+        "Implantation déportée"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "néonatalogie",
+        "UMH"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "pédiatrie",
+        "antenne"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.1 Structures SMUR",
+      "source_page": "11",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-019",
+      "knowledge_type": "definition",
+      "title": "Unité mobile hospitalière",
+      "definition": "Effecteur opérationnel du SMUR associant une équipe, un lot de matériel technique et médical et un vecteur terrestre, aérien ou maritime.",
+      "summary": "L’UMH permet la prise en charge diagnostique, thérapeutique et de surveillance d’un ou plusieurs patients.",
+      "important_points": [
+        "Équipe",
+        "Matériel",
+        "Vecteur",
+        "Effecteur du SMUR"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Réduire l’UMH au seul véhicule"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "SMUR",
+        "vecteur"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "UMH",
+        "ressources"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.3 Vecteurs SMUR",
+      "source_page": "13",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-020",
+      "knowledge_type": "definition",
+      "title": "Vecteurs terrestres du SMUR",
+      "definition": "La VML transporte l’équipe et le matériel sans patient ; l’ambulance de réanimation transporte équipe, matériel et patient allongé ; le VL sert surtout aux renforts.",
+      "summary": "Chaque vecteur a une fonction, une capacité et des équipements propres décrits dans le référentiel.",
+      "important_points": [
+        "VML sans patient",
+        "AR avec patient",
+        "VL de renfort"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Utiliser une VML comme ambulance de transport de patient"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "EN 1789",
+        "UMH"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "VML",
+        "AR",
+        "VL"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.3.1 Vecteurs terrestres",
+      "source_page": "14",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-021",
+      "knowledge_type": "definition",
+      "title": "Vecteurs aériens et maritimes",
+      "definition": "Le document distingue HéliSMUR, autres hélicoptères sanitaires, avion SMUR, avion sanitaire et NaviSMUR selon leur dédicace, agrément et fonction.",
+      "summary": "Le déclenchement d’un HéliSMUR ou d’un avion SMUR est exclusivement réalisé par le SAMU dans le cadre décrit.",
+      "important_points": [
+        "Agrément transport sanitaire",
+        "Dédicace SMUR",
+        "Vecteurs maritimes"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Assimiler tout hélicoptère sanitaire à un HéliSMUR"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "HéliSMUR",
+        "NaviSMUR"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "aérien",
+        "maritime",
+        "SMUR"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.3.2 et 4.3.3",
+      "source_page": "15",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-022",
+      "knowledge_type": "notion",
+      "title": "Niveaux de ressources E, S et O",
+      "definition": "Les ressources et recommandations sont classées E pour Essentiel, S pour Souhaitable et O pour Optionnel.",
+      "summary": "Ce classement structure les tableaux de locaux, matériels et indicateurs.",
+      "important_points": [
+        "E essentiel",
+        "S souhaitable",
+        "O optionnel"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Interpréter souhaitable comme obligatoire"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "matériel",
+        "évaluation"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "E-S-O",
+        "priorité"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources et organisation",
+      "source_section": "Classification",
+      "source_page": "15, 20, 24",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-023",
+      "knowledge_type": "notion",
+      "title": "Locaux et zones fonctionnelles du SMUR",
+      "definition": "Le référentiel classe les besoins de locaux, garages, rééquipement, décontamination, stockage, repos et accès selon leur importance.",
+      "summary": "Les SMUR disposant d’un HéliSMUR ont aussi des exigences de zone de poser, avitaillement et poste pilote.",
+      "important_points": [
+        "Garage",
+        "Décontamination",
+        "Stockage",
+        "Accessibilité",
+        "Zone HéliSMUR"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "logistique",
+        "hygiène"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "locaux",
+        "logistique"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.2 Locaux",
+      "source_page": "11-13",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-024",
+      "knowledge_type": "notion",
+      "title": "Équipement médical d’une UMH",
+      "definition": "Chaque véhicule doit disposer du matériel réglementaire et du matériel recommandé pour le monitorage préhospitalier, classé E, S ou O.",
+      "summary": "Le document détaille réanimation respiratoire et cardiovasculaire, médicaments, diagnostic, hygiène, protection et matériel pédiatrique ou néonatal.",
+      "important_points": [
+        "Matériel réglementaire",
+        "Monitorage",
+        "Réanimation",
+        "Adaptation pédiatrique"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Projeter directement une liste de 2013 sans vérifier sa version actuelle"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "EN 1789",
+        "néonatalogie"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "matériel",
+        "UMH",
+        "historique"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.4 Matériel médical",
+      "source_page": "15-18, 40-43",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-025",
+      "knowledge_type": "notion",
+      "title": "Personnels et qualifications SMUR",
+      "definition": "L’équipe comprend au moins un médecin, un infirmier et un conducteur ou pilote, hors exceptions de certains transferts ; chaque catégorie doit posséder les qualifications requises.",
+      "summary": "Le document décrit aussi les exigences propres aux médecins, infirmiers et ambulanciers dans son cadre de 2013.",
+      "important_points": [
+        "Composition minimale",
+        "Qualifications réglementaires",
+        "Effectifs adaptés"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Appliquer sans révision les exigences de permis et formation datées de 2013"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "équipe",
+        "ambulancier SMUR"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "personnel",
+        "qualification",
+        "historique"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Ressources",
+      "source_section": "4.5 Personnels SMUR",
+      "source_page": "18-19",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-026",
+      "knowledge_type": "notion",
+      "title": "Organisation opérationnelle d’une mission",
+      "definition": "L’engagement d’une UMH est décidé exclusivement par un SAMU, le départ est prioritaire, le bilan est transmis et l’orientation est coordonnée avec la régulation.",
+      "summary": "Le SMUR doit aussi disposer d’un règlement intérieur et de procédures de déclenchement et de secours.",
+      "important_points": [
+        "Décision SAMU",
+        "Départ prioritaire",
+        "Bilan avant départ des lieux",
+        "Orientation régulée"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Choisir une destination sans lien avec la régulation"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "bilan",
+        "régulation",
+        "orientation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "engagement",
+        "organisation"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.1 Organisations opérationnelles",
+      "source_page": "20",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-027",
+      "knowledge_type": "notion",
+      "title": "Dossier médical SMUR",
+      "definition": "Un dossier médical est créé à chaque intervention, suit le patient dans sa filière et fait partie du dossier hospitalier.",
+      "summary": "Il consigne identité, professionnels, horaires, histoire, surveillance, hypothèse, actes, traitements, orientation et relais de responsabilité.",
+      "important_points": [
+        "Chaque intervention",
+        "Traçabilité clinique",
+        "Actes et doses horodatés",
+        "Exemplaire au service d’accueil"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Omettre l’horodatage des actes et médicaments"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "dossier hospitalier",
+        "INS",
+        "NIR"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "dossier",
+        "traçabilité"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.2 Dossier médical",
+      "source_page": "20-21",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-028",
+      "knowledge_type": "notion",
+      "title": "Codage et devenir des patients",
+      "definition": "Le codage minimal porte sur la gravité CCMUm, l’hypothèse issue du thésaurus SFMU/CIM-10 et les actes classants ; le SMUR suit le devenir des patients.",
+      "summary": "L’orientation est décrite notamment vers urgences, soins critiques ou filière MCO.",
+      "important_points": [
+        "CCMUm",
+        "CIM-10",
+        "Actes classants",
+        "Devenir"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre hypothèse diagnostique codée et diagnostic définitif"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "qualité du dossier",
+        "orientation"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "codage",
+        "devenir"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.2 Dossier médical et codage",
+      "source_page": "20-21",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-029",
+      "knowledge_type": "notion",
+      "title": "Pathologies traceuses et procédures actualisées",
+      "definition": "Chaque SMUR doit disposer de procédures conformes aux recommandations actualisées et pouvoir décrire certaines prises en charge traceuses.",
+      "summary": "SCA, AVC, accouchement inopiné extrahospitalier, douleur et traumatismes graves ou médullaires sont cités.",
+      "important_points": [
+        "Recommandations actualisées",
+        "Registres ou évaluations spécifiques",
+        "Pathologies traceuses"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Prendre la liste pour un protocole clinique complet"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "DPC",
+        "registre"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "pathologies traceuses",
+        "qualité"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.3 Performances thérapeutiques",
+      "source_page": "21-22",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-030",
+      "knowledge_type": "notion",
+      "title": "Vigilances applicables au SMUR",
+      "definition": "Le SMUR applique les règles et procédures de vigilance de l’établissement de santé.",
+      "summary": "Le document cite matériovigilance, pharmacovigilance, hygiène hospitalière et accidents d’exposition aux liquides biologiques.",
+      "important_points": [
+        "Matériovigilance",
+        "Pharmacovigilance",
+        "Hygiène",
+        "Exposition biologique"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "sécurité",
+        "procédures locales"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "vigilance",
+        "hygiène"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.4 Vigilances",
+      "source_page": "22",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-031",
+      "knowledge_type": "notion",
+      "title": "Démarche qualité et exercices",
+      "definition": "Le document prévoit formation continue, revues régulières de pratiques et exercices de secours ou de simulation.",
+      "summary": "Les rythmes cités sont quotidien pour les dossiers, hebdomadaire pour les staffs et semestriel pour les revues de morbi-mortalité.",
+      "important_points": [
+        "DPC",
+        "Formation continue",
+        "Revues",
+        "Simulation",
+        "Secours spécifiques"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "évaluation pratiques",
+        "formation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "qualité",
+        "exercices"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.5.1 et 5.5.2",
+      "source_page": "22",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-032",
+      "knowledge_type": "notion",
+      "title": "Enseignement, recherche et activité institutionnelle",
+      "definition": "Les SMUR participent aux études, publications, communications, enseignements, éducation sanitaire et activités institutionnelles.",
+      "summary": "Le CESU est explicitement cité comme cadre d’enseignement et d’éducation sanitaire.",
+      "important_points": [
+        "Recherche clinique",
+        "Publications",
+        "Enseignement",
+        "Institutions"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "CESU",
+        "formation"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "recherche",
+        "enseignement"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.5.3 et 5.5.4",
+      "source_page": "23",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-033",
+      "knowledge_type": "notion",
+      "title": "Plaintes, dysfonctionnements et dossier informatisé",
+      "definition": "Une procédure de gestion des plaintes et dysfonctionnements est requise et le SMUR doit disposer d’un dossier informatisé communiquant.",
+      "summary": "Le système d’information doit permettre de décrire et d’évaluer l’activité.",
+      "important_points": [
+        "Procédure dédiée",
+        "Dossier informatisé",
+        "Interopérabilité",
+        "Évaluation"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "qualité",
+        "SI"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "plaintes",
+        "informatique"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Organisation",
+      "source_section": "5.6 et 5.7",
+      "source_page": "23",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-034",
+      "knowledge_type": "notion",
+      "title": "Indicateurs d’évaluation du SMUR",
+      "definition": "Le référentiel organise l’évaluation par indicateurs quantitatifs et qualitatifs sur population, effectifs, véhicules, communications, activité, délais, transports et activités institutionnelles.",
+      "summary": "Les indicateurs sont classés E, S ou O et les résultats sont exprimés en nombre, pourcentage et, pour les délais, par statistiques descriptives.",
+      "important_points": [
+        "Quantitatif et qualitatif",
+        "Classement E-S-O",
+        "Plusieurs domaines",
+        "Statistiques de délai"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Comparer des structures sans tenir compte du périmètre et des définitions"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "pilotage",
+        "qualité"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "indicateurs",
+        "évaluation"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Évaluation",
+      "source_section": "6.1 à 6.8",
+      "source_page": "24-31",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SMUR-2013-035",
+      "knowledge_type": "notion",
+      "title": "Codification des status SMUR et ANTARES",
+      "definition": "Les annexes mettent en correspondance les événements de mission avec des codes SMUR et ANTARES.",
+      "summary": "Décision, déclenchement, départ, arrivée, bilan, orientation, transport, destination, disponibilité et retour base sont tracés selon le schéma fourni.",
+      "important_points": [
+        "Codes normalisés",
+        "Correspondance SMUR-ANTARES",
+        "Status de transport obligatoires en gras"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Utiliser la position dans un tableau plutôt que le code comme identifiant"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "horodatage",
+        "interopérabilité"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "ANTARES",
+        "status",
+        "codification"
+      ],
+      "source_document": "DOC-SMUR-REFERENTIEL-2013",
+      "source_chapter": "Annexes",
+      "source_section": "Annexes 3 et 4",
+      "source_page": "36-38",
+      "version": "2013-06",
+      "review_status": "source_verified"
+    }
+  ],
+  "quality_notes": {
+    "historical_reference": true,
+    "currency_review_required": true,
+    "currency_note": "Le document date de juin 2013. Toute utilisation pédagogique concernant réglementation, composition des équipes, permis, équipements, normes ou codifications doit être comparée aux textes et référentiels en vigueur.",
+    "protocols_complete": false,
+    "protocols_note": "Le référentiel exige plusieurs procédures et recommandations actualisées, mais ne publie pas les protocoles cliniques pas-à-pas.",
+    "terminology_note": "La graphie source « status » est conservée lorsqu’elle désigne la codification opérationnelle du document.",
+    "tables_note": "Les 25 tableaux détectés automatiquement sont conservés dans raw_tables avec leur page et leur ordre ; l’index tables les regroupe par fonction.",
+    "official_online_verification": "Le PDF et sa page de référence sont encore disponibles sur le site officiel de la SFMU au 2026-08-01.",
+    "trainer_validation": false,
+    "raw_table_count": 25
+  }
+}

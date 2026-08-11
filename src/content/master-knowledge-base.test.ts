@@ -29,7 +29,10 @@ const trackedSpecificationIds = new Set([
 ]);
 const importedQuestionIds = importManifest.generatedTargets.flatMap((target) => {
   const raw = JSON.parse(
-    readFileSync(new URL(`./formations/dea/${target.file}`, import.meta.url), "utf8"),
+    readFileSync(
+      new URL(`./formations/dea/${target.archiveFile ?? target.file}`, import.meta.url),
+      "utf8",
+    ),
   ) as unknown;
   return parseLessonContentFile(raw).items.map((item) => item.id);
 });

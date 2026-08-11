@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l01",
+  "title": "Le squelette humain",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier le rôle général du squelette.",
+    "Distinguer la tête, le tronc et les membres.",
+    "Reconnaître les trois catégories d’os citées par le support."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel rôle général le support attribue-t-il au squelette ?",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q01-a1",
+          "text": "Former la charpente du corps humain",
+          "explanation": "Le support définit le squelette comme la charpente du corps."
+        },
+        {
+          "id": "dea-p04-l01-q01-a2",
+          "text": "Assurer seul la circulation du sang",
+          "explanation": "La circulation relève de l’appareil circulatoire, pas du squelette seul.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p04-l01-q01-a3",
+          "text": "Produire seul tous les mouvements",
+          "explanation": "Le mouvement implique aussi les articulations et les muscles.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p04-l01-q01-a4",
+          "text": "Commander les informations nerveuses",
+          "explanation": "Cette fonction appartient au système nerveux.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q01-a1",
+      "explanation": "Le support présente le squelette comme la charpente du corps humain : il en constitue l’armature.",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support présente le squelette comme la charpente du corps humain : il en constitue l’armature.",
+        "commonMistake": "Une erreur fréquente consiste à attribuer au squelette, seul, toutes les fonctions de l’appareil locomoteur.",
+        "keyTakeaway": "Le squelette soutient la structure corporelle ; le mouvement mobilise aussi articulations et muscles.",
+        "fieldApplication": "Commencer un repérage en identifiant la grande structure osseuse concernée.",
+        "memoryTip": "Squelette = charpente."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support présente le squelette comme la charpente du corps humain : il en constitue l’armature.",
+      "common_mistake": "Une erreur fréquente consiste à attribuer au squelette, seul, toutes les fonctions de l’appareil locomoteur.",
+      "key_takeaway": "Le squelette soutient la structure corporelle ; le mouvement mobilise aussi articulations et muscles.",
+      "memory_tip": "Squelette = charpente.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "role"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l01-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le squelette est formé d’os et d’articulations.",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q02-true",
+          "text": "Vrai",
+          "explanation": "Le support associe explicitement os et articulations dans la composition du squelette."
+        },
+        {
+          "id": "dea-p04-l01-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : les articulations font partie de l’organisation décrite du squelette."
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q02-true",
+      "explanation": "La proposition reprend la composition indiquée dans le support : des os et des articulations.",
+      "knowledgeIds": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend la composition indiquée dans le support : des os et des articulations.",
+        "commonMistake": "Oublier les articulations conduit à réduire le squelette à une simple collection d’os.",
+        "keyTakeaway": "Os et articulations structurent ensemble le squelette.",
+        "fieldApplication": "Lors d’un repérage, distinguer une zone osseuse d’une zone articulaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend la composition indiquée dans le support : des os et des articulations.",
+      "common_mistake": "Oublier les articulations conduit à réduire le squelette à une simple collection d’os.",
+      "key_takeaway": "Os et articulations structurent ensemble le squelette.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "composition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-001",
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l01-q03",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "En combien de grandes parties le support divise-t-il le squelette ?",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q03-a1",
+          "text": "Deux",
+          "explanation": "Le support ne retient pas une division en deux parties."
+        },
+        {
+          "id": "dea-p04-l01-q03-a2",
+          "text": "Trois",
+          "explanation": "La tête, le tronc et les membres forment les trois parties décrites."
+        },
+        {
+          "id": "dea-p04-l01-q03-a3",
+          "text": "Quatre",
+          "explanation": "Les membres supérieurs et inférieurs restent regroupés dans la partie « membres ».",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p04-l01-q03-a4",
+          "text": "Sept",
+          "explanation": "Sept correspond au nombre d’appareils dans un autre tableau du support, pas aux parties du squelette.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q03-a2",
+      "explanation": "Le squelette est divisé en trois parties : la tête, le tronc et les membres.",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le squelette est divisé en trois parties : la tête, le tronc et les membres.",
+        "commonMistake": "Compter séparément les membres supérieurs et inférieurs conduit à une division différente de celle du support.",
+        "keyTakeaway": "Retenir l’organisation tête - tronc - membres.",
+        "fieldApplication": "Cette première classification permet de situer rapidement une zone corporelle.",
+        "memoryTip": "TTM : Tête, Tronc, Membres."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le squelette est divisé en trois parties : la tête, le tronc et les membres.",
+      "common_mistake": "Compter séparément les membres supérieurs et inférieurs conduit à une division différente de celle du support.",
+      "key_takeaway": "Retenir l’organisation tête - tronc - membres.",
+      "memory_tip": "TTM : Tête, Tronc, Membres.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "organisation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l01-q04",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque grande partie du squelette aux éléments décrits dans le support.",
+      "instruction": "Associe chaque partie à sa description.",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q04-a1",
+          "text": "Tête",
+          "match": "Crâne et face",
+          "explanation": "La tête comprend le crâne et la face."
+        },
+        {
+          "id": "dea-p04-l01-q04-a2",
+          "text": "Tronc",
+          "match": "Rachis, côtes et sternum",
+          "explanation": "Le tronc comprend notamment le rachis, les côtes et le sternum."
+        },
+        {
+          "id": "dea-p04-l01-q04-a3",
+          "text": "Membres",
+          "match": "Membres supérieurs et inférieurs",
+          "explanation": "Cette partie regroupe les membres supérieurs et inférieurs."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l01-q04-a1",
+        "dea-p04-l01-q04-a2",
+        "dea-p04-l01-q04-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-l01-q04-a1",
+        "dea-p04-l01-q04-a2",
+        "dea-p04-l01-q04-a3"
+      ],
+      "explanation": "Chaque association suit directement la division anatomique donnée par le support.",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association suit directement la division anatomique donnée par le support.",
+        "commonMistake": "Le sternum et les côtes sont parfois classés à tort avec les membres alors qu’ils appartiennent au tronc.",
+        "keyTakeaway": "Tête : crâne et face ; tronc : rachis, côtes, sternum ; membres : supérieurs et inférieurs.",
+        "fieldApplication": "Employer ces grandes régions avant de préciser l’os concerné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association suit directement la division anatomique donnée par le support.",
+      "common_mistake": "Le sternum et les côtes sont parfois classés à tort avec les membres alors qu’ils appartiennent au tronc.",
+      "key_takeaway": "Tête : crâne et face ; tronc : rachis, côtes, sternum ; membres : supérieurs et inférieurs.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-l01-q05",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels éléments appartiennent au tronc selon le support ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q05-a1",
+          "text": "La colonne vertébrale",
+          "explanation": "Le rachis est cité dans la partie tronc."
+        },
+        {
+          "id": "dea-p04-l01-q05-a2",
+          "text": "Les côtes",
+          "explanation": "Les côtes sont citées dans la partie tronc."
+        },
+        {
+          "id": "dea-p04-l01-q05-a3",
+          "text": "L’humérus",
+          "explanation": "L’humérus appartient au membre supérieur.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p04-l01-q05-a4",
+          "text": "Le fémur",
+          "explanation": "Le fémur appartient au membre inférieur.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l01-q05-a1",
+        "dea-p04-l01-q05-a2"
+      ],
+      "correctAnswers": [
+        "dea-p04-l01-q05-a1",
+        "dea-p04-l01-q05-a2"
+      ],
+      "explanation": "La colonne vertébrale et les côtes sont deux éléments du tronc décrits page 35.",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La colonne vertébrale et les côtes sont deux éléments du tronc décrits page 35.",
+        "commonMistake": "Humérus et fémur sont des os des membres et ne doivent pas être déplacés vers le tronc.",
+        "keyTakeaway": "Le tronc comprend notamment rachis, côtes et sternum.",
+        "fieldApplication": "Distinguer tronc et membres évite une localisation anatomique trop large."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La colonne vertébrale et les côtes sont deux éléments du tronc décrits page 35.",
+      "common_mistake": "Humérus et fémur sont des os des membres et ne doivent pas être déplacés vers le tronc.",
+      "key_takeaway": "Le tronc comprend notamment rachis, côtes et sternum.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "tronc",
+        "squelette"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p04-l01-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le squelette humain est formé de plus de ______ os.",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q06-a1",
+          "text": "200",
+          "explanation": "Le support indique « plus de 200 » os."
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q06-a1",
+      "explanation": "Le nombre attendu est 200, dans la formulation « plus de 200 os ».",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le nombre attendu est 200, dans la formulation « plus de 200 os ».",
+        "commonMistake": "Donner un nombre exact différent dépasse ce que précise ce support.",
+        "keyTakeaway": "Le support retient une valeur supérieure à 200, sans exiger ici un décompte exact.",
+        "fieldApplication": "Cette donnée sert de repère général, pas de critère clinique isolé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le nombre attendu est 200, dans la formulation « plus de 200 os ».",
+      "common_mistake": "Donner un nombre exact différent dépasse ce que précise ce support.",
+      "key_takeaway": "Le support retient une valeur supérieure à 200, sans exiger ici un décompte exact.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "nombre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l01-q07",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une personne désigne une douleur située au niveau du sternum. Dans quelle grande partie du squelette situes-tu d’abord ce repère ?",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q07-a1",
+          "text": "La tête",
+          "explanation": "Le sternum n’appartient pas à la tête."
+        },
+        {
+          "id": "dea-p04-l01-q07-a2",
+          "text": "Le tronc",
+          "explanation": "Le sternum est cité parmi les éléments du tronc."
+        },
+        {
+          "id": "dea-p04-l01-q07-a3",
+          "text": "Le membre supérieur",
+          "explanation": "Le sternum n’est pas un os du membre supérieur.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p04-l01-q07-a4",
+          "text": "Le membre inférieur",
+          "explanation": "Le sternum n’est pas un os du membre inférieur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q07-a2",
+      "explanation": "Le sternum se situe dans le tronc ; c’est la première catégorie anatomique à retenir.",
+      "knowledgeIds": [
+        "K-DEA-P04-002",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le sternum se situe dans le tronc ; c’est la première catégorie anatomique à retenir.",
+        "commonMistake": "Le voisinage des membres supérieurs ne transforme pas le sternum en os du membre supérieur.",
+        "keyTakeaway": "Localiser d’abord la grande région, puis préciser le repère osseux.",
+        "fieldApplication": "Une transmission descriptive peut préciser « tronc, région sternale » sans conclure à un diagnostic.",
+        "safetyPoint": "La localisation anatomique ne remplace pas l’évaluation clinique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le sternum se situe dans le tronc ; c’est la première catégorie anatomique à retenir.",
+      "common_mistake": "Le voisinage des membres supérieurs ne transforme pas le sternum en os du membre supérieur.",
+      "key_takeaway": "Localiser d’abord la grande région, puis préciser le repère osseux.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "sternum",
+        "repere",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l01-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Dans la division du support, les membres supérieurs et inférieurs constituent deux des trois grandes parties séparées du squelette.",
+      "answers": [
+        {
+          "id": "dea-p04-l01-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette affirmation sépare artificiellement les deux types de membres."
+        },
+        {
+          "id": "dea-p04-l01-q08-false",
+          "text": "Faux",
+          "explanation": "Le support regroupe membres supérieurs et inférieurs dans une seule grande partie : les membres."
+        }
+      ],
+      "correctAnswer": "dea-p04-l01-q08-false",
+      "explanation": "L’affirmation est fausse : « les membres » forment une seule des trois grandes parties.",
+      "knowledgeIds": [
+        "K-DEA-P04-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l01",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : « les membres » forment une seule des trois grandes parties.",
+        "commonMistake": "Le piège consiste à compter séparément membres supérieurs et inférieurs.",
+        "keyTakeaway": "Les trois parties restent tête, tronc et membres.",
+        "fieldApplication": "Cette nomenclature commune facilite un repérage cohérent entre professionnels."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : « les membres » forment une seule des trois grandes parties.",
+      "common_mistake": "Le piège consiste à compter séparément membres supérieurs et inférieurs.",
+      "key_takeaway": "Les trois parties restent tête, tronc et membres.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "squelette",
+        "membres"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

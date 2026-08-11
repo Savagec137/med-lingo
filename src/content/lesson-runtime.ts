@@ -4,7 +4,7 @@ import type {
   ContentPedagogicalFeedback,
 } from "./content-domain.ts";
 import type { LessonContentPool, LessonKind, LessonSelectionPolicy } from "./learning-domain.ts";
-import { derivePedagogicalFeedback } from "./pedagogical-feedback.ts";
+import { readPedagogicalFeedback } from "./pedagogical-feedback.ts";
 
 function isMatchingAssociation(item: ContentItem) {
   return item.type === "association" && item.metadata?.associationMode === "matching";
@@ -100,7 +100,7 @@ export function prepareContentInteraction(
         ? item.correctAnswer.length
         : 1,
     explanation: item.explanation,
-    pedagogicalFeedback: derivePedagogicalFeedback(item),
+    pedagogicalFeedback: readPedagogicalFeedback(item),
   };
 }
 

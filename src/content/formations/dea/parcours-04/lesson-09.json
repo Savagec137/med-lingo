@@ -1,0 +1,845 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-boss",
+  "title": "Boss - Système locomoteur",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 12,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "boss",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les principaux éléments du système locomoteur.",
+    "Localiser les principaux repères osseux et articulaires.",
+    "Distinguer os, articulation, muscle, tendon et ligament."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks",
+    "anatomy.location.description",
+    "anatomy.location.transmission"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Valider les principaux repères du système locomoteur au niveau DEA.",
+    "scenario": "Une victime consciente signale une douleur d’un membre. L’apprenant doit localiser et nommer les structures sans poser de diagnostic.",
+    "tasks": [
+      "Identifier le segment corporel.",
+      "Nommer le repère anatomique utile.",
+      "Distinguer les structures locomotrices."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-boss-q01",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Une victime consciente indique une douleur entre le coude et le poignet droits. Quel bilan anatomique est le plus précis ?",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q01-a1",
+          "text": "Douleur de l’avant-bras droit, au niveau du radius et du cubitus",
+          "explanation": "Le segment et ses deux principaux repères osseux sont correctement identifiés."
+        },
+        {
+          "id": "dea-p04-boss-q01-a2",
+          "text": "Douleur du bras droit, au niveau de l’humérus",
+          "explanation": "Le bras est situé entre l’épaule et le coude."
+        },
+        {
+          "id": "dea-p04-boss-q01-a3",
+          "text": "Douleur de la main droite, au niveau des phalanges",
+          "explanation": "La main est située au-delà du poignet."
+        },
+        {
+          "id": "dea-p04-boss-q01-a4",
+          "text": "Douleur du membre inférieur droit",
+          "explanation": "Le membre inférieur n’est pas concerné."
+        }
+      ],
+      "correctAnswer": "dea-p04-boss-q01-a1",
+      "explanation": "La zone coude-poignet correspond à l’avant-bras, où se situent radius et cubitus.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La zone coude-poignet correspond à l’avant-bras, où se situent radius et cubitus.",
+        "commonMistake": "Le mot bras est souvent employé pour tout le membre supérieur mais manque ici de précision.",
+        "keyTakeaway": "Coude-poignet = avant-bras.",
+        "fieldApplication": "Associer côté, segment et repères osseux dans la transmission.",
+        "safetyPoint": "Ne pas déduire une fracture de cette seule localisation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La zone coude-poignet correspond à l’avant-bras, où se situent radius et cubitus.",
+      "common_mistake": "Le mot bras est souvent employé pour tout le membre supérieur mais manque ici de précision.",
+      "key_takeaway": "Coude-poignet = avant-bras.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "avant-bras",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-boss-q02",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque repère au segment corporel exact.",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q02-a1",
+          "text": "Humérus",
+          "match": "Bras",
+          "explanation": "Il correspond au bras."
+        },
+        {
+          "id": "dea-p04-boss-q02-a2",
+          "text": "Fémur",
+          "match": "Cuisse",
+          "explanation": "Il correspond à la cuisse."
+        },
+        {
+          "id": "dea-p04-boss-q02-a3",
+          "text": "Tibia et péroné",
+          "match": "Jambe",
+          "explanation": "Ils correspondent à la jambe."
+        },
+        {
+          "id": "dea-p04-boss-q02-a4",
+          "text": "Carpe",
+          "match": "Poignet",
+          "explanation": "Il correspond au poignet."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-boss-q02-a1",
+        "dea-p04-boss-q02-a2",
+        "dea-p04-boss-q02-a3",
+        "dea-p04-boss-q02-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-boss-q02-a1",
+        "dea-p04-boss-q02-a2",
+        "dea-p04-boss-q02-a3",
+        "dea-p04-boss-q02-a4"
+      ],
+      "explanation": "Les associations utilisent les repères osseux majeurs du parcours.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations utilisent les repères osseux majeurs du parcours.",
+        "commonMistake": "Bras/avant-bras et cuisse/jambe sont les couples de segments le plus souvent confondus.",
+        "keyTakeaway": "Humérus-bras ; fémur-cuisse ; tibia/péroné-jambe ; carpe-poignet.",
+        "fieldApplication": "Vérifier le segment avant d’ajouter le nom de l’os."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations utilisent les repères osseux majeurs du parcours.",
+      "common_mistake": "Bras/avant-bras et cuisse/jambe sont les couples de segments le plus souvent confondus.",
+      "key_takeaway": "Humérus-bras ; fémur-cuisse ; tibia/péroné-jambe ; carpe-poignet.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "association",
+        "reperes"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-011",
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-boss-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle structure contribue directement à stabiliser une articulation ?",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q03-a1",
+          "text": "Le ligament",
+          "explanation": "Le support attribue aux ligaments la stabilité articulaire."
+        },
+        {
+          "id": "dea-p04-boss-q03-a2",
+          "text": "Le tendon",
+          "explanation": "Le tendon est décrit comme l’intermédiaire entre muscle et os."
+        },
+        {
+          "id": "dea-p04-boss-q03-a3",
+          "text": "La diaphyse",
+          "explanation": "La diaphyse est la partie centrale d’un os long."
+        },
+        {
+          "id": "dea-p04-boss-q03-a4",
+          "text": "Le muscle lisse",
+          "explanation": "Le muscle lisse n’est pas présenté comme stabilisateur ligamentaire."
+        }
+      ],
+      "correctAnswer": "dea-p04-boss-q03-a1",
+      "explanation": "Le ligament participe à la stabilité de l’articulation.",
+      "knowledgeIds": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le ligament participe à la stabilité de l’articulation.",
+        "commonMistake": "Tendon et ligament sont souvent confondus parce qu’ils se trouvent tous deux dans l’appareil locomoteur.",
+        "keyTakeaway": "Ligament : articulation ; tendon : muscle-os.",
+        "fieldApplication": "Employer le bon terme lors d’une description anatomique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le ligament participe à la stabilité de l’articulation.",
+      "common_mistake": "Tendon et ligament sont souvent confondus parce qu’ils se trouvent tous deux dans l’appareil locomoteur.",
+      "key_takeaway": "Ligament : articulation ; tendon : muscle-os.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "ligament",
+        "articulation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006",
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-boss-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Classe ces repères du membre inférieur du plus proximal au plus distal.",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q04-a1",
+          "text": "Bassin",
+          "explanation": "Il constitue le repère proximal de la liste.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-boss-q04-a2",
+          "text": "Fémur",
+          "explanation": "Il suit le bassin dans la cuisse.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-boss-q04-a3",
+          "text": "Rotule",
+          "explanation": "Elle se situe au niveau du genou.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-boss-q04-a4",
+          "text": "Tibia et péroné",
+          "explanation": "Ils se situent dans la jambe.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-boss-q04-a5",
+          "text": "Phalanges",
+          "explanation": "Elles se situent aux orteils, en distal.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-boss-q04-a1",
+        "dea-p04-boss-q04-a2",
+        "dea-p04-boss-q04-a3",
+        "dea-p04-boss-q04-a4",
+        "dea-p04-boss-q04-a5"
+      ],
+      "correctAnswers": [
+        "dea-p04-boss-q04-a1",
+        "dea-p04-boss-q04-a2",
+        "dea-p04-boss-q04-a3",
+        "dea-p04-boss-q04-a4",
+        "dea-p04-boss-q04-a5"
+      ],
+      "explanation": "L’ordre suit le membre inférieur du bassin vers les orteils.",
+      "knowledgeIds": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit le membre inférieur du bassin vers les orteils.",
+        "commonMistake": "La rotule peut être placée après le tibia par confusion entre genou et jambe.",
+        "keyTakeaway": "Bassin → fémur → rotule → tibia/péroné → phalanges.",
+        "fieldApplication": "Suivre le membre dans un sens constant sécurise le repérage."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit le membre inférieur du bassin vers les orteils.",
+      "common_mistake": "La rotule peut être placée après le tibia par confusion entre genou et jambe.",
+      "key_takeaway": "Bassin → fémur → rotule → tibia/péroné → phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "ordre",
+        "membre-inferieur"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p04-boss-q05",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels éléments participent ensemble au mouvement locomoteur décrit ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q05-a1",
+          "text": "Les segments osseux",
+          "explanation": "Les muscles agissent sur des segments osseux."
+        },
+        {
+          "id": "dea-p04-boss-q05-a2",
+          "text": "Les articulations",
+          "explanation": "Elles permettent les mouvements entre les os."
+        },
+        {
+          "id": "dea-p04-boss-q05-a3",
+          "text": "Les muscles",
+          "explanation": "Leurs contractions et relaxations produisent le mouvement."
+        },
+        {
+          "id": "dea-p04-boss-q05-a4",
+          "text": "Le système digestif seul",
+          "explanation": "Il ne remplace pas l’organisation locomotrice."
+        },
+        {
+          "id": "dea-p04-boss-q05-a5",
+          "text": "Le liquide synovial seul",
+          "explanation": "La synovie est un composant articulaire, pas l’ensemble du système."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-boss-q05-a1",
+        "dea-p04-boss-q05-a2",
+        "dea-p04-boss-q05-a3"
+      ],
+      "correctAnswers": [
+        "dea-p04-boss-q05-a1",
+        "dea-p04-boss-q05-a2",
+        "dea-p04-boss-q05-a3"
+      ],
+      "explanation": "Le mouvement associe segments osseux, articulations et action musculaire.",
+      "knowledgeIds": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mouvement associe segments osseux, articulations et action musculaire.",
+        "commonMistake": "Choisir un seul composant revient à oublier la logique de système.",
+        "keyTakeaway": "Le mouvement est une fonction coordonnée du système locomoteur.",
+        "fieldApplication": "Distinguer les structures tout en comprenant leur coopération."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mouvement associe segments osseux, articulations et action musculaire.",
+      "common_mistake": "Choisir un seul composant revient à oublier la logique de système.",
+      "key_takeaway": "Le mouvement est une fonction coordonnée du système locomoteur.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "mouvement",
+        "systeme"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-001",
+          "K-DEA-P04-006",
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p04-boss-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "La diaphyse correspond à l’une des deux extrémités d’un os long.",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q06-true",
+          "text": "Vrai",
+          "explanation": "Cette proposition confond la diaphyse avec une épiphyse."
+        },
+        {
+          "id": "dea-p04-boss-q06-false",
+          "text": "Faux",
+          "explanation": "La diaphyse est la partie centrale ; les épiphyses sont les extrémités."
+        }
+      ],
+      "correctAnswer": "dea-p04-boss-q06-false",
+      "explanation": "L’affirmation est fausse : la diaphyse forme le corps central de l’os long.",
+      "knowledgeIds": [
+        "K-DEA-P04-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : la diaphyse forme le corps central de l’os long.",
+        "commonMistake": "Les préfixes et la présence de deux épiphyses peuvent favoriser l’inversion.",
+        "keyTakeaway": "Diaphyse au centre, épiphyses aux extrémités.",
+        "fieldApplication": "Utiliser ces termes uniquement lorsque la zone de l’os est clairement localisée.",
+        "memoryTip": "Épiphyses aux extrémités."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : la diaphyse forme le corps central de l’os long.",
+      "common_mistake": "Les préfixes et la présence de deux épiphyses peuvent favoriser l’inversion.",
+      "key_takeaway": "Diaphyse au centre, épiphyses aux extrémités.",
+      "memory_tip": "Épiphyses aux extrémités.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "os-long"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-005"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-boss-q07",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Une personne signale une douleur au bas du dos, juste au-dessus du sacrum. Quelle information transmettre en priorité dans ce Boss anatomique ?",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q07-a1",
+          "text": "La douleur est localisée dans la région lombaire",
+          "explanation": "Cette formulation nomme la région anatomique correspondante."
+        },
+        {
+          "id": "dea-p04-boss-q07-a2",
+          "text": "La personne a forcément une lésion vertébrale",
+          "explanation": "La localisation seule ne permet pas d’affirmer une lésion."
+        },
+        {
+          "id": "dea-p04-boss-q07-a3",
+          "text": "La douleur est cervicale",
+          "explanation": "La région cervicale correspond au cou."
+        },
+        {
+          "id": "dea-p04-boss-q07-a4",
+          "text": "La douleur concerne le membre supérieur",
+          "explanation": "Le repère décrit appartient au rachis."
+        }
+      ],
+      "correctAnswer": "dea-p04-boss-q07-a1",
+      "explanation": "La région lombaire est le repère anatomique correct pour la zone située au-dessus du sacrum.",
+      "knowledgeIds": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La région lombaire est le repère anatomique correct pour la zone située au-dessus du sacrum.",
+        "commonMistake": "Transformer immédiatement une localisation en diagnostic dépasse les informations disponibles.",
+        "keyTakeaway": "Localiser précisément avant d’interpréter.",
+        "fieldApplication": "Transmettre la région, le contexte et les observations réellement recueillies.",
+        "safetyPoint": "En contexte traumatique, appliquer les protocoles validés sans provoquer de mouvement inutile."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La région lombaire est le repère anatomique correct pour la zone située au-dessus du sacrum.",
+      "common_mistake": "Transformer immédiatement une localisation en diagnostic dépasse les informations disponibles.",
+      "key_takeaway": "Localiser précisément avant d’interpréter.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "rachis",
+        "lombaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-boss-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle conclusion finale est la plus rigoureuse après ce parcours ?",
+      "answers": [
+        {
+          "id": "dea-p04-boss-q08-a1",
+          "text": "Le système locomoteur associe plusieurs structures qu’il faut localiser sans surinterpréter",
+          "explanation": "Cette conclusion relie les connaissances du parcours à une description DEA prudente."
+        },
+        {
+          "id": "dea-p04-boss-q08-a2",
+          "text": "Toute douleur osseuse prouve une fracture",
+          "explanation": "Une douleur ne suffit pas à établir ce diagnostic."
+        },
+        {
+          "id": "dea-p04-boss-q08-a3",
+          "text": "Un ligament et un tendon sont deux noms de la même structure",
+          "explanation": "Leurs relations et fonctions décrites diffèrent."
+        },
+        {
+          "id": "dea-p04-boss-q08-a4",
+          "text": "Le bras et l’avant-bras sont un seul segment anatomique",
+          "explanation": "Le coude sépare ces deux segments."
+        }
+      ],
+      "correctAnswer": "dea-p04-boss-q08-a1",
+      "explanation": "Le parcours vise une compréhension structurée et un repérage précis, sans diagnostic non étayé.",
+      "knowledgeIds": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Boss de synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-boss",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le parcours vise une compréhension structurée et un repérage précis, sans diagnostic non étayé.",
+        "commonMistake": "La surinterprétation clinique et l’emploi de termes interchangeables sont les erreurs principales à éviter.",
+        "keyTakeaway": "Comprendre, localiser, décrire et transmettre fidèlement.",
+        "fieldApplication": "Appliquer ce vocabulaire au bilan tout en respectant les limites des données observées.",
+        "safetyPoint": "Les conduites de prise en charge doivent rester fondées sur les protocoles validés applicables."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le parcours vise une compréhension structurée et un repérage précis, sans diagnostic non étayé.",
+      "common_mistake": "La surinterprétation clinique et l’emploi de termes interchangeables sont les erreurs principales à éviter.",
+      "key_takeaway": "Comprendre, localiser, décrire et transmettre fidèlement.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "boss",
+        "synthese",
+        "dea"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Boss de synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-001",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

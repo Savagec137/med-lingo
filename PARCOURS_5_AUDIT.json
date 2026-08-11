@@ -1,0 +1,97 @@
+{
+  "auditVersion": "1.0.0",
+  "generatedAt": "2026-08-11T00:00:00.000Z",
+  "scope": {
+    "blocId": "bloc-02",
+    "parcoursId": "parcours-05",
+    "title": "Système cardiovasculaire"
+  },
+  "preGeneration": {
+    "plannedLessons": 8,
+    "existingImportedDraftQuestions": 10,
+    "usableSourcedQuestions": 0,
+    "officialQuestionsMissing": 72,
+    "bossDeclared": true,
+    "bossPreviouslyPopulated": false
+  },
+  "source": {
+    "documentId": "DOC-AFTRAL-DEA-B2-M4-2022",
+    "title": "B2.M4 - Support Etudiant.pdf",
+    "type": "training_source",
+    "contentStatus": "content_verified",
+    "verifiedPages": [18, 19, 20, 21, 53, 66, 67, 68],
+    "checksum": "0B298BDFFE8439F6B081E70E656EA9C1B6D044476B2819C37DB19CCE5876CCF8"
+  },
+  "counts": {
+    "plannedLessons": 8,
+    "completedLessons": 8,
+    "knowledgeCreated": 14,
+    "lessonQuestions": 64,
+    "bossQuestions": 8,
+    "totalQuestions": 72,
+    "needsReview": 72,
+    "preservedLegacyDraftQuestions": 10
+  },
+  "distributions": {
+    "types": {
+      "mcq": 18,
+      "true_false_contextual": 13,
+      "multiple_choice": 7,
+      "association": 11,
+      "ordering": 7,
+      "fill_blank": 5,
+      "clinical_case": 11
+    },
+    "difficulties": {
+      "easy": 35,
+      "medium": 22,
+      "hard": 15
+    }
+  },
+  "checks": {
+    "jsonValid": true,
+    "uniqueQuestionIds": true,
+    "uniqueQuestionPrompts": true,
+    "sourcesPresent": true,
+    "knowledgeReferencesValid": true,
+    "lessonReferencesValid": true,
+    "competencyReferencesValid": true,
+    "noListingOnlySource": true,
+    "verifiedPagesOnly": true,
+    "feedbackComplete": true,
+    "parcoursOnly": true,
+    "legacyDraftPreserved": true,
+    "medicalLevelManualReview": "pass",
+    "tests": "pass_111_of_111",
+    "lint": "pass_scoped_files",
+    "build": "pass",
+    "typescript": "blocked_by_preexisting_scene_engine_type_imports"
+  },
+  "errors": [],
+  "warnings": [],
+  "info": [
+    {
+      "code": "MEDICAL_SCOPE",
+      "message": "Contenu limité aux pages vérifiées sur l’appareil circulatoire, la pression artérielle et le pouls ; aucun diagnostic, seuil controversé ou traitement généré."
+    },
+    {
+      "code": "LEGACY_PRESERVED",
+      "message": "Les 10 anciennes questions importées depuis JSON.xlsx restent inchangées dans legacy-import-lesson-08.json et ne sont pas publiées comme banque officielle."
+    },
+    {
+      "code": "VALIDATION_REQUIRED",
+      "message": "Les 72 questions et 14 connaissances restent à valider par un formateur compétent."
+    },
+    {
+      "code": "PREEXISTING_TYPESCRIPT_BASELINE",
+      "message": "tsc --noEmit reste bloqué par quatre imports manquants vers scene/engine/type, sans lien avec les fichiers du Parcours 5 ; le build de production et les 111 tests du dépôt réussissent."
+    }
+  ],
+  "coverage": {
+    "playableEntities": 9,
+    "plannedEntities": 9,
+    "score": 100,
+    "trainerValidatedScore": 0
+  },
+  "result": "PASS_WITH_PREEXISTING_TYPESCRIPT_BASELINE"
+}

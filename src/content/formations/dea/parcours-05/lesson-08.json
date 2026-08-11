@@ -7,561 +7,816 @@
   "kind": "lesson",
   "status": "review",
   "difficulty": "medium",
-  "estimatedMinutes": 8,
+  "estimatedMinutes": 9,
   "level": 1,
-  "xp": 30,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
   "pulse": null,
   "selection": {
-    "strategy": "random",
-    "count": 10
+    "strategy": "all",
+    "count": 8
   },
   "learningObjectives": [
-    "Physiologie cardiovasculaire"
+    "Relier cœur, vaisseaux et sang dans un circuit fermé.",
+    "Distinguer petite et grande circulation.",
+    "Structurer une observation simple de la pression artérielle et du pouls."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l03"
+    "body.system.cardiovascular",
+    "body.organ.function",
+    "body.organization.organ-to-system"
   ],
   "prerequisiteIds": [
     "dea-p05-l07"
   ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l03-q321",
+      "id": "dea-p05-l08-q01",
+      "type": "multiple_choice",
       "difficulty": "easy",
-      "question": "La systole correspond :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q321",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
+      "question": "Quels éléments composent le circuit fermé de l’appareil circulatoire selon le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
       "answers": [
         {
-          "id": "import-b01-p04-l03-q321-answer-01",
-          "text": "À la contraction du cœur",
-          "explanation": ""
+          "id": "dea-p05-l08-q01-a1",
+          "text": "Le cœur",
+          "explanation": "Le cœur est la pompe du circuit."
         },
         {
-          "id": "import-b01-p04-l03-q321-answer-02",
-          "text": "Au remplissage du cœur",
-          "explanation": ""
+          "id": "dea-p05-l08-q01-a2",
+          "text": "Les vaisseaux sanguins",
+          "explanation": "Les vaisseaux sont les canalisations."
         },
         {
-          "id": "import-b01-p04-l03-q321-answer-03",
-          "text": "À l'arrêt du cœur",
-          "explanation": ""
+          "id": "dea-p05-l08-q01-a3",
+          "text": "Le sang",
+          "explanation": "Le sang circule dans ce circuit."
         },
         {
-          "id": "import-b01-p04-l03-q321-answer-04",
-          "text": "À la fermeture des valves",
-          "explanation": ""
+          "id": "dea-p05-l08-q01-a4",
+          "text": "Le squelette seul",
+          "explanation": "Le squelette appartient à un autre appareil étudié.",
+          "distractorType": "other-context"
         }
       ],
-      "correctAnswer": "import-b01-p04-l03-q321-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l03-q322",
-      "difficulty": "easy",
-      "question": "Le débit cardiaque correspond :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
+      "correctAnswer": [
+        "dea-p05-l08-q01-a1",
+        "dea-p05-l08-q01-a2",
+        "dea-p05-l08-q01-a3"
       ],
+      "correctAnswers": [
+        "dea-p05-l08-q01-a1",
+        "dea-p05-l08-q01-a2",
+        "dea-p05-l08-q01-a3"
+      ],
+      "explanation": "Le circuit associe pompe cardiaque, vaisseaux et sang.",
+      "knowledgeIds": [
+        "K-DEA-P05-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
       "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
       ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q322",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le circuit associe pompe cardiaque, vaisseaux et sang.",
+        "commonMistake": "Réduire le système à un seul organe empêche d’en comprendre l’organisation.",
+        "keyTakeaway": "Cœur + vaisseaux + sang = appareil circulatoire.",
+        "fieldApplication": "Décrire successivement les trois composants lors d’une synthèse."
       },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q322-answer-01",
-          "text": "Au volume de sang éjecté par minute",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q322-answer-02",
-          "text": "À la pression artérielle",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q322-answer-03",
-          "text": "Au volume pulmonaire",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q322-answer-04",
-          "text": "À la saturation en oxygène",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l03-q322-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l03-q323",
-      "difficulty": "easy",
-      "question": "Une fréquence cardiaque de 80 bpm est physiologique chez un adulte au repos.",
-      "explanation": "",
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le circuit associe pompe cardiaque, vaisseaux et sang.",
+      "common_mistake": "Réduire le système à un seul organe empêche d’en comprendre l’organisation.",
+      "key_takeaway": "Cœur + vaisseaux + sang = appareil circulatoire.",
       "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
+        "dea",
+        "parcours-05",
+        "synthese",
+        "composition"
       ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
       "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q323",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q323-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q323-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l03-q323-true"
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-001"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
     },
     {
-      "id": "import-b01-p04-l03-q324",
-      "difficulty": "easy",
-      "question": "La diastole correspond à la contraction des ventricules.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q324",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q324-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q324-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l03-q324-false"
-    },
-    {
-      "id": "import-b01-p04-l03-q325",
+      "id": "dea-p05-l08-q02",
+      "type": "association",
       "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
+      "question": "Associe chaque élément à sa fonction générale.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-l08-q02-a1",
+          "text": "Cœur",
+          "match": "Met le sang en mouvement",
+          "explanation": "Il assure la fonction de pompe."
+        },
+        {
+          "id": "dea-p05-l08-q02-a2",
+          "text": "Artères",
+          "match": "Conduisent vers les organes",
+          "explanation": "Elles partent du cœur."
+        },
+        {
+          "id": "dea-p05-l08-q02-a3",
+          "text": "Capillaires",
+          "match": "Échanges avec les cellules",
+          "explanation": "Ils permettent les échanges."
+        },
+        {
+          "id": "dea-p05-l08-q02-a4",
+          "text": "Veines",
+          "match": "Ramènent depuis les organes",
+          "explanation": "Elles reviennent au cœur."
+        }
       ],
+      "correctAnswer": [
+        "dea-p05-l08-q02-a1",
+        "dea-p05-l08-q02-a2",
+        "dea-p05-l08-q02-a3",
+        "dea-p05-l08-q02-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-l08-q02-a1",
+        "dea-p05-l08-q02-a2",
+        "dea-p05-l08-q02-a3",
+        "dea-p05-l08-q02-a4"
+      ],
+      "explanation": "Les quatre fonctions reconstituent l’organisation générale du circuit.",
+      "knowledgeIds": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
       "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
       ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre fonctions reconstituent l’organisation générale du circuit.",
+        "commonMistake": "Les artères et les veines sont souvent inversées lorsque le sens du flux n’est pas suivi.",
+        "keyTakeaway": "Pompe, départ, échange, retour.",
+        "fieldApplication": "Utiliser cette structure pour lire un schéma cardiovasculaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre fonctions reconstituent l’organisation générale du circuit.",
+      "common_mistake": "Les artères et les veines sont souvent inversées lorsque le sens du flux n’est pas suivi.",
+      "key_takeaway": "Pompe, départ, échange, retour.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "circuit"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
       "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q325",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-001",
+          "K-DEA-P05-005",
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
         "associationMode": "matching",
         "requiredSelections": 4
-      },
-      "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q325-pair-01",
-          "text": "Systole",
-          "match": "Contraction",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q325-pair-02",
-          "text": "Diastole",
-          "match": "Relâchement",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q325-pair-03",
-          "text": "Débit cardiaque",
-          "match": "Volume par minute",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q325-pair-04",
-          "text": "Perfusion",
-          "match": "Apport d'oxygène",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l03-q325-pair-01",
-        "import-b01-p04-l03-q325-pair-02",
-        "import-b01-p04-l03-q325-pair-03",
-        "import-b01-p04-l03-q325-pair-04"
-      ]
+      }
     },
     {
-      "id": "import-b01-p04-l03-q326",
-      "difficulty": "medium",
-      "question": "Le débit cardiaque est exprimé par ______.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q326",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "minute",
-          "volume de sang par minute"
-        ]
-      },
-      "type": "fill_blank",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q326-accepted-01",
-          "text": "minute",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q326-accepted-02",
-          "text": "volume de sang par minute",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l03-q326-accepted-01",
-        "import-b01-p04-l03-q326-accepted-02"
-      ]
-    },
-    {
-      "id": "import-b01-p04-l03-q327",
-      "difficulty": "hard",
-      "question": "Une diminution importante du débit cardiaque entraîne principalement :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q327",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q327-answer-01",
-          "text": "Une baisse de la perfusion des organes",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q327-answer-02",
-          "text": "Une augmentation de la digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q327-answer-03",
-          "text": "Une augmentation de la filtration rénale",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q327-answer-04",
-          "text": "Une augmentation de la glycémie",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l03-q327-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l03-q328",
-      "difficulty": "hard",
-      "question": "Lors du bilan, une hypotension est associée à une peau froide et marbrée. Quel mécanisme physiologique est principalement altéré ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q328",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
-      "answers": [
-        {
-          "id": "import-b01-p04-l03-q328-answer-01",
-          "text": "La perfusion tissulaire",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q328-answer-02",
-          "text": "La digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q328-answer-03",
-          "text": "La coagulation",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l03-q328-answer-04",
-          "text": "La ventilation",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l03-q328-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l03-q329",
-      "difficulty": "medium",
-      "question": "Replace les étapes du trajet du sang.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q329",
-        "originalType": "ordering",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "requiredSelections": 5
-      },
+      "id": "dea-p05-l08-q03",
       "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet général entre deux passages par le cœur.",
       "answers": [
         {
-          "id": "import-b01-p04-l03-q329-step-01",
-          "text": "Oreillette",
-          "explanation": "",
+          "id": "dea-p05-l08-q03-a1",
+          "text": "Ventricule",
+          "explanation": "Le sang part du cœur par un ventricule.",
           "sequenceRank": 1
         },
         {
-          "id": "import-b01-p04-l03-q329-step-02",
-          "text": "Ventricule",
-          "explanation": "",
+          "id": "dea-p05-l08-q03-a2",
+          "text": "Artère",
+          "explanation": "Une artère conduit le sang depuis le cœur.",
           "sequenceRank": 2
         },
         {
-          "id": "import-b01-p04-l03-q329-step-03",
-          "text": "Artère",
-          "explanation": "",
+          "id": "dea-p05-l08-q03-a3",
+          "text": "Capillaires",
+          "explanation": "Les échanges ont lieu dans le réseau capillaire.",
           "sequenceRank": 3
         },
         {
-          "id": "import-b01-p04-l03-q329-step-04",
-          "text": "Capillaires",
-          "explanation": "",
+          "id": "dea-p05-l08-q03-a4",
+          "text": "Veine",
+          "explanation": "Une veine ramène le sang.",
           "sequenceRank": 4
         },
         {
-          "id": "import-b01-p04-l03-q329-step-05",
-          "text": "Veine",
-          "explanation": "",
+          "id": "dea-p05-l08-q03-a5",
+          "text": "Oreillette",
+          "explanation": "Le sang revient au cœur par une oreillette.",
           "sequenceRank": 5
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l03-q329-step-01",
-        "import-b01-p04-l03-q329-step-02",
-        "import-b01-p04-l03-q329-step-03",
-        "import-b01-p04-l03-q329-step-04",
-        "import-b01-p04-l03-q329-step-05"
-      ]
+        "dea-p05-l08-q03-a1",
+        "dea-p05-l08-q03-a2",
+        "dea-p05-l08-q03-a3",
+        "dea-p05-l08-q03-a4",
+        "dea-p05-l08-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-l08-q03-a1",
+        "dea-p05-l08-q03-a2",
+        "dea-p05-l08-q03-a3",
+        "dea-p05-l08-q03-a4",
+        "dea-p05-l08-q03-a5"
+      ],
+      "explanation": "Le trajet général part d’un ventricule et revient à une oreillette après artères, capillaires et veines.",
+      "knowledgeIds": [
+        "K-DEA-P05-003",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet général part d’un ventricule et revient à une oreillette après artères, capillaires et veines.",
+        "commonMistake": "Commencer par une oreillette confond arrivée et départ.",
+        "keyTakeaway": "Ventricule → artère → capillaires → veine → oreillette.",
+        "fieldApplication": "Reconstituer d’abord le trajet général avant de préciser le petit ou le grand circuit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet général part d’un ventricule et revient à une oreillette après artères, capillaires et veines.",
+      "common_mistake": "Commencer par une oreillette confond arrivée et départ.",
+      "key_takeaway": "Ventricule → artère → capillaires → veine → oreillette.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003",
+          "K-DEA-P05-005",
+          "K-DEA-P05-006"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
     },
     {
-      "id": "import-b01-p04-l03-q330",
+      "id": "dea-p05-l08-q04",
+      "type": "association",
       "difficulty": "medium",
-      "question": "Clique sur le ventricule gauche.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l03"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l03"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L03",
-        "originalQuestionId": "Q330",
-        "originalType": "anatomy_click",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "anatomyTarget": "left_ventricle"
-      },
-      "type": "anatomy_location",
+      "question": "Associe chaque circulation à ses repères de départ et d’arrivée.",
+      "instruction": "Associe chaque circuit.",
       "answers": [
         {
-          "id": "hotspot-left_ventricle",
-          "text": "Ventricule gauche",
-          "detail": "0.56,0.34",
-          "explanation": ""
+          "id": "dea-p05-l08-q04-a1",
+          "text": "Petite circulation",
+          "match": "Ventricule droit → oreillette gauche",
+          "explanation": "Elle traverse les poumons."
         },
         {
-          "id": "hotspot-knee",
-          "text": "Genou",
-          "detail": "0.59,0.8",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-kidneys",
-          "text": "Reins",
-          "detail": "0.5,0.46",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-small_intestine",
-          "text": "Intestin grêle",
-          "detail": "0.5,0.54",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-thyroid",
-          "text": "Thyroïde",
-          "detail": "0.5,0.17",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-right_upper_limb",
-          "text": "Membre supérieur droit",
-          "detail": "0.18,0.36",
-          "explanation": ""
+          "id": "dea-p05-l08-q04-a2",
+          "text": "Grande circulation",
+          "match": "Ventricule gauche → oreillette droite",
+          "explanation": "Elle traverse les tissus."
         }
       ],
-      "correctAnswer": "hotspot-left_ventricle"
+      "correctAnswer": [
+        "dea-p05-l08-q04-a1",
+        "dea-p05-l08-q04-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l08-q04-a1",
+        "dea-p05-l08-q04-a2"
+      ],
+      "explanation": "Les repères opposés permettent de distinguer les deux circuits.",
+      "knowledgeIds": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les repères opposés permettent de distinguer les deux circuits.",
+        "commonMistake": "Inverser les oreillettes d’arrivée mélange retour pulmonaire et retour tissulaire.",
+        "keyTakeaway": "Petite : VD-OG ; grande : VG-OD.",
+        "fieldApplication": "Vérifier territoire, départ et arrivée.",
+        "memoryTip": "Les deux circuits se croisent : droite-gauche puis gauche-droite."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les repères opposés permettent de distinguer les deux circuits.",
+      "common_mistake": "Inverser les oreillettes d’arrivée mélange retour pulmonaire et retour tissulaire.",
+      "key_takeaway": "Petite : VD-OG ; grande : VG-OD.",
+      "memory_tip": "Les deux circuits se croisent : droite-gauche puis gauche-droite.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "circulations"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010",
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l08-q05",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque repère auscultatoire de pression artérielle à la valeur transmise.",
+      "instruction": "Associe chaque moment.",
+      "answers": [
+        {
+          "id": "dea-p05-l08-q05-a1",
+          "text": "Premier battement net",
+          "match": "Systolique",
+          "explanation": "Il correspond à la valeur systolique."
+        },
+        {
+          "id": "dea-p05-l08-q05-a2",
+          "text": "Dernier battement avant disparition",
+          "match": "Diastolique",
+          "explanation": "Il correspond à la valeur diastolique."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l08-q05-a1",
+        "dea-p05-l08-q05-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l08-q05-a1",
+        "dea-p05-l08-q05-a2"
+      ],
+      "explanation": "Le premier battement net donne la systolique et le dernier la diastolique.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "66",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le premier battement net donne la systolique et le dernier la diastolique.",
+        "commonMistake": "Une inversion rend le résultat incohérent.",
+        "keyTakeaway": "Systolique d’abord, diastolique ensuite.",
+        "fieldApplication": "Transmettre les deux valeurs dans le bon ordre et avec l’unité adaptée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le premier battement net donne la systolique et le dernier la diastolique.",
+      "common_mistake": "Une inversion rend le résultat incohérent.",
+      "key_takeaway": "Systolique d’abord, diastolique ensuite.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "pression-arterielle"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 66",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "66",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l08-q06",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles informations décrivent complètement un pouls dans le support ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-l08-q06-a1",
+          "text": "La fréquence",
+          "explanation": "Elle correspond au nombre de pulsations."
+        },
+        {
+          "id": "dea-p05-l08-q06-a2",
+          "text": "L’amplitude",
+          "explanation": "Elle décrit la perception du pouls."
+        },
+        {
+          "id": "dea-p05-l08-q06-a3",
+          "text": "Le rythme",
+          "explanation": "Il précise la régularité."
+        },
+        {
+          "id": "dea-p05-l08-q06-a4",
+          "text": "Le groupe sanguin",
+          "explanation": "Il n’est pas déterminé par le pouls.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l08-q06-a1",
+        "dea-p05-l08-q06-a2",
+        "dea-p05-l08-q06-a3"
+      ],
+      "correctAnswers": [
+        "dea-p05-l08-q06-a1",
+        "dea-p05-l08-q06-a2",
+        "dea-p05-l08-q06-a3"
+      ],
+      "explanation": "Fréquence, amplitude et rythme forment la description demandée.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Fréquence, amplitude et rythme forment la description demandée.",
+        "commonMistake": "Un nombre seul ne rend pas compte de la qualité ni de la régularité du pouls.",
+        "keyTakeaway": "FAR : fréquence, amplitude, rythme.",
+        "fieldApplication": "Ajouter le site de mesure lors de la transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Fréquence, amplitude et rythme forment la description demandée.",
+      "common_mistake": "Un nombre seul ne rend pas compte de la qualité ni de la régularité du pouls.",
+      "key_takeaway": "FAR : fréquence, amplitude, rythme.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "pouls"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p05-l08-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Après une mesure au poignet, quelle formulation est la plus précise pour le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p05-l08-q07-a1",
+          "text": "Pouls radial : fréquence, régularité et amplitude observées",
+          "explanation": "Elle identifie le site et les critères décrits."
+        },
+        {
+          "id": "dea-p05-l08-q07-a2",
+          "text": "Le cœur va bien",
+          "explanation": "Cette conclusion diagnostique n’est pas justifiée par le seul pouls.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l08-q07-a3",
+          "text": "Pouls pris, rien à signaler",
+          "explanation": "La formulation reste vague et sans valeur mesurée.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l08-q07-a4",
+          "text": "Pression artérielle normale",
+          "explanation": "Le pouls ne permet pas à lui seul d’affirmer cette valeur.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p05-l08-q07-a1",
+      "explanation": "La formulation précise le site et les trois caractères observables sans conclure au-delà des données.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La formulation précise le site et les trois caractères observables sans conclure au-delà des données.",
+        "commonMistake": "Transformer une observation en diagnostic est une surinterprétation.",
+        "keyTakeaway": "Décrire ce qui est mesuré, avec son site et ses caractéristiques.",
+        "fieldApplication": "Faire un bilan factuel et structuré au médecin régulateur.",
+        "safetyPoint": "Le pouls doit être interprété avec l’ensemble du bilan et des autres paramètres."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La formulation précise le site et les trois caractères observables sans conclure au-delà des données.",
+      "common_mistake": "Transformer une observation en diagnostic est une surinterprétation.",
+      "key_takeaway": "Décrire ce qui est mesuré, avec son site et ses caractéristiques.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "transmission",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l08-q08",
+      "type": "true_false_contextual",
+      "difficulty": "hard",
+      "question": "Le sens du flux par rapport au cœur est plus fiable que la teneur en oxygène pour distinguer artère et veine.",
+      "answers": [
+        {
+          "id": "dea-p05-l08-q08-true",
+          "text": "Vrai",
+          "explanation": "Le sens par rapport au cœur définit les vaisseaux."
+        },
+        {
+          "id": "dea-p05-l08-q08-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : l’oxygénation connaît des exceptions pulmonaires."
+        }
+      ],
+      "correctAnswer": "dea-p05-l08-q08-true",
+      "explanation": "La proposition est vraie et explique les particularités des vaisseaux pulmonaires.",
+      "knowledgeIds": [
+        "K-DEA-P05-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "sourcePages": "18-21, 53, 66-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p05-l08",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition est vraie et explique les particularités des vaisseaux pulmonaires.",
+        "commonMistake": "La règle simplifiée rouge/bleu peut conduire à mal nommer l’artère ou les veines pulmonaires.",
+        "keyTakeaway": "Artère part ; veine revient.",
+        "fieldApplication": "Suivre les flèches et les cavités de départ ou d’arrivée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition est vraie et explique les particularités des vaisseaux pulmonaires.",
+      "common_mistake": "La règle simplifiée rouge/bleu peut conduire à mal nommer l’artère ou les veines pulmonaires.",
+      "key_takeaway": "Artère part ; veine revient.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "synthese",
+        "vaisseaux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18-21, 53, 66-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Synthèse cardiovasculaire",
+        "sourcePages": "18-21, 53, 66-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-005"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.function",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     }
   ]
 }

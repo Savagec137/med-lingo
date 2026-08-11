@@ -47,7 +47,7 @@ test("la feuille de route DEA contient 15 blocs et 75 parcours uniques", () => {
 
 test("les contenus actifs, testables et en attente sont distingués explicitement", () => {
   const lessons = formation.parcours.flatMap((parcours) => parcours.lessons);
-  assert.equal(lessons.length, 35);
+  assert.equal(lessons.length, 52);
   assert.deepEqual(
     formation.parcours[0]?.lessons.map((lesson) => lesson.id),
     [
@@ -63,7 +63,7 @@ test("les contenus actifs, testables et en attente sont distingués explicitemen
     ],
   );
   assert.equal(lessons.filter((lesson) => lesson.status === "published").length, 2);
-  assert.equal(lessons.filter((lesson) => lesson.status === "review").length, 32);
+  assert.equal(lessons.filter((lesson) => lesson.status === "review").length, 49);
   assert.deepEqual(
     lessons.filter((lesson) => lesson.status === "awaiting_content").map((lesson) => lesson.id),
     ["dea-p03-l07"],

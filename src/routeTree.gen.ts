@@ -10,7 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BibliothequeRouteImport } from './routes/bibliotheque'
 import { Route as BlocsRouteImport } from './routes/blocs'
 import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as ClassementRouteImport } from './routes/classement'
@@ -32,9 +34,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliothequeRoute = BibliothequeRouteImport.update({
+  id: '/bibliotheque',
+  path: '/bibliotheque',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlocsRoute = BlocsRouteImport.update({
@@ -115,7 +127,9 @@ const BlocBlocIdFinRoute = BlocBlocIdFinRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/auth': typeof AuthRoute
+  '/bibliotheque': typeof BibliothequeRoute
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
@@ -134,7 +148,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/auth': typeof AuthRoute
+  '/bibliotheque': typeof BibliothequeRoute
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
@@ -154,7 +170,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/auth': typeof AuthRoute
+  '/bibliotheque': typeof BibliothequeRoute
   '/blocs': typeof BlocsRoute
   '/boutique': typeof BoutiqueRoute
   '/classement': typeof ClassementRoute
@@ -175,7 +193,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/audit'
     | '/auth'
+    | '/bibliotheque'
     | '/blocs'
     | '/boutique'
     | '/classement'
@@ -194,7 +214,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/audit'
     | '/auth'
+    | '/bibliotheque'
     | '/blocs'
     | '/boutique'
     | '/classement'
@@ -213,7 +235,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/audit'
     | '/auth'
+    | '/bibliotheque'
     | '/blocs'
     | '/boutique'
     | '/classement'
@@ -233,7 +257,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuditRoute: typeof AuditRoute
   AuthRoute: typeof AuthRoute
+  BibliothequeRoute: typeof BibliothequeRoute
   BlocsRoute: typeof BlocsRoute
   BoutiqueRoute: typeof BoutiqueRoute
   ClassementRoute: typeof ClassementRoute
@@ -259,11 +285,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bibliotheque': {
+      id: '/bibliotheque'
+      path: '/bibliotheque'
+      fullPath: '/bibliotheque'
+      preLoaderRoute: typeof BibliothequeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blocs': {
@@ -388,7 +428,9 @@ const BlocBlocIdRouteWithChildren = BlocBlocIdRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuditRoute: AuditRoute,
   AuthRoute: AuthRoute,
+  BibliothequeRoute: BibliothequeRoute,
   BlocsRoute: BlocsRoute,
   BoutiqueRoute: BoutiqueRoute,
   ClassementRoute: ClassementRoute,

@@ -41,10 +41,14 @@ function normalizePrompt(value: string) {
   return value.normalize("NFKC").toLocaleLowerCase("fr").replace(/\s+/g, " ").trim();
 }
 
-const generatedBanks = importManifest.generatedTargets.map((target) => ({
-  target,
-  bank: parseLessonContentFile(readJson<unknown>(new URL(target.file, deaRoot))),
-}));
+const generatedBanks = importManifest.generatedTargets.map((target) => {
+  const sourceBankFile = target.archiveFile ?? target.file;
+  return {
+    target,
+    sourceBankFile,
+    bank: parseLessonContentFile(readJson<unknown>(new URL(sourceBankFile, deaRoot))),
+  };
+});
 
 test("l'import conserve les 460 questions sources et publie 446 exercices uniques", () => {
   const lessons = sourceFiles("lessons");
@@ -85,13 +89,11 @@ test("toutes les banques générées respectent le schéma, les identifiants et 
     assert.equal(bank.id, target.id);
     assert.equal(bank.status, "review");
     assert.equal(bank.items.length, target.questionCount);
-    assert.equal(
-      formation.parcours
-        .flatMap((parcours) => parcours.lessons)
-        .some((lesson) => lesson.id === target.id && lesson.file === target.file),
-      true,
-      target.id,
-    );
+    const registeredLesson = formation.parcours
+      .flatMap((parcours) => parcours.lessons)
+      .find((lesson) => lesson.id === target.id);
+    assert.ok(registeredLesson, target.id);
+    assert.equal(registeredLesson.file, target.supersededBy ?? target.file, target.id);
 
     const normalizedItems = bank.items.map((item) => normalizeLearningItem(bank, item));
     const catalog = createContentCatalog({ schemaVersion: 1, items: normalizedItems });

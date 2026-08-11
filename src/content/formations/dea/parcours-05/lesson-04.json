@@ -1,0 +1,716 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l04",
+  "title": "Petite circulation",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Définir la circulation pulmonaire.",
+    "Reconstituer son trajet du ventricule droit à l’oreillette gauche.",
+    "Distinguer ses vaisseaux de ceux de la grande circulation."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel autre nom le support donne-t-il à la petite circulation ?",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q01-a1",
+          "text": "Circulation pulmonaire",
+          "explanation": "Petite circulation et circulation pulmonaire désignent le même circuit."
+        },
+        {
+          "id": "dea-p05-l04-q01-a2",
+          "text": "Circulation tissulaire",
+          "explanation": "Ce terme désigne la grande circulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l04-q01-a3",
+          "text": "Circulation lymphatique",
+          "explanation": "Ce circuit n’est pas celui décrit page 21.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l04-q01-a4",
+          "text": "Circulation digestive",
+          "explanation": "Le support ne donne pas ce nom à la petite circulation.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q01-a1",
+      "explanation": "La petite circulation est la circulation pulmonaire.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La petite circulation est la circulation pulmonaire.",
+        "commonMistake": "Les qualificatifs pulmonaire et tissulaire sont souvent inversés.",
+        "keyTakeaway": "Petite = pulmonaire.",
+        "fieldApplication": "Identifier d’abord le circuit avant de suivre ses structures."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La petite circulation est la circulation pulmonaire.",
+      "common_mistake": "Les qualificatifs pulmonaire et tissulaire sont souvent inversés.",
+      "key_takeaway": "Petite = pulmonaire.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Dans quelle cavité débute la petite circulation ?",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q02-a1",
+          "text": "Le ventricule droit",
+          "explanation": "Le support fait débuter le trajet au ventricule droit."
+        },
+        {
+          "id": "dea-p05-l04-q02-a2",
+          "text": "Le ventricule gauche",
+          "explanation": "Il débute la grande circulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l04-q02-a3",
+          "text": "L’oreillette droite",
+          "explanation": "Elle termine la grande circulation.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l04-q02-a4",
+          "text": "L’oreillette gauche",
+          "explanation": "Elle reçoit le retour de la petite circulation.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q02-a1",
+      "explanation": "La petite circulation part du ventricule droit.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La petite circulation part du ventricule droit.",
+        "commonMistake": "Confondre cavité de départ et cavité d’arrivée inverse le trajet.",
+        "keyTakeaway": "Ventricule droit : départ vers les poumons.",
+        "fieldApplication": "Commencer un tracé par la cavité qui propulse le sang."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La petite circulation part du ventricule droit.",
+      "common_mistake": "Confondre cavité de départ et cavité d’arrivée inverse le trajet.",
+      "key_takeaway": "Ventricule droit : départ vers les poumons.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "ventricule-droit"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q03",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet de la petite circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q03-a1",
+          "text": "Ventricule droit",
+          "explanation": "Il propulse le sang vers les poumons.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-l04-q03-a2",
+          "text": "Artère pulmonaire",
+          "explanation": "Elle conduit le sang aux poumons.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-l04-q03-a3",
+          "text": "Capillaires pulmonaires",
+          "explanation": "Ils constituent le réseau pulmonaire.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p05-l04-q03-a4",
+          "text": "Veines pulmonaires",
+          "explanation": "Elles reviennent vers le cœur.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p05-l04-q03-a5",
+          "text": "Oreillette gauche",
+          "explanation": "Elle reçoit le retour pulmonaire.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l04-q03-a1",
+        "dea-p05-l04-q03-a2",
+        "dea-p05-l04-q03-a3",
+        "dea-p05-l04-q03-a4",
+        "dea-p05-l04-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p05-l04-q03-a1",
+        "dea-p05-l04-q03-a2",
+        "dea-p05-l04-q03-a3",
+        "dea-p05-l04-q03-a4",
+        "dea-p05-l04-q03-a5"
+      ],
+      "explanation": "L’ordre exact suit le trajet donné page 21 du ventricule droit à l’oreillette gauche.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre exact suit le trajet donné page 21 du ventricule droit à l’oreillette gauche.",
+        "commonMistake": "Inverser artère et veines pulmonaires change le sens du circuit.",
+        "keyTakeaway": "VD, artère pulmonaire, capillaires pulmonaires, veines pulmonaires, OG.",
+        "fieldApplication": "Tracer le circuit en suivant les flèches et les points de départ et d’arrivée.",
+        "memoryTip": "VD → poumons → OG."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre exact suit le trajet donné page 21 du ventricule droit à l’oreillette gauche.",
+      "common_mistake": "Inverser artère et veines pulmonaires change le sens du circuit.",
+      "key_takeaway": "VD, artère pulmonaire, capillaires pulmonaires, veines pulmonaires, OG.",
+      "memory_tip": "VD → poumons → OG.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p05-l04-q04",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "L’artère pulmonaire appartient à la petite circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q04-true",
+          "text": "Vrai",
+          "explanation": "Elle figure dans le trajet pulmonaire décrit."
+        },
+        {
+          "id": "dea-p05-l04-q04-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : l’artère pulmonaire est un élément de la petite circulation."
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q04-true",
+      "explanation": "La proposition est vraie : elle relie le ventricule droit au réseau pulmonaire.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition est vraie : elle relie le ventricule droit au réseau pulmonaire.",
+        "commonMistake": "Le mot artère peut être associé à tort à la seule grande circulation.",
+        "keyTakeaway": "L’artère pulmonaire part du cœur vers les poumons.",
+        "fieldApplication": "Classer un vaisseau selon son trajet et son circuit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition est vraie : elle relie le ventricule droit au réseau pulmonaire.",
+      "common_mistake": "Le mot artère peut être associé à tort à la seule grande circulation.",
+      "key_takeaway": "L’artère pulmonaire part du cœur vers les poumons.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "artere-pulmonaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle structure suit l’artère pulmonaire dans le trajet décrit ?",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q05-a1",
+          "text": "Les capillaires pulmonaires",
+          "explanation": "Ils suivent l’artère pulmonaire dans le circuit."
+        },
+        {
+          "id": "dea-p05-l04-q05-a2",
+          "text": "Les veines caves",
+          "explanation": "Elles appartiennent à la grande circulation.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l04-q05-a3",
+          "text": "L’aorte",
+          "explanation": "Elle part du ventricule gauche dans la grande circulation.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l04-q05-a4",
+          "text": "Les capillaires cellulaires",
+          "explanation": "Ils appartiennent au circuit tissulaire.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q05-a1",
+      "explanation": "Après l’artère pulmonaire viennent les capillaires pulmonaires.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Après l’artère pulmonaire viennent les capillaires pulmonaires.",
+        "commonMistake": "Mélanger capillaires pulmonaires et cellulaires fusionne les deux circulations.",
+        "keyTakeaway": "Le réseau capillaire prend le nom du territoire traversé.",
+        "fieldApplication": "Préciser « pulmonaire » dans une description du petit circuit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Après l’artère pulmonaire viennent les capillaires pulmonaires.",
+      "common_mistake": "Mélanger capillaires pulmonaires et cellulaires fusionne les deux circulations.",
+      "key_takeaway": "Le réseau capillaire prend le nom du territoire traversé.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "capillaires"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les veines pulmonaires ramènent le sang vers l’oreillette ______.",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q06-a1",
+          "text": "gauche",
+          "explanation": "Le trajet pulmonaire se termine à l’oreillette gauche."
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q06-a1",
+      "explanation": "Le mot attendu est « gauche ».",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot attendu est « gauche ».",
+        "commonMistake": "Le côté droit est le point de départ de ce circuit, pas son point d’arrivée.",
+        "keyTakeaway": "Petite circulation : ventricule droit vers oreillette gauche.",
+        "fieldApplication": "Vérifier la cavité terminale avant de conclure un tracé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot attendu est « gauche ».",
+      "common_mistake": "Le côté droit est le point de départ de ce circuit, pas son point d’arrivée.",
+      "key_takeaway": "Petite circulation : ventricule droit vers oreillette gauche.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "oreillette-gauche"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q07",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "L’aorte et les veines caves constituent le trajet principal de la petite circulation.",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q07-true",
+          "text": "Vrai",
+          "explanation": "Vrai serait incorrect : ces vaisseaux appartiennent au grand circuit."
+        },
+        {
+          "id": "dea-p05-l04-q07-false",
+          "text": "Faux",
+          "explanation": "La petite circulation utilise l’artère et les veines pulmonaires."
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q07-false",
+      "explanation": "L’affirmation est fausse : aorte et veines caves appartiennent à la grande circulation.",
+      "knowledgeIds": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : aorte et veines caves appartiennent à la grande circulation.",
+        "commonMistake": "Les deux circuits partagent le cœur, ce qui peut faire mélanger leurs vaisseaux.",
+        "keyTakeaway": "Petite : artère et veines pulmonaires ; grande : aorte et veines caves.",
+        "fieldApplication": "Nommer le circuit avant de classer ses vaisseaux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : aorte et veines caves appartiennent à la grande circulation.",
+      "common_mistake": "Les deux circuits partagent le cœur, ce qui peut faire mélanger leurs vaisseaux.",
+      "key_takeaway": "Petite : artère et veines pulmonaires ; grande : aorte et veines caves.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "comparaison"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010",
+          "K-DEA-P05-011"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l04-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un schéma suit le sang du ventricule droit aux poumons, puis jusqu’à l’oreillette gauche. Quel circuit est représenté ?",
+      "answers": [
+        {
+          "id": "dea-p05-l04-q08-a1",
+          "text": "La petite circulation",
+          "explanation": "Ce trajet correspond exactement à la circulation pulmonaire."
+        },
+        {
+          "id": "dea-p05-l04-q08-a2",
+          "text": "La grande circulation",
+          "explanation": "Elle relie le ventricule gauche aux tissus puis à l’oreillette droite.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l04-q08-a3",
+          "text": "Le retour veineux systémique seul",
+          "explanation": "Le trajet inclut aussi l’aller vers les poumons.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p05-l04-q08-a4",
+          "text": "Le cycle cardiaque",
+          "explanation": "Le cycle décrit des phases de contraction et de relaxation, pas ce trajet vasculaire.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l04-q08-a1",
+      "explanation": "Le départ au ventricule droit, le passage pulmonaire et l’arrivée à l’oreillette gauche identifient la petite circulation.",
+      "knowledgeIds": [
+        "K-DEA-P05-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Petite circulation",
+      "sourcePages": "21",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l04",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le départ au ventricule droit, le passage pulmonaire et l’arrivée à l’oreillette gauche identifient la petite circulation.",
+        "commonMistake": "S’arrêter au mot « cœur » ne suffit pas : les cavités et le territoire traversé déterminent le circuit.",
+        "keyTakeaway": "VD → poumons → OG = petite circulation.",
+        "fieldApplication": "Reconnaître le circuit à partir de trois repères fiables."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le départ au ventricule droit, le passage pulmonaire et l’arrivée à l’oreillette gauche identifient la petite circulation.",
+      "common_mistake": "S’arrêter au mot « cœur » ne suffit pas : les cavités et le territoire traversé déterminent le circuit.",
+      "key_takeaway": "VD → poumons → OG = petite circulation.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "petite-circulation",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 21",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Petite circulation",
+        "sourcePages": "21",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-010"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

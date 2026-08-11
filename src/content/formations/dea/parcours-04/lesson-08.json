@@ -1,0 +1,794 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l08",
+  "title": "Synthèse du système locomoteur",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Relier squelette, articulations, muscles, tendons et ligaments.",
+    "Mobiliser les principaux repères anatomiques.",
+    "Formuler une localisation précise au niveau DEA."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks",
+    "anatomy.location.description"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l07"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l08-q01",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque structure du système locomoteur à sa fonction générale décrite.",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q01-a1",
+          "text": "Squelette",
+          "match": "Charpente du corps",
+          "explanation": "Il forme la charpente du corps."
+        },
+        {
+          "id": "dea-p04-l08-q01-a2",
+          "text": "Articulation",
+          "match": "Union de deux os",
+          "explanation": "Elle organise l’union et la mobilité entre deux os."
+        },
+        {
+          "id": "dea-p04-l08-q01-a3",
+          "text": "Ligament",
+          "match": "Stabilité de l’articulation",
+          "explanation": "Il contribue à la stabilité articulaire."
+        },
+        {
+          "id": "dea-p04-l08-q01-a4",
+          "text": "Tendon",
+          "match": "Intermédiaire muscle-os",
+          "explanation": "Il relie le muscle au segment osseux."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l08-q01-a1",
+        "dea-p04-l08-q01-a2",
+        "dea-p04-l08-q01-a3",
+        "dea-p04-l08-q01-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-l08-q01-a1",
+        "dea-p04-l08-q01-a2",
+        "dea-p04-l08-q01-a3",
+        "dea-p04-l08-q01-a4"
+      ],
+      "explanation": "Chaque structure possède un rôle distinct dans l’organisation locomotrice.",
+      "knowledgeIds": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque structure possède un rôle distinct dans l’organisation locomotrice.",
+        "commonMistake": "Tendon et ligament sont les deux structures le plus souvent interverties.",
+        "keyTakeaway": "Squelette-charpente ; articulation-union ; ligament-stabilité ; tendon-muscle-os.",
+        "fieldApplication": "Nommer la bonne structure évite une description anatomique ambiguë.",
+        "memoryTip": "Tendon pour le muscle, ligament pour l’articulation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque structure possède un rôle distinct dans l’organisation locomotrice.",
+      "common_mistake": "Tendon et ligament sont les deux structures le plus souvent interverties.",
+      "key_takeaway": "Squelette-charpente ; articulation-union ; ligament-stabilité ; tendon-muscle-os.",
+      "memory_tip": "Tendon pour le muscle, ligament pour l’articulation.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "synthese",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-001",
+          "K-DEA-P04-006",
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-l08-q02",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe ces repères du haut du corps vers le bas.",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q02-a1",
+          "text": "Crâne",
+          "explanation": "Le crâne est le repère le plus haut de la liste.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l08-q02-a2",
+          "text": "Sternum",
+          "explanation": "Le sternum se situe dans le thorax.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l08-q02-a3",
+          "text": "Bassin",
+          "explanation": "Le bassin se situe sous le tronc thoracique.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l08-q02-a4",
+          "text": "Fémur",
+          "explanation": "Le fémur se situe dans la cuisse.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l08-q02-a5",
+          "text": "Tibia",
+          "explanation": "Le tibia se situe dans la jambe.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l08-q02-a1",
+        "dea-p04-l08-q02-a2",
+        "dea-p04-l08-q02-a3",
+        "dea-p04-l08-q02-a4",
+        "dea-p04-l08-q02-a5"
+      ],
+      "correctAnswers": [
+        "dea-p04-l08-q02-a1",
+        "dea-p04-l08-q02-a2",
+        "dea-p04-l08-q02-a3",
+        "dea-p04-l08-q02-a4",
+        "dea-p04-l08-q02-a5"
+      ],
+      "explanation": "L’ordre suit les repères du crâne vers la jambe.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit les repères du crâne vers la jambe.",
+        "commonMistake": "Intervertir bassin et sternum inverse deux régions du tronc.",
+        "keyTakeaway": "Crâne → sternum → bassin → fémur → tibia.",
+        "fieldApplication": "Parcourir le corps dans un seul sens aide à vérifier une description."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit les repères du crâne vers la jambe.",
+      "common_mistake": "Intervertir bassin et sternum inverse deux régions du tronc.",
+      "key_takeaway": "Crâne → sternum → bassin → fémur → tibia.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "synthese",
+        "ordre",
+        "reperes"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p04-l08-q03",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quelles formulations sont anatomiquement précises d’après les repères du parcours ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q03-a1",
+          "text": "Douleur de l’avant-bras droit entre coude et poignet",
+          "explanation": "La formulation précise segment, côté et limites anatomiques."
+        },
+        {
+          "id": "dea-p04-l08-q03-a2",
+          "text": "Douleur de la région lombaire",
+          "explanation": "La région du rachis est clairement nommée."
+        },
+        {
+          "id": "dea-p04-l08-q03-a3",
+          "text": "Douleur quelque part dans le bras",
+          "explanation": "La localisation reste vague et le mot bras peut être mal employé."
+        },
+        {
+          "id": "dea-p04-l08-q03-a4",
+          "text": "Mal en bas",
+          "explanation": "Cette formulation ne donne aucun repère anatomique exploitable."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l08-q03-a1",
+        "dea-p04-l08-q03-a2"
+      ],
+      "correctAnswers": [
+        "dea-p04-l08-q03-a1",
+        "dea-p04-l08-q03-a2"
+      ],
+      "explanation": "Un segment, un côté et un repère anatomique rendent la localisation exploitable.",
+      "knowledgeIds": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un segment, un côté et un repère anatomique rendent la localisation exploitable.",
+        "commonMistake": "Les expressions courantes vagues ne suffisent pas pour une transmission structurée.",
+        "keyTakeaway": "Décrire où, de quel côté et par rapport à quel repère.",
+        "fieldApplication": "Reformuler les mots du patient avec une localisation anatomique fidèle, sans modifier ses symptômes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un segment, un côté et un repère anatomique rendent la localisation exploitable.",
+      "common_mistake": "Les expressions courantes vagues ne suffisent pas pour une transmission structurée.",
+      "key_takeaway": "Décrire où, de quel côté et par rapport à quel repère.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "transmission",
+        "precision"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010",
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p04-l08-q04",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle distinction est correcte ?",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q04-a1",
+          "text": "Le tendon relie le muscle à l’os, le ligament stabilise l’articulation",
+          "explanation": "Cette distinction reprend les fonctions décrites."
+        },
+        {
+          "id": "dea-p04-l08-q04-a2",
+          "text": "Le tendon stabilise l’articulation, le ligament produit le mouvement",
+          "explanation": "Les deux rôles sont mal attribués."
+        },
+        {
+          "id": "dea-p04-l08-q04-a3",
+          "text": "Le cartilage relie le muscle à l’os",
+          "explanation": "Le cartilage recouvre les surfaces articulaires décrites."
+        },
+        {
+          "id": "dea-p04-l08-q04-a4",
+          "text": "La synovie constitue le corps d’un os long",
+          "explanation": "La synovie est articulaire ; la diaphyse est le corps de l’os long."
+        }
+      ],
+      "correctAnswer": "dea-p04-l08-q04-a1",
+      "explanation": "Le tendon est l’intermédiaire muscle-os ; le ligament contribue à la stabilité articulaire.",
+      "knowledgeIds": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le tendon est l’intermédiaire muscle-os ; le ligament contribue à la stabilité articulaire.",
+        "commonMistake": "La proximité anatomique de ces structures explique leur confusion fréquente.",
+        "keyTakeaway": "Tendon et ligament ont des relations différentes.",
+        "fieldApplication": "Ne pas utiliser ces termes comme synonymes dans un bilan descriptif."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le tendon est l’intermédiaire muscle-os ; le ligament contribue à la stabilité articulaire.",
+      "common_mistake": "La proximité anatomique de ces structures explique leur confusion fréquente.",
+      "key_takeaway": "Tendon et ligament ont des relations différentes.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "tendon",
+        "ligament",
+        "synthese"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-006",
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l08-q05",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le mouvement locomoteur dépend des seuls muscles, indépendamment du squelette et des articulations.",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q05-true",
+          "text": "Vrai",
+          "explanation": "Cette affirmation isole le muscle du système auquel il participe."
+        },
+        {
+          "id": "dea-p04-l08-q05-false",
+          "text": "Faux",
+          "explanation": "Le mouvement associe muscles, segments osseux et articulations."
+        }
+      ],
+      "correctAnswer": "dea-p04-l08-q05-false",
+      "explanation": "L’affirmation est fausse : le mouvement résulte de l’action musculaire sur des segments osseux articulés.",
+      "knowledgeIds": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : le mouvement résulte de l’action musculaire sur des segments osseux articulés.",
+        "commonMistake": "Attribuer toute la fonction à une seule structure oublie l’organisation en système.",
+        "keyTakeaway": "Le système locomoteur fonctionne par coopération de plusieurs structures.",
+        "fieldApplication": "Identifier séparément les structures concernées tout en comprenant leur interaction."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : le mouvement résulte de l’action musculaire sur des segments osseux articulés.",
+      "common_mistake": "Attribuer toute la fonction à une seule structure oublie l’organisation en système.",
+      "key_takeaway": "Le système locomoteur fonctionne par coopération de plusieurs structures.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "synthese",
+        "mouvement"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-001",
+          "K-DEA-P04-006",
+          "K-DEA-P04-008"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l08-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Une personne signale une douleur entre le genou et la cheville gauches. Quelle transmission anatomique est la plus adaptée ?",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q06-a1",
+          "text": "Douleur de la jambe gauche, région tibia-péroné",
+          "explanation": "La formulation correspond au segment et aux repères osseux décrits."
+        },
+        {
+          "id": "dea-p04-l08-q06-a2",
+          "text": "Douleur de la cuisse gauche",
+          "explanation": "La cuisse se situe au-dessus du genou."
+        },
+        {
+          "id": "dea-p04-l08-q06-a3",
+          "text": "Douleur du membre supérieur gauche",
+          "explanation": "Le membre supérieur n’est pas concerné."
+        },
+        {
+          "id": "dea-p04-l08-q06-a4",
+          "text": "Douleur en bas à gauche",
+          "explanation": "La formulation est trop vague pour être anatomiquement exploitable."
+        }
+      ],
+      "correctAnswer": "dea-p04-l08-q06-a1",
+      "explanation": "Entre genou et cheville, le segment est la jambe ; tibia et péroné en sont les repères osseux principaux.",
+      "knowledgeIds": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Entre genou et cheville, le segment est la jambe ; tibia et péroné en sont les repères osseux principaux.",
+        "commonMistake": "Le langage courant peut appeler tout le membre « jambe », mais ici les limites anatomiques sont explicites.",
+        "keyTakeaway": "Genou-cheville = jambe.",
+        "fieldApplication": "Transmettre segment, côté et repère sans annoncer la nature de la lésion.",
+        "safetyPoint": "Une localisation précise n’autorise pas à conclure à une fracture."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Entre genou et cheville, le segment est la jambe ; tibia et péroné en sont les repères osseux principaux.",
+      "common_mistake": "Le langage courant peut appeler tout le membre « jambe », mais ici les limites anatomiques sont explicites.",
+      "key_takeaway": "Genou-cheville = jambe.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "jambe",
+        "cas",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l08-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : la partie centrale d’un os long est la ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q07-a1",
+          "text": "diaphyse",
+          "explanation": "La diaphyse correspond au corps central de l’os long."
+        }
+      ],
+      "correctAnswer": "dea-p04-l08-q07-a1",
+      "explanation": "Le terme attendu est « diaphyse ».",
+      "knowledgeIds": [
+        "K-DEA-P04-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « diaphyse ».",
+        "commonMistake": "Les épiphyses sont les extrémités et ne désignent pas la partie centrale.",
+        "keyTakeaway": "Diaphyse au centre, épiphyses aux extrémités.",
+        "fieldApplication": "Ce vocabulaire améliore la précision de localisation sur un os long.",
+        "memoryTip": "Diaphyse : au milieu ; épiphyses : aux extrémités."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « diaphyse ».",
+      "common_mistake": "Les épiphyses sont les extrémités et ne désignent pas la partie centrale.",
+      "key_takeaway": "Diaphyse au centre, épiphyses aux extrémités.",
+      "memory_tip": "Diaphyse : au milieu ; épiphyses : aux extrémités.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "os-long",
+        "diaphyse"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-005"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l08-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle formulation respecte le mieux le niveau DEA et les données disponibles ?",
+      "answers": [
+        {
+          "id": "dea-p04-l08-q08-a1",
+          "text": "Décrire la région, le côté et le repère sans poser de diagnostic",
+          "explanation": "La description anatomique précise reste dans le périmètre des connaissances sourcées."
+        },
+        {
+          "id": "dea-p04-l08-q08-a2",
+          "text": "Affirmer une fracture à partir de la douleur seule",
+          "explanation": "La source anatomique et la douleur seule ne permettent pas cette conclusion."
+        },
+        {
+          "id": "dea-p04-l08-q08-a3",
+          "text": "Forcer le mouvement pour identifier l’articulation",
+          "explanation": "Le parcours n’autorise pas un test forcé, particulièrement en contexte douloureux."
+        },
+        {
+          "id": "dea-p04-l08-q08-a4",
+          "text": "Inventer un mécanisme lésionnel absent",
+          "explanation": "Une transmission doit rester fidèle aux éléments recueillis."
+        }
+      ],
+      "correctAnswer": "dea-p04-l08-q08-a1",
+      "explanation": "Le rôle attendu ici est de localiser et transmettre fidèlement, sans transformer un repère anatomique en diagnostic.",
+      "knowledgeIds": [
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Synthèse",
+      "sourcePages": "34-37",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l08",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le rôle attendu ici est de localiser et transmettre fidèlement, sans transformer un repère anatomique en diagnostic.",
+        "commonMistake": "Une erreur fréquente consiste à surinterpréter une douleur ou une déformation sans données suffisantes.",
+        "keyTakeaway": "Observer, localiser, décrire et transmettre ; ne pas inventer.",
+        "fieldApplication": "Utiliser les repères du parcours pour structurer le bilan anatomique.",
+        "safetyPoint": "Le contenu de ce parcours ne remplace pas les protocoles de prise en charge traumatique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le rôle attendu ici est de localiser et transmettre fidèlement, sans transformer un repère anatomique en diagnostic.",
+      "common_mistake": "Une erreur fréquente consiste à surinterpréter une douleur ou une déformation sans données suffisantes.",
+      "key_takeaway": "Observer, localiser, décrire et transmettre ; ne pas inventer.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "dea",
+        "securite",
+        "transmission"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Synthèse",
+        "sourcePages": "34-37",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

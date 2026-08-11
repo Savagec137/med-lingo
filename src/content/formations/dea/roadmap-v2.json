@@ -507,7 +507,7 @@
       "unlocksParcoursId": "parcours-05",
       "stage": "core_dea",
       "pedagogicalScope": "foundation",
-      "contentStatus": "awaiting_content",
+      "contentStatus": "partial",
       "metadataStatus": "pending_specification",
       "pendingFields": [
         "xp",
@@ -532,10 +532,10 @@
         "Comprendre le rôle du sang.",
         "Identifier les gros vaisseaux."
       ],
-      "difficulty": null,
-      "difficultyLabel": null,
-      "estimatedMinutes": null,
-      "estimatedDurationLabel": null,
+      "difficulty": "easy",
+      "difficultyLabel": "Débutant",
+      "estimatedMinutes": 75,
+      "estimatedDurationLabel": "≈ 75 minutes",
       "xp": null,
       "badge": ": Cœur en Action",
       "chest": null,
@@ -600,8 +600,6 @@
       "contentStatus": "partial",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],

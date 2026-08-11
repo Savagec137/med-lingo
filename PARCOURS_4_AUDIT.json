@@ -1,0 +1,89 @@
+{
+  "auditVersion": "1.0.0",
+  "generatedAt": "2026-08-11T00:00:00.000Z",
+  "scope": {
+    "blocId": "bloc-02",
+    "parcoursId": "parcours-04",
+    "title": "Système locomoteur"
+  },
+  "source": {
+    "documentId": "DOC-AFTRAL-DEA-B2-M4-2022",
+    "title": "B2.M4 - Support Etudiant.pdf",
+    "type": "training_source",
+    "contentStatus": "content_verified",
+    "verifiedPages": [34, 35, 36, 37, 38],
+    "checksum": "0B298BDFFE8439F6B081E70E656EA9C1B6D044476B2819C37DB19CCE5876CCF8"
+  },
+  "counts": {
+    "plannedLessons": 8,
+    "completedLessons": 8,
+    "knowledgeCreated": 13,
+    "lessonQuestions": 64,
+    "bossQuestions": 8,
+    "totalQuestions": 72,
+    "needsReview": 72
+  },
+  "distributions": {
+    "types": {
+      "mcq": 16,
+      "true_false_contextual": 14,
+      "association": 9,
+      "multiple_choice": 8,
+      "fill_blank": 8,
+      "clinical_case": 10,
+      "ordering": 7
+    },
+    "difficulties": {
+      "easy": 61,
+      "medium": 11
+    }
+  },
+  "checks": {
+    "jsonValid": true,
+    "uniqueQuestionIds": true,
+    "uniqueQuestionPrompts": true,
+    "sourcesPresent": true,
+    "knowledgeReferencesValid": true,
+    "lessonReferencesValid": true,
+    "competencyReferencesValid": true,
+    "noListingOnlySource": true,
+    "verifiedPagesOnly": true,
+    "feedbackComplete": true,
+    "parcoursOnly": true,
+    "medicalLevelManualReview": "pass",
+    "tests": "pass_111_of_111",
+    "lint": "targeted_pass_full_repository_blocked_by_preexisting_crlf",
+    "typescript": "blocked_by_preexisting_scene_type_imports",
+    "build": "pass"
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "PREEXISTING_REPOSITORY_LINT_LINE_ENDINGS",
+      "scope": "outside_parcours_04",
+      "message": "Le lint ciblé des fichiers modifiés passe. Le lint global reste bloqué par des fins de ligne CRLF préexistantes dans l’ensemble du checkout."
+    },
+    {
+      "code": "PREEXISTING_SCENE_TYPE_IMPORTS",
+      "scope": "outside_parcours_04",
+      "message": "tsc --noEmit reste bloqué par quatre imports ./type manquants préexistants sous src/features/scene ; le build de production passe."
+    }
+  ],
+  "info": [
+    {
+      "code": "MEDICAL_SCOPE",
+      "message": "Relecture manuelle : contenu limité aux repères anatomiques DEA des pages 34 à 37 ; aucun diagnostic ni protocole d’immobilisation généré."
+    },
+    {
+      "code": "VALIDATION_REQUIRED",
+      "message": "Les 72 questions et 13 connaissances restent à valider par un formateur compétent."
+    }
+  ],
+  "coverage": {
+    "playableEntities": 9,
+    "plannedEntities": 9,
+    "score": 100,
+    "trainerValidatedScore": 0
+  },
+  "result": "PASS_WITH_PREEXISTING_REPOSITORY_WARNINGS"
+}

@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "DOC-SECURITE-ROUTIERE-URGENCE-2026",
+  "title": "Référentiel de formation à la sécurité routière et conduite en intervention d’urgence pour les ambulanciers SMUR",
+  "organization": "Société Française de Médecine d’Urgence (SFMU), en collaboration avec l’AFASH et l’ANCESU",
+  "category": "Transport_Sanitaire",
+  "publication_date": "2026-01-28",
+  "document_date": "2026-01-20",
+  "version": "Référentiel validé le 20/01/2026",
+  "language": "fr",
+  "status": "official",
+  "review_status": "source_verified",
+  "source_file": "docs/official_sources/Transport_Sanitaire/VFF_Referentiel_formation_securite_routiere_et_conduite_en_intervention_urgence_ambulanciers_SMUR_SFMU_AFASH_ANCESU_2026.pdf",
+  "source_url": "https://www.sfmu.org/upload/referentielsSFMU/VFF_Referentiel_formation_securite_routiere_et%20conduite_en%20intervention_urgence_ambulanciers%20SMUR_SFMU_AFASH_ANCESU_2026.pdf",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "D04E8064019729EB30F2185BF10B764A001150EDBDAC3F74FC7ED3AB1D58B35B",
+  "pages": 26,
+  "analyzed_at": "2026-08-01T00:00:00.000Z",
+  "extraction_method": [
+    "pdfplumber_text_and_tables",
+    "pypdf_metadata",
+    "pypdfium2_visual_rendering",
+    "human_structural_review",
+    "official_source_url_verification"
+  ],
+  "scope": "Référentiel professionnel de formation à la conduite en intervention d’urgence des ambulanciers SMUR. Le programme des pages 3 à 5 est distingué des comparaisons étrangères, de l’enquête descriptive et de la synthèse bibliographique.",
+  "chapters": [
+    {
+      "chapter_id": "SEC-2026-CH-01",
+      "title": "Couverture",
+      "page_range": "1",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SEC-2026-CH-02",
+      "title": "Auteurs, validations et contexte",
+      "page_range": "2",
+      "subchapters": [
+        {
+          "subchapter_id": "SEC-2026-CH-02-S01",
+          "title": "Auteurs et validations institutionnelles",
+          "page_range": "2",
+          "knowledge_ids": ["K-SEC-2026-001", "K-SEC-2026-006"]
+        },
+        {
+          "subchapter_id": "SEC-2026-CH-02-S02",
+          "title": "Contexte de création du référentiel",
+          "page_range": "2",
+          "knowledge_ids": ["K-SEC-2026-006"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SEC-2026-CH-03",
+      "title": "Référentiel de formation",
+      "page_range": "3-5",
+      "subchapters": [
+        {
+          "subchapter_id": "SEC-2026-CH-03-S01",
+          "title": "Architecture, durée et certification",
+          "page_range": "3",
+          "knowledge_ids": ["K-SEC-2026-007"]
+        },
+        {
+          "subchapter_id": "SEC-2026-CH-03-S02",
+          "title": "Module 1 — Apports théoriques",
+          "page_range": "4",
+          "knowledge_ids": ["K-SEC-2026-008", "K-SEC-2026-009", "K-SEC-2026-010", "K-SEC-2026-011", "K-SEC-2026-012", "K-SEC-2026-013", "K-SEC-2026-014", "K-SEC-2026-015", "K-SEC-2026-016", "K-SEC-2026-017", "K-SEC-2026-018", "K-SEC-2026-019"]
+        },
+        {
+          "subchapter_id": "SEC-2026-CH-03-S03",
+          "title": "Module 2 — Techniques de conduite en ateliers pratiques",
+          "page_range": "5",
+          "knowledge_ids": ["K-SEC-2026-014", "K-SEC-2026-017", "K-SEC-2026-021", "K-SEC-2026-022", "K-SEC-2026-023", "K-SEC-2026-024", "K-SEC-2026-025", "K-SEC-2026-026"]
+        },
+        {
+          "subchapter_id": "SEC-2026-CH-03-S04",
+          "title": "Module 3 — Conduite approfondie sur piste",
+          "page_range": "5",
+          "knowledge_ids": ["K-SEC-2026-027", "K-SEC-2026-028", "K-SEC-2026-029", "K-SEC-2026-030", "K-SEC-2026-031"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SEC-2026-CH-04",
+      "title": "État des lieux des centres de formation existants",
+      "page_range": "6",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SEC-2026-CH-05",
+      "title": "État des lieux de la formation des ambulanciers à travers le monde",
+      "page_range": "6-10",
+      "subchapters": [
+        {"subchapter_id": "SEC-2026-CH-05-S01", "title": "Suisse", "page_range": "6-7", "knowledge_ids": ["K-SEC-2026-039"]},
+        {"subchapter_id": "SEC-2026-CH-05-S02", "title": "Belgique", "page_range": "7", "knowledge_ids": ["K-SEC-2026-039"]},
+        {"subchapter_id": "SEC-2026-CH-05-S03", "title": "Espagne", "page_range": "8", "knowledge_ids": ["K-SEC-2026-039"]},
+        {"subchapter_id": "SEC-2026-CH-05-S04", "title": "Royaume-Uni", "page_range": "8-9", "knowledge_ids": ["K-SEC-2026-039"]},
+        {"subchapter_id": "SEC-2026-CH-05-S05", "title": "Québec", "page_range": "9", "knowledge_ids": ["K-SEC-2026-039"]},
+        {"subchapter_id": "SEC-2026-CH-05-S06", "title": "Tableau comparatif", "page_range": "10", "knowledge_ids": ["K-SEC-2026-039"]}
+      ]
+    },
+    {
+      "chapter_id": "SEC-2026-CH-06",
+      "title": "État des lieux et attentes des ambulanciers SMUR",
+      "page_range": "11-13",
+      "subchapters": [
+        {"subchapter_id": "SEC-2026-CH-06-S01", "title": "Profil des répondants", "page_range": "11-12", "knowledge_ids": ["K-SEC-2026-037"]},
+        {"subchapter_id": "SEC-2026-CH-06-S02", "title": "Contenus de formation souhaités", "page_range": "13", "knowledge_ids": ["K-SEC-2026-037"]}
+      ]
+    },
+    {
+      "chapter_id": "SEC-2026-CH-07",
+      "title": "Bibliographie et données d’accidentologie",
+      "page_range": "14-16",
+      "subchapters": [
+        {"subchapter_id": "SEC-2026-CH-07-S01", "title": "Cadre de priorité et sécurité", "page_range": "14", "knowledge_ids": ["K-SEC-2026-032", "K-SEC-2026-033", "K-SEC-2026-035"]},
+        {"subchapter_id": "SEC-2026-CH-07-S02", "title": "Conduite, risque et patient", "page_range": "14-15", "knowledge_ids": ["K-SEC-2026-034", "K-SEC-2026-035"]},
+        {"subchapter_id": "SEC-2026-CH-07-S03", "title": "Charge cognitive et perception", "page_range": "15-16", "knowledge_ids": ["K-SEC-2026-036"]}
+      ]
+    },
+    {"chapter_id": "SEC-2026-CH-08", "title": "Références", "page_range": "17-18", "subchapters": []},
+    {"chapter_id": "SEC-2026-CH-09", "title": "Annexe 1 — Résultats du questionnaire", "page_range": "19-20", "subchapters": [{"subchapter_id": "SEC-2026-CH-09-S01", "title": "Résultats détaillés", "page_range": "19-20", "knowledge_ids": ["K-SEC-2026-037", "K-SEC-2026-038"]}]},
+    {"chapter_id": "SEC-2026-CH-10", "title": "Annexe 2 — Modèle d’attestation du module 1", "page_range": "21-22", "subchapters": []},
+    {"chapter_id": "SEC-2026-CH-11", "title": "Annexe 3 — Modèle d’attestation des modules 2 et 3", "page_range": "23-24", "subchapters": []},
+    {"chapter_id": "SEC-2026-CH-12", "title": "Annexe 4 — Modèle d’attestation d’actualisation", "page_range": "25-26", "subchapters": []}
+  ],
+  "notions": [
+    "K-SEC-2026-006", "K-SEC-2026-007", "K-SEC-2026-008", "K-SEC-2026-009", "K-SEC-2026-010", "K-SEC-2026-011", "K-SEC-2026-012", "K-SEC-2026-013", "K-SEC-2026-014", "K-SEC-2026-015", "K-SEC-2026-016", "K-SEC-2026-017", "K-SEC-2026-018", "K-SEC-2026-019", "K-SEC-2026-020", "K-SEC-2026-021", "K-SEC-2026-022", "K-SEC-2026-023", "K-SEC-2026-024", "K-SEC-2026-025", "K-SEC-2026-026", "K-SEC-2026-027", "K-SEC-2026-028", "K-SEC-2026-029", "K-SEC-2026-030", "K-SEC-2026-031", "K-SEC-2026-032", "K-SEC-2026-033", "K-SEC-2026-034", "K-SEC-2026-035", "K-SEC-2026-036"
+  ],
+  "definitions": ["K-SEC-2026-001", "K-SEC-2026-002", "K-SEC-2026-003", "K-SEC-2026-004", "K-SEC-2026-005"],
+  "procedures": [
+    {
+      "procedure_id": "SEC-2026-PROC-001",
+      "title": "Parcours initial de formation",
+      "summary": "Suivre le module théorique organisé par un CESU avant les deux modules pratiques organisés par un centre agréé, pour un total de 21 heures, avec évaluation continue et attestations distinctes.",
+      "steps": [
+        "Module 1 théorique en CESU",
+        "Module 2 d’ateliers pratiques en centre agréé",
+        "Module 3 de conduite approfondie sur piste en centre agréé",
+        "Évaluation tout au long de la formation",
+        "Délivrance des attestations correspondantes"
+      ],
+      "source_pages": "3-5",
+      "knowledge_ids": ["K-SEC-2026-007"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-002",
+      "title": "Mise en œuvre du module 1",
+      "summary": "Relier les apports théoriques à des cas concrets et au rôle quotidien de l’ambulancier, utiliser une ambulance de réanimation pour la partie véhicule et poste de conduite, puis évaluer par questionnaire et mise en situation.",
+      "source_pages": "4",
+      "knowledge_ids": ["K-SEC-2026-008", "K-SEC-2026-009", "K-SEC-2026-013"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-003",
+      "title": "Mise en œuvre du module 2",
+      "summary": "Reprendre le module théorique, individualiser le travail sur le comportement et les risques, mesurer au freinographe sur piste sèche et humide, réaliser les manœuvres sur parcours balisé et faire expérimenter au moins une fois le brancard à chaque apprenant durant un atelier dynamique.",
+      "source_pages": "5",
+      "knowledge_ids": ["K-SEC-2026-014", "K-SEC-2026-017", "K-SEC-2026-021", "K-SEC-2026-022", "K-SEC-2026-023", "K-SEC-2026-024", "K-SEC-2026-025", "K-SEC-2026-026"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-004",
+      "title": "Mise en œuvre du module 3",
+      "summary": "Travailler sur piste les gestes de conduite, les trajectoires, l’allure rapide, les dépassements, le convoi et le retour avec ou sans patient, puis évaluer l’apprenant en situation.",
+      "source_pages": "5",
+      "knowledge_ids": ["K-SEC-2026-027", "K-SEC-2026-028", "K-SEC-2026-029", "K-SEC-2026-030", "K-SEC-2026-031"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-005",
+      "title": "Évaluation des trois modules",
+      "summary": "Le module 1 est évalué par questionnaire et mise en situation ; le module 2 par mise en situation et analyse des résultats du freinographe ; le module 3 par mise en situation.",
+      "source_pages": "3-5",
+      "knowledge_ids": ["K-SEC-2026-007", "K-SEC-2026-022", "K-SEC-2026-027"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-006",
+      "title": "Actualisation et prorogation",
+      "summary": "Après cinq ans, la prorogation de cinq ans est subordonnée à une actualisation de 14 heures dans un centre agréé, associant actualisation théorique et perfectionnement en ateliers et sur piste.",
+      "source_pages": "3, 22, 24, 26",
+      "knowledge_ids": ["K-SEC-2026-007"]
+    },
+    {
+      "procedure_id": "SEC-2026-PROC-007",
+      "title": "Délivrance des attestations",
+      "summary": "Le responsable médical du CESU signe l’attestation du module 1 ; le responsable pédagogique du centre agréé signe celles des modules 2 et 3 et de l’actualisation.",
+      "source_pages": "21-26",
+      "knowledge_ids": ["K-SEC-2026-005", "K-SEC-2026-007"]
+    }
+  ],
+  "protocols": [],
+  "tables": [
+    {
+      "table_id": "SEC-2026-TBL-001",
+      "title": "Architecture de la formation",
+      "source_page": "3",
+      "columns": ["module", "intitulé", "durée", "organisateur"],
+      "rows": [
+        ["1", "Apports théoriques", "7 h", "CESU"],
+        ["2", "Techniques de conduite en ateliers pratiques", "7 h", "Centre agréé"],
+        ["3", "Conduite approfondie sur piste", "7 h", "Centre agréé"]
+      ]
+    },
+    {
+      "table_id": "SEC-2026-TBL-002",
+      "title": "Matrice du module 1",
+      "source_page": "4",
+      "columns": ["objectif", "compétences", "évaluation"],
+      "rows": [["Développer une compréhension approfondie des principes fondamentaux de sécurité routière, de conduite responsable, sécurisante et de réglementation spécifique des SMUR", "Connaître la législation en vigueur ; prendre conscience du risque routier et connaître les notions de dynamique du véhicule ; prendre en compte le véhicule", "Questionnaire et mise en situation"]]
+    },
+    {
+      "table_id": "SEC-2026-TBL-003",
+      "title": "Matrice du module 2",
+      "source_page": "5",
+      "columns": ["objectif", "compétences", "évaluation"],
+      "rows": [["Découvrir et mettre en œuvre les techniques de conduite et d’anticipation dans la gestion des situations d’urgence", "Mettre en œuvre les dispositifs d’aide à la conduite ; réagir face à une situation imprévue et dangereuse ; appréhender le gabarit ; être conscient des effets sur le patient et le personnel embarqué", "Mise en situation et résultats du freinographe"]]
+    },
+    {
+      "table_id": "SEC-2026-TBL-004",
+      "title": "Matrice du module 3",
+      "source_page": "5",
+      "columns": ["objectif", "compétences", "évaluation"],
+      "rows": [["Développer une maîtrise technique et une compréhension approfondie des gestes essentiels à une conduite efficace et sécuritaire", "Maîtriser les gestes essentiels ; évoluer à allure rapide seul ou en convoi ; adapter sa conduite hors intervention", "Mise en situation"]]
+    },
+    {
+      "table_id": "SEC-2026-TBL-005",
+      "title": "Comparaison internationale des formations",
+      "source_page": "10",
+      "classification": "comparative_non_normative",
+      "columns": ["territoire", "durée", "conduite urgente incluse", "stage pratique", "maintien", "certification"],
+      "rows": [
+        ["Belgique", "Voir source", "Voir source", "Voir source", "Voir source", "Voir source"],
+        ["Espagne", "Voir source", "Voir source", "Voir source", "Voir source", "Voir source"],
+        ["Royaume-Uni", "Voir source", "Voir source", "Voir source", "Voir source", "Voir source"],
+        ["Suisse", "Voir source", "Voir source", "Voir source", "Voir source", "Voir source"],
+        ["Québec", "Voir source", "Voir source", "Voir source", "Voir source", "Voir source"]
+      ],
+      "quality_note": "La table est indexée sans transcrire des valeurs non revérifiées ; elle ne constitue pas une norme française."
+    },
+    {
+      "table_id": "SEC-2026-TBL-006",
+      "title": "Contenus de formation souhaités par les répondants",
+      "source_pages": "13, 20",
+      "classification": "survey_descriptive",
+      "columns": ["contenu", "réponses", "pourcentage"],
+      "rows": [
+        ["Freinage d’urgence", 297, "89,7 %"],
+        ["Évitements", 287, "86,7 %"],
+        ["Perte d’adhérence", 280, "84,6 %"],
+        ["Dynamique du véhicule et transfert des masses", 276, "83,4 %"],
+        ["Conduite rapide", 256, "77,3 %"],
+        ["Temps de réaction et distances", 247, "74,6 %"],
+        ["Réglementation", 192, "58 %"],
+        ["Aides à la conduite", 173, "52,3 %"],
+        ["Transport du patient en ambulance", 165, "49,8 %"],
+        ["Conduite préventive", 163, "49,2 %"]
+      ]
+    },
+    {
+      "table_id": "SEC-2026-TBL-007",
+      "title": "Utilité perçue, changement de conduite et accidents déclarés",
+      "source_pages": "19-20",
+      "classification": "survey_descriptive",
+      "columns": ["indicateur", "effectif", "pourcentage", "base"],
+      "rows": [
+        ["Formation jugée très utile", 235, "83 %", "N=283 formés"],
+        ["Formation jugée utile", 41, "14,5 %", "N=283 formés"],
+        ["Formation jugée peu utile", 6, "2,1 %", "N=283 formés"],
+        ["Formation jugée sans intérêt", 1, "0,4 %", "N=283 formés"],
+        ["Formation ayant changé la conduite : oui", 248, "87,6 %", "N=283 formés"],
+        ["Non formés estimant qu’une formation changerait leur conduite", 47, "97,9 %", "N=48 non formés"],
+        ["Aucun accident déclaré en SMUR", 226, "68,3 %", "N=331"],
+        ["Accident modéré ou matériel déclaré", 102, "30,8 %", "N=331"],
+        ["Accident grave déclaré", 3, "0,9 %", "N=331"]
+      ]
+    },
+    {
+      "table_id": "SEC-2026-TBL-008",
+      "title": "Modèles d’attestation",
+      "source_pages": "21-26",
+      "columns": ["annexe", "objet", "signataire"],
+      "rows": [
+        ["2", "Suivi du module 1", "Responsable médical du CESU"],
+        ["3", "Suivi des modules 2 et 3", "Responsable pédagogique du centre agréé"],
+        ["4", "Actualisation de la formation", "Responsable pédagogique du centre agréé"]
+      ]
+    }
+  ],
+  "vocabulary": [
+    {"term": "FAE", "definition": "Formation d’Adaptation à l’Emploi", "definition_status": "explicit", "source_page": "2", "knowledge_id": "K-SEC-2026-001"},
+    {"term": "SMUR", "definition": "Structure mobile d’urgence et de réanimation", "definition_status": "explicit", "source_page": "14", "knowledge_id": "K-SEC-2026-002"},
+    {"term": "VIGP", "definition": "Véhicule d’intérêt général prioritaire", "definition_status": "explicit", "source_page": "14", "knowledge_id": "K-SEC-2026-003"},
+    {"term": "UMH", "definition": "Unité mobile hospitalière", "definition_status": "explicit", "source_page": "14", "knowledge_id": "K-SEC-2026-004"},
+    {"term": "CESU", "definition": "Centre d’enseignement des soins d’urgence", "definition_status": "explicit", "source_pages": "3, 21", "knowledge_id": "K-SEC-2026-005"},
+    {"term": "ABS", "definition": null, "definition_status": "absent", "source_pages": "4, 13, 20"},
+    {"term": "ESP", "definition": null, "definition_status": "absent", "source_pages": "4, 13, 20"},
+    {"term": "AFU", "definition": null, "definition_status": "absent", "source_pages": "4, 13, 20"},
+    {"term": "ESR", "definition": null, "definition_status": "absent", "source_page": "4"},
+    {"term": "DSC", "definition": null, "definition_status": "absent", "source_page": "4"},
+    {"term": "ASR", "definition": null, "definition_status": "absent", "source_pages": "13, 20"},
+    {"term": "Distance de sécurité", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4-5"},
+    {"term": "Temps de réaction", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4-5, 13"},
+    {"term": "Distance de freinage", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4-5"},
+    {"term": "Distance d’arrêt", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4-5"},
+    {"term": "Centre de gravité", "definition": null, "definition_status": "cited_not_defined", "source_page": "4"},
+    {"term": "Transfert de masse", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4, 13"},
+    {"term": "Force centrifuge", "definition": null, "definition_status": "cited_not_defined", "source_pages": "4-5"},
+    {"term": "Énergie cinétique", "definition": null, "definition_status": "cited_not_defined", "source_page": "4"},
+    {"term": "Freinographe", "definition": null, "definition_status": "cited_not_defined", "source_page": "5"}
+  ],
+  "constants": [
+    {"constant_id": "SEC-2026-CONST-001", "label": "Durée totale de la formation initiale", "value": 21, "unit": "heures", "source_page": "3", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-002", "label": "Nombre de modules", "value": 3, "unit": "modules", "source_page": "3", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-003", "label": "Durée de chaque module", "value": 7, "unit": "heures", "source_page": "3", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-004", "label": "Ratio maximal formateur-apprenants en ateliers", "value": 3, "unit": "apprenants par formateur", "source_page": "5", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-005", "label": "Validité de la formation", "value": 5, "unit": "ans", "source_pages": "3, 22, 24", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-006", "label": "Durée de l’actualisation", "value": 14, "unit": "heures", "source_pages": "3, 26", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-007", "label": "Durée de prorogation après actualisation", "value": 5, "unit": "ans", "source_pages": "3, 26", "classification": "referential"},
+    {"constant_id": "SEC-2026-CONST-008", "label": "Répondants à l’enquête", "value": 331, "unit": "répondants", "source_pages": "11, 19-20", "classification": "survey"},
+    {"constant_id": "SEC-2026-CONST-009", "label": "Départements représentés", "value": 49, "unit": "départements", "source_page": "11", "classification": "survey"},
+    {"constant_id": "SEC-2026-CONST-010", "label": "Période de collecte de l’enquête", "value": "juin à septembre 2025", "unit": "période", "source_page": "11", "classification": "survey"},
+    {"constant_id": "SEC-2026-CONST-011", "label": "Répondants ayant reçu une formation à la conduite", "value": 283, "unit": "répondants", "source_pages": "19-20", "classification": "survey"},
+    {"constant_id": "SEC-2026-CONST-012", "label": "Répondants n’ayant pas reçu de formation à la conduite", "value": 48, "unit": "répondants", "source_page": "20", "classification": "survey"}
+  ],
+  "competencies": [
+    {"competency_id": "SMUR-DRIVE-2026-C01", "module": 1, "title": "Connaître la législation en vigueur", "mastery_criteria": ["Connaissance du cadre légal"], "source_page": "4", "knowledge_ids": ["K-SEC-2026-008", "K-SEC-2026-009", "K-SEC-2026-010"]},
+    {"competency_id": "SMUR-DRIVE-2026-C02", "module": 1, "title": "Prendre conscience du risque routier et connaître les notions de dynamique du véhicule", "mastery_criteria": ["Pertinence de l’identification des situations à risque", "Conformité de l’application des règles, procédures et bonnes pratiques"], "source_page": "4", "knowledge_ids": ["K-SEC-2026-011", "K-SEC-2026-012", "K-SEC-2026-013", "K-SEC-2026-015"]},
+    {"competency_id": "SMUR-DRIVE-2026-C03", "module": 1, "title": "Prendre en compte le véhicule", "mastery_criteria": ["Conformité de l’application des règles, procédures et bonnes pratiques"], "source_page": "4", "knowledge_ids": ["K-SEC-2026-014", "K-SEC-2026-016", "K-SEC-2026-018", "K-SEC-2026-019", "K-SEC-2026-020"]},
+    {"competency_id": "SMUR-DRIVE-2026-C04", "module": 2, "title": "Mettre en œuvre les dispositifs d’aide à la conduite", "mastery_criteria": ["Connaissance des dispositifs d’aide à la conduite", "Pertinence et conformité des actions"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-014"]},
+    {"competency_id": "SMUR-DRIVE-2026-C05", "module": 2, "title": "Réagir face à une situation imprévue et dangereuse", "mastery_criteria": ["Pertinence et conformité des actions", "Analyse des résultats du freinographe"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-021", "K-SEC-2026-022", "K-SEC-2026-023", "K-SEC-2026-024", "K-SEC-2026-025"]},
+    {"competency_id": "SMUR-DRIVE-2026-C06", "module": 2, "title": "Appréhender le gabarit du véhicule", "mastery_criteria": ["Réussite du parcours balisé"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-026"]},
+    {"competency_id": "SMUR-DRIVE-2026-C07", "module": 2, "title": "Être conscient des effets de la conduite sur le patient et le personnel embarqué", "mastery_criteria": ["Pertinence de l’analyse des effets de la conduite"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-017", "K-SEC-2026-034"]},
+    {"competency_id": "SMUR-DRIVE-2026-C08", "module": 3, "title": "Maîtriser les gestes essentiels à une conduite efficace et sécuritaire", "mastery_criteria": ["Maîtrise d’une conduite efficace et sécuritaire", "Pertinence et conformité des actions"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-027", "K-SEC-2026-028"]},
+    {"competency_id": "SMUR-DRIVE-2026-C09", "module": 3, "title": "Évoluer à allure rapide seul ou en convoi", "mastery_criteria": ["Pertinence et conformité des actions"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-029", "K-SEC-2026-030"]},
+    {"competency_id": "SMUR-DRIVE-2026-C10", "module": 3, "title": "Adapter sa conduite hors intervention", "mastery_criteria": ["Adaptation de la conduite"], "source_page": "5", "knowledge_ids": ["K-SEC-2026-031"]}
+  ],
+  "knowledge_entries": [
+    {"knowledge_id":"K-SEC-2026-001","knowledge_type":"definition","title":"Formation d’Adaptation à l’Emploi","definition":"FAE signifie Formation d’Adaptation à l’Emploi.","summary":"Cette formation est requise pour l’affectation des ambulanciers en SMUR dans le contexte décrit par le référentiel.","important_points":["Affectation en SMUR","Formation préalable mentionnée"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["ambulancier SMUR","conduite en intervention"],"difficulty":"easy","tags":["FAE","SMUR","formation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Contexte","source_section":"Prérequis d’affectation","source_page":"2","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-002","knowledge_type":"definition","title":"Structure mobile d’urgence et de réanimation","definition":"SMUR signifie structure mobile d’urgence et de réanimation.","summary":"Le référentiel vise spécifiquement les ambulanciers affectés aux SMUR.","important_points":["Structure d’urgence et de réanimation","Public cible du référentiel"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["UMH","ambulancier SMUR"],"difficulty":"easy","tags":["SMUR","définition"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Cadre de l’intervention","source_page":"14","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-003","knowledge_type":"definition","title":"Véhicule d’intérêt général prioritaire","definition":"VIGP signifie véhicule d’intérêt général prioritaire.","summary":"Le statut prioritaire est encadré et ne dispense pas de préserver la sécurité des autres usagers.","important_points":["Statut prioritaire","Sécurité maintenue"],"clinical_examples":[],"common_errors":["Interpréter la priorité comme une liberté totale vis-à-vis des règles de sécurité"],"memory_tips":[],"related_topics":["avertisseurs","cadre légal"],"difficulty":"medium","tags":["VIGP","réglementation","sécurité"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Véhicules prioritaires","source_page":"14","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-004","knowledge_type":"definition","title":"Unité mobile hospitalière","definition":"UMH signifie unité mobile hospitalière.","summary":"Le document utilise ce terme dans le contexte des interventions mobiles hospitalières.","important_points":["Unité mobile hospitalière"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["SMUR"],"difficulty":"easy","tags":["UMH","définition"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Cadre de l’intervention","source_page":"14","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-005","knowledge_type":"definition","title":"Centre d’enseignement des soins d’urgence","definition":"CESU signifie centre d’enseignement des soins d’urgence.","summary":"Le CESU organise le module théorique et délivre l’attestation correspondante selon le modèle fourni.","important_points":["Organisation du module 1","Attestation du module 1"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["module 1","attestation"],"difficulty":"easy","tags":["CESU","formation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Organisation","source_page":"3","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-006","knowledge_type":"notion","title":"Nécessité d’un référentiel homogène de conduite SMUR","definition":"Le référentiel est créé pour harmoniser des contenus de formation jusque-là non homogènes entre centres.","summary":"L’objectif annoncé est d’optimiser la sécurité des patients et des équipes en définissant un cadre commun de formation.","important_points":["Harmonisation des formations","Sécurité des patients","Sécurité des équipes"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["FAE","formation conduite"],"difficulty":"easy","tags":["contexte","harmonisation","sécurité"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Contexte","source_section":"Justification du référentiel","source_page":"2","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-007","knowledge_type":"notion","title":"Architecture de la formation conduite SMUR","definition":"La formation initiale totalise 21 heures réparties en trois modules successifs de 7 heures.","summary":"Le module théorique précède deux modules pratiques ; l’évaluation est continue, les attestations sont distinctes et la validité est limitée à cinq ans.","important_points":["21 heures","Trois modules de 7 heures","Théorie avant pratique","Validité de cinq ans","Actualisation de 14 heures"],"clinical_examples":[],"common_errors":["Confondre la durée historique de formations observées dans l’enquête avec la durée prescrite par le référentiel"],"memory_tips":[],"related_topics":["module 1","module 2","module 3","actualisation"],"difficulty":"easy","tags":["architecture","durée","certification"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Architecture générale","source_page":"3","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-008","knowledge_type":"notion","title":"Cadre légal de la conduite en intervention","definition":"Le module théorique inclut la réglementation applicable à la conduite en intervention d’urgence.","summary":"La connaissance du cadre légal fait partie des compétences évaluées du module 1.","important_points":["Réglementation spécifique","Cadre légal évalué"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["VIGP","responsabilité"],"difficulty":"medium","tags":["législation","conduite","SMUR"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-009","knowledge_type":"notion","title":"Droits, devoirs et responsabilité du conducteur","definition":"Le module 1 traite les droits, devoirs et responsabilités liés à la conduite d’un véhicule SMUR.","summary":"La priorité d’intervention s’exerce dans un cadre de responsabilité et de sécurité.","important_points":["Droits","Devoirs","Responsabilité"],"clinical_examples":[],"common_errors":["Assimiler priorité et absence de responsabilité"],"memory_tips":[],"related_topics":["cadre légal","VIGP"],"difficulty":"medium","tags":["responsabilité","réglementation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-010","knowledge_type":"notion","title":"Avertisseurs et signalétique SMUR","definition":"Le programme inclut les avertisseurs sonores et lumineux ainsi que la signalétique des véhicules SMUR.","summary":"Leur usage s’inscrit dans le cadre réglementaire et les conditions de sécurité de l’intervention.","important_points":["Avertisseurs sonores","Avertisseurs lumineux","Signalétique"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["VIGP","perception des usagers"],"difficulty":"medium","tags":["avertisseurs","signalétique","SMUR"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-011","knowledge_type":"notion","title":"Facteurs défavorables à la conduite","definition":"Le référentiel fait travailler les facteurs qui augmentent le risque routier.","summary":"La vitesse, la fatigue, l’hygiène de vie, certains comportements à risque et l’absence de formation sont cités parmi les facteurs défavorables.","important_points":["Vitesse","Fatigue","Hygiène de vie","Comportements à risque","Formation"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["accidentologie","stress"],"difficulty":"easy","tags":["risque","fatigue","vitesse"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-012","knowledge_type":"notion","title":"Perception et temps de réaction","definition":"Le programme relie perception, temps de réaction et gestion du risque routier.","summary":"Ces notions contribuent à comprendre les distances et à anticiper une situation dangereuse.","important_points":["Perception","Temps de réaction","Anticipation"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["distance d’arrêt","freinage"],"difficulty":"medium","tags":["perception","réaction","distance"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-013","knowledge_type":"notion","title":"Dynamique du véhicule","definition":"Le module théorique aborde les notions de dynamique nécessaires à la compréhension du comportement du véhicule.","summary":"Le centre de gravité, le transfert de masse, la force centrifuge, l’énergie cinétique et l’adhérence sont cités comme objets d’apprentissage.","important_points":["Centre de gravité","Transfert de masse","Force centrifuge","Énergie cinétique","Adhérence"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["freinage","perte d’adhérence"],"difficulty":"medium","tags":["dynamique","véhicule","adhérence"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-014","knowledge_type":"notion","title":"Dispositifs d’aide à la conduite","definition":"Les dispositifs d’aide à la conduite font partie des contenus théoriques et pratiques.","summary":"Le conducteur doit connaître leur présence et apprendre à les mettre en œuvre dans le cadre des ateliers.","important_points":["Connaissance des aides","Mise en œuvre pratique"],"clinical_examples":[],"common_errors":["Développer les acronymes sans source explicite dans ce document"],"memory_tips":[],"related_topics":["ABS","ESP","AFU","ESR","DSC","ASR"],"difficulty":"medium","tags":["aides conduite","véhicule"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Modules 1 et 2","source_page":"4-5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-015","knowledge_type":"notion","title":"Conduite préventive","definition":"La conduite préventive est intégrée aux contenus visant l’anticipation des risques.","summary":"Elle s’oppose à une conduite centrée uniquement sur la vitesse ou la réaction tardive.","important_points":["Anticipation","Prévention du risque"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["conduite défensive","anticipation"],"difficulty":"medium","tags":["prévention","anticipation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-016","knowledge_type":"notion","title":"Placement et stationnement de l’ambulance","definition":"Le placement et le stationnement du véhicule sont inclus dans l’apprentissage de la prise en compte du véhicule.","summary":"Le conducteur doit intégrer le véhicule et son environnement dans la sécurité de l’intervention.","important_points":["Placement","Stationnement","Environnement"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["gabarit","sécurité intervention"],"difficulty":"medium","tags":["placement","stationnement","ambulance"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-017","knowledge_type":"notion","title":"Effets de la conduite sur le patient et le personnel embarqué","definition":"La conduite produit des effets dynamiques sur le patient et les membres de l’équipe transportés.","summary":"Le référentiel demande au conducteur de prendre conscience de ces effets et de les analyser.","important_points":["Patient","Personnel embarqué","Effets dynamiques"],"clinical_examples":[],"common_errors":["Limiter la conduite à la seule progression du véhicule"],"memory_tips":[],"related_topics":["arrimage","confort","soin"],"difficulty":"medium","tags":["patient","équipe","dynamique"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Modules 1 et 2","source_page":"4-5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-018","knowledge_type":"notion","title":"Ceintures et arrimage","definition":"Le programme inclut l’usage des ceintures et l’arrimage dans la prise en compte du véhicule et de ses occupants.","summary":"La sécurisation concerne les personnes transportées comme le matériel et les charges.","important_points":["Ceintures","Arrimage","Sécurisation"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["répartition des poids","patient"],"difficulty":"easy","tags":["ceinture","arrimage","sécurité"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-019","knowledge_type":"notion","title":"État, entretien et chargement du véhicule","definition":"Le conducteur doit prendre en compte l’état du véhicule, son entretien, les remorques, le sanglage et la répartition des poids.","summary":"La sécurité de conduite dépend aussi de la préparation matérielle du véhicule.","important_points":["État du véhicule","Entretien","Remorque","Sanglage","Répartition des poids"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["gabarit","arrimage"],"difficulty":"medium","tags":["entretien","chargement","véhicule"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-020","knowledge_type":"notion","title":"Poste de conduite","definition":"Le poste de conduite d’une ambulance de réanimation fait partie des contenus pratiques associés au module théorique.","summary":"L’apprentissage est relié au véhicule réellement utilisé et au rôle quotidien de l’ambulancier.","important_points":["Poste de conduite","Ambulance de réanimation","Lien théorie-pratique"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["ergonomie","commandes"],"difficulty":"easy","tags":["poste conduite","ambulance"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 1","source_page":"4","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-021","knowledge_type":"notion","title":"Distances de sécurité et d’arrêt","definition":"Le module pratique aborde les distances de sécurité et décompose l’arrêt en temps de réaction, freinage et distance d’arrêt.","summary":"Ces éléments servent à anticiper et à réagir face à une situation dangereuse.","important_points":["Distance de sécurité","Temps de réaction","Distance de freinage","Distance d’arrêt"],"clinical_examples":[],"common_errors":["Confondre distance de freinage et distance d’arrêt"],"memory_tips":[],"related_topics":["freinage d’urgence","anticipation"],"difficulty":"medium","tags":["distance","freinage","réaction"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-022","knowledge_type":"notion","title":"Freinage d’urgence","definition":"Le freinage d’urgence est travaillé en atelier et mesuré au freinographe sur piste sèche et humide.","summary":"L’évaluation associe la mise en situation à l’analyse des résultats mesurés.","important_points":["Atelier pratique","Piste sèche et humide","Freinographe"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["distance d’arrêt","adhérence"],"difficulty":"medium","tags":["freinage urgence","freinographe"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-023","knowledge_type":"notion","title":"Évitement","definition":"L’évitement est une technique de conduite travaillée dans le module pratique pour répondre à une situation imprévue et dangereuse.","summary":"Il est réalisé en situation sur un parcours balisé avec une ambulance.","important_points":["Situation imprévue","Parcours balisé","Ambulance"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["freinage urgence","anticipation"],"difficulty":"medium","tags":["évitement","atelier"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-024","knowledge_type":"notion","title":"Perte d’adhérence","definition":"La perte d’adhérence est étudiée et expérimentée dans les ateliers pratiques de conduite.","summary":"Elle est reliée à la dynamique du véhicule et à la gestion des situations dangereuses.","important_points":["Adhérence","Dynamique","Réaction"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["piste humide","transfert de masse"],"difficulty":"medium","tags":["adhérence","atelier","risque"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-025","knowledge_type":"notion","title":"Anticipation en conduite d’urgence","definition":"L’anticipation est une technique centrale pour gérer les situations d’urgence et réduire le besoin de réaction tardive.","summary":"Elle est travaillée dans le module 2 avec les autres techniques de gestion du risque.","important_points":["Lecture de situation","Prévention","Réaction adaptée"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["conduite préventive","temps de réaction"],"difficulty":"medium","tags":["anticipation","urgence"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-026","knowledge_type":"notion","title":"Gabarit du véhicule","definition":"L’appréhension du gabarit est une compétence pratique évaluée sur parcours balisé.","summary":"Elle permet d’adapter les manœuvres aux dimensions de l’ambulance.","important_points":["Dimensions du véhicule","Parcours balisé","Manœuvres"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["placement","trajectoire"],"difficulty":"medium","tags":["gabarit","ambulance","manœuvre"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 2","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-027","knowledge_type":"notion","title":"Gestes essentiels de conduite","definition":"Le module 3 approfondit le placement des mains et des pieds, le regard, l’attitude, le comportement et la chronologie des gestes.","summary":"Ces éléments sont travaillés pour obtenir une conduite efficace et sécuritaire.","important_points":["Mains et pieds","Regard","Attitude","Chronologie des gestes"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["trajectoire","allure rapide"],"difficulty":"medium","tags":["gestes conduite","piste"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 3","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-028","knowledge_type":"notion","title":"Trajectoires, courbes et virages","definition":"Les trajectoires, courbes et virages sont travaillés sur piste dans le module de conduite approfondie.","summary":"L’objectif est de maîtriser les gestes associés dans une conduite efficace et sécuritaire.","important_points":["Trajectoires","Courbes","Virages"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["regard","dynamique"],"difficulty":"medium","tags":["trajectoire","virage","piste"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 3","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-029","knowledge_type":"notion","title":"Évolution à allure rapide","definition":"L’évolution à allure rapide est travaillée avec un véhicule léger et une ambulance dans le module 3.","summary":"Elle reste inscrite dans l’objectif de conduite efficace et sécuritaire.","important_points":["Véhicule léger","Ambulance","Sécurité"],"clinical_examples":[],"common_errors":["Assimiler allure rapide et recherche systématique du gain de temps"],"memory_tips":[],"related_topics":["vitesse","convoi"],"difficulty":"hard","tags":["allure rapide","piste"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 3","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-030","knowledge_type":"notion","title":"Dépassements et conduite en convoi","definition":"Le module 3 inclut les dépassements et l’évolution en convoi avec véhicule léger et ambulance.","summary":"Ces situations sont travaillées sur piste dans un cadre d’apprentissage sécurisé.","important_points":["Dépassement","Convoi","VL et ambulance"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["allure rapide","trajectoire"],"difficulty":"hard","tags":["dépassement","convoi","piste"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 3","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-031","knowledge_type":"notion","title":"Retour avec ou sans patient","definition":"Le conducteur apprend à adapter sa conduite au retour de mission selon la présence ou l’absence d’un patient.","summary":"Le contexte de transport influence la conduite attendue hors de la phase d’aller en intervention.","important_points":["Présence du patient","Adaptation de conduite","Retour de mission"],"clinical_examples":[],"common_errors":["Appliquer la même conduite indépendamment de la présence du patient"],"memory_tips":[],"related_topics":["effets sur le patient","conduite hors intervention"],"difficulty":"medium","tags":["retour","patient","adaptation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Référentiel de formation","source_section":"Module 3","source_page":"5","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-032","knowledge_type":"evidence","title":"Priorité et obligation de sécurité","definition":"La synthèse bibliographique rappelle que le statut de VIGP ne signifie pas que le conducteur dispose de tous les droits.","summary":"L’usage des avertisseurs doit être justifié par l’urgence et ne supprime pas l’exigence de ne pas mettre autrui en danger.","important_points":["Priorité encadrée","Urgence justifiant les avertisseurs","Absence de mise en danger"],"clinical_examples":[],"common_errors":["Considérer les dérogations comme absolues"],"memory_tips":[],"related_topics":["VIGP","responsabilité"],"difficulty":"hard","tags":["secondary_evidence","priorité","sécurité"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Cadre de sécurité","source_page":"14","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-033","knowledge_type":"evidence","title":"Gain de temps et sécurité routière","definition":"La synthèse indique que le gain de temps obtenu par une conduite plus risquée est faible au regard de la durée globale d’une mission.","summary":"La vitesse ne doit pas devenir un objectif au détriment de la sécurité.","important_points":["Gain de temps limité","Risque routier","Sécurité prioritaire"],"clinical_examples":[],"common_errors":["Faire du gain de temps routier le critère principal"],"memory_tips":[],"related_topics":["allure rapide","conduite préventive"],"difficulty":"medium","tags":["secondary_evidence","vitesse","sécurité"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Vitesse et risque","source_page":"14-15","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-034","knowledge_type":"evidence","title":"La conduite de l’ambulance comme composante du soin","definition":"La synthèse bibliographique relie la conduite aux effets hémodynamiques, aux mouvements et aux nausées du patient.","summary":"La manière de conduire influence directement l’expérience et la sécurité du patient transporté.","important_points":["Effets hémodynamiques","Mouvements","Nausées","Confort et sécurité"],"clinical_examples":[],"common_errors":["Séparer totalement transport et prise en soin"],"memory_tips":[],"related_topics":["patient embarqué","arrimage"],"difficulty":"medium","tags":["secondary_evidence","patient","soin"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Effets sur le patient","source_page":"15","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-035","knowledge_type":"evidence","title":"Situations routières fréquemment impliquées dans les accidents","definition":"La synthèse identifie notamment les intersections, les feux, les changements de direction et les dépassements comme situations à risque.","summary":"Ces environnements exigent anticipation et attention renforcée aux réactions des autres usagers.","important_points":["Intersections","Feux","Changements de direction","Dépassements"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["anticipation","avertisseurs"],"difficulty":"medium","tags":["secondary_evidence","accidentologie","intersection"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Situations d’accident","source_page":"14-16","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-036","knowledge_type":"evidence","title":"Charge cognitive et tâches secondaires","definition":"La synthèse relie les tâches secondaires, dont certaines communications radio, à une charge cognitive accrue et à un allongement du temps de réaction.","summary":"Le conducteur doit limiter les sources de distraction incompatibles avec la conduite sûre.","important_points":["Charge cognitive","Tâches secondaires","Communication radio","Temps de réaction"],"clinical_examples":[],"common_errors":[],"memory_tips":[],"related_topics":["perception","stress"],"difficulty":"hard","tags":["secondary_evidence","cognition","distraction"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Bibliographie et données d’accidentologie","source_section":"Charge cognitive","source_page":"15-16","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-037","knowledge_type":"evidence","title":"Attentes déclarées des ambulanciers SMUR","definition":"Une enquête menée auprès de 331 répondants de 49 départements a recensé les contenus de conduite jugés prioritaires.","summary":"Le freinage d’urgence, l’évitement, la perte d’adhérence et la dynamique du véhicule arrivent en tête des contenus souhaités.","important_points":["N=331","49 départements","Enquête juin-septembre 2025","Résultats descriptifs"],"clinical_examples":[],"common_errors":["Interpréter une préférence déclarée comme une obligation réglementaire"],"memory_tips":[],"related_topics":["freinage","évitement","adhérence"],"difficulty":"medium","tags":["survey","attentes","formation"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"État des lieux et attentes des ambulanciers SMUR","source_section":"Questionnaire","source_page":"11-13, 20","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-038","knowledge_type":"evidence","title":"Utilité perçue et accidents déclarés dans l’enquête","definition":"L’enquête rapporte l’utilité perçue de la formation, son effet déclaré sur la conduite et les accidents déclarés par les répondants.","summary":"Ces résultats décrivent l’échantillon interrogé et ne constituent ni un seuil réglementaire ni une démonstration causale.","important_points":["N=283 formés","N=48 non formés","Résultats auto-déclarés","Accidents déclarés"],"clinical_examples":[],"common_errors":["Déduire une causalité à partir de résultats déclaratifs"],"memory_tips":[],"related_topics":["formation","accidentologie"],"difficulty":"hard","tags":["survey","descriptive","quality_limit"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"Annexe 1","source_section":"Résultats du questionnaire","source_page":"19-20","version":"2026-01-20","review_status":"source_verified"},
+    {"knowledge_id":"K-SEC-2026-039","knowledge_type":"evidence","title":"Comparaison internationale des formations de conduite ambulancière","definition":"Le document présente des exemples de formation en Suisse, Belgique, Espagne, Royaume-Uni et Québec.","summary":"Cette comparaison éclaire le contexte de conception mais ne définit pas la norme applicable en France.","important_points":["Comparaison internationale","Contexte documentaire","Caractère non normatif en France"],"clinical_examples":[],"common_errors":["Appliquer en France une exigence décrite pour un autre territoire"],"memory_tips":[],"related_topics":["formation pratique","certification"],"difficulty":"hard","tags":["comparative","non_normative","international"],"source_document":"DOC-SECURITE-ROUTIERE-URGENCE-2026","source_chapter":"État des lieux de la formation des ambulanciers à travers le monde","source_section":"Comparaisons et synthèse","source_page":"6-10","version":"2026-01-20","review_status":"source_verified"}
+  ],
+  "quality_notes": {
+    "protocols_complete": false,
+    "protocols_note": "Le document définit une architecture et des contenus de formation, mais ne fournit aucun protocole opérationnel pas-à-pas pour le franchissement d’un carrefour, l’usage des avertisseurs ou une vitesse d’intervention.",
+    "normative_scope_note": "Les pages 3 à 5 constituent le cœur du référentiel professionnel. Les pages 6 à 10 sont comparatives, les pages 11 à 13 et 19 à 20 décrivent une enquête, et les pages 14 à 16 synthétisent une bibliographie.",
+    "acronym_inconsistency": "Les pages 4 et 13/20 n’emploient pas exactement la même liste d’acronymes d’aides à la conduite (ESR/DSC versus ASR). Aucun développement n’étant fourni, les graphies sont conservées et leurs définitions restent à confirmer.",
+    "duration_warning": "La durée de 21 heures prescrite par le référentiel ne doit pas être fusionnée avec la durée historique de formations rapportée dans l’enquête.",
+    "speed_thresholds": "Aucun seuil chiffré de vitesse n’est défini dans le document.",
+    "trainer_validation": false,
+    "official_online_verification": "Le PDF et sa page d’actualité ont été retrouvés sur le site officiel de la SFMU le 2026-08-01."
+  }
+}

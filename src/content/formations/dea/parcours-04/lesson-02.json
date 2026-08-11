@@ -1,0 +1,813 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l02",
+  "title": "Les principaux os",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-36",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les principaux os des membres et du tronc.",
+    "Distinguer os longs et os plats explicitement illustrés.",
+    "Employer des repères anatomiques précis."
+  ],
+  "competencyIds": [
+    "body.system.locomotor",
+    "anatomy.landmarks"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l02-q01",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque os à la région indiquée par le support.",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q01-a1",
+          "text": "Humérus",
+          "match": "Bras",
+          "explanation": "L’humérus est l’os du bras."
+        },
+        {
+          "id": "dea-p04-l02-q01-a2",
+          "text": "Radius et cubitus",
+          "match": "Avant-bras",
+          "explanation": "Ces deux os sont situés dans l’avant-bras."
+        },
+        {
+          "id": "dea-p04-l02-q01-a3",
+          "text": "Fémur",
+          "match": "Cuisse",
+          "explanation": "Le fémur est l’os de la cuisse."
+        },
+        {
+          "id": "dea-p04-l02-q01-a4",
+          "text": "Tibia et péroné",
+          "match": "Jambe",
+          "explanation": "Ces deux os sont situés dans la jambe."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l02-q01-a1",
+        "dea-p04-l02-q01-a2",
+        "dea-p04-l02-q01-a3",
+        "dea-p04-l02-q01-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-l02-q01-a1",
+        "dea-p04-l02-q01-a2",
+        "dea-p04-l02-q01-a3",
+        "dea-p04-l02-q01-a4"
+      ],
+      "explanation": "Les associations reprennent les repères du schéma : humérus-bras, radius/cubitus-avant-bras, fémur-cuisse, tibia/péroné-jambe.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations reprennent les repères du schéma : humérus-bras, radius/cubitus-avant-bras, fémur-cuisse, tibia/péroné-jambe.",
+        "commonMistake": "Bras et avant-bras, comme cuisse et jambe, sont souvent employés à tort comme synonymes.",
+        "keyTakeaway": "Nommer le segment exact évite de désigner tout un membre par un seul mot.",
+        "fieldApplication": "Utiliser le segment puis l’os correspondant dans une description anatomique.",
+        "memoryTip": "Bras : humérus ; cuisse : fémur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations reprennent les repères du schéma : humérus-bras, radius/cubitus-avant-bras, fémur-cuisse, tibia/péroné-jambe.",
+      "common_mistake": "Bras et avant-bras, comme cuisse et jambe, sont souvent employés à tort comme synonymes.",
+      "key_takeaway": "Nommer le segment exact évite de désigner tout un membre par un seul mot.",
+      "memory_tip": "Bras : humérus ; cuisse : fémur.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "os",
+        "reperes",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-l02-q02",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe les repères osseux du membre supérieur du plus proche du tronc au plus éloigné.",
+      "instruction": "Remets les éléments dans l’ordre proximal vers distal.",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q02-a1",
+          "text": "Ceinture scapulaire",
+          "explanation": "Elle relie le membre supérieur au tronc.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l02-q02-a2",
+          "text": "Humérus",
+          "explanation": "Il forme le segment osseux du bras.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l02-q02-a3",
+          "text": "Radius et cubitus",
+          "explanation": "Ils forment le squelette de l’avant-bras.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l02-q02-a4",
+          "text": "Carpe",
+          "explanation": "Il correspond au repère osseux du poignet.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l02-q02-a5",
+          "text": "Métacarpes et phalanges",
+          "explanation": "Ils se situent dans la main et les doigts.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l02-q02-a1",
+        "dea-p04-l02-q02-a2",
+        "dea-p04-l02-q02-a3",
+        "dea-p04-l02-q02-a4",
+        "dea-p04-l02-q02-a5"
+      ],
+      "correctAnswers": [
+        "dea-p04-l02-q02-a1",
+        "dea-p04-l02-q02-a2",
+        "dea-p04-l02-q02-a3",
+        "dea-p04-l02-q02-a4",
+        "dea-p04-l02-q02-a5"
+      ],
+      "explanation": "L’ordre suit la description du membre supérieur depuis la ceinture scapulaire jusqu’aux phalanges.",
+      "knowledgeIds": [
+        "K-DEA-P04-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit la description du membre supérieur depuis la ceinture scapulaire jusqu’aux phalanges.",
+        "commonMistake": "Commencer par la main inverse le sens proximal-distal demandé.",
+        "keyTakeaway": "Ceinture scapulaire → humérus → radius/cubitus → carpe → métacarpes/phalanges.",
+        "fieldApplication": "Parcourir mentalement le membre depuis l’épaule vers les doigts aide à localiser un repère."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit la description du membre supérieur depuis la ceinture scapulaire jusqu’aux phalanges.",
+      "common_mistake": "Commencer par la main inverse le sens proximal-distal demandé.",
+      "key_takeaway": "Ceinture scapulaire → humérus → radius/cubitus → carpe → métacarpes/phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-superieur",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-011"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p04-l02-q03",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe les repères osseux du membre inférieur du plus proche du tronc au plus éloigné.",
+      "instruction": "Remets les éléments dans l’ordre proximal vers distal.",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q03-a1",
+          "text": "Bassin",
+          "explanation": "Le bassin constitue le repère proximal décrit du membre inférieur.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l02-q03-a2",
+          "text": "Fémur",
+          "explanation": "Il se situe dans la cuisse.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l02-q03-a3",
+          "text": "Rotule",
+          "explanation": "Elle se situe au niveau du genou.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l02-q03-a4",
+          "text": "Tibia et péroné",
+          "explanation": "Ils se situent dans la jambe.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l02-q03-a5",
+          "text": "Tarse, métatarses et phalanges",
+          "explanation": "Ils se situent vers la cheville, le pied et les orteils.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l02-q03-a1",
+        "dea-p04-l02-q03-a2",
+        "dea-p04-l02-q03-a3",
+        "dea-p04-l02-q03-a4",
+        "dea-p04-l02-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p04-l02-q03-a1",
+        "dea-p04-l02-q03-a2",
+        "dea-p04-l02-q03-a3",
+        "dea-p04-l02-q03-a4",
+        "dea-p04-l02-q03-a5"
+      ],
+      "explanation": "L’ordre suit le membre inférieur depuis le bassin jusqu’aux phalanges.",
+      "knowledgeIds": [
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit le membre inférieur depuis le bassin jusqu’aux phalanges.",
+        "commonMistake": "La jambe anatomique vient après le genou et ne comprend pas la cuisse.",
+        "keyTakeaway": "Bassin → fémur → rotule → tibia/péroné → tarse/métatarses/phalanges.",
+        "fieldApplication": "Suivre la trajectoire hanche-pied permet de vérifier la cohérence d’une localisation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit le membre inférieur depuis le bassin jusqu’aux phalanges.",
+      "common_mistake": "La jambe anatomique vient après le genou et ne comprend pas la cuisse.",
+      "key_takeaway": "Bassin → fémur → rotule → tibia/péroné → tarse/métatarses/phalanges.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "membre-inferieur",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p04-l02-q04",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel os est explicitement présenté comme un os plat ?",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q04-a1",
+          "text": "Le sternum",
+          "explanation": "Le support précise que le sternum est un os plat."
+        },
+        {
+          "id": "dea-p04-l02-q04-a2",
+          "text": "L’humérus",
+          "explanation": "L’humérus est utilisé comme exemple d’os long."
+        },
+        {
+          "id": "dea-p04-l02-q04-a3",
+          "text": "Le fémur",
+          "explanation": "Le fémur appartient au membre inférieur et n’est pas qualifié d’os plat dans ce passage."
+        },
+        {
+          "id": "dea-p04-l02-q04-a4",
+          "text": "Le radius",
+          "explanation": "Le radius est un os de l’avant-bras, sans qualification d’os plat ici."
+        }
+      ],
+      "correctAnswer": "dea-p04-l02-q04-a1",
+      "explanation": "Le sternum est le seul os que cette page qualifie explicitement d’os plat.",
+      "knowledgeIds": [
+        "K-DEA-P04-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le sternum est le seul os que cette page qualifie explicitement d’os plat.",
+        "commonMistake": "L’humérus peut attirer l’attention parce qu’il est illustré ensuite, mais comme os long.",
+        "keyTakeaway": "Dans ce support : sternum = os plat ; humérus = exemple d’os long.",
+        "fieldApplication": "Associer le nom de l’os à sa catégorie seulement lorsque la source le précise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le sternum est le seul os que cette page qualifie explicitement d’os plat.",
+      "common_mistake": "L’humérus peut attirer l’attention parce qu’il est illustré ensuite, mais comme os long.",
+      "key_takeaway": "Dans ce support : sternum = os plat ; humérus = exemple d’os long.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "os-plat",
+        "sternum"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-003"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l02-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel os sert d’exemple pour présenter la structure d’un os long ?",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q05-a1",
+          "text": "L’humérus",
+          "explanation": "La figure de la page 36 est légendée « Os long (humérus) »."
+        },
+        {
+          "id": "dea-p04-l02-q05-a2",
+          "text": "Le sternum",
+          "explanation": "Le sternum est présenté comme un os plat."
+        },
+        {
+          "id": "dea-p04-l02-q05-a3",
+          "text": "La rotule",
+          "explanation": "La rotule est repérée au genou, mais n’illustre pas la structure de l’os long."
+        },
+        {
+          "id": "dea-p04-l02-q05-a4",
+          "text": "Une vertèbre",
+          "explanation": "Les vertèbres sont décrites dans le rachis, pas comme l’exemple illustré d’os long."
+        }
+      ],
+      "correctAnswer": "dea-p04-l02-q05-a1",
+      "explanation": "La page 36 utilise l’humérus pour illustrer diaphyse et épiphyses d’un os long.",
+      "knowledgeIds": [
+        "K-DEA-P04-003",
+        "K-DEA-P04-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "36",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La page 36 utilise l’humérus pour illustrer diaphyse et épiphyses d’un os long.",
+        "commonMistake": "Confondre l’os illustré avec le sternum mélange os long et os plat.",
+        "keyTakeaway": "L’humérus est l’exemple d’os long retenu par ce support.",
+        "fieldApplication": "Identifier l’os puis la partie de l’os évite une description imprécise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La page 36 utilise l’humérus pour illustrer diaphyse et épiphyses d’un os long.",
+      "common_mistake": "Confondre l’os illustré avec le sternum mélange os long et os plat.",
+      "key_takeaway": "L’humérus est l’exemple d’os long retenu par ce support.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "os-long",
+        "humerus"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 36",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "36",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-003",
+          "K-DEA-P04-005"
+        ],
+        "competencyIds": [
+          "body.system.locomotor",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l02-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une personne montre une douleur entre le coude et le poignet. Quels os principaux correspondent à ce segment ?",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q06-a1",
+          "text": "L’humérus seul",
+          "explanation": "L’humérus correspond au bras, au-dessus du coude.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p04-l02-q06-a2",
+          "text": "Le radius et le cubitus",
+          "explanation": "Ces deux os correspondent à l’avant-bras, entre coude et poignet."
+        },
+        {
+          "id": "dea-p04-l02-q06-a3",
+          "text": "Le fémur et la rotule",
+          "explanation": "Ces os appartiennent au membre inférieur.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p04-l02-q06-a4",
+          "text": "Le tibia et le péroné",
+          "explanation": "Ces os correspondent à la jambe.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p04-l02-q06-a2",
+      "explanation": "Le segment entre coude et poignet est l’avant-bras, où le support situe radius et cubitus.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le segment entre coude et poignet est l’avant-bras, où le support situe radius et cubitus.",
+        "commonMistake": "Employer « bras » pour toute la zone du membre supérieur masque la distinction avec l’avant-bras.",
+        "keyTakeaway": "Avant-bras = radius + cubitus dans la nomenclature du support.",
+        "fieldApplication": "Décrire « avant-bras » puis préciser le côté est plus utile qu’une expression vague.",
+        "safetyPoint": "Cette localisation ne permet pas, à elle seule, de conclure à une lésion précise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le segment entre coude et poignet est l’avant-bras, où le support situe radius et cubitus.",
+      "common_mistake": "Employer « bras » pour toute la zone du membre supérieur masque la distinction avec l’avant-bras.",
+      "key_takeaway": "Avant-bras = radius + cubitus dans la nomenclature du support.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "avant-bras",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-011",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.region.upper-limb",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l02-q07",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels os principaux le schéma situe dans la jambe ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q07-a1",
+          "text": "Le tibia",
+          "explanation": "Le tibia est repéré dans la jambe."
+        },
+        {
+          "id": "dea-p04-l02-q07-a2",
+          "text": "Le péroné",
+          "explanation": "Le péroné est repéré dans la jambe."
+        },
+        {
+          "id": "dea-p04-l02-q07-a3",
+          "text": "Le fémur",
+          "explanation": "Le fémur correspond à la cuisse.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p04-l02-q07-a4",
+          "text": "L’humérus",
+          "explanation": "L’humérus correspond au bras.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l02-q07-a1",
+        "dea-p04-l02-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p04-l02-q07-a1",
+        "dea-p04-l02-q07-a2"
+      ],
+      "explanation": "Le tibia et le péroné sont les deux os principaux repérés dans la jambe.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le tibia et le péroné sont les deux os principaux repérés dans la jambe.",
+        "commonMistake": "Le fémur est souvent sélectionné par extension abusive du mot jambe à tout le membre inférieur.",
+        "keyTakeaway": "Cuisse : fémur ; jambe : tibia et péroné.",
+        "fieldApplication": "Nommer le segment exact améliore le repérage d’une douleur ou d’une lésion visible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le tibia et le péroné sont les deux os principaux repérés dans la jambe.",
+      "common_mistake": "Le fémur est souvent sélectionné par extension abusive du mot jambe à tout le membre inférieur.",
+      "key_takeaway": "Cuisse : fémur ; jambe : tibia et péroné.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "jambe",
+        "tibia",
+        "perone"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p04-l02-q08",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : l’os principal de la cuisse est le ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l02-q08-a1",
+          "text": "fémur",
+          "explanation": "Le schéma situe le fémur dans la cuisse."
+        }
+      ],
+      "correctAnswer": "dea-p04-l02-q08-a1",
+      "explanation": "Le terme attendu est « fémur », l’os repéré dans la cuisse.",
+      "knowledgeIds": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - schéma et principaux os",
+      "sourcePages": "34-35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonId": "dea-p04-l02",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « fémur », l’os repéré dans la cuisse.",
+        "commonMistake": "Répondre tibia confond la cuisse avec la jambe située sous le genou.",
+        "keyTakeaway": "Fémur = cuisse.",
+        "fieldApplication": "Associer segment et os facilite une transmission anatomique concise.",
+        "memoryTip": "Fémur rime avec longueur de la cuisse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « fémur », l’os repéré dans la cuisse.",
+      "common_mistake": "Répondre tibia confond la cuisse avec la jambe située sous le genou.",
+      "key_takeaway": "Fémur = cuisse.",
+      "memory_tip": "Fémur rime avec longueur de la cuisse.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "cuisse",
+        "femur"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - schéma et principaux os",
+        "sourcePages": "34-35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-004",
+          "K-DEA-P04-012"
+        ],
+        "competencyIds": [
+          "anatomy.region.lower-limb",
+          "anatomy.landmarks"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

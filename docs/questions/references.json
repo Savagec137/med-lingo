@@ -1,0 +1,2514 @@
+{
+  "schema_version": "1.0.0",
+  "library_version": "v1",
+  "questions": [
+    {
+      "question_id": "dea-p04-l01-q01",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q02",
+      "knowledge_reference": "K-DEA-P04-001",
+      "knowledge_references": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q03",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q04",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q05",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q06",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q07",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l01-q08",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002"
+      ],
+      "lesson_id": "dea-p04-l01",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q01",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q02",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q03",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q04",
+      "knowledge_reference": "K-DEA-P04-003",
+      "knowledge_references": [
+        "K-DEA-P04-003"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q05",
+      "knowledge_reference": "K-DEA-P04-003",
+      "knowledge_references": [
+        "K-DEA-P04-003",
+        "K-DEA-P04-005"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q06",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q07",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l02-q08",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l02",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - schéma et principaux os",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q01",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q02",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q03",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q04",
+      "knowledge_reference": "K-DEA-P04-007",
+      "knowledge_references": [
+        "K-DEA-P04-007"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q05",
+      "knowledge_reference": "K-DEA-P04-007",
+      "knowledge_references": [
+        "K-DEA-P04-007"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q06",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-007",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q07",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l03-q08",
+      "knowledge_reference": "K-DEA-P04-007",
+      "knowledge_references": [
+        "K-DEA-P04-007"
+      ],
+      "lesson_id": "dea-p04-l03",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les articulations",
+      "source_page": "36",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q01",
+      "knowledge_reference": "K-DEA-P04-008",
+      "knowledge_references": [
+        "K-DEA-P04-008",
+        "K-DEA-P04-009"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q02",
+      "knowledge_reference": "K-DEA-P04-008",
+      "knowledge_references": [
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q03",
+      "knowledge_reference": "K-DEA-P04-009",
+      "knowledge_references": [
+        "K-DEA-P04-009"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q04",
+      "knowledge_reference": "K-DEA-P04-009",
+      "knowledge_references": [
+        "K-DEA-P04-009"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q05",
+      "knowledge_reference": "K-DEA-P04-008",
+      "knowledge_references": [
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q06",
+      "knowledge_reference": "K-DEA-P04-008",
+      "knowledge_references": [
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q07",
+      "knowledge_reference": "K-DEA-P04-008",
+      "knowledge_references": [
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l04-q08",
+      "knowledge_reference": "K-DEA-P04-009",
+      "knowledge_references": [
+        "K-DEA-P04-009"
+      ],
+      "lesson_id": "dea-p04-l04",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les muscles",
+      "source_page": "37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q01",
+      "knowledge_reference": "K-DEA-P04-002",
+      "knowledge_references": [
+        "K-DEA-P04-002",
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q02",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q03",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q04",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q05",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q06",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q07",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l05-q08",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010"
+      ],
+      "lesson_id": "dea-p04-l05",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Les os - Le tronc",
+      "source_page": "35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q01",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q02",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q03",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q04",
+      "knowledge_reference": "K-DEA-P04-013",
+      "knowledge_references": [
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q05",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q06",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q07",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l06-q08",
+      "knowledge_reference": "K-DEA-P04-011",
+      "knowledge_references": [
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l06",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres supérieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q01",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q02",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q03",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q04",
+      "knowledge_reference": "K-DEA-P04-013",
+      "knowledge_references": [
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q05",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q06",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q07",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l07-q08",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l07",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Membres inférieurs",
+      "source_page": "34-35",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q01",
+      "knowledge_reference": "K-DEA-P04-001",
+      "knowledge_references": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q02",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q03",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q04",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q05",
+      "knowledge_reference": "K-DEA-P04-001",
+      "knowledge_references": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q06",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q07",
+      "knowledge_reference": "K-DEA-P04-005",
+      "knowledge_references": [
+        "K-DEA-P04-005"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-l08-q08",
+      "knowledge_reference": "K-DEA-P04-013",
+      "knowledge_references": [
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-l08",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q01",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q02",
+      "knowledge_reference": "K-DEA-P04-004",
+      "knowledge_references": [
+        "K-DEA-P04-004",
+        "K-DEA-P04-011",
+        "K-DEA-P04-012"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q03",
+      "knowledge_reference": "K-DEA-P04-006",
+      "knowledge_references": [
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q04",
+      "knowledge_reference": "K-DEA-P04-012",
+      "knowledge_references": [
+        "K-DEA-P04-012",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q05",
+      "knowledge_reference": "K-DEA-P04-001",
+      "knowledge_references": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-006",
+        "K-DEA-P04-008"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q06",
+      "knowledge_reference": "K-DEA-P04-005",
+      "knowledge_references": [
+        "K-DEA-P04-005"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q07",
+      "knowledge_reference": "K-DEA-P04-010",
+      "knowledge_references": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p04-boss-q08",
+      "knowledge_reference": "K-DEA-P04-001",
+      "knowledge_references": [
+        "K-DEA-P04-001",
+        "K-DEA-P04-013"
+      ],
+      "lesson_id": "dea-p04-boss",
+      "planned_parcours_ids": [
+        "parcours-04"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil locomoteur - Boss de synthèse",
+      "source_page": "34-37",
+      "source_version": "Version 1 — Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q01",
+      "knowledge_reference": "K-DEA-P05-001",
+      "knowledge_references": [
+        "K-DEA-P05-001"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18, 20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q02",
+      "knowledge_reference": "K-DEA-P05-002",
+      "knowledge_references": [
+        "K-DEA-P05-002",
+        "K-DEA-P05-004"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18, 20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q03",
+      "knowledge_reference": "K-DEA-P05-002",
+      "knowledge_references": [
+        "K-DEA-P05-002"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18, 20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q04",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18, 20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q05",
+      "knowledge_reference": "K-DEA-P05-004",
+      "knowledge_references": [
+        "K-DEA-P05-004"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q06",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q07",
+      "knowledge_reference": "K-DEA-P05-002",
+      "knowledge_references": [
+        "K-DEA-P05-002"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l01-q08",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003"
+      ],
+      "lesson_id": "dea-p05-l01",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "source_page": "18, 20",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q01",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q02",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-007"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q03",
+      "knowledge_reference": "K-DEA-P05-006",
+      "knowledge_references": [
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q04",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q05",
+      "knowledge_reference": "K-DEA-P05-001",
+      "knowledge_references": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q06",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18-19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q07",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003",
+        "K-DEA-P05-005"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "18",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l02-q08",
+      "knowledge_reference": "K-DEA-P05-007",
+      "knowledge_references": [
+        "K-DEA-P05-007"
+      ],
+      "lesson_id": "dea-p05-l02",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q01",
+      "knowledge_reference": "K-DEA-P05-008",
+      "knowledge_references": [
+        "K-DEA-P05-008"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q02",
+      "knowledge_reference": "K-DEA-P05-008",
+      "knowledge_references": [
+        "K-DEA-P05-008"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q03",
+      "knowledge_reference": "K-DEA-P05-008",
+      "knowledge_references": [
+        "K-DEA-P05-008"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q04",
+      "knowledge_reference": "K-DEA-P05-009",
+      "knowledge_references": [
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q05",
+      "knowledge_reference": "K-DEA-P05-009",
+      "knowledge_references": [
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q06",
+      "knowledge_reference": "K-DEA-P05-009",
+      "knowledge_references": [
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q07",
+      "knowledge_reference": "K-DEA-P05-008",
+      "knowledge_references": [
+        "K-DEA-P05-008",
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l03-q08",
+      "knowledge_reference": "K-DEA-P05-009",
+      "knowledge_references": [
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-l03",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Le sang",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q01",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q02",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q03",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q04",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q05",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q06",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q07",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l04-q08",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-l04",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Petite circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q01",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q02",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q03",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q04",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q05",
+      "knowledge_reference": "K-DEA-P05-006",
+      "knowledge_references": [
+        "K-DEA-P05-006",
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q06",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q07",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l05-q08",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l05",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Grande circulation",
+      "source_page": "21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q01",
+      "knowledge_reference": "K-DEA-P05-012",
+      "knowledge_references": [
+        "K-DEA-P05-012"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "53",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q02",
+      "knowledge_reference": "K-DEA-P05-012",
+      "knowledge_references": [
+        "K-DEA-P05-012"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "53",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q03",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "53, 66-67",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q04",
+      "knowledge_reference": "K-DEA-P05-012",
+      "knowledge_references": [
+        "K-DEA-P05-012",
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "53, 66-67",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q05",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "66",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q06",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "66",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q07",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "67",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l06-q08",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l06",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Matériels et mesures - Pression artérielle",
+      "source_page": "67",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q01",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q02",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q03",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q04",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q05",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q06",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q07",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l07-q08",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l07",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q01",
+      "knowledge_reference": "K-DEA-P05-001",
+      "knowledge_references": [
+        "K-DEA-P05-001"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q02",
+      "knowledge_reference": "K-DEA-P05-001",
+      "knowledge_references": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q03",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q04",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010",
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q05",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "66",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q06",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q07",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-l08-q08",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005"
+      ],
+      "lesson_id": "dea-p05-l08",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Synthèse cardiovasculaire",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q01",
+      "knowledge_reference": "K-DEA-P05-001",
+      "knowledge_references": [
+        "K-DEA-P05-001",
+        "K-DEA-P05-005",
+        "K-DEA-P05-006"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q02",
+      "knowledge_reference": "K-DEA-P05-010",
+      "knowledge_references": [
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q03",
+      "knowledge_reference": "K-DEA-P05-011",
+      "knowledge_references": [
+        "K-DEA-P05-011"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "18-21, 53, 66-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q04",
+      "knowledge_reference": "K-DEA-P05-013",
+      "knowledge_references": [
+        "K-DEA-P05-013"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "66",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q05",
+      "knowledge_reference": "K-DEA-P05-014",
+      "knowledge_references": [
+        "K-DEA-P05-014"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "67-68",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q06",
+      "knowledge_reference": "K-DEA-P05-003",
+      "knowledge_references": [
+        "K-DEA-P05-003"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "18",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q07",
+      "knowledge_reference": "K-DEA-P05-008",
+      "knowledge_references": [
+        "K-DEA-P05-008",
+        "K-DEA-P05-009"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "19",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p05-boss-q08",
+      "knowledge_reference": "K-DEA-P05-005",
+      "knowledge_references": [
+        "K-DEA-P05-005",
+        "K-DEA-P05-010"
+      ],
+      "lesson_id": "dea-p05-boss",
+      "planned_parcours_ids": [
+        "parcours-05"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil circulatoire - Boss de synthèse",
+      "source_page": "18, 21",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    }
+  ]
+}

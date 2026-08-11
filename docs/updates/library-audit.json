@@ -1,0 +1,2082 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-05T04:22:22.015Z",
+  "libraryVersion": "v1",
+  "counts": {
+    "officialDocuments": 4,
+    "internalDocuments": 0,
+    "knowledge": 159,
+    "questions": 0,
+    "bosses": 0,
+    "clinicalCases": 0,
+    "glossaryTerms": 0,
+    "obsoleteDocuments": 0,
+    "knowledgeWithoutSource": 0,
+    "questionsWithoutReference": 0
+  },
+  "issuesBySeverity": {
+    "INFO": 0,
+    "WARNING": 257,
+    "ERROR": 0,
+    "CRITICAL": 0
+  },
+  "issues": [
+    {
+      "id": "library-00001",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée auxiliaire ambulancier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-001"
+    },
+    {
+      "id": "library-00002",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transport sanitaire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-001"
+    },
+    {
+      "id": "library-00003",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée aide médicale urgente n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-001"
+    },
+    {
+      "id": "library-00004",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ambulancier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-002"
+    },
+    {
+      "id": "library-00005",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée AFGSU 2 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-002"
+    },
+    {
+      "id": "library-00006",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transport sanitaire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-002"
+    },
+    {
+      "id": "library-00007",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée communication n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-003"
+    },
+    {
+      "id": "library-00008",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée mobilisation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-003"
+    },
+    {
+      "id": "library-00009",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée hygiène et confort n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-003"
+    },
+    {
+      "id": "library-00010",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée bilan n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-004"
+    },
+    {
+      "id": "library-00011",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée urgence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-004"
+    },
+    {
+      "id": "library-00012",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation médicale n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-004"
+    },
+    {
+      "id": "library-00013",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée véhicule sanitaire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-005"
+    },
+    {
+      "id": "library-00014",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée sécurité du transport n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-005"
+    },
+    {
+      "id": "library-00015",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-006"
+    },
+    {
+      "id": "library-00016",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée itinéraire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-006"
+    },
+    {
+      "id": "library-00017",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée sécurité routière n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-006"
+    },
+    {
+      "id": "library-00018",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée hygiène n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-007"
+    },
+    {
+      "id": "library-00019",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée désinfection n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-007"
+    },
+    {
+      "id": "library-00020",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée maintenance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-007"
+    },
+    {
+      "id": "library-00021",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transmission n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-008"
+    },
+    {
+      "id": "library-00022",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée dossier patient n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-008"
+    },
+    {
+      "id": "library-00023",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée traçabilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-008"
+    },
+    {
+      "id": "library-00024",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée équipe pluriprofessionnelle n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-009"
+    },
+    {
+      "id": "library-00025",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-009"
+    },
+    {
+      "id": "library-00026",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée gestion des risques n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-009"
+    },
+    {
+      "id": "library-00027",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée certification n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-010"
+    },
+    {
+      "id": "library-00028",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée blocs de compétences n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-010"
+    },
+    {
+      "id": "library-00029",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée admissibilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-011"
+    },
+    {
+      "id": "library-00030",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée entretien n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-011"
+    },
+    {
+      "id": "library-00031",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stage d’observation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-011"
+    },
+    {
+      "id": "library-00032",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée report n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-012"
+    },
+    {
+      "id": "library-00033",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée apprentissage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-012"
+    },
+    {
+      "id": "library-00034",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée admission dérogatoire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-012"
+    },
+    {
+      "id": "library-00035",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée modules n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-013"
+    },
+    {
+      "id": "library-00036",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stages n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-013"
+    },
+    {
+      "id": "library-00037",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée organisation pédagogique n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-013"
+    },
+    {
+      "id": "library-00038",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée modules n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-014"
+    },
+    {
+      "id": "library-00039",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée simulation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-014"
+    },
+    {
+      "id": "library-00040",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée distance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-014"
+    },
+    {
+      "id": "library-00041",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-015"
+    },
+    {
+      "id": "library-00042",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée portfolio n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-015"
+    },
+    {
+      "id": "library-00043",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée évaluation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-015"
+    },
+    {
+      "id": "library-00044",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée portfolio n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-016"
+    },
+    {
+      "id": "library-00045",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée tuteur n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-016"
+    },
+    {
+      "id": "library-00046",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétences n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-016"
+    },
+    {
+      "id": "library-00047",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée certification n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-017"
+    },
+    {
+      "id": "library-00048",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée rattrapage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-017"
+    },
+    {
+      "id": "library-00049",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée jury n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-017"
+    },
+    {
+      "id": "library-00050",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée équivalence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-018"
+    },
+    {
+      "id": "library-00051",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée allègement n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-018"
+    },
+    {
+      "id": "library-00052",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée parcours individualisé n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-018"
+    },
+    {
+      "id": "library-00053",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée alternance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-019"
+    },
+    {
+      "id": "library-00054",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée portfolio n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-019"
+    },
+    {
+      "id": "library-00055",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-019"
+    },
+    {
+      "id": "library-00056",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée admission n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-020"
+    },
+    {
+      "id": "library-00057",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée aptitudes n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-020"
+    },
+    {
+      "id": "library-00058",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée projet professionnel n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-020"
+    },
+    {
+      "id": "library-00059",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée communication n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C01"
+    },
+    {
+      "id": "library-00060",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée patient n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C01"
+    },
+    {
+      "id": "library-00061",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée entourage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C01"
+    },
+    {
+      "id": "library-00062",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée mobilisation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C02"
+    },
+    {
+      "id": "library-00063",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée brancardage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C02"
+    },
+    {
+      "id": "library-00064",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ergonomie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C02"
+    },
+    {
+      "id": "library-00065",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée hygiène n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C03"
+    },
+    {
+      "id": "library-00066",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée confort n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C03"
+    },
+    {
+      "id": "library-00067",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée bientraitance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C03"
+    },
+    {
+      "id": "library-00068",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée bilan n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C04"
+    },
+    {
+      "id": "library-00069",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée paramètres vitaux n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C04"
+    },
+    {
+      "id": "library-00070",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée urgence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C04"
+    },
+    {
+      "id": "library-00071",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée urgence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C05"
+    },
+    {
+      "id": "library-00072",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée soins n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C05"
+    },
+    {
+      "id": "library-00073",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation médicale n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C05"
+    },
+    {
+      "id": "library-00074",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée véhicule n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C06"
+    },
+    {
+      "id": "library-00075",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée sécurité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C06"
+    },
+    {
+      "id": "library-00076",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée maintenance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C06"
+    },
+    {
+      "id": "library-00077",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C07"
+    },
+    {
+      "id": "library-00078",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transport n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C07"
+    },
+    {
+      "id": "library-00079",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée patient n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C07"
+    },
+    {
+      "id": "library-00080",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée hygiène n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C08"
+    },
+    {
+      "id": "library-00081",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée désinfection n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C08"
+    },
+    {
+      "id": "library-00082",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée matériel n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C08"
+    },
+    {
+      "id": "library-00083",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée maintenance n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C09"
+    },
+    {
+      "id": "library-00084",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée traçabilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C09"
+    },
+    {
+      "id": "library-00085",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C09"
+    },
+    {
+      "id": "library-00086",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transmission n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C10"
+    },
+    {
+      "id": "library-00087",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée bilan n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C10"
+    },
+    {
+      "id": "library-00088",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée tutorat n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C10"
+    },
+    {
+      "id": "library-00089",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée équipe n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C11"
+    },
+    {
+      "id": "library-00090",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C11"
+    },
+    {
+      "id": "library-00091",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée risques n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-C11"
+    },
+    {
+      "id": "library-00092",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 1 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M01"
+    },
+    {
+      "id": "library-00093",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 2 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M02"
+    },
+    {
+      "id": "library-00094",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 3 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M03"
+    },
+    {
+      "id": "library-00095",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 4 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M04"
+    },
+    {
+      "id": "library-00096",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 5 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M05"
+    },
+    {
+      "id": "library-00097",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 6 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M06"
+    },
+    {
+      "id": "library-00098",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 7 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M07"
+    },
+    {
+      "id": "library-00099",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétences 8 et 9 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M08"
+    },
+    {
+      "id": "library-00100",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 10 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M09"
+    },
+    {
+      "id": "library-00101",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée compétence 11 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-JORF-DEA-M10"
+    },
+    {
+      "id": "library-00102",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ambulancier SMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-001"
+    },
+    {
+      "id": "library-00103",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite en intervention n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-001"
+    },
+    {
+      "id": "library-00104",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée UMH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-002"
+    },
+    {
+      "id": "library-00105",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ambulancier SMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-002"
+    },
+    {
+      "id": "library-00106",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée avertisseurs n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-003"
+    },
+    {
+      "id": "library-00107",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée cadre légal n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-003"
+    },
+    {
+      "id": "library-00108",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-004"
+    },
+    {
+      "id": "library-00109",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée module 1 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-005"
+    },
+    {
+      "id": "library-00110",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée attestation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-005"
+    },
+    {
+      "id": "library-00111",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée FAE n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-006"
+    },
+    {
+      "id": "library-00112",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée formation conduite n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-006"
+    },
+    {
+      "id": "library-00113",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée module 1 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-007"
+    },
+    {
+      "id": "library-00114",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée module 2 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-007"
+    },
+    {
+      "id": "library-00115",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée module 3 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-007"
+    },
+    {
+      "id": "library-00116",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée actualisation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-007"
+    },
+    {
+      "id": "library-00117",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée VIGP n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-008"
+    },
+    {
+      "id": "library-00118",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée responsabilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-008"
+    },
+    {
+      "id": "library-00119",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée cadre légal n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-009"
+    },
+    {
+      "id": "library-00120",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée VIGP n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-009"
+    },
+    {
+      "id": "library-00121",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée VIGP n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-010"
+    },
+    {
+      "id": "library-00122",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée perception des usagers n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-010"
+    },
+    {
+      "id": "library-00123",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée accidentologie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-011"
+    },
+    {
+      "id": "library-00124",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stress n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-011"
+    },
+    {
+      "id": "library-00125",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée distance d’arrêt n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-012"
+    },
+    {
+      "id": "library-00126",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée freinage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-012"
+    },
+    {
+      "id": "library-00127",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée freinage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-013"
+    },
+    {
+      "id": "library-00128",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée perte d’adhérence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-013"
+    },
+    {
+      "id": "library-00129",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ABS n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00130",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ESP n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00131",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée AFU n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00132",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ESR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00133",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée DSC n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00134",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ASR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-014"
+    },
+    {
+      "id": "library-00135",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite défensive n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-015"
+    },
+    {
+      "id": "library-00136",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée anticipation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-015"
+    },
+    {
+      "id": "library-00137",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée gabarit n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-016"
+    },
+    {
+      "id": "library-00138",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée sécurité intervention n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-016"
+    },
+    {
+      "id": "library-00139",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée arrimage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-017"
+    },
+    {
+      "id": "library-00140",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée confort n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-017"
+    },
+    {
+      "id": "library-00141",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée soin n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-017"
+    },
+    {
+      "id": "library-00142",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée répartition des poids n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-018"
+    },
+    {
+      "id": "library-00143",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée patient n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-018"
+    },
+    {
+      "id": "library-00144",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée gabarit n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-019"
+    },
+    {
+      "id": "library-00145",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée arrimage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-019"
+    },
+    {
+      "id": "library-00146",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ergonomie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-020"
+    },
+    {
+      "id": "library-00147",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée commandes n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-020"
+    },
+    {
+      "id": "library-00148",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée freinage d’urgence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-021"
+    },
+    {
+      "id": "library-00149",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée anticipation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-021"
+    },
+    {
+      "id": "library-00150",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée distance d’arrêt n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-022"
+    },
+    {
+      "id": "library-00151",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée adhérence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-022"
+    },
+    {
+      "id": "library-00152",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée freinage urgence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-023"
+    },
+    {
+      "id": "library-00153",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée anticipation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-023"
+    },
+    {
+      "id": "library-00154",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée piste humide n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-024"
+    },
+    {
+      "id": "library-00155",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transfert de masse n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-024"
+    },
+    {
+      "id": "library-00156",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite préventive n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-025"
+    },
+    {
+      "id": "library-00157",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée temps de réaction n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-025"
+    },
+    {
+      "id": "library-00158",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée placement n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-026"
+    },
+    {
+      "id": "library-00159",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée trajectoire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-026"
+    },
+    {
+      "id": "library-00160",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée trajectoire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-027"
+    },
+    {
+      "id": "library-00161",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée allure rapide n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-027"
+    },
+    {
+      "id": "library-00162",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée regard n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-028"
+    },
+    {
+      "id": "library-00163",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée dynamique n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-028"
+    },
+    {
+      "id": "library-00164",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée vitesse n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-029"
+    },
+    {
+      "id": "library-00165",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée convoi n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-029"
+    },
+    {
+      "id": "library-00166",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée allure rapide n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-030"
+    },
+    {
+      "id": "library-00167",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée trajectoire n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-030"
+    },
+    {
+      "id": "library-00168",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée effets sur le patient n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-031"
+    },
+    {
+      "id": "library-00169",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite hors intervention n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-031"
+    },
+    {
+      "id": "library-00170",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée VIGP n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-032"
+    },
+    {
+      "id": "library-00171",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée responsabilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-032"
+    },
+    {
+      "id": "library-00172",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée allure rapide n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-033"
+    },
+    {
+      "id": "library-00173",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée conduite préventive n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-033"
+    },
+    {
+      "id": "library-00174",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée patient embarqué n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-034"
+    },
+    {
+      "id": "library-00175",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée arrimage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-034"
+    },
+    {
+      "id": "library-00176",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée anticipation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-035"
+    },
+    {
+      "id": "library-00177",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée avertisseurs n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-035"
+    },
+    {
+      "id": "library-00178",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée perception n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-036"
+    },
+    {
+      "id": "library-00179",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée stress n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-036"
+    },
+    {
+      "id": "library-00180",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée freinage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-037"
+    },
+    {
+      "id": "library-00181",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée évitement n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-037"
+    },
+    {
+      "id": "library-00182",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée adhérence n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-037"
+    },
+    {
+      "id": "library-00183",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée formation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-038"
+    },
+    {
+      "id": "library-00184",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée accidentologie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-038"
+    },
+    {
+      "id": "library-00185",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée formation pratique n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-039"
+    },
+    {
+      "id": "library-00186",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée certification n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SEC-2026-039"
+    },
+    {
+      "id": "library-00187",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SAMU n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-001"
+    },
+    {
+      "id": "library-00188",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée UMH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-001"
+    },
+    {
+      "id": "library-00189",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-001"
+    },
+    {
+      "id": "library-00190",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée intervention n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-002"
+    },
+    {
+      "id": "library-00191",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transfert n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-002"
+    },
+    {
+      "id": "library-00192",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée inter-hospitalier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-003"
+    },
+    {
+      "id": "library-00193",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée intra-hospitalier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-003"
+    },
+    {
+      "id": "library-00194",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée mission de transfert n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-004"
+    },
+    {
+      "id": "library-00195",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée TiiH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-005"
+    },
+    {
+      "id": "library-00196",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée T2iH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-005"
+    },
+    {
+      "id": "library-00197",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée mission de transfert n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-006"
+    },
+    {
+      "id": "library-00198",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée Rapasan n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-007"
+    },
+    {
+      "id": "library-00199",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée Medivac n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-007"
+    },
+    {
+      "id": "library-00200",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée transfert n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-008"
+    },
+    {
+      "id": "library-00201",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée orientation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-008"
+    },
+    {
+      "id": "library-00202",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SAMU n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-009"
+    },
+    {
+      "id": "library-00203",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-009"
+    },
+    {
+      "id": "library-00204",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée UMH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-010"
+    },
+    {
+      "id": "library-00205",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée mission n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-010"
+    },
+    {
+      "id": "library-00206",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée intervention n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-011"
+    },
+    {
+      "id": "library-00207",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée logistique n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-011"
+    },
+    {
+      "id": "library-00208",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-012"
+    },
+    {
+      "id": "library-00209",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée délai n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-012"
+    },
+    {
+      "id": "library-00210",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée DRM n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-013"
+    },
+    {
+      "id": "library-00211",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée indicateurs n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-013"
+    },
+    {
+      "id": "library-00212",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SROS n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-014"
+    },
+    {
+      "id": "library-00213",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée géolocalisation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-014"
+    },
+    {
+      "id": "library-00214",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée secteur n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-015"
+    },
+    {
+      "id": "library-00215",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée indicateurs n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-015"
+    },
+    {
+      "id": "library-00216",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ANTARES n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-016"
+    },
+    {
+      "id": "library-00217",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée DRM n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-016"
+    },
+    {
+      "id": "library-00218",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée status n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-017"
+    },
+    {
+      "id": "library-00219",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée indicateurs n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-017"
+    },
+    {
+      "id": "library-00220",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée néonatalogie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-018"
+    },
+    {
+      "id": "library-00221",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée UMH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-018"
+    },
+    {
+      "id": "library-00222",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-019"
+    },
+    {
+      "id": "library-00223",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée vecteur n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-019"
+    },
+    {
+      "id": "library-00224",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée EN 1789 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-020"
+    },
+    {
+      "id": "library-00225",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée UMH n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-020"
+    },
+    {
+      "id": "library-00226",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée HéliSMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-021"
+    },
+    {
+      "id": "library-00227",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée NaviSMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-021"
+    },
+    {
+      "id": "library-00228",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée matériel n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-022"
+    },
+    {
+      "id": "library-00229",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée évaluation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-022"
+    },
+    {
+      "id": "library-00230",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée logistique n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-023"
+    },
+    {
+      "id": "library-00231",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée hygiène n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-023"
+    },
+    {
+      "id": "library-00232",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée EN 1789 n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-024"
+    },
+    {
+      "id": "library-00233",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée néonatalogie n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-024"
+    },
+    {
+      "id": "library-00234",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée équipe n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-025"
+    },
+    {
+      "id": "library-00235",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée ambulancier SMUR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-025"
+    },
+    {
+      "id": "library-00236",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée bilan n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-026"
+    },
+    {
+      "id": "library-00237",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée régulation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-026"
+    },
+    {
+      "id": "library-00238",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée orientation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-026"
+    },
+    {
+      "id": "library-00239",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée dossier hospitalier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-027"
+    },
+    {
+      "id": "library-00240",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée INS n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-027"
+    },
+    {
+      "id": "library-00241",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée NIR n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-027"
+    },
+    {
+      "id": "library-00242",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité du dossier n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-028"
+    },
+    {
+      "id": "library-00243",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée orientation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-028"
+    },
+    {
+      "id": "library-00244",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée DPC n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-029"
+    },
+    {
+      "id": "library-00245",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée registre n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-029"
+    },
+    {
+      "id": "library-00246",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée sécurité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-030"
+    },
+    {
+      "id": "library-00247",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée procédures locales n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-030"
+    },
+    {
+      "id": "library-00248",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée évaluation pratiques n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-031"
+    },
+    {
+      "id": "library-00249",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée formation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-031"
+    },
+    {
+      "id": "library-00250",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée CESU n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-032"
+    },
+    {
+      "id": "library-00251",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée formation n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-032"
+    },
+    {
+      "id": "library-00252",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-033"
+    },
+    {
+      "id": "library-00253",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée SI n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-033"
+    },
+    {
+      "id": "library-00254",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée pilotage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-034"
+    },
+    {
+      "id": "library-00255",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée qualité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-034"
+    },
+    {
+      "id": "library-00256",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée horodatage n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-035"
+    },
+    {
+      "id": "library-00257",
+      "severity": "WARNING",
+      "code": "RELATED_KNOWLEDGE_MISSING",
+      "message": "La connaissance liée interopérabilité n'existe pas.",
+      "entityType": "knowledge",
+      "entityId": "K-SMUR-2013-035"
+    }
+  ],
+  "qualityScore": 0
+}

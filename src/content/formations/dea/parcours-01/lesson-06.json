@@ -92,7 +92,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les tissus constituent des organes, qui forment des appareils.",
+      "common_mistake": "Plusieurs appareils ne définissent pas un organe.",
+      "key_takeaway": "Le support présente les tissus comme constituant des organes, eux-mêmes regroupés en appareils ou systèmes."
     },
     {
       "id": "dea-p1-l3-mcq-02",
@@ -144,7 +147,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les tissus constituent des organes.",
+      "common_mistake": "La cellule précède le tissu dans l’organisation présentée.",
+      "key_takeaway": "L’ordre présenté est cellule, tissu, organe, puis appareil ou système."
     },
     {
       "id": "dea-p1-l3-mcq-03",
@@ -196,7 +202,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : le cœur figure parmi les organes de l’appareil circulatoire.",
+      "common_mistake": "Le cœur est classé comme organe, pas comme système.",
+      "key_takeaway": "Un organe appartient à un appareil ou système qui regroupe plusieurs organes ou éléments associés."
     },
     {
       "id": "dea-p1-l3-mcq-04",
@@ -248,7 +257,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les organes s’organisent en appareils ou systèmes.",
+      "common_mistake": "Les tissus se situent avant les organes dans l’organisation.",
+      "key_takeaway": "Les organes sont regroupés en appareils ou systèmes assurant de grandes fonctions."
     },
     {
       "id": "dea-p1-l3-mcq-05",
@@ -299,7 +311,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les bronches sont citées dans l’appareil respiratoire.",
+      "common_mistake": "La vessie figure avec l’appareil excréteur.",
+      "key_takeaway": "Le support associe nez, trachée, bronches et poumons à l’appareil respiratoire."
     },
     {
       "id": "dea-p1-l3-mcq-06",
@@ -350,7 +365,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : le cœur est cité avec les vaisseaux et le sang.",
+      "common_mistake": "L’appareil neurologique comprend notamment cerveau, moelle épinière et nerfs.",
+      "key_takeaway": "Le cœur, les vaisseaux et le sang sont rattachés à l’appareil circulatoire."
     },
     {
       "id": "dea-p1-l3-mcq-07",
@@ -401,7 +419,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : l’estomac figure dans l’appareil digestif.",
+      "common_mistake": "La trachée est associée à l’appareil respiratoire.",
+      "key_takeaway": "Le tableau cite bouche, œsophage, estomac et intestins pour l’appareil digestif."
     },
     {
       "id": "dea-p1-l3-mcq-08",
@@ -452,7 +473,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : ce couple figure dans la ligne de l’appareil excréteur.",
+      "common_mistake": "Ce couple appartient à l’appareil circulatoire.",
+      "key_takeaway": "Le support associe les reins et la vessie à l’appareil excréteur."
     },
     {
       "id": "dea-p1-l3-mcq-09",
@@ -504,7 +528,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : ils figurent dans la ligne de l’appareil locomoteur.",
+      "common_mistake": "Ces éléments sont associés à l’appareil neurologique.",
+      "key_takeaway": "Le tableau associe os, muscles et ligaments à l’appareil locomoteur."
     },
     {
       "id": "dea-p1-l3-mcq-10",
@@ -555,7 +582,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : ces éléments composent l’appareil neurologique dans le tableau.",
+      "common_mistake": "Ils sont associés à la filtration et à l’élimination.",
+      "key_takeaway": "Le support relie l’appareil neurologique aux commandes, à l’information et à la coordination."
     },
     {
       "id": "dea-p1-l3-mcq-11",
@@ -606,7 +636,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : cette fonction est indiquée pour l’appareil respiratoire.",
+      "common_mistake": "Cette fonction est associée à l’appareil excréteur.",
+      "key_takeaway": "Le tableau relie l’appareil respiratoire à l’inspiration de l’O2 et à l’expiration du CO2."
     },
     {
       "id": "dea-p1-l3-mcq-12",
@@ -659,7 +692,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : le support présente l’abdomen comme région et l’estomac comme organe digestif.",
+      "common_mistake": "L’abdomen est une région et l’estomac un organe.",
+      "key_takeaway": "Le support distingue les grandes régions anatomiques des organes listés dans les appareils."
     },
     {
       "id": "dea-p1-l3-mcq-13",
@@ -712,7 +748,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : cette succession reprend l’organisation décrite.",
+      "common_mistake": "L’appareil se situe à un niveau plus global.",
+      "key_takeaway": "Le support décrit une progression des cellules vers les tissus, puis les organes."
     },
     {
       "id": "dea-p1-l3-mcq-14",
@@ -763,7 +802,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Cette description reste factuelle et localise la région.",
+      "common_mistake": "La région abdominale ne permet pas d’identifier à elle seule un organe atteint.",
+      "key_takeaway": "Une région anatomique peut être transmise précisément sans conclure sur l’organe concerné."
     },
     {
       "id": "dea-p1-l3-mcq-15",
@@ -816,7 +858,10 @@
         "originalType": "mcq",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les trois éléments correspondent à la même ligne du tableau.",
+      "common_mistake": "Les reins et la vessie sont rattachés à l’appareil excréteur.",
+      "key_takeaway": "L’appareil excréteur est associé aux reins et à la vessie, ainsi qu’aux fonctions de filtration et d’élimination."
     },
     {
       "id": "dea-p1-l3-tf-01",
@@ -856,7 +901,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Le support indique que les cellules s’agencent en tissus, lesquels constituent des organes.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Le support indique que les cellules s’agencent en tissus, lesquels constituent des organes."
     },
     {
       "id": "dea-p1-l3-tf-02",
@@ -896,7 +944,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Un appareil ou système regroupe des organes ; il ne correspond pas à un tissu isolé.",
+      "common_mistake": "Cette proposition ne correspond pas au support.",
+      "key_takeaway": "Un appareil ou système regroupe des organes ; il ne correspond pas à un tissu isolé."
     },
     {
       "id": "dea-p1-l3-tf-03",
@@ -936,7 +987,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Cette relation est explicitement présentée dans l’organisation générale du corps.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Cette relation est explicitement présentée dans l’organisation générale du corps."
     },
     {
       "id": "dea-p1-l3-tf-04",
@@ -975,7 +1029,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "L’abdomen est une région anatomique ; l’estomac et les intestins sont des organes digestifs cités.",
+      "common_mistake": "Cette proposition ne correspond pas au support.",
+      "key_takeaway": "L’abdomen est une région anatomique ; l’estomac et les intestins sont des organes digestifs cités."
     },
     {
       "id": "dea-p1-l3-tf-05",
@@ -1014,7 +1071,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Le tableau place le cœur avec les vaisseaux et le sang dans l’appareil circulatoire.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Le tableau place le cœur avec les vaisseaux et le sang dans l’appareil circulatoire."
     },
     {
       "id": "dea-p1-l3-tf-06",
@@ -1053,7 +1113,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Les reins et la vessie sont associés à l’appareil excréteur.",
+      "common_mistake": "Cette proposition ne correspond pas au support.",
+      "key_takeaway": "Les reins et la vessie sont associés à l’appareil excréteur."
     },
     {
       "id": "dea-p1-l3-tf-07",
@@ -1092,7 +1155,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Le support cite nez, trachée, bronches et poumons pour l’appareil respiratoire.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Le support cite nez, trachée, bronches et poumons pour l’appareil respiratoire."
     },
     {
       "id": "dea-p1-l3-tf-08",
@@ -1131,7 +1197,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Les nerfs sont associés à l’appareil neurologique.",
+      "common_mistake": "Cette proposition ne correspond pas au support.",
+      "key_takeaway": "Les nerfs sont associés à l’appareil neurologique."
     },
     {
       "id": "dea-p1-l3-tf-09",
@@ -1170,7 +1239,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Ces trois éléments sont regroupés dans la ligne de l’appareil locomoteur.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Ces trois éléments sont regroupés dans la ligne de l’appareil locomoteur."
     },
     {
       "id": "dea-p1-l3-tf-10",
@@ -1210,7 +1282,10 @@
         "originalType": "true_false",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Cet ensemble d’organes et ces fonctions correspondent à l’appareil digestif.",
+      "common_mistake": "Cette proposition correspond au support.",
+      "key_takeaway": "Cet ensemble d’organes et ces fonctions correspondent à l’appareil digestif."
     },
     {
       "id": "dea-p1-l3-match-01",
@@ -1264,7 +1339,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Tissu correspond à : Cellules agencées.",
+      "key_takeaway": "Le support présente l’enchaînement cellule, tissu, organe puis appareil ou système."
     },
     {
       "id": "dea-p1-l3-match-02",
@@ -1317,7 +1394,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Appareil respiratoire correspond à : Poumons.",
+      "key_takeaway": "Chaque organe proposé figure dans la ligne correspondante du tableau."
     },
     {
       "id": "dea-p1-l3-match-03",
@@ -1369,7 +1448,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Respiratoire correspond à : Inspiration O2 et expiration CO2.",
+      "key_takeaway": "Le tableau relie chaque appareil à ses fonctions générales."
     },
     {
       "id": "dea-p1-l3-match-04",
@@ -1421,7 +1502,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Excréteur correspond à : Reins et vessie.",
+      "key_takeaway": "Ces groupes reprennent les associations du tableau des sept appareils."
     },
     {
       "id": "dea-p1-l3-match-05",
@@ -1476,7 +1559,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Abdomen correspond à : Région anatomique.",
+      "key_takeaway": "Une région, un organe et un appareil correspondent à des catégories différentes."
     },
     {
       "id": "dea-p1-l3-match-06",
@@ -1535,7 +1620,9 @@
         "associationMode": "matching",
         "requiredSelections": 4,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Trachée correspond à : Respiratoire.",
+      "key_takeaway": "Chaque élément est classé dans l’appareil correspondant par le support."
     },
     {
       "id": "dea-p1-l3-match-07",
@@ -1596,7 +1683,9 @@
         "associationMode": "matching",
         "requiredSelections": 4,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Poumons correspond à : Inspiration O2 et expiration CO2.",
+      "key_takeaway": "La fonction est celle de l’appareil auquel chaque organe est rattaché."
     },
     {
       "id": "dea-p1-l3-match-08",
@@ -1649,7 +1738,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Nez, trachée, bronches, poumons correspond à : Respiratoire.",
+      "key_takeaway": "Les ensembles proposés reprennent les regroupements du tableau."
     },
     {
       "id": "dea-p1-l3-match-09",
@@ -1703,7 +1794,9 @@
         "associationMode": "matching",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Cellules qui s’agencent correspond à : Tissu.",
+      "key_takeaway": "Cette association suit la progression structurelle décrite page 15."
     },
     {
       "id": "dea-p1-l3-match-10",
@@ -1785,7 +1878,9 @@
         "associationMode": "matching",
         "requiredSelections": 7,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Respiratoire correspond à : Nez, trachée, bronches, poumons.",
+      "key_takeaway": "Les sept correspondances reproduisent l’organisation présentée dans le tableau du support."
     },
     {
       "id": "dea-p1-l3-order-01",
@@ -1844,7 +1939,9 @@
         "reviewStatus": "source_verified",
         "requiredSelections": 4,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Organe occupe la position 3 dans cet ordre.",
+      "key_takeaway": "L’ordre structurel est cellule, tissu, organe, puis appareil ou système."
     },
     {
       "id": "dea-p1-l3-order-02",
@@ -1905,7 +2002,9 @@
         "reviewStatus": "source_verified",
         "requiredSelections": 4,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Les organes forment un appareil occupe la position 3 dans cet ordre.",
+      "key_takeaway": "Le support relie l’organisation structurelle aux grandes fonctions du corps."
     },
     {
       "id": "dea-p1-l3-order-03",
@@ -1957,7 +2056,9 @@
         "reviewStatus": "source_verified",
         "requiredSelections": 3,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Transmettre la localisation anatomique occupe la position 3 dans cet ordre.",
+      "key_takeaway": "Le support demande de s’entendre sur l’organe ou la région afin de transmettre un bilan exploitable."
     },
     {
       "id": "dea-p1-l3-order-04",
@@ -2017,7 +2118,9 @@
         "reviewStatus": "source_verified",
         "requiredSelections": 4,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Tissu occupe la position 3 dans cet ordre.",
+      "key_takeaway": "En ordre inverse, on passe de l’appareil à l’organe, puis au tissu et à la cellule."
     },
     {
       "id": "dea-p1-l3-order-05",
@@ -2085,7 +2188,9 @@
         "reviewStatus": "source_verified",
         "requiredSelections": 5,
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Fonctions indispensables à la vie occupe la position 5 dans cet ordre.",
+      "key_takeaway": "Les cellules forment des tissus, puis des organes et des appareils assurant les grandes fonctions."
     },
     {
       "id": "dea-p1-l3-case-01",
@@ -2136,7 +2241,10 @@
         "originalType": "clinical_case",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : cette formulation décrit la région sans poser de diagnostic.",
+      "common_mistake": "La région montrée ne permet pas de conclure sur un organe précis.",
+      "key_takeaway": "La transmission doit identifier la région anatomique de façon exploitable sans attribuer une cause."
     },
     {
       "id": "dea-p1-l3-case-02",
@@ -2189,7 +2297,10 @@
         "originalType": "clinical_case",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : il figure avec les vaisseaux et le sang dans cet appareil.",
+      "common_mistake": "Le cœur est classé comme organe circulatoire.",
+      "key_takeaway": "Le cœur est un organe rattaché à l’appareil circulatoire."
     },
     {
       "id": "dea-p1-l3-case-03",
@@ -2240,7 +2351,10 @@
         "originalType": "clinical_case",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : organes et fonctions correspondent à la même ligne du tableau.",
+      "common_mistake": "L’assimilation est associée à l’appareil digestif.",
+      "key_takeaway": "Les reins et la vessie sont associés à l’appareil excréteur et à ses fonctions."
     },
     {
       "id": "dea-p1-l3-case-04",
@@ -2291,7 +2405,10 @@
         "originalType": "clinical_case",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : elle constitue une localisation factuelle et exploitable.",
+      "common_mistake": "La proximité ne prouve pas qu’un organe est concerné.",
+      "key_takeaway": "La localisation factuelle doit être distinguée d’une interprétation sur l’organe concerné."
     },
     {
       "id": "dea-p1-l3-case-05",
@@ -2343,7 +2460,10 @@
         "originalType": "clinical_case",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : la région est décrite et la limite de l’information est respectée.",
+      "common_mistake": "L’abdomen est une région et non un organe.",
+      "key_takeaway": "Une localisation précise n’autorise pas à identifier un organe atteint ni à poser un diagnostic."
     },
     {
       "id": "dea-p1-l3-priority-01",
@@ -2395,7 +2515,10 @@
         "originalType": "prioritization",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : cette précision rend le bilan exploitable.",
+      "common_mistake": "Une hypothèse ne remplace pas la localisation factuelle.",
+      "key_takeaway": "Le support souligne la nécessité de s’entendre sur l’organe ou la région avant la transmission."
     },
     {
       "id": "dea-p1-l3-priority-02",
@@ -2448,7 +2571,10 @@
         "originalType": "prioritization",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : les tissus constituent les organes.",
+      "common_mistake": "L’appareil vient après l’organe.",
+      "key_takeaway": "Le tissu est le niveau immédiatement antérieur à l’organe dans l’organisation présentée."
     },
     {
       "id": "dea-p1-l3-priority-03",
@@ -2501,7 +2627,10 @@
         "originalType": "prioritization",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : l’appareil relie plusieurs organes à une grande fonction.",
+      "common_mistake": "Une région localise mais ne regroupe pas nécessairement des organes par fonction.",
+      "key_takeaway": "Les appareils regroupent les organes et assurent les fonctions indispensables à la vie."
     },
     {
       "id": "dea-p1-l3-priority-04",
@@ -2554,7 +2683,10 @@
         "originalType": "prioritization",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : cette lecture respecte les trois colonnes du tableau.",
+      "common_mistake": "La proximité anatomique ne suffit pas à classer un organe.",
+      "key_takeaway": "La lecture appareil, organes, fonctions conserve la relation exacte présentée dans le tableau."
     },
     {
       "id": "dea-p1-l3-priority-05",
@@ -2606,7 +2738,10 @@
         "originalType": "prioritization",
         "reviewStatus": "source_verified",
         "migratedFromLessonId": "dea-p01-l03"
-      }
+      },
+      "why_correct": "Exact : il faut d’abord préciser la localisation factuelle.",
+      "common_mistake": "Cette fonction ne précise pas la zone réellement désignée.",
+      "key_takeaway": "L’identification précise de la région précède toute interprétation sur un organe concerné."
     }
   ]
 }

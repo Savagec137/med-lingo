@@ -1,0 +1,755 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l03",
+  "title": "Le sang",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les fonctions générales du sang.",
+    "Distinguer plasma et cellules sanguines.",
+    "Associer globules rouges, globules blancs et plaquettes à leur rôle principal."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular",
+    "body.tissue"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l02"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l03-q01",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quelles substances ou éléments le sang transporte-t-il selon le support ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q01-a1",
+          "text": "L’oxygène et le dioxyde de carbone",
+          "explanation": "Ces deux gaz sont explicitement cités."
+        },
+        {
+          "id": "dea-p05-l03-q01-a2",
+          "text": "Des nutriments et des déchets",
+          "explanation": "Nutriments et déchets sont cités dans les transports du sang."
+        },
+        {
+          "id": "dea-p05-l03-q01-a3",
+          "text": "Uniquement des hormones",
+          "explanation": "Le sang ne transporte pas uniquement des hormones.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l03-q01-a4",
+          "text": "Uniquement de l’eau",
+          "explanation": "Le sang transporte bien plus que de l’eau.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l03-q01-a1",
+        "dea-p05-l03-q01-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l03-q01-a1",
+        "dea-p05-l03-q01-a2"
+      ],
+      "explanation": "Le sang transporte notamment gaz respiratoires, nutriments et déchets.",
+      "knowledgeIds": [
+        "K-DEA-P05-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le sang transporte notamment gaz respiratoires, nutriments et déchets.",
+        "commonMistake": "Réduire le sang à un seul transport fait perdre sa fonction multiple.",
+        "keyTakeaway": "Le sang est un moyen de transport pour plusieurs substances et pour la chaleur.",
+        "fieldApplication": "Identifier la fonction générale sans déduire un résultat biologique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le sang transporte notamment gaz respiratoires, nutriments et déchets.",
+      "common_mistake": "Réduire le sang à un seul transport fait perdre sa fonction multiple.",
+      "key_takeaway": "Le sang est un moyen de transport pour plusieurs substances et pour la chaleur.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "transport"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-008"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l03-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Comment le support nomme-t-il la phase liquide du sang ?",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q02-a1",
+          "text": "Le plasma",
+          "explanation": "Le plasma est la phase liquide du sang."
+        },
+        {
+          "id": "dea-p05-l03-q02-a2",
+          "text": "Les érythrocytes",
+          "explanation": "Les érythrocytes sont des cellules sanguines.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l03-q02-a3",
+          "text": "Les plaquettes",
+          "explanation": "Les plaquettes sont des éléments figurés du sang.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l03-q02-a4",
+          "text": "La moelle osseuse",
+          "explanation": "La moelle osseuse est citée comme origine des cellules sanguines.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q02-a1",
+      "explanation": "La phase liquide est le plasma, dans lequel circulent les cellules sanguines.",
+      "knowledgeIds": [
+        "K-DEA-P05-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La phase liquide est le plasma, dans lequel circulent les cellules sanguines.",
+        "commonMistake": "Confondre phase liquide et cellules revient à mélanger contenant et éléments circulants.",
+        "keyTakeaway": "Plasma : phase liquide ; cellules : éléments circulants.",
+        "fieldApplication": "Employer le bon niveau de description lorsqu’on explique la composition du sang."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La phase liquide est le plasma, dans lequel circulent les cellules sanguines.",
+      "common_mistake": "Confondre phase liquide et cellules revient à mélanger contenant et éléments circulants.",
+      "key_takeaway": "Plasma : phase liquide ; cellules : éléments circulants.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "plasma"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-008"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l03-q03",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le plasma est décrit comme constitué notamment d’eau, de fibrinogène et de sels minéraux.",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q03-true",
+          "text": "Vrai",
+          "explanation": "Ces constituants sont explicitement cités page 19."
+        },
+        {
+          "id": "dea-p05-l03-q03-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : eau, fibrinogène et sels minéraux sont indiqués."
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q03-true",
+      "explanation": "La proposition reprend les constituants cités dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P05-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend les constituants cités dans le support.",
+        "commonMistake": "Le plasma est parfois assimilé à de l’eau pure, ce qui est incomplet.",
+        "keyTakeaway": "Le plasma est une phase liquide contenant plusieurs constituants.",
+        "fieldApplication": "Ne pas réduire un constituant biologique à un seul de ses composants."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend les constituants cités dans le support.",
+      "common_mistake": "Le plasma est parfois assimilé à de l’eau pure, ce qui est incomplet.",
+      "key_takeaway": "Le plasma est une phase liquide contenant plusieurs constituants.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "plasma"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-008"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l03-q04",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel élément sanguin transporte principalement l’oxygène et le dioxyde de carbone selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q04-a1",
+          "text": "Les globules rouges",
+          "explanation": "Les érythrocytes assurent le transport cité de l’O2 et du CO2."
+        },
+        {
+          "id": "dea-p05-l03-q04-a2",
+          "text": "Les globules blancs",
+          "explanation": "Les leucocytes participent à la défense.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l03-q04-a3",
+          "text": "Les plaquettes",
+          "explanation": "Les plaquettes participent à limiter les phénomènes hémorragiques.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l03-q04-a4",
+          "text": "Les valves",
+          "explanation": "Les valves appartiennent aux structures circulatoires, pas aux cellules sanguines.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q04-a1",
+      "explanation": "Les globules rouges, ou érythrocytes, transportent les gaz respiratoires cités.",
+      "knowledgeIds": [
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les globules rouges, ou érythrocytes, transportent les gaz respiratoires cités.",
+        "commonMistake": "Confondre les familles de cellules sanguines fait attribuer une fonction de défense aux globules rouges.",
+        "keyTakeaway": "Rouges : gaz ; blancs : défense ; plaquettes : brèches.",
+        "fieldApplication": "Associer chaque constituant à sa fonction générale sans interpréter une analyse.",
+        "memoryTip": "Rouges-respiration, blancs-défense, plaquettes-colmatage."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les globules rouges, ou érythrocytes, transportent les gaz respiratoires cités.",
+      "common_mistake": "Confondre les familles de cellules sanguines fait attribuer une fonction de défense aux globules rouges.",
+      "key_takeaway": "Rouges : gaz ; blancs : défense ; plaquettes : brèches.",
+      "memory_tip": "Rouges-respiration, blancs-défense, plaquettes-colmatage.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "globules-rouges"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l03-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel rôle général le support attribue-t-il aux globules blancs ?",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q05-a1",
+          "text": "Participer à la défense de l’organisme",
+          "explanation": "Les leucocytes sont présentés comme acteurs de la défense."
+        },
+        {
+          "id": "dea-p05-l03-q05-a2",
+          "text": "Transporter principalement l’oxygène",
+          "explanation": "Ce rôle est attribué aux globules rouges.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l03-q05-a3",
+          "text": "Former les valves cardiaques",
+          "explanation": "Les valves ne sont pas formées par les leucocytes.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l03-q05-a4",
+          "text": "Mesurer la pression artérielle",
+          "explanation": "Cette mesure utilise un tensiomètre.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q05-a1",
+      "explanation": "Les globules blancs participent à la défense de l’organisme.",
+      "knowledgeIds": [
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les globules blancs participent à la défense de l’organisme.",
+        "commonMistake": "La couleur du nom ne renseigne pas sur le transport d’oxygène.",
+        "keyTakeaway": "Leucocytes = défense.",
+        "fieldApplication": "Utiliser ce rôle général sans conclure à une infection."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les globules blancs participent à la défense de l’organisme.",
+      "common_mistake": "La couleur du nom ne renseigne pas sur le transport d’oxygène.",
+      "key_takeaway": "Leucocytes = défense.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "globules-blancs"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l03-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Les plaquettes s’agglutinent pour aider à colmater des brèches et limiter les phénomènes hémorragiques.",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q06-true",
+          "text": "Vrai",
+          "explanation": "Le support décrit explicitement cette fonction."
+        },
+        {
+          "id": "dea-p05-l03-q06-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : ce rôle est attribué aux plaquettes."
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q06-true",
+      "explanation": "La proposition reprend le rôle des plaquettes décrit page 19.",
+      "knowledgeIds": [
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend le rôle des plaquettes décrit page 19.",
+        "commonMistake": "Les plaquettes sont parfois confondues avec les globules rouges en raison de leur présence dans le sang.",
+        "keyTakeaway": "Plaquettes : colmatage des brèches et limitation des phénomènes hémorragiques.",
+        "fieldApplication": "Distinguer cette fonction générale d’une conduite de prise en charge."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend le rôle des plaquettes décrit page 19.",
+      "common_mistake": "Les plaquettes sont parfois confondues avec les globules rouges en raison de leur présence dans le sang.",
+      "key_takeaway": "Plaquettes : colmatage des brèches et limitation des phénomènes hémorragiques.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "plaquettes"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l03-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque constituant à sa fonction principale.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q07-a1",
+          "text": "Plasma",
+          "match": "Phase liquide du sang",
+          "explanation": "Il constitue la phase liquide."
+        },
+        {
+          "id": "dea-p05-l03-q07-a2",
+          "text": "Globules rouges",
+          "match": "Transport des gaz respiratoires",
+          "explanation": "Ils transportent O2 et CO2."
+        },
+        {
+          "id": "dea-p05-l03-q07-a3",
+          "text": "Globules blancs",
+          "match": "Défense de l’organisme",
+          "explanation": "Ils participent à la défense."
+        },
+        {
+          "id": "dea-p05-l03-q07-a4",
+          "text": "Plaquettes",
+          "match": "Limitation des phénomènes hémorragiques",
+          "explanation": "Elles aident à colmater les brèches."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l03-q07-a1",
+        "dea-p05-l03-q07-a2",
+        "dea-p05-l03-q07-a3",
+        "dea-p05-l03-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-l03-q07-a1",
+        "dea-p05-l03-q07-a2",
+        "dea-p05-l03-q07-a3",
+        "dea-p05-l03-q07-a4"
+      ],
+      "explanation": "Chaque constituant est associé à la fonction générale indiquée dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P05-008",
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque constituant est associé à la fonction générale indiquée dans le support.",
+        "commonMistake": "Attribuer une même fonction à tous les éléments empêche de comprendre leur complémentarité.",
+        "keyTakeaway": "Liquide, gaz, défense, colmatage : quatre rôles distincts.",
+        "fieldApplication": "Structurer une explication simple de la composition du sang."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque constituant est associé à la fonction générale indiquée dans le support.",
+      "common_mistake": "Attribuer une même fonction à tous les éléments empêche de comprendre leur complémentarité.",
+      "key_takeaway": "Liquide, gaz, défense, colmatage : quatre rôles distincts.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-008",
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-l03-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Dans une situation pédagogique, une brèche vasculaire est évoquée. Quel constituant du sang est directement associé dans le support au colmatage de cette brèche ?",
+      "answers": [
+        {
+          "id": "dea-p05-l03-q08-a1",
+          "text": "Les plaquettes",
+          "explanation": "Le support associe les plaquettes au colmatage des brèches."
+        },
+        {
+          "id": "dea-p05-l03-q08-a2",
+          "text": "Les globules rouges",
+          "explanation": "Ils sont associés au transport des gaz.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l03-q08-a3",
+          "text": "Les globules blancs",
+          "explanation": "Ils sont associés à la défense de l’organisme.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l03-q08-a4",
+          "text": "Le péricarde",
+          "explanation": "Le péricarde enveloppe le cœur et n’est pas un constituant sanguin.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l03-q08-a1",
+      "explanation": "Les plaquettes sont le constituant relié au colmatage des brèches.",
+      "knowledgeIds": [
+        "K-DEA-P05-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le sang",
+      "sourcePages": "19",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonId": "dea-p05-l03",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les plaquettes sont le constituant relié au colmatage des brèches.",
+        "commonMistake": "La présence de sang ne permet pas d’attribuer la même fonction à toutes ses cellules.",
+        "keyTakeaway": "Plaquettes et limitation des phénomènes hémorragiques sont liées dans le support.",
+        "fieldApplication": "Reconnaître une fonction biologique sans en déduire un diagnostic ni un traitement.",
+        "safetyPoint": "Cette notion ne remplace pas les protocoles de prise en charge d’une hémorragie."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les plaquettes sont le constituant relié au colmatage des brèches.",
+      "common_mistake": "La présence de sang ne permet pas d’attribuer la même fonction à toutes ses cellules.",
+      "key_takeaway": "Plaquettes et limitation des phénomènes hémorragiques sont liées dans le support.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "sang",
+        "plaquettes",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 19",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le sang",
+        "sourcePages": "19",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-009"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.tissue"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

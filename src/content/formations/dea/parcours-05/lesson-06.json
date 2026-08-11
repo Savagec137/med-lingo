@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l06",
+  "title": "La pression artérielle",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 53, 66-67",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les éléments d’un tensiomètre.",
+    "Décrire les conditions essentielles d’une mesure manuelle.",
+    "Distinguer valeurs systolique et diastolique et repérer des sources d’erreur."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l06-q01",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément du tensiomètre manuel à son rôle.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q01-a1",
+          "text": "Manchon gonflable",
+          "match": "Exerce la contre-pression sur le bras",
+          "explanation": "Il se place autour du bras."
+        },
+        {
+          "id": "dea-p05-l06-q01-a2",
+          "text": "Poire",
+          "match": "Gonfle le manchon",
+          "explanation": "Elle permet de gonfler le manchon."
+        },
+        {
+          "id": "dea-p05-l06-q01-a3",
+          "text": "Valve",
+          "match": "Contrôle le dégonflage",
+          "explanation": "Son ouverture permet le dégonflage progressif."
+        },
+        {
+          "id": "dea-p05-l06-q01-a4",
+          "text": "Manomètre",
+          "match": "Affiche la mesure de pression",
+          "explanation": "Il mesure la contre-pression."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l06-q01-a1",
+        "dea-p05-l06-q01-a2",
+        "dea-p05-l06-q01-a3",
+        "dea-p05-l06-q01-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-l06-q01-a1",
+        "dea-p05-l06-q01-a2",
+        "dea-p05-l06-q01-a3",
+        "dea-p05-l06-q01-a4"
+      ],
+      "explanation": "Chaque élément est associé à la fonction décrite page 53.",
+      "knowledgeIds": [
+        "K-DEA-P05-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "53",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque élément est associé à la fonction décrite page 53.",
+        "commonMistake": "Confondre poire et manomètre mélange production de pression et lecture de la mesure.",
+        "keyTakeaway": "Manchon, poire, valve et manomètre ont des fonctions complémentaires.",
+        "fieldApplication": "Vérifier le matériel avant la mesure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque élément est associé à la fonction décrite page 53.",
+      "common_mistake": "Confondre poire et manomètre mélange production de pression et lecture de la mesure.",
+      "key_takeaway": "Manchon, poire, valve et manomètre ont des fonctions complémentaires.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "materiel"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 53",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "53",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-012"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-l06-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Un tensiomètre automatique peut afficher la pression artérielle et la fréquence cardiaque.",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q02-true",
+          "text": "Vrai",
+          "explanation": "Les deux affichages sont cités page 53."
+        },
+        {
+          "id": "dea-p05-l06-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : la fréquence cardiaque est également indiquée."
+        }
+      ],
+      "correctAnswer": "dea-p05-l06-q02-true",
+      "explanation": "La proposition est vraie selon la description du tensiomètre automatique.",
+      "knowledgeIds": [
+        "K-DEA-P05-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "53",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition est vraie selon la description du tensiomètre automatique.",
+        "commonMistake": "Automatique ne signifie pas que seules les valeurs de pression sont disponibles.",
+        "keyTakeaway": "L’appareil peut afficher pression artérielle et fréquence cardiaque.",
+        "fieldApplication": "Lire toutes les valeurs utiles tout en contrôlant leur cohérence clinique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition est vraie selon la description du tensiomètre automatique.",
+      "common_mistake": "Automatique ne signifie pas que seules les valeurs de pression sont disponibles.",
+      "key_takeaway": "L’appareil peut afficher pression artérielle et fréquence cardiaque.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "automatique"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 53",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "53",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-012"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l06-q03",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle condition préalable est demandée par le support pour une mesure manuelle de la pression artérielle ?",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q03-a1",
+          "text": "Un patient au repos depuis dix minutes, en décubitus dorsal",
+          "explanation": "C’est la condition indiquée page 66."
+        },
+        {
+          "id": "dea-p05-l06-q03-a2",
+          "text": "Un patient venant de marcher rapidement",
+          "explanation": "L’effort peut modifier la mesure.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "dea-p05-l06-q03-a3",
+          "text": "Un brassard posé sur des vêtements épais",
+          "explanation": "Le support demande un positionnement précis sur le bras.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l06-q03-a4",
+          "text": "Une contraction volontaire du bras",
+          "explanation": "Une contraction musculaire peut fausser la mesure.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-l06-q03-a1",
+      "explanation": "Le support demande repos de dix minutes et décubitus dorsal avant cette mesure.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "53, 66-67",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support demande repos de dix minutes et décubitus dorsal avant cette mesure.",
+        "commonMistake": "Mesurer immédiatement après un effort compromet la comparabilité de la valeur.",
+        "keyTakeaway": "Repos et position font partie de la qualité de mesure.",
+        "fieldApplication": "Documenter les conditions si elles ne peuvent pas être respectées.",
+        "safetyPoint": "Une valeur isolée doit être interprétée avec l’ensemble du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support demande repos de dix minutes et décubitus dorsal avant cette mesure.",
+      "common_mistake": "Mesurer immédiatement après un effort compromet la comparabilité de la valeur.",
+      "key_takeaway": "Repos et position font partie de la qualité de mesure.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "conditions"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 53, 66-67",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "53, 66-67",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l06-q04",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Pourquoi le brassard doit-il être adapté à la morphologie du patient ?",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q04-a1",
+          "text": "Parce qu’une taille inadaptée peut fausser la mesure",
+          "explanation": "Le support précise le sens des erreurs selon la taille."
+        },
+        {
+          "id": "dea-p05-l06-q04-a2",
+          "text": "Pour changer la fréquence cardiaque",
+          "explanation": "Le brassard ne sert pas à modifier la fréquence.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l06-q04-a3",
+          "text": "Pour remplacer le stéthoscope",
+          "explanation": "Le brassard et le stéthoscope ont des fonctions distinctes en manuel.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l06-q04-a4",
+          "text": "Pour déterminer le groupe sanguin",
+          "explanation": "Cette mesure ne détermine pas le groupe sanguin.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l06-q04-a1",
+      "explanation": "La taille du brassard influence directement la valeur mesurée.",
+      "knowledgeIds": [
+        "K-DEA-P05-012",
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "53, 66-67",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La taille du brassard influence directement la valeur mesurée.",
+        "commonMistake": "Choisir le brassard le plus proche sans vérifier sa taille est une erreur de préparation.",
+        "keyTakeaway": "Brassard adapté = mesure plus fiable.",
+        "fieldApplication": "Préparer le bon manchon adulte ou enfant avant de commencer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La taille du brassard influence directement la valeur mesurée.",
+      "common_mistake": "Choisir le brassard le plus proche sans vérifier sa taille est une erreur de préparation.",
+      "key_takeaway": "Brassard adapté = mesure plus fiable.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "brassard"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 53, 66-67",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "53, 66-67",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-012",
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l06-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il le brassard pour la mesure manuelle ?",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q05-a1",
+          "text": "Sur le bras, environ deux centimètres au-dessus du pli du coude",
+          "explanation": "Ce positionnement est indiqué page 66."
+        },
+        {
+          "id": "dea-p05-l06-q05-a2",
+          "text": "Autour du poignet, sous la base du pouce",
+          "explanation": "Cette zone correspond au repérage du pouls radial.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l06-q05-a3",
+          "text": "Sur la cheville sans autre repère",
+          "explanation": "Ce n’est pas la technique décrite dans cette leçon.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l06-q05-a4",
+          "text": "Directement sur le pli du coude",
+          "explanation": "Le support indique environ deux centimètres au-dessus.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-l06-q05-a1",
+      "explanation": "Le brassard se place sur le bras, environ deux centimètres au-dessus du pli du coude.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "66",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le brassard se place sur le bras, environ deux centimètres au-dessus du pli du coude.",
+        "commonMistake": "Confondre la zone du stéthoscope avec celle du brassard déplace le matériel.",
+        "keyTakeaway": "Brassard au-dessus du pli ; stéthoscope sur le trajet huméral au pli.",
+        "fieldApplication": "Respecter les repères avant le gonflage."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le brassard se place sur le bras, environ deux centimètres au-dessus du pli du coude.",
+      "common_mistake": "Confondre la zone du stéthoscope avec celle du brassard déplace le matériel.",
+      "key_takeaway": "Brassard au-dessus du pli ; stéthoscope sur le trajet huméral au pli.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "positionnement"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 66",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "66",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l06-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe le moment auscultatoire à la valeur correspondante.",
+      "instruction": "Associe chaque moment.",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q06-a1",
+          "text": "Premier battement net",
+          "match": "Valeur systolique",
+          "explanation": "Il caractérise la valeur systolique."
+        },
+        {
+          "id": "dea-p05-l06-q06-a2",
+          "text": "Dernier battement avant disparition des bruits",
+          "match": "Valeur diastolique",
+          "explanation": "Il correspond à la valeur diastolique."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l06-q06-a1",
+        "dea-p05-l06-q06-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l06-q06-a1",
+        "dea-p05-l06-q06-a2"
+      ],
+      "explanation": "Premier battement net et dernier battement correspondent respectivement aux valeurs systolique et diastolique.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "66",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Premier battement net et dernier battement correspondent respectivement aux valeurs systolique et diastolique.",
+        "commonMistake": "Inverser les deux moments produit une transmission erronée.",
+        "keyTakeaway": "Premier = systolique ; dernier = diastolique.",
+        "fieldApplication": "Noter et transmettre les deux valeurs dans le bon ordre.",
+        "memoryTip": "S avant D dans l’écoute comme dans la transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Premier battement net et dernier battement correspondent respectivement aux valeurs systolique et diastolique.",
+      "common_mistake": "Inverser les deux moments produit une transmission erronée.",
+      "key_takeaway": "Premier = systolique ; dernier = diastolique.",
+      "memory_tip": "S avant D dans l’écoute comme dans la transmission.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "systolique",
+        "diastolique"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 66",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "66",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l06-q07",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quels effets d’un brassard inadapté sont décrits ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q07-a1",
+          "text": "Un brassard trop petit peut surestimer la valeur",
+          "explanation": "Le support précise cette surestimation."
+        },
+        {
+          "id": "dea-p05-l06-q07-a2",
+          "text": "Un brassard trop grand peut sous-estimer la valeur",
+          "explanation": "Le support précise cette sous-estimation."
+        },
+        {
+          "id": "dea-p05-l06-q07-a3",
+          "text": "Un brassard trop petit supprime toujours le pouls",
+          "explanation": "Cette conséquence absolue n’est pas donnée.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l06-q07-a4",
+          "text": "La taille n’a aucun effet sur la mesure",
+          "explanation": "Cette proposition contredit la vigilance indiquée.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l06-q07-a1",
+        "dea-p05-l06-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l06-q07-a1",
+        "dea-p05-l06-q07-a2"
+      ],
+      "explanation": "Petit surestime et grand sous-estime selon le support.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "67",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Petit surestime et grand sous-estime selon le support.",
+        "commonMistake": "Retenir seulement que la taille compte sans connaître le sens de l’erreur limite le contrôle qualité.",
+        "keyTakeaway": "Trop petit : valeur trop haute ; trop grand : valeur trop basse.",
+        "fieldApplication": "Recommencer avec un brassard adapté si la taille est incorrecte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Petit surestime et grand sous-estime selon le support.",
+      "common_mistake": "Retenir seulement que la taille compte sans connaître le sens de l’erreur limite le contrôle qualité.",
+      "key_takeaway": "Trop petit : valeur trop haute ; trop grand : valeur trop basse.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "erreurs"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "67",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l06-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Le patient vient de contracter fortement le bras pendant la mesure. Quelle décision améliore le plus la fiabilité du résultat ?",
+      "answers": [
+        {
+          "id": "dea-p05-l06-q08-a1",
+          "text": "Reprendre la mesure dans de bonnes conditions après relâchement",
+          "explanation": "Une contraction musculaire peut fausser la mesure."
+        },
+        {
+          "id": "dea-p05-l06-q08-a2",
+          "text": "Conserver la valeur sans signaler les conditions",
+          "explanation": "Cela ignore une source d’erreur connue.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l06-q08-a3",
+          "text": "Gonfler immédiatement beaucoup plus fort",
+          "explanation": "Augmenter la pression ne corrige pas la contraction musculaire.",
+          "distractorType": "unsafe-context"
+        },
+        {
+          "id": "dea-p05-l06-q08-a4",
+          "text": "Remplacer la mesure par la température",
+          "explanation": "Les paramètres ne sont pas interchangeables.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l06-q08-a1",
+      "explanation": "La contraction peut fausser la mesure ; il faut la reprendre dans des conditions adaptées.",
+      "knowledgeIds": [
+        "K-DEA-P05-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Matériels et mesures - Pression artérielle",
+      "sourcePages": "67",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l06",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La contraction peut fausser la mesure ; il faut la reprendre dans des conditions adaptées.",
+        "commonMistake": "Une valeur chiffrée n’est pas fiable uniquement parce qu’elle s’affiche.",
+        "keyTakeaway": "Contrôler les conditions avant de valider le chiffre.",
+        "fieldApplication": "Tracer ou transmettre toute difficulté de mesure pertinente.",
+        "safetyPoint": "Ne jamais interpréter une mesure isolée sans l’état clinique global."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La contraction peut fausser la mesure ; il faut la reprendre dans des conditions adaptées.",
+      "common_mistake": "Une valeur chiffrée n’est pas fiable uniquement parce qu’elle s’affiche.",
+      "key_takeaway": "Contrôler les conditions avant de valider le chiffre.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pression-arterielle",
+        "cas",
+        "qualite"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Matériels et mesures - Pression artérielle",
+        "sourcePages": "67",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-013"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

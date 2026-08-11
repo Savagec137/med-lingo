@@ -61,7 +61,10 @@ export interface LearningContentItem {
   correctAnswer: string | string[];
   explanation: string;
   priorityReminder?: string;
-  pedagogicalFeedback?: ContentPedagogicalFeedback;
+  why_correct?: ContentPedagogicalFeedback["why_correct"];
+  common_mistake?: ContentPedagogicalFeedback["common_mistake"];
+  key_takeaway?: ContentPedagogicalFeedback["key_takeaway"];
+  memory_tip?: ContentPedagogicalFeedback["memory_tip"];
   tags: string[];
   competencyIds: string[];
   pedagogicalReference?: string;

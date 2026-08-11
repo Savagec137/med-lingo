@@ -1,0 +1,982 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "title": "Module 4 - Appréciation de l’état clinique du patient",
+  "organization": "AFTRAL - Institut de Formation d’Ambulanciers",
+  "document_type": "training_source",
+  "content_status": "content_verified",
+  "version": "Version 1 - Août 2022",
+  "pages": 175,
+  "analyzed_scope": "Appareil locomoteur, pages 34 à 38 ; appareil circulatoire, pages 18 à 21 ; pression artérielle et pouls, pages 53 et 66 à 68",
+  "analysis_status": "partial_content_verified",
+  "review_status": "source_verified",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P04-001",
+      "title": "Composition et rôle de l’appareil locomoteur",
+      "summary": "L’appareil locomoteur associe les os, les articulations, les muscles et leurs structures de liaison pour soutenir le corps et permettre le mouvement.",
+      "keyPoints": [
+        "Le squelette forme la charpente du corps.",
+        "Les articulations organisent la mobilité entre les os.",
+        "Les muscles produisent le mouvement des segments osseux."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil locomoteur aux seuls os.",
+        "Confondre articulation et muscle."
+      ],
+      "clinicalApplication": "Nommer séparément l’os, l’articulation et le segment corporel concernés améliore la précision d’un repérage.",
+      "section": "Appareil locomoteur - vue d’ensemble",
+      "pages": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-002",
+      "title": "Organisation générale du squelette",
+      "summary": "Le squelette compte plus de 200 os et s’organise en trois grandes parties : la tête, le tronc et les membres.",
+      "keyPoints": [
+        "La tête comprend le crâne et la face.",
+        "Le tronc comprend notamment le rachis, les côtes et le sternum.",
+        "Les membres comprennent les membres supérieurs et inférieurs."
+      ],
+      "commonErrors": [
+        "Classer le sternum ou les côtes parmi les membres."
+      ],
+      "clinicalApplication": "Cette organisation permet de situer d’abord une zone dans une grande partie du squelette.",
+      "section": "Appareil locomoteur - Les os",
+      "pages": [
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-003",
+      "title": "Catégories d’os",
+      "summary": "Le support distingue les os courts, les os plats et les os longs ; il identifie le sternum comme os plat et l’humérus comme os long.",
+      "keyPoints": [
+        "Trois catégories sont citées : courts, plats et longs.",
+        "Le sternum est explicitement présenté comme un os plat.",
+        "L’humérus illustre la structure d’un os long."
+      ],
+      "commonErrors": [
+        "Déduire du support un exemple d’os court qu’il ne précise pas explicitement."
+      ],
+      "clinicalApplication": "La catégorie d’un os aide à organiser les repères anatomiques sans remplacer l’identification précise de l’os.",
+      "section": "Appareil locomoteur - Les os",
+      "pages": [
+        35,
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l01",
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-004",
+      "title": "Principaux os et repères du squelette",
+      "summary": "Le support localise notamment le crâne, les vertèbres, la clavicule, le sternum, les côtes, l’humérus, le radius, le cubitus, le fémur, la rotule, le tibia et le péroné.",
+      "keyPoints": [
+        "L’humérus appartient au bras.",
+        "Le radius et le cubitus appartiennent à l’avant-bras.",
+        "Le fémur appartient à la cuisse ; le tibia et le péroné à la jambe."
+      ],
+      "commonErrors": [
+        "Employer bras pour désigner tout le membre supérieur.",
+        "Employer jambe pour désigner tout le membre inférieur."
+      ],
+      "clinicalApplication": "Utiliser le nom du segment et de l’os visible sur le schéma rend une localisation moins vague.",
+      "section": "Appareil locomoteur - schéma des repères osseux",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-005",
+      "title": "Structure d’un os long",
+      "summary": "Un os long comprend une diaphyse centrale et deux épiphyses couvertes de cartilage articulaire.",
+      "keyPoints": [
+        "La diaphyse correspond au corps de l’os long.",
+        "Les épiphyses correspondent aux deux extrémités.",
+        "Le cartilage articulaire recouvre les extrémités décrites."
+      ],
+      "commonErrors": [
+        "Inverser diaphyse et épiphyses."
+      ],
+      "clinicalApplication": "Les termes diaphyse et épiphyse permettent de décrire plus précisément une zone d’un os long.",
+      "section": "Appareil locomoteur - Un os long",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-006",
+      "title": "Articulation, mobilité et stabilité",
+      "summary": "Une articulation se situe à l’union de deux os, organise leur mobilité et est stabilisée par des ligaments.",
+      "keyPoints": [
+        "Les surfaces articulaires sont cartilagineuses.",
+        "Le liquide synovial se trouve dans la capsule synoviale.",
+        "Les ligaments participent à la stabilité."
+      ],
+      "commonErrors": [
+        "Confondre ligament, qui stabilise l’articulation, et tendon."
+      ],
+      "clinicalApplication": "Repérer une articulation aide à distinguer une douleur articulaire d’une douleur située sur un segment osseux.",
+      "section": "Appareil locomoteur - Les articulations",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l03",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-007",
+      "title": "Mouvements articulaires",
+      "summary": "Le support cite la flexion, l’extension, l’adduction, l’abduction et la rotation parmi les mouvements permis par les articulations.",
+      "keyPoints": [
+        "Les articulations peuvent être fixes, semi-mobiles ou mobiles.",
+        "Les os du crâne illustrent les articulations fixes.",
+        "Le coude illustre une articulation mobile."
+      ],
+      "commonErrors": [
+        "Prendre un mouvement articulaire pour une région anatomique."
+      ],
+      "clinicalApplication": "Décrire le mouvement possible ou limité complète la localisation de l’articulation concernée.",
+      "section": "Appareil locomoteur - Les articulations",
+      "pages": [
+        36
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l03",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-008",
+      "title": "Muscles et tendons",
+      "summary": "Les contractions et relaxations musculaires génèrent le mouvement des segments osseux, les muscles s’insérant sur eux par l’intermédiaire de tendons.",
+      "keyPoints": [
+        "Le tendon assure l’intermédiaire entre le muscle et le segment osseux.",
+        "Les muscles striés décrits obéissent à la volonté.",
+        "Les muscles lisses décrits n’obéissent pas à la volonté."
+      ],
+      "commonErrors": [
+        "Dire qu’un tendon relie deux os entre eux."
+      ],
+      "clinicalApplication": "Distinguer muscle, tendon et os évite de confondre les structures lors d’un repérage.",
+      "section": "Appareil locomoteur - Les muscles",
+      "pages": [
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l04",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-009",
+      "title": "Propriétés et rôles des muscles",
+      "summary": "Les muscles sont contractiles, élastiques et excitables ; ils participent au mouvement, au travail, à l’équilibre et à la production de chaleur.",
+      "keyPoints": [
+        "La contraction et la relaxation participent au mouvement.",
+        "Les muscles contribuent au maintien de l’équilibre.",
+        "Les muscles participent à la production de chaleur."
+      ],
+      "commonErrors": [
+        "Limiter le rôle musculaire à la seule pratique sportive."
+      ],
+      "clinicalApplication": "Connaître ces rôles aide à interpréter la fonction générale d’un groupe musculaire sans poser de diagnostic.",
+      "section": "Appareil locomoteur - Les muscles",
+      "pages": [
+        37
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.locomotor"
+      ],
+      "lessonIds": [
+        "dea-p04-l04",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-010",
+      "title": "Rachis et répartition des vertèbres",
+      "summary": "Le rachis appartient au tronc et le support le décrit comme une colonne de 33 vertèbres réparties en régions cervicale, dorsale, lombaire, sacrée et coccygienne.",
+      "keyPoints": [
+        "7 vertèbres cervicales.",
+        "12 vertèbres dorsales et 5 lombaires.",
+        "5 vertèbres sacrées et 4 à 6 coccygiennes dans le décompte présenté."
+      ],
+      "commonErrors": [
+        "Inverser le nombre de vertèbres cervicales et dorsales."
+      ],
+      "clinicalApplication": "Nommer la région cervicale, dorsale ou lombaire améliore la précision d’une localisation sur le rachis.",
+      "section": "Appareil locomoteur - Les os - Le tronc",
+      "pages": [
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonIds": [
+        "dea-p04-l05",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-011",
+      "title": "Repères du membre supérieur",
+      "summary": "Le membre supérieur comprend la ceinture scapulaire, l’humérus, le cubitus, le radius, le carpe, les métacarpes et les phalanges.",
+      "keyPoints": [
+        "L’humérus correspond au bras.",
+        "Le cubitus et le radius correspondent à l’avant-bras.",
+        "Le carpe, les métacarpes et les phalanges structurent le poignet, la main et les doigts."
+      ],
+      "commonErrors": [
+        "Confondre bras et avant-bras."
+      ],
+      "clinicalApplication": "Situer un repère au bras, à l’avant-bras, au poignet, à la main ou aux doigts rend la description exploitable.",
+      "section": "Appareil locomoteur - schéma et membres supérieurs",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.upper-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l06",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-012",
+      "title": "Repères du membre inférieur",
+      "summary": "Le membre inférieur comprend le bassin, le fémur, la rotule, le tibia, le péroné, le tarse, les métatarses et les phalanges.",
+      "keyPoints": [
+        "Le fémur correspond à la cuisse.",
+        "Le tibia et le péroné correspondent à la jambe.",
+        "Le tarse, les métatarses et les phalanges structurent la cheville, le pied et les orteils."
+      ],
+      "commonErrors": [
+        "Employer jambe pour désigner la cuisse ou tout le membre inférieur."
+      ],
+      "clinicalApplication": "Situer un repère à la cuisse, au genou, à la jambe, à la cheville ou au pied précise la transmission.",
+      "section": "Appareil locomoteur - schéma et membres inférieurs",
+      "pages": [
+        34,
+        35
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.region.lower-limb",
+        "anatomy.landmarks"
+      ],
+      "lessonIds": [
+        "dea-p04-l07",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P04-013",
+      "title": "Repères anatomiques locomoteurs pour la description",
+      "summary": "Le schéma distingue les segments du membre supérieur et du membre inférieur ainsi que leurs principaux repères osseux et articulaires.",
+      "keyPoints": [
+        "Membre supérieur : épaule, bras, coude, avant-bras, poignet, main, doigts.",
+        "Membre inférieur : hanche, cuisse, genou, jambe, cheville, pied, orteils.",
+        "Un segment corporel et un repère osseux ne sont pas interchangeables."
+      ],
+      "commonErrors": [
+        "Décrire une localisation par des expressions vagues comme « en bas » ou « au bras » pour tout le membre supérieur."
+      ],
+      "clinicalApplication": "Associer segment, côté et repère anatomique améliore la précision du bilan descriptif.",
+      "section": "Appareil locomoteur - schéma des repères anatomiques",
+      "pages": [
+        34
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.injury",
+        "anatomy.location.transmission"
+      ],
+      "lessonIds": [
+        "dea-p04-l02",
+        "dea-p04-l06",
+        "dea-p04-l07",
+        "dea-p04-l08",
+        "dea-p04-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-001",
+      "title": "Rôle et composition de l’appareil circulatoire",
+      "summary": "L’appareil circulatoire forme un circuit fermé qui distribue aux cellules oxygène, nutriments, hormones et autres molécules, puis récupère des déchets et substances élaborées.",
+      "keyPoints": [
+        "Le cœur constitue la pompe du circuit.",
+        "Les vaisseaux sanguins constituent les canalisations.",
+        "Le sang est le contenu circulant du circuit."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil circulatoire au seul cœur.",
+        "Oublier son rôle de récupération des déchets."
+      ],
+      "clinicalApplication": "Identifier séparément la pompe, les vaisseaux et le sang aide à structurer l’observation cardiovasculaire sans poser de diagnostic.",
+      "section": "Appareil circulatoire - rôle et vue d’ensemble",
+      "pages": [
+        18
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organization.organ-to-system"
+      ],
+      "lessonIds": [
+        "dea-p05-l01",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-002",
+      "title": "Nature et situation du cœur",
+      "summary": "Le cœur est un muscle creux involontaire, enveloppé par le péricarde, situé entre les deux poumons avec sa pointe orientée vers la gauche.",
+      "keyPoints": [
+        "Le cœur se contracte et se dilate sans intervention de la volonté.",
+        "Le péricarde est une poche à double paroi qui enveloppe le cœur.",
+        "Le cœur se situe entre les deux poumons."
+      ],
+      "commonErrors": [
+        "Décrire le cœur comme un muscle volontaire.",
+        "Confondre péricarde et myocarde."
+      ],
+      "clinicalApplication": "Ces repères permettent de situer l’organe et d’utiliser un vocabulaire anatomique précis dans une transmission.",
+      "section": "Appareil circulatoire - Le cœur",
+      "pages": [
+        18
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p05-l01",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-003",
+      "title": "Quatre cavités et sens du sang dans le cœur",
+      "summary": "Le cœur comporte deux oreillettes et deux ventricules ; le sang arrive par les veines au niveau des oreillettes et repart par les artères au niveau des ventricules.",
+      "keyPoints": [
+        "Les cavités droites reçoivent un sang appauvri en oxygène destiné aux poumons.",
+        "Les cavités gauches reçoivent des poumons un sang riche en oxygène destiné aux cellules.",
+        "Oreillettes et ventricules communiquent par des valves."
+      ],
+      "commonErrors": [
+        "Inverser oreillettes et ventricules dans le sens d’arrivée et de départ.",
+        "Associer artère et veine uniquement à la teneur en oxygène."
+      ],
+      "clinicalApplication": "Le sens de circulation permet de comprendre les termes utilisés lors d’un bilan et sur un schéma cardiovasculaire.",
+      "section": "Appareil circulatoire - Le cœur et ses cavités",
+      "pages": [
+        18
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p05-l01",
+        "dea-p05-l04",
+        "dea-p05-l05",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-004",
+      "title": "Fonctionnement et cycle cardiaques",
+      "summary": "Le myocarde se contracte sous l’effet d’impulsions électriques involontaires ; le cycle alterne diastole, systole auriculaire et systole ventriculaire.",
+      "keyPoints": [
+        "La diastole est la phase de relaxation et de remplissage des oreillettes décrite par le support.",
+        "La systole auriculaire correspond à la contraction des oreillettes.",
+        "La systole ventriculaire correspond à la contraction des ventricules."
+      ],
+      "commonErrors": [
+        "Définir la diastole comme une contraction des ventricules."
+      ],
+      "clinicalApplication": "Distinguer contraction, relaxation et remplissage aide à comprendre les paramètres cardiovasculaires observés.",
+      "section": "Appareil circulatoire - Le fonctionnement cardiaque",
+      "pages": [
+        20
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p05-l01",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-005",
+      "title": "Artères et veines : sens de circulation",
+      "summary": "Les artères conduisent le sang du cœur vers les organes, tandis que les veines ramènent le sang des organes vers le cœur.",
+      "keyPoints": [
+        "Le sens par rapport au cœur définit artère et veine.",
+        "Les artères se ramifient en vaisseaux de plus en plus petits.",
+        "Les veines ramènent le sang vers le cœur."
+      ],
+      "commonErrors": [
+        "Définir systématiquement une artère comme riche en oxygène et une veine comme pauvre en oxygène."
+      ],
+      "clinicalApplication": "Le sens de circulation est un repère fiable pour nommer un vaisseau sans déduire sa teneur en oxygène.",
+      "section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "pages": [
+        18,
+        19
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l02",
+        "dea-p05-l04",
+        "dea-p05-l05",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-006",
+      "title": "Capillaires et échanges cellulaires",
+      "summary": "Les capillaires se situent à la jonction entre artères et veines ; leur fine paroi et la lenteur du flux favorisent les échanges avec les cellules.",
+      "keyPoints": [
+        "Les capillaires relient le réseau artériel au réseau veineux.",
+        "Ils constituent le lieu d’échange avec les cellules.",
+        "Leur paroi fine favorise le passage des substances."
+      ],
+      "commonErrors": [
+        "Présenter les capillaires comme des cavités du cœur."
+      ],
+      "clinicalApplication": "Comprendre leur rôle permet de relier circulation et échanges tissulaires sans extrapoler à un diagnostic.",
+      "section": "Appareil circulatoire - Les vaisseaux sanguins",
+      "pages": [
+        18
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l02",
+        "dea-p05-l04",
+        "dea-p05-l05",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-007",
+      "title": "Retour veineux et valves",
+      "summary": "Le retour veineux vers le cœur est aidé par les contractions musculaires et par des valves qui limitent le retour à contre-courant.",
+      "keyPoints": [
+        "Les veines ramènent le sang vers le cœur.",
+        "Les muscles participent à une fonction de pompage.",
+        "Les valves limitent le reflux à contre-courant."
+      ],
+      "commonErrors": [
+        "Attribuer aux valves veineuses la propulsion initiale du sang depuis le cœur."
+      ],
+      "clinicalApplication": "Cette organisation explique la direction générale du retour veineux décrite dans le support.",
+      "section": "Appareil circulatoire - Les veines",
+      "pages": [
+        19
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l02",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-008",
+      "title": "Sang et plasma",
+      "summary": "Le sang transporte notamment nutriments, oxygène, dioxyde de carbone, déchets, cellules et chaleur ; sa phase liquide est le plasma.",
+      "keyPoints": [
+        "Le plasma constitue la phase liquide du sang.",
+        "Le support décrit le plasma comme formé d’eau, de fibrinogène et de sels minéraux.",
+        "Les cellules sanguines circulent dans le plasma."
+      ],
+      "commonErrors": [
+        "Confondre plasma et globules rouges."
+      ],
+      "clinicalApplication": "Distinguer phase liquide et cellules aide à comprendre les rôles complémentaires des constituants du sang.",
+      "section": "Appareil circulatoire - Le sang",
+      "pages": [
+        19
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonIds": [
+        "dea-p05-l03",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-009",
+      "title": "Cellules sanguines et fonctions principales",
+      "summary": "Le support distingue globules rouges, globules blancs et plaquettes, associés respectivement au transport des gaz, à la défense et à la limitation des phénomènes hémorragiques.",
+      "keyPoints": [
+        "Les globules rouges transportent l’oxygène et le dioxyde de carbone.",
+        "Les globules blancs participent à la défense de l’organisme.",
+        "Les plaquettes s’agglutinent pour colmater des brèches et limiter les phénomènes hémorragiques."
+      ],
+      "commonErrors": [
+        "Attribuer aux globules blancs le transport principal des gaz.",
+        "Confondre rôle des plaquettes et rôle du plasma."
+      ],
+      "clinicalApplication": "Ces distinctions permettent d’expliquer une fonction générale sans interpréter un résultat biologique.",
+      "section": "Appareil circulatoire - Le sang",
+      "pages": [
+        19
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.tissue"
+      ],
+      "lessonIds": [
+        "dea-p05-l03",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-010",
+      "title": "Petite circulation pulmonaire",
+      "summary": "La petite circulation relie le ventricule droit aux poumons puis à l’oreillette gauche par l’artère pulmonaire, les capillaires pulmonaires et les veines pulmonaires.",
+      "keyPoints": [
+        "Elle débute au ventricule droit.",
+        "Elle traverse les capillaires pulmonaires.",
+        "Elle revient à l’oreillette gauche par les veines pulmonaires."
+      ],
+      "commonErrors": [
+        "Faire débuter la petite circulation au ventricule gauche.",
+        "Y placer l’aorte ou les veines caves."
+      ],
+      "clinicalApplication": "Le trajet permet de distinguer circulation pulmonaire et circulation tissulaire sur un schéma.",
+      "section": "Appareil circulatoire - La grande et la petite circulation",
+      "pages": [
+        21
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l04",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-011",
+      "title": "Grande circulation tissulaire",
+      "summary": "La grande circulation relie le ventricule gauche aux tissus puis à l’oreillette droite par l’aorte, les capillaires cellulaires et les veines caves.",
+      "keyPoints": [
+        "Elle débute au ventricule gauche.",
+        "L’aorte conduit le sang vers les organes et les capillaires cellulaires.",
+        "Les veines caves ramènent le sang à l’oreillette droite."
+      ],
+      "commonErrors": [
+        "Faire revenir la grande circulation à l’oreillette gauche.",
+        "Y placer les veines pulmonaires."
+      ],
+      "clinicalApplication": "Le trajet permet de situer les échanges tissulaires dans la circulation générale.",
+      "section": "Appareil circulatoire - La grande et la petite circulation",
+      "pages": [
+        21
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l05",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-012",
+      "title": "Tensiomètres manuel et automatique",
+      "summary": "Le tensiomètre manuel associe un manchon, une poire avec valve et un manomètre ; un appareil automatique affiche la pression artérielle et la fréquence cardiaque.",
+      "keyPoints": [
+        "Le manchon doit être adapté à la morphologie du patient.",
+        "La poire gonfle le manchon et sa valve permet un dégonflage progressif.",
+        "Le manomètre mesure la contre-pression exercée sur le bras."
+      ],
+      "commonErrors": [
+        "Utiliser un brassard sans tenir compte de la taille du patient."
+      ],
+      "clinicalApplication": "Identifier les éléments du tensiomètre permet de préparer un matériel adapté avant la mesure.",
+      "section": "Les matériels de mesures - Le tensiomètre",
+      "pages": [
+        53
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l06",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-013",
+      "title": "Mesure manuelle de la pression artérielle",
+      "summary": "La mesure manuelle utilise un brassard adapté, posé sur un patient au repos ; le premier battement net correspond à la valeur systolique et le dernier à la valeur diastolique.",
+      "keyPoints": [
+        "Le support demande un patient au repos depuis dix minutes, en décubitus dorsal.",
+        "Le brassard se place environ deux centimètres au-dessus du pli du coude.",
+        "Un brassard trop petit surestime les valeurs et un brassard trop grand les sous-estime."
+      ],
+      "commonErrors": [
+        "Inverser valeurs systolique et diastolique.",
+        "Négliger l’adaptation du brassard ou la position du patient."
+      ],
+      "clinicalApplication": "Respecter les conditions et transmettre les deux valeurs améliore la fiabilité du bilan chiffré.",
+      "section": "Mesures des paramètres vitaux - Pression artérielle manuelle",
+      "pages": [
+        66,
+        67
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l06",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P05-014",
+      "title": "Évaluation du pouls",
+      "summary": "L’évaluation du pouls apprécie sa fréquence, son amplitude et son rythme ; le pouls radial se recherche à la base du pouce avec l’index et le majeur.",
+      "keyPoints": [
+        "La fréquence correspond au nombre de pulsations sur une minute dans la technique décrite.",
+        "L’amplitude peut être forte, faible, filante ou imperceptible.",
+        "Le rythme est décrit comme régulier ou irrégulier."
+      ],
+      "commonErrors": [
+        "Utiliser son propre pouce pour palper le pouls radial.",
+        "Transmettre uniquement la fréquence sans amplitude ni rythme."
+      ],
+      "clinicalApplication": "Une transmission structurée associe site de prise, fréquence, rythme et amplitude observés.",
+      "section": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "pages": [
+        67,
+        68
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonIds": [
+        "dea-p05-l07",
+        "dea-p05-l08",
+        "dea-p05-boss"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

@@ -1,0 +1,805 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "DOC-JORF-2022-04-17-0091-0039",
+  "title": "Arrêté du 11 avril 2022 relatif à la formation conduisant au diplôme d’État d’ambulancier et aux conditions de formation de l’auxiliaire ambulancier",
+  "organization": "Ministère des solidarités et de la santé — Journal officiel de la République française",
+  "category": "Code_Santé_Publique",
+  "publication_date": "2022-04-17",
+  "document_date": "2022-04-11",
+  "version": "JORF initiale 2022-04-17",
+  "nor": "SSAH2130352A",
+  "language": "fr",
+  "status": "official",
+  "review_status": "source_verified",
+  "source_file": "docs/official_sources/Code_Santé_Publique/joe_20220417_0091_0039.pdf",
+  "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045593318/",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "1495720C9B49765816866161475F9A7958477CB8571B7E3ADED96CA4FE1DE680",
+  "pages": 31,
+  "analyzed_at": "2026-08-01T00:00:00.000Z",
+  "extraction_method": [
+    "pdfplumber_text_and_tables",
+    "pypdf_metadata",
+    "pypdfium2_visual_rendering",
+    "human_structural_review"
+  ],
+  "scope": "Référentiel réglementaire de formation, d’activités et de compétences du diplôme d’État d’ambulancier publié au JORF.",
+  "chapters": [
+    {
+      "chapter_id": "JORF-CH-01",
+      "title": "Titre Ier — Formations conduisant au diplôme d’État d’ambulancier et à la profession d’auxiliaire ambulancier",
+      "page_range": "1-2",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-01-S01",
+          "title": "Diplôme d’État d’ambulancier",
+          "article_range": "Article 1",
+          "page_range": "1",
+          "knowledge_ids": ["K-JORF-DEA-001", "K-JORF-DEA-010"]
+        },
+        {
+          "subchapter_id": "JORF-CH-01-S02",
+          "title": "Profession d’auxiliaire ambulancier",
+          "article_range": "Article 2",
+          "page_range": "1-2",
+          "knowledge_ids": ["K-JORF-DEA-002"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-02",
+      "title": "Titre II — Conditions d’accès à la formation d’ambulancier",
+      "page_range": "2-5",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-02-S01",
+          "title": "Voies d’accès, admissibilité et entretien",
+          "article_range": "Articles 3 à 12",
+          "page_range": "2-5",
+          "knowledge_ids": ["K-JORF-DEA-011"]
+        },
+        {
+          "subchapter_id": "JORF-CH-02-S02",
+          "title": "Reports, admissions dérogatoires et apprentissage",
+          "article_range": "Articles 13 à 15",
+          "page_range": "5",
+          "knowledge_ids": ["K-JORF-DEA-012"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-03",
+      "title": "Titre III — Contenu et organisation pédagogique de la formation d’ambulancier",
+      "page_range": "5-7",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-03-S01",
+          "title": "Durée et organisation générale",
+          "article_range": "Articles 16 à 18",
+          "page_range": "5-6",
+          "knowledge_ids": ["K-JORF-DEA-013", "K-JORF-DEA-014"]
+        },
+        {
+          "subchapter_id": "JORF-CH-03-S02",
+          "title": "Formation en milieu professionnel et portfolio",
+          "article_range": "Articles 19 à 21",
+          "page_range": "6-7",
+          "knowledge_ids": ["K-JORF-DEA-015", "K-JORF-DEA-016"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-04",
+      "title": "Titre IV — Organisation des épreuves d’évaluation conduisant à la certification",
+      "page_range": "7-8",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-04-S01",
+          "title": "Évaluation, rattrapage et certification",
+          "article_range": "Articles 22 à 27",
+          "page_range": "7-8",
+          "knowledge_ids": ["K-JORF-DEA-017"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-05",
+      "title": "Titre V — Équivalences de compétences et allègements de formation",
+      "page_range": "8-9",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-05-S01",
+          "title": "Diplômes, titres et parcours individualisés",
+          "article_range": "Articles 28 à 30",
+          "page_range": "8-9",
+          "knowledge_ids": ["K-JORF-DEA-018"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-06",
+      "title": "Titre VI — Déroulement de la formation des alternants",
+      "page_range": "9",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-06-S01",
+          "title": "Organisation de l’alternance",
+          "article_range": "Articles 31 et 32",
+          "page_range": "9",
+          "knowledge_ids": ["K-JORF-DEA-019"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-07",
+      "title": "Titre VII — Dispositions transitoires et finales",
+      "page_range": "9",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-07-S01",
+          "title": "Entrée en vigueur et annexes",
+          "article_range": "Articles 33 à 36",
+          "page_range": "9",
+          "knowledge_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-08",
+      "title": "Annexe I — Référentiel d’activités",
+      "page_range": "10-11",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-08-S01",
+          "title": "Définition du métier d’ambulancier",
+          "page_range": "10",
+          "knowledge_ids": ["K-JORF-DEA-001"]
+        },
+        {
+          "subchapter_id": "JORF-CH-08-S02",
+          "title": "Sept domaines d’activités",
+          "page_range": "10-11",
+          "knowledge_ids": [
+            "K-JORF-DEA-003",
+            "K-JORF-DEA-004",
+            "K-JORF-DEA-005",
+            "K-JORF-DEA-006",
+            "K-JORF-DEA-007",
+            "K-JORF-DEA-008",
+            "K-JORF-DEA-009"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-09",
+      "title": "Annexe II — Référentiel de compétences",
+      "page_range": "12-18",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-09-S01",
+          "title": "Bloc 1 — Prise en soin du patient à tout âge de la vie",
+          "page_range": "12-14",
+          "knowledge_ids": ["K-JORF-DEA-C01", "K-JORF-DEA-C02", "K-JORF-DEA-C03"]
+        },
+        {
+          "subchapter_id": "JORF-CH-09-S02",
+          "title": "Bloc 2 — Recueil de données cliniques et soins adaptés",
+          "page_range": "14-15",
+          "knowledge_ids": ["K-JORF-DEA-C04", "K-JORF-DEA-C05"]
+        },
+        {
+          "subchapter_id": "JORF-CH-09-S03",
+          "title": "Bloc 3 — Transport et sécurité routière",
+          "page_range": "15-16",
+          "knowledge_ids": ["K-JORF-DEA-C06", "K-JORF-DEA-C07"]
+        },
+        {
+          "subchapter_id": "JORF-CH-09-S04",
+          "title": "Bloc 4 — Entretien des matériels et installations",
+          "page_range": "16-17",
+          "knowledge_ids": ["K-JORF-DEA-C08", "K-JORF-DEA-C09"]
+        },
+        {
+          "subchapter_id": "JORF-CH-09-S05",
+          "title": "Bloc 5 — Travail en équipe, information, qualité et risques",
+          "page_range": "17-18",
+          "knowledge_ids": ["K-JORF-DEA-C10", "K-JORF-DEA-C11"]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-10",
+      "title": "Annexe III — Référentiel de formation",
+      "page_range": "19-28",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-10-S01",
+          "title": "Organisation des modules et modalités d’évaluation",
+          "page_range": "19-20",
+          "knowledge_ids": [
+            "K-JORF-DEA-M01",
+            "K-JORF-DEA-M02",
+            "K-JORF-DEA-M03",
+            "K-JORF-DEA-M04",
+            "K-JORF-DEA-M05",
+            "K-JORF-DEA-M06",
+            "K-JORF-DEA-M07",
+            "K-JORF-DEA-M08",
+            "K-JORF-DEA-M09",
+            "K-JORF-DEA-M10"
+          ]
+        },
+        {
+          "subchapter_id": "JORF-CH-10-S02",
+          "title": "Organisation et répartition des stages",
+          "page_range": "21",
+          "knowledge_ids": ["K-JORF-DEA-015"]
+        },
+        {
+          "subchapter_id": "JORF-CH-10-S03",
+          "title": "Contenus des modules 1 à 10",
+          "page_range": "21-28",
+          "knowledge_ids": [
+            "K-JORF-DEA-M01",
+            "K-JORF-DEA-M02",
+            "K-JORF-DEA-M03",
+            "K-JORF-DEA-M04",
+            "K-JORF-DEA-M05",
+            "K-JORF-DEA-M06",
+            "K-JORF-DEA-M07",
+            "K-JORF-DEA-M08",
+            "K-JORF-DEA-M09",
+            "K-JORF-DEA-M10"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "JORF-CH-11",
+      "title": "Annexes IV à VI — Documents de suivi et attendus",
+      "page_range": "29-31",
+      "subchapters": [
+        {
+          "subchapter_id": "JORF-CH-11-S01",
+          "title": "Attestation de suivi du stage d’observation",
+          "page_range": "29",
+          "knowledge_ids": []
+        },
+        {
+          "subchapter_id": "JORF-CH-11-S02",
+          "title": "Attendus de la formation",
+          "page_range": "30",
+          "knowledge_ids": ["K-JORF-DEA-020"]
+        },
+        {
+          "subchapter_id": "JORF-CH-11-S03",
+          "title": "Attestation de l’employeur",
+          "page_range": "31",
+          "knowledge_ids": []
+        }
+      ]
+    }
+  ],
+  "notions": [
+    "K-JORF-DEA-003",
+    "K-JORF-DEA-004",
+    "K-JORF-DEA-005",
+    "K-JORF-DEA-006",
+    "K-JORF-DEA-007",
+    "K-JORF-DEA-008",
+    "K-JORF-DEA-009",
+    "K-JORF-DEA-010",
+    "K-JORF-DEA-013",
+    "K-JORF-DEA-014",
+    "K-JORF-DEA-015",
+    "K-JORF-DEA-016",
+    "K-JORF-DEA-018",
+    "K-JORF-DEA-019",
+    "K-JORF-DEA-020"
+  ],
+  "definitions": ["K-JORF-DEA-001", "K-JORF-DEA-002"],
+  "procedures": [
+    {
+      "procedure_id": "JORF-PROC-001",
+      "title": "Admission en formation DEA",
+      "summary": "Le processus associe, selon la situation du candidat, admissibilité sur dossier, stage d’observation et entretien d’admission, avec des dispenses et voies dérogatoires encadrées.",
+      "source_pages": "2-5",
+      "source_articles": "Articles 3 à 15",
+      "knowledge_ids": ["K-JORF-DEA-011", "K-JORF-DEA-012"]
+    },
+    {
+      "procedure_id": "JORF-PROC-002",
+      "title": "Suivi et évaluation des stages",
+      "summary": "Les périodes en milieu professionnel sont suivies par portfolio et évaluées par le tuteur ou maître de stage, avec synthèse par le formateur référent.",
+      "source_pages": "6-7",
+      "source_articles": "Articles 19 et 20",
+      "knowledge_ids": ["K-JORF-DEA-015", "K-JORF-DEA-016"]
+    },
+    {
+      "procedure_id": "JORF-PROC-003",
+      "title": "Validation des blocs et certification",
+      "summary": "Chaque bloc est évalué sans compensation entre blocs ; le dispositif prévoit rattrapage, compléments de stage et décision du jury de certification.",
+      "source_pages": "7-8",
+      "source_articles": "Articles 22 à 27",
+      "knowledge_ids": ["K-JORF-DEA-017"]
+    }
+  ],
+  "protocols": [
+    {
+      "protocol_id": "JORF-PROT-REF-001",
+      "title": "Mesure des signes cliniques et données paracliniques",
+      "status": "referenced_not_defined",
+      "scope_note": "Le référentiel exige l’usage de protocoles établis, mais ne fournit pas de séquence opératoire détaillée.",
+      "source_pages": "14, 23-24"
+    },
+    {
+      "protocol_id": "JORF-PROT-REF-002",
+      "title": "Soins relevant de l’urgence en lien avec la régulation médicale",
+      "status": "referenced_not_defined",
+      "scope_note": "Le texte énumère des familles de gestes et de soins, sans constituer à lui seul un protocole clinique complet.",
+      "source_pages": "15, 24-25"
+    },
+    {
+      "protocol_id": "JORF-PROT-REF-003",
+      "title": "Nettoyage, désinfection et prévention des risques",
+      "status": "referenced_not_defined",
+      "scope_note": "Les principes, circuits et exigences sont référencés ; les protocoles locaux et fiches techniques restent nécessaires.",
+      "source_pages": "16, 26"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "JORF-TBL-001",
+      "title": "Correspondance entre blocs et compétences",
+      "source_page": "12",
+      "columns": ["bloc", "compétences"],
+      "rows": [
+        ["Bloc 1", "Compétences 1 à 3"],
+        ["Bloc 2", "Compétences 4 et 5"],
+        ["Bloc 3", "Compétences 6 et 7"],
+        ["Bloc 4", "Compétences 8 et 9"],
+        ["Bloc 5", "Compétences 10 et 11"]
+      ]
+    },
+    {
+      "table_id": "JORF-TBL-002",
+      "title": "Durée des modules de formation",
+      "source_pages": "19-20",
+      "columns": ["module", "durée_heures"],
+      "rows": [
+        ["Module 1", 70],
+        ["Module 2", 70],
+        ["Module 3", 35],
+        ["Module 4", 105],
+        ["Module 5", 105],
+        ["Module 6", 7],
+        ["Module 7", 21],
+        ["Module 8", 35],
+        ["Module 9", 35],
+        ["Module 10", 70],
+        ["Suivi pédagogique", 3]
+      ],
+      "total_hours": 556
+    },
+    {
+      "table_id": "JORF-TBL-003",
+      "title": "Répartition des stages",
+      "source_page": "21",
+      "columns": ["type", "durée_heures"],
+      "rows": [
+        ["Structures de soins selon le parcours individualisé", 105],
+        ["Médecine d’urgence adulte/enfant, urgences ou SAMU-SMUR", 70],
+        ["Entreprise de transport sanitaire", 70]
+      ],
+      "total_hours": 245
+    },
+    {
+      "table_id": "JORF-TBL-004",
+      "title": "Attendus de la formation",
+      "source_page": "30",
+      "columns": ["attendu", "critères"],
+      "rows": [
+        ["Intérêt pour le domaine de l’accompagnement et de l’aide à la personne", "Connaissances du domaine, intérêt pour l’accompagnement"],
+        ["Qualités humaines", "Aptitude à l’empathie, la bienveillance et l’écoute"],
+        ["Aptitudes relationnelles", "Communication, travail en équipe, expression et argumentation"],
+        ["Capacités organisationnelles", "Rigueur, organisation et autonomie" ]
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Ambulancier",
+      "definition": "Professionnel de santé et du transport sanitaire assurant la prise en soin et/ou le transport de patients, notamment dans le cadre de l’aide médicale urgente.",
+      "source_page": "10",
+      "knowledge_id": "K-JORF-DEA-001"
+    },
+    {
+      "term": "Auxiliaire ambulancier",
+      "definition": "Professionnel habilité à conduire le véhicule sanitaire léger et l’ambulance et pouvant être l’équipier de l’ambulancier.",
+      "source_pages": "1-2",
+      "knowledge_id": "K-JORF-DEA-002"
+    },
+    {
+      "term": "Bloc de compétences",
+      "definition": "Ensemble cohérent de compétences devant être validé pour l’obtention du diplôme ; les cinq blocs ne se compensent pas entre eux.",
+      "source_pages": "1, 7",
+      "knowledge_id": "K-JORF-DEA-010"
+    },
+    {
+      "term": "Portfolio",
+      "definition": "Support de suivi des périodes de formation en milieu professionnel et de l’acquisition progressive des compétences.",
+      "source_pages": "6-7",
+      "knowledge_id": "K-JORF-DEA-016"
+    },
+    {
+      "term": "Dossier de prestation ambulancière",
+      "definition": "Ensemble des informations administratives et techniques assurant la traçabilité de la prestation et du transport.",
+      "source_page": "11",
+      "knowledge_id": "K-JORF-DEA-008"
+    }
+  ],
+  "constants": [
+    {"constant_id": "JORF-CONST-001", "label": "Nombre de blocs de compétences", "value": 5, "unit": "blocs", "source_page": "1"},
+    {"constant_id": "JORF-CONST-002", "label": "Niveau du diplôme dans le cadre national", "value": 3, "unit": "niveau", "source_page": "1"},
+    {"constant_id": "JORF-CONST-003", "label": "Formation d’auxiliaire ambulancier", "value": 70, "unit": "heures", "source_page": "2"},
+    {"constant_id": "JORF-CONST-004", "label": "Stage d’observation préalable", "value": 70, "unit": "heures", "source_page": "2"},
+    {"constant_id": "JORF-CONST-005", "label": "Durée maximale de l’entretien d’admission", "value": 20, "unit": "minutes", "source_page": "4"},
+    {"constant_id": "JORF-CONST-006", "label": "Seuil éliminatoire à l’entretien", "value": 8, "unit": "points_sur_20_exclus", "source_page": "4"},
+    {"constant_id": "JORF-CONST-007", "label": "Durée totale de la formation DEA", "value": 801, "unit": "heures", "source_page": "5"},
+    {"constant_id": "JORF-CONST-008", "label": "Formation théorique et pratique", "value": 556, "unit": "heures", "source_page": "5"},
+    {"constant_id": "JORF-CONST-009", "label": "Formation en milieu professionnel", "value": 245, "unit": "heures", "source_page": "5"},
+    {"constant_id": "JORF-CONST-010", "label": "Durée de la formation en milieu professionnel", "value": 7, "unit": "semaines_de_35_heures", "source_page": "5"},
+    {"constant_id": "JORF-CONST-011", "label": "Nombre de modules", "value": 10, "unit": "modules", "source_page": "6"},
+    {"constant_id": "JORF-CONST-012", "label": "Part maximale d’enseignement théorique à distance", "value": 70, "unit": "pourcent", "source_page": "6"},
+    {"constant_id": "JORF-CONST-013", "label": "Franchise maximale d’absence", "value": 5, "unit": "pourcent_de_la_formation", "source_page": "7"},
+    {"constant_id": "JORF-CONST-014", "label": "Note minimale à l’évaluation théorique de chaque bloc", "value": 10, "unit": "points_sur_20", "source_page": "7"},
+    {"constant_id": "JORF-CONST-015", "label": "Stage minimal après non-validation initiale en stage", "value": 35, "unit": "heures", "source_page": "7"},
+    {"constant_id": "JORF-CONST-016", "label": "Stage minimal après non-validation à la session de rattrapage", "value": 70, "unit": "heures", "source_page": "7"},
+    {"constant_id": "JORF-CONST-017", "label": "Délai de publication des résultats", "value": 5, "unit": "jours_ouvrés", "source_page": "8"},
+    {"constant_id": "JORF-CONST-018", "label": "Durée maximale de la formation en alternance", "value": 24, "unit": "mois", "source_page": "9"}
+  ],
+  "competencies": [
+    {"competency_id": "DEA-2022-C01", "block": 1, "title": "Établir une communication adaptée pour informer et accompagner le patient et son entourage", "source_pages": "12", "knowledge_id": "K-JORF-DEA-C01"},
+    {"competency_id": "DEA-2022-C02", "block": 1, "title": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources et en utilisant le matériel adapté", "source_pages": "13", "knowledge_id": "K-JORF-DEA-C02"},
+    {"competency_id": "DEA-2022-C03", "block": 1, "title": "Mettre en œuvre des soins d’hygiène et de confort adaptés aux besoins et à la situation du patient", "source_pages": "13-14", "knowledge_id": "K-JORF-DEA-C03"},
+    {"competency_id": "DEA-2022-C04", "block": 2, "title": "Apprécier l’état clinique du patient dans son domaine de compétences", "source_pages": "14", "knowledge_id": "K-JORF-DEA-C04"},
+    {"competency_id": "DEA-2022-C05", "block": 2, "title": "Mettre en œuvre les soins adaptés à l’état du patient notamment ceux relevant de l’urgence", "source_pages": "14-15", "knowledge_id": "K-JORF-DEA-C05"},
+    {"competency_id": "DEA-2022-C06", "block": 3, "title": "Réaliser la préparation, le contrôle et l’entretien du véhicule adapté au transport sanitaire terrestre afin de garantir la sécurité du transport", "source_pages": "15", "knowledge_id": "K-JORF-DEA-C06"},
+    {"competency_id": "DEA-2022-C07", "block": 3, "title": "Conduire le véhicule adapté au transport sanitaire terrestre dans le respect des règles de circulation et de sécurité routière et de façon adaptée à l’état de santé du patient", "source_pages": "15-16", "knowledge_id": "K-JORF-DEA-C07"},
+    {"competency_id": "DEA-2022-C08", "block": 4, "title": "Utiliser des techniques d’entretien du matériel et des installations adaptées en prenant en compte la prévention des risques associés", "source_pages": "16", "knowledge_id": "K-JORF-DEA-C08"},
+    {"competency_id": "DEA-2022-C09", "block": 4, "title": "Repérer, signaler, traiter les anomalies et dysfonctionnements en lien avec l’entretien du véhicule, du matériel et des installations et en assurer la traçabilité", "source_pages": "16-17", "knowledge_id": "K-JORF-DEA-C09"},
+    {"competency_id": "DEA-2022-C10", "block": 5, "title": "Rechercher, traiter, transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et des activités et transmettre ses savoir-faire professionnels", "source_pages": "17", "knowledge_id": "K-JORF-DEA-C10"},
+    {"competency_id": "DEA-2022-C11", "block": 5, "title": "Organiser et contrôler son activité, coopérer au sein d’une équipe pluriprofessionnelle et améliorer sa pratique dans le cadre d’une démarche qualité et de gestion des risques", "source_pages": "17-18", "knowledge_id": "K-JORF-DEA-C11"}
+  ],
+  "knowledge_entries": [
+    {
+      "knowledge_id": "K-JORF-DEA-001",
+      "knowledge_type": "definition",
+      "title": "Métier d’ambulancier",
+      "definition": "L’ambulancier est un professionnel de santé et du transport sanitaire qui assure la prise en soin et/ou le transport de patients à tout âge de la vie, sur prescription médicale ou dans le cadre de l’aide médicale urgente.",
+      "summary": "Son activité combine prise en soin, transport sanitaire adapté, soins relevant de l’urgence dans son domaine d’intervention et collaboration pluriprofessionnelle.",
+      "important_points": ["Profession de santé", "Transport sanitaire adapté à l’état du patient", "Intervention possible dans l’aide médicale urgente", "Exercice dans un champ de compétences défini"],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": ["auxiliaire ambulancier", "transport sanitaire", "aide médicale urgente"],
+      "difficulty": "easy",
+      "tags": ["DEA", "métier", "référentiel", "définition"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039",
+      "source_chapter": "Annexe I",
+      "source_section": "Définition du métier d’ambulancier",
+      "source_page": "10",
+      "version": "2022-04-17",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-002",
+      "knowledge_type": "definition",
+      "title": "Profession d’auxiliaire ambulancier",
+      "definition": "L’auxiliaire ambulancier est habilité à conduire le véhicule sanitaire léger et l’ambulance et peut être l’équipier de l’ambulancier.",
+      "summary": "L’exercice exige notamment des justificatifs d’aptitude, de santé et de vaccination, une formation de 70 heures validée et l’AFGSU de niveau 2.",
+      "important_points": ["Conduite du VSL et de l’ambulance", "Équipier possible de l’ambulancier", "Formation spécifique de 70 heures", "AFGSU niveau 2"],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": ["ambulancier", "AFGSU 2", "transport sanitaire"],
+      "difficulty": "easy",
+      "tags": ["auxiliaire ambulancier", "conditions d’exercice", "formation"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039",
+      "source_chapter": "Titre Ier",
+      "source_section": "Article 2",
+      "source_page": "1-2",
+      "version": "2022-04-17",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-003",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 1 — Prise en soin et transport sécurisé",
+      "definition": "Ce domaine couvre le recueil d’informations, la prévention des risques, l’installation, la mobilisation et les soins d’hygiène ou de confort adaptés.",
+      "summary": "La prise en soin est individualisée selon l’âge, la situation, les capacités et les risques du patient.",
+      "important_points": ["Recueil d’informations", "Prévention des risques", "Mobilisation et conditionnement", "Confort physique et psychique"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["communication", "mobilisation", "hygiène et confort"],
+      "difficulty": "easy", "tags": ["activité", "bloc 1", "prise en soin"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 1", "source_page": "10", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-004",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 2 — Données cliniques, soins et transmission",
+      "definition": "Ce domaine porte sur le recueil de paramètres cliniques, le bilan, la surveillance, l’alerte et les premiers soins dans le champ d’intervention de l’ambulancier.",
+      "summary": "L’ambulancier observe, mesure, surveille, alerte et transmet tout changement pertinent de l’état du patient.",
+      "important_points": ["Données cliniques", "Bilan", "Surveillance", "Alerte", "Premiers soins sur prescription du médecin régulateur"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["bilan", "urgence", "régulation médicale"],
+      "difficulty": "medium", "tags": ["activité", "bloc 2", "clinique"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 2", "source_page": "10", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-005",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 3 — Contrôle du véhicule",
+      "definition": "Ce domaine comprend la préparation du véhicule, le contrôle de l’adéquation des équipements et les vérifications de base.",
+      "summary": "Le véhicule et ses équipements doivent être préparés en fonction de la situation clinique et des risques de transport.",
+      "important_points": ["Prévention des contaminations et chutes", "Adéquation des équipements", "Vérifications de base"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["véhicule sanitaire", "sécurité du transport"],
+      "difficulty": "easy", "tags": ["activité", "véhicule", "sécurité"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 3", "source_page": "10", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-006",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 4 — Transport sanitaire du patient",
+      "definition": "Ce domaine associe le choix de l’itinéraire et une conduite sûre, adaptée à la pathologie, à l’urgence et aux conditions de circulation.",
+      "summary": "Le transport doit rester compatible avec l’état clinique du patient et les contraintes de circulation.",
+      "important_points": ["Choix de l’itinéraire", "Degré d’urgence", "Conduite adaptée", "Sécurité routière"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["conduite", "itinéraire", "sécurité routière"],
+      "difficulty": "medium", "tags": ["activité", "transport", "conduite"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 4", "source_page": "10", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-007",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 5 — Entretien des matériels et installations",
+      "definition": "Ce domaine couvre la conformité, le fonctionnement, l’approvisionnement, l’hygiène et le traitement des anomalies des matériels et installations.",
+      "summary": "L’entretien vise la disponibilité, la sécurité et la prévention des contaminations.",
+      "important_points": ["Conformité", "Fonctionnement", "Consommables", "Nettoyage et désinfection", "Anomalies"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["hygiène", "désinfection", "maintenance"],
+      "difficulty": "medium", "tags": ["activité", "matériel", "hygiène"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 5", "source_page": "10-11", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-008",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 6 — Traçabilité de la prestation ambulancière",
+      "definition": "Ce domaine regroupe la recherche, le traitement, la rédaction et la transmission des informations administratives et techniques liées au transport.",
+      "summary": "La fiche bilan, le rapport d’intervention et les événements du transport doivent être tracés.",
+      "important_points": ["Dossier administratif", "Fiche bilan", "Rapport d’intervention", "Traçabilité des événements"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["transmission", "dossier patient", "traçabilité"],
+      "difficulty": "medium", "tags": ["activité", "information", "traçabilité"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 6", "source_page": "11", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-009",
+      "knowledge_type": "notion",
+      "title": "Domaine d’activité 7 — Travail en équipe et transmission des savoir-faire",
+      "definition": "Ce domaine comprend l’organisation d’équipage, les échanges, la transmission de savoir-faire, la sécurité collective et l’amélioration continue.",
+      "summary": "L’ambulancier contribue à la coordination, à l’apprentissage collectif et à la qualité des pratiques.",
+      "important_points": ["Organisation de l’équipage", "Transmission d’informations", "Transmission de savoir-faire", "Sécurité collective", "Amélioration continue"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["équipe pluriprofessionnelle", "qualité", "gestion des risques"],
+      "difficulty": "medium", "tags": ["activité", "équipe", "qualité"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe I", "source_section": "Domaine d’activité 7", "source_page": "11", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-010",
+      "knowledge_type": "notion",
+      "title": "Architecture de certification du DEA",
+      "definition": "Le diplôme atteste la validation de cinq blocs de compétences et est enregistré au niveau 3 du cadre national des certifications professionnelles.",
+      "summary": "L’obtention du diplôme exige la validation de tous les blocs ; aucune compensation n’est admise entre eux.",
+      "important_points": ["Cinq blocs", "Niveau 3", "Validation de tous les blocs", "Absence de compensation"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["certification", "blocs de compétences"],
+      "difficulty": "easy", "tags": ["DEA", "certification", "blocs"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre Ier et Titre IV", "source_section": "Articles 1 et 22", "source_page": "1, 7", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-011",
+      "knowledge_type": "procedure",
+      "title": "Processus général d’admission en formation DEA",
+      "definition": "L’admission s’effectue selon une procédure adaptée au profil du candidat, comprenant généralement un dossier d’admissibilité, un stage d’observation et un entretien.",
+      "summary": "Les pièces, dispenses, seuils et modalités de classement sont définis aux articles 3 à 12.",
+      "important_points": ["Accès sans condition de diplôme", "Dossier d’admissibilité", "Stage d’observation de 70 heures sauf dispense", "Entretien de 20 minutes", "Classement selon capacité d’accueil"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["admissibilité", "entretien", "stage d’observation"],
+      "difficulty": "medium", "tags": ["admission", "formation", "procédure"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre II", "source_section": "Articles 3 à 12", "source_page": "2-5", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-012",
+      "knowledge_type": "procedure",
+      "title": "Reports et admissions particulières",
+      "definition": "Le texte encadre les reports d’entrée, l’admission de certains auxiliaires ambulanciers et l’admission directe de candidats déjà sélectionnés pour un contrat d’apprentissage.",
+      "summary": "Les dérogations reposent sur des situations et justificatifs explicitement définis.",
+      "important_points": ["Report cumulé dans la limite de deux ans", "Cas de droit et cas exceptionnels", "Admission directe possible en apprentissage sous conditions"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["report", "apprentissage", "admission dérogatoire"],
+      "difficulty": "medium", "tags": ["admission", "dérogation", "apprentissage"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre II", "source_section": "Articles 13 à 15", "source_page": "5", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-013",
+      "knowledge_type": "constant",
+      "title": "Durée globale de la formation DEA",
+      "definition": "La formation totalise 801 heures : 556 heures théoriques et pratiques et 245 heures en milieu professionnel.",
+      "summary": "Les 245 heures de stage correspondent à sept semaines de 35 heures.",
+      "important_points": ["801 heures au total", "556 heures en institut ou à distance", "245 heures en milieu professionnel", "Sept semaines de stage"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["modules", "stages", "organisation pédagogique"],
+      "difficulty": "easy", "tags": ["durée", "formation", "constante"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre III", "source_section": "Article 17", "source_page": "5", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-014",
+      "knowledge_type": "notion",
+      "title": "Organisation pédagogique théorique et pratique",
+      "definition": "La formation comprend dix modules et un suivi pédagogique individualisé, avec cours, travaux dirigés, travaux pratiques et simulation en santé.",
+      "summary": "La part d’enseignement théorique à distance ne peut dépasser 70 % de la durée théorique.",
+      "important_points": ["Dix modules", "Suivi individualisé", "Simulation en santé", "Interprofessionnalité", "Enseignement à distance plafonné"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["modules", "simulation", "distance"],
+      "difficulty": "easy", "tags": ["organisation", "pédagogie", "formation"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre III", "source_section": "Article 18", "source_page": "6", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-015",
+      "knowledge_type": "procedure",
+      "title": "Organisation de la formation en milieu professionnel",
+      "definition": "Les 245 heures de stage sont réparties entre structures de soins, médecine d’urgence et entreprise de transport sanitaire.",
+      "summary": "Le parcours doit inclure au moins une expérience de nuit et une de week-end, avec convention et encadrement formalisés.",
+      "important_points": ["105 heures en structures de soins", "70 heures en médecine d’urgence", "70 heures en entreprise de transport sanitaire", "Supervision par un ambulancier diplômé d’État en entreprise"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["stage", "portfolio", "évaluation"],
+      "difficulty": "medium", "tags": ["stage", "formation professionnelle", "répartition"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre III et Annexe III", "source_section": "Article 19 et organisation des stages", "source_page": "6, 21", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-016",
+      "knowledge_type": "procedure",
+      "title": "Portfolio et évaluation en stage",
+      "definition": "Le portfolio suit les périodes en milieu professionnel et l’acquisition progressive des compétences.",
+      "summary": "Le tuteur évalue à chaque période ; le formateur référent assure le suivi et la synthèse des acquis.",
+      "important_points": ["Suivi progressif", "Évaluation par période", "Entretien en cas de difficulté", "Réajustement possible des objectifs"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["portfolio", "tuteur", "compétences"],
+      "difficulty": "medium", "tags": ["stage", "portfolio", "évaluation"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre III", "source_section": "Article 20", "source_page": "6-7", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-017",
+      "knowledge_type": "procedure",
+      "title": "Évaluation et certification du DEA",
+      "definition": "L’évaluation combine les résultats théoriques de chaque bloc et l’acquisition des compétences en stage.",
+      "summary": "Chaque bloc exige au moins 10/20 en théorie, sans compensation entre blocs, avec une session de rattrapage prévue.",
+      "important_points": ["Seuil théorique de 10/20", "Évaluation en stage", "Pas de compensation", "Rattrapage", "Validation de tous les blocs et AFGSU 2"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["certification", "rattrapage", "jury"],
+      "difficulty": "medium", "tags": ["certification", "évaluation", "procédure"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre IV", "source_section": "Articles 22 à 27", "source_page": "7-8", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-018",
+      "knowledge_type": "notion",
+      "title": "Équivalences et allègements de formation",
+      "definition": "Certains diplômes et titres ouvrent droit à des équivalences de compétences ou à des allègements de modules selon les modalités réglementaires.",
+      "summary": "Le parcours individualisé doit couvrir les compétences manquantes et respecter les modalités d’évaluation applicables.",
+      "important_points": ["Équivalences conditionnées", "Allègements partiels ou complets", "Parcours individualisés", "Comparaison des formations pour les diplômes européens"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["équivalence", "allègement", "parcours individualisé"],
+      "difficulty": "medium", "tags": ["équivalence", "formation", "réglementation"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre V", "source_section": "Articles 28 à 30", "source_page": "8-9", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-019",
+      "knowledge_type": "procedure",
+      "title": "Formation DEA par alternance",
+      "definition": "L’alternance répartit activité professionnelle, formation en institut et formation en milieu professionnel sur une durée maximale de vingt-quatre mois.",
+      "summary": "Les objectifs et durées de stage restent ceux du référentiel et le portfolio suit l’acquisition des compétences.",
+      "important_points": ["Durée maximale de 24 mois", "Convention pour chaque période professionnelle", "Portfolio obligatoire", "Évaluation identique des compétences"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["alternance", "portfolio", "stage"],
+      "difficulty": "medium", "tags": ["alternance", "formation", "procédure"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Titre VI", "source_section": "Articles 31 et 32", "source_page": "9", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-020",
+      "knowledge_type": "notion",
+      "title": "Attendus d’entrée en formation DEA",
+      "definition": "Les attendus portent sur l’intérêt pour l’accompagnement, les qualités humaines, les aptitudes relationnelles et les capacités organisationnelles.",
+      "summary": "Ils sont appréciés au moyen de critères portant notamment sur l’empathie, l’écoute, la communication, le travail en équipe, la rigueur et l’autonomie.",
+      "important_points": ["Accompagnement et aide à la personne", "Qualités humaines", "Aptitudes relationnelles", "Organisation et autonomie"],
+      "clinical_examples": [], "common_errors": [], "memory_tips": [],
+      "related_topics": ["admission", "aptitudes", "projet professionnel"],
+      "difficulty": "easy", "tags": ["admission", "attendus", "compétences transversales"],
+      "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe V", "source_section": "Attendus de la formation", "source_page": "30", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C01", "knowledge_type": "competency", "title": "Compétence 1 — Communication adaptée", "definition": "Établir une communication adaptée pour informer et accompagner le patient et son entourage.", "summary": "Écouter, informer, expliquer et adapter la relation sans jugement, dans le respect de la confidentialité et du champ professionnel.", "important_points": ["Communication verbale et non verbale", "Bienveillance", "Relation de confiance", "Vérification de la compréhension"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["communication", "patient", "entourage"], "difficulty": "medium", "tags": ["compétence", "bloc 1", "communication"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 1 — Compétence 1", "source_page": "12", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C02", "knowledge_type": "competency", "title": "Compétence 2 — Installation et déplacements", "definition": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources et en utilisant le matériel adapté.", "summary": "Évaluer les capacités, choisir les aides, appliquer l’ergonomie et sécuriser le patient, l’équipage et l’environnement.", "important_points": ["Capacités du patient", "Aides à la mobilisation", "Ergonomie", "Prévention des risques"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["mobilisation", "brancardage", "ergonomie"], "difficulty": "medium", "tags": ["compétence", "bloc 1", "mobilisation"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 1 — Compétence 2", "source_page": "13", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C03", "knowledge_type": "competency", "title": "Compétence 3 — Soins d’hygiène et de confort", "definition": "Mettre en œuvre des soins d’hygiène et de confort adaptés aux besoins et à la situation du patient.", "summary": "Rechercher les précautions, personnaliser le soin, respecter les bonnes pratiques et réévaluer sa qualité.", "important_points": ["Consentement", "Pudeur", "Hygiène et sécurité", "Personnalisation", "Réajustement"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["hygiène", "confort", "bientraitance"], "difficulty": "medium", "tags": ["compétence", "bloc 1", "soins"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 1 — Compétence 3", "source_page": "13-14", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C04", "knowledge_type": "competency", "title": "Compétence 4 — Appréciation de l’état clinique", "definition": "Apprécier l’état clinique du patient dans son domaine de compétences.", "summary": "Rechercher les informations, observer, mesurer, évaluer la douleur, repérer l’urgence et alerter.", "important_points": ["Entretien et observation", "Paramètres", "Douleur", "Signes d’alerte", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["bilan", "paramètres vitaux", "urgence"], "difficulty": "hard", "tags": ["compétence", "bloc 2", "clinique"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 2 — Compétence 4", "source_page": "14", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C05", "knowledge_type": "competency", "title": "Compétence 5 — Soins adaptés et urgence", "definition": "Mettre en œuvre les soins adaptés à l’état du patient, notamment ceux relevant de l’urgence.", "summary": "Identifier le soin pertinent, installer le patient, respecter les procédures et prescriptions du médecin régulateur, puis réévaluer.", "important_points": ["Choix du soin", "Position adaptée", "Procédures et régulation", "Réévaluation"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["urgence", "soins", "régulation médicale"], "difficulty": "hard", "tags": ["compétence", "bloc 2", "urgence"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 2 — Compétence 5", "source_page": "14-15", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C06", "knowledge_type": "competency", "title": "Compétence 6 — Préparation et entretien du véhicule", "definition": "Préparer, contrôler et entretenir le véhicule afin de garantir la sécurité du transport sanitaire terrestre.", "summary": "Vérifier conformité, fonctionnement et équipements, repérer les anomalies et réaliser l’entretien courant dans son champ de compétences.", "important_points": ["Conformité", "Équipements adaptés", "Anomalies", "Entretien courant", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["véhicule", "sécurité", "maintenance"], "difficulty": "medium", "tags": ["compétence", "bloc 3", "véhicule"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 3 — Compétence 6", "source_page": "15", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C07", "knowledge_type": "competency", "title": "Compétence 7 — Conduite adaptée", "definition": "Conduire le véhicule sanitaire en respectant la circulation et la sécurité routière, de façon adaptée à l’état du patient.", "summary": "Choisir l’itinéraire et adapter la conduite à la clinique, au trafic et aux conditions météorologiques.", "important_points": ["Sécurité routière", "Itinéraire", "État du patient", "Trafic et météo"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["conduite", "transport", "patient"], "difficulty": "hard", "tags": ["compétence", "bloc 3", "conduite"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 3 — Compétence 7", "source_page": "15-16", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C08", "knowledge_type": "competency", "title": "Compétence 8 — Entretien du matériel et prévention des risques", "definition": "Utiliser des techniques d’entretien du matériel et des installations adaptées en prenant en compte les risques associés.", "summary": "Choisir et doser les produits, appliquer nettoyage et désinfection, respecter les circuits et contrôler l’efficacité.", "important_points": ["Produits et fiches techniques", "Nettoyage et désinfection", "Circuits", "Stockage", "Prévention des infections"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["hygiène", "désinfection", "matériel"], "difficulty": "hard", "tags": ["compétence", "bloc 4", "hygiène"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 4 — Compétence 8", "source_page": "16", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C09", "knowledge_type": "competency", "title": "Compétence 9 — Anomalies et dysfonctionnements", "definition": "Repérer, signaler et traiter les anomalies liées à l’entretien du véhicule, du matériel et des installations et en assurer la traçabilité.", "summary": "Vérifier, identifier, alerter, proposer des réajustements et tracer les défauts constatés.", "important_points": ["Vérification", "Repérage", "Signalement", "Traçabilité", "Analyse critique"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["maintenance", "traçabilité", "qualité"], "difficulty": "medium", "tags": ["compétence", "bloc 4", "anomalie"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 4 — Compétence 9", "source_page": "16-17", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C10", "knowledge_type": "competency", "title": "Compétence 10 — Information, continuité et savoir-faire", "definition": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et transmettre les savoir-faire professionnels.", "summary": "Hiérarchiser les informations, restituer une synthèse exacte, utiliser les outils adaptés et accompagner les apprenants.", "important_points": ["Recueil", "Hiérarchisation", "Transmission", "Continuité", "Traçabilité", "Tutorat"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["transmission", "bilan", "tutorat"], "difficulty": "hard", "tags": ["compétence", "bloc 5", "information"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 5 — Compétence 10", "source_page": "17", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-C11", "knowledge_type": "competency", "title": "Compétence 11 — Organisation, coopération et qualité", "definition": "Organiser et contrôler son activité, coopérer en équipe pluriprofessionnelle et améliorer sa pratique dans une démarche qualité et de gestion des risques.", "summary": "Identifier les rôles, prioriser, contribuer aux projets collectifs, signaler les événements indésirables et développer sa pratique.", "important_points": ["Champ d’intervention", "Organisation", "Coopération", "Qualité", "Gestion des risques", "Formation continue"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["équipe", "qualité", "risques"], "difficulty": "hard", "tags": ["compétence", "bloc 5", "qualité"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe II", "source_section": "Bloc 5 — Compétence 11", "source_page": "17-18", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M01", "knowledge_type": "notion", "title": "Module 1 — Relation et communication", "definition": "Module de 70 heures consacré à la relation et à la communication avec les patients et leur entourage.", "summary": "Il couvre droits du patient, confidentialité, consentement, bientraitance, communication adaptée et situations spécifiques.", "important_points": ["70 heures", "Droits du patient", "Écoute active", "Communication adaptée", "Bientraitance"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 1"], "difficulty": "medium", "tags": ["module", "communication", "bloc 1"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 1", "source_page": "19, 21-22", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M02", "knowledge_type": "notion", "title": "Module 2 — Installation et déplacements", "definition": "Module de 70 heures consacré à l’accompagnement du patient dans son installation et ses déplacements.", "summary": "Il traite anatomie locomotrice, ergonomie, évaluation des capacités, prévention des chutes, mobilisation, transferts et brancardage.", "important_points": ["70 heures", "Ergonomie", "Mobilisation", "Aides techniques", "Prévention des risques"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 2"], "difficulty": "hard", "tags": ["module", "mobilisation", "bloc 1"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 2", "source_page": "19, 22", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M03", "knowledge_type": "notion", "title": "Module 3 — Soins d’hygiène et de confort", "definition": "Module de 35 heures consacré aux soins d’hygiène et de confort adaptés et à leur réajustement.", "summary": "Il aborde sécurité, douleur, pudeur, appareillages, aspiration sur orifice trachéal cicatrisé et évaluation de la qualité du soin.", "important_points": ["35 heures", "Bonnes pratiques", "Pudeur", "Dispositifs médicaux", "Réévaluation"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 3"], "difficulty": "hard", "tags": ["module", "hygiène", "bloc 1"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 3", "source_page": "19, 22-23", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M04", "knowledge_type": "notion", "title": "Module 4 — Appréciation de l’état clinique", "definition": "Module de 105 heures consacré au recueil, à l’analyse et à la traçabilité des données cliniques.", "summary": "Il couvre anatomie, physiologie, pathologies prévalentes, raisonnement clinique partagé, paramètres, douleur et signes d’alerte à tout âge.", "important_points": ["105 heures", "Paramètres vitaux", "Raisonnement clinique", "Signes d’alerte", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 4"], "difficulty": "hard", "tags": ["module", "clinique", "bloc 2"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 4", "source_page": "19, 23-24", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M05", "knowledge_type": "notion", "title": "Module 5 — Soins relevant de l’urgence", "definition": "Module de 105 heures consacré à la mise en œuvre de soins adaptés, notamment ceux relevant de l’urgence.", "summary": "Il intègre l’AFGSU 2, l’évaluation initiale, les conduites d’urgence, l’oxygénothérapie, la défibrillation, l’hémorragie, l’immobilisation et la réévaluation.", "important_points": ["105 heures", "AFGSU 2", "Soins en lien avec la régulation", "Gestes d’urgence", "Réévaluation"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 5"], "difficulty": "hard", "tags": ["module", "urgence", "bloc 2"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 5", "source_page": "19, 24-25", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M06", "knowledge_type": "notion", "title": "Module 6 — Préparation et entretien du véhicule", "definition": "Module de 7 heures consacré à la conformité, au contrôle et à l’entretien courant du véhicule sanitaire.", "summary": "Il couvre les catégories de véhicules, les vérifications, les anomalies, la traçabilité et l’entretien courant selon les préconisations constructeur.", "important_points": ["7 heures", "Contrôles", "Anomalies", "Entretien courant", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 6"], "difficulty": "medium", "tags": ["module", "véhicule", "bloc 3"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 6", "source_page": "19, 25", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M07", "knowledge_type": "notion", "title": "Module 7 — Conduite du véhicule", "definition": "Module de 21 heures consacré à la conduite sûre et à l’itinéraire adapté à l’état du patient.", "summary": "Il traite réglementation, effets du transport, conduite d’urgence, choix d’itinéraire et constat d’accident.", "important_points": ["21 heures", "Code de la route", "Conduite adaptée", "Itinéraire", "Constat d’accident"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 7"], "difficulty": "hard", "tags": ["module", "conduite", "bloc 3"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 7", "source_page": "19, 25", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M08", "knowledge_type": "notion", "title": "Module 8 — Entretien du matériel et prévention des risques", "definition": "Module de 35 heures consacré au nettoyage, à la désinfection, aux circuits et à la prévention des risques associés.", "summary": "Il couvre infection, produits, déchets, matériels stériles, stockage, traçabilité et signalement des anomalies.", "important_points": ["35 heures", "Nettoyage et désinfection", "Déchets", "Stockage", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétences 8 et 9"], "difficulty": "hard", "tags": ["module", "hygiène", "bloc 4"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 8", "source_page": "20, 26", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M09", "knowledge_type": "notion", "title": "Module 9 — Traitement des informations", "definition": "Module de 35 heures consacré à la recherche, la hiérarchisation, la transcription et la transmission des informations.", "summary": "Il couvre bilan d’urgence, surveillance, dossier de transport, outils numériques, RGPD, rapports et transmission de savoir-faire.", "important_points": ["35 heures", "Bilan", "Continuité des soins", "Outils numériques", "RGPD", "Traçabilité"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 10"], "difficulty": "hard", "tags": ["module", "information", "bloc 5"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 9", "source_page": "20, 27", "version": "2022-04-17", "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-JORF-DEA-M10", "knowledge_type": "notion", "title": "Module 10 — Travail en équipe, qualité et gestion des risques", "definition": "Module de 70 heures consacré au travail pluriprofessionnel, à l’organisation, à la qualité et à la gestion des risques.", "summary": "Il traite système de santé, aide médicale urgente, rôles professionnels, organisation, événements indésirables, éthique et amélioration continue.", "important_points": ["70 heures", "Équipe pluriprofessionnelle", "SAMU et SMUR", "Qualité", "Gestion des risques", "Actualisation des connaissances"], "clinical_examples": [], "common_errors": [], "memory_tips": [], "related_topics": ["compétence 11"], "difficulty": "hard", "tags": ["module", "équipe", "bloc 5"], "source_document": "DOC-JORF-2022-04-17-0091-0039", "source_chapter": "Annexe III", "source_section": "Module 10", "source_page": "20, 27-28", "version": "2022-04-17", "review_status": "source_verified"
+    }
+  ],
+  "quality_notes": {
+    "protocols_complete": false,
+    "protocols_note": "Le document réglementaire définit des compétences et contenus de formation, mais renvoie à des protocoles établis ou en vigueur sans en publier les algorithmes complets.",
+    "annexes_not_embedded": ["Annexe VII", "Annexe VIII", "Annexe IX", "Annexe X"],
+    "annexes_note": "Le texte indique que les annexes VII à X sont consultables sur le site du ministère ; elles ne figurent pas dans le PDF analysé.",
+    "legal_currency_checked_at": "2026-08-01",
+    "legal_currency_note": "L’URL officielle Légifrance a été retrouvée ; la consolidation juridique détaillée n’est pas remplacée par cette extraction.",
+    "trainer_validation": false
+  }
+}

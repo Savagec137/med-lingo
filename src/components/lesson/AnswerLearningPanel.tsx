@@ -8,20 +8,17 @@ import {
   Lightbulb,
 } from "lucide-react";
 import type { ContentPedagogicalFeedback } from "@/content/content-domain";
+import { hasPedagogicalFeedback } from "@/content/pedagogical-feedback";
 
 interface AnswerLearningPanelProps {
   feedback: ContentPedagogicalFeedback;
-  mistakeExplanation: string;
-  isCorrect: boolean;
 }
 
-export function AnswerLearningPanel({
-  feedback,
-  mistakeExplanation,
-  isCorrect,
-}: AnswerLearningPanelProps) {
+export function AnswerLearningPanel({ feedback }: AnswerLearningPanelProps) {
   const [open, setOpen] = useState(false);
   const panelId = "answer-learning-panel";
+
+  if (!hasPedagogicalFeedback(feedback)) return null;
 
   return (
     <div className="mt-3">
@@ -50,36 +47,42 @@ export function AnswerLearningPanel({
           aria-label="Explication pédagogique"
           className="mt-3 grid gap-3 rounded-2xl border border-border bg-card p-4 shadow-sm"
         >
-          <article className="rounded-xl bg-[color:var(--color-success)]/10 p-3">
-            <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-success)]">
-              <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
-              Pourquoi cette réponse est correcte
-            </h3>
-            <p className="mt-1 text-sm font-medium leading-relaxed text-foreground">
-              {feedback.correctExplanation}
-            </p>
-          </article>
+          {feedback.why_correct && (
+            <article className="rounded-xl bg-[color:var(--color-success)]/10 p-3">
+              <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-success)]">
+                <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+                Pourquoi cette réponse est correcte
+              </h3>
+              <p className="mt-1 text-sm font-medium leading-relaxed text-foreground">
+                {feedback.why_correct}
+              </p>
+            </article>
+          )}
 
-          <article className="rounded-xl bg-[color:var(--color-warning)]/10 p-3">
-            <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-warning)]">
-              <AlertTriangle className="h-4 w-4" aria-hidden="true" />
-              {isCorrect ? "Erreur fréquente à éviter" : "Pourquoi ton choix était moins adapté"}
-            </h3>
-            <p className="mt-1 text-sm font-medium leading-relaxed text-foreground">
-              {mistakeExplanation}
-            </p>
-          </article>
+          {feedback.common_mistake && (
+            <article className="rounded-xl bg-[color:var(--color-warning)]/10 p-3">
+              <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-warning)]">
+                <AlertTriangle className="h-4 w-4" aria-hidden="true" />
+                Erreur fréquente à éviter
+              </h3>
+              <p className="mt-1 text-sm font-medium leading-relaxed text-foreground">
+                {feedback.common_mistake}
+              </p>
+            </article>
+          )}
 
-          <article className="rounded-xl bg-[color:var(--color-primary)]/10 p-3">
-            <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-primary)]">
-              <BookOpenCheck className="h-4 w-4" aria-hidden="true" />À retenir
-            </h3>
-            <p className="mt-1 text-sm font-semibold leading-relaxed text-foreground">
-              {feedback.takeaway}
-            </p>
-          </article>
+          {feedback.key_takeaway && (
+            <article className="rounded-xl bg-[color:var(--color-primary)]/10 p-3">
+              <h3 className="flex items-center gap-2 text-sm font-extrabold text-[color:var(--color-primary)]">
+                <BookOpenCheck className="h-4 w-4" aria-hidden="true" />À retenir
+              </h3>
+              <p className="mt-1 text-sm font-semibold leading-relaxed text-foreground">
+                {feedback.key_takeaway}
+              </p>
+            </article>
+          )}
 
-          {feedback.mnemonic && (
+          {feedback.memory_tip && (
             <article className="rounded-xl bg-secondary p-3">
               <h3 className="flex items-center gap-2 text-sm font-extrabold text-foreground">
                 <Lightbulb
@@ -89,7 +92,7 @@ export function AnswerLearningPanel({
                 Astuce mnémotechnique
               </h3>
               <p className="mt-1 text-sm font-medium leading-relaxed text-muted-foreground">
-                {feedback.mnemonic}
+                {feedback.memory_tip}
               </p>
             </article>
           )}

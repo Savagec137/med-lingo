@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l01",
+  "title": "Le cœur",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer le cœur et décrire sa nature.",
+    "Identifier ses quatre cavités et le sens général du sang.",
+    "Distinguer les phases du cycle cardiaque décrites par le support."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular",
+    "body.organ.definition",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Dans l’appareil circulatoire, quelle fonction générale le cœur assure-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q01-a1",
+          "text": "La fonction de pompe du circuit",
+          "explanation": "Le support présente le cœur comme la pompe du circuit fermé."
+        },
+        {
+          "id": "dea-p05-l01-q01-a2",
+          "text": "La fonction d’échange avec toutes les cellules",
+          "explanation": "Les échanges se réalisent surtout au niveau des capillaires.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p05-l01-q01-a3",
+          "text": "La fabrication de toutes les cellules sanguines",
+          "explanation": "Le support indique que les cellules sanguines sont issues de la moelle osseuse.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l01-q01-a4",
+          "text": "La commande volontaire des vaisseaux",
+          "explanation": "Le fonctionnement cardiaque décrit échappe au contrôle volontaire.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-l01-q01-a1",
+      "explanation": "Le cœur est la pompe qui met le sang en mouvement dans le circuit fermé.",
+      "knowledgeIds": [
+        "K-DEA-P05-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18, 20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le cœur est la pompe qui met le sang en mouvement dans le circuit fermé.",
+        "commonMistake": "Confondre la pompe avec les lieux d’échange fait attribuer au cœur le rôle des capillaires.",
+        "keyTakeaway": "Cœur : pompe ; vaisseaux : canalisations ; sang : contenu circulant.",
+        "fieldApplication": "Structurer une transmission en distinguant organe, vaisseaux et sang.",
+        "memoryTip": "Pompe, tuyaux, contenu : cœur, vaisseaux, sang."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le cœur est la pompe qui met le sang en mouvement dans le circuit fermé.",
+      "common_mistake": "Confondre la pompe avec les lieux d’échange fait attribuer au cœur le rôle des capillaires.",
+      "key_takeaway": "Cœur : pompe ; vaisseaux : canalisations ; sang : contenu circulant.",
+      "memory_tip": "Pompe, tuyaux, contenu : cœur, vaisseaux, sang.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "role"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18, 20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-001"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l01-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le cœur est décrit comme un muscle creux dont l’activité ne dépend pas de la volonté.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q02-true",
+          "text": "Vrai",
+          "explanation": "Le support décrit bien un muscle creux qui se contracte sans intervention de la volonté."
+        },
+        {
+          "id": "dea-p05-l01-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : l’activité cardiaque décrite est involontaire."
+        }
+      ],
+      "correctAnswer": "dea-p05-l01-q02-true",
+      "explanation": "La proposition reprend la nature musculaire, creuse et involontaire du cœur décrite dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P05-002",
+        "K-DEA-P05-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18, 20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend la nature musculaire, creuse et involontaire du cœur décrite dans le support.",
+        "commonMistake": "Le mot « muscle » peut faire penser à tort à un mouvement volontaire.",
+        "keyTakeaway": "Le cœur est un muscle creux à activité involontaire.",
+        "fieldApplication": "Employer cette description sans confondre le cœur avec un muscle squelettique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend la nature musculaire, creuse et involontaire du cœur décrite dans le support.",
+      "common_mistake": "Le mot « muscle » peut faire penser à tort à un mouvement volontaire.",
+      "key_takeaway": "Le cœur est un muscle creux à activité involontaire.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "nature"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18, 20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-002",
+          "K-DEA-P05-004"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l01-q03",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels repères anatomiques correspondent au cœur dans le support ?",
+      "instruction": "Sélectionne les deux réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q03-a1",
+          "text": "Il est situé entre les deux poumons",
+          "explanation": "Le support localise le cœur entre les poumons."
+        },
+        {
+          "id": "dea-p05-l01-q03-a2",
+          "text": "Sa pointe est tournée vers la gauche",
+          "explanation": "L’orientation de la pointe vers la gauche est explicitement indiquée."
+        },
+        {
+          "id": "dea-p05-l01-q03-a3",
+          "text": "Il est situé sous le bassin",
+          "explanation": "Cette localisation ne correspond pas au support.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p05-l01-q03-a4",
+          "text": "Sa pointe est toujours tournée vers la droite",
+          "explanation": "Cette orientation inverse celle décrite.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l01-q03-a1",
+        "dea-p05-l01-q03-a2"
+      ],
+      "correctAnswers": [
+        "dea-p05-l01-q03-a1",
+        "dea-p05-l01-q03-a2"
+      ],
+      "explanation": "Les deux repères exacts sont une position entre les poumons et une pointe orientée vers la gauche.",
+      "knowledgeIds": [
+        "K-DEA-P05-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18, 20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux repères exacts sont une position entre les poumons et une pointe orientée vers la gauche.",
+        "commonMistake": "Une représentation de face peut conduire à inverser droite et gauche.",
+        "keyTakeaway": "Le cœur est intrathoracique, entre les poumons, avec une pointe vers la gauche.",
+        "fieldApplication": "Utiliser des repères anatomiques précis plutôt qu’une formule vague comme « dans la poitrine »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux repères exacts sont une position entre les poumons et une pointe orientée vers la gauche.",
+      "common_mistake": "Une représentation de face peut conduire à inverser droite et gauche.",
+      "key_takeaway": "Le cœur est intrathoracique, entre les poumons, avec une pointe vers la gauche.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "localisation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18, 20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-002"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 2
+      }
+    },
+    {
+      "id": "dea-p05-l01-q04",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque ensemble de cavités au rôle indiqué dans le support.",
+      "instruction": "Associe chaque élément.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q04-a1",
+          "text": "Oreillette et ventricule droits",
+          "match": "Reçoivent le sang appauvri en O2 destiné aux poumons",
+          "explanation": "Les cavités droites récupèrent le sang appauvri en oxygène."
+        },
+        {
+          "id": "dea-p05-l01-q04-a2",
+          "text": "Oreillette et ventricule gauches",
+          "match": "Reçoivent le sang riche en O2 destiné aux cellules",
+          "explanation": "Les cavités gauches reçoivent des poumons le sang riche en oxygène."
+        },
+        {
+          "id": "dea-p05-l01-q04-a3",
+          "text": "Oreillettes",
+          "match": "Cavités d’arrivée du sang",
+          "explanation": "Le sang arrive au cœur au niveau des oreillettes."
+        },
+        {
+          "id": "dea-p05-l01-q04-a4",
+          "text": "Ventricules",
+          "match": "Cavités de départ du sang",
+          "explanation": "Le sang part du cœur au niveau des ventricules."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l01-q04-a1",
+        "dea-p05-l01-q04-a2",
+        "dea-p05-l01-q04-a3",
+        "dea-p05-l01-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-l01-q04-a1",
+        "dea-p05-l01-q04-a2",
+        "dea-p05-l01-q04-a3",
+        "dea-p05-l01-q04-a4"
+      ],
+      "explanation": "Chaque association suit le côté du cœur et le sens d’arrivée ou de départ décrits page 18.",
+      "knowledgeIds": [
+        "K-DEA-P05-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18, 20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association suit le côté du cœur et le sens d’arrivée ou de départ décrits page 18.",
+        "commonMistake": "L’erreur fréquente consiste à inverser oreillette et ventricule ou côté droit et côté gauche.",
+        "keyTakeaway": "Oreillettes : arrivée ; ventricules : départ ; droite vers poumons ; gauche vers cellules.",
+        "fieldApplication": "Lire un schéma cardiaque en suivant le sens des flèches plutôt que la seule couleur.",
+        "memoryTip": "O reçoit, V propulse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association suit le côté du cœur et le sens d’arrivée ou de départ décrits page 18.",
+      "common_mistake": "L’erreur fréquente consiste à inverser oreillette et ventricule ou côté droit et côté gauche.",
+      "key_takeaway": "Oreillettes : arrivée ; ventricules : départ ; droite vers poumons ; gauche vers cellules.",
+      "memory_tip": "O reçoit, V propulse.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "cavites"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18, 20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-l01-q05",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre les phases du cycle cardiaque décrites par le support.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q05-a1",
+          "text": "Diastole : relaxation et remplissage",
+          "explanation": "Le cycle décrit commence par la phase de relaxation.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p05-l01-q05-a2",
+          "text": "Systole auriculaire : contraction des oreillettes",
+          "explanation": "La contraction auriculaire suit la diastole.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p05-l01-q05-a3",
+          "text": "Systole ventriculaire : contraction des ventricules",
+          "explanation": "La contraction ventriculaire constitue la phase suivante.",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l01-q05-a1",
+        "dea-p05-l01-q05-a2",
+        "dea-p05-l01-q05-a3"
+      ],
+      "correctAnswers": [
+        "dea-p05-l01-q05-a1",
+        "dea-p05-l01-q05-a2",
+        "dea-p05-l01-q05-a3"
+      ],
+      "explanation": "Le support décrit successivement diastole, systole auriculaire puis systole ventriculaire.",
+      "knowledgeIds": [
+        "K-DEA-P05-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support décrit successivement diastole, systole auriculaire puis systole ventriculaire.",
+        "commonMistake": "Assimiler toute systole à une seule phase fait oublier la distinction auriculaire et ventriculaire.",
+        "keyTakeaway": "Relaxation, contraction des oreillettes, contraction des ventricules.",
+        "fieldApplication": "Employer ces termes avec leur phase exacte lors d’une explication physiologique.",
+        "memoryTip": "D-A-V : Diastole, Auriculaire, Ventriculaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support décrit successivement diastole, systole auriculaire puis systole ventriculaire.",
+      "common_mistake": "Assimiler toute systole à une seule phase fait oublier la distinction auriculaire et ventriculaire.",
+      "key_takeaway": "Relaxation, contraction des oreillettes, contraction des ventricules.",
+      "memory_tip": "D-A-V : Diastole, Auriculaire, Ventriculaire.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "cycle"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-004"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p05-l01-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le cœur est constitué de ______ cavités.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q06-a1",
+          "text": "quatre",
+          "explanation": "Deux oreillettes et deux ventricules forment quatre cavités."
+        }
+      ],
+      "correctAnswer": "dea-p05-l01-q06-a1",
+      "explanation": "Le cœur comporte deux oreillettes et deux ventricules, soit quatre cavités.",
+      "knowledgeIds": [
+        "K-DEA-P05-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le cœur comporte deux oreillettes et deux ventricules, soit quatre cavités.",
+        "commonMistake": "Compter uniquement les côtés droit et gauche conduit à répondre deux.",
+        "keyTakeaway": "Deux oreillettes + deux ventricules = quatre cavités.",
+        "fieldApplication": "Vérifier sur un schéma que les quatre cavités sont identifiées."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le cœur comporte deux oreillettes et deux ventricules, soit quatre cavités.",
+      "common_mistake": "Compter uniquement les côtés droit et gauche conduit à répondre deux.",
+      "key_takeaway": "Deux oreillettes + deux ventricules = quatre cavités.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "cavites"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l01-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Lors d’un exercice de repérage, un étudiant désigne la poche à double paroi qui enveloppe le cœur. Quel terme doit-il employer ?",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q07-a1",
+          "text": "Le péricarde",
+          "explanation": "Le support nomme péricarde la poche à double paroi enveloppant le cœur."
+        },
+        {
+          "id": "dea-p05-l01-q07-a2",
+          "text": "Le myocarde",
+          "explanation": "Le myocarde désigne le muscle cardiaque dans le support.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l01-q07-a3",
+          "text": "L’aorte",
+          "explanation": "L’aorte est une artère qui part du ventricule gauche.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l01-q07-a4",
+          "text": "La veine cave",
+          "explanation": "Les veines caves ramènent le sang à l’oreillette droite.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l01-q07-a1",
+      "explanation": "La structure décrite est le péricarde, enveloppe à double paroi du cœur.",
+      "knowledgeIds": [
+        "K-DEA-P05-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La structure décrite est le péricarde, enveloppe à double paroi du cœur.",
+        "commonMistake": "Péricarde et myocarde sont proches lexicalement mais ne désignent pas la même structure.",
+        "keyTakeaway": "Péricarde : enveloppe ; myocarde : muscle cardiaque.",
+        "fieldApplication": "Choisir le terme anatomique exact dans une transmission descriptive.",
+        "safetyPoint": "Un repérage anatomique ne suffit pas à conclure à une atteinte clinique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La structure décrite est le péricarde, enveloppe à double paroi du cœur.",
+      "common_mistake": "Péricarde et myocarde sont proches lexicalement mais ne désignent pas la même structure.",
+      "key_takeaway": "Péricarde : enveloppe ; myocarde : muscle cardiaque.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "pericarde",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-002"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l01-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le support indique une communication directe normale entre les cavités droites et gauches du cœur.",
+      "answers": [
+        {
+          "id": "dea-p05-l01-q08-true",
+          "text": "Vrai",
+          "explanation": "Vrai serait incorrect : les côtés droit et gauche sont décrits comme séparés."
+        },
+        {
+          "id": "dea-p05-l01-q08-false",
+          "text": "Faux",
+          "explanation": "Le support exclut une communication normale entre les cavités droites et gauches."
+        }
+      ],
+      "correctAnswer": "dea-p05-l01-q08-false",
+      "explanation": "L’affirmation est fausse : le support précise qu’il ne doit pas exister de communication entre cavités droites et gauches.",
+      "knowledgeIds": [
+        "K-DEA-P05-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+      "sourcePages": "18, 20",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular",
+        "body.organ.definition",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p05-l01",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : le support précise qu’il ne doit pas exister de communication entre cavités droites et gauches.",
+        "commonMistake": "La communication normale entre oreillette et ventricule d’un même côté peut être confondue avec une communication entre les deux côtés.",
+        "keyTakeaway": "Les deux côtés sont séparés ; oreillette et ventricule d’un même côté communiquent par des valves.",
+        "fieldApplication": "Suivre chaque côté séparément sur le schéma cardiaque."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : le support précise qu’il ne doit pas exister de communication entre cavités droites et gauches.",
+      "common_mistake": "La communication normale entre oreillette et ventricule d’un même côté peut être confondue avec une communication entre les deux côtés.",
+      "key_takeaway": "Les deux côtés sont séparés ; oreillette et ventricule d’un même côté communiquent par des valves.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "coeur",
+        "cavites"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 18, 20",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil circulatoire - Le cœur et son fonctionnement",
+        "sourcePages": "18, 20",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-003"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular",
+          "body.organ.definition",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

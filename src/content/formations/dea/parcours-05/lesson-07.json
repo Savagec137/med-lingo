@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-05",
+  "id": "dea-p05-l07",
+  "title": "Le pouls",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-05",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Définir la fréquence cardiaque observée au niveau des artères.",
+    "Décrire fréquence, amplitude et rythme du pouls.",
+    "Réaliser conceptuellement le repérage radial décrit par le support."
+  ],
+  "competencyIds": [
+    "body.system.cardiovascular"
+  ],
+  "prerequisiteIds": [
+    "dea-p05-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p05-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Que traduit la fréquence cardiaque au niveau des artères selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q01-a1",
+          "text": "Les battements du cœur",
+          "explanation": "La fréquence cardiaque traduit les battements cardiaques au niveau artériel."
+        },
+        {
+          "id": "dea-p05-l07-q01-a2",
+          "text": "La température corporelle",
+          "explanation": "La température est un autre paramètre.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l07-q01-a3",
+          "text": "Le groupe sanguin",
+          "explanation": "Le groupe sanguin n’est pas mesuré par le pouls.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l07-q01-a4",
+          "text": "Le volume pulmonaire",
+          "explanation": "Ce volume ne définit pas le pouls.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q01-a1",
+      "explanation": "La fréquence cardiaque correspond à la traduction des battements du cœur au niveau des artères.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La fréquence cardiaque correspond à la traduction des battements du cœur au niveau des artères.",
+        "commonMistake": "Confondre les paramètres vitaux empêche une transmission structurée.",
+        "keyTakeaway": "Le pouls rend perceptibles les battements cardiaques dans une artère.",
+        "fieldApplication": "Nommer le paramètre observé avant de donner sa valeur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La fréquence cardiaque correspond à la traduction des battements du cœur au niveau des artères.",
+      "common_mistake": "Confondre les paramètres vitaux empêche une transmission structurée.",
+      "key_takeaway": "Le pouls rend perceptibles les battements cardiaques dans une artère.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "definition"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l07-q02",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Quels caractères du pouls doivent être observés ?",
+      "instruction": "Sélectionne les trois réponses correctes.",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q02-a1",
+          "text": "Sa fréquence",
+          "explanation": "Le nombre de pulsations fait partie de l’évaluation."
+        },
+        {
+          "id": "dea-p05-l07-q02-a2",
+          "text": "Son amplitude",
+          "explanation": "La perception forte, faible, filante ou imperceptible est observée."
+        },
+        {
+          "id": "dea-p05-l07-q02-a3",
+          "text": "Son rythme",
+          "explanation": "La régularité ou l’irrégularité est observée."
+        },
+        {
+          "id": "dea-p05-l07-q02-a4",
+          "text": "La couleur des yeux",
+          "explanation": "Elle n’est pas un caractère du pouls.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l07-q02-a1",
+        "dea-p05-l07-q02-a2",
+        "dea-p05-l07-q02-a3"
+      ],
+      "correctAnswers": [
+        "dea-p05-l07-q02-a1",
+        "dea-p05-l07-q02-a2",
+        "dea-p05-l07-q02-a3"
+      ],
+      "explanation": "L’évaluation associe fréquence, amplitude et rythme.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’évaluation associe fréquence, amplitude et rythme.",
+        "commonMistake": "Transmettre seulement un nombre omet deux informations cliniques décrites.",
+        "keyTakeaway": "FAR : fréquence, amplitude, rythme.",
+        "fieldApplication": "Transmettre les trois caractères observés.",
+        "memoryTip": "FAR : Fréquence, Amplitude, Rythme."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’évaluation associe fréquence, amplitude et rythme.",
+      "common_mistake": "Transmettre seulement un nombre omet deux informations cliniques décrites.",
+      "key_takeaway": "FAR : fréquence, amplitude, rythme.",
+      "memory_tip": "FAR : Fréquence, Amplitude, Rythme.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "caracteres"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 3
+      }
+    },
+    {
+      "id": "dea-p05-l07-q03",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où recherche-t-on le pouls radial dans la technique décrite ?",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q03-a1",
+          "text": "À la base du pouce au niveau du poignet",
+          "explanation": "Le support situe le pouls radial à la base du pouce."
+        },
+        {
+          "id": "dea-p05-l07-q03-a2",
+          "text": "Sous l’oreille",
+          "explanation": "Cette zone correspond au pouls carotidien décrit.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l07-q03-a3",
+          "text": "Dans l’aine",
+          "explanation": "Cette zone correspond au pouls fémoral cité.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l07-q03-a4",
+          "text": "Sur la face dorsale du pied",
+          "explanation": "Cette zone correspond au pouls pédieux.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q03-a1",
+      "explanation": "Le pouls radial se recherche à la base du pouce, au poignet.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le pouls radial se recherche à la base du pouce, au poignet.",
+        "commonMistake": "Les différents sites artériels peuvent être confondus si leur nom n’est pas associé à une région.",
+        "keyTakeaway": "Radial : poignet, côté du pouce.",
+        "fieldApplication": "Préciser le site de prise dans une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le pouls radial se recherche à la base du pouce, au poignet.",
+      "common_mistake": "Les différents sites artériels peuvent être confondus si leur nom n’est pas associé à une région.",
+      "key_takeaway": "Radial : poignet, côté du pouce.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "radial"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l07-q04",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quels doigts sont recommandés pour palper le pouls radial ?",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q04-a1",
+          "text": "L’index et le majeur",
+          "explanation": "Le support recommande l’extrémité de ces doigts."
+        },
+        {
+          "id": "dea-p05-l07-q04-a2",
+          "text": "Le pouce seul",
+          "explanation": "Le pouce possède son propre pouls perceptible.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l07-q04-a3",
+          "text": "L’auriculaire seul",
+          "explanation": "Ce n’est pas la technique décrite.",
+          "distractorType": "other-context"
+        },
+        {
+          "id": "dea-p05-l07-q04-a4",
+          "text": "Toute la paume",
+          "explanation": "Cette technique manque de précision.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q04-a1",
+      "explanation": "L’index et le majeur permettent la palpation sans confondre avec son propre pouls du pouce.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’index et le majeur permettent la palpation sans confondre avec son propre pouls du pouce.",
+        "commonMistake": "Utiliser le pouce peut faire compter les battements de l’opérateur.",
+        "keyTakeaway": "Index et majeur, jamais le pouce.",
+        "fieldApplication": "Positionner légèrement les doigts sur l’artère sans trop appuyer.",
+        "safetyPoint": "Une pression excessive peut rendre le pouls plus difficile à percevoir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’index et le majeur permettent la palpation sans confondre avec son propre pouls du pouce.",
+      "common_mistake": "Utiliser le pouce peut faire compter les battements de l’opérateur.",
+      "key_takeaway": "Index et majeur, jamais le pouce.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "technique"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l07-q05",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Pour la prise radiale décrite, le patient est si possible au repos et le bras repose sur un support.",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q05-true",
+          "text": "Vrai",
+          "explanation": "Ces deux conditions figurent dans la technique radiale."
+        },
+        {
+          "id": "dea-p05-l07-q05-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support recommande repos et bras soutenu."
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q05-true",
+      "explanation": "La proposition reprend les conditions indiquées page 68.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend les conditions indiquées page 68.",
+        "commonMistake": "Prendre le pouls pendant un mouvement du bras peut compliquer la perception.",
+        "keyTakeaway": "Repos du patient et bras soutenu favorisent une mesure comparable.",
+        "fieldApplication": "Préparer la position avant de commencer le comptage."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend les conditions indiquées page 68.",
+      "common_mistake": "Prendre le pouls pendant un mouvement du bras peut compliquer la perception.",
+      "key_takeaway": "Repos du patient et bras soutenu favorisent une mesure comparable.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "conditions"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l07-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : dans la technique décrite, le nombre de pulsations est compté sur une ______.",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q06-a1",
+          "text": "minute",
+          "explanation": "Le support demande un comptage sur une minute."
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q06-a1",
+      "explanation": "Le mot attendu est « minute ».",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot attendu est « minute ».",
+        "commonMistake": "Raccourcir le comptage sans règle explicitée sort du protocole présenté dans ce support.",
+        "keyTakeaway": "La technique enseignée ici compte les pulsations sur une minute.",
+        "fieldApplication": "Appliquer la méthode définie par le support et transmettre l’unité."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot attendu est « minute ».",
+      "common_mistake": "Raccourcir le comptage sans règle explicitée sort du protocole présenté dans ce support.",
+      "key_takeaway": "La technique enseignée ici compte les pulsations sur une minute.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "frequence"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p05-l07-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque site de pouls à son repère anatomique.",
+      "instruction": "Associe chaque site.",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q07-a1",
+          "text": "Radial",
+          "match": "Poignet, base du pouce",
+          "explanation": "Il est recherché à la base du pouce."
+        },
+        {
+          "id": "dea-p05-l07-q07-a2",
+          "text": "Carotidien",
+          "match": "Cou",
+          "explanation": "Il est recherché sous l’oreille au niveau du cou."
+        },
+        {
+          "id": "dea-p05-l07-q07-a3",
+          "text": "Fémoral",
+          "match": "Aine",
+          "explanation": "Le support cite le repérage au niveau de l’aine."
+        },
+        {
+          "id": "dea-p05-l07-q07-a4",
+          "text": "Pédieux",
+          "match": "Dos du pied",
+          "explanation": "Il est recherché sur la face dorsale du pied."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p05-l07-q07-a1",
+        "dea-p05-l07-q07-a2",
+        "dea-p05-l07-q07-a3",
+        "dea-p05-l07-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p05-l07-q07-a1",
+        "dea-p05-l07-q07-a2",
+        "dea-p05-l07-q07-a3",
+        "dea-p05-l07-q07-a4"
+      ],
+      "explanation": "Chaque site est associé au repère anatomique indiqué pages 67 et 68.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque site est associé au repère anatomique indiqué pages 67 et 68.",
+        "commonMistake": "Confondre le nom de l’artère et la région corporelle peut entraîner une mauvaise localisation.",
+        "keyTakeaway": "Radial-poignet, carotidien-cou, fémoral-aine, pédieux-pied.",
+        "fieldApplication": "Toujours nommer le site utilisé pour contextualiser la mesure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque site est associé au repère anatomique indiqué pages 67 et 68.",
+      "common_mistake": "Confondre le nom de l’artère et la région corporelle peut entraîner une mauvaise localisation.",
+      "key_takeaway": "Radial-poignet, carotidien-cou, fémoral-aine, pédieux-pied.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "sites"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p05-l07-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un pouls radial est mesuré. Quelle transmission est la plus complète selon les critères du support ?",
+      "answers": [
+        {
+          "id": "dea-p05-l07-q08-a1",
+          "text": "Site radial, fréquence, rythme et amplitude",
+          "explanation": "Ces quatre éléments contextualisent et décrivent le pouls."
+        },
+        {
+          "id": "dea-p05-l07-q08-a2",
+          "text": "Seulement « pouls présent »",
+          "explanation": "Cette formulation omet fréquence, rythme et amplitude.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p05-l07-q08-a3",
+          "text": "Seulement la fréquence sans site",
+          "explanation": "La fréquence seule ne décrit pas complètement le pouls.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p05-l07-q08-a4",
+          "text": "La pression artérielle à la place du pouls",
+          "explanation": "Les deux paramètres ne sont pas interchangeables.",
+          "distractorType": "other-context"
+        }
+      ],
+      "correctAnswer": "dea-p05-l07-q08-a1",
+      "explanation": "La transmission la plus complète précise le site et les trois caractères du pouls.",
+      "knowledgeIds": [
+        "K-DEA-P05-014"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+      "sourcePages": "67-68",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.cardiovascular"
+      ],
+      "lessonId": "dea-p05-l07",
+      "plannedParcoursIds": [
+        "parcours-05"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La transmission la plus complète précise le site et les trois caractères du pouls.",
+        "commonMistake": "Un nombre isolé peut être exact mais insuffisant pour décrire la mesure.",
+        "keyTakeaway": "Site + fréquence + rythme + amplitude.",
+        "fieldApplication": "Structurer le bilan oral avec des données observables et leur contexte.",
+        "safetyPoint": "Toute anomalie doit être confrontée aux autres signes et paramètres du patient."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La transmission la plus complète précise le site et les trois caractères du pouls.",
+      "common_mistake": "Un nombre isolé peut être exact mais insuffisant pour décrire la mesure.",
+      "key_takeaway": "Site + fréquence + rythme + amplitude.",
+      "tags": [
+        "dea",
+        "parcours-05",
+        "pouls",
+        "transmission",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 67-68",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p05-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Mesures des paramètres vitaux - Fréquence cardiaque et pouls",
+        "sourcePages": "67-68",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P05-014"
+        ],
+        "competencyIds": [
+          "body.system.cardiovascular"
+        ],
+        "plannedParcoursIds": [
+          "parcours-05"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

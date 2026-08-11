@@ -35,10 +35,10 @@ export interface ContentAnswer {
 }
 
 export interface ContentPedagogicalFeedback {
-  correctExplanation: string;
-  commonErrorExplanation?: string;
-  takeaway: string;
-  mnemonic?: string;
+  why_correct?: string;
+  common_mistake?: string;
+  key_takeaway?: string;
+  memory_tip?: string;
 }
 
 export interface ContentMetadata {
@@ -66,7 +66,10 @@ export interface ContentItem {
   correctAnswer: string | string[];
   explanation: string;
   priorityReminder?: string;
-  pedagogicalFeedback?: ContentPedagogicalFeedback;
+  why_correct?: string;
+  common_mistake?: string;
+  key_takeaway?: string;
+  memory_tip?: string;
   tags: string[];
   metadata?: ContentMetadata;
 }

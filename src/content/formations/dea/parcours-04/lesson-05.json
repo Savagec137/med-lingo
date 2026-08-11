@@ -1,0 +1,745 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-04",
+  "id": "dea-p04-l05",
+  "title": "Le rachis",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-04",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer le rachis dans le tronc.",
+    "Reconnaître les régions vertébrales décrites.",
+    "Employer un repère rachidien précis dans une localisation."
+  ],
+  "competencyIds": [
+    "anatomy.landmarks",
+    "anatomy.location.description"
+  ],
+  "prerequisiteIds": [
+    "dea-p04-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p04-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "À quelle grande partie du squelette appartient la colonne vertébrale ?",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q01-a1",
+          "text": "Au tronc",
+          "explanation": "Le support classe la colonne vertébrale dans le tronc."
+        },
+        {
+          "id": "dea-p04-l05-q01-a2",
+          "text": "À la tête",
+          "explanation": "La tête comprend le crâne et la face."
+        },
+        {
+          "id": "dea-p04-l05-q01-a3",
+          "text": "Au membre supérieur",
+          "explanation": "Le membre supérieur débute à la ceinture scapulaire."
+        },
+        {
+          "id": "dea-p04-l05-q01-a4",
+          "text": "Au membre inférieur",
+          "explanation": "Le bassin et les os du membre inférieur sont décrits séparément."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q01-a1",
+      "explanation": "Le rachis est un élément central du tronc.",
+      "knowledgeIds": [
+        "K-DEA-P04-002",
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le rachis est un élément central du tronc.",
+        "commonMistake": "La proximité du rachis cervical avec la tête peut conduire à classer tout le rachis dans la tête.",
+        "keyTakeaway": "Le rachis appartient au tronc et se divise en régions.",
+        "fieldApplication": "Nommer la région du rachis précise davantage une localisation que le seul mot « dos »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le rachis est un élément central du tronc.",
+      "common_mistake": "La proximité du rachis cervical avec la tête peut conduire à classer tout le rachis dans la tête.",
+      "key_takeaway": "Le rachis appartient au tronc et se divise en régions.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "tronc"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-002",
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l05-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le support décrit le rachis comme une colonne de 33 vertèbres.",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q02-true",
+          "text": "Vrai",
+          "explanation": "La page 35 indique une colonne de 33 vertèbres."
+        },
+        {
+          "id": "dea-p04-l05-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect au regard du nombre donné dans le support."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q02-true",
+      "explanation": "Le chiffre de référence présenté est 33 vertèbres.",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le chiffre de référence présenté est 33 vertèbres.",
+        "commonMistake": "Additionner mécaniquement une plage variable coccygienne peut sembler contradictoire ; ici il faut retenir la formulation du support.",
+        "keyTakeaway": "Le support retient une colonne de 33 vertèbres.",
+        "fieldApplication": "Utiliser ce nombre comme repère pédagogique général."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le chiffre de référence présenté est 33 vertèbres.",
+      "common_mistake": "Additionner mécaniquement une plage variable coccygienne peut sembler contradictoire ; ici il faut retenir la formulation du support.",
+      "key_takeaway": "Le support retient une colonne de 33 vertèbres.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "vertebres"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l05-q03",
+      "type": "association",
+      "difficulty": "easy",
+      "question": "Associe chaque région du rachis au nombre de vertèbres indiqué.",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q03-a1",
+          "text": "Cervicale",
+          "match": "7",
+          "explanation": "Le support indique 7 vertèbres cervicales."
+        },
+        {
+          "id": "dea-p04-l05-q03-a2",
+          "text": "Dorsale",
+          "match": "12",
+          "explanation": "Le support indique 12 vertèbres dorsales."
+        },
+        {
+          "id": "dea-p04-l05-q03-a3",
+          "text": "Lombaire",
+          "match": "5",
+          "explanation": "Le support indique 5 vertèbres lombaires."
+        },
+        {
+          "id": "dea-p04-l05-q03-a4",
+          "text": "Sacrée",
+          "match": "5 soudées",
+          "explanation": "Le support indique 5 vertèbres sacrées."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l05-q03-a1",
+        "dea-p04-l05-q03-a2",
+        "dea-p04-l05-q03-a3",
+        "dea-p04-l05-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p04-l05-q03-a1",
+        "dea-p04-l05-q03-a2",
+        "dea-p04-l05-q03-a3",
+        "dea-p04-l05-q03-a4"
+      ],
+      "explanation": "La répartition demandée suit la liste cervicale 7, dorsale 12, lombaire 5 et sacrée 5 soudées.",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La répartition demandée suit la liste cervicale 7, dorsale 12, lombaire 5 et sacrée 5 soudées.",
+        "commonMistake": "Les nombres cervical et dorsal sont fréquemment inversés.",
+        "keyTakeaway": "Retenir 7 cervicales, 12 dorsales, 5 lombaires.",
+        "fieldApplication": "Le nom de la région est plus utile dans une transmission que le numéro isolé d’une vertèbre non identifié.",
+        "memoryTip": "7-12-5 : cou, dos, lombes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La répartition demandée suit la liste cervicale 7, dorsale 12, lombaire 5 et sacrée 5 soudées.",
+      "common_mistake": "Les nombres cervical et dorsal sont fréquemment inversés.",
+      "key_takeaway": "Retenir 7 cervicales, 12 dorsales, 5 lombaires.",
+      "memory_tip": "7-12-5 : cou, dos, lombes.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "association"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p04-l05-q04",
+      "type": "ordering",
+      "difficulty": "easy",
+      "question": "Classe les régions du rachis du haut vers le bas.",
+      "instruction": "Remets les régions dans l’ordre cranio-caudal.",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q04-a1",
+          "text": "Cervicale",
+          "explanation": "La région cervicale est la plus haute de la liste.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p04-l05-q04-a2",
+          "text": "Dorsale",
+          "explanation": "Elle suit la région cervicale.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p04-l05-q04-a3",
+          "text": "Lombaire",
+          "explanation": "Elle suit la région dorsale.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p04-l05-q04-a4",
+          "text": "Sacrée",
+          "explanation": "Elle se situe sous la région lombaire.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p04-l05-q04-a5",
+          "text": "Coccygienne",
+          "explanation": "Elle termine la succession décrite.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p04-l05-q04-a1",
+        "dea-p04-l05-q04-a2",
+        "dea-p04-l05-q04-a3",
+        "dea-p04-l05-q04-a4",
+        "dea-p04-l05-q04-a5"
+      ],
+      "correctAnswers": [
+        "dea-p04-l05-q04-a1",
+        "dea-p04-l05-q04-a2",
+        "dea-p04-l05-q04-a3",
+        "dea-p04-l05-q04-a4",
+        "dea-p04-l05-q04-a5"
+      ],
+      "explanation": "L’ordre anatomique est cervical, dorsal, lombaire, sacré puis coccygien.",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre anatomique est cervical, dorsal, lombaire, sacré puis coccygien.",
+        "commonMistake": "Commencer par la région lombaire confond une région basse avec le sommet du rachis.",
+        "keyTakeaway": "Du haut vers le bas : cervical → dorsal → lombaire → sacré → coccygien.",
+        "fieldApplication": "Suivre mentalement le rachis du cou au coccyx sécurise l’ordre de description."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre anatomique est cervical, dorsal, lombaire, sacré puis coccygien.",
+      "common_mistake": "Commencer par la région lombaire confond une région basse avec le sommet du rachis.",
+      "key_takeaway": "Du haut vers le bas : cervical → dorsal → lombaire → sacré → coccygien.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "ordre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "requiredSelections": 5
+      }
+    },
+    {
+      "id": "dea-p04-l05-q05",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Combien de vertèbres cervicales le support indique-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q05-a1",
+          "text": "5",
+          "explanation": "Cinq correspond au nombre lombaire cité."
+        },
+        {
+          "id": "dea-p04-l05-q05-a2",
+          "text": "7",
+          "explanation": "Le support indique sept vertèbres cervicales."
+        },
+        {
+          "id": "dea-p04-l05-q05-a3",
+          "text": "12",
+          "explanation": "Douze correspond au nombre dorsal cité."
+        },
+        {
+          "id": "dea-p04-l05-q05-a4",
+          "text": "33",
+          "explanation": "Trente-trois correspond au total présenté pour la colonne."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q05-a2",
+      "explanation": "La région cervicale compte sept vertèbres dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La région cervicale compte sept vertèbres dans le support.",
+        "commonMistake": "Cinq et douze appartiennent à d’autres régions et peuvent être sélectionnés par confusion.",
+        "keyTakeaway": "Cervicales = 7.",
+        "fieldApplication": "Employer « région cervicale » pour une localisation au cou sur le rachis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La région cervicale compte sept vertèbres dans le support.",
+      "common_mistake": "Cinq et douze appartiennent à d’autres régions et peuvent être sélectionnés par confusion.",
+      "key_takeaway": "Cervicales = 7.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "cervical",
+        "nombre"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l05-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Une victime consciente indique une douleur sur la partie basse du dos, au-dessus du sacrum. Quelle région du rachis décrit le mieux ce repère ?",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q06-a1",
+          "text": "Cervicale",
+          "explanation": "La région cervicale correspond au cou."
+        },
+        {
+          "id": "dea-p04-l05-q06-a2",
+          "text": "Dorsale",
+          "explanation": "La région dorsale se situe plus haut que la région décrite."
+        },
+        {
+          "id": "dea-p04-l05-q06-a3",
+          "text": "Lombaire",
+          "explanation": "La région lombaire se situe dans la partie basse du dos, au-dessus du sacrum."
+        },
+        {
+          "id": "dea-p04-l05-q06-a4",
+          "text": "Coccygienne",
+          "explanation": "La région coccygienne se situe sous le sacrum."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q06-a3",
+      "explanation": "Le repère décrit correspond à la région lombaire.",
+      "knowledgeIds": [
+        "K-DEA-P04-010",
+        "K-DEA-P04-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description",
+        "anatomy.location.transmission"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le repère décrit correspond à la région lombaire.",
+        "commonMistake": "Employer uniquement « dos » est moins précis et peut englober plusieurs régions.",
+        "keyTakeaway": "Une localisation rachidienne gagne à préciser cervicale, dorsale ou lombaire.",
+        "fieldApplication": "Transmettre le côté si pertinent et la région, sans déduire une lésion.",
+        "safetyPoint": "En contexte traumatique, la localisation ne justifie aucune mobilisation non indiquée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le repère décrit correspond à la région lombaire.",
+      "common_mistake": "Employer uniquement « dos » est moins précis et peut englober plusieurs régions.",
+      "key_takeaway": "Une localisation rachidienne gagne à préciser cervicale, dorsale ou lombaire.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "lombaire",
+        "cas"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010",
+          "K-DEA-P04-013"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description",
+          "anatomy.location.transmission"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l05-q07",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : la région située entre le rachis dorsal et le sacrum est la région ______.",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q07-a1",
+          "text": "lombaire",
+          "explanation": "La région lombaire suit la région dorsale et précède la région sacrée."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q07-a1",
+      "explanation": "Le terme attendu est « lombaire ».",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu est « lombaire ».",
+        "commonMistake": "Confondre lombaire et cervical inverse une région basse et une région haute.",
+        "keyTakeaway": "Dorsal → lombaire → sacré.",
+        "fieldApplication": "Ce vocabulaire rend une localisation plus exploitable."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu est « lombaire ».",
+      "common_mistake": "Confondre lombaire et cervical inverse une région basse et une région haute.",
+      "key_takeaway": "Dorsal → lombaire → sacré.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "lombaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p04-l05-q08",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La région dorsale est située sous la région lombaire.",
+      "answers": [
+        {
+          "id": "dea-p04-l05-q08-true",
+          "text": "Vrai",
+          "explanation": "Cette proposition inverse l’ordre anatomique des deux régions."
+        },
+        {
+          "id": "dea-p04-l05-q08-false",
+          "text": "Faux",
+          "explanation": "La région dorsale se situe au-dessus de la région lombaire."
+        }
+      ],
+      "correctAnswer": "dea-p04-l05-q08-false",
+      "explanation": "L’affirmation est fausse : la région dorsale précède la région lombaire du haut vers le bas.",
+      "knowledgeIds": [
+        "K-DEA-P04-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+      "sourcePages": "35",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "anatomy.landmarks",
+        "anatomy.location.description"
+      ],
+      "lessonId": "dea-p04-l05",
+      "plannedParcoursIds": [
+        "parcours-04"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’affirmation est fausse : la région dorsale précède la région lombaire du haut vers le bas.",
+        "commonMistake": "Une représentation mentale partant du bassin peut conduire à inverser l’ordre demandé.",
+        "keyTakeaway": "Dorsal au-dessus, lombaire en dessous.",
+        "fieldApplication": "Vérifier le sens de description avant une transmission anatomique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’affirmation est fausse : la région dorsale précède la région lombaire du haut vers le bas.",
+      "common_mistake": "Une représentation mentale partant du bassin peut conduire à inverser l’ordre demandé.",
+      "key_takeaway": "Dorsal au-dessus, lombaire en dessous.",
+      "tags": [
+        "dea",
+        "parcours-04",
+        "rachis",
+        "orientation"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 35",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p04-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil locomoteur - Les os - Le tronc",
+        "sourcePages": "35",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P04-010"
+        ],
+        "competencyIds": [
+          "anatomy.landmarks",
+          "anatomy.location.description"
+        ],
+        "plannedParcoursIds": [
+          "parcours-04"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

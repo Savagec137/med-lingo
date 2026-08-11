@@ -1,0 +1,5607 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "DOC-SAMU-CENTRES-15-2015",
+  "title": "Samu Centres 15 — Référentiel et guide d’évaluation",
+  "organization": "Samu-Urgences de France (SUdF) et Société Française de Médecine d’Urgence (SFMU)",
+  "author_metadata": "Frédéric Berthier",
+  "category": "SAMU",
+  "publication_date": "2015-03",
+  "document_date": "2015-03",
+  "date_precision": "month",
+  "version": "Mars 2015",
+  "language": "fr",
+  "status": "official",
+  "review_status": "source_verified",
+  "source_file": "docs/official_sources/SAMU/sfmu-sudf_referentiel_samu_2015.pdf",
+  "source_url": "https://www.sfmu.org/upload/referentielsSFMU/sfmu-sudf_referentiel_samu_2015.pdf",
+  "source_page_url": "https://www.sfmu.org/fr/vie-professionnelle/outils-professionnels/referentiels-sfmu/samu-centres-15-referentiel-et-guide-d-evaluation/ref_id/32",
+  "checksum_algorithm": "SHA-256",
+  "checksum": "2FD128293D5A48C79F1574E950EA64D4F454843BDAA4C6DB241E0244B8A7AEB6",
+  "pages": 86,
+  "analyzed_at": "2026-08-04T00:00:00.000Z",
+  "extraction_method": [
+    "pdfplumber_text_and_tables",
+    "pypdf_metadata",
+    "pypdfium2_visual_rendering",
+    "human_structural_review",
+    "official_source_url_verification"
+  ],
+  "scope": "Référentiel professionnel historique consacré à l’organisation, la terminologie, la codification, les ressources et l’évaluation des Samu Centres 15. Il ne constitue pas, à lui seul, une norme réglementaire opposable ni un protocole clinique exécutable.",
+  "chapters": [
+    {
+      "chapter_id": "SAMU-2015-CH-01",
+      "title": "Sommaire",
+      "page_range": "1-2",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-02",
+      "title": "Préambule",
+      "page_range": "3-4",
+      "subchapters": [
+        {
+          "subchapter_id": "SAMU-2015-CH-02-S01",
+          "title": "Missions, cadre général et objectifs",
+          "page_range": "3-4",
+          "knowledge_ids": [
+            "K-SAMU-2015-001",
+            "K-SAMU-2015-044"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-03",
+      "title": "Définitions",
+      "page_range": "4-30",
+      "subchapters": [
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S01",
+          "title": "Généralités",
+          "page_range": "4-5",
+          "knowledge_ids": [
+            "K-SAMU-2015-001",
+            "K-SAMU-2015-044"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S02",
+          "title": "Appels",
+          "page_range": "5-8",
+          "knowledge_ids": [
+            "K-SAMU-2015-002",
+            "K-SAMU-2015-003",
+            "K-SAMU-2015-004",
+            "K-SAMU-2015-005",
+            "K-SAMU-2015-006",
+            "K-SAMU-2015-007",
+            "K-SAMU-2015-008",
+            "K-SAMU-2015-009",
+            "K-SAMU-2015-010"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S03",
+          "title": "Dossiers",
+          "page_range": "8-9",
+          "knowledge_ids": [
+            "K-SAMU-2015-011",
+            "K-SAMU-2015-012",
+            "K-SAMU-2015-013",
+            "K-SAMU-2015-014",
+            "K-SAMU-2015-015",
+            "K-SAMU-2015-016"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S04",
+          "title": "Codifications",
+          "page_range": "10-21",
+          "knowledge_ids": [
+            "K-SAMU-2015-017",
+            "K-SAMU-2015-018",
+            "K-SAMU-2015-019",
+            "K-SAMU-2015-020",
+            "K-SAMU-2015-021",
+            "K-SAMU-2015-022"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S05",
+          "title": "De la victime au Dossier Patient",
+          "page_range": "21-24",
+          "knowledge_ids": [
+            "K-SAMU-2015-023",
+            "K-SAMU-2015-024",
+            "K-SAMU-2015-025",
+            "K-SAMU-2015-026",
+            "K-SAMU-2015-043"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-03-S06",
+          "title": "Indicateurs",
+          "page_range": "24-30",
+          "knowledge_ids": [
+            "K-SAMU-2015-027",
+            "K-SAMU-2015-028",
+            "K-SAMU-2015-029",
+            "K-SAMU-2015-030"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-04",
+      "title": "Référentiel",
+      "page_range": "31-46",
+      "subchapters": [
+        {
+          "subchapter_id": "SAMU-2015-CH-04-S01",
+          "title": "Locaux",
+          "page_range": "31-32",
+          "knowledge_ids": [
+            "K-SAMU-2015-031"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-04-S02",
+          "title": "Ressources humaines",
+          "page_range": "32-34",
+          "knowledge_ids": [
+            "K-SAMU-2015-032"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-04-S03",
+          "title": "Organisations et activités",
+          "page_range": "35-43",
+          "knowledge_ids": [
+            "K-SAMU-2015-033",
+            "K-SAMU-2015-034",
+            "K-SAMU-2015-035",
+            "K-SAMU-2015-036",
+            "K-SAMU-2015-037",
+            "K-SAMU-2015-038",
+            "K-SAMU-2015-044"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-04-S04",
+          "title": "Coût et financement",
+          "page_range": "44-46",
+          "knowledge_ids": [
+            "K-SAMU-2015-039"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-05",
+      "title": "Évaluation",
+      "page_range": "46-52",
+      "subchapters": [
+        {
+          "subchapter_id": "SAMU-2015-CH-05-S01",
+          "title": "Indicateurs incontournables",
+          "page_range": "46-47",
+          "knowledge_ids": [
+            "K-SAMU-2015-040"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-05-S02",
+          "title": "Ressources humaines",
+          "page_range": "47-48",
+          "knowledge_ids": [
+            "K-SAMU-2015-032",
+            "K-SAMU-2015-040"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-05-S03",
+          "title": "Performances",
+          "page_range": "48",
+          "knowledge_ids": [
+            "K-SAMU-2015-029",
+            "K-SAMU-2015-040"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-05-S04",
+          "title": "Activité",
+          "page_range": "49-52",
+          "knowledge_ids": [
+            "K-SAMU-2015-028",
+            "K-SAMU-2015-040",
+            "K-SAMU-2015-041"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-06",
+      "title": "Références",
+      "page_range": "52-55",
+      "subchapters": []
+    },
+    {
+      "chapter_id": "SAMU-2015-CH-07",
+      "title": "Annexes",
+      "page_range": "56-86",
+      "subchapters": [
+        {
+          "subchapter_id": "SAMU-2015-CH-07-S01",
+          "title": "Contributeurs",
+          "page_range": "56",
+          "knowledge_ids": []
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-07-S02",
+          "title": "Lexique",
+          "page_range": "57-61",
+          "knowledge_ids": []
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-07-S03",
+          "title": "Schéma des appels",
+          "page_range": "62",
+          "knowledge_ids": [
+            "K-SAMU-2015-010"
+          ]
+        },
+        {
+          "subchapter_id": "SAMU-2015-CH-07-S04",
+          "title": "Codification du dossier de régulation",
+          "page_range": "63-86",
+          "knowledge_ids": [
+            "K-SAMU-2015-017",
+            "K-SAMU-2015-018",
+            "K-SAMU-2015-019",
+            "K-SAMU-2015-020",
+            "K-SAMU-2015-021",
+            "K-SAMU-2015-042"
+          ]
+        }
+      ]
+    }
+  ],
+  "notions": [
+    "K-SAMU-2015-001",
+    "K-SAMU-2015-010",
+    "K-SAMU-2015-016",
+    "K-SAMU-2015-017",
+    "K-SAMU-2015-018",
+    "K-SAMU-2015-025",
+    "K-SAMU-2015-027",
+    "K-SAMU-2015-030",
+    "K-SAMU-2015-031",
+    "K-SAMU-2015-032",
+    "K-SAMU-2015-033",
+    "K-SAMU-2015-034",
+    "K-SAMU-2015-035",
+    "K-SAMU-2015-036",
+    "K-SAMU-2015-038",
+    "K-SAMU-2015-039",
+    "K-SAMU-2015-040",
+    "K-SAMU-2015-041",
+    "K-SAMU-2015-042",
+    "K-SAMU-2015-043",
+    "K-SAMU-2015-044"
+  ],
+  "definitions": [
+    "K-SAMU-2015-002",
+    "K-SAMU-2015-003",
+    "K-SAMU-2015-004",
+    "K-SAMU-2015-005",
+    "K-SAMU-2015-006",
+    "K-SAMU-2015-007",
+    "K-SAMU-2015-008",
+    "K-SAMU-2015-009",
+    "K-SAMU-2015-011",
+    "K-SAMU-2015-012",
+    "K-SAMU-2015-013",
+    "K-SAMU-2015-014",
+    "K-SAMU-2015-015",
+    "K-SAMU-2015-019",
+    "K-SAMU-2015-020",
+    "K-SAMU-2015-021",
+    "K-SAMU-2015-022",
+    "K-SAMU-2015-023",
+    "K-SAMU-2015-024",
+    "K-SAMU-2015-026",
+    "K-SAMU-2015-028",
+    "K-SAMU-2015-029",
+    "K-SAMU-2015-037"
+  ],
+  "procedures": [
+    {
+      "procedure_id": "SAMU-2015-PROC-001",
+      "title": "Qualifier et compter les appels",
+      "summary": "Distinguer flux entrant ou sortant, état de traitement et événements horodatés avant de calculer les indicateurs.",
+      "steps": [
+        "Identifier le sens de l’appel",
+        "Qualifier présenté, rejeté, traité automatiquement, décroché, répondu ou perdu",
+        "Conserver les repères temporels définis",
+        "Calculer avec les formules du référentiel"
+      ],
+      "source_pages": "5-8, 62",
+      "knowledge_ids": [
+        "K-SAMU-2015-002",
+        "K-SAMU-2015-003",
+        "K-SAMU-2015-004",
+        "K-SAMU-2015-005",
+        "K-SAMU-2015-006",
+        "K-SAMU-2015-007",
+        "K-SAMU-2015-008",
+        "K-SAMU-2015-009",
+        "K-SAMU-2015-010"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-002",
+      "title": "Créer et qualifier un dossier",
+      "summary": "Créer un D pour le problème soumis, le qualifier en DR lorsque la situation est suivie, puis en DRM lorsqu’un acte de régulation médicale est réalisé.",
+      "steps": [
+        "Créer le dossier",
+        "Documenter la situation",
+        "Qualifier le DR",
+        "Tracer l’acte médical et le DRM",
+        "Rattacher les ERM concernés"
+      ],
+      "source_pages": "8-9",
+      "knowledge_ids": [
+        "K-SAMU-2015-011",
+        "K-SAMU-2015-012",
+        "K-SAMU-2015-013",
+        "K-SAMU-2015-014",
+        "K-SAMU-2015-015"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-003",
+      "title": "Assurer la continuité d’un DR",
+      "summary": "Rattacher selon la convention du document les appels liés à la même situation dans la fenêtre de 24 heures.",
+      "source_page": "9",
+      "knowledge_ids": [
+        "K-SAMU-2015-016"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-004",
+      "title": "Coder les dimensions du dossier",
+      "summary": "Documenter séparément provenance, appelant, lieu, circonstance, motif, devenir, décision et ressources mobilisées.",
+      "source_pages": "10-20, 63-86",
+      "knowledge_ids": [
+        "K-SAMU-2015-017",
+        "K-SAMU-2015-018",
+        "K-SAMU-2015-019",
+        "K-SAMU-2015-020",
+        "K-SAMU-2015-021"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-005",
+      "title": "Générer et conserver l’identifiant du dossier",
+      "summary": "Utiliser l’identifiant unique proposé par le référentiel afin d’assurer la traçabilité du dossier.",
+      "source_page": "11",
+      "knowledge_ids": [
+        "K-SAMU-2015-017",
+        "K-SAMU-2015-018"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-006",
+      "title": "Gérer les états du dossier",
+      "summary": "Faire progresser le dossier entre états actif, achevé, validé, clôturé et archivé selon les règles décrites.",
+      "source_pages": "11, 65",
+      "knowledge_ids": [
+        "K-SAMU-2015-017"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-007",
+      "title": "Tracer HDR et diagnostic d’effecteur",
+      "summary": "Distinguer l’hypothèse ayant motivé les décisions initiales du diagnostic renseigné par l’effecteur.",
+      "source_pages": "20-21",
+      "knowledge_ids": [
+        "K-SAMU-2015-022"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-008",
+      "title": "Constituer le dossier centré patient",
+      "summary": "Relier patient, événement, épisodes, parcours de soins urgents et dossiers associés dans le modèle décrit.",
+      "source_pages": "21-24",
+      "knowledge_ids": [
+        "K-SAMU-2015-023",
+        "K-SAMU-2015-024",
+        "K-SAMU-2015-025",
+        "K-SAMU-2015-026",
+        "K-SAMU-2015-043"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-009",
+      "title": "Calculer et suivre les indicateurs",
+      "summary": "Calculer activité, taux d’accueil, qualité de service, taux de charge, durée moyenne et productivité avec les définitions et dénominateurs du document.",
+      "source_pages": "24-28, 40-41",
+      "knowledge_ids": [
+        "K-SAMU-2015-028",
+        "K-SAMU-2015-029"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-010",
+      "title": "Planifier les effectifs à partir de la charge",
+      "summary": "Estimer les flux, la durée des communications et le taux de charge avant d’ajuster l’organisation et les effectifs.",
+      "source_pages": "33-34, 41",
+      "knowledge_ids": [
+        "K-SAMU-2015-032",
+        "K-SAMU-2015-036"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-011",
+      "title": "Gérer plaintes et événements indésirables",
+      "summary": "Réceptionner, tracer, analyser, répondre et exploiter les plaintes, réclamations, dysfonctionnements et événements indésirables selon le circuit décrit.",
+      "source_pages": "42-45",
+      "knowledge_ids": [
+        "K-SAMU-2015-038"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-012",
+      "title": "Suivre décisions, moyens et destinations",
+      "summary": "Tracer la décision, son exécution, les ressources engagées, le devenir du patient et l’exécution de la recherche de destination.",
+      "source_pages": "15-20, 77-86",
+      "knowledge_ids": [
+        "K-SAMU-2015-020",
+        "K-SAMU-2015-021",
+        "K-SAMU-2015-042"
+      ]
+    },
+    {
+      "procedure_id": "SAMU-2015-PROC-013",
+      "title": "Évaluer l’activité du Samu",
+      "summary": "Produire les indicateurs quantitatifs et qualitatifs relatifs aux ressources, performances, activités, décisions, moyens et événements indésirables.",
+      "source_pages": "46-52",
+      "knowledge_ids": [
+        "K-SAMU-2015-040",
+        "K-SAMU-2015-041"
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-001",
+      "title": "Accident vasculaire cérébral",
+      "status": "referenced_not_defined",
+      "scope_note": "Le document exige un protocole accessible mais ne fournit aucun algorithme clinique.",
+      "source_pages": "35-36"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-002",
+      "title": "Douleur thoracique",
+      "status": "referenced_not_defined",
+      "scope_note": "Le document exige un protocole accessible mais ne fournit aucun algorithme clinique.",
+      "source_pages": "35-36"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-003",
+      "title": "Arrêt cardiaque",
+      "status": "referenced_not_defined",
+      "scope_note": "Le document exige un protocole accessible mais ne fournit aucun algorithme clinique.",
+      "source_pages": "35-36"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-004",
+      "title": "Traumatisé grave",
+      "status": "referenced_not_defined",
+      "scope_note": "Le document exige un protocole accessible mais ne fournit aucun algorithme clinique.",
+      "source_pages": "35-36"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-005",
+      "title": "Médecins Correspondants du Samu",
+      "status": "referenced_not_defined",
+      "scope_note": "Les protocoles sont cités sans contenu opérationnel complet.",
+      "source_pages": "37"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-006",
+      "title": "Échanges entre systèmes d’information",
+      "status": "referenced_not_defined",
+      "scope_note": "Le besoin de protocoles d’échange est cité sans spécification technique complète.",
+      "source_pages": "39"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-007",
+      "title": "Procédure P0 de déclenchement réflexe",
+      "status": "referenced_not_defined",
+      "scope_note": "La procédure est exigée ou codée sans algorithme détaillé.",
+      "source_pages": "36, 65"
+    },
+    {
+      "protocol_id": "SAMU-2015-PROT-REF-008",
+      "title": "Fonctionnement dégradé et suppléance",
+      "status": "referenced_not_defined",
+      "scope_note": "La procédure est exigée sans déroulement opérationnel complet.",
+      "source_pages": "29, 36"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "SAMU-2015-TBL-001",
+      "title": "40 critères qualité C1-C40",
+      "source_pages": "29-30",
+      "classification": "quality_criteria"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-002",
+      "title": "Locaux et niveaux E/S/O",
+      "source_pages": "31-32",
+      "classification": "referential_requirements"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-003",
+      "title": "Médecins seniors nécessaires",
+      "source_pages": "34",
+      "classification": "historical_staffing_model"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-004",
+      "title": "Personnels non médicaux",
+      "source_pages": "34",
+      "classification": "historical_staffing_model"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-005",
+      "title": "Protocoles et procédures requis",
+      "source_pages": "35-36",
+      "classification": "referenced_requirements"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-006",
+      "title": "Indicateurs de performance et objectifs",
+      "source_pages": "41",
+      "classification": "historical_performance_targets"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-007",
+      "title": "Indicateurs d’évaluation des ressources et de l’activité",
+      "source_pages": "46-52",
+      "classification": "evaluation_indicators"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-008",
+      "title": "Pathologies traceuses",
+      "source_pages": "51",
+      "classification": "trace_conditions"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-009",
+      "title": "Type de médecin régulateur",
+      "source_pages": "63",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-010",
+      "title": "Types de dossiers",
+      "source_pages": "64",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-011",
+      "title": "Priorités et états du dossier",
+      "source_pages": "65",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-012",
+      "title": "Provenance de l’appel",
+      "source_pages": "66-67",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-013",
+      "title": "Types d’appelants",
+      "source_pages": "67-68",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-014",
+      "title": "Lieux d’intervention",
+      "source_pages": "69-70",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-015",
+      "title": "Circonstances",
+      "source_pages": "71-72",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-016",
+      "title": "Motifs de recours",
+      "source_pages": "73-75",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-017",
+      "title": "Codification complémentaire ARéSa",
+      "source_pages": "76",
+      "classification": "local_historical_coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-018",
+      "title": "Devenir du patient",
+      "source_pages": "77",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-019",
+      "title": "Types de décisions",
+      "source_pages": "78-80",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-020",
+      "title": "Exécution des décisions",
+      "source_pages": "80",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-021",
+      "title": "Types de moyens",
+      "source_pages": "81-82",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-022",
+      "title": "Exécution des moyens",
+      "source_pages": "82",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-023",
+      "title": "Types de véhicules",
+      "source_pages": "83",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-024",
+      "title": "Exécution des véhicules et types de personnels",
+      "source_pages": "84",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-025",
+      "title": "Types d’équipes et services",
+      "source_pages": "85",
+      "classification": "coding"
+    },
+    {
+      "table_id": "SAMU-2015-TBL-026",
+      "title": "Activités de soins et recherche de destination",
+      "source_pages": "85-86",
+      "classification": "coding"
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "SAMU-2015-FIG-001",
+      "title": "DRM, ERM et événement",
+      "source_page": "9"
+    },
+    {
+      "figure_id": "SAMU-2015-FIG-002",
+      "title": "Système de régulation centré patient",
+      "source_page": "22"
+    },
+    {
+      "figure_id": "SAMU-2015-FIG-003",
+      "title": "Dossier Patient du SI-Samu",
+      "source_page": "23"
+    },
+    {
+      "figure_id": "SAMU-2015-FIG-004",
+      "title": "Processus métiers du centre de régulation",
+      "source_page": "25"
+    },
+    {
+      "figure_id": "SAMU-2015-FIG-005",
+      "title": "Gestion des plaintes, réclamations et contentieux",
+      "source_page": "45"
+    },
+    {
+      "figure_id": "SAMU-2015-FIG-006",
+      "title": "Schéma récapitulatif des appels",
+      "source_page": "62"
+    }
+  ],
+  "raw_tables": [
+    {
+      "raw_table_id": "SAMU-2015-RAW-P031-T01",
+      "source_page": 31,
+      "table_index": 1,
+      "cells": [
+        [
+          "Localisation au sein d’un Établissement de Santé public (ES)",
+          "E"
+        ],
+        [
+          "Localisation à proximité d’une autre structure d’urgence de l’établissement",
+          "E"
+        ],
+        [
+          "SECTEUR OPERATIONNEL",
+          ""
+        ],
+        [
+          "Salle de régulation médicale dédiée à l’activité quotidienne d’une surface d’au moins 10 m² par\nposte de travail",
+          "E"
+        ],
+        [
+          "Salle dédiée pour la gestion des évènements exceptionnels",
+          "E"
+        ],
+        [
+          "Acoustique et insonorisation soignée",
+          "E"
+        ],
+        [
+          "Les postes de travail de la salle de régulation et de la salle catastrophe seront en configuration\nidentique et/ou typé par profil d’agent, et multi-écrans",
+          "E"
+        ],
+        [
+          "Thermorégulation avec dispositif de climatisation",
+          "E"
+        ],
+        [
+          "Accès sécurisé",
+          "E"
+        ],
+        [
+          "Présence d’un éclairage naturel",
+          "E"
+        ],
+        [
+          "L’alimentation électrique générale des postes de travail et de tous les équipements techniques est\nsécurisée avec un dispositif de secours indépendant de celui de l’établissement",
+          "E"
+        ],
+        [
+          "Prises de courant électrique des équipements opérationnels ondulées et sécurisées",
+          "E"
+        ],
+        [
+          "Le réseau informatique et de téléphonie du secteur opérationnel doit fonctionner\nindépendamment du réseau de l’établissement et vice versa",
+          "E"
+        ],
+        [
+          "Salle pour évènements catastrophiques à effets limités est contigüe ou à proximité directe de la\nsalle de régulation médicale",
+          "E"
+        ],
+        [
+          "Local technique dédié contigüe à la salle de régulation médicale et sécurisé (alarme, sauvegardes et\nserveurs de secours à distance hors du bâtiment du Samu Centre15)",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P032-T01",
+      "source_page": 32,
+      "table_index": 1,
+      "cells": [
+        [
+          "SECTEUR MEDICO-ADMINISTRATIF",
+          ""
+        ],
+        [
+          "Espace de bureaux dédié aux équipes médico-soignantes (*)",
+          "E"
+        ],
+        [
+          "Secrétariat situé à proximité du secteur opérationnel avec un secteur d’archivage (*)",
+          "E"
+        ],
+        [
+          "Il comporte un secteur d’archivage des dossiers\nAu moins une salle de réunion et une bibliothèque (*)",
+          "E"
+        ],
+        [
+          "Chambre de repos pour chaque médecin de garde : insonorisées et équipées en sanitaire. Leur\nnombre est équivalent au nombre de lignes de permanence médicale et d’astreinte",
+          "E"
+        ],
+        [
+          "Salle de repos et de détente au même niveau et proche de la salle de régulation (*)",
+          "E"
+        ],
+        [
+          "Salle de repas (*)",
+          "E"
+        ],
+        [
+          "Vestiaire (*)",
+          "E"
+        ],
+        [
+          "Accessibilité des locaux administratifs aux Personnes à Mobilité Réduite (PMR)",
+          "E"
+        ],
+        [
+          "Parking dédié aux personnels du Samu Centre 15",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P034-T01",
+      "source_page": 34,
+      "table_index": 1,
+      "cells": [
+        [
+          "Assistant de Régulation Médicale",
+          "E"
+        ],
+        [
+          "Secrétaire médicale",
+          "E"
+        ],
+        [
+          "Superviseur",
+          "S"
+        ],
+        [
+          "Encadrement ARM",
+          "E"
+        ],
+        [
+          "Assistante sociale",
+          "S"
+        ],
+        [
+          "Coordonnateur Ambulancier",
+          "S"
+        ],
+        [
+          "Technicien et informaticien",
+          "E"
+        ],
+        [
+          "Agent de Service Hospitalier",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P035-T01",
+      "source_page": 35,
+      "table_index": 1,
+      "cells": [
+        [
+          "Existence d’un réseau des urgences",
+          "E"
+        ],
+        [
+          "Adhésion de l’établissement siège du Samu Centre 15 au réseau des urgences",
+          "E"
+        ],
+        [
+          "Existence d’un ROR",
+          "E"
+        ],
+        [
+          "Signalement des dysfonctionnements",
+          "E"
+        ],
+        [
+          "Participation aux registres",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P036-T01",
+      "source_page": 36,
+      "table_index": 1,
+      "cells": [
+        [
+          "PROTOCOLES DE REGULATION",
+          ""
+        ],
+        [
+          "Accident vasculaire cérébral",
+          "E"
+        ],
+        [
+          "Douleur thoracique",
+          "E"
+        ],
+        [
+          "Arrêt cardiaque",
+          "E"
+        ],
+        [
+          "Traumatisé grave",
+          "E"
+        ],
+        [
+          "PROCEDURES",
+          ""
+        ],
+        [
+          "Procédure P0 de déclenchement des moyens",
+          "E"
+        ],
+        [
+          "Transfert des appels au sein du CRRA, entre front office niveau 1 et 2, selon le type de\nrégulation médicale, la priorisation des appels, la disponibilité du médecin régulateur et le\nniveau d’activité du CRRA",
+          "E"
+        ],
+        [
+          "Procédure de suivi des appels, des patients et des effecteurs (délai du rappel par rapport à\nl’heure d’appel, motif de recours justifiant un suivi d’appel, …)",
+          "E"
+        ],
+        [
+          "Organisation des avis demandés à un spécialiste extérieur ; pédiatre, cardio….",
+          "E"
+        ],
+        [
+          "Régulation de secours spécifiques (milieu périlleux, montagne, spéléologie…)",
+          "E"
+        ],
+        [
+          "Transfusion sanguine pré-hospitalière (commande à l’EFS, procédure d’acheminement…)",
+          "E"
+        ],
+        [
+          "Rappel des personnels en situation exceptionnelle",
+          "E"
+        ],
+        [
+          "Activation de la salle de gestion de crise",
+          "E"
+        ],
+        [
+          "Déclaration de dysfonctionnements, évènements indésirables …",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P036-T02",
+      "source_page": 36,
+      "table_index": 2,
+      "cells": [
+        [
+          "Adaptation de l’effectif aux contraintes saisonnières",
+          ""
+        ],
+        [
+          " Concernant les médecins régulateurs",
+          "S"
+        ],
+        [
+          " Concernant les ARM",
+          "S"
+        ],
+        [
+          "Adaptation de l’effectif aux flux prévisionnels horaires",
+          ""
+        ],
+        [
+          " Concernant les médecins régulateurs",
+          "S"
+        ],
+        [
+          " Concernant les ARM",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P041-T01",
+      "source_page": 41,
+      "table_index": 1,
+      "cells": [
+        [
+          "INDICATEUR",
+          "MODE DE CALCUL OU MESURE",
+          "OBJECTIF"
+        ],
+        [
+          "Taux de Charge (TC)",
+          "Temps en communication / Temps logué",
+          "23%"
+        ],
+        [
+          "Taux d’accueil (TA)",
+          "Nombre d’appels répondus /\n(nb d’appels distribués – nb d’appels perdus avant 15 secondes)",
+          "99%"
+        ],
+        [
+          "Qualité de service (QS)",
+          "QS : nombre d’appels répondus avant 60 secondes\n60\n/ Nombre d’appels répondus total",
+          "99%"
+        ],
+        [
+          "Durée Moyenne de\nCommunication (DMC)",
+          "Temps en communication / nb appels entrants et sortants",
+          "100 s"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P043-T01",
+      "source_page": 43,
+      "table_index": 1,
+      "cells": [
+        [
+          "Existence d’une procédure interne écrite de gestion des plaintes et réclamations",
+          "E"
+        ],
+        [
+          "Fiche d’événements indésirables",
+          "E"
+        ],
+        [
+          "Enregistrement et traçabilité écrite des plaintes",
+          "E"
+        ],
+        [
+          "Archivage, classement des dossiers des plaintes et réclamations",
+          "E"
+        ],
+        [
+          "Accusé de réception au plaignant",
+          "E"
+        ],
+        [
+          "Réponse systématique et rapide au courrier du plaignant, avec copie à la CRUQ",
+          "E"
+        ],
+        [
+          "Analyse quantitative et qualitative des réclamations avec dispositif de suivi",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P044-T01",
+      "source_page": 44,
+      "table_index": 1,
+      "cells": [
+        [
+          "Coût du personnel médical",
+          "E"
+        ],
+        [
+          "Coût du personnel non médical",
+          "E"
+        ],
+        [
+          "Charges afférentes logistiques et gestion générale",
+          "E"
+        ],
+        [
+          "Actifs bruts ou tableau d’amortissement des charges du parc de véhicules du Samu\n(véhicule logistique, VPC, VLM autorité, remorques…)",
+          "S"
+        ],
+        [
+          "Charge de téléphonie (au mieux amortissement et maintenance séparé)",
+          "E"
+        ],
+        [
+          "Charge de radiophonie (au mieux amortissement et maintenance séparé), dans la mesure du\npossible, les coûts de location des points hauts devraient être identifiables.\nPour les Samu ayant plusieurs réseaux radiophoniques, chaque réseau doit être analysable\nséparément (capacité de comparaison inter-Samu).",
+          "E"
+        ],
+        [
+          "Charge de SI (au mieux amortissement et maintenance séparé),\nles coûts des liens avec les partenaires devraient être identifiables : interconnexion CTA-CODIS,\npasserelles SU et ES, lien CPAM, liens Smur, entreprises de transports sanitaires, réseau\ntélémédecine…",
+          "E"
+        ],
+        [
+          "Charge spécifique annexe : télésurveillance, vidéoconférence inter établissement…",
+          "O"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P047-T01",
+      "source_page": 47,
+      "table_index": 1,
+      "cells": [
+        [
+          "Nombre d’heures cumulées annuelles de régulation assurées par les médecins hospitaliers",
+          "E"
+        ],
+        [
+          "Nombre de médecins hospitaliers participant à la régulation médicale",
+          "S"
+        ],
+        [
+          "Nombre d’heures cumulées annuelles de régulation assurées par les médecins régulateurs de la\nPDSA",
+          "E"
+        ],
+        [
+          "Nombre d’heures cumulées annuelles postées assurées par les ARM",
+          "E"
+        ],
+        [
+          "Nombre d’ETP d’ARM affectés au Samu Centre 15",
+          "E"
+        ],
+        [
+          "Pyramide des âges",
+          ""
+        ],
+        [
+          " % de médecins de plus de 55 ans",
+          "S"
+        ],
+        [
+          " % d’ARM de plus de 55 ans",
+          "S"
+        ],
+        [
+          " % de médecins dans le service depuis moins de 5 ans",
+          "S"
+        ],
+        [
+          " % d’ARM dans le service depuis moins de 5 ans",
+          "S"
+        ],
+        [
+          " % de médecins dans le service depuis plus de 15 ans",
+          "S"
+        ],
+        [
+          " % d’ARM dans le service depuis plus de 15 ans",
+          "S"
+        ],
+        [
+          " % de médecins à statut non précaire (PUPH, MCUPH, PH, PHTP)",
+          "S"
+        ],
+        [
+          " % de médecins à activité partagée avec une structure d’accueil des urgences",
+          "S"
+        ],
+        [
+          "Taux d’activité non clinique moyen en %",
+          "E"
+        ],
+        [
+          "Taux moyen d’absentéisme pour maladie et accident",
+          ""
+        ],
+        [
+          " Taux moyen d’absentéisme pour maladie et accident des médecins",
+          "S"
+        ],
+        [
+          " Taux moyen d’absentéisme pour maladie et accident des ARM",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P048-T01",
+      "source_page": 48,
+      "table_index": 1,
+      "cells": [
+        [
+          "Nombre de publications scientifiques par an",
+          "S"
+        ],
+        [
+          "Nombre de communications courtes par an lors d’un congrès",
+          "S"
+        ],
+        [
+          "Nombre d’études, de protocoles de recherche clinique en cours dans le service",
+          "S"
+        ],
+        [
+          "% des médecins ayant participé au moins à 1 congrès de médecine d’urgence par an",
+          "S"
+        ],
+        [
+          "Nombre moyen de jours de DPC par médecin par an",
+          "S"
+        ],
+        [
+          "Nombre d’exercices de secours auxquels a participé le Samu dans l’année",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P048-T02",
+      "source_page": 48,
+      "table_index": 2,
+      "cells": [
+        [
+          "Nombre de staffs médicaux intra services par mois",
+          "E"
+        ],
+        [
+          "Nombre de staffs médicaux inter services par mois",
+          "S"
+        ],
+        [
+          "Nombre de revues de morbi-mortalité par an",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P048-T03",
+      "source_page": 48,
+      "table_index": 3,
+      "cells": [
+        [
+          "Taux de Charge (TC)",
+          "E"
+        ],
+        [
+          "Taux d’accueil (TA)",
+          "E"
+        ],
+        [
+          "Qualité de service (QS60)",
+          "E"
+        ],
+        [
+          "P (productivité ARM Heure)",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P049-T01",
+      "source_page": 49,
+      "table_index": 1,
+      "cells": [
+        [
+          "Nombre d’habitants du bassin de population couverte par le Samu Centre 15",
+          "E"
+        ],
+        [
+          "Nombre d’appels entrants",
+          "E"
+        ],
+        [
+          "Selon la provenance",
+          ""
+        ],
+        [
+          " Directement au CRRA par le 15",
+          "S"
+        ],
+        [
+          " Directement au CRRA par un numéro dédié à la PDSA",
+          "S"
+        ],
+        [
+          " Directement au CRRA par le 112",
+          "S"
+        ],
+        [
+          " Par le CTA-CODIS des Pompiers",
+          "S"
+        ],
+        [
+          " Par le CIC ou le CORG des forces de l’ordre",
+          "S"
+        ],
+        [
+          " Selon les tranches horaires",
+          "E"
+        ],
+        [
+          " Selon les jours de la semaine",
+          "E"
+        ],
+        [
+          " Nombre d’appels présentés / nombre d’habitants",
+          "E"
+        ],
+        [
+          "Nombre d’appels sortants",
+          "E"
+        ],
+        [
+          "Nombre de DR",
+          "E"
+        ],
+        [
+          "Nombre de DRM",
+          "E"
+        ],
+        [
+          " Nombre de DRM régulés par un médecin régulateur de l’AMU",
+          "E"
+        ],
+        [
+          " Nombre de DRM régulés par un médecin régulateur de le PDSA",
+          "E"
+        ],
+        [
+          "Nombre de décisions",
+          ""
+        ],
+        [
+          " Nombre d’interventions Smur primaires",
+          "E"
+        ],
+        [
+          " Nombre de transferts Smur",
+          "E"
+        ],
+        [
+          " Nombre d’interventions Smur pédiatriques",
+          "E"
+        ],
+        [
+          " Nombre de Transports Infirmiers Inter-Hospitaliers (TIIH)",
+          "E"
+        ],
+        [
+          " Nombre d’interventions VSAV globales",
+          "E"
+        ],
+        [
+          " Nombre d’interventions VSAV à la demande du Samu",
+          "S"
+        ],
+        [
+          " Nombre d’interventions d’ambulances privées",
+          "E"
+        ],
+        [
+          " Nombre de recours aux Médecins généralistes",
+          "E"
+        ],
+        [
+          " Nombre de recours aux Médecins généralistes en visite",
+          "S"
+        ],
+        [
+          " Nombre de Conseils Médicaux (avec ou sans PMT)",
+          "E"
+        ],
+        [
+          " Prescription Médicale Téléphonique (PMT)",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P050-T01",
+      "source_page": 50,
+      "table_index": 1,
+      "cells": [
+        [
+          " Autres décisions",
+          "S"
+        ],
+        [
+          " Nombre d’interventions héliportées primaires",
+          "E"
+        ],
+        [
+          " Nombre d’interventions héliportées primaires par HéliSmur",
+          "S"
+        ],
+        [
+          " Nombre de transferts inter-hospitaliers héliportés",
+          "E"
+        ],
+        [
+          " Nombre de transferts inter-hospitaliers par HéliSmur",
+          "S"
+        ],
+        [
+          "Nombre de « Suivi d’appels » réalisés",
+          "S"
+        ],
+        [
+          "Devenir des patients (prise en charge pré-hospitalière)",
+          ""
+        ],
+        [
+          " Transport médicalisé",
+          "E"
+        ],
+        [
+          " Transport non médicalisé",
+          "E"
+        ],
+        [
+          " Laissé sur place",
+          "E"
+        ],
+        [
+          " Décédé",
+          "E"
+        ],
+        [
+          "Orientation des patients transportés",
+          ""
+        ],
+        [
+          " Filière accueil des urgences",
+          "S"
+        ],
+        [
+          " Filière soins critiques (Réa, USC, USI, Imagerie interventionnelle, bloc opératoire)",
+          "S"
+        ],
+        [
+          " Filière spécialisée MCO",
+          "S"
+        ],
+        [
+          "Hospitalisation des patients transportés",
+          ""
+        ],
+        [
+          " Patients non hospitalisés",
+          "O"
+        ],
+        [
+          " Patients décédés avant admission en hospitalisation",
+          "O"
+        ],
+        [
+          " Patients hospitalisé en soins critiques (Réa, USC, USI, Imagerie interventionnelle, bloc\nopératoire)",
+          "O"
+        ],
+        [
+          " Patients hospitalisés en MCO",
+          "O"
+        ],
+        [
+          " Nombre de patient transféré hors d’un établissement de la structure juridique dans les 24\nheures",
+          "O"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P051-T01",
+      "source_page": 51,
+      "table_index": 1,
+      "cells": [
+        [
+          "Arrêt Cardiaque (AC)",
+          ""
+        ],
+        [
+          " Nombre d’AC régulés",
+          "E"
+        ],
+        [
+          " Nombre d’AC régulés avec appel direct au 15",
+          "S"
+        ],
+        [
+          " Nombre de MCE assistés par téléphone",
+          "S"
+        ],
+        [
+          " Délai moyen entre la réception de l’appel initial (t0) et le déclenchement du Smur",
+          "E"
+        ],
+        [
+          " Délai de départ moyen du Smur",
+          "E"
+        ],
+        [
+          "Douleur thoracique",
+          ""
+        ],
+        [
+          " Nombre de douleurs thoraciques régulées",
+          "E"
+        ],
+        [
+          " % d’envoi du Smur après régulation d’une douleur thoracique",
+          "S"
+        ],
+        [
+          " % de patients SCA ST+ orientés directement vers un centre de cardiologie\ninterventionnelle",
+          "S"
+        ],
+        [
+          "Traumatisés graves",
+          ""
+        ],
+        [
+          " % de décisions Smur de 1ère intention pour traumatisme grave",
+          "E"
+        ],
+        [
+          " % de TG par niveau de gravité : stables, stabilisés, instables",
+          "E"
+        ],
+        [
+          " % de TG orientés vers la SAUV, vers le bloc opératoire",
+          "E"
+        ],
+        [
+          "AVC",
+          ""
+        ],
+        [
+          " Nombre de suspicions d’AVC régulées",
+          "S"
+        ],
+        [
+          " % d’AVC régulés orientés vers une filière neuro-vasculaire",
+          "E"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P052-T01",
+      "source_page": 52,
+      "table_index": 1,
+      "cells": [
+        [
+          "% de rappels dans les 24 heures nécessitant un engagement d’un moyen après un conseil médical",
+          "S"
+        ],
+        [
+          "% de départs Smur (mission primaire) en plus de 6 mn (délai entre la décision médicale et départ\ndu Smur)",
+          "S"
+        ],
+        [
+          "Nombre de transports non médicalisés et patients hospitalisés en REA ou en SI ou décédés dans les\n6 heures",
+          "S"
+        ],
+        [
+          "Nombre de patients réorientés dans les 6 heures vers un autre plateau technique",
+          "S"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P062-T01",
+      "source_page": 62,
+      "table_index": 1,
+      "cells": [
+        [
+          "APPELS DECROCHES",
+          "ARM\n(ou médecin)"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P063-T01",
+      "source_page": 63,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "URG",
+          "Médecin urgentiste",
+          "1"
+        ],
+        [
+          "MG",
+          "Médecin généraliste",
+          "2"
+        ],
+        [
+          "PED",
+          "Pédiatre",
+          "3"
+        ],
+        [
+          "PSY",
+          "Psychiatre",
+          "4"
+        ],
+        [
+          "MEDSPE",
+          "Médecin autre discipline",
+          "5"
+        ],
+        [
+          "XXX",
+          "Indéterminé",
+          "6"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P064-T01",
+      "source_page": 64,
+      "table_index": 1,
+      "cells": [
+        [
+          "Type",
+          "Code DRREGUL",
+          "Libellé",
+          "Action",
+          "Ordre"
+        ],
+        [
+          "DRM",
+          "URG",
+          "Attribution Régul Urgentiste",
+          "Régulation hospitalière",
+          "1"
+        ],
+        [
+          "DRM",
+          "URG1",
+          "URG1 : Rég Urgentiste",
+          "Régulation hospitalière",
+          "2"
+        ],
+        [
+          "DRM",
+          "URG2",
+          "URG2 : Rég Urgentiste",
+          "Régulation hospitalière",
+          "3"
+        ],
+        [
+          "DRM",
+          "URG3",
+          "URG3 : Rég Urgentiste",
+          "Régulation hospitalière",
+          "4"
+        ],
+        [
+          "DRM",
+          "URG4",
+          "URG4 : Rég Urgentiste",
+          "Régulation hospitalière",
+          "5"
+        ],
+        [
+          "DRM",
+          "T2",
+          "Demande de transfert adulte",
+          "Transfert secondaire",
+          "6"
+        ],
+        [
+          "DRM",
+          "T3",
+          "Demande de transfert pédiatrique",
+          "Transfert secondaire",
+          "7"
+        ],
+        [
+          "DRM",
+          "MG",
+          "Attribution Médecine Générale",
+          "Médecine générale",
+          "21"
+        ],
+        [
+          "DRM",
+          "MG1",
+          "MG1 : Rég Généraliste",
+          "Médecine générale",
+          "22"
+        ],
+        [
+          "DRM",
+          "MG2",
+          "MG2 : Rég Généraliste",
+          "Médecine générale",
+          "23"
+        ],
+        [
+          "DRM",
+          "MG3",
+          "MG3 : Rég Généraliste",
+          "Médecine générale",
+          "24"
+        ],
+        [
+          "DRM",
+          "MG4",
+          "MG4 : Rég Généraliste",
+          "Médecine générale",
+          "25"
+        ],
+        [
+          "DRM",
+          "MG5",
+          "MG5 : Rég Généraliste",
+          "Médecine générale",
+          "26"
+        ],
+        [
+          "DRM",
+          "MG6",
+          "MG6 : Rég Généraliste",
+          "Médecine générale",
+          "27"
+        ],
+        [
+          "DRM",
+          "MG9",
+          "MRG à distance",
+          "Médecine générale",
+          "28"
+        ],
+        [
+          "DRM",
+          "MG-URG",
+          "MRG indispo, régulé par défaut par MRU",
+          "Régulation hospitalière",
+          "29"
+        ],
+        [
+          "DRM",
+          "DRMRAPPEL",
+          "DRM en attente de rappel",
+          "Médecine générale",
+          "30"
+        ],
+        [
+          "DRM",
+          "ROUGE",
+          "Transfert vers Salle Plan Rouge",
+          "Régulation hospitalière",
+          "41"
+        ],
+        [
+          "DRM",
+          "BLANC",
+          "Transfert vers Salle Plan Blanc",
+          "Régulation hospitalière",
+          "42"
+        ],
+        [
+          "DRM",
+          "PCRMU",
+          "PC Régulation médicale",
+          "Régulation hospitalière",
+          "43"
+        ],
+        [
+          "D",
+          "ITER",
+          "Appel itératif, à rattacher à un DRM existant",
+          "Affaire en cours",
+          "51"
+        ],
+        [
+          "DR",
+          "RENS",
+          "Renseignement (ARM)",
+          "A classer",
+          "52"
+        ],
+        [
+          "DR",
+          "GARDE",
+          "Médecin de garde",
+          "Renseignement sur garde",
+          "53"
+        ],
+        [
+          "DR",
+          "PHAR",
+          "Pharmacie de garde",
+          "Renseignement sur garde",
+          "54"
+        ],
+        [
+          "DR",
+          "DENT",
+          "Dentiste de garde",
+          "Renseignement sur garde",
+          "55"
+        ],
+        [
+          "DR",
+          "INFO",
+          "Info CTA/CODIS non médicale",
+          "A classer",
+          "56"
+        ],
+        [
+          "D",
+          "ADMIN",
+          "Appel administratif",
+          "A classer",
+          "61"
+        ],
+        [
+          "D",
+          "NREP",
+          "Raccroché ; pas de réponse",
+          "A classer",
+          "62"
+        ],
+        [
+          "D",
+          "FAX",
+          "Tonalité de fax, porteuse",
+          "A classer",
+          "63"
+        ],
+        [
+          "D",
+          "MALV",
+          "Appel malveillant, canular",
+          "A classer",
+          "64"
+        ],
+        [
+          "D",
+          "ERR",
+          "Erreur de numéro, erreur d'acheminement",
+          "A classer",
+          "65"
+        ],
+        [
+          "D",
+          "PERSO",
+          "Appel personnel",
+          "A classer",
+          "66"
+        ],
+        [
+          "D",
+          "WAUTRE",
+          "Autre appel",
+          "A classer",
+          "67"
+        ],
+        [
+          "DRM",
+          "FORM",
+          "Transfert vers salle de formation",
+          "Régulation hospitalière",
+          "99"
+        ],
+        [
+          "DRM",
+          "NATTR",
+          "Dossier créé par un lien 15-xx",
+          "Régulation hospitalière",
+          "100"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P065-T01",
+      "source_page": 65,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRETAT",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "ACTIF",
+          "Actif",
+          "1"
+        ],
+        [
+          "ACHEVE",
+          "Achevé",
+          "2"
+        ],
+        [
+          "VALIDE",
+          "Validé",
+          "3"
+        ],
+        [
+          "CLOTURE",
+          "Clôturé",
+          "4"
+        ],
+        [
+          "ARCHIVE",
+          "Archivé",
+          "5"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P066-T01",
+      "source_page": 66,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRPROVE",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "C15",
+          "Samu Centre 15",
+          "1"
+        ],
+        [
+          "PDSA",
+          "Appel pour permanence de soins ambulatoire",
+          "2"
+        ],
+        [
+          "INTCH",
+          "Appel interne hôpital",
+          "3"
+        ],
+        [
+          "AUTREC15",
+          "Autre Samu",
+          "4"
+        ],
+        [
+          "AUTRECH",
+          "Appel d'un autre ES",
+          "5"
+        ],
+        [
+          "CTA18",
+          "CTA-CODIS Interconnexion",
+          "6"
+        ],
+        [
+          "INFO18",
+          "CTA-CODIS Info",
+          "7"
+        ],
+        [
+          "AUTRECTA",
+          "Autre CTA-CODIS",
+          "8"
+        ],
+        [
+          "CNR114",
+          "Centre 114",
+          "10"
+        ],
+        [
+          "FDO17",
+          "Police, Gendarmerie",
+          "11"
+        ],
+        [
+          "PDSSOS",
+          "Association PDSA et SOS",
+          "12"
+        ],
+        [
+          "TELEASSIT",
+          "Téléassistance",
+          "13"
+        ],
+        [
+          "PUBLIC",
+          "Autre structure publique d'urgence (CROSS,…)",
+          "14"
+        ],
+        [
+          "AUTRE",
+          "Autre structure",
+          "15"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P067-T01",
+      "source_page": 67,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRAPLT",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "SUJET",
+          "Le sujet lui-même",
+          "1"
+        ],
+        [
+          "FAMILLE",
+          "Famille ou proche du patient",
+          "2"
+        ],
+        [
+          "TIERS",
+          "Particulier autre",
+          "3"
+        ],
+        [
+          "SP-AMB",
+          "Secouriste actif en mission",
+          "4"
+        ],
+        [
+          "MED",
+          "Médecin",
+          "5"
+        ],
+        [
+          "INFIRMIER",
+          "Infirmier",
+          "6"
+        ],
+        [
+          "SANTE",
+          "Autre professionnel de santé",
+          "7"
+        ],
+        [
+          "FDO-ARME",
+          "Policier Gendarme Militaire",
+          "8"
+        ],
+        [
+          "SOS",
+          "SOS Médecins ou association PDS",
+          "9"
+        ],
+        [
+          "DERLI",
+          "Demande provenant du MRG",
+          "10"
+        ],
+        [
+          "DEFLI",
+          "Demande provenant de l'effecteur MG",
+          "11"
+        ],
+        [
+          "CROSS",
+          "Cross",
+          "12"
+        ],
+        [
+          "AUTRE",
+          "Autre fonction ou indéterminé",
+          "13"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P069-T01",
+      "source_page": 69,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRLIEU",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "DOMICILE",
+          "Lieu de logement ou d’habitation",
+          "1"
+        ],
+        [
+          "VP",
+          "Voie publique",
+          "2"
+        ],
+        [
+          "PUBLIC",
+          "Etablissement recevant du public",
+          "3"
+        ],
+        [
+          "PRO",
+          "Lieux de travail : bureaux, usine, chantier …",
+          "4"
+        ],
+        [
+          "ES",
+          "Hôpital, clinique",
+          "5"
+        ],
+        [
+          "CAB",
+          "Cabinet médical, paramédical, pharmacie",
+          "6"
+        ],
+        [
+          "LONGSEJ",
+          "EHPAD, maison de retraite, foyer accueil, MAS",
+          "7"
+        ],
+        [
+          "SPORT",
+          "Lieu de pratique d'un sport",
+          "8"
+        ],
+        [
+          "RURAL",
+          "Champs, forêt, mer, étang, montagne",
+          "9"
+        ],
+        [
+          "SCOLAIRE",
+          "Ecole, université, crèche, garderie",
+          "10"
+        ],
+        [
+          "PRISON",
+          "Maison d'arrêt, lieu de détention",
+          "11"
+        ],
+        [
+          "TRANSPOR",
+          "Bus, tram, gare, aéronef, bateau, train",
+          "12"
+        ],
+        [
+          "AERO",
+          "Aéroport",
+          "13"
+        ],
+        [
+          "AUTRE",
+          "Autre lieu d'intervention",
+          "14"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P071-T01",
+      "source_page": 71,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRCIRCO",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "AVP",
+          "AVP",
+          "1"
+        ],
+        [
+          "DEFENEST",
+          "Chute de grande hauteur",
+          "2"
+        ],
+        [
+          "AGRESSION",
+          "Autres agression, rixe ou morsure",
+          "3"
+        ],
+        [
+          "NOYADE",
+          "Noyade, plongée, eau",
+          "4"
+        ],
+        [
+          "ARMEFEU",
+          "Arme à feu",
+          "5"
+        ],
+        [
+          "COUTEAU",
+          "Objet tranchant ou perforant",
+          "6"
+        ],
+        [
+          "SPORT",
+          "Accident de sport ou de loisir",
+          "7"
+        ],
+        [
+          "PENDU",
+          "Pendaison, strangulation",
+          "8"
+        ],
+        [
+          "FEU",
+          "Feu, agent thermique, fumée",
+          "9"
+        ],
+        [
+          "EXPLOSIF",
+          "Explosion",
+          "10"
+        ],
+        [
+          "ECRASE",
+          "Ecrasement",
+          "11"
+        ],
+        [
+          "TOXIQUE",
+          "Exposition à produits chimiques ou toxiques",
+          "12"
+        ],
+        [
+          "CHUTE",
+          "Chute, traumatisme bénin",
+          "13"
+        ],
+        [
+          "ELEC",
+          "Electricité, foudre",
+          "14"
+        ],
+        [
+          "PRO",
+          "Trauma par machine à usage professionnel",
+          "15"
+        ],
+        [
+          "DOMJEU",
+          "Trauma par appareillage domestique",
+          "16"
+        ],
+        [
+          "SECOND",
+          "Transfert secondaire",
+          "17"
+        ],
+        [
+          "AUTRE",
+          "Autres",
+          "18"
+        ],
+        [
+          "CATA",
+          "Accident nombreuses victimes",
+          "19"
+        ],
+        [
+          "00000",
+          "Pathologie non traumatique, non circonstancielle",
+          "20"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P073-T01",
+      "source_page": 73,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRMOTIF",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "ACR",
+          "ACR-DCD-EMA",
+          "1"
+        ],
+        [
+          "POITR",
+          "J’ai mal à la poitrine ; douleur thoracique",
+          "2"
+        ],
+        [
+          "CARDIO",
+          "Pb cardiaque autre",
+          "3"
+        ],
+        [
+          "DYSPNEE",
+          "Pb respiratoire",
+          "4"
+        ],
+        [
+          "AVC",
+          "Déficit d’un membre, … AVC",
+          "5"
+        ],
+        [
+          "NEURO",
+          "Pb neurologique autre",
+          "6"
+        ],
+        [
+          "GYNOBST",
+          "Pb obstétrique",
+          "7"
+        ],
+        [
+          "COMA",
+          "Inconscient",
+          "8"
+        ],
+        [
+          "MALAISE",
+          "Malaise, syncope",
+          "9"
+        ],
+        [
+          "INTOX",
+          "Intoxication",
+          "10"
+        ],
+        [
+          "FIEVRE",
+          "Pb infectieux",
+          "11"
+        ],
+        [
+          "GASTRO",
+          "Douleur abdominale, diarrhée, vomissement",
+          "12"
+        ],
+        [
+          "UROGENIT",
+          "Pb gynéco et uro-génital",
+          "13"
+        ],
+        [
+          "DOULEUR",
+          "Autre douleur",
+          "14"
+        ],
+        [
+          "ALLERGIE",
+          "Pb allergique",
+          "15"
+        ],
+        [
+          "HEMORRAG",
+          "Saignement",
+          "16"
+        ],
+        [
+          "TRAUMA",
+          "Trauma léger",
+          "17"
+        ],
+        [
+          "TRAUM999",
+          "Trauma grave",
+          "18"
+        ],
+        [
+          "PSY",
+          "Psychiatrie",
+          "19"
+        ],
+        [
+          "CMED",
+          "Conseil médical",
+          "20"
+        ],
+        [
+          "CERTIF",
+          "Certificats ou ordonnances",
+          "21"
+        ],
+        [
+          "PNRPAA",
+          "Ouverture de porte",
+          "22"
+        ],
+        [
+          "T2T3",
+          "Secondaire",
+          "23"
+        ],
+        [
+          "SANSOC",
+          "Pb social ou sanitaire",
+          "24"
+        ],
+        [
+          "CATA",
+          "Catastrophe",
+          "25"
+        ],
+        [
+          "GREFF",
+          "Greffe ; transplantation",
+          "26"
+        ],
+        [
+          "AUTRE",
+          "Autres motifs ou pas de motif identifié",
+          "27"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P076-T01",
+      "source_page": 76,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRAUTR",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "OK",
+          "Pas de particularité",
+          "1"
+        ],
+        [
+          "PANIQ",
+          "Panique de l’appelant ou de l’entourage",
+          "2"
+        ],
+        [
+          "HOSTI",
+          "Milieu hostile",
+          "3"
+        ],
+        [
+          "POSEC",
+          "Poste de secours",
+          "4"
+        ],
+        [
+          "MANIF",
+          "Mouvement social (NDDL, ...)",
+          "5"
+        ],
+        [
+          "GRRAS",
+          "Grand rassemblement",
+          "6"
+        ],
+        [
+          "TENS",
+          "Hôpital en tension",
+          "7"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P077-T01",
+      "source_page": 77,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRPAT",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "TRSAN",
+          "Transporté en véhicule sanitaire",
+          "10"
+        ],
+        [
+          "TRPER",
+          "Transporté par ses propres moyens",
+          "13"
+        ],
+        [
+          "DOM",
+          "Ramené à domicile",
+          "15"
+        ],
+        [
+          "CABMG",
+          "Transporté vers un cabinet médical",
+          "17"
+        ],
+        [
+          "LSP",
+          "Laissé sur place",
+          "20"
+        ],
+        [
+          "FDO17",
+          "Confié aux forces de l'ordre",
+          "23"
+        ],
+        [
+          "REFUS",
+          "Refus de soins, de transport ou d'hospitalisation",
+          "25"
+        ],
+        [
+          "DCD",
+          "Décédé",
+          "30"
+        ],
+        [
+          "DCDAV",
+          "DC avant réa (non examiné) - LSP",
+          "31"
+        ],
+        [
+          "DCDAF",
+          "DC avant réa (examiné, à facturer) - LSP",
+          "32"
+        ],
+        [
+          "DCDAP",
+          "DC après réanimation, LSP",
+          "33"
+        ],
+        [
+          "DCDTR",
+          "DC pendant le transport",
+          "34"
+        ],
+        [
+          "DCDAD",
+          "DC à l'admission",
+          "35"
+        ],
+        [
+          "RAS",
+          "Pas d'envoi de moyen",
+          "40"
+        ],
+        [
+          "INCO",
+          "Pas de nouvelles du moyen envoyé",
+          "91"
+        ],
+        [
+          "ANNUL",
+          "Intervention annulée",
+          "99"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P078-T01",
+      "source_page": 78,
+      "table_index": 1,
+      "cells": [
+        [
+          "Ordre",
+          "Code DRDEC",
+          "Libellé"
+        ],
+        [
+          "12",
+          "CM",
+          "Conseil médical simple"
+        ],
+        [
+          "22",
+          "PMT",
+          "Conseil médical avec PMT (médicament)"
+        ],
+        [
+          "25",
+          "MED8",
+          "Conseil médical, appeler MG"
+        ],
+        [
+          "26",
+          "MED9",
+          "Conseil médical, appeler SOS"
+        ],
+        [
+          "27",
+          "MED7",
+          "Conseil médical, aller aux urgences"
+        ],
+        [
+          "999",
+          "ZERO",
+          "Pas de décision (après régulation médicale)"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P079-T01",
+      "source_page": 79,
+      "table_index": 1,
+      "cells": [
+        [
+          "Ordre",
+          "Code DRDEC",
+          "Libellé"
+        ],
+        [
+          "1",
+          "SMUR1",
+          "Smur engagé après régulation médicale"
+        ],
+        [
+          "2",
+          "SMUR0",
+          "Smur engagé par ARM avant régulation médicale"
+        ],
+        [
+          "3",
+          "SMUR2",
+          "Smur engagé par autre Samu"
+        ],
+        [
+          "4",
+          "SCMM",
+          "Recours Samu de coordination médicale maritime"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "40",
+          "DATSU",
+          "ATSU (Demande par lien informatique)"
+        ],
+        [
+          "41",
+          "AMBCO",
+          "Amb conventionnée (pour T2, …)"
+        ],
+        [
+          "42",
+          "AMBBA",
+          "Amb bariatrique"
+        ],
+        [
+          "43",
+          "ADTNU",
+          "Amb pour transport de détenu"
+        ],
+        [
+          "48",
+          "AMBU",
+          "Amb (Réponse lien informatique et Pannes)"
+        ],
+        [
+          "49",
+          "AMB2",
+          "Amb déjà déclenchée"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "38",
+          "RFT18",
+          "Demande moyens Pompiers (VSAV VLI MSP) par lien informatique"
+        ],
+        [
+          "61",
+          "VSAV0",
+          "VSAV engagé par ARM avant régulation médicale"
+        ],
+        [
+          "62",
+          "VSAB1",
+          "VSAV engagé après régulation médicale"
+        ],
+        [
+          "63",
+          "VSAB2",
+          "VSAV déjà engagé"
+        ],
+        [
+          "64",
+          "VSAB3",
+          "VSAV par indisponibilité d’ambulance"
+        ],
+        [
+          "66",
+          "MEDSP",
+          "Médecin sapeur-pompier"
+        ],
+        [
+          "67",
+          "ISP1",
+          "Infirmier sapeur-pompier engagé après régulation médicale"
+        ],
+        [
+          "68",
+          "ISP2",
+          "Infirmier sapeur-pompier déjà engagé"
+        ],
+        [
+          "69",
+          "CODIS",
+          "Pompiers (autres moyens)"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "11",
+          "MED1",
+          "MG engagé après régulation médicale"
+        ],
+        [
+          "12",
+          "MED2",
+          "MG déjà engagé"
+        ],
+        [
+          "23",
+          "MCS",
+          "Médecin Correspondant de Samu"
+        ],
+        [
+          "31",
+          "CMCAP",
+          "Recours au Centre Anti Poison"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "27",
+          "UPAP",
+          "Recours UPAP (unité paramédicale d'accueil psychiatrique)"
+        ],
+        [
+          "30",
+          "DENT",
+          "Dentiste"
+        ],
+        [
+          "6",
+          "DAE",
+          "Défibrillateur automatisé externe"
+        ],
+        [
+          "28",
+          "KINE",
+          "Kinésithérapie respiratoire"
+        ],
+        [
+          "81",
+          "FDO17",
+          "Gendarmerie ; police"
+        ],
+        [
+          "33",
+          "INVS",
+          "Recours INVS"
+        ],
+        [
+          "99",
+          "ROUGE",
+          "Plan Rouge ; rappel de personnel8"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "95",
+          "POSEC",
+          "Postes de secours"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P080-T01",
+      "source_page": 80,
+      "table_index": 1,
+      "cells": [
+        [
+          "Ordre",
+          "Code DRDEC",
+          "Libellé"
+        ],
+        [
+          "83",
+          "INF",
+          "Recours à un IDE d’astreinte ou SLL9"
+        ],
+        [
+          "85",
+          "W531",
+          "Pose de voie veineuse centrale"
+        ],
+        [
+          "86",
+          "W532",
+          "Infirmier dans les étages"
+        ],
+        [
+          "85",
+          "W721",
+          "Infirmière abeille"
+        ],
+        [
+          "86",
+          "W722",
+          "Brancardage, transport intérieur"
+        ],
+        [
+          "91",
+          "MACO",
+          "Moyens ACO10"
+        ],
+        [
+          "92",
+          "ACONP",
+          "Moyen ACO non précisé"
+        ],
+        [
+          "85",
+          "W441",
+          "UNASS 44"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P080-T02",
+      "source_page": 80,
+      "table_index": 2,
+      "cells": [
+        [
+          "Code DREXEDEC",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "OK",
+          "Ok",
+          "1"
+        ],
+        [
+          "DEL15",
+          "OK dans le quart d’heure",
+          "2"
+        ],
+        [
+          "DEL30",
+          "OK dans la demi-heure",
+          "3"
+        ],
+        [
+          "DEL60",
+          "OK dans l’heure",
+          "4"
+        ],
+        [
+          "DEL90",
+          "OK dans l'heure et demi",
+          "5"
+        ],
+        [
+          "DEL2H",
+          "OK dans 2 heures",
+          "6"
+        ],
+        [
+          "DEL3H",
+          "OK dans 3 heures",
+          "7"
+        ],
+        [
+          "DEL4H",
+          "OK dans la demi-journée",
+          "8"
+        ],
+        [
+          "DEL8H",
+          "OK dans la journée",
+          "9"
+        ],
+        [
+          "REFUS",
+          "Refus",
+          "11"
+        ],
+        [
+          "INDIS",
+          "Moyen Indisponible",
+          "12"
+        ],
+        [
+          "ANNUL",
+          "Demande annulée",
+          "13"
+        ],
+        [
+          "ERR",
+          "Erreur de choix",
+          "14"
+        ],
+        [
+          "TECH",
+          "Erreur technique",
+          "15"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P081-T01",
+      "source_page": 81,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRMOY",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "SMUR",
+          "Smur",
+          "1"
+        ],
+        [
+          "SCMM",
+          "Samu de coordination médicale maritime",
+          "2"
+        ],
+        [
+          "MCS",
+          "Médecin correspondant de SAMU",
+          "3"
+        ],
+        [
+          "DAE",
+          "Défibrillateur Automatisé Externe",
+          "4"
+        ],
+        [
+          "DATSU",
+          "Ambulance : type de demande (lien informatique)",
+          "5"
+        ],
+        [
+          "AMBU",
+          "Ambulance privée",
+          "6"
+        ],
+        [
+          "AMBCO",
+          "Ambulance conventionnée",
+          "7"
+        ],
+        [
+          "AMBBA",
+          "Ambulance bariatrique",
+          "8"
+        ],
+        [
+          "ADTNU",
+          "Ambulance pour transport de détenus",
+          "9"
+        ],
+        [
+          "MEDG",
+          "Médecin généraliste",
+          "10"
+        ],
+        [
+          "DRF18",
+          "Demande Renfort Moyen Pompier : type de demande (lien informatique)",
+          "11"
+        ],
+        [
+          "VSAV",
+          "VSAV",
+          "12"
+        ],
+        [
+          "ISP",
+          "ISP, VLI",
+          "13"
+        ],
+        [
+          "MEDSP",
+          "Médecin pompier",
+          "14"
+        ],
+        [
+          "CODIS",
+          "Autres moyens du SDIS",
+          "15"
+        ],
+        [
+          "FDO17",
+          "Gendarmerie Police",
+          "16"
+        ],
+        [
+          "PHPMT",
+          "Pharmacie, PMT",
+          "17"
+        ],
+        [
+          "DENT",
+          "Dentiste",
+          "18"
+        ],
+        [
+          "ES",
+          "Etablissements de soins",
+          "19"
+        ],
+        [
+          "ROUGE",
+          "Plan Rouge - Rappel de personnel",
+          "20"
+        ],
+        [
+          "CAP",
+          "Centre Anti Poison",
+          "21"
+        ],
+        [
+          "TRADU",
+          "Traducteurs",
+          "22"
+        ],
+        [
+          "INVS",
+          "Institut de veille Sanitaire",
+          "23"
+        ],
+        [
+          "INF",
+          "Infirmier(e)",
+          "24"
+        ],
+        [
+          "INFPSY",
+          "Infirmier(e) Psy",
+          "25"
+        ],
+        [
+          "KINE",
+          "Kinésithérapeute",
+          "26"
+        ],
+        [
+          "TRANS",
+          "Transport sanitaire intérieur d’un établissement de santé",
+          "27"
+        ],
+        [
+          "SECOU",
+          "Secouristes",
+          "28"
+        ],
+        [
+          "POSEC",
+          "Poste de secours",
+          "30"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P082-T01",
+      "source_page": 82,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRMOY",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "ACO",
+          "Moyens ACO",
+          "29"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P082-T02",
+      "source_page": 82,
+      "table_index": 2,
+      "cells": [
+        [
+          "Code DREXEMOY",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "OK",
+          "OK immédiat",
+          "1"
+        ],
+        [
+          "DEL15",
+          "OK dans le quart d’heure",
+          "2"
+        ],
+        [
+          "DEL30",
+          "OK dans la demi-heure",
+          "3"
+        ],
+        [
+          "DEL60",
+          "OK dans l'heure",
+          "4"
+        ],
+        [
+          "DEL90",
+          "OK dans l'heure et demi",
+          "5"
+        ],
+        [
+          "DEL2H",
+          "OK dans 2 heures",
+          "6"
+        ],
+        [
+          "DEL3H",
+          "OK dans 3 heures",
+          "7"
+        ],
+        [
+          "DEL4H",
+          "OK dans la demi-journée",
+          "8"
+        ],
+        [
+          "DEL8H",
+          "OK dans la journée",
+          "9"
+        ],
+        [
+          "CONFR",
+          "Confié à un autre confrère, remplaçant",
+          "11"
+        ],
+        [
+          "REP",
+          "Répondeur, boite vocale",
+          "12"
+        ],
+        [
+          "ABS",
+          "Absent",
+          "13"
+        ],
+        [
+          "RFUS",
+          "Refus",
+          "14"
+        ],
+        [
+          "OCCUP",
+          "Ligne téléphonique occupée",
+          "15"
+        ],
+        [
+          "INDIS",
+          "Moyen déjà engagé indisponible",
+          "16"
+        ],
+        [
+          "ANNUL",
+          "Moyen annulé et/ou remplacé",
+          "17"
+        ],
+        [
+          "TRAIT",
+          "Demande informatique traitée",
+          "18"
+        ],
+        [
+          "ERR",
+          "Erreur de manipulation",
+          "19"
+        ],
+        [
+          "TECH",
+          "Erreur technique",
+          "20"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P084-T01",
+      "source_page": 84,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DREXEVEH",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "GO",
+          "Accord",
+          "1"
+        ],
+        [
+          "CONVOI",
+          "Accord, réalisé en convoi",
+          "2"
+        ],
+        [
+          "INDISPO",
+          "Indisponible",
+          "3"
+        ],
+        [
+          "PANNE",
+          "En panne",
+          "4"
+        ],
+        [
+          "ETAT",
+          "Non adapté à l'état du patient",
+          "5"
+        ],
+        [
+          "ANNUL",
+          "Intervention annulée",
+          "6"
+        ],
+        [
+          "METEO",
+          "Annulé cause météo",
+          "7"
+        ],
+        [
+          "ERR",
+          "Erreur de manipulation",
+          "8"
+        ],
+        [
+          "TECH",
+          "Erreur technique",
+          "9"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P084-T02",
+      "source_page": 84,
+      "table_index": 2,
+      "cells": [
+        [
+          "Code DRPER",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "AMB",
+          "Ambulancier",
+          "1"
+        ],
+        [
+          "PIL",
+          "Pilote Hélicoptère",
+          "2"
+        ],
+        [
+          "IDE",
+          "IDE",
+          "3"
+        ],
+        [
+          "IADE",
+          "IADE",
+          "4"
+        ],
+        [
+          "MDURG",
+          "Urgentiste",
+          "5"
+        ],
+        [
+          "MDREA",
+          "Réanimateur",
+          "6"
+        ],
+        [
+          "MDINT",
+          "Interne",
+          "7"
+        ],
+        [
+          "MDMCS",
+          "Médecin Correspondant Samu",
+          "8"
+        ],
+        [
+          "PUER",
+          "Puéricultrice",
+          "9"
+        ],
+        [
+          "MDPED",
+          "Pédiatre",
+          "10"
+        ],
+        [
+          "SF",
+          "Sagefemme",
+          "11"
+        ],
+        [
+          "MDPSY",
+          "Psychiatre",
+          "12"
+        ],
+        [
+          "ARM",
+          "ARM",
+          "13"
+        ],
+        [
+          "STAGE",
+          "Stagiaire",
+          "14"
+        ],
+        [
+          "AUTRE",
+          "Autre",
+          "15"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P085-T01",
+      "source_page": 85,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DREQU",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "EQU1",
+          "Equipe primaire 1",
+          "1"
+        ],
+        [
+          "EQU2",
+          "Equipe primaire 2",
+          "2"
+        ],
+        [
+          "EQU3",
+          "Equipe primaire 3",
+          "3"
+        ],
+        [
+          "EQS1",
+          "Equipe secondaire 1",
+          "4"
+        ],
+        [
+          "EQS2",
+          "Equipe secondaire 2",
+          "5"
+        ],
+        [
+          "EQSP",
+          "Equipe pédiatrique",
+          "6"
+        ],
+        [
+          "EQPS",
+          "Equipe psychiatrique",
+          "7"
+        ],
+        [
+          "TEST",
+          "Equipe test",
+          "9"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P085-T02",
+      "source_page": 85,
+      "table_index": 2,
+      "cells": [
+        [
+          "Code DRSERV",
+          "Libellé",
+          "Ordre"
+        ],
+        [
+          "SU",
+          "Service des Urgences",
+          "1"
+        ],
+        [
+          "SAUV",
+          "Salle d’accueil des urgences vitales",
+          "2"
+        ],
+        [
+          "BO",
+          "Bloc opératoire",
+          "3"
+        ],
+        [
+          "USC",
+          "USC, USIC, UNV",
+          "4"
+        ],
+        [
+          "REA",
+          "Réanimation",
+          "5"
+        ],
+        [
+          "BRUL",
+          "Service des Brulés",
+          "6"
+        ],
+        [
+          "TECH",
+          "Plateau technique (Radio, scanner, IRM, CHB, Hémodynamique …)",
+          "7"
+        ],
+        [
+          "SPMED",
+          "Spécialités Médicales",
+          "11"
+        ],
+        [
+          "SPCHIR",
+          "Spécialités Chirurgicales",
+          "12"
+        ],
+        [
+          "GYNOBS",
+          "Gynéco Obstétrique",
+          "13"
+        ],
+        [
+          "PED",
+          "Pédiatrie",
+          "14"
+        ],
+        [
+          "PSY",
+          "Psychiatrie",
+          "15"
+        ],
+        [
+          "MMG",
+          "Maison médicale de garde",
+          "51"
+        ],
+        [
+          "X",
+          "Autre",
+          "99"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P086-T01",
+      "source_page": 86,
+      "table_index": 1,
+      "cells": [
+        [
+          "Code DRDIS",
+          "Libellé"
+        ],
+        [
+          "MED",
+          "Médecine"
+        ],
+        [
+          "CHIR",
+          "Chirurgie"
+        ],
+        [
+          "GO",
+          "Gynécologie-obstétrique"
+        ],
+        [
+          "NEON",
+          "Néonatologie, réanimation néonatale"
+        ],
+        [
+          "PSY",
+          "Psychiatrie"
+        ],
+        [
+          "SSR",
+          "Soins de suite et de réadaptation"
+        ],
+        [
+          "SLD",
+          "Soins de longue durée"
+        ],
+        [
+          "HEMAT",
+          "Greffes d'organes et greffes de cellules hématopoïétiques"
+        ],
+        [
+          "BRUL",
+          "Traitement des grands brûlés"
+        ],
+        [
+          "CTCV",
+          "Chirurgie cardiaque"
+        ],
+        [
+          "HEMOD",
+          "Activité interventionnelle sous imagerie médicale, par voie endovasculaire, en cardiologie"
+        ],
+        [
+          "NCHIR",
+          "Neurochirurgie"
+        ],
+        [
+          "NRAD",
+          "Activités interventionnelles sous imagerie médicale, par voie endovasculaire, en\ncardiologie"
+        ],
+        [
+          "MU",
+          "Médecine d'urgence"
+        ],
+        [
+          "REA",
+          "Réanimation"
+        ],
+        [
+          "NEPHR",
+          "Traitement de l'insuffisance rénale chronique par épuration extrarénale"
+        ],
+        [
+          "AMP",
+          "Activités cliniques et biologiques d'assistance médicale à la procréation et activités\nbiologiques de diagnostic prénatal"
+        ],
+        [
+          "ONCO",
+          "Traitement du cancer"
+        ],
+        [
+          "GENET",
+          "Examen des caractéristiques génétiques d'une personne ou identification d'une personne\npar empreintes génétiques à des fins médicales"
+        ]
+      ]
+    },
+    {
+      "raw_table_id": "SAMU-2015-RAW-P086-T02",
+      "source_page": 86,
+      "table_index": 2,
+      "cells": [
+        [
+          "Code DREXEDEST",
+          "Libellé",
+          "ORDRE"
+        ],
+        [
+          "ACC",
+          "Accord",
+          "1"
+        ],
+        [
+          "EXCO",
+          "Passage pour examen complémentaire",
+          "2"
+        ],
+        [
+          "CHANG",
+          "Changement de destination",
+          "3"
+        ],
+        [
+          "PLACE",
+          "Pas de places disponibles",
+          "4"
+        ],
+        [
+          "EQPM",
+          "Equipement non adapté",
+          "5"
+        ],
+        [
+          "REFUS",
+          "Refus d'admission",
+          "6"
+        ],
+        [
+          "IMP",
+          "Impossibilités diverses",
+          "7"
+        ],
+        [
+          "ERR",
+          "Erreur de manipulation",
+          "8"
+        ]
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "AMU",
+      "definition": "Aide médicale urgente",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ARM",
+      "definition": "Assistant de régulation médicale",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "MRU",
+      "definition": "Médecin régulateur urgentiste",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "MRG",
+      "definition": "Médecin régulateur généraliste",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "Samu",
+      "definition": "Service d’aide médicale urgente",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "CRRA",
+      "definition": "Centre de réception et de régulation des appels",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "Smur",
+      "definition": "Structure mobile d’urgence et de réanimation",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "UMH",
+      "definition": "Unité mobile hospitalière",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "D",
+      "definition": "Dossier",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DR",
+      "definition": "Dossier de régulation",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DRM",
+      "definition": "Dossier de régulation médicale",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ERM",
+      "definition": "Épisode de régulation médicale",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DP",
+      "definition": "Dossier Patient",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DPI",
+      "definition": "Dossier Patient Informatisé",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DMP",
+      "definition": "Dossier Médical Personnel, selon la terminologie source de 2015",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DPU",
+      "definition": "Dossier Patient Urgence",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "PSU",
+      "definition": "Parcours de soins d’urgence",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "LRM",
+      "definition": "Logiciel de régulation médicale",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SI",
+      "definition": "Système d’information",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SI-Samu",
+      "definition": "Système d’information des Samu",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SRM",
+      "definition": "Système de régulation médicale",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "PDSA",
+      "definition": "Permanence des soins ambulatoires",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "MCS",
+      "definition": "Médecin Correspondant du Samu",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ATSU",
+      "definition": "Association de transports sanitaires urgents",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "CTA",
+      "definition": "Centre de traitement de l’alerte",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "CODIS",
+      "definition": "Centre opérationnel départemental d’incendie et de secours",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SIS",
+      "definition": "Service d’incendie et de secours",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "TA",
+      "definition": "Taux d’accueil",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "QS",
+      "definition": "Qualité de service",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "TC",
+      "definition": "Taux de charge",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DMC",
+      "definition": "Durée moyenne de communication",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ANC",
+      "definition": "Activités non cliniques",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DPC",
+      "definition": "Développement professionnel continu",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "EPP",
+      "definition": "Évaluation des pratiques professionnelles",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ROR",
+      "definition": "Répertoire opérationnel des ressources",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "INS",
+      "definition": "Identifiant national de santé",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "RPPS",
+      "definition": "Répertoire partagé des professionnels de santé",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "TIIH",
+      "definition": "Transport infirmier interhospitalier",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "EVASAN",
+      "definition": "Évacuation sanitaire",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "CUMP",
+      "definition": "Cellule d’urgence médico-psychologique",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "CESU",
+      "definition": "Centre d’enseignement des soins d’urgence",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SAUV",
+      "definition": "Salle d’accueil des urgences vitales",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "USC",
+      "definition": "Unité de surveillance continue",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "USI",
+      "definition": "Unité de soins intensifs",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "ACR",
+      "definition": "Arrêt cardiorespiratoire",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "SCA",
+      "definition": "Syndrome coronarien aigu",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "AVC",
+      "definition": "Accident vasculaire cérébral",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "DAE",
+      "definition": "Défibrillateur automatisé externe",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "VSAV",
+      "definition": "Véhicule de secours et d’assistance aux victimes",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "VLM",
+      "definition": "Véhicule léger médicalisé",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    },
+    {
+      "term": "HéliSmur",
+      "definition": "Hélicoptère utilisé dans le dispositif Smur décrit",
+      "source_pages": "57-61",
+      "historical_vocabulary": true
+    }
+  ],
+  "constants": [
+    {
+      "constant_id": "SAMU-2015-CONST-001",
+      "label": "Continuité d’un DR",
+      "value": 24,
+      "unit": "heures",
+      "source_pages": "9",
+      "classification": "historical_rule",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-002",
+      "label": "Clôture d’un DR validé",
+      "value": 24,
+      "unit": "heures après création",
+      "source_pages": "65",
+      "classification": "historical_rule",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-003",
+      "label": "Délai maximal d’archivage",
+      "value": 60,
+      "unit": "jours après clôture",
+      "source_pages": "65",
+      "classification": "historical_rule",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-004",
+      "label": "Priorités ARM",
+      "value": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "unit": "codes",
+      "source_pages": "65",
+      "classification": "historical_coding",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-005",
+      "label": "Activité moyenne médecin régulateur",
+      "value": 6,
+      "unit": "DRM/heure",
+      "source_pages": "26, 33",
+      "classification": "historical_recommendation",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-006",
+      "label": "Maximum ponctuel médecin régulateur",
+      "value": 10,
+      "unit": "DRM/heure",
+      "source_pages": "26",
+      "classification": "historical_recommendation",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-007",
+      "label": "Activité ARM",
+      "value": 7.2,
+      "unit": "appels/heure",
+      "source_pages": "28, 33",
+      "classification": "historical_staffing_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-008",
+      "label": "Ligne médicale H24",
+      "value": 6,
+      "unit": "ETP",
+      "source_pages": "33",
+      "classification": "historical_recommendation",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-009",
+      "label": "Part d’activités non cliniques médicales",
+      "value": 20,
+      "unit": "%",
+      "source_pages": "33, 42",
+      "classification": "historical_recommendation",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-010",
+      "label": "Seuil proposé de supervision",
+      "value": "8 à 10",
+      "unit": "personnes en salle",
+      "source_pages": "25",
+      "classification": "historical_proposal",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-011",
+      "label": "Surface opérationnelle minimale",
+      "value": 10,
+      "unit": "m²/poste",
+      "source_pages": "31",
+      "classification": "historical_referential",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-012",
+      "label": "Objectif de taux d’accueil",
+      "value": 99,
+      "unit": "%",
+      "source_pages": "28, 41",
+      "classification": "historical_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-013",
+      "label": "Objectif conceptuel de taux d’accueil",
+      "value": 100,
+      "unit": "%",
+      "source_pages": "40",
+      "classification": "conceptual_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-014",
+      "label": "Plage recommandée de taux de charge",
+      "value": "20-40",
+      "unit": "%",
+      "source_pages": "28, 34, 40",
+      "classification": "historical_recommendation",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-015",
+      "label": "Taux de charge ARM cible",
+      "value": 23,
+      "unit": "%",
+      "source_pages": "28, 40-41",
+      "classification": "historical_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-016",
+      "label": "Taux de charge médecin envisagé",
+      "value": 25,
+      "unit": "%",
+      "source_pages": "27",
+      "classification": "unvalidated_hypothesis",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-017",
+      "label": "Qualité de service QS60",
+      "value": 99,
+      "unit": "%",
+      "source_pages": "28, 40-41",
+      "classification": "historical_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-018",
+      "label": "Comparateur NENA QS20",
+      "value": 95,
+      "unit": "%",
+      "source_pages": "28",
+      "classification": "international_comparator",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-019",
+      "label": "Comparateur NENA QS10 en pointe",
+      "value": 90,
+      "unit": "%",
+      "source_pages": "28",
+      "classification": "international_comparator",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-020",
+      "label": "DMC entrante cible",
+      "value": 100,
+      "unit": "secondes",
+      "source_pages": "28, 41",
+      "classification": "historical_target",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-021",
+      "label": "Plage DMC entrante",
+      "value": "80-120",
+      "unit": "secondes",
+      "source_pages": "28, 41",
+      "classification": "historical_target_range",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-022",
+      "label": "DMC sortante initialement proposée",
+      "value": 200,
+      "unit": "secondes",
+      "source_pages": "28",
+      "classification": "historical_proposal",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-023",
+      "label": "Chute de grande hauteur dans la codification",
+      "value": 3,
+      "unit": "mètres, seuil strictement supérieur",
+      "source_pages": "71",
+      "classification": "historical_coding_threshold",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-024",
+      "label": "Départ Smur tardif surveillé",
+      "value": 6,
+      "unit": "minutes, seuil strictement supérieur",
+      "source_pages": "52",
+      "classification": "quality_detection_threshold",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-025",
+      "label": "Fenêtre de réorientation ou soins critiques",
+      "value": 6,
+      "unit": "heures",
+      "source_pages": "52",
+      "classification": "quality_detection_window",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-026",
+      "label": "Formule des appels répondus",
+      "value": "appels décrochés + appels traités automatiquement",
+      "unit": "formule",
+      "source_pages": "6",
+      "classification": "formula",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-027",
+      "label": "Formule des appels perdus",
+      "value": "appels entrants - appels décrochés - appels traités automatiquement",
+      "unit": "formule",
+      "source_pages": "6",
+      "classification": "formula",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-028",
+      "label": "Formule du taux de charge",
+      "value": "temps en communication / temps logué hors temps de retrait",
+      "unit": "formule",
+      "source_pages": "26-27",
+      "classification": "formula",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-029",
+      "label": "Formule de la DMC",
+      "value": "temps en communication / nombre d’appels",
+      "unit": "formule",
+      "source_pages": "27, 41",
+      "classification": "formula",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-030",
+      "label": "Formule de productivité",
+      "value": "(3600 / DMC en secondes) × taux de charge cible",
+      "unit": "formule",
+      "source_pages": "27, 41",
+      "classification": "formula",
+      "currency_review_required": true
+    },
+    {
+      "constant_id": "SAMU-2015-CONST-031",
+      "label": "Formule QS60",
+      "value": "appels répondus avant 60 secondes / appels répondus",
+      "unit": "formule",
+      "source_pages": "41",
+      "classification": "formula",
+      "currency_review_required": true
+    }
+  ],
+  "competencies": [
+    {
+      "competency_id": "samu.missions.framework",
+      "scope": "organizational_historical",
+      "title": "Expliquer les missions générales d’un Samu Centre 15",
+      "source_pages": "3-4",
+      "knowledge_ids": [
+        "K-SAMU-2015-001",
+        "K-SAMU-2015-044"
+      ]
+    },
+    {
+      "competency_id": "samu.calls.classification",
+      "scope": "organizational_historical",
+      "title": "Classer les différentes catégories d’appels",
+      "source_pages": "5-7",
+      "knowledge_ids": [
+        "K-SAMU-2015-002",
+        "K-SAMU-2015-003",
+        "K-SAMU-2015-004",
+        "K-SAMU-2015-005",
+        "K-SAMU-2015-006",
+        "K-SAMU-2015-007",
+        "K-SAMU-2015-008",
+        "K-SAMU-2015-009"
+      ]
+    },
+    {
+      "competency_id": "samu.calls.timeline",
+      "scope": "organizational_historical",
+      "title": "Utiliser les repères temporels des appels",
+      "source_pages": "5-8, 62",
+      "knowledge_ids": [
+        "K-SAMU-2015-010"
+      ]
+    },
+    {
+      "competency_id": "samu.calls.metrics",
+      "scope": "organizational_historical",
+      "title": "Calculer les délais et indicateurs téléphoniques",
+      "source_pages": "7-8, 27-28, 41",
+      "knowledge_ids": [
+        "K-SAMU-2015-010",
+        "K-SAMU-2015-029"
+      ]
+    },
+    {
+      "competency_id": "samu.record.classification",
+      "scope": "organizational_historical",
+      "title": "Distinguer D, DR, DRM et ERM",
+      "source_pages": "8-9",
+      "knowledge_ids": [
+        "K-SAMU-2015-011",
+        "K-SAMU-2015-012",
+        "K-SAMU-2015-013",
+        "K-SAMU-2015-014"
+      ]
+    },
+    {
+      "competency_id": "samu.regulation.medical_act",
+      "scope": "organizational_historical",
+      "title": "Identifier les composantes d’un acte de régulation médicale",
+      "source_pages": "8",
+      "knowledge_ids": [
+        "K-SAMU-2015-015"
+      ]
+    },
+    {
+      "competency_id": "samu.record.lifecycle",
+      "scope": "organizational_historical",
+      "title": "Comprendre le cycle de vie d’un dossier",
+      "source_pages": "11, 65",
+      "knowledge_ids": [
+        "K-SAMU-2015-016",
+        "K-SAMU-2015-017"
+      ]
+    },
+    {
+      "competency_id": "samu.record.coding",
+      "scope": "organizational_historical",
+      "title": "Interpréter les principales codifications du dossier",
+      "source_pages": "10-21, 63-86",
+      "knowledge_ids": [
+        "K-SAMU-2015-018",
+        "K-SAMU-2015-019",
+        "K-SAMU-2015-020",
+        "K-SAMU-2015-021",
+        "K-SAMU-2015-042"
+      ]
+    },
+    {
+      "competency_id": "samu.decision.tracking",
+      "scope": "organizational_historical",
+      "title": "Retracer décisions, exécution, moyens et destinations",
+      "source_pages": "15-20, 77-86",
+      "knowledge_ids": [
+        "K-SAMU-2015-020",
+        "K-SAMU-2015-021",
+        "K-SAMU-2015-042"
+      ]
+    },
+    {
+      "competency_id": "samu.diagnostic.coding",
+      "scope": "organizational_historical",
+      "title": "Distinguer HDR et diagnostic d’effecteur",
+      "source_pages": "20-21",
+      "knowledge_ids": [
+        "K-SAMU-2015-022"
+      ]
+    },
+    {
+      "competency_id": "samu.patient.record",
+      "scope": "organizational_historical",
+      "title": "Comprendre le dossier patient centré sur le parcours",
+      "source_pages": "21-24",
+      "knowledge_ids": [
+        "K-SAMU-2015-023",
+        "K-SAMU-2015-024",
+        "K-SAMU-2015-025",
+        "K-SAMU-2015-026"
+      ]
+    },
+    {
+      "competency_id": "samu.identity.vigilance",
+      "scope": "organizational_historical",
+      "title": "Interpréter les éléments d’identitovigilance du document",
+      "source_pages": "23",
+      "knowledge_ids": [
+        "K-SAMU-2015-043"
+      ]
+    },
+    {
+      "competency_id": "samu.performance.indicators",
+      "scope": "organizational_historical",
+      "title": "Interpréter TA, QS, TC, DMC et productivité",
+      "source_pages": "24-28, 39-41",
+      "knowledge_ids": [
+        "K-SAMU-2015-028",
+        "K-SAMU-2015-029",
+        "K-SAMU-2015-036"
+      ]
+    },
+    {
+      "competency_id": "samu.workforce.planning",
+      "scope": "organizational_historical",
+      "title": "Relier flux, charge et planification des ressources",
+      "source_pages": "32-34, 41",
+      "knowledge_ids": [
+        "K-SAMU-2015-032",
+        "K-SAMU-2015-036"
+      ]
+    },
+    {
+      "competency_id": "samu.quality.management",
+      "scope": "organizational_historical",
+      "title": "Identifier les critères de qualité organisationnelle",
+      "source_pages": "29-30, 42-45",
+      "knowledge_ids": [
+        "K-SAMU-2015-030",
+        "K-SAMU-2015-038",
+        "K-SAMU-2015-041"
+      ]
+    },
+    {
+      "competency_id": "samu.resources.requirements",
+      "scope": "organizational_historical",
+      "title": "Identifier les exigences historiques de locaux et ressources",
+      "source_pages": "31-34",
+      "knowledge_ids": [
+        "K-SAMU-2015-031",
+        "K-SAMU-2015-032"
+      ]
+    },
+    {
+      "competency_id": "samu.partner.coordination",
+      "scope": "organizational_historical",
+      "title": "Décrire la coordination avec les partenaires de l’AMU",
+      "source_pages": "35-39",
+      "knowledge_ids": [
+        "K-SAMU-2015-033"
+      ]
+    },
+    {
+      "competency_id": "samu.information_system",
+      "scope": "organizational_historical",
+      "title": "Expliquer les exigences du SI-Samu de 2015",
+      "source_pages": "39",
+      "knowledge_ids": [
+        "K-SAMU-2015-035"
+      ]
+    },
+    {
+      "competency_id": "samu.complaints.management",
+      "scope": "organizational_historical",
+      "title": "Décrire le circuit historique de gestion des plaintes",
+      "source_pages": "42-45",
+      "knowledge_ids": [
+        "K-SAMU-2015-038"
+      ]
+    },
+    {
+      "competency_id": "samu.activity.reporting",
+      "scope": "organizational_historical",
+      "title": "Produire les indicateurs d’activité et d’évaluation",
+      "source_pages": "46-52",
+      "knowledge_ids": [
+        "K-SAMU-2015-028",
+        "K-SAMU-2015-040",
+        "K-SAMU-2015-041"
+      ]
+    },
+    {
+      "competency_id": "samu.trace_conditions",
+      "scope": "organizational_historical",
+      "title": "Identifier les pathologies traceuses sans en déduire un protocole",
+      "source_pages": "51",
+      "knowledge_ids": [
+        "K-SAMU-2015-034",
+        "K-SAMU-2015-041"
+      ]
+    },
+    {
+      "competency_id": "samu.nomenclature.interpretation",
+      "scope": "organizational_historical",
+      "title": "Lire les codes des annexes en respectant leur portée historique ou locale",
+      "source_pages": "63-86",
+      "knowledge_ids": [
+        "K-SAMU-2015-042"
+      ]
+    }
+  ],
+  "knowledge_entries": [
+    {
+      "knowledge_id": "K-SAMU-2015-001",
+      "knowledge_type": "notion",
+      "title": "Missions et objectifs du Samu Centre 15",
+      "definition": "Le référentiel décrit la réception et le traitement des appels d’urgence médicale, la détermination de la réponse adaptée, l’organisation du transport et de l’accueil, ainsi que le suivi du patient et des décisions.",
+      "summary": "Son objectif est d’harmoniser la terminologie, les codifications, les ressources, l’organisation et l’évaluation des Samu Centres 15.",
+      "important_points": [
+        "Écoute médicale permanente",
+        "Réponse adaptée",
+        "Suivi du patient",
+        "Évaluation"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Présenter le document comme une norme réglementaire autonome"
+      ],
+      "memory_tips": [],
+      "related_topics": [
+        "K-SAMU-2015-027",
+        "K-SAMU-2015-044"
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "Préambule",
+      "source_page": "3-4",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-002",
+      "knowledge_type": "definition",
+      "title": "Appel entrant",
+      "definition": "Appel initié depuis l’extérieur et aboutissant à l’autocommutateur du Samu.",
+      "summary": "Un appel téléphonique et un dossier de régulation sont deux unités de comptage différentes.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre nombre d’appels et nombre de dossiers"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "5",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-003",
+      "knowledge_type": "definition",
+      "title": "Appel rejeté",
+      "definition": "Appel traité automatiquement de manière à ne pouvoir être décroché.",
+      "summary": "Le rejet constitue une catégorie distincte dans la qualification des appels entrants.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-004",
+      "knowledge_type": "definition",
+      "title": "Appel présenté",
+      "definition": "Appel en mesure d’être pris en charge par le dispositif de réponse.",
+      "summary": "La présentation précède la réponse ou la perte de l’appel dans la chronologie téléphonique.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-005",
+      "knowledge_type": "definition",
+      "title": "Appel traité automatiquement",
+      "definition": "Appel pris en charge par un dispositif automatique selon la définition du référentiel.",
+      "summary": "Il entre dans le calcul des appels répondus sans être nécessairement décroché par un agent.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Assimiler traitement automatique et décroché humain"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-006",
+      "knowledge_type": "definition",
+      "title": "Appel décroché",
+      "definition": "Appel présenté pris en charge par un agent du CRRA.",
+      "summary": "Le décroché est un événement horodaté de la chaîne téléphonique.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-007",
+      "knowledge_type": "definition",
+      "title": "Appel répondu",
+      "definition": "Appel décroché ou traité automatiquement.",
+      "summary": "Le nombre d’appels répondus agrège deux modes de prise en charge définis par le document.",
+      "important_points": [
+        "Décroché",
+        "Traitement automatique"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-008",
+      "knowledge_type": "definition",
+      "title": "Appel perdu",
+      "definition": "Appel qui n’est ni décroché, ni traité automatiquement, ni rejeté.",
+      "summary": "Sa définition doit rester alignée sur la formule de comptage fournie par le référentiel.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Inclure automatiquement les appels rejetés dans les appels perdus"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "6",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-009",
+      "knowledge_type": "definition",
+      "title": "Appel sortant et appel établi",
+      "definition": "Un appel sortant est initié depuis un poste du Samu ; il est établi lorsque la communication avec le destinataire aboutit selon la définition du document.",
+      "summary": "Les flux entrants et sortants sont distingués pour mesurer l’activité.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels",
+      "source_page": "7",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-010",
+      "knowledge_type": "notion",
+      "title": "Chronologie et délais d’un appel",
+      "definition": "Le référentiel utilise les repères t0, t1, t2 et tf pour décrire présentation, décroché, réponse et fin d’appel, puis en déduit les temps de sonnerie, d’attente, de communication et d’accès au médecin.",
+      "summary": "Les indicateurs de délai dépendent d’événements précisément horodatés.",
+      "important_points": [
+        "t0",
+        "t1",
+        "t2",
+        "tf",
+        "délai d’accès médecin"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Utiliser des repères temporels sans vérifier leur définition source"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.2 Appels et annexe 7.3",
+      "source_page": "5-8, 62",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-011",
+      "knowledge_type": "definition",
+      "title": "Dossier",
+      "definition": "Enregistrement créé dans le système d’information pour chaque problème soumis au Samu.",
+      "summary": "Le dossier est une entité informationnelle distincte de l’appel.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "8-9",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-012",
+      "knowledge_type": "definition",
+      "title": "Dossier de régulation (DR)",
+      "definition": "Dossier regroupant les informations, mesures et suivi d’une situation médicale, médico-sociale ou sanitaire traitée par le Samu.",
+      "summary": "Le DR structure la prise en charge d’une situation au-delà du seul appel initial.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "8-9",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-013",
+      "knowledge_type": "definition",
+      "title": "Dossier de régulation médicale (DRM)",
+      "definition": "Dossier de régulation ayant bénéficié d’un acte de régulation médicale.",
+      "summary": "Le passage de DR à DRM dépend d’un acte médical de régulation, pas du nombre d’appels.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Qualifier tout DR de DRM"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "8-9",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-014",
+      "knowledge_type": "definition",
+      "title": "Épisode de régulation médicale (ERM)",
+      "definition": "Ensemble des données de santé concernant un patient au sein d’un DRM.",
+      "summary": "Un même DRM peut porter des épisodes liés aux patients concernés par la situation.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "K-SAMU-2015-013",
+        "K-SAMU-2015-023"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "8-9",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-015",
+      "knowledge_type": "definition",
+      "title": "Acte de régulation médicale",
+      "definition": "Acte réalisé par un médecin régulateur et documenté dans le dossier selon les composantes décrites par le référentiel.",
+      "summary": "Il qualifie médicalement la situation et fonde le passage du DR au DRM.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "8",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-016",
+      "knowledge_type": "notion",
+      "title": "Continuité du dossier de régulation",
+      "definition": "Le référentiel propose de rattacher au même DR un nouvel appel lié à la même situation dans une fenêtre de 24 heures.",
+      "summary": "Cette règle de continuité est une convention du référentiel de 2015 à revalider avant usage opérationnel actuel.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Présenter la fenêtre de 24 heures comme une règle légale actuelle"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.3 Dossiers",
+      "source_page": "9",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-017",
+      "knowledge_type": "notion",
+      "title": "Cycle de vie du dossier",
+      "definition": "Les états actif, achevé, validé, clôturé et archivé décrivent le cycle de vie du dossier dans la nomenclature fournie.",
+      "summary": "Chaque transition possède une signification de suivi et de disponibilité des données.",
+      "important_points": [
+        "Actif",
+        "Achevé",
+        "Validé",
+        "Clôturé",
+        "Archivé"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre clôture et suppression"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications et annexe 7.4",
+      "source_page": "11, 65",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-018",
+      "knowledge_type": "notion",
+      "title": "Codification du dossier de régulation",
+      "definition": "Le dossier est structuré par des champs de type de dossier, médecin régulateur, provenance, appelant, lieu, circonstance, motif, devenir, décision, moyen, véhicule, personnel, équipe, service et destination.",
+      "summary": "Les annexes proposent des nomenclatures détaillées, dont certaines sont locales ou historiques.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Traiter les exemples ARéSa comme une nomenclature nationale obligatoire"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications et annexe 7.4",
+      "source_page": "10-21, 63-86",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-019",
+      "knowledge_type": "definition",
+      "title": "Provenance, appelant, lieu et circonstance",
+      "definition": "La provenance décrit le mode d’arrivée de l’appel ; le type d’appelant qualifie le premier témoin ayant alerté ; le lieu décrit la nature du lieu ; la circonstance caractérise la survenue de la situation.",
+      "summary": "Ces dimensions ne sont pas interchangeables et répondent à des questions différentes.",
+      "important_points": [
+        "Provenance",
+        "Appelant",
+        "Lieu",
+        "Circonstance"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications",
+      "source_page": "11-13, 66-72",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-020",
+      "knowledge_type": "definition",
+      "title": "Motif de recours et devenir",
+      "definition": "Le motif de recours code de façon non médicale le motif principal exprimé par l’appelant ; le devenir décrit la situation du patient entre l’appel et la fin de l’épisode de soins.",
+      "summary": "Le motif exprimé ne doit pas être confondu avec une hypothèse diagnostique.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Transformer le motif de recours en diagnostic"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications",
+      "source_page": "13-15, 73-77",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-021",
+      "knowledge_type": "definition",
+      "title": "Décision et ressources engagées",
+      "definition": "Une décision est une mesure prise par le Samu ; les moyens, véhicules, personnels et équipes décrivent les ressources engagées pour l’exécuter.",
+      "summary": "La décision, son exécution et la ressource mobilisée doivent être tracées séparément.",
+      "important_points": [
+        "Décision",
+        "Exécution",
+        "Moyen",
+        "Véhicule",
+        "Personnel",
+        "Équipe"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications",
+      "source_page": "15-19, 78-85",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-022",
+      "knowledge_type": "definition",
+      "title": "Hypothèse diagnostique de régulation et diagnostic d’effecteur",
+      "definition": "L’hypothèse diagnostique de régulation correspond à la maladie supposée ou au signe ayant motivé la première série de décisions ; le diagnostic d’effecteur est renseigné après évaluation par l’effecteur.",
+      "summary": "Une hypothèse de régulation n’est pas un diagnostic définitif.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Présenter l’HDR comme un diagnostic confirmé"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.4 Codifications",
+      "source_page": "20-21",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-023",
+      "knowledge_type": "definition",
+      "title": "Victime et patient",
+      "definition": "Le référentiel qualifie de victime la personne qui n’a pas encore reçu de soins médicaux après un accident ou une maladie, et de patient la personne qui reçoit ou doit recevoir des soins médicaux.",
+      "summary": "Cette distinction est terminologique et datée du document de 2015.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "easy",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.5 De la victime au Dossier Patient",
+      "source_page": "22",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-024",
+      "knowledge_type": "definition",
+      "title": "Événement",
+      "definition": "Situation à l’origine d’un ou plusieurs parcours de soins urgents et des dossiers associés.",
+      "summary": "L’événement permet de relier plusieurs éléments de régulation et de soins autour d’une même situation.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.5 De la victime au Dossier Patient",
+      "source_page": "23",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-025",
+      "knowledge_type": "notion",
+      "title": "Dossier Patient, DPI et DMP",
+      "definition": "Le document décrit une organisation centrée sur le patient reliant le dossier patient, le dossier patient informatisé et le DMP dans le contexte institutionnel de 2015.",
+      "summary": "Ces concepts doivent être comparés aux dispositifs et terminologies actuellement en vigueur avant usage.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Projeter automatiquement la signification et le fonctionnement de 2015 dans le système actuel"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.5 De la victime au Dossier Patient",
+      "source_page": "21-23",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-026",
+      "knowledge_type": "definition",
+      "title": "Parcours de soins d’urgence et Dossier Patient Urgence",
+      "definition": "Le parcours de soins d’urgence rassemble les dossiers de régulation et passages aux urgences d’un patient pour un événement ; le Dossier Patient Urgence regroupe les parcours urgents d’un même patient.",
+      "summary": "Cette modélisation relie l’événement, le patient, les épisodes et les structures de soins.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "K-SAMU-2015-024",
+        "K-SAMU-2015-025"
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.5 De la victime au Dossier Patient",
+      "source_page": "23-24",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-027",
+      "knowledge_type": "notion",
+      "title": "Processus métier du centre de régulation",
+      "definition": "Le processus distingue un front office de niveau 1 porté par les ARM et un niveau 2 porté par les médecins régulateurs, avec supervision et coopération entre fonctions.",
+      "summary": "L’organisation vise la fiabilité du traitement des appels et la continuité de la réponse.",
+      "important_points": [
+        "Front office 1",
+        "Front office 2",
+        "Supervision"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Réduire le processus à un simple transfert téléphonique"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.6 Indicateurs",
+      "source_page": "24-26",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-028",
+      "knowledge_type": "definition",
+      "title": "Indicateurs d’activité",
+      "definition": "Les indicateurs d’activité décrivent notamment les volumes d’appels, dossiers, décisions et communications, en distinguant les unités de comptage.",
+      "summary": "Ils ne mesurent pas à eux seuls la qualité ni l’efficience.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre activité et qualité"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.6 Indicateurs",
+      "source_page": "25-26",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-029",
+      "knowledge_type": "definition",
+      "title": "Indicateurs de performance téléphonique",
+      "definition": "Le taux d’accueil, la qualité de service, le taux de charge, la durée moyenne de communication et la productivité décrivent des dimensions différentes de la performance téléphonique.",
+      "summary": "Chaque indicateur doit être calculé avec son dénominateur et sa fenêtre temporelle exacts.",
+      "important_points": [
+        "TA",
+        "QS",
+        "TC",
+        "DMC",
+        "Productivité"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Comparer des taux construits avec des définitions différentes"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.6 Indicateurs et 4.3.5 Performance",
+      "source_page": "26-28, 40-41",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-030",
+      "knowledge_type": "notion",
+      "title": "Quarante critères de qualité",
+      "definition": "Le référentiel reprend quarante critères de qualité portant sur le traitement des appels, la régulation, le suivi, les ressources et la sécurité.",
+      "summary": "Ces critères datés doivent servir de trace historique et être réévalués avant une projection pédagogique actuelle.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Présenter les critères de 2007 repris en 2015 comme une certification actuelle"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.6 Indicateurs",
+      "source_page": "29-30",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-031",
+      "knowledge_type": "notion",
+      "title": "Locaux et niveaux E, S, O",
+      "definition": "Les besoins en locaux sont classés Essentiels, Souhaitables ou Optionnels pour les espaces opérationnels, techniques, de stockage, de repos et de gestion de crise.",
+      "summary": "E, S et O sont des niveaux de recommandation du référentiel, pas des catégories réglementaires universelles.",
+      "important_points": [
+        "Essentiel",
+        "Souhaitable",
+        "Optionnel"
+      ],
+      "clinical_examples": [],
+      "common_errors": [
+        "Assimiler souhaitable à obligatoire"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.1 Locaux",
+      "source_page": "31-32",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-032",
+      "knowledge_type": "notion",
+      "title": "Ressources humaines et dimensionnement",
+      "definition": "Le référentiel relie les effectifs médicaux et non médicaux au volume d’activité, à la couverture horaire et à la charge de travail.",
+      "summary": "Les ratios et cibles proposés sont historiques et ne doivent pas être appliqués sans revue d’actualité.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Utiliser un ratio 2015 comme obligation actuelle"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.2 Ressources humaines",
+      "source_page": "32-34",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-033",
+      "knowledge_type": "notion",
+      "title": "Réseaux, filières et partenaires",
+      "definition": "L’organisation du Samu repose sur des relations formalisées avec Smur, médecins correspondants, SIS, transporteurs sanitaires, permanence des soins et structures d’accueil.",
+      "summary": "La coordination doit assurer disponibilité de l’information, engagement des ressources et orientation du patient.",
+      "important_points": [
+        "Smur",
+        "MCS",
+        "SIS",
+        "ATSU",
+        "PDSA"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3.1 à 4.3.3 Réseaux et partenaires",
+      "source_page": "35-39",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-034",
+      "knowledge_type": "notion",
+      "title": "Gouvernance des procédures et protocoles",
+      "definition": "Le document exige des procédures et protocoles accessibles, actualisés, validés et connus des professionnels, tout en n’en fournissant pas les algorithmes cliniques détaillés.",
+      "summary": "AVC, douleur thoracique, arrêt cardiaque et traumatisé grave sont des thèmes référencés, non des protocoles exécutables dans ce PDF.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Inventer des étapes cliniques absentes du référentiel"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3 Organisations et activités",
+      "source_page": "35-37",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-035",
+      "knowledge_type": "notion",
+      "title": "Système d’information du Samu",
+      "definition": "Le système d’information est décrit comme modulaire, sécurisé, interopérable, traçable et capable de soutenir l’activité, le suivi et l’évaluation.",
+      "summary": "Les exigences et architectures reflètent l’état des systèmes de 2015 et nécessitent une revue technique actuelle.",
+      "important_points": [
+        "Sécurité",
+        "Interopérabilité",
+        "Traçabilité",
+        "Disponibilité"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3.4 Système d’information",
+      "source_page": "39",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-036",
+      "knowledge_type": "notion",
+      "title": "Pilotage, performance et planification",
+      "definition": "Le pilotage relie objectifs, résultats, charge, productivité et ressources afin d’adapter les effectifs et l’organisation.",
+      "summary": "L’efficacité rapporte les résultats aux objectifs ; l’efficience rapporte les résultats aux moyens mobilisés.",
+      "important_points": [
+        "Efficacité",
+        "Efficience",
+        "Prévision de charge"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3.5 Performance",
+      "source_page": "39-41",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-037",
+      "knowledge_type": "definition",
+      "title": "Activités non cliniques",
+      "definition": "Activités professionnelles réalisées hors de l’activité clinique postée, telles que formation, évaluation, recherche, gestion et participation institutionnelle.",
+      "summary": "Le document réserve une part du temps médical à ces activités dans son modèle organisationnel.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [
+        "K-SAMU-2015-030",
+        "K-SAMU-2015-038"
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3.6 Activités non cliniques",
+      "source_page": "42",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-038",
+      "knowledge_type": "notion",
+      "title": "Plaintes, réclamations et événements indésirables",
+      "definition": "Le référentiel prévoit un circuit écrit de réception, analyse, réponse, traçabilité et retour d’expérience pour les plaintes, réclamations, dysfonctionnements et événements indésirables.",
+      "summary": "Le schéma institutionnel présenté est historique et doit être actualisé avant usage organisationnel.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Reprendre la CRUQ comme appellation institutionnelle actuelle"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.3.7 et figure 5",
+      "source_page": "42-45",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-039",
+      "knowledge_type": "notion",
+      "title": "Coût, financement, efficacité et efficience",
+      "definition": "Le chapitre médico-économique distingue activité, coût, financement, efficacité et efficience afin d’éclairer le pilotage du Samu.",
+      "summary": "Les mécanismes de financement décrits correspondent au contexte de 2015.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Présenter un modèle de financement 2015 comme mécanisme actuel"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "4.4 Coût et financement",
+      "source_page": "44-46",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-040",
+      "knowledge_type": "notion",
+      "title": "Cadre d’évaluation du Samu",
+      "definition": "L’évaluation combine indicateurs incontournables, ressources humaines, performances, activité, décisions, moyens, orientations et événements indésirables.",
+      "summary": "Les tableaux distinguent indicateurs quantitatifs et qualitatifs et niveaux E, S ou O.",
+      "important_points": [
+        "Ressources",
+        "Performance",
+        "Activité",
+        "Qualité"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "5. Évaluation",
+      "source_page": "46-52",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-041",
+      "knowledge_type": "notion",
+      "title": "Pathologies traceuses et signaux d’événements indésirables",
+      "definition": "Le référentiel utilise des pathologies traceuses et des seuils de détection pour repérer des situations nécessitant une analyse de qualité.",
+      "summary": "Ces éléments sont des indicateurs d’évaluation, pas des protocoles cliniques ni des diagnostics automatiques.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Transformer un signal d’audit en conclusion clinique"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "5.4 Activité",
+      "source_page": "51-52",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-042",
+      "knowledge_type": "notion",
+      "title": "Nomenclatures des annexes",
+      "definition": "Les annexes détaillent les codes de dossiers, états, provenances, appelants, lieux, circonstances, motifs, devenirs, décisions, ressources et destinations.",
+      "summary": "Certaines listes sont des exemples régionaux ARéSa ou des choix locaux ; leur portée nationale ne doit pas être présumée.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Confondre exemples locaux et nomenclature nationale"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "7.4 Codification du dossier de régulation",
+      "source_page": "63-86",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-043",
+      "knowledge_type": "notion",
+      "title": "Identitovigilance et signalement particulier",
+      "definition": "Le document relie l’identification du patient à des statuts d’identitovigilance et décrit un signalement particulier soumis au consentement et révocable.",
+      "summary": "Ces mécanismes reflètent le cadre informationnel de 2015 et doivent être comparés aux règles actuelles.",
+      "important_points": [],
+      "clinical_examples": [],
+      "common_errors": [
+        "Conserver ou diffuser un signalement sans vérifier le cadre légal actuel"
+      ],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "hard",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "3.5 De la victime au Dossier Patient",
+      "source_page": "23",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    },
+    {
+      "knowledge_id": "K-SAMU-2015-044",
+      "knowledge_type": "notion",
+      "title": "Organisation de haute fiabilité et juste soin",
+      "definition": "Le référentiel vise une organisation capable de fournir le juste soin grâce à une réception fiable, une régulation structurée, une supervision, des procédures et une évaluation continue.",
+      "summary": "La fiabilité est une propriété du système complet, pas d’un indicateur isolé.",
+      "important_points": [
+        "Juste soin",
+        "Fiabilité",
+        "Supervision",
+        "Évaluation"
+      ],
+      "clinical_examples": [],
+      "common_errors": [],
+      "memory_tips": [],
+      "related_topics": [],
+      "difficulty": "medium",
+      "tags": [
+        "SAMU",
+        "référentiel 2015"
+      ],
+      "source_document": "DOC-SAMU-CENTRES-15-2015",
+      "source_chapter": "Samu Centres 15 — Référentiel et guide d’évaluation",
+      "source_section": "Préambule et organisation",
+      "source_page": "4, 24-25, 39-41",
+      "version": "2015-03",
+      "review_status": "source_verified"
+    }
+  ],
+  "quality_notes": {
+    "historical_reference": true,
+    "currency_review_required": true,
+    "currency_note": "Document de mars 2015 : toute utilisation portant sur réglementation, institutions, financement, systèmes d’information, effectifs, seuils, objectifs ou codifications doit être comparée aux sources en vigueur.",
+    "normative_status": "Référentiel professionnel SUdF/SFMU ; non assimilé à une norme réglementaire autonome.",
+    "protocols_complete": false,
+    "protocols_note": "Les thèmes AVC, douleur thoracique, arrêt cardiaque et traumatisé grave sont seulement référencés ; aucun algorithme clinique complet n’est fourni.",
+    "local_coding_note": "Les codifications ARéSa et certaines décisions des annexes sont des exemples régionaux ou locaux, et non une nomenclature nationale obligatoire.",
+    "institutional_note": "La CRUQ, le DMP et plusieurs mécanismes institutionnels sont décrits dans leur état de 2015.",
+    "performance_note": "Les cibles de performance, ratios d’effectifs et comparateurs NENA sont conservés comme données historiques, jamais comme constantes médicales actuelles.",
+    "visual_review": "Les 86 pages ont été rendues et contrôlées visuellement. Les tableaux bruts détectés sont conservés avec leur page et leur ordre.",
+    "official_online_verification": "Le PDF et sa page de référence sont disponibles sur les sites officiels de la SFMU et de Samu-Urgences de France au 2026-08-04.",
+    "trainer_validation": false,
+    "raw_table_count": 41
+  }
+}

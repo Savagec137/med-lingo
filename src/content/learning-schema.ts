@@ -29,13 +29,6 @@ const answerSchema = z.object({
   sequenceRank: z.number().int().positive().optional(),
 });
 
-const pedagogicalFeedbackSchema = z.object({
-  correctExplanation: z.string().trim().min(1),
-  commonErrorExplanation: z.string().trim().min(1).optional(),
-  takeaway: z.string().trim().min(1),
-  mnemonic: z.string().trim().min(1).optional(),
-});
-
 const metadataSchema = z
   .record(z.string(), z.union([z.string(), z.number(), z.boolean(), z.array(z.string())]))
   .optional();
@@ -81,7 +74,10 @@ const learningItemSchema = z.object({
   correctAnswer: z.union([z.string().trim().min(1), z.array(z.string().trim().min(1)).min(1)]),
   explanation: z.string(),
   priorityReminder: z.string().trim().min(1).optional(),
-  pedagogicalFeedback: pedagogicalFeedbackSchema.optional(),
+  why_correct: z.string().trim().min(1).optional(),
+  common_mistake: z.string().trim().min(1).optional(),
+  key_takeaway: z.string().trim().min(1).optional(),
+  memory_tip: z.string().trim().min(1).optional(),
   tags: z.array(z.string().trim().min(1)).min(1),
   competencyIds: z.array(z.string().trim().min(1)).min(1),
   pedagogicalReference: z.string().trim().min(1).optional(),
@@ -178,25 +174,6 @@ const lessonContentSchema = z
           ? item.correctAnswer
           : [item.correctAnswer];
         const correctAnswers = item.answers.filter((answer) => correctIds.includes(answer.id));
-        const correctExplanation =
-          item.pedagogicalFeedback?.correctExplanation ??
-          correctAnswers.find((answer) => answer.explanation.trim())?.explanation;
-        const takeaway = item.pedagogicalFeedback?.takeaway ?? item.explanation;
-
-        if (!correctExplanation?.trim()) {
-          context.addIssue({
-            code: z.ZodIssueCode.custom,
-            path: ["items", index, "explanation"],
-            message: "Une question publiée exige une explication de la bonne réponse.",
-          });
-        }
-        if (!takeaway?.trim()) {
-          context.addIssue({
-            code: z.ZodIssueCode.custom,
-            path: ["items", index, "explanation"],
-            message: "Une question publiée exige un contenu « À retenir ».",
-          });
-        }
         if (item.answers.some((answer) => !answer.explanation.trim())) {
           context.addIssue({
             code: z.ZodIssueCode.custom,
@@ -206,13 +183,15 @@ const lessonContentSchema = z
         }
         if (
           correctAnswers.some(
-            (answer) => correctExplanation && isAnswerTextCopy(correctExplanation, answer.text),
+            (answer) => item.why_correct && isAnswerTextCopy(item.why_correct, answer.text),
           ) ||
-          correctAnswers.some((answer) => takeaway && isAnswerTextCopy(takeaway, answer.text))
+          correctAnswers.some(
+            (answer) => item.key_takeaway && isAnswerTextCopy(item.key_takeaway, answer.text),
+          )
         ) {
           context.addIssue({
             code: z.ZodIssueCode.custom,
-            path: ["items", index, "pedagogicalFeedback"],
+            path: ["items", index],
             message:
               "L’explication et le contenu « À retenir » ne peuvent pas recopier la bonne réponse.",
           });
@@ -414,7 +393,10 @@ export function normalizeLearningItem(
     correctAnswer: item.correctAnswer,
     explanation: item.explanation,
     priorityReminder: item.priorityReminder,
-    pedagogicalFeedback: item.pedagogicalFeedback,
+    why_correct: item.why_correct,
+    common_mistake: item.common_mistake,
+    key_takeaway: item.key_takeaway,
+    memory_tip: item.memory_tip,
     tags: item.tags,
     metadata: {
       ...item.metadata,
