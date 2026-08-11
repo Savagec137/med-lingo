@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l04",
+  "title": "La ventilation",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Distinguer inspiration et expiration.",
+    "Comprendre la notion de volume courant.",
+    "Identifier les facteurs de régulation cités."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle définition correspond au volume courant décrit dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q01-a1",
+          "text": "Le volume mobilisé lors d’une respiration calme, environ 0,5 litre",
+          "explanation": "Le support associe le volume courant à une respiration normale au repos."
+        },
+        {
+          "id": "dea-p06-l04-q01-a2",
+          "text": "La totalité du volume des deux poumons, environ 0,5 litre",
+          "explanation": "Le volume pulmonaire total indiqué est bien supérieur."
+        },
+        {
+          "id": "dea-p06-l04-q01-a3",
+          "text": "Le volume uniquement expiré lors d’un effort maximal",
+          "explanation": "Cela ne décrit pas une respiration calme."
+        },
+        {
+          "id": "dea-p06-l04-q01-a4",
+          "text": "Le volume d’air restant dans la trachée",
+          "explanation": "Le volume courant concerne l’air mobilisé."
+        }
+      ],
+      "correctAnswer": "dea-p06-l04-q01-a1",
+      "explanation": "La notion associe une respiration calme à un volume mobilisé approximatif.",
+      "knowledgeIds": [
+        "K-DEA-P06-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La notion associe une respiration calme à un volume mobilisé approximatif.",
+        "commonMistake": "Confondre volume courant, capacité totale et volume forcé est fréquent.",
+        "keyTakeaway": "Volume courant : respiration calme, environ un demi-litre.",
+        "fieldApplication": "Interpréter un mouvement respiratoire avec son contexte, pas à partir d’un volume théorique seul."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La notion associe une respiration calme à un volume mobilisé approximatif.",
+      "common_mistake": "Confondre volume courant, capacité totale et volume forcé est fréquent.",
+      "key_takeaway": "Volume courant : respiration calme, environ un demi-litre.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-009"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La ventilation alterne une phase d’inspiration et une phase d’expiration.",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition décrit correctement le cycle."
+        },
+        {
+          "id": "dea-p06-l04-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : les deux phases sont nécessaires."
+        }
+      ],
+      "correctAnswer": "dea-p06-l04-q02-true",
+      "explanation": "L’alternance de ces deux phases constitue le cycle ventilatoire décrit.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’alternance de ces deux phases constitue le cycle ventilatoire décrit.",
+        "commonMistake": "Se concentrer uniquement sur l’entrée d’air fait oublier l’expiration.",
+        "keyTakeaway": "Un cycle associe inspiration et expiration.",
+        "fieldApplication": "Compter des cycles complets pendant la mesure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’alternance de ces deux phases constitue le cycle ventilatoire décrit.",
+      "common_mistake": "Se concentrer uniquement sur l’entrée d’air fait oublier l’expiration.",
+      "key_takeaway": "Un cycle associe inspiration et expiration.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque terme ventilatoire à sa description.",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q03-a1",
+          "text": "Inspiration",
+          "match": "Entrée de l’air",
+          "explanation": "Elle accompagne l’augmentation du volume thoracique."
+        },
+        {
+          "id": "dea-p06-l04-q03-a2",
+          "text": "Expiration",
+          "match": "Sortie de l’air",
+          "explanation": "Elle accompagne la diminution du volume thoracique."
+        },
+        {
+          "id": "dea-p06-l04-q03-a3",
+          "text": "Volume courant",
+          "match": "Air mobilisé lors d’une respiration calme",
+          "explanation": "Le support l’estime à environ 0,5 litre."
+        },
+        {
+          "id": "dea-p06-l04-q03-a4",
+          "text": "Fréquence respiratoire",
+          "match": "Nombre de cycles par minute",
+          "explanation": "Elle quantifie le rythme ventilatoire."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l04-q03-a1",
+        "dea-p06-l04-q03-a2",
+        "dea-p06-l04-q03-a3",
+        "dea-p06-l04-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l04-q03-a1",
+        "dea-p06-l04-q03-a2",
+        "dea-p06-l04-q03-a3",
+        "dea-p06-l04-q03-a4"
+      ],
+      "explanation": "Les associations distinguent phase, volume et rythme.",
+      "knowledgeIds": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-009",
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations distinguent phase, volume et rythme.",
+        "commonMistake": "Confondre fréquence et volume mélange nombre de cycles et quantité d’air.",
+        "keyTakeaway": "Ventilation = phases, fréquence et amplitude.",
+        "fieldApplication": "Transmettre un chiffre avec rythme et amplitude."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations distinguent phase, volume et rythme.",
+      "common_mistake": "Confondre fréquence et volume mélange nombre de cycles et quantité d’air.",
+      "key_takeaway": "Ventilation = phases, fréquence et amplitude.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005",
+          "K-DEA-P06-009",
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre un cycle ventilatoire en commençant par l’inspiration.",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q04-a1",
+          "text": "Contraction du diaphragme",
+          "explanation": "Le cycle inspiratoire débute.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l04-q04-a2",
+          "text": "Entrée de l’air",
+          "explanation": "L’air pénètre après l’augmentation du volume.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l04-q04-a3",
+          "text": "Relâchement du diaphragme",
+          "explanation": "La phase expiratoire commence.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l04-q04-a4",
+          "text": "Sortie de l’air",
+          "explanation": "L’air quitte les voies aériennes.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l04-q04-a1",
+        "dea-p06-l04-q04-a2",
+        "dea-p06-l04-q04-a3",
+        "dea-p06-l04-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l04-q04-a1",
+        "dea-p06-l04-q04-a2",
+        "dea-p06-l04-q04-a3",
+        "dea-p06-l04-q04-a4"
+      ],
+      "explanation": "L’ordre associe les deux mouvements musculaires aux deux sens de circulation de l’air.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre associe les deux mouvements musculaires aux deux sens de circulation de l’air.",
+        "commonMistake": "Placer la sortie avant le relâchement inverse la mécanique décrite.",
+        "keyTakeaway": "Contraction et entrée, puis relâchement et sortie.",
+        "fieldApplication": "Repérer où le cycle semble limité chez un patient."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre associe les deux mouvements musculaires aux deux sens de circulation de l’air.",
+      "common_mistake": "Placer la sortie avant le relâchement inverse la mécanique décrite.",
+      "key_takeaway": "Contraction et entrée, puis relâchement et sortie.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : la fréquence respiratoire correspond au nombre de ______ respiratoires par minute.",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q05-a1",
+          "text": "cycles",
+          "explanation": "Une inspiration et une expiration forment un cycle compté."
+        },
+        {
+          "id": "dea-p06-l04-q05-a2",
+          "text": "litres",
+          "explanation": "Les litres mesurent un volume."
+        },
+        {
+          "id": "dea-p06-l04-q05-a3",
+          "text": "lobes",
+          "explanation": "Les lobes décrivent l’anatomie pulmonaire."
+        },
+        {
+          "id": "dea-p06-l04-q05-a4",
+          "text": "capillaires",
+          "explanation": "Ils participent aux échanges."
+        }
+      ],
+      "correctAnswer": "dea-p06-l04-q05-a1",
+      "explanation": "L’unité de comptage porte sur des cycles complets.",
+      "knowledgeIds": [
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’unité de comptage porte sur des cycles complets.",
+        "commonMistake": "Compter inspiration et expiration séparément double artificiellement la fréquence.",
+        "keyTakeaway": "Un cycle complet par mouvement respiratoire compté.",
+        "fieldApplication": "Observer discrètement pendant une minute."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’unité de comptage porte sur des cycles complets.",
+      "common_mistake": "Compter inspiration et expiration séparément double artificiellement la fréquence.",
+      "key_takeaway": "Un cycle complet par mouvement respiratoire compté.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Un patient vient de monter un escalier et respire plus vite. Quelle donnée du support aide à contextualiser cette observation ?",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q06-a1",
+          "text": "L’effort peut augmenter les besoins et modifier la fréquence respiratoire",
+          "explanation": "Le support cite l’effort parmi les facteurs influençant la respiration."
+        },
+        {
+          "id": "dea-p06-l04-q06-a2",
+          "text": "Le nombre de lobes pulmonaires change après l’effort",
+          "explanation": "L’anatomie ne change pas avec l’activité."
+        },
+        {
+          "id": "dea-p06-l04-q06-a3",
+          "text": "La plèvre devient une voie aérienne",
+          "explanation": "La plèvre reste une enveloppe."
+        },
+        {
+          "id": "dea-p06-l04-q06-a4",
+          "text": "La trachée se divise en davantage de bronches",
+          "explanation": "L’organisation anatomique reste la même."
+        }
+      ],
+      "correctAnswer": "dea-p06-l04-q06-a1",
+      "explanation": "Le contexte d’effort peut expliquer une adaptation ventilatoire sans constituer à lui seul un diagnostic.",
+      "knowledgeIds": [
+        "K-DEA-P06-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le contexte d’effort peut expliquer une adaptation ventilatoire sans constituer à lui seul un diagnostic.",
+        "commonMistake": "Interpréter toute accélération comme pathologique ignore le contexte.",
+        "keyTakeaway": "Toujours associer la fréquence à l’âge, au repos ou à l’effort et aux signes.",
+        "fieldApplication": "Laisser reposer si la situation le permet puis mesurer selon le protocole.",
+        "safetyPoint": "Une gêne ou des signes de gravité imposent une évaluation prioritaire, indépendamment du contexte d’effort."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le contexte d’effort peut expliquer une adaptation ventilatoire sans constituer à lui seul un diagnostic.",
+      "common_mistake": "Interpréter toute accélération comme pathologique ignore le contexte.",
+      "key_takeaway": "Toujours associer la fréquence à l’âge, au repos ou à l’effort et aux signes.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-009"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels facteurs sont cités comme pouvant modifier la respiration ?",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q07-a1",
+          "text": "L’effort",
+          "explanation": "Il modifie les besoins de l’organisme."
+        },
+        {
+          "id": "dea-p06-l04-q07-a2",
+          "text": "Le stress",
+          "explanation": "Il peut influencer la fréquence."
+        },
+        {
+          "id": "dea-p06-l04-q07-a3",
+          "text": "La fièvre",
+          "explanation": "Elle peut augmenter les besoins."
+        },
+        {
+          "id": "dea-p06-l04-q07-a4",
+          "text": "Certains médicaments",
+          "explanation": "Ils peuvent modifier la commande respiratoire."
+        },
+        {
+          "id": "dea-p06-l04-q07-a5",
+          "text": "Le nombre de lobes pulmonaires",
+          "explanation": "Il s’agit d’une donnée anatomique stable."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l04-q07-a1",
+        "dea-p06-l04-q07-a2",
+        "dea-p06-l04-q07-a3",
+        "dea-p06-l04-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l04-q07-a1",
+        "dea-p06-l04-q07-a2",
+        "dea-p06-l04-q07-a3",
+        "dea-p06-l04-q07-a4"
+      ],
+      "explanation": "Les facteurs sélectionnés figurent parmi les influences décrites par le support.",
+      "knowledgeIds": [
+        "K-DEA-P06-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les facteurs sélectionnés figurent parmi les influences décrites par le support.",
+        "commonMistake": "Choisir une structure anatomique stable comme facteur dynamique mélange anatomie et physiologie.",
+        "keyTakeaway": "Contexte, état et substances peuvent modifier la ventilation.",
+        "fieldApplication": "Noter les facteurs présents lors du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les facteurs sélectionnés figurent parmi les influences décrites par le support.",
+      "common_mistake": "Choisir une structure anatomique stable comme facteur dynamique mélange anatomie et physiologie.",
+      "key_takeaway": "Contexte, état et substances peuvent modifier la ventilation.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-009"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l04-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle observation complète le mieux une fréquence respiratoire chiffrée ?",
+      "answers": [
+        {
+          "id": "dea-p06-l04-q08-a1",
+          "text": "Le rythme et l’amplitude des mouvements",
+          "explanation": "Le support demande de qualifier régularité et amplitude en plus du nombre."
+        },
+        {
+          "id": "dea-p06-l04-q08-a2",
+          "text": "Le nombre de lobes pulmonaires",
+          "explanation": "Cette donnée anatomique ne décrit pas la ventilation instantanée."
+        },
+        {
+          "id": "dea-p06-l04-q08-a3",
+          "text": "La couleur du tensiomètre",
+          "explanation": "Elle n’apporte aucune information respiratoire."
+        },
+        {
+          "id": "dea-p06-l04-q08-a4",
+          "text": "Le volume pulmonaire théorique uniquement",
+          "explanation": "Il ne remplace pas l’observation du patient."
+        }
+      ],
+      "correctAnswer": "dea-p06-l04-q08-a1",
+      "explanation": "La qualité des mouvements donne un sens clinique au chiffre.",
+      "knowledgeIds": [
+        "K-DEA-P06-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "sourcePages": "25, 26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l04",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La qualité des mouvements donne un sens clinique au chiffre.",
+        "commonMistake": "Transmettre seulement la fréquence masque une respiration irrégulière ou superficielle.",
+        "keyTakeaway": "Nombre, rythme, amplitude.",
+        "fieldApplication": "Structurer le bilan respiratoire autour de données observables."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La qualité des mouvements donne un sens clinique au chiffre.",
+      "common_mistake": "Transmettre seulement la fréquence masque une respiration irrégulière ou superficielle.",
+      "key_takeaway": "Nombre, rythme, amplitude.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 25, 26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+        "sourcePages": "25, 26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

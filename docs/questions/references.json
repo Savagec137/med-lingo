@@ -2509,6 +2509,1273 @@
       "source_version": "Version 1 - Août 2022",
       "validation_status": "to_validate",
       "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q01",
+      "knowledge_reference": "K-DEA-P06-002",
+      "knowledge_references": [
+        "K-DEA-P06-002"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q02",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q03",
+      "knowledge_reference": "K-DEA-P06-002",
+      "knowledge_references": [
+        "K-DEA-P06-002",
+        "K-DEA-P06-003"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q04",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q05",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q06",
+      "knowledge_reference": "K-DEA-P06-002",
+      "knowledge_references": [
+        "K-DEA-P06-002"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q07",
+      "knowledge_reference": "K-DEA-P06-006",
+      "knowledge_references": [
+        "K-DEA-P06-006"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l01-q08",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-003"
+      ],
+      "lesson_id": "dea-p06-l01",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "source_page": "23, 25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q01",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q02",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q03",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q04",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q05",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q06",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q07",
+      "knowledge_reference": "K-DEA-P06-004",
+      "knowledge_references": [
+        "K-DEA-P06-004"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l02-q08",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l02",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "source_page": "23, 24",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q01",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q02",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q03",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q04",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q05",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q06",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q07",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l03-q08",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l03",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - diaphragme et mouvements ventilatoires",
+      "source_page": "25",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q01",
+      "knowledge_reference": "K-DEA-P06-009",
+      "knowledge_references": [
+        "K-DEA-P06-009"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q02",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q03",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-009",
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q04",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q05",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q06",
+      "knowledge_reference": "K-DEA-P06-009",
+      "knowledge_references": [
+        "K-DEA-P06-009"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q07",
+      "knowledge_reference": "K-DEA-P06-009",
+      "knowledge_references": [
+        "K-DEA-P06-009"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l04-q08",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l04",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - inspiration, expiration, volumes et régulation",
+      "source_page": "25, 26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q01",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q02",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q03",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q04",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q05",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q06",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-007",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q07",
+      "knowledge_reference": "K-DEA-P06-008",
+      "knowledge_references": [
+        "K-DEA-P06-008"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l05-q08",
+      "knowledge_reference": "K-DEA-P06-008",
+      "knowledge_references": [
+        "K-DEA-P06-008"
+      ],
+      "lesson_id": "dea-p06-l05",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "source_page": "24-26",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q01",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q02",
+      "knowledge_reference": "K-DEA-P06-012",
+      "knowledge_references": [
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q03",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007",
+        "K-DEA-P06-008",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q04",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007",
+        "K-DEA-P06-008"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q05",
+      "knowledge_reference": "K-DEA-P06-012",
+      "knowledge_references": [
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q06",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q07",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l06-q08",
+      "knowledge_reference": "K-DEA-P06-008",
+      "knowledge_references": [
+        "K-DEA-P06-008",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l06",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - oxygène, finalité respiratoire et SpO₂",
+      "source_page": "24-26, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q01",
+      "knowledge_reference": "K-DEA-P06-011",
+      "knowledge_references": [
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q02",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q03",
+      "knowledge_reference": "K-DEA-P06-011",
+      "knowledge_references": [
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q04",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q05",
+      "knowledge_reference": "K-DEA-P06-011",
+      "knowledge_references": [
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q06",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q07",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l07-q08",
+      "knowledge_reference": "K-DEA-P06-012",
+      "knowledge_references": [
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l07",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Mesure des paramètres vitaux - fréquence respiratoire et SpO₂",
+      "source_page": "71, 72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q01",
+      "knowledge_reference": "K-DEA-P06-003",
+      "knowledge_references": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q02",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q03",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q04",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q05",
+      "knowledge_reference": "K-DEA-P06-007",
+      "knowledge_references": [
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q06",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q07",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-l08-q08",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-l08",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q01",
+      "knowledge_reference": "K-DEA-P06-002",
+      "knowledge_references": [
+        "K-DEA-P06-002",
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q02",
+      "knowledge_reference": "K-DEA-P06-001",
+      "knowledge_references": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-009"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q03",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q04",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-007"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q05",
+      "knowledge_reference": "K-DEA-P06-011",
+      "knowledge_references": [
+        "K-DEA-P06-011"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q06",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q07",
+      "knowledge_reference": "K-DEA-P06-005",
+      "knowledge_references": [
+        "K-DEA-P06-005"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
+    },
+    {
+      "question_id": "dea-p06-boss-q08",
+      "knowledge_reference": "K-DEA-P06-010",
+      "knowledge_references": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "lesson_id": "dea-p06-boss",
+      "planned_parcours_ids": [
+        "parcours-06"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_section": "Appareil respiratoire - Boss de synthèse",
+      "source_page": "23-26, 71-72",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate",
+      "generation_source": "library_extracted_knowledge"
     }
   ]
 }

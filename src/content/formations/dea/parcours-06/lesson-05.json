@@ -1,0 +1,737 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l05",
+  "title": "Les échanges gazeux",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Localiser les échanges gazeux.",
+    "Distinguer le trajet de l’oxygène et du dioxyde de carbone.",
+    "Comparer air ambiant et air alvéolaire."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Entre quelles structures se réalisent les échanges gazeux pulmonaires ?",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q01-a1",
+          "text": "Entre les alvéoles et les capillaires pulmonaires",
+          "explanation": "Le contact alvéolo-capillaire permet le passage des gaz."
+        },
+        {
+          "id": "dea-p06-l05-q01-a2",
+          "text": "Entre le pharynx et la trachée",
+          "explanation": "Ces structures conduisent l’air."
+        },
+        {
+          "id": "dea-p06-l05-q01-a3",
+          "text": "Entre la plèvre et les bronches",
+          "explanation": "La plèvre est une enveloppe."
+        },
+        {
+          "id": "dea-p06-l05-q01-a4",
+          "text": "Entre le diaphragme et les fosses nasales",
+          "explanation": "Le diaphragme assure un rôle mécanique."
+        }
+      ],
+      "correctAnswer": "dea-p06-l05-q01-a1",
+      "explanation": "La proximité entre air alvéolaire et sang capillaire rend les échanges possibles.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proximité entre air alvéolaire et sang capillaire rend les échanges possibles.",
+        "commonMistake": "Choisir un conduit parce qu’il contient de l’air confond ventilation et diffusion.",
+        "keyTakeaway": "Les échanges sont alvéolo-capillaires.",
+        "fieldApplication": "Distinguer passage de l’air et transfert des gaz."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proximité entre air alvéolaire et sang capillaire rend les échanges possibles.",
+      "common_mistake": "Choisir un conduit parce qu’il contient de l’air confond ventilation et diffusion.",
+      "key_takeaway": "Les échanges sont alvéolo-capillaires.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le dioxyde de carbone passe du sang vers l’air alvéolaire avant d’être expiré.",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition suit le sens d’élimination du dioxyde de carbone."
+        },
+        {
+          "id": "dea-p06-l05-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le gaz quitte bien le sang au niveau pulmonaire."
+        }
+      ],
+      "correctAnswer": "dea-p06-l05-q02-true",
+      "explanation": "Le trajet décrit permet l’élimination du dioxyde de carbone par l’expiration.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet décrit permet l’élimination du dioxyde de carbone par l’expiration.",
+        "commonMistake": "Inverser les deux gaz conduit à dire que le dioxyde de carbone est inspiré pour les cellules.",
+        "keyTakeaway": "Oxygène vers le sang ; dioxyde de carbone vers l’alvéole.",
+        "fieldApplication": "Relier le sens des échanges à la finalité de la respiration."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet décrit permet l’élimination du dioxyde de carbone par l’expiration.",
+      "common_mistake": "Inverser les deux gaz conduit à dire que le dioxyde de carbone est inspiré pour les cellules.",
+      "key_takeaway": "Oxygène vers le sang ; dioxyde de carbone vers l’alvéole.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque gaz ou milieu à son rôle dans les échanges.",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q03-a1",
+          "text": "Oxygène",
+          "match": "Passe de l’alvéole vers le sang",
+          "explanation": "Il est apporté à l’organisme."
+        },
+        {
+          "id": "dea-p06-l05-q03-a2",
+          "text": "Dioxyde de carbone",
+          "match": "Passe du sang vers l’alvéole",
+          "explanation": "Il doit être éliminé."
+        },
+        {
+          "id": "dea-p06-l05-q03-a3",
+          "text": "Alvéole",
+          "match": "Contient l’air au contact des capillaires",
+          "explanation": "Elle constitue la zone aérienne d’échange."
+        },
+        {
+          "id": "dea-p06-l05-q03-a4",
+          "text": "Capillaire pulmonaire",
+          "match": "Conduit le sang au contact de l’alvéole",
+          "explanation": "Il constitue la zone sanguine d’échange."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l05-q03-a1",
+        "dea-p06-l05-q03-a2",
+        "dea-p06-l05-q03-a3",
+        "dea-p06-l05-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l05-q03-a1",
+        "dea-p06-l05-q03-a2",
+        "dea-p06-l05-q03-a3",
+        "dea-p06-l05-q03-a4"
+      ],
+      "explanation": "Les associations opposent les deux sens de transfert.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations opposent les deux sens de transfert.",
+        "commonMistake": "Attribuer le même sens aux deux gaz efface la finalité des échanges.",
+        "keyTakeaway": "O₂ entre dans le sang, CO₂ en sort.",
+        "fieldApplication": "Expliquer simplement le mécanisme sans conclure à une pathologie."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations opposent les deux sens de transfert.",
+      "common_mistake": "Attribuer le même sens aux deux gaz efface la finalité des échanges.",
+      "key_takeaway": "O₂ entre dans le sang, CO₂ en sort.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet de l’oxygène depuis l’air inspiré jusqu’au sang.",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q04-a1",
+          "text": "Air inspiré",
+          "explanation": "Il entre dans les voies aériennes.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l05-q04-a2",
+          "text": "Voies aériennes",
+          "explanation": "Elles conduisent l’air.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l05-q04-a3",
+          "text": "Alvéoles",
+          "explanation": "L’air atteint la zone d’échange.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l05-q04-a4",
+          "text": "Capillaires pulmonaires",
+          "explanation": "L’oxygène passe dans le sang.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l05-q04-a1",
+        "dea-p06-l05-q04-a2",
+        "dea-p06-l05-q04-a3",
+        "dea-p06-l05-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l05-q04-a1",
+        "dea-p06-l05-q04-a2",
+        "dea-p06-l05-q04-a3",
+        "dea-p06-l05-q04-a4"
+      ],
+      "explanation": "Le trajet sépare transport aérien et passage vers le sang.",
+      "knowledgeIds": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet sépare transport aérien et passage vers le sang.",
+        "commonMistake": "Passer directement du nez au sang omet les conduits et les alvéoles.",
+        "keyTakeaway": "Air, voies aériennes, alvéoles, sang.",
+        "fieldApplication": "Identifier à quelle étape une difficulté observée pourrait se situer, sans diagnostiquer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet sépare transport aérien et passage vers le sang.",
+      "common_mistake": "Passer directement du nez au sang omet les conduits et les alvéoles.",
+      "key_takeaway": "Air, voies aériennes, alvéoles, sang.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les échanges gazeux se produisent au niveau des ______ pulmonaires.",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q05-a1",
+          "text": "alvéoles",
+          "explanation": "Les alvéoles sont au contact du réseau capillaire."
+        },
+        {
+          "id": "dea-p06-l05-q05-a2",
+          "text": "bronches",
+          "explanation": "Les bronches conduisent l’air."
+        },
+        {
+          "id": "dea-p06-l05-q05-a3",
+          "text": "plèvres",
+          "explanation": "Les plèvres entourent les poumons."
+        },
+        {
+          "id": "dea-p06-l05-q05-a4",
+          "text": "fosses nasales",
+          "explanation": "Elles appartiennent aux voies aériennes supérieures."
+        }
+      ],
+      "correctAnswer": "dea-p06-l05-q05-a1",
+      "explanation": "Le terme attendu désigne la terminaison respiratoire spécialisée dans les échanges.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme attendu désigne la terminaison respiratoire spécialisée dans les échanges.",
+        "commonMistake": "Bronches et alvéoles sont proches dans le trajet mais n’ont pas la même fonction.",
+        "keyTakeaway": "Alvéoles : interface entre air et sang.",
+        "fieldApplication": "Employer ce repère pour relier anatomie et physiologie."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme attendu désigne la terminaison respiratoire spécialisée dans les échanges.",
+      "common_mistake": "Bronches et alvéoles sont proches dans le trajet mais n’ont pas la même fonction.",
+      "key_takeaway": "Alvéoles : interface entre air et sang.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un patient ventile mais présente une mesure d’oxygénation anormale. Quel principe doit rester présent dans le raisonnement ?",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q06-a1",
+          "text": "Faire entrer de l’air et assurer les échanges gazeux sont deux étapes différentes",
+          "explanation": "La ventilation conduit l’air ; les échanges transfèrent ensuite l’oxygène vers le sang."
+        },
+        {
+          "id": "dea-p06-l05-q06-a2",
+          "text": "Toute ventilation visible garantit des échanges normaux",
+          "explanation": "Un mouvement d’air ne prouve pas à lui seul l’efficacité des échanges."
+        },
+        {
+          "id": "dea-p06-l05-q06-a3",
+          "text": "Les échanges ont lieu dans le pharynx",
+          "explanation": "Ils se réalisent au niveau alvéolo-capillaire."
+        },
+        {
+          "id": "dea-p06-l05-q06-a4",
+          "text": "La fréquence suffit à évaluer toute la respiration",
+          "explanation": "Rythme, amplitude, signes et oxygénation complètent l’évaluation."
+        }
+      ],
+      "correctAnswer": "dea-p06-l05-q06-a1",
+      "explanation": "La distinction entre ventilation et échanges évite une conclusion trop rapide.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-007",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La distinction entre ventilation et échanges évite une conclusion trop rapide.",
+        "commonMistake": "Voir le thorax bouger peut donner un faux sentiment de normalité.",
+        "keyTakeaway": "Air déplacé ne signifie pas automatiquement oxygène transféré.",
+        "fieldApplication": "Croiser mouvements, fréquence, signes cliniques et mesure disponible.",
+        "safetyPoint": "Ne jamais rassurer ou alarmer sur un seul paramètre isolé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La distinction entre ventilation et échanges évite une conclusion trop rapide.",
+      "common_mistake": "Voir le thorax bouger peut donner un faux sentiment de normalité.",
+      "key_takeaway": "Air déplacé ne signifie pas automatiquement oxygène transféré.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-007",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles différences le support décrit-il entre air ambiant et air alvéolaire ?",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q07-a1",
+          "text": "L’air alvéolaire contient moins d’oxygène",
+          "explanation": "Il est indiqué autour de 16 % contre environ 21 % dans l’air ambiant."
+        },
+        {
+          "id": "dea-p06-l05-q07-a2",
+          "text": "L’air alvéolaire contient davantage de dioxyde de carbone",
+          "explanation": "Le support l’indique autour de 5 %."
+        },
+        {
+          "id": "dea-p06-l05-q07-a3",
+          "text": "L’air alvéolaire ne contient plus d’azote",
+          "explanation": "Le support ne décrit pas une disparition totale de l’azote."
+        },
+        {
+          "id": "dea-p06-l05-q07-a4",
+          "text": "L’air ambiant contient majoritairement de l’oxygène",
+          "explanation": "L’azote est le gaz majoritaire."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l05-q07-a1",
+        "dea-p06-l05-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p06-l05-q07-a1",
+        "dea-p06-l05-q07-a2"
+      ],
+      "explanation": "Les changements de composition reflètent les échanges avec le sang.",
+      "knowledgeIds": [
+        "K-DEA-P06-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les changements de composition reflètent les échanges avec le sang.",
+        "commonMistake": "Confondre gaz utile et gaz majoritaire fait surestimer la proportion d’oxygène.",
+        "keyTakeaway": "Après échanges : moins d’O₂, plus de CO₂.",
+        "fieldApplication": "Utiliser les valeurs comme illustration physiologique, pas comme mesure du patient."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les changements de composition reflètent les échanges avec le sang.",
+      "common_mistake": "Confondre gaz utile et gaz majoritaire fait surestimer la proportion d’oxygène.",
+      "key_takeaway": "Après échanges : moins d’O₂, plus de CO₂.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-008"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l05-q08",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel gaz est majoritaire dans l’air ambiant selon les valeurs du support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l05-q08-a1",
+          "text": "L’azote",
+          "explanation": "Le support indique environ 78 % d’azote."
+        },
+        {
+          "id": "dea-p06-l05-q08-a2",
+          "text": "L’oxygène",
+          "explanation": "Il représente environ 21 %."
+        },
+        {
+          "id": "dea-p06-l05-q08-a3",
+          "text": "Le dioxyde de carbone",
+          "explanation": "Sa proportion est bien plus faible dans l’air ambiant."
+        },
+        {
+          "id": "dea-p06-l05-q08-a4",
+          "text": "La vapeur d’eau",
+          "explanation": "Elle n’est pas donnée comme gaz majoritaire."
+        }
+      ],
+      "correctAnswer": "dea-p06-l05-q08-a1",
+      "explanation": "Le gaz majoritaire est identifié par sa proportion, non par son importance biologique.",
+      "knowledgeIds": [
+        "K-DEA-P06-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+      "sourcePages": "24-26",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l05",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le gaz majoritaire est identifié par sa proportion, non par son importance biologique.",
+        "commonMistake": "L’oxygène est vital mais n’est pas le composant principal de l’air.",
+        "keyTakeaway": "Air ambiant : environ 78 % d’azote et 21 % d’oxygène.",
+        "fieldApplication": "Éviter de confondre importance physiologique et proportion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le gaz majoritaire est identifié par sa proportion, non par son importance biologique.",
+      "common_mistake": "L’oxygène est vital mais n’est pas le composant principal de l’air.",
+      "key_takeaway": "Air ambiant : environ 78 % d’azote et 21 % d’oxygène.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 24-26",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - échanges alvéolo-capillaires",
+        "sourcePages": "24-26",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-008"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

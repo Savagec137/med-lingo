@@ -1,0 +1,791 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-boss",
+  "title": "Boss - Système respiratoire",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 12,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "boss",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Relier voies aériennes, ventilation et échanges gazeux.",
+    "Mesurer et transmettre les principaux paramètres respiratoires.",
+    "Choisir une formulation factuelle adaptée au niveau DEA."
+  ],
+  "competencyIds": [
+    "body.system.respiratory",
+    "body.organization.organ-to-system"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Valider les bases du système respiratoire au niveau DEA.",
+    "scenario": "L’apprenant reconstitue le trajet de l’air, analyse des observations simples et sélectionne une transmission respiratoire factuelle.",
+    "tasks": [
+      "Reconstituer le trajet de l’air.",
+      "Distinguer ventilation et échanges.",
+      "Mesurer et transmettre fréquence, rythme, amplitude et SpO₂ disponible."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-boss-q01",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet anatomique de l’air jusqu’à la zone d’échange.",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q01-a1",
+          "text": "Fosses nasales ou bouche",
+          "explanation": "L’air entre dans les voies aériennes.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-boss-q01-a2",
+          "text": "Pharynx",
+          "explanation": "Il constitue un passage commun.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-boss-q01-a3",
+          "text": "Larynx et trachée",
+          "explanation": "Ils conduisent vers le thorax.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-boss-q01-a4",
+          "text": "Bronches puis bronchioles",
+          "explanation": "Les conduits se ramifient.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p06-boss-q01-a5",
+          "text": "Alvéoles",
+          "explanation": "Elles constituent la zone d’échange.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-boss-q01-a1",
+        "dea-p06-boss-q01-a2",
+        "dea-p06-boss-q01-a3",
+        "dea-p06-boss-q01-a4",
+        "dea-p06-boss-q01-a5"
+      ],
+      "correctAnswers": [
+        "dea-p06-boss-q01-a1",
+        "dea-p06-boss-q01-a2",
+        "dea-p06-boss-q01-a3",
+        "dea-p06-boss-q01-a4",
+        "dea-p06-boss-q01-a5"
+      ],
+      "explanation": "La séquence suit l’arbre respiratoire de l’extérieur vers les alvéoles.",
+      "knowledgeIds": [
+        "K-DEA-P06-002",
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence suit l’arbre respiratoire de l’extérieur vers les alvéoles.",
+        "commonMistake": "Sauter ou inverser une ramification empêche de localiser correctement une obstruction.",
+        "keyTakeaway": "Du nez aux alvéoles, le calibre se ramifie.",
+        "fieldApplication": "Utiliser le trajet pour structurer une description."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence suit l’arbre respiratoire de l’extérieur vers les alvéoles.",
+      "common_mistake": "Sauter ou inverser une ramification empêche de localiser correctement une obstruction.",
+      "key_takeaway": "Du nez aux alvéoles, le calibre se ramifie.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-002",
+          "K-DEA-P06-003",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q02",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément du système respiratoire à sa fonction.",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q02-a1",
+          "text": "Voies aériennes",
+          "match": "Conduction de l’air",
+          "explanation": "Elles forment les passages."
+        },
+        {
+          "id": "dea-p06-boss-q02-a2",
+          "text": "Diaphragme",
+          "match": "Mécanique ventilatoire",
+          "explanation": "Il modifie le volume thoracique."
+        },
+        {
+          "id": "dea-p06-boss-q02-a3",
+          "text": "Alvéoles",
+          "match": "Échanges gazeux",
+          "explanation": "Elles sont au contact des capillaires."
+        },
+        {
+          "id": "dea-p06-boss-q02-a4",
+          "text": "Centres neurologiques",
+          "match": "Commande respiratoire",
+          "explanation": "Ils participent à la régulation."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-boss-q02-a1",
+        "dea-p06-boss-q02-a2",
+        "dea-p06-boss-q02-a3",
+        "dea-p06-boss-q02-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-boss-q02-a1",
+        "dea-p06-boss-q02-a2",
+        "dea-p06-boss-q02-a3",
+        "dea-p06-boss-q02-a4"
+      ],
+      "explanation": "Les quatre associations reconstruisent l’organisation fonctionnelle du système.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre associations reconstruisent l’organisation fonctionnelle du système.",
+        "commonMistake": "Réduire la respiration aux poumons seuls fait oublier commande, conduits et mécanique.",
+        "keyTakeaway": "Commander, conduire, ventiler, échanger.",
+        "fieldApplication": "Identifier l’étape concernée dans une situation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre associations reconstruisent l’organisation fonctionnelle du système.",
+      "common_mistake": "Réduire la respiration aux poumons seuls fait oublier commande, conduits et mécanique.",
+      "key_takeaway": "Commander, conduire, ventiler, échanger.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-005",
+          "K-DEA-P06-007",
+          "K-DEA-P06-009"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q03",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un adulte au repos présente une FR à 18/min, irrégulière, avec des mouvements superficiels. Quel bilan est le plus fidèle ?",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q03-a1",
+          "text": "FR 18/min au repos, rythme irrégulier, amplitude superficielle",
+          "explanation": "La transmission conserve le chiffre et les caractéristiques anormales observées."
+        },
+        {
+          "id": "dea-p06-boss-q03-a2",
+          "text": "Respiration normale car la fréquence est entre 12 et 20",
+          "explanation": "La plage numérique n’annule pas rythme et amplitude."
+        },
+        {
+          "id": "dea-p06-boss-q03-a3",
+          "text": "Détresse confirmée par la seule fréquence",
+          "explanation": "La fréquence isolée ne suffit pas à confirmer une cause."
+        },
+        {
+          "id": "dea-p06-boss-q03-a4",
+          "text": "SpO₂ normale",
+          "explanation": "Aucune SpO₂ n’est fournie."
+        }
+      ],
+      "correctAnswer": "dea-p06-boss-q03-a1",
+      "explanation": "La réponse transmet uniquement des faits disponibles et utiles.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse transmet uniquement des faits disponibles et utiles.",
+        "commonMistake": "Résumer par « normal » ou inventer une mesure supprime la nuance clinique.",
+        "keyTakeaway": "Valeur, contexte, rythme et amplitude.",
+        "fieldApplication": "Faire un bilan structuré sans poser de diagnostic.",
+        "safetyPoint": "Toute aggravation clinique doit être signalée sans attendre une mesure supplémentaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse transmet uniquement des faits disponibles et utiles.",
+      "common_mistake": "Résumer par « normal » ou inventer une mesure supprime la nuance clinique.",
+      "key_takeaway": "Valeur, contexte, rythme et amplitude.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations distinguent correctement ventilation et échanges gazeux ?",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q04-a1",
+          "text": "La ventilation déplace l’air",
+          "explanation": "Elle alterne inspiration et expiration."
+        },
+        {
+          "id": "dea-p06-boss-q04-a2",
+          "text": "Les échanges font passer l’oxygène vers le sang",
+          "explanation": "Ils se produisent au niveau alvéolo-capillaire."
+        },
+        {
+          "id": "dea-p06-boss-q04-a3",
+          "text": "Le dioxyde de carbone passe vers l’air alvéolaire",
+          "explanation": "Il est ensuite expiré."
+        },
+        {
+          "id": "dea-p06-boss-q04-a4",
+          "text": "Le diaphragme réalise directement les échanges sanguins",
+          "explanation": "Il assure un rôle mécanique."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-boss-q04-a1",
+        "dea-p06-boss-q04-a2",
+        "dea-p06-boss-q04-a3"
+      ],
+      "correctAnswers": [
+        "dea-p06-boss-q04-a1",
+        "dea-p06-boss-q04-a2",
+        "dea-p06-boss-q04-a3"
+      ],
+      "explanation": "Les propositions séparent le mouvement d’air du transfert des gaz.",
+      "knowledgeIds": [
+        "K-DEA-P06-005",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les propositions séparent le mouvement d’air du transfert des gaz.",
+        "commonMistake": "Confondre le muscle ventilatoire avec l’interface d’échange est une erreur fréquente.",
+        "keyTakeaway": "Ventiler amène l’air ; échanger transfère les gaz.",
+        "fieldApplication": "Croiser mécanique visible et oxygénation mesurée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les propositions séparent le mouvement d’air du transfert des gaz.",
+      "common_mistake": "Confondre le muscle ventilatoire avec l’interface d’échange est une erreur fréquente.",
+      "key_takeaway": "Ventiler amène l’air ; échanger transfère les gaz.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q05",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Chez un enfant de 6 ans au repos, quelle plage de fréquence respiratoire le support indique-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q05-a1",
+          "text": "20 à 30 cycles par minute",
+          "explanation": "La tranche 2 à 12 ans utilise ce repère."
+        },
+        {
+          "id": "dea-p06-boss-q05-a2",
+          "text": "12 à 20 cycles par minute",
+          "explanation": "Cette plage est donnée après 14 ans."
+        },
+        {
+          "id": "dea-p06-boss-q05-a3",
+          "text": "30 à 60 cycles par minute",
+          "explanation": "Cette plage concerne 1 mois à 2 ans."
+        },
+        {
+          "id": "dea-p06-boss-q05-a4",
+          "text": "40 à 60 cycles par minute",
+          "explanation": "Cette plage concerne moins d’un mois."
+        }
+      ],
+      "correctAnswer": "dea-p06-boss-q05-a1",
+      "explanation": "L’âge de six ans place l’enfant dans la tranche 2 à 12 ans.",
+      "knowledgeIds": [
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’âge de six ans place l’enfant dans la tranche 2 à 12 ans.",
+        "commonMistake": "Appliquer automatiquement la plage adulte néglige les différences liées à l’âge.",
+        "keyTakeaway": "De 2 à 12 ans : 20 à 30 cycles/min au repos.",
+        "fieldApplication": "Toujours annoncer l’âge avec la fréquence."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’âge de six ans place l’enfant dans la tranche 2 à 12 ans.",
+      "common_mistake": "Appliquer automatiquement la plage adulte néglige les différences liées à l’âge.",
+      "key_takeaway": "De 2 à 12 ans : 20 à 30 cycles/min au repos.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Une SpO₂ chiffrée remplace l’observation du rythme et de l’amplitude respiratoires.",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q06-true",
+          "text": "Vrai",
+          "explanation": "Vrai serait incorrect : la SpO₂ ne décrit ni rythme ni amplitude."
+        },
+        {
+          "id": "dea-p06-boss-q06-false",
+          "text": "Faux",
+          "explanation": "Faux est correct car les données sont complémentaires."
+        }
+      ],
+      "correctAnswer": "dea-p06-boss-q06-false",
+      "explanation": "La mesure complète l’examen mais ne remplace pas les mouvements et signes observés.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La mesure complète l’examen mais ne remplace pas les mouvements et signes observés.",
+        "commonMistake": "La précision numérique de l’appareil peut faire oublier ses limites et le patient.",
+        "keyTakeaway": "Appareil et clinique se complètent.",
+        "fieldApplication": "Transmettre SpO₂, fréquence, rythme, amplitude et signes.",
+        "safetyPoint": "Ne jamais retarder une prise en charge urgente pour obtenir un chiffre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La mesure complète l’examen mais ne remplace pas les mouvements et signes observés.",
+      "common_mistake": "La précision numérique de l’appareil peut faire oublier ses limites et le patient.",
+      "key_takeaway": "Appareil et clinique se complètent.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q07",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Complète : pendant l’inspiration, le diaphragme se contracte, s’abaisse et le volume ______ augmente.",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q07-a1",
+          "text": "thoracique",
+          "explanation": "L’augmentation du volume thoracique accompagne l’entrée d’air."
+        },
+        {
+          "id": "dea-p06-boss-q07-a2",
+          "text": "alvéolaire uniquement",
+          "explanation": "Le support décrit d’abord le volume de la cage thoracique."
+        },
+        {
+          "id": "dea-p06-boss-q07-a3",
+          "text": "cardiaque",
+          "explanation": "Le cœur ne constitue pas la mécanique inspiratoire."
+        },
+        {
+          "id": "dea-p06-boss-q07-a4",
+          "text": "digestif",
+          "explanation": "Ce terme ne correspond pas au cycle ventilatoire."
+        }
+      ],
+      "correctAnswer": "dea-p06-boss-q07-a1",
+      "explanation": "Le mot relie l’action du diaphragme à la cage thoracique.",
+      "knowledgeIds": [
+        "K-DEA-P06-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot relie l’action du diaphragme à la cage thoracique.",
+        "commonMistake": "Se concentrer sur un organe isolé fait perdre la mécanique globale.",
+        "keyTakeaway": "Diaphragme abaissé, volume thoracique augmenté, air entrant.",
+        "fieldApplication": "Expliquer le mouvement respiratoire en trois étapes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot relie l’action du diaphragme à la cage thoracique.",
+      "common_mistake": "Se concentrer sur un organe isolé fait perdre la mécanique globale.",
+      "key_takeaway": "Diaphragme abaissé, volume thoracique augmenté, air entrant.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-005"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-boss-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle transmission est la plus sûre face à une valeur de SpO₂ inattendue ?",
+      "answers": [
+        {
+          "id": "dea-p06-boss-q08-a1",
+          "text": "Donner la valeur, les signes cliniques et les conditions de mesure",
+          "explanation": "La mesure prend son sens lorsqu’elle est intégrée au bilan global."
+        },
+        {
+          "id": "dea-p06-boss-q08-a2",
+          "text": "Donner uniquement le pourcentage",
+          "explanation": "Le chiffre isolé manque de contexte."
+        },
+        {
+          "id": "dea-p06-boss-q08-a3",
+          "text": "Annoncer un diagnostic à partir de la valeur",
+          "explanation": "Une mesure seule ne détermine pas une cause."
+        },
+        {
+          "id": "dea-p06-boss-q08-a4",
+          "text": "Remplacer la valeur par « respiration correcte »",
+          "explanation": "Cette formule perd l’information mesurée."
+        }
+      ],
+      "correctAnswer": "dea-p06-boss-q08-a1",
+      "explanation": "La transmission combine donnée instrumentale, observation et fiabilité.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - Boss de synthèse",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-boss",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La transmission combine donnée instrumentale, observation et fiabilité.",
+        "commonMistake": "Un chiffre unique peut conduire à une interprétation excessive.",
+        "keyTakeaway": "Mesurer, vérifier, observer, transmettre.",
+        "fieldApplication": "Présenter des faits et leur évolution au régulateur.",
+        "safetyPoint": "L’état clinique doit toujours rester prioritaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La transmission combine donnée instrumentale, observation et fiabilité.",
+      "common_mistake": "Un chiffre unique peut conduire à une interprétation excessive.",
+      "key_takeaway": "Mesurer, vérifier, observer, transmettre.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - Boss de synthèse",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l01",
+  "title": "Les voies aériennes",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Distinguer les voies aériennes supérieures et inférieures selon le support.",
+    "Reconstituer le trajet de l’air vers les alvéoles.",
+    "Identifier les réflexes de protection décrits."
+  ],
+  "competencyIds": [
+    "body.system.respiratory"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Selon le support, quels éléments appartiennent aux voies aériennes supérieures ?",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q01-a1",
+          "text": "Les fosses nasales et le pharynx",
+          "explanation": "Ces deux structures sont classées dans les voies aériennes supérieures."
+        },
+        {
+          "id": "dea-p06-l01-q01-a2",
+          "text": "Le larynx et la trachée",
+          "explanation": "Le support les classe parmi les voies aériennes inférieures."
+        },
+        {
+          "id": "dea-p06-l01-q01-a3",
+          "text": "Les bronches et les bronchioles",
+          "explanation": "Elles appartiennent aux voies aériennes inférieures."
+        },
+        {
+          "id": "dea-p06-l01-q01-a4",
+          "text": "Les alvéoles et les capillaires",
+          "explanation": "Ils participent aux échanges, pas à cette catégorie anatomique."
+        }
+      ],
+      "correctAnswer": "dea-p06-l01-q01-a1",
+      "explanation": "La classification demandée reprend exactement celle du support DEA.",
+      "knowledgeIds": [
+        "K-DEA-P06-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La classification demandée reprend exactement celle du support DEA.",
+        "commonMistake": "Mélanger les nomenclatures d’autres documents peut déplacer le larynx d’une catégorie à l’autre.",
+        "keyTakeaway": "Dans ce support : fosses nasales et pharynx sont supérieurs.",
+        "fieldApplication": "Employer la nomenclature du document de référence dans la transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La classification demandée reprend exactement celle du support DEA.",
+      "common_mistake": "Mélanger les nomenclatures d’autres documents peut déplacer le larynx d’une catégorie à l’autre.",
+      "key_takeaway": "Dans ce support : fosses nasales et pharynx sont supérieurs.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-002"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La trachée se divise en deux bronches principales.",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition suit le trajet anatomique du support."
+        },
+        {
+          "id": "dea-p06-l01-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : les deux bronches principales succèdent bien à la trachée."
+        }
+      ],
+      "correctAnswer": "dea-p06-l01-q02-true",
+      "explanation": "La division de la trachée ouvre le trajet vers chacun des poumons.",
+      "knowledgeIds": [
+        "K-DEA-P06-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La division de la trachée ouvre le trajet vers chacun des poumons.",
+        "commonMistake": "Confondre bronche principale et bronchiole inverse l’ordre des ramifications.",
+        "keyTakeaway": "Trachée, bronches, bronchioles, alvéoles.",
+        "fieldApplication": "Reconstituer ce trajet lorsqu’une localisation respiratoire est décrite.",
+        "memoryTip": "T-B-B-A : trachée, bronches, bronchioles, alvéoles."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La division de la trachée ouvre le trajet vers chacun des poumons.",
+      "common_mistake": "Confondre bronche principale et bronchiole inverse l’ordre des ramifications.",
+      "key_takeaway": "Trachée, bronches, bronchioles, alvéoles.",
+      "memory_tip": "T-B-B-A : trachée, bronches, bronchioles, alvéoles.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à sa description.",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q03-a1",
+          "text": "Fosses nasales",
+          "match": "Massif facial",
+          "explanation": "Elles sont situées dans le massif facial."
+        },
+        {
+          "id": "dea-p06-l01-q03-a2",
+          "text": "Pharynx",
+          "match": "Conduit commun respiratoire et digestif",
+          "explanation": "Il est commun aux deux voies."
+        },
+        {
+          "id": "dea-p06-l01-q03-a3",
+          "text": "Trachée",
+          "match": "Se divise en deux bronches",
+          "explanation": "Elle précède les bronches principales."
+        },
+        {
+          "id": "dea-p06-l01-q03-a4",
+          "text": "Bronchioles",
+          "match": "Ramifications conduisant aux alvéoles",
+          "explanation": "Elles prolongent les bronches."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l01-q03-a1",
+        "dea-p06-l01-q03-a2",
+        "dea-p06-l01-q03-a3",
+        "dea-p06-l01-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l01-q03-a1",
+        "dea-p06-l01-q03-a2",
+        "dea-p06-l01-q03-a3",
+        "dea-p06-l01-q03-a4"
+      ],
+      "explanation": "Chaque association replace la structure dans le trajet ou sa fonction descriptive.",
+      "knowledgeIds": [
+        "K-DEA-P06-002",
+        "K-DEA-P06-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque association replace la structure dans le trajet ou sa fonction descriptive.",
+        "commonMistake": "Associer toutes les structures à l’échange gazeux efface leur rôle de conduit.",
+        "keyTakeaway": "Les voies aériennes conduisent l’air jusqu’aux alvéoles.",
+        "fieldApplication": "Localiser précisément une gêne au cours du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque association replace la structure dans le trajet ou sa fonction descriptive.",
+      "common_mistake": "Associer toutes les structures à l’échange gazeux efface leur rôle de conduit.",
+      "key_takeaway": "Les voies aériennes conduisent l’air jusqu’aux alvéoles.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-002",
+          "K-DEA-P06-003"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet de l’air après le pharynx.",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q04-a1",
+          "text": "Larynx",
+          "explanation": "Il précède la trachée.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l01-q04-a2",
+          "text": "Trachée",
+          "explanation": "Elle conduit vers les bronches.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l01-q04-a3",
+          "text": "Bronches",
+          "explanation": "Elles se ramifient.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l01-q04-a4",
+          "text": "Bronchioles",
+          "explanation": "Elles conduisent aux alvéoles.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p06-l01-q04-a5",
+          "text": "Alvéoles",
+          "explanation": "Elles constituent le lieu des échanges.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l01-q04-a1",
+        "dea-p06-l01-q04-a2",
+        "dea-p06-l01-q04-a3",
+        "dea-p06-l01-q04-a4",
+        "dea-p06-l01-q04-a5"
+      ],
+      "correctAnswers": [
+        "dea-p06-l01-q04-a1",
+        "dea-p06-l01-q04-a2",
+        "dea-p06-l01-q04-a3",
+        "dea-p06-l01-q04-a4",
+        "dea-p06-l01-q04-a5"
+      ],
+      "explanation": "L’ordre suit la diminution progressive du calibre des conduits.",
+      "knowledgeIds": [
+        "K-DEA-P06-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit la diminution progressive du calibre des conduits.",
+        "commonMistake": "Placer les alvéoles avant les bronchioles confond conduit et terminaison d’échange.",
+        "keyTakeaway": "Larynx, trachée, bronches, bronchioles, alvéoles.",
+        "fieldApplication": "Utiliser cet ordre pour raisonner sur la localisation d’une obstruction."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit la diminution progressive du calibre des conduits.",
+      "common_mistake": "Placer les alvéoles avant les bronchioles confond conduit et terminaison d’échange.",
+      "key_takeaway": "Larynx, trachée, bronches, bronchioles, alvéoles.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les bronches se ramifient en ______ avant d’atteindre les alvéoles.",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q05-a1",
+          "text": "bronchioles",
+          "explanation": "Les bronchioles sont les ramifications qui conduisent aux alvéoles."
+        },
+        {
+          "id": "dea-p06-l01-q05-a2",
+          "text": "trachées",
+          "explanation": "La trachée est située en amont des bronches."
+        },
+        {
+          "id": "dea-p06-l01-q05-a3",
+          "text": "pharynx",
+          "explanation": "Le pharynx précède le larynx et la trachée."
+        },
+        {
+          "id": "dea-p06-l01-q05-a4",
+          "text": "plèvres",
+          "explanation": "La plèvre enveloppe les poumons."
+        }
+      ],
+      "correctAnswer": "dea-p06-l01-q05-a1",
+      "explanation": "Le terme complète le trajet anatomique décrit par le support.",
+      "knowledgeIds": [
+        "K-DEA-P06-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme complète le trajet anatomique décrit par le support.",
+        "commonMistake": "La proximité sonore entre bronche et bronchiole peut faire oublier leur ordre.",
+        "keyTakeaway": "Les bronchioles prolongent les bronches.",
+        "fieldApplication": "Nommer le niveau anatomique plutôt que dire seulement « dans les poumons »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme complète le trajet anatomique décrit par le support.",
+      "common_mistake": "La proximité sonore entre bronche et bronchiole peut faire oublier leur ordre.",
+      "key_takeaway": "Les bronchioles prolongent les bronches.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Un patient conscient désigne une gêne ressentie au niveau du nez. Quelle localisation factuelle est la plus précise ?",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q06-a1",
+          "text": "Voies aériennes supérieures, au niveau des fosses nasales",
+          "explanation": "Cette formulation localise la zone sans poser de diagnostic."
+        },
+        {
+          "id": "dea-p06-l01-q06-a2",
+          "text": "Voies aériennes inférieures, au niveau des bronchioles",
+          "explanation": "Cette localisation ne correspond pas à la zone désignée."
+        },
+        {
+          "id": "dea-p06-l01-q06-a3",
+          "text": "Alvéoles pulmonaires",
+          "explanation": "Les alvéoles ne sont pas situées dans le nez."
+        },
+        {
+          "id": "dea-p06-l01-q06-a4",
+          "text": "Plèvre gauche",
+          "explanation": "La plèvre entoure un poumon et n’est pas dans le massif facial."
+        }
+      ],
+      "correctAnswer": "dea-p06-l01-q06-a1",
+      "explanation": "La formulation associe la région observée à la catégorie anatomique du support.",
+      "knowledgeIds": [
+        "K-DEA-P06-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La formulation associe la région observée à la catégorie anatomique du support.",
+        "commonMistake": "Transformer une plainte localisée en diagnostic est hors objectif.",
+        "keyTakeaway": "Décrire d’abord où se situe le problème.",
+        "fieldApplication": "Transmettre une localisation observable et les signes associés.",
+        "safetyPoint": "Une localisation anatomique ne remplace pas l’évaluation clinique complète."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La formulation associe la région observée à la catégorie anatomique du support.",
+      "common_mistake": "Transformer une plainte localisée en diagnostic est hors objectif.",
+      "key_takeaway": "Décrire d’abord où se situe le problème.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-002"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels éléments sont des réflexes de sécurité des voies aériennes selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q07-a1",
+          "text": "La déglutition",
+          "explanation": "Elle oriente le bol alimentaire vers l’œsophage."
+        },
+        {
+          "id": "dea-p06-l01-q07-a2",
+          "text": "La toux",
+          "explanation": "Elle cherche à expulser un corps étranger."
+        },
+        {
+          "id": "dea-p06-l01-q07-a3",
+          "text": "L’inspiration",
+          "explanation": "C’est un mouvement ventilatoire."
+        },
+        {
+          "id": "dea-p06-l01-q07-a4",
+          "text": "L’expiration",
+          "explanation": "C’est un mouvement ventilatoire."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l01-q07-a1",
+        "dea-p06-l01-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p06-l01-q07-a1",
+        "dea-p06-l01-q07-a2"
+      ],
+      "explanation": "Les deux mécanismes protègent les voies aériennes contre une fausse route ou un corps étranger.",
+      "knowledgeIds": [
+        "K-DEA-P06-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux mécanismes protègent les voies aériennes contre une fausse route ou un corps étranger.",
+        "commonMistake": "Confondre protection et ventilation conduit à sélectionner inspiration ou expiration.",
+        "keyTakeaway": "Déglutition et toux protègent ; inspiration et expiration ventilent.",
+        "fieldApplication": "Observer et transmettre l’efficacité de ces réflexes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux mécanismes protègent les voies aériennes contre une fausse route ou un corps étranger.",
+      "common_mistake": "Confondre protection et ventilation conduit à sélectionner inspiration ou expiration.",
+      "key_takeaway": "Déglutition et toux protègent ; inspiration et expiration ventilent.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-006"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l01-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel énoncé distingue correctement une voie aérienne d’une zone d’échange ?",
+      "answers": [
+        {
+          "id": "dea-p06-l01-q08-a1",
+          "text": "Une bronche conduit l’air, une alvéole participe aux échanges",
+          "explanation": "La bronche est un conduit tandis que l’alvéole est une terminaison d’échange."
+        },
+        {
+          "id": "dea-p06-l01-q08-a2",
+          "text": "Une alvéole conduit l’air vers la trachée",
+          "explanation": "Le trajet va de la trachée vers les alvéoles."
+        },
+        {
+          "id": "dea-p06-l01-q08-a3",
+          "text": "Une bronche réalise seule tous les échanges",
+          "explanation": "Les échanges sont alvéolo-capillaires."
+        },
+        {
+          "id": "dea-p06-l01-q08-a4",
+          "text": "La plèvre conduit l’air vers les bronchioles",
+          "explanation": "La plèvre est une enveloppe du poumon."
+        }
+      ],
+      "correctAnswer": "dea-p06-l01-q08-a1",
+      "explanation": "La distinction repose sur la fonction de passage ou d’échange.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+      "sourcePages": "23, 25",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory"
+      ],
+      "lessonId": "dea-p06-l01",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La distinction repose sur la fonction de passage ou d’échange.",
+        "commonMistake": "Le mot « respiratoire » ne signifie pas que toutes les structures ont la même fonction.",
+        "keyTakeaway": "Conduits jusqu’aux alvéoles ; échanges dans les alvéoles.",
+        "fieldApplication": "Structurer une observation sans confondre anatomie et fonction."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La distinction repose sur la fonction de passage ou d’échange.",
+      "common_mistake": "Le mot « respiratoire » ne signifie pas que toutes les structures ont la même fonction.",
+      "key_takeaway": "Conduits jusqu’aux alvéoles ; échanges dans les alvéoles.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 25",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - voies aériennes et réflexes de sécurité",
+        "sourcePages": "23, 25",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-003"
+        ],
+        "competencyIds": [
+          "body.system.respiratory"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

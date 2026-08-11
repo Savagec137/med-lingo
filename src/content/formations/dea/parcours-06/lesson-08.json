@@ -6,548 +6,794 @@
   "title": "Synthèse",
   "kind": "lesson",
   "status": "review",
-  "difficulty": "medium",
-  "estimatedMinutes": 8,
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
   "level": 1,
-  "xp": 30,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
   "pulse": null,
   "selection": {
-    "strategy": "random",
-    "count": 10
+    "strategy": "all",
+    "count": 8
   },
   "learningObjectives": [
-    "Physiologie respiratoire"
+    "Reconstituer le trajet de l’air.",
+    "Relier ventilation et échanges.",
+    "Construire une transmission respiratoire factuelle."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l04"
+    "body.system.respiratory",
+    "body.organization.organ-to-system"
   ],
   "prerequisiteIds": [
     "dea-p06-l07"
   ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l04-q331",
-      "difficulty": "easy",
-      "question": "Les échanges gazeux ont lieu principalement :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q331",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p06-l08-q01",
       "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle séquence résume correctement le parcours de l’air et de l’oxygène ?",
       "answers": [
         {
-          "id": "import-b01-p04-l04-q331-answer-01",
-          "text": "Dans les alvéoles",
-          "explanation": ""
+          "id": "dea-p06-l08-q01-a1",
+          "text": "Voies aériennes, alvéoles, capillaires, cellules",
+          "explanation": "Les conduits amènent l’air aux alvéoles, puis l’oxygène rejoint le sang et les cellules."
         },
         {
-          "id": "import-b01-p04-l04-q331-answer-02",
-          "text": "Dans la trachée",
-          "explanation": ""
+          "id": "dea-p06-l08-q01-a2",
+          "text": "Alvéoles, plèvre, pharynx, cellules",
+          "explanation": "La plèvre n’est pas une étape du trajet de l’air."
         },
         {
-          "id": "import-b01-p04-l04-q331-answer-03",
-          "text": "Dans le pharynx",
-          "explanation": ""
+          "id": "dea-p06-l08-q01-a3",
+          "text": "Diaphragme, cellules, bronches, capillaires",
+          "explanation": "Le diaphragme agit sur le volume mais ne conduit pas l’oxygène."
         },
         {
-          "id": "import-b01-p04-l04-q331-answer-04",
-          "text": "Dans les bronches",
-          "explanation": ""
+          "id": "dea-p06-l08-q01-a4",
+          "text": "Capillaires, fosses nasales, alvéoles, bronches",
+          "explanation": "L’ordre est inversé et mélange air et sang."
         }
       ],
-      "correctAnswer": "import-b01-p04-l04-q331-answer-01"
+      "correctAnswer": "dea-p06-l08-q01-a1",
+      "explanation": "La séquence distingue conduction de l’air puis transfert sanguin.",
+      "knowledgeIds": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence distingue conduction de l’air puis transfert sanguin.",
+        "commonMistake": "Mélanger structures mécaniques et voies de passage rend le trajet incohérent.",
+        "keyTakeaway": "Voies aériennes vers alvéoles, puis sang vers cellules.",
+        "fieldApplication": "Utiliser cette chaîne pour vérifier un raisonnement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence distingue conduction de l’air puis transfert sanguin.",
+      "common_mistake": "Mélanger structures mécaniques et voies de passage rend le trajet incohérent.",
+      "key_takeaway": "Voies aériennes vers alvéoles, puis sang vers cellules.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l04-q332",
-      "difficulty": "easy",
-      "question": "L'oxygène est principalement transporté par :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q332",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l04-q332-answer-01",
-          "text": "L'hémoglobine",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q332-answer-02",
-          "text": "Le plasma uniquement",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q332-answer-03",
-          "text": "Les plaquettes",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q332-answer-04",
-          "text": "Les leucocytes",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l04-q332-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l04-q333",
-      "difficulty": "easy",
-      "question": "Une fréquence respiratoire de 16/min est normale chez un adulte au repos.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q333",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p06-l08-q02",
       "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l04-q333-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q333-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l04-q333-true"
-    },
-    {
-      "id": "import-b01-p04-l04-q334",
       "difficulty": "easy",
-      "question": "Le dioxyde de carbone est absorbé par les poumons.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q334",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
+      "question": "Une fréquence respiratoire dans la plage attendue suffit, à elle seule, à conclure que la respiration est efficace.",
       "answers": [
         {
-          "id": "import-b01-p04-l04-q334-true",
+          "id": "dea-p06-l08-q02-true",
           "text": "Vrai",
-          "explanation": ""
+          "explanation": "Vrai serait incorrect : une plage attendue n’exclut pas une anomalie."
         },
         {
-          "id": "import-b01-p04-l04-q334-false",
+          "id": "dea-p06-l08-q02-false",
           "text": "Faux",
-          "explanation": ""
+          "explanation": "Faux est correct car plusieurs dimensions doivent être évaluées."
         }
       ],
-      "correctAnswer": "import-b01-p04-l04-q334-false"
+      "correctAnswer": "dea-p06-l08-q02-false",
+      "explanation": "La fréquence doit être complétée par rythme, amplitude, signes cliniques et mesures disponibles.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La fréquence doit être complétée par rythme, amplitude, signes cliniques et mesures disponibles.",
+        "commonMistake": "Une valeur rassurante peut faire négliger une respiration superficielle ou un patient qui se dégrade.",
+        "keyTakeaway": "Aucun chiffre respiratoire ne remplace l’observation globale.",
+        "fieldApplication": "Transmettre toutes les données et leur évolution.",
+        "safetyPoint": "L’état clinique prime sur une valeur isolée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La fréquence doit être complétée par rythme, amplitude, signes cliniques et mesures disponibles.",
+      "common_mistake": "Une valeur rassurante peut faire négliger une respiration superficielle ou un patient qui se dégrade.",
+      "key_takeaway": "Aucun chiffre respiratoire ne remplace l’observation globale.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l04-q335",
-      "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q335",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "associationMode": "matching",
-        "requiredSelections": 4
-      },
+      "id": "dea-p06-l08-q03",
       "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
+      "difficulty": "medium",
+      "question": "Associe chaque composant à sa fonction principale.",
       "answers": [
         {
-          "id": "import-b01-p04-l04-q335-pair-01",
-          "text": "Inspiration",
-          "match": "Entrée de l'air",
-          "explanation": ""
+          "id": "dea-p06-l08-q03-a1",
+          "text": "Voies aériennes",
+          "match": "Conduire l’air",
+          "explanation": "Elles relient l’extérieur aux zones d’échange."
         },
         {
-          "id": "import-b01-p04-l04-q335-pair-02",
-          "text": "Expiration",
-          "match": "Sortie de l'air",
-          "explanation": ""
+          "id": "dea-p06-l08-q03-a2",
+          "text": "Diaphragme",
+          "match": "Créer le mouvement ventilatoire",
+          "explanation": "Il modifie le volume thoracique."
         },
         {
-          "id": "import-b01-p04-l04-q335-pair-03",
+          "id": "dea-p06-l08-q03-a3",
           "text": "Alvéoles",
-          "match": "Échanges gazeux",
-          "explanation": ""
+          "match": "Permettre les échanges gazeux",
+          "explanation": "Elles sont au contact des capillaires."
         },
         {
-          "id": "import-b01-p04-l04-q335-pair-04",
-          "text": "Hémoglobine",
-          "match": "Transport de l'oxygène",
-          "explanation": ""
+          "id": "dea-p06-l08-q03-a4",
+          "text": "Oxymètre",
+          "match": "Estimer la SpO₂",
+          "explanation": "Il fournit une mesure non invasive."
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l04-q335-pair-01",
-        "import-b01-p04-l04-q335-pair-02",
-        "import-b01-p04-l04-q335-pair-03",
-        "import-b01-p04-l04-q335-pair-04"
-      ]
+        "dea-p06-l08-q03-a1",
+        "dea-p06-l08-q03-a2",
+        "dea-p06-l08-q03-a3",
+        "dea-p06-l08-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l08-q03-a1",
+        "dea-p06-l08-q03-a2",
+        "dea-p06-l08-q03-a3",
+        "dea-p06-l08-q03-a4"
+      ],
+      "explanation": "Chaque élément correspond à une étape différente de la fonction respiratoire.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque élément correspond à une étape différente de la fonction respiratoire.",
+        "commonMistake": "Attribuer toutes les fonctions aux poumons empêche de distinguer le système.",
+        "keyTakeaway": "Conduire, ventiler, échanger, mesurer.",
+        "fieldApplication": "Structurer le bilan par fonction."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque élément correspond à une étape différente de la fonction respiratoire.",
+      "common_mistake": "Attribuer toutes les fonctions aux poumons empêche de distinguer le système.",
+      "key_takeaway": "Conduire, ventiler, échanger, mesurer.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-005",
+          "K-DEA-P06-007",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l04-q336",
-      "difficulty": "medium",
-      "question": "Les échanges gazeux ont lieu dans les ______ pulmonaires.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q336",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "alvéoles"
-        ]
-      },
-      "type": "fill_blank",
-      "answers": [
-        {
-          "id": "import-b01-p04-l04-q336-accepted-01",
-          "text": "alvéoles",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l04-q336-accepted-01"
-      ]
-    },
-    {
-      "id": "import-b01-p04-l04-q337",
-      "difficulty": "hard",
-      "question": "Une baisse importante de la ventilation entraîne principalement :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q337",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l04-q337-answer-01",
-          "text": "Une diminution de l'apport en oxygène",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q337-answer-02",
-          "text": "Une augmentation de la glycémie",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q337-answer-03",
-          "text": "Une augmentation de la filtration rénale",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q337-answer-04",
-          "text": "Une augmentation du débit cardiaque",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l04-q337-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l04-q338",
-      "difficulty": "hard",
-      "question": "Une SpO₂ à 86 % est mesurée chez un patient dyspnéique. Quel mécanisme physiologique est le plus probablement perturbé ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q338",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
-      "answers": [
-        {
-          "id": "import-b01-p04-l04-q338-answer-01",
-          "text": "Les échanges gazeux pulmonaires",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q338-answer-02",
-          "text": "La digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q338-answer-03",
-          "text": "La coagulation",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l04-q338-answer-04",
-          "text": "La filtration rénale",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l04-q338-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l04-q339",
-      "difficulty": "medium",
-      "question": "Replace le trajet de l'oxygène jusqu'au sang.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q339",
-        "originalType": "ordering",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "requiredSelections": 4
-      },
+      "id": "dea-p06-l08-q04",
       "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue une évaluation respiratoire factuelle simple.",
       "answers": [
         {
-          "id": "import-b01-p04-l04-q339-step-01",
-          "text": "Air inspiré",
-          "explanation": "",
+          "id": "dea-p06-l08-q04-a1",
+          "text": "Observer le patient au repos",
+          "explanation": "L’observation clinique vient d’abord.",
           "sequenceRank": 1
         },
         {
-          "id": "import-b01-p04-l04-q339-step-02",
-          "text": "Alvéoles",
-          "explanation": "",
+          "id": "dea-p06-l08-q04-a2",
+          "text": "Compter les cycles pendant une minute",
+          "explanation": "La fréquence est mesurée.",
           "sequenceRank": 2
         },
         {
-          "id": "import-b01-p04-l04-q339-step-03",
-          "text": "Capillaires pulmonaires",
-          "explanation": "",
+          "id": "dea-p06-l08-q04-a3",
+          "text": "Qualifier rythme et amplitude",
+          "explanation": "La qualité des mouvements est décrite.",
           "sequenceRank": 3
         },
         {
-          "id": "import-b01-p04-l04-q339-step-04",
-          "text": "Hémoglobine",
-          "explanation": "",
+          "id": "dea-p06-l08-q04-a4",
+          "text": "Relever la SpO₂ si disponible",
+          "explanation": "La mesure complète le bilan.",
           "sequenceRank": 4
+        },
+        {
+          "id": "dea-p06-l08-q04-a5",
+          "text": "Transmettre les données et leur contexte",
+          "explanation": "Les faits sont communiqués ensemble.",
+          "sequenceRank": 5
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l04-q339-step-01",
-        "import-b01-p04-l04-q339-step-02",
-        "import-b01-p04-l04-q339-step-03",
-        "import-b01-p04-l04-q339-step-04"
-      ]
+        "dea-p06-l08-q04-a1",
+        "dea-p06-l08-q04-a2",
+        "dea-p06-l08-q04-a3",
+        "dea-p06-l08-q04-a4",
+        "dea-p06-l08-q04-a5"
+      ],
+      "correctAnswers": [
+        "dea-p06-l08-q04-a1",
+        "dea-p06-l08-q04-a2",
+        "dea-p06-l08-q04-a3",
+        "dea-p06-l08-q04-a4",
+        "dea-p06-l08-q04-a5"
+      ],
+      "explanation": "La séquence va de l’observation à la transmission structurée.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence va de l’observation à la transmission structurée.",
+        "commonMistake": "Commencer par l’appareil peut faire négliger le patient.",
+        "keyTakeaway": "Patient d’abord, mesure ensuite, transmission complète.",
+        "fieldApplication": "Suivre la même trame pour limiter les oublis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence va de l’observation à la transmission structurée.",
+      "common_mistake": "Commencer par l’appareil peut faire négliger le patient.",
+      "key_takeaway": "Patient d’abord, mesure ensuite, transmission complète.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l04-q340",
-      "difficulty": "medium",
-      "question": "Clique sur une alvéole pulmonaire.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l04"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l04"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L04",
-        "originalQuestionId": "Q340",
-        "originalType": "anatomy_click",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "anatomyTarget": "alveolus"
-      },
-      "type": "anatomy_location",
+      "id": "dea-p06-l08-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le lieu des échanges entre air et sang est l’interface alvéolo-______.",
       "answers": [
         {
-          "id": "hotspot-alveolus",
-          "text": "Alvéole pulmonaire",
-          "detail": "0.38,0.27",
-          "explanation": ""
+          "id": "dea-p06-l08-q05-a1",
+          "text": "capillaire",
+          "explanation": "Les capillaires pulmonaires sont au contact des alvéoles."
         },
         {
-          "id": "hotspot-right_upper_limb",
-          "text": "Membre supérieur droit",
-          "detail": "0.18,0.36",
-          "explanation": ""
+          "id": "dea-p06-l08-q05-a2",
+          "text": "pleurale",
+          "explanation": "La plèvre entoure les poumons."
         },
         {
-          "id": "hotspot-heart",
-          "text": "Cœur",
-          "detail": "0.54,0.31",
-          "explanation": ""
+          "id": "dea-p06-l08-q05-a3",
+          "text": "trachéale",
+          "explanation": "La trachée conduit l’air."
         },
         {
-          "id": "hotspot-thorax",
-          "text": "Thorax",
-          "detail": "0.5,0.31",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-spinal_cord",
-          "text": "Moelle épinière",
-          "detail": "0.5,0.27",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-stomach",
-          "text": "Estomac",
-          "detail": "0.45,0.46",
-          "explanation": ""
+          "id": "dea-p06-l08-q05-a4",
+          "text": "diaphragmatique",
+          "explanation": "Le diaphragme participe à la ventilation."
         }
       ],
-      "correctAnswer": "hotspot-alveolus"
+      "correctAnswer": "dea-p06-l08-q05-a1",
+      "explanation": "Le mot complète le nom des deux côtés de l’interface d’échange.",
+      "knowledgeIds": [
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot complète le nom des deux côtés de l’interface d’échange.",
+        "commonMistake": "Choisir une structure voisine ne suffit pas : il faut la zone en contact avec le sang.",
+        "keyTakeaway": "Alvéole côté air, capillaire côté sang.",
+        "fieldApplication": "Relier l’anatomie à la fonction d’échange."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot complète le nom des deux côtés de l’interface d’échange.",
+      "common_mistake": "Choisir une structure voisine ne suffit pas : il faut la zone en contact avec le sang.",
+      "key_takeaway": "Alvéole côté air, capillaire côté sang.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l08-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un adulte au repos présente une FR à 18/min, irrégulière et superficielle. Quelle donnée doit être transmise ?",
+      "answers": [
+        {
+          "id": "dea-p06-l08-q06-a1",
+          "text": "La valeur 18/min ainsi que le caractère irrégulier et superficiel",
+          "explanation": "Le chiffre est dans la plage adulte, mais la qualité des mouvements reste anormale à signaler."
+        },
+        {
+          "id": "dea-p06-l08-q06-a2",
+          "text": "Seulement « FR normale »",
+          "explanation": "Cette formule masque rythme et amplitude."
+        },
+        {
+          "id": "dea-p06-l08-q06-a3",
+          "text": "Seulement la SpO₂ même si elle n’a pas été mesurée",
+          "explanation": "Une donnée absente ne doit pas être inventée."
+        },
+        {
+          "id": "dea-p06-l08-q06-a4",
+          "text": "Aucune information puisque 18 est dans la plage",
+          "explanation": "Le rythme et l’amplitude imposent une transmission."
+        }
+      ],
+      "correctAnswer": "dea-p06-l08-q06-a1",
+      "explanation": "La fréquence ne doit pas effacer les caractéristiques observées.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La fréquence ne doit pas effacer les caractéristiques observées.",
+        "commonMistake": "Réduire le bilan à une plage numérique peut masquer une ventilation anormale.",
+        "keyTakeaway": "Un nombre attendu n’annule pas des signes anormaux.",
+        "fieldApplication": "Transmettre valeur, rythme, amplitude et évolution.",
+        "safetyPoint": "Ne jamais inventer une mesure non réalisée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La fréquence ne doit pas effacer les caractéristiques observées.",
+      "common_mistake": "Réduire le bilan à une plage numérique peut masquer une ventilation anormale.",
+      "key_takeaway": "Un nombre attendu n’annule pas des signes anormaux.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-011"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l08-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles données appartiennent à une synthèse respiratoire complète au niveau de cette leçon ?",
+      "answers": [
+        {
+          "id": "dea-p06-l08-q07-a1",
+          "text": "Le trajet des voies aériennes",
+          "explanation": "Il situe la conduction de l’air."
+        },
+        {
+          "id": "dea-p06-l08-q07-a2",
+          "text": "Les mouvements du diaphragme",
+          "explanation": "Ils expliquent la ventilation."
+        },
+        {
+          "id": "dea-p06-l08-q07-a3",
+          "text": "Le lieu des échanges gazeux",
+          "explanation": "Il relie alvéoles et capillaires."
+        },
+        {
+          "id": "dea-p06-l08-q07-a4",
+          "text": "La fréquence, le rythme et l’amplitude",
+          "explanation": "Ils décrivent la respiration observée."
+        },
+        {
+          "id": "dea-p06-l08-q07-a5",
+          "text": "La SpO₂ si elle est mesurée",
+          "explanation": "Elle complète l’observation."
+        },
+        {
+          "id": "dea-p06-l08-q07-a6",
+          "text": "Un diagnostic déduit d’une seule valeur",
+          "explanation": "La leçon demande des données factuelles, pas un diagnostic isolé."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l08-q07-a1",
+        "dea-p06-l08-q07-a2",
+        "dea-p06-l08-q07-a3",
+        "dea-p06-l08-q07-a4",
+        "dea-p06-l08-q07-a5"
+      ],
+      "correctAnswers": [
+        "dea-p06-l08-q07-a1",
+        "dea-p06-l08-q07-a2",
+        "dea-p06-l08-q07-a3",
+        "dea-p06-l08-q07-a4",
+        "dea-p06-l08-q07-a5"
+      ],
+      "explanation": "Les éléments sélectionnés couvrent anatomie, mécanique, échanges et paramètres.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-005",
+        "K-DEA-P06-007",
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les éléments sélectionnés couvrent anatomie, mécanique, échanges et paramètres.",
+        "commonMistake": "Chercher une conclusion unique trop tôt réduit la qualité du bilan.",
+        "keyTakeaway": "Comprendre le système puis observer et transmettre.",
+        "fieldApplication": "Utiliser une trame pour ne pas omettre une dimension."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les éléments sélectionnés couvrent anatomie, mécanique, échanges et paramètres.",
+      "common_mistake": "Chercher une conclusion unique trop tôt réduit la qualité du bilan.",
+      "key_takeaway": "Comprendre le système puis observer et transmettre.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-005",
+          "K-DEA-P06-007",
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l08-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle distinction résume correctement les deux paramètres respiratoires étudiés ?",
+      "answers": [
+        {
+          "id": "dea-p06-l08-q08-a1",
+          "text": "La fréquence compte des cycles par minute, la SpO₂ estime une saturation en pourcentage",
+          "explanation": "Les deux paramètres utilisent des unités et des méthodes différentes."
+        },
+        {
+          "id": "dea-p06-l08-q08-a2",
+          "text": "La fréquence et la SpO₂ mesurent toutes deux un volume en litres",
+          "explanation": "Aucune de ces deux données n’est un volume."
+        },
+        {
+          "id": "dea-p06-l08-q08-a3",
+          "text": "La SpO₂ compte les mouvements thoraciques",
+          "explanation": "Le comptage des mouvements donne la fréquence."
+        },
+        {
+          "id": "dea-p06-l08-q08-a4",
+          "text": "La fréquence estime directement l’oxygène du sang",
+          "explanation": "Cette estimation correspond à l’oxymètre."
+        }
+      ],
+      "correctAnswer": "dea-p06-l08-q08-a1",
+      "explanation": "Nommer la grandeur et son unité évite de confondre les deux mesures.",
+      "knowledgeIds": [
+        "K-DEA-P06-010",
+        "K-DEA-P06-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+      "sourcePages": "23-26, 71-72",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p06-l08",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Nommer la grandeur et son unité évite de confondre les deux mesures.",
+        "commonMistake": "Deux valeurs numériques affichées côte à côte peuvent sembler interchangeables.",
+        "keyTakeaway": "FR en cycles/min ; SpO₂ en pourcentage.",
+        "fieldApplication": "Transmettre chaque paramètre avec son nom et son unité."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Nommer la grandeur et son unité évite de confondre les deux mesures.",
+      "common_mistake": "Deux valeurs numériques affichées côte à côte peuvent sembler interchangeables.",
+      "key_takeaway": "FR en cycles/min ; SpO₂ en pourcentage.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23-26, 71-72",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - synthèse anatomique, physiologique et paramétrique",
+        "sourcePages": "23-26, 71-72",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-010",
+          "K-DEA-P06-012"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     }
   ]
 }

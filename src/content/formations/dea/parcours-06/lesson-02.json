@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-06",
+  "id": "dea-p06-l02",
+  "title": "Les poumons",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-06",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer les deux poumons.",
+    "Comparer leurs lobes.",
+    "Distinguer poumon, plèvre et alvéoles."
+  ],
+  "competencyIds": [
+    "body.system.respiratory",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [
+    "dea-p06-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p06-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Combien de lobes le poumon droit comporte-t-il selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q01-a1",
+          "text": "Trois lobes",
+          "explanation": "Le poumon droit est décrit avec trois lobes."
+        },
+        {
+          "id": "dea-p06-l02-q01-a2",
+          "text": "Deux lobes",
+          "explanation": "Deux lobes correspondent au poumon gauche."
+        },
+        {
+          "id": "dea-p06-l02-q01-a3",
+          "text": "Quatre lobes",
+          "explanation": "Ce nombre n’est pas indiqué pour un poumon."
+        },
+        {
+          "id": "dea-p06-l02-q01-a4",
+          "text": "Un seul lobe",
+          "explanation": "Le support décrit plusieurs lobes."
+        }
+      ],
+      "correctAnswer": "dea-p06-l02-q01-a1",
+      "explanation": "La différence droite-gauche est un repère anatomique stable du support.",
+      "knowledgeIds": [
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La différence droite-gauche est un repère anatomique stable du support.",
+        "commonMistake": "Attribuer la même organisation aux deux côtés fait perdre ce repère.",
+        "keyTakeaway": "Droit : trois ; gauche : deux.",
+        "fieldApplication": "Préciser le côté lors de la localisation d’un signe.",
+        "memoryTip": "3 à droite, 2 à gauche."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La différence droite-gauche est un repère anatomique stable du support.",
+      "common_mistake": "Attribuer la même organisation aux deux côtés fait perdre ce repère.",
+      "key_takeaway": "Droit : trois ; gauche : deux.",
+      "memory_tip": "3 à droite, 2 à gauche.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La plèvre est décrite comme une double enveloppe entourant chaque poumon.",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q02-true",
+          "text": "Vrai",
+          "explanation": "La plèvre est bien présentée comme une double enveloppe."
+        },
+        {
+          "id": "dea-p06-l02-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : cette description figure dans le support."
+        }
+      ],
+      "correctAnswer": "dea-p06-l02-q02-true",
+      "explanation": "La proposition reprend la description anatomique donnée.",
+      "knowledgeIds": [
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend la description anatomique donnée.",
+        "commonMistake": "La confondre avec l’air pulmonaire revient à prendre une enveloppe pour un conduit.",
+        "keyTakeaway": "La plèvre enveloppe le poumon.",
+        "fieldApplication": "Utiliser le terme pour localiser sans attribuer de diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend la description anatomique donnée.",
+      "common_mistake": "La confondre avec l’air pulmonaire revient à prendre une enveloppe pour un conduit.",
+      "key_takeaway": "La plèvre enveloppe le poumon.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément pulmonaire à sa caractéristique.",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q03-a1",
+          "text": "Poumon droit",
+          "match": "Trois lobes",
+          "explanation": "Il comporte trois lobes."
+        },
+        {
+          "id": "dea-p06-l02-q03-a2",
+          "text": "Poumon gauche",
+          "match": "Deux lobes",
+          "explanation": "Il comporte deux lobes."
+        },
+        {
+          "id": "dea-p06-l02-q03-a3",
+          "text": "Plèvre",
+          "match": "Double enveloppe",
+          "explanation": "Elle entoure chaque poumon."
+        },
+        {
+          "id": "dea-p06-l02-q03-a4",
+          "text": "Alvéoles",
+          "match": "Lieu des échanges gazeux",
+          "explanation": "Elles sont au contact des capillaires."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l02-q03-a1",
+        "dea-p06-l02-q03-a2",
+        "dea-p06-l02-q03-a3",
+        "dea-p06-l02-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l02-q03-a1",
+        "dea-p06-l02-q03-a2",
+        "dea-p06-l02-q03-a3",
+        "dea-p06-l02-q03-a4"
+      ],
+      "explanation": "Les associations distinguent organisation anatomique et fonction.",
+      "knowledgeIds": [
+        "K-DEA-P06-004",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations distinguent organisation anatomique et fonction.",
+        "commonMistake": "Confondre plèvre et alvéoles mélange enveloppe et échanges.",
+        "keyTakeaway": "Lobes pour les poumons, plèvre autour, alvéoles pour les échanges.",
+        "fieldApplication": "Décrire précisément le côté et la structure concernés."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations distinguent organisation anatomique et fonction.",
+      "common_mistake": "Confondre plèvre et alvéoles mélange enveloppe et échanges.",
+      "key_takeaway": "Lobes pour les poumons, plèvre autour, alvéoles pour les échanges.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Classe ces niveaux du plus global au plus fin dans l’arbre respiratoire.",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q04-a1",
+          "text": "Poumon",
+          "explanation": "Il contient les ramifications.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p06-l02-q04-a2",
+          "text": "Bronche principale",
+          "explanation": "Elle entre dans le poumon.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p06-l02-q04-a3",
+          "text": "Bronchiole",
+          "explanation": "Elle prolonge les bronches.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p06-l02-q04-a4",
+          "text": "Alvéole",
+          "explanation": "Elle termine l’arbre et participe aux échanges.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l02-q04-a1",
+        "dea-p06-l02-q04-a2",
+        "dea-p06-l02-q04-a3",
+        "dea-p06-l02-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p06-l02-q04-a1",
+        "dea-p06-l02-q04-a2",
+        "dea-p06-l02-q04-a3",
+        "dea-p06-l02-q04-a4"
+      ],
+      "explanation": "L’ordre va de l’organe vers ses ramifications terminales.",
+      "knowledgeIds": [
+        "K-DEA-P06-003",
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre va de l’organe vers ses ramifications terminales.",
+        "commonMistake": "Classer par taille visuelle sans suivre l’arbre anatomique crée des inversions.",
+        "keyTakeaway": "Poumon, bronche, bronchiole, alvéole.",
+        "fieldApplication": "Situer le niveau exact mentionné dans une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre va de l’organe vers ses ramifications terminales.",
+      "common_mistake": "Classer par taille visuelle sans suivre l’arbre anatomique crée des inversions.",
+      "key_takeaway": "Poumon, bronche, bronchiole, alvéole.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-003",
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le poumon gauche comporte ______ lobes.",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q05-a1",
+          "text": "deux",
+          "explanation": "Le support attribue deux lobes au poumon gauche."
+        },
+        {
+          "id": "dea-p06-l02-q05-a2",
+          "text": "trois",
+          "explanation": "Trois lobes correspondent au poumon droit."
+        },
+        {
+          "id": "dea-p06-l02-q05-a3",
+          "text": "quatre",
+          "explanation": "Ce nombre ne correspond pas au support."
+        },
+        {
+          "id": "dea-p06-l02-q05-a4",
+          "text": "cinq",
+          "explanation": "Cinq est le total des lobes des deux poumons, pas celui du gauche."
+        }
+      ],
+      "correctAnswer": "dea-p06-l02-q05-a1",
+      "explanation": "La latéralité permet de choisir le bon nombre.",
+      "knowledgeIds": [
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La latéralité permet de choisir le bon nombre.",
+        "commonMistake": "Additionner les lobes des deux poumons donne cinq et répond à une autre question.",
+        "keyTakeaway": "Gauche deux, droit trois.",
+        "fieldApplication": "Toujours associer un repère thoracique à son côté."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La latéralité permet de choisir le bon nombre.",
+      "common_mistake": "Additionner les lobes des deux poumons donne cinq et répond à une autre question.",
+      "key_takeaway": "Gauche deux, droit trois.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q06",
+      "type": "clinical_case",
+      "difficulty": "easy",
+      "question": "Lors d’un bilan, une douleur est montrée sur l’hémithorax droit. Quelle formulation reste anatomiquement précise et prudente ?",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q06-a1",
+          "text": "Douleur localisée à l’hémithorax droit, sans conclure sur l’organe atteint",
+          "explanation": "La localisation est transmissible et ne transforme pas le signe en diagnostic."
+        },
+        {
+          "id": "dea-p06-l02-q06-a2",
+          "text": "Douleur du poumon droit certaine",
+          "explanation": "La localisation seule ne prouve pas l’organe atteint."
+        },
+        {
+          "id": "dea-p06-l02-q06-a3",
+          "text": "Atteinte de la plèvre confirmée",
+          "explanation": "Aucun élément ne confirme cette structure."
+        },
+        {
+          "id": "dea-p06-l02-q06-a4",
+          "text": "Douleur alvéolaire",
+          "explanation": "Une alvéole ne peut pas être localisée ainsi par le patient."
+        }
+      ],
+      "correctAnswer": "dea-p06-l02-q06-a1",
+      "explanation": "La description factuelle distingue ce qui est observé de ce qui serait interprété.",
+      "knowledgeIds": [
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La description factuelle distingue ce qui est observé de ce qui serait interprété.",
+        "commonMistake": "Nommer un organe comme cause certaine dépasse les informations disponibles.",
+        "keyTakeaway": "Localiser précisément sans diagnostiquer.",
+        "fieldApplication": "Transmettre côté, région, contexte et signes associés.",
+        "safetyPoint": "Ne jamais déduire l’organe atteint de la seule zone douloureuse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La description factuelle distingue ce qui est observé de ce qui serait interprété.",
+      "common_mistake": "Nommer un organe comme cause certaine dépasse les informations disponibles.",
+      "key_takeaway": "Localiser précisément sans diagnostiquer.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles propositions décrivent correctement les poumons selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q07-a1",
+          "text": "Ils sont deux",
+          "explanation": "Le support décrit deux poumons."
+        },
+        {
+          "id": "dea-p06-l02-q07-a2",
+          "text": "Ils sont situés dans la cage thoracique",
+          "explanation": "Ils occupent le thorax."
+        },
+        {
+          "id": "dea-p06-l02-q07-a3",
+          "text": "Ils sont entourés par une plèvre",
+          "explanation": "Chaque poumon est entouré d’une double enveloppe."
+        },
+        {
+          "id": "dea-p06-l02-q07-a4",
+          "text": "Ils possèdent chacun trois lobes",
+          "explanation": "Le poumon gauche n’en possède que deux."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p06-l02-q07-a1",
+        "dea-p06-l02-q07-a2",
+        "dea-p06-l02-q07-a3"
+      ],
+      "correctAnswers": [
+        "dea-p06-l02-q07-a1",
+        "dea-p06-l02-q07-a2",
+        "dea-p06-l02-q07-a3"
+      ],
+      "explanation": "Les trois propositions réunissent nombre, situation et enveloppe.",
+      "knowledgeIds": [
+        "K-DEA-P06-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les trois propositions réunissent nombre, situation et enveloppe.",
+        "commonMistake": "Généraliser les trois lobes du côté droit au côté gauche est l’erreur classique.",
+        "keyTakeaway": "Deux poumons dans le thorax, entourés par la plèvre.",
+        "fieldApplication": "Utiliser droite et gauche dans toute description pulmonaire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les trois propositions réunissent nombre, situation et enveloppe.",
+      "common_mistake": "Généraliser les trois lobes du côté droit au côté gauche est l’erreur classique.",
+      "key_takeaway": "Deux poumons dans le thorax, entourés par la plèvre.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-004"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p06-l02-q08",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel élément constitue le lieu principal des échanges gazeux pulmonaires ?",
+      "answers": [
+        {
+          "id": "dea-p06-l02-q08-a1",
+          "text": "Les alvéoles",
+          "explanation": "Les échanges ont lieu entre alvéoles et capillaires."
+        },
+        {
+          "id": "dea-p06-l02-q08-a2",
+          "text": "La plèvre",
+          "explanation": "Elle entoure le poumon."
+        },
+        {
+          "id": "dea-p06-l02-q08-a3",
+          "text": "La trachée",
+          "explanation": "Elle conduit l’air."
+        },
+        {
+          "id": "dea-p06-l02-q08-a4",
+          "text": "Le pharynx",
+          "explanation": "Il constitue un passage commun."
+        }
+      ],
+      "correctAnswer": "dea-p06-l02-q08-a1",
+      "explanation": "Les alvéoles mettent l’air au contact du réseau capillaire.",
+      "knowledgeIds": [
+        "K-DEA-P06-001",
+        "K-DEA-P06-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+      "sourcePages": "23, 24",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.respiratory",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p06-l02",
+      "plannedParcoursIds": [
+        "parcours-06"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les alvéoles mettent l’air au contact du réseau capillaire.",
+        "commonMistake": "Choisir un conduit parce qu’il contient de l’air ne suffit pas à en faire un lieu d’échange.",
+        "keyTakeaway": "Alvéoles : échanges ; voies aériennes : passage.",
+        "fieldApplication": "Relier structure et fonction dans le bilan respiratoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les alvéoles mettent l’air au contact du réseau capillaire.",
+      "common_mistake": "Choisir un conduit parce qu’il contient de l’air ne suffit pas à en faire un lieu d’échange.",
+      "key_takeaway": "Alvéoles : échanges ; voies aériennes : passage.",
+      "tags": [
+        "dea",
+        "parcours-06",
+        "respiration"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 23, 24",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p06-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil respiratoire - poumons, lobes, plèvre et alvéoles",
+        "sourcePages": "23, 24",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P06-001",
+          "K-DEA-P06-007"
+        ],
+        "competencyIds": [
+          "body.system.respiratory",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-06"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}
