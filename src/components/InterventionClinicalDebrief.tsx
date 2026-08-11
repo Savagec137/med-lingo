@@ -123,6 +123,9 @@ export function InterventionClinicalDebrief({
                 <div className="mt-1 text-xs text-slate-500">
                   {reference.knowledgeId} · {reference.sourceDocument} · p. {reference.sourcePages}
                 </div>
+                <code className="mt-2 block break-all text-[10px] leading-relaxed text-slate-500">
+                  {reference.repositoryPath}
+                </code>
               </li>
             ))}
           </ul>

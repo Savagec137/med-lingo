@@ -139,6 +139,7 @@ export interface InterventionScenario {
 export interface DecisionRecord {
   stepId: string;
   phase: InterventionPhase;
+  interactionFormat?: InterventionQuestionFormat;
   choiceId: string;
   choiceLabel: string;
   selectedChoiceIds?: string[];

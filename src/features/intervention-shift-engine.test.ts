@@ -21,6 +21,7 @@ import {
   isPersistedInterventionShift,
   randomFloat,
   requestNextShiftCall,
+  restoreInterventionShift,
   selectTravelDecision,
   startInterventionShift,
   validateAftralCatalog,
@@ -153,6 +154,17 @@ test("le flux appel, qualification, trajet et arrivée démarre la mission exist
   assert.equal(shift.activeCall?.missionSession?.status, "active");
   assert.ok(shift.activeCall?.missionStartedAtMs);
   assert.ok((shift.activeCall?.missionSession?.simulatedTimeSeconds ?? 0) > 0);
+  assert.equal(
+    shift.activeCall?.clinicalState?.overallState,
+    shift.activeCall?.missionSession?.patientState,
+  );
+});
+
+test("la décision de trajet est réellement transmise au moteur clinique", () => {
+  const shift = startPlayableShift("travel-clinical");
+  const scenario = INTERVENTION_SCENARIOS.find((item) => item.id === shift.activeCall?.scenarioId);
+  assert.ok(scenario);
+  assert.equal(shift.activeCall?.clinicalState?.overallState, scenario.startingPatient + 4);
 });
 
 test("la fin d'une intervention n'est comptabilisée qu'une fois", () => {
@@ -199,5 +211,22 @@ test("la validation de persistance rejette un snapshot incomplet", () => {
   assert.equal(
     isPersistedInterventionShift({ ...valid, vigilance: 120 } as InterventionShiftSession),
     false,
+  );
+});
+
+test("une mission clinique en cours reprend après sérialisation locale", () => {
+  const active = startPlayableShift("resume-active-mission");
+  const serialized = JSON.parse(JSON.stringify(active)) as unknown;
+  const restored = restoreInterventionShift(serialized, INTERVENTION_SCENARIOS);
+  assert.ok(restored);
+  assert.equal(restored.status, "mission");
+  assert.equal(restored.activeCall?.scenarioId, active.activeCall?.scenarioId);
+  assert.equal(
+    restored.activeCall?.missionSession?.currentStepId,
+    active.activeCall?.missionSession?.currentStepId,
+  );
+  assert.deepEqual(
+    restored.activeCall?.clinicalState,
+    JSON.parse(JSON.stringify(active.activeCall?.clinicalState)),
   );
 });
