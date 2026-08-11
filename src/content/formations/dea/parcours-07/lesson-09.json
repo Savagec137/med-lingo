@@ -1,0 +1,842 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-boss",
+  "title": "Boss — Système digestif",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 12,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "boss",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Reconstituer le trajet complet des aliments.",
+    "Relier chaque organe à son rôle général.",
+    "Distinguer digestion, absorption et évacuation."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organization.organ-to-system"
+  ],
+  "prerequisiteIds": [
+    "dea-p07-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Valider les bases du système digestif au niveau DEA.",
+    "scenario": "L’apprenant suit le trajet d’un aliment, identifie les organes et explique le devenir des nutriments et des résidus.",
+    "tasks": [
+      "Reconstituer le trajet digestif.",
+      "Relier les glandes à leurs sécrétions.",
+      "Distinguer absorption et transit terminal."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-boss-q01",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Dans une vue d’ensemble, quel enchaînement fonctionnel décrit le mieux l’appareil digestif ?",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q01-a1",
+          "text": "Préparer et transformer les aliments, absorber les nutriments, puis évacuer les éléments non absorbés",
+          "explanation": "Cette succession résume les étapes décrites dans le support."
+        },
+        {
+          "id": "dea-p07-boss-q01-a2",
+          "text": "Absorber tous les aliments dans l’œsophage puis stocker les résidus dans le foie",
+          "explanation": "L’œsophage est un conduit et le foie n’est pas un réservoir de résidus."
+        },
+        {
+          "id": "dea-p07-boss-q01-a3",
+          "text": "Produire la bile dans la bouche puis l’évacuer par le pancréas",
+          "explanation": "Les organes et les sécrétions sont inversés."
+        },
+        {
+          "id": "dea-p07-boss-q01-a4",
+          "text": "Transformer les aliments uniquement dans le côlon",
+          "explanation": "La transformation commence dès la bouche et se poursuit avant le côlon."
+        }
+      ],
+      "correctAnswer": "dea-p07-boss-q01-a1",
+      "explanation": "La réponse relie transformation, absorption et évacuation dans leur ordre fonctionnel.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse relie transformation, absorption et évacuation dans leur ordre fonctionnel.",
+        "commonMistake": "Réduire la digestion à un seul organe fait oublier la continuité du système.",
+        "keyTakeaway": "Transformer, absorber, évacuer les résidus.",
+        "fieldApplication": "Présenter un fonctionnement global avant les détails anatomiques."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse relie transformation, absorption et évacuation dans leur ordre fonctionnel.",
+      "common_mistake": "Réduire la digestion à un seul organe fait oublier la continuité du système.",
+      "key_takeaway": "Transformer, absorber, évacuer les résidus.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q02",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet complet d’un aliment dans le tube digestif.",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q02-a1",
+          "text": "Bouche",
+          "explanation": "Préparation initiale.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-boss-q02-a2",
+          "text": "Pharynx",
+          "explanation": "Carrefour aérodigestif.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-boss-q02-a3",
+          "text": "Œsophage",
+          "explanation": "Conduit vers l’estomac.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-boss-q02-a4",
+          "text": "Estomac",
+          "explanation": "Brassage et imprégnation.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p07-boss-q02-a5",
+          "text": "Intestin grêle",
+          "explanation": "Poursuite de la digestion et absorption.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "dea-p07-boss-q02-a6",
+          "text": "Gros intestin",
+          "explanation": "Transit des éléments non absorbés.",
+          "sequenceRank": 6
+        },
+        {
+          "id": "dea-p07-boss-q02-a7",
+          "text": "Évacuation",
+          "explanation": "Fin du trajet des résidus.",
+          "sequenceRank": 7
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-boss-q02-a1",
+        "dea-p07-boss-q02-a2",
+        "dea-p07-boss-q02-a3",
+        "dea-p07-boss-q02-a4",
+        "dea-p07-boss-q02-a5",
+        "dea-p07-boss-q02-a6",
+        "dea-p07-boss-q02-a7"
+      ],
+      "correctAnswers": [
+        "dea-p07-boss-q02-a1",
+        "dea-p07-boss-q02-a2",
+        "dea-p07-boss-q02-a3",
+        "dea-p07-boss-q02-a4",
+        "dea-p07-boss-q02-a5",
+        "dea-p07-boss-q02-a6",
+        "dea-p07-boss-q02-a7"
+      ],
+      "explanation": "L’ordre suit les organes réellement traversés par les aliments.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit les organes réellement traversés par les aliments.",
+        "commonMistake": "Insérer le foie ou le pancréas dans le conduit confond glandes annexes et tube digestif.",
+        "keyTakeaway": "Bouche à gros intestin : un trajet continu.",
+        "fieldApplication": "S’appuyer sur cet ordre pour localiser une plainte digestive."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit les organes réellement traversés par les aliments.",
+      "common_mistake": "Insérer le foie ou le pancréas dans le conduit confond glandes annexes et tube digestif.",
+      "key_takeaway": "Bouche à gros intestin : un trajet continu.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006",
+          "K-DEA-P07-007",
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à son rôle principal dans le support.",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q03-a1",
+          "text": "Œsophage",
+          "match": "Passage des aliments",
+          "explanation": "Il conduit vers l’estomac."
+        },
+        {
+          "id": "dea-p07-boss-q03-a2",
+          "text": "Estomac",
+          "match": "Brassage et suc gastrique",
+          "explanation": "Il mélange et imprègne le contenu."
+        },
+        {
+          "id": "dea-p07-boss-q03-a3",
+          "text": "Foie",
+          "match": "Sécrétion de bile",
+          "explanation": "La bile rejoint l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-boss-q03-a4",
+          "text": "Pancréas",
+          "match": "Suc pancréatique et insuline",
+          "explanation": "Les deux productions sont citées."
+        },
+        {
+          "id": "dea-p07-boss-q03-a5",
+          "text": "Intestin grêle",
+          "match": "Absorption des nutriments",
+          "explanation": "Sa paroi permet le passage vers sang ou lymphe."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-boss-q03-a1",
+        "dea-p07-boss-q03-a2",
+        "dea-p07-boss-q03-a3",
+        "dea-p07-boss-q03-a4",
+        "dea-p07-boss-q03-a5"
+      ],
+      "correctAnswers": [
+        "dea-p07-boss-q03-a1",
+        "dea-p07-boss-q03-a2",
+        "dea-p07-boss-q03-a3",
+        "dea-p07-boss-q03-a4",
+        "dea-p07-boss-q03-a5"
+      ],
+      "explanation": "Les associations couvrent conduit, poche, glandes et surface d’absorption.",
+      "knowledgeIds": [
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-008",
+        "K-DEA-P07-010",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations couvrent conduit, poche, glandes et surface d’absorption.",
+        "commonMistake": "Attribuer la même fonction à plusieurs organes empêche de comprendre leur complémentarité.",
+        "keyTakeaway": "Un organe, un rôle général précis dans le trajet.",
+        "fieldApplication": "Employer la bonne structure dans une transmission anatomique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations couvrent conduit, poche, glandes et surface d’absorption.",
+      "common_mistake": "Attribuer la même fonction à plusieurs organes empêche de comprendre leur complémentarité.",
+      "key_takeaway": "Un organe, un rôle général précis dans le trajet.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-005",
+          "K-DEA-P07-006",
+          "K-DEA-P07-008",
+          "K-DEA-P07-010",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q04",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Pendant une révision, un apprenant doit nommer la première partie intestinale qui reçoit des canaux venant de la vésicule biliaire et du pancréas. Quelle réponse est attendue ?",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q04-a1",
+          "text": "Le duodénum",
+          "explanation": "Il est la première partie de l’intestin grêle et reçoit ces canaux."
+        },
+        {
+          "id": "dea-p07-boss-q04-a2",
+          "text": "Le cardia",
+          "explanation": "Le cardia est l’entrée de l’estomac."
+        },
+        {
+          "id": "dea-p07-boss-q04-a3",
+          "text": "L’œsophage",
+          "explanation": "L’œsophage précède l’estomac."
+        },
+        {
+          "id": "dea-p07-boss-q04-a4",
+          "text": "Le côlon",
+          "explanation": "Le côlon vient après l’intestin grêle."
+        }
+      ],
+      "correctAnswer": "dea-p07-boss-q04-a1",
+      "explanation": "Le duodénum est le point d’arrivée intestinal des canaux cités.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-009",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le duodénum est le point d’arrivée intestinal des canaux cités.",
+        "commonMistake": "Choisir un repère gastrique ou colique confond la succession anatomique.",
+        "keyTakeaway": "Duodénum : début du grêle, arrivée biliaire et pancréatique.",
+        "fieldApplication": "Identifier ce repère sur un schéma avant de décrire le trajet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le duodénum est le point d’arrivée intestinal des canaux cités.",
+      "common_mistake": "Choisir un repère gastrique ou colique confond la succession anatomique.",
+      "key_takeaway": "Duodénum : début du grêle, arrivée biliaire et pancréatique.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-009",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q05",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le péritoine protège les viscères mais n’est pas parcouru par les aliments.",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q05-true",
+          "text": "Vrai",
+          "explanation": "La fonction protectrice et l’absence de transit sont correctement distinguées."
+        },
+        {
+          "id": "dea-p07-boss-q05-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le péritoine n’est pas une portion du tube digestif."
+        }
+      ],
+      "correctAnswer": "dea-p07-boss-q05-true",
+      "explanation": "Le support le présente comme une enveloppe protectrice de la cavité abdominale.",
+      "knowledgeIds": [
+        "K-DEA-P07-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support le présente comme une enveloppe protectrice de la cavité abdominale.",
+        "commonMistake": "Le confondre avec le tube digestif lui attribue une fonction de conduit absente.",
+        "keyTakeaway": "Péritoine : protection, pas transit.",
+        "fieldApplication": "Distinguer enveloppe abdominale et organes digestifs."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support le présente comme une enveloppe protectrice de la cavité abdominale.",
+      "common_mistake": "Le confondre avec le tube digestif lui attribue une fonction de conduit absente.",
+      "key_takeaway": "Péritoine : protection, pas transit.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-012"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q06",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles associations entre une structure et une sécrétion sont correctes ?",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q06-a1",
+          "text": "Glandes salivaires — salive",
+          "explanation": "La salive contient une enzyme agissant sur les amidons."
+        },
+        {
+          "id": "dea-p07-boss-q06-a2",
+          "text": "Estomac — suc gastrique",
+          "explanation": "Ses glandes sécrètent ce suc très acide."
+        },
+        {
+          "id": "dea-p07-boss-q06-a3",
+          "text": "Foie — bile",
+          "explanation": "Le foie sécrète la bile."
+        },
+        {
+          "id": "dea-p07-boss-q06-a4",
+          "text": "Pancréas — suc pancréatique",
+          "explanation": "Le pancréas sécrète ce suc."
+        },
+        {
+          "id": "dea-p07-boss-q06-a5",
+          "text": "Vésicule biliaire — fabrication de la bile",
+          "explanation": "La vésicule stocke la bile."
+        },
+        {
+          "id": "dea-p07-boss-q06-a6",
+          "text": "Œsophage — insuline",
+          "explanation": "L’insuline est fabriquée par le pancréas."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-boss-q06-a1",
+        "dea-p07-boss-q06-a2",
+        "dea-p07-boss-q06-a3",
+        "dea-p07-boss-q06-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-boss-q06-a1",
+        "dea-p07-boss-q06-a2",
+        "dea-p07-boss-q06-a3",
+        "dea-p07-boss-q06-a4"
+      ],
+      "explanation": "Les quatre associations exactes relient chaque sécrétion à son origine.",
+      "knowledgeIds": [
+        "K-DEA-P07-003",
+        "K-DEA-P07-006",
+        "K-DEA-P07-008",
+        "K-DEA-P07-009",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre associations exactes relient chaque sécrétion à son origine.",
+        "commonMistake": "Production et stockage de la bile restent le piège principal.",
+        "keyTakeaway": "Salive, suc gastrique, bile, suc pancréatique : quatre origines distinctes.",
+        "fieldApplication": "Vérifier systématiquement le verbe produire, sécréter ou stocker."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre associations exactes relient chaque sécrétion à son origine.",
+      "common_mistake": "Production et stockage de la bile restent le piège principal.",
+      "key_takeaway": "Salive, suc gastrique, bile, suc pancréatique : quatre origines distinctes.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-003",
+          "K-DEA-P07-006",
+          "K-DEA-P07-008",
+          "K-DEA-P07-009",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q07",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Complète : le passage des nutriments dans le sang ou la lymphe s’appelle l’______ intestinale.",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q07-a1",
+          "text": "absorption",
+          "explanation": "Le support donne ce terme pour le passage à travers la paroi de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-boss-q07-a2",
+          "text": "évacuation",
+          "explanation": "Elle concerne la fin du trajet des résidus."
+        },
+        {
+          "id": "dea-p07-boss-q07-a3",
+          "text": "salivation",
+          "explanation": "Elle a lieu dans la bouche."
+        },
+        {
+          "id": "dea-p07-boss-q07-a4",
+          "text": "ventilation",
+          "explanation": "Elle appartient au système respiratoire."
+        }
+      ],
+      "correctAnswer": "dea-p07-boss-q07-a1",
+      "explanation": "L’absorption suit la transformation digestive des nutriments.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’absorption suit la transformation digestive des nutriments.",
+        "commonMistake": "La confondre avec évacuation inverse le devenir des éléments absorbés et non absorbés.",
+        "keyTakeaway": "Absorption : vers sang ou lymphe.",
+        "fieldApplication": "Employer ce terme lorsque le devenir des nutriments est expliqué."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’absorption suit la transformation digestive des nutriments.",
+      "common_mistake": "La confondre avec évacuation inverse le devenir des éléments absorbés et non absorbés.",
+      "key_takeaway": "Absorption : vers sang ou lymphe.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-boss-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel énoncé décrit correctement la fin du trajet digestif ?",
+      "answers": [
+        {
+          "id": "dea-p07-boss-q08-a1",
+          "text": "Les éléments non absorbés deviennent des matières fécales, transitent dans le gros intestin puis sont évacués",
+          "explanation": "Cette succession reprend le texte source."
+        },
+        {
+          "id": "dea-p07-boss-q08-a2",
+          "text": "Tous les nutriments restent dans le côlon",
+          "explanation": "Les nutriments absorbés passent vers le sang ou la lymphe."
+        },
+        {
+          "id": "dea-p07-boss-q08-a3",
+          "text": "Le contenu retourne du côlon vers l’estomac",
+          "explanation": "Le trajet ne revient pas en arrière dans cette description."
+        },
+        {
+          "id": "dea-p07-boss-q08-a4",
+          "text": "Le pancréas évacue les matières fécales",
+          "explanation": "Le pancréas produit des sécrétions, il n’assure pas l’évacuation."
+        }
+      ],
+      "correctAnswer": "dea-p07-boss-q08-a1",
+      "explanation": "La réponse distingue les résidus non absorbés des nutriments absorbés.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-boss",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse distingue les résidus non absorbés des nutriments absorbés.",
+        "commonMistake": "Confondre côlon et surface d’absorption conduit à y laisser tous les nutriments.",
+        "keyTakeaway": "Non absorbé : gros intestin puis évacuation.",
+        "fieldApplication": "Décrire le transit sans ajouter une cause non établie."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse distingue les résidus non absorbés des nutriments absorbés.",
+      "common_mistake": "Confondre côlon et surface d’absorption conduit à y laisser tous les nutriments.",
+      "key_takeaway": "Non absorbé : gros intestin puis évacuation.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - synthèse du trajet et des fonctions",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

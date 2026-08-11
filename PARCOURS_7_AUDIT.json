@@ -1,0 +1,81 @@
+{
+  "auditId": "parcours-07-audit-2026-08-11",
+  "generatedAt": "2026-08-11T09:35:33.376Z",
+  "scope": {
+    "formationId": "dea",
+    "blocId": "bloc-02",
+    "parcoursId": "parcours-07",
+    "title": "Système digestif"
+  },
+  "baseline": {
+    "plannedLessons": 8,
+    "existingOfficialPlayableQuestions": 0,
+    "archivedUnverifiedImportedQuestions": 9,
+    "existingBossQuestions": 0,
+    "missingQuestionsBeforeGeneration": 72
+  },
+  "result": {
+    "status": "PASS",
+    "errorCount": 0,
+    "warningCount": 1,
+    "knowledgeCount": 13,
+    "lessonCount": 8,
+    "lessonQuestionCount": 64,
+    "bossQuestionCount": 8,
+    "totalQuestionCount": 72,
+    "typeDistribution": {
+      "mcq": 18,
+      "true_false_contextual": 9,
+      "association": 9,
+      "ordering": 9,
+      "fill_blank": 9,
+      "clinical_case": 9,
+      "multiple_choice": 9
+    },
+    "difficultyDistribution": {
+      "easy": 24,
+      "medium": 48
+    },
+    "coveragePercent": 100,
+    "toolchain": "passed",
+    "toolchainDetails": {
+      "tests": "111/111 passed",
+      "productionBuild": "passed",
+      "scopedLint": "passed",
+      "globalLint": "blocked by pre-existing CRLF formatting errors outside the Parcours 7 scope"
+    }
+  },
+  "sources": [
+    {
+      "documentId": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "title": "Module 4 — Appréciation de l’état clinique du patient",
+      "sourceType": "training_source",
+      "contentStatus": "content_verified",
+      "pagesUsed": [
+        39,
+        40,
+        41
+      ],
+      "excludedPages": [
+        42
+      ],
+      "excludedReason": "L’IMC et le vocabulaire médical de la page 42 sont hors du périmètre du Parcours 7."
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "code": "SOURCE_COLON_CLAIM_REVIEW",
+      "entityId": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "message": "L’affirmation simplifiée de la page 40 sur la cellulose n’a pas été transformée en question et nécessite une validation pédagogique préalable."
+    }
+  ],
+  "info": [
+    {
+      "code": "SOURCE_SELECTION",
+      "entityId": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "message": "B2.M4 est le seul PDF local directement pertinent et suffisamment précis pour ce parcours fondamental."
+    }
+  ],
+  "nextRecommendedParcours": "parcours-08"
+}

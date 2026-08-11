@@ -92,6 +92,39 @@
       "source_pages": "23-26, 71-72",
       "source_version": "Version 1 - Août 2022",
       "validation_status": "to_validate"
+    },
+    {
+      "boss_id": "dea-p07-boss",
+      "parcours_id": "parcours-07",
+      "lesson_file": "src/content/formations/dea/parcours-07/lesson-09.json",
+      "question_ids": [
+        "dea-p07-boss-q01",
+        "dea-p07-boss-q02",
+        "dea-p07-boss-q03",
+        "dea-p07-boss-q04",
+        "dea-p07-boss-q05",
+        "dea-p07-boss-q06",
+        "dea-p07-boss-q07",
+        "dea-p07-boss-q08"
+      ],
+      "knowledge_references": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-011",
+        "K-DEA-P07-013",
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-008",
+        "K-DEA-P07-010",
+        "K-DEA-P07-009",
+        "K-DEA-P07-012",
+        "K-DEA-P07-003"
+      ],
+      "source_document": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "source_pages": "39-41",
+      "source_version": "Version 1 - Août 2022",
+      "validation_status": "to_validate"
     }
   ]
 }

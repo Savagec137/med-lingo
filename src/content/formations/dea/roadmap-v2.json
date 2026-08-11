@@ -711,10 +711,10 @@
         "Comprendre la digestion.",
         "Comprendre l'absorption des nutriments."
       ],
-      "difficulty": null,
-      "difficultyLabel": null,
-      "estimatedMinutes": null,
-      "estimatedDurationLabel": null,
+      "difficulty": "easy",
+      "difficultyLabel": "Débutant",
+      "estimatedMinutes": 75,
+      "estimatedDurationLabel": "≈ 75 minutes",
       "xp": null,
       "badge": ": Explorateur Digestif",
       "chest": null,
@@ -779,8 +779,6 @@
       "contentStatus": "partial",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],

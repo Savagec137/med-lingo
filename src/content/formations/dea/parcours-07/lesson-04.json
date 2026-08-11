@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l04",
+  "title": "Le foie et le pancréas",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Distinguer les rôles du foie, de la vésicule biliaire et du pancréas.",
+    "Relier leurs sécrétions au duodénum.",
+    "Éviter les confusions entre production et stockage."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel organe sécrète la bile selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q01-a1",
+          "text": "Le foie",
+          "explanation": "Le foie est la glande digestive qui sécrète la bile."
+        },
+        {
+          "id": "dea-p07-l04-q01-a2",
+          "text": "La vésicule biliaire",
+          "explanation": "Elle stocke la bile mais ne la fabrique pas."
+        },
+        {
+          "id": "dea-p07-l04-q01-a3",
+          "text": "Le pancréas",
+          "explanation": "Il sécrète le suc pancréatique et fabrique l’insuline."
+        },
+        {
+          "id": "dea-p07-l04-q01-a4",
+          "text": "L’estomac",
+          "explanation": "Il sécrète le suc gastrique."
+        }
+      ],
+      "correctAnswer": "dea-p07-l04-q01-a1",
+      "explanation": "Le support attribue explicitement la sécrétion de bile au foie.",
+      "knowledgeIds": [
+        "K-DEA-P07-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support attribue explicitement la sécrétion de bile au foie.",
+        "commonMistake": "Confondre foie et vésicule revient à confondre production et stockage.",
+        "keyTakeaway": "Foie produit la bile ; vésicule la stocke.",
+        "fieldApplication": "Employer le bon organe lors d’une description anatomique.",
+        "memoryTip": "Foie fabrique, vésicule veille sur la réserve."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support attribue explicitement la sécrétion de bile au foie.",
+      "common_mistake": "Confondre foie et vésicule revient à confondre production et stockage.",
+      "key_takeaway": "Foie produit la bile ; vésicule la stocke.",
+      "memory_tip": "Foie fabrique, vésicule veille sur la réserve.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-008"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La vésicule biliaire emmagasine la bile.",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition correspond au rôle de la vésicule biliaire."
+        },
+        {
+          "id": "dea-p07-l04-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : la vésicule emmagasine bien la bile."
+        }
+      ],
+      "correctAnswer": "dea-p07-l04-q02-true",
+      "explanation": "Cette fonction de stockage est celle décrite dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette fonction de stockage est celle décrite dans le support.",
+        "commonMistake": "Lui attribuer la fabrication de bile méconnaît le rôle du foie.",
+        "keyTakeaway": "Vésicule biliaire : stockage de la bile.",
+        "fieldApplication": "Distinguer organe producteur et réservoir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette fonction de stockage est celle décrite dans le support.",
+      "common_mistake": "Lui attribuer la fabrication de bile méconnaît le rôle du foie.",
+      "key_takeaway": "Vésicule biliaire : stockage de la bile.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-009"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à la fonction citée.",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q03-a1",
+          "text": "Foie",
+          "match": "Sécrète la bile",
+          "explanation": "Cette sécrétion est attribuée au foie."
+        },
+        {
+          "id": "dea-p07-l04-q03-a2",
+          "text": "Vésicule biliaire",
+          "match": "Emmagasine la bile",
+          "explanation": "Elle assure le stockage."
+        },
+        {
+          "id": "dea-p07-l04-q03-a3",
+          "text": "Pancréas",
+          "match": "Sécrète le suc pancréatique",
+          "explanation": "Cette sécrétion rejoint le duodénum."
+        },
+        {
+          "id": "dea-p07-l04-q03-a4",
+          "text": "Duodénum",
+          "match": "Reçoit les canaux biliaire et pancréatique",
+          "explanation": "Il est la première partie de l’intestin grêle."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l04-q03-a1",
+        "dea-p07-l04-q03-a2",
+        "dea-p07-l04-q03-a3",
+        "dea-p07-l04-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l04-q03-a1",
+        "dea-p07-l04-q03-a2",
+        "dea-p07-l04-q03-a3",
+        "dea-p07-l04-q03-a4"
+      ],
+      "explanation": "Les associations relient glandes, réservoir et lieu d’arrivée des canaux.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-008",
+        "K-DEA-P07-009",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations relient glandes, réservoir et lieu d’arrivée des canaux.",
+        "commonMistake": "Attribuer toutes les sécrétions au même organe efface leurs rôles distincts.",
+        "keyTakeaway": "Foie-bile, vésicule-stockage, pancréas-suc, duodénum-réception.",
+        "fieldApplication": "Identifier la structure exacte sur un schéma digestif."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations relient glandes, réservoir et lieu d’arrivée des canaux.",
+      "common_mistake": "Attribuer toutes les sécrétions au même organe efface leurs rôles distincts.",
+      "key_takeaway": "Foie-bile, vésicule-stockage, pancréas-suc, duodénum-réception.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-008",
+          "K-DEA-P07-009",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le parcours simplifié de la bile décrit par le support.",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q04-a1",
+          "text": "Sécrétion par le foie",
+          "explanation": "Le foie produit la bile.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l04-q04-a2",
+          "text": "Stockage dans la vésicule biliaire",
+          "explanation": "La vésicule l’emmagasine.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l04-q04-a3",
+          "text": "Passage par le canal biliaire",
+          "explanation": "Le canal provient de la vésicule.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l04-q04-a4",
+          "text": "Arrivée dans le duodénum",
+          "explanation": "Le duodénum reçoit cette sécrétion.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l04-q04-a1",
+        "dea-p07-l04-q04-a2",
+        "dea-p07-l04-q04-a3",
+        "dea-p07-l04-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l04-q04-a1",
+        "dea-p07-l04-q04-a2",
+        "dea-p07-l04-q04-a3",
+        "dea-p07-l04-q04-a4"
+      ],
+      "explanation": "La séquence distingue production, stockage et arrivée intestinale.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-008",
+        "K-DEA-P07-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence distingue production, stockage et arrivée intestinale.",
+        "commonMistake": "Commencer par le duodénum ou le pancréas inverse le parcours retenu.",
+        "keyTakeaway": "Foie, vésicule, canal, duodénum.",
+        "fieldApplication": "Reconstituer le trajet d’une sécrétion digestive."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence distingue production, stockage et arrivée intestinale.",
+      "common_mistake": "Commencer par le duodénum ou le pancréas inverse le parcours retenu.",
+      "key_takeaway": "Foie, vésicule, canal, duodénum.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-008",
+          "K-DEA-P07-009"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le ______ sécrète le suc pancréatique et fabrique l’insuline.",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q05-a1",
+          "text": "pancréas",
+          "explanation": "Les deux productions sont attribuées au pancréas."
+        },
+        {
+          "id": "dea-p07-l04-q05-a2",
+          "text": "foie",
+          "explanation": "Le foie sécrète la bile."
+        },
+        {
+          "id": "dea-p07-l04-q05-a3",
+          "text": "côlon",
+          "explanation": "Le côlon reçoit les éléments non absorbés."
+        },
+        {
+          "id": "dea-p07-l04-q05-a4",
+          "text": "œsophage",
+          "explanation": "L’œsophage conduit les aliments vers l’estomac."
+        }
+      ],
+      "correctAnswer": "dea-p07-l04-q05-a1",
+      "explanation": "Le pancréas est le seul organe auquel le support attribue ces deux productions.",
+      "knowledgeIds": [
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le pancréas est le seul organe auquel le support attribue ces deux productions.",
+        "commonMistake": "Choisir le foie confond bile et suc pancréatique.",
+        "keyTakeaway": "Pancréas : suc pancréatique et insuline.",
+        "fieldApplication": "Distinguer les glandes digestives lors d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le pancréas est le seul organe auquel le support attribue ces deux productions.",
+      "common_mistake": "Choisir le foie confond bile et suc pancréatique.",
+      "key_takeaway": "Pancréas : suc pancréatique et insuline.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Sur un schéma, l’apprenant doit distinguer l’organe qui produit la bile du petit sac qui la stocke. Quelle paire est correcte ?",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q06-a1",
+          "text": "Foie : production ; vésicule biliaire : stockage",
+          "explanation": "La paire respecte les rôles décrits."
+        },
+        {
+          "id": "dea-p07-l04-q06-a2",
+          "text": "Vésicule biliaire : production ; foie : stockage",
+          "explanation": "Les rôles sont inversés."
+        },
+        {
+          "id": "dea-p07-l04-q06-a3",
+          "text": "Pancréas : production de bile ; estomac : stockage",
+          "explanation": "Aucun de ces rôles ne correspond au support."
+        },
+        {
+          "id": "dea-p07-l04-q06-a4",
+          "text": "Côlon : production ; œsophage : stockage",
+          "explanation": "Ces organes ne produisent ni ne stockent la bile."
+        }
+      ],
+      "correctAnswer": "dea-p07-l04-q06-a1",
+      "explanation": "La réponse distingue précisément le foie et la vésicule biliaire.",
+      "knowledgeIds": [
+        "K-DEA-P07-008",
+        "K-DEA-P07-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse distingue précisément le foie et la vésicule biliaire.",
+        "commonMistake": "Leur proximité anatomique peut conduire à inverser leurs fonctions.",
+        "keyTakeaway": "Production par le foie, stockage dans la vésicule.",
+        "fieldApplication": "Vérifier fonction et localisation avant de nommer une structure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse distingue précisément le foie et la vésicule biliaire.",
+      "common_mistake": "Leur proximité anatomique peut conduire à inverser leurs fonctions.",
+      "key_takeaway": "Production par le foie, stockage dans la vésicule.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-008",
+          "K-DEA-P07-009"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles productions sont attribuées au pancréas dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q07-a1",
+          "text": "Le suc pancréatique",
+          "explanation": "Il participe à la digestion dans l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l04-q07-a2",
+          "text": "L’insuline",
+          "explanation": "Le support cite également sa fabrication."
+        },
+        {
+          "id": "dea-p07-l04-q07-a3",
+          "text": "La bile",
+          "explanation": "Elle est sécrétée par le foie."
+        },
+        {
+          "id": "dea-p07-l04-q07-a4",
+          "text": "La salive",
+          "explanation": "Elle est associée aux glandes salivaires."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l04-q07-a1",
+        "dea-p07-l04-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p07-l04-q07-a1",
+        "dea-p07-l04-q07-a2"
+      ],
+      "explanation": "Les deux productions sont explicitement rattachées au pancréas.",
+      "knowledgeIds": [
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux productions sont explicitement rattachées au pancréas.",
+        "commonMistake": "Bile et salive sont d’autres sécrétions digestives.",
+        "keyTakeaway": "Pancréas : suc pancréatique et insuline.",
+        "fieldApplication": "Ne pas réduire le pancréas à une seule fonction."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux productions sont explicitement rattachées au pancréas.",
+      "common_mistake": "Bile et salive sont d’autres sécrétions digestives.",
+      "key_takeaway": "Pancréas : suc pancréatique et insuline.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l04-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Où débouchent les canaux provenant de la vésicule biliaire et du pancréas ?",
+      "answers": [
+        {
+          "id": "dea-p07-l04-q08-a1",
+          "text": "Dans le duodénum",
+          "explanation": "Le duodénum est la première partie de l’intestin grêle où arrivent ces canaux."
+        },
+        {
+          "id": "dea-p07-l04-q08-a2",
+          "text": "Dans l’œsophage",
+          "explanation": "L’œsophage est situé avant l’estomac."
+        },
+        {
+          "id": "dea-p07-l04-q08-a3",
+          "text": "Dans le cardia",
+          "explanation": "Le cardia est l’entrée de l’estomac."
+        },
+        {
+          "id": "dea-p07-l04-q08-a4",
+          "text": "Dans le côlon",
+          "explanation": "Le côlon vient après l’intestin grêle."
+        }
+      ],
+      "correctAnswer": "dea-p07-l04-q08-a1",
+      "explanation": "Le duodénum reçoit les sécrétions biliaire et pancréatique.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-009",
+        "K-DEA-P07-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+      "sourcePages": "39, 40",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l04",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le duodénum reçoit les sécrétions biliaire et pancréatique.",
+        "commonMistake": "Choisir un autre segment du trajet confond la chronologie digestive.",
+        "keyTakeaway": "Duodénum : arrivée des canaux biliaire et pancréatique.",
+        "fieldApplication": "Relier les glandes annexes à leur lieu d’action digestif."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le duodénum reçoit les sécrétions biliaire et pancréatique.",
+      "common_mistake": "Choisir un autre segment du trajet confond la chronologie digestive.",
+      "key_takeaway": "Duodénum : arrivée des canaux biliaire et pancréatique.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 40",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - glandes digestives, foie, vésicule biliaire et pancréas",
+        "sourcePages": "39, 40",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-009",
+          "K-DEA-P07-010"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

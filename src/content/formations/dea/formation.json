@@ -717,8 +717,8 @@
       "theme": "blue",
       "stage": "core_dea",
       "pedagogicalScope": "foundation",
-      "difficulty": null,
-      "estimatedMinutes": null,
+      "difficulty": "easy",
+      "estimatedMinutes": 75,
       "xp": null,
       "badge": ": Explorateur Digestif",
       "chest": null,
@@ -727,22 +727,76 @@
       "prerequisiteIds": [
         "dea-p06-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
-        "difficulty",
-        "duration",
         "xp",
         "chest"
       ],
       "sourceAnchor": "Parcours 7 — Système digestif",
       "lessons": [
         {
+          "id": "dea-p07-l01",
+          "title": "La bouche",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-01.json"
+        },
+        {
+          "id": "dea-p07-l02",
+          "title": "L’œsophage",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-02.json"
+        },
+        {
+          "id": "dea-p07-l03",
+          "title": "L’estomac",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-03.json"
+        },
+        {
+          "id": "dea-p07-l04",
+          "title": "Le foie et le pancréas",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-04.json"
+        },
+        {
+          "id": "dea-p07-l05",
+          "title": "L’intestin grêle",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-05.json"
+        },
+        {
+          "id": "dea-p07-l06",
+          "title": "Le côlon",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-06.json"
+        },
+        {
+          "id": "dea-p07-l07",
+          "title": "La digestion complète",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-07/lesson-07.json"
+        },
+        {
           "id": "dea-p07-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-07/lesson-08.json"
+        },
+        {
+          "id": "dea-p07-boss",
+          "title": "Boss — Système digestif",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-07/lesson-09.json"
         }
       ]
     },

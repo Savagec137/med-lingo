@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l06",
+  "title": "Le côlon",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire la place générale du côlon.",
+    "Identifier le devenir des éléments non absorbés.",
+    "Distinguer intestin grêle et gros intestin."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l06-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle longueur approximative le support attribue-t-il au côlon ?",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q01-a1",
+          "text": "1,5 mètre",
+          "explanation": "Cette longueur est donnée dans la description du côlon."
+        },
+        {
+          "id": "dea-p07-l06-q01-a2",
+          "text": "25 centimètres",
+          "explanation": "Cette longueur est donnée pour l’œsophage."
+        },
+        {
+          "id": "dea-p07-l06-q01-a3",
+          "text": "8 mètres",
+          "explanation": "Cette longueur est donnée pour l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l06-q01-a4",
+          "text": "2 litres",
+          "explanation": "Il s’agit d’une capacité attribuée à l’estomac."
+        }
+      ],
+      "correctAnswer": "dea-p07-l06-q01-a1",
+      "explanation": "Le côlon est décrit comme un tube d’environ 1,5 mètre.",
+      "knowledgeIds": [
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le côlon est décrit comme un tube d’environ 1,5 mètre.",
+        "commonMistake": "Les mesures des autres organes digestifs sont facilement interverties.",
+        "keyTakeaway": "Côlon : environ 1,5 mètre.",
+        "fieldApplication": "Reconnaître l’organe sur un schéma anatomique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le côlon est décrit comme un tube d’environ 1,5 mètre.",
+      "common_mistake": "Les mesures des autres organes digestifs sont facilement interverties.",
+      "key_takeaway": "Côlon : environ 1,5 mètre.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Les aliments non absorbés deviennent des matières fécales qui transitent dans le gros intestin avant leur évacuation.",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q02-true",
+          "text": "Vrai",
+          "explanation": "La progression vers le gros intestin puis l’évacuation est correcte."
+        },
+        {
+          "id": "dea-p07-l06-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support décrit explicitement ce transit."
+        }
+      ],
+      "correctAnswer": "dea-p07-l06-q02-true",
+      "explanation": "La proposition reprend le devenir des éléments non absorbés décrit page 41.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La proposition reprend le devenir des éléments non absorbés décrit page 41.",
+        "commonMistake": "Les confondre avec les nutriments absorbés inverse leur destination.",
+        "keyTakeaway": "Absorbé vers sang ou lymphe ; non absorbé vers le gros intestin.",
+        "fieldApplication": "Décrire clairement le transit lors d’un bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La proposition reprend le devenir des éléments non absorbés décrit page 41.",
+      "common_mistake": "Les confondre avec les nutriments absorbés inverse leur destination.",
+      "key_takeaway": "Absorbé vers sang ou lymphe ; non absorbé vers le gros intestin.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque repère du gros intestin à la description correspondante.",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q03-a1",
+          "text": "Côlon",
+          "match": "Tube d’environ 1,5 mètre",
+          "explanation": "La mesure est donnée par le support."
+        },
+        {
+          "id": "dea-p07-l06-q03-a2",
+          "text": "Appendice",
+          "match": "Porté par le cul-de-sac initial",
+          "explanation": "Le début du côlon est décrit ainsi."
+        },
+        {
+          "id": "dea-p07-l06-q03-a3",
+          "text": "Matières fécales",
+          "match": "Éléments non absorbés",
+          "explanation": "Elles poursuivent leur transit dans le gros intestin."
+        },
+        {
+          "id": "dea-p07-l06-q03-a4",
+          "text": "Évacuation",
+          "match": "Fin du trajet digestif",
+          "explanation": "Elle suit le transit dans le gros intestin."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l06-q03-a1",
+        "dea-p07-l06-q03-a2",
+        "dea-p07-l06-q03-a3",
+        "dea-p07-l06-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l06-q03-a1",
+        "dea-p07-l06-q03-a2",
+        "dea-p07-l06-q03-a3",
+        "dea-p07-l06-q03-a4"
+      ],
+      "explanation": "Les associations relient le côlon, son repère initial et le devenir des résidus.",
+      "knowledgeIds": [
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations relient le côlon, son repère initial et le devenir des résidus.",
+        "commonMistake": "Placer l’appendice dans l’œsophage ou l’estomac rompt la topographie.",
+        "keyTakeaway": "Côlon : gros intestin, résidus, évacuation.",
+        "fieldApplication": "Employer des repères simples et exacts dans une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations relient le côlon, son repère initial et le devenir des résidus.",
+      "common_mistake": "Placer l’appendice dans l’œsophage ou l’estomac rompt la topographie.",
+      "key_takeaway": "Côlon : gros intestin, résidus, évacuation.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le devenir des éléments non absorbés.",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q04-a1",
+          "text": "Fin du passage dans l’intestin grêle",
+          "explanation": "Les nutriments absorbables ont traversé la paroi.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l06-q04-a2",
+          "text": "Arrivée dans le gros intestin",
+          "explanation": "Les éléments non absorbés poursuivent le trajet.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l06-q04-a3",
+          "text": "Constitution des matières fécales",
+          "explanation": "Le support nomme ainsi les aliments non absorbés.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l06-q04-a4",
+          "text": "Évacuation",
+          "explanation": "Elle termine le transit digestif.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l06-q04-a1",
+        "dea-p07-l06-q04-a2",
+        "dea-p07-l06-q04-a3",
+        "dea-p07-l06-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l06-q04-a1",
+        "dea-p07-l06-q04-a2",
+        "dea-p07-l06-q04-a3",
+        "dea-p07-l06-q04-a4"
+      ],
+      "explanation": "La séquence suit la progression des résidus après l’intestin grêle.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La séquence suit la progression des résidus après l’intestin grêle.",
+        "commonMistake": "Placer l’évacuation avant le gros intestin inverse le trajet.",
+        "keyTakeaway": "Intestin grêle, gros intestin, matières fécales, évacuation.",
+        "fieldApplication": "Décrire l’étape du transit sans interprétation diagnostique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La séquence suit la progression des résidus après l’intestin grêle.",
+      "common_mistake": "Placer l’évacuation avant le gros intestin inverse le trajet.",
+      "key_takeaway": "Intestin grêle, gros intestin, matières fécales, évacuation.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : les éléments non absorbés transitent dans le ______ intestin.",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q05-a1",
+          "text": "gros",
+          "explanation": "Le gros intestin reçoit ces éléments."
+        },
+        {
+          "id": "dea-p07-l06-q05-a2",
+          "text": "petit",
+          "explanation": "Le support emploie l’expression intestin grêle, pas petit intestin ici."
+        },
+        {
+          "id": "dea-p07-l06-q05-a3",
+          "text": "respiratoire",
+          "explanation": "Ce terme ne décrit pas une portion intestinale."
+        },
+        {
+          "id": "dea-p07-l06-q05-a4",
+          "text": "urinaire",
+          "explanation": "Ce terme appartient à un autre système."
+        }
+      ],
+      "correctAnswer": "dea-p07-l06-q05-a1",
+      "explanation": "Le gros intestin est l’étape suivante pour les éléments non absorbés.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le gros intestin est l’étape suivante pour les éléments non absorbés.",
+        "commonMistake": "Confondre intestin grêle et gros intestin mélange absorption et transit terminal.",
+        "keyTakeaway": "Non absorbé : gros intestin.",
+        "fieldApplication": "Situer correctement une information sur le transit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le gros intestin est l’étape suivante pour les éléments non absorbés.",
+      "common_mistake": "Confondre intestin grêle et gros intestin mélange absorption et transit terminal.",
+      "key_takeaway": "Non absorbé : gros intestin.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Lors d’un bilan, le patient rapporte une modification récente du transit. Quelle information est la plus factuelle à transmettre ?",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q06-a1",
+          "text": "La nature observée du transit, sa fréquence, son début et la présence éventuelle de sang rapportée ou observée",
+          "explanation": "Cette formulation décrit des faits et leur évolution sans poser de diagnostic."
+        },
+        {
+          "id": "dea-p07-l06-q06-a2",
+          "text": "Un diagnostic certain de maladie du côlon",
+          "explanation": "Les seules informations de transit ne suffisent pas à conclure."
+        },
+        {
+          "id": "dea-p07-l06-q06-a3",
+          "text": "Une atteinte respiratoire confirmée",
+          "explanation": "Le transit concerne le système digestif."
+        },
+        {
+          "id": "dea-p07-l06-q06-a4",
+          "text": "Aucune information puisque le transit n’est jamais utile",
+          "explanation": "Le support cite ces variations comme éléments de surveillance."
+        }
+      ],
+      "correctAnswer": "dea-p07-l06-q06-a1",
+      "explanation": "Une transmission utile décrit ce qui est observé, son début et son évolution.",
+      "knowledgeIds": [
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Digestion - surveillance du transit",
+      "sourcePages": "41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une transmission utile décrit ce qui est observé, son début et son évolution.",
+        "commonMistake": "Nommer une maladie sans éléments suffisants transforme l’observation en diagnostic.",
+        "keyTakeaway": "Transit : décrire, dater, quantifier, signaler les anomalies.",
+        "fieldApplication": "Transmettre au régulateur les faits pertinents et les signes associés.",
+        "safetyPoint": "La présence de sang ou une altération clinique doit être signalée rapidement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une transmission utile décrit ce qui est observé, son début et son évolution.",
+      "common_mistake": "Nommer une maladie sans éléments suffisants transforme l’observation en diagnostic.",
+      "key_takeaway": "Transit : décrire, dater, quantifier, signaler les anomalies.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Digestion - surveillance du transit",
+        "sourcePages": "41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles variations du transit le support cite-t-il comme pathologiques ou importantes à surveiller ?",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q07-a1",
+          "text": "La diarrhée",
+          "explanation": "Elle est citée parmi les variations pathologiques."
+        },
+        {
+          "id": "dea-p07-l06-q07-a2",
+          "text": "La constipation",
+          "explanation": "Elle est citée parmi les variations pathologiques."
+        },
+        {
+          "id": "dea-p07-l06-q07-a3",
+          "text": "La présence de sang dans les selles",
+          "explanation": "Elle est citée comme anomalie importante."
+        },
+        {
+          "id": "dea-p07-l06-q07-a4",
+          "text": "L’évacuation des gaz",
+          "explanation": "Elle fait partie de la surveillance du transit décrite."
+        },
+        {
+          "id": "dea-p07-l06-q07-a5",
+          "text": "La couleur de l’iris",
+          "explanation": "Elle ne décrit pas le transit digestif."
+        },
+        {
+          "id": "dea-p07-l06-q07-a6",
+          "text": "La fréquence des clignements",
+          "explanation": "Elle n’appartient pas à la surveillance digestive citée."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l06-q07-a1",
+        "dea-p07-l06-q07-a2",
+        "dea-p07-l06-q07-a3",
+        "dea-p07-l06-q07-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l06-q07-a1",
+        "dea-p07-l06-q07-a2",
+        "dea-p07-l06-q07-a3",
+        "dea-p07-l06-q07-a4"
+      ],
+      "explanation": "Les quatre éléments figurent dans le passage consacré à la surveillance du transit.",
+      "knowledgeIds": [
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Digestion - surveillance du transit",
+      "sourcePages": "41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les quatre éléments figurent dans le passage consacré à la surveillance du transit.",
+        "commonMistake": "Ajouter des observations sans rapport avec la fonction digestive dilue le bilan.",
+        "keyTakeaway": "Transit : selles, sang éventuel et gaz font partie des éléments à décrire.",
+        "fieldApplication": "Recueillir des informations précises sans poser de diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les quatre éléments figurent dans le passage consacré à la surveillance du transit.",
+      "common_mistake": "Ajouter des observations sans rapport avec la fonction digestive dilue le bilan.",
+      "key_takeaway": "Transit : selles, sang éventuel et gaz font partie des éléments à décrire.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Digestion - surveillance du transit",
+        "sourcePages": "41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l06-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle distinction entre intestin grêle et gros intestin est correcte ?",
+      "answers": [
+        {
+          "id": "dea-p07-l06-q08-a1",
+          "text": "L’intestin grêle permet l’absorption des nutriments ; le gros intestin reçoit les éléments non absorbés",
+          "explanation": "La distinction reprend les étapes successives décrites."
+        },
+        {
+          "id": "dea-p07-l06-q08-a2",
+          "text": "Le gros intestin reçoit la bile avant l’estomac",
+          "explanation": "La bile arrive dans le duodénum après l’estomac."
+        },
+        {
+          "id": "dea-p07-l06-q08-a3",
+          "text": "L’intestin grêle est le sphincter d’entrée de l’estomac",
+          "explanation": "Le cardia est ce sphincter."
+        },
+        {
+          "id": "dea-p07-l06-q08-a4",
+          "text": "Les deux termes désignent exactement le même organe",
+          "explanation": "Ils désignent deux portions différentes du trajet."
+        }
+      ],
+      "correctAnswer": "dea-p07-l06-q08-a1",
+      "explanation": "La réponse distingue absorption et transit des résidus.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+      "sourcePages": "40, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l06",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse distingue absorption et transit des résidus.",
+        "commonMistake": "Les confondre empêche de suivre le devenir des nutriments.",
+        "keyTakeaway": "Grêle : absorption ; gros : résidus non absorbés.",
+        "fieldApplication": "Situer une plainte ou une fonction dans la bonne portion intestinale."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse distingue absorption et transit des résidus.",
+      "common_mistake": "Les confondre empêche de suivre le devenir des nutriments.",
+      "key_takeaway": "Grêle : absorption ; gros : résidus non absorbés.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 40, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - côlon, gros intestin et transit",
+        "sourcePages": "40, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

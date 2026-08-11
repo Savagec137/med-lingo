@@ -1,0 +1,814 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l07",
+  "title": "La digestion complète",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Reconstituer le trajet complet des aliments.",
+    "Définir digestion et nutriments.",
+    "Distinguer absorption et évacuation."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organization.organ-to-system"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Comment le support définit-il la digestion ?",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q01-a1",
+          "text": "La transformation de certains aliments en petites molécules grâce aux enzymes des sucs digestifs",
+          "explanation": "Cette définition reprend le mécanisme et le lieu général décrits."
+        },
+        {
+          "id": "dea-p07-l07-q01-a2",
+          "text": "Le simple passage des aliments dans l’œsophage",
+          "explanation": "Le passage ne suffit pas à définir la transformation digestive."
+        },
+        {
+          "id": "dea-p07-l07-q01-a3",
+          "text": "Le stockage de la bile dans le foie",
+          "explanation": "La bile est stockée dans la vésicule et ce n’est pas la définition de la digestion."
+        },
+        {
+          "id": "dea-p07-l07-q01-a4",
+          "text": "L’évacuation immédiate de tous les aliments",
+          "explanation": "L’évacuation concerne les éléments non absorbés à la fin du trajet."
+        }
+      ],
+      "correctAnswer": "dea-p07-l07-q01-a1",
+      "explanation": "La digestion est une transformation enzymatique dans le tube digestif.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La digestion est une transformation enzymatique dans le tube digestif.",
+        "commonMistake": "La confondre avec transport, stockage ou évacuation réduit le mécanisme à une seule étape.",
+        "keyTakeaway": "Digestion = transformation par les enzymes digestives.",
+        "fieldApplication": "Expliquer le mécanisme avec des termes simples et exacts."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La digestion est une transformation enzymatique dans le tube digestif.",
+      "common_mistake": "La confondre avec transport, stockage ou évacuation réduit le mécanisme à une seule étape.",
+      "key_takeaway": "Digestion = transformation par les enzymes digestives.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Les nutriments sont des molécules utilisables par l’organisme.",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q02-true",
+          "text": "Vrai",
+          "explanation": "La définition correspond au texte source."
+        },
+        {
+          "id": "dea-p07-l07-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support emploie exactement cette fonction générale."
+        }
+      ],
+      "correctAnswer": "dea-p07-l07-q02-true",
+      "explanation": "Cette définition est donnée directement dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette définition est donnée directement dans le support.",
+        "commonMistake": "Les confondre avec les matières fécales inverse leur devenir.",
+        "keyTakeaway": "Nutriments : molécules utilisables par l’organisme.",
+        "fieldApplication": "Distinguer nutriment absorbé et résidu non absorbé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette définition est donnée directement dans le support.",
+      "common_mistake": "Les confondre avec les matières fécales inverse leur devenir.",
+      "key_takeaway": "Nutriments : molécules utilisables par l’organisme.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque notion à sa définition fonctionnelle.",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q03-a1",
+          "text": "Digestion",
+          "match": "Transformation en petites molécules",
+          "explanation": "Elle utilise des enzymes des sucs digestifs."
+        },
+        {
+          "id": "dea-p07-l07-q03-a2",
+          "text": "Nutriment",
+          "match": "Molécule utilisable par l’organisme",
+          "explanation": "Il peut être absorbé."
+        },
+        {
+          "id": "dea-p07-l07-q03-a3",
+          "text": "Absorption intestinale",
+          "match": "Passage vers le sang ou la lymphe",
+          "explanation": "Elle se fait à travers la paroi de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l07-q03-a4",
+          "text": "Matière fécale",
+          "match": "Élément non absorbé",
+          "explanation": "Elle poursuit son transit dans le gros intestin."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l07-q03-a1",
+        "dea-p07-l07-q03-a2",
+        "dea-p07-l07-q03-a3",
+        "dea-p07-l07-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l07-q03-a1",
+        "dea-p07-l07-q03-a2",
+        "dea-p07-l07-q03-a3",
+        "dea-p07-l07-q03-a4"
+      ],
+      "explanation": "Les associations suivent transformation, utilisation, passage et élimination.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations suivent transformation, utilisation, passage et élimination.",
+        "commonMistake": "Confondre nutriment et résidu inverse la logique digestive.",
+        "keyTakeaway": "Transformer, absorber, puis évacuer ce qui ne l’est pas.",
+        "fieldApplication": "Employer ces termes dans une explication structurée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations suivent transformation, utilisation, passage et élimination.",
+      "common_mistake": "Confondre nutriment et résidu inverse la logique digestive.",
+      "key_takeaway": "Transformer, absorber, puis évacuer ce qui ne l’est pas.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet anatomique complet d’un aliment.",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q04-a1",
+          "text": "Bouche",
+          "explanation": "La préparation initiale commence ici.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l07-q04-a2",
+          "text": "Pharynx",
+          "explanation": "Il suit la déglutition.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l07-q04-a3",
+          "text": "Œsophage",
+          "explanation": "Il conduit vers l’estomac.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l07-q04-a4",
+          "text": "Estomac",
+          "explanation": "Il brasse et imprègne le contenu.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p07-l07-q04-a5",
+          "text": "Intestin grêle",
+          "explanation": "La digestion se poursuit et les nutriments sont absorbés.",
+          "sequenceRank": 5
+        },
+        {
+          "id": "dea-p07-l07-q04-a6",
+          "text": "Gros intestin",
+          "explanation": "Il reçoit les éléments non absorbés.",
+          "sequenceRank": 6
+        },
+        {
+          "id": "dea-p07-l07-q04-a7",
+          "text": "Évacuation",
+          "explanation": "Elle termine le trajet des résidus.",
+          "sequenceRank": 7
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l07-q04-a1",
+        "dea-p07-l07-q04-a2",
+        "dea-p07-l07-q04-a3",
+        "dea-p07-l07-q04-a4",
+        "dea-p07-l07-q04-a5",
+        "dea-p07-l07-q04-a6",
+        "dea-p07-l07-q04-a7"
+      ],
+      "correctAnswers": [
+        "dea-p07-l07-q04-a1",
+        "dea-p07-l07-q04-a2",
+        "dea-p07-l07-q04-a3",
+        "dea-p07-l07-q04-a4",
+        "dea-p07-l07-q04-a5",
+        "dea-p07-l07-q04-a6",
+        "dea-p07-l07-q04-a7"
+      ],
+      "explanation": "L’ordre reprend la continuité du tube digestif.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre reprend la continuité du tube digestif.",
+        "commonMistake": "Intercaler le foie ou le pancréas dans le conduit confond organes annexes et organes traversés.",
+        "keyTakeaway": "Bouche, pharynx, œsophage, estomac, grêle, gros intestin, évacuation.",
+        "fieldApplication": "Suivre ce trajet pour situer précisément une plainte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre reprend la continuité du tube digestif.",
+      "common_mistake": "Intercaler le foie ou le pancréas dans le conduit confond organes annexes et organes traversés.",
+      "key_takeaway": "Bouche, pharynx, œsophage, estomac, grêle, gros intestin, évacuation.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006",
+          "K-DEA-P07-007",
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : la digestion a lieu dans le tube digestif grâce à des ______ contenues dans les sucs digestifs.",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q05-a1",
+          "text": "enzymes",
+          "explanation": "Les enzymes permettent la transformation décrite."
+        },
+        {
+          "id": "dea-p07-l07-q05-a2",
+          "text": "vertèbres",
+          "explanation": "Elles appartiennent au squelette."
+        },
+        {
+          "id": "dea-p07-l07-q05-a3",
+          "text": "alvéoles",
+          "explanation": "Elles appartiennent à l’appareil respiratoire."
+        },
+        {
+          "id": "dea-p07-l07-q05-a4",
+          "text": "valves cardiaques",
+          "explanation": "Elles appartiennent au cœur."
+        }
+      ],
+      "correctAnswer": "dea-p07-l07-q05-a1",
+      "explanation": "Les enzymes des sucs digestifs assurent la transformation en petites molécules.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les enzymes des sucs digestifs assurent la transformation en petites molécules.",
+        "commonMistake": "Choisir une structure d’un autre système ne décrit pas le mécanisme chimique.",
+        "keyTakeaway": "Enzymes digestives : transformation des aliments.",
+        "fieldApplication": "Différencier agent de transformation et organe traversé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les enzymes des sucs digestifs assurent la transformation en petites molécules.",
+      "common_mistake": "Choisir une structure d’un autre système ne décrit pas le mécanisme chimique.",
+      "key_takeaway": "Enzymes digestives : transformation des aliments.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Un patient demande où vont les nutriments après leur passage dans l’intestin grêle. Quelle réponse anatomique est conforme au support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q06-a1",
+          "text": "Ils passent dans le sang ou dans la lymphe",
+          "explanation": "Le support décrit ces deux voies après l’absorption intestinale."
+        },
+        {
+          "id": "dea-p07-l07-q06-a2",
+          "text": "Ils retournent tous dans l’œsophage",
+          "explanation": "Le trajet digestif ne revient pas vers l’œsophage."
+        },
+        {
+          "id": "dea-p07-l07-q06-a3",
+          "text": "Ils sont tous stockés dans la vésicule biliaire",
+          "explanation": "La vésicule stocke la bile, pas les nutriments."
+        },
+        {
+          "id": "dea-p07-l07-q06-a4",
+          "text": "Ils deviennent tous des matières fécales",
+          "explanation": "Seuls les éléments non absorbés poursuivent ce trajet."
+        }
+      ],
+      "correctAnswer": "dea-p07-l07-q06-a1",
+      "explanation": "L’absorption conduit les nutriments vers le sang ou la lymphe.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’absorption conduit les nutriments vers le sang ou la lymphe.",
+        "commonMistake": "Dire que tout devient matière fécale ignore l’étape d’absorption.",
+        "keyTakeaway": "Nutriments absorbés : sang ou lymphe.",
+        "fieldApplication": "Expliquer simplement le devenir des nutriments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’absorption conduit les nutriments vers le sang ou la lymphe.",
+      "common_mistake": "Dire que tout devient matière fécale ignore l’étape d’absorption.",
+      "key_takeaway": "Nutriments absorbés : sang ou lymphe.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels éléments font partie du trajet réellement parcouru par les aliments ?",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q07-a1",
+          "text": "La bouche",
+          "explanation": "Elle reçoit et prépare les aliments."
+        },
+        {
+          "id": "dea-p07-l07-q07-a2",
+          "text": "L’œsophage",
+          "explanation": "Il les conduit vers l’estomac."
+        },
+        {
+          "id": "dea-p07-l07-q07-a3",
+          "text": "L’estomac",
+          "explanation": "Il les brasse et les imprègne."
+        },
+        {
+          "id": "dea-p07-l07-q07-a4",
+          "text": "L’intestin grêle",
+          "explanation": "La digestion et l’absorption s’y poursuivent."
+        },
+        {
+          "id": "dea-p07-l07-q07-a5",
+          "text": "Le gros intestin",
+          "explanation": "Il reçoit les éléments non absorbés."
+        },
+        {
+          "id": "dea-p07-l07-q07-a6",
+          "text": "Le foie",
+          "explanation": "Il sécrète la bile mais les aliments ne le traversent pas."
+        },
+        {
+          "id": "dea-p07-l07-q07-a7",
+          "text": "Le pancréas",
+          "explanation": "Il sécrète un suc vers le duodénum mais n’est pas traversé par les aliments."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l07-q07-a1",
+        "dea-p07-l07-q07-a2",
+        "dea-p07-l07-q07-a3",
+        "dea-p07-l07-q07-a4",
+        "dea-p07-l07-q07-a5"
+      ],
+      "correctAnswers": [
+        "dea-p07-l07-q07-a1",
+        "dea-p07-l07-q07-a2",
+        "dea-p07-l07-q07-a3",
+        "dea-p07-l07-q07-a4",
+        "dea-p07-l07-q07-a5"
+      ],
+      "explanation": "Les réponses exactes appartiennent au conduit parcouru par les aliments.",
+      "knowledgeIds": [
+        "K-DEA-P07-001",
+        "K-DEA-P07-002",
+        "K-DEA-P07-005",
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les réponses exactes appartiennent au conduit parcouru par les aliments.",
+        "commonMistake": "Foie et pancréas participent par leurs sécrétions sans être traversés.",
+        "keyTakeaway": "Distinguer tube digestif et glandes digestives annexes.",
+        "fieldApplication": "Identifier si une structure est traversée ou si elle agit à distance par une sécrétion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les réponses exactes appartiennent au conduit parcouru par les aliments.",
+      "common_mistake": "Foie et pancréas participent par leurs sécrétions sans être traversés.",
+      "key_takeaway": "Distinguer tube digestif et glandes digestives annexes.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-001",
+          "K-DEA-P07-002",
+          "K-DEA-P07-005",
+          "K-DEA-P07-006",
+          "K-DEA-P07-007",
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l07-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle affirmation décrit correctement le devenir des aliments non absorbés ?",
+      "answers": [
+        {
+          "id": "dea-p07-l07-q08-a1",
+          "text": "Ils deviennent des matières fécales et transitent dans le gros intestin avant évacuation",
+          "explanation": "Cette succession est explicitement donnée."
+        },
+        {
+          "id": "dea-p07-l07-q08-a2",
+          "text": "Ils passent tous dans la lymphe",
+          "explanation": "Seuls les nutriments absorbés suivent cette voie."
+        },
+        {
+          "id": "dea-p07-l07-q08-a3",
+          "text": "Ils sont stockés dans le pancréas",
+          "explanation": "Le pancréas ne stocke pas les résidus alimentaires."
+        },
+        {
+          "id": "dea-p07-l07-q08-a4",
+          "text": "Ils retournent dans la bouche",
+          "explanation": "Le trajet ne revient pas à son point de départ."
+        }
+      ],
+      "correctAnswer": "dea-p07-l07-q08-a1",
+      "explanation": "La réponse suit la fin du trajet digestif des résidus.",
+      "knowledgeIds": [
+        "K-DEA-P07-011",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+      "sourcePages": "39-41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organization.organ-to-system"
+      ],
+      "lessonId": "dea-p07-l07",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse suit la fin du trajet digestif des résidus.",
+        "commonMistake": "Confondre absorbé et non absorbé conduit à choisir le sang ou la lymphe.",
+        "keyTakeaway": "Non absorbé : gros intestin puis évacuation.",
+        "fieldApplication": "Distinguer clairement nutriments et résidus."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse suit la fin du trajet digestif des résidus.",
+      "common_mistake": "Confondre absorbé et non absorbé conduit à choisir le sang ou la lymphe.",
+      "key_takeaway": "Non absorbé : gros intestin puis évacuation.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39-41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - trajet, digestion, nutriments et absorption",
+        "sourcePages": "39-41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-011",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organization.organ-to-system"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

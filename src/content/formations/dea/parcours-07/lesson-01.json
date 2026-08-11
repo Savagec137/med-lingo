@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l01",
+  "title": "La bouche",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Identifier les éléments cités dans la bouche.",
+    "Distinguer mastication, salivation et déglutition.",
+    "Relier la salive à son action enzymatique décrite."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.composition",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quels éléments le support associe-t-il directement à la bouche ?",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q01-a1",
+          "text": "La langue, les dents et les glandes salivaires",
+          "explanation": "Ces trois éléments sont cités dans la description de la bouche."
+        },
+        {
+          "id": "dea-p07-l01-q01-a2",
+          "text": "Le foie, la vésicule biliaire et le pancréas",
+          "explanation": "Ces structures sont des glandes ou annexes digestives abdominales."
+        },
+        {
+          "id": "dea-p07-l01-q01-a3",
+          "text": "Le cardia, le pylore et le duodénum",
+          "explanation": "Ces repères concernent l’estomac et le début de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l01-q01-a4",
+          "text": "Le côlon, l’appendice et le rectum",
+          "explanation": "Ces structures appartiennent à la partie terminale du trajet digestif."
+        }
+      ],
+      "correctAnswer": "dea-p07-l01-q01-a1",
+      "explanation": "La description de la bouche réunit langue, dents et glandes salivaires.",
+      "knowledgeIds": [
+        "K-DEA-P07-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La description de la bouche réunit langue, dents et glandes salivaires.",
+        "commonMistake": "Regrouper tous les organes digestifs dans la bouche efface leur localisation.",
+        "keyTakeaway": "La bouche associe langue, dents et glandes salivaires.",
+        "fieldApplication": "Nommer précisément la cavité buccale lors d’une observation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La description de la bouche réunit langue, dents et glandes salivaires.",
+      "common_mistake": "Regrouper tous les organes digestifs dans la bouche efface leur localisation.",
+      "key_takeaway": "La bouche associe langue, dents et glandes salivaires.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "La salive contient une enzyme qui agit sur les amidons.",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition reprend l’action de la salive donnée dans le support."
+        },
+        {
+          "id": "dea-p07-l01-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le support relie bien la salive aux amidons."
+        }
+      ],
+      "correctAnswer": "dea-p07-l01-q02-true",
+      "explanation": "Le support décrit explicitement cette action enzymatique de la salive.",
+      "knowledgeIds": [
+        "K-DEA-P07-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support décrit explicitement cette action enzymatique de la salive.",
+        "commonMistake": "Attribuer cette action à la bile ou au suc gastrique confond les sécrétions.",
+        "keyTakeaway": "L’action enzymatique digestive commence dès la bouche.",
+        "fieldApplication": "Distinguer la sécrétion concernée dans une explication anatomique simple."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support décrit explicitement cette action enzymatique de la salive.",
+      "common_mistake": "Attribuer cette action à la bile ou au suc gastrique confond les sécrétions.",
+      "key_takeaway": "L’action enzymatique digestive commence dès la bouche.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-003"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément de la phase buccale à la description correspondante.",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q03-a1",
+          "text": "Dents",
+          "match": "Mastication",
+          "explanation": "Elles participent à la fragmentation mécanique."
+        },
+        {
+          "id": "dea-p07-l01-q03-a2",
+          "text": "Glandes salivaires",
+          "match": "Salivation",
+          "explanation": "Elles sont associées à la production de salive."
+        },
+        {
+          "id": "dea-p07-l01-q03-a3",
+          "text": "Salive",
+          "match": "Enzyme agissant sur les amidons",
+          "explanation": "Cette action est explicitement citée."
+        },
+        {
+          "id": "dea-p07-l01-q03-a4",
+          "text": "Déglutition",
+          "match": "Poursuite du trajet vers le pharynx",
+          "explanation": "Elle fait suite à la préparation buccale."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l01-q03-a1",
+        "dea-p07-l01-q03-a2",
+        "dea-p07-l01-q03-a3",
+        "dea-p07-l01-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l01-q03-a1",
+        "dea-p07-l01-q03-a2",
+        "dea-p07-l01-q03-a3",
+        "dea-p07-l01-q03-a4"
+      ],
+      "explanation": "Les associations distinguent mécanismes, structures et sécrétion.",
+      "knowledgeIds": [
+        "K-DEA-P07-002",
+        "K-DEA-P07-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations distinguent mécanismes, structures et sécrétion.",
+        "commonMistake": "Confondre salivation et mastication mélange action chimique et action mécanique.",
+        "keyTakeaway": "Bouche : mastication, salivation, puis poursuite par la déglutition.",
+        "fieldApplication": "Décrire séparément structure observée et fonction générale."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations distinguent mécanismes, structures et sécrétion.",
+      "common_mistake": "Confondre salivation et mastication mélange action chimique et action mécanique.",
+      "key_takeaway": "Bouche : mastication, salivation, puis poursuite par la déglutition.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002",
+          "K-DEA-P07-003"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le début du trajet digestif décrit par le support.",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q04-a1",
+          "text": "Entrée des aliments dans la bouche",
+          "explanation": "La bouche est la première étape retenue ici.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l01-q04-a2",
+          "text": "Mastication et salivation",
+          "explanation": "Elles préparent les aliments dans la bouche.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l01-q04-a3",
+          "text": "Déglutition",
+          "explanation": "Elle engage la poursuite du trajet.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l01-q04-a4",
+          "text": "Passage par le pharynx",
+          "explanation": "Le pharynx précède l’œsophage.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l01-q04-a1",
+        "dea-p07-l01-q04-a2",
+        "dea-p07-l01-q04-a3",
+        "dea-p07-l01-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l01-q04-a1",
+        "dea-p07-l01-q04-a2",
+        "dea-p07-l01-q04-a3",
+        "dea-p07-l01-q04-a4"
+      ],
+      "explanation": "L’ordre suit la préparation buccale puis le passage vers le pharynx.",
+      "knowledgeIds": [
+        "K-DEA-P07-002",
+        "K-DEA-P07-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit la préparation buccale puis le passage vers le pharynx.",
+        "commonMistake": "Placer le pharynx avant l’entrée dans la bouche inverse le trajet.",
+        "keyTakeaway": "Bouche, préparation, déglutition, pharynx.",
+        "fieldApplication": "Reconstituer un trajet anatomique sans ajouter de diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit la préparation buccale puis le passage vers le pharynx.",
+      "common_mistake": "Placer le pharynx avant l’entrée dans la bouche inverse le trajet.",
+      "key_takeaway": "Bouche, préparation, déglutition, pharynx.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002",
+          "K-DEA-P07-005"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le support décrit un total de ______ dents.",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q05-a1",
+          "text": "32",
+          "explanation": "Le nombre total annoncé est de 32 dents."
+        },
+        {
+          "id": "dea-p07-l01-q05-a2",
+          "text": "16",
+          "explanation": "Seize correspond au total obtenu pour une seule mâchoire avec la répartition donnée."
+        },
+        {
+          "id": "dea-p07-l01-q05-a3",
+          "text": "24",
+          "explanation": "Ce nombre ne correspond pas à la dentition décrite."
+        },
+        {
+          "id": "dea-p07-l01-q05-a4",
+          "text": "36",
+          "explanation": "Ce nombre dépasse le total donné dans le support."
+        }
+      ],
+      "correctAnswer": "dea-p07-l01-q05-a1",
+      "explanation": "La somme des deux mâchoires conduit au total de 32 dents.",
+      "knowledgeIds": [
+        "K-DEA-P07-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La somme des deux mâchoires conduit au total de 32 dents.",
+        "commonMistake": "S’arrêter à la répartition d’une seule mâchoire conduit à répondre 16.",
+        "keyTakeaway": "16 par mâchoire, 32 au total dans ce support.",
+        "fieldApplication": "Employer ce repère lors d’une description de la cavité buccale.",
+        "memoryTip": "Deux fois seize font trente-deux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La somme des deux mâchoires conduit au total de 32 dents.",
+      "common_mistake": "S’arrêter à la répartition d’une seule mâchoire conduit à répondre 16.",
+      "key_takeaway": "16 par mâchoire, 32 au total dans ce support.",
+      "memory_tip": "Deux fois seize font trente-deux.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-004"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Lors du bilan, un patient conscient montre une gêne limitée à l’intérieur de la bouche. Quelle transmission reste la plus factuelle ?",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q06-a1",
+          "text": "Gêne localisée dans la cavité buccale, au contact de la langue et des dents",
+          "explanation": "La formulation localise ce qui est montré sans conclure sur une cause."
+        },
+        {
+          "id": "dea-p07-l01-q06-a2",
+          "text": "Atteinte certaine du pancréas",
+          "explanation": "Le pancréas n’est pas situé dans la cavité buccale et aucune cause n’est établie."
+        },
+        {
+          "id": "dea-p07-l01-q06-a3",
+          "text": "Obstruction du côlon",
+          "explanation": "Cette localisation ne correspond pas à la zone désignée."
+        },
+        {
+          "id": "dea-p07-l01-q06-a4",
+          "text": "Maladie de l’estomac confirmée",
+          "explanation": "Une gêne buccale ne permet pas cette conclusion."
+        }
+      ],
+      "correctAnswer": "dea-p07-l01-q06-a1",
+      "explanation": "La réponse décrit uniquement la localisation observable.",
+      "knowledgeIds": [
+        "K-DEA-P07-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse décrit uniquement la localisation observable.",
+        "commonMistake": "Transformer une plainte locale en diagnostic dépasse l’objectif anatomique.",
+        "keyTakeaway": "Localiser avant d’interpréter.",
+        "fieldApplication": "Transmettre la zone, les signes et l’évolution observée.",
+        "safetyPoint": "Une localisation ne remplace jamais le bilan complet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse décrit uniquement la localisation observable.",
+      "common_mistake": "Transformer une plainte locale en diagnostic dépasse l’objectif anatomique.",
+      "key_takeaway": "Localiser avant d’interpréter.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels phénomènes le support situe-t-il dans la bouche ?",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q07-a1",
+          "text": "La mastication",
+          "explanation": "Elle correspond à la préparation mécanique."
+        },
+        {
+          "id": "dea-p07-l01-q07-a2",
+          "text": "La salivation",
+          "explanation": "Elle accompagne l’action de la salive."
+        },
+        {
+          "id": "dea-p07-l01-q07-a3",
+          "text": "La déglutition",
+          "explanation": "Elle permet la poursuite du trajet."
+        },
+        {
+          "id": "dea-p07-l01-q07-a4",
+          "text": "L’absorption intestinale",
+          "explanation": "Elle se déroule au niveau de l’intestin grêle."
+        },
+        {
+          "id": "dea-p07-l01-q07-a5",
+          "text": "L’évacuation des matières fécales",
+          "explanation": "Elle correspond à la fin du trajet digestif."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l01-q07-a1",
+        "dea-p07-l01-q07-a2",
+        "dea-p07-l01-q07-a3"
+      ],
+      "correctAnswers": [
+        "dea-p07-l01-q07-a1",
+        "dea-p07-l01-q07-a2",
+        "dea-p07-l01-q07-a3"
+      ],
+      "explanation": "Les trois phénomènes buccaux sont listés ensemble dans le support.",
+      "knowledgeIds": [
+        "K-DEA-P07-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les trois phénomènes buccaux sont listés ensemble dans le support.",
+        "commonMistake": "Choisir absorption ou évacuation confond le début et la fin du trajet digestif.",
+        "keyTakeaway": "Mastication, salivation et déglutition appartiennent à la phase buccale.",
+        "fieldApplication": "Structurer le trajet digestif étape par étape."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les trois phénomènes buccaux sont listés ensemble dans le support.",
+      "common_mistake": "Choisir absorption ou évacuation confond le début et la fin du trajet digestif.",
+      "key_takeaway": "Mastication, salivation et déglutition appartiennent à la phase buccale.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-002"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l01-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle répartition est donnée pour une mâchoire ?",
+      "answers": [
+        {
+          "id": "dea-p07-l01-q08-a1",
+          "text": "4 incisives, 2 canines, 4 prémolaires et 6 molaires",
+          "explanation": "Cette répartition totalise 16 dents par mâchoire."
+        },
+        {
+          "id": "dea-p07-l01-q08-a2",
+          "text": "2 incisives, 4 canines, 6 prémolaires et 4 molaires",
+          "explanation": "Les catégories sont inversées."
+        },
+        {
+          "id": "dea-p07-l01-q08-a3",
+          "text": "4 incisives, 4 canines, 2 prémolaires et 6 molaires",
+          "explanation": "Le nombre de canines et prémolaires ne correspond pas."
+        },
+        {
+          "id": "dea-p07-l01-q08-a4",
+          "text": "6 incisives, 2 canines, 4 prémolaires et 4 molaires",
+          "explanation": "Le nombre d’incisives et molaires ne correspond pas."
+        }
+      ],
+      "correctAnswer": "dea-p07-l01-q08-a1",
+      "explanation": "La répartition reprend exactement celle du support.",
+      "knowledgeIds": [
+        "K-DEA-P07-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - bouche, salive et dents",
+      "sourcePages": "39",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.composition",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p07-l01",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La répartition reprend exactement celle du support.",
+        "commonMistake": "Les nombres proches peuvent être inversés entre catégories dentaires.",
+        "keyTakeaway": "Par mâchoire : 4, 2, 4, 6.",
+        "fieldApplication": "Utiliser la bonne catégorie lorsqu’une lésion dentaire est localisée.",
+        "memoryTip": "I-C-P-M : 4-2-4-6."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La répartition reprend exactement celle du support.",
+      "common_mistake": "Les nombres proches peuvent être inversés entre catégories dentaires.",
+      "key_takeaway": "Par mâchoire : 4, 2, 4, 6.",
+      "memory_tip": "I-C-P-M : 4-2-4-6.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - bouche, salive et dents",
+        "sourcePages": "39",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-004"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.composition",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-07",
+  "id": "dea-p07-l05",
+  "title": "L’intestin grêle",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-07",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire l’intestin grêle et sa première partie.",
+    "Comprendre l’arrivée des sécrétions digestives.",
+    "Distinguer digestion et absorption intestinale."
+  ],
+  "competencyIds": [
+    "body.system.digestive",
+    "body.organ.function",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p07-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle description correspond à l’intestin grêle dans le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q01-a1",
+          "text": "Un tube d’environ 8 mètres replié en anses",
+          "explanation": "La longueur et la disposition sont explicitement indiquées."
+        },
+        {
+          "id": "dea-p07-l05-q01-a2",
+          "text": "Une poche en J d’environ 2 litres",
+          "explanation": "Cette description correspond à l’estomac."
+        },
+        {
+          "id": "dea-p07-l05-q01-a3",
+          "text": "Un tube d’environ 25 cm",
+          "explanation": "Cette description correspond à l’œsophage."
+        },
+        {
+          "id": "dea-p07-l05-q01-a4",
+          "text": "Un tube d’environ 1,5 mètre",
+          "explanation": "Cette longueur est donnée pour le côlon."
+        }
+      ],
+      "correctAnswer": "dea-p07-l05-q01-a1",
+      "explanation": "Le support décrit l’intestin grêle comme un long tube replié en anses.",
+      "knowledgeIds": [
+        "K-DEA-P07-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support décrit l’intestin grêle comme un long tube replié en anses.",
+        "commonMistake": "Les dimensions des autres organes digestifs peuvent être confondues.",
+        "keyTakeaway": "Intestin grêle : environ 8 mètres, replié en anses.",
+        "fieldApplication": "Identifier l’organe à partir de sa forme et de sa position."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support décrit l’intestin grêle comme un long tube replié en anses.",
+      "common_mistake": "Les dimensions des autres organes digestifs peuvent être confondues.",
+      "key_takeaway": "Intestin grêle : environ 8 mètres, replié en anses.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Le duodénum est la première partie de l’intestin grêle.",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q02-true",
+          "text": "Vrai",
+          "explanation": "La proposition correspond à la description anatomique du support."
+        },
+        {
+          "id": "dea-p07-l05-q02-false",
+          "text": "Faux",
+          "explanation": "Faux serait incorrect : le duodénum ouvre bien l’intestin grêle."
+        }
+      ],
+      "correctAnswer": "dea-p07-l05-q02-true",
+      "explanation": "Le support définit explicitement cette relation anatomique.",
+      "knowledgeIds": [
+        "K-DEA-P07-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support définit explicitement cette relation anatomique.",
+        "commonMistake": "Confondre duodénum et côlon déplace une structure du début vers la fin du trajet intestinal.",
+        "keyTakeaway": "Duodénum : début de l’intestin grêle.",
+        "fieldApplication": "Situer correctement l’arrivée des sécrétions biliaire et pancréatique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support définit explicitement cette relation anatomique.",
+      "common_mistake": "Confondre duodénum et côlon déplace une structure du début vers la fin du trajet intestinal.",
+      "key_takeaway": "Duodénum : début de l’intestin grêle.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque notion intestinale à sa description.",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q03-a1",
+          "text": "Intestin grêle",
+          "match": "Tube replié en anses",
+          "explanation": "Il mesure environ 8 mètres selon le support."
+        },
+        {
+          "id": "dea-p07-l05-q03-a2",
+          "text": "Duodénum",
+          "match": "Première partie de l’intestin grêle",
+          "explanation": "Il reçoit les canaux biliaire et pancréatique."
+        },
+        {
+          "id": "dea-p07-l05-q03-a3",
+          "text": "Absorption intestinale",
+          "match": "Passage vers le sang ou la lymphe",
+          "explanation": "Elle concerne les nutriments."
+        },
+        {
+          "id": "dea-p07-l05-q03-a4",
+          "text": "Paroi intestinale",
+          "match": "Grande surface et faible épaisseur",
+          "explanation": "Ces propriétés facilitent le passage des nutriments."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l05-q03-a1",
+        "dea-p07-l05-q03-a2",
+        "dea-p07-l05-q03-a3",
+        "dea-p07-l05-q03-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l05-q03-a1",
+        "dea-p07-l05-q03-a2",
+        "dea-p07-l05-q03-a3",
+        "dea-p07-l05-q03-a4"
+      ],
+      "explanation": "Les associations relient structure, première portion et fonction d’absorption.",
+      "knowledgeIds": [
+        "K-DEA-P07-007",
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les associations relient structure, première portion et fonction d’absorption.",
+        "commonMistake": "Confondre digestion et absorption conduit à associer l’enzyme au passage dans le sang.",
+        "keyTakeaway": "L’intestin grêle transforme puis permet l’absorption des nutriments.",
+        "fieldApplication": "Distinguer étape chimique et passage vers les milieux de transport."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les associations relient structure, première portion et fonction d’absorption.",
+      "common_mistake": "Confondre digestion et absorption conduit à associer l’enzyme au passage dans le sang.",
+      "key_takeaway": "L’intestin grêle transforme puis permet l’absorption des nutriments.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-007",
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q04",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Remets dans l’ordre le trajet autour de l’intestin grêle.",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q04-a1",
+          "text": "Sortie de l’estomac par le pylore",
+          "explanation": "Le pylore précède l’intestin.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p07-l05-q04-a2",
+          "text": "Entrée dans le duodénum",
+          "explanation": "Le duodénum est la première partie.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p07-l05-q04-a3",
+          "text": "Progression dans l’intestin grêle",
+          "explanation": "Le tube se poursuit en anses.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p07-l05-q04-a4",
+          "text": "Arrivée dans le gros intestin",
+          "explanation": "Le contenu non absorbé poursuit son trajet.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l05-q04-a1",
+        "dea-p07-l05-q04-a2",
+        "dea-p07-l05-q04-a3",
+        "dea-p07-l05-q04-a4"
+      ],
+      "correctAnswers": [
+        "dea-p07-l05-q04-a1",
+        "dea-p07-l05-q04-a2",
+        "dea-p07-l05-q04-a3",
+        "dea-p07-l05-q04-a4"
+      ],
+      "explanation": "L’ordre suit la continuité anatomique de l’estomac vers le gros intestin.",
+      "knowledgeIds": [
+        "K-DEA-P07-006",
+        "K-DEA-P07-007",
+        "K-DEA-P07-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre suit la continuité anatomique de l’estomac vers le gros intestin.",
+        "commonMistake": "Placer le gros intestin avant le duodénum inverse la progression.",
+        "keyTakeaway": "Pylore, duodénum, intestin grêle, gros intestin.",
+        "fieldApplication": "Reconstituer le trajet pour localiser une région digestive."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre suit la continuité anatomique de l’estomac vers le gros intestin.",
+      "common_mistake": "Placer le gros intestin avant le duodénum inverse la progression.",
+      "key_takeaway": "Pylore, duodénum, intestin grêle, gros intestin.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-006",
+          "K-DEA-P07-007",
+          "K-DEA-P07-011"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Complète : le passage des nutriments vers le sang ou la lymphe est l’______ intestinale.",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q05-a1",
+          "text": "absorption",
+          "explanation": "C’est le terme utilisé pour ce passage."
+        },
+        {
+          "id": "dea-p07-l05-q05-a2",
+          "text": "expiration",
+          "explanation": "Ce terme appartient à la ventilation."
+        },
+        {
+          "id": "dea-p07-l05-q05-a3",
+          "text": "immobilisation",
+          "explanation": "Ce terme appartient à la prise en charge locomotrice ou traumatique."
+        },
+        {
+          "id": "dea-p07-l05-q05-a4",
+          "text": "mastication",
+          "explanation": "La mastication se déroule dans la bouche."
+        }
+      ],
+      "correctAnswer": "dea-p07-l05-q05-a1",
+      "explanation": "L’absorption désigne le passage des nutriments à travers la paroi intestinale.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’absorption désigne le passage des nutriments à travers la paroi intestinale.",
+        "commonMistake": "La digestion transforme ; l’absorption fait passer vers le sang ou la lymphe.",
+        "keyTakeaway": "Absorption = passage des nutriments.",
+        "fieldApplication": "Employer le terme exact dans une explication du fonctionnement digestif."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’absorption désigne le passage des nutriments à travers la paroi intestinale.",
+      "common_mistake": "La digestion transforme ; l’absorption fait passer vers le sang ou la lymphe.",
+      "key_takeaway": "Absorption = passage des nutriments.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q06",
+      "type": "clinical_case",
+      "difficulty": "medium",
+      "question": "Dans une explication à un apprenant, quelle formulation décrit correctement le lieu de passage des nutriments vers le sang ou la lymphe ?",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q06-a1",
+          "text": "À travers la paroi de l’intestin grêle",
+          "explanation": "Le support situe l’absorption intestinale à ce niveau."
+        },
+        {
+          "id": "dea-p07-l05-q06-a2",
+          "text": "À travers la paroi de l’œsophage",
+          "explanation": "L’œsophage est un conduit de passage des aliments."
+        },
+        {
+          "id": "dea-p07-l05-q06-a3",
+          "text": "À travers la vésicule biliaire",
+          "explanation": "La vésicule stocke la bile."
+        },
+        {
+          "id": "dea-p07-l05-q06-a4",
+          "text": "À travers le péritoine uniquement",
+          "explanation": "Le péritoine protège les viscères et n’assure pas cette absorption."
+        }
+      ],
+      "correctAnswer": "dea-p07-l05-q06-a1",
+      "explanation": "La grande surface et la faible épaisseur de la paroi de l’intestin grêle permettent ce passage.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La grande surface et la faible épaisseur de la paroi de l’intestin grêle permettent ce passage.",
+        "commonMistake": "Confondre un conduit avec une surface d’absorption est une erreur de fonction.",
+        "keyTakeaway": "Absorption des nutriments : paroi de l’intestin grêle vers sang ou lymphe.",
+        "fieldApplication": "Expliquer le mécanisme sans extrapoler vers un diagnostic."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La grande surface et la faible épaisseur de la paroi de l’intestin grêle permettent ce passage.",
+      "common_mistake": "Confondre un conduit avec une surface d’absorption est une erreur de fonction.",
+      "key_takeaway": "Absorption des nutriments : paroi de l’intestin grêle vers sang ou lymphe.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q07",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles caractéristiques favorisent l’absorption intestinale selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q07-a1",
+          "text": "Une surface importante",
+          "explanation": "Elle augmente la zone de passage disponible."
+        },
+        {
+          "id": "dea-p07-l05-q07-a2",
+          "text": "Une paroi de faible épaisseur",
+          "explanation": "Elle facilite le passage des nutriments."
+        },
+        {
+          "id": "dea-p07-l05-q07-a3",
+          "text": "Une paroi totalement imperméable",
+          "explanation": "Elle empêcherait le passage décrit."
+        },
+        {
+          "id": "dea-p07-l05-q07-a4",
+          "text": "Une absence complète de circulation",
+          "explanation": "Les nutriments passent vers le sang ou la lymphe."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p07-l05-q07-a1",
+        "dea-p07-l05-q07-a2"
+      ],
+      "correctAnswers": [
+        "dea-p07-l05-q07-a1",
+        "dea-p07-l05-q07-a2"
+      ],
+      "explanation": "Les deux propriétés sont citées comme facilitant l’absorption.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux propriétés sont citées comme facilitant l’absorption.",
+        "commonMistake": "Choisir imperméabilité ou absence de circulation contredit le mécanisme.",
+        "keyTakeaway": "Grande surface et paroi fine favorisent le passage.",
+        "fieldApplication": "Relier une structure anatomique à sa fonction générale."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux propriétés sont citées comme facilitant l’absorption.",
+      "common_mistake": "Choisir imperméabilité ou absence de circulation contredit le mécanisme.",
+      "key_takeaway": "Grande surface et paroi fine favorisent le passage.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p07-l05-q08",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel énoncé distingue correctement digestion et absorption ?",
+      "answers": [
+        {
+          "id": "dea-p07-l05-q08-a1",
+          "text": "La digestion transforme les aliments ; l’absorption fait passer les nutriments vers le sang ou la lymphe",
+          "explanation": "Les deux étapes sont différentes et complémentaires."
+        },
+        {
+          "id": "dea-p07-l05-q08-a2",
+          "text": "La digestion stocke la bile ; l’absorption produit l’insuline",
+          "explanation": "Ces fonctions appartiennent à la vésicule et au pancréas."
+        },
+        {
+          "id": "dea-p07-l05-q08-a3",
+          "text": "La digestion conduit l’air ; l’absorption l’expire",
+          "explanation": "Cet énoncé concerne le système respiratoire."
+        },
+        {
+          "id": "dea-p07-l05-q08-a4",
+          "text": "La digestion et l’absorption désignent exactement la même étape",
+          "explanation": "Le support les distingue clairement."
+        }
+      ],
+      "correctAnswer": "dea-p07-l05-q08-a1",
+      "explanation": "La réponse sépare transformation des aliments et passage des nutriments.",
+      "knowledgeIds": [
+        "K-DEA-P07-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+      "sourcePages": "39, 41",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.digestive",
+        "body.organ.function",
+        "body.organ.location"
+      ],
+      "lessonId": "dea-p07-l05",
+      "plannedParcoursIds": [
+        "parcours-07"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La réponse sépare transformation des aliments et passage des nutriments.",
+        "commonMistake": "Employer les deux termes comme synonymes masque la succession des étapes.",
+        "keyTakeaway": "Digérer transforme ; absorber fait passer.",
+        "fieldApplication": "Expliquer le fonctionnement digestif avec un vocabulaire précis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La réponse sépare transformation des aliments et passage des nutriments.",
+      "common_mistake": "Employer les deux termes comme synonymes masque la succession des étapes.",
+      "key_takeaway": "Digérer transforme ; absorber fait passer.",
+      "tags": [
+        "dea",
+        "parcours-07",
+        "système-digestif"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 39, 41",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p07-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil digestif - intestin grêle, duodénum et absorption",
+        "sourcePages": "39, 41",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P07-013"
+        ],
+        "competencyIds": [
+          "body.system.digestive",
+          "body.organ.function",
+          "body.organ.location"
+        ],
+        "plannedParcoursIds": [
+          "parcours-07"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}
