@@ -1,0 +1,239 @@
+# Mode Intervention V3 — contrat de données
+
+Couche de données du Mode Intervention V3. **Aucun moteur d'exécution, aucune
+interface** : ce lot livre les types, les schémas, les données du scénario pilote
+et la lecture des faits. `applyAction`, les transitions de phase, le score et les
+écrans viennent après.
+
+Les deux documents de conception restent la référence :
+`../INTERVENTION_V3_SPECIFICATION.md` pour le fonctionnel écran par écran,
+`../INTERVENTION_V3_ARCHITECTURE.md` pour l'architecture d'ensemble.
+
+## Ce qui est livré
+
+| Fichier                               | Rôle                                                       |
+| ------------------------------------- | ---------------------------------------------------------- |
+| `v3-domain.ts`                        | tous les types du mode, et la première barrière anti-fuite |
+| `v3-session.ts`                       | état initial d'une session                                 |
+| `facts/fact-registry.json`            | 32 faits cliniques déclarés                                |
+| `facts/fact-schema.ts`                | validation zod du registre, huit invariants                |
+| `facts/fact-registry.ts`              | chargement et index                                        |
+| `facts/read-fact.ts`                  | **la seule porte d'accès aux données cliniques**           |
+| `facts/reveal-fact.ts`                | gel d'une mesure au moment du relevé                       |
+| `facts/source-trust.ts`               | niveau de confiance dérivé d'un document                   |
+| `actions/action-catalog.json`         | 21 actions jouables et 6 actions hors périmètre            |
+| `actions/action-schema.ts`            | validation zod du catalogue, dont la garantie de périmètre |
+| `actions/action-catalog.ts`           | chargement et index                                        |
+| `scenarios/pilot-trauma-cranien.json` | le scénario pilote complet                                 |
+| `scenarios/scenario-schema.ts`        | validation zod, dont le plafond du bilan attendu           |
+| `scenarios/v3-catalog.ts`             | catalogue V3, séparé des quinze missions historiques       |
+| `tests/`                              | 55 tests                                                   |
+
+## Les deux axes d'un fait
+
+Un fait porte une **catégorie** — d'où vient l'information — et une
+**visibilité** — ce qui la rend lisible. Les deux sont indépendants, et c'est ce
+qui permet d'exprimer un danger qui ne se voit pas depuis le point d'arrivée :
+catégorie `observable`, visibilité `on_action`.
+
+| Catégorie    | Sens                                       |
+| ------------ | ------------------------------------------ |
+| `dispatch`   | transmis par la régulation                 |
+| `observable` | vu sans geste                              |
+| `probe`      | mesuré par un appareil ou un examen        |
+| `interview`  | dit par le patient, l'entourage, un témoin |
+| `derived`    | calculé à partir d'autres faits            |
+
+| Visibilité      | Lisible quand                               |
+| --------------- | ------------------------------------------- |
+| `always`        | toujours                                    |
+| `on_arrival`    | la phase n'est plus `new_call`              |
+| `on_action`     | le fait figure dans `session.revealedFacts` |
+| `on_dependency` | tous ses `dependsOn` sont lisibles          |
+
+## Règles de `readFact`
+
+`readFact(session, factId)` est le seul accès aux données cliniques côté
+interface. Il ne retourne jamais un nombre nu : il retourne un `FactRead`, qui
+est soit une valeur relevée, soit **une absence nommée**.
+
+1. **Résolution.** Le fait est cherché dans le registre. Un `factId` inconnu
+   lève une erreur : c'est un défaut de programmation, pas un cas d'affichage.
+2. **Visibilité.** Si le fait n'est pas visible, retour `status: "unknown"` avec
+   la raison la plus utile, dans cet ordre :
+   - le fait n'appartient pas au scénario → `not_applicable`, « Sans objet ici » ;
+   - le matériel requis n'a pas été embarqué → `equipment_missing`, « Glucomètre
+     non embarqué » ;
+   - sinon → `not_revealed`, « Non mesurée » pour une constante, le gabarit du
+     fait sinon.
+3. **Faits dérivés.** La valeur est calculée à partir des seuls faits déjà
+   lisibles. Si un prérequis manque, retour `unknown`.
+4. **Faits `always` et `on_arrival`.** Ce que la régulation transmet et ce qu'on
+   voit en arrivant appartiennent au scénario, pas à un relevé : la valeur est
+   lue dans `scenario.factValues`, sans entrée dans `revealedFacts`. Ce dernier
+   reste ainsi le registre exact de ce que le joueur est allé chercher lui-même.
+5. **Valeur figée.** Pour un fait relevé, la valeur retournée est celle du
+   relevé, **jamais recalculée** depuis `session.vitals`.
+6. **Tendance.** `trend` et `delta` ne sont renseignés qu'à partir de la
+   deuxième mesure. Une flèche sur un point unique inventerait une évolution.
+
+## Règles de `isStale`
+
+```
+ageSeconds = session.simulatedTimeSeconds − lastMeasuredAtSeconds
+isStale    = fact.freshnessSeconds !== null && ageSeconds > fact.freshnessSeconds
+```
+
+La péremption n'a demandé aucun mécanisme : elle découle du gel de la valeur. Le
+patient continue d'évoluer pendant que l'écran affiche la dernière prise, donc
+l'âge de la mesure suffit à dire si elle vaut encore quelque chose.
+
+Trois conséquences voulues. Un fait sans `freshnessSeconds` — antécédents,
+traitements, circonstances — ne périme jamais : un antécédent ne vieillit pas.
+Une mesure périmée **redevient un trou** dans `gapFactIds`, donc peut faire
+réapparaître une question du régulateur. Le seuil est strict : à `ageSeconds`
+exactement égal au délai, la mesure est encore fraîche.
+
+Délais retenus : 300 s pour SpO₂, pouls, TA, FR, Glasgow et conscience ; 600 s
+pour la douleur, la coloration et la sudation ; 900 s pour la température et la
+glycémie ; aucun délai pour les données d'interrogatoire.
+
+## Trois barrières contre les fuites de constantes
+
+**Barrière 1 — les types.** `v3-domain.ts` n'exporte ni `InterventionVitals`, ni
+`DisplayedVital`, ni `VitalsSample`. Un composant ne peut pas nommer le type des
+constantes réelles. Et `InterventionSessionView` — ce que l'interface reçoit —
+retire structurellement `vitals` et `vitalsHistory`, si bien qu'un composant ne
+peut pas les atteindre même sans nommer leur type.
+
+**Barrière 2 — ESLint.** `eslint.config.js` interdit à
+`src/components/intervention-v3/**` d'importer `intervention-vitals`,
+`reveal-fact`, le moteur ou la fabrique de session.
+
+**Barrière 3 — les tests.** `v3-facts.test.ts` vérifie sur une session neuve
+qu'aucune constante n'est lisible, et qu'aucun libellé d'absence ne contient de
+chiffre. Le test de rendu sur les sept écrans, qui inspectera aussi les
+attributs `aria-label`, `title` et `data-*`, viendra avec l'interface.
+
+## Les deux natures de prérequis
+
+Distinction apparue en écrivant le catalogue, et que le schéma impose désormais.
+
+Les **barrières dures** — `phases`, `equipment`, `blockingActions` — décrivent
+une impossibilité matérielle : on ne retire pas un capteur qu'on n'a pas posé,
+on ne transmet pas un bilan sans avoir joint la régulation. L'action est refusée
+sans consommer de temps.
+
+Les **barrières souples** — `justifyingFacts`, `justifyingActions` — décrivent
+une justification clinique. Leur absence **ne bloque pas** : l'action s'exécute
+avec `unjustifiedEffect` et pose son marqueur. Approcher un patient sans avoir
+sécurisé, ou partir sans réévaluer, doit être possible pour être une faute.
+
+Le schéma exige l'équivalence : une action a une barrière souple si et seulement
+si elle décrit l'effet de son absence.
+
+## Confiance dans une source
+
+Les trois niveaux sont **dérivés**, jamais déclarés — `facts/source-trust.ts` :
+
+| Document                                              | Niveau                 |
+| ----------------------------------------------------- | ---------------------- |
+| publieur institutionnel ou normatif **et** contenu lu | `official_verified`    |
+| support de formation                                  | `training_source`      |
+| interne, ou contenu non lu                            | `internal_to_validate` |
+
+Un décret dont seule l'URL a été validée retombe donc en
+`internal_to_validate`, au même rang qu'une note interne. C'est le seul
+agencement qui rende la mention non trompeuse : au 12 août 2026, neuf documents
+sur cinquante-huit sont en `contentVerification: "content_verified"`.
+
+## Le scénario pilote
+
+`v3-pilot-trauma-cranien` — homme d'environ 42 ans, traumatisme crânien sur
+chute avec inconscience, Axe N104 borne 24, témoins présents.
+
+Il vit dans un catalogue séparé parce que `intervention-catalog.test.ts` affirme
+que le catalogue historique compte exactement quinze missions enchaînées par
+`unlockAfter` : y insérer le pilote casserait deux tests existants.
+
+**Constantes initiales**, reprises des maquettes : FC 92 /min, TA 138/84 mmHg,
+SpO₂ 98 %, FR 18 /min, température 36,8 °C, Glasgow 13/15, douleur 6/10,
+glycémie 5,4 mmol/L.
+
+Tout le piège pédagogique tient là : **sept constantes sur huit sont normales.**
+Le seul signal est un Glasgow à 13 chez un patient qui a perdu connaissance. Un
+joueur qui pose le saturomètre, trouve 98 % et part rassuré aura fait exactement
+l'erreur que le scénario vise.
+
+**Douze faits attendus au bilan**, plafond respecté sans le relever :
+conscience qualitative, Glasgow, SpO₂, pouls, TA, FR, glycémie, douleur, perte
+de connaissance initiale, durée de l'inconscience, antécédents, traitements.
+
+La température reste mesurable mais sort du bilan attendu. Les circonstances
+deviennent un fait de régulation, lisible dès l'écran d'appel, et ne comptent
+pas comme fait à recueillir.
+
+La glycémie est déclarée pertinente explicitement — la famille `trauma` ne
+l'active pas dans le moteur clinique, et un patient confus avec perte de
+connaissance initiale justifie sa mesure. Le schéma refuse d'ailleurs un
+scénario qui l'attendrait au bilan sans l'activer.
+
+`clinicalTrust: "internal_to_validate"` n'est pas une précaution de forme : ces
+valeurs sont un contenu de jeu construit d'après les maquettes, pas l'extrait
+d'un document lisible. Elles doivent être relues par le binôme médecin
+urgentiste et formateur DEA, comme les affirmations suivies dans
+`../INTERVENTION_MEDICAL_REVIEW.md`.
+
+## Périmètre DEA
+
+Le catalogue n'expose que des actes du **paragraphe II** de l'article
+R. 6311-17, accomplis en lien constant avec le médecin : température, pulsation
+cardiaque et pression artérielle par voie non invasive, glycémie, évaluation de
+la douleur et de la conscience, saturation. Aucun acte du paragraphe III n'est
+mobilisé : quatre de ses intitulés sont marqués `verbatim: false` dans la
+bibliothèque, donc non confrontés au texte.
+
+Injection, auto-injection, perfusion, voie veineuse, cathéter et seringue sont
+exclus du jouable. La garantie est double : le schéma refuse une action jouable
+dont l'identifiant, le libellé ou l'indice contient l'un de ces termes, et un
+test balaie tout le catalogue. Les six actions hors périmètre en parlent
+nécessairement — c'est leur raison d'être — et chacune porte le motif de son
+refus.
+
+**La tuile oxygène ne cite aucun acte, et c'est délibéré.** R. 6311-17, II, 3 ne
+couvre que « l'administration en aérosols de produits non médicamenteux », ce
+qui n'est pas l'oxygénothérapie, et les deux documents ANSM sur l'oxygène médical
+du catalogue sont en `listing_only`. Lui rattacher un acte serait inventer une
+base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local.
+
+## Tests
+
+`npm test` couvre les 55 tests du mode, en plus des 183 existants.
+
+| Fichier              | Couvre                                                                                                          |
+| -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `v3-facts.test.ts`   | 18 tests : invariants du registre, gel de la valeur, péremption, tendance, trous, couverture                    |
+| `v3-actions.test.ts` | 16 tests : périmètre DEA, résolubilité des références, réciprocité registre ↔ catalogue, natures de prérequis   |
+| `v3-pilot.test.ts`   | 21 tests : décisions produit, constantes initiales, questions du régulateur, gestes, confiance dans les sources |
+
+Deux tests méritent d'être lus avant de toucher au contrat. « la valeur relevée
+est figée » dégrade la SpO₂ du patient après la mesure et vérifie que l'écran
+affiche toujours la valeur relevée. « un bilan complet ne déclenche aucune
+question du régulateur » vérifie que les questions naissent des trous et de rien
+d'autre.
+
+## Reste à faire
+
+**Moteur.** `applyAction` avec la séquence complète — périmètre, phase,
+matériel, justification, temps, physiologie, révélation, score, vies, journal —
+puis les transitions de phase avec leurs gardes, le calcul du score et des six
+axes, la construction du `DebriefReport`.
+
+**Interface.** Les sept écrans, le hook, et le test de rendu sur session vierge.
+
+**Points ouverts.** L'unité d'affichage de la glycémie : la maquette montre
+`g/L`, le moteur formate en `mmol/L` et ses seuils sont exprimés en `mmol/L` —
+le registre suit aujourd'hui le moteur. La politique d'indices `hintPolicy` par
+niveau de difficulté. Les trois références du débriefing, qu'aucune fiche
+existante ne fonde. La nature du rejeu. Le comportement de la barre d'onglets
+pendant une intervention.

@@ -1,0 +1,685 @@
+/**
+ * Contrats du Mode Intervention V3.
+ *
+ * V3 est une couche additive : le moteur clinique de `intervention-vitals.ts` et
+ * les types de mission de `intervention-domain.ts` sont importés, jamais
+ * dupliqués ni modifiés. Les quinze missions historiques continuent de tourner
+ * sur `intervention-engine.ts`.
+ *
+ * **Règle centrale.** Aucune donnée clinique n'est affichée sans une action du
+ * joueur qui la révèle. Ce module en porte la première barrière : il n'exporte
+ * ni `InterventionVitals`, ni `DisplayedVital`, ni `VitalsSample`. Un composant
+ * ne peut donc pas nommer le type des constantes réelles, et la vue de session
+ * qu'il reçoit (`InterventionSessionView`) ne les contient pas.
+ *
+ * Trois noms entrent en homonymie avec `intervention-domain.ts` :
+ * `InterventionPhase`, `InterventionScenario` et `InterventionSession`. C'est
+ * volontaire — ce sont les noms du domaine — et sans risque tant qu'un même
+ * fichier n'importe pas les deux modules. Aucun fichier ne devrait avoir à le
+ * faire : `v3-phases.ts` porte seul la correspondance entre les deux jeux de
+ * phases.
+ */
+
+import type {
+  MissionAlert,
+  MissionReward,
+  ScenarioIllustration,
+  VitalsSample,
+} from "../intervention-domain.ts";
+import type {
+  DisplayedVital,
+  InterventionClinicalProfile,
+  InterventionVitals,
+  VitalSeverity,
+  VitalTrend,
+} from "../intervention-vitals.ts";
+
+/* -------------------------------------------------------------------------- */
+/* Phases                                                                     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Les dix phases V3. Distinctes des neuf phases du moteur historique : V3
+ * ajoute `new_call` et `reevaluation`, et sépare l'évaluation de la scène de
+ * celle du patient.
+ */
+export const V3_PHASES = [
+  "new_call",
+  "arrival",
+  "scene_assessment",
+  "patient_assessment",
+  "vitals",
+  "centre15_call",
+  "priority_actions",
+  "reevaluation",
+  "transport",
+  "debrief",
+] as const;
+
+export type InterventionPhase = (typeof V3_PHASES)[number];
+
+export const PHASE_LABELS: Record<InterventionPhase, string> = {
+  new_call: "Nouvel appel",
+  arrival: "Arrivée sur les lieux",
+  scene_assessment: "Bilan circonstanciel",
+  patient_assessment: "Évaluation primaire",
+  vitals: "Constantes vitales",
+  centre15_call: "Appel au 15",
+  priority_actions: "Gestes prioritaires",
+  reevaluation: "Réévaluation",
+  transport: "Transport",
+  debrief: "Débriefing",
+};
+
+/* -------------------------------------------------------------------------- */
+/* Faits cliniques                                                            */
+/* -------------------------------------------------------------------------- */
+
+export type FactId = string;
+
+/** D'où vient l'information. */
+export const FACT_CATEGORIES = ["dispatch", "observable", "probe", "interview", "derived"] as const;
+
+export type FactCategory = (typeof FACT_CATEGORIES)[number];
+
+/**
+ * Ce qui rend un fait visible. Axe indépendant de la catégorie : un fait
+ * `observable` peut n'être visible qu'après une action, comme un danger qui ne
+ * se voit pas depuis le point d'arrivée.
+ */
+export const FACT_VISIBILITIES = ["always", "on_arrival", "on_action", "on_dependency"] as const;
+
+export type FactVisibility = (typeof FACT_VISIBILITIES)[number];
+
+export const FACT_VALUE_KINDS = ["numeric", "ratio", "text", "boolean", "enum"] as const;
+
+export type FactValueKind = (typeof FACT_VALUE_KINDS)[number];
+
+export type FactValue =
+  | { kind: "numeric"; value: number; formatted: string }
+  | { kind: "ratio"; systolic: number; diastolic: number; formatted: string }
+  | { kind: "text"; value: string }
+  | { kind: "boolean"; value: boolean; formatted: string }
+  | { kind: "enum"; value: string; formatted: string };
+
+/**
+ * Texte à afficher pour une valeur, quelle que soit sa forme. Un fait `text` n'a
+ * pas de `formatted` : sa valeur **est** son affichage, et la dupliquer offrirait
+ * deux vérités pour une même donnée.
+ */
+export function displayValue(value: FactValue): string {
+  return value.kind === "text" ? value.value : value.formatted;
+}
+
+export interface ClinicalFact {
+  id: FactId;
+  category: FactCategory;
+  visibility: FactVisibility;
+  label: string;
+  valueKind: FactValueKind;
+  unit: string | null;
+  /**
+   * Gabarit affiché tant que le fait n'est pas révélé : « --/-- », « --,- °C ».
+   * Ne contient jamais de chiffre — sinon il laisserait deviner la valeur.
+   */
+  placeholder: string;
+  /** Constante du moteur clinique dont ce fait prend la valeur. `probe` seulement. */
+  vitalKey: DisplayedVital | null;
+  /** Matériel sans lequel le fait est définitivement hors d'atteinte. */
+  requiresEquipment: EquipmentId[];
+  /** Actions qui révèlent ce fait. Non vide si `visibility === "on_action"`. */
+  revealedBy: PlayerActionId[];
+  /** Prérequis d'un fait `derived`. Aucun ne peut être lui-même `derived`. */
+  dependsOn: FactId[];
+  /** Secondes simulées au-delà desquelles la mesure est périmée. */
+  freshnessSeconds: number | null;
+}
+
+/** Une prise de mesure horodatée. Un fait `probe` en accumule plusieurs. */
+export interface FactMeasurement {
+  value: FactValue;
+  severity: VitalSeverity;
+  atSeconds: number;
+  actionId: PlayerActionId;
+}
+
+/**
+ * État d'un fait révélé.
+ *
+ * `current` est **figée au moment du relevé** et n'est jamais recalculée depuis
+ * `session.vitals`. C'est ce qui rend l'affichage fidèle à ce que le joueur a
+ * réellement mesuré, et ce qui donne la péremption sans mécanisme dédié : le
+ * patient évolue, la valeur affichée reste celle de la dernière prise.
+ */
+export interface RevealedFactState {
+  factId: FactId;
+  current: FactValue;
+  severity: VitalSeverity;
+  revealedAtSeconds: number;
+  lastMeasuredAtSeconds: number;
+  measurements: FactMeasurement[];
+}
+
+/** Pourquoi un fait n'est pas lisible. Détermine le libellé affiché. */
+export const FACT_UNKNOWN_REASONS = [
+  "not_revealed",
+  "equipment_missing",
+  "not_applicable",
+] as const;
+
+export type FactUnknownReason = (typeof FACT_UNKNOWN_REASONS)[number];
+
+export type FactRead =
+  | {
+      status: "known";
+      fact: ClinicalFact;
+      value: FactValue;
+      severity: VitalSeverity;
+      /** Âge de la dernière mesure, en secondes simulées. */
+      ageSeconds: number;
+      isStale: boolean;
+      /** Renseignés à partir de la deuxième mesure seulement. */
+      trend?: VitalTrend;
+      delta?: string;
+    }
+  | {
+      status: "unknown";
+      fact: ClinicalFact;
+      reason: FactUnknownReason;
+      placeholder: string;
+      /** « Non mesurée », « Glucomètre non embarqué ». */
+      label: string;
+    };
+
+export interface FactRegistryIndex {
+  schemaVersion: 1;
+  facts: ClinicalFact[];
+}
+
+/* -------------------------------------------------------------------------- */
+/* Actions                                                                    */
+/* -------------------------------------------------------------------------- */
+
+export type PlayerActionId = string;
+
+export const ACTION_CATEGORIES = [
+  "secure",
+  "observe",
+  "examine",
+  "probe",
+  "interview",
+  "care",
+  "communicate",
+  "logistics",
+] as const;
+
+export type ActionCategory = (typeof ACTION_CATEGORIES)[number];
+
+export const EQUIPMENT_IDS = [
+  "saturometre",
+  "tensiometre",
+  "glucometre",
+  "thermometre",
+  "oxygene",
+  "aspirateur",
+  "dae",
+  "collier",
+  "brancard",
+  "attelle",
+] as const;
+
+export type EquipmentId = (typeof EQUIPMENT_IDS)[number];
+
+export const EQUIPMENT_LABELS: Record<EquipmentId, string> = {
+  saturometre: "Saturomètre",
+  tensiometre: "Tensiomètre",
+  glucometre: "Glucomètre",
+  thermometre: "Thermomètre",
+  oxygene: "Oxygène",
+  aspirateur: "Aspirateur de mucosités",
+  dae: "Défibrillateur automatisé externe",
+  collier: "Collier cervical",
+  brancard: "Brancard",
+  attelle: "Attelle",
+};
+
+/**
+ * Deux natures de prérequis, qu'il ne faut pas confondre.
+ *
+ * Les **barrières dures** — phase, matériel, actions bloquantes — décrivent une
+ * impossibilité matérielle : on ne retire pas un capteur qu'on n'a pas posé, on
+ * ne transmet pas un bilan sans avoir joint la régulation. L'action est refusée
+ * sans consommer de temps.
+ *
+ * Les **barrières souples** — faits et actions justifiantes — décrivent une
+ * justification clinique. Leur absence **ne bloque pas** : l'action s'exécute
+ * avec `unjustifiedEffect` et pose son marqueur. C'est le cœur pédagogique du
+ * mode : approcher un patient sans avoir sécurisé, ou partir sans réévaluer,
+ * doit être possible pour être une faute.
+ */
+export interface ActionRequirement {
+  phases: InterventionPhase[];
+  equipment: EquipmentId[];
+  /** Actions sans lesquelles celle-ci est matériellement impossible. */
+  blockingActions: PlayerActionId[];
+  /** Faits qui justifient l'action. Absents, l'action reste possible. */
+  justifyingFacts: FactId[];
+  /** Actions qui justifient celle-ci. Absentes, l'action reste possible. */
+  justifyingActions: PlayerActionId[];
+  maxUses: number | null;
+}
+
+export interface ActionEffect {
+  score: number;
+  patient: number;
+  timeSeconds: number;
+  flag: string | null;
+  /**
+   * Vrai pour un geste. Seule une action thérapeutique modifie `patientState`
+   * et peut autoriser une reprise d'activité circulatoire.
+   */
+  therapeutic: boolean;
+}
+
+export interface PlayerAction {
+  id: PlayerActionId;
+  label: string;
+  hint: string;
+  category: ActionCategory;
+  requires: ActionRequirement;
+  reveals: FactId[];
+  timeSeconds: number;
+  effect: ActionEffect;
+  /** Effet quand `requires.facts` n'est pas réuni. */
+  unjustifiedEffect: ActionEffect | null;
+  /** Acte de l'article R. 6311-17. Jamais inventé : vérifié contre le catalogue. */
+  actId: string | null;
+  competencyIds: string[];
+  /** Hors périmètre DEA : affichée barrée, refusée, expliquée. */
+  outOfScope: boolean;
+  outOfScopeReason: string | null;
+  /** Fiche de la bibliothèque justifiant l'action ou son refus. */
+  knowledgeId: string | null;
+}
+
+export type ActionOutcomeKind = "applied" | "refused" | "unjustified";
+
+export interface ActionLogEntry {
+  actionId: PlayerActionId;
+  phase: InterventionPhase;
+  atSeconds: number;
+  outcome: ActionOutcomeKind;
+  refusalReason?: string;
+  revealedFactIds: FactId[];
+  scoreDelta: number;
+  patientDelta: number;
+  flag?: string;
+}
+
+export interface ActionCatalogIndex {
+  schemaVersion: 1;
+  actions: PlayerAction[];
+}
+
+/* -------------------------------------------------------------------------- */
+/* Transmission au Centre 15                                                  */
+/* -------------------------------------------------------------------------- */
+
+export interface HandoverItem {
+  id: string;
+  label: string;
+  factIds: FactId[];
+  /** Attendu dans le bilan de ce scénario. */
+  expected: boolean;
+  /** Le joueur peut transmettre « non recueilli » plutôt que taire. */
+  disclosable: boolean;
+}
+
+export const HANDOVER_ITEM_STATES = [
+  "transmitted",
+  "disclosed_missing",
+  "omitted",
+  "silent_gap",
+] as const;
+
+export type HandoverItemState = (typeof HANDOVER_ITEM_STATES)[number];
+
+export interface RegulatorAnswer {
+  id: string;
+  text: string;
+  correct: boolean;
+  rationale: string;
+}
+
+export interface RegulatorQuestion {
+  id: string;
+  text: string;
+  /** Le trou qui déclenche la question. Sans trou, pas de question. */
+  triggeredByFactId: FactId;
+  /** Vrai si la question naît d'un fait révélé mais non transmis. */
+  onOmission: boolean;
+  answers: RegulatorAnswer[];
+}
+
+export interface Centre15Transmission {
+  startedAtSeconds: number;
+  durationSeconds: number;
+  selection: string[];
+  itemStates: Record<string, HandoverItemState>;
+  questionsAsked: string[];
+  answers: Record<string, string>;
+  /** Consigne reçue de la régulation. Toujours reçue, jamais choisie. */
+  instruction: string;
+  freeAdditions: string[];
+  rejectedAdditions: string[];
+}
+
+/* -------------------------------------------------------------------------- */
+/* Gestes prioritaires                                                        */
+/* -------------------------------------------------------------------------- */
+
+export const GESTURE_CONSEQUENCE_FAMILIES = [
+  "risk_reduction",
+  "handover_quality",
+  "stability",
+] as const;
+
+export type GestureConsequenceFamily = (typeof GESTURE_CONSEQUENCE_FAMILIES)[number];
+
+export interface PriorityGesture {
+  id: string;
+  label: string;
+  hint: string;
+  recommended: boolean;
+  outOfScope: boolean;
+  outOfScopeReason: string | null;
+  /** Faits qui justifient le geste. Absents → `unjustified-act`. */
+  justifiedBy: FactId[];
+  consequenceFamily: GestureConsequenceFamily;
+  actId: string | null;
+  competencyIds: string[];
+  knowledgeId: string | null;
+}
+
+export interface PriorityGestureRoundDefinition {
+  id: string;
+  requiredSelections: number;
+  timerSeconds: number | null;
+  offered: PriorityGesture[];
+}
+
+export interface PriorityGestureRound extends PriorityGestureRoundDefinition {
+  selected: string[];
+  refused: Array<{ gestureId: string; reason: string }>;
+  resolved: boolean;
+  correct: boolean;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Réévaluation                                                               */
+/* -------------------------------------------------------------------------- */
+
+export const REINFORCEMENT_STATUSES = ["none", "requested", "en_route", "on_scene"] as const;
+
+export type ReinforcementStatus = (typeof REINFORCEMENT_STATUSES)[number];
+
+/** Ce que l'écran de réévaluation dit au joueur des trous de son bilan. */
+export const HINT_POLICIES = ["gap_list", "gap_count", "none"] as const;
+
+export type HintPolicy = (typeof HINT_POLICIES)[number];
+
+export interface ReevaluationState {
+  cycle: number;
+  startedAtSeconds: number;
+  reinforcement: ReinforcementStatus;
+  refreshedFactIds: FactId[];
+  /** Faits attendus non révélés ou périmés. Calculés, jamais rédigés. */
+  gapFactIds: FactId[];
+  note: string | null;
+  validated: boolean;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Scénario                                                                   */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Confiance dans une source, **dérivée** des deux axes de la bibliothèque et
+ * jamais déclarée. Un document `official` dont le contenu n'a pas été lu
+ * retombe en `internal_to_validate`.
+ */
+export const SOURCE_TRUSTS = [
+  "official_verified",
+  "training_source",
+  "internal_to_validate",
+] as const;
+
+export type SourceTrust = (typeof SOURCE_TRUSTS)[number];
+
+export interface InterventionScenario {
+  id: string;
+  schemaVersion: 1;
+  title: string;
+  specialty: string;
+  learningObjective: string;
+  difficulty: "initiation" | "intermediate" | "advanced";
+  illustration: ScenarioIllustration;
+  estimatedMinutes: number;
+  baseXp: number;
+  startingPatient: number;
+  hintPolicy: HintPolicy;
+  alert: MissionAlert;
+  clinical: InterventionClinicalProfile;
+  /** Nature de la validation des valeurs cliniques du scénario. */
+  clinicalTrust: SourceTrust;
+  clinicalReviewNote: string;
+  /** Faits mobilisés par ce scénario. Tous existent dans le registre. */
+  factIds: FactId[];
+  /**
+   * Valeur de chaque fait que le moteur clinique ne produit pas : circonstances,
+   * antécédents, traitements, perte de connaissance, coloration cutanée. Les
+   * mesures rattachées à une constante (`vitalKey`) n'y figurent pas — leur
+   * valeur vient du moteur au moment du relevé, sans quoi le scénario pourrait
+   * contredire la physiologie simulée.
+   */
+  factValues: Record<FactId, FactValue>;
+  /** Sous-ensemble attendu au bilan. Plafonné à 12. */
+  expectedHandoverFactIds: FactId[];
+  handoverItems: HandoverItem[];
+  regulatorQuestions: RegulatorQuestion[];
+  gestureRounds: PriorityGestureRoundDefinition[];
+  narrative: Record<InterventionPhase, string>;
+  /** Consigne reçue de la régulation après transmission. */
+  regulatorInstruction: string;
+  /** Formulations diagnostiques proposées à l'ajout libre, et refusées. */
+  rejectedAdditions: string[];
+  freeAdditions: string[];
+  reward: MissionReward;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Session                                                                    */
+/* -------------------------------------------------------------------------- */
+
+export interface EquipmentState {
+  id: EquipmentId;
+  prepared: boolean;
+  attached: boolean;
+}
+
+export const SESSION_STATUSES = ["briefing", "active", "debrief"] as const;
+
+export type SessionStatus = (typeof SESSION_STATUSES)[number];
+
+export interface InterventionSession {
+  scenarioId: string;
+  phase: InterventionPhase;
+  status: SessionStatus;
+  score: number;
+  patientState: number;
+  lives: number;
+  simulatedTimeSeconds: number;
+  equipment: EquipmentState[];
+  revealedFacts: Record<FactId, RevealedFactState>;
+  actionLog: ActionLogEntry[];
+  flags: string[];
+  /**
+   * Constantes réelles du patient. **Jamais lues par un composant** : elles ne
+   * figurent pas dans `InterventionSessionView`.
+   */
+  vitals: InterventionVitals;
+  vitalsHistory: VitalsSample[];
+  roscAchieved: boolean;
+  transmission: Centre15Transmission | null;
+  gestureRounds: PriorityGestureRound[];
+  reevaluations: ReevaluationState[];
+  xpBonus: number;
+  rewardBonus: number;
+}
+
+/**
+ * Ce que l'interface reçoit. Deuxième moitié de la première barrière : les
+ * constantes réelles et leur historique sont retirés structurellement, si bien
+ * qu'un composant ne peut pas les atteindre même sans nommer leur type.
+ */
+export type InterventionSessionView = Omit<InterventionSession, "vitals" | "vitalsHistory">;
+
+export function toSessionView(session: InterventionSession): InterventionSessionView {
+  const { vitals, vitalsHistory, ...view } = session;
+  void vitals;
+  void vitalsHistory;
+  return view;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Débriefing                                                                 */
+/* -------------------------------------------------------------------------- */
+
+export const SCORE_AXIS_IDS = [
+  "securite",
+  "bilan",
+  "constantes",
+  "communication",
+  "gestes",
+  "transport",
+] as const;
+
+export type ScoreAxisId = (typeof SCORE_AXIS_IDS)[number];
+
+export const SCORE_AXIS_LABELS: Record<ScoreAxisId, string> = {
+  securite: "Sécurité du patient",
+  bilan: "Bilan & évaluation",
+  constantes: "Constantes vitales",
+  communication: "Communication Centre 15",
+  gestes: "Gestes prioritaires",
+  transport: "Transport & installation",
+};
+
+export const AXIS_RATINGS = ["excellent", "tres_bien", "bien", "suffisant", "a_ameliorer"] as const;
+
+export type AxisRating = (typeof AXIS_RATINGS)[number];
+
+export interface ScoreAxis {
+  id: ScoreAxisId;
+  label: string;
+  /** `null` quand l'axe n'est pas mobilisé : affiché « non évalué », jamais 0 %. */
+  percentage: number | null;
+  earned: number;
+  available: number;
+  rating: AxisRating | null;
+  /** Entrées du journal ayant coûté des points sur cet axe. */
+  lostOn: ActionLogEntry[];
+}
+
+export const TIMELINE_NODE_STATUSES = ["success", "partial", "error"] as const;
+
+export type TimelineNodeStatus = (typeof TIMELINE_NODE_STATUSES)[number];
+
+export interface TimelineNode {
+  id: string;
+  label: string;
+  phases: InterventionPhase[];
+  durationSeconds: number;
+  status: TimelineNodeStatus;
+  reason?: string;
+}
+
+export interface RewardResult {
+  nominalXp: number;
+  nominalCoins: number;
+  rewardFactor: number;
+  xp: number;
+  coins: number;
+  badge?: string;
+  rankBefore: number;
+  rankAfter: number;
+  rankBonusPercent: number;
+}
+
+export interface DebriefReviewEntry {
+  severity: "error" | "warning";
+  label: string;
+  knowledgeId?: string;
+  /** Point de départ du rejeu, reconstruit depuis `actionLog`. */
+  replayFromSeconds?: number;
+}
+
+export interface DebriefReference {
+  knowledgeId: string;
+  title: string;
+  subtitle: string;
+  trust: SourceTrust;
+}
+
+export const FACT_COVERAGE_STATES = ["measured", "not_measured", "not_measurable"] as const;
+
+export type FactCoverageState = (typeof FACT_COVERAGE_STATES)[number];
+
+export interface DebriefReport {
+  scenarioId: string;
+  passed: boolean;
+  failureReason?: string;
+  score: number;
+  /** 1 à 5, par demi-points. */
+  stars: number;
+  globalRating: string;
+  /** Égal à la somme des `durationSeconds` de `timeline`. */
+  totalSeconds: number;
+  axes: ScoreAxis[];
+  /** Découplé de `livesRemaining` : un trou de bilan ne coûte pas de vie. */
+  criticalErrorCount: number;
+  livesRemaining: number;
+  timeline: TimelineNode[];
+  trajectory: "amelioration" | "stabilisation" | "aggravation" | "echec" | undefined;
+  reward: RewardResult;
+  review: DebriefReviewEntry[];
+  references: DebriefReference[];
+  factCoverage: Array<{ factId: FactId; label: string; state: FactCoverageState }>;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Constantes de règle                                                        */
+/* -------------------------------------------------------------------------- */
+
+/** Score de départ, repris du moteur historique. */
+export const V3_STARTING_SCORE = 45;
+
+/** Vies au départ. Une vie ne tombe que sur une faute grave. */
+export const V3_STARTING_LIVES = 5;
+
+/**
+ * Marqueurs coûtant une vie. Volontairement court : un trou de bilan n'en coûte
+ * aucune, ce qui rend cohérent « cinq vies intactes, deux erreurs critiques ».
+ */
+export const GRAVE_FAULT_FLAGS = [
+  "out-of-scope-act",
+  "unsafe-approach",
+  "ignored-alert",
+  "premature-transport",
+] as const;
+
+/** Plafond de faits attendus au bilan : au-delà, ce n'est plus un bilan. */
+export const MAX_EXPECTED_HANDOVER_FACTS = 12;
+
+/** Plancher, pour qu'un bilan attendu ne soit pas trivial. */
+export const MIN_EXPECTED_HANDOVER_FACTS = 6;
