@@ -80,7 +80,7 @@ export function InterventionClinicalDebrief({
       <div className="grid gap-4 lg:grid-cols-2">
         {debrief.pulseLessons.length > 0 && (
           <DebriefCard
-            title="Leçons Pulseo à revoir"
+            title="Leçons Medoca à revoir"
             icon={<Brain className="h-5 w-5 text-violet-300" />}
             tone="neutral"
             items={debrief.pulseLessons}
