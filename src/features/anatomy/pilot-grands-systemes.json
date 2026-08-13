@@ -1,0 +1,92 @@
+{
+  "id": "anatomy.pilot.grands-systemes.coeur",
+  "title": "Les grands systèmes",
+  "subtitle": "Découvrir le corps humain",
+  "instruction": "Clique sur le cœur",
+  "actionHint": "Sélectionne la zone demandée sur le schéma.",
+  "targetLabel": "Cœur",
+  "targetHotspotId": "hotspot-heart",
+  "plateId": "plate.full-body",
+  "view": "front",
+  "enabledLayers": ["skin", "muscles", "skeleton", "organs", "vessels"],
+  "visibleLayers": ["skeleton", "organs", "vessels", "skin"],
+  "hotspots": [
+    {
+      "id": "hotspot-heart",
+      "label": "Cœur",
+      "x": 54,
+      "y": 31,
+      "radius": 7,
+      "layer": "organs",
+      "order": 1,
+      "targetOrganId": "organ.heart"
+    },
+    {
+      "id": "hotspot-stomach",
+      "label": "Estomac",
+      "x": 45,
+      "y": 46,
+      "radius": 7,
+      "layer": "organs",
+      "order": 2,
+      "targetOrganId": "organ.stomach"
+    },
+    {
+      "id": "hotspot-brain",
+      "label": "Cerveau",
+      "x": 50,
+      "y": 8,
+      "radius": 7,
+      "layer": "organs",
+      "order": 3,
+      "targetOrganId": "organ.brain"
+    },
+    {
+      "id": "hotspot-small_intestine",
+      "label": "Intestin grêle",
+      "x": 50,
+      "y": 54,
+      "radius": 7,
+      "layer": "organs",
+      "order": 4,
+      "targetOrganId": "organ.small-intestine"
+    },
+    {
+      "id": "hotspot-abdomen",
+      "label": "Abdomen",
+      "x": 50,
+      "y": 49,
+      "radius": 7,
+      "layer": "skin",
+      "order": 5,
+      "targetOrganId": "region.abdomen"
+    },
+    {
+      "id": "hotspot-diaphragm",
+      "label": "Diaphragme",
+      "x": 50,
+      "y": 39,
+      "radius": 7,
+      "layer": "muscles",
+      "order": 6,
+      "targetOrganId": "organ.diaphragm"
+    }
+  ],
+  "explanation": "Le cœur est un muscle creux situé dans le thorax. Il agit comme une pompe pour faire circuler le sang dans tout le corps.",
+  "infoCards": [
+    {
+      "hotspotId": "hotspot-heart",
+      "title": "Le cœur",
+      "description": "Le cœur est un muscle creux situé dans le thorax, légèrement à gauche du centre. Il pompe le sang dans tout le corps via les vaisseaux sanguins.",
+      "stats": [
+        { "label": "Taille", "value": "≈ 12 cm", "iconKey": "ruler" },
+        { "label": "Poids", "value": "250 - 350 g", "iconKey": "weight" },
+        { "label": "Battements", "value": "60 - 100 bpm", "iconKey": "heart-pulse" },
+        { "label": "Fonction", "value": "Pompe sanguine", "iconKey": "activity" }
+      ],
+      "knowledgeId": null,
+      "trust": "internal_to_validate",
+      "reviewNote": "Taille, poids et fréquence sont des ordres de grandeur rédigés pour le jeu, sans document lisible de la bibliothèque derrière eux. À faire relire par le binôme médecin urgentiste et formateur DEA avant publication, comme les affirmations suivies dans INTERVENTION_MEDICAL_REVIEW.md."
+    }
+  ]
+}
