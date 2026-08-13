@@ -126,7 +126,7 @@ export function renderAuditHtml(report: AuditReport): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Audit pédagogique Medoka</title>
+  <title>Audit pédagogique Medoca</title>
   <style>
     :root{color-scheme:dark;--bg:#050b18;--panel:#0d1728;--line:#24334b;--cyan:#22d3ee;--purple:#a78bfa;--green:#34d399;--amber:#fbbf24;--red:#fb7185}
     *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#172554 0,transparent 28%),var(--bg);color:#e5eefb;font:14px/1.45 Inter,system-ui,sans-serif}
@@ -143,7 +143,7 @@ export function renderAuditHtml(report: AuditReport): string {
 <body>
 <main>
   <header class="header">
-    <div><p class="muted">MEDOKA · CONTRÔLE AVANT DÉPLOIEMENT</p><h1>Audit de la base pédagogique</h1><p class="muted">Généré le ${escapeHtml(report.generatedAt)} · périmètre : ${escapeHtml(report.scope.activeDefinition)}</p></div>
+    <div><p class="muted">MEDOCA · CONTRÔLE AVANT DÉPLOIEMENT</p><h1>Audit de la base pédagogique</h1><p class="muted">Généré le ${escapeHtml(report.generatedAt)} · périmètre : ${escapeHtml(report.scope.activeDefinition)}</p></div>
     <div class="score"><div><strong>${report.qualityScore.total}</strong><small>/ 100</small></div></div>
   </header>
   <section class="grid">${counts.map(([label, value]) => `<div class="card"><span class="muted">${label}</span><strong>${value}</strong></div>`).join("")}</section>

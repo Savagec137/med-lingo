@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "extractedAt": "2026-08-11",
+  "extractionRules": {
+    "sources": "Seuls les documents en `contentVerification: \"content_verified\"` dont le contenu a été relevé sont exploités. Les 49 sources en `listing_only` sont exclues : leur URL est validée, leur contenu n'a pas été lu.",
+    "excluded": "Trois documents content_verified sont écartés. `json-xlsx-v1` est en quarantaine avec `medicalSourceValidationRequired: true`. `medlingo-spec-dea-p01-l01` porte l'anatomie du Parcours 1, hors des thèmes couverts. `sfmu-ancesu-gestes-soins-urgence` n'a livré que sa page de titre : sa couche texte utilise une police à sous-ensemble et ses chapitres n'ont pas pu être lus. `intervention-medical-review` est écarté parce que ses affirmations attendent une relecture médicale : en tirer de nouvelles questions reviendrait à propager une assertion non validée.",
+    "terminology": "Les points clés reprennent la terminologie des textes. Un énoncé entre guillemets est reproduit sans reformulation ; hors guillemets, il résume le texte cité en `sourceSection`.",
+    "pages": "Aucune page n'est citée : les cinq documents exploités sont des textes consultés en ligne, dont la citation canonique est l'article ou l'annexe. Toutes les fiches portent `pageStatus: \"section_only_reference\"`."
+  },
+  "knowledge": [
+    {
+      "knowledgeId": "library.actes-lien-constant-medecin",
+      "title": "Actes accomplis en lien constant avec le médecin",
+      "summary": "Le décret n° 2022-629 énumère cinq actes que l'ambulancier accomplit dans le cadre de l'aide médicale urgente en lien constant avec le médecin. La liste est limitative : ce qui n'y figure pas n'est pas couvert par ce paragraphe.",
+      "keyPoints": [
+        "« Prise de température, de pulsation cardiaque et de pression artérielle par voie non invasive »",
+        "« Recueil de la glycémie par captation capillaire brève ou lecture transdermique »",
+        "« Administration en aérosols de produits non médicamenteux »",
+        "« Evaluation de la douleur et observation des manifestations de l'état de conscience »",
+        "« Recueil du taux de saturation en oxygène ou en monoxyde de carbone par voie non invasive »"
+      ],
+      "commonErrors": [
+        "Croire que le lien constant avec le médecin est une simple information a posteriori, alors que le texte en fait la condition de l'acte.",
+        "Confondre ces actes avec ceux du paragraphe III, qui exigent une prescription et une situation d'urgence."
+      ],
+      "clinicalApplication": "Délimite ce qu'un ambulancier peut mesurer et administrer sans prescription dans le cadre de l'aide médicale urgente.",
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "plannedParcoursIds": ["parcours-44"],
+      "lessonIds": ["dea-p44-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.actes-sur-prescription",
+      "title": "Actes accomplis sur prescription lorsque l'urgence l'impose",
+      "summary": "Le paragraphe III du même article ouvre cinq actes supplémentaires, à deux conditions cumulatives : une prescription médicale et une situation où l'urgence l'impose. Plusieurs sont bornés à des indications nommées.",
+      "keyPoints": [
+        "L'administration de produits médicamenteux en aérosols ou pulvérisations est prévue pour l'asthme aigu et la douleur aiguë.",
+        "L'administration par voie orale ou intranasale est prévue pour le surdosage en opiacés et la douleur aiguë.",
+        "L'administration par voie auto-injectable est prévue pour le choc anaphylactique et l'hypoglycémie.",
+        "« Enregistrement et transmission d'électrocardiogramme à visée diagnostique à l'aide d'un outil automatisé »",
+        "« Recueil de l'hémoglobinémie »"
+      ],
+      "commonErrors": [
+        "Traiter l'auto-injecteur comme un geste réflexe, alors que le texte le subordonne à une prescription et à des indications nommées.",
+        "Oublier que l'urgence est une condition du texte, et non un simple contexte."
+      ],
+      "clinicalApplication": "Délimite les actes qu'un ambulancier ne peut engager que sur prescription, et pour les seules situations que le texte nomme.",
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, III",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c05"],
+      "plannedParcoursIds": ["parcours-44"],
+      "lessonIds": ["dea-p44-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.parametres-recueillis-par-le-dea",
+      "title": "Les paramètres que l'ambulancier peut recueillir",
+      "summary": "Quatre des cinq actes du paragraphe II sont des recueils de paramètres. Ils dessinent exactement le relevé qu'un ambulancier est autorisé à produire en aide médicale urgente.",
+      "keyPoints": [
+        "Température, pulsation cardiaque et pression artérielle, toutes trois « par voie non invasive ».",
+        "Glycémie, « par captation capillaire brève ou lecture transdermique ».",
+        "Saturation « en oxygène ou en monoxyde de carbone », également par voie non invasive : le texte nomme les deux, dans un même acte.",
+        "L'évaluation de la douleur et l'observation des manifestations de l'état de conscience figurent dans la même liste que les mesures instrumentales."
+      ],
+      "commonErrors": [
+        "Considérer l'évaluation de la douleur et de la conscience comme une appréciation subjective hors du champ réglementaire, alors qu'elles sont des actes énumérés.",
+        "Croire que le recueil de saturation ne vaut que pour l'oxygène, alors que le texte nomme aussi le monoxyde de carbone."
+      ],
+      "clinicalApplication": "Fonde le contenu du relevé de constantes réalisé par un ambulancier, et ce que la transmission peut annoncer comme mesuré.",
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c04"],
+      "plannedParcoursIds": ["parcours-18"],
+      "lessonIds": ["dea-p18-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.dae-definition-fonctions",
+      "title": "Ce qu'est un défibrillateur automatisé externe",
+      "summary": "L'article R. 6311-14 définit le défibrillateur automatisé externe comme un dispositif médical et lui assigne trois fonctions. Il englobe les appareils entièrement automatiques et semi-automatiques.",
+      "keyPoints": [
+        "Le terme couvre « les défibrillateurs externes entièrement automatiques et les défibrillateurs externes semi-automatiques ».",
+        "Première fonction : « L'analyse automatique de l'activité électrique du myocarde d'une personne victime d'un arrêt circulatoire afin de déceler une fibrillation ventriculaire ou certaines tachycardies ventriculaires ».",
+        "Deuxième fonction : le chargement automatique quand l'analyse est positive et la délivrance de chocs. Le choc est déclenché « soit par l'opérateur en cas d'utilisation du défibrillateur semi-automatique, soit automatiquement en cas d'utilisation du défibrillateur entièrement automatique ».",
+        "Troisième fonction : « L'enregistrement des segments de l'activité électrique du myocarde et des données de l'utilisation de l'appareil »."
+      ],
+      "commonErrors": [
+        "Croire que l'appareil délivre un choc sur simple décision de l'opérateur, alors que le chargement suppose une analyse positive.",
+        "Ignorer la fonction d'enregistrement, qui fait de l'appareil une source de données sur le déroulement de la réanimation."
+      ],
+      "clinicalApplication": "Explique pourquoi l'analyse impose une interruption des compressions et pourquoi l'appareil documente la réanimation.",
+      "sourceDocument": "csp-dae-r6311-14-16",
+      "sourceSection": "Article R. 6311-14",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c05"],
+      "plannedParcoursIds": ["parcours-22"],
+      "lessonIds": ["dea-p22-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.dae-habilitation",
+      "title": "Qui est habilité à utiliser un défibrillateur automatisé externe",
+      "summary": "L'article R. 6311-15 tient en une phrase et ouvre l'usage du défibrillateur à tous, sans condition de profession ni de formation préalable.",
+      "keyPoints": [
+        "« Toute personne, même non médecin, est habilitée à utiliser un défibrillateur automatisé externe répondant aux caractéristiques définies à l'article R. 6311-14. »",
+        "L'habilitation ne dépend d'aucun diplôme : elle vaut pour le témoin comme pour le professionnel.",
+        "Elle est renvoyée aux caractéristiques de l'article R. 6311-14 : elle porte sur l'appareil défini par ce texte, pas sur un appareil quelconque."
+      ],
+      "commonErrors": [
+        "Attendre l'arrivée d'un professionnel avant d'utiliser un défibrillateur, alors que le texte habilite toute personne.",
+        "Croire qu'une formation est une condition juridique de l'usage, alors qu'elle est encouragée sans être exigée par cet article."
+      ],
+      "clinicalApplication": "Fonde le fait qu'un témoin peut engager la défibrillation avant l'arrivée des secours, et qu'un ambulancier n'a pas à s'interroger sur son habilitation.",
+      "sourceDocument": "csp-dae-r6311-14-16",
+      "sourceSection": "Article R. 6311-15",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c05"],
+      "plannedParcoursIds": ["parcours-22"],
+      "lessonIds": ["dea-p22-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.dae-recueil-national",
+      "title": "Le recueil national de données sur l'usage des défibrillateurs",
+      "summary": "L'article R. 6311-16 organise une évaluation nationale des modalités d'utilisation des défibrillateurs, alimentée par les équipes de secours.",
+      "keyPoints": [
+        "« Le ministre chargé de la santé organise une évaluation des modalités d'utilisation des défibrillateurs automatisés externes par le recueil de données transmises par les équipes de secours. »",
+        "Les données portent notamment sur la répartition géographique des appareils, leurs modalités d'utilisation et des données statistiques agrégées sur les personnes prises en charge.",
+        "Les modalités du recueil et la liste des données sont fixées par arrêté du ministre chargé de la santé."
+      ],
+      "commonErrors": [
+        "Voir dans la traçabilité une formalité administrative, alors que le texte en fait la matière d'une évaluation nationale.",
+        "Croire que les données remontées sont nominatives, alors que le texte parle de données statistiques agrégées."
+      ],
+      "clinicalApplication": "Explique pourquoi les données d'utilisation d'un défibrillateur sont transmises au-delà du dossier du patient.",
+      "sourceDocument": "csp-dae-r6311-14-16",
+      "sourceSection": "Article R. 6311-16",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c09", "dea.c10"],
+      "plannedParcoursIds": ["parcours-22"],
+      "lessonIds": ["dea-p22-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.categories-vehicules-sanitaires",
+      "title": "Les catégories de véhicules de transport sanitaire",
+      "summary": "L'article R. 6312-8 classe les véhicules adaptés au transport sanitaire en quatre catégories, dont trois spécialement aménagées et une quatrième distincte.",
+      "keyPoints": [
+        "Trois catégories de « véhicules spécialement aménagés » : catégorie A « ambulance de secours et de soins d'urgence \"ASSU\" », catégorie B « voiture de secours aux asphyxiés et blessés \"VSAB\" », catégorie C « ambulance ».",
+        "Une quatrième catégorie dans les « autres véhicules affectés au transport sanitaire terrestre » : catégorie D, « véhicule sanitaire léger ».",
+        "Le texte distingue donc les véhicules aménagés des autres, et non les seuls véhicules par leur taille."
+      ],
+      "commonErrors": [
+        "Employer « ambulance » comme terme générique, alors que le texte le réserve à la catégorie C.",
+        "Ranger le véhicule sanitaire léger parmi les véhicules spécialement aménagés, alors qu'il relève d'un autre groupe."
+      ],
+      "clinicalApplication": "Fixe le vocabulaire employé dans la demande de moyens et dans la transmission à la régulation.",
+      "sourceDocument": "csp-transports-sanitaires-terrestres",
+      "sourceSection": "Article R. 6312-8",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c06", "dea.c07"],
+      "plannedParcoursIds": ["parcours-46"],
+      "lessonIds": ["dea-p46-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.composition-equipages",
+      "title": "La composition des équipages selon la catégorie de véhicule",
+      "summary": "L'article R. 6312-10 fixe, catégorie par catégorie, le nombre de personnes de l'équipage et la qualification exigée d'au moins l'une d'elles.",
+      "keyPoints": [
+        "Catégories A et C : deux personnes, dont au moins une de la catégorie de personnel mentionnée au 1 de l'article R. 6312-7.",
+        "Catégorie B : deux personnes au moins, dont au moins une des catégories mentionnées aux 1° ou 2°.",
+        "Catégorie D : une personne, des catégories mentionnées aux 1° ou 3°.",
+        "Le texte renvoie systématiquement aux catégories de personnel de l'article R. 6312-7 : le nombre seul ne suffit pas, la qualification est exigée."
+      ],
+      "commonErrors": [
+        "Retenir un effectif sans la qualification associée, alors que le texte lie les deux.",
+        "Appliquer à la catégorie D la règle des deux personnes des catégories A et C."
+      ],
+      "clinicalApplication": "Détermine si un équipage est réglementairement constitué pour le véhicule engagé.",
+      "sourceDocument": "csp-transports-sanitaires-terrestres",
+      "sourceSection": "Article R. 6312-10",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c06", "dea.c11"],
+      "plannedParcoursIds": ["parcours-46"],
+      "lessonIds": ["dea-p46-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.blocs-competences-dea",
+      "title": "Les cinq blocs de compétences du diplôme d'État d'ambulancier",
+      "summary": "L'annexe II de l'arrêté du 11 avril 2022 organise le référentiel en cinq blocs de compétences, tous requis pour l'obtention du diplôme.",
+      "keyPoints": [
+        "Bloc 1 : « Prise en soin du patient à tout âge de la vie dans le cadre de ses missions ».",
+        "Bloc 2 : « Réalisation d'un recueil de données cliniques et mise en œuvre de soins adaptés à l'état du patient notamment ceux relevant de l'urgence ».",
+        "Bloc 3 : « Transport du patient dans le respect des règles de circulation et de sécurité routière ».",
+        "Bloc 4 : « Entretien des matériels et installations du véhicule adapté au transport sanitaire terrestre en tenant compte des situations d'intervention ».",
+        "Bloc 5 : « Travail en équipe et traitement des informations liées aux activités de l'ambulancier, à la qualité / gestion des risques »."
+      ],
+      "commonErrors": [
+        "Réduire le métier au bloc 2, alors que le transport, l'entretien et le travail en équipe constituent trois blocs à part entière.",
+        "Croire qu'un bloc peut être compensé par un autre, alors que le diplôme atteste de la validation des cinq."
+      ],
+      "clinicalApplication": "Permet de situer une activité de l'intervention dans le bloc dont elle relève, et donc de savoir ce qui est évalué.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — référentiel de compétences",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c01", "dea.c04", "dea.c07", "dea.c08", "dea.c11"],
+      "plannedParcoursIds": ["parcours-44"],
+      "lessonIds": ["dea-p44-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.repartition-competences-par-bloc",
+      "title": "La répartition des onze compétences dans les cinq blocs",
+      "summary": "L'annexe II répartit onze compétences numérotées entre les cinq blocs : trois au premier, deux dans chacun des quatre suivants.",
+      "keyPoints": [
+        "Bloc 1, trois compétences : établir une communication adaptée, accompagner l'installation et les déplacements, mettre en œuvre des soins d'hygiène et de confort.",
+        "Bloc 2, deux compétences : « Apprécier l'état clinique du patient dans son domaine de compétences » et « Mettre en œuvre les soins adaptés à l'état du patient notamment ceux relevant de l'urgence ».",
+        "Bloc 3, deux compétences : préparer, contrôler et entretenir le véhicule, puis le conduire de façon adaptée à l'état de santé du patient.",
+        "Bloc 4, deux compétences : utiliser des techniques d'entretien du matériel, puis repérer, signaler et traiter les anomalies en assurant leur traçabilité.",
+        "Bloc 5, deux compétences : rechercher, traiter et transmettre les informations pertinentes, puis organiser son activité et coopérer au sein d'une équipe pluriprofessionnelle."
+      ],
+      "commonErrors": [
+        "Rattacher l'hygiène au bloc de l'entretien du matériel, alors que l'hygiène du patient relève du bloc 1 et l'entretien du matériel du bloc 4.",
+        "Placer la transmission des informations dans le bloc du recueil clinique, alors qu'elle constitue une compétence du bloc 5."
+      ],
+      "clinicalApplication": "Permet de rattacher une question d'intervention à la compétence exacte qu'elle évalue.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — référentiel de compétences",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c02", "dea.c03", "dea.c05", "dea.c06", "dea.c09", "dea.c10"],
+      "plannedParcoursIds": ["parcours-44"],
+      "lessonIds": ["dea-p44-l01"],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "library.formation-actes-amu",
+      "title": "La formation aux actes de l'aide médicale urgente",
+      "summary": "L'annexe I de l'arrêté du 31 octobre 2022 découpe la formation aux actes de l'aide médicale urgente en trois modules, dont les durées sont fixées.",
+      "keyPoints": [
+        "Module 1 : « Cadre réglementaire », 3,5 heures.",
+        "Module 2 : « Application des actes professionnels », 14 heures.",
+        "Module 3 : « Recueil et Traçabilité », 3,5 heures.",
+        "Le module d'application représente à lui seul le double des deux autres réunis."
+      ],
+      "commonErrors": [
+        "Confondre cette formation avec le référentiel du diplôme, qui relève d'un autre arrêté.",
+        "Ignorer que le recueil et la traçabilité font l'objet d'un module dédié, et non d'un simple rappel."
+      ],
+      "clinicalApplication": "Situe la formation complémentaire qui conditionne la réalisation des actes du décret n° 2022-629.",
+      "sourceDocument": "arrete-2022-10-31-actes-amu",
+      "sourceSection": "Annexe I — référentiel de formation",
+      "sourcePages": [],
+      "pageStatus": "section_only_reference",
+      "sourceType": "regulatory",
+      "competencyIds": ["dea.c05", "dea.c10"],
+      "plannedParcoursIds": ["parcours-44"],
+      "lessonIds": ["dea-p44-l01"],
+      "status": "to_validate"
+    }
+  ]
+}

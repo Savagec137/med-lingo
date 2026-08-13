@@ -1,0 +1,568 @@
+{
+  "id": "v3-pilot-trauma-cranien",
+  "schemaVersion": 1,
+  "title": "Traumatisme crânien sur chute avec inconscience",
+  "specialty": "Traumatologie",
+  "learningObjective": "Reconnaître qu'un trouble de conscience persistant après une chute impose un bilan complet, alors que les constantes instrumentales peuvent rester normales.",
+  "difficulty": "intermediate",
+  "illustration": "trauma",
+  "estimatedMinutes": 12,
+  "baseXp": 180,
+  "startingPatient": 55,
+  "hintPolicy": "gap_list",
+  "alert": {
+    "patient": "Homme",
+    "age": "environ 42 ans",
+    "reason": "Traumatisme crânien sur chute avec inconscience",
+    "priority": "Élevée",
+    "distance": "2,4 km",
+    "location": "Axe N104, borne 24",
+    "time": "22:47",
+    "dispatchNote": "Appel d'un témoin : patient retrouvé inconscient au bord de la voie, chute suspectée, plusieurs témoins sur place. Pluie, 18 °C."
+  },
+  "clinical": {
+    "ageBand": "adult",
+    "cardiacArrest": false,
+    "glycemiaRelevant": true,
+    "baseline": {
+      "hr": 92,
+      "sbp": 138,
+      "dbp": 84,
+      "spo2": 98,
+      "rr": 18,
+      "temperature": 36.8,
+      "gcs": 13,
+      "pain": 6,
+      "glycemia": 5.4
+    }
+  },
+  "clinicalTrust": "internal_to_validate",
+  "clinicalReviewNote": "Les valeurs cliniques de ce scénario sont un contenu de jeu construit à partir des maquettes, non l'extrait d'un document lisible de la bibliothèque. Elles doivent être relues par le binôme médecin urgentiste et formateur DEA avant publication, au même titre que les affirmations suivies dans INTERVENTION_MEDICAL_REVIEW.md.",
+  "factIds": [
+    "fact.motif-appel",
+    "fact.lieu",
+    "fact.priorite",
+    "fact.contexte-appel",
+    "fact.circonstances",
+    "fact.position-patient",
+    "fact.temoins-presents",
+    "fact.scene-visible",
+    "fact.scene-securisee",
+    "fact.dangers",
+    "fact.indices-mecanisme",
+    "fact.conscience-qualitative",
+    "fact.respiration-presente",
+    "fact.spo2",
+    "fact.fc",
+    "fact.ta",
+    "fact.fr",
+    "fact.temperature",
+    "fact.glycemie",
+    "fact.eva",
+    "fact.glasgow",
+    "fact.coloration",
+    "fact.sudation",
+    "fact.plaintes",
+    "fact.douleur-declaree",
+    "fact.pci",
+    "fact.duree-inconscience",
+    "fact.heure-debut",
+    "fact.antecedents",
+    "fact.traitements",
+    "fact.allergies",
+    "fact.stabilite-parametres"
+  ],
+  "factValues": {
+    "fact.motif-appel": {
+      "kind": "text",
+      "value": "Traumatisme crânien sur chute avec inconscience"
+    },
+    "fact.lieu": { "kind": "text", "value": "Axe N104, borne 24" },
+    "fact.priorite": { "kind": "text", "value": "Élevée" },
+    "fact.contexte-appel": { "kind": "text", "value": "Appel témoin" },
+    "fact.circonstances": {
+      "kind": "text",
+      "value": "Chute signalée par un témoin, patient retrouvé inconscient au bord de la voie"
+    },
+    "fact.position-patient": {
+      "kind": "text",
+      "value": "Allongé sur le flanc droit, en bord de chaussée"
+    },
+    "fact.temoins-presents": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Oui, trois témoins"
+    },
+    "fact.scene-visible": {
+      "kind": "text",
+      "value": "Deux-roues couché, casque à trois mètres, chaussée mouillée, véhicules arrêtés"
+    },
+    "fact.scene-securisee": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Zone balisée en amont"
+    },
+    "fact.dangers": {
+      "kind": "text",
+      "value": "Circulation non interrompue sur la voie de gauche, chaussée glissante"
+    },
+    "fact.indices-mecanisme": {
+      "kind": "text",
+      "value": "Casque détaché retrouvé à distance, pas d'obstacle visible sur la trajectoire"
+    },
+    "fact.conscience-qualitative": {
+      "kind": "enum",
+      "value": "confus",
+      "formatted": "Ouvre les yeux à l'appel, réponses décalées, désorienté"
+    },
+    "fact.respiration-presente": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Respiration spontanée, ample"
+    },
+    "fact.coloration": { "kind": "enum", "value": "normale", "formatted": "Coloration normale" },
+    "fact.sudation": { "kind": "enum", "value": "moderee", "formatted": "Peau moite" },
+    "fact.plaintes": {
+      "kind": "text",
+      "value": "Se plaint de la tête, répète les mêmes questions, ne se souvient pas de la chute"
+    },
+    "fact.douleur-declaree": {
+      "kind": "text",
+      "value": "Douleur décrite comme un étau à l'arrière du crâne"
+    },
+    "fact.pci": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Oui, perte de connaissance initiale rapportée"
+    },
+    "fact.duree-inconscience": {
+      "kind": "text",
+      "value": "Environ deux minutes selon les témoins"
+    },
+    "fact.heure-debut": { "kind": "text", "value": "Chute vers 22:35, appel à 22:38" },
+    "fact.antecedents": {
+      "kind": "text",
+      "value": "Hypertension artérielle traitée, fibrillation auriculaire connue"
+    },
+    "fact.traitements": {
+      "kind": "text",
+      "value": "Anticoagulant oral quotidien, antihypertenseur"
+    },
+    "fact.allergies": { "kind": "text", "value": "Aucune allergie connue" }
+  },
+  "expectedHandoverFactIds": [
+    "fact.conscience-qualitative",
+    "fact.glasgow",
+    "fact.spo2",
+    "fact.fc",
+    "fact.ta",
+    "fact.fr",
+    "fact.glycemie",
+    "fact.eva",
+    "fact.pci",
+    "fact.duree-inconscience",
+    "fact.antecedents",
+    "fact.traitements"
+  ],
+  "handoverItems": [
+    {
+      "id": "item.identite",
+      "label": "Identité — sexe, âge",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.motif",
+      "label": "Motif d'appel",
+      "factIds": ["fact.motif-appel"],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.circonstances",
+      "label": "Circonstances",
+      "factIds": ["fact.circonstances", "fact.indices-mecanisme"],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.conscience",
+      "label": "Niveau de conscience",
+      "factIds": ["fact.conscience-qualitative", "fact.glasgow"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.constantes",
+      "label": "Constantes mesurées",
+      "factIds": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.glycemie",
+      "label": "Glycémie",
+      "factIds": ["fact.glycemie"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.douleur",
+      "label": "Douleur",
+      "factIds": ["fact.eva"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.perte-de-connaissance",
+      "label": "Perte de connaissance initiale",
+      "factIds": ["fact.pci", "fact.duree-inconscience"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.antecedents",
+      "label": "Antécédents",
+      "factIds": ["fact.antecedents"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.traitements",
+      "label": "Traitements",
+      "factIds": ["fact.traitements"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.allergies",
+      "label": "Allergies",
+      "factIds": ["fact.allergies"],
+      "expected": false,
+      "disclosable": true
+    },
+    {
+      "id": "item.heure-debut",
+      "label": "Heure de début",
+      "factIds": ["fact.heure-debut"],
+      "expected": false,
+      "disclosable": true
+    },
+    {
+      "id": "item.gestes-realises",
+      "label": "Gestes réalisés",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.demande-de-renfort",
+      "label": "Demande de renfort",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    }
+  ],
+  "regulatorQuestions": [
+    {
+      "id": "question.conscience-exacte",
+      "text": "Quel est l'état de conscience exact ?",
+      "triggeredByFactId": "fact.glasgow",
+      "onOmission": true,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Glasgow chiffré, avec la réactivité observée",
+          "correct": true,
+          "rationale": "Le régulateur attend une donnée reproductible. Un score chiffré et la réactivité constatée lui permettent de comparer avec l'évolution ultérieure."
+        },
+        {
+          "id": "a2",
+          "text": "Il est un peu dans le vague, ça va aller",
+          "correct": false,
+          "rationale": "Une appréciation subjective ne se compare pas d'un relevé à l'autre. L'observation des manifestations de l'état de conscience est un acte énuméré, pas une impression."
+        },
+        {
+          "id": "a3",
+          "text": "Il présente un traumatisme crânien léger",
+          "correct": false,
+          "rationale": "C'est une conclusion diagnostique, qui relève du médecin. L'ambulancier transmet ce qu'il a constaté, pas une hypothèse."
+        }
+      ]
+    },
+    {
+      "id": "question.tension",
+      "text": "Avez-vous pris la tension ?",
+      "triggeredByFactId": "fact.ta",
+      "onOmission": false,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Annoncer la valeur mesurée et l'heure du relevé",
+          "correct": true,
+          "rationale": "La tension prend son sens avec son horodatage : une valeur vieille de dix minutes chez un traumatisé crânien ne dit plus l'état actuel."
+        },
+        {
+          "id": "a2",
+          "text": "Non, mais le patient a l'air stable",
+          "correct": false,
+          "rationale": "La prise de pression artérielle par voie non invasive fait partie des actes que l'ambulancier accomplit. L'apparence ne remplace pas la mesure."
+        },
+        {
+          "id": "a3",
+          "text": "Non, je la prendrai pendant le transport",
+          "correct": false,
+          "rationale": "Différer la mesure prive la régulation d'un élément de décision au moment où elle décide. La mesure se prend avant de transmettre."
+        }
+      ]
+    },
+    {
+      "id": "question.antecedents",
+      "text": "Le patient a-t-il des antécédents ?",
+      "triggeredByFactId": "fact.antecedents",
+      "onOmission": false,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Rapporter ce que les documents et l'entourage ont permis de recueillir",
+          "correct": true,
+          "rationale": "Les antécédents ne s'inventent pas : ils viennent des documents du patient ou de son entourage, et se transmettent avec leur source."
+        },
+        {
+          "id": "a2",
+          "text": "Je n'ai pas cherché, il est confus",
+          "correct": false,
+          "rationale": "Un patient confus ne peut pas répondre, mais les témoins et les documents restent accessibles. La confusion est une raison de chercher ailleurs, pas de renoncer."
+        },
+        {
+          "id": "a3",
+          "text": "Aucun, il n'a rien dit",
+          "correct": false,
+          "rationale": "Le silence d'un patient confus ne vaut pas absence d'antécédent. Annoncer « aucun » transforme une information manquante en information fausse."
+        }
+      ]
+    },
+    {
+      "id": "question.perte-de-connaissance",
+      "text": "Y a-t-il eu une perte de connaissance initiale ?",
+      "triggeredByFactId": "fact.pci",
+      "onOmission": false,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Oui, avec la durée rapportée par les témoins",
+          "correct": true,
+          "rationale": "Seuls les témoins peuvent dire ce qui s'est passé avant l'arrivée. La durée rapportée est une donnée de bilan, à transmettre comme telle."
+        },
+        {
+          "id": "a2",
+          "text": "Je ne sais pas, il était déjà éveillé quand je suis arrivé",
+          "correct": false,
+          "rationale": "L'état à l'arrivée ne renseigne pas sur ce qui a précédé. La question s'adresse aux témoins, qui étaient présents."
+        },
+        {
+          "id": "a3",
+          "text": "Probablement, vu le mécanisme",
+          "correct": false,
+          "rationale": "Déduire une perte de connaissance du mécanisme, c'est transmettre une hypothèse comme un constat. Le témoin donne un fait ; le mécanisme ne donne qu'une vraisemblance."
+        }
+      ]
+    }
+  ],
+  "gestureRounds": [
+    {
+      "id": "round.gestes-prioritaires",
+      "requiredSelections": 3,
+      "timerSeconds": 300,
+      "offered": [
+        {
+          "id": "geste.maintenir-axe",
+          "label": "Maintenir l'axe tête-cou-tronc",
+          "hint": "Immobilisation dans la position trouvée",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.conscience-qualitative", "fact.indices-mecanisme"],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": ["dea.c02", "dea.c05"],
+          "knowledgeId": "intervention.traumatisme"
+        },
+        {
+          "id": "geste.surveiller-conscience-ventilation",
+          "label": "Surveiller conscience et ventilation",
+          "hint": "Réévaluation rapprochée des fonctions vitales",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.conscience-qualitative", "fact.respiration-presente"],
+          "consequenceFamily": "stability",
+          "actId": "acte.r6311-17.ii.4",
+          "competencyIds": ["dea.c04"],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        },
+        {
+          "id": "geste.reevaluer-constantes",
+          "label": "Réévaluer les constantes",
+          "hint": "Nouveau relevé après immobilisation",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.spo2", "fact.fc"],
+          "consequenceFamily": "handover_quality",
+          "actId": "acte.r6311-17.ii.1",
+          "competencyIds": ["dea.c04"],
+          "knowledgeId": "intervention.constantes-vitales"
+        },
+        {
+          "id": "geste.administrer-oxygene",
+          "label": "Administrer l'oxygène si indiqué",
+          "hint": "Selon la SpO₂ mesurée et le protocole en vigueur",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.spo2"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c05"],
+          "knowledgeId": null
+        },
+        {
+          "id": "geste.rassurer-surveiller",
+          "label": "Rassurer et surveiller",
+          "hint": "Maintenir le contact verbal",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.conscience-qualitative"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c01"],
+          "knowledgeId": "intervention.bilan-secondaire"
+        },
+        {
+          "id": "geste.installer-selon-tolerance",
+          "label": "Installer selon la tolérance",
+          "hint": "Position adaptée à l'état du patient",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.conscience-qualitative"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c02"],
+          "knowledgeId": "intervention.transport-sanitaire"
+        },
+        {
+          "id": "geste.preparer-le-transport",
+          "label": "Préparer le transport",
+          "hint": "Brancard et matériel d'immobilisation",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": [],
+          "consequenceFamily": "handover_quality",
+          "actId": null,
+          "competencyIds": ["dea.c06"],
+          "knowledgeId": "intervention.transport-sanitaire"
+        },
+        {
+          "id": "geste.demander-renfort",
+          "label": "Demander un renfort médicalisé",
+          "hint": "Solliciter la régulation",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.glasgow"],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": ["dea.c10", "dea.c11"],
+          "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+        },
+        {
+          "id": "geste.transporter-sans-reevaluation",
+          "label": "Transporter immédiatement sans réévaluation",
+          "hint": "Départ direct vers l'hôpital",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Partir sans réévaluer prive la régulation de l'évolution du patient et engage le transport sur un bilan périmé. La surveillance relève de la compétence 7 du bloc 3.",
+          "justifiedBy": [],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        },
+        {
+          "id": "geste.non-indique",
+          "label": "Faire un geste non indiqué",
+          "hint": "Agir sans élément clinique le justifiant",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Un geste sans indication consomme du temps et expose le patient sans bénéfice. Chaque geste doit se rattacher à un élément recueilli du bilan.",
+          "justifiedBy": [],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.bilan-primaire"
+        },
+        {
+          "id": "geste.retirer-immobilisation",
+          "label": "Retirer l'immobilisation trop tôt",
+          "hint": "Libérer l'axe avant le relais",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "L'immobilisation d'un traumatisé crânien est maintenue jusqu'au relais médical. La lever sur place fait perdre le bénéfice du geste initial.",
+          "justifiedBy": [],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.traumatisme"
+        },
+        {
+          "id": "geste.attendre-sans-surveillance",
+          "label": "Attendre sans surveillance",
+          "hint": "Patienter jusqu'à l'arrivée du renfort",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Attendre est parfois la bonne décision, mais jamais sans surveiller : un trouble de conscience peut s'aggraver pendant l'attente sans que rien ne le signale.",
+          "justifiedBy": [],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        }
+      ]
+    }
+  ],
+  "narrative": {
+    "new_call": "Le Centre 15 signale un homme retrouvé inconscient au bord de la N104, à la borne 24. Un témoin a appelé. Il pleut, la nuit est tombée.",
+    "arrival": "Le véhicule se gare en amont. Un homme est allongé sur le flanc, en bord de chaussée. Un casque et un deux-roues couché sont à quelques mètres. Des véhicules sont arrêtés, des témoins sont sur la voie.",
+    "scene_assessment": "La chaussée est mouillée et l'éclairage public suffit à travailler. Les témoins attendent qu'on leur parle. Rien ne saigne de façon visible.",
+    "patient_assessment": "L'homme ouvre les yeux quand on lui parle, mais ses réponses sont décalées et il ne sait pas où il est. Il respire spontanément.",
+    "vitals": "Le patient tolère la pose du matériel. Le relevé complet reste à construire : chaque appareil embarqué donne un paramètre, et un seul.",
+    "centre15_call": "La régulation attend le bilan. Ce qui n'a pas été recueilli apparaîtra en clair dans le résumé transmis.",
+    "priority_actions": "L'homme reste confus et cherche à se relever. Trois gestes sont à retenir, pas plus, et le temps compte.",
+    "reevaluation": "Le patient est installé et sanglé. Les paramètres déjà relevés peuvent être comparés ; ceux qui n'ont jamais été pris n'ont rien à comparer.",
+    "transport": "Le transport est engagé vers le service d'accueil désigné par la régulation. La surveillance continue pendant le trajet.",
+    "debrief": "L'intervention est terminée. Le service d'accueil a retenu l'hypothèse d'un traumatisme crânien avec perte de connaissance initiale, sur la base du bilan transmis."
+  },
+  "regulatorInstruction": "Le médecin régulateur demande un transport vers un service d'accueil des urgences avec surveillance neurologique rapprochée pendant le trajet, et rappel immédiat en cas d'aggravation de la conscience.",
+  "rejectedAdditions": [
+    "Je pense à un traumatisme crânien grave",
+    "C'est sûrement une hémorragie intracrânienne",
+    "Il faudrait un scanner en urgence",
+    "Je l'emmène directement au service de neurochirurgie"
+  ],
+  "freeAdditions": [
+    "Le patient cherche à se relever malgré les consignes",
+    "Les témoins décrivent une chute sans obstacle visible",
+    "Le casque était détaché à l'arrivée des secours",
+    "Le patient répète les mêmes questions"
+  ],
+  "reward": {
+    "coins": 150,
+    "badge": "Professionnel de terrain",
+    "badgeMinimumScore": 82
+  }
+}

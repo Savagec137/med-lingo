@@ -1,0 +1,1413 @@
+{
+  "schemaVersion": 1,
+  "indexedAt": "2026-08-10",
+  "provenanceRules": {
+    "keyPointProvenance": "Chaque point clé porte sa propre provenance. `official` signifie que l'énoncé figure dans un texte officiel indexé, à la section citée. `internal` signifie que l'énoncé est une affirmation portée par la banque MedLingo, consignée dans INTERVENTION_MEDICAL_REVIEW.md et en attente de relecture médicale.",
+    "commonErrors": "Les erreurs fréquentes sont toutes d'origine interne : elles décrivent les distracteurs de la banque du Mode Intervention. Aucune ne provient d'un texte officiel.",
+    "sourcePages": "Aucune connaissance ne porte de page. Les textes officiels indexés sont cités par article ou par annexe, pas par page, et le seul document paginé de la bibliothèque (B2.M4 - Support Etudiant.pdf) ne couvre pas ces thèmes et n'est pas présent dans le dépôt.",
+    "status": "`extracted` : tous les points clés sont officiels. `to_validate` : au moins un point clé est une affirmation interne. `validated` : relu et signé par un médecin urgentiste et un formateur DEA — aucune connaissance n'a encore ce statut.",
+    "scope": "Vingt thèmes correspondent au périmètre demandé pour le P0 nº4. Quatre s'y ajoutent — anaphylaxie, urgence pédiatrique, intoxication, situation à victimes multiples — parce que les missions 9, 11, 14 et 15 n'entrent dans aucun des vingt et que les rattacher au thème le plus proche aurait forcé une référence.",
+    "lessonLink": "Aucun des vingt-huit parcours visés ne porte de leçon publiée sur son thème : `lessonIds` reste vide et `proposedLessonId` porte une proposition. Le format de la proposition est délibérément `dea-pNN-<theme>` et non `dea-pNN-lNN` : il ne peut donc jamais être confondu avec un identifiant de leçon existante."
+  },
+  "knowledge": [
+    {
+      "knowledgeId": "intervention.securite-de-scene",
+      "title": "Sécurité de scène",
+      "theme": "securite-de-scene",
+      "summary": "La sécurisation précède le soin. Elle porte sur l'équipage, le patient et les tiers, et se poursuit pendant toute l'intervention : un danger neutralisé peut réapparaître.",
+      "keyPoints": [
+        {
+          "text": "Coopérer au sein d'une équipe pluriprofessionnelle et organiser son activité fait partie des compétences exigées du diplôme.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 11"
+        },
+        {
+          "text": "Le soin ne commence pas avant que le danger soit traité : oxygénothérapie débutée sans avoir aéré, abord d'une victime près d'une machine non consignée, protocole appliqué sans interrompre l'exposition sont présentés comme des erreurs.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        },
+        {
+          "text": "Une absence d'odeur perçue ne renseigne pas sur la présence de monoxyde de carbone : l'atmosphère doit être contrôlée avant l'entrée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        },
+        {
+          "text": "La sécurisation est proportionnée : sur un arrêt cardio-respiratoire dans un hall sans danger particulier, une sécurisation exhaustive retarde le massage. Faire guider les renforts en fait partie.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 22"
+        },
+        {
+          "text": "Sur un dispositif interservices, se présenter au commandement et respecter le zonage précède l'engagement des gestes.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        }
+      ],
+      "commonErrors": [
+        "Commencer le bilan pendant qu'un équipier recherche encore les dangers.",
+        "Entrer dans une atmosphère non contrôlée parce que les victimes sont visibles.",
+        "Sécuriser exhaustivement une scène sans danger particulier et retarder un geste vital.",
+        "Engager la prise en charge sans s'être présenté au commandement sur une opération interservices."
+      ],
+      "clinicalApplication": "Phase Sécurisation des quinze missions. Détermine si le joueur peut engager le bilan, et sur les missions 6, 8, 13, 14 et 15 la nature exacte du danger conditionne la bonne réponse.",
+      "sourceDocument": "intervention-medical-review",
+      "sourcePages": null,
+      "sourceSection": "Contenu réécrit hors gabarit — points 21 et 22",
+      "sourceType": "internal",
+      "competencyIds": ["dea.c11", "dea.c03"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-16"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-16",
+      "proposedLessonId": "dea-p16-securite-de-scene",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.bilan-primaire",
+      "title": "Bilan primaire",
+      "theme": "bilan-primaire",
+      "summary": "Recherche ordonnée des détresses vitales selon l'ABCDE, avec traitement de chaque menace dès qu'elle est trouvée, avant tout inventaire lésionnel.",
+      "keyPoints": [
+        {
+          "text": "Apprécier l'état clinique du patient dans son domaine de compétences est la compétence 4 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 2, compétence 4"
+        },
+        {
+          "text": "L'évaluation de la douleur et l'observation des manifestations de l'état de conscience sont des actes autorisés, accomplis en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II"
+        },
+        {
+          "text": "Les signes d'épuisement respiratoire pèsent davantage que la saturation isolée chez le patient BPCO.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 24"
+        },
+        {
+          "text": "Une lésion spectaculaire masque les lésions vitales : la démarche ne se laisse pas capter par ce qui se voit.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 24"
+        },
+        {
+          "text": "Une hémorragie menaçant la vie se traite dès sa constatation, avant de poursuivre l'ABCDE : c'est la seule exception retenue à l'ordre de la démarche.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 25"
+        },
+        {
+          "text": "Chez l'enfant, les constantes s'interprètent avec les valeurs de référence de son âge, et le temps de recoloration cutanée est un marqueur utile.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 24"
+        }
+      ],
+      "commonErrors": [
+        "Se limiter à demander au patient s'il va mieux.",
+        "Se fier au seul chiffre de saturation.",
+        "Examiner d'abord la lésion la plus visible.",
+        "Prendre des gasps pour une respiration efficace, ou prolonger la recherche du pouls avant de débuter la réanimation.",
+        "Conduire un examen complet victime par victime sur un afflux au lieu d'un tri."
+      ],
+      "clinicalApplication": "Phase Bilan primaire des quinze missions, et prérequis de la phase Constantes qui la suit.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 2, compétence 4",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04"],
+      "actIds": ["acte.r6311-17.ii.4"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-17"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-17",
+      "proposedLessonId": "dea-p17-bilan-primaire",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.constantes-vitales",
+      "title": "Constantes vitales",
+      "theme": "constantes-vitales",
+      "summary": "Recueil, horodatage et interprétation des paramètres vitaux. Une valeur isolée ne renseigne pas : c'est la série qui montre une dynamique.",
+      "keyPoints": [
+        {
+          "text": "La prise de température, de pulsation cardiaque et de pression artérielle par voie non invasive est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 1"
+        },
+        {
+          "text": "Le recueil du taux de saturation en oxygène ou en monoxyde de carbone par voie non invasive est un acte autorisé.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 5"
+        },
+        {
+          "text": "Le recueil de la glycémie par captation capillaire brève ou lecture transdermique est un acte autorisé.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 2"
+        },
+        {
+          "text": "Une saturation ne s'interprète pas sans le débit d'oxygène sous lequel elle est mesurée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 29"
+        },
+        {
+          "text": "Les seuils d'alerte adultes et pédiatriques du moteur, l'unité de glycémie retenue et les vitesses d'évolution de chaque paramètre sont des hypothèses d'ingénierie non validées.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Constantes dynamiques — points 1, 2 et 7"
+        }
+      ],
+      "commonErrors": [
+        "Donner une valeur unique en la présentant comme un état stable.",
+        "Transmettre une saturation sans préciser le débit d'oxygène administré.",
+        "Annoncer une valeur sans son horaire, ce qui rend l'évolution illisible.",
+        "Interpréter les constantes d'un nourrisson avec les valeurs de l'adulte."
+      ],
+      "clinicalApplication": "Phase Constantes, présente dans les quinze missions sous forme de relevé sans question, et moteur `intervention-vitals.ts` qui fait évoluer huit paramètres.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, II",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04"],
+      "actIds": ["acte.r6311-17.ii.1", "acte.r6311-17.ii.2", "acte.r6311-17.ii.5"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-18"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-18",
+      "proposedLessonId": "dea-p18-constantes-vitales",
+      "lessonLinkStatus": "needs_review",
+      "lessonLinkReason": "Le parcours 18 porte déjà deux fichiers de leçon en statut review, mais leur contenu traite l'adaptation à l'effort et la physiologie, pas les paramètres vitaux, et il provient du lot json-xlsx en attente de validation. Reclasser ces fichiers ou créer la leçon relève d'une décision humaine."
+    },
+    {
+      "knowledgeId": "intervention.bilan-secondaire",
+      "title": "Bilan secondaire",
+      "theme": "bilan-secondaire",
+      "summary": "Recueil ciblé par l'hypothèse clinique, et non exhaustif. Il apporte ce que l'examen ne donne pas : circonstances, antécédents utiles, traitements, chronologie.",
+      "keyPoints": [
+        {
+          "text": "Rechercher et traiter les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 10"
+        },
+        {
+          "text": "Établir une communication adaptée pour informer et accompagner le patient et son entourage est la compétence 1 : le recueil auprès des proches en relève.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 1, compétence 1"
+        },
+        {
+          "text": "Le bilan secondaire est ciblé par l'hypothèse et non exhaustif : répéter un ABCDE complet, commencer par l'administratif ou explorer les antécédents anciens avant de transmettre sont présentés comme des erreurs. La trame SAMPLE est citée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 16"
+        },
+        {
+          "text": "Le recueil auprès du témoin se mène en parallèle du massage : aucune interruption de réanimation n'est justifiée pour interroger.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 18"
+        },
+        {
+          "text": "L'inquiétude parentale et la comparaison au comportement habituel ont valeur de signe d'alerte chez le nourrisson.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 19"
+        }
+      ],
+      "commonErrors": [
+        "Refaire un ABCDE complet au lieu de chercher pourquoi le patient est tombé.",
+        "Interrompre la réanimation pour interroger le témoin.",
+        "Explorer les antécédents anciens avant de transmettre chez un traumatisé instable.",
+        "Faire un interrogatoire long avant de traiter une détresse en cours."
+      ],
+      "clinicalApplication": "Phase Bilan secondaire des quinze missions, dont sept questions d'association où l'élément recueilli doit être relié à ce qu'il change.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 5, compétence 10",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c10", "dea.c01"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-17"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-17",
+      "proposedLessonId": "dea-p17-bilan-secondaire",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.detresse-respiratoire",
+      "title": "Détresse respiratoire",
+      "theme": "detresse-respiratoire",
+      "summary": "Reconnaissance de l'épuisement respiratoire et oxygénothérapie titrée, en respectant la position choisie par le patient.",
+      "keyPoints": [
+        {
+          "text": "L'administration en aérosols de produits non médicamenteux est un acte autorisé en lien constant avec le médecin ; celle de produits médicamenteux en aérosols ou pulvérisations relève d'une prescription lorsque l'urgence l'impose.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 3 et III"
+        },
+        {
+          "text": "Chez le patient BPCO, un objectif de saturation plus bas s'applique et un débit non contrôlé peut déprimer la commande ventilatoire. La valeur cible doit venir du protocole du service.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 1"
+        },
+        {
+          "text": "La capacité à terminer ses phrases et l'usage des muscles accessoires complètent la saturation pour juger de l'épuisement.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 24"
+        },
+        {
+          "text": "La position spontanément choisie par le patient dyspnéique est respectée : l'allonger de force aggrave la détresse.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 1"
+        },
+        {
+          "text": "Dans l'intoxication au monoxyde de carbone, la saturation affichée peut rester normale : le débit d'oxygène suit le protocole et non la valeur mesurée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 10"
+        }
+      ],
+      "commonErrors": [
+        "Se fier au seul chiffre de saturation pour juger de la gravité.",
+        "Allonger de force un patient dyspnéique.",
+        "Modifier seul le traitement personnel du patient.",
+        "Lire le saturomètre comme fiable dans une intoxication au monoxyde de carbone."
+      ],
+      "clinicalApplication": "Mission 3 sur les huit phases, et phase Gestes des missions 9, 14 et 15 où l'oxygénothérapie intervient.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, II, 3",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.3", "acte.r6311-17.ii.5", "acte.r6311-17.iii.1"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-19", "parcours-23"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-19",
+      "proposedLessonId": "dea-p19-detresse-respiratoire",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.douleur-thoracique",
+      "title": "Douleur thoracique",
+      "theme": "douleur-thoracique",
+      "summary": "Toute douleur thoracique est traitée comme un syndrome coronarien : limiter le travail cardiaque, anticiper le risque rythmique, documenter les horaires.",
+      "keyPoints": [
+        {
+          "text": "L'enregistrement et la transmission d'un électrocardiogramme à visée diagnostique à l'aide d'un outil automatisé est un acte autorisé sur prescription lorsque l'urgence l'impose.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, III"
+        },
+        {
+          "text": "L'évaluation de la douleur est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 4"
+        },
+        {
+          "text": "L'oxygénothérapie à haut débit n'est pas systématique et est écartée à 94 % de saturation. À confirmer par rapport au protocole retenu.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 2"
+        },
+        {
+          "text": "L'heure de début de la douleur et son évolution chiffrée commandent la suite de la prise en charge ; une appréciation qualitative n'est pas exploitable.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 13 et 30"
+        },
+        {
+          "text": "Tout effort inutile est évité : faire marcher le patient jusqu'au véhicule majore le travail cardiaque.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 27"
+        }
+      ],
+      "commonErrors": [
+        "Interroger la douleur avant de prendre les constantes.",
+        "Faire marcher le patient vers l'ambulance.",
+        "Annoncer une douleur « un peu diminuée » sans les évaluations chiffrées et leurs horaires.",
+        "Choisir seul l'hôpital le plus proche."
+      ],
+      "clinicalApplication": "Mission 2 sur les huit phases. Le matériel de surveillance et les modalités d'ECG dépendent de la formation détenue et de la prescription du médecin régulateur.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, III",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.4", "acte.r6311-17.iii.4"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-25", "parcours-53"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-25",
+      "proposedLessonId": "dea-p25-douleur-thoracique",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.malaise",
+      "title": "Malaise",
+      "theme": "malaise",
+      "summary": "Devant un malaise sans cause établie, rechercher une détresse vitale et une cause corrigeable avant toute explication rassurante.",
+      "keyPoints": [
+        {
+          "text": "L'administration de produits médicamenteux par voie orale ou intranasale relève d'une prescription et de situations limitativement prévues par le texte.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, III"
+        },
+        {
+          "text": "Le dernier repas et les traitements cardiovasculaires sont les éléments décisifs du recueil devant un malaise.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 17"
+        },
+        {
+          "text": "Une amélioration apparente ne dispense pas d'une réévaluation, et la chronologie transmise vaut mieux qu'une conclusion annoncée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 28"
+        }
+      ],
+      "commonErrors": [
+        "Conclure à la fatigue sans rechercher les traitements.",
+        "Donner un médicament trouvé dans le logement.",
+        "Faire marcher immédiatement le patient.",
+        "Annoncer une tension « normale » mesurée une seule fois comme un état stable."
+      ],
+      "clinicalApplication": "Mission 1 sur les huit phases.",
+      "sourceDocument": "intervention-medical-review",
+      "sourcePages": null,
+      "sourceSection": "Contenu réécrit hors gabarit — point 17",
+      "sourceType": "internal",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.iii.2"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-17"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-17",
+      "proposedLessonId": "dea-p17-malaise",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.hypoglycemie",
+      "title": "Hypoglycémie",
+      "theme": "hypoglycemie",
+      "summary": "Cause immédiatement corrigeable de trouble de conscience, à écarter par une mesure devant tout déficit neurologique ou toute altération de la vigilance.",
+      "keyPoints": [
+        {
+          "text": "Le recueil de la glycémie par captation capillaire brève ou lecture transdermique est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 2"
+        },
+        {
+          "text": "L'administration de produits médicamenteux par voie auto-injectable est prévue pour le choc anaphylactique et l'hypoglycémie, sur prescription lorsque l'urgence l'impose.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, III"
+        },
+        {
+          "text": "La glycémie est intégrée au bilan devant un déficit neurologique brutal, et son résultat écarte une cause immédiatement curable.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 24 et 30"
+        },
+        {
+          "text": "Le fait qu'une glycémie ait déjà été mesurée doit être transmis : sans cela l'équipe receveuse refait le geste ou garde l'hypothèse ouverte.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 28"
+        },
+        {
+          "text": "L'unité de glycémie du moteur (mmol/L avec conversion affichée en g/L) reste à confirmer par rapport aux appareils utilisés en formation.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Constantes dynamiques — point 2"
+        }
+      ],
+      "commonErrors": [
+        "Partir sans lecteur de glycémie sur un déficit neurologique brutal.",
+        "Écarter l'hypoglycémie sans l'avoir mesurée.",
+        "Laisser la fiche indiquer la glycémie sans signaler qu'elle a été faite."
+      ],
+      "clinicalApplication": "Missions 1, 4 et 10 : phase Départ pour l'emport du lecteur, phase Bilan primaire pour l'intégration au bilan, phase Relais pour la transmission du résultat.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, II, 2",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.2", "acte.r6311-17.iii.3"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-66"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-66",
+      "proposedLessonId": "dea-p66-hypoglycemie",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.suspicion-avc",
+      "title": "Suspicion d'AVC",
+      "theme": "suspicion-avc",
+      "summary": "Filière neurovasculaire commandée par une heure : celle de la dernière normalité. Écarter l'hypoglycémie, protéger les voies aériennes, ne pas retarder.",
+      "keyPoints": [
+        {
+          "text": "L'observation des manifestations de l'état de conscience est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 4"
+        },
+        {
+          "text": "L'heure de dernière normalité se distingue de l'heure de découverte des signes, et c'est elle qui conditionne la fenêtre thérapeutique.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 13, 17 et 28"
+        },
+        {
+          "text": "Le maintien à jeun est strict et le risque d'inhalation existe dès qu'un trouble de la parole est présent.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 3"
+        },
+        {
+          "text": "Une régression partielle du déficit ne repousse pas l'urgence : le déficit peut se reconstituer et la fenêtre continue de se refermer.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 30"
+        }
+      ],
+      "commonErrors": [
+        "Faire boire pour tester la déglutition.",
+        "Attendre que les symptômes disparaissent.",
+        "Annoncer seulement une faiblesse du bras au régulateur.",
+        "Remettre la fiche où l'heure de début est notée sans l'énoncer à voix haute."
+      ],
+      "clinicalApplication": "Mission 4 sur les huit phases. La filière et l'orientation relèvent du médecin régulateur.",
+      "sourceDocument": "intervention-medical-review",
+      "sourcePages": null,
+      "sourceSection": "Contenu réécrit hors gabarit — points 3 et 13",
+      "sourceType": "internal",
+      "competencyIds": ["dea.c04", "dea.c05", "dea.c10"],
+      "actIds": ["acte.r6311-17.ii.4"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-21", "parcours-61"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-21",
+      "proposedLessonId": "dea-p21-suspicion-avc",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.crise-convulsive",
+      "title": "Crise convulsive",
+      "theme": "crise-convulsive",
+      "summary": "Protéger sans contraindre pendant la crise, protéger les voies aériennes en phase post-critique, chercher une cause corrigeable.",
+      "keyPoints": [
+        {
+          "text": "L'observation des manifestations de l'état de conscience est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 4"
+        },
+        {
+          "text": "La contention provoque des lésions sans raccourcir la crise : la conduite retenue est d'écarter les objets et de protéger la tête.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 23"
+        },
+        {
+          "text": "La position latérale de sécurité s'applique en phase post-critique, et l'objet entre les dents est une pratique abandonnée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 7"
+        },
+        {
+          "text": "Le retour de la parole précède le retour de la vigilance et de l'orientation : la surveillance des voies aériennes reste nécessaire.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 30"
+        },
+        {
+          "text": "La durée de la crise et la récupération de la conscience sont les éléments décisifs de la transmission ; une cause réversible est recherchée avant de conclure à une récidive d'épilepsie.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 13 et 17"
+        }
+      ],
+      "commonErrors": [
+        "Maintenir les membres de force.",
+        "Placer un objet entre les dents.",
+        "Faire boire immédiatement pour réveiller le patient.",
+        "Conclure à l'épilepsie sans autre recherche.",
+        "Laisser repartir seul un patient dès qu'il parle."
+      ],
+      "clinicalApplication": "Mission 10 sur les huit phases.",
+      "sourceDocument": "intervention-medical-review",
+      "sourcePages": null,
+      "sourceSection": "Contenu réécrit hors gabarit — points 7 et 23",
+      "sourceType": "internal",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.4"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-21", "parcours-63"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-21",
+      "proposedLessonId": "dea-p21-crise-convulsive",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.chute",
+      "title": "Chute",
+      "theme": "chute",
+      "summary": "Chercher la cause de la chute autant que ses conséquences, immobiliser dans la position trouvée, contrôler l'état vasculaire en aval.",
+      "keyPoints": [
+        {
+          "text": "Accompagner le patient dans son installation et ses déplacements en utilisant le matériel adapté est la compétence 2 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 1, compétence 2"
+        },
+        {
+          "text": "Un membre déformé n'est pas réaligné, et l'état vasculaire distal est contrôlé avant et après l'immobilisation.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 4"
+        },
+        {
+          "text": "La cause de la chute est recherchée autant que la lésion : une chute peut être la conséquence d'un malaise.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 17"
+        },
+        {
+          "text": "Un membre coloré ne dispense pas de rechercher le pouls en aval de l'attelle, et les deux contrôles distaux doivent être transmis car l'équipe receveuse ne peut plus les refaire.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 28 et 30"
+        },
+        {
+          "text": "Un traitement anticoagulant modifie la surveillance et doit être transmis oralement, y compris sans saignement visible.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 28"
+        }
+      ],
+      "commonErrors": [
+        "Manipuler immédiatement le membre sans bilan.",
+        "Tenter de remettre la jambe droite sans indication.",
+        "Ignorer les traitements parce qu'il n'y a pas de saignement.",
+        "Annoncer un membre « bien coloré » sans avoir cherché le pouls distal."
+      ],
+      "clinicalApplication": "Mission 5 sur les huit phases, et bilan secondaire de la mission 1 où la chute peut révéler un malaise.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 1, compétence 2",
+      "sourceType": "official",
+      "competencyIds": ["dea.c02", "dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.4"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-34"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-34",
+      "proposedLessonId": "dea-p34-chute-et-fracture",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.traumatisme",
+      "title": "Traumatisme",
+      "theme": "traumatisme",
+      "summary": "Le mécanisme fait suspecter les lésions que l'examen initial ne montre pas. Immobilisation, contrôle des hémorragies et lutte contre le refroidissement se mènent en parallèle.",
+      "keyPoints": [
+        {
+          "text": "Mettre en œuvre les soins adaptés à l'état du patient notamment ceux relevant de l'urgence est la compétence 5 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 2, compétence 5"
+        },
+        {
+          "text": "La cinétique est un critère de gravité autonome, et un traumatisme grave est annoncé d'emblée, avant le détail lésionnel.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 15"
+        },
+        {
+          "text": "Le relevage est unique et commandé : les reprises successives du mouvement multiplient les contraintes sur une lésion instable.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 27"
+        },
+        {
+          "text": "L'hypothermie du traumatisé grave aggrave le saignement et se constitue silencieusement : le réchauffement est nommé dans les gestes et dans le relais.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 5 et 34"
+        },
+        {
+          "text": "L'immobilisation du rachis précède tout déplacement, et les gestes vitaux sont achevés avant de mobiliser un polytraumatisé.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 26"
+        }
+      ],
+      "commonErrors": [
+        "Commencer par rechercher toutes les fractures.",
+        "Mobiliser chaque membre pour tester les lésions.",
+        "Multiplier les gestes non prioritaires sur place.",
+        "Attendre un diagnostic lésionnel complet avant d'alerter la régulation."
+      ],
+      "clinicalApplication": "Missions 5, 8 et 13 sur les huit phases.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 2, compétence 5",
+      "sourceType": "official",
+      "competencyIds": ["dea.c02", "dea.c05"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-34", "parcours-35", "parcours-36"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-34",
+      "proposedLessonId": "dea-p34-polytraumatisme",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.accident-de-la-route",
+      "title": "Accident de la route",
+      "theme": "accident-de-la-route",
+      "summary": "La protection de la zone précède tout geste. Le risque de suraccident et le maintien de l'axe tête-cou-tronc dès le premier contact structurent l'intervention.",
+      "keyPoints": [
+        {
+          "text": "Conduire le véhicule dans le respect des règles de circulation et de sécurité routière est la compétence 7 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 3, compétence 7"
+        },
+        {
+          "text": "Organiser son activité et coopérer au sein d'une équipe pluriprofessionnelle est la compétence 11 : la coordination avec les autres services en relève.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 11"
+        },
+        {
+          "text": "La protection de la zone et la coordination des renforts précèdent l'approche de la victime, y compris lorsqu'elle est visible.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        },
+        {
+          "text": "Un patient confus répond souvent aux questions simples : réduire son état neurologique à cette capacité efface la confusion et le motif de surveillance.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 30"
+        }
+      ],
+      "commonErrors": [
+        "Courir directement vers la victime.",
+        "Tester si le patient peut marcher jusqu'au brancard.",
+        "Décrire uniquement la lésion la plus visible au régulateur.",
+        "Relever sans briefing pour partir plus vite."
+      ],
+      "clinicalApplication": "Mission 8 sur les huit phases, et phase Sécurisation de la mission 13.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 5, compétence 11",
+      "sourceType": "official",
+      "competencyIds": ["dea.c07", "dea.c11", "dea.c05"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-16", "parcours-48"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-16",
+      "proposedLessonId": "dea-p16-secours-routier",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.accouchement-imminent",
+      "title": "Accouchement imminent",
+      "theme": "accouchement-imminent",
+      "summary": "Deux patients, une décision partagée avec la régulation sur l'imminence, et aucune manœuvre pour accélérer la naissance.",
+      "keyPoints": [
+        {
+          "text": "Établir une communication adaptée pour informer et accompagner le patient et son entourage est la compétence 1 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 1, compétence 1"
+        },
+        {
+          "text": "L'accouchement est accompagné sans traction, et le séchage puis le réchauffement du nouveau-né sont des gestes urgents.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 9"
+        },
+        {
+          "text": "La parité conditionne la vitesse du travail, et des pertes faibles ne renseignent pas sur son avancement.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 17 et 20"
+        },
+        {
+          "text": "L'hémorragie de la délivrance est la complication maternelle immédiate ; le réchauffement est l'enjeu majeur des premières minutes chez un nouveau-né né hors maternité.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 33"
+        },
+        {
+          "text": "La recherche de la dilatation est présentée comme hors du rôle du DEA.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 14"
+        }
+      ],
+      "commonErrors": [
+        "Faire partir immédiatement sans évaluer l'imminence.",
+        "Réaliser des gestes non indiqués pour accélérer la naissance.",
+        "Séparer inutilement le nouveau-né stable de sa mère.",
+        "Décider seul d'un transport malgré une naissance imminente."
+      ],
+      "clinicalApplication": "Mission 12 sur les huit phases, la seule à prendre en charge deux patients.",
+      "sourceDocument": "intervention-medical-review",
+      "sourcePages": null,
+      "sourceSection": "Contenu réécrit hors gabarit — points 9 et 33",
+      "sourceType": "internal",
+      "competencyIds": ["dea.c01", "dea.c05"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-40"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-40",
+      "proposedLessonId": "dea-p40-accouchement-inopine",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.arret-cardio-respiratoire",
+      "title": "Arrêt cardio-respiratoire",
+      "theme": "arret-cardio-respiratoire",
+      "summary": "Reconnaissance en quelques secondes, réanimation de qualité à interruptions limitées, défibrillation au plus tôt, et une chronologie qui commande tout le reste.",
+      "keyPoints": [
+        {
+          "text": "Mettre en œuvre les soins adaptés à l'état du patient notamment ceux relevant de l'urgence est la compétence 5 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 2, compétence 5"
+        },
+        {
+          "text": "Les interruptions de massage sont limitées à l'analyse du défibrillateur, et la recherche de pouls entre les compressions est présentée comme une erreur.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 6"
+        },
+        {
+          "text": "Le devenir dépend du temps sans circulation et du délai avant la première défibrillation : ces intervalles ne sont reconstituables que par l'équipage.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 13 et 28"
+        },
+        {
+          "text": "Une reprise d'activité circulatoire annoncée sans son horaire ni les constantes relevées depuis ne permet pas d'évaluer sa stabilité.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 30"
+        },
+        {
+          "text": "La séquence de réanimation, le seuil de qualité conditionnant la reprise d'activité et les cibles de constantes après reprise sont des hypothèses du moteur, non validées.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Constantes dynamiques — point 6"
+        }
+      ],
+      "commonErrors": [
+        "Prolonger la recherche de signes avant de débuter la réanimation.",
+        "Interrompre longuement les compressions pendant l'installation du défibrillateur.",
+        "Attendre que tout le matériel soit installé avant de masser.",
+        "Renvoyer à la bande du défibrillateur pour le nombre de chocs sans l'annoncer."
+      ],
+      "clinicalApplication": "Mission 7 sur les huit phases. La séquence opérationnelle, la gestion des interruptions et les critères de transport relèvent des protocoles du service.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 2, compétence 5",
+      "sourceType": "official",
+      "competencyIds": ["dea.c05", "dea.c10"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-22"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-22",
+      "proposedLessonId": "dea-p22-arret-cardio-respiratoire",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.hemorragie",
+      "title": "Hémorragie",
+      "theme": "hemorragie",
+      "summary": "Contrôle immédiat sans jamais interrompre la compression, reconnaissance du choc hémorragique, lutte contre le refroidissement.",
+      "keyPoints": [
+        {
+          "text": "Le recueil de l'hémoglobinémie est un acte autorisé sur prescription lorsque l'urgence l'impose.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, III"
+        },
+        {
+          "text": "La compression n'est jamais interrompue pour examiner la plaie, et la lutte contre le refroidissement fait partie du traitement du choc.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 5"
+        },
+        {
+          "text": "Une hémorragie menaçant la vie se traite dès sa constatation, avant de poursuivre l'ABCDE.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 25"
+        },
+        {
+          "text": "Un pansement sec en surface ne prouve pas l'arrêt du saignement, et le nombre de couches ajoutées mesure l'importance des pertes.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 28 et 30"
+        },
+        {
+          "text": "C'est l'efficacité de la compression, et non sa seule réalisation, qui doit être transmise au régulateur.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 13"
+        }
+      ],
+      "commonErrors": [
+        "Retirer la compression pour examiner longuement la plaie.",
+        "Faire un examen complet avant de vérifier le contrôle du saignement.",
+        "Relâcher la surveillance une fois la plaie couverte.",
+        "Décrire uniquement la taille de la plaie au régulateur."
+      ],
+      "clinicalApplication": "Mission 6 sur les huit phases, et phases Bilan primaire et Gestes des missions 8 et 13.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, III",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.iii.5"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-38", "parcours-20"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-38",
+      "proposedLessonId": "dea-p38-hemorragie-externe",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur",
+      "title": "Transmission au médecin régulateur",
+      "theme": "transmission-au-medecin-regulateur",
+      "summary": "Transmettre les faits observés dans un ordre allant des détresses vitales vers l'administratif, et laisser la décision d'orientation au médecin régulateur.",
+      "keyPoints": [
+        {
+          "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 10"
+        },
+        {
+          "text": "Les actes du II de l'article R. 6311-17 sont accomplis en lien constant avec le médecin, ceux du III sur prescription médicale lorsque l'urgence l'impose : la transmission est la condition de ce lien.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II et III"
+        },
+        {
+          "text": "Un module de formation « Recueil et Traçabilité » de 3,5 heures est prévu pour les actes de l'aide médicale urgente.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-10-31-actes-amu",
+          "sourceSection": "Annexe I — module 3"
+        },
+        {
+          "text": "L'ordre transmis va des détresses vitales vers l'administratif ; commencer par l'état civil, le médecin traitant, le statut vaccinal ou les circonstances d'un accident du travail est présenté comme une erreur. L'ordre retenu doit être aligné sur le format du service.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 12"
+        },
+        {
+          "text": "Poser un diagnostic, réclamer une filière ou un examen, décider d'un non-transport, choisir seul la destination ou fixer seul l'ordre d'évacuation sont présentés comme hors du rôle du DEA.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 14"
+        }
+      ],
+      "commonErrors": [
+        "Annoncer une interprétation à la place du fait observé.",
+        "Retarder l'élément décisif au profit d'un élément administratif.",
+        "Demander une destination sans transmettre le bilan.",
+        "Décider seul de l'orientation alors qu'elle relève du médecin régulateur."
+      ],
+      "clinicalApplication": "Phase Transmission des quinze missions, et phase Relais où la même exigence s'applique à l'équipe receveuse.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 5, compétence 10",
+      "sourceType": "official",
+      "competencyIds": ["dea.c10"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-47"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-47",
+      "proposedLessonId": "dea-p47-transmission-regulation",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.surveillance-du-patient",
+      "title": "Surveillance du patient",
+      "theme": "surveillance-du-patient",
+      "summary": "Réévaluer à intervalles réguliers, horodater, et ne pas laisser une amélioration interrompre la surveillance.",
+      "keyPoints": [
+        {
+          "text": "Conduire le véhicule de façon adaptée à l'état de santé du patient est la compétence 7 : la surveillance pendant le trajet en relève.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 3, compétence 7"
+        },
+        {
+          "text": "Une amélioration apparente ne dispense pas de réévaluer : le risque de récidive persiste après une convulsion, une anaphylaxie ou une inhalation de fumées.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 20 et 31"
+        },
+        {
+          "text": "La surveillance après anaphylaxie se compte à partir de l'heure d'administration du traitement ; sa durée n'est volontairement pas chiffrée et doit venir du protocole du service.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 31"
+        },
+        {
+          "text": "Chez le nourrisson, l'évolution de la réactivité pendant le transport est un élément de surveillance à transmettre.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 32"
+        }
+      ],
+      "commonErrors": [
+        "Interrompre la surveillance pour ranger le matériel.",
+        "Laisser le patient sur place dès amélioration.",
+        "Installer un enfant hors de vue pour le laisser dormir.",
+        "Minimiser parce que le patient reste conscient."
+      ],
+      "clinicalApplication": "Phase Transport des quinze missions, et moteur de constantes qui poursuit l'évolution jusqu'au relais.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 3, compétence 7",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c07"],
+      "actIds": ["acte.r6311-17.ii.1"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-18", "parcours-45"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-18",
+      "proposedLessonId": "dea-p18-surveillance-du-patient",
+      "lessonLinkStatus": "needs_review",
+      "lessonLinkReason": "Le parcours 18 porte déjà deux fichiers de leçon en statut review, mais leur contenu traite l'adaptation à l'effort et la physiologie, pas les paramètres vitaux, et il provient du lot json-xlsx en attente de validation. Reclasser ces fichiers ou créer la leçon relève d'une décision humaine."
+    },
+    {
+      "knowledgeId": "intervention.transport-sanitaire",
+      "title": "Transport sanitaire",
+      "theme": "transport-sanitaire",
+      "summary": "Mobilisation, relevage et portage adaptés à la pathologie, dans un ordre qui protège la lésion et sous une décision qui reste médicale.",
+      "keyPoints": [
+        {
+          "text": "Réaliser la préparation, le contrôle et l'entretien du véhicule afin de garantir la sécurité du transport est la compétence 6 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 3, compétence 6"
+        },
+        {
+          "text": "Conduire le véhicule dans le respect des règles de circulation et de sécurité routière et de façon adaptée à l'état du patient est la compétence 7.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 3, compétence 7"
+        },
+        {
+          "text": "L'ordre de mobilisation dépend de la pathologie : contrôle du saignement vérifié avant de bouger, immobilisation du rachis avant tout déplacement, position latérale conservée pendant le portage, gestes vitaux achevés avant relevage. Ces ordres doivent être confrontés aux procédures du service.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 26"
+        },
+        {
+          "text": "Le relevage est unique et commandé : les reprises successives du mouvement multiplient les contraintes sur une lésion instable.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 27"
+        }
+      ],
+      "commonErrors": [
+        "Faire descendre seul un patient par l'escalier.",
+        "Retirer un dispositif de contrôle avant le départ pour vérifier la plaie.",
+        "Porter le patient sans briefing.",
+        "Faire partir les véhicules selon leur ordre d'arrivée plutôt que selon le tri."
+      ],
+      "clinicalApplication": "Phase Départ, pour la préparation du matériel, et phase Transport, dont dix questions d'ordre chronologique.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 3, compétences 6 et 7",
+      "sourceType": "official",
+      "competencyIds": ["dea.c02", "dea.c06", "dea.c07", "dea.c09"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-45", "parcours-46"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-45",
+      "proposedLessonId": "dea-p45-mobilisation-et-transport",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.hygiene-et-desinfection",
+      "title": "Hygiène et désinfection",
+      "theme": "hygiene-et-desinfection",
+      "summary": "Protection individuelle avant le contact, hygiène et confort du patient pendant la prise en charge, entretien du matériel après l'intervention.",
+      "keyPoints": [
+        {
+          "text": "Mettre en œuvre des soins d'hygiène et de confort adaptés aux besoins et à la situation du patient est la compétence 3 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 1, compétence 3"
+        },
+        {
+          "text": "Utiliser des techniques d'entretien du matériel et des installations en prenant en compte la prévention des risques associés est la compétence 8.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 4, compétence 8"
+        },
+        {
+          "text": "La protection face au sang précède le contact avec le patient : s'approcher sans protection pour gagner du temps est présenté comme une erreur.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        },
+        {
+          "text": "La préservation de l'intimité fait partie de l'organisation de l'espace de soins, notamment en obstétrique.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 21"
+        }
+      ],
+      "commonErrors": [
+        "S'approcher d'une hémorragie sans protection pour gagner du temps.",
+        "Organiser l'espace sans préserver l'intimité de la patiente."
+      ],
+      "clinicalApplication": "Phases Départ, Sécurisation et Gestes de la mission 6, et phase Sécurisation de la mission 12. **Ce thème est le moins couvert de la banque** : aucune question ne porte sur la désinfection du matériel ou du véhicule après l'intervention.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 1, compétence 3",
+      "sourceType": "official",
+      "competencyIds": ["dea.c03", "dea.c08"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-14", "parcours-15"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-14",
+      "proposedLessonId": "dea-p14-hygiene-en-intervention",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.anaphylaxie",
+      "title": "Réaction allergique sévère",
+      "theme": "anaphylaxie",
+      "summary": "Une atteinte respiratoire ou circulatoire après une exposition fait reconnaître une anaphylaxie et déclencher le protocole sans attendre. Le risque de récidive persiste après amélioration.",
+      "keyPoints": [
+        {
+          "text": "L'administration de produits médicamenteux par voie auto-injectable est prévue pour le choc anaphylactique, sur prescription lorsque l'urgence l'impose.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, III"
+        },
+        {
+          "text": "Mettre en œuvre les soins adaptés à l'état du patient notamment ceux relevant de l'urgence est la compétence 5 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 2, compétence 5"
+        },
+        {
+          "text": "Le délai entre l'exposition et les premiers signes est un critère de gravité : plus il est court, plus la réaction est sévère.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 17"
+        },
+        {
+          "text": "L'urticaire régresse avant l'atteinte respiratoire et circulatoire : sa pâleur ne signe pas la guérison et n'autorise pas à alléger la surveillance.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 20 et 31"
+        },
+        {
+          "text": "La surveillance se compte à partir de l'heure d'administration du traitement. Sa durée n'est volontairement pas chiffrée et doit venir du protocole du service.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 31"
+        }
+      ],
+      "commonErrors": [
+        "Attendre l'apparition de plaques plus importantes avant de reconnaître l'anaphylaxie.",
+        "Se limiter à un antihistaminique en première intention.",
+        "Minimiser parce que l'urticaire commence à pâlir.",
+        "Laisser la patiente sur place dès amélioration."
+      ],
+      "clinicalApplication": "Mission 9 sur les huit phases. L'emploi éventuel d'un auto-injecteur reste strictement encadré par les textes et la prescription.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, III",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05", "dea.c10"],
+      "actIds": ["acte.r6311-17.iii.3"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-33"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-33",
+      "proposedLessonId": "dea-p33-anaphylaxie",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.urgence-pediatrique",
+      "title": "Urgence pédiatrique",
+      "theme": "urgence-pediatrique",
+      "summary": "Chez l'enfant, aucune constante ne s'interprète sans l'âge, la réactivité est un signe de gravité, et l'observation des parents est une donnée clinique.",
+      "keyPoints": [
+        {
+          "text": "Apprécier l'état clinique du patient dans son domaine de compétences s'applique à tout âge de la vie, le bloc 1 visant explicitement « le patient à tout âge de la vie ».",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 1 et Bloc 2, compétence 4"
+        },
+        {
+          "text": "La prise de température est un acte autorisé, accompli en lien constant avec le médecin.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 1"
+        },
+        {
+          "text": "Les constantes de l'enfant s'interprètent avec les valeurs de référence de son âge, et le temps de recoloration cutanée est un marqueur utile.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 24"
+        },
+        {
+          "text": "L'inquiétude parentale et la comparaison au comportement habituel ont valeur de signe d'alerte ; la recherche de taches cutanées ne s'effaçant pas à la pression est une urgence à ne pas différer.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 19"
+        },
+        {
+          "text": "Le découvrement est progressif et le refroidissement brutal est refusé ; l'accompagnant a une place dans la prise en charge.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 8"
+        },
+        {
+          "text": "La pertinence d'une seule tranche « enfant » dans le moteur de constantes, face aux classes d'âge réelles, reste à trancher.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Constantes dynamiques — point 1"
+        }
+      ],
+      "commonErrors": [
+        "Se concentrer uniquement sur le chiffre de température.",
+        "Plonger l'enfant dans un bain froid.",
+        "Écarter l'inquiétude parentale sans examen complet.",
+        "Installer l'enfant hors de vue pour le laisser dormir."
+      ],
+      "clinicalApplication": "Mission 11 sur les huit phases, et profil clinique `ageBand: child` du moteur de constantes.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 2, compétence 4",
+      "sourceType": "official",
+      "competencyIds": ["dea.c01", "dea.c04", "dea.c05"],
+      "actIds": ["acte.r6311-17.ii.1"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-39"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-39",
+      "proposedLessonId": "dea-p39-urgence-pediatrique",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.intoxication",
+      "title": "Intoxication",
+      "theme": "intoxication",
+      "summary": "Protéger l'équipage d'une atmosphère toxique avant d'extraire, puis traiter chaque victime individuellement en gardant l'exposition comme donnée commune.",
+      "keyPoints": [
+        {
+          "text": "Le recueil du taux de saturation en monoxyde de carbone par voie non invasive est un acte autorisé, distinct du recueil de la saturation en oxygène.",
+          "provenance": "official",
+          "sourceDocumentId": "decret-2022-629",
+          "sourceSection": "Article R. 6311-17, II, 5"
+        },
+        {
+          "text": "Organiser et contrôler son activité et coopérer au sein d'une équipe pluriprofessionnelle est la compétence 11 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 11"
+        },
+        {
+          "text": "La saturation affichée par un saturomètre peut rester normale en présence de carboxyhémoglobine : le débit d'oxygène suit le protocole et non la valeur mesurée. C'est l'affirmation la plus importante à valider.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 10"
+        },
+        {
+          "text": "Une absence d'odeur perçue ne renseigne pas sur la présence de monoxyde de carbone, et une personne parlant normalement peut être significativement intoxiquée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 20 et 21"
+        },
+        {
+          "text": "Les personnes exposées et non symptomatiques doivent être recensées et signalées : l'intoxication peut être asymptomatique au moment du bilan.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — points 17 et 35"
+        },
+        {
+          "text": "La valeur de saturation de complément retenue par le moteur pour cette mission ne traduit pas encore le piège et doit être remplacée.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Constantes dynamiques — point 3"
+        }
+      ],
+      "commonErrors": [
+        "Entrer rapidement pour ouvrir les fenêtres avant toute sécurisation atmosphérique.",
+        "Examiner uniquement l'adulte qui parle le plus fort.",
+        "Chercher le produit dans le logement non sécurisé.",
+        "Faire boire pour accélérer l'élimination du toxique.",
+        "Faire un seul bilan global sans distinguer les victimes."
+      ],
+      "clinicalApplication": "Mission 14 sur les huit phases. Zonage, protections, détection et coordination avec le centre antipoison relèvent de l'organisation locale.",
+      "sourceDocument": "decret-2022-629",
+      "sourcePages": null,
+      "sourceSection": "Article R. 6311-17, II, 5",
+      "sourceType": "official",
+      "competencyIds": ["dea.c04", "dea.c05", "dea.c11"],
+      "actIds": ["acte.r6311-17.ii.5"],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-32"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-32",
+      "proposedLessonId": "dea-p32-intoxication-collective",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    },
+    {
+      "knowledgeId": "intervention.victimes-multiples",
+      "title": "Situation à victimes multiples",
+      "theme": "victimes-multiples",
+      "summary": "Prendre sa place dans un dispositif : se présenter au commandement, hiérarchiser par le tri et non par l'ordre de rencontre, réévaluer, partager une image commune.",
+      "keyPoints": [
+        {
+          "text": "Organiser et contrôler son activité, coopérer au sein d'une équipe pluriprofessionnelle et améliorer sa pratique dans une démarche qualité est la compétence 11 du référentiel.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 11"
+        },
+        {
+          "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10.",
+          "provenance": "official",
+          "sourceDocumentId": "arrete-2022-04-11-dea",
+          "sourceSection": "Annexe II — Bloc 5, compétence 10"
+        },
+        {
+          "text": "Le tri commande l'ordre des gestes, et un bilan exhaustif victime par victime est présenté comme incompatible avec un afflux.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 11"
+        },
+        {
+          "text": "Une victime valide au premier tri peut se dégrader après inhalation de fumées : le tri se réévalue.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 20"
+        },
+        {
+          "text": "Fixer seul l'ordre d'évacuation ou répartir seul plusieurs victimes est présenté comme hors du rôle du DEA.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 14"
+        },
+        {
+          "text": "Le vocabulaire de commandement, le tri, le zonage et l'évacuation doivent être alignés sur les plans et doctrines du territoire.",
+          "provenance": "internal",
+          "sourceDocumentId": "intervention-medical-review",
+          "sourceSection": "Contenu réécrit hors gabarit — point 36"
+        }
+      ],
+      "commonErrors": [
+        "Entrer dans la zone chaude pour rechercher des victimes.",
+        "Consacrer tout le temps à la première victime rencontrée.",
+        "Conserver le tri initial sans réévaluation.",
+        "Envoyer des bilans séparés sans synthèse commune.",
+        "Faire partir les véhicules selon leur ordre d'arrivée."
+      ],
+      "clinicalApplication": "Mission 15 sur les huit phases, et phases Sécurisation et Transmission de la mission 14, qui compte trois victimes.",
+      "sourceDocument": "arrete-2022-04-11-dea",
+      "sourcePages": null,
+      "sourceSection": "Annexe II — Bloc 5, compétence 11",
+      "sourceType": "official",
+      "competencyIds": ["dea.c10", "dea.c11"],
+      "actIds": [],
+      "lessonIds": [],
+      "plannedParcoursIds": ["parcours-16", "parcours-49"],
+      "status": "to_validate",
+      "needsReview": true,
+      "primaryParcoursId": "parcours-49",
+      "proposedLessonId": "dea-p49-victimes-multiples",
+      "lessonLinkStatus": "needs_creation",
+      "lessonLinkReason": "Le parcours visé existe dans la feuille de route avec le statut awaiting_content et ne porte aucun fichier de leçon : la leçon doit être créée."
+    }
+  ]
+}

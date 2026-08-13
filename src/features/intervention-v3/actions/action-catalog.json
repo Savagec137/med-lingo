@@ -1,0 +1,830 @@
+{
+  "schemaVersion": 1,
+  "actions": [
+    {
+      "id": "action.securiser-scene",
+      "label": "Sécuriser la zone",
+      "hint": "Mettre en sécurité le patient et l'environnement",
+      "category": "secure",
+      "requires": {
+        "phases": ["arrival", "scene_assessment"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": 1
+      },
+      "reveals": ["fact.scene-securisee"],
+      "timeSeconds": 60,
+      "effect": {
+        "score": 6,
+        "patient": 0,
+        "timeSeconds": 60,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c11"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.securite-de-scene"
+    },
+    {
+      "id": "action.observer-environnement",
+      "label": "Observer l'environnement",
+      "hint": "Rechercher des dangers, témoins, indices",
+      "category": "observe",
+      "requires": {
+        "phases": ["arrival", "scene_assessment"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": 1
+      },
+      "reveals": ["fact.dangers", "fact.indices-mecanisme"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 3,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c11"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.securite-de-scene"
+    },
+    {
+      "id": "action.approcher-patient",
+      "label": "Approcher le patient",
+      "hint": "Évaluer l'état initial et la conscience",
+      "category": "examine",
+      "requires": {
+        "phases": ["scene_assessment", "patient_assessment"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.scene-securisee"],
+        "justifyingActions": [],
+        "maxUses": 1
+      },
+      "reveals": ["fact.conscience-qualitative", "fact.respiration-presente"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 5,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": -8,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": "unsafe-approach",
+        "therapeutic": false
+      },
+      "actId": null,
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.bilan-primaire"
+    },
+    {
+      "id": "action.interroger-patient",
+      "label": "Interroger le patient",
+      "hint": "Plaintes, douleur ressentie",
+      "category": "interview",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.conscience-qualitative"],
+        "justifyingActions": [],
+        "maxUses": 2
+      },
+      "reveals": ["fact.plaintes", "fact.douleur-declaree"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": -3,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": "interview-before-assessment",
+        "therapeutic": false
+      },
+      "actId": null,
+      "competencyIds": ["dea.c01", "dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.bilan-secondaire"
+    },
+    {
+      "id": "action.interroger-temoin",
+      "label": "Interroger témoins / famille",
+      "hint": "Circonstances, perte de connaissance, heure",
+      "category": "interview",
+      "requires": {
+        "phases": ["scene_assessment", "patient_assessment", "vitals"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": 2
+      },
+      "reveals": ["fact.pci", "fact.duree-inconscience", "fact.heure-debut", "fact.antecedents"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 5,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c01", "dea.c10"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.bilan-secondaire"
+    },
+    {
+      "id": "action.consulter-documents",
+      "label": "Consulter les documents",
+      "hint": "Ordonnances, carnet, dossier de liaison",
+      "category": "interview",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": 1
+      },
+      "reveals": ["fact.antecedents", "fact.traitements", "fact.allergies"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c10"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.bilan-secondaire"
+    },
+    {
+      "id": "action.poser-saturometre",
+      "label": "Poser le saturomètre",
+      "hint": "Mesurer la SpO₂",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation", "transport"],
+        "equipment": ["saturometre"],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.spo2", "fact.fc"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": "acte.r6311-17.ii.5",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.retirer-saturometre",
+      "label": "Retirer le capteur",
+      "hint": "Arrêter la mesure continue",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation", "transport"],
+        "equipment": ["saturometre"],
+        "blockingActions": ["action.poser-saturometre"],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 10,
+      "effect": {
+        "score": 0,
+        "patient": 0,
+        "timeSeconds": 10,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": null
+    },
+    {
+      "id": "action.prendre-tension",
+      "label": "Prendre la tension",
+      "hint": "Mesurer la TA",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation", "transport"],
+        "equipment": ["tensiometre"],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.ta"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": "acte.r6311-17.ii.1",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.palper-pouls",
+      "label": "Palper le pouls",
+      "hint": "Contrôle manuel",
+      "category": "probe",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.fc"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": "acte.r6311-17.ii.1",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.compter-fr",
+      "label": "Compter la fréquence respiratoire",
+      "hint": "Mesurer la FR sur une minute",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.fr"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.constantes-vitales"
+    },
+    {
+      "id": "action.faire-glycemie",
+      "label": "Faire la glycémie",
+      "hint": "Glucomètre, captation capillaire",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation"],
+        "equipment": ["glucometre"],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.glycemie"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": "acte.r6311-17.ii.2",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.prendre-temperature",
+      "label": "Prendre la température",
+      "hint": "Thermomètre",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation"],
+        "equipment": ["thermometre"],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.temperature"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 0,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": "acte.r6311-17.ii.1",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.evaluer-douleur",
+      "label": "Évaluer la douleur",
+      "hint": "Échelle EVA",
+      "category": "probe",
+      "requires": {
+        "phases": ["vitals", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.conscience-qualitative"],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.eva"],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": 0,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": "assessment-without-contact",
+        "therapeutic": false
+      },
+      "actId": "acte.r6311-17.ii.4",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.evaluer-conscience",
+      "label": "Évaluer la conscience",
+      "hint": "Score de Glasgow",
+      "category": "probe",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.conscience-qualitative"],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.glasgow"],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": 0,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": "assessment-without-contact",
+        "therapeutic": false
+      },
+      "actId": "acte.r6311-17.ii.4",
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "library.parametres-recueillis-par-le-dea"
+    },
+    {
+      "id": "action.observer-peau",
+      "label": "Observer la peau",
+      "hint": "Sueurs, pâleur, cyanose",
+      "category": "probe",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": ["fact.coloration", "fact.sudation"],
+      "timeSeconds": 20,
+      "effect": {
+        "score": 3,
+        "patient": 0,
+        "timeSeconds": 20,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c04"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.bilan-primaire"
+    },
+    {
+      "id": "action.appeler-centre15",
+      "label": "Appeler le Centre 15",
+      "hint": "Joindre le médecin régulateur",
+      "category": "communicate",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "reevaluation"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.scene-securisee", "fact.conscience-qualitative"],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 30,
+      "effect": {
+        "score": 3,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": -5,
+        "patient": 0,
+        "timeSeconds": 30,
+        "flag": "premature-handover",
+        "therapeutic": false
+      },
+      "actId": null,
+      "competencyIds": ["dea.c10"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+    },
+    {
+      "id": "action.transmettre-bilan",
+      "label": "Transmettre le bilan",
+      "hint": "Envoyer les éléments sélectionnés",
+      "category": "communicate",
+      "requires": {
+        "phases": ["centre15_call"],
+        "equipment": [],
+        "blockingActions": ["action.appeler-centre15"],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 90,
+      "effect": {
+        "score": 0,
+        "patient": 0,
+        "timeSeconds": 90,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c10"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+    },
+    {
+      "id": "action.choisir-gestes-prioritaires",
+      "label": "Choisir les gestes prioritaires",
+      "hint": "Sélectionner les actions adaptées",
+      "category": "care",
+      "requires": {
+        "phases": ["priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": ["fact.conscience-qualitative"],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 120,
+      "effect": {
+        "score": 12,
+        "patient": 8,
+        "timeSeconds": 120,
+        "flag": null,
+        "therapeutic": true
+      },
+      "unjustifiedEffect": {
+        "score": -6,
+        "patient": -4,
+        "timeSeconds": 120,
+        "flag": "unjustified-act",
+        "therapeutic": true
+      },
+      "actId": null,
+      "competencyIds": ["dea.c05"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.traumatisme"
+    },
+    {
+      "id": "action.reevaluer-patient",
+      "label": "Réévaluer le patient",
+      "hint": "Comparer à l'état précédent",
+      "category": "examine",
+      "requires": {
+        "phases": ["reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 60,
+      "effect": {
+        "score": 8,
+        "patient": 0,
+        "timeSeconds": 60,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": ["dea.c07"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.surveillance-du-patient"
+    },
+    {
+      "id": "action.preparer-transport",
+      "label": "Préparer le transport",
+      "hint": "Installation et bilan final",
+      "category": "logistics",
+      "requires": {
+        "phases": ["priority_actions", "reevaluation"],
+        "equipment": ["brancard"],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": ["action.reevaluer-patient"],
+        "maxUses": 1
+      },
+      "reveals": [],
+      "timeSeconds": 120,
+      "effect": {
+        "score": 6,
+        "patient": 0,
+        "timeSeconds": 120,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": -10,
+        "patient": -5,
+        "timeSeconds": 120,
+        "flag": "premature-transport",
+        "therapeutic": false
+      },
+      "actId": null,
+      "competencyIds": ["dea.c06", "dea.c07"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.transport-sanitaire"
+    },
+    {
+      "id": "action.poser-voie-veineuse",
+      "label": "Poser une voie veineuse",
+      "hint": "Abord vasculaire périphérique",
+      "category": "care",
+      "requires": {
+        "phases": ["priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "Aucun acte de l'article R. 6311-17 ne prévoit d'abord vasculaire pour l'ambulancier.",
+      "knowledgeId": "library.actes-lien-constant-medecin"
+    },
+    {
+      "id": "action.injecter-produit",
+      "label": "Injecter un produit",
+      "hint": "Administration par voie injectable",
+      "category": "care",
+      "requires": {
+        "phases": ["priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "La liste des actes de l'ambulancier est limitative et ne comporte pas cette administration.",
+      "knowledgeId": "library.actes-sur-prescription"
+    },
+    {
+      "id": "action.perfuser",
+      "label": "Poser une perfusion",
+      "hint": "Remplissage vasculaire",
+      "category": "care",
+      "requires": {
+        "phases": ["priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "Geste invasif hors du champ de l'ambulancier, réservé à d'autres professions.",
+      "knowledgeId": "library.actes-lien-constant-medecin"
+    },
+    {
+      "id": "action.sonder-invasif",
+      "label": "Introduire une sonde",
+      "hint": "Geste invasif",
+      "category": "care",
+      "requires": {
+        "phases": ["priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "Geste invasif hors des actes énumérés pour l'ambulancier.",
+      "knowledgeId": "library.actes-lien-constant-medecin"
+    },
+    {
+      "id": "action.poser-diagnostic",
+      "label": "Annoncer un diagnostic",
+      "hint": "Nommer la pathologie au patient",
+      "category": "communicate",
+      "requires": {
+        "phases": ["patient_assessment", "vitals", "centre15_call", "priority_actions"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "Le diagnostic relève du médecin. L'ambulancier transmet un bilan de ce qu'il a constaté.",
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+    },
+    {
+      "id": "action.choisir-destination",
+      "label": "Choisir l'hôpital de destination",
+      "hint": "Décider de l'orientation",
+      "category": "communicate",
+      "requires": {
+        "phases": ["centre15_call", "reevaluation", "transport"],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": [],
+        "maxUses": null
+      },
+      "reveals": [],
+      "timeSeconds": 0,
+      "effect": {
+        "score": -10,
+        "patient": 0,
+        "timeSeconds": 0,
+        "flag": "out-of-scope-act",
+        "therapeutic": false
+      },
+      "unjustifiedEffect": null,
+      "actId": null,
+      "competencyIds": [],
+      "outOfScope": true,
+      "outOfScopeReason": "L'orientation est décidée par le médecin régulateur, qui reste décisionnaire.",
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+    }
+  ]
+}
