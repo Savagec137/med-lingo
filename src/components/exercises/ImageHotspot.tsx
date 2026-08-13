@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
+import { DEFAULT_HOTSPOT_RADIUS } from "@/features/anatomy/anatomy-domain";
 
 export interface Hotspot {
   id: string;
-  /** 0..1 coords relative to image */
+  /** Coordonnées 0..1 relatives à l'image. */
   x: number;
   y: number;
   label: string;
-  /** rayon en % de la largeur (défaut 6) */
+  /** Rayon en pourcentage de la largeur (défaut 7). */
   radius?: number;
 }
 
@@ -16,31 +17,32 @@ interface ImageHotspotProps {
   imageUrl: string;
   imageAlt: string;
   hotspots: Hotspot[];
-  /** Id à trouver ; si null, mode observation libre */
+  /** Identifiant à trouver ; `null` conserve le mode observation libre. */
   target?: string | null;
   onGuess?: (result: { hit: Hotspot | null; correct: boolean }) => void;
 }
 
 /**
- * Image interactive : l'utilisateur touche une zone. Utilisé pour Identifier
- * (« Où est le radius ? »). En mode observation (target=null) : affiche les
- * labels au survol.
+ * Image interactive générique, conservée pour `interactive_image`.
+ * `anatomy_location` utilise désormais AnatomyBoard sans supprimer ce contrat.
  */
 export function ImageHotspot({ imageUrl, imageAlt, hotspots, target, onGuess }: ImageHotspotProps) {
-  const [feedback, setFeedback] = useState<null | { at: { x: number; y: number }; ok: boolean }>(null);
+  const [feedback, setFeedback] = useState<null | { at: { x: number; y: number }; ok: boolean }>(
+    null,
+  );
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!target) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-    const hit = hotspots.find((h) => {
-      const r = (h.radius ?? 6) / 100;
-      return Math.hypot(h.x - x, h.y - y) <= r;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    const hit = hotspots.find((hotspot) => {
+      const radius = (hotspot.radius ?? DEFAULT_HOTSPOT_RADIUS) / 100;
+      return Math.hypot(hotspot.x - x, hotspot.y - y) <= radius;
     });
-    const correct = hit?.id === target;
-    setFeedback({ at: { x, y }, ok: correct });
-    onGuess?.({ hit: hit ?? null, correct });
+    const isCorrect = hit?.id === target;
+    setFeedback({ at: { x, y }, ok: isCorrect });
+    onGuess?.({ hit: hit ?? null, correct: isCorrect });
   };
 
   return (
@@ -52,15 +54,14 @@ export function ImageHotspot({ imageUrl, imageAlt, hotspots, target, onGuess }: 
       >
         <img src={imageUrl} alt={imageAlt} className="block w-full select-none" draggable={false} />
 
-        {/* Observation mode : labels flottants */}
         {!target
-          ? hotspots.map((h) => (
+          ? hotspots.map((hotspot) => (
               <span
-                key={h.id}
+                key={hotspot.id}
                 className="chip absolute -translate-x-1/2 -translate-y-1/2"
-                style={{ left: `${h.x * 100}%`, top: `${h.y * 100}%` }}
+                style={{ left: `${hotspot.x * 100}%`, top: `${hotspot.y * 100}%` }}
               >
-                {h.label}
+                {hotspot.label}
               </span>
             ))
           : null}
@@ -69,9 +70,7 @@ export function ImageHotspot({ imageUrl, imageAlt, hotspots, target, onGuess }: 
           <motion.span
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className={`pointer-events-none absolute grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full text-white ${
-              feedback.ok ? "bg-[color:var(--color-success)]" : "bg-[color:var(--color-destructive)]"
-            }`}
+            className={`pointer-events-none absolute grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full text-white ${feedback.ok ? "bg-[color:var(--color-success)]" : "bg-[color:var(--color-destructive)]"}`}
             style={{ left: `${feedback.at.x * 100}%`, top: `${feedback.at.y * 100}%` }}
           >
             {feedback.ok ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
@@ -80,7 +79,7 @@ export function ImageHotspot({ imageUrl, imageAlt, hotspots, target, onGuess }: 
       </div>
       {target ? (
         <p className="mt-3 text-center text-sm text-muted-foreground">
-          Cible : <span className="font-bold text-foreground">{hotspots.find((h) => h.id === target)?.label}</span>
+          Sélectionne la zone demandée sur l’image.
         </p>
       ) : null}
     </div>

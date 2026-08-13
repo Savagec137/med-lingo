@@ -6,6 +6,7 @@ export interface ExerciseRendererDefinition {
     | "TrueFalseCard"
     | "MatchPairs"
     | "DragDropZone"
+    | "AnatomyBoard"
     | "ImageHotspot"
     | "ClinicalCaseCard"
     | "CalculationCard"
@@ -23,7 +24,7 @@ export const EXERCISE_RENDERER_REGISTRY: Record<
   association: { component: "MatchPairs", answerMode: "matching", supportsKeyboard: true },
   ordering: { component: "DragDropZone", answerMode: "ordered", supportsKeyboard: true },
   drag_drop: { component: "DragDropZone", answerMode: "ordered", supportsKeyboard: true },
-  anatomy_location: { component: "ImageHotspot", answerMode: "point", supportsKeyboard: true },
+  anatomy_location: { component: "AnatomyBoard", answerMode: "point", supportsKeyboard: true },
   interactive_image: { component: "ImageHotspot", answerMode: "point", supportsKeyboard: true },
   clinical_case: { component: "ClinicalCaseCard", answerMode: "single", supportsKeyboard: true },
   calculation: { component: "CalculationCard", answerMode: "numeric", supportsKeyboard: true },

@@ -187,9 +187,11 @@ function LessonPage() {
     xpGained: number;
   } | null>(null);
   const [pulseDismissed, setPulseDismissed] = useState(false);
+  const [foundAnatomyHotspotIds, setFoundAnatomyHotspotIds] = useState<string[]>([]);
 
   useEffect(() => {
     setPulseDismissed(false);
+    setFoundAnatomyHotspotIds([]);
   }, [lessonId]);
 
   if (!found && blueprint && blueprintParcours) {
@@ -283,6 +285,11 @@ function LessonPage() {
           : evaluatedIds.length === 1 && current.correctAnswerIds.includes(evaluatedIds[0]);
     setChecked(true);
     setResponseCorrect(isCorrect);
+    if (isCorrect && current.type === "anatomy_location" && evaluatedIds[0]) {
+      setFoundAnatomyHotspotIds((foundIds) =>
+        foundIds.includes(evaluatedIds[0]!) ? foundIds : [...foundIds, evaluatedIds[0]!],
+      );
+    }
     recordAttempt(current.id, isCorrect);
     if (isCorrect) setCorrectCount((c) => c + 1);
     else {
@@ -438,6 +445,7 @@ function LessonPage() {
                 setResponseCorrect(null);
                 setCorrectCount(0);
                 setWrongCount(0);
+                setFoundAnatomyHotspotIds([]);
                 setFinished(false);
                 setResult(null);
               }}
@@ -454,41 +462,51 @@ function LessonPage() {
   const isCorrect = checked && responseCorrect === true;
   const isWrong = checked && responseCorrect === false;
   const correctAnswer = current.answers.find((answer) => answer.id === current.correctAnswerIds[0]);
+  const anatomyMode = current.type === "anatomy_location";
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
       {/* Header with progress + hearts */}
-      <header className="border-b border-border bg-background">
-        <div className="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3">
-          <button
-            onClick={() => {
-              if (confirm("Quitter la leçon ? Ta progression sera perdue.")) navigate({ to: "/" });
-            }}
-            className="p-1 text-muted-foreground hover:text-foreground"
-            aria-label="Quitter"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <div className="h-3 flex-1 overflow-hidden rounded-full bg-secondary">
-            <div
-              className="h-full rounded-full bg-[color:var(--color-success)] transition-all"
-              style={{ width: `${progressPct}%` }}
-            />
+      {!anatomyMode ? (
+        <header className="border-b border-border bg-background">
+          <div className="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3">
+            <button
+              onClick={() => {
+                if (confirm("Quitter la leçon ? Ta progression sera perdue."))
+                  navigate({ to: "/" });
+              }}
+              className="p-1 text-muted-foreground hover:text-foreground"
+              aria-label="Quitter"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <div className="h-3 flex-1 overflow-hidden rounded-full bg-secondary">
+              <div
+                className="h-full rounded-full bg-[color:var(--color-success)] transition-all"
+                style={{ width: `${progressPct}%` }}
+              />
+            </div>
+            <span className="flex items-center gap-1 text-sm font-bold text-[color:var(--color-destructive)]">
+              <Heart className="h-5 w-5 fill-current" />
+              {hydrated ? progress.hearts : MAX_HEARTS}
+            </span>
           </div>
-          <span className="flex items-center gap-1 text-sm font-bold text-[color:var(--color-destructive)]">
-            <Heart className="h-5 w-5 fill-current" />
-            {hydrated ? progress.hearts : MAX_HEARTS}
-          </span>
-        </div>
-      </header>
+        </header>
+      ) : null}
 
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 pt-8">
-        <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-          {found.parcours.title} · {found.lesson.title}
-        </p>
-        <h1 className="mb-6 text-2xl font-extrabold leading-tight sm:text-3xl">
-          {current.question}
-        </h1>
+      <main
+        className={`mx-auto flex w-full flex-1 flex-col ${anatomyMode ? "max-w-none px-0 pt-0" : "max-w-2xl px-4 pt-8"}`}
+      >
+        {!anatomyMode ? (
+          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            {found.parcours.title} · {found.lesson.title}
+          </p>
+        ) : null}
+        {!anatomyMode ? (
+          <h1 className="mb-6 text-2xl font-extrabold leading-tight sm:text-3xl">
+            {current.question}
+          </h1>
+        ) : null}
 
         {current.type === "fill_blank" ? (
           <div className="grid gap-3">
@@ -507,11 +525,22 @@ function LessonPage() {
           </div>
         ) : current.type === "anatomy_location" ? (
           <AnatomyLocationQuestion
+            questionId={current.id}
+            question={current.question}
+            lessonTitle={found.lesson.title}
+            parcoursTitle={found.parcours.title}
             answers={current.answers}
             selectedId={selected}
             correctAnswerIds={current.correctAnswerIds}
             checked={checked}
+            explanation={current.explanation}
+            lives={hydrated ? progress.hearts : MAX_HEARTS}
+            maxLives={MAX_HEARTS}
+            foundHotspotIds={foundAnatomyHotspotIds}
             onSelect={setSelected}
+            onBack={() => {
+              if (confirm("Quitter la leçon ? Ta progression sera perdue.")) navigate({ to: "/" });
+            }}
           />
         ) : current.type === "association" ? (
           <div className="grid gap-3">
@@ -667,8 +696,8 @@ function LessonPage() {
               : "border-border bg-background"
         }`}
       >
-        <div className="mx-auto max-w-2xl px-4 py-4">
-          {checked && (
+        <div className={`mx-auto px-4 py-4 ${anatomyMode ? "max-w-[1240px]" : "max-w-2xl"}`}>
+          {checked && !anatomyMode && (
             <div className="mb-3">
               <p
                 className={`flex items-center gap-2 text-lg font-extrabold ${
