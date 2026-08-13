@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "indexedAt": "2026-08-10",
+  "referenceDocumentId": "arrete-2022-04-11-dea",
+  "referenceSection": "Annexe II — référentiel de compétences",
+  "extractionNote": "Les cinq blocs et les onze compétences sont relevés à l'annexe II de l'arrêté du 11 avril 2022. Le champ `title` reproduit l'intitulé officiel ; le champ `description` est éditorial et propre à MedLingo. L'accentuation exacte des intitulés reste à confronter au PDF du Journal officiel.",
+  "blocs": [
+    {
+      "blocId": "dea.bloc-01",
+      "number": 1,
+      "title": "Prise en soin du patient à tout âge de la vie dans le cadre de ses missions"
+    },
+    {
+      "blocId": "dea.bloc-02",
+      "number": 2,
+      "title": "Réalisation d'un recueil de données cliniques et mise en œuvre de soins adaptés à l'état du patient notamment ceux relevant de l'urgence"
+    },
+    {
+      "blocId": "dea.bloc-03",
+      "number": 3,
+      "title": "Transport du patient dans le respect des règles de circulation et de sécurité routière"
+    },
+    {
+      "blocId": "dea.bloc-04",
+      "number": 4,
+      "title": "Entretien des matériels et installations du véhicule adapté au transport sanitaire terrestre en tenant compte des situations d'intervention"
+    },
+    {
+      "blocId": "dea.bloc-05",
+      "number": 5,
+      "title": "Travail en équipe et traitement des informations liées aux activités de l'ambulancier, à la qualité / gestion des risques"
+    }
+  ],
+  "competencies": [
+    {
+      "competencyId": "dea.c01",
+      "number": 1,
+      "blocId": "dea.bloc-01",
+      "title": "Etablir une communication adaptée pour informer et accompagner le patient et son entourage",
+      "description": "Communication avec le patient, ses proches et les témoins : se présenter, expliquer ce qui est fait, recueillir ce que l'entourage est seul à pouvoir dire.",
+      "interventionThemes": ["bilan-secondaire", "securite-de-scene"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-12", "parcours-13"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 1, compétence 1",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c02",
+      "number": 2,
+      "blocId": "dea.bloc-01",
+      "title": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources et en utilisant le matériel adapté",
+      "description": "Installation, position d'attente, relevage et portage avec le matériel adapté, en tenant compte de ce que le patient peut ou ne peut pas faire.",
+      "interventionThemes": ["transport-sanitaire", "chute", "traumatisme"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-45", "parcours-46"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 1, compétence 2",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c03",
+      "number": 3,
+      "blocId": "dea.bloc-01",
+      "title": "Mettre en œuvre des soins d'hygiène et de confort adaptés aux besoins et à la situation du patient",
+      "description": "Hygiène, protection individuelle, désinfection du matériel et du véhicule, confort et pudeur du patient pendant la prise en charge.",
+      "interventionThemes": ["hygiene-et-desinfection"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-14", "parcours-15"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 1, compétence 3",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c04",
+      "number": 4,
+      "blocId": "dea.bloc-02",
+      "title": "Apprécier l'état clinique du patient dans son domaine de compétences",
+      "description": "Bilan primaire et secondaire, recueil et interprétation des paramètres vitaux, reconnaissance des signes de gravité et réévaluation.",
+      "interventionThemes": [
+        "bilan-primaire",
+        "bilan-secondaire",
+        "constantes-vitales",
+        "surveillance-du-patient",
+        "detresse-respiratoire",
+        "douleur-thoracique",
+        "malaise",
+        "hypoglycemie",
+        "suspicion-avc",
+        "crise-convulsive"
+      ],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-17", "parcours-18"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 2, compétence 4",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c05",
+      "number": 5,
+      "blocId": "dea.bloc-02",
+      "title": "Mettre en œuvre les soins adaptés à l'état du patient notamment ceux relevant de l'urgence",
+      "description": "Gestes d'urgence dans le champ de compétence du DEA : oxygénothérapie, position d'attente, compression d'une hémorragie, réanimation cardio-pulmonaire et défibrillation, immobilisation.",
+      "interventionThemes": [
+        "arret-cardio-respiratoire",
+        "hemorragie",
+        "detresse-respiratoire",
+        "accouchement-imminent",
+        "traumatisme",
+        "accident-de-la-route",
+        "crise-convulsive",
+        "hypoglycemie"
+      ],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": [
+        "parcours-19",
+        "parcours-20",
+        "parcours-21",
+        "parcours-22",
+        "parcours-23",
+        "parcours-24"
+      ],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 2, compétence 5",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c06",
+      "number": 6,
+      "blocId": "dea.bloc-03",
+      "title": "Réaliser la préparation, le contrôle et l'entretien du véhicule adapté au transport sanitaire terrestre afin de garantir la sécurité du transport",
+      "description": "Préparation et contrôle du véhicule et de sa dotation avant le départ, y compris le matériel emporté jusqu'au patient.",
+      "interventionThemes": ["transport-sanitaire"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-46"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 3, compétence 6",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c07",
+      "number": 7,
+      "blocId": "dea.bloc-03",
+      "title": "Conduire le véhicule adapté au transport sanitaire terrestre dans le respect des règles de circulation et de sécurité routière et de façon adaptée à l'état de santé du patient",
+      "description": "Conduite adaptée à l'état du patient et surveillance pendant le trajet, y compris la décision de partir ou de rester sur place lorsqu'elle relève de la régulation.",
+      "interventionThemes": ["transport-sanitaire", "surveillance-du-patient"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-45", "parcours-48"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 3, compétence 7",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c08",
+      "number": 8,
+      "blocId": "dea.bloc-04",
+      "title": "Utiliser des techniques d'entretien du matériel et des installations adaptées dans son domaine de compétences en prenant en compte la prévention des risques associés",
+      "description": "Entretien et désinfection du matériel et des installations, prévention des risques associés à leur usage.",
+      "interventionThemes": ["hygiene-et-desinfection"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-46"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 4, compétence 8",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c09",
+      "number": 9,
+      "blocId": "dea.bloc-04",
+      "title": "Repérer, signaler, traiter les anomalies et dysfonctionnements en lien avec l'entretien du véhicule, du matériel et des installations et en assurer la traçabilité",
+      "description": "Repérage et signalement d'une anomalie de matériel, et traçabilité de ce signalement.",
+      "interventionThemes": ["transport-sanitaire"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-46"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 4, compétence 9",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c10",
+      "number": 10,
+      "blocId": "dea.bloc-05",
+      "title": "Rechercher, traiter, transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et des activités et transmettre ses savoir-faire professionnels",
+      "description": "Transmission au médecin régulateur et relais à l'équipe receveuse : sélectionner l'information pertinente, la hiérarchiser, en assurer la traçabilité.",
+      "interventionThemes": [
+        "transmission-au-medecin-regulateur",
+        "bilan-secondaire",
+        "surveillance-du-patient"
+      ],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-47", "parcours-49"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 5, compétence 10",
+      "needsReview": false
+    },
+    {
+      "competencyId": "dea.c11",
+      "number": 11,
+      "blocId": "dea.bloc-05",
+      "title": "Organiser et contrôler son activité, coopérer au sein d'une équipe pluriprofessionnelle et améliorer sa pratique dans le cadre d'une démarche qualité / gestion des risques",
+      "description": "Organisation de son activité et coopération interservices : répartition des rôles, place dans un dispositif, zonage, tri, analyse de sa pratique.",
+      "interventionThemes": ["securite-de-scene", "accident-de-la-route"],
+      "publishedLessonIds": [],
+      "plannedParcoursIds": ["parcours-16", "parcours-49"],
+      "plannedParcoursLinkStatus": "needsReview",
+      "modules": [],
+      "modulesStatus": "needsReview",
+      "sourceDocumentId": "arrete-2022-04-11-dea",
+      "sourceSection": "Annexe II — Bloc 5, compétence 11",
+      "needsReview": false
+    }
+  ],
+  "authorisedActs": {
+    "sourceDocumentId": "decret-2022-629",
+    "sourceSection": "Article R. 6311-17 du code de la santé publique",
+    "note": "Intitulés relevés sur Légifrance. Les actes du II sont accomplis en lien constant avec le médecin ; ceux du III sur prescription médicale lorsque l'urgence l'impose. Les intitulés du III ont été relevés de façon abrégée pour quatre d'entre eux et doivent être confrontés au texte avant publication.",
+    "acts": [
+      {
+        "actId": "acte.r6311-17.ii.1",
+        "paragraph": "II",
+        "title": "Prise de température, de pulsation cardiaque et de pression artérielle par voie non invasive",
+        "verbatim": true,
+        "competencyIds": ["dea.c04"],
+        "interventionThemes": ["constantes-vitales"]
+      },
+      {
+        "actId": "acte.r6311-17.ii.2",
+        "paragraph": "II",
+        "title": "Recueil de la glycémie par captation capillaire brève ou lecture transdermique",
+        "verbatim": true,
+        "competencyIds": ["dea.c04"],
+        "interventionThemes": ["hypoglycemie", "constantes-vitales"]
+      },
+      {
+        "actId": "acte.r6311-17.ii.3",
+        "paragraph": "II",
+        "title": "Administration en aérosols de produits non médicamenteux",
+        "verbatim": true,
+        "competencyIds": ["dea.c05"],
+        "interventionThemes": ["detresse-respiratoire"]
+      },
+      {
+        "actId": "acte.r6311-17.ii.4",
+        "paragraph": "II",
+        "title": "Evaluation de la douleur et observation des manifestations de l'état de conscience",
+        "verbatim": true,
+        "competencyIds": ["dea.c04"],
+        "interventionThemes": ["constantes-vitales", "crise-convulsive", "suspicion-avc"]
+      },
+      {
+        "actId": "acte.r6311-17.ii.5",
+        "paragraph": "II",
+        "title": "Recueil du taux de saturation en oxygène ou en monoxyde de carbone par voie non invasive",
+        "verbatim": true,
+        "competencyIds": ["dea.c04"],
+        "interventionThemes": ["constantes-vitales", "detresse-respiratoire"]
+      },
+      {
+        "actId": "acte.r6311-17.iii.1",
+        "paragraph": "III",
+        "title": "Administration en aérosols ou pulvérisations de produits médicamenteux (asthme aigu ou douleur aiguë)",
+        "verbatim": false,
+        "competencyIds": ["dea.c05"],
+        "interventionThemes": ["detresse-respiratoire"]
+      },
+      {
+        "actId": "acte.r6311-17.iii.2",
+        "paragraph": "III",
+        "title": "Administration de produits médicamenteux par voie orale ou intranasale (surdosage en opiacés ou douleur aiguë)",
+        "verbatim": false,
+        "competencyIds": ["dea.c05"],
+        "interventionThemes": ["malaise"]
+      },
+      {
+        "actId": "acte.r6311-17.iii.3",
+        "paragraph": "III",
+        "title": "Administration de produits médicamenteux par voie auto-injectable (choc anaphylactique ou hypoglycémie)",
+        "verbatim": false,
+        "competencyIds": ["dea.c05"],
+        "interventionThemes": ["hypoglycemie"]
+      },
+      {
+        "actId": "acte.r6311-17.iii.4",
+        "paragraph": "III",
+        "title": "Enregistrement et transmission d'électrocardiogramme à visée diagnostique à l'aide d'un outil automatisé",
+        "verbatim": true,
+        "competencyIds": ["dea.c04", "dea.c10"],
+        "interventionThemes": ["douleur-thoracique"]
+      },
+      {
+        "actId": "acte.r6311-17.iii.5",
+        "paragraph": "III",
+        "title": "Recueil de l'hémoglobinémie",
+        "verbatim": true,
+        "competencyIds": ["dea.c04"],
+        "interventionThemes": ["hemorragie"]
+      }
+    ]
+  },
+  "amuTrainingModules": {
+    "sourceDocumentId": "arrete-2022-10-31-actes-amu",
+    "sourceSection": "Annexe I — référentiel de formation",
+    "note": "Modules de la formation aux actes de l'aide médicale urgente. Ils ne sont pas rattachés aux blocs du diplôme : ce rattachement n'apparaît pas dans les textes consultés.",
+    "modules": [
+      { "moduleId": "amu.m1", "number": 1, "title": "Cadre réglementaire", "hours": 3.5 },
+      {
+        "moduleId": "amu.m2",
+        "number": 2,
+        "title": "Application des actes professionnels",
+        "hours": 14
+      },
+      { "moduleId": "amu.m3", "number": 3, "title": "Recueil et Traçabilité", "hours": 3.5 }
+    ]
+  }
+}

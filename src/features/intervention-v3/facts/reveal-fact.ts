@@ -8,8 +8,8 @@
  * connaissance. Le schéma de scénario garantit qu'aucun fait n'a deux sources.
  */
 
-import type { InterventionVitals, VitalSeverity } from "../../intervention-vitals.ts";
-import { formatVital, vitalSeverity } from "../../intervention-vitals.ts";
+import type { InterventionVitals, VitalSeverity } from "../clinical/intervention-vitals.ts";
+import { formatVital, vitalSeverity } from "../clinical/intervention-vitals.ts";
 import type {
   ClinicalFact,
   FactId,
@@ -20,6 +20,7 @@ import type {
 } from "../v3-domain.ts";
 import { getFact } from "./fact-registry.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
+import { formatGlycemiaForUi } from "../format-glycemia.ts";
 
 /** Valeur et sévérité d'une mesure, lues dans les constantes courantes. */
 export function factValueFromVitals(
@@ -35,6 +36,16 @@ export function factValueFromVitals(
     return {
       severity,
       value: { kind: "ratio", systolic: vitals.sbp, diastolic: vitals.dbp, formatted },
+    };
+  }
+  if (key === "glycemia") {
+    return {
+      severity,
+      value: {
+        kind: "numeric",
+        value: vitals.glycemia,
+        formatted: formatGlycemiaForUi(vitals.glycemia),
+      },
     };
   }
   return { severity, value: { kind: "numeric", value: vitals[key], formatted } };

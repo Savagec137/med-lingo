@@ -1,9 +1,9 @@
 # Mode Intervention V3 — contrat de données
 
-Couche de données du Mode Intervention V3. **Aucun moteur d'exécution, aucune
-interface** : ce lot livre les types, les schémas, les données du scénario pilote
-et la lecture des faits. `applyAction`, les transitions de phase, le score et les
-écrans viennent après.
+Couche autonome du Mode Intervention V3. Le contrat de données Claude reste
+inchangé et un moteur d'exécution minimal l'entoure désormais. **Aucune interface
+finale n'est encore livrée** : l'UI consommera le moteur via `engine/index.ts` et
+les données cliniques uniquement via `readFact`.
 
 Les deux documents de conception restent la référence :
 `../INTERVENTION_V3_SPECIFICATION.md` pour le fonctionnel écran par écran,
@@ -27,7 +27,13 @@ Les deux documents de conception restent la référence :
 | `scenarios/pilot-trauma-cranien.json` | le scénario pilote complet                                 |
 | `scenarios/scenario-schema.ts`        | validation zod, dont le plafond du bilan attendu           |
 | `scenarios/v3-catalog.ts`             | catalogue V3, séparé des quinze missions historiques       |
-| `tests/`                              | 55 tests                                                   |
+| `engine/apply-action.ts`              | prérequis, temps, faits, physiologie et journal            |
+| `engine/v3-phases.ts`                 | transitions gardées des dix phases                         |
+| `engine/v3-gaps.ts`                   | trous du bilan et questions du régulateur                  |
+| `engine/v3-scoring.ts`                | note unique, axes explicatifs, vies et gains               |
+| `engine/v3-debrief.ts`                | débrief déterministe dérivé du journal                     |
+| `format-glycemia.ts`                  | conversion d'affichage mmol/L vers g/L                     |
+| `tests/`                              | 71 tests V3                                                |
 
 ## Les deux axes d'un fait
 
@@ -107,7 +113,7 @@ retire structurellement `vitals` et `vitalsHistory`, si bien qu'un composant ne
 peut pas les atteindre même sans nommer leur type.
 
 **Barrière 2 — ESLint.** `eslint.config.js` interdit à
-`src/components/intervention-v3/**` d'importer `intervention-vitals`,
+`src/components/intervention-v3/**` d'importer `clinical/intervention-vitals`,
 `reveal-fact`, le moteur ou la fabrique de session.
 
 **Barrière 3 — les tests.** `v3-facts.test.ts` vérifie sur une session neuve
@@ -208,13 +214,15 @@ base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local
 
 ## Tests
 
-`npm test` couvre les 55 tests du mode, en plus des 183 existants.
+`npm test` couvre les 71 tests du mode, en plus des 131 autres tests du projet.
 
 | Fichier              | Couvre                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `v3-facts.test.ts`   | 18 tests : invariants du registre, gel de la valeur, péremption, tendance, trous, couverture                    |
 | `v3-actions.test.ts` | 16 tests : périmètre DEA, résolubilité des références, réciprocité registre ↔ catalogue, natures de prérequis   |
 | `v3-pilot.test.ts`   | 21 tests : décisions produit, constantes initiales, questions du régulateur, gestes, confiance dans les sources |
+| `v3-engine.test.ts`  | 12 tests : actions, phases, trous, mesures figées, périmètre DEA                                                |
+| `v3-debrief.test.ts` | 4 tests : journal déterministe, vies, échec non profitable et glycémie                                          |
 
 Deux tests méritent d'être lus avant de toucher au contrat. « la valeur relevée
 est figée » dégrade la SpO₂ du patient après la mesure et vérifie que l'écran
@@ -224,16 +232,11 @@ d'autre.
 
 ## Reste à faire
 
-**Moteur.** `applyAction` avec la séquence complète — périmètre, phase,
-matériel, justification, temps, physiologie, révélation, score, vies, journal —
-puis les transitions de phase avec leurs gardes, le calcul du score et des six
-axes, la construction du `DebriefReport`.
+**Interface.** Les sept écrans, le hook, la persistance/reprise et le test de
+rendu sur session vierge. Les maquettes restent une référence visuelle : aucune
+constante ne devra être lue sans `readFact`.
 
-**Interface.** Les sept écrans, le hook, et le test de rendu sur session vierge.
-
-**Points ouverts.** L'unité d'affichage de la glycémie : la maquette montre
-`g/L`, le moteur formate en `mmol/L` et ses seuils sont exprimés en `mmol/L` —
-le registre suit aujourd'hui le moteur. La politique d'indices `hintPolicy` par
-niveau de difficulté. Les trois références du débriefing, qu'aucune fiche
-existante ne fonde. La nature du rejeu. Le comportement de la barre d'onglets
-pendant une intervention.
+**Points ouverts.** La politique d'indices `hintPolicy` par niveau de difficulté,
+la persistance versionnée des sessions, la nature du rejeu et le comportement de
+la barre d'onglets pendant une intervention. La glycémie reste en mmol/L dans le
+moteur et ne passe en g/L qu'au formatage UI, sans interprétation médicale.

@@ -7,7 +7,7 @@
  * c'est la condition de départ que le test d'étanchéité vérifie.
  */
 
-import { normalizeVitals } from "../intervention-vitals.ts";
+import { normalizeVitals } from "./clinical/intervention-vitals.ts";
 import {
   EQUIPMENT_IDS,
   V3_STARTING_LIVES,

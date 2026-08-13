@@ -17,7 +17,7 @@ import type {
   InterventionScenario,
   InterventionSession,
 } from "../v3-domain.ts";
-import type { VitalTrend } from "../../intervention-vitals.ts";
+import type { VitalTrend } from "../clinical/intervention-vitals.ts";
 import { getFact } from "./fact-registry.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { EQUIPMENT_LABELS } from "../v3-domain.ts";

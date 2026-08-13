@@ -1,7 +1,7 @@
 /**
  * Contrats du Mode Intervention V3.
  *
- * V3 est une couche additive : le moteur clinique de `intervention-vitals.ts` et
+ * V3 est une couche additive : le moteur clinique de `clinical/intervention-vitals.ts` et
  * les types de mission de `intervention-domain.ts` sont importés, jamais
  * dupliqués ni modifiés. Les quinze missions historiques continuent de tourner
  * sur `intervention-engine.ts`.
@@ -20,19 +20,15 @@
  * phases.
  */
 
-import type {
-  MissionAlert,
-  MissionReward,
-  ScenarioIllustration,
-  VitalsSample,
-} from "../intervention-domain.ts";
+import type { MissionAlert, MissionReward, ScenarioIllustration } from "../intervention-domain.ts";
 import type {
   DisplayedVital,
   InterventionClinicalProfile,
   InterventionVitals,
+  VitalAlert,
   VitalSeverity,
   VitalTrend,
-} from "../intervention-vitals.ts";
+} from "./clinical/intervention-vitals.ts";
 
 /* -------------------------------------------------------------------------- */
 /* Phases                                                                     */
@@ -507,6 +503,21 @@ export interface EquipmentState {
   attached: boolean;
 }
 
+/**
+ * Historique physiologique interne au moteur V3.
+ *
+ * Il vit volontairement dans le contrat V3 : le domaine historique ne doit pas
+ * être étendu pour faire fonctionner le pilote. Comme les constantes courantes,
+ * cet historique est retiré de `InterventionSessionView`.
+ */
+export interface V3VitalsSample {
+  phase: InterventionPhase;
+  label: string;
+  simulatedTimeSeconds: number;
+  vitals: InterventionVitals;
+  alerts: VitalAlert[];
+}
+
 export const SESSION_STATUSES = ["briefing", "active", "debrief"] as const;
 
 export type SessionStatus = (typeof SESSION_STATUSES)[number];
@@ -528,7 +539,7 @@ export interface InterventionSession {
    * figurent pas dans `InterventionSessionView`.
    */
   vitals: InterventionVitals;
-  vitalsHistory: VitalsSample[];
+  vitalsHistory: V3VitalsSample[];
   roscAchieved: boolean;
   transmission: Centre15Transmission | null;
   gestureRounds: PriorityGestureRound[];
