@@ -1,0 +1,728 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l04",
+  "title": "La moelle épinière",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire la composition et la situation de la moelle épinière.",
+    "Situer sa terminaison sur le rachis.",
+    "Relier la sortie des fibres à l’innervation des organes."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.composition",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "De quoi la moelle épinière est-elle constituée, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q01-a1",
+          "text": "De fibres nerveuses",
+          "explanation": "C’est la composition donnée par le support."
+        },
+        {
+          "id": "dea-p08-l04-q01-a2",
+          "text": "D’amas cellulaires uniquement",
+          "explanation": "Cette description est celle de la substance grise du cerveau.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l04-q01-a3",
+          "text": "De liquide céphalo-rachidien",
+          "explanation": "Le LCR est contenu par les méninges.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l04-q01-a4",
+          "text": "De vertèbres empilées",
+          "explanation": "Les vertèbres forment le rachis, qui protège la moelle.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l04-q01-a1",
+      "explanation": "La moelle épinière est constituée de fibres nerveuses.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Distinguer la moelle du rachis qui la contient est la base de toute description de cette région.",
+        "commonMistake": "Confondre la moelle et les vertèbres mélange l’appareil neurologique et l’appareil locomoteur.",
+        "keyTakeaway": "Des fibres nerveuses, logées dans un canal osseux.",
+        "fieldApplication": "Une douleur du dos et un déficit neurologique se transmettent comme deux constats distincts."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Distinguer la moelle du rachis qui la contient est la base de toute description de cette région.",
+      "common_mistake": "Confondre la moelle et les vertèbres mélange l’appareil neurologique et l’appareil locomoteur.",
+      "key_takeaway": "Des fibres nerveuses, logées dans un canal osseux.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "À quelle hauteur la moelle épinière s’arrête-t-elle, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q02-a1",
+          "text": "À hauteur de la première vertèbre lombaire",
+          "explanation": "C’est le niveau que le support indique."
+        },
+        {
+          "id": "dea-p08-l04-q02-a2",
+          "text": "Au bas du sacrum",
+          "explanation": "Le support arrête la moelle bien plus haut.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l04-q02-a3",
+          "text": "À la dernière vertèbre cervicale",
+          "explanation": "Ce niveau est très au-dessus de celui indiqué.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l04-q02-a4",
+          "text": "À hauteur du diaphragme",
+          "explanation": "Le support donne un repère vertébral, pas musculaire."
+        }
+      ],
+      "correctAnswer": "dea-p08-l04-q02-a1",
+      "explanation": "La moelle épinière s’arrête à hauteur de la première vertèbre lombaire.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La moelle est plus courte que le rachis : c’est un fait que le support énonce précisément.",
+        "commonMistake": "La faire descendre jusqu’au sacrum revient à la confondre avec le canal qui, lui, continue.",
+        "keyTakeaway": "La moelle s’arrête à L1, le rachis continue.",
+        "fieldApplication": "Le niveau d’une atteinte et le niveau d’une douleur ne coïncident pas nécessairement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La moelle est plus courte que le rachis : c’est un fait que le support énonce précisément.",
+      "common_mistake": "La faire descendre jusqu’au sacrum revient à la confondre avec le canal qui, lui, continue.",
+      "key_takeaway": "La moelle s’arrête à L1, le rachis continue.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q03",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que le support dit-il du trajet des fibres qui sortent de la moelle ?",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q03-a1",
+          "text": "Elles sortent par les trous de conjugaison",
+          "explanation": "C’est le passage nommé par le support."
+        },
+        {
+          "id": "dea-p08-l04-q03-a2",
+          "text": "Elles sortent à chaque étage, c’est-à-dire à chaque vertèbre",
+          "explanation": "Le support précise « à chaque étage, à chaque vertèbre »."
+        },
+        {
+          "id": "dea-p08-l04-q03-a3",
+          "text": "Elles assurent l’innervation des différents organes",
+          "explanation": "C’est la destination donnée par le support."
+        },
+        {
+          "id": "dea-p08-l04-q03-a4",
+          "text": "Elles rejoignent d’abord le cervelet",
+          "explanation": "Le support ne décrit pas ce trajet.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l04-q03-a5",
+          "text": "Elles sortent toutes au niveau de la première vertèbre lombaire",
+          "explanation": "C’est le niveau où la moelle s’arrête, pas celui d’une sortie unique.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l04-q03-a1",
+        "dea-p08-l04-q03-a2",
+        "dea-p08-l04-q03-a3"
+      ],
+      "explanation": "Les fibres sortent de la moelle par les trous de conjugaison, à chaque étage vertébral, pour innerver les organes.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une sortie par étage explique qu’un déficit puisse concerner un niveau précis du corps.",
+        "commonMistake": "Imaginer une sortie unique supprime la correspondance entre un étage et une région innervée.",
+        "keyTakeaway": "Un étage, une paire de fibres, une région innervée.",
+        "fieldApplication": "Décrire jusqu’où va un déficit aide la régulation à situer le niveau concerné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une sortie par étage explique qu’un déficit puisse concerner un niveau précis du corps.",
+      "common_mistake": "Imaginer une sortie unique supprime la correspondance entre un étage et une région innervée.",
+      "key_takeaway": "Un étage, une paire de fibres, une région innervée.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q04",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "La moelle épinière est logée dans le canal ______.",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q04-a1",
+          "text": "rachidien",
+          "explanation": "Le support nomme ainsi le canal qui la loge."
+        },
+        {
+          "id": "dea-p08-l04-q04-a2",
+          "text": "médullaire",
+          "explanation": "Le support emploie le terme « canal rachidien ».",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l04-q04-a1",
+      "explanation": "Le support indique que la moelle épinière est logée dans le canal rachidien.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le canal appartient au rachis, la moelle au système nerveux : deux appareils, une même région.",
+        "commonMistake": "Employer un autre nom que celui du support rend la relecture plus difficile.",
+        "keyTakeaway": "La moelle est dans le canal rachidien.",
+        "fieldApplication": "Nommer le contenant et le contenu séparément évite les descriptions ambiguës."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le canal appartient au rachis, la moelle au système nerveux : deux appareils, une même région.",
+      "common_mistake": "Employer un autre nom que celui du support rend la relecture plus difficile.",
+      "key_takeaway": "La moelle est dans le canal rachidien.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "rachidien",
+          "le canal rachidien"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l04-q05",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "Selon le support, les méninges enveloppent le système nerveux central et contiennent le liquide céphalo-rachidien.",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q05-a1",
+          "text": "Vrai",
+          "explanation": "C’est exactement ce que le support énonce."
+        },
+        {
+          "id": "dea-p08-l04-q05-a2",
+          "text": "Faux",
+          "explanation": "Le support attribue pourtant ces deux caractéristiques aux méninges.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l04-q05-a1",
+      "explanation": "Les méninges enveloppent le système nerveux central et contiennent le liquide céphalo-rachidien, abrégé LCR.",
+      "knowledgeIds": [
+        "K-DEA-P08-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - les méninges",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une enveloppe et son contenu : les deux vont ensemble dans la description du support.",
+        "commonMistake": "Séparer le LCR des méninges fait perdre le lien que le support établit.",
+        "keyTakeaway": "Les méninges enveloppent et contiennent le LCR.",
+        "fieldApplication": "Comprendre le mot « méningite » entendu en transmission suppose de savoir ce qu’il désigne."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une enveloppe et son contenu : les deux vont ensemble dans la description du support.",
+      "common_mistake": "Séparer le LCR des méninges fait perdre le lien que le support établit.",
+      "key_takeaway": "Les méninges enveloppent et contiennent le LCR.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - les méninges",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-008"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q06",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "Désigne, sur le schéma, la structure nerveuse logée dans le canal rachidien.",
+      "answers": [
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "explanation": "Elle chemine dans le canal du rachis.",
+          "detail": "0.5,0.27"
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "explanation": "Le cerveau occupe la boîte crânienne.",
+          "detail": "0.5,0.08",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "explanation": "Le thorax est une région, pas une structure nerveuse.",
+          "detail": "0.5,0.31",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "explanation": "Le cœur appartient à l’appareil circulatoire.",
+          "detail": "0.54,0.31"
+        }
+      ],
+      "correctAnswer": "hotspot-spinal_cord",
+      "explanation": "La moelle épinière chemine dans le canal rachidien, protégée par les vertèbres.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Situer la moelle dans le canal rachidien relie l’appareil neurologique et l’appareil locomoteur.",
+        "commonMistake": "Désigner une région au lieu d’une structure rend la description inutilisable.",
+        "keyTakeaway": "La moelle est une structure ; le thorax est une région.",
+        "fieldApplication": "Un traumatisme du rachis appelle une description précise du niveau concerné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Situer la moelle dans le canal rachidien relie l’appareil neurologique et l’appareil locomoteur.",
+      "common_mistake": "Désigner une région au lieu d’une structure rend la description inutilisable.",
+      "key_takeaway": "La moelle est une structure ; le thorax est une région.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "spinal_cord"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet d’une fibre nerveuse, de la moelle jusqu’à l’organe innervé.",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q07-a1",
+          "text": "Moelle épinière",
+          "explanation": "Point de départ de la fibre.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-l04-q07-a2",
+          "text": "Trou de conjugaison",
+          "explanation": "Passage de sortie, à l’étage de la vertèbre.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-l04-q07-a3",
+          "text": "Fibre nerveuse",
+          "explanation": "Elle chemine vers sa destination.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p08-l04-q07-a4",
+          "text": "Organe innervé",
+          "explanation": "Terme du trajet décrit par le support.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l04-q07-a1",
+        "dea-p08-l04-q07-a2",
+        "dea-p08-l04-q07-a3",
+        "dea-p08-l04-q07-a4"
+      ],
+      "explanation": "Le support décrit un trajet continu : la moelle laisse sortir des fibres par les trous de conjugaison, qui gagnent les organes.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet explique pourquoi une atteinte à un étage donné se traduit par un déficit à un endroit donné.",
+        "commonMistake": "Sauter l’étape du trou de conjugaison fait disparaître la correspondance entre étage et organe.",
+        "keyTakeaway": "De la moelle à l’organe, en sortant à l’étage voulu.",
+        "fieldApplication": "Décrire jusqu’où s’étend un déficit aide la régulation à en situer le niveau."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet explique pourquoi une atteinte à un étage donné se traduit par un déficit à un endroit donné.",
+      "common_mistake": "Sauter l’étape du trou de conjugaison fait disparaître la correspondance entre étage et organe.",
+      "key_takeaway": "De la moelle à l’organe, en sortant à l’étage voulu.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l04-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Après une chute de hauteur, un patient conscient dit ne plus sentir ses jambes. Que transmet le bilan en priorité ?",
+      "answers": [
+        {
+          "id": "dea-p08-l04-q08-a1",
+          "text": "Le déficit décrit par le patient, avec le mécanisme de chute et l’absence de mobilisation",
+          "explanation": "Trois éléments factuels, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p08-l04-q08-a2",
+          "text": "Une atteinte de la moelle épinière",
+          "explanation": "C’est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l04-q08-a3",
+          "text": "La hauteur exacte de la chute uniquement",
+          "explanation": "Le mécanisme compte, mais il ne remplace pas la description du déficit.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p08-l04-q08-a4",
+          "text": "Le résultat d’un test de mobilité que vous lui demandez de faire",
+          "explanation": "Faire mobiliser un patient dans ce contexte est une prise de risque.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p08-l04-q08-a1",
+      "explanation": "Un déficit sensitif après une chute de hauteur est l’élément le plus lourd du bilan. Il se transmet avec le mécanisme, sans être nommé comme diagnostic.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support situe la moelle dans le canal rachidien : c’est ce qui rend un traumatisme du rachis si déterminant à décrire.",
+        "commonMistake": "Nommer l’atteinte médullaire remplace un constat solide par une hypothèse.",
+        "keyTakeaway": "Ce que le patient ne sent plus se transmet avant tout le reste.",
+        "fieldApplication": "Le constat se fait sans mobiliser la victime, par l’observation et le dialogue."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support situe la moelle dans le canal rachidien : c’est ce qui rend un traumatisme du rachis si déterminant à décrire.",
+      "common_mistake": "Nommer l’atteinte médullaire remplace un constat solide par une hypothèse.",
+      "key_takeaway": "Ce que le patient ne sent plus se transmet avant tout le reste.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l04",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

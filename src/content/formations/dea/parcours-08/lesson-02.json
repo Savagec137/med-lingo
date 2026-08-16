@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l02",
+  "title": "Le cervelet",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer le cervelet par rapport au cerveau.",
+    "Nommer les deux fonctions que le support lui attribue.",
+    "Distinguer commander un mouvement et le coordonner."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.location",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il le cervelet ?",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q01-a1",
+          "text": "En dessous et en arrière du cerveau",
+          "explanation": "C’est la situation décrite par le support."
+        },
+        {
+          "id": "dea-p08-l02-q01-a2",
+          "text": "Au-dessus et en avant du cerveau",
+          "explanation": "Le support décrit la position inverse.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q01-a3",
+          "text": "Dans le canal rachidien, sous la moelle",
+          "explanation": "Le canal rachidien loge la moelle épinière.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l02-q01-a4",
+          "text": "À l’intérieur de chaque hémisphère cérébral",
+          "explanation": "Le cervelet est une structure distincte du cerveau."
+        }
+      ],
+      "correctAnswer": "dea-p08-l02-q01-a1",
+      "explanation": "Le cervelet est situé en dessous et en arrière du cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P08-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cervelet",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Situer le cervelet par rapport au cerveau évite de le confondre avec lui dans une description.",
+        "commonMistake": "Le placer en avant ou au-dessus inverse une position que le support énonce clairement.",
+        "keyTakeaway": "En dessous et en arrière : deux repères, pas un seul.",
+        "fieldApplication": "Une description anatomique précise vaut mieux qu’un « à l’arrière de la tête »."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Situer le cervelet par rapport au cerveau évite de le confondre avec lui dans une description.",
+      "common_mistake": "Le placer en avant ou au-dessus inverse une position que le support énonce clairement.",
+      "key_takeaway": "En dessous et en arrière : deux repères, pas un seul.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cervelet",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l02-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Dans quelles fonctions le support fait-il intervenir le cervelet ?",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q02-a1",
+          "text": "La coordination",
+          "explanation": "Le support la cite explicitement."
+        },
+        {
+          "id": "dea-p08-l02-q02-a2",
+          "text": "L’équilibre",
+          "explanation": "Le support le cite explicitement."
+        },
+        {
+          "id": "dea-p08-l02-q02-a3",
+          "text": "La commande directe des muscles squelettiques",
+          "explanation": "Cette commande est attribuée à l’aire motrice primaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q02-a4",
+          "text": "La production du liquide céphalo-rachidien",
+          "explanation": "Le support rattache le LCR aux méninges.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l02-q02-a5",
+          "text": "Les automatismes cardiaques",
+          "explanation": "Ils relèvent du système nerveux végétatif."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l02-q02-a1",
+        "dea-p08-l02-q02-a2"
+      ],
+      "explanation": "Le support attribue au cervelet deux fonctions : la coordination et l’équilibre.",
+      "knowledgeIds": [
+        "K-DEA-P08-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cervelet",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Coordonner un mouvement et le commander sont deux choses différentes, portées par deux structures différentes.",
+        "commonMistake": "Attribuer la commande motrice au cervelet efface la distinction que le support pose.",
+        "keyTakeaway": "Le cervelet coordonne et équilibre ; il ne commande pas.",
+        "fieldApplication": "Un trouble de l’équilibre se décrit tel qu’il est observé, sans nommer la structure en cause."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Coordonner un mouvement et le commander sont deux choses différentes, portées par deux structures différentes.",
+      "common_mistake": "Attribuer la commande motrice au cervelet efface la distinction que le support pose.",
+      "key_takeaway": "Le cervelet coordonne et équilibre ; il ne commande pas.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cervelet",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l02-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, le cervelet commande directement les mouvements des muscles squelettiques.",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q03-a1",
+          "text": "Vrai",
+          "explanation": "Cette commande est attribuée à l’aire motrice primaire, pas au cervelet.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q03-a2",
+          "text": "Faux",
+          "explanation": "Le support attribue au cervelet la coordination et l’équilibre."
+        }
+      ],
+      "correctAnswer": "dea-p08-l02-q03-a2",
+      "explanation": "La commande des muscles squelettiques revient à l’aire motrice primaire ; le cervelet intervient dans la coordination et l’équilibre.",
+      "knowledgeIds": [
+        "K-DEA-P08-005",
+        "K-DEA-P08-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cervelet",
+      "sourcePages": "29, 31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux structures, deux rôles : l’une déclenche le mouvement, l’autre l’ajuste.",
+        "commonMistake": "Confondre commande et coordination fait attribuer un déficit à la mauvaise structure.",
+        "keyTakeaway": "Commander n’est pas coordonner.",
+        "fieldApplication": "Le bilan décrit un mouvement maladroit ou une instabilité, sans en désigner l’origine."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux structures, deux rôles : l’une déclenche le mouvement, l’autre l’ajuste.",
+      "common_mistake": "Confondre commande et coordination fait attribuer un déficit à la mauvaise structure.",
+      "key_takeaway": "Commander n’est pas coordonner.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cervelet",
+        "sourcePages": "29, 31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005",
+          "K-DEA-P08-003"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l02-q04",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Le support situe le cervelet en dessous et en ______ du cerveau.",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q04-a1",
+          "text": "arrière",
+          "explanation": "Les deux repères donnés sont « en dessous » et « en arrière »."
+        },
+        {
+          "id": "dea-p08-l02-q04-a2",
+          "text": "avant",
+          "explanation": "Le support indique la position opposée.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l02-q04-a1",
+      "explanation": "Le cervelet est situé en dessous et en arrière du cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P08-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cervelet",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux repères se complètent : l’un donne la hauteur, l’autre la profondeur.",
+        "commonMistake": "Retenir un seul des deux repères laisse la position ambiguë.",
+        "keyTakeaway": "En dessous et en arrière, les deux à la fois.",
+        "fieldApplication": "Un repère anatomique précis se transmet mieux qu’un geste montré."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux repères se complètent : l’un donne la hauteur, l’autre la profondeur.",
+      "common_mistake": "Retenir un seul des deux repères laisse la position ambiguë.",
+      "key_takeaway": "En dessous et en arrière, les deux à la fois.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cervelet",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "arrière",
+          "en arrière"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l02-q05",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure du système nerveux central à la fonction que le support lui attribue.",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q05-a1",
+          "text": "Cervelet",
+          "explanation": "Le support lui attribue ces deux fonctions.",
+          "match": "Coordination et équilibre"
+        },
+        {
+          "id": "dea-p08-l02-q05-a2",
+          "text": "Aire motrice primaire",
+          "explanation": "Elle commande le mouvement des muscles squelettiques.",
+          "match": "Commande des muscles squelettiques"
+        },
+        {
+          "id": "dea-p08-l02-q05-a3",
+          "text": "Aire somesthésique primaire",
+          "explanation": "Elle est organisée comme l’aire motrice, pour la sensibilité.",
+          "match": "Sensibilité, région par région"
+        },
+        {
+          "id": "dea-p08-l02-q05-a4",
+          "text": "Méninges",
+          "explanation": "Elles enveloppent le SNC et contiennent le LCR.",
+          "match": "Enveloppe contenant le LCR"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l02-q05-a1",
+        "dea-p08-l02-q05-a2",
+        "dea-p08-l02-q05-a3",
+        "dea-p08-l02-q05-a4"
+      ],
+      "explanation": "Chaque structure a une fonction propre : le support ne les fait pas se recouvrir.",
+      "knowledgeIds": [
+        "K-DEA-P08-005",
+        "K-DEA-P08-003",
+        "K-DEA-P08-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central",
+      "sourcePages": "29, 31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Attribuer à chaque structure ce que le support lui attribue, et rien de plus, est la base d’une description juste.",
+        "commonMistake": "Prêter deux rôles à une même structure brouille l’ensemble de la description.",
+        "keyTakeaway": "Une structure, une fonction citée.",
+        "fieldApplication": "Nommer correctement ce qu’on décrit évite les malentendus en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Attribuer à chaque structure ce que le support lui attribue, et rien de plus, est la base d’une description juste.",
+      "common_mistake": "Prêter deux rôles à une même structure brouille l’ensemble de la description.",
+      "key_takeaway": "Une structure, une fonction citée.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central",
+        "sourcePages": "29, 31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005",
+          "K-DEA-P08-003",
+          "K-DEA-P08-008"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l02-q06",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient marche en écartant les pieds et se rattrape à un meuble. Comment le bilan décrit-il cette observation ?",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q06-a1",
+          "text": "Une marche instable, avec appui recherché sur le mobilier",
+          "explanation": "La description reprend ce qui a été vu, sans l’interpréter."
+        },
+        {
+          "id": "dea-p08-l02-q06-a2",
+          "text": "Une atteinte du cervelet",
+          "explanation": "Nommer la structure atteinte est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q06-a3",
+          "text": "Une ataxie",
+          "explanation": "Le terme technique est un diagnostic, pas une observation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q06-a4",
+          "text": "Une simple fatigue",
+          "explanation": "Minimiser sans examen revient aussi à conclure.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p08-l02-q06-a1",
+      "explanation": "Une instabilité à la marche se décrit par ce qui est observé : la façon de marcher et ce que le patient fait pour compenser.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot technique et le constat ne disent pas la même chose : l’un conclut, l’autre rapporte.",
+        "commonMistake": "Employer un terme entendu ailleurs fait franchir la limite entre décrire et diagnostiquer.",
+        "keyTakeaway": "On décrit une marche, on ne nomme pas une atteinte.",
+        "fieldApplication": "Le médecin régulateur décide de ce que cette observation signifie."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le mot technique et le constat ne disent pas la même chose : l’un conclut, l’autre rapporte.",
+      "common_mistake": "Employer un terme entendu ailleurs fait franchir la limite entre décrire et diagnostiquer.",
+      "key_takeaway": "On décrit une marche, on ne nomme pas une atteinte.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p08-l02-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Classe ces structures de la plus superficielle à la plus profonde, telles que le support les situe.",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q07-a1",
+          "text": "Méninges",
+          "explanation": "Elles enveloppent le système nerveux central.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-l02-q07-a2",
+          "text": "Substance grise",
+          "explanation": "Le support la décrit comme superficielle.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-l02-q07-a3",
+          "text": "Substance blanche",
+          "explanation": "Le support la situe en profondeur.",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l02-q07-a1",
+        "dea-p08-l02-q07-a2",
+        "dea-p08-l02-q07-a3"
+      ],
+      "explanation": "Les méninges enveloppent l’ensemble ; sous elles, la substance grise est superficielle et la substance blanche profonde.",
+      "knowledgeIds": [
+        "K-DEA-P08-004",
+        "K-DEA-P08-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central",
+      "sourcePages": "30, 31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre des plans reprend exactement les positions que le support donne à chaque élément.",
+        "commonMistake": "Placer la substance blanche en surface inverse la description de la coupe.",
+        "keyTakeaway": "Enveloppe, puis grise, puis blanche.",
+        "fieldApplication": "Situer les plans aide à comprendre les termes entendus lors d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre des plans reprend exactement les positions que le support donne à chaque élément.",
+      "common_mistake": "Placer la substance blanche en surface inverse la description de la coupe.",
+      "key_takeaway": "Enveloppe, puis grise, puis blanche.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 30, 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central",
+        "sourcePages": "30, 31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-004",
+          "K-DEA-P08-008"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l02-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Une famille vous dit que le patient « a perdu l’équilibre d’un coup ». Que transmet le bilan au Centre 15 ?",
+      "answers": [
+        {
+          "id": "dea-p08-l02-q08-a1",
+          "text": "Ce que la famille rapporte, présenté comme tel, et ce que vous constatez vous-même",
+          "explanation": "Les deux sources sont distinctes et se transmettent comme telles."
+        },
+        {
+          "id": "dea-p08-l02-q08-a2",
+          "text": "Le récit de la famille repris comme un constat",
+          "explanation": "Ce qui est rapporté n’a pas la même valeur que ce qui est observé.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q08-a3",
+          "text": "Une atteinte du cervelet, compatible avec le récit",
+          "explanation": "C’est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l02-q08-a4",
+          "text": "Rien tant que le patient n’a pas été remis debout",
+          "explanation": "Faire marcher un patient instable pour vérifier est une prise de risque inutile.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p08-l02-q08-a1",
+      "explanation": "Un bilan distingue ce qu’il a constaté de ce qui lui a été rapporté. Les deux comptent, mais pas au même titre.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La régulation pondère différemment un constat et un récit : encore faut-il qu’elle sache lequel est lequel.",
+        "commonMistake": "Reprendre un récit à son compte transforme un témoignage en observation.",
+        "keyTakeaway": "Ce que je vois et ce qu’on me dit se transmettent séparément.",
+        "fieldApplication": "Préciser la source de chaque élément est une habitude qui protège tout le bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La régulation pondère différemment un constat et un récit : encore faut-il qu’elle sache lequel est lequel.",
+      "common_mistake": "Reprendre un récit à son compte transforme un témoignage en observation.",
+      "key_takeaway": "Ce que je vois et ce qu’on me dit se transmettent séparément.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l02",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

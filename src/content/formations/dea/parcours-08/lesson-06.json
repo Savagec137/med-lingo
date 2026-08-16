@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l06",
+  "title": "Le système autonome",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 9,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Nommer le système végétatif et son synonyme.",
+    "Citer les automatismes dont il est responsable.",
+    "Distinguer fonction automatique et fonction volontaire."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l06-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel autre nom le support donne-t-il au système nerveux végétatif ?",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q01-a1",
+          "text": "Système nerveux autonome",
+          "explanation": "Le support pose l’équivalence entre les deux termes."
+        },
+        {
+          "id": "dea-p08-l06-q01-a2",
+          "text": "Système nerveux central",
+          "explanation": "Le central regroupe l’encéphale et la moelle.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q01-a3",
+          "text": "Système nerveux périphérique",
+          "explanation": "Le périphérique regroupe les nerfs crâniens et rachidiens.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q01-a4",
+          "text": "Système somesthésique",
+          "explanation": "Ce terme renvoie à une aire du cerveau."
+        }
+      ],
+      "correctAnswer": "dea-p08-l06-q01-a1",
+      "explanation": "Le support présente le système nerveux végétatif comme équivalent au système nerveux autonome.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux noms pour un même ensemble : le savoir évite de croire à deux systèmes distincts.",
+        "commonMistake": "Confondre végétatif et central mélange deux découpages différents du système nerveux.",
+        "keyTakeaway": "Végétatif et autonome désignent la même chose.",
+        "fieldApplication": "Un terme entendu en transmission se comprend d’autant mieux qu’on en connaît les synonymes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux noms pour un même ensemble : le savoir évite de croire à deux systèmes distincts.",
+      "common_mistake": "Confondre végétatif et central mélange deux découpages différents du système nerveux.",
+      "key_takeaway": "Végétatif et autonome désignent la même chose.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l06-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "De quoi le système nerveux végétatif est-il responsable, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q02-a1",
+          "text": "Des automatismes de l’organisme",
+          "explanation": "C’est la responsabilité que le support lui donne."
+        },
+        {
+          "id": "dea-p08-l06-q02-a2",
+          "text": "De l’automatisme cardiaque, cité en exemple",
+          "explanation": "Le support le donne comme exemple."
+        },
+        {
+          "id": "dea-p08-l06-q02-a3",
+          "text": "De l’automatisme digestif, cité en exemple",
+          "explanation": "Le support le donne comme exemple."
+        },
+        {
+          "id": "dea-p08-l06-q02-a4",
+          "text": "De la commande volontaire des muscles squelettiques",
+          "explanation": "Elle relève de l’aire motrice primaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q02-a5",
+          "text": "De la coordination et de l’équilibre",
+          "explanation": "Ces fonctions sont attribuées au cervelet.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l06-q02-a1",
+        "dea-p08-l06-q02-a2",
+        "dea-p08-l06-q02-a3"
+      ],
+      "explanation": "Le système nerveux végétatif est responsable des automatismes, cardiaque ou digestif par exemple.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ce qui fonctionne sans décision consciente relève de ce système : c’est ce qui le définit.",
+        "commonMistake": "Lui attribuer la commande volontaire supprime la distinction entre automatique et volontaire.",
+        "keyTakeaway": "Automatique d’un côté, volontaire de l’autre.",
+        "fieldApplication": "Un patient ne peut pas contrôler à volonté son rythme cardiaque : le lui demander n’a pas de sens."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ce qui fonctionne sans décision consciente relève de ce système : c’est ce qui le définit.",
+      "common_mistake": "Lui attribuer la commande volontaire supprime la distinction entre automatique et volontaire.",
+      "key_takeaway": "Automatique d’un côté, volontaire de l’autre.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l06-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Par combien de contingents le système nerveux végétatif module-t-il les réactions de l’organisme ?",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q03-a1",
+          "text": "Deux : le sympathique et le parasympathique",
+          "explanation": "Ce sont les deux contingents nommés par le support."
+        },
+        {
+          "id": "dea-p08-l06-q03-a2",
+          "text": "Un seul, indifférencié",
+          "explanation": "Le support en décrit deux, nommément.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q03-a3",
+          "text": "Douze, comme les paires de nerfs crâniens",
+          "explanation": "Ce nombre est celui des nerfs crâniens.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l06-q03-a4",
+          "text": "Trente et un, comme les paires de nerfs rachidiens",
+          "explanation": "Ce nombre est celui des nerfs rachidiens."
+        }
+      ],
+      "correctAnswer": "dea-p08-l06-q03-a1",
+      "explanation": "Le support décrit deux contingents : le sympathique et le parasympathique.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux contingents permettent de moduler dans deux directions, ce qu’un seul ne permettrait pas.",
+        "commonMistake": "N’en retenir qu’un fait disparaître l’idée même de modulation.",
+        "keyTakeaway": "Sympathique et parasympathique : deux contingents, une modulation.",
+        "fieldApplication": "Comprendre qu’une réaction est modulée aide à ne pas s’étonner de sa variabilité."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux contingents permettent de moduler dans deux directions, ce qu’un seul ne permettrait pas.",
+      "common_mistake": "N’en retenir qu’un fait disparaître l’idée même de modulation.",
+      "key_takeaway": "Sympathique et parasympathique : deux contingents, une modulation.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l06-q04",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Les deux contingents du système végétatif sont le sympathique et le ______.",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q04-a1",
+          "text": "parasympathique",
+          "explanation": "Le support nomme ces deux contingents."
+        },
+        {
+          "id": "dea-p08-l06-q04-a2",
+          "text": "somatique",
+          "explanation": "Ce terme n’est pas celui employé par le support pour ce contingent.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l06-q04-a1",
+      "explanation": "Le support nomme deux contingents : sympathique et parasympathique.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux noms vont par paire : citer l’un appelle l’autre.",
+        "commonMistake": "Substituer un terme voisin fait sortir du vocabulaire du support.",
+        "keyTakeaway": "Sympathique et parasympathique, toujours les deux.",
+        "fieldApplication": "Employer les termes du support facilite la relecture par un formateur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux noms vont par paire : citer l’un appelle l’autre.",
+      "common_mistake": "Substituer un terme voisin fait sortir du vocabulaire du support.",
+      "key_takeaway": "Sympathique et parasympathique, toujours les deux.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "parasympathique",
+          "le parasympathique"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l06-q05",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, les automatismes cardiaques et digestifs sont commandés volontairement par le patient.",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q05-a1",
+          "text": "Vrai",
+          "explanation": "Le support les rattache au système végétatif, responsable des automatismes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q05-a2",
+          "text": "Faux",
+          "explanation": "Ils relèvent du système nerveux végétatif, dit autonome."
+        }
+      ],
+      "correctAnswer": "dea-p08-l06-q05-a2",
+      "explanation": "Les automatismes cardiaques et digestifs relèvent du système nerveux végétatif, que le support qualifie aussi d’autonome.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot « autonome » dit exactement cela : ces fonctions ne dépendent pas d’une décision.",
+        "commonMistake": "Croire ces fonctions volontaires conduit à demander au patient l’impossible.",
+        "keyTakeaway": "Autonome veut dire indépendant de la volonté.",
+        "fieldApplication": "On ne demande pas à un patient de ralentir son cœur ; on décrit ce qu’on mesure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot « autonome » dit exactement cela : ces fonctions ne dépendent pas d’une décision.",
+      "common_mistake": "Croire ces fonctions volontaires conduit à demander au patient l’impossible.",
+      "key_takeaway": "Autonome veut dire indépendant de la volonté.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l06-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque ensemble à ce que le support lui rattache.",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q06-a1",
+          "text": "Système nerveux central",
+          "explanation": "Le support y range l’encéphale et la moelle.",
+          "match": "Cerveau, cervelet, tronc et moelle"
+        },
+        {
+          "id": "dea-p08-l06-q06-a2",
+          "text": "Système nerveux périphérique",
+          "explanation": "Il regroupe les nerfs.",
+          "match": "12 paires crâniennes, 31 paires rachidiennes"
+        },
+        {
+          "id": "dea-p08-l06-q06-a3",
+          "text": "Système nerveux végétatif",
+          "explanation": "Il porte les automatismes.",
+          "match": "Automatismes, deux contingents"
+        },
+        {
+          "id": "dea-p08-l06-q06-a4",
+          "text": "Méninges",
+          "explanation": "Elles enveloppent le central.",
+          "match": "Enveloppe contenant le LCR"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l06-q06-a1",
+        "dea-p08-l06-q06-a2",
+        "dea-p08-l06-q06-a3",
+        "dea-p08-l06-q06-a4"
+      ],
+      "explanation": "Le support découpe le système nerveux en ensembles qui ne se recouvrent pas, chacun avec son contenu propre.",
+      "knowledgeIds": [
+        "K-DEA-P08-009",
+        "K-DEA-P08-011",
+        "K-DEA-P08-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - ensembles",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Savoir à quel ensemble appartient une structure évite de la situer au mauvais endroit.",
+        "commonMistake": "Mélanger les ensembles rend impossible de situer un déficit décrit par un patient.",
+        "keyTakeaway": "Trois ensembles, une enveloppe, aucun recouvrement.",
+        "fieldApplication": "Rattacher un signe au bon ensemble structure le bilan neurologique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Savoir à quel ensemble appartient une structure évite de la situer au mauvais endroit.",
+      "common_mistake": "Mélanger les ensembles rend impossible de situer un déficit décrit par un patient.",
+      "key_takeaway": "Trois ensembles, une enveloppe, aucun recouvrement.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - ensembles",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-009",
+          "K-DEA-P08-011",
+          "K-DEA-P08-008"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l06-q07",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur le système végétatif ?",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q07-a1",
+          "text": "Il est aussi appelé autonome",
+          "explanation": "Le support pose cette équivalence."
+        },
+        {
+          "id": "dea-p08-l06-q07-a2",
+          "text": "Il module les réactions de l’organisme",
+          "explanation": "C’est le verbe employé par le support."
+        },
+        {
+          "id": "dea-p08-l06-q07-a3",
+          "text": "Il agit par deux contingents",
+          "explanation": "Sympathique et parasympathique."
+        },
+        {
+          "id": "dea-p08-l06-q07-a4",
+          "text": "Il commande les mouvements volontaires",
+          "explanation": "Cette commande relève de l’aire motrice primaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q07-a5",
+          "text": "Il est à l’origine des nerfs crâniens",
+          "explanation": "Cette origine est attribuée au tronc cérébral.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l06-q07-a1",
+        "dea-p08-l06-q07-a2",
+        "dea-p08-l06-q07-a3"
+      ],
+      "explanation": "Le support décrit un système autonome, responsable des automatismes, qui module les réactions par deux contingents.",
+      "knowledgeIds": [
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux végétatif",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir aux trois affirmations du support évite de lui prêter des fonctions d’autres structures.",
+        "commonMistake": "Ajouter la commande volontaire ou l’origine des nerfs crâniens mélange trois descriptions distinctes.",
+        "keyTakeaway": "Autonome, modulateur, à deux contingents.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir aux trois affirmations du support évite de lui prêter des fonctions d’autres structures.",
+      "common_mistake": "Ajouter la commande volontaire ou l’origine des nerfs crâniens mélange trois descriptions distinctes.",
+      "key_takeaway": "Autonome, modulateur, à deux contingents.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux végétatif",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l06-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient très angoissé présente un pouls rapide et des mains moites. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p08-l06-q08-a1",
+          "text": "Le pouls relevé, l’aspect des extrémités et l’état d’angoisse observé",
+          "explanation": "Trois constats, transmis sans être reliés entre eux par une explication."
+        },
+        {
+          "id": "dea-p08-l06-q08-a2",
+          "text": "Une simple réaction du système végétatif, sans gravité",
+          "explanation": "Expliquer les signes par un mécanisme est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l06-q08-a3",
+          "text": "Uniquement le chiffre du pouls",
+          "explanation": "L’aspect des extrémités et l’état observé font partie du bilan.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p08-l06-q08-a4",
+          "text": "Que l’angoisse suffit à expliquer le tableau",
+          "explanation": "Rien n’autorise à écarter une autre cause.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l06-q08-a1",
+      "explanation": "Des signes peuvent avoir plusieurs causes. Le bilan les rapporte tous, sans en choisir une pour expliquer les autres.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Expliquer un signe par l’angoisse revient à écarter d’autres hypothèses que rien ne permet d’écarter.",
+        "commonMistake": "Attribuer trop vite un tableau à une cause plausible est l’erreur la plus fréquente du bilan.",
+        "keyTakeaway": "On rapporte les signes, on ne les explique pas.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Expliquer un signe par l’angoisse revient à écarter d’autres hypothèses que rien ne permet d’écarter.",
+      "common_mistake": "Attribuer trop vite un tableau à une cause plausible est l’erreur la plus fréquente du bilan.",
+      "key_takeaway": "On rapporte les signes, on ne les explique pas.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l06",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l01",
+  "title": "Le cerveau",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 30",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer le cerveau parmi les organes de l’appareil neurologique.",
+    "Décrire son organisation en hémisphères, lobes et territoires.",
+    "Distinguer aire motrice primaire et aire somesthésique primaire."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.composition",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Selon le support, en combien d’hémisphères le cerveau est-il organisé ?",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q01-a1",
+          "text": "Deux",
+          "explanation": "Le support décrit un cerveau qui comporte deux hémisphères."
+        },
+        {
+          "id": "dea-p08-l01-q01-a2",
+          "text": "Un seul, d’un seul tenant",
+          "explanation": "Le support décrit au contraire une organisation en deux hémisphères.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q01-a3",
+          "text": "Quatre, un par lobe principal",
+          "explanation": "Les lobes sont une subdivision des hémisphères, pas leur équivalent.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q01-a4",
+          "text": "Trente et un, un par étage vertébral",
+          "explanation": "Ce nombre est celui des paires de nerfs rachidiens."
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q01-a1",
+      "explanation": "Le cerveau comporte deux hémisphères, chacun organisé en lobes.",
+      "knowledgeIds": [
+        "K-DEA-P08-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cerveau",
+      "sourcePages": "29",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support énonce une organisation en deux hémisphères, subdivisés ensuite en lobes.",
+        "commonMistake": "Compter un hémisphère par lobe confond deux niveaux d’organisation.",
+        "keyTakeaway": "Deux hémisphères, puis des lobes, puis des territoires.",
+        "fieldApplication": "Décrire une atteinte par son côté suppose de savoir que le cerveau a deux moitiés."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support énonce une organisation en deux hémisphères, subdivisés ensuite en lobes.",
+      "common_mistake": "Compter un hémisphère par lobe confond deux niveaux d’organisation.",
+      "key_takeaway": "Deux hémisphères, puis des lobes, puis des territoires.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cerveau",
+        "sourcePages": "29",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-002"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l01-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Comment le support décrit-il l’organisation interne d’un hémisphère ?",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q02-a1",
+          "text": "En lobes, eux-mêmes divisés en territoires dévolus à des fonctions spécifiques",
+          "explanation": "C’est la description donnée par le support."
+        },
+        {
+          "id": "dea-p08-l01-q02-a2",
+          "text": "En une masse homogène assurant toutes les fonctions à parts égales",
+          "explanation": "Le support décrit au contraire une répartition par territoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q02-a3",
+          "text": "En faisceaux de fibres engainées de myéline",
+          "explanation": "Cette description est celle d’un nerf, pas d’un hémisphère.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l01-q02-a4",
+          "text": "En trente et une paires symétriques",
+          "explanation": "Ce découpage est celui des nerfs rachidiens."
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q02-a1",
+      "explanation": "Chaque hémisphère est organisé en lobes, eux-mêmes divisés en territoires dévolus à des fonctions spécifiques.",
+      "knowledgeIds": [
+        "K-DEA-P08-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cerveau",
+      "sourcePages": "29",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La répartition par territoire est ce qui permet à une fonction d’être touchée sans que les autres le soient.",
+        "commonMistake": "Imaginer un cerveau homogène rend incompréhensible qu’un seul geste ou un seul mot soit atteint.",
+        "keyTakeaway": "Chaque territoire a sa fonction : l’atteinte peut être partielle.",
+        "fieldApplication": "Un patient peut avoir perdu une fonction précise en conservant tout le reste."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La répartition par territoire est ce qui permet à une fonction d’être touchée sans que les autres le soient.",
+      "common_mistake": "Imaginer un cerveau homogène rend incompréhensible qu’un seul geste ou un seul mot soit atteint.",
+      "key_takeaway": "Chaque territoire a sa fonction : l’atteinte peut être partielle.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cerveau",
+        "sourcePages": "29",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-002"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l01-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Que commande l’aire motrice primaire, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q03-a1",
+          "text": "Les mouvements des muscles squelettiques",
+          "explanation": "C’est la fonction que le support lui attribue."
+        },
+        {
+          "id": "dea-p08-l01-q03-a2",
+          "text": "Les automatismes cardiaques et digestifs",
+          "explanation": "Ces automatismes relèvent du système nerveux végétatif.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q03-a3",
+          "text": "La sensibilité du corps",
+          "explanation": "La sensibilité relève de l’aire somesthésique primaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q03-a4",
+          "text": "L’équilibre et la coordination",
+          "explanation": "Ces fonctions sont attribuées au cervelet.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q03-a1",
+      "explanation": "L’aire motrice primaire commande les mouvements des muscles squelettiques ; elle est divisée en régions selon la partie du corps coordonnée.",
+      "knowledgeIds": [
+        "K-DEA-P08-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - aires primaires",
+      "sourcePages": "29",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support sépare nettement la commande du mouvement et la sensibilité, portées par deux aires distinctes.",
+        "commonMistake": "Attribuer la sensibilité à l’aire motrice fusionne deux aires que le support distingue.",
+        "keyTakeaway": "Aire motrice pour le mouvement, aire somesthésique pour la sensibilité.",
+        "fieldApplication": "Ce que le patient ne peut plus faire et ce qu’il ne sent plus se décrivent séparément."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support sépare nettement la commande du mouvement et la sensibilité, portées par deux aires distinctes.",
+      "common_mistake": "Attribuer la sensibilité à l’aire motrice fusionne deux aires que le support distingue.",
+      "key_takeaway": "Aire motrice pour le mouvement, aire somesthésique pour la sensibilité.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - aires primaires",
+        "sourcePages": "29",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-003"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l01-q04",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, l’aire somesthésique primaire est elle aussi divisée en régions selon la partie du corps concernée.",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q04-a1",
+          "text": "Vrai",
+          "explanation": "Le support précise que le même travail de division a été fait pour cette aire."
+        },
+        {
+          "id": "dea-p08-l01-q04-a2",
+          "text": "Faux",
+          "explanation": "Le support indique au contraire la même organisation en régions.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q04-a1",
+      "explanation": "Le support indique que la division en régions selon la partie du corps vaut pour l’aire somesthésique primaire comme pour l’aire motrice.",
+      "knowledgeIds": [
+        "K-DEA-P08-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - aires primaires",
+      "sourcePages": "29",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux aires partagent le même principe d’organisation, ce qui permet de les comparer partie par partie.",
+        "commonMistake": "Croire que seule l’aire motrice est régionalisée fait manquer la symétrie décrite.",
+        "keyTakeaway": "Motricité et sensibilité suivent la même carte du corps.",
+        "fieldApplication": "Un déficit peut concerner une région du corps pour la motricité, la sensibilité, ou les deux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux aires partagent le même principe d’organisation, ce qui permet de les comparer partie par partie.",
+      "common_mistake": "Croire que seule l’aire motrice est régionalisée fait manquer la symétrie décrite.",
+      "key_takeaway": "Motricité et sensibilité suivent la même carte du corps.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - aires primaires",
+        "sourcePages": "29",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-003"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l01-q05",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que révèle une coupe de cerveau, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q05-a1",
+          "text": "La substance blanche, en profondeur",
+          "explanation": "Le support la situe en profondeur."
+        },
+        {
+          "id": "dea-p08-l01-q05-a2",
+          "text": "La substance grise, superficielle",
+          "explanation": "Le support la décrit comme superficielle."
+        },
+        {
+          "id": "dea-p08-l01-q05-a3",
+          "text": "Que la substance blanche est une zone de connexions entre les cellules",
+          "explanation": "C’est la fonction que le support lui attribue."
+        },
+        {
+          "id": "dea-p08-l01-q05-a4",
+          "text": "Que la substance grise est constituée d’amas cellulaires",
+          "explanation": "C’est la composition décrite par le support."
+        },
+        {
+          "id": "dea-p08-l01-q05-a5",
+          "text": "Que la substance grise est la plus profonde des deux",
+          "explanation": "Le support la situe au contraire en superficie.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l01-q05-a1",
+        "dea-p08-l01-q05-a2",
+        "dea-p08-l01-q05-a3",
+        "dea-p08-l01-q05-a4"
+      ],
+      "explanation": "La coupe distingue une substance blanche profonde, zone de connexions, et une substance grise superficielle, faite d’amas cellulaires.",
+      "knowledgeIds": [
+        "K-DEA-P08-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - coupe de cerveau",
+      "sourcePages": "30",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Position et composition vont de pair : le support décrit les deux pour chaque substance.",
+        "commonMistake": "Inverser la position des deux substances rend la description inutilisable.",
+        "keyTakeaway": "Blanche en profondeur et connectrice, grise en surface et cellulaire.",
+        "fieldApplication": "Savoir ce qui est superficiel et ce qui est profond aide à situer une atteinte décrite en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Position et composition vont de pair : le support décrit les deux pour chaque substance.",
+      "common_mistake": "Inverser la position des deux substances rend la description inutilisable.",
+      "key_takeaway": "Blanche en profondeur et connectrice, grise en surface et cellulaire.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 30",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - coupe de cerveau",
+        "sourcePages": "30",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-004"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l01-q06",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Dans le tableau des sept appareils, l’appareil neurologique réunit le cerveau, les nerfs et la ______ épinière.",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q06-a1",
+          "text": "moelle",
+          "explanation": "Le support cite le cerveau, la moelle épinière et les nerfs comme organes de cet appareil."
+        },
+        {
+          "id": "dea-p08-l01-q06-a2",
+          "text": "colonne",
+          "explanation": "La colonne vertébrale appartient à l’appareil locomoteur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q06-a1",
+      "explanation": "Le support range dans l’appareil neurologique le cerveau, la moelle épinière et les nerfs.",
+      "knowledgeIds": [
+        "K-DEA-P08-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil neurologique - place parmi les sept appareils",
+      "sourcePages": "16",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces trois organes forment l’appareil, et aucun ne le résume à lui seul.",
+        "commonMistake": "Confondre la moelle et la colonne qui la protège mélange deux appareils différents.",
+        "keyTakeaway": "Cerveau, moelle épinière et nerfs : trois organes, un appareil.",
+        "fieldApplication": "Rattacher un signe au bon appareil est la première étape d’un bilan structuré."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces trois organes forment l’appareil, et aucun ne le résume à lui seul.",
+      "common_mistake": "Confondre la moelle et la colonne qui la protège mélange deux appareils différents.",
+      "key_takeaway": "Cerveau, moelle épinière et nerfs : trois organes, un appareil.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil neurologique - place parmi les sept appareils",
+        "sourcePages": "16",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-001"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "moelle",
+          "la moelle"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l01-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément décrit par le support à ce qui le caractérise.",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q07-a1",
+          "text": "Hémisphères",
+          "explanation": "Le support en décrit deux.",
+          "match": "Au nombre de deux"
+        },
+        {
+          "id": "dea-p08-l01-q07-a2",
+          "text": "Lobes",
+          "explanation": "Ils subdivisent chaque hémisphère.",
+          "match": "Subdivisions de l’hémisphère"
+        },
+        {
+          "id": "dea-p08-l01-q07-a3",
+          "text": "Substance blanche",
+          "explanation": "Le support la situe en profondeur.",
+          "match": "Profonde, zone de connexions"
+        },
+        {
+          "id": "dea-p08-l01-q07-a4",
+          "text": "Substance grise",
+          "explanation": "Le support la situe en superficie.",
+          "match": "Superficielle, amas cellulaires"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l01-q07-a1",
+        "dea-p08-l01-q07-a2",
+        "dea-p08-l01-q07-a3",
+        "dea-p08-l01-q07-a4"
+      ],
+      "explanation": "Le support décrit le cerveau à deux échelles : son organisation en hémisphères et lobes, et la composition révélée par une coupe.",
+      "knowledgeIds": [
+        "K-DEA-P08-002",
+        "K-DEA-P08-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - le cerveau",
+      "sourcePages": "29, 30",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque niveau de description répond à une question différente : la forme d’ensemble, puis le contenu.",
+        "commonMistake": "Mélanger les deux échelles produit des descriptions qui ne correspondent à rien.",
+        "keyTakeaway": "Une organisation d’ensemble, puis deux substances qui la composent.",
+        "fieldApplication": "Employer le bon terme évite de faire dire à une transmission autre chose que ce qu’elle dit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque niveau de description répond à une question différente : la forme d’ensemble, puis le contenu.",
+      "common_mistake": "Mélanger les deux échelles produit des descriptions qui ne correspondent à rien.",
+      "key_takeaway": "Une organisation d’ensemble, puis deux substances qui la composent.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 30",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - le cerveau",
+        "sourcePages": "29, 30",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-002",
+          "K-DEA-P08-004"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l01-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient conscient ne parvient plus à mobiliser son bras droit, mais dit sentir votre main lorsque vous le touchez. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p08-l01-q08-a1",
+          "text": "Le déficit de mobilité constaté et la sensibilité conservée, décrits séparément",
+          "explanation": "Deux constats distincts, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p08-l01-q08-a2",
+          "text": "Une atteinte de l’aire motrice primaire gauche",
+          "explanation": "Nommer la structure atteinte est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q08-a3",
+          "text": "Un accident vasculaire cérébral",
+          "explanation": "Le diagnostic appartient au médecin régulateur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l01-q08-a4",
+          "text": "Uniquement le déficit moteur, la sensibilité conservée étant rassurante",
+          "explanation": "La sensibilité conservée est une information à transmettre, pas à écarter.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p08-l01-q08-a1",
+      "explanation": "Motricité et sensibilité se décrivent séparément parce qu’elles peuvent être atteintes séparément. Nommer la structure ou la cause relève du médecin.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support distingue deux aires primaires : c’est exactement pourquoi le bilan sépare ce que le patient ne peut plus faire de ce qu’il ne sent plus.",
+        "commonMistake": "Fondre les deux constats en un seul fait perdre l’information la plus utile à la régulation.",
+        "keyTakeaway": "Ce qu’il ne peut plus faire et ce qu’il ne sent plus sont deux constats.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces constats, pas d’un diagnostic transmis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support distingue deux aires primaires : c’est exactement pourquoi le bilan sépare ce que le patient ne peut plus faire de ce qu’il ne sent plus.",
+      "common_mistake": "Fondre les deux constats en un seul fait perdre l’information la plus utile à la régulation.",
+      "key_takeaway": "Ce qu’il ne peut plus faire et ce qu’il ne sent plus sont deux constats.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l01",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

@@ -327,7 +327,10 @@
         "P04:L05"
       ],
       "questionCount": 9,
-      "status": "review"
+      "status": "review",
+      "archiveFile": "parcours-08/legacy-import-lesson-08.json",
+      "supersededBy": "parcours-08/lesson-08.json",
+      "publicationStatus": "archived_source_bank"
     },
     {
       "id": "dea-p09-l08",
