@@ -28,7 +28,11 @@
       "notes": "L'annexe II a été relevée et sert de table de compétences. L'annexe III (liste et durée des modules) n'a pas pu être consultée : aucun module n'est donc renseigné.",
       "pagination": "none",
       "paginationNote": "Texte consulté en ligne : la citation canonique est l'article ou l'annexe.",
-      "pulseoDomains": ["dea", "reglementation", "transport-sanitaire"],
+      "pulseoDomains": [
+        "dea",
+        "reglementation",
+        "transport-sanitaire"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -58,7 +62,12 @@
       "notes": "Seul document de la bibliothèque qui délimite nommément les actes autorisés. C'est la référence des questions portant sur le champ de compétence.",
       "pagination": "none",
       "paginationNote": "Texte consulté en ligne : la citation canonique est l'article.",
-      "pulseoDomains": ["dea", "urgences-vitales", "pharmacologie", "reglementation"],
+      "pulseoDomains": [
+        "dea",
+        "urgences-vitales",
+        "pharmacologie",
+        "reglementation"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -89,7 +98,11 @@
       "notes": "Rattache les actes de l'aide médicale urgente à trois modules de formation. Les intitulés et durées ont été relevés ; le détail du contenu de chaque module n'a pas été consulté.",
       "pagination": "none",
       "paginationNote": "Texte consulté en ligne : la citation canonique est l'annexe.",
-      "pulseoDomains": ["dea", "urgences-vitales", "reglementation"],
+      "pulseoDomains": [
+        "dea",
+        "urgences-vitales",
+        "reglementation"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -116,7 +129,9 @@
       "notes": "Référence générale citée par INTERVENTION_MEDICAL_REVIEW.md. Le contenu n'a pas pu être lu, aucune question ne s'appuie donc sur ce document.",
       "pagination": "none",
       "paginationNote": "Page web sans pagination, et non consultable en l'état.",
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": null,
       "contentVerification": "listing_only",
       "validatedAt": null
@@ -129,23 +144,37 @@
       "category": "support-pedagogique",
       "version": null,
       "locator": {
-        "kind": "referenced_filename",
-        "value": "B2.M4 - Support Etudiant.pdf"
+        "kind": "repository_path",
+        "value": "docs/internal_sources/Cours_DEA/B2.M4 - Support Etudiant.pdf"
       },
-      "storedInRepository": false,
-      "status": "referenced_not_stored",
+      "storedInRepository": true,
+      "status": "awaiting_medical_validation",
       "importedAt": null,
-      "lastVerifiedAt": null,
-      "hash": null,
-      "hashNote": "Fichier absent du dépôt : aucune empreinte calculable.",
-      "coverage": ["Anatomie générale, pages 4 à 16 citées par master-knowledge-base.json"],
+      "lastVerifiedAt": "2026-08-16",
+      "hash": "0b298bdffe8439f6b081e70e656ea9c1b6d044476b2819c37db19cce5876ccf8",
+      "hashNote": "Empreinte calculée sur le fichier présent dans le dépôt.",
+      "coverage": [
+        "Vocabulaire médical, pages 3 à 6",
+        "Organisation générale du corps humain, pages 14 à 18",
+        "Appareil circulatoire, pages 18 à 21",
+        "Appareil neurologique, pages 28 à 33",
+        "Appareil locomoteur, pages 34 à 38",
+        "Appareil digestif, pages 39 à 41",
+        "Appareil urinaire, pages 43 et 44",
+        "Appareils génitaux et système endocrinien, pages 45 à 52",
+        "Matériels de mesure, pages 53 et 54",
+        "Prélèvements non stériles, pages 76 à 78",
+        "Situations pathologiques, pages 83 à 174"
+      ],
       "usableForInterventionSourcing": false,
-      "notes": "Seul document paginé cité par la base de connaissances. Il ne couvre que l'anatomie du Parcours 1 et son fichier n'est pas dans le dépôt : aucune page ne peut être vérifiée ni citée pour le Mode Intervention.",
-      "pagination": "pages_unreliable",
-      "paginationNote": "Pages 4 à 16 citées par master-knowledge-base.json, mais le fichier est absent du dépôt : aucune page n'est vérifiable.",
-      "pulseoDomains": ["dea"],
+      "notes": "Support de formation présent dans le dépôt et relu. Les parcours 4 à 8 en citent des pages vérifiées. Le contenu reste un support pédagogique et non un texte officiel : sourceType « training », donc jamais official_verified pour une question.",
+      "pagination": "pages_available",
+      "paginationNote": "175 pages, numérotées dans le pied de page. Les pages citées par les parcours 4 à 8 ont été relues dans le fichier.",
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": null,
-      "contentVerification": "listing_only",
+      "contentVerification": "content_verified",
       "validatedAt": null
     },
     {
@@ -172,7 +201,9 @@
       "notes": "L'audit du 26 juillet 2026 conclut que le classeur « ne contient pas les questions des 15 blocs et 75 parcours » et que la banque a été générée par un modèle de langage, support DEA et pages sources à confirmer. Il ne peut donc rien sourcer pour le Mode Intervention.",
       "pagination": "none",
       "paginationNote": "Classeur sans pagination ; le manifeste d'import note lui-même « sourcePages: non fournies ».",
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -194,12 +225,16 @@
       "lastVerifiedAt": null,
       "hash": null,
       "hashNote": "Document non présent dans le dépôt.",
-      "coverage": ["Parcours 1 — 45 compétences de master-knowledge-base.json"],
+      "coverage": [
+        "Parcours 1 — 45 compétences de master-knowledge-base.json"
+      ],
       "usableForInterventionSourcing": false,
       "notes": "Cité comme sourceDocument par 45 compétences de la base maîtresse, toutes en reviewStatus draft.",
       "pagination": "none",
       "paginationNote": "Document non présent dans le dépôt et sans pagination connue.",
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": null,
       "contentVerification": "listing_only",
       "validatedAt": null
@@ -221,12 +256,16 @@
       "lastVerifiedAt": "2026-08-10",
       "hash": null,
       "hashNote": "Fichier vivant du dépôt : l'empreinte n'est pas figée ici pour éviter une référence périmée à chaque révision.",
-      "coverage": ["Leçon dea-p01-l01 — Pourquoi apprendre l'anatomie ?"],
+      "coverage": [
+        "Leçon dea-p01-l01 — Pourquoi apprendre l'anatomie ?"
+      ],
       "usableForInterventionSourcing": false,
       "notes": "Spécification officielle d'une leçon d'anatomie. Hors périmètre du Mode Intervention.",
       "pagination": "none",
       "paginationNote": "Fichier JSON structuré, cité par identifiant de contenu.",
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -257,7 +296,10 @@
       "notes": "Ce document n'est pas une source d'autorité : c'est le registre interne des affirmations que la banque avance et qui attendent un relecteur médecin. Les connaissances qui s'y rattachent restent en status to_validate.",
       "pagination": "none",
       "paginationNote": "Document Markdown, cité par point numéroté.",
-      "pulseoDomains": ["dea", "urgences-vitales"],
+      "pulseoDomains": [
+        "dea",
+        "urgences-vitales"
+      ],
       "priority": null,
       "contentVerification": "content_verified",
       "validatedAt": null
@@ -282,7 +324,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales", "dea"],
+      "pulseoDomains": [
+        "urgences-vitales",
+        "dea"
+      ],
       "priority": "P1",
       "contentVerification": "content_verified",
       "validatedAt": "2026-08-11",
@@ -309,7 +354,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales", "reglementation"],
+      "pulseoDomains": [
+        "urgences-vitales",
+        "reglementation"
+      ],
       "priority": "P1",
       "contentVerification": "content_verified",
       "validatedAt": "2026-08-11",
@@ -336,7 +384,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales", "reglementation"],
+      "pulseoDomains": [
+        "urgences-vitales",
+        "reglementation"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -363,7 +414,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales", "dea"],
+      "pulseoDomains": [
+        "urgences-vitales",
+        "dea"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -390,7 +444,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales", "reglementation"],
+      "pulseoDomains": [
+        "urgences-vitales",
+        "reglementation"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -417,7 +474,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["urgences-vitales"],
+      "pulseoDomains": [
+        "urgences-vitales"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -444,7 +503,11 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire", "dea", "reglementation"],
+      "pulseoDomains": [
+        "transport-sanitaire",
+        "dea",
+        "reglementation"
+      ],
       "priority": "P1",
       "contentVerification": "content_verified",
       "validatedAt": "2026-08-11",
@@ -471,7 +534,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire", "reglementation"],
+      "pulseoDomains": [
+        "transport-sanitaire",
+        "reglementation"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -498,7 +564,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire", "reglementation"],
+      "pulseoDomains": [
+        "transport-sanitaire",
+        "reglementation"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -525,7 +594,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire", "dea"],
+      "pulseoDomains": [
+        "transport-sanitaire",
+        "dea"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -552,7 +624,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire"],
+      "pulseoDomains": [
+        "transport-sanitaire"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -579,7 +653,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire", "reglementation"],
+      "pulseoDomains": [
+        "transport-sanitaire",
+        "reglementation"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -606,7 +683,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["transport-sanitaire"],
+      "pulseoDomains": [
+        "transport-sanitaire"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -633,7 +712,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -660,7 +741,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea"],
+      "pulseoDomains": [
+        "dea"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -687,7 +770,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea", "numerique-en-sante"],
+      "pulseoDomains": [
+        "dea",
+        "numerique-en-sante"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -714,7 +800,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea", "numerique-en-sante"],
+      "pulseoDomains": [
+        "dea",
+        "numerique-en-sante"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -741,7 +830,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea", "urgences-vitales"],
+      "pulseoDomains": [
+        "dea",
+        "urgences-vitales"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -768,7 +860,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["dea", "urgences-vitales"],
+      "pulseoDomains": [
+        "dea",
+        "urgences-vitales"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -795,7 +890,11 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pharmacologie", "transport-sanitaire", "dea"],
+      "pulseoDomains": [
+        "pharmacologie",
+        "transport-sanitaire",
+        "dea"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -822,7 +921,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pharmacologie", "transport-sanitaire"],
+      "pulseoDomains": [
+        "pharmacologie",
+        "transport-sanitaire"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -849,7 +951,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pharmacologie"],
+      "pulseoDomains": [
+        "pharmacologie"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -876,7 +980,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pharmacologie", "urgences-vitales"],
+      "pulseoDomains": [
+        "pharmacologie",
+        "urgences-vitales"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -903,7 +1010,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["hygiene"],
+      "pulseoDomains": [
+        "hygiene"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -930,7 +1039,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["hygiene", "infectiologie"],
+      "pulseoDomains": [
+        "hygiene",
+        "infectiologie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -957,7 +1069,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["hygiene"],
+      "pulseoDomains": [
+        "hygiene"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -984,7 +1098,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["infectiologie"],
+      "pulseoDomains": [
+        "infectiologie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1011,7 +1127,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["infectiologie", "pharmacologie"],
+      "pulseoDomains": [
+        "infectiologie",
+        "pharmacologie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1038,7 +1157,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["cardiologie", "urgences-vitales"],
+      "pulseoDomains": [
+        "cardiologie",
+        "urgences-vitales"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1065,7 +1187,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["cardiologie", "urgences-vitales"],
+      "pulseoDomains": [
+        "cardiologie",
+        "urgences-vitales"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1092,7 +1217,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["neurologie", "urgences-vitales"],
+      "pulseoDomains": [
+        "neurologie",
+        "urgences-vitales"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1119,7 +1247,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["neurologie"],
+      "pulseoDomains": [
+        "neurologie"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1146,7 +1276,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["obstetrique", "urgences-vitales"],
+      "pulseoDomains": [
+        "obstetrique",
+        "urgences-vitales"
+      ],
       "priority": "P1",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1173,7 +1306,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["obstetrique"],
+      "pulseoDomains": [
+        "obstetrique"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1200,7 +1335,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pediatrie", "infectiologie"],
+      "pulseoDomains": [
+        "pediatrie",
+        "infectiologie"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1227,7 +1365,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["pediatrie"],
+      "pulseoDomains": [
+        "pediatrie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1254,7 +1394,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["geriatrie"],
+      "pulseoDomains": [
+        "geriatrie"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1281,7 +1423,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["geriatrie"],
+      "pulseoDomains": [
+        "geriatrie"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1308,7 +1452,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["geriatrie"],
+      "pulseoDomains": [
+        "geriatrie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1335,7 +1481,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["geriatrie"],
+      "pulseoDomains": [
+        "geriatrie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1362,7 +1510,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["psychiatrie"],
+      "pulseoDomains": [
+        "psychiatrie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1389,7 +1539,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["psychiatrie"],
+      "pulseoDomains": [
+        "psychiatrie"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1416,7 +1568,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["numerique-en-sante"],
+      "pulseoDomains": [
+        "numerique-en-sante"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1443,7 +1597,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["numerique-en-sante", "reglementation"],
+      "pulseoDomains": [
+        "numerique-en-sante",
+        "reglementation"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1470,7 +1627,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["numerique-en-sante"],
+      "pulseoDomains": [
+        "numerique-en-sante"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1497,7 +1656,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["reglementation", "numerique-en-sante"],
+      "pulseoDomains": [
+        "reglementation",
+        "numerique-en-sante"
+      ],
       "priority": "P2",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1524,7 +1686,9 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["reglementation"],
+      "pulseoDomains": [
+        "reglementation"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1551,7 +1715,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["reglementation", "transport-sanitaire"],
+      "pulseoDomains": [
+        "reglementation",
+        "transport-sanitaire"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
@@ -1578,7 +1745,10 @@
       "pagination": "none",
       "paginationNote": "Ressource en ligne, citée par article, annexe ou section — sans pagination.",
       "coverage": [],
-      "pulseoDomains": ["reglementation", "dea"],
+      "pulseoDomains": [
+        "reglementation",
+        "dea"
+      ],
       "priority": "P3",
       "contentVerification": "listing_only",
       "validatedAt": "2026-08-11",
