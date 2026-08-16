@@ -36,15 +36,45 @@
   ],
   "bossConfiguration": {
     "objective": "Valider les bases du système digestif au niveau DEA.",
-    "scenario": "L’apprenant suit le trajet d’un aliment, identifie les organes et explique le devenir des nutriments et des résidus.",
+    "scenario": "Transport programmé vers une consultation. Le patient, conscient et installé, vous interroge sur ce qui lui a été expliqué à l'hôpital et emploie des termes qu'il a mal retenus. Vous devez suivre le trajet d'un aliment et nommer correctement les organes, sans franchir la limite de l'explication médicale, qui appartient au médecin.",
     "tasks": [
-      "Reconstituer le trajet digestif.",
-      "Relier les glandes à leurs sécrétions.",
-      "Distinguer absorption et transit terminal."
+      "Reconstituer le trajet d'un aliment dans le tube digestif.",
+      "Relier chaque glande à la sécrétion qu'elle produit.",
+      "Distinguer l'absorption intestinale du transit terminal.",
+      "Répondre sans commenter la prise en charge décidée par le médecin."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
-    "successThreshold": 0.8
+    "successThreshold": 0.8,
+    "initialInformation": [
+      "Patient conscient, installé, sans plainte aiguë pendant le transport.",
+      "Il rapporte des termes entendus à l'hôpital, sans en connaître le sens.",
+      "Aucun élément du compte rendu ne vous a été expliqué oralement.",
+      "Le transport dure assez longtemps pour permettre l'échange."
+    ],
+    "priorities": [
+      "Nommer les organes dans l'ordre du trajet, sans en sauter.",
+      "Distinguer ce que le patient rapporte de ce que vous constatez.",
+      "Renvoyer au médecin toute question qui porte sur son état ou son traitement.",
+      "Signaler au Centre 15 toute plainte nouvelle survenue pendant le transport."
+    ],
+    "pitfalls": [
+      "Expliquer au patient ce qu'a voulu dire son médecin : ce n'est pas votre rôle.",
+      "Confondre absorption et transit terminal, qui n'ont ni lieu ni fonction communs.",
+      "Attribuer une sécrétion à la mauvaise glande.",
+      "Prendre le péritoine pour un segment du tube digestif."
+    ],
+    "debrief": {
+      "success": "Le trajet digestif a été reconstitué sans erreur d'ordre, chaque glande rattachée à sa sécrétion, et les questions qui relevaient du médecin lui ont été renvoyées. Répondre correctement sans sortir de son champ est exactement ce qui était demandé.",
+      "failure": "L'ordre du trajet ou l'attribution d'une sécrétion est inexact, ou une explication médicale a été donnée au patient. Reprends l'enchaînement des organes, et rappelle-toi que renvoyer une question au médecin est une réponse, pas une dérobade.",
+      "commonErrors": [
+        "Expliquer au patient une décision médicale.",
+        "Confondre absorption intestinale et transit terminal.",
+        "Attribuer une sécrétion à la mauvaise glande.",
+        "Faire du péritoine un segment du tube digestif."
+      ]
+    },
+    "rewardConfigurable": true
   },
   "validationStatus": "to_validate",
   "generationSource": "library_extracted_knowledge",
@@ -385,7 +415,9 @@
           "parcours-07"
         ],
         "validationStatus": "to_validate",
-        "generationSource": "library_extracted_knowledge"
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 5
       }
     },
     {

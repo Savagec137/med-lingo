@@ -49,6 +49,18 @@ export interface LessonBossConfiguration {
   excludedEngine: "mode_intervention";
   successThreshold: number | null;
   rewardConfigurable: boolean;
+  /** Ce que le joueur sait en arrivant sur les lieux. */
+  initialInformation?: string[];
+  /** Les bonnes priorités, dans l'ordre attendu. */
+  priorities?: string[];
+  /** Les pièges de la situation, à reconnaître sans y tomber. */
+  pitfalls?: string[];
+  /** Feedback final, réussite comme échec, et erreurs fréquentes nommées. */
+  debrief?: {
+    success: string;
+    failure: string;
+    commonErrors: string[];
+  };
 }
 
 export interface LearningContentItem {

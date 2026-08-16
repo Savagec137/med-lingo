@@ -138,6 +138,21 @@ const lessonContentSchema = z
         excludedEngine: z.literal("mode_intervention"),
         successThreshold: z.number().min(0).max(1).nullable(),
         rewardConfigurable: z.boolean(),
+        // Un boss doit poser une situation, pas une série de questions de
+        // mémorisation. Ces quatre blocs sont optionnels — un boss qui n'a pas
+        // encore été repris reste valide — mais sans eux le contenu d'un
+        // briefing serait supprimé silencieusement au parsing, `z.object`
+        // écartant les clés inconnues.
+        initialInformation: z.array(z.string().trim().min(1)).min(1).optional(),
+        priorities: z.array(z.string().trim().min(1)).min(1).optional(),
+        pitfalls: z.array(z.string().trim().min(1)).min(1).optional(),
+        debrief: z
+          .object({
+            success: z.string().trim().min(1),
+            failure: z.string().trim().min(1),
+            commonErrors: z.array(z.string().trim().min(1)).min(1),
+          })
+          .optional(),
       })
       .optional(),
     items: z.array(learningItemSchema),

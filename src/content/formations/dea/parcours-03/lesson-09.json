@@ -31,19 +31,45 @@
   ],
   "bossConfiguration": {
     "objective": "Boss — Anatomie générale",
-    "scenario": "Cas clinique interactif : Une victime présente plusieurs symptômes. Le joueur doit : identifier le système concerné ; retrouver les organes impliqués ; expliquer le rôle général de ce système.",
+    "scenario": "Salle de sport, fin de journée. Un homme d'une cinquantaine d'années s'est effondré après un effort, puis a repris connaissance. Il décrit plusieurs sensations à la fois. Votre bilan doit rattacher chaque signe au système concerné, sans décider lequel est en cause.",
     "tasks": [
-      "Cas clinique interactif :",
-      "Une victime présente plusieurs symptômes.",
-      "Le joueur doit :",
-      "identifier le système concerné ;",
-      "retrouver les organes impliqués ;",
-      "expliquer le rôle général de ce système."
+      "Rattacher chaque signe décrit au système anatomique concerné.",
+      "Nommer les organes situés dans la région dont la victime se plaint.",
+      "Distinguer les signes observés des sensations rapportées.",
+      "Transmettre l'ensemble sans désigner un système comme responsable."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Victime consciente à votre arrivée, assise, essoufflée.",
+      "Plusieurs plaintes : gêne du thorax, essoufflement, douleur du dos.",
+      "L'effondrement a été vu par deux témoins, sans chute de hauteur.",
+      "Aucun antécédent connu n'est communiqué sur place."
+    ],
+    "priorities": [
+      "Décrire d'abord ce qui touche la respiration et la circulation.",
+      "Rapporter le mécanisme — effort, effondrement, reprise de conscience — avant les plaintes secondaires.",
+      "Distinguer ce que la victime ressent de ce que vous constatez.",
+      "Signaler l'évolution entre deux observations."
+    ],
+    "pitfalls": [
+      "Attribuer une douleur thoracique à un seul système alors que plusieurs occupent la même région.",
+      "Nommer une atteinte d'organe : c'est un diagnostic.",
+      "Oublier de rapporter la perte de connaissance initiale, qui a eu lieu avant votre arrivée.",
+      "Traiter une sensation rapportée comme un signe constaté."
+    ],
+    "debrief": {
+      "success": "Chaque signe a été rattaché à un système sans qu'aucun ne soit désigné comme responsable, et la perte de connaissance initiale a été transmise. Le médecin régulateur dispose d'un tableau complet et neutre.",
+      "failure": "Un système a été désigné comme la cause, ou un élément du tableau manque. Reprends l'organisation des systèmes : plusieurs occupent la même région, et c'est précisément pourquoi le bilan décrit sans trancher.",
+      "commonErrors": [
+        "Désigner un système comme responsable du tableau.",
+        "Omettre la perte de connaissance survenue avant l'arrivée.",
+        "Confondre le rôle du muscle cardiaque et celui des muscles volontaires.",
+        "Rapporter une sensation comme un signe constaté."
+      ]
+    }
   },
   "items": [
     {
