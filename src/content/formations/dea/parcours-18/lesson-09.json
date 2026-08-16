@@ -31,20 +31,46 @@
   ],
   "bossConfiguration": {
     "objective": "Boss — Paramètres vitaux",
-    "scenario": "Mission immersive : Le joueur intervient auprès d'un patient présentant plusieurs symptômes. Il doit : mesurer toutes les constantes ; identifier les anomalies ; interpréter les résultats ; transmettre les données au SAMU.",
+    "scenario": "Domicile, début de nuit. Une femme d'une soixantaine d'années est retrouvée par sa famille, somnolente et respirant vite. Vous réalisez le relevé complet des paramètres que vous êtes autorisé à recueillir, puis vous le transmettez au Centre 15, qui décidera de l'orientation.",
     "tasks": [
-      "Mission immersive :",
-      "Le joueur intervient auprès d'un patient présentant plusieurs symptômes.",
-      "Il doit :",
-      "mesurer toutes les constantes ;",
-      "identifier les anomalies ;",
-      "interpréter les résultats ;",
-      "transmettre les données au SAMU."
+      "Recueillir les paramètres autorisés par l'article R. 6311-17, II.",
+      "Relever chaque valeur avec son heure et ses conditions de mesure.",
+      "Décrire les signes observés qu'aucun appareil ne mesure.",
+      "Transmettre l'ensemble au Centre 15 sans le commenter."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Patiente somnolente mais réactive à la parole.",
+      "Respiration visiblement rapide, coloration des lèvres modifiée.",
+      "La famille signale une dégradation progressive depuis plusieurs heures.",
+      "Le matériel de recueil des constantes est disponible et fonctionnel."
+    ],
+    "priorities": [
+      "Recueillir d'abord les paramètres respiratoires et circulatoires.",
+      "Horodater chaque valeur, faute de quoi aucune évolution ne sera lisible.",
+      "Décrire l'état de conscience observé, qui figure parmi les éléments recueillis.",
+      "Répéter le relevé et transmettre l'écart entre les deux."
+    ],
+    "pitfalls": [
+      "Qualifier le tableau — « détresse », « choc » — au lieu de le décrire : l'interprétation appartient au médecin régulateur.",
+      "Transmettre une valeur sans son heure, ce qui rend toute comparaison impossible.",
+      "Se fier à une saturation affichée sans signaler les conditions du relevé.",
+      "Proposer une orientation ou un service : la décision revient au Centre 15.",
+      "Omettre les signes observés sous prétexte qu'ils ne sont pas chiffrés."
+    ],
+    "debrief": {
+      "success": "Tous les paramètres autorisés ont été recueillis, horodatés et transmis avec leurs conditions de mesure, accompagnés des signes observés. Le médecin régulateur dispose de tout ce qu'il faut, et d'aucune conclusion qui ne soit la sienne.",
+      "failure": "Le relevé est incomplet, non horodaté, ou le bilan a qualifié l'état de la patiente. Reprends la liste des paramètres que l'ambulancier recueille et la frontière entre décrire et interpréter : elle est ce qui rend le bilan utilisable.",
+      "commonErrors": [
+        "Qualifier l'état du patient au lieu de le décrire.",
+        "Transmettre une valeur sans son heure de relevé.",
+        "Omettre l'observation de l'état de conscience.",
+        "Proposer une orientation hospitalière."
+      ]
+    }
   },
   "items": [
     {

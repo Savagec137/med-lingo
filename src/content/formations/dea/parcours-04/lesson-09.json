@@ -38,16 +38,45 @@
   ],
   "bossConfiguration": {
     "objective": "Valider les principaux repères du système locomoteur au niveau DEA.",
-    "scenario": "Une victime consciente signale une douleur d’un membre. L’apprenant doit localiser et nommer les structures sans poser de diagnostic.",
+    "scenario": "Fin de matinée, salle de sport. Un adhérent conscient s'est réceptionné de travers après un saut. Il reste debout, soutient son avant-bras droit et signale aussi une gêne du bas du dos. Vous décrivez chaque zone atteinte dans un vocabulaire que le Centre 15 lira sans ambiguïté.",
     "tasks": [
-      "Identifier le segment corporel.",
-      "Nommer le repère anatomique utile.",
-      "Distinguer les structures locomotrices."
+      "Nommer le segment corporel atteint pour chaque plainte.",
+      "Employer le repère anatomique qui lève l'ambiguïté de la description.",
+      "Distinguer os, articulation, muscle et ligament dans le bilan.",
+      "Transmettre les localisations au Centre 15 sans nommer de lésion."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Victime consciente, debout, qui répond aux questions.",
+      "Douleur signalée entre le coude et le poignet du côté droit.",
+      "Seconde plainte au bas du dos, juste au-dessus du sacrum.",
+      "Aucune déformation évidente à l'inspection initiale."
+    ],
+    "priorities": [
+      "Situer chaque douleur par son segment avant d'en décrire l'intensité.",
+      "Employer un repère fixe plutôt qu'un geste montré, intransmissible par radio.",
+      "Signaler la plainte du rachis, qui engage des précautions de mobilisation.",
+      "Rapporter ce que la victime ne peut plus faire, pas seulement ce dont elle se plaint."
+    ],
+    "pitfalls": [
+      "Employer « bras » pour tout le membre supérieur : la localisation transmise devient fausse.",
+      "Nommer une fracture ou une entorse : c'est un diagnostic, il appartient au médecin régulateur.",
+      "Confondre ligament et tendon en reprenant les mots de la victime.",
+      "Décrire la douleur du dos sans préciser le segment du rachis concerné."
+    ],
+    "debrief": {
+      "success": "Chaque zone atteinte a été située par son segment et son repère anatomique, et aucune lésion n'a été nommée. Le Centre 15 reçoit un bilan qu'il peut relire sans vous demander de préciser : c'est exactement ce que le vocabulaire anatomique sert à produire.",
+      "failure": "Des localisations restent approximatives, ou une lésion a été nommée à la place du médecin. Reprends les segments des membres et ceux du rachis : un bilan qui désigne mal l'endroit oriente la régulation vers la mauvaise hypothèse.",
+      "commonErrors": [
+        "Employer « bras » ou « jambe » pour un membre entier.",
+        "Confondre ligament et tendon.",
+        "Nommer la lésion à la place du médecin régulateur.",
+        "Situer une douleur du dos sans préciser le segment du rachis."
+      ]
+    }
   },
   "validationStatus": "to_validate",
   "generationSource": "library_extracted_knowledge",
@@ -811,8 +840,7 @@
         "dea",
         "parcours-04",
         "boss",
-        "synthese",
-        "dea"
+        "synthese"
       ],
       "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 34-37",
       "level": 1,

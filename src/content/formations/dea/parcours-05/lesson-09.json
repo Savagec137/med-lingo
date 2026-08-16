@@ -37,16 +37,46 @@
   ],
   "bossConfiguration": {
     "objective": "Valider les bases du système cardiovasculaire au niveau DEA.",
-    "scenario": "L’apprenant analyse un schéma circulatoire et des mesures simples, puis sélectionne une transmission factuelle sans poser de diagnostic.",
+    "scenario": "Fin de matinée, domicile. Un homme d'une quarantaine d'années est assis, pâle et mal à l'aise depuis une heure. Son pouls radial est palpable, ses mains sont froides. Vous recueillez les paramètres circulatoires disponibles et transmettez au Centre 15, qui décidera de l'orientation.",
     "tasks": [
-      "Reconstituer les deux circulations.",
-      "Identifier les rôles du cœur, des vaisseaux et du sang.",
-      "Transmettre les paramètres observés avec précision."
+      "Recueillir la fréquence du pouls, son amplitude et le site utilisé.",
+      "Décrire les signes cutanés qui complètent la lecture du pouls.",
+      "Annoncer explicitement les paramètres non recueillis.",
+      "Transmettre le bilan circulatoire au Centre 15 sans le conclure."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Patient conscient, assis, pâle, qui répond aux questions.",
+      "Pouls radial palpable ; extrémités froides à l'inspection.",
+      "Mesure manuelle de la pression artérielle en cours.",
+      "Aucun saignement extérieur visible."
+    ],
+    "priorities": [
+      "Rapporter d'abord ce qui a été perçu au pouls, avec son site de recherche.",
+      "Signaler la pâleur et les extrémités froides, qui se voient sans appareil.",
+      "Horodater chaque valeur, faute de quoi aucune évolution ne sera lisible.",
+      "Répéter la mesure et transmettre l'écart entre les deux relevés."
+    ],
+    "pitfalls": [
+      "Transmettre le seul chiffre de la fréquence, en perdant l'amplitude et le site.",
+      "Conclure à un état de choc : c'est un diagnostic médical.",
+      "Taire une pression artérielle non mesurée, ce qui laisse croire qu'elle a été prise et qu'elle était normale.",
+      "Se rassurer d'une conscience conservée alors que la circulation peut déjà être compromise.",
+      "Déduire la nature d'un vaisseau de la richesse en oxygène du sang qui y circule."
+    ],
+    "debrief": {
+      "success": "Le bilan circulatoire transmis réunit ce qui a été perçu, ce qui a été vu et ce qui n'a pas pu être mesuré, chaque élément à sa place et sans conclusion. Le médecin régulateur peut décider de l'orientation sur cette base.",
+      "failure": "Le bilan s'est réduit à des chiffres, ou une conclusion médicale s'y est glissée. Reprends ce qu'un pouls transmet — fréquence, amplitude, site — et ce qu'on fait d'un paramètre qu'on n'a pas pu recueillir : on le dit.",
+      "commonErrors": [
+        "Ne transmettre que la fréquence du pouls.",
+        "Nommer un état de choc à la place du médecin.",
+        "Passer sous silence une pression artérielle non mesurée.",
+        "Identifier une artère par la richesse en oxygène du sang."
+      ]
+    }
   },
   "validationStatus": "to_validate",
   "generationSource": "library_extracted_knowledge",

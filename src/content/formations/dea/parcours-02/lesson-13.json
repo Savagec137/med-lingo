@@ -31,15 +31,45 @@
   ],
   "bossConfiguration": {
     "objective": "Boss — Langage médical",
-    "scenario": "Lire un compte rendu médical simplifié. Retrouver la signification des termes.",
+    "scenario": "Vous prenez en charge un patient à domicile. Le médecin traitant vous remet un compte rendu, et le médecin régulateur emploie au téléphone des termes qu'il faut comprendre sans les faire répéter. Décoder le langage médical fait partie de la transmission, pas d'un exercice de vocabulaire.",
     "tasks": [
-      "Lire un compte rendu médical simplifié.",
-      "Retrouver la signification des termes."
+      "Décomposer un terme médical en racine, préfixe et suffixe.",
+      "Traduire les abréviations demandées par la régulation.",
+      "Employer le terme exact plutôt qu'une périphrase approximative.",
+      "Rapporter ce que dit le compte rendu sans l'interpréter."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Un compte rendu médical simplifié vous est remis par la famille.",
+      "Le médecin régulateur vous demande la FR, la FC, la TA et la SpO₂.",
+      "Le patient est conscient et répond aux questions.",
+      "Aucun élément du compte rendu ne vous a été expliqué oralement."
+    ],
+    "priorities": [
+      "Comprendre d'abord les termes qui portent sur l'état actuel du patient.",
+      "Demander une précision plutôt que deviner un terme inconnu.",
+      "Employer les abréviations que la régulation attend, sans en inventer.",
+      "Distinguer ce que vous avez mesuré de ce que le compte rendu affirme."
+    ],
+    "pitfalls": [
+      "Deviner le sens d'un terme à partir d'une ressemblance : hypo- et hyper- se ressemblent et disent l'inverse.",
+      "Reprendre à votre compte une conclusion écrite dans le compte rendu, comme si vous l'aviez constatée.",
+      "Employer un terme technique mal maîtrisé alors qu'une description simple serait exacte.",
+      "Confondre une valeur ancienne du compte rendu avec une valeur mesurée à l'instant."
+    ],
+    "debrief": {
+      "success": "Les termes du compte rendu et ceux de la régulation ont été compris et employés à bon escient, et la frontière entre ce que vous avez mesuré et ce que le document affirme est restée nette pendant toute la transmission.",
+      "failure": "Un terme a été mal compris, ou une affirmation du compte rendu a été transmise comme un constat. Reprends les préfixes, suffixes et racines : un mot mal traduit fait entendre à la régulation autre chose que ce que vous avez vu.",
+      "commonErrors": [
+        "Confondre hypo- et hyper-.",
+        "Traduire cyanose par rougeur.",
+        "Reprendre une conclusion du compte rendu comme une observation.",
+        "Employer une abréviation inventée dans une transmission."
+      ]
+    }
   },
   "items": [
     {

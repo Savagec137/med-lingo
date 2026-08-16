@@ -31,19 +31,45 @@
   ],
   "bossConfiguration": {
     "objective": "Boss — Découvrir le corps humain",
-    "scenario": "Mission : Une victime présente différentes douleurs. Le joueur doit : localiser les régions anatomiques ; identifier les organes concernés ; associer les systèmes concernés.",
+    "scenario": "Fin d'après-midi, piste cyclable. Un cycliste a chuté seul, sans témoin du choc. Il est conscient, assis sur le bas-côté, et se plaint de plusieurs endroits à la fois. Votre bilan doit situer chaque douleur dans un vocabulaire que le Centre 15 lira sans ambiguïté.",
     "tasks": [
-      "Mission :",
-      "Une victime présente différentes douleurs.",
-      "Le joueur doit :",
-      "localiser les régions anatomiques ;",
-      "identifier les organes concernés ;",
-      "associer les systèmes concernés."
+      "Situer chaque douleur par sa région et son plan de référence.",
+      "Nommer la cavité du corps concernée par chaque plainte.",
+      "Rattacher chaque région au système qui s'y trouve.",
+      "Transmettre les localisations sans nommer de lésion."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
     "successThreshold": 0.8,
-    "rewardConfigurable": true
+    "rewardConfigurable": true,
+    "initialInformation": [
+      "Victime consciente, assise, qui répond aux questions.",
+      "Plusieurs plaintes simultanées : côté droit du thorax, ventre, épaule.",
+      "Aucun témoin du mécanisme exact de la chute.",
+      "La victime n'a pas été mobilisée avant votre arrivée."
+    ],
+    "priorities": [
+      "Décrire d'abord les douleurs du thorax et de l'abdomen, qui recouvrent des organes vitaux.",
+      "Employer un repère fixe — antérieur, postérieur, médial, distal — plutôt que « ici » ou « de ce côté ».",
+      "Nommer le quadrant abdominal plutôt que « le ventre ».",
+      "Signaler ce que la victime ne peut pas faire, pas seulement ce dont elle se plaint."
+    ],
+    "pitfalls": [
+      "Employer « bras » pour tout le membre supérieur : la localisation transmise devient fausse.",
+      "Confondre cavité thoracique et cavité abdominale au niveau du diaphragme.",
+      "Nommer un organe atteint : c'est une conclusion, pas une observation.",
+      "Décrire une douleur par un geste montré, intransmissible par radio."
+    ],
+    "debrief": {
+      "success": "Chaque plainte a été située par une région, un plan et une cavité. Le Centre 15 reçoit un bilan qu'il peut relire sans vous demander de préciser : c'est exactement ce que le vocabulaire anatomique sert à produire.",
+      "failure": "Des localisations restent approximatives, ou un organe a été nommé à la place d'une région. Reprends les plans de référence et les cavités : un bilan qui désigne mal l'endroit oriente la régulation vers la mauvaise hypothèse.",
+      "commonErrors": [
+        "Employer « bras » ou « jambe » pour un membre entier.",
+        "Placer les reins dans la cavité thoracique.",
+        "Nommer l'organe atteint au lieu de la région douloureuse.",
+        "Confondre médial et latéral, proximal et distal."
+      ]
+    }
   },
   "items": [
     {

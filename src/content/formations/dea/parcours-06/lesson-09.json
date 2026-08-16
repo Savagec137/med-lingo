@@ -36,15 +36,46 @@
   ],
   "bossConfiguration": {
     "objective": "Valider les bases du système respiratoire au niveau DEA.",
-    "scenario": "L’apprenant reconstitue le trajet de l’air, analyse des observations simples et sélectionne une transmission respiratoire factuelle.",
+    "scenario": "Début d'après-midi, domicile. Un adulte au repos respire de façon irrégulière, avec des mouvements thoraciques superficiels. Un enfant de six ans, présent sur les lieux, respire lui aussi plus vite que d'habitude selon sa mère. Vous réalisez les bilans respiratoires et transmettez au Centre 15, qui décidera de l'orientation.",
     "tasks": [
-      "Reconstituer le trajet de l’air.",
-      "Distinguer ventilation et échanges.",
-      "Mesurer et transmettre fréquence, rythme, amplitude et SpO₂ disponible."
+      "Compter la fréquence respiratoire dans des conditions qui ne la faussent pas.",
+      "Décrire le rythme et l'amplitude, que le chiffre seul ne donne pas.",
+      "Rapporter la fréquence de l'enfant à la plage usuelle de son âge.",
+      "Transmettre le bilan respiratoire au Centre 15 sans le conclure."
     ],
     "engine": "existing_lesson_engine",
     "excludedEngine": "mode_intervention",
-    "successThreshold": 0.8
+    "successThreshold": 0.8,
+    "initialInformation": [
+      "Adulte conscient, au repos, fréquence respiratoire mesurée à 18 par minute.",
+      "Respiration irrégulière, avec des mouvements visiblement superficiels.",
+      "Enfant de six ans présent, décrit par sa mère comme respirant plus vite.",
+      "Le saturomètre affiche une valeur, mais dans des conditions à préciser."
+    ],
+    "priorities": [
+      "Compter la fréquence avant toute autre mesure, et sans prévenir le patient.",
+      "Décrire le rythme et l'amplitude en même temps que la fréquence.",
+      "Rapporter la valeur de l'enfant à la plage de son âge, non à celle de l'adulte.",
+      "Signaler les conditions de recueil quand une valeur affichée surprend."
+    ],
+    "pitfalls": [
+      "Traiter une fréquence chiffrée normale comme une respiration normale, alors que le rythme et l'amplitude disent autre chose.",
+      "Laisser une valeur de saturation remplacer l'observation du rythme et de l'amplitude.",
+      "Appliquer la plage de l'adulte à un enfant de six ans.",
+      "Nommer une détresse respiratoire : c'est une conclusion médicale.",
+      "Transmettre une valeur inattendue sans signaler les conditions du relevé."
+    ],
+    "debrief": {
+      "success": "Les deux bilans transmis réunissent la fréquence, le rythme et l'amplitude, chacun rapporté à la plage de l'âge concerné, et les conditions de recueil accompagnent les valeurs surprenantes. Le médecin régulateur dispose de tout ce qu'il faut pour décider.",
+      "failure": "Un chiffre a été transmis seul, ou la plage de l'adulte a été appliquée à l'enfant. Reprends ce que le regard apprend d'une ventilation : une fréquence normale accompagnée d'une amplitude superficielle ne décrit pas une respiration normale.",
+      "commonErrors": [
+        "Conclure de la seule fréquence que la respiration est normale.",
+        "Laisser la saturation remplacer l'observation du rythme.",
+        "Appliquer la plage de l'adulte à un enfant.",
+        "Nommer une détresse respiratoire."
+      ]
+    },
+    "rewardConfigurable": true
   },
   "validationStatus": "to_validate",
   "generationSource": "library_extracted_knowledge",
@@ -264,7 +295,9 @@
           "parcours-06"
         ],
         "validationStatus": "to_validate",
-        "generationSource": "library_extracted_knowledge"
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
       }
     },
     {
