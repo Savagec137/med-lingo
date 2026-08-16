@@ -1,0 +1,732 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l05",
+  "title": "Les nerfs",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32, 33",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Distinguer système nerveux central et périphérique.",
+    "Décrire la constitution d’un nerf et le trajet de l’influx.",
+    "Comprendre un terme neurologique sans le reprendre à son compte."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.tissue",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l05-q01",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Que comporte le système nerveux périphérique, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q01-a1",
+          "text": "12 paires de nerfs crâniens",
+          "explanation": "C’est le nombre donné par le support."
+        },
+        {
+          "id": "dea-p08-l05-q01-a2",
+          "text": "31 paires de nerfs rachidiens",
+          "explanation": "C’est le nombre donné par le support."
+        },
+        {
+          "id": "dea-p08-l05-q01-a3",
+          "text": "Le cerveau et le cervelet",
+          "explanation": "Ces structures appartiennent au système nerveux central.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q01-a4",
+          "text": "La moelle épinière",
+          "explanation": "Elle appartient au système nerveux central.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q01-a5",
+          "text": "Les méninges",
+          "explanation": "Elles enveloppent le système nerveux central."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l05-q01-a1",
+        "dea-p08-l05-q01-a2"
+      ],
+      "explanation": "Le système nerveux périphérique comporte 12 paires de nerfs crâniens et 31 paires de nerfs rachidiens.",
+      "knowledgeIds": [
+        "K-DEA-P08-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le périphérique est fait de nerfs ; le central est fait de l’encéphale et de la moelle.",
+        "commonMistake": "Ranger la moelle dans le périphérique efface la frontière entre les deux systèmes.",
+        "keyTakeaway": "Douze paires crâniennes, trente et une paires rachidiennes.",
+        "fieldApplication": "Situer un déficit dans le bon ensemble est la première étape d’une description utile."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le périphérique est fait de nerfs ; le central est fait de l’encéphale et de la moelle.",
+      "common_mistake": "Ranger la moelle dans le périphérique efface la frontière entre les deux systèmes.",
+      "key_takeaway": "Douze paires crâniennes, trente et une paires rachidiennes.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-009"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l05-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Comment le support décrit-il la constitution d’un nerf ?",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q02-a1",
+          "text": "Des faisceaux de fibres nerveuses engainées par la myéline",
+          "explanation": "C’est la description donnée par le support."
+        },
+        {
+          "id": "dea-p08-l05-q02-a2",
+          "text": "Une cellule unique très allongée",
+          "explanation": "Le support décrit des faisceaux, pas une cellule isolée.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q02-a3",
+          "text": "Un amas cellulaire superficiel",
+          "explanation": "Cette description est celle de la substance grise.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l05-q02-a4",
+          "text": "Un canal contenant du liquide céphalo-rachidien",
+          "explanation": "Le LCR est contenu par les méninges."
+        }
+      ],
+      "correctAnswer": "dea-p08-l05-q02-a1",
+      "explanation": "Un nerf est constitué de faisceaux de fibres nerveuses engainées par la myéline.",
+      "knowledgeIds": [
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un nerf est un assemblage, pas une unité : c’est pourquoi une atteinte peut être partielle.",
+        "commonMistake": "Réduire le nerf à une cellule empêche de comprendre qu’il regroupe de nombreuses fibres.",
+        "keyTakeaway": "Des faisceaux de fibres, engainés de myéline.",
+        "fieldApplication": "Comprendre la structure aide à saisir les termes entendus lors d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un nerf est un assemblage, pas une unité : c’est pourquoi une atteinte peut être partielle.",
+      "common_mistake": "Réduire le nerf à une cellule empêche de comprendre qu’il regroupe de nombreuses fibres.",
+      "key_takeaway": "Des faisceaux de fibres, engainés de myéline.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l05-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Dans quel sens circule l’influx sensitif, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q03-a1",
+          "text": "Des organes vers le cerveau",
+          "explanation": "C’est le sens que le support lui donne."
+        },
+        {
+          "id": "dea-p08-l05-q03-a2",
+          "text": "Du cerveau vers les organes",
+          "explanation": "C’est le sens de l’influx moteur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q03-a3",
+          "text": "Dans les deux sens simultanément",
+          "explanation": "Le support attribue un sens propre à chaque type d’influx.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q03-a4",
+          "text": "Il ne circule pas, il reste dans le nerf",
+          "explanation": "L’influx se propage de neurone en neurone."
+        }
+      ],
+      "correctAnswer": "dea-p08-l05-q03-a1",
+      "explanation": "L’influx sensitif transmet une information des organes au cerveau ; l’influx moteur porte la réponse du cerveau aux organes.",
+      "knowledgeIds": [
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux sens opposés pour deux fonctions : recevoir l’information, puis y répondre.",
+        "commonMistake": "Inverser les deux sens rend incompréhensible la distinction entre sentir et bouger.",
+        "keyTakeaway": "Sensitif monte, moteur descend.",
+        "fieldApplication": "Ce que le patient ne sent plus et ce qu’il ne peut plus faire se décrivent séparément."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux sens opposés pour deux fonctions : recevoir l’information, puis y répondre.",
+      "common_mistake": "Inverser les deux sens rend incompréhensible la distinction entre sentir et bouger.",
+      "key_takeaway": "Sensitif monte, moteur descend.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l05-q04",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "L’influx passe d’un neurone à l’autre par des neuromédiateurs libérés dans une zone de connexion appelée ______.",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q04-a1",
+          "text": "synapse",
+          "explanation": "Le support nomme ainsi cette zone de connexion."
+        },
+        {
+          "id": "dea-p08-l05-q04-a2",
+          "text": "myéline",
+          "explanation": "La myéline est la gaine qui entoure les fibres.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l05-q04-a1",
+      "explanation": "Le support décrit la synapse comme la zone de connexion où sont libérés les neuromédiateurs.",
+      "knowledgeIds": [
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le passage d’un neurone à l’autre n’est pas direct : il suppose une zone de connexion et des médiateurs.",
+        "commonMistake": "Confondre la gaine et la zone de connexion mélange deux éléments distincts du support.",
+        "keyTakeaway": "La synapse connecte, la myéline engaine.",
+        "fieldApplication": "Un vocabulaire juste permet de comprendre une transmission sans la déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le passage d’un neurone à l’autre n’est pas direct : il suppose une zone de connexion et des médiateurs.",
+      "common_mistake": "Confondre la gaine et la zone de connexion mélange deux éléments distincts du support.",
+      "key_takeaway": "La synapse connecte, la myéline engaine.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "synapse",
+          "la synapse"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l05-q05",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque racine citée par le support à son sens.",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q05-a1",
+          "text": "NEURO",
+          "explanation": "Le support la rattache au nerf et au système nerveux.",
+          "match": "Nerf, système nerveux"
+        },
+        {
+          "id": "dea-p08-l05-q05-a2",
+          "text": "PLEGIE",
+          "explanation": "Le support la traduit par paralysie.",
+          "match": "Paralysie"
+        },
+        {
+          "id": "dea-p08-l05-q05-a3",
+          "text": "ESTHESIE",
+          "explanation": "Le support la traduit par sensibilité.",
+          "match": "Sensibilité"
+        },
+        {
+          "id": "dea-p08-l05-q05-a4",
+          "text": "CEPHA",
+          "explanation": "Le support la traduit par tête.",
+          "match": "Tête"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l05-q05-a1",
+        "dea-p08-l05-q05-a2",
+        "dea-p08-l05-q05-a3",
+        "dea-p08-l05-q05-a4"
+      ],
+      "explanation": "Le support liste des racines qui permettent de comprendre un terme entendu sans avoir à le deviner.",
+      "knowledgeIds": [
+        "K-DEA-P08-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - vocabulaire essentiel",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+        "commonMistake": "Deviner le sens d’un terme à partir d’une ressemblance conduit à des contresens.",
+        "keyTakeaway": "Quatre racines, quatre familles de mots.",
+        "fieldApplication": "Comprendre un terme entendu n’autorise pas à le reprendre comme un constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+      "common_mistake": "Deviner le sens d’un terme à partir d’une ressemblance conduit à des contresens.",
+      "key_takeaway": "Quatre racines, quatre familles de mots.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - vocabulaire essentiel",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-013"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l05-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, la moelle épinière fait partie du système nerveux périphérique.",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q06-a1",
+          "text": "Vrai",
+          "explanation": "La moelle appartient au système nerveux central.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q06-a2",
+          "text": "Faux",
+          "explanation": "Le périphérique comporte les nerfs crâniens et rachidiens."
+        }
+      ],
+      "correctAnswer": "dea-p08-l05-q06-a2",
+      "explanation": "Le système nerveux périphérique comporte les nerfs crâniens et rachidiens ; la moelle appartient au central.",
+      "knowledgeIds": [
+        "K-DEA-P08-009",
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La frontière entre central et périphérique passe à la sortie de la moelle, pas ailleurs.",
+        "commonMistake": "Déplacer la moelle vers le périphérique brouille toute la description des deux ensembles.",
+        "keyTakeaway": "Central : encéphale et moelle. Périphérique : les nerfs.",
+        "fieldApplication": "Situer une atteinte dans le bon ensemble change ce que la régulation en attend."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La frontière entre central et périphérique passe à la sortie de la moelle, pas ailleurs.",
+      "common_mistake": "Déplacer la moelle vers le périphérique brouille toute la description des deux ensembles.",
+      "key_takeaway": "Central : encéphale et moelle. Périphérique : les nerfs.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-009",
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l05-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet d’une information sensitive, telle que le support la décrit.",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q07-a1",
+          "text": "Organe",
+          "explanation": "Point de départ de l’information sensitive.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-l05-q07-a2",
+          "text": "Fibre nerveuse",
+          "explanation": "Elle conduit l’influx.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-l05-q07-a3",
+          "text": "Synapse",
+          "explanation": "Zone de connexion entre deux neurones.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p08-l05-q07-a4",
+          "text": "Cerveau",
+          "explanation": "Destination de l’influx sensitif.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l05-q07-a1",
+        "dea-p08-l05-q07-a2",
+        "dea-p08-l05-q07-a3",
+        "dea-p08-l05-q07-a4"
+      ],
+      "explanation": "L’influx sensitif part de l’organe, chemine par les fibres et les synapses, et parvient au cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet montre que l’information met en jeu plusieurs relais avant d’être perçue.",
+        "commonMistake": "Faire partir l’influx sensitif du cerveau inverse le sens que le support lui donne.",
+        "keyTakeaway": "De l’organe au cerveau, relais après relais.",
+        "fieldApplication": "Comprendre le trajet aide à décrire séparément la sensibilité et la motricité."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet montre que l’information met en jeu plusieurs relais avant d’être perçue.",
+      "common_mistake": "Faire partir l’influx sensitif du cerveau inverse le sens que le support lui donne.",
+      "key_takeaway": "De l’organe au cerveau, relais après relais.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l05-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Une transmission mentionne que le patient présente une « hémiplégie droite ». Que fait l’ambulancier de ce terme ?",
+      "answers": [
+        {
+          "id": "dea-p08-l05-q08-a1",
+          "text": "Il le comprend, et transmet pour sa part ce qu’il constate lui-même",
+          "explanation": "Comprendre un terme et le reprendre à son compte sont deux choses différentes."
+        },
+        {
+          "id": "dea-p08-l05-q08-a2",
+          "text": "Il le reprend tel quel dans son propre bilan",
+          "explanation": "Reprendre une conclusion d’autrui la transforme en constat personnel.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q08-a3",
+          "text": "Il l’ignore, le terme étant hors de son champ",
+          "explanation": "Comprendre le vocabulaire fait partie du métier.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l05-q08-a4",
+          "text": "Il demande au patient de confirmer le diagnostic",
+          "explanation": "Le patient n’est pas en mesure de valider un terme médical.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p08-l05-q08-a1",
+      "explanation": "Le vocabulaire du support sert à comprendre ce qui est dit, pas à produire des conclusions. Le bilan rapporte ce qui a été constaté.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La racine PLEGIE permet de comprendre le terme ; cela ne rend pas le constat transmissible comme le sien.",
+        "commonMistake": "Reprendre un terme entendu efface la distinction entre ce qu’on sait et ce qu’on a vu.",
+        "keyTakeaway": "Comprendre un mot n’autorise pas à le faire sien.",
+        "fieldApplication": "Le bilan distingue ce qui a été rapporté de ce qui a été observé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La racine PLEGIE permet de comprendre le terme ; cela ne rend pas le constat transmissible comme le sien.",
+      "common_mistake": "Reprendre un terme entendu efface la distinction entre ce qu’on sait et ce qu’on a vu.",
+      "key_takeaway": "Comprendre un mot n’autorise pas à le faire sien.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l05",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

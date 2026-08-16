@@ -1,0 +1,726 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l07",
+  "title": "Les réflexes",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 9,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Expliquer ce que l’arc réflexe court-circuite et pourquoi.",
+    "Distinguer réaction réflexe et mouvement volontaire.",
+    "Décrire une réaction obtenue sans conclure sur la conscience."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Que fait l’arc réflexe, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q01-a1",
+          "text": "Il court-circuite le cerveau",
+          "explanation": "C’est exactement le verbe employé par le support."
+        },
+        {
+          "id": "dea-p08-l07-q01-a2",
+          "text": "Il passe par le cerveau avant de répondre",
+          "explanation": "Le support décrit au contraire un court-circuit.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q01-a3",
+          "text": "Il passe par le cervelet pour être coordonné",
+          "explanation": "Le support ne fait pas intervenir le cervelet dans l’arc réflexe.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l07-q01-a4",
+          "text": "Il emprunte les nerfs crâniens uniquement",
+          "explanation": "Le support ne restreint pas l’arc réflexe à ces nerfs."
+        }
+      ],
+      "correctAnswer": "dea-p08-l07-q01-a1",
+      "explanation": "L’arc réflexe court-circuite le cerveau, pour gagner du temps et permettre une réaction immédiate.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Court-circuiter le cerveau est ce qui rend la réaction immédiate : c’est la raison d’être du réflexe.",
+        "commonMistake": "Faire passer le réflexe par le cerveau supprime le gain de temps qui le définit.",
+        "keyTakeaway": "Le réflexe évite le cerveau, et c’est là tout son intérêt.",
+        "fieldApplication": "Un mouvement réflexe observé ne prouve pas que le patient a compris ou décidé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Court-circuiter le cerveau est ce qui rend la réaction immédiate : c’est la raison d’être du réflexe.",
+      "common_mistake": "Faire passer le réflexe par le cerveau supprime le gain de temps qui le définit.",
+      "key_takeaway": "Le réflexe évite le cerveau, et c’est là tout son intérêt.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l07-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels avantages le support attribue-t-il à l’arc réflexe ?",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q02-a1",
+          "text": "Gagner du temps",
+          "explanation": "Le support le mentionne explicitement."
+        },
+        {
+          "id": "dea-p08-l07-q02-a2",
+          "text": "Permettre une réaction immédiate",
+          "explanation": "Le support le mentionne explicitement."
+        },
+        {
+          "id": "dea-p08-l07-q02-a3",
+          "text": "Renforcer la coordination du mouvement",
+          "explanation": "La coordination est attribuée au cervelet.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q02-a4",
+          "text": "Permettre une décision réfléchie",
+          "explanation": "Le réflexe court-circuite précisément la décision.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q02-a5",
+          "text": "Moduler les automatismes cardiaques",
+          "explanation": "Cette modulation relève du système végétatif."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l07-q02-a1",
+        "dea-p08-l07-q02-a2"
+      ],
+      "explanation": "Le support attribue à l’arc réflexe deux avantages : gagner du temps et permettre une réaction immédiate.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux avantages sont liés : l’un est le moyen, l’autre le résultat.",
+        "commonMistake": "Attribuer au réflexe une décision réfléchie contredit le principe même du court-circuit.",
+        "keyTakeaway": "Du temps gagné, une réaction immédiate.",
+        "fieldApplication": "Une réaction immédiate observée chez un patient n’est pas la preuve d’une décision consciente."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux avantages sont liés : l’un est le moyen, l’autre le résultat.",
+      "common_mistake": "Attribuer au réflexe une décision réfléchie contredit le principe même du court-circuit.",
+      "key_takeaway": "Du temps gagné, une réaction immédiate.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l07-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, une réaction réflexe suppose une décision prise par le cerveau.",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q03-a1",
+          "text": "Vrai",
+          "explanation": "Le support décrit au contraire un court-circuit du cerveau.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q03-a2",
+          "text": "Faux",
+          "explanation": "L’arc réflexe court-circuite le cerveau pour gagner du temps."
+        }
+      ],
+      "correctAnswer": "dea-p08-l07-q03-a2",
+      "explanation": "L’arc réflexe court-circuite le cerveau : la réaction se produit sans décision.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La différence entre réflexe et mouvement volontaire tient exactement à ce court-circuit.",
+        "commonMistake": "Confondre les deux fait tirer d’un mouvement observé une conclusion sur l’état de conscience.",
+        "keyTakeaway": "Un réflexe n’est pas une décision.",
+        "fieldApplication": "Un patient qui retire sa main n’a pas nécessairement compris ce qui se passe."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La différence entre réflexe et mouvement volontaire tient exactement à ce court-circuit.",
+      "common_mistake": "Confondre les deux fait tirer d’un mouvement observé une conclusion sur l’état de conscience.",
+      "key_takeaway": "Un réflexe n’est pas une décision.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l07-q04",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Le support indique que l’arc réflexe ______ le cerveau pour gagner du temps.",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q04-a1",
+          "text": "court-circuite",
+          "explanation": "C’est le terme employé par le support."
+        },
+        {
+          "id": "dea-p08-l07-q04-a2",
+          "text": "traverse",
+          "explanation": "Le support décrit un contournement, pas une traversée.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l07-q04-a1",
+      "explanation": "Le support écrit que l’arc réflexe court-circuite le cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot choisi par le support dit à la fois le trajet évité et la raison de l’éviter.",
+        "commonMistake": "Parler de traversée inverse le mécanisme décrit.",
+        "keyTakeaway": "Court-circuiter, c’est contourner pour aller plus vite.",
+        "fieldApplication": "Employer le terme du support facilite la relecture par un formateur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot choisi par le support dit à la fois le trajet évité et la raison de l’éviter.",
+      "common_mistake": "Parler de traversée inverse le mécanisme décrit.",
+      "key_takeaway": "Court-circuiter, c’est contourner pour aller plus vite.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "court-circuite",
+          "courtcircuite",
+          "court circuite"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l07-q05",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient inconscient retire son bras quand vous le pincez. Que permet d’affirmer cette seule observation ?",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q05-a1",
+          "text": "Qu’une réaction a été obtenue à la stimulation, décrite telle quelle",
+          "explanation": "C’est un fait observable, transmissible sans interprétation."
+        },
+        {
+          "id": "dea-p08-l07-q05-a2",
+          "text": "Que le patient a repris conscience",
+          "explanation": "Une réaction réflexe ne suppose pas de décision consciente.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q05-a3",
+          "text": "Que le patient comprend ce qui se passe",
+          "explanation": "Le réflexe court-circuite précisément le cerveau.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q05-a4",
+          "text": "Que la surveillance peut être espacée",
+          "explanation": "Une réaction obtenue n’autorise pas à relâcher la surveillance.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p08-l07-q05-a1",
+      "explanation": "Une réaction à la stimulation se décrit telle qu’elle est obtenue. En tirer une conclusion sur la conscience est un pas de plus, qui n’appartient pas à l’ambulancier.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support explique pourquoi : le réflexe court-circuite le cerveau, donc il ne dit rien de la conscience.",
+        "commonMistake": "Conclure à un réveil sur une réaction réflexe est une erreur que l’anatomie suffit à écarter.",
+        "keyTakeaway": "Une réaction obtenue n’est pas une conscience retrouvée.",
+        "fieldApplication": "Le bilan décrit la réaction et la stimulation employée, sans en tirer de conclusion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support explique pourquoi : le réflexe court-circuite le cerveau, donc il ne dit rien de la conscience.",
+      "common_mistake": "Conclure à un réveil sur une réaction réflexe est une erreur que l’anatomie suffit à écarter.",
+      "key_takeaway": "Une réaction obtenue n’est pas une conscience retrouvée.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l07-q06",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue ce qui distingue un mouvement réflexe d’un mouvement volontaire, du plus rapide au plus lent.",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q06-a1",
+          "text": "Réaction réflexe, qui court-circuite le cerveau",
+          "explanation": "Le support en fait un gain de temps.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-l07-q06-a2",
+          "text": "Influx sensitif porté jusqu’au cerveau",
+          "explanation": "Étape que le réflexe évite.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-l07-q06-a3",
+          "text": "Réponse du cerveau renvoyée aux organes",
+          "explanation": "C’est l’influx moteur décrit par le support.",
+          "sequenceRank": 3
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l07-q06-a1",
+        "dea-p08-l07-q06-a2",
+        "dea-p08-l07-q06-a3"
+      ],
+      "explanation": "Le réflexe est immédiat parce qu’il évite l’aller-retour vers le cerveau que suppose un mouvement volontaire.",
+      "knowledgeIds": [
+        "K-DEA-P08-012",
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "32, 33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La comparaison rend visible ce que le court-circuit fait gagner.",
+        "commonMistake": "Placer le réflexe après l’aller-retour cérébral supprime son avantage.",
+        "keyTakeaway": "Le réflexe va plus vite parce qu’il en fait moins.",
+        "fieldApplication": "Distinguer réflexe et mouvement volontaire change ce que l’observation permet de conclure."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La comparaison rend visible ce que le court-circuit fait gagner.",
+      "common_mistake": "Placer le réflexe après l’aller-retour cérébral supprime son avantage.",
+      "key_takeaway": "Le réflexe va plus vite parce qu’il en fait moins.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32, 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "32, 33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012",
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l07-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque terme du vocabulaire du support à son sens.",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q07-a1",
+          "text": "PLEGIE",
+          "explanation": "Le support la traduit par paralysie.",
+          "match": "Paralysie"
+        },
+        {
+          "id": "dea-p08-l07-q07-a2",
+          "text": "ENCEPHALE",
+          "explanation": "Le support la traduit par cerveau.",
+          "match": "Cerveau"
+        },
+        {
+          "id": "dea-p08-l07-q07-a3",
+          "text": "NEVR",
+          "explanation": "Le support la rattache au nerf.",
+          "match": "Nerf"
+        },
+        {
+          "id": "dea-p08-l07-q07-a4",
+          "text": "THYM",
+          "explanation": "Le support la traduit par humeur.",
+          "match": "Humeur"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l07-q07-a1",
+        "dea-p08-l07-q07-a2",
+        "dea-p08-l07-q07-a3",
+        "dea-p08-l07-q07-a4"
+      ],
+      "explanation": "Le support donne des racines qui permettent de décomposer un terme entendu plutôt que de le deviner.",
+      "knowledgeIds": [
+        "K-DEA-P08-013"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - vocabulaire essentiel",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Décomposer un terme est plus sûr que se fier à sa ressemblance avec un autre.",
+        "commonMistake": "Deviner à partir d’une sonorité voisine conduit à des contresens en transmission.",
+        "keyTakeaway": "Quatre racines, quatre sens précis.",
+        "fieldApplication": "Comprendre un terme ne veut pas dire pouvoir le reprendre comme un constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Décomposer un terme est plus sûr que se fier à sa ressemblance avec un autre.",
+      "common_mistake": "Deviner à partir d’une sonorité voisine conduit à des contresens en transmission.",
+      "key_takeaway": "Quatre racines, quatre sens précis.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - vocabulaire essentiel",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-013"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l07-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous décrivez au Centre 15 l’état neurologique d’un patient qui ne répond pas mais réagit à la douleur. Que transmettez-vous ?",
+      "answers": [
+        {
+          "id": "dea-p08-l07-q08-a1",
+          "text": "L’absence de réponse aux questions, la réaction obtenue et la stimulation employée",
+          "explanation": "Trois éléments factuels, qui permettent à la régulation de se représenter l’état."
+        },
+        {
+          "id": "dea-p08-l07-q08-a2",
+          "text": "Que le patient est dans le coma",
+          "explanation": "Le terme est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q08-a3",
+          "text": "Que le patient est conscient puisqu’il réagit",
+          "explanation": "Une réaction réflexe ne prouve pas la conscience.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l07-q08-a4",
+          "text": "La seule absence de réponse, la réaction étant réflexe",
+          "explanation": "La réaction obtenue est une information à part entière.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p08-l07-q08-a1",
+      "explanation": "Un état neurologique se décrit par ce qui a été demandé, ce qui a été obtenu, et comment. Le mot qui résume tout cela appartient au médecin.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Préciser la stimulation employée permet au médecin de comparer deux observations successives.",
+        "commonMistake": "Employer un terme global efface les détails qui rendent la comparaison possible.",
+        "keyTakeaway": "Ce que je demande, ce que j’obtiens, et comment.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments décrits."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Préciser la stimulation employée permet au médecin de comparer deux observations successives.",
+      "common_mistake": "Employer un terme global efface les détails qui rendent la comparaison possible.",
+      "key_takeaway": "Ce que je demande, ce que j’obtiens, et comment.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l07",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

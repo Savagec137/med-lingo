@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-l03",
+  "title": "Le tronc cérébral",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer le tronc cérébral et le bulbe rachidien.",
+    "Rattacher les nerfs crâniens à leur origine.",
+    "Ordonner les étages du système nerveux central."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organ.location"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l02"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-l03-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il le tronc cérébral et le bulbe rachidien ?",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q01-a1",
+          "text": "À l’union entre le cerveau, le cervelet et la moelle",
+          "explanation": "C’est la situation décrite par le support."
+        },
+        {
+          "id": "dea-p08-l03-q01-a2",
+          "text": "Au sommet du crâne, au-dessus des hémisphères",
+          "explanation": "Aucune structure n’est décrite à cet endroit par le support."
+        },
+        {
+          "id": "dea-p08-l03-q01-a3",
+          "text": "À hauteur de la première vertèbre lombaire",
+          "explanation": "C’est le niveau où s’arrête la moelle épinière.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l03-q01-a4",
+          "text": "Dans les trous de conjugaison du rachis",
+          "explanation": "Ces trous laissent sortir les fibres nerveuses.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p08-l03-q01-a1",
+      "explanation": "Le tronc cérébral et le bulbe rachidien se situent à l’union entre cerveau, cervelet et moelle.",
+      "knowledgeIds": [
+        "K-DEA-P08-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "C’est un carrefour : trois structures s’y rejoignent, ce qui explique son importance dans la description.",
+        "commonMistake": "Le situer ailleurs revient à supprimer la jonction entre l’encéphale et la moelle.",
+        "keyTakeaway": "Un point de passage entre cerveau, cervelet et moelle.",
+        "fieldApplication": "Situer correctement une structure évite les descriptions approximatives."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "C’est un carrefour : trois structures s’y rejoignent, ce qui explique son importance dans la description.",
+      "common_mistake": "Le situer ailleurs revient à supprimer la jonction entre l’encéphale et la moelle.",
+      "key_takeaway": "Un point de passage entre cerveau, cervelet et moelle.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-006"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l03-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelle origine le support attribue-t-il au tronc cérébral et au bulbe rachidien ?",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q02-a1",
+          "text": "Celle des nerfs crâniens",
+          "explanation": "Le support les décrit comme l’origine de nos nerfs crâniens."
+        },
+        {
+          "id": "dea-p08-l03-q02-a2",
+          "text": "Celle des nerfs rachidiens",
+          "explanation": "Les nerfs rachidiens sortent de la moelle par les trous de conjugaison.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l03-q02-a3",
+          "text": "Celle du liquide céphalo-rachidien",
+          "explanation": "Le LCR est rattaché aux méninges par le support.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p08-l03-q02-a4",
+          "text": "Celle des deux contingents du système végétatif",
+          "explanation": "Le support ne rattache pas ces contingents au tronc cérébral."
+        }
+      ],
+      "correctAnswer": "dea-p08-l03-q02-a1",
+      "explanation": "Le tronc cérébral et le bulbe rachidien sont à l’origine des nerfs crâniens.",
+      "knowledgeIds": [
+        "K-DEA-P08-006",
+        "K-DEA-P08-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux origines distinctes pour deux ensembles de nerfs : crâniens d’un côté, rachidiens de l’autre.",
+        "commonMistake": "Faire naître les nerfs rachidiens du tronc cérébral supprime le rôle des étages vertébraux.",
+        "keyTakeaway": "Nerfs crâniens au tronc, nerfs rachidiens à la moelle.",
+        "fieldApplication": "Distinguer les deux ensembles aide à comprendre un déficit décrit à la tête ou au tronc."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux origines distinctes pour deux ensembles de nerfs : crâniens d’un côté, rachidiens de l’autre.",
+      "common_mistake": "Faire naître les nerfs rachidiens du tronc cérébral supprime le rôle des étages vertébraux.",
+      "key_takeaway": "Nerfs crâniens au tronc, nerfs rachidiens à la moelle.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-006",
+          "K-DEA-P08-009"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l03-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, le tronc cérébral se trouve à la jonction entre le cerveau, le cervelet et la moelle.",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q03-a1",
+          "text": "Vrai",
+          "explanation": "Le support le situe précisément à cette union."
+        },
+        {
+          "id": "dea-p08-l03-q03-a2",
+          "text": "Faux",
+          "explanation": "C’est pourtant la situation que le support décrit.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l03-q03-a1",
+      "explanation": "Le support place le tronc cérébral et le bulbe rachidien à l’union entre cerveau, cervelet et moelle.",
+      "knowledgeIds": [
+        "K-DEA-P08-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette position de carrefour est ce qui donne son importance à la structure.",
+        "commonMistake": "L’isoler d’une des trois structures fait perdre le sens du mot « union ».",
+        "keyTakeaway": "Trois structures se rejoignent là, pas deux.",
+        "fieldApplication": "Un repère anatomique juste rend la description transmissible sans ambiguïté."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette position de carrefour est ce qui donne son importance à la structure.",
+      "common_mistake": "L’isoler d’une des trois structures fait perdre le sens du mot « union ».",
+      "key_takeaway": "Trois structures se rejoignent là, pas deux.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-006"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l03-q04",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le tronc cérébral et le bulbe rachidien sont, selon le support, à l’origine des nerfs ______.",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q04-a1",
+          "text": "crâniens",
+          "explanation": "Le support parle de « l’origine de nos nerfs crâniens »."
+        },
+        {
+          "id": "dea-p08-l03-q04-a2",
+          "text": "rachidiens",
+          "explanation": "Les nerfs rachidiens sortent de la moelle, à chaque étage vertébral.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l03-q04-a1",
+      "explanation": "Le support attribue au tronc cérébral et au bulbe rachidien l’origine des nerfs crâniens.",
+      "knowledgeIds": [
+        "K-DEA-P08-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le nom du nerf renvoie à son origine : crânien pour le tronc, rachidien pour la moelle.",
+        "commonMistake": "Confondre les deux familles de nerfs fait situer un déficit au mauvais niveau.",
+        "keyTakeaway": "Crânien vient du tronc, rachidien vient de la moelle.",
+        "fieldApplication": "Un vocabulaire juste rend la transmission compréhensible du premier coup."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le nom du nerf renvoie à son origine : crânien pour le tronc, rachidien pour la moelle.",
+      "common_mistake": "Confondre les deux familles de nerfs fait situer un déficit au mauvais niveau.",
+      "key_takeaway": "Crânien vient du tronc, rachidien vient de la moelle.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-006"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "crâniens",
+          "crânien"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l03-q05",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à sa situation, telle que le support la donne.",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q05-a1",
+          "text": "Cerveau",
+          "explanation": "Il occupe la partie haute de l’encéphale.",
+          "match": "Au-dessus du cervelet"
+        },
+        {
+          "id": "dea-p08-l03-q05-a2",
+          "text": "Cervelet",
+          "explanation": "Le support le situe par deux repères.",
+          "match": "En dessous et en arrière du cerveau"
+        },
+        {
+          "id": "dea-p08-l03-q05-a3",
+          "text": "Tronc cérébral",
+          "explanation": "Il fait la jonction entre trois structures.",
+          "match": "À l’union cerveau, cervelet et moelle"
+        },
+        {
+          "id": "dea-p08-l03-q05-a4",
+          "text": "Moelle épinière",
+          "explanation": "Elle est logée dans un canal du rachis.",
+          "match": "Dans le canal rachidien"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l03-q05-a1",
+        "dea-p08-l03-q05-a2",
+        "dea-p08-l03-q05-a3",
+        "dea-p08-l03-q05-a4"
+      ],
+      "explanation": "Les quatre structures s’enchaînent de haut en bas, chacune avec une situation que le support énonce.",
+      "knowledgeIds": [
+        "K-DEA-P08-005",
+        "K-DEA-P08-006",
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Situer les structures les unes par rapport aux autres est ce qui rend une description utilisable.",
+        "commonMistake": "Une situation approximative rend impossible de comprendre à quel niveau se joue un déficit.",
+        "keyTakeaway": "Du cerveau à la moelle, quatre étages, quatre repères.",
+        "fieldApplication": "Le niveau d’une atteinte change ce que la régulation en attend."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Situer les structures les unes par rapport aux autres est ce qui rend une description utilisable.",
+      "common_mistake": "Une situation approximative rend impossible de comprendre à quel niveau se joue un déficit.",
+      "key_takeaway": "Du cerveau à la moelle, quatre étages, quatre repères.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005",
+          "K-DEA-P08-006",
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l03-q06",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur le tronc cérébral ?",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q06-a1",
+          "text": "Il se situe à l’union entre cerveau, cervelet et moelle",
+          "explanation": "C’est la situation décrite."
+        },
+        {
+          "id": "dea-p08-l03-q06-a2",
+          "text": "Il est à l’origine des nerfs crâniens",
+          "explanation": "C’est l’origine attribuée par le support."
+        },
+        {
+          "id": "dea-p08-l03-q06-a3",
+          "text": "Il est cité avec le bulbe rachidien",
+          "explanation": "Le support les présente ensemble."
+        },
+        {
+          "id": "dea-p08-l03-q06-a4",
+          "text": "Il contient le liquide céphalo-rachidien",
+          "explanation": "Le LCR est rattaché aux méninges.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l03-q06-a5",
+          "text": "Il commande l’équilibre",
+          "explanation": "L’équilibre est attribué au cervelet.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l03-q06-a1",
+        "dea-p08-l03-q06-a2",
+        "dea-p08-l03-q06-a3"
+      ],
+      "explanation": "Le support présente le tronc cérébral et le bulbe rachidien ensemble, à l’union de trois structures, comme origine des nerfs crâniens.",
+      "knowledgeIds": [
+        "K-DEA-P08-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir à ce que le support énonce évite d’ajouter des fonctions qu’il n’attribue pas.",
+        "commonMistake": "Prêter au tronc cérébral l’équilibre ou le LCR mélange trois structures distinctes.",
+        "keyTakeaway": "Une situation, une origine, et rien d’autre.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir à ce que le support énonce évite d’ajouter des fonctions qu’il n’attribue pas.",
+      "common_mistake": "Prêter au tronc cérébral l’équilibre ou le LCR mélange trois structures distinctes.",
+      "key_takeaway": "Une situation, une origine, et rien d’autre.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - tronc cérébral et bulbe rachidien",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-006"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l03-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Classe ces structures de haut en bas, telles que le support les enchaîne.",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q07-a1",
+          "text": "Cerveau",
+          "explanation": "Structure la plus haute de l’encéphale.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-l03-q07-a2",
+          "text": "Cervelet",
+          "explanation": "En dessous et en arrière du cerveau.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-l03-q07-a3",
+          "text": "Tronc cérébral et bulbe rachidien",
+          "explanation": "À l’union avec la moelle.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p08-l03-q07-a4",
+          "text": "Moelle épinière",
+          "explanation": "Elle descend dans le canal rachidien.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-l03-q07-a1",
+        "dea-p08-l03-q07-a2",
+        "dea-p08-l03-q07-a3",
+        "dea-p08-l03-q07-a4"
+      ],
+      "explanation": "L’enchaînement descend du cerveau à la moelle, en passant par le cervelet puis le tronc cérébral.",
+      "knowledgeIds": [
+        "K-DEA-P08-005",
+        "K-DEA-P08-006",
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central",
+      "sourcePages": "29, 31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cet ordre est la carte minimale du système nerveux central : il permet de situer tout le reste.",
+        "commonMistake": "Intervertir tronc cérébral et moelle supprime la jonction que le support décrit.",
+        "keyTakeaway": "Cerveau, cervelet, tronc, moelle : de haut en bas.",
+        "fieldApplication": "Situer le niveau d’un déficit suppose de connaître l’ordre des étages."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cet ordre est la carte minimale du système nerveux central : il permet de situer tout le reste.",
+      "common_mistake": "Intervertir tronc cérébral et moelle supprime la jonction que le support décrit.",
+      "key_takeaway": "Cerveau, cervelet, tronc, moelle : de haut en bas.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central",
+        "sourcePages": "29, 31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-005",
+          "K-DEA-P08-006",
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l03-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous prenez en charge un patient dont la parole est devenue difficile depuis une heure. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p08-l03-q08-a1",
+          "text": "La difficulté de parole constatée et l’heure de début rapportée",
+          "explanation": "Un constat et une donnée temporelle, chacun à sa place."
+        },
+        {
+          "id": "dea-p08-l03-q08-a2",
+          "text": "Une aphasie",
+          "explanation": "Le terme technique est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l03-q08-a3",
+          "text": "Une atteinte du tronc cérébral",
+          "explanation": "Nommer la structure atteinte n’appartient pas à l’ambulancier.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l03-q08-a4",
+          "text": "Uniquement le constat, l’heure étant approximative",
+          "explanation": "L’heure de début est justement une information déterminante.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p08-l03-q08-a1",
+      "explanation": "Une difficulté de parole se décrit telle qu’elle s’observe, avec l’heure de début. Le terme technique et la structure en cause relèvent du médecin.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’heure de début est souvent l’élément qui conditionne la décision de la régulation.",
+        "commonMistake": "Écarter l’heure au motif qu’elle est approximative prive la régulation d’un repère essentiel.",
+        "keyTakeaway": "Ce que j’observe, et depuis quand : deux éléments, pas un.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir du constat et de son ancienneté."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "L’heure de début est souvent l’élément qui conditionne la décision de la régulation.",
+      "common_mistake": "Écarter l’heure au motif qu’elle est approximative prive la régulation d’un repère essentiel.",
+      "key_takeaway": "Ce que j’observe, et depuis quand : deux éléments, pas un.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l03",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

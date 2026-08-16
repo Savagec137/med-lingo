@@ -1,0 +1,962 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p08-boss",
+  "title": "Boss — Système nerveux",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "level": 3,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31, 32, 33",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Décrire un état neurologique sans poser de diagnostic.",
+    "Situer chaque structure dans le bon ensemble nerveux.",
+    "Transmettre un bilan neurologique structuré au Centre 15."
+  ],
+  "competencyIds": [
+    "body.system.nervous",
+    "body.organization.organ-to-system",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p08-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Système nerveux",
+    "scenario": "Fin de journée, salle de pause d’une entreprise. Un salarié conscient ne parvient plus à mobiliser son bras droit depuis le matin selon ses collègues. Un second salarié, tombé en voulant l’aider, se plaint du dos et réagit mal aux stimulations. Vous décrivez l’état neurologique des deux victimes et transmettez au Centre 15, qui décidera de l’orientation.",
+    "initialInformation": [
+      "Première victime consciente, assise, qui répond aux questions posées.",
+      "Elle ne mobilise plus son bras droit ; le début est situé le matin par ses collègues.",
+      "Seconde victime tombée de sa hauteur, se plaignant du dos, peu réactive à la parole.",
+      "Aucune des deux victimes n’a été mobilisée avant votre arrivée."
+    ],
+    "tasks": [
+      "Décrire séparément ce qui est perdu et ce qui est conservé.",
+      "Situer chaque structure citée dans le bon ensemble nerveux.",
+      "Préciser la stimulation employée avec chaque réaction obtenue.",
+      "Transmettre le bilan neurologique au Centre 15 sans le conclure."
+    ],
+    "priorities": [
+      "Rapporter l’heure de début de la première victime : elle conditionne souvent la décision.",
+      "Décrire la motricité et la sensibilité comme deux constats distincts.",
+      "Signaler le mécanisme de chute et l’absence de mobilisation de la seconde victime.",
+      "Répéter l’observation et transmettre l’écart entre les deux."
+    ],
+    "pitfalls": [
+      "Nommer une hémiplégie, un coma ou une atteinte médullaire : ce sont des diagnostics.",
+      "Conclure d’une réaction à la douleur que la victime a repris conscience, alors que le réflexe court-circuite le cerveau.",
+      "Fondre motricité et sensibilité en un seul constat.",
+      "Reprendre à son compte un terme employé par un témoin.",
+      "Proposer une orientation hospitalière : la décision revient au Centre 15."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true,
+    "debrief": {
+      "success": "Les deux bilans transmis séparent ce qui est perdu de ce qui est conservé, précisent la stimulation employée pour chaque réaction obtenue, et rapportent l’heure de début. Aucun terme diagnostique ne s’y est glissé : le médecin régulateur dispose de tout ce qu’il faut.",
+      "failure": "Un terme diagnostique a été employé, ou une réaction réflexe a été lue comme un signe de conscience. Reprends l’arc réflexe : il court-circuite le cerveau, et c’est précisément pourquoi une réaction obtenue ne dit rien de ce que la victime perçoit.",
+      "commonErrors": [
+        "Employer un terme diagnostique comme hémiplégie ou coma.",
+        "Conclure à un réveil sur une réaction réflexe.",
+        "Confondre système nerveux central et périphérique.",
+        "Transmettre un déficit sans son heure de début.",
+        "Proposer une orientation hospitalière."
+      ]
+    }
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p08-boss-q01",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Première victime : consciente, elle ne parvient plus à mobiliser son bras droit. Quelle description le bilan retient-il ?",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q01-a1",
+          "text": "Le membre concerné, le mouvement impossible, et la sensibilité testée séparément",
+          "explanation": "Trois constats distincts, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p08-boss-q01-a2",
+          "text": "Une hémiplégie droite",
+          "explanation": "Le terme est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q01-a3",
+          "text": "Une atteinte de l’aire motrice primaire",
+          "explanation": "Nommer la structure n’appartient pas à l’ambulancier.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q01-a4",
+          "text": "Le seul membre concerné, le détail du mouvement étant secondaire",
+          "explanation": "Ce que le patient ne peut plus faire est justement l’information centrale.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p08-boss-q01-a1",
+      "explanation": "Motricité et sensibilité se décrivent séparément parce que le support les rattache à deux aires distinctes.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Séparer les deux constats donne à la régulation deux informations au lieu d’une.",
+        "commonMistake": "Un terme global efface la distinction que l’anatomie impose.",
+        "keyTakeaway": "Ce qu’il ne peut plus faire, et ce qu’il sent encore.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces constats."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Séparer les deux constats donne à la régulation deux informations au lieu d’une.",
+      "common_mistake": "Un terme global efface la distinction que l’anatomie impose.",
+      "key_takeaway": "Ce qu’il ne peut plus faire, et ce qu’il sent encore.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Vous situez les structures citées par la famille. Lesquelles appartiennent au système nerveux central ?",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q02-a1",
+          "text": "Le cerveau",
+          "explanation": "Structure centrale."
+        },
+        {
+          "id": "dea-p08-boss-q02-a2",
+          "text": "Le cervelet",
+          "explanation": "Structure centrale."
+        },
+        {
+          "id": "dea-p08-boss-q02-a3",
+          "text": "La moelle épinière",
+          "explanation": "Structure centrale."
+        },
+        {
+          "id": "dea-p08-boss-q02-a4",
+          "text": "Les nerfs rachidiens",
+          "explanation": "Ils appartiennent au système périphérique.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q02-a5",
+          "text": "Les nerfs crâniens",
+          "explanation": "Ils appartiennent au système périphérique.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-boss-q02-a1",
+        "dea-p08-boss-q02-a2",
+        "dea-p08-boss-q02-a3"
+      ],
+      "explanation": "Le central réunit l’encéphale et la moelle ; le périphérique réunit les nerfs.",
+      "knowledgeIds": [
+        "K-DEA-P08-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La frontière passe à la sortie des nerfs, et nulle part ailleurs.",
+        "commonMistake": "Ranger un nerf dans le central efface la distinction entre les deux ensembles.",
+        "keyTakeaway": "Central : encéphale et moelle. Périphérique : les nerfs.",
+        "fieldApplication": "Situer une atteinte dans le bon ensemble oriente ce que la régulation en attend."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La frontière passe à la sortie des nerfs, et nulle part ailleurs.",
+      "common_mistake": "Ranger un nerf dans le central efface la distinction entre les deux ensembles.",
+      "key_takeaway": "Central : encéphale et moelle. Périphérique : les nerfs.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-009"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q03",
+      "type": "ordering",
+      "difficulty": "hard",
+      "question": "Reconstitue le trajet complet d’une réponse motrice, du cerveau au muscle.",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q03-a1",
+          "text": "Cerveau",
+          "explanation": "Origine de l’influx moteur.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p08-boss-q03-a2",
+          "text": "Moelle épinière",
+          "explanation": "Elle conduit l’influx jusqu’à l’étage voulu.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p08-boss-q03-a3",
+          "text": "Trou de conjugaison",
+          "explanation": "Sortie des fibres, à chaque vertèbre.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p08-boss-q03-a4",
+          "text": "Nerf",
+          "explanation": "Faisceau de fibres engainées de myéline.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p08-boss-q03-a5",
+          "text": "Muscle",
+          "explanation": "Destination de la réponse motrice.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-boss-q03-a1",
+        "dea-p08-boss-q03-a2",
+        "dea-p08-boss-q03-a3",
+        "dea-p08-boss-q03-a4",
+        "dea-p08-boss-q03-a5"
+      ],
+      "explanation": "L’influx moteur descend du cerveau par la moelle, sort à l’étage voulu, et gagne le muscle par un nerf.",
+      "knowledgeIds": [
+        "K-DEA-P08-007",
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - trajet moteur",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet réunit tout ce que le support décrit du central au périphérique.",
+        "commonMistake": "Supprimer la sortie par étage fait disparaître le lien entre un niveau et une région du corps.",
+        "keyTakeaway": "Du cerveau au muscle, en sortant à l’étage voulu.",
+        "fieldApplication": "Décrire jusqu’où s’étend un déficit suppose de connaître ce trajet."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet réunit tout ce que le support décrit du central au périphérique.",
+      "common_mistake": "Supprimer la sortie par étage fait disparaître le lien entre un niveau et une région du corps.",
+      "key_takeaway": "Du cerveau au muscle, en sortant à l’étage voulu.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - trajet moteur",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007",
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q04",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "Seconde victime : douleur du dos après une chute. Désigne la structure nerveuse logée dans le canal rachidien.",
+      "answers": [
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "explanation": "Elle chemine dans le canal du rachis.",
+          "detail": "0.5,0.27"
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "explanation": "Il occupe la boîte crânienne.",
+          "detail": "0.5,0.08",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "explanation": "Une région, pas une structure nerveuse.",
+          "detail": "0.5,0.31",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "explanation": "Il appartient à l’appareil circulatoire.",
+          "detail": "0.54,0.31"
+        }
+      ],
+      "correctAnswer": "hotspot-spinal_cord",
+      "explanation": "La moelle épinière chemine dans le canal rachidien, ce qui explique l’importance d’un traumatisme du rachis.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support situe la moelle dans le canal rachidien : c’est ce qui relie traumatisme du dos et déficit neurologique.",
+        "commonMistake": "Désigner une région au lieu d’une structure rend la description inutilisable.",
+        "keyTakeaway": "La moelle est une structure ; le thorax est une région.",
+        "fieldApplication": "Un traumatisme du rachis appelle une description précise du niveau concerné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support situe la moelle dans le canal rachidien : c’est ce qui relie traumatisme du dos et déficit neurologique.",
+      "common_mistake": "Désigner une région au lieu d’une structure rend la description inutilisable.",
+      "key_takeaway": "La moelle est une structure ; le thorax est une région.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "spinal_cord"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q05",
+      "type": "association",
+      "difficulty": "hard",
+      "question": "Pour transmettre, vous rattachez chaque structure citée à son rôle. Associe chaque structure à la fonction que le support lui attribue.",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q05-a1",
+          "text": "Aire motrice primaire",
+          "explanation": "Elle commande les muscles squelettiques.",
+          "match": "Commande du mouvement"
+        },
+        {
+          "id": "dea-p08-boss-q05-a2",
+          "text": "Cervelet",
+          "explanation": "Il intervient dans ces deux fonctions.",
+          "match": "Coordination et équilibre"
+        },
+        {
+          "id": "dea-p08-boss-q05-a3",
+          "text": "Tronc cérébral",
+          "explanation": "Il est à l’origine de ces nerfs.",
+          "match": "Origine des nerfs crâniens"
+        },
+        {
+          "id": "dea-p08-boss-q05-a4",
+          "text": "Système végétatif",
+          "explanation": "Il porte les automatismes.",
+          "match": "Automatismes de l’organisme"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-boss-q05-a1",
+        "dea-p08-boss-q05-a2",
+        "dea-p08-boss-q05-a3",
+        "dea-p08-boss-q05-a4"
+      ],
+      "explanation": "Quatre structures, quatre fonctions distinctes que le support ne fait pas se recouvrir.",
+      "knowledgeIds": [
+        "K-DEA-P08-003",
+        "K-DEA-P08-005",
+        "K-DEA-P08-006",
+        "K-DEA-P08-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - fonctions",
+      "sourcePages": "29, 31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Attribuer à chaque structure ce que le support lui attribue est la base d’une description juste.",
+        "commonMistake": "Prêter deux rôles à une même structure brouille toute la description.",
+        "keyTakeaway": "Une structure, une fonction citée.",
+        "fieldApplication": "Rattacher un signe à la bonne fonction structure le bilan neurologique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Attribuer à chaque structure ce que le support lui attribue est la base d’une description juste.",
+      "common_mistake": "Prêter deux rôles à une même structure brouille toute la description.",
+      "key_takeaway": "Une structure, une fonction citée.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - fonctions",
+        "sourcePages": "29, 31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-003",
+          "K-DEA-P08-005",
+          "K-DEA-P08-006",
+          "K-DEA-P08-011"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-boss-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "La seconde victime retire sa jambe quand vous la pincez : vous pouvez en conclure qu’elle perçoit la douleur consciemment.",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q06-a1",
+          "text": "Vrai",
+          "explanation": "L’arc réflexe court-circuite le cerveau : la réaction ne prouve pas la perception consciente.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q06-a2",
+          "text": "Faux",
+          "explanation": "Une réaction réflexe se produit sans passer par le cerveau."
+        }
+      ],
+      "correctAnswer": "dea-p08-boss-q06-a2",
+      "explanation": "L’arc réflexe court-circuite le cerveau. Une réaction obtenue se décrit ; elle ne permet pas de conclure sur la conscience.",
+      "knowledgeIds": [
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - l’arc réflexe",
+      "sourcePages": "33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "C’est le support lui-même qui l’explique : le réflexe évite le cerveau pour gagner du temps.",
+        "commonMistake": "Prendre une réaction réflexe pour un signe de conscience est l’erreur que ce parcours doit écarter.",
+        "keyTakeaway": "Une réaction obtenue n’est pas une conscience établie.",
+        "fieldApplication": "Le bilan décrit la stimulation employée et la réaction obtenue, sans en tirer de conclusion."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "C’est le support lui-même qui l’explique : le réflexe évite le cerveau pour gagner du temps.",
+      "common_mistake": "Prendre une réaction réflexe pour un signe de conscience est l’erreur que ce parcours doit écarter.",
+      "key_takeaway": "Une réaction obtenue n’est pas une conscience établie.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - l’arc réflexe",
+        "sourcePages": "33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q07",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Vous transmettez au Centre 15. Quel élément relève de l’observation directe ?",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q07-a1",
+          "text": "La réaction obtenue à une stimulation précise, décrite avec la stimulation employée",
+          "explanation": "Un fait vérifiable par un tiers."
+        },
+        {
+          "id": "dea-p08-boss-q07-a2",
+          "text": "Le diagnostic neurologique le plus probable",
+          "explanation": "Il appartient au médecin régulateur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q07-a3",
+          "text": "Le service hospitalier vers lequel orienter",
+          "explanation": "L’orientation est décidée par la régulation.",
+          "distractorType": "wrong-timing"
+        },
+        {
+          "id": "dea-p08-boss-q07-a4",
+          "text": "La structure nerveuse vraisemblablement atteinte",
+          "explanation": "La nommer est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-boss-q07-a1",
+      "explanation": "Un bilan neurologique rapporte ce qui a été demandé, ce qui a été obtenu et comment. Le reste appartient au médecin.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un constat décrit avec sa stimulation permet de comparer deux observations successives.",
+        "commonMistake": "Glisser une conclusion parmi des observations rend l’ensemble moins fiable.",
+        "keyTakeaway": "Ce que je demande, ce que j’obtiens, et comment.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ce que le bilan lui apporte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Un constat décrit avec sa stimulation permet de comparer deux observations successives.",
+      "common_mistake": "Glisser une conclusion parmi des observations rend l’ensemble moins fiable.",
+      "key_takeaway": "Ce que je demande, ce que j’obtiens, et comment.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q08",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support situe la fin de la moelle épinière à hauteur de la première vertèbre ______.",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q08-a1",
+          "text": "lombaire",
+          "explanation": "C’est le repère donné par le support."
+        },
+        {
+          "id": "dea-p08-boss-q08-a2",
+          "text": "sacrée",
+          "explanation": "Le support arrête la moelle nettement plus haut.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-boss-q08-a1",
+      "explanation": "La moelle épinière s’arrête à hauteur de la première vertèbre lombaire.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La moelle est plus courte que le rachis : le canal osseux continue au-delà d’elle.",
+        "commonMistake": "La faire descendre jusqu’au sacrum la confond avec le canal qui la contient.",
+        "keyTakeaway": "La moelle s’arrête à L1, le rachis continue.",
+        "fieldApplication": "Le niveau d’une douleur du dos et celui d’une atteinte ne coïncident pas nécessairement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La moelle est plus courte que le rachis : le canal osseux continue au-delà d’elle.",
+      "common_mistake": "La faire descendre jusqu’au sacrum la confond avec le canal qui la contient.",
+      "key_takeaway": "La moelle s’arrête à L1, le rachis continue.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "lombaire",
+          "1ère lombaire",
+          "L1"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-boss-q09",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quels éléments un bilan neurologique transmis au Centre 15 rassemble-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q09-a1",
+          "text": "Le côté et la région concernés",
+          "explanation": "Une localisation, exprimée dans un vocabulaire commun."
+        },
+        {
+          "id": "dea-p08-boss-q09-a2",
+          "text": "Ce que le patient ne peut plus faire",
+          "explanation": "Un constat de motricité."
+        },
+        {
+          "id": "dea-p08-boss-q09-a3",
+          "text": "Ce que le patient sent encore",
+          "explanation": "Un constat de sensibilité, distinct du précédent."
+        },
+        {
+          "id": "dea-p08-boss-q09-a4",
+          "text": "L’heure de début rapportée",
+          "explanation": "Elle conditionne souvent la décision de la régulation."
+        },
+        {
+          "id": "dea-p08-boss-q09-a5",
+          "text": "Le nom de l’atteinte en cause",
+          "explanation": "Le nommer est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-boss-q09-a6",
+          "text": "L’orientation hospitalière retenue",
+          "explanation": "Elle est décidée par le médecin régulateur.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p08-boss-q09-a1",
+        "dea-p08-boss-q09-a2",
+        "dea-p08-boss-q09-a3",
+        "dea-p08-boss-q09-a4"
+      ],
+      "explanation": "Un bilan neurologique réunit une localisation, deux constats distincts et une heure. Il ne nomme ni l’atteinte ni la destination.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces quatre éléments suffisent au médecin régulateur pour décider, et aucun ne demande de conclure.",
+        "commonMistake": "Ajouter le nom de l’atteinte ou la destination fait sortir l’ambulancier de son champ.",
+        "keyTakeaway": "Où, quoi de perdu, quoi de conservé, depuis quand.",
+        "fieldApplication": "L’orientation appartient au Centre 15, à partir de ce que le bilan lui apporte."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Ces quatre éléments suffisent au médecin régulateur pour décider, et aucun ne demande de conclure.",
+      "common_mistake": "Ajouter le nom de l’atteinte ou la destination fait sortir l’ambulancier de son champ.",
+      "key_takeaway": "Où, quoi de perdu, quoi de conservé, depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p08-boss-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Parmi ces énoncés, lequel contredit ce que le support décrit ?",
+      "answers": [
+        {
+          "id": "dea-p08-boss-q10-a1",
+          "text": "Un réflexe suppose une décision prise par le cerveau",
+          "explanation": "Le support décrit au contraire un court-circuit du cerveau."
+        },
+        {
+          "id": "dea-p08-boss-q10-a2",
+          "text": "Les méninges contiennent le liquide céphalo-rachidien",
+          "explanation": "C’est ce que le support énonce."
+        },
+        {
+          "id": "dea-p08-boss-q10-a3",
+          "text": "Le système végétatif agit par deux contingents",
+          "explanation": "Sympathique et parasympathique, comme l’indique le support."
+        },
+        {
+          "id": "dea-p08-boss-q10-a4",
+          "text": "La substance grise est superficielle",
+          "explanation": "C’est la position que le support lui donne."
+        }
+      ],
+      "correctAnswer": "dea-p08-boss-q10-a1",
+      "explanation": "Trois de ces énoncés reprennent le support ; le premier le contredit directement.",
+      "knowledgeIds": [
+        "K-DEA-P08-012",
+        "K-DEA-P08-008",
+        "K-DEA-P08-011",
+        "K-DEA-P08-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - synthèse",
+      "sourcePages": "30, 31, 32, 33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le court-circuit du cerveau est le point précis qui distingue le réflexe du mouvement volontaire.",
+        "commonMistake": "Faire passer le réflexe par une décision supprime le gain de temps qui le définit.",
+        "keyTakeaway": "Un réflexe n’est pas une décision.",
+        "fieldApplication": "Un mouvement observé chez un patient ne renseigne pas seul sur son état de conscience."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le court-circuit du cerveau est le point précis qui distingue le réflexe du mouvement volontaire.",
+      "common_mistake": "Faire passer le réflexe par une décision supprime le gain de temps qui le définit.",
+      "key_takeaway": "Un réflexe n’est pas une décision.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 30, 31, 32, 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - synthèse",
+        "sourcePages": "30, 31, 32, 33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012",
+          "K-DEA-P08-008",
+          "K-DEA-P08-011",
+          "K-DEA-P08-004"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    }
+  ]
+}

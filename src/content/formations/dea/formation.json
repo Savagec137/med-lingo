@@ -822,7 +822,7 @@
       "prerequisiteIds": [
         "dea-p07-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
         "difficulty",
@@ -833,11 +833,67 @@
       "sourceAnchor": "Parcours 8 — Système nerveux",
       "lessons": [
         {
+          "id": "dea-p08-l01",
+          "title": "Le cerveau",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-01.json"
+        },
+        {
+          "id": "dea-p08-l02",
+          "title": "Le cervelet",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-02.json"
+        },
+        {
+          "id": "dea-p08-l03",
+          "title": "Le tronc cérébral",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-03.json"
+        },
+        {
+          "id": "dea-p08-l04",
+          "title": "La moelle épinière",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-04.json"
+        },
+        {
+          "id": "dea-p08-l05",
+          "title": "Les nerfs",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-05.json"
+        },
+        {
+          "id": "dea-p08-l06",
+          "title": "Le système autonome",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-06.json"
+        },
+        {
+          "id": "dea-p08-l07",
+          "title": "Les réflexes",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-08/lesson-07.json"
+        },
+        {
           "id": "dea-p08-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-08/lesson-08.json"
+        },
+        {
+          "id": "dea-p08-boss",
+          "title": "Boss — Système nerveux",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-08/lesson-09.json"
         }
       ]
     },

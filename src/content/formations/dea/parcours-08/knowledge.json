@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "formationId": "dea",
+  "blocId": "bloc-02",
+  "parcoursId": "parcours-08",
+  "contentId": "dea-p08",
+  "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "validationStatus": "to_validate",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P08-001",
+      "title": "Place de l’appareil neurologique parmi les sept appareils",
+      "summary": "Le support range l’appareil neurologique parmi les sept appareils, avec ses organes et ses fonctions propres.",
+      "keyPoints": [
+        "Ses organes cités sont le cerveau, la moelle épinière et les nerfs.",
+        "Ses fonctions citées sont la commande, l’information et la coordination.",
+        "Il figure au même rang que les appareils respiratoire, circulatoire, digestif, excréteur, locomoteur et reproducteur."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil neurologique au seul cerveau.",
+        "Confondre la fonction de commande et la fonction de coordination."
+      ],
+      "clinicalApplication": "Situer l’appareil neurologique parmi les autres permet de rattacher un signe observé au bon appareil dans un bilan DEA.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil neurologique - place parmi les sept appareils",
+      "pages": [
+        16
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organization.organ-to-system"
+      ],
+      "lessonIds": [
+        "dea-p08-l01",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-002",
+      "title": "Le cerveau : hémisphères, lobes et territoires",
+      "summary": "Le cerveau comporte deux hémisphères, organisés en lobes eux-mêmes divisés en territoires dévolus à des fonctions spécifiques.",
+      "keyPoints": [
+        "Le cerveau comporte deux hémisphères.",
+        "Chaque hémisphère est organisé en lobes.",
+        "Les lobes sont divisés en territoires dévolus à des fonctions spécifiques."
+      ],
+      "commonErrors": [
+        "Croire que le cerveau est une masse homogène sans organisation interne.",
+        "Confondre lobe et territoire fonctionnel."
+      ],
+      "clinicalApplication": "Savoir que les fonctions sont réparties par territoire explique qu’une atteinte puisse toucher une fonction sans toucher les autres.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - le cerveau",
+      "pages": [
+        29
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.composition"
+      ],
+      "lessonIds": [
+        "dea-p08-l01",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-003",
+      "title": "Aire motrice primaire et aire somesthésique primaire",
+      "summary": "Le support décrit deux aires primaires, chacune divisée en régions selon la partie du corps concernée.",
+      "keyPoints": [
+        "L’aire motrice primaire commande les mouvements des muscles squelettiques.",
+        "Elle est divisée en régions selon la partie du corps qu’elle coordonne.",
+        "La même organisation en régions vaut pour l’aire somesthésique primaire."
+      ],
+      "commonErrors": [
+        "Attribuer la commande motrice et la sensibilité à une seule et même aire.",
+        "Oublier que chaque aire est elle-même divisée par partie du corps."
+      ],
+      "clinicalApplication": "Une atteinte peut concerner la motricité, la sensibilité, ou les deux : le bilan décrit ce qui est constaté pour chacune.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - aires primaires",
+      "pages": [
+        29
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p08-l01",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-004",
+      "title": "Substance blanche et substance grise",
+      "summary": "Une coupe de cerveau distingue deux substances, par leur position et par ce qu’elles contiennent.",
+      "keyPoints": [
+        "La substance blanche est profonde et constitue une zone de connexions entre les cellules.",
+        "La substance grise est superficielle et constituée d’amas cellulaires."
+      ],
+      "commonErrors": [
+        "Inverser la position des deux substances.",
+        "Confondre zone de connexion et amas cellulaire."
+      ],
+      "clinicalApplication": "Distinguer connexions et corps cellulaires aide à comprendre pourquoi une atteinte profonde et une atteinte superficielle ne donnent pas le même tableau.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - coupe de cerveau",
+      "pages": [
+        30
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.tissue"
+      ],
+      "lessonIds": [
+        "dea-p08-l01",
+        "dea-p08-l08"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-005",
+      "title": "Le cervelet",
+      "summary": "Le cervelet est situé en dessous et en arrière du cerveau, et intervient dans la coordination et l’équilibre.",
+      "keyPoints": [
+        "Il est situé en dessous et en arrière du cerveau.",
+        "Il intervient dans la coordination.",
+        "Il intervient dans l’équilibre."
+      ],
+      "commonErrors": [
+        "Situer le cervelet au-dessus ou en avant du cerveau.",
+        "Attribuer au cervelet la commande directe des mouvements, qui relève de l’aire motrice primaire."
+      ],
+      "clinicalApplication": "Un trouble de l’équilibre ou de la coordination se décrit tel qu’il est observé, sans en nommer la cause.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - le cervelet",
+      "pages": [
+        31
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.location",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p08-l02",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-006",
+      "title": "Tronc cérébral et bulbe rachidien",
+      "summary": "Le tronc cérébral et le bulbe rachidien se situent à l’union entre cerveau, cervelet et moelle, et sont l’origine des nerfs crâniens.",
+      "keyPoints": [
+        "Ils se trouvent à l’union entre le cerveau, le cervelet et la moelle.",
+        "Ils sont à l’origine des nerfs crâniens."
+      ],
+      "commonErrors": [
+        "Situer le tronc cérébral en dehors de cette zone de jonction.",
+        "Attribuer l’origine des nerfs crâniens à la moelle épinière."
+      ],
+      "clinicalApplication": "Le tronc cérébral est le point de passage entre l’encéphale et la moelle : le situer correctement précise toute description.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - tronc cérébral et bulbe rachidien",
+      "pages": [
+        31
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p08-l03",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-007",
+      "title": "La moelle épinière",
+      "summary": "La moelle épinière est constituée de fibres nerveuses, logée dans le canal rachidien, et s’arrête à hauteur de la première vertèbre lombaire.",
+      "keyPoints": [
+        "Elle est constituée de fibres nerveuses.",
+        "Elle est logée dans le canal rachidien.",
+        "Elle laisse sortir des fibres par les trous de conjugaison, à chaque étage vertébral.",
+        "Ces fibres assurent l’innervation des différents organes.",
+        "Elle s’arrête à hauteur de la première vertèbre lombaire."
+      ],
+      "commonErrors": [
+        "Croire que la moelle épinière descend jusqu’au bas du rachis.",
+        "Confondre le canal rachidien et le trou de conjugaison."
+      ],
+      "clinicalApplication": "La sortie des fibres à chaque étage explique qu’une atteinte du rachis puisse se traduire par un déficit à un niveau précis.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - la moelle épinière",
+      "pages": [
+        31
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.composition",
+        "body.organ.location"
+      ],
+      "lessonIds": [
+        "dea-p08-l04",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-008",
+      "title": "Les méninges et le liquide céphalo-rachidien",
+      "summary": "Les méninges enveloppent le système nerveux central et contiennent le liquide céphalo-rachidien.",
+      "keyPoints": [
+        "Elles enveloppent le système nerveux central.",
+        "Elles contiennent le liquide céphalo-rachidien, abrégé LCR."
+      ],
+      "commonErrors": [
+        "Prendre les méninges pour une partie du tissu nerveux lui-même.",
+        "Situer le liquide céphalo-rachidien en dehors des méninges."
+      ],
+      "clinicalApplication": "Le vocabulaire des méninges revient dans les termes que le bilan peut entendre, comme méningite : le comprendre évite de le reprendre à tort.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux central - les méninges",
+      "pages": [
+        31
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.composition"
+      ],
+      "lessonIds": [
+        "dea-p08-l04",
+        "dea-p08-l08"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-009",
+      "title": "Le système nerveux périphérique",
+      "summary": "Le système nerveux périphérique comporte douze paires de nerfs crâniens et trente et une paires de nerfs rachidiens.",
+      "keyPoints": [
+        "Il comporte 12 paires de nerfs crâniens.",
+        "Il comporte 31 paires de nerfs rachidiens."
+      ],
+      "commonErrors": [
+        "Confondre nerfs crâniens et nerfs rachidiens.",
+        "Ranger les nerfs dans le système nerveux central."
+      ],
+      "clinicalApplication": "Distinguer central et périphérique permet de situer un déficit décrit par le patient dans le bon ensemble.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux périphérique",
+      "pages": [
+        32
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organization.organ-to-system"
+      ],
+      "lessonIds": [
+        "dea-p08-l05",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-010",
+      "title": "Le nerf, le neurone et l’influx nerveux",
+      "summary": "Un nerf est un faisceau de fibres nerveuses engainées par la myéline ; l’influx se propage de neurone en neurone à travers les synapses.",
+      "keyPoints": [
+        "Un nerf est constitué de faisceaux de fibres nerveuses engainées par la myéline.",
+        "Le tissu nerveux est composé de neurones.",
+        "L’influx électrique se propage de neurone en neurone.",
+        "Le passage se fait par des neuromédiateurs libérés dans la synapse.",
+        "L’influx sensitif va des organes au cerveau, l’influx moteur du cerveau aux organes."
+      ],
+      "commonErrors": [
+        "Confondre le sens de l’influx sensitif et celui de l’influx moteur.",
+        "Prendre le nerf pour une cellule unique plutôt que pour un faisceau de fibres."
+      ],
+      "clinicalApplication": "Distinguer sensitif et moteur permet de décrire séparément ce que le patient ne sent plus et ce qu’il ne peut plus faire.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux périphérique - nerf, neurone et influx",
+      "pages": [
+        32
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.tissue",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p08-l05",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-011",
+      "title": "Le système nerveux végétatif ou autonome",
+      "summary": "Le système nerveux végétatif, aussi appelé autonome, est responsable des automatismes et module les réactions de l’organisme par deux contingents.",
+      "keyPoints": [
+        "Il est responsable des automatismes, cardiaque ou digestif par exemple.",
+        "Il module les réactions de l’organisme.",
+        "Il agit au travers de deux contingents : sympathique et parasympathique."
+      ],
+      "commonErrors": [
+        "Croire que les automatismes cardiaques ou digestifs sont commandés volontairement.",
+        "Ne retenir qu’un seul des deux contingents."
+      ],
+      "clinicalApplication": "Comprendre que certaines fonctions échappent à la volonté aide à interpréter ce qu’un patient peut ou ne peut pas contrôler.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux végétatif",
+      "pages": [
+        32
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p08-l06",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-012",
+      "title": "L’arc réflexe",
+      "summary": "L’arc réflexe court-circuite le cerveau, pour gagner du temps et permettre une réaction immédiate.",
+      "keyPoints": [
+        "Il court-circuite le cerveau.",
+        "Il permet de gagner du temps.",
+        "Il autorise une réaction immédiate."
+      ],
+      "commonErrors": [
+        "Croire qu’un réflexe passe par une décision du cerveau.",
+        "Confondre réaction réflexe et mouvement volontaire."
+      ],
+      "clinicalApplication": "Un mouvement réflexe observé ne prouve pas que le patient a compris ou décidé : le bilan décrit ce qui est vu, sans en conclure l’état de conscience.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux - l’arc réflexe",
+      "pages": [
+        33
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p08-l07",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P08-013",
+      "title": "Le vocabulaire neurologique du support",
+      "summary": "Le support liste des racines et des mots-clés du champ neurologique, utiles pour comprendre une transmission sans la reprendre à tort.",
+      "keyPoints": [
+        "Racines citées : ANXIO pour anxiété, CEPHA pour tête, ENCEPHALE pour cerveau.",
+        "ESTHESIE désigne la sensibilité, NEURO et NEVR désignent le nerf.",
+        "PLEGIE désigne la paralysie, THYM désigne l’humeur.",
+        "Mots-clés cités : aphasie, hémiplégie, paraplégie, tétraplégie, coma, méningite, entre autres."
+      ],
+      "commonErrors": [
+        "Employer un terme entendu sans en connaître le sens exact.",
+        "Confondre une racine désignant le nerf et une racine désignant la paralysie."
+      ],
+      "clinicalApplication": "Comprendre un terme entendu en transmission n’autorise pas à le reprendre comme un constat : le bilan décrit ce qui a été observé.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système nerveux - vocabulaire essentiel",
+      "pages": [
+        33
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organization.organ-to-system"
+      ],
+      "lessonIds": [
+        "dea-p08-l05",
+        "dea-p08-l08",
+        "dea-p08-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

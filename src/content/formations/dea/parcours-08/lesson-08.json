@@ -7,510 +7,751 @@
   "kind": "lesson",
   "status": "review",
   "difficulty": "medium",
-  "estimatedMinutes": 7,
-  "level": 1,
-  "xp": 27,
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-08",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31, 32, 33",
   "pulse": null,
   "selection": {
-    "strategy": "random",
-    "count": 9
+    "strategy": "all",
+    "count": 8
   },
   "learningObjectives": [
-    "Physiologie du système nerveux"
+    "Réunir les structures du système nerveux central et périphérique.",
+    "Reconstituer le trajet d’une réponse motrice.",
+    "Structurer un bilan neurologique sans conclure."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l05"
+    "body.system.nervous",
+    "body.organization.organ-to-system",
+    "body.organ.function"
   ],
   "prerequisiteIds": [
     "dea-p08-l07"
   ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l05-q342",
-      "difficulty": "easy",
-      "question": "Le système nerveux central comprend :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q342",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q342-answer-01",
-          "text": "Le cerveau et la moelle épinière",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q342-answer-02",
-          "text": "Les nerfs uniquement",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q342-answer-03",
-          "text": "Les muscles",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q342-answer-04",
-          "text": "Le cœur",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l05-q342-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l05-q343",
-      "difficulty": "easy",
-      "question": "Les réflexes sont des réponses rapides et automatiques.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q343",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q343-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q343-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l05-q343-true"
-    },
-    {
-      "id": "import-b01-p04-l05-q344",
-      "difficulty": "easy",
-      "question": "Les nerfs appartiennent au système digestif.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q344",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q344-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q344-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l05-q344-false"
-    },
-    {
-      "id": "import-b01-p04-l05-q345",
+      "id": "dea-p08-l08-q01",
+      "type": "multiple_choice",
       "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q345",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "associationMode": "matching",
-        "requiredSelections": 4
-      },
-      "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
+      "question": "Quelles structures le support range-t-il dans le système nerveux central ?",
       "answers": [
         {
-          "id": "import-b01-p04-l05-q345-pair-01",
-          "text": "Neurone",
-          "match": "Transmission de l'information",
-          "explanation": ""
+          "id": "dea-p08-l08-q01-a1",
+          "text": "Le cerveau",
+          "explanation": "Le support le décrit comme structure centrale."
         },
         {
-          "id": "import-b01-p04-l05-q345-pair-02",
-          "text": "Cerveau",
-          "match": "Analyse",
-          "explanation": ""
+          "id": "dea-p08-l08-q01-a2",
+          "text": "Le cervelet",
+          "explanation": "Il est décrit avec le système nerveux central."
         },
         {
-          "id": "import-b01-p04-l05-q345-pair-03",
-          "text": "Moelle épinière",
-          "match": "Relais nerveux",
-          "explanation": ""
+          "id": "dea-p08-l08-q01-a3",
+          "text": "Le tronc cérébral et le bulbe rachidien",
+          "explanation": "Ils sont décrits à l’union avec la moelle."
         },
         {
-          "id": "import-b01-p04-l05-q345-pair-04",
-          "text": "Nerf",
-          "match": "Communication avec les organes",
-          "explanation": ""
+          "id": "dea-p08-l08-q01-a4",
+          "text": "La moelle épinière",
+          "explanation": "Elle est décrite comme structure centrale."
+        },
+        {
+          "id": "dea-p08-l08-q01-a5",
+          "text": "Les 31 paires de nerfs rachidiens",
+          "explanation": "Elles appartiennent au système nerveux périphérique.",
+          "distractorType": "frequent-error"
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l05-q345-pair-01",
-        "import-b01-p04-l05-q345-pair-02",
-        "import-b01-p04-l05-q345-pair-03",
-        "import-b01-p04-l05-q345-pair-04"
-      ]
+        "dea-p08-l08-q01-a1",
+        "dea-p08-l08-q01-a2",
+        "dea-p08-l08-q01-a3",
+        "dea-p08-l08-q01-a4"
+      ],
+      "explanation": "Le système nerveux central réunit le cerveau, le cervelet, le tronc cérébral avec le bulbe rachidien, et la moelle épinière.",
+      "knowledgeIds": [
+        "K-DEA-P08-002",
+        "K-DEA-P08-005",
+        "K-DEA-P08-006",
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central",
+      "sourcePages": "29, 31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La frontière entre central et périphérique passe à la sortie des nerfs, pas ailleurs.",
+        "commonMistake": "Ranger les nerfs rachidiens dans le central efface la distinction entre les deux ensembles.",
+        "keyTakeaway": "Central : ce qui est dans le crâne et le canal rachidien.",
+        "fieldApplication": "Situer une atteinte dans le bon ensemble oriente la description transmise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La frontière entre central et périphérique passe à la sortie des nerfs, pas ailleurs.",
+      "common_mistake": "Ranger les nerfs rachidiens dans le central efface la distinction entre les deux ensembles.",
+      "key_takeaway": "Central : ce qui est dans le crâne et le canal rachidien.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central",
+        "sourcePages": "29, 31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-002",
+          "K-DEA-P08-005",
+          "K-DEA-P08-006",
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l05-q346",
-      "difficulty": "medium",
-      "question": "La ______ épinière fait partie du système nerveux central.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q346",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "moelle"
-        ]
-      },
-      "type": "fill_blank",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q346-accepted-01",
-          "text": "moelle",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l05-q346-accepted-01"
-      ]
-    },
-    {
-      "id": "import-b01-p04-l05-q347",
-      "difficulty": "hard",
-      "question": "Quel est l'objectif principal d'un bilan neurologique chez un patient ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q347",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q347-answer-01",
-          "text": "Évaluer l'état neurologique et la conscience",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q347-answer-02",
-          "text": "Mesurer la glycémie",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q347-answer-03",
-          "text": "Évaluer la digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q347-answer-04",
-          "text": "Mesurer la température",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l05-q347-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l05-q348",
-      "difficulty": "hard",
-      "question": "Un patient ne répond plus aux stimulations verbales. Quel système est prioritairement évalué ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q348",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
-      "answers": [
-        {
-          "id": "import-b01-p04-l05-q348-answer-01",
-          "text": "Le système nerveux",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q348-answer-02",
-          "text": "Le système digestif",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q348-answer-03",
-          "text": "Le système urinaire",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l05-q348-answer-04",
-          "text": "Le système cutané",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l05-q348-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l05-q349",
-      "difficulty": "medium",
-      "question": "Replace le trajet d'un réflexe simple.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q349",
-        "originalType": "ordering",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "requiredSelections": 6
-      },
+      "id": "dea-p08-l08-q02",
       "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet complet d’une réponse motrice, du cerveau jusqu’au muscle.",
       "answers": [
         {
-          "id": "import-b01-p04-l05-q349-step-01",
-          "text": "Stimulus",
-          "explanation": "",
+          "id": "dea-p08-l08-q02-a1",
+          "text": "Cerveau",
+          "explanation": "Origine de l’influx moteur.",
           "sequenceRank": 1
         },
         {
-          "id": "import-b01-p04-l05-q349-step-02",
-          "text": "Récepteur",
-          "explanation": "",
+          "id": "dea-p08-l08-q02-a2",
+          "text": "Moelle épinière",
+          "explanation": "Elle conduit l’influx vers l’étage voulu.",
           "sequenceRank": 2
         },
         {
-          "id": "import-b01-p04-l05-q349-step-03",
-          "text": "Nerf sensitif",
-          "explanation": "",
+          "id": "dea-p08-l08-q02-a3",
+          "text": "Trou de conjugaison",
+          "explanation": "Passage de sortie des fibres.",
           "sequenceRank": 3
         },
         {
-          "id": "import-b01-p04-l05-q349-step-04",
-          "text": "Moelle épinière",
-          "explanation": "",
+          "id": "dea-p08-l08-q02-a4",
+          "text": "Nerf",
+          "explanation": "Faisceau de fibres engainées de myéline.",
           "sequenceRank": 4
         },
         {
-          "id": "import-b01-p04-l05-q349-step-05",
-          "text": "Nerf moteur",
-          "explanation": "",
-          "sequenceRank": 5
-        },
-        {
-          "id": "import-b01-p04-l05-q349-step-06",
+          "id": "dea-p08-l08-q02-a5",
           "text": "Muscle",
-          "explanation": "",
-          "sequenceRank": 6
+          "explanation": "Destination de la réponse motrice.",
+          "sequenceRank": 5
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l05-q349-step-01",
-        "import-b01-p04-l05-q349-step-02",
-        "import-b01-p04-l05-q349-step-03",
-        "import-b01-p04-l05-q349-step-04",
-        "import-b01-p04-l05-q349-step-05",
-        "import-b01-p04-l05-q349-step-06"
-      ]
+        "dea-p08-l08-q02-a1",
+        "dea-p08-l08-q02-a2",
+        "dea-p08-l08-q02-a3",
+        "dea-p08-l08-q02-a4",
+        "dea-p08-l08-q02-a5"
+      ],
+      "explanation": "L’influx moteur part du cerveau, descend par la moelle, sort à l’étage voulu et gagne le muscle par un nerf.",
+      "knowledgeIds": [
+        "K-DEA-P08-007",
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - trajet moteur",
+      "sourcePages": "31, 32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet réunit tout ce que le support décrit : le central, la sortie par étage, et le périphérique.",
+        "commonMistake": "Sauter la sortie par le trou de conjugaison fait disparaître la correspondance entre étage et région.",
+        "keyTakeaway": "Du cerveau au muscle, en sortant à l’étage voulu.",
+        "fieldApplication": "Comprendre le trajet aide à décrire jusqu’où s’étend un déficit."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet réunit tout ce que le support décrit : le central, la sortie par étage, et le périphérique.",
+      "common_mistake": "Sauter la sortie par le trou de conjugaison fait disparaître la correspondance entre étage et région.",
+      "key_takeaway": "Du cerveau au muscle, en sortant à l’étage voulu.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31, 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - trajet moteur",
+        "sourcePages": "31, 32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007",
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l05-q350",
+      "id": "dea-p08-l08-q03",
+      "type": "association",
       "difficulty": "medium",
-      "question": "Clique sur la moelle épinière.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l05"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l05"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L05",
-        "originalQuestionId": "Q350",
-        "originalType": "anatomy_click",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "anatomyTarget": "spinal_cord"
-      },
-      "type": "anatomy_location",
+      "question": "Associe chaque structure à la fonction que le support lui attribue.",
       "answers": [
         {
-          "id": "hotspot-spinal_cord",
-          "text": "Moelle épinière",
-          "detail": "0.5,0.27",
-          "explanation": ""
+          "id": "dea-p08-l08-q03-a1",
+          "text": "Aire motrice primaire",
+          "explanation": "Elle commande les muscles squelettiques.",
+          "match": "Commande du mouvement"
         },
         {
-          "id": "hotspot-femur",
-          "text": "Fémur",
-          "detail": "0.59,0.69",
-          "explanation": ""
+          "id": "dea-p08-l08-q03-a2",
+          "text": "Cervelet",
+          "explanation": "Il intervient dans ces deux fonctions.",
+          "match": "Coordination et équilibre"
         },
         {
-          "id": "hotspot-right_upper_limb",
-          "text": "Membre supérieur droit",
-          "detail": "0.18,0.36",
-          "explanation": ""
+          "id": "dea-p08-l08-q03-a3",
+          "text": "Système végétatif",
+          "explanation": "Il porte les automatismes.",
+          "match": "Automatismes de l’organisme"
         },
         {
-          "id": "hotspot-thyroid",
-          "text": "Thyroïde",
-          "detail": "0.5,0.17",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-left_ventricle",
-          "text": "Ventricule gauche",
-          "detail": "0.56,0.34",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-stomach",
-          "text": "Estomac",
-          "detail": "0.45,0.46",
-          "explanation": ""
+          "id": "dea-p08-l08-q03-a4",
+          "text": "Arc réflexe",
+          "explanation": "Il court-circuite le cerveau.",
+          "match": "Réaction immédiate"
         }
       ],
-      "correctAnswer": "hotspot-spinal_cord"
+      "correctAnswer": [
+        "dea-p08-l08-q03-a1",
+        "dea-p08-l08-q03-a2",
+        "dea-p08-l08-q03-a3",
+        "dea-p08-l08-q03-a4"
+      ],
+      "explanation": "Quatre structures, quatre fonctions que le support distingue soigneusement.",
+      "knowledgeIds": [
+        "K-DEA-P08-003",
+        "K-DEA-P08-005",
+        "K-DEA-P08-011",
+        "K-DEA-P08-012"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - fonctions",
+      "sourcePages": "29, 31, 32, 33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque fonction a sa structure : aucune n’en remplace une autre.",
+        "commonMistake": "Mélanger commande, coordination et automatisme rend toute description confuse.",
+        "keyTakeaway": "Commander, coordonner, automatiser, réagir : quatre rôles distincts.",
+        "fieldApplication": "Rattacher un signe à la bonne fonction structure le bilan neurologique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque fonction a sa structure : aucune n’en remplace une autre.",
+      "common_mistake": "Mélanger commande, coordination et automatisme rend toute description confuse.",
+      "key_takeaway": "Commander, coordonner, automatiser, réagir : quatre rôles distincts.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31, 32, 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - fonctions",
+        "sourcePages": "29, 31, 32, 33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-003",
+          "K-DEA-P08-005",
+          "K-DEA-P08-011",
+          "K-DEA-P08-012"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p08-l08-q04",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel repère le support donne-t-il pour la terminaison de la moelle épinière ?",
+      "answers": [
+        {
+          "id": "dea-p08-l08-q04-a1",
+          "text": "La première vertèbre lombaire",
+          "explanation": "C’est le repère indiqué par le support."
+        },
+        {
+          "id": "dea-p08-l08-q04-a2",
+          "text": "La dernière vertèbre sacrée",
+          "explanation": "Le support arrête la moelle bien plus haut.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l08-q04-a3",
+          "text": "La septième vertèbre cervicale",
+          "explanation": "Ce niveau est très au-dessus de celui indiqué.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l08-q04-a4",
+          "text": "Le bord inférieur du diaphragme",
+          "explanation": "Le repère donné est vertébral."
+        }
+      ],
+      "correctAnswer": "dea-p08-l08-q04-a1",
+      "explanation": "La moelle épinière s’arrête à hauteur de la première vertèbre lombaire.",
+      "knowledgeIds": [
+        "K-DEA-P08-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - la moelle épinière",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ce repère précis distingue la moelle du canal osseux, qui lui continue plus bas.",
+        "commonMistake": "Faire descendre la moelle jusqu’au sacrum la confond avec le canal qui la contenait.",
+        "keyTakeaway": "La moelle s’arrête à L1.",
+        "fieldApplication": "Le niveau d’une douleur et le niveau d’une atteinte ne coïncident pas nécessairement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ce repère précis distingue la moelle du canal osseux, qui lui continue plus bas.",
+      "common_mistake": "Faire descendre la moelle jusqu’au sacrum la confond avec le canal qui la contenait.",
+      "key_takeaway": "La moelle s’arrête à L1.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - la moelle épinière",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-007"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l08-q05",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Selon le support, l’influx moteur va du cerveau vers les organes.",
+      "answers": [
+        {
+          "id": "dea-p08-l08-q05-a1",
+          "text": "Vrai",
+          "explanation": "Le support décrit l’influx moteur comme la réponse du cerveau aux organes."
+        },
+        {
+          "id": "dea-p08-l08-q05-a2",
+          "text": "Faux",
+          "explanation": "C’est pourtant le sens que le support lui donne.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l08-q05-a1",
+      "explanation": "L’influx moteur porte la réponse du cerveau aux organes ; l’influx sensitif fait le trajet inverse.",
+      "knowledgeIds": [
+        "K-DEA-P08-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+      "sourcePages": "32",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux sens opposés pour deux fonctions, que le support énonce séparément.",
+        "commonMistake": "Inverser les deux rend incompréhensible la différence entre sentir et bouger.",
+        "keyTakeaway": "Moteur descend, sensitif monte.",
+        "fieldApplication": "Le bilan décrit séparément ce que le patient ne sent plus et ce qu’il ne peut plus faire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux sens opposés pour deux fonctions, que le support énonce séparément.",
+      "common_mistake": "Inverser les deux rend incompréhensible la différence entre sentir et bouger.",
+      "key_takeaway": "Moteur descend, sensitif monte.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 32",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux périphérique - nerf, neurone et influx",
+        "sourcePages": "32",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-010"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p08-l08-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Les méninges enveloppent le système nerveux central et contiennent le liquide ______-rachidien.",
+      "answers": [
+        {
+          "id": "dea-p08-l08-q06-a1",
+          "text": "céphalo",
+          "explanation": "Le support parle du liquide céphalo-rachidien, abrégé LCR."
+        },
+        {
+          "id": "dea-p08-l08-q06-a2",
+          "text": "broncho",
+          "explanation": "Ce préfixe renvoie aux bronches, pas au système nerveux.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p08-l08-q06-a1",
+      "explanation": "Le support indique que les méninges contiennent le liquide céphalo-rachidien.",
+      "knowledgeIds": [
+        "K-DEA-P08-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux central - les méninges",
+      "sourcePages": "31",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le nom du liquide reprend ses deux régions : la tête et le rachis.",
+        "commonMistake": "Un préfixe emprunté à un autre appareil produit un terme qui n’existe pas.",
+        "keyTakeaway": "Céphalo pour la tête, rachidien pour le rachis.",
+        "fieldApplication": "Comprendre un terme entendu en transmission suppose d’en connaître les racines."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le nom du liquide reprend ses deux régions : la tête et le rachis.",
+      "common_mistake": "Un préfixe emprunté à un autre appareil produit un terme qui n’existe pas.",
+      "key_takeaway": "Céphalo pour la tête, rachidien pour le rachis.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 31",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux central - les méninges",
+        "sourcePages": "31",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-008"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "céphalo",
+          "cephalo",
+          "céphalo-rachidien"
+        ]
+      }
+    },
+    {
+      "id": "dea-p08-l08-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous êtes appelé pour un patient dont la famille rapporte une faiblesse du côté gauche depuis le matin. Que structure le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p08-l08-q07-a1",
+          "text": "Le côté concerné, ce que le patient ne peut plus faire, ce qu’il sent encore, et l’heure de début rapportée",
+          "explanation": "Quatre éléments distincts, chacun transmissible tel quel."
+        },
+        {
+          "id": "dea-p08-l08-q07-a2",
+          "text": "Une hémiplégie gauche d’installation matinale",
+          "explanation": "Le terme technique est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l08-q07-a3",
+          "text": "Une atteinte de l’hémisphère droit",
+          "explanation": "Nommer la structure atteinte n’appartient pas à l’ambulancier.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p08-l08-q07-a4",
+          "text": "Le seul côté concerné, le reste étant du ressort du médecin",
+          "explanation": "Décrire le déficit et son heure de début fait partie du bilan.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p08-l08-q07-a1",
+      "explanation": "Un déficit se décrit par son côté, ce qui est perdu, ce qui est conservé, et depuis quand. Le nommer relève du médecin.",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support sépare motricité et sensibilité : le bilan reprend cette séparation, qui rend la description précise.",
+        "commonMistake": "Employer un terme global fait perdre les distinctions qui rendent le bilan utile.",
+        "keyTakeaway": "Quel côté, quoi de perdu, quoi de conservé, depuis quand.",
+        "fieldApplication": "L’heure de début est souvent l’élément qui conditionne la décision de la régulation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support sépare motricité et sensibilité : le bilan reprend cette séparation, qui rend la description précise.",
+      "common_mistake": "Employer un terme global fait perdre les distinctions qui rendent le bilan utile.",
+      "key_takeaway": "Quel côté, quoi de perdu, quoi de conservé, depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p08-l08-q08",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Parmi ces énoncés, lequel dépasse ce que le support autorise à affirmer ?",
+      "answers": [
+        {
+          "id": "dea-p08-l08-q08-a1",
+          "text": "Une réaction obtenue à la douleur signifie que le patient a repris conscience",
+          "explanation": "Le réflexe court-circuite le cerveau : rien ne permet de l’affirmer."
+        },
+        {
+          "id": "dea-p08-l08-q08-a2",
+          "text": "L’aire motrice primaire commande les muscles squelettiques",
+          "explanation": "C’est ce que le support énonce."
+        },
+        {
+          "id": "dea-p08-l08-q08-a3",
+          "text": "Le système périphérique comporte 12 paires de nerfs crâniens",
+          "explanation": "C’est le nombre donné par le support."
+        },
+        {
+          "id": "dea-p08-l08-q08-a4",
+          "text": "Le cervelet intervient dans la coordination et l’équilibre",
+          "explanation": "Ce sont les fonctions attribuées par le support."
+        }
+      ],
+      "correctAnswer": "dea-p08-l08-q08-a1",
+      "explanation": "Trois de ces énoncés reprennent le support ; le quatrième en tire une conclusion que le support contredit.",
+      "knowledgeIds": [
+        "K-DEA-P08-012",
+        "K-DEA-P08-003",
+        "K-DEA-P08-005",
+        "K-DEA-P08-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système nerveux - synthèse",
+      "sourcePages": "29, 31, 32, 33",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.nervous",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p08-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support explique pourquoi cette conclusion est fausse : le réflexe évite justement le cerveau.",
+        "commonMistake": "Prendre une réaction réflexe pour un signe de conscience est l’erreur que ce parcours doit écarter.",
+        "keyTakeaway": "Une réaction n’est pas une conscience.",
+        "fieldApplication": "La description d’un état de conscience se fait par ce qui est demandé et ce qui est obtenu."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support explique pourquoi cette conclusion est fausse : le réflexe évite justement le cerveau.",
+      "common_mistake": "Prendre une réaction réflexe pour un signe de conscience est l’erreur que ce parcours doit écarter.",
+      "key_takeaway": "Une réaction n’est pas une conscience.",
+      "tags": [
+        "dea",
+        "parcours-08",
+        "système-nerveux"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 29, 31, 32, 33",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p08-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système nerveux - synthèse",
+        "sourcePages": "29, 31, 32, 33",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P08-012",
+          "K-DEA-P08-003",
+          "K-DEA-P08-005",
+          "K-DEA-P08-009"
+        ],
+        "competencyIds": [
+          "body.system.nervous",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     }
   ]
 }
