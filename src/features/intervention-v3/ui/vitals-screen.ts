@@ -11,7 +11,7 @@ import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { getFact } from "../facts/fact-registry.ts";
 import { readFact } from "../facts/read-fact.ts";
 import { actionsForPhase, findAction } from "../actions/action-catalog.ts";
-import { successfulActionIds } from "../engine/apply-action.ts";
+import { successfulActionIds } from "../engine/action-gate.ts";
 import { actionAvailability } from "./action-availability.ts";
 import { formatGlycemiaMmolForUi } from "../format-glycemia.ts";
 

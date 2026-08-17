@@ -49,13 +49,64 @@ export default tseslint.config(
         {
           patterns: [
             {
-              group: ["**/intervention-vitals*", "**/facts/reveal-fact*"],
+              // Les motifs portent sur la chaîne écrite dans l'import, pas sur
+              // le chemin résolu : un `../clinical/intervention-vitals.ts` doit
+              // donc être décrit tel qu'il s'écrit. Un motif ancré sur
+              // `**/intervention-v3/...` ne rattrapait aucun import relatif, et
+              // laissait donc passer précisément ce qu'il devait interdire.
+              group: ["**/intervention-vitals*", "**/reveal-fact*"],
               message:
                 "Un composant lit les faits via readFact, jamais les constantes du moteur clinique.",
             },
             {
-              group: ["**/intervention-v3/engine/*", "**/intervention-v3/v3-session*"],
+              group: [
+                "**/engine",
+                "**/engine/index*",
+                "**/engine/apply-action*",
+                "**/engine/v3-*",
+                "**/v3-session*",
+              ],
               message: "Un composant passe par le hook use-intervention-v3, jamais par le moteur.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    // Même barrière pour la couche présentation. Les modules de `ui/` sont des
+    // fonctions pures qui décrivent un écran : ils lisent les faits par
+    // `readFact` et demandent à `action-gate` quels gestes sont refusés. Rien
+    // d'autre du moteur ne leur est accessible — en particulier pas
+    // `applyAction`, qui modifie la session, ni `reveal-fact`, qui révélerait
+    // une constante sans que le joueur ait agi.
+    files: ["src/features/intervention-v3/ui/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["**/intervention-vitals*", "**/reveal-fact*"],
+              message:
+                "Un écran lit les faits via readFact, jamais les constantes du moteur clinique.",
+            },
+            {
+              // `action-gate` est volontairement absent de la liste : c'est le
+              // seul module du moteur qu'un écran peut interroger, et il est
+              // sans effet. Tout le reste est nommé explicitement plutôt
+              // qu'exclu par négation — une négation au milieu d'un groupe
+              // annule le groupe entier sans le signaler. Et `**/engine` seul
+              // est absent aussi : en sémantique gitignore il couvre tout le
+              // dossier, `action-gate` compris.
+              group: [
+                "**/engine/index*",
+                "**/engine/apply-action*",
+                "**/engine/v3-*",
+                "**/v3-session*",
+              ],
+              message:
+                "Un présentateur décrit un écran : il interroge action-gate, il n'exécute pas le moteur.",
             },
           ],
         },

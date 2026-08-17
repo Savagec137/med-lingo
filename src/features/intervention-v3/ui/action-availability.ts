@@ -4,7 +4,7 @@ import {
   missingEquipmentLabels,
   successfulActionIds,
   type ActionRefusalKind,
-} from "../engine/apply-action.ts";
+} from "../engine/action-gate.ts";
 import { findAction } from "../actions/action-catalog.ts";
 
 /**
