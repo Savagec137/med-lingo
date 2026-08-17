@@ -40,8 +40,7 @@ const scenario = getV3Scenario("v3-pilot-trauma-cranien");
  * respectent plutôt que de la contourner par un cast.
  */
 function view(overrides: Partial<InterventionSessionView> = {}): InterventionSessionView {
-  const { vitals: _vitals, vitalsHistory: _history, ...rest } = createV3Session(scenario);
-  return { ...rest, ...overrides };
+  return { ...toSessionView(createV3Session(scenario)), ...overrides };
 }
 
 const session = view();
@@ -605,28 +604,63 @@ test("un constat non établi propose le geste qui l'établirait", () => {
   assert.ok(after.value.length > 0);
 });
 
-test("le matériel affiché est celui embarqué, avec ce qui a servi", () => {
+test("« matériel embarqué » et « matériel utilisé » sont deux panneaux distincts", () => {
+  // Une seule liste avec un marqueur laissait le composant afficher, sous le
+  // titre « Matériel utilisé », un tensiomètre resté dans le sac. Les deux
+  // notions ne se mélangent plus : l'une dit ce que l'équipe avait, l'autre ce
+  // qu'elle a sorti.
   const played = play(atVitals(["saturometre", "tensiometre"]), "action.prendre-tension");
   const model = vitalsScreenModel(toSessionView(played));
+
+  assert.equal(model.equipmentPanelLabels.carried, "Matériel embarqué");
+  assert.equal(model.equipmentPanelLabels.used, "Matériel utilisé");
+
   assert.deepEqual(
-    model.equipment.map((chip) => [chip.label, chip.used]),
+    model.carriedEquipment.map((chip) => [chip.label, chip.stateLabel]),
     [
-      ["Saturomètre", false],
-      ["Tensiomètre", true],
+      ["Saturomètre", "Non utilisé"],
+      ["Tensiomètre", "Utilisé"],
     ],
   );
-  // Le saturomètre embarqué et jamais sorti reste visible : c'est l'oubli que
-  // l'écran doit rendre lisible, et le masquer l'effacerait.
-  assert.equal(model.equipment.length, 2);
+  // Le panneau « utilisé » ne contient que ce qui a réellement servi.
+  assert.deepEqual(
+    model.usedEquipment.map((chip) => chip.label),
+    ["Tensiomètre"],
+  );
+  // Et il reste un sous-ensemble strict : rien n'y apparaît qui ne soit embarqué.
+  const carried = new Set(model.carriedEquipment.map((chip) => chip.id));
+  assert.ok(model.usedEquipment.every((chip) => carried.has(chip.id)));
 });
 
-test("poser le saturomètre le marque en place sur le patient", () => {
-  const played = play(atVitals(), "action.poser-saturometre");
-  const chip = vitalsScreenModel(toSessionView(played)).equipment.find(
+test("poser puis retirer un capteur distingue « posé » de « retiré »", () => {
+  // Un saturomètre ôté a bien servi, mais il ne surveille plus. Confondre les
+  // deux effacerait la surveillance interrompue.
+  const posed = play(atVitals(), "action.poser-saturometre");
+  const attached = vitalsScreenModel(toSessionView(posed)).carriedEquipment.find(
     (entry) => entry.id === "saturometre",
   )!;
-  assert.equal(chip.attached, true);
-  assert.equal(chip.used, true);
+  assert.equal(attached.state, "attached");
+  assert.equal(attached.stateLabel, "Posé");
+  assert.equal(attached.used, true);
+
+  const removed = play(posed, "action.retirer-saturometre");
+  const detached = vitalsScreenModel(toSessionView(removed)).carriedEquipment.find(
+    (entry) => entry.id === "saturometre",
+  )!;
+  assert.equal(detached.state, "removed");
+  assert.equal(detached.stateLabel, "Retiré");
+  assert.equal(detached.used, true, "il a servi, même s'il n'est plus en place");
+  assert.equal(detached.attached, false);
+});
+
+test("un matériel embarqué qui ne se pose pas reste « disponible »", () => {
+  // « Non utilisé » ne se dit que d'un appareil qu'on aurait pu poser. Un
+  // brancard qu'on n'a pas sorti est disponible, pas un oubli de surveillance.
+  const model = vitalsScreenModel(toSessionView(atVitals(["brancard", "saturometre"])));
+  const byId = new Map(model.carriedEquipment.map((chip) => [chip.id, chip]));
+  assert.equal(byId.get("brancard")!.stateLabel, "Disponible");
+  assert.equal(byId.get("saturometre")!.stateLabel, "Non utilisé");
+  assert.deepEqual(model.usedEquipment, []);
 });
 
 /**

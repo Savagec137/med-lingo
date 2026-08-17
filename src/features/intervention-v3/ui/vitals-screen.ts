@@ -100,14 +100,35 @@ export interface EvaluationModel {
   } | null;
 }
 
+/**
+ * État d'un matériel, en un seul mot.
+ *
+ * Quatre états qui ne se confondent pas. « Embarqué et jamais sorti » n'est pas
+ * « utilisé », et « posé » n'est pas « retiré » — un saturomètre qu'on a ôté a
+ * bien servi, mais il ne surveille plus. Un panneau qui mélangerait ces états
+ * mentirait sur ce que l'équipe a réellement fait.
+ */
+export const EQUIPMENT_USAGE_STATES = [
+  "available",
+  "used",
+  "attached",
+  "removed",
+  "unused",
+] as const;
+
+export type EquipmentUsageState = (typeof EQUIPMENT_USAGE_STATES)[number];
+
 export interface EquipmentChipModel {
   id: EquipmentId;
   label: string;
+  state: EquipmentUsageState;
+  /** Libellé du métier, celui que la maquette affiche. */
+  stateLabel: string;
   /** Embarqué au départ. Le reste du matériel n'existe pas pour cette mission. */
   prepared: boolean;
-  /** Capteur en place sur le patient. */
+  /** Capteur en place sur le patient à cet instant. */
   attached: boolean;
-  /** Mobilisé au moins une fois. C'est le « utilisé » de la maquette. */
+  /** Mobilisé au moins une fois pendant la mission. */
   used: boolean;
 }
 
@@ -129,7 +150,18 @@ export interface VitalsScreenModel {
    */
   sensorControls: QuickMeasureModel[];
   evaluations: EvaluationModel[];
-  equipment: EquipmentChipModel[];
+  /**
+   * Panneau « Matériel embarqué » : tout ce que l'équipe a dans le sac, chacun
+   * avec son état. Le tensiomètre jamais sorti y figure, marqué « Non utilisé ».
+   */
+  carriedEquipment: EquipmentChipModel[];
+  /**
+   * Panneau « Matériel utilisé » de la maquette : uniquement ce qui a réellement
+   * servi. Un sous-ensemble strict du précédent, jamais un mélange des deux.
+   */
+  usedEquipment: EquipmentChipModel[];
+  /** Intitulés des deux panneaux, pour que le composant ne les réinvente pas. */
+  equipmentPanelLabels: { carried: string; used: string };
 }
 
 /**
@@ -299,15 +331,41 @@ function evaluation(session: InterventionSessionView, factId: FactId): Evaluatio
   };
 }
 
+const EQUIPMENT_STATE_LABELS: Record<EquipmentUsageState, string> = {
+  available: "Disponible",
+  used: "Utilisé",
+  attached: "Posé",
+  removed: "Retiré",
+  unused: "Non utilisé",
+};
+
 /**
- * Matériel de la mission.
+ * Matériel de la mission, en deux listes qui ne se mélangent pas.
  *
- * La maquette titre ce panneau « Matériel utilisé ». Le modèle expose le matériel
- * **embarqué** avec un marqueur `used`, et non le seul matériel déjà employé :
- * masquer le tensiomètre présent dans le sac et jamais sorti effacerait
- * exactement l'oubli que l'écran doit rendre visible. Un composant qui veut la
- * lettre de la maquette filtre sur `used`.
+ * La maquette titre son panneau « Matériel utilisé ». Une première version
+ * rendait une liste unique du matériel embarqué avec un marqueur `used`, en
+ * laissant au composant le soin de filtrer : c'était mélanger deux notions sous
+ * un seul titre, et le composant pouvait afficher le tensiomètre resté dans le sac
+ * sous l'intitulé « utilisé ».
+ *
+ * Les deux listes sont donc construites ici, avec leur libellé propre. « Matériel
+ * embarqué » dit ce que l'équipe avait, « Matériel utilisé » ce qu'elle a sorti.
+ * Le tensiomètre embarqué et jamais employé apparaît dans la première, marqué
+ * « Non utilisé » — l'oubli reste visible, sans être rangé sous le mauvais titre.
  */
+function equipmentUsageState(
+  item: InterventionSessionView["equipment"][number],
+  used: boolean,
+): EquipmentUsageState {
+  if (!used) return ATTACHABLE_EQUIPMENT.has(item.id) ? "unused" : "available";
+  if (item.attached) return "attached";
+  // Un capteur détaché a bien servi : « retiré » et « jamais sorti » sont deux
+  // situations différentes, et les confondre effacerait la surveillance
+  // interrompue. Un matériel qui ne se pose pas et qui a servi est simplement
+  // « utilisé » — un tensiomètre ne reste pas en place.
+  return ATTACHABLE_EQUIPMENT.has(item.id) ? "removed" : "used";
+}
+
 function equipmentChips(session: InterventionSessionView): EquipmentChipModel[] {
   const done = successfulActionIds(session);
   const usedIds = new Set<EquipmentId>();
@@ -317,14 +375,23 @@ function equipmentChips(session: InterventionSessionView): EquipmentChipModel[] 
   }
   return session.equipment
     .filter((item) => item.prepared)
-    .map((item) => ({
-      id: item.id,
-      label: EQUIPMENT_LABELS[item.id],
-      prepared: item.prepared,
-      attached: item.attached,
-      used: usedIds.has(item.id),
-    }));
+    .map((item) => {
+      const used = usedIds.has(item.id);
+      const state = equipmentUsageState(item, used);
+      return {
+        id: item.id,
+        label: EQUIPMENT_LABELS[item.id],
+        state,
+        stateLabel: EQUIPMENT_STATE_LABELS[state],
+        prepared: item.prepared,
+        attached: item.attached,
+        used,
+      };
+    });
 }
+
+/** Matériel qui se pose sur le patient, et peut donc être retiré. */
+const ATTACHABLE_EQUIPMENT = new Set<EquipmentId>(["saturometre"]);
 
 export function vitalsScreenModel(session: InterventionSessionView): VitalsScreenModel {
   const scenario = getV3Scenario(session.scenarioId);
@@ -332,6 +399,7 @@ export function vitalsScreenModel(session: InterventionSessionView): VitalsScree
   const probeActions = actionsForPhase(session.phase).filter(
     (action) => action.category === "probe",
   );
+  const carried = equipmentChips(session);
 
   // La jauge compte les constantes **attendues au bilan**, pas toutes celles que
   // le scénario mobilise : c'est sur le bilan que le joueur est évalué.
@@ -352,6 +420,8 @@ export function vitalsScreenModel(session: InterventionSessionView): VitalsScree
       .filter((action) => action.reveals.length === 0)
       .map((action) => quickMeasure(session, action)),
     evaluations: evaluationFactIds(session.scenarioId).map((factId) => evaluation(session, factId)),
-    equipment: equipmentChips(session),
+    carriedEquipment: carried,
+    usedEquipment: carried.filter((chip) => chip.used),
+    equipmentPanelLabels: { carried: "Matériel embarqué", used: "Matériel utilisé" },
   };
 }

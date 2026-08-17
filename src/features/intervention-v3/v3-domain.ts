@@ -578,17 +578,73 @@ export interface InterventionSession {
 }
 
 /**
- * Ce que l'interface reçoit. Deuxième moitié de la première barrière : les
- * constantes réelles et leur historique sont retirés structurellement, si bien
- * qu'un composant ne peut pas les atteindre même sans nommer leur type.
+ * Champs que l'interface a le droit de recevoir.
+ *
+ * **Une liste d'autorisation, et non d'exclusion.** La distinction n'est pas de
+ * style : une liste d'exclusion laisse passer par défaut tout champ ajouté
+ * ensuite à la session. C'est ainsi que `patientState` et `roscAchieved` — l'état
+ * de santé simulé du patient et la reprise d'activité circulatoire — se
+ * retrouvaient exposés à l'interface alors qu'aucune action du joueur ne les
+ * révèle. Un écran pouvait afficher « patient à 72 % » sans qu'un seul geste ait
+ * été fait.
+ *
+ * Ajouter un champ à `InterventionSession` sans le classer ici le rend invisible
+ * à l'interface, et un test refuse un champ non classé plutôt que de deviner.
  */
-export type InterventionSessionView = Omit<InterventionSession, "vitals" | "vitalsHistory">;
+export const SESSION_VIEW_FIELDS = [
+  "scenarioId",
+  "phase",
+  "status",
+  "score",
+  "lives",
+  "simulatedTimeSeconds",
+  "equipment",
+  "revealedFacts",
+  "actionLog",
+  "flags",
+  "transmission",
+  "gestureRounds",
+  "reevaluations",
+  "xpBonus",
+  "rewardBonus",
+] as const satisfies readonly (keyof InterventionSession)[];
 
+export type SessionViewField = (typeof SESSION_VIEW_FIELDS)[number];
+
+/**
+ * Champs délibérément retenus, avec la raison de leur rétention.
+ *
+ * Déclarés plutôt que déduits : un champ caché doit l'être par décision, et la
+ * décision doit être lisible à côté du champ.
+ */
+export const HIDDEN_SESSION_FIELDS = {
+  vitals: "Constantes réelles du patient, connues du moteur dès la première seconde.",
+  vitalsHistory: "Historique physiologique, d'où l'on pourrait relire les constantes.",
+  patientState:
+    "État de santé simulé. Aucune action ne le révèle : l'afficher donnerait une lecture clinique gratuite.",
+  roscAchieved:
+    "Reprise d'activité circulatoire. C'est un constat clinique, qui doit se gagner comme les autres.",
+} as const satisfies Partial<Record<keyof InterventionSession, string>>;
+
+export type HiddenSessionField = keyof typeof HIDDEN_SESSION_FIELDS;
+
+/**
+ * Ce que l'interface reçoit. Deuxième moitié de la première barrière : les
+ * données cliniques cachées sont retirées structurellement, si bien qu'un
+ * composant ne peut pas les atteindre même sans nommer leur type.
+ */
+export type InterventionSessionView = Pick<InterventionSession, SessionViewField>;
+
+/**
+ * Construit la vue **en recopiant la liste d'autorisation**, et non en retirant
+ * les champs cachés. La différence compte : une copie par retrait laisserait
+ * passer tout champ que la liste d'exclusion aurait oublié, y compris ceux
+ * ajoutés après elle. Ici l'objet produit ne peut porter que ce qui est déclaré.
+ */
 export function toSessionView(session: InterventionSession): InterventionSessionView {
-  const { vitals, vitalsHistory, ...view } = session;
-  void vitals;
-  void vitalsHistory;
-  return view;
+  const view: Partial<Record<SessionViewField, unknown>> = {};
+  for (const field of SESSION_VIEW_FIELDS) view[field] = session[field];
+  return view as InterventionSessionView;
 }
 
 /* -------------------------------------------------------------------------- */
