@@ -200,3 +200,87 @@ test("aucun modèle d'écran n'expose la session à un composant", () => {
     }
   }
 });
+
+/* -------------------------------------------------------------------------- */
+/* Les composants n'atteignent rien de plus que leurs propriétés              */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Le contrôle sur les composants React.
+ *
+ * Ils ne sont pas exécutables ici — ni `vite build` ni outillage de rendu DOM ne
+ * tournent dans cet environnement. Ce qui reste vérifiable est leur **surface
+ * d'accès** : de quoi ils dépendent. Un composant qui n'importe que des types de
+ * modèle et des icônes ne peut, par construction, lire aucune donnée cachée,
+ * qu'on puisse le rendre ou non.
+ */
+test("aucun composant du Mode Intervention V3 n'atteint le moteur ni le scénario", () => {
+  const root = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+  const componentsDir = join(root, "components", "intervention-v3");
+
+  const files: string[] = [];
+  const walk = (directory: string) => {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      if (entry.isDirectory()) walk(path);
+      else if (entry.name.endsWith(".tsx") || entry.name.endsWith(".ts")) files.push(path);
+    }
+  };
+  walk(componentsDir);
+  assert.ok(files.length >= 7, `seulement ${files.length} composants`);
+
+  const forbidden = [
+    "intervention-vitals",
+    "reveal-fact",
+    "read-fact",
+    "engine/apply-action",
+    "engine/v3-",
+    "engine/index",
+    "v3-session",
+    "scenarios/",
+    "v3-catalog",
+    "fact-registry",
+    "action-catalog",
+  ];
+  for (const file of files) {
+    const source = readFileSync(file, "utf8");
+    const imports = source.match(/^import[\s\S]*?from\s+"[^"]+";/gm) ?? [];
+    const specifiers = imports.join("\n");
+    for (const pattern of forbidden) {
+      assert.ok(
+        !specifiers.includes(pattern),
+        `${file.split("/").pop()} importe « ${pattern} » : un composant reçoit des propriétés, il ne va rien chercher`,
+      );
+    }
+    // Et jamais l'accès direct à un champ caché, quelle qu'en soit la provenance.
+    for (const field of Object.keys(HIDDEN_SESSION_FIELDS)) {
+      assert.ok(
+        !new RegExp(`\\.${field}\\b`).test(source),
+        `${file.split("/").pop()} lit « .${field} »`,
+      );
+    }
+  }
+});
+
+test("les composants animés ne reçoivent que des cadences déjà dérivées", () => {
+  // Une animation est une fuite comme une autre : une onde qui bat à la fréquence
+  // réelle du patient la révèle aussi sûrement qu'un chiffre. Les composants
+  // animés reçoivent donc une cadence en propriété — nulle tant que la mesure
+  // n'est pas prise — et n'ont aucun moyen d'en calculer une.
+  const root = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+  const monitoringDir = join(root, "components", "intervention-v3", "monitoring");
+  const files = readdirSync(monitoringDir).filter((name) => name.endsWith(".tsx"));
+  assert.ok(files.length >= 5, `seulement ${files.length} composants animés`);
+
+  for (const file of files) {
+    const source = readFileSync(join(monitoringDir, file), "utf8");
+    // Chaque composant animé doit savoir se taire.
+    assert.ok(/reducedMotion/.test(source), `${file} ignore la préférence d'animation réduite`);
+    // Aucun n'importe quoi que ce soit du domaine hors les types de modèle.
+    const imports = (source.match(/from\s+"([^"]+)"/g) ?? []).join("\n");
+    assert.ok(
+      !/features\/intervention-v3\/(?!ui\/)/.test(imports),
+      `${file} importe hors de la couche présentation`,
+    );
+  }
+});

@@ -10,7 +10,7 @@ import { EQUIPMENT_LABELS, displayValue } from "../v3-domain.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { getFact } from "../facts/fact-registry.ts";
 import { readFact } from "../facts/read-fact.ts";
-import { actionsForPhase, findAction } from "../actions/action-catalog.ts";
+import { actionsForPhase, findAction, PLAYER_ACTIONS } from "../actions/action-catalog.ts";
 import { successfulActionIds } from "../engine/action-gate.ts";
 import { actionAvailability } from "./action-availability.ts";
 import { formatGlycemiaMmolForUi } from "../format-glycemia.ts";
@@ -68,6 +68,44 @@ export interface VitalCardModel {
   outOfReach: boolean;
   /** La même valeur dans l'autre unité, sans interprétation. Glycémie seule. */
   secondaryValue: string | null;
+  /**
+   * Surveillance continue en cours : un capteur en place tient cette constante à
+   * jour. Faux pour un instantané — une tension prise au brassard reste la valeur
+   * du moment où on l'a prise, et l'animer en continu mentirait sur sa nature.
+   */
+  isLive: boolean;
+  /** État du capteur qui porte la mesure. Nul si aucun appareil n'y est rattaché. */
+  equipmentState: EquipmentUsageState | null;
+  /** Instant du relevé, en secondes simulées. Nul si jamais mesurée. */
+  measuredAtSeconds: number | null;
+  /**
+   * Valeur numérique du relevé, pour les animations qui ont besoin d'un nombre.
+   * **Nulle tant que rien n'est mesuré** : c'est ce qui interdit à une animation
+   * de trahir une constante que le joueur n'a pas relevée.
+   */
+  numericValue: number | null;
+}
+
+/**
+ * Ce qui anime l'écran, et rien d'autre.
+ *
+ * Chaque champ est **nul tant que la mesure correspondante n'a pas été prise**.
+ * C'est la règle centrale portée jusque dans les animations : une onde de pouls
+ * qui battrait à la fréquence réelle du patient avant toute palpation
+ * révélerait cette fréquence aussi sûrement qu'un chiffre.
+ */
+export interface MonitoringModel {
+  /** Un capteur au moins est en place. */
+  anyLive: boolean;
+  /**
+   * Cadence de la pulsation visuelle, en battements par minute. Nulle tant que le
+   * pouls n'a pas été relevé — une onde qui bat sans mesure invente une donnée.
+   */
+  pulseBpm: number | null;
+  /** Cadence de l'animation respiratoire. Nulle tant que la FR n'est pas comptée. */
+  respiratoryRatePerMinute: number | null;
+  /** Constantes actuellement tenues à jour par un capteur en place. */
+  liveFactIds: FactId[];
 }
 
 export interface QuickMeasureModel {
@@ -149,6 +187,8 @@ export interface VitalsScreenModel {
    * rendrait le retrait du saturomètre injouable depuis cet écran.
    */
   sensorControls: QuickMeasureModel[];
+  /** Ce qui anime l'écran. Tout y est nul tant que la mesure n'est pas prise. */
+  monitoring: MonitoringModel;
   evaluations: EvaluationModel[];
   /**
    * Panneau « Matériel embarqué » : tout ce que l'équipe a dans le sac, chacun
@@ -238,9 +278,19 @@ function secondaryValueOf(read: KnownRead): string | null {
   return formatGlycemiaMmolForUi(read.value.value);
 }
 
-function vitalCard(session: InterventionSessionView, factId: FactId): VitalCardModel {
+interface MonitoringContext {
+  live: Set<FactId>;
+  equipmentByFact: Map<FactId, EquipmentUsageState>;
+}
+
+function vitalCard(
+  session: InterventionSessionView,
+  factId: FactId,
+  context: MonitoringContext,
+): VitalCardModel {
   const read = readFact(session, factId);
   const fact = read.fact;
+  const equipmentState = context.equipmentByFact.get(factId) ?? null;
 
   if (read.status === "unknown") {
     return {
@@ -257,6 +307,13 @@ function vitalCard(session: InterventionSessionView, factId: FactId): VitalCardM
       missingLabel: read.label,
       outOfReach: read.reason === "equipment_missing",
       secondaryValue: null,
+      // Une constante non relevée n'anime rien, quel que soit l'état du capteur :
+      // un saturomètre posé mais dont la mesure n'a pas encore été lue ne doit
+      // pas faire battre une onde.
+      isLive: false,
+      equipmentState,
+      measuredAtSeconds: null,
+      numericValue: null,
     };
   }
 
@@ -276,6 +333,10 @@ function vitalCard(session: InterventionSessionView, factId: FactId): VitalCardM
     missingLabel: null,
     outOfReach: false,
     secondaryValue: secondaryValueOf(read),
+    isLive: context.live.has(factId),
+    equipmentState,
+    measuredAtSeconds: session.simulatedTimeSeconds - read.ageSeconds,
+    numericValue: numericOf(read),
   };
 }
 
@@ -393,13 +454,61 @@ function equipmentChips(session: InterventionSessionView): EquipmentChipModel[] 
 /** Matériel qui se pose sur le patient, et peut donc être retiré. */
 const ATTACHABLE_EQUIPMENT = new Set<EquipmentId>(["saturometre"]);
 
+/**
+ * Constantes qu'un capteur en place tient à jour en continu.
+ *
+ * Dérivé et non écrit en dur : un capteur posé surveille ce que son geste de pose
+ * révèle. Le saturomètre donne SpO₂ et pouls tant qu'il est au doigt ; le
+ * tensiomètre, lui, ne reste pas en place — une tension est un instantané, et
+ * l'animer en continu mentirait sur sa nature.
+ */
+function liveFactIds(session: InterventionSessionView): Set<FactId> {
+  const live = new Set<FactId>();
+  for (const item of session.equipment) {
+    if (!item.attached) continue;
+    for (const action of PLAYER_ACTIONS) {
+      if (!action.requires.equipment.includes(item.id)) continue;
+      for (const factId of action.reveals) live.add(factId);
+    }
+  }
+  return live;
+}
+
+/**
+ * Valeur numérique d'un relevé, ou rien.
+ *
+ * C'est la seule porte par laquelle un nombre atteint une animation, et elle est
+ * fermée tant que le fait n'est pas relevé. Une tension rend sa systolique : c'est
+ * elle qui donne le rythme, pas la diastolique.
+ */
+function numericOf(read: FactRead): number | null {
+  if (read.status !== "known") return null;
+  if (read.value.kind === "numeric") return read.value.value;
+  if (read.value.kind === "ratio") return read.value.systolic;
+  return null;
+}
+
 export function vitalsScreenModel(session: InterventionSessionView): VitalsScreenModel {
   const scenario = getV3Scenario(session.scenarioId);
-  const vitals = vitalFactIds(session.scenarioId).map((factId) => vitalCard(session, factId));
+  const carried = equipmentChips(session);
+  const context: MonitoringContext = {
+    live: liveFactIds(session),
+    equipmentByFact: new Map(
+      carried.flatMap((chip) =>
+        PLAYER_ACTIONS.filter((action) => action.requires.equipment.includes(chip.id)).flatMap(
+          (action) => action.reveals.map((factId) => [factId, chip.state] as const),
+        ),
+      ),
+    ),
+  };
+  const vitals = vitalFactIds(session.scenarioId).map((factId) =>
+    vitalCard(session, factId, context),
+  );
+  const measuredOf = (factId: FactId) =>
+    vitals.find((card) => card.factId === factId)?.numericValue ?? null;
   const probeActions = actionsForPhase(session.phase).filter(
     (action) => action.category === "probe",
   );
-  const carried = equipmentChips(session);
 
   // La jauge compte les constantes **attendues au bilan**, pas toutes celles que
   // le scénario mobilise : c'est sur le bilan que le joueur est évalué.
@@ -419,6 +528,15 @@ export function vitalsScreenModel(session: InterventionSessionView): VitalsScree
     sensorControls: probeActions
       .filter((action) => action.reveals.length === 0)
       .map((action) => quickMeasure(session, action)),
+    monitoring: {
+      anyLive: context.live.size > 0,
+      // Les cadences viennent des cartes, donc de `readFact`, donc de ce que le
+      // joueur a relevé. Aucune animation ne peut battre à une fréquence que
+      // personne n'a mesurée.
+      pulseBpm: measuredOf("fact.fc"),
+      respiratoryRatePerMinute: measuredOf("fact.fr"),
+      liveFactIds: [...context.live],
+    },
     evaluations: evaluationFactIds(session.scenarioId).map((factId) => evaluation(session, factId)),
     carriedEquipment: carried,
     usedEquipment: carried.filter((chip) => chip.used),

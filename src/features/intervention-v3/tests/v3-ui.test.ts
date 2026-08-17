@@ -717,3 +717,126 @@ test("le bandeau de cet écran est celui des maquettes 3 et 4", () => {
     ["clock", "lives", "coins", "logo", "level", "avatar"],
   );
 });
+
+/* -------------------------------------------------------------------------- */
+/* Écran 3 — la surveillance animée ne trahit rien                            */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Une animation est une fuite comme une autre.
+ *
+ * Une onde de pouls qui battrait à la fréquence réelle du patient révélerait
+ * cette fréquence aussi sûrement qu'un chiffre affiché. Ces tests vérifient donc
+ * que **toute cadence d'animation est nulle tant que la mesure n'a pas été
+ * prise**, et que la surveillance continue s'arrête avec le capteur.
+ */
+
+test("sur session vierge, aucune animation n'a de cadence", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  assert.equal(model.monitoring.anyLive, false);
+  assert.equal(model.monitoring.pulseBpm, null, "aucune onde ne doit battre");
+  assert.equal(model.monitoring.respiratoryRatePerMinute, null);
+  assert.deepEqual(model.monitoring.liveFactIds, []);
+  for (const card of model.vitals) {
+    assert.equal(card.isLive, false, card.factId);
+    assert.equal(card.numericValue, null, `${card.factId} donne un nombre sans mesure`);
+    assert.equal(card.measuredAtSeconds, null, card.factId);
+  }
+});
+
+test("poser le saturomètre ouvre la surveillance continue de la SpO₂ et du pouls", () => {
+  const played = play(atVitals(), "action.poser-saturometre");
+  const model = vitalsScreenModel(toSessionView(played));
+
+  assert.equal(model.monitoring.anyLive, true);
+  assert.ok(model.monitoring.liveFactIds.includes("fact.spo2"));
+  assert.ok(model.monitoring.liveFactIds.includes("fact.fc"));
+  // La cadence de l'onde vient du pouls relevé, jamais du patient réel.
+  assert.ok(model.monitoring.pulseBpm !== null && model.monitoring.pulseBpm > 0);
+  assert.equal(model.monitoring.pulseBpm, cardOf(model, "fact.fc").numericValue);
+
+  assert.equal(cardOf(model, "fact.spo2").isLive, true);
+  assert.equal(cardOf(model, "fact.spo2").equipmentState, "attached");
+  // La tension n'est pas surveillée en continu : le brassard ne reste pas posé.
+  assert.equal(cardOf(model, "fact.ta").isLive, false);
+  assert.equal(cardOf(model, "fact.ta").numericValue, null);
+  // Et la FR n'anime rien tant qu'elle n'est pas comptée.
+  assert.equal(model.monitoring.respiratoryRatePerMinute, null);
+});
+
+test("retirer le saturomètre arrête la surveillance sans effacer la mesure", () => {
+  const posed = play(atVitals(), "action.poser-saturometre");
+  const removed = play(posed, "action.retirer-saturometre");
+  const model = vitalsScreenModel(toSessionView(removed));
+
+  assert.equal(model.monitoring.anyLive, false, "plus aucun capteur en place");
+  assert.deepEqual(model.monitoring.liveFactIds, []);
+  const spo2 = cardOf(model, "fact.spo2");
+  assert.equal(spo2.isLive, false, "l'onde doit s'arrêter");
+  // La dernière valeur reste lisible : elle est datée, pas effacée.
+  assert.equal(spo2.measured, true);
+  assert.ok(spo2.numericValue !== null);
+  assert.equal(spo2.equipmentState, "removed");
+});
+
+test("la surveillance continue ne recalcule aucune valeur", () => {
+  // Un capteur en place n'invente pas de nouvelles mesures : la valeur affichée
+  // reste celle du relevé, et le temps qui passe la date sans la changer.
+  const posed = play(atVitals(), "action.poser-saturometre");
+  const before = cardOf(vitalsScreenModel(toSessionView(posed)), "fact.spo2");
+  const later = vitalsScreenModel(
+    toSessionView({ ...posed, simulatedTimeSeconds: posed.simulatedTimeSeconds + 10_000 }),
+  );
+  const after = cardOf(later, "fact.spo2");
+
+  assert.equal(after.numericValue, before.numericValue, "la valeur ne doit pas dériver");
+  assert.equal(after.value, before.value);
+  assert.equal(after.isStale, true, "elle doit en revanche être signalée datée");
+  assert.equal(after.measuredAtSeconds, before.measuredAtSeconds);
+});
+
+test("compter la FR ouvre l'animation respiratoire, et elle seule", () => {
+  const model = vitalsScreenModel(toSessionView(play(atVitals(), "action.compter-fr")));
+  assert.ok(model.monitoring.respiratoryRatePerMinute !== null);
+  assert.equal(model.monitoring.respiratoryRatePerMinute, cardOf(model, "fact.fr").numericValue);
+  // Compter la FR ne pose aucun capteur : rien n'est en surveillance continue.
+  assert.equal(model.monitoring.anyLive, false);
+  assert.equal(model.monitoring.pulseBpm, null, "le pouls n'a pas été relevé");
+});
+
+test("une mesure prise au brassard reste un instantané", () => {
+  // Animer une tension en continu mentirait sur sa nature : elle vaut pour
+  // l'instant où elle a été prise.
+  const model = vitalsScreenModel(toSessionView(play(atVitals(), "action.prendre-tension")));
+  const tension = cardOf(model, "fact.ta");
+  assert.equal(tension.measured, true);
+  assert.equal(tension.isLive, false);
+  assert.equal(tension.equipmentState, "used", "le tensiomètre a servi, il n'est pas posé");
+  // La valeur numérique d'une tension est sa systolique, pour un éventuel rythme.
+  assert.ok(tension.numericValue !== null && tension.numericValue > 0);
+});
+
+test("aucune cadence d'animation n'existe sans la mesure correspondante", () => {
+  // Le contrôle général : pour chaque constante, la valeur numérique qui pourrait
+  // nourrir une animation n'apparaît qu'avec la mesure.
+  for (const actionId of [
+    "action.poser-saturometre",
+    "action.prendre-tension",
+    "action.compter-fr",
+    "action.evaluer-conscience",
+    "action.faire-glycemie",
+    "action.evaluer-douleur",
+  ] as const) {
+    const revealed = new Set(getAction(actionId).reveals);
+    const model = vitalsScreenModel(toSessionView(play(atVitals(), actionId)));
+    for (const card of model.vitals) {
+      if (revealed.has(card.factId)) continue;
+      assert.equal(
+        card.numericValue,
+        null,
+        `${actionId} donne un nombre pour ${card.factId} sans l'avoir mesuré`,
+      );
+      assert.equal(card.isLive, false, `${actionId} anime ${card.factId} sans mesure`);
+    }
+  }
+});
