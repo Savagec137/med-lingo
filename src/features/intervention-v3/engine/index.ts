@@ -92,5 +92,10 @@ export {
   type HandoverSelection,
   type RegulatorAnswerResult,
 } from "./v3-transmission.ts";
-export { transmitHandover, type TransmissionResult } from "./v3-handover.ts";
+export {
+  commitGestureRound,
+  transmitHandover,
+  type GestureCommitResult,
+  type TransmissionResult,
+} from "./v3-handover.ts";
 export { createDebriefReport } from "./v3-debrief.ts";

@@ -34,7 +34,12 @@ Les deux documents de conception restent la référence :
 | `engine/v3-debrief.ts`                | débrief déterministe dérivé du journal                     |
 | `format-glycemia.ts`                  | conversion d'affichage mmol/L vers g/L                     |
 | `ui/`                                 | un présentateur pur par écran de maquette                  |
-| `tests/`                              | 115 tests V3                                               |
+| `engine/action-gate.ts`               | les barrières dures, sans effet                            |
+| `engine/queries.ts`                   | tout ce qu'on peut demander au moteur, rien de plus        |
+| `engine/v3-gestures.ts`               | gestes prioritaires et leurs conséquences                  |
+| `engine/v3-reevaluation.ts`           | cycles de réévaluation et sanction du départ               |
+| `engine/v3-handover.ts`               | transmission choisie, validation du tour de gestes         |
+| `tests/`                              | 237 tests V3                                               |
 
 ## Les deux axes d'un fait
 
@@ -215,16 +220,22 @@ base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local
 
 ## Tests
 
-`npm test` couvre les 115 tests du mode, en plus des 214 autres tests du projet.
+`npm test` couvre les 237 tests du mode, en plus des 214 autres tests du projet.
 
-| Fichier              | Couvre                                                                                                          |
-| -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `v3-facts.test.ts`   | 18 tests : invariants du registre, gel de la valeur, péremption, tendance, trous, couverture                    |
-| `v3-actions.test.ts` | 16 tests : périmètre DEA, résolubilité des références, réciprocité registre ↔ catalogue, natures de prérequis   |
-| `v3-pilot.test.ts`   | 21 tests : décisions produit, constantes initiales, questions du régulateur, gestes, confiance dans les sources |
-| `v3-engine.test.ts`  | 12 tests : actions, phases, trous, mesures figées, périmètre DEA                                                |
-| `v3-debrief.test.ts` | 4 tests : journal déterministe, vies, échec non profitable et glycémie                                          |
-| `v3-ui.test.ts`      | 44 tests : bandeaux, écrans 1 à 3, étanchéité des constantes, accord écran ↔ moteur                             |
+| Fichier                      | Couvre                                                                                                          |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `v3-facts.test.ts`           | 18 tests : invariants du registre, gel de la valeur, péremption, tendance, trous, couverture                    |
+| `v3-actions.test.ts`         | 16 tests : périmètre DEA, résolubilité des références, réciprocité registre ↔ catalogue, natures de prérequis   |
+| `v3-pilot.test.ts`           | 21 tests : décisions produit, constantes initiales, questions du régulateur, gestes, confiance dans les sources |
+| `v3-engine.test.ts`          | 12 tests : actions, phases, trous, mesures figées, périmètre DEA                                                |
+| `v3-debrief.test.ts`         | 4 tests : journal déterministe, vies, échec non profitable et glycémie                                          |
+| `v3-ui.test.ts`              | 44 tests : bandeaux, écrans 1 à 3, étanchéité des constantes, accord écran ↔ moteur                             |
+| `v3-anti-leak.test.ts`       | 13 tests : les douze données protégées, 84 croisements, aucun bouton décoratif                                  |
+| `v3-gestures.test.ts`        | 19 tests : refus expliqués, barème du raisonnement, bornes du tour                                              |
+| `v3-reevaluation.test.ts`    | 21 tests : péremption, cycles, renfort, sanction du départ                                                      |
+| `v3-handover.test.ts`        | 26 tests : les quatre issues, questions du régulateur, refus de conclure                                        |
+| `v3-debrief-complet.test.ts` | 21 tests : huit sections, note complète, ordre du recueil                                                       |
+| `v3-ui-screens.test.ts`      | 22 tests : écrans 4 à 6, étanchéité, barrière de la couche présentation                                         |
 
 Deux tests méritent d'être lus avant de toucher au contrat. « la valeur relevée
 est figée » dégrade la SpO₂ du patient après la mesure et vérifie que l'écran
@@ -268,9 +279,17 @@ n'apparaît dans le texte de l'écran — ni dans les cartes, ni dans les
 
 ## Reste à faire
 
-**Interface.** Les écrans 4 à 7 en couche présentation — appel au 15, gestes
-prioritaires, réévaluation, débriefing — puis les composants React, le hook, la
-persistance/reprise et la route. Les maquettes restent la référence visuelle.
+**Interface.** Le débriefing en couche présentation — `DebriefReport` est déjà
+prêt à afficher, un présentateur n'y ajouterait qu'un habillage — puis les
+composants React, le hook, la persistance/reprise et la route. Les maquettes
+restent la référence visuelle.
+
+**Deux points ouverts, connus et non corrigés.** « Réévaluer le patient »
+rapporte huit points sans plafond d'utilisation : un joueur qui a des constantes
+fraîches peut la rejouer, chaque appel coûtant soixante secondes simulées. Et une
+mission bien menée sature le plafond de cent, si bien que la note finale ne
+distingue plus deux bonnes parties — l'écart reste lisible dans les axes et dans
+les reproches, pas dans le score.
 
 **Points ouverts.** La politique d'indices `hintPolicy` par niveau de difficulté,
 la persistance versionnée des sessions, la nature du rejeu et le comportement de

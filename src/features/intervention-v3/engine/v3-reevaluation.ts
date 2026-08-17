@@ -34,6 +34,7 @@ import type {
   FactId,
   InterventionScenario,
   InterventionSession,
+  InterventionSessionView,
   ReevaluationState,
   ReinforcementStatus,
 } from "../v3-domain.ts";
@@ -54,7 +55,7 @@ export function perishableExpectedFactIds(scenario: InterventionScenario): FactI
 
 /** Constantes attendues relevées mais périmées. C'est le « à réévaluer » de l'écran. */
 export function staleExpectedFactIds(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): FactId[] {
   return scenario.expectedHandoverFactIds.filter((factId) => {
@@ -65,7 +66,7 @@ export function staleExpectedFactIds(
 
 /** Constantes attendues jamais relevées. Distinct d'une mesure périmée. */
 export function missingExpectedFactIds(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): FactId[] {
   return scenario.expectedHandoverFactIds.filter(
@@ -89,7 +90,7 @@ export const REINFORCEMENT_ON_SCENE_SECONDS = 420;
  * statut obligerait à le faire progresser à chaque action, et un oubli le
  * figerait sans que rien ne le dise.
  */
-export function reinforcementStatus(session: InterventionSession): ReinforcementStatus {
+export function reinforcementStatus(session: InterventionSessionView): ReinforcementStatus {
   const requested = session.actionLog.find(
     (entry) => entry.actionId === "action.demander-renfort" && entry.outcome !== "refused",
   );
@@ -105,7 +106,9 @@ export function reinforcementStatus(session: InterventionSession): Reinforcement
 /* -------------------------------------------------------------------------- */
 
 /** Cycle en cours : le dernier ouvert et non validé. */
-export function currentReevaluation(session: InterventionSession): ReevaluationState | undefined {
+export function currentReevaluation(
+  session: InterventionSessionView,
+): ReevaluationState | undefined {
   const last = session.reevaluations[session.reevaluations.length - 1];
   return last && !last.validated ? last : undefined;
 }
@@ -142,7 +145,7 @@ export function openReevaluation(session: InterventionSession): InterventionSess
  * (`>=`) parce qu'une mesure jouée dans la même seconde que l'ouverture du cycle
  * en fait partie.
  */
-export function refreshedSince(session: InterventionSession, sinceSeconds: number): FactId[] {
+export function refreshedSince(session: InterventionSessionView, sinceSeconds: number): FactId[] {
   const ids = new Set<FactId>();
   for (const entry of session.actionLog) {
     if (entry.outcome === "refused") continue;
@@ -166,7 +169,7 @@ export interface ReevaluationStatus {
 }
 
 /** État de la réévaluation en cours, tel que l'écran doit l'afficher. */
-export function reevaluationStatus(session: InterventionSession): ReevaluationStatus {
+export function reevaluationStatus(session: InterventionSessionView): ReevaluationStatus {
   const scenario = getV3Scenario(session.scenarioId);
   const current = currentReevaluation(session);
   const startedAt = current?.startedAtSeconds ?? session.simulatedTimeSeconds;
@@ -258,7 +261,7 @@ export const STALE_TRANSPORT_PENALTY_CAP = 12;
  * zéro n'apprend plus rien.
  */
 export function staleTransportPenalty(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): number {
   const stale = staleExpectedFactIds(session, scenario).length;
@@ -280,7 +283,7 @@ export interface TransportReadiness {
   graveFault: boolean;
 }
 
-export function transportReadiness(session: InterventionSession): TransportReadiness {
+export function transportReadiness(session: InterventionSessionView): TransportReadiness {
   const scenario = getV3Scenario(session.scenarioId);
   const reevaluated = session.actionLog.some(
     (entry) => entry.actionId === "action.reevaluer-patient" && entry.outcome !== "refused",

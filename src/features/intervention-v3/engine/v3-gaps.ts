@@ -2,7 +2,7 @@ import {
   EQUIPMENT_LABELS,
   type FactId,
   type InterventionScenario,
-  type InterventionSession,
+  type InterventionSessionView,
   type RegulatorQuestion,
 } from "../v3-domain.ts";
 import { readFact } from "../facts/read-fact.ts";
@@ -22,7 +22,7 @@ export interface BilanGap {
  * Une mesure périmée est un trou distinct d'une mesure jamais réalisée.
  */
 export function calculateBilanGaps(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): BilanGap[] {
   const gaps: BilanGap[] = [];
@@ -58,17 +58,17 @@ export function calculateBilanGaps(
 }
 
 export const gapFactIdsV3 = (
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): FactId[] => calculateBilanGaps(session, scenario).map((gap) => gap.factId);
 
-export const staleFactIds = (session: InterventionSession, scenario: InterventionScenario) =>
+export const staleFactIds = (session: InterventionSessionView, scenario: InterventionScenario) =>
   calculateBilanGaps(session, scenario)
     .filter((gap) => gap.kind === "stale")
     .map((gap) => gap.factId);
 
 export const equipmentBlockedFactIds = (
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ) =>
   calculateBilanGaps(session, scenario)
@@ -104,7 +104,7 @@ const painQuestion: RegulatorQuestion = {
 
 /** Questions entièrement déclenchées par les trous réellement constatés. */
 export function regulatorQuestionsForSession(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
 ): RegulatorQuestion[] {
   const gaps = new Set(gapFactIdsV3(session, scenario));

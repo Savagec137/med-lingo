@@ -27,6 +27,7 @@ import { readFact } from "../facts/read-fact.ts";
 import type {
   GestureChoice,
   InterventionSession,
+  InterventionSessionView,
   PriorityGesture,
   PriorityGestureRound,
 } from "../v3-domain.ts";
@@ -93,7 +94,7 @@ const findGesture = (round: PriorityGestureRound, gestureId: string): PriorityGe
  * sa pertinence à aucun élément particulier.
  */
 export function isGestureJustified(
-  session: InterventionSession,
+  session: InterventionSessionView,
   gesture: PriorityGesture,
 ): boolean {
   return gesture.justifiedBy.every((factId) => {
@@ -104,7 +105,7 @@ export function isGestureJustified(
 
 /** Faits qui justifieraient le geste et manquent encore. Alimente l'écran. */
 export function missingJustifications(
-  session: InterventionSession,
+  session: InterventionSessionView,
   gesture: PriorityGesture,
 ): string[] {
   return gesture.justifiedBy.filter((factId) => {
@@ -114,7 +115,7 @@ export function missingJustifications(
 }
 
 /** Moment où le tour s'est ouvert, déduit du journal plutôt que stocké. */
-export function gestureRoundOpenedAt(session: InterventionSession): number | null {
+export function gestureRoundOpenedAt(session: InterventionSessionView): number | null {
   const entry = session.actionLog.find(
     (item) => item.actionId === "action.transmettre-bilan" && item.outcome !== "refused",
   );
@@ -123,7 +124,7 @@ export function gestureRoundOpenedAt(session: InterventionSession): number | nul
 
 /** Secondes restantes au chronomètre du tour. Nul si le tour n'en a pas. */
 export function gestureRoundTimeLeft(
-  session: InterventionSession,
+  session: InterventionSessionView,
   round: PriorityGestureRound,
 ): number | null {
   if (round.timerSeconds === null) return null;
@@ -134,7 +135,7 @@ export function gestureRoundTimeLeft(
 }
 
 export const isGestureRoundExpired = (
-  session: InterventionSession,
+  session: InterventionSessionView,
   round: PriorityGestureRound,
 ): boolean => gestureRoundTimeLeft(session, round) === 0;
 
@@ -346,9 +347,9 @@ export function resolveGestureRound(
 }
 
 /** Tous les gestes retenus de la mission, tous tours confondus. */
-export const allGestureChoices = (session: InterventionSession): GestureChoice[] =>
+export const allGestureChoices = (session: InterventionSessionView): GestureChoice[] =>
   session.gestureRounds.flatMap((round) => round.choices);
 
 /** Toutes les tentatives refusées de la mission. Alimente le débriefing. */
-export const allRefusedGestures = (session: InterventionSession) =>
+export const allRefusedGestures = (session: InterventionSessionView) =>
   session.gestureRounds.flatMap((round) => round.refused);

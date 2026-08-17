@@ -32,6 +32,7 @@ import type {
   HandoverItemState,
   InterventionScenario,
   InterventionSession,
+  InterventionSessionView,
   RegulatorQuestion,
 } from "../v3-domain.ts";
 import { readFact } from "../facts/read-fact.ts";
@@ -97,13 +98,13 @@ export interface HandoverItemOffer {
   narrative: boolean;
 }
 
-const factStatus = (session: InterventionSession, factId: FactId): HandoverFactStatus => {
+const factStatus = (session: InterventionSessionView, factId: FactId): HandoverFactStatus => {
   const read = readFact(session, factId);
   if (read.status === "unknown") return "unknown";
   return read.isStale ? "stale" : "known";
 };
 
-const isComplete = (session: InterventionSession, item: HandoverItem): boolean =>
+const isComplete = (session: InterventionSessionView, item: HandoverItem): boolean =>
   item.factIds.length === 0 ||
   item.factIds.every((factId) => factStatus(session, factId) === "known");
 
@@ -115,7 +116,7 @@ const isComplete = (session: InterventionSession, item: HandoverItem): boolean =
  * tension. Le joueur choisit sur ce qu'il sait avoir, pas sur ce que le moteur
  * sait.
  */
-export function handoverOffers(session: InterventionSession): HandoverItemOffer[] {
+export function handoverOffers(session: InterventionSessionView): HandoverItemOffer[] {
   const scenario = getV3Scenario(session.scenarioId);
   return scenario.handoverItems.map((item) => ({
     id: item.id,
@@ -137,7 +138,7 @@ export function handoverOffers(session: InterventionSession): HandoverItemOffer[
 /* -------------------------------------------------------------------------- */
 
 export function handoverItemStates(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
   selectedItemIds: readonly string[],
 ): Record<string, HandoverItemState> {
@@ -203,7 +204,7 @@ export function handoverCommunicationScore(
  * `onOmission` du scénario décrit.
  */
 export function regulatorQuestionsForTransmission(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
   states: Record<string, HandoverItemState>,
 ): RegulatorQuestion[] {
@@ -377,7 +378,7 @@ export function answerRegulatorQuestion(
 }
 
 /** Questions posées et restées sans réponse. Alimente le débriefing. */
-export function unansweredQuestions(session: InterventionSession): string[] {
+export function unansweredQuestions(session: InterventionSessionView): string[] {
   const transmission = session.transmission;
   if (!transmission) return [];
   return transmission.questionsAsked.filter((questionId) => !(questionId in transmission.answers));

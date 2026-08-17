@@ -18,6 +18,7 @@ import type {
 } from "../v3-domain.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { applyAction } from "./apply-action.ts";
+import { resolveGestureRound, type GestureRoundResolution } from "./v3-gestures.ts";
 import {
   handoverCommunicationScore,
   handoverItemStates,
@@ -134,4 +135,43 @@ export function transmitHandover(
     questions,
     rejectedAdditions: review.rejected,
   };
+}
+
+/* -------------------------------------------------------------------------- */
+/* Valider le tour de gestes                                                  */
+/* -------------------------------------------------------------------------- */
+
+export interface GestureCommitResult {
+  session: InterventionSession;
+  resolution: GestureRoundResolution;
+  refusalReason: string | null;
+}
+
+/**
+ * Valide le tour de gestes et fait avancer la mission.
+ *
+ * Deux mécanismes distincts existaient sans être reliés : `resolveGestureRound`
+ * marquait le tour clos, et l'action `action.choisir-gestes-prioritaires` faisait
+ * passer à la réévaluation. Une interface pouvait donc appeler l'une sans l'autre
+ * — clore un tour sans avancer, ou avancer sans clore. Les deux ne forment plus
+ * qu'un seul geste, comme la transmission plus haut, et pour la même raison : ce
+ * qui doit arriver ensemble ne doit pas pouvoir arriver séparément.
+ */
+export function commitGestureRound(
+  session: InterventionSession,
+  roundId: string,
+): GestureCommitResult {
+  const applied = applyAction(session, "action.choisir-gestes-prioritaires");
+  if (applied.classification === "impossible") {
+    return {
+      session: applied.session,
+      resolution: resolveGestureRound(session, roundId),
+      refusalReason: applied.reason ?? "Validation impossible.",
+    };
+  }
+  // L'action a fait avancer la phase ; la résolution est calculée sur la session
+  // d'avant, pour que le jugement des gestes porte sur l'état où ils ont été
+  // choisis et non sur celui que la validation vient de produire.
+  const resolution = resolveGestureRound(applied.session, roundId);
+  return { session: resolution.session, resolution, refusalReason: null };
 }

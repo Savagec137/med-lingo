@@ -92,13 +92,14 @@ export default tseslint.config(
                 "Un écran lit les faits via readFact, jamais les constantes du moteur clinique.",
             },
             {
-              // `action-gate` est volontairement absent de la liste : c'est le
-              // seul module du moteur qu'un écran peut interroger, et il est
-              // sans effet. Tout le reste est nommé explicitement plutôt
-              // qu'exclu par négation — une négation au milieu d'un groupe
-              // annule le groupe entier sans le signaler. Et `**/engine` seul
-              // est absent aussi : en sémantique gitignore il couvre tout le
-              // dossier, `action-gate` compris.
+              // Deux modules du moteur sont volontairement absents de la liste :
+              // `action-gate` et `queries`. Tous deux sont **sans effet** —
+              // aucune de leurs fonctions ne rend une session modifiée — et ce
+              // sont les seuls qu'un écran peut interroger. Tout le reste est
+              // nommé explicitement plutôt qu'exclu par négation : une négation
+              // au milieu d'un groupe annule le groupe entier sans le signaler.
+              // Et `**/engine` seul est absent aussi, car en sémantique
+              // gitignore il couvre tout le dossier, exceptions comprises.
               group: [
                 "**/engine/index*",
                 "**/engine/apply-action*",
