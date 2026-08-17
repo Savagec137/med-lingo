@@ -168,6 +168,46 @@ test("les informations reçues viennent de la note de dispatch, sans réécritur
   }
 });
 
+/**
+ * Les puces sont propres au scénario : « Patient retrouvé inconscient au bord de
+ * la voie » ne vaut que pour un patient retrouvé inconscient. Rien n'est écrit
+ * en dur, et le découpage doit donc tenir sur des notes de dispatch de natures
+ * très différentes sans produire de fragment illisible.
+ */
+const DISPATCH_NOTES: readonly string[] = [
+  "Appel du patient : douleur thoracique depuis 40 minutes, sueurs, gêne respiratoire. Domicile, 3e étage sans ascenseur.",
+  "Appel de l'épouse : malaise avec perte de connaissance brève, patient conscient à notre appel, diabétique connu.",
+  "Appel du collègue : difficulté respiratoire d'aggravation progressive, patient assis, parle par phrases courtes.",
+  "Chute de sa hauteur chez une personne âgée, douleur de hanche, ne peut plus se relever.",
+  "Femme enceinte, contractions rapprochées depuis une heure.",
+];
+
+test("le découpage des informations reçues tient sur d'autres scénarios", () => {
+  for (const note of DISPATCH_NOTES) {
+    const received = receivedInformation(note);
+    assert.ok(received.length >= 2, `${note} : ${received.length} puce(s)`);
+    assert.ok(received.length <= 3, "la maquette n'en affiche pas plus de trois");
+    for (const line of received) {
+      // Une puce commence par une capitale et porte au moins deux mots : un
+      // fragment comme « Ne peut plus » ne serait pas lisible dans la maquette.
+      assert.equal(line[0], line[0]!.toLocaleUpperCase("fr"), line);
+      assert.ok(line.split(/\s+/u).length >= 2, `puce trop courte : « ${line} »`);
+      // Le préfixe « Appel de … : » est retiré, il n'est pas une information reçue.
+      assert.ok(!/^Appel /u.test(line), `le préfixe d'appel subsiste : « ${line} »`);
+    }
+  }
+});
+
+test("le découpage ne coupe pas sur une virgule suivie d'un nombre", () => {
+  // « Domicile, 3e étage » est une seule information, pas deux.
+  const received = receivedInformation("Chute à domicile, 3e étage sans ascenseur.");
+  assert.deepEqual(received, ["Chute à domicile, 3e étage sans ascenseur"]);
+});
+
+test("une note sans ponctuation forte reste une puce unique", () => {
+  assert.deepEqual(receivedInformation("Patient inconscient"), ["Patient inconscient"]);
+});
+
 test("l'écran d'appel n'expose aucune donnée clinique", () => {
   // Le régulateur n'a pas donné de constantes : l'écran ne doit pas en montrer.
   const model = newCallScreenModel(session);
