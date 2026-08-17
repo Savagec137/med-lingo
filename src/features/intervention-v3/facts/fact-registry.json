@@ -165,7 +165,7 @@
       "placeholder": "Conscience non appréciée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.approcher-patient"],
+      "revealedBy": ["action.approcher-patient", "action.reevaluer-patient"],
       "dependsOn": [],
       "freshnessSeconds": 300
     },
@@ -179,7 +179,7 @@
       "placeholder": "Respiration non appréciée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.approcher-patient"],
+      "revealedBy": ["action.approcher-patient", "action.reevaluer-patient"],
       "dependsOn": [],
       "freshnessSeconds": 300
     },

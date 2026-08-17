@@ -13,6 +13,7 @@ import {
   type PlayerActionId,
 } from "../v3-domain.ts";
 import { actionRefusal, successfulActionIds } from "./action-gate.ts";
+import { STALE_TRANSPORT_FLAG, staleTransportPenalty } from "./v3-reevaluation.ts";
 import { phaseAfterAction } from "./v3-phases.ts";
 import { buildCentre15Transmission } from "./v3-transmission.ts";
 
@@ -120,12 +121,25 @@ export function applyAction(
   const effect = !justified ? action.unjustifiedEffect : action.effect;
   if (!effect) return refusal(session, actionId, "Action non justifiée et sans effet défini.");
 
+  // Partir sur des constantes datées est une faute distincte de partir sans avoir
+  // réévalué du tout. La seconde coûte une vie par `premature-transport` ; la
+  // première coûte des points, parce que le joueur a fait la démarche et l'a mal
+  // faite. Les confondre rendrait la sanction illisible.
+  const stalePenalty =
+    actionId === "action.preparer-transport" ? staleTransportPenalty(session, scenario) : 0;
+
   const evolved = evolveForAction(session, action, effect, isFault);
-  const flag = effect.flag ?? (incompleteHandover ? "incomplete-handover" : undefined);
+  const flag =
+    effect.flag ??
+    (incompleteHandover
+      ? "incomplete-handover"
+      : stalePenalty > 0
+        ? STALE_TRANSPORT_FLAG
+        : undefined);
   const grave = flag ? graveFaults.has(flag) : false;
   const patientDelta = effect.therapeutic ? effect.patient : 0;
   const handoverPenalty = incompleteHandover ? Math.min(15, handoverGaps.length * 2) : 0;
-  const scoreDelta = effect.score - handoverPenalty;
+  const scoreDelta = effect.score - handoverPenalty - stalePenalty;
   let updated: InterventionSession = {
     ...session,
     score: clamp(session.score + scoreDelta, 0, 100),

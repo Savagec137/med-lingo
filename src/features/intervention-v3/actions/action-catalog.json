@@ -640,11 +640,11 @@
         "phases": ["reevaluation", "transport"],
         "equipment": [],
         "blockingActions": [],
-        "justifyingFacts": [],
+        "justifyingFacts": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr", "fact.glasgow"],
         "justifyingActions": [],
         "maxUses": null
       },
-      "reveals": [],
+      "reveals": ["fact.conscience-qualitative", "fact.respiration-presente"],
       "timeSeconds": 60,
       "effect": {
         "score": 8,
@@ -653,7 +653,13 @@
         "flag": null,
         "therapeutic": false
       },
-      "unjustifiedEffect": null,
+      "unjustifiedEffect": {
+        "score": -6,
+        "patient": 0,
+        "timeSeconds": 60,
+        "flag": "reevaluation-without-measures",
+        "therapeutic": false
+      },
       "actId": null,
       "competencyIds": ["dea.c07"],
       "outOfScope": false,

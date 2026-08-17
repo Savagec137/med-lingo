@@ -47,5 +47,26 @@ export {
   type GestureRoundResolution,
   type GestureSelectionResult,
 } from "./v3-gestures.ts";
+export {
+  currentReevaluation,
+  missingExpectedFactIds,
+  openReevaluation,
+  perishableExpectedFactIds,
+  reevaluationStatus,
+  refreshedSince,
+  reinforcementStatus,
+  staleExpectedFactIds,
+  staleTransportPenalty,
+  transportReadiness,
+  validateReevaluation,
+  REINFORCEMENT_EN_ROUTE_SECONDS,
+  REINFORCEMENT_ON_SCENE_SECONDS,
+  STALE_TRANSPORT_FLAG,
+  STALE_TRANSPORT_PENALTY_CAP,
+  STALE_TRANSPORT_PENALTY_PER_FACT,
+  type ReevaluationStatus,
+  type ReevaluationValidation,
+  type TransportReadiness,
+} from "./v3-reevaluation.ts";
 export { buildCentre15Transmission } from "./v3-transmission.ts";
 export { createDebriefReport } from "./v3-debrief.ts";
