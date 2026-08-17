@@ -1,8 +1,16 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createV3Session } from "../v3-session.ts";
-import { GRAVE_FAULT_FLAGS, type InterventionSessionView } from "../v3-domain.ts";
+import { ALL_EQUIPMENT, createV3Session } from "../v3-session.ts";
+import {
+  GRAVE_FAULT_FLAGS,
+  toSessionView,
+  type EquipmentId,
+  type InterventionSession,
+  type InterventionSessionView,
+  type PlayerActionId,
+} from "../v3-domain.ts";
 import { getAction } from "../actions/action-catalog.ts";
+import { applyAction } from "../engine/apply-action.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { hudModel, xpProgress, HUD_VARIANTS, type PlayerHud } from "../ui/hud-model.ts";
 import { newCallScreenModel, receivedInformation } from "../ui/new-call-screen.ts";
@@ -11,6 +19,11 @@ import {
   weatherFromDispatch,
   ARRIVAL_MOCKUP_ACTIONS,
 } from "../ui/arrival-screen.ts";
+import {
+  splitFormattedValue,
+  vitalsScreenModel,
+  type VitalsScreenModel,
+} from "../ui/vitals-screen.ts";
 
 /**
  * La couche présentation est la seule partie de l'interface vérifiable dans cet
@@ -370,4 +383,303 @@ test("la progression de mission part de l'étape 1 sur 12, comme la maquette", (
   assert.equal(model.progress.label, "01: Arrivée");
   assert.equal(model.progress.completedSteps, 1);
   assert.equal(model.progress.totalSteps, 12);
+});
+
+/* -------------------------------------------------------------------------- */
+/* Écran 3 — Constantes en direct                                             */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Session complète amenée à la phase des constantes. Elle sert à jouer de vraies
+ * actions avec le moteur : les tests de cet écran ne fabriquent pas de faits
+ * révélés à la main, ils les obtiennent en mesurant, comme un joueur.
+ */
+function atVitals(equipment: readonly EquipmentId[] = ALL_EQUIPMENT): InterventionSession {
+  return {
+    ...createV3Session(scenario, { preparedEquipment: equipment }),
+    phase: "vitals",
+    status: "active",
+  };
+}
+
+const play = (session: InterventionSession, ...actionIds: PlayerActionId[]): InterventionSession =>
+  actionIds.reduce((current, actionId) => applyAction(current, actionId).session, session);
+
+const cardOf = (model: VitalsScreenModel, factId: string) =>
+  model.vitals.find((card) => card.factId === factId)!;
+
+const measureOf = (model: VitalsScreenModel, actionId: string) =>
+  [...model.quickMeasures, ...model.sensorControls].find((measure) => measure.id === actionId)!;
+
+test("sur une session vierge, aucune constante n'est affichée", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  assert.equal(model.title, "Constantes en direct");
+  assert.ok(model.vitals.length >= 8, `seulement ${model.vitals.length} constantes`);
+  for (const card of model.vitals) {
+    assert.equal(card.measured, false, card.factId);
+    assert.equal(card.severity, null, card.factId);
+    assert.equal(card.trend, null, card.factId);
+    assert.equal(card.value, card.value.trim());
+  }
+  assert.equal(model.measuredCount, 0);
+  assert.ok(model.expectedCount >= 6);
+});
+
+test("aucun chiffre ne s'affiche avant la première mesure", () => {
+  // La règle centrale du mode, vérifiée sur l'écran qui la met le plus à
+  // l'épreuve : les huit constantes du patient existent dans le moteur dès la
+  // première seconde, et aucune ne doit apparaître sans un relevé.
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  const shown = [
+    ...model.vitals.flatMap((card) => [card.value, card.missingLabel ?? ""]),
+    ...model.evaluations.map((entry) => entry.value),
+    model.narrative,
+  ];
+  for (const text of shown) {
+    assert.ok(!/[0-9]/.test(text), `l'écran des constantes laisse fuir « ${text} »`);
+  }
+});
+
+test("la grille ne contient que les constantes chiffrées du patient", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  const ids = model.vitals.map((card) => card.factId);
+  for (const expected of [
+    "fact.spo2",
+    "fact.fc",
+    "fact.ta",
+    "fact.fr",
+    "fact.temperature",
+    "fact.glycemie",
+    "fact.eva",
+    "fact.glasgow",
+  ]) {
+    assert.ok(ids.includes(expected), `${expected} manque à la grille`);
+  }
+  // Les faits de scène appartiennent au bilan circonstanciel, pas à cet écran.
+  for (const scene of ["fact.scene-securisee", "fact.dangers", "fact.indices-mecanisme"]) {
+    assert.ok(!ids.includes(scene), `${scene} n'a rien à faire dans les constantes`);
+  }
+  // Les faits non chiffrés vont au panneau des évaluations, pas à la grille.
+  const evaluationIds = model.evaluations.map((entry) => entry.factId);
+  assert.ok(evaluationIds.includes("fact.coloration"));
+  assert.ok(!ids.includes("fact.coloration"));
+});
+
+test("poser le saturomètre affiche la SpO₂ et le pouls, et rien d'autre", () => {
+  const played = play(atVitals(), "action.poser-saturometre");
+  const model = vitalsScreenModel(toSessionView(played));
+  const spo2 = cardOf(model, "fact.spo2");
+  assert.equal(spo2.measured, true);
+  // La valeur et son unité sont séparées : la maquette compose un grand nombre
+  // et une petite unité, et « 98 % % » serait le résultat d'un doublon.
+  assert.match(spo2.value, /^\d+$/);
+  assert.equal(spo2.unit, "%");
+  assert.equal(cardOf(model, "fact.fc").measured, true);
+  // Le saturomètre ne donne pas la tension : elle reste un trou.
+  const tension = cardOf(model, "fact.ta");
+  assert.equal(tension.measured, false);
+  assert.equal(tension.missingLabel, "Non mesurée");
+  assert.equal(model.measuredCount, 2);
+});
+
+test("le matériel non embarqué rend la mesure hors d'atteinte, pas oubliée", () => {
+  // Distinction que le joueur doit voir : un trou qu'il peut combler et un trou
+  // qu'il ne peut plus combler ne se corrigent pas de la même façon.
+  const model = vitalsScreenModel(toSessionView(atVitals(["saturometre"])));
+  const glycemia = cardOf(model, "fact.glycemie");
+  assert.equal(glycemia.measured, false);
+  assert.equal(glycemia.outOfReach, true);
+  assert.equal(glycemia.missingLabel, "Glucomètre non embarqué");
+  const pulse = cardOf(model, "fact.fc");
+  assert.equal(pulse.outOfReach, false, "le pouls se palpe sans appareil");
+});
+
+test("une mesure impossible est présentée désactivée avec le nom du matériel", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals(["saturometre"])));
+  const glycemia = measureOf(model, "action.faire-glycemie");
+  assert.equal(glycemia.enabled, false);
+  assert.equal(glycemia.disabledReason, "Matériel non embarqué : Glucomètre.");
+  assert.deepEqual(glycemia.equipment, ["Glucomètre"]);
+  // La carte reste affichée : le joueur doit comprendre ce qui lui manque.
+  assert.equal(glycemia.label, getAction("action.faire-glycemie").label);
+});
+
+test("retirer un capteur qui n'est pas posé est refusé par l'écran aussi", () => {
+  // C'est la règle que la première version de l'écran d'arrivée avait oubliée en
+  // réécrivant les prérequis de son côté. L'écran interroge désormais le moteur.
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  const remove = measureOf(model, "action.retirer-saturometre");
+  assert.equal(remove.enabled, false);
+  assert.equal(remove.disabledReason, "Le saturomètre n'est pas posé.");
+
+  const posed = play(atVitals(), "action.poser-saturometre");
+  const after = measureOf(vitalsScreenModel(toSessionView(posed)), "action.retirer-saturometre");
+  assert.equal(after.enabled, true);
+});
+
+test("une mesure déjà prise est marquée, sans disparaître", () => {
+  const played = play(atVitals(), "action.prendre-tension");
+  const model = vitalsScreenModel(toSessionView(played));
+  const tension = measureOf(model, "action.prendre-tension");
+  assert.equal(tension.alreadyDone, true);
+  // Le tensiomètre n'a pas de plafond d'utilisation : reprendre la TA est permis.
+  assert.equal(tension.enabled, true);
+});
+
+test("la glycémie porte ses deux unités, sans interprétation", () => {
+  // Le registre décrit la glycémie en mmol/L, le relevé est formaté en g/L pour
+  // le terrain. Annoncer « mmol/L » à côté d'une valeur en g/L afficherait une
+  // mesure fausse d'un facteur cinq : l'unité vient donc de la valeur affichée.
+  const model = vitalsScreenModel(toSessionView(play(atVitals(), "action.faire-glycemie")));
+  const glycemia = cardOf(model, "fact.glycemie");
+  assert.equal(glycemia.measured, true);
+  assert.equal(glycemia.unit, "g/L");
+  assert.match(glycemia.value, /^\d+,\d{2}$/);
+  assert.match(glycemia.secondaryValue!, /^\d+,\d mmol\/L$/);
+  // Aucune qualification de la valeur n'accompagne le changement d'unité.
+  for (const word of ["normale", "basse", "élevée", "hypo", "hyper"]) {
+    assert.ok(!glycemia.secondaryValue!.toLowerCase().includes(word));
+  }
+  // Les autres constantes n'ont qu'une unité.
+  assert.equal(cardOf(model, "fact.fr").secondaryValue, null);
+});
+
+test("l'unité collée à la valeur est détachée sans reformater la mesure", () => {
+  // Glasgow et douleur s'écrivent « 13/15 » et « 6/10 » : aucune espace ne
+  // sépare la valeur de son unité, et la découper à l'espace les laisserait
+  // entières. Le découpage retombe alors sur l'unité déclarée au registre.
+  assert.deepEqual(splitFormattedValue("13/15", "/15"), { value: "13", unit: "/15" });
+  assert.deepEqual(splitFormattedValue("138/84 mmHg", "mmHg"), {
+    value: "138/84",
+    unit: "mmHg",
+  });
+  assert.deepEqual(splitFormattedValue("36,8 °C", "°C"), { value: "36,8", unit: "°C" });
+  // Une valeur sans unité reste intacte.
+  assert.deepEqual(splitFormattedValue("Pâleur marquée", null), {
+    value: "Pâleur marquée",
+    unit: null,
+  });
+
+  const model = vitalsScreenModel(
+    toSessionView(play(atVitals(), "action.evaluer-conscience", "action.evaluer-douleur")),
+  );
+  const glasgow = cardOf(model, "fact.glasgow");
+  assert.equal(glasgow.unit, "/15");
+  assert.match(glasgow.value, /^\d+$/);
+  assert.equal(cardOf(model, "fact.eva").unit, "/10");
+});
+
+test("une tendance n'apparaît qu'à partir de la deuxième mesure", () => {
+  const once = play(atVitals(), "action.palper-pouls");
+  assert.equal(cardOf(vitalsScreenModel(toSessionView(once)), "fact.fc").trend, null);
+  const twice = play(once, "action.palper-pouls");
+  const card = cardOf(vitalsScreenModel(toSessionView(twice)), "fact.fc");
+  assert.ok(card.trend, "deux relevés doivent produire une tendance");
+  assert.ok(card.delta, "la tendance s'accompagne de son écart");
+});
+
+test("une mesure périmée reste affichée mais signalée", () => {
+  const played = play(atVitals(), "action.poser-saturometre");
+  const stale = toSessionView({ ...played, simulatedTimeSeconds: 100_000 });
+  const card = cardOf(vitalsScreenModel(stale), "fact.spo2");
+  assert.equal(card.measured, true, "la valeur relevée ne s'effface pas");
+  assert.equal(card.isStale, true);
+  assert.ok(card.ageSeconds! > 0);
+  // Une constante périmée ne compte plus comme relevée dans la jauge du bilan.
+  assert.equal(vitalsScreenModel(stale).measuredCount, 0);
+});
+
+test("un constat non établi propose le geste qui l'établirait", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  const complaints = model.evaluations.find((entry) => entry.factId === "fact.plaintes")!;
+  assert.equal(complaints.known, false);
+  assert.equal(complaints.action?.id, "action.interroger-patient");
+  assert.equal(complaints.action?.enabled, true);
+
+  const played = play(atVitals(), "action.interroger-patient");
+  const after = vitalsScreenModel(toSessionView(played)).evaluations.find(
+    (entry) => entry.factId === "fact.plaintes",
+  )!;
+  assert.equal(after.known, true);
+  assert.equal(after.action, null, "un constat établi n'a plus de geste à proposer");
+  assert.ok(after.value.length > 0);
+});
+
+test("le matériel affiché est celui embarqué, avec ce qui a servi", () => {
+  const played = play(atVitals(["saturometre", "tensiometre"]), "action.prendre-tension");
+  const model = vitalsScreenModel(toSessionView(played));
+  assert.deepEqual(
+    model.equipment.map((chip) => [chip.label, chip.used]),
+    [
+      ["Saturomètre", false],
+      ["Tensiomètre", true],
+    ],
+  );
+  // Le saturomètre embarqué et jamais sorti reste visible : c'est l'oubli que
+  // l'écran doit rendre lisible, et le masquer l'effacerait.
+  assert.equal(model.equipment.length, 2);
+});
+
+test("poser le saturomètre le marque en place sur le patient", () => {
+  const played = play(atVitals(), "action.poser-saturometre");
+  const chip = vitalsScreenModel(toSessionView(played)).equipment.find(
+    (entry) => entry.id === "saturometre",
+  )!;
+  assert.equal(chip.attached, true);
+  assert.equal(chip.used, true);
+});
+
+/**
+ * L'invariant qui compte pour tout l'écran : un bouton actif est un bouton que le
+ * moteur accepte. Le vérifier action par action et sur plusieurs états ferme la
+ * seule vraie classe de bugs d'une interface de jeu — proposer un geste qui sera
+ * rejeté au clic, ou en cacher un qui était permis.
+ */
+test("un geste est actif si et seulement si le moteur l'accepte", () => {
+  const states: InterventionSession[] = [
+    atVitals(),
+    atVitals([]),
+    atVitals(["saturometre"]),
+    play(atVitals(), "action.poser-saturometre"),
+    play(atVitals(), "action.poser-saturometre", "action.palper-pouls", "action.compter-fr"),
+    play(atVitals(), "action.demander-renfort"),
+  ];
+  let checked = 0;
+  for (const state of states) {
+    const model = vitalsScreenModel(toSessionView(state));
+    for (const measure of model.quickMeasures) {
+      const engineRefuses = applyAction(state, measure.id).classification === "impossible";
+      assert.equal(
+        measure.enabled,
+        !engineRefuses,
+        `${measure.id} : écran ${measure.enabled ? "actif" : "inactif"}, moteur ${
+          engineRefuses ? "refuse" : "accepte"
+        }`,
+      );
+      assert.equal(measure.disabledReason === null, measure.enabled, measure.id);
+      checked += 1;
+    }
+  }
+  assert.ok(checked >= 30, `seulement ${checked} vérifications`);
+});
+
+test("aucune mesure rapide de cette phase n'est hors du champ DEA", () => {
+  const model = vitalsScreenModel(toSessionView(atVitals()));
+  for (const measure of model.quickMeasures) {
+    assert.ok(measure.reveals.length > 0, `${measure.id} ne renseigne rien`);
+    assert.ok(measure.timeSeconds > 0, `${measure.id} doit coûter du temps`);
+  }
+  // Les actes hors périmètre existent au catalogue mais pas à cette phase.
+  const ids = model.quickMeasures.map((measure) => measure.id);
+  for (const forbidden of ["action.poser-voie-veineuse", "action.injecter-produit"]) {
+    assert.ok(!ids.includes(forbidden), forbidden);
+  }
+});
+
+test("le bandeau de cet écran est celui des maquettes 3 et 4", () => {
+  const hud = hudModel(toSessionView(atVitals()), "monitoring", PLAYER);
+  assert.deepEqual(
+    hud.slots.map((slot) => slot.kind),
+    ["clock", "lives", "coins", "logo", "level", "avatar"],
+  );
 });

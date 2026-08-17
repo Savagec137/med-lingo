@@ -21,7 +21,7 @@ Les deux documents de conception restent la référence :
 | `facts/read-fact.ts`                  | **la seule porte d'accès aux données cliniques**           |
 | `facts/reveal-fact.ts`                | gel d'une mesure au moment du relevé                       |
 | `facts/source-trust.ts`               | niveau de confiance dérivé d'un document                   |
-| `actions/action-catalog.json`         | 21 actions jouables et 6 actions hors périmètre            |
+| `actions/action-catalog.json`         | 22 actions jouables et 6 actions hors périmètre            |
 | `actions/action-schema.ts`            | validation zod du catalogue, dont la garantie de périmètre |
 | `actions/action-catalog.ts`           | chargement et index                                        |
 | `scenarios/pilot-trauma-cranien.json` | le scénario pilote complet                                 |
@@ -33,7 +33,8 @@ Les deux documents de conception restent la référence :
 | `engine/v3-scoring.ts`                | note unique, axes explicatifs, vies et gains               |
 | `engine/v3-debrief.ts`                | débrief déterministe dérivé du journal                     |
 | `format-glycemia.ts`                  | conversion d'affichage mmol/L vers g/L                     |
-| `tests/`                              | 71 tests V3                                                |
+| `ui/`                                 | un présentateur pur par écran de maquette                  |
+| `tests/`                              | 115 tests V3                                               |
 
 ## Les deux axes d'un fait
 
@@ -214,7 +215,7 @@ base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local
 
 ## Tests
 
-`npm test` couvre les 71 tests du mode, en plus des 131 autres tests du projet.
+`npm test` couvre les 115 tests du mode, en plus des 214 autres tests du projet.
 
 | Fichier              | Couvre                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -223,6 +224,7 @@ base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local
 | `v3-pilot.test.ts`   | 21 tests : décisions produit, constantes initiales, questions du régulateur, gestes, confiance dans les sources |
 | `v3-engine.test.ts`  | 12 tests : actions, phases, trous, mesures figées, périmètre DEA                                                |
 | `v3-debrief.test.ts` | 4 tests : journal déterministe, vies, échec non profitable et glycémie                                          |
+| `v3-ui.test.ts`      | 44 tests : bandeaux, écrans 1 à 3, étanchéité des constantes, accord écran ↔ moteur                             |
 
 Deux tests méritent d'être lus avant de toucher au contrat. « la valeur relevée
 est figée » dégrade la SpO₂ du patient après la mesure et vérifie que l'écran
@@ -230,11 +232,45 @@ affiche toujours la valeur relevée. « un bilan complet ne déclenche aucune
 question du régulateur » vérifie que les questions naissent des trous et de rien
 d'autre.
 
+## La couche présentation
+
+`ui/` contient un module par écran de maquette. Chacun est une **fonction pure**
+qui prend une `InterventionSessionView` et rend ce que l'écran doit afficher :
+libellés, valeurs, boutons actifs. Aucun composant React n'y figure.
+
+Ce découpage n'est pas une élégance : ni `vite build` ni serveur de dev ne
+s'exécutent dans l'environnement de développement distant, et le dépôt n'a aucun
+outillage de rendu DOM. Un écran écrit directement en JSX y serait
+**invérifiable**. Sorti en fonction, il se teste — `tests/v3-ui.test.ts` couvre
+44 cas.
+
+| Module                   | Écran                     | État                  |
+| ------------------------ | ------------------------- | --------------------- |
+| `hud-model.ts`           | bandeau des 5 maquettes   | fait — 4 dispositions |
+| `new-call-screen.ts`     | 1 — Nouvel appel          | fait                  |
+| `arrival-screen.ts`      | 2 — Arrivée sur les lieux | fait                  |
+| `vitals-screen.ts`       | 3 — Constantes en direct  | fait                  |
+| `action-availability.ts` | boutons actifs, partout   | fait                  |
+
+**Deux règles tenues par des tests.**
+
+`actionAvailability` ne décide pas de ce qui est refusé : il interroge
+`actionRefusal`, dans le moteur, et ne traduit que la nature du refus en phrase
+affichable. La première version de l'écran d'arrivée rejouait ces règles de son
+côté et en avait déjà perdu deux — le capteur posé, et le fait qu'une action
+refusée ne compte pas comme accomplie. Un test vérifie désormais qu'un geste est
+actif **si et seulement si** le moteur l'accepte.
+
+Aucune valeur clinique n'est lue autrement que par `readFact`. Un test rend la
+règle mécanique : sur une session vierge à la phase des constantes, aucun chiffre
+n'apparaît dans le texte de l'écran — ni dans les cartes, ni dans les
+évaluations, ni dans le récit.
+
 ## Reste à faire
 
-**Interface.** Les sept écrans, le hook, la persistance/reprise et le test de
-rendu sur session vierge. Les maquettes restent une référence visuelle : aucune
-constante ne devra être lue sans `readFact`.
+**Interface.** Les écrans 4 à 7 en couche présentation — appel au 15, gestes
+prioritaires, réévaluation, débriefing — puis les composants React, le hook, la
+persistance/reprise et la route. Les maquettes restent la référence visuelle.
 
 **Points ouverts.** La politique d'indices `hintPolicy` par niveau de difficulté,
 la persistance versionnée des sessions, la nature du rejeu et le comportement de

@@ -19,3 +19,14 @@ export function formatGlycemiaForUi(value: number): string {
 export function formatGlycemiaFactForUi(value: FactValue): string | undefined {
   return value.kind === "numeric" ? formatGlycemiaForUi(value.value) : undefined;
 }
+
+/**
+ * La même valeur dans l'unité du moteur.
+ *
+ * Le relevé d'une glycémie est formaté en g/L à l'affichage, mais le nombre
+ * conservé reste en mmol/L. Les deux unités doivent pouvoir coexister sur une
+ * carte sans que la seconde soit recalculée à la main ailleurs.
+ */
+export function formatGlycemiaMmolForUi(value: number): string {
+  return `${value.toFixed(1).replace(".", ",")} mmol/L`;
+}

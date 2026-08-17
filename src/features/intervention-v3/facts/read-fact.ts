@@ -5,6 +5,13 @@
  * soit une valeur relevée, soit une absence nommée. `status: "unknown"` n'est
  * pas une erreur : c'est le cas d'affichage qui produit les « Non mesurée » de
  * l'écran de réévaluation.
+ *
+ * Ces fonctions prennent une `InterventionSessionView`, et non la session
+ * complète : c'est ce que l'interface détient. Le contraire rendait la porte
+ * inutilisable par celui à qui elle est destinée — un composant ne peut pas
+ * fournir les constantes réelles, elles lui sont structurellement retirées. Le
+ * moteur, qui détient la session entière, continue d'appeler ces fonctions sans
+ * changement : une session complète satisfait la vue.
  */
 
 import type {
@@ -15,7 +22,7 @@ import type {
   FactUnknownReason,
   FactValue,
   InterventionScenario,
-  InterventionSession,
+  InterventionSessionView,
 } from "../v3-domain.ts";
 import type { VitalTrend } from "../clinical/intervention-vitals.ts";
 import { getFact } from "./fact-registry.ts";
@@ -62,7 +69,7 @@ export function trendOf(
 
 /** Historique exploitable pour une courbe. Vide sous deux mesures. */
 export function trendSeries(
-  session: InterventionSession,
+  session: InterventionSessionView,
   factId: FactId,
 ): readonly FactMeasurement[] {
   const state = session.revealedFacts[factId];
@@ -70,7 +77,7 @@ export function trendSeries(
   return state.measurements;
 }
 
-const missingEquipment = (session: InterventionSession, fact: ClinicalFact) =>
+const missingEquipment = (session: InterventionSessionView, fact: ClinicalFact) =>
   fact.requiresEquipment.filter(
     (id) => !session.equipment.some((entry) => entry.id === id && entry.prepared),
   );
@@ -80,7 +87,7 @@ const missingEquipment = (session: InterventionSession, fact: ClinicalFact) =>
  * phase courante n'entre pas en compte pour un fait déjà relevé — ce qui a été
  * mesuré reste connu d'un écran à l'autre.
  */
-export function isFactVisible(session: InterventionSession, factId: FactId): boolean {
+export function isFactVisible(session: InterventionSessionView, factId: FactId): boolean {
   const fact = getFact(factId);
   switch (fact.visibility) {
     case "always":
@@ -95,7 +102,10 @@ export function isFactVisible(session: InterventionSession, factId: FactId): boo
 }
 
 /** Valeur d'un fait calculé, à partir des seuls faits déjà visibles. */
-function resolveDerived(session: InterventionSession, fact: ClinicalFact): FactValue | undefined {
+function resolveDerived(
+  session: InterventionSessionView,
+  fact: ClinicalFact,
+): FactValue | undefined {
   if (fact.id !== "fact.stabilite-parametres") return undefined;
   const severities = fact.dependsOn.map((id) => session.revealedFacts[id]?.severity);
   if (severities.some((severity) => severity === undefined)) return undefined;
@@ -109,7 +119,7 @@ function resolveDerived(session: InterventionSession, fact: ClinicalFact): FactV
 }
 
 function unknownReason(
-  session: InterventionSession,
+  session: InterventionSessionView,
   scenario: InterventionScenario,
   fact: ClinicalFact,
 ): { reason: FactUnknownReason; label: string } {
@@ -143,7 +153,7 @@ function notMeasuredLabel(fact: ClinicalFact): string {
  * affiche la dernière prise, ce qui est fidèle au terrain et donne la
  * péremption sans mécanisme dédié.
  */
-export function readFact(session: InterventionSession, factId: FactId): FactRead {
+export function readFact(session: InterventionSessionView, factId: FactId): FactRead {
   const fact = getFact(factId);
   const scenario = getV3Scenario(session.scenarioId);
 
@@ -202,15 +212,20 @@ export function readFact(session: InterventionSession, factId: FactId): FactRead
   };
 }
 
-export const readFacts = (session: InterventionSession, factIds: readonly FactId[]): FactRead[] =>
-  factIds.map((factId) => readFact(session, factId));
+export const readFacts = (
+  session: InterventionSessionView,
+  factIds: readonly FactId[],
+): FactRead[] => factIds.map((factId) => readFact(session, factId));
 
 /**
  * Faits attendus au bilan qui manquent ou sont périmés. Alimente la liste de
  * rappel de l'écran de réévaluation et les questions du régulateur : elle est
  * calculée, jamais rédigée dans les données de mission.
  */
-export function gapFactIds(session: InterventionSession, scenario: InterventionScenario): FactId[] {
+export function gapFactIds(
+  session: InterventionSessionView,
+  scenario: InterventionScenario,
+): FactId[] {
   return scenario.expectedHandoverFactIds.filter((factId) => {
     const read = readFact(session, factId);
     return read.status === "unknown" || read.isStale;
@@ -218,7 +233,7 @@ export function gapFactIds(session: InterventionSession, scenario: InterventionS
 }
 
 /** Couverture des faits pour le débriefing : mesuré, non mesuré, hors d'atteinte. */
-export function factCoverage(session: InterventionSession, scenario: InterventionScenario) {
+export function factCoverage(session: InterventionSessionView, scenario: InterventionScenario) {
   return scenario.factIds.map((factId) => {
     const fact = getFact(factId);
     const read = readFact(session, factId);

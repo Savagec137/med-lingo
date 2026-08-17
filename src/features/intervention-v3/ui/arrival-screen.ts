@@ -1,6 +1,7 @@
 import type { InterventionSessionView, PlayerActionId } from "../v3-domain.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { actionsForPhase } from "../actions/action-catalog.ts";
+import { actionAvailability } from "./action-availability.ts";
 
 /**
  * Écran 2 — « Arrivée sur les lieux ».
@@ -10,11 +11,12 @@ import { actionsForPhase } from "../actions/action-catalog.ts";
  * maquette afficherait des boutons que le moteur refuse, ou masquerait des
  * actions qu'il autorise.
  *
- * **Écart connu avec la maquette**, consigné et testé plus bas : la maquette
- * montre quatre actions, le catalogue n'en propose que deux à cette phase.
- * « Approcher le patient » y existe mais pour la phase suivante, et « Demander
- * renfort » n'existe pas du tout. Ces deux points attendent un arbitrage : ils ne
- * sont ni ajoutés au catalogue ni effacés de la maquette de ma seule initiative.
+ * L'écart initial est résorbé : le catalogue ne proposait que deux des quatre
+ * actions de la maquette, il a été étendu sur autorisation et un test interdit
+ * que l'écart se rouvre.
+ *
+ * Ce qui active ou désactive une carte n'est pas décidé ici : `actionAvailability`
+ * interroge le moteur, qui reste seul juge des refus.
  */
 
 /** Les quatre actions de la maquette 2, dans son ordre, pour comparaison. */
@@ -70,30 +72,15 @@ export function arrivalScreenModel(
 ): ArrivalScreenModel {
   const scenario = getV3Scenario(session.scenarioId);
   const alert = scenario.alert;
-  const used = new Set(session.actionLog.map((entry) => entry.actionId));
 
   const actions = actionsForPhase(session.phase).map((action): ArrivalActionModel => {
-    const exhausted =
-      action.requires.maxUses !== null &&
-      session.actionLog.filter((entry) => entry.actionId === action.id).length >=
-        action.requires.maxUses;
-    const missingEquipment = action.requires.equipment.filter(
-      (equipmentId) => !session.equipment.some((item) => item.id === equipmentId && item.prepared),
-    );
-    const blocked = action.requires.blockingActions.filter((required) => !used.has(required));
-
-    let disabledReason: string | null = null;
-    if (action.outOfScope) disabledReason = action.outOfScopeReason;
-    else if (exhausted) disabledReason = "Action déjà réalisée.";
-    else if (missingEquipment.length > 0) disabledReason = "Matériel indisponible.";
-    else if (blocked.length > 0) disabledReason = "Une action préalable manque.";
-
+    const availability = actionAvailability(session, action);
     return {
       id: action.id,
       label: action.label,
       hint: action.hint,
-      enabled: disabledReason === null,
-      disabledReason,
+      enabled: availability.enabled,
+      disabledReason: availability.disabledReason,
       outOfScope: action.outOfScope,
     };
   });
