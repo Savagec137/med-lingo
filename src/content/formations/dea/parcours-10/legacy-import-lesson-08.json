@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-10",
+  "id": "dea-p10-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": 30,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Physiologie du système endocrinien"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l08"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l08-q371",
+      "difficulty": "easy",
+      "question": "Les hormones sont :",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q371",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q371-answer-01",
+          "text": "Des messagers chimiques",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q371-answer-02",
+          "text": "Des cellules sanguines",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q371-answer-03",
+          "text": "Des enzymes digestives",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q371-answer-04",
+          "text": "Des fibres musculaires",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q371-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l08-q372",
+      "difficulty": "easy",
+      "question": "Quelle hormone fait diminuer la glycémie ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q372",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q372-answer-01",
+          "text": "L'insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q372-answer-02",
+          "text": "Le glucagon",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q372-answer-03",
+          "text": "L'adrénaline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q372-answer-04",
+          "text": "Le cortisol",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q372-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l08-q373",
+      "difficulty": "easy",
+      "question": "La thyroïde participe à la régulation du métabolisme.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q373",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q373-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q373-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q373-true"
+    },
+    {
+      "id": "import-b01-p04-l08-q374",
+      "difficulty": "easy",
+      "question": "Les hormones circulent principalement dans les bronches.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q374",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q374-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q374-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q374-false"
+    },
+    {
+      "id": "import-b01-p04-l08-q375",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q375",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q375-pair-01",
+          "text": "Pancréas",
+          "match": "Insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q375-pair-02",
+          "text": "Thyroïde",
+          "match": "Métabolisme",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q375-pair-03",
+          "text": "Surrénales",
+          "match": "Adrénaline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q375-pair-04",
+          "text": "Hormones",
+          "match": "Messagers chimiques",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l08-q375-pair-01",
+        "import-b01-p04-l08-q375-pair-02",
+        "import-b01-p04-l08-q375-pair-03",
+        "import-b01-p04-l08-q375-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l08-q376",
+      "difficulty": "medium",
+      "question": "L'hormone qui diminue la glycémie est l'______.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q376",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "insuline"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q376-accepted-01",
+          "text": "insuline",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l08-q376-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l08-q377",
+      "difficulty": "hard",
+      "question": "Quel est le rôle principal du système endocrinien ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q377",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q377-answer-01",
+          "text": "Réguler les fonctions de l'organisme grâce aux hormones",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q377-answer-02",
+          "text": "Transporter l'oxygène",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q377-answer-03",
+          "text": "Assurer la digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q377-answer-04",
+          "text": "Produire les cellules sanguines",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q377-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l08-q378",
+      "difficulty": "hard",
+      "question": "Un patient présente une hypoglycémie symptomatique. Quelle hormone est directement impliquée dans cette régulation ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q378",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q378-answer-01",
+          "text": "L'insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q378-answer-02",
+          "text": "La thyroxine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q378-answer-03",
+          "text": "L'aldostérone",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l08-q378-answer-04",
+          "text": "La mélatonine",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l08-q378-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l08-q379",
+      "difficulty": "medium",
+      "question": "Replace les étapes d'une régulation hormonale.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q379",
+        "originalType": "ordering",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "requiredSelections": 5
+      },
+      "type": "ordering",
+      "answers": [
+        {
+          "id": "import-b01-p04-l08-q379-step-01",
+          "text": "Stimulus",
+          "explanation": "",
+          "sequenceRank": 1
+        },
+        {
+          "id": "import-b01-p04-l08-q379-step-02",
+          "text": "Sécrétion hormonale",
+          "explanation": "",
+          "sequenceRank": 2
+        },
+        {
+          "id": "import-b01-p04-l08-q379-step-03",
+          "text": "Transport sanguin",
+          "explanation": "",
+          "sequenceRank": 3
+        },
+        {
+          "id": "import-b01-p04-l08-q379-step-04",
+          "text": "Organe cible",
+          "explanation": "",
+          "sequenceRank": 4
+        },
+        {
+          "id": "import-b01-p04-l08-q379-step-05",
+          "text": "Réponse physiologique",
+          "explanation": "",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l08-q379-step-01",
+        "import-b01-p04-l08-q379-step-02",
+        "import-b01-p04-l08-q379-step-03",
+        "import-b01-p04-l08-q379-step-04",
+        "import-b01-p04-l08-q379-step-05"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l08-q380",
+      "difficulty": "medium",
+      "question": "Clique sur la thyroïde.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l08"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l08"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L08",
+        "originalQuestionId": "Q380",
+        "originalType": "anatomy_click",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "anatomyTarget": "thyroid"
+      },
+      "type": "anatomy_location",
+      "answers": [
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "detail": "0.5,0.17",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "detail": "0.42,0.46",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-left_upper_limb",
+          "text": "Membre supérieur gauche",
+          "detail": "0.82,0.36",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "detail": "0.5,0.31",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-spinal_cord",
+          "text": "Moelle épinière",
+          "detail": "0.5,0.27",
+          "explanation": ""
+        },
+        {
+          "id": "hotspot-right_upper_limb",
+          "text": "Membre supérieur droit",
+          "detail": "0.18,0.36",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "hotspot-thyroid"
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l07",
+  "title": "Les grands équilibres hormonaux",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50, 51",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Expliquer l’autorégulation et la constance du milieu interne.",
+    "Rattacher chaque grand équilibre à sa glande de référence.",
+    "Comprendre pourquoi les signes d’un dérèglement sont dispersés."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organization.organ-to-system",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l07-q01",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que dit le support de l’autorégulation du système endocrinien ?",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q01-a1",
+          "text": "Il fonctionne sous l’influence de l’extérieur",
+          "explanation": "Le support le précise."
+        },
+        {
+          "id": "dea-p10-l07-q01-a2",
+          "text": "Il répond aussi à des facteurs internes à l’organisme",
+          "explanation": "C’est ce que le support nomme autorégulation."
+        },
+        {
+          "id": "dea-p10-l07-q01-a3",
+          "text": "Toutes les glandes concourent à la constance du milieu interne",
+          "explanation": "Le support l’indique."
+        },
+        {
+          "id": "dea-p10-l07-q01-a4",
+          "text": "Il fonctionne indépendamment de tout signal extérieur",
+          "explanation": "Le support décrit au contraire une double influence.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q01-a5",
+          "text": "Il est commandé uniquement par la volonté",
+          "explanation": "Le support ne décrit aucune commande volontaire.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l07-q01-a1",
+        "dea-p10-l07-q01-a2",
+        "dea-p10-l07-q01-a3"
+      ],
+      "explanation": "Le système endocrinien répond au milieu extérieur et à des facteurs internes ; toutes les glandes concourent à la constance du milieu interne.",
+      "knowledgeIds": [
+        "K-DEA-P10-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - autorégulation",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La double influence explique qu’un même patient réagisse différemment selon le contexte.",
+        "commonMistake": "Croire le système autonome de tout signal extérieur en fait un mécanisme fermé, ce qu’il n’est pas.",
+        "keyTakeaway": "Dehors et dedans : deux sources d’influence.",
+        "fieldApplication": "Un patient exposé au froid ou au stress peut présenter des variations qui ne sont pas des anomalies."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La double influence explique qu’un même patient réagisse différemment selon le contexte.",
+      "common_mistake": "Croire le système autonome de tout signal extérieur en fait un mécanisme fermé, ce qu’il n’est pas.",
+      "key_takeaway": "Dehors et dedans : deux sources d’influence.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - autorégulation",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-003"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l07-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels exemples de constantes le support cite-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q02-a1",
+          "text": "La température corporelle",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l07-q02-a2",
+          "text": "La quantité de sel circulant dans le sang",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l07-q02-a3",
+          "text": "La quantité de sucre circulant dans le sang",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l07-q02-a4",
+          "text": "Le nombre de vertèbres du rachis",
+          "explanation": "Ce n’est pas une constante du milieu interne.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q02-a5",
+          "text": "Le nombre de paires de nerfs crâniens",
+          "explanation": "Ce n’est pas une constante du milieu interne.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l07-q02-a1",
+        "dea-p10-l07-q02-a2",
+        "dea-p10-l07-q02-a3"
+      ],
+      "explanation": "Le support cite la température corporelle, la quantité de sel et la quantité de sucre circulant dans le sang comme exemples de constantes.",
+      "knowledgeIds": [
+        "K-DEA-P10-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - autorégulation",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces trois constantes sont celles qu’un ambulancier peut approcher : température, glycémie, état d’hydratation.",
+        "commonMistake": "Confondre une constante physiologique et un nombre anatomique mélange deux registres.",
+        "keyTakeaway": "Température, sel, sucre : trois constantes citées.",
+        "fieldApplication": "Deux de ces constantes correspondent à des paramètres que l’ambulancier est autorisé à recueillir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces trois constantes sont celles qu’un ambulancier peut approcher : température, glycémie, état d’hydratation.",
+      "common_mistake": "Confondre une constante physiologique et un nombre anatomique mélange deux registres.",
+      "key_takeaway": "Température, sel, sucre : trois constantes citées.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - autorégulation",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-003"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l07-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Comment le système endocrinien agit-il sur ses cibles, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q03-a1",
+          "text": "Par stimulation ou par inhibition",
+          "explanation": "Le support cite les deux effets."
+        },
+        {
+          "id": "dea-p10-l07-q03-a2",
+          "text": "Par stimulation uniquement",
+          "explanation": "Le support cite aussi l’inhibition.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q03-a3",
+          "text": "Par inhibition uniquement",
+          "explanation": "Le support cite aussi la stimulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q03-a4",
+          "text": "Par un influx électrique direct",
+          "explanation": "Ce mode est celui du système nerveux.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p10-l07-q03-a1",
+      "explanation": "Le support décrit une action par stimulation ou inhibition, qui permet de réguler les différentes fonctions de l’organisme.",
+      "knowledgeIds": [
+        "K-DEA-P10-001",
+        "K-DEA-P10-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - rôle",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Pouvoir freiner autant qu’accélérer est ce qui distingue une régulation d’une simple commande.",
+        "commonMistake": "N’en retenir qu’un sens rend incompréhensible le retour à l’équilibre.",
+        "keyTakeaway": "Accélérer ou freiner, selon le besoin.",
+        "fieldApplication": "Des signes opposés peuvent relever d’un même système : le bilan les décrit sans trancher."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Pouvoir freiner autant qu’accélérer est ce qui distingue une régulation d’une simple commande.",
+      "common_mistake": "N’en retenir qu’un sens rend incompréhensible le retour à l’équilibre.",
+      "key_takeaway": "Accélérer ou freiner, selon le besoin.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - rôle",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-001",
+          "K-DEA-P10-003"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l07-q04",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Selon le support, seules quelques glandes participent à la constance du milieu interne.",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q04-a1",
+          "text": "Vrai",
+          "explanation": "Le support indique que toutes les glandes y concourent.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q04-a2",
+          "text": "Faux",
+          "explanation": "Toutes les glandes ont des fonctions diverses dont assurer cette constance."
+        }
+      ],
+      "correctAnswer": "dea-p10-l07-q04-a2",
+      "explanation": "Le support indique que toutes les glandes ont des fonctions diverses, dont assurer la constance du milieu interne.",
+      "knowledgeIds": [
+        "K-DEA-P10-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - autorégulation",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La constance du milieu interne est une fonction partagée, pas la spécialité d’une glande.",
+        "commonMistake": "Réserver cette fonction à quelques glandes fait oublier la cohérence de l’ensemble.",
+        "keyTakeaway": "Toutes y concourent.",
+        "fieldApplication": "Un déséquilibre général peut relever de plusieurs glandes : le bilan décrit sans trancher."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La constance du milieu interne est une fonction partagée, pas la spécialité d’une glande.",
+      "common_mistake": "Réserver cette fonction à quelques glandes fait oublier la cohérence de l’ensemble.",
+      "key_takeaway": "Toutes y concourent.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - autorégulation",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-003"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l07-q05",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque constante citée par le support à la glande que le support rattache à son domaine.",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q05-a1",
+          "text": "Quantité de sucre dans le sang",
+          "explanation": "Le support attribue cette régulation au pancréas.",
+          "match": "Pancréas"
+        },
+        {
+          "id": "dea-p10-l07-q05-a2",
+          "text": "Quantité de calcium",
+          "explanation": "Le support l’attribue aux parathyroïdes.",
+          "match": "Parathyroïdes"
+        },
+        {
+          "id": "dea-p10-l07-q05-a3",
+          "text": "Métabolisme et croissance",
+          "explanation": "Le support les attribue à la thyroïde.",
+          "match": "Thyroïde"
+        },
+        {
+          "id": "dea-p10-l07-q05-a4",
+          "text": "Pression artérielle",
+          "explanation": "Le support y rattache une hormone surrénalienne.",
+          "match": "Glandes surrénales"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l07-q05-a1",
+        "dea-p10-l07-q05-a2",
+        "dea-p10-l07-q05-a3",
+        "dea-p10-l07-q05-a4"
+      ],
+      "explanation": "Chaque grand équilibre a une glande de référence dans le support, sans recouvrement entre elles.",
+      "knowledgeIds": [
+        "K-DEA-P10-005",
+        "K-DEA-P10-007",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes",
+      "sourcePages": "50, 51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Rattacher un équilibre à sa glande donne une carte utilisable pour lire une transmission.",
+        "commonMistake": "Mélanger deux domaines rend la carte inutilisable.",
+        "keyTakeaway": "Un équilibre, une glande de référence.",
+        "fieldApplication": "Deux de ces équilibres correspondent à des paramètres recueillis par l’ambulancier."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Rattacher un équilibre à sa glande donne une carte utilisable pour lire une transmission.",
+      "common_mistake": "Mélanger deux domaines rend la carte inutilisable.",
+      "key_takeaway": "Un équilibre, une glande de référence.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes",
+        "sourcePages": "50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005",
+          "K-DEA-P10-007",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l07-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support indique que le système fonctionne aussi en réponse à des facteurs internes, ce qu’il nomme l’______.",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q06-a1",
+          "text": "autorégulation",
+          "explanation": "C’est le terme employé par le support."
+        },
+        {
+          "id": "dea-p10-l07-q06-a2",
+          "text": "inhibition",
+          "explanation": "L’inhibition est un des deux effets sur les cibles, pas le mécanisme d’ensemble.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l07-q06-a1",
+      "explanation": "Le support nomme autorégulation la réponse du système à des facteurs internes à l’organisme.",
+      "knowledgeIds": [
+        "K-DEA-P10-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - autorégulation",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le terme désigne un mécanisme d’ensemble, distinct des effets exercés sur une cible donnée.",
+        "commonMistake": "Confondre le mécanisme global et l’un de ses effets brouille la description.",
+        "keyTakeaway": "L’autorégulation répond au dedans.",
+        "fieldApplication": "Employer le terme du support facilite la relecture par un formateur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le terme désigne un mécanisme d’ensemble, distinct des effets exercés sur une cible donnée.",
+      "common_mistake": "Confondre le mécanisme global et l’un de ses effets brouille la description.",
+      "key_takeaway": "L’autorégulation répond au dedans.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - autorégulation",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-003"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "autorégulation",
+          "autoregulation",
+          "l’autorégulation"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l07-q07",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Pourquoi un dérèglement hormonal peut-il donner des signes très éloignés de la glande en cause ?",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q07-a1",
+          "text": "Parce que les hormones sont véhiculées par le sang et agissent à distance",
+          "explanation": "C’est le mode d’action décrit par le support."
+        },
+        {
+          "id": "dea-p10-l07-q07-a2",
+          "text": "Parce que les glandes sont toutes situées au même endroit",
+          "explanation": "Le support les situe au contraire à des étages différents.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q07-a3",
+          "text": "Parce que les hormones circulent dans les nerfs",
+          "explanation": "Le support décrit un transport sanguin.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p10-l07-q07-a4",
+          "text": "Parce que chaque glande n’a qu’une seule cible",
+          "explanation": "Le support décrit des actions larges, sur plusieurs systèmes.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l07-q07-a1",
+      "explanation": "Le transport sanguin et l’action à distance expliquent qu’une atteinte se manifeste loin de son origine.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ce mécanisme est ce qui rend le bilan endocrinien difficile à localiser : les signes sont dispersés.",
+        "commonMistake": "Chercher une cause près du signe conduit à ignorer une glande éloignée.",
+        "keyTakeaway": "Produite ici, active ailleurs.",
+        "fieldApplication": "Le bilan décrit tous les signes constatés, sans chercher à les rattacher à un seul organe."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ce mécanisme est ce qui rend le bilan endocrinien difficile à localiser : les signes sont dispersés.",
+      "common_mistake": "Chercher une cause près du signe conduit à ignorer une glande éloignée.",
+      "key_takeaway": "Produite ici, active ailleurs.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l07-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient présente à la fois une fatigue, une soif inhabituelle et une envie fréquente d’uriner. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p10-l07-q08-a1",
+          "text": "Les trois éléments rapportés, leur ancienneté, et le résultat d’une glycémie si elle a pu être recueillie",
+          "explanation": "Trois plaintes et, éventuellement, une mesure autorisée."
+        },
+        {
+          "id": "dea-p10-l07-q08-a2",
+          "text": "Un diabète",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q08-a3",
+          "text": "Un déséquilibre hormonal",
+          "explanation": "Nommer un mécanisme est déjà une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l07-q08-a4",
+          "text": "La seule fatigue, les deux autres plaintes étant subjectives",
+          "explanation": "Une plainte rapportée est une information à transmettre.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-l07-q08-a1",
+      "explanation": "Trois plaintes concordantes se transmettent ensemble. Le recueil de la glycémie est autorisé ; le diagnostic ne l’est pas.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ce tableau est exactement celui où le recueil autorisé de la glycémie apporte le plus à la régulation.",
+        "commonMistake": "Nommer un diabète transforme trois plaintes en diagnostic non autorisé.",
+        "keyTakeaway": "Trois plaintes, une mesure autorisée, aucune conclusion.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Ce tableau est exactement celui où le recueil autorisé de la glycémie apporte le plus à la régulation.",
+      "common_mistake": "Nommer un diabète transforme trois plaintes en diagnostic non autorisé.",
+      "key_takeaway": "Trois plaintes, une mesure autorisée, aucune conclusion.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l07",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

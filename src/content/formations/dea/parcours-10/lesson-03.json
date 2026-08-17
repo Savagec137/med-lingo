@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l03",
+  "title": "La thyroïde",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 52",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer thyroïde, parathyroïdes et thymus.",
+    "Décrire l’étendue de l’action thyroïdienne.",
+    "Distinguer deux glandes aux noms voisins."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.location",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l02"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l03-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il la thyroïde ?",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q01-a1",
+          "text": "Sur la base du cou",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l03-q01-a2",
+          "text": "À la base du cerveau",
+          "explanation": "C’est la localisation de l’hypophyse.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q01-a3",
+          "text": "Derrière le sternum",
+          "explanation": "C’est la localisation du thymus.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q01-a4",
+          "text": "Au-dessus des reins",
+          "explanation": "C’est la localisation des surrénales."
+        }
+      ],
+      "correctAnswer": "dea-p10-l03-q01-a1",
+      "explanation": "La thyroïde est située sur la base du cou.",
+      "knowledgeIds": [
+        "K-DEA-P10-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Quatre glandes, quatre localisations : les mémoriser ensemble évite de les confondre.",
+        "commonMistake": "Confondre thyroïde et thymus, dont les noms se ressemblent, déplace la glande d’une région.",
+        "keyTakeaway": "La thyroïde est au cou, le thymus derrière le sternum.",
+        "fieldApplication": "Situer une glande permet de comprendre le vocabulaire d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Quatre glandes, quatre localisations : les mémoriser ensemble évite de les confondre.",
+      "common_mistake": "Confondre thyroïde et thymus, dont les noms se ressemblent, déplace la glande d’une région.",
+      "key_takeaway": "La thyroïde est au cou, le thymus derrière le sternum.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l03-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Sur quoi la thyroïde agit-elle, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q02-a1",
+          "text": "La croissance",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l03-q02-a2",
+          "text": "Le système cardiaque",
+          "explanation": "Le support le cite."
+        },
+        {
+          "id": "dea-p10-l03-q02-a3",
+          "text": "Le système digestif",
+          "explanation": "Le support le cite."
+        },
+        {
+          "id": "dea-p10-l03-q02-a4",
+          "text": "Le métabolisme",
+          "explanation": "Le support le cite."
+        },
+        {
+          "id": "dea-p10-l03-q02-a5",
+          "text": "La filtration du sang",
+          "explanation": "Elle relève de l’appareil excréteur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l03-q02-a1",
+        "dea-p10-l03-q02-a2",
+        "dea-p10-l03-q02-a3",
+        "dea-p10-l03-q02-a4"
+      ],
+      "explanation": "Le support fait agir la thyroïde sur la croissance, les systèmes nerveux, cardiaque, musculaire, digestif, génital et sur le métabolisme.",
+      "knowledgeIds": [
+        "K-DEA-P10-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’étendue de son action explique qu’un dérèglement thyroïdien donne des signes très variés.",
+        "commonMistake": "Restreindre son action à un seul système fait manquer la dispersion des signes.",
+        "keyTakeaway": "Une glande, de très nombreuses cibles.",
+        "fieldApplication": "Des signes dispersés peuvent relever d’une seule glande : le bilan les rapporte tous."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’étendue de son action explique qu’un dérèglement thyroïdien donne des signes très variés.",
+      "common_mistake": "Restreindre son action à un seul système fait manquer la dispersion des signes.",
+      "key_takeaway": "Une glande, de très nombreuses cibles.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l03-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel rôle le support attribue-t-il aux parathyroïdes ?",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q03-a1",
+          "text": "Un rôle dans la régulation du calcium",
+          "explanation": "C’est la fonction citée par le support."
+        },
+        {
+          "id": "dea-p10-l03-q03-a2",
+          "text": "La régulation du taux de sucre",
+          "explanation": "Elle est attribuée au pancréas.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q03-a3",
+          "text": "La production de la testostérone",
+          "explanation": "Elle est attribuée au testicule endocrine.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q03-a4",
+          "text": "La stimulation de toutes les glandes",
+          "explanation": "Elle est attribuée à l’hypophyse."
+        }
+      ],
+      "correctAnswer": "dea-p10-l03-q03-a1",
+      "explanation": "Les parathyroïdes, situées sur la thyroïde, jouent un rôle dans la régulation du calcium.",
+      "knowledgeIds": [
+        "K-DEA-P10-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux glandes voisines et de noms proches, mais deux fonctions distinctes.",
+        "commonMistake": "Attribuer aux parathyroïdes les fonctions de la thyroïde efface la distinction que le support pose.",
+        "keyTakeaway": "La thyroïde agit largement ; les parathyroïdes règlent le calcium.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux glandes voisines et de noms proches, mais deux fonctions distinctes.",
+      "common_mistake": "Attribuer aux parathyroïdes les fonctions de la thyroïde efface la distinction que le support pose.",
+      "key_takeaway": "La thyroïde agit largement ; les parathyroïdes règlent le calcium.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l03-q04",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Où le support situe-t-il le thymus ?",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q04-a1",
+          "text": "Dans la cage thoracique, derrière le sternum",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l03-q04-a2",
+          "text": "Sur la thyroïde",
+          "explanation": "C’est la localisation des parathyroïdes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q04-a3",
+          "text": "À la base du cou",
+          "explanation": "C’est la localisation de la thyroïde.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q04-a4",
+          "text": "Au-dessus des reins",
+          "explanation": "C’est la localisation des surrénales."
+        }
+      ],
+      "correctAnswer": "dea-p10-l03-q04-a1",
+      "explanation": "Le thymus est situé dans la cage thoracique, derrière le sternum, et agit sur le système nerveux.",
+      "knowledgeIds": [
+        "K-DEA-P10-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le thymus",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Thymus et thyroïde se ressemblent par le nom, pas par la localisation.",
+        "commonMistake": "Situer le thymus dans le cou le confond avec la thyroïde.",
+        "keyTakeaway": "Le thymus est dans le thorax, pas dans le cou.",
+        "fieldApplication": "Deux glandes aux noms voisins se situent à deux étages différents."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Thymus et thyroïde se ressemblent par le nom, pas par la localisation.",
+      "common_mistake": "Situer le thymus dans le cou le confond avec la thyroïde.",
+      "key_takeaway": "Le thymus est dans le thorax, pas dans le cou.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le thymus",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-006"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l03-q05",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "Désigne, sur le schéma, la glande que le support situe sur la base du cou.",
+      "answers": [
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "explanation": "Le support la situe à la base du cou.",
+          "detail": "0.5,0.17"
+        },
+        {
+          "id": "hotspot-brain",
+          "text": "Cerveau",
+          "explanation": "L’hypophyse est à sa base, mais le cerveau n’est pas une glande.",
+          "detail": "0.5,0.08",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-thorax",
+          "text": "Thorax",
+          "explanation": "Le thorax est une région, pas une glande.",
+          "detail": "0.5,0.31",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "explanation": "Elles sont situées au-dessus des reins.",
+          "detail": "0.5,0.43",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "hotspot-thyroid",
+      "explanation": "La thyroïde est située sur la base du cou ; les surrénales sont au-dessus des reins.",
+      "knowledgeIds": [
+        "K-DEA-P10-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Situer les glandes les unes par rapport aux autres évite de les confondre en transmission.",
+        "commonMistake": "Désigner une région au lieu d’une glande rend la description inutilisable.",
+        "keyTakeaway": "La thyroïde est une glande ; le thorax est une région.",
+        "fieldApplication": "Une masse ou une cicatrice décrite au cou se situe par sa région, pas par l’organe supposé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Situer les glandes les unes par rapport aux autres évite de les confondre en transmission.",
+      "common_mistake": "Désigner une région au lieu d’une glande rend la description inutilisable.",
+      "key_takeaway": "La thyroïde est une glande ; le thorax est une région.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - thyroïde et parathyroïdes",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "thyroid"
+      }
+    },
+    {
+      "id": "dea-p10-l03-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque glande à sa localisation, telle que le support la donne.",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q06-a1",
+          "text": "Hypophyse",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cerveau"
+        },
+        {
+          "id": "dea-p10-l03-q06-a2",
+          "text": "Thyroïde",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cou"
+        },
+        {
+          "id": "dea-p10-l03-q06-a3",
+          "text": "Thymus",
+          "explanation": "Le support le situe là.",
+          "match": "Derrière le sternum"
+        },
+        {
+          "id": "dea-p10-l03-q06-a4",
+          "text": "Glandes surrénales",
+          "explanation": "Le support les situe là.",
+          "match": "Au-dessus des reins"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l03-q06-a1",
+        "dea-p10-l03-q06-a2",
+        "dea-p10-l03-q06-a3",
+        "dea-p10-l03-q06-a4"
+      ],
+      "explanation": "Quatre glandes, quatre localisations distinctes que le support énonce précisément.",
+      "knowledgeIds": [
+        "K-DEA-P10-004",
+        "K-DEA-P10-005",
+        "K-DEA-P10-006",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes",
+      "sourcePages": "50, 51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une carte des glandes permet de rattacher un terme entendu à une région du corps.",
+        "commonMistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+        "keyTakeaway": "Tête, cou, thorax, abdomen : quatre étages, quatre glandes.",
+        "fieldApplication": "Situer correctement une glande rend la description transmissible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une carte des glandes permet de rattacher un terme entendu à une région du corps.",
+      "common_mistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+      "key_takeaway": "Tête, cou, thorax, abdomen : quatre étages, quatre glandes.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes",
+        "sourcePages": "50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004",
+          "K-DEA-P10-005",
+          "K-DEA-P10-006",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l03-q07",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support cite l’hyperthyroïdie et l’______ parmi ses mots-clés.",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q07-a1",
+          "text": "hypothyroïdie",
+          "explanation": "Le support cite les deux termes ensemble."
+        },
+        {
+          "id": "dea-p10-l03-q07-a2",
+          "text": "hypoglycémie",
+          "explanation": "Ce terme ne figure pas dans la liste des mots-clés endocriniens.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l03-q07-a1",
+      "explanation": "Le support liste diabète, hyperthyroïdie, hypothyroïdie, ovariectomie et thyroïdectomie.",
+      "knowledgeIds": [
+        "K-DEA-P10-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - vocabulaire essentiel",
+      "sourcePages": "52",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux termes décrivent des états opposés d’une même glande : les préfixes suffisent à les distinguer.",
+        "commonMistake": "Confondre les deux fait transmettre l’inverse de ce qui a été dit.",
+        "keyTakeaway": "Hyper au-dessus, hypo en dessous.",
+        "fieldApplication": "Comprendre un terme entendu permet de lire une transmission sans la déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux termes décrivent des états opposés d’une même glande : les préfixes suffisent à les distinguer.",
+      "common_mistake": "Confondre les deux fait transmettre l’inverse de ce qui a été dit.",
+      "key_takeaway": "Hyper au-dessus, hypo en dessous.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 52",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - vocabulaire essentiel",
+        "sourcePages": "52",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-011"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "hypothyroïdie",
+          "hypothyroidie"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l03-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient vous dit être « suivi pour la thyroïde » et présente un pouls rapide. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p10-l03-q08-a1",
+          "text": "Le suivi rapporté, la fréquence du pouls relevée, et l’heure du relevé",
+          "explanation": "Trois éléments distincts, chacun à sa place."
+        },
+        {
+          "id": "dea-p10-l03-q08-a2",
+          "text": "Une hyperthyroïdie",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q08-a3",
+          "text": "Que le pouls rapide s’explique par la thyroïde",
+          "explanation": "Relier les deux éléments est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l03-q08-a4",
+          "text": "Le seul pouls, le suivi rapporté n’étant pas vérifiable",
+          "explanation": "Un antécédent rapporté oriente utilement la régulation.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-l03-q08-a1",
+      "explanation": "Le support rattache la thyroïde au système cardiaque, mais cela ne suffit pas à relier deux éléments d’un bilan. Chacun se transmet séparément.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l03",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Connaître un lien anatomique ne donne pas le droit de l’appliquer à un patient précis.",
+        "commonMistake": "Expliquer un signe par un antécédent connu ferme le raisonnement de la régulation.",
+        "keyTakeaway": "On transmet les deux éléments, pas le lien qu’on imagine.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Connaître un lien anatomique ne donne pas le droit de l’appliquer à un patient précis.",
+      "common_mistake": "Expliquer un signe par un antécédent connu ferme le raisonnement de la régulation.",
+      "key_takeaway": "On transmet les deux éléments, pas le lien qu’on imagine.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l03",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

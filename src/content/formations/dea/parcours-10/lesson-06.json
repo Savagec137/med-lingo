@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l06",
+  "title": "Les hormones sexuelles",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Expliquer ce qu’est une glande mixte.",
+    "Distinguer fonction exocrine et fonction endocrine.",
+    "Situer le placenta parmi les glandes."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l06-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Comment le support qualifie-t-il l’ovaire et le testicule ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q01-a1",
+          "text": "De glandes mixtes, à la fois exocrines et endocrines",
+          "explanation": "C’est le terme employé par le support."
+        },
+        {
+          "id": "dea-p10-l06-q01-a2",
+          "text": "De glandes uniquement endocrines",
+          "explanation": "Le support leur reconnaît aussi une fonction exocrine.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q01-a3",
+          "text": "De glandes uniquement exocrines",
+          "explanation": "Le support leur reconnaît aussi une fonction endocrine.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q01-a4",
+          "text": "D’organes cibles sans fonction glandulaire",
+          "explanation": "Le support les range parmi les glandes."
+        }
+      ],
+      "correctAnswer": "dea-p10-l06-q01-a1",
+      "explanation": "Le support qualifie l’ovaire et le testicule de glandes mixtes : exocrines et endocrines.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une même glande peut avoir deux versants : c’est ce que le mot « mixte » signifie ici.",
+        "commonMistake": "N’en retenir qu’un versant fait disparaître la moitié de la fonction.",
+        "keyTakeaway": "Mixte veut dire deux fonctions, pas une.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une même glande peut avoir deux versants : c’est ce que le mot « mixte » signifie ici.",
+      "common_mistake": "N’en retenir qu’un versant fait disparaître la moitié de la fonction.",
+      "key_takeaway": "Mixte veut dire deux fonctions, pas une.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l06-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que le support attribue-t-il au testicule ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q02-a1",
+          "text": "Une situation dans les bourses",
+          "explanation": "Le support la précise."
+        },
+        {
+          "id": "dea-p10-l06-q02-a2",
+          "text": "Une fonction exocrine : la fabrication des spermatozoïdes",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l06-q02-a3",
+          "text": "Une fonction endocrine : la sécrétion de testostérone",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l06-q02-a4",
+          "text": "Un rôle dans la régulation du calcium",
+          "explanation": "Ce rôle est attribué aux parathyroïdes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q02-a5",
+          "text": "La stimulation de toutes les glandes endocrines",
+          "explanation": "Elle est attribuée à l’hypophyse.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l06-q02-a1",
+        "dea-p10-l06-q02-a2",
+        "dea-p10-l06-q02-a3"
+      ],
+      "explanation": "Le testicule, situé dans les bourses, fabrique des spermatozoïdes par sa fonction exocrine et sécrète la testostérone par sa fonction endocrine.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux versants sont cités ensemble : reproduction d’un côté, hormone de l’autre.",
+        "commonMistake": "Lui attribuer une fonction d’une autre glande dilue ce que le support énonce précisément.",
+        "keyTakeaway": "Exocrine pour les cellules, endocrine pour l’hormone.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux versants sont cités ensemble : reproduction d’un côté, hormone de l’autre.",
+      "common_mistake": "Lui attribuer une fonction d’une autre glande dilue ce que le support énonce précisément.",
+      "key_takeaway": "Exocrine pour les cellules, endocrine pour l’hormone.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l06-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Dans quoi la testostérone intervient-elle, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q03-a1",
+          "text": "Les caractères sexuels secondaires et la maturation des spermatozoïdes",
+          "explanation": "Ce sont les deux rôles cités."
+        },
+        {
+          "id": "dea-p10-l06-q03-a2",
+          "text": "Le maintien de la grossesse",
+          "explanation": "Ce rôle est attribué à la fonction endocrine de l’ovaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q03-a3",
+          "text": "La régulation du taux de sucre",
+          "explanation": "Elle est attribuée au pancréas.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q03-a4",
+          "text": "Les fonctions anti-inflammatoires",
+          "explanation": "Elles sont attribuées à la cortisone."
+        }
+      ],
+      "correctAnswer": "dea-p10-l06-q03-a1",
+      "explanation": "Le support fait intervenir la testostérone dans les caractères sexuels secondaires et la maturation des spermatozoïdes.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une hormone porte souvent plusieurs rôles : les retenir ensemble évite d’en oublier un.",
+        "commonMistake": "Attribuer à la testostérone un rôle ovarien mélange les deux glandes sexuelles.",
+        "keyTakeaway": "Caractères secondaires et maturation.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une hormone porte souvent plusieurs rôles : les retenir ensemble évite d’en oublier un.",
+      "common_mistake": "Attribuer à la testostérone un rôle ovarien mélange les deux glandes sexuelles.",
+      "key_takeaway": "Caractères secondaires et maturation.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l06-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que le support attribue-t-il à la fonction endocrine de l’ovaire ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q04-a1",
+          "text": "Les caractères sexuels secondaires",
+          "explanation": "Le support les cite."
+        },
+        {
+          "id": "dea-p10-l06-q04-a2",
+          "text": "La maturation des ovules",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l06-q04-a3",
+          "text": "Le maintien de la grossesse",
+          "explanation": "Le support le cite."
+        },
+        {
+          "id": "dea-p10-l06-q04-a4",
+          "text": "La fabrication des ovules",
+          "explanation": "Elle relève de la fonction exocrine.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q04-a5",
+          "text": "La sécrétion de testostérone",
+          "explanation": "Elle est attribuée au testicule endocrine.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l06-q04-a1",
+        "dea-p10-l06-q04-a2",
+        "dea-p10-l06-q04-a3"
+      ],
+      "explanation": "L’ovaire endocrine intervient dans les caractères sexuels secondaires, la maturation des ovules et le maintien de la grossesse ; la fabrication des ovules est exocrine.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le partage entre exocrine et endocrine est ce qui structure toute la description du support.",
+        "commonMistake": "Ranger la fabrication des ovules du côté endocrine efface la distinction entre les deux versants.",
+        "keyTakeaway": "Fabriquer est exocrine ; régler est endocrine.",
+        "fieldApplication": "Comprendre la double fonction évite de réduire l’organe à un seul rôle."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le partage entre exocrine et endocrine est ce qui structure toute la description du support.",
+      "common_mistake": "Ranger la fabrication des ovules du côté endocrine efface la distinction entre les deux versants.",
+      "key_takeaway": "Fabriquer est exocrine ; régler est endocrine.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l06-q05",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel rôle le support attribue-t-il au placenta ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q05-a1",
+          "text": "Les échanges nutritifs et en oxygène, et la sécrétion d’hormones de grossesse",
+          "explanation": "Le support cite les deux rôles."
+        },
+        {
+          "id": "dea-p10-l06-q05-a2",
+          "text": "Les seuls échanges nutritifs et en oxygène",
+          "explanation": "Le support lui reconnaît aussi une fonction hormonale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q05-a3",
+          "text": "La seule sécrétion d’hormones",
+          "explanation": "Le support cite aussi les échanges.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q05-a4",
+          "text": "La fabrication des ovules",
+          "explanation": "Elle est attribuée à l’ovaire exocrine."
+        }
+      ],
+      "correctAnswer": "dea-p10-l06-q05-a1",
+      "explanation": "Le placenta permet les échanges nutritifs et en oxygène, grâce au cordon ombilical, et sécrète des hormones indispensables au bon déroulement de la grossesse.",
+      "knowledgeIds": [
+        "K-DEA-P10-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le placenta",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support range le placenta parmi les glandes : un organe transitoire peut avoir une fonction endocrine.",
+        "commonMistake": "Réduire le placenta aux échanges fait oublier pourquoi le support le classe ici.",
+        "keyTakeaway": "Il échange et il sécrète.",
+        "fieldApplication": "Comprendre le rôle du placenta éclaire les termes entendus lors d’une prise en charge obstétricale."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support range le placenta parmi les glandes : un organe transitoire peut avoir une fonction endocrine.",
+      "common_mistake": "Réduire le placenta aux échanges fait oublier pourquoi le support le classe ici.",
+      "key_takeaway": "Il échange et il sécrète.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le placenta",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-010"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l06-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque glande sexuelle à ce que le support lui attribue.",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q06-a1",
+          "text": "Ovaire exocrine",
+          "explanation": "Le support lui attribue cette fabrication.",
+          "match": "Fabrication d’ovules"
+        },
+        {
+          "id": "dea-p10-l06-q06-a2",
+          "text": "Ovaire endocrine",
+          "explanation": "Le support cite ce rôle parmi d’autres.",
+          "match": "Maintien de la grossesse"
+        },
+        {
+          "id": "dea-p10-l06-q06-a3",
+          "text": "Testicule exocrine",
+          "explanation": "Le support lui attribue cette fabrication.",
+          "match": "Fabrication de spermatozoïdes"
+        },
+        {
+          "id": "dea-p10-l06-q06-a4",
+          "text": "Testicule endocrine",
+          "explanation": "Le support cite cette sécrétion.",
+          "match": "Sécrétion de testostérone"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l06-q06-a1",
+        "dea-p10-l06-q06-a2",
+        "dea-p10-l06-q06-a3",
+        "dea-p10-l06-q06-a4"
+      ],
+      "explanation": "Chaque glande sexuelle a deux versants, et le support attribue à chacun une fonction distincte.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le tableau à double entrée — glande et versant — est la façon la plus sûre de retenir cette page.",
+        "commonMistake": "Mélanger les versants revient à confondre reproduction et régulation hormonale.",
+        "keyTakeaway": "Deux glandes, deux versants, quatre fonctions.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le tableau à double entrée — glande et versant — est la façon la plus sûre de retenir cette page.",
+      "common_mistake": "Mélanger les versants revient à confondre reproduction et régulation hormonale.",
+      "key_takeaway": "Deux glandes, deux versants, quatre fonctions.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l06-q07",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support qualifie l’ovaire et le testicule de glandes ______.",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q07-a1",
+          "text": "mixtes",
+          "explanation": "Le terme employé par le support désigne leur double fonction."
+        },
+        {
+          "id": "dea-p10-l06-q07-a2",
+          "text": "endocrines",
+          "explanation": "Le support précise qu’elles sont aussi exocrines.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l06-q07-a1",
+      "explanation": "Le support qualifie ces deux glandes de mixtes : exocrines et endocrines.",
+      "knowledgeIds": [
+        "K-DEA-P10-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes sexuelles",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le mot « mixte » résume à lui seul la double fonction que le support détaille ensuite.",
+        "commonMistake": "Les qualifier d’endocrines seulement supprime la moitié de leur rôle.",
+        "keyTakeaway": "Mixte : deux versants.",
+        "fieldApplication": "Employer le terme du support facilite la relecture par un formateur."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le mot « mixte » résume à lui seul la double fonction que le support détaille ensuite.",
+      "common_mistake": "Les qualifier d’endocrines seulement supprime la moitié de leur rôle.",
+      "key_takeaway": "Mixte : deux versants.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes sexuelles",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-009"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "mixtes",
+          "mixte"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l06-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous prenez en charge une femme enceinte qui vous interroge sur le rôle du placenta. Que faites-vous ?",
+      "answers": [
+        {
+          "id": "dea-p10-l06-q08-a1",
+          "text": "Vous renvoyez la question au médecin et vous transmettez qu’elle a été posée",
+          "explanation": "Expliquer relève du médecin ; l’inquiétude exprimée fait partie du bilan."
+        },
+        {
+          "id": "dea-p10-l06-q08-a2",
+          "text": "Vous lui expliquez les hormones de grossesse",
+          "explanation": "Expliquer un mécanisme à une patiente est une information médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q08-a3",
+          "text": "Vous la rassurez en disant que tout va bien",
+          "explanation": "Rien ne permet de l’affirmer, et ce n’est pas votre rôle.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l06-q08-a4",
+          "text": "Vous ne répondez rien et n’en faites pas mention",
+          "explanation": "La question posée renseigne sur son état d’esprit.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-l06-q08-a1",
+      "explanation": "Renvoyer une question médicale au médecin est une réponse. Et le fait qu’elle ait été posée est une information à transmettre.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une question posée par une patiente renseigne sur son inquiétude : c’est une donnée du bilan.",
+        "commonMistake": "Expliquer un mécanisme engage l’ambulancier sur un terrain qui n’est pas le sien.",
+        "keyTakeaway": "Renvoyer au médecin est une réponse.",
+        "fieldApplication": "Le Centre 15 décide de ce qui doit être expliqué et par qui."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Une question posée par une patiente renseigne sur son inquiétude : c’est une donnée du bilan.",
+      "common_mistake": "Expliquer un mécanisme engage l’ambulancier sur un terrain qui n’est pas le sien.",
+      "key_takeaway": "Renvoyer au médecin est une réponse.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l06",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

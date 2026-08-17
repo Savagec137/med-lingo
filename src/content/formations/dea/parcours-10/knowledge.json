@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "formationId": "dea",
+  "blocId": "bloc-02",
+  "parcoursId": "parcours-10",
+  "contentId": "dea-p10",
+  "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "validationStatus": "to_validate",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P10-001",
+      "title": "Rôle du système endocrinien",
+      "summary": "Le système endocrinien assure la régulation des organes : il accélère ou ralentit leur fonctionnement.",
+      "keyPoints": [
+        "Il assure la régulation des organes.",
+        "Il accélère ou ralentit leur fonctionnement.",
+        "Il agit par stimulation ou par inhibition au niveau de ses cibles."
+      ],
+      "commonErrors": [
+        "Croire qu’une hormone ne peut qu’activer une fonction.",
+        "Confondre régulation endocrinienne et commande nerveuse directe."
+      ],
+      "clinicalApplication": "Comprendre qu’un même système peut accélérer ou ralentir aide à ne pas s’étonner de tableaux opposés.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - rôle",
+      "pages": [
+        49
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l01",
+        "dea-p10-l07",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-002",
+      "title": "Ce qu’est une hormone",
+      "summary": "Les hormones sont des protéines sécrétées par les glandes endocrines, véhiculées par le sang jusqu’à des organes cibles à distance.",
+      "keyPoints": [
+        "Une hormone est une protéine sécrétée par une glande endocrine.",
+        "Elle est véhiculée par le sang.",
+        "Elle agit sur des organes cibles à distance.",
+        "Ces cibles portent des récepteurs spécifiques à certaines hormones."
+      ],
+      "commonErrors": [
+        "Croire qu’une hormone agit là où elle est produite.",
+        "Confondre la glande, qui produit, et l’organe cible, qui répond."
+      ],
+      "clinicalApplication": "Le transport par le sang explique qu’une atteinte endocrinienne se traduise par des signes très éloignés de la glande en cause.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - composition",
+      "pages": [
+        49
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l01",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-003",
+      "title": "L’autorégulation et la constance du milieu interne",
+      "summary": "Le système fonctionne sous l’influence de l’extérieur mais aussi en réponse à des facteurs internes ; toutes les glandes concourent à la constance du milieu interne.",
+      "keyPoints": [
+        "Le système répond au milieu extérieur et à des facteurs internes : c’est l’autorégulation.",
+        "Toutes les glandes assurent la constance du milieu interne.",
+        "Le support cite en exemple la température corporelle, la quantité de sel et de sucre circulant dans le sang."
+      ],
+      "commonErrors": [
+        "Croire que seules les influences extérieures déclenchent une réponse hormonale.",
+        "Oublier que la constance du milieu interne est une fonction partagée par toutes les glandes."
+      ],
+      "clinicalApplication": "Un patient dont l’équilibre interne est perturbé peut présenter des signes généraux sans plainte localisée.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - autorégulation",
+      "pages": [
+        49
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l01",
+        "dea-p10-l07",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-004",
+      "title": "L’hypophyse",
+      "summary": "Située à la base du cerveau, l’hypophyse stimule toutes les glandes endocrines et reste elle-même sous dépendance du système nerveux central.",
+      "keyPoints": [
+        "Elle est située à la base du cerveau.",
+        "Elle stimule toutes les glandes endocrines.",
+        "Elle contrôle la fabrication des hormones thyroïdiennes, des corticosurrénales et de la lactation.",
+        "Elle intervient dans la régulation de l’hormone de croissance et des hormones sexuelles.",
+        "Elle est elle-même sous dépendance du système nerveux central."
+      ],
+      "commonErrors": [
+        "Faire de l’hypophyse une glande indépendante du système nerveux.",
+        "Croire qu’elle ne contrôle qu’une seule famille d’hormones."
+      ],
+      "clinicalApplication": "Une glande qui commande toutes les autres explique qu’une seule atteinte puisse retentir sur plusieurs fonctions.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - l’hypophyse",
+      "pages": [
+        49,
+        50
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l02",
+        "dea-p10-l07",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-005",
+      "title": "La thyroïde et les parathyroïdes",
+      "summary": "La thyroïde, à la base du cou, agit sur de nombreux systèmes ; les parathyroïdes, situées sur elle, régulent le calcium.",
+      "keyPoints": [
+        "La thyroïde est située sur la base du cou.",
+        "Elle agit sur la croissance et sur le métabolisme.",
+        "Elle agit sur les systèmes nerveux, cardiaque, musculaire, digestif et génital.",
+        "Les parathyroïdes sont situées sur la thyroïde.",
+        "Elles jouent un rôle dans la régulation du calcium."
+      ],
+      "commonErrors": [
+        "Confondre thyroïde et parathyroïdes, qui n’ont ni la même taille ni le même rôle.",
+        "Réduire l’action de la thyroïde à un seul système."
+      ],
+      "clinicalApplication": "L’étendue de son action explique qu’un dérèglement thyroïdien se manifeste par des signes très variés.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - thyroïde et parathyroïdes",
+      "pages": [
+        50
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l03",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-006",
+      "title": "Le thymus",
+      "summary": "Le thymus est situé dans la cage thoracique derrière le sternum et agit sur le système nerveux.",
+      "keyPoints": [
+        "Il est situé dans la cage thoracique, derrière le sternum.",
+        "Il agit sur le système nerveux.",
+        "Le support le rattache aux défenses immunitaires."
+      ],
+      "commonErrors": [
+        "Situer le thymus dans le cou, avec la thyroïde.",
+        "Confondre thymus et thyroïde, dont les noms se ressemblent."
+      ],
+      "clinicalApplication": "Distinguer deux glandes aux noms voisins évite de situer une atteinte au mauvais endroit.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - le thymus",
+      "pages": [
+        50
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l03",
+        "dea-p10-l08"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-007",
+      "title": "Le pancréas endocrine",
+      "summary": "Le pancréas régule le taux de sucre dans le sang au moyen de deux hormones aux effets opposés.",
+      "keyPoints": [
+        "Il régule le taux de sucre dans le sang.",
+        "Une hormone hypoglycémiante fait baisser ce taux.",
+        "Le glucagon est l’hormone hyperglycémiante."
+      ],
+      "commonErrors": [
+        "Croire qu’une seule hormone suffit à régler le taux de sucre.",
+        "Confondre hypoglycémiant, qui fait baisser, et hyperglycémiant, qui fait monter."
+      ],
+      "clinicalApplication": "Le taux de sucre est l’un des rares paramètres qu’un ambulancier est autorisé à recueillir.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - le pancréas",
+      "pages": [
+        51
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l04",
+        "dea-p10-l07",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-008",
+      "title": "Les glandes surrénales",
+      "summary": "Situées au-dessus des reins, les glandes surrénales permettent la régulation de nombreuses fonctions organiques.",
+      "keyPoints": [
+        "Elles sont situées au-dessus des reins.",
+        "Elles permettent la régulation de nombreuses fonctions organiques.",
+        "Elles produisent la cortisone, qui possède une fonction anti-inflammatoire et antiallergique.",
+        "Le support rattache à ces glandes une hormone jouant un rôle dans la régulation de la pression artérielle."
+      ],
+      "commonErrors": [
+        "Situer les surrénales dans les reins plutôt qu’au-dessus.",
+        "Réduire leur production à une seule hormone."
+      ],
+      "clinicalApplication": "Leur position au-dessus des reins et leur rôle sur la pression artérielle relient l’endocrinien au circulatoire.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - les glandes surrénales",
+      "pages": [
+        51
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l05",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-009",
+      "title": "Les glandes sexuelles, dites mixtes",
+      "summary": "Ovaires et testicules sont des glandes mixtes : exocrines pour la reproduction, endocrines pour les hormones.",
+      "keyPoints": [
+        "L’ovaire exocrine fabrique des ovules ; l’ovaire endocrine intervient dans les caractères sexuels secondaires, la maturation des ovules et le maintien de la grossesse.",
+        "Les testicules sont situés dans les bourses.",
+        "Le testicule exocrine fabrique des spermatozoïdes ; le testicule endocrine sécrète la testostérone.",
+        "La testostérone intervient dans les caractères sexuels secondaires et la maturation des spermatozoïdes."
+      ],
+      "commonErrors": [
+        "Croire qu’une glande ne peut avoir qu’une seule fonction.",
+        "Confondre la fonction exocrine, tournée vers la reproduction, et la fonction endocrine, hormonale."
+      ],
+      "clinicalApplication": "Comprendre la double fonction évite de réduire ces organes à leur seul rôle reproducteur.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - glandes sexuelles",
+      "pages": [
+        51
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l06",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-010",
+      "title": "Le placenta comme glande",
+      "summary": "Le placenta permet les échanges nutritifs et en oxygène et sécrète des hormones indispensables au bon déroulement de la grossesse.",
+      "keyPoints": [
+        "Il permet les échanges nutritifs et en oxygène, grâce au cordon ombilical.",
+        "Il sécrète des hormones indispensables au bon déroulement de la grossesse."
+      ],
+      "commonErrors": [
+        "Réduire le placenta à un organe d’échange, sans fonction hormonale.",
+        "Oublier le rôle du cordon ombilical dans ces échanges."
+      ],
+      "clinicalApplication": "Un organe transitoire peut assurer une fonction endocrine : le support le range parmi les glandes.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - le placenta",
+      "pages": [
+        51
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l06",
+        "dea-p10-l08"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P10-011",
+      "title": "Le vocabulaire endocrinien du support",
+      "summary": "Le support liste les mots-clés et les racines du champ endocrinien.",
+      "keyPoints": [
+        "Mots-clés : diabète, hyperthyroïdie, hypothyroïdie, ovariectomie, thyroïdectomie.",
+        "Andro désigne l’homme.",
+        "Glyco désigne le sucre.",
+        "Ova désigne l’ovaire."
+      ],
+      "commonErrors": [
+        "Employer un terme entendu sans en connaître le sens exact.",
+        "Confondre hyperthyroïdie et hypothyroïdie, qui décrivent des états opposés."
+      ],
+      "clinicalApplication": "Ces termes se comprennent pour lire une transmission, pas pour produire un bilan à leur place.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Système endocrinien - vocabulaire essentiel",
+      "pages": [
+        52
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p10-l03",
+        "dea-p10-l08",
+        "dea-p10-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-10"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l02",
+  "title": "L’hypophyse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer l’hypophyse et décrire son rôle de stimulation.",
+    "Citer les fabrications qu’elle contrôle.",
+    "Relier l’hypophyse au système nerveux central."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.location",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il l’hypophyse ?",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q01-a1",
+          "text": "À la base du cerveau",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l02-q01-a2",
+          "text": "À la base du cou",
+          "explanation": "C’est la localisation de la thyroïde.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q01-a3",
+          "text": "Au-dessus des reins",
+          "explanation": "C’est la localisation des glandes surrénales.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q01-a4",
+          "text": "Derrière le sternum",
+          "explanation": "C’est la localisation du thymus.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l02-q01-a1",
+      "explanation": "L’hypophyse est située à la base du cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque glande a sa localisation propre : les mémoriser ensemble évite de les confondre.",
+        "commonMistake": "Placer l’hypophyse dans le cou la confond avec la thyroïde.",
+        "keyTakeaway": "L’hypophyse est dans la tête, à la base du cerveau.",
+        "fieldApplication": "Situer une glande permet de comprendre le vocabulaire d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque glande a sa localisation propre : les mémoriser ensemble évite de les confondre.",
+      "common_mistake": "Placer l’hypophyse dans le cou la confond avec la thyroïde.",
+      "key_takeaway": "L’hypophyse est dans la tête, à la base du cerveau.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel rôle général le support attribue-t-il à l’hypophyse ?",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q02-a1",
+          "text": "Elle stimule toutes les glandes endocrines",
+          "explanation": "C’est la formulation du support."
+        },
+        {
+          "id": "dea-p10-l02-q02-a2",
+          "text": "Elle produit l’ensemble des hormones de l’organisme",
+          "explanation": "Le support lui attribue un rôle de stimulation, pas de production unique.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q02-a3",
+          "text": "Elle régule le taux de sucre dans le sang",
+          "explanation": "Cette régulation est attribuée au pancréas.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q02-a4",
+          "text": "Elle assure la fabrication des ovules",
+          "explanation": "Cette fonction est exocrine et attribuée à l’ovaire."
+        }
+      ],
+      "correctAnswer": "dea-p10-l02-q02-a1",
+      "explanation": "L’hypophyse stimule toutes les glandes endocrines.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Stimuler les autres glandes est un rôle de chef d’orchestre, pas de producteur unique.",
+        "commonMistake": "Lui attribuer toutes les productions hormonales supprime le rôle des autres glandes.",
+        "keyTakeaway": "Elle commande les glandes, elle ne les remplace pas.",
+        "fieldApplication": "Une glande qui commande les autres explique qu’une atteinte retentisse largement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Stimuler les autres glandes est un rôle de chef d’orchestre, pas de producteur unique.",
+      "common_mistake": "Lui attribuer toutes les productions hormonales supprime le rôle des autres glandes.",
+      "key_takeaway": "Elle commande les glandes, elle ne les remplace pas.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q03",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles fabrications l’hypophyse contrôle-t-elle, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q03-a1",
+          "text": "Les hormones thyroïdiennes",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l02-q03-a2",
+          "text": "Les corticosurrénales",
+          "explanation": "Le support les cite."
+        },
+        {
+          "id": "dea-p10-l02-q03-a3",
+          "text": "La lactation",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l02-q03-a4",
+          "text": "Le glucagon",
+          "explanation": "Le support rattache le glucagon au pancréas.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q03-a5",
+          "text": "Les spermatozoïdes",
+          "explanation": "Leur fabrication est une fonction exocrine du testicule.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l02-q03-a1",
+        "dea-p10-l02-q03-a2",
+        "dea-p10-l02-q03-a3"
+      ],
+      "explanation": "Le support indique que l’hypophyse contrôle la fabrication des hormones thyroïdiennes, des corticosurrénales et de la lactation.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette liste montre l’étendue de son action : plusieurs glandes très différentes en dépendent.",
+        "commonMistake": "Y ajouter une fonction exocrine mélange les deux versants d’une glande mixte.",
+        "keyTakeaway": "Trois fabrications contrôlées, citées par le support.",
+        "fieldApplication": "Une atteinte hypophysaire peut se traduire par des signes venant de plusieurs glandes."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette liste montre l’étendue de son action : plusieurs glandes très différentes en dépendent.",
+      "common_mistake": "Y ajouter une fonction exocrine mélange les deux versants d’une glande mixte.",
+      "key_takeaway": "Trois fabrications contrôlées, citées par le support.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q04",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Selon le support, l’hypophyse fonctionne indépendamment du système nerveux central.",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q04-a1",
+          "text": "Vrai",
+          "explanation": "Le support la décrit au contraire sous dépendance du système nerveux central.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q04-a2",
+          "text": "Faux",
+          "explanation": "Elle est elle-même sous dépendance du système nerveux central."
+        }
+      ],
+      "correctAnswer": "dea-p10-l02-q04-a2",
+      "explanation": "L’hypophyse stimule toutes les glandes endocrines, mais elle est elle-même sous dépendance du système nerveux central.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "49, 50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La chaîne remonte plus haut qu’il n’y paraît : le nerveux commande l’endocrinien.",
+        "commonMistake": "Faire de l’hypophyse un sommet indépendant coupe le lien entre les deux systèmes de commande.",
+        "keyTakeaway": "Elle commande les glandes, le système nerveux la commande.",
+        "fieldApplication": "Les deux systèmes de commande de l’organisme sont liés, pas parallèles."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La chaîne remonte plus haut qu’il n’y paraît : le nerveux commande l’endocrinien.",
+      "common_mistake": "Faire de l’hypophyse un sommet indépendant coupe le lien entre les deux systèmes de commande.",
+      "key_takeaway": "Elle commande les glandes, le système nerveux la commande.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "49, 50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q05",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Dans quelles régulations l’hypophyse intervient-elle, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q05-a1",
+          "text": "L’hormone de croissance",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p10-l02-q05-a2",
+          "text": "Les hormones thyroïdiennes",
+          "explanation": "Le support les cite."
+        },
+        {
+          "id": "dea-p10-l02-q05-a3",
+          "text": "Les hormones sexuelles",
+          "explanation": "Le support les cite."
+        },
+        {
+          "id": "dea-p10-l02-q05-a4",
+          "text": "La filtration du sang",
+          "explanation": "Elle relève de l’appareil excréteur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q05-a5",
+          "text": "La coordination des mouvements",
+          "explanation": "Elle est attribuée au cervelet.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l02-q05-a1",
+        "dea-p10-l02-q05-a2",
+        "dea-p10-l02-q05-a3"
+      ],
+      "explanation": "Le support cite trois familles d’hormones dont l’hypophyse régule la synthèse : croissance, thyroïdiennes, sexuelles.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Trois familles très différentes sous une même commande : c’est ce qui rend cette glande centrale.",
+        "commonMistake": "Y ajouter une fonction d’un autre appareil dilue ce que le support attribue précisément.",
+        "keyTakeaway": "Croissance, thyroïde, sexuel : trois familles, une commande.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Trois familles très différentes sous une même commande : c’est ce qui rend cette glande centrale.",
+      "common_mistake": "Y ajouter une fonction d’un autre appareil dilue ce que le support attribue précisément.",
+      "key_takeaway": "Croissance, thyroïde, sexuel : trois familles, une commande.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "L’hypophyse est située à la base du ______.",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q06-a1",
+          "text": "cerveau",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l02-q06-a2",
+          "text": "cou",
+          "explanation": "La base du cou est la localisation de la thyroïde.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l02-q06-a1",
+      "explanation": "Le support situe l’hypophyse à la base du cerveau.",
+      "knowledgeIds": [
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - l’hypophyse",
+      "sourcePages": "50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Sa position sous le cerveau éclaire sa dépendance au système nerveux central.",
+        "commonMistake": "Confondre base du cerveau et base du cou déplace la glande d’un étage entier.",
+        "keyTakeaway": "Base du cerveau pour l’hypophyse, base du cou pour la thyroïde.",
+        "fieldApplication": "Situer une glande permet de comprendre les termes d’une transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Sa position sous le cerveau éclaire sa dépendance au système nerveux central.",
+      "common_mistake": "Confondre base du cerveau et base du cou déplace la glande d’un étage entier.",
+      "key_takeaway": "Base du cerveau pour l’hypophyse, base du cou pour la thyroïde.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - l’hypophyse",
+        "sourcePages": "50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "cerveau",
+          "du cerveau"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l02-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue la chaîne de commande décrite par le support, du plus haut au plus bas.",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q07-a1",
+          "text": "Système nerveux central",
+          "explanation": "Le support en fait la dépendance de l’hypophyse.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p10-l02-q07-a2",
+          "text": "Hypophyse",
+          "explanation": "Elle stimule toutes les glandes endocrines.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p10-l02-q07-a3",
+          "text": "Glandes endocrines",
+          "explanation": "Elles produisent les hormones.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p10-l02-q07-a4",
+          "text": "Organes cibles",
+          "explanation": "Ils portent les récepteurs et répondent.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l02-q07-a1",
+        "dea-p10-l02-q07-a2",
+        "dea-p10-l02-q07-a3",
+        "dea-p10-l02-q07-a4"
+      ],
+      "explanation": "Le système nerveux central commande l’hypophyse, qui stimule les glandes, dont les hormones agissent sur les organes cibles.",
+      "knowledgeIds": [
+        "K-DEA-P10-004",
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien",
+      "sourcePages": "49, 50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La chaîne montre que l’endocrinien n’est pas indépendant : il est commandé plus haut.",
+        "commonMistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+        "keyTakeaway": "Nerveux, hypophyse, glandes, cibles.",
+        "fieldApplication": "Deux systèmes de commande liés expliquent qu’une émotion retentisse sur des fonctions automatiques."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La chaîne montre que l’endocrinien n’est pas indépendant : il est commandé plus haut.",
+      "common_mistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+      "key_takeaway": "Nerveux, hypophyse, glandes, cibles.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien",
+        "sourcePages": "49, 50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004",
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l02-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un proche vous dit que le patient « a un problème d’hypophyse ». Que faites-vous de cette information ?",
+      "answers": [
+        {
+          "id": "dea-p10-l02-q08-a1",
+          "text": "Vous la transmettez comme un antécédent rapporté, en nommant la source",
+          "explanation": "Un propos rapporté se transmet comme tel."
+        },
+        {
+          "id": "dea-p10-l02-q08-a2",
+          "text": "Vous la transmettez comme un antécédent établi",
+          "explanation": "Rien ne permet de la vérifier sur place.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q08-a3",
+          "text": "Vous l’écartez, n’étant pas en mesure de la vérifier",
+          "explanation": "Un antécédent rapporté oriente utilement la régulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l02-q08-a4",
+          "text": "Vous en déduisez les glandes probablement touchées",
+          "explanation": "Raisonner sur les conséquences est une démarche médicale.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l02-q08-a1",
+      "explanation": "Un antécédent rapporté par un proche se transmet avec sa source. Le vérifier ou en tirer des conséquences appartient au médecin.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une atteinte hypophysaire pouvant retentir sur plusieurs glandes, l’information est précieuse — à condition d’être annoncée comme rapportée.",
+        "commonMistake": "Transformer un propos en antécédent établi fait entrer une incertitude non signalée dans le bilan.",
+        "keyTakeaway": "Ce qu’on me dit, et qui me le dit.",
+        "fieldApplication": "Le Centre 15 décide de ce qu’il faut faire de cette information."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Une atteinte hypophysaire pouvant retentir sur plusieurs glandes, l’information est précieuse — à condition d’être annoncée comme rapportée.",
+      "common_mistake": "Transformer un propos en antécédent établi fait entrer une incertitude non signalée dans le bilan.",
+      "key_takeaway": "Ce qu’on me dit, et qui me le dit.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l02",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

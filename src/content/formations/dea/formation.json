@@ -1017,7 +1017,7 @@
       "prerequisiteIds": [
         "dea-p09-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
         "competencies",
@@ -1029,11 +1029,67 @@
       "sourceAnchor": "Parcours 10 — Système endocrinien",
       "lessons": [
         {
+          "id": "dea-p10-l01",
+          "title": "Les hormones",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-01.json"
+        },
+        {
+          "id": "dea-p10-l02",
+          "title": "L’hypophyse",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-02.json"
+        },
+        {
+          "id": "dea-p10-l03",
+          "title": "La thyroïde",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-03.json"
+        },
+        {
+          "id": "dea-p10-l04",
+          "title": "Le pancréas endocrine",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-04.json"
+        },
+        {
+          "id": "dea-p10-l05",
+          "title": "Les surrénales",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-05.json"
+        },
+        {
+          "id": "dea-p10-l06",
+          "title": "Les hormones sexuelles",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-06.json"
+        },
+        {
+          "id": "dea-p10-l07",
+          "title": "Les grands équilibres hormonaux",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-10/lesson-07.json"
+        },
+        {
           "id": "dea-p10-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-10/lesson-08.json"
+        },
+        {
+          "id": "dea-p10-boss",
+          "title": "Boss — Système endocrinien",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-10/lesson-09.json"
         }
       ]
     },

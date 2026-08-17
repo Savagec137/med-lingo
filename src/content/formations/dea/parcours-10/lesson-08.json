@@ -1,560 +1,752 @@
 {
   "schemaVersion": 2,
   "formation": "dea",
-  "parcours": "parcours-10",
+  "parcours": "parcours-08",
   "id": "dea-p10-l08",
   "title": "Synthèse",
   "kind": "lesson",
   "status": "review",
   "difficulty": "medium",
-  "estimatedMinutes": 8,
-  "level": 1,
-  "xp": 30,
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50, 51, 52",
   "pulse": null,
   "selection": {
-    "strategy": "random",
-    "count": 10
+    "strategy": "all",
+    "count": 8
   },
   "learningObjectives": [
-    "Physiologie du système endocrinien"
+    "Réunir les glandes, leurs localisations et leurs domaines.",
+    "Distinguer ce qu’autorise le décret et ce qu’il n’autorise pas.",
+    "Structurer un bilan endocrinien sans conclure."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l08"
+    "body.system.endocrine",
+    "body.organization.organ-to-system",
+    "body.organ.function"
   ],
   "prerequisiteIds": [
     "dea-p10-l07"
   ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l08-q371",
-      "difficulty": "easy",
-      "question": "Les hormones sont :",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q371",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q371-answer-01",
-          "text": "Des messagers chimiques",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q371-answer-02",
-          "text": "Des cellules sanguines",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q371-answer-03",
-          "text": "Des enzymes digestives",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q371-answer-04",
-          "text": "Des fibres musculaires",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q371-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l08-q372",
-      "difficulty": "easy",
-      "question": "Quelle hormone fait diminuer la glycémie ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q372",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q372-answer-01",
-          "text": "L'insuline",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q372-answer-02",
-          "text": "Le glucagon",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q372-answer-03",
-          "text": "L'adrénaline",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q372-answer-04",
-          "text": "Le cortisol",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q372-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l08-q373",
-      "difficulty": "easy",
-      "question": "La thyroïde participe à la régulation du métabolisme.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q373",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q373-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q373-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q373-true"
-    },
-    {
-      "id": "import-b01-p04-l08-q374",
-      "difficulty": "easy",
-      "question": "Les hormones circulent principalement dans les bronches.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q374",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q374-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q374-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q374-false"
-    },
-    {
-      "id": "import-b01-p04-l08-q375",
+      "id": "dea-p10-l08-q01",
+      "type": "multiple_choice",
       "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur le système endocrinien ?",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q01-a1",
+          "text": "Il assure la régulation des organes",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-l08-q01-a2",
+          "text": "Les hormones sont véhiculées par le sang",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-l08-q01-a3",
+          "text": "L’hypophyse stimule toutes les glandes endocrines",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-l08-q01-a4",
+          "text": "Les surrénales sont situées au-dessus des reins",
+          "explanation": "Localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l08-q01-a5",
+          "text": "Les hormones circulent dans les nerfs",
+          "explanation": "Le support décrit un transport sanguin.",
+          "distractorType": "frequent-error"
+        }
       ],
+      "correctAnswer": [
+        "dea-p10-l08-q01-a1",
+        "dea-p10-l08-q01-a2",
+        "dea-p10-l08-q01-a3",
+        "dea-p10-l08-q01-a4"
+      ],
+      "explanation": "Quatre affirmations viennent du support ; la cinquième confond transport hormonal et conduction nerveuse.",
+      "knowledgeIds": [
+        "K-DEA-P10-001",
+        "K-DEA-P10-002",
+        "K-DEA-P10-004",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien",
+      "sourcePages": "49, 50, 51",
+      "pageStatus": "verified",
       "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
+        "body.system.endocrine",
+        "body.organ.function"
       ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir aux énoncés de la source distingue un contenu sourcé d’un contenu inventé.",
+        "commonMistake": "Faire circuler une hormone dans un nerf mélange les deux systèmes de commande.",
+        "keyTakeaway": "Ce que la source dit, et rien de plus.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir aux énoncés de la source distingue un contenu sourcé d’un contenu inventé.",
+      "common_mistake": "Faire circuler une hormone dans un nerf mélange les deux systèmes de commande.",
+      "key_takeaway": "Ce que la source dit, et rien de plus.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50, 51",
+      "level": 1,
+      "xp": 0,
       "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q375",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien",
+        "sourcePages": "49, 50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-001",
+          "K-DEA-P10-002",
+          "K-DEA-P10-004",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l08-q02",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque glande à sa localisation.",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q02-a1",
+          "text": "Hypophyse",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cerveau"
+        },
+        {
+          "id": "dea-p10-l08-q02-a2",
+          "text": "Thyroïde",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cou"
+        },
+        {
+          "id": "dea-p10-l08-q02-a3",
+          "text": "Thymus",
+          "explanation": "Le support le situe là.",
+          "match": "Derrière le sternum"
+        },
+        {
+          "id": "dea-p10-l08-q02-a4",
+          "text": "Surrénales",
+          "explanation": "Le support les situe là.",
+          "match": "Au-dessus des reins"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l08-q02-a1",
+        "dea-p10-l08-q02-a2",
+        "dea-p10-l08-q02-a3",
+        "dea-p10-l08-q02-a4"
+      ],
+      "explanation": "Quatre glandes, quatre étages du corps, que le support situe précisément.",
+      "knowledgeIds": [
+        "K-DEA-P10-004",
+        "K-DEA-P10-005",
+        "K-DEA-P10-006",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes",
+      "sourcePages": "50, 51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une carte des glandes permet de rattacher un terme entendu à une région du corps.",
+        "commonMistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+        "keyTakeaway": "Tête, cou, thorax, abdomen.",
+        "fieldApplication": "Situer correctement une glande rend la description transmissible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une carte des glandes permet de rattacher un terme entendu à une région du corps.",
+      "common_mistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+      "key_takeaway": "Tête, cou, thorax, abdomen.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes",
+        "sourcePages": "50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004",
+          "K-DEA-P10-005",
+          "K-DEA-P10-006",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
         "associationMode": "matching",
         "requiredSelections": 4
-      },
-      "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q375-pair-01",
-          "text": "Pancréas",
-          "match": "Insuline",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q375-pair-02",
-          "text": "Thyroïde",
-          "match": "Métabolisme",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q375-pair-03",
-          "text": "Surrénales",
-          "match": "Adrénaline",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q375-pair-04",
-          "text": "Hormones",
-          "match": "Messagers chimiques",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l08-q375-pair-01",
-        "import-b01-p04-l08-q375-pair-02",
-        "import-b01-p04-l08-q375-pair-03",
-        "import-b01-p04-l08-q375-pair-04"
-      ]
+      }
     },
     {
-      "id": "import-b01-p04-l08-q376",
-      "difficulty": "medium",
-      "question": "L'hormone qui diminue la glycémie est l'______.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q376",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "insuline"
-        ]
-      },
-      "type": "fill_blank",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q376-accepted-01",
-          "text": "insuline",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l08-q376-accepted-01"
-      ]
-    },
-    {
-      "id": "import-b01-p04-l08-q377",
-      "difficulty": "hard",
-      "question": "Quel est le rôle principal du système endocrinien ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q377",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q377-answer-01",
-          "text": "Réguler les fonctions de l'organisme grâce aux hormones",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q377-answer-02",
-          "text": "Transporter l'oxygène",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q377-answer-03",
-          "text": "Assurer la digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q377-answer-04",
-          "text": "Produire les cellules sanguines",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q377-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l08-q378",
-      "difficulty": "hard",
-      "question": "Un patient présente une hypoglycémie symptomatique. Quelle hormone est directement impliquée dans cette régulation ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q378",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
-      "answers": [
-        {
-          "id": "import-b01-p04-l08-q378-answer-01",
-          "text": "L'insuline",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q378-answer-02",
-          "text": "La thyroxine",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q378-answer-03",
-          "text": "L'aldostérone",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l08-q378-answer-04",
-          "text": "La mélatonine",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l08-q378-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l08-q379",
-      "difficulty": "medium",
-      "question": "Replace les étapes d'une régulation hormonale.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q379",
-        "originalType": "ordering",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "requiredSelections": 5
-      },
+      "id": "dea-p10-l08-q03",
       "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue la chaîne de commande, du plus haut au plus bas.",
       "answers": [
         {
-          "id": "import-b01-p04-l08-q379-step-01",
-          "text": "Stimulus",
-          "explanation": "",
+          "id": "dea-p10-l08-q03-a1",
+          "text": "Système nerveux central",
+          "explanation": "Le support en fait la dépendance de l’hypophyse.",
           "sequenceRank": 1
         },
         {
-          "id": "import-b01-p04-l08-q379-step-02",
-          "text": "Sécrétion hormonale",
-          "explanation": "",
+          "id": "dea-p10-l08-q03-a2",
+          "text": "Hypophyse",
+          "explanation": "Elle stimule toutes les glandes endocrines.",
           "sequenceRank": 2
         },
         {
-          "id": "import-b01-p04-l08-q379-step-03",
-          "text": "Transport sanguin",
-          "explanation": "",
+          "id": "dea-p10-l08-q03-a3",
+          "text": "Glande endocrine",
+          "explanation": "Elle produit l’hormone.",
           "sequenceRank": 3
         },
         {
-          "id": "import-b01-p04-l08-q379-step-04",
-          "text": "Organe cible",
-          "explanation": "",
+          "id": "dea-p10-l08-q03-a4",
+          "text": "Sang",
+          "explanation": "Il véhicule l’hormone.",
           "sequenceRank": 4
         },
         {
-          "id": "import-b01-p04-l08-q379-step-05",
-          "text": "Réponse physiologique",
-          "explanation": "",
+          "id": "dea-p10-l08-q03-a5",
+          "text": "Organe cible",
+          "explanation": "Il porte le récepteur et répond.",
           "sequenceRank": 5
         }
       ],
       "correctAnswer": [
-        "import-b01-p04-l08-q379-step-01",
-        "import-b01-p04-l08-q379-step-02",
-        "import-b01-p04-l08-q379-step-03",
-        "import-b01-p04-l08-q379-step-04",
-        "import-b01-p04-l08-q379-step-05"
-      ]
+        "dea-p10-l08-q03-a1",
+        "dea-p10-l08-q03-a2",
+        "dea-p10-l08-q03-a3",
+        "dea-p10-l08-q03-a4",
+        "dea-p10-l08-q03-a5"
+      ],
+      "explanation": "Le système nerveux commande l’hypophyse, qui stimule les glandes, dont les hormones voyagent par le sang jusqu’aux cibles.",
+      "knowledgeIds": [
+        "K-DEA-P10-002",
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien",
+      "sourcePages": "49, 50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette chaîne réunit tout ce que les pages 49 à 51 énoncent.",
+        "commonMistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+        "keyTakeaway": "Du nerveux à la cible, cinq maillons.",
+        "fieldApplication": "Deux systèmes de commande liés expliquent qu’une émotion retentisse sur des fonctions automatiques."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette chaîne réunit tout ce que les pages 49 à 51 énoncent.",
+      "common_mistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+      "key_takeaway": "Du nerveux à la cible, cinq maillons.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien",
+        "sourcePages": "49, 50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002",
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l08-q380",
+      "id": "dea-p10-l08-q04",
+      "type": "mcq",
       "difficulty": "medium",
-      "question": "Clique sur la thyroïde.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l08"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l08"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L08",
-        "originalQuestionId": "Q380",
-        "originalType": "anatomy_click",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "anatomyTarget": "thyroid"
-      },
-      "type": "anatomy_location",
+      "question": "Quelle glande le support rattache-t-il à la régulation du taux de sucre ?",
       "answers": [
         {
-          "id": "hotspot-thyroid",
-          "text": "Thyroïde",
-          "detail": "0.5,0.17",
-          "explanation": ""
+          "id": "dea-p10-l08-q04-a1",
+          "text": "Le pancréas",
+          "explanation": "Le support lui attribue cette régulation."
         },
         {
-          "id": "hotspot-kidney",
-          "text": "Rein",
-          "detail": "0.42,0.46",
-          "explanation": ""
+          "id": "dea-p10-l08-q04-a2",
+          "text": "La thyroïde",
+          "explanation": "Elle agit sur la croissance et le métabolisme.",
+          "distractorType": "frequent-error"
         },
         {
-          "id": "hotspot-left_upper_limb",
-          "text": "Membre supérieur gauche",
-          "detail": "0.82,0.36",
-          "explanation": ""
+          "id": "dea-p10-l08-q04-a3",
+          "text": "Les parathyroïdes",
+          "explanation": "Elles régulent le calcium.",
+          "distractorType": "frequent-error"
         },
         {
-          "id": "hotspot-thorax",
-          "text": "Thorax",
-          "detail": "0.5,0.31",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-spinal_cord",
-          "text": "Moelle épinière",
-          "detail": "0.5,0.27",
-          "explanation": ""
-        },
-        {
-          "id": "hotspot-right_upper_limb",
-          "text": "Membre supérieur droit",
-          "detail": "0.18,0.36",
-          "explanation": ""
+          "id": "dea-p10-l08-q04-a4",
+          "text": "Le thymus",
+          "explanation": "Le support le rattache aux défenses immunitaires et au système nerveux."
         }
       ],
-      "correctAnswer": "hotspot-thyroid"
+      "correctAnswer": "dea-p10-l08-q04-a1",
+      "explanation": "Le pancréas régule le taux de sucre dans le sang, au moyen d’une hormone hypoglycémiante et du glucagon.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "C’est la seule glande que le support rattache au sucre, et c’est aussi celle qui touche à un paramètre recueilli par l’ambulancier.",
+        "commonMistake": "Attribuer cette régulation à une autre glande brouille la carte des domaines.",
+        "keyTakeaway": "Le pancréas règle le sucre.",
+        "fieldApplication": "Le recueil de la glycémie figure parmi les actes du paragraphe II du décret."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "C’est la seule glande que le support rattache au sucre, et c’est aussi celle qui touche à un paramètre recueilli par l’ambulancier.",
+      "common_mistake": "Attribuer cette régulation à une autre glande brouille la carte des domaines.",
+      "key_takeaway": "Le pancréas règle le sucre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l08-q05",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le recueil de la glycémie figure parmi les actes que l’ambulancier accomplit en lien constant avec le médecin.",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q05-a1",
+          "text": "Vrai",
+          "explanation": "Il figure au paragraphe II de l’article R. 6311-17."
+        },
+        {
+          "id": "dea-p10-l08-q05-a2",
+          "text": "Faux",
+          "explanation": "Le texte le range pourtant parmi ces actes.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l08-q05-a1",
+      "explanation": "Le décret n° 2022-629 range le recueil de la glycémie parmi les cinq actes du paragraphe II, accomplis en lien constant avec le médecin.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux sources se rejoignent ici : le support explique la physiologie, le décret encadre le geste.",
+        "commonMistake": "Ignorer le cadre réglementaire d’un recueil autorisé fait manquer une part du métier.",
+        "keyTakeaway": "Le recueil est encadré, pas libre.",
+        "fieldApplication": "La valeur recueillie se transmet ; son interprétation appartient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "Deux sources se rejoignent ici : le support explique la physiologie, le décret encadre le geste.",
+      "common_mistake": "Ignorer le cadre réglementaire d’un recueil autorisé fait manquer une part du métier.",
+      "key_takeaway": "Le recueil est encadré, pas libre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    },
+    {
+      "id": "dea-p10-l08-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support cite parmi ses racines Glyco pour le sucre et Ova pour l’______.",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q06-a1",
+          "text": "ovaire",
+          "explanation": "C’est la traduction donnée par le support."
+        },
+        {
+          "id": "dea-p10-l08-q06-a2",
+          "text": "os",
+          "explanation": "Cette racine n’est pas celle que le support donne.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l08-q06-a1",
+      "explanation": "Le support donne Andro pour homme, Glyco pour sucre et Ova pour ovaire.",
+      "knowledgeIds": [
+        "K-DEA-P10-011"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - vocabulaire essentiel",
+      "sourcePages": "52",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Trois racines suffisent à décomposer une bonne part du vocabulaire endocrinien.",
+        "commonMistake": "Deviner une racine d’après une sonorité voisine conduit à des contresens.",
+        "keyTakeaway": "Andro, Glyco, Ova : trois racines, trois sens.",
+        "fieldApplication": "Comprendre un terme entendu permet de lire une transmission sans la déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Trois racines suffisent à décomposer une bonne part du vocabulaire endocrinien.",
+      "common_mistake": "Deviner une racine d’après une sonorité voisine conduit à des contresens.",
+      "key_takeaway": "Andro, Glyco, Ova : trois racines, trois sens.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 52",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - vocabulaire essentiel",
+        "sourcePages": "52",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-011"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "ovaire",
+          "l’ovaire"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l08-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient confus présente une soif intense. Sa famille signale un diabète connu. Que transmet le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q07-a1",
+          "text": "L’état de conscience observé, la soif rapportée, l’antécédent rapporté avec sa source, et la glycémie si elle a pu être recueillie",
+          "explanation": "Quatre éléments distincts, chacun à sa place."
+        },
+        {
+          "id": "dea-p10-l08-q07-a2",
+          "text": "Une hypoglycémie",
+          "explanation": "Le terme est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l08-q07-a3",
+          "text": "Une décompensation du diabète connu",
+          "explanation": "Relier l’antécédent aux signes est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l08-q07-a4",
+          "text": "La seule glycémie, les autres éléments étant rapportés",
+          "explanation": "Les propos rapportés font partie du bilan, annoncés comme tels.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-l08-q07-a1",
+      "explanation": "Un antécédent rapporté, des signes observés et une mesure autorisée se transmettent séparément. Les relier appartient au médecin.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le recueil de la glycémie est autorisé et particulièrement utile ici, mais il ne change pas la limite : mesurer n’est pas conclure.",
+        "commonMistake": "Relier un antécédent connu aux signes du jour ferme le raisonnement de la régulation.",
+        "keyTakeaway": "Ce que je vois, ce qu’on me dit, ce que je mesure.",
+        "fieldApplication": "Le Centre 15 décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "Le recueil de la glycémie est autorisé et particulièrement utile ici, mais il ne change pas la limite : mesurer n’est pas conclure.",
+      "common_mistake": "Relier un antécédent connu aux signes du jour ferme le raisonnement de la régulation.",
+      "key_takeaway": "Ce que je vois, ce qu’on me dit, ce que je mesure.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    },
+    {
+      "id": "dea-p10-l08-q08",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Parmi ces énoncés, lequel dépasse ce que le support autorise à affirmer ?",
+      "answers": [
+        {
+          "id": "dea-p10-l08-q08-a1",
+          "text": "L’ambulancier peut interpréter une glycémie recueillie pour adapter sa conduite",
+          "explanation": "Le décret encadre le recueil, pas l’interprétation."
+        },
+        {
+          "id": "dea-p10-l08-q08-a2",
+          "text": "Les surrénales sont situées au-dessus des reins",
+          "explanation": "Localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l08-q08-a3",
+          "text": "L’hypophyse est sous dépendance du système nerveux central",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-l08-q08-a4",
+          "text": "Le glucagon est une hormone hyperglycémiante",
+          "explanation": "Qualificatif donné par le support."
+        }
+      ],
+      "correctAnswer": "dea-p10-l08-q08-a1",
+      "explanation": "Trois énoncés reprennent le support ; le premier prête à l’ambulancier une décision qui appartient au médecin.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La frontière ne porte pas sur le geste, qui est autorisé, mais sur ce qu’on en fait.",
+        "commonMistake": "Confondre l’autorisation de mesurer et celle de décider est l’erreur que ce parcours doit écarter.",
+        "keyTakeaway": "Mesurer est autorisé ; conclure ne l’est pas.",
+        "fieldApplication": "Le médecin régulateur décide de la conduite à tenir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La frontière ne porte pas sur le geste, qui est autorisé, mais sur ce qu’on en fait.",
+      "common_mistake": "Confondre l’autorisation de mesurer et celle de décider est l’erreur que ce parcours doit écarter.",
+      "key_takeaway": "Mesurer est autorisé ; conclure ne l’est pas.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l08",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
     }
   ]
 }
