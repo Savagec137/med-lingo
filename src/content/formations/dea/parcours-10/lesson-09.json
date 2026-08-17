@@ -1,0 +1,967 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-boss",
+  "title": "Boss — Système endocrinien",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "level": 3,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50, 51, 52",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Distinguer un constat d’un propos rapporté.",
+    "Recueillir et transmettre une glycémie sans l’interpréter.",
+    "Structurer un bilan endocrinien au Centre 15."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organization.organ-to-system",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Système endocrinien",
+    "scenario": "Domicile, fin d’après-midi. Vous êtes appelé pour un homme d’une soixantaine d’années, confus et très fatigué depuis plusieurs jours selon son épouse. Elle signale un diabète connu et un traitement par cortisone au long cours. Vous recueillez ce que vous êtes autorisé à recueillir et transmettez au Centre 15, qui décidera de l’orientation.",
+    "initialInformation": [
+      "Patient conscient mais confus, répondant lentement aux questions posées.",
+      "Fatigue installée depuis plusieurs jours selon l’épouse ; aucune date précise.",
+      "Deux antécédents rapportés : un diabète connu et un traitement par cortisone.",
+      "Le matériel de recueil de la glycémie est disponible et fonctionnel."
+    ],
+    "tasks": [
+      "Distinguer ce qui est constaté de ce qui est rapporté par l’épouse.",
+      "Recueillir la glycémie et la transmettre avec son heure et sa voie.",
+      "Décrire l’état de conscience observé sans le qualifier.",
+      "Transmettre le bilan au Centre 15 sans le conclure."
+    ],
+    "priorities": [
+      "Décrire l’état de conscience en premier : c’est le constat le plus lourd du tableau.",
+      "Recueillir la glycémie, seul paramètre du tableau que le décret autorise à mesurer.",
+      "Annoncer la source de chaque antécédent, l’épouse n’ayant produit aucun document.",
+      "Situer l’ancienneté des signes, même approximative, plutôt que de l’omettre."
+    ],
+    "pitfalls": [
+      "Nommer une décompensation diabétique ou une hypoglycémie : ce sont des diagnostics.",
+      "Déduire l’origine de la fatigue du traitement par cortisone, alors que rien ne l’établit.",
+      "Transmettre une glycémie sans son heure ni sa voie de recueil.",
+      "Reprendre les antécédents rapportés comme s’ils étaient vérifiés.",
+      "Proposer une orientation hospitalière : la décision revient au Centre 15."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true,
+    "debrief": {
+      "success": "Le bilan transmis sépare ce qui a été constaté de ce que l’épouse rapporte, porte la glycémie avec son heure et sa voie de recueil, et ne relie aucun élément à un autre. Le décret autorisait la mesure, pas la conclusion : la limite a été tenue.",
+      "failure": "Une conclusion s’est glissée dans le bilan, ou un antécédent rapporté a été transmis comme établi. Reprends la limite du paragraphe II : il nomme le recueil de la glycémie et s’arrête là, sans rien dire de son interprétation.",
+      "commonErrors": [
+        "Nommer une hypoglycémie ou une décompensation.",
+        "Expliquer un signe par le traitement le plus visible.",
+        "Transmettre une glycémie sans son heure ni sa voie.",
+        "Reprendre un antécédent rapporté comme vérifié.",
+        "Proposer une orientation hospitalière."
+      ]
+    }
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-boss-q01",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Domicile, fin d’après-midi. Vous êtes appelé pour un homme confus, très fatigué depuis plusieurs jours. Sa femme signale un diabète connu et un traitement par cortisone. Que retient le bilan en premier ?",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q01-a1",
+          "text": "L’état de conscience observé, les antécédents rapportés avec leur source, et l’ancienneté des signes",
+          "explanation": "Trois éléments distincts, chacun à sa place."
+        },
+        {
+          "id": "dea-p10-boss-q01-a2",
+          "text": "Une décompensation diabétique",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q01-a3",
+          "text": "Un déséquilibre hormonal lié à la cortisone",
+          "explanation": "Relier le traitement aux signes est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q01-a4",
+          "text": "Les seuls antécédents, l’état de conscience relevant du médecin",
+          "explanation": "L’état de conscience est un constat que l’ambulancier décrit.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-boss-q01-a1",
+      "explanation": "Un état observé, des antécédents rapportés et une ancienneté se transmettent séparément. Les relier appartient au médecin.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux antécédents endocriniens dans le même tableau invitent d’autant plus à décrire sans trancher.",
+        "commonMistake": "Choisir une explication parmi deux plausibles ferme le raisonnement de la régulation.",
+        "keyTakeaway": "Ce que je vois, ce qu’on me dit, et depuis quand.",
+        "fieldApplication": "Le Centre 15 décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Deux antécédents endocriniens dans le même tableau invitent d’autant plus à décrire sans trancher.",
+      "common_mistake": "Choisir une explication parmi deux plausibles ferme le raisonnement de la régulation.",
+      "key_takeaway": "Ce que je vois, ce qu’on me dit, et depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations sur le système endocrinien correspondent au support ?",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q02-a1",
+          "text": "Il régule les organes en accélérant ou en ralentissant leur fonctionnement",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-boss-q02-a2",
+          "text": "Les hormones sont véhiculées par le sang",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-boss-q02-a3",
+          "text": "Elles agissent sur des cibles à distance",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-boss-q02-a4",
+          "text": "Elles n’agissent que sur la glande qui les produit",
+          "explanation": "Le support décrit une action à distance.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q02-a5",
+          "text": "Elles circulent dans les nerfs",
+          "explanation": "Le support décrit un transport sanguin.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-boss-q02-a1",
+        "dea-p10-boss-q02-a2",
+        "dea-p10-boss-q02-a3"
+      ],
+      "explanation": "Le support décrit un système qui régule à distance, par des protéines véhiculées par le sang.",
+      "knowledgeIds": [
+        "K-DEA-P10-001",
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’action à distance explique la dispersion des signes d’un dérèglement.",
+        "commonMistake": "Ramener l’action au lieu de production supprime la raison d’être du transport sanguin.",
+        "keyTakeaway": "Produite ici, active ailleurs.",
+        "fieldApplication": "Des signes dispersés se transmettent tous, sans être rattachés à un seul organe."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’action à distance explique la dispersion des signes d’un dérèglement.",
+      "common_mistake": "Ramener l’action au lieu de production supprime la raison d’être du transport sanguin.",
+      "key_takeaway": "Produite ici, active ailleurs.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-001",
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q03",
+      "type": "association",
+      "difficulty": "hard",
+      "question": "Vous situez les glandes citées par la famille. Associe chacune à sa localisation.",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q03-a1",
+          "text": "Hypophyse",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cerveau"
+        },
+        {
+          "id": "dea-p10-boss-q03-a2",
+          "text": "Thyroïde",
+          "explanation": "Le support la situe là.",
+          "match": "Base du cou"
+        },
+        {
+          "id": "dea-p10-boss-q03-a3",
+          "text": "Pancréas",
+          "explanation": "Le support lui attribue la régulation du sucre.",
+          "match": "Règle le taux de sucre"
+        },
+        {
+          "id": "dea-p10-boss-q03-a4",
+          "text": "Surrénales",
+          "explanation": "Le support les situe là.",
+          "match": "Au-dessus des reins"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-boss-q03-a1",
+        "dea-p10-boss-q03-a2",
+        "dea-p10-boss-q03-a3",
+        "dea-p10-boss-q03-a4"
+      ],
+      "explanation": "Situer chaque glande permet de rattacher un terme entendu à une région du corps.",
+      "knowledgeIds": [
+        "K-DEA-P10-004",
+        "K-DEA-P10-005",
+        "K-DEA-P10-007",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes",
+      "sourcePages": "50, 51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une carte des glandes rend lisible une transmission qui en cite plusieurs.",
+        "commonMistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+        "keyTakeaway": "Chaque glande a son étage.",
+        "fieldApplication": "Situer correctement une glande rend la description transmissible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une carte des glandes rend lisible une transmission qui en cite plusieurs.",
+      "common_mistake": "Mélanger deux localisations fait situer une atteinte au mauvais étage.",
+      "key_takeaway": "Chaque glande a son étage.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes",
+        "sourcePages": "50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-004",
+          "K-DEA-P10-005",
+          "K-DEA-P10-007",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-boss-q04",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "La femme du patient évoque un traitement des surrénales. Désigne, sur le schéma, les glandes situées au-dessus des reins.",
+      "answers": [
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "explanation": "Le support les situe au-dessus des reins.",
+          "detail": "0.5,0.43"
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "explanation": "Le rein est l’organe situé en dessous.",
+          "detail": "0.42,0.46",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "explanation": "La thyroïde est à la base du cou.",
+          "detail": "0.5,0.17",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "explanation": "L’abdomen est une région, pas une glande.",
+          "detail": "0.5,0.49",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "hotspot-adrenal_glands",
+      "explanation": "Les glandes surrénales coiffent les reins : le rein filtre, la surrénale sécrète.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux organes superposés, deux fonctions : la proximité ne les confond pas.",
+        "commonMistake": "Désigner le rein pour la surrénale confond l’organe et la glande qui le coiffe.",
+        "keyTakeaway": "Au-dessus du rein, une glande ; en dessous, un filtre.",
+        "fieldApplication": "Situer précisément permet de comprendre un terme entendu en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux organes superposés, deux fonctions : la proximité ne les confond pas.",
+      "common_mistake": "Désigner le rein pour la surrénale confond l’organe et la glande qui le coiffe.",
+      "key_takeaway": "Au-dessus du rein, une glande ; en dessous, un filtre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "adrenal_glands"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q05",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Vous recueillez la glycémie. Que prévoit exactement l’article R. 6311-17, II ?",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q05-a1",
+          "text": "Le recueil de la glycémie",
+          "explanation": "Le texte le nomme."
+        },
+        {
+          "id": "dea-p10-boss-q05-a2",
+          "text": "Une captation capillaire brève",
+          "explanation": "Voie précisée par le texte."
+        },
+        {
+          "id": "dea-p10-boss-q05-a3",
+          "text": "Une lecture transdermique",
+          "explanation": "Seconde voie précisée par le texte."
+        },
+        {
+          "id": "dea-p10-boss-q05-a4",
+          "text": "L’interprétation du résultat obtenu",
+          "explanation": "Le texte encadre le recueil, pas l’interprétation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q05-a5",
+          "text": "L’adaptation de la conduite à tenir selon le chiffre",
+          "explanation": "Elle appartient au médecin régulateur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-boss-q05-a1",
+        "dea-p10-boss-q05-a2",
+        "dea-p10-boss-q05-a3"
+      ],
+      "explanation": "Le texte nomme le recueil et précise deux voies. Il ne dit rien de l’interprétation ni de la conduite à tenir.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le décret autorise un geste et s’arrête là : ce qu’on fait de la valeur relève d’une autre décision.",
+        "commonMistake": "Lire dans le texte une autorisation d’interpréter dépasse ce qu’il énonce.",
+        "keyTakeaway": "Mesurer est autorisé ; conclure ne l’est pas.",
+        "fieldApplication": "La valeur se transmet avec son heure et sa voie de recueil."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "Le décret autorise un geste et s’arrête là : ce qu’on fait de la valeur relève d’une autre décision.",
+      "common_mistake": "Lire dans le texte une autorisation d’interpréter dépasse ce qu’il énonce.",
+      "key_takeaway": "Mesurer est autorisé ; conclure ne l’est pas.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le patient étant sous cortisone, vous pouvez en déduire l’origine de sa fatigue.",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q06-a1",
+          "text": "Vrai",
+          "explanation": "Un traitement connu n’explique pas à lui seul un signe constaté.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q06-a2",
+          "text": "Faux",
+          "explanation": "Le traitement se transmet comme une information ; le lien avec la fatigue appartient au médecin."
+        }
+      ],
+      "correctAnswer": "dea-p10-boss-q06-a2",
+      "explanation": "Un traitement en cours est une information du bilan. En déduire la cause d’un signe est une conclusion médicale.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support attribue à la cortisone des fonctions anti-inflammatoire et antiallergique : rien qui permette d’expliquer une fatigue.",
+        "commonMistake": "Expliquer un signe par le traitement le plus visible est une facilité qui trompe la régulation.",
+        "keyTakeaway": "On transmet le traitement, pas la cause qu’on lui prête.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support attribue à la cortisone des fonctions anti-inflammatoire et antiallergique : rien qui permette d’expliquer une fatigue.",
+      "common_mistake": "Expliquer un signe par le traitement le plus visible est une facilité qui trompe la régulation.",
+      "key_takeaway": "On transmet le traitement, pas la cause qu’on lui prête.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q07",
+      "type": "ordering",
+      "difficulty": "hard",
+      "question": "Avant de transmettre, vous vérifiez le vocabulaire employé. Le support qualifie le glucagon d’hormone ______.",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q07-a1",
+          "text": "Système nerveux central",
+          "explanation": "Le support en fait la dépendance de l’hypophyse.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p10-boss-q07-a2",
+          "text": "Hypophyse",
+          "explanation": "Elle stimule toutes les glandes endocrines.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p10-boss-q07-a3",
+          "text": "Glande endocrine",
+          "explanation": "Elle produit l’hormone.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p10-boss-q07-a4",
+          "text": "Sang",
+          "explanation": "Il véhicule l’hormone.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p10-boss-q07-a5",
+          "text": "Organe cible",
+          "explanation": "Il porte le récepteur et répond.",
+          "sequenceRank": 5
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-boss-q07-a1",
+        "dea-p10-boss-q07-a2",
+        "dea-p10-boss-q07-a3",
+        "dea-p10-boss-q07-a4",
+        "dea-p10-boss-q07-a5"
+      ],
+      "explanation": "Le système nerveux commande l’hypophyse, qui stimule les glandes, dont les hormones voyagent par le sang jusqu’aux cibles.",
+      "knowledgeIds": [
+        "K-DEA-P10-002",
+        "K-DEA-P10-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien",
+      "sourcePages": "49, 50",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Cette chaîne réunit tout ce que les pages 49 à 51 énoncent du fonctionnement d’ensemble.",
+        "commonMistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+        "keyTakeaway": "Du nerveux à la cible, cinq maillons.",
+        "fieldApplication": "Deux systèmes de commande liés expliquent qu’une émotion retentisse sur des fonctions automatiques."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Cette chaîne réunit tout ce que les pages 49 à 51 énoncent du fonctionnement d’ensemble.",
+      "common_mistake": "Placer l’hypophyse au sommet coupe le lien avec le système nerveux central.",
+      "key_takeaway": "Du nerveux à la cible, cinq maillons.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49, 50",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien",
+        "sourcePages": "49, 50",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002",
+          "K-DEA-P10-004"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q08",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Pour transmettre, vous rappelez que le glucagon est une hormone ______.",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q08-a1",
+          "text": "hyperglycémiante",
+          "explanation": "C’est le qualificatif employé par le support."
+        },
+        {
+          "id": "dea-p10-boss-q08-a2",
+          "text": "hypoglycémiante",
+          "explanation": "Ce qualificatif désigne l’autre hormone pancréatique.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-boss-q08-a1",
+      "explanation": "Le support qualifie le glucagon d’hormone hyperglycémiante, par opposition à l’hormone hypoglycémiante.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le préfixe porte tout le sens : hyper fait monter, hypo fait baisser.",
+        "commonMistake": "Inverser les deux préfixes fait transmettre l’inverse de ce qui est décrit.",
+        "keyTakeaway": "Glucagon : hyperglycémiant.",
+        "fieldApplication": "Comprendre le préfixe permet de lire un terme entendu sans le déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le préfixe porte tout le sens : hyper fait monter, hypo fait baisser.",
+      "common_mistake": "Inverser les deux préfixes fait transmettre l’inverse de ce qui est décrit.",
+      "key_takeaway": "Glucagon : hyperglycémiant.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "hyperglycémiante",
+          "hyperglycemiante"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-boss-q09",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quels éléments votre bilan transmet-il au Centre 15 ?",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q09-a1",
+          "text": "L’état de conscience observé",
+          "explanation": "Un constat direct."
+        },
+        {
+          "id": "dea-p10-boss-q09-a2",
+          "text": "Les antécédents et traitements rapportés, avec leur source",
+          "explanation": "Des propos rapportés, annoncés comme tels."
+        },
+        {
+          "id": "dea-p10-boss-q09-a3",
+          "text": "La glycémie recueillie, avec son heure et sa voie",
+          "explanation": "Une mesure autorisée, transmise avec ses conditions."
+        },
+        {
+          "id": "dea-p10-boss-q09-a4",
+          "text": "L’ancienneté des signes rapportée par l’entourage",
+          "explanation": "Elle situe le tableau dans le temps."
+        },
+        {
+          "id": "dea-p10-boss-q09-a5",
+          "text": "Le nom de la décompensation en cause",
+          "explanation": "Le nommer est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-boss-q09-a6",
+          "text": "Le service hospitalier vers lequel orienter",
+          "explanation": "L’orientation est décidée par le médecin régulateur.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-boss-q09-a1",
+        "dea-p10-boss-q09-a2",
+        "dea-p10-boss-q09-a3",
+        "dea-p10-boss-q09-a4"
+      ],
+      "explanation": "Un bilan réunit des constats, des propos rapportés avec leur source, une mesure autorisée et une ancienneté. Il ne nomme pas et ne décide pas.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces quatre éléments suffisent au médecin régulateur, et aucun ne demande de conclure.",
+        "commonMistake": "Ajouter le nom du trouble ou la destination fait sortir l’ambulancier de son champ.",
+        "keyTakeaway": "Ce que je vois, ce qu’on me dit, ce que je mesure, depuis quand.",
+        "fieldApplication": "L’orientation appartient au Centre 15."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Ces quatre éléments suffisent au médecin régulateur, et aucun ne demande de conclure.",
+      "common_mistake": "Ajouter le nom du trouble ou la destination fait sortir l’ambulancier de son champ.",
+      "key_takeaway": "Ce que je vois, ce qu’on me dit, ce que je mesure, depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p10-boss-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Vous relisez votre bilan. Lequel de ces énoncés ne peut pas y figurer ?",
+      "answers": [
+        {
+          "id": "dea-p10-boss-q10-a1",
+          "text": "La glycémie recueillie oriente vers une décompensation du diabète connu",
+          "explanation": "C’est une interprétation, que le décret ne confie pas à l’ambulancier."
+        },
+        {
+          "id": "dea-p10-boss-q10-a2",
+          "text": "Glycémie recueillie à 17 h 40 par captation capillaire brève",
+          "explanation": "Une mesure autorisée, transmise avec ses conditions."
+        },
+        {
+          "id": "dea-p10-boss-q10-a3",
+          "text": "Patient confus, répondant lentement aux questions",
+          "explanation": "Un constat direct."
+        },
+        {
+          "id": "dea-p10-boss-q10-a4",
+          "text": "Diabète et traitement par cortisone rapportés par l’épouse",
+          "explanation": "Des propos rapportés, annoncés comme tels."
+        }
+      ],
+      "correctAnswer": "dea-p10-boss-q10-a1",
+      "explanation": "Trois de ces énoncés sont des constats ou des propos rapportés. Le premier tire une conclusion à partir d’une mesure autorisée.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La frontière ne porte pas sur le geste, qui est autorisé, mais sur ce qu’on en dit.",
+        "commonMistake": "Confondre l’autorisation de mesurer et celle de conclure est l’erreur que ce parcours doit écarter.",
+        "keyTakeaway": "Mesurer est autorisé ; orienter ne l’est pas.",
+        "fieldApplication": "Le médecin régulateur décide de la conduite à tenir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La frontière ne porte pas sur le geste, qui est autorisé, mais sur ce qu’on en dit.",
+      "common_mistake": "Confondre l’autorisation de mesurer et celle de conclure est l’erreur que ce parcours doit écarter.",
+      "key_takeaway": "Mesurer est autorisé ; orienter ne l’est pas.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

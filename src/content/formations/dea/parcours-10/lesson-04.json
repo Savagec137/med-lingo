@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l04",
+  "title": "Le pancréas endocrine",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 11,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire la régulation du taux de sucre par deux hormones opposées.",
+    "Situer le recueil de la glycémie dans le cadre de l’article R. 6311-17.",
+    "Transmettre une glycémie sans l’interpréter."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l04-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Que régule le pancréas, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q01-a1",
+          "text": "Le taux de sucre dans le sang",
+          "explanation": "C’est la régulation citée par le support."
+        },
+        {
+          "id": "dea-p10-l04-q01-a2",
+          "text": "La quantité de calcium",
+          "explanation": "Elle est attribuée aux parathyroïdes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q01-a3",
+          "text": "La pression artérielle",
+          "explanation": "Le support la rattache à une hormone surrénalienne.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q01-a4",
+          "text": "La température corporelle",
+          "explanation": "Le support la cite comme exemple de constante, sans la rattacher au pancréas."
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q01-a1",
+      "explanation": "Le pancréas régule le taux de sucre dans le sang.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une glande, une constante : le support attribue à chacune un domaine précis.",
+        "commonMistake": "Attribuer au pancréas la régulation du calcium mélange deux glandes.",
+        "keyTakeaway": "Le pancréas règle le sucre.",
+        "fieldApplication": "Le taux de sucre est l’un des rares paramètres qu’un ambulancier peut recueillir."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une glande, une constante : le support attribue à chacune un domaine précis.",
+      "common_mistake": "Attribuer au pancréas la régulation du calcium mélange deux glandes.",
+      "key_takeaway": "Le pancréas règle le sucre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l04-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel effet le support attribue-t-il au glucagon ?",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q02-a1",
+          "text": "Un effet hyperglycémiant",
+          "explanation": "Le support le qualifie ainsi."
+        },
+        {
+          "id": "dea-p10-l04-q02-a2",
+          "text": "Un effet hypoglycémiant",
+          "explanation": "Le support réserve ce qualificatif à l’autre hormone.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q02-a3",
+          "text": "Un effet anti-inflammatoire",
+          "explanation": "Cet effet est attribué à la cortisone.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q02-a4",
+          "text": "Un rôle dans la régulation du calcium",
+          "explanation": "Ce rôle est attribué aux parathyroïdes."
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q02-a1",
+      "explanation": "Le pancréas régule le taux de sucre au moyen d’une hormone hypoglycémiante et du glucagon, hyperglycémiant.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux hormones aux effets opposés permettent de régler dans les deux sens.",
+        "commonMistake": "Inverser les deux effets fait comprendre l’inverse de ce que le support décrit.",
+        "keyTakeaway": "Glucagon fait monter ; l’autre fait baisser.",
+        "fieldApplication": "Un taux de sucre anormal peut relever d’un excès dans un sens comme dans l’autre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux hormones aux effets opposés permettent de régler dans les deux sens.",
+      "common_mistake": "Inverser les deux effets fait comprendre l’inverse de ce que le support décrit.",
+      "key_takeaway": "Glucagon fait monter ; l’autre fait baisser.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l04-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, une seule hormone suffit à régler le taux de sucre dans le sang.",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q03-a1",
+          "text": "Vrai",
+          "explanation": "Le support en décrit deux, aux effets opposés.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q03-a2",
+          "text": "Faux",
+          "explanation": "Le support décrit une hormone hypoglycémiante et le glucagon, hyperglycémiant."
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q03-a2",
+      "explanation": "Le support décrit deux hormones pancréatiques aux effets opposés sur le taux de sucre.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Régler une constante suppose de pouvoir agir dans les deux sens, pas dans un seul.",
+        "commonMistake": "N’en retenir qu’une rend incompréhensible la remontée d’un taux de sucre trop bas.",
+        "keyTakeaway": "Deux hormones, deux sens.",
+        "fieldApplication": "Un taux de sucre recueilli se transmet comme une donnée, sans être interprété."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Régler une constante suppose de pouvoir agir dans les deux sens, pas dans un seul.",
+      "common_mistake": "N’en retenir qu’une rend incompréhensible la remontée d’un taux de sucre trop bas.",
+      "key_takeaway": "Deux hormones, deux sens.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l04-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que prévoit l’article R. 6311-17, II, à propos de la glycémie ?",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q04-a1",
+          "text": "Le recueil de la glycémie",
+          "explanation": "Le texte le nomme parmi les actes du paragraphe II."
+        },
+        {
+          "id": "dea-p10-l04-q04-a2",
+          "text": "Un recueil par captation capillaire brève",
+          "explanation": "Le texte précise cette voie."
+        },
+        {
+          "id": "dea-p10-l04-q04-a3",
+          "text": "Un recueil par lecture transdermique",
+          "explanation": "Le texte précise également cette voie."
+        },
+        {
+          "id": "dea-p10-l04-q04-a4",
+          "text": "L’interprétation médicale du résultat",
+          "explanation": "Le texte encadre le recueil, pas l’interprétation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q04-a5",
+          "text": "La décision de la conduite à tenir en fonction du chiffre",
+          "explanation": "Elle appartient au médecin régulateur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l04-q04-a1",
+        "dea-p10-l04-q04-a2",
+        "dea-p10-l04-q04-a3"
+      ],
+      "explanation": "L’acte du paragraphe II nomme le recueil de la glycémie et précise deux voies : captation capillaire brève ou lecture transdermique.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le texte encadre un recueil et s’arrête là : ce qu’on fait de la valeur relève d’une autre décision.",
+        "commonMistake": "Lire dans le texte une autorisation d’interpréter dépasse ce qu’il énonce.",
+        "keyTakeaway": "Le décret autorise à mesurer, pas à conclure.",
+        "fieldApplication": "La valeur recueillie se transmet ; son interprétation appartient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "Le texte encadre un recueil et s’arrête là : ce qu’on fait de la valeur relève d’une autre décision.",
+      "common_mistake": "Lire dans le texte une autorisation d’interpréter dépasse ce qu’il énonce.",
+      "key_takeaway": "Le décret autorise à mesurer, pas à conclure.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    },
+    {
+      "id": "dea-p10-l04-q05",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le recueil de la glycémie fait partie des actes que l’ambulancier accomplit en lien constant avec le médecin.",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q05-a1",
+          "text": "Vrai",
+          "explanation": "Il figure au paragraphe II, dont les actes s’accomplissent en lien constant avec le médecin."
+        },
+        {
+          "id": "dea-p10-l04-q05-a2",
+          "text": "Faux",
+          "explanation": "Le recueil de la glycémie figure pourtant parmi ces actes.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q05-a1",
+      "explanation": "Le paragraphe II énumère cinq actes accomplis en lien constant avec le médecin ; le recueil de la glycémie en fait partie.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le lien constant avec le médecin est une condition de l’acte, pas une formalité postérieure.",
+        "commonMistake": "Traiter ce lien comme un compte rendu a posteriori inverse la logique du texte.",
+        "keyTakeaway": "Le lien constant est une condition.",
+        "fieldApplication": "Le recueil de la glycémie s’inscrit dans cet échange avec la régulation."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "Le lien constant avec le médecin est une condition de l’acte, pas une formalité postérieure.",
+      "common_mistake": "Traiter ce lien comme un compte rendu a posteriori inverse la logique du texte.",
+      "key_takeaway": "Le lien constant est une condition.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    },
+    {
+      "id": "dea-p10-l04-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support qualifie le glucagon d’hormone ______.",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q06-a1",
+          "text": "hyperglycémiante",
+          "explanation": "C’est le qualificatif employé par le support."
+        },
+        {
+          "id": "dea-p10-l04-q06-a2",
+          "text": "hypoglycémiante",
+          "explanation": "Ce qualificatif désigne l’autre hormone pancréatique.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q06-a1",
+      "explanation": "Le support qualifie le glucagon d’hormone hyperglycémiante.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le préfixe porte tout le sens : hyper fait monter, hypo fait baisser.",
+        "commonMistake": "Inverser les deux préfixes fait transmettre l’inverse de ce qui est décrit.",
+        "keyTakeaway": "Glucagon : hyperglycémiant.",
+        "fieldApplication": "Comprendre le préfixe permet de lire un terme entendu sans le déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le préfixe porte tout le sens : hyper fait monter, hypo fait baisser.",
+      "common_mistake": "Inverser les deux préfixes fait transmettre l’inverse de ce qui est décrit.",
+      "key_takeaway": "Glucagon : hyperglycémiant.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "hyperglycémiante",
+          "hyperglycemiante"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l04-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à ce que le support ou le décret en dit.",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q07-a1",
+          "text": "Glucagon",
+          "explanation": "Le support le qualifie ainsi.",
+          "match": "Hormone hyperglycémiante"
+        },
+        {
+          "id": "dea-p10-l04-q07-a2",
+          "text": "Pancréas",
+          "explanation": "Le support lui attribue cette régulation.",
+          "match": "Règle le taux de sucre"
+        },
+        {
+          "id": "dea-p10-l04-q07-a3",
+          "text": "Recueil de la glycémie",
+          "explanation": "Le décret le range parmi les actes du paragraphe II.",
+          "match": "Acte en lien constant avec le médecin"
+        },
+        {
+          "id": "dea-p10-l04-q07-a4",
+          "text": "Interprétation du résultat",
+          "explanation": "Ni le support ni le décret ne la confient à l’ambulancier.",
+          "match": "Relève du médecin"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l04-q07-a1",
+        "dea-p10-l04-q07-a2",
+        "dea-p10-l04-q07-a3",
+        "dea-p10-l04-q07-a4"
+      ],
+      "explanation": "Deux sources se complètent ici : le support décrit la physiologie, le décret encadre le recueil.",
+      "knowledgeIds": [
+        "K-DEA-P10-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - le pancréas",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Savoir d’où vient chaque élément permet de ne pas prêter à l’un ce que dit l’autre.",
+        "commonMistake": "Confondre ce que décrit un support pédagogique et ce qu’autorise un texte réglementaire mélange deux registres.",
+        "keyTakeaway": "Le support explique, le décret autorise.",
+        "fieldApplication": "Le chiffre se transmet ; ce qu’il signifie appartient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Savoir d’où vient chaque élément permet de ne pas prêter à l’un ce que dit l’autre.",
+      "common_mistake": "Confondre ce que décrit un support pédagogique et ce qu’autorise un texte réglementaire mélange deux registres.",
+      "key_takeaway": "Le support explique, le décret autorise.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - le pancréas",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-007"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l04-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous recueillez une glycémie chez un patient confus. Que transmet le bilan au Centre 15 ?",
+      "answers": [
+        {
+          "id": "dea-p10-l04-q08-a1",
+          "text": "La valeur recueillie, l’heure du relevé, la voie employée et l’état de conscience observé",
+          "explanation": "Quatre éléments factuels, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p10-l04-q08-a2",
+          "text": "Une hypoglycémie",
+          "explanation": "Le terme est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l04-q08-a3",
+          "text": "La valeur seule, l’heure étant secondaire",
+          "explanation": "L’heure permet de comparer avec un relevé ultérieur.",
+          "distractorType": "secondary-priority"
+        },
+        {
+          "id": "dea-p10-l04-q08-a4",
+          "text": "La conduite à tenir que le chiffre impose",
+          "explanation": "Elle est décidée par le médecin régulateur.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p10-l04-q08-a1",
+      "explanation": "Le décret autorise le recueil, pas la conclusion. Une valeur se transmet avec son heure et ses conditions.",
+      "knowledgeIds": [
+        "library.parametres-recueillis-par-le-dea"
+      ],
+      "sourceDocument": "decret-2022-629",
+      "sourceSection": "Article R. 6311-17, II",
+      "pageStatus": "section_only_reference",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La confusion observée et le chiffre relevé sont deux constats : les relier appartient au médecin.",
+        "commonMistake": "Nommer une hypoglycémie transforme une mesure autorisée en diagnostic non autorisé.",
+        "keyTakeaway": "Un chiffre, une heure, une voie, un état observé.",
+        "fieldApplication": "Le Centre 15 décide de la conduite à tenir à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "regulatory_text",
+      "why_correct": "La confusion observée et le chiffre relevé sont deux constats : les relier appartient au médecin.",
+      "common_mistake": "Nommer une hypoglycémie transforme une mesure autorisée en diagnostic non autorisé.",
+      "key_takeaway": "Un chiffre, une heure, une voie, un état observé.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Texte réglementaire — décret n° 2022-629, article R. 6311-17, II.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l04",
+        "sourceDocument": "decret-2022-629",
+        "sourceSection": "Article R. 6311-17, II",
+        "pageStatus": "section_only_reference",
+        "sourceType": "official",
+        "sourceStatus": "linked",
+        "knowledgeIds": [
+          "library.parametres-recueillis-par-le-dea"
+        ],
+        "actIds": [
+          "acte.r6311-17.ii.2"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "regulatory_text"
+      }
+    }
+  ]
+}

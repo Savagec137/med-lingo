@@ -1,0 +1,732 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l05",
+  "title": "Les surrénales",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer les glandes surrénales par rapport aux reins.",
+    "Citer les fonctions de la cortisone.",
+    "Transmettre un traitement rapporté sans en déduire la maladie."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.location",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p10-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il les glandes surrénales ?",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q01-a1",
+          "text": "Au-dessus des reins",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l05-q01-a2",
+          "text": "À l’intérieur des reins",
+          "explanation": "Le support les situe au-dessus, pas dedans.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q01-a3",
+          "text": "Sur la thyroïde",
+          "explanation": "C’est la localisation des parathyroïdes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q01-a4",
+          "text": "Derrière le sternum",
+          "explanation": "C’est la localisation du thymus."
+        }
+      ],
+      "correctAnswer": "dea-p10-l05-q01-a1",
+      "explanation": "Les glandes surrénales sont situées au-dessus des reins.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Leur nom dit leur position : au-dessus du rein, et non dedans.",
+        "commonMistake": "Les placer dans le rein confond une glande endocrine et un organe filtrant.",
+        "keyTakeaway": "Sur le rein, pas dans le rein.",
+        "fieldApplication": "Situer correctement une glande rend la description transmissible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Leur nom dit leur position : au-dessus du rein, et non dedans.",
+      "common_mistake": "Les placer dans le rein confond une glande endocrine et un organe filtrant.",
+      "key_takeaway": "Sur le rein, pas dans le rein.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l05-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quelles fonctions le support attribue-t-il à la cortisone ?",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q02-a1",
+          "text": "Une fonction anti-inflammatoire et antiallergique",
+          "explanation": "Le support les cite ensemble."
+        },
+        {
+          "id": "dea-p10-l05-q02-a2",
+          "text": "Une fonction hyperglycémiante exclusive",
+          "explanation": "Le support attribue cet effet au glucagon.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q02-a3",
+          "text": "La régulation du calcium",
+          "explanation": "Elle est attribuée aux parathyroïdes.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q02-a4",
+          "text": "La maturation des spermatozoïdes",
+          "explanation": "Elle est attribuée à la testostérone."
+        }
+      ],
+      "correctAnswer": "dea-p10-l05-q02-a1",
+      "explanation": "Le support indique que la cortisone possède une fonction anti-inflammatoire et antiallergique.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux effets cités ensemble par le support : les retenir ensemble évite d’en oublier un.",
+        "commonMistake": "Attribuer à la cortisone une fonction d’une autre hormone mélange deux glandes.",
+        "keyTakeaway": "Anti-inflammatoire et antiallergique.",
+        "fieldApplication": "Un patient traité par cortisone peut le mentionner : comprendre le terme aide à le transmettre correctement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux effets cités ensemble par le support : les retenir ensemble évite d’en oublier un.",
+      "common_mistake": "Attribuer à la cortisone une fonction d’une autre hormone mélange deux glandes.",
+      "key_takeaway": "Anti-inflammatoire et antiallergique.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l05-q03",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que dit le support des glandes surrénales ?",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q03-a1",
+          "text": "Elles sont situées au-dessus des reins",
+          "explanation": "Localisation donnée par le support."
+        },
+        {
+          "id": "dea-p10-l05-q03-a2",
+          "text": "Elles permettent la régulation de nombreuses fonctions organiques",
+          "explanation": "Formulation du support."
+        },
+        {
+          "id": "dea-p10-l05-q03-a3",
+          "text": "Elles produisent la cortisone",
+          "explanation": "Le support la cite parmi leurs hormones."
+        },
+        {
+          "id": "dea-p10-l05-q03-a4",
+          "text": "Le support leur rattache une hormone jouant sur la pression artérielle",
+          "explanation": "Le support l’indique."
+        },
+        {
+          "id": "dea-p10-l05-q03-a5",
+          "text": "Elles filtrent le sang",
+          "explanation": "La filtration est attribuée au rein.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l05-q03-a1",
+        "dea-p10-l05-q03-a2",
+        "dea-p10-l05-q03-a3",
+        "dea-p10-l05-q03-a4"
+      ],
+      "explanation": "Les surrénales régulent de nombreuses fonctions et produisent des hormones importantes, dont la cortisone.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Leur voisinage avec le rein ne leur donne pas les fonctions du rein.",
+        "commonMistake": "Attribuer la filtration aux surrénales confond deux organes voisins mais distincts.",
+        "keyTakeaway": "Voisines du rein, mais pas rein.",
+        "fieldApplication": "Situer et distinguer deux organes voisins évite les descriptions ambiguës."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Leur voisinage avec le rein ne leur donne pas les fonctions du rein.",
+      "common_mistake": "Attribuer la filtration aux surrénales confond deux organes voisins mais distincts.",
+      "key_takeaway": "Voisines du rein, mais pas rein.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l05-q04",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "Désigne, sur le schéma, les glandes que le support situe au-dessus des reins.",
+      "answers": [
+        {
+          "id": "hotspot-adrenal_glands",
+          "text": "Glandes surrénales",
+          "explanation": "Le support les situe au-dessus des reins.",
+          "detail": "0.5,0.43"
+        },
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "explanation": "Le rein est l’organe situé en dessous.",
+          "detail": "0.42,0.46",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-thyroid",
+          "text": "Thyroïde",
+          "explanation": "La thyroïde est à la base du cou.",
+          "detail": "0.5,0.17",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "explanation": "L’abdomen est une région, pas une glande.",
+          "detail": "0.5,0.49",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "hotspot-adrenal_glands",
+      "explanation": "Les glandes surrénales coiffent les reins ; le rein filtre, la surrénale sécrète.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux organes superposés, deux fonctions : la proximité ne les confond pas.",
+        "commonMistake": "Désigner le rein pour la surrénale confond l’organe et la glande qui le coiffe.",
+        "keyTakeaway": "Au-dessus du rein, une glande ; en dessous, un filtre.",
+        "fieldApplication": "Situer précisément permet de comprendre un terme entendu en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux organes superposés, deux fonctions : la proximité ne les confond pas.",
+      "common_mistake": "Désigner le rein pour la surrénale confond l’organe et la glande qui le coiffe.",
+      "key_takeaway": "Au-dessus du rein, une glande ; en dessous, un filtre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "adrenal_glands"
+      }
+    },
+    {
+      "id": "dea-p10-l05-q05",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "La cortisone possède une fonction anti-inflammatoire et ______.",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q05-a1",
+          "text": "antiallergique",
+          "explanation": "C’est le second qualificatif employé par le support."
+        },
+        {
+          "id": "dea-p10-l05-q05-a2",
+          "text": "hyperglycémiante",
+          "explanation": "Ce qualificatif désigne le glucagon.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l05-q05-a1",
+      "explanation": "Le support attribue à la cortisone une fonction anti-inflammatoire et antiallergique.",
+      "knowledgeIds": [
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - les glandes surrénales",
+      "sourcePages": "51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux fonctions sont citées ensemble : l’une n’est pas plus importante que l’autre.",
+        "commonMistake": "Substituer un qualificatif d’une autre hormone brouille les rôles.",
+        "keyTakeaway": "Anti-inflammatoire et antiallergique.",
+        "fieldApplication": "Comprendre un traitement mentionné par un patient aide à le transmettre correctement."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux fonctions sont citées ensemble : l’une n’est pas plus importante que l’autre.",
+      "common_mistake": "Substituer un qualificatif d’une autre hormone brouille les rôles.",
+      "key_takeaway": "Anti-inflammatoire et antiallergique.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - les glandes surrénales",
+        "sourcePages": "51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "antiallergique",
+          "anti-allergique"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l05-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque glande à ce que le support lui attribue.",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q06-a1",
+          "text": "Pancréas",
+          "explanation": "Le support lui attribue cette régulation.",
+          "match": "Taux de sucre dans le sang"
+        },
+        {
+          "id": "dea-p10-l05-q06-a2",
+          "text": "Parathyroïdes",
+          "explanation": "Le support leur attribue ce rôle.",
+          "match": "Régulation du calcium"
+        },
+        {
+          "id": "dea-p10-l05-q06-a3",
+          "text": "Glandes surrénales",
+          "explanation": "Le support cite cette hormone.",
+          "match": "Cortisone"
+        },
+        {
+          "id": "dea-p10-l05-q06-a4",
+          "text": "Thyroïde",
+          "explanation": "Le support cite cette action large.",
+          "match": "Croissance et métabolisme"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l05-q06-a1",
+        "dea-p10-l05-q06-a2",
+        "dea-p10-l05-q06-a3",
+        "dea-p10-l05-q06-a4"
+      ],
+      "explanation": "Quatre glandes, quatre domaines que le support attribue sans recouvrement.",
+      "knowledgeIds": [
+        "K-DEA-P10-005",
+        "K-DEA-P10-007",
+        "K-DEA-P10-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - glandes",
+      "sourcePages": "50, 51",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque glande a son domaine : le support ne les fait pas se chevaucher.",
+        "commonMistake": "Attribuer deux domaines à une même glande rend la carte inutilisable.",
+        "keyTakeaway": "Une glande, un domaine.",
+        "fieldApplication": "Rattacher un terme entendu à la bonne glande évite les contresens."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque glande a son domaine : le support ne les fait pas se chevaucher.",
+      "common_mistake": "Attribuer deux domaines à une même glande rend la carte inutilisable.",
+      "key_takeaway": "Une glande, un domaine.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 50, 51",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - glandes",
+        "sourcePages": "50, 51",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-005",
+          "K-DEA-P10-007",
+          "K-DEA-P10-008"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l05-q07",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient signale prendre de la cortisone au long cours. Que fait le bilan de cette information ?",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q07-a1",
+          "text": "Il la transmet comme un traitement rapporté, avec sa source",
+          "explanation": "Un traitement rapporté se transmet tel quel."
+        },
+        {
+          "id": "dea-p10-l05-q07-a2",
+          "text": "Il en déduit une atteinte surrénalienne",
+          "explanation": "Raisonner sur la cause d’un traitement est une démarche médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q07-a3",
+          "text": "Il l’écarte, le traitement n’étant pas vérifiable sur place",
+          "explanation": "Un traitement rapporté oriente utilement la régulation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q07-a4",
+          "text": "Il conseille au patient d’en modifier la prise",
+          "explanation": "Modifier un traitement n’appartient pas à l’ambulancier.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p10-l05-q07-a1",
+      "explanation": "Un traitement en cours est une information du bilan. Le transmettre suffit ; en déduire une cause ou le modifier n’appartient pas à l’ambulancier.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un traitement au long cours change souvent la lecture d’un tableau : la régulation doit le savoir.",
+        "commonMistake": "Déduire une maladie d’un traitement revient à poser un diagnostic à rebours.",
+        "keyTakeaway": "On transmet le traitement, pas la maladie qu’on suppose derrière.",
+        "fieldApplication": "Le médecin régulateur décide de ce que ce traitement implique."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Un traitement au long cours change souvent la lecture d’un tableau : la régulation doit le savoir.",
+      "common_mistake": "Déduire une maladie d’un traitement revient à poser un diagnostic à rebours.",
+      "key_takeaway": "On transmet le traitement, pas la maladie qu’on suppose derrière.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p10-l05-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient présente une pression artérielle basse et signale un traitement des surrénales. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p10-l05-q08-a1",
+          "text": "La valeur mesurée avec son heure, et le traitement rapporté avec sa source",
+          "explanation": "Deux éléments distincts, transmis sans être reliés."
+        },
+        {
+          "id": "dea-p10-l05-q08-a2",
+          "text": "Une insuffisance surrénalienne",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q08-a3",
+          "text": "Que la pression basse s’explique par le traitement",
+          "explanation": "Relier les deux éléments est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l05-q08-a4",
+          "text": "La seule pression artérielle, le traitement relevant du médecin traitant",
+          "explanation": "Un traitement en cours fait partie du bilan.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p10-l05-q08-a1",
+      "explanation": "Le support rattache une hormone surrénalienne à la pression artérielle, mais cela ne permet pas de relier deux éléments d’un bilan précis.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Connaître un lien physiologique ne donne pas le droit de l’appliquer à un patient donné.",
+        "commonMistake": "Expliquer une valeur par un traitement connu ferme le raisonnement de la régulation.",
+        "keyTakeaway": "On transmet les deux, pas le lien qu’on imagine.",
+        "fieldApplication": "Le Centre 15 décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Connaître un lien physiologique ne donne pas le droit de l’appliquer à un patient donné.",
+      "common_mistake": "Expliquer une valeur par un traitement connu ferme le raisonnement de la régulation.",
+      "key_takeaway": "On transmet les deux, pas le lien qu’on imagine.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l05",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

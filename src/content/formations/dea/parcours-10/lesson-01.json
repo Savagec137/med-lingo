@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p10-l01",
+  "title": "Les hormones",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-10",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Définir une hormone et son mode de transport.",
+    "Expliquer l’action à distance sur des organes cibles.",
+    "Distinguer commande hormonale et commande nerveuse."
+  ],
+  "competencyIds": [
+    "body.system.endocrine",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p10-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quel rôle le support attribue-t-il au système endocrinien ?",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q01-a1",
+          "text": "La régulation des organes, dont il accélère ou ralentit le fonctionnement",
+          "explanation": "C’est la formulation du support."
+        },
+        {
+          "id": "dea-p10-l01-q01-a2",
+          "text": "La commande directe des mouvements volontaires",
+          "explanation": "Elle relève de l’aire motrice primaire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q01-a3",
+          "text": "Le transport de l’oxygène vers les tissus",
+          "explanation": "Il relève de l’appareil circulatoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q01-a4",
+          "text": "La filtration du sang",
+          "explanation": "Elle relève de l’appareil excréteur."
+        }
+      ],
+      "correctAnswer": "dea-p10-l01-q01-a1",
+      "explanation": "Le système endocrinien assure la régulation des organes : il accélère ou ralentit leur fonctionnement.",
+      "knowledgeIds": [
+        "K-DEA-P10-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - rôle",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Réguler, c’est pouvoir agir dans les deux sens : accélérer comme ralentir.",
+        "commonMistake": "Croire qu’une hormone ne peut qu’activer une fonction rend incompréhensibles les tableaux de ralentissement.",
+        "keyTakeaway": "Le système endocrinien règle : il accélère ou il ralentit.",
+        "fieldApplication": "Des signes opposés peuvent relever d’un même système : le bilan les décrit sans trancher."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Réguler, c’est pouvoir agir dans les deux sens : accélérer comme ralentir.",
+      "common_mistake": "Croire qu’une hormone ne peut qu’activer une fonction rend incompréhensibles les tableaux de ralentissement.",
+      "key_takeaway": "Le système endocrinien règle : il accélère ou il ralentit.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - rôle",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-001"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l01-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Comment le support définit-il une hormone ?",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q02-a1",
+          "text": "Une protéine sécrétée par une glande endocrine",
+          "explanation": "C’est la définition donnée par le support."
+        },
+        {
+          "id": "dea-p10-l01-q02-a2",
+          "text": "Une cellule produite par la moelle osseuse",
+          "explanation": "Cette description est celle des cellules sanguines.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q02-a3",
+          "text": "Un gaz transporté par l’hémoglobine",
+          "explanation": "Cette description est celle de l’oxygène.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p10-l01-q02-a4",
+          "text": "Un influx électrique circulant dans un nerf",
+          "explanation": "Cette description est celle de l’influx nerveux.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l01-q02-a1",
+      "explanation": "Les hormones sont des protéines sécrétées par les glandes endocrines.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La nature chimique de l’hormone la distingue nettement de l’influx nerveux, qui est électrique.",
+        "commonMistake": "Confondre hormone et influx mélange deux modes de commande très différents.",
+        "keyTakeaway": "Une hormone est une protéine, pas un signal électrique.",
+        "fieldApplication": "Deux systèmes commandent l’organisme, par deux moyens différents."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La nature chimique de l’hormone la distingue nettement de l’influx nerveux, qui est électrique.",
+      "common_mistake": "Confondre hormone et influx mélange deux modes de commande très différents.",
+      "key_takeaway": "Une hormone est une protéine, pas un signal électrique.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l01-q03",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que dit le support du trajet et de l’action des hormones ?",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q03-a1",
+          "text": "Elles sont véhiculées par le sang",
+          "explanation": "C’est le moyen de transport cité."
+        },
+        {
+          "id": "dea-p10-l01-q03-a2",
+          "text": "Elles agissent sur des organes cibles à distance",
+          "explanation": "C’est la portée décrite par le support."
+        },
+        {
+          "id": "dea-p10-l01-q03-a3",
+          "text": "Leurs cibles portent des récepteurs spécifiques",
+          "explanation": "Le support le précise."
+        },
+        {
+          "id": "dea-p10-l01-q03-a4",
+          "text": "Elles agissent par stimulation ou par inhibition",
+          "explanation": "Le support cite les deux effets."
+        },
+        {
+          "id": "dea-p10-l01-q03-a5",
+          "text": "Elles agissent uniquement sur la glande qui les produit",
+          "explanation": "Le support décrit au contraire une action à distance.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l01-q03-a1",
+        "dea-p10-l01-q03-a2",
+        "dea-p10-l01-q03-a3",
+        "dea-p10-l01-q03-a4"
+      ],
+      "explanation": "Produites par une glande, les hormones circulent dans le sang et agissent à distance sur des cibles porteuses de récepteurs spécifiques.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’action à distance explique qu’un dérèglement se manifeste loin de la glande en cause.",
+        "commonMistake": "Croire l’action locale rend incompréhensible qu’une atteinte du cou retentisse sur le cœur.",
+        "keyTakeaway": "Produite ici, active ailleurs.",
+        "fieldApplication": "Des signes dispersés peuvent relever d’une seule glande : le bilan les décrit tous."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’action à distance explique qu’un dérèglement se manifeste loin de la glande en cause.",
+      "common_mistake": "Croire l’action locale rend incompréhensible qu’une atteinte du cou retentisse sur le cœur.",
+      "key_takeaway": "Produite ici, active ailleurs.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l01-q04",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "D’après le support, une hormone n’agit que sur l’organe qui l’a produite.",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q04-a1",
+          "text": "Vrai",
+          "explanation": "Le support décrit une action sur des organes cibles à distance.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q04-a2",
+          "text": "Faux",
+          "explanation": "Les hormones agissent sur des organes cibles à distance, par voie sanguine."
+        }
+      ],
+      "correctAnswer": "dea-p10-l01-q04-a2",
+      "explanation": "Les hormones sont véhiculées par le sang et agissent sur des organes cibles à distance.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La distance entre la glande et sa cible est ce qui définit le mode d’action hormonal.",
+        "commonMistake": "Ramener l’action au lieu de production supprime la raison d’être du transport sanguin.",
+        "keyTakeaway": "Le sang porte l’hormone jusqu’à sa cible.",
+        "fieldApplication": "Une atteinte endocrinienne peut se traduire par des signes très éloignés de la glande."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La distance entre la glande et sa cible est ce qui définit le mode d’action hormonal.",
+      "common_mistake": "Ramener l’action au lieu de production supprime la raison d’être du transport sanguin.",
+      "key_takeaway": "Le sang porte l’hormone jusqu’à sa cible.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l01-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "Les hormones sont produites par des glandes et véhiculées par le ______.",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q05-a1",
+          "text": "sang",
+          "explanation": "C’est le moyen de transport cité par le support."
+        },
+        {
+          "id": "dea-p10-l01-q05-a2",
+          "text": "nerf",
+          "explanation": "Le nerf conduit un influx électrique, pas une hormone.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p10-l01-q05-a1",
+      "explanation": "Le support indique que les hormones sont produites par des glandes et véhiculées par le sang.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le moyen de transport distingue la commande hormonale de la commande nerveuse.",
+        "commonMistake": "Faire circuler une hormone dans un nerf mélange deux systèmes de commande.",
+        "keyTakeaway": "L’hormone voyage par le sang.",
+        "fieldApplication": "Comprendre le mode de transport éclaire la lenteur relative d’une réponse hormonale."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le moyen de transport distingue la commande hormonale de la commande nerveuse.",
+      "common_mistake": "Faire circuler une hormone dans un nerf mélange deux systèmes de commande.",
+      "key_takeaway": "L’hormone voyage par le sang.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "sang",
+          "le sang"
+        ]
+      }
+    },
+    {
+      "id": "dea-p10-l01-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque terme à ce que le support en dit.",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q06-a1",
+          "text": "Glande endocrine",
+          "explanation": "Elle est à l’origine de l’hormone.",
+          "match": "Produit l’hormone"
+        },
+        {
+          "id": "dea-p10-l01-q06-a2",
+          "text": "Hormone",
+          "explanation": "Le support en donne la nature.",
+          "match": "Protéine sécrétée"
+        },
+        {
+          "id": "dea-p10-l01-q06-a3",
+          "text": "Sang",
+          "explanation": "Le support en fait le véhicule.",
+          "match": "Véhicule l’hormone"
+        },
+        {
+          "id": "dea-p10-l01-q06-a4",
+          "text": "Organe cible",
+          "explanation": "Il porte des récepteurs spécifiques.",
+          "match": "Répond à l’hormone"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l01-q06-a1",
+        "dea-p10-l01-q06-a2",
+        "dea-p10-l01-q06-a3",
+        "dea-p10-l01-q06-a4"
+      ],
+      "explanation": "Quatre éléments, un enchaînement : une glande produit, le sang transporte, une cible répond.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque élément fait une chose : les confondre rend la description du mécanisme impossible.",
+        "commonMistake": "Prendre la glande pour la cible inverse le sens de l’action hormonale.",
+        "keyTakeaway": "Produire, transporter, répondre.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque élément fait une chose : les confondre rend la description du mécanisme impossible.",
+      "common_mistake": "Prendre la glande pour la cible inverse le sens de l’action hormonale.",
+      "key_takeaway": "Produire, transporter, répondre.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p10-l01-q07",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet d’une hormone, de sa production à son effet.",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q07-a1",
+          "text": "Glande endocrine",
+          "explanation": "Lieu de production.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p10-l01-q07-a2",
+          "text": "Sang",
+          "explanation": "Véhicule décrit par le support.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p10-l01-q07-a3",
+          "text": "Récepteur spécifique de l’organe cible",
+          "explanation": "Point de reconnaissance.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p10-l01-q07-a4",
+          "text": "Stimulation ou inhibition de la fonction",
+          "explanation": "Effet décrit par le support.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p10-l01-q07-a1",
+        "dea-p10-l01-q07-a2",
+        "dea-p10-l01-q07-a3",
+        "dea-p10-l01-q07-a4"
+      ],
+      "explanation": "L’hormone est produite par une glande, transportée par le sang, reconnue par un récepteur, puis elle stimule ou inhibe.",
+      "knowledgeIds": [
+        "K-DEA-P10-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Système endocrinien - composition",
+      "sourcePages": "49",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet explique le décalage entre le moment où une hormone est libérée et celui où son effet se voit.",
+        "commonMistake": "Placer l’effet avant le transport supprime la distance qui caractérise l’action hormonale.",
+        "keyTakeaway": "Produire, transporter, reconnaître, agir.",
+        "fieldApplication": "Un effet hormonal peut être différé : le bilan décrit ce qu’il constate au moment où il le constate."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet explique le décalage entre le moment où une hormone est libérée et celui où son effet se voit.",
+      "common_mistake": "Placer l’effet avant le transport supprime la distance qui caractérise l’action hormonale.",
+      "key_takeaway": "Produire, transporter, reconnaître, agir.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 49",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Système endocrinien - composition",
+        "sourcePages": "49",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P10-002"
+        ],
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p10-l01-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient présente une fatigue inhabituelle, une prise de poids et une frilosité, sans plainte localisée. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p10-l01-q08-a1",
+          "text": "Les trois éléments rapportés, leur ancienneté, et l’absence de plainte localisée",
+          "explanation": "Quatre constats factuels, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p10-l01-q08-a2",
+          "text": "Une hypothyroïdie",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q08-a3",
+          "text": "Un dérèglement hormonal",
+          "explanation": "Nommer un mécanisme est déjà une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p10-l01-q08-a4",
+          "text": "Rien de significatif, aucun signe n’étant localisé",
+          "explanation": "L’absence de localisation est justement une information.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p10-l01-q08-a1",
+      "explanation": "Des signes généraux dispersés sont difficiles à rattacher, précisément parce que les hormones agissent à distance. Le bilan les rapporte tous, sans les relier.",
+      "competencyIds": [
+        "body.system.endocrine",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p10-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support explique pourquoi ces signes sont dispersés : l’hormone agit loin de la glande qui la produit.",
+        "commonMistake": "Écarter des signes parce qu’ils ne sont pas localisés fait perdre l’essentiel du tableau.",
+        "keyTakeaway": "Des signes généraux se transmettent comme tels.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui relie ces éléments entre eux."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support explique pourquoi ces signes sont dispersés : l’hormone agit loin de la glande qui la produit.",
+      "common_mistake": "Écarter des signes parce qu’ils ne sont pas localisés fait perdre l’essentiel du tableau.",
+      "key_takeaway": "Des signes généraux se transmettent comme tels.",
+      "tags": [
+        "dea",
+        "parcours-10",
+        "système-endocrinien"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p10-l01",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.endocrine",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

@@ -34,19 +34,19 @@ Relevé par recherche plein texte sur les 175 pages. Les plages marquées
 
 ### Anatomie et physiologie
 
-| Section                                                    | Pages        | État                       |
-| ---------------------------------------------------------- | ------------ | -------------------------- |
-| Vocabulaire médical — préfixes, suffixes, racines          | 3–6          | disponible                 |
-| Organisation générale du corps, tableau des sept appareils | 14–18        | **exploitée** (p. 16)      |
-| Appareil circulatoire                                      | 18–21        | **exploitée** — parcours 5 |
-| Appareil neurologique                                      | 28–33        | **exploitée** — parcours 8 |
-| Appareil locomoteur                                        | 34–38        | **exploitée** — parcours 4 |
-| Appareil digestif                                          | 39–41        | **exploitée** — parcours 7 |
-| Appareil urinaire                                          | 43–44        | **exploitée** — parcours 9 |
-| Appareil génital féminin                                   | 45–47, 51–52 | disponible                 |
-| Appareil génital masculin                                  | 48–51        | disponible                 |
-| Système endocrinien                                        | 45–52        | disponible — parcours 10   |
-| Appareil respiratoire                                      | 23–27        | **exploitée** — parcours 6 |
+| Section                                                    | Pages        | État                        |
+| ---------------------------------------------------------- | ------------ | --------------------------- |
+| Vocabulaire médical — préfixes, suffixes, racines          | 3–6          | disponible                  |
+| Organisation générale du corps, tableau des sept appareils | 14–18        | **exploitée** (p. 16)       |
+| Appareil circulatoire                                      | 18–21        | **exploitée** — parcours 5  |
+| Appareil neurologique                                      | 28–33        | **exploitée** — parcours 8  |
+| Appareil locomoteur                                        | 34–38        | **exploitée** — parcours 4  |
+| Appareil digestif                                          | 39–41        | **exploitée** — parcours 7  |
+| Appareil urinaire                                          | 43–44        | **exploitée** — parcours 9  |
+| Appareil génital féminin                                   | 45–47, 51–52 | disponible                  |
+| Appareil génital masculin                                  | 48–51        | disponible                  |
+| Système endocrinien                                        | 49–52        | **exploitée** — parcours 10 |
+| Appareil respiratoire                                      | 23–27        | **exploitée** — parcours 6  |
 
 ### Gestes, mesures et bilans
 
@@ -106,7 +106,15 @@ déclarer. **Ne pas les rattacher au support par commodité.**
 4. **Ne jamais faire dire au support plus qu'il ne dit.** Quand une question
    mêle un élément que le support énumère et un élément qu'il n'énumère pas,
    elle reste en rédaction interne.
-5. **Une leçon du plan que le support ne couvre pas reste au plan, et le dit.**
+5. **Un parcours peut avoir deux sources.** Le parcours 10 en donne l'exemple :
+   le support décrit la physiologie du pancréas, et le décret n° 2022-629
+   encadre le recueil de la glycémie. Les questions réglementaires citent le
+   décret et son acte `acte.r6311-17.ii.2` ; les questions de physiologie
+   citent le support et ses pages. Le générateur distingue explicitement les
+   trois provenances — support, décret, extension — parce qu'un cas non prévu
+   retombe silencieusement en `missing_source` : la source disparaît sans que
+   rien ne le signale.
+6. **Une leçon du plan que le support ne couvre pas reste au plan, et le dit.**
    Le parcours 9 en donne deux exemples : « L'urètre » et « Équilibre
    hydrique » n'apparaissent nulle part dans les deux pages consacrées à
    l'appareil urinaire. Les titres de `roadmap-v2.json` n'ont pas été modifiés
