@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "formationId": "dea",
+  "blocId": "bloc-02",
+  "parcoursId": "parcours-09",
+  "contentId": "dea-p09",
+  "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+  "validationStatus": "to_validate",
+  "knowledge": [
+    {
+      "knowledgeId": "K-DEA-P09-001",
+      "title": "Place de l’appareil excréteur parmi les sept appareils",
+      "summary": "Le tableau des sept appareils attribue à l’appareil excréteur deux fonctions : filtration et élimination.",
+      "keyPoints": [
+        "Le support le nomme « appareil excréteur ».",
+        "Ses deux fonctions citées sont la filtration et l’élimination."
+      ],
+      "commonErrors": [
+        "Réduire l’appareil à l’élimination en oubliant la filtration.",
+        "Confondre appareil excréteur et appareil digestif, qui élimine aussi des résidus."
+      ],
+      "clinicalApplication": "Rattacher un signe urinaire au bon appareil est la première étape d’un bilan structuré.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Organisation générale du corps - les sept appareils",
+      "pages": [
+        16
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l01",
+        "dea-p09-l07",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-002",
+      "title": "Le trajet de l’urine jusqu’à la vessie",
+      "summary": "L’urine se déverse dans un réservoir, la vessie, au moyen de deux canaux : les uretères.",
+      "keyPoints": [
+        "La vessie est décrite comme un réservoir.",
+        "Deux canaux y conduisent l’urine : les uretères.",
+        "Le support ouvre la section par les reins."
+      ],
+      "commonErrors": [
+        "Croire qu’un seul canal relie les reins à la vessie.",
+        "Confondre l’uretère, qui mène à la vessie, et l’organe qui la stocke."
+      ],
+      "clinicalApplication": "Nommer correctement chaque segment évite les descriptions ambiguës d’une douleur du flanc ou du bas-ventre.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - reins, uretères et vessie",
+      "pages": [
+        43
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l01",
+        "dea-p09-l02",
+        "dea-p09-l03",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-003",
+      "title": "Le néphron",
+      "summary": "Chaque rein contient environ un million de néphrons, constitués de glomérules et de tubes urinifères.",
+      "keyPoints": [
+        "Chaque rein contient environ 1 million de néphrons.",
+        "Un néphron est constitué de glomérules et de tubes urinifères."
+      ],
+      "commonErrors": [
+        "Croire que le rein est une masse homogène sans unité fonctionnelle.",
+        "Confondre le néphron, unité microscopique, et le rein entier."
+      ],
+      "clinicalApplication": "Comprendre que le rein est fait d’un million d’unités explique qu’une partie puisse être atteinte sans que tout s’arrête.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - le néphron",
+      "pages": [
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l01",
+        "dea-p09-l05",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-004",
+      "title": "La première filtration",
+      "summary": "Le support situe la première filtration au niveau de la paroi des capillaires.",
+      "keyPoints": [
+        "La filtration se fait à travers la paroi des capillaires.",
+        "Le support la qualifie de « première » filtration.",
+        "Elle est la fonction que le tableau des sept appareils attribue à cet appareil."
+      ],
+      "commonErrors": [
+        "Situer la filtration dans la vessie plutôt que dans le rein.",
+        "Croire qu’une seule étape suffit, alors que le support parle d’une première filtration."
+      ],
+      "clinicalApplication": "Savoir où commence la production d’urine aide à comprendre pourquoi une circulation compromise retentit sur la diurèse.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - filtration",
+      "pages": [
+        16,
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l05",
+        "dea-p09-l07",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-005",
+      "title": "Polyurie et oligurie",
+      "summary": "Le support donne deux variations pathologiques du volume urinaire, avec leurs seuils.",
+      "keyPoints": [
+        "La polyurie correspond à un volume supérieur à 2 litres.",
+        "Un volume inférieur à 1 litre correspond à l’oligurie, terme figurant dans les mots-clés de la même page."
+      ],
+      "commonErrors": [
+        "Employer « polyurie » pour une diminution du volume.",
+        "Transmettre une impression de volume plutôt qu’une quantité ou une durée."
+      ],
+      "clinicalApplication": "Un volume urinaire anormal se transmet comme une donnée, avec la période sur laquelle il a été constaté.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - variations du volume urinaire",
+      "pages": [
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l05",
+        "dea-p09-l06",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-006",
+      "title": "L’aspect des urines décrit par le support",
+      "summary": "Le support énumère plusieurs aspects anormaux de l’urine et les relie à ce qu’ils peuvent traduire.",
+      "keyPoints": [
+        "Urine foncée, acajou ou brun.",
+        "Urine délavée.",
+        "Urine colorée en rouge par le sang.",
+        "Urine orange ou violette, associée aux infections."
+      ],
+      "commonErrors": [
+        "Interpréter une couleur comme un diagnostic plutôt que de la décrire.",
+        "Omettre la couleur constatée sous prétexte qu’elle n’est pas chiffrée."
+      ],
+      "clinicalApplication": "La couleur d’une urine est une observation directe, transmissible telle quelle sans être interprétée.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - aspect des urines",
+      "pages": [
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l06",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-007",
+      "title": "L’aspect des urines lors d’un recueil",
+      "summary": "Dans la partie consacrée aux prélèvements non stériles, le support relie trois aspects à leur signification.",
+      "keyPoints": [
+        "Urine claire : aspect normal.",
+        "Urine trouble : infection.",
+        "Urine jaune foncé : urines concentrées."
+      ],
+      "commonErrors": [
+        "Conclure à une infection à partir du seul aspect, sans transmettre le constat.",
+        "Confondre urine foncée par concentration et urine colorée par du sang."
+      ],
+      "clinicalApplication": "L’aspect se décrit au moment du recueil, avec l’heure ; l’interprétation revient au médecin.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Prélèvements non stériles - aspect des urines",
+      "pages": [
+        77
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l06",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-008",
+      "title": "Les racines du vocabulaire urinaire",
+      "summary": "Le support liste les racines qui permettent de décomposer un terme urinaire entendu en transmission.",
+      "keyPoints": [
+        "Cysto désigne la vessie ou la vésicule.",
+        "Néphr désigne le rein.",
+        "Pyel désigne le bassinet.",
+        "Vesic désigne la vessie.",
+        "Natr désigne le sodium."
+      ],
+      "commonErrors": [
+        "Deviner le sens d’un terme d’après une sonorité voisine.",
+        "Confondre une racine désignant le rein et une racine désignant la vessie."
+      ],
+      "clinicalApplication": "Comprendre un terme entendu n’autorise pas à le reprendre comme un constat personnel.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - vocabulaire essentiel",
+      "pages": [
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l03",
+        "dea-p09-l04",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-009",
+      "title": "Les mots-clés urinaires du support",
+      "summary": "Le support énumère les termes du champ urinaire qu’un ambulancier peut rencontrer dans une transmission.",
+      "keyPoints": [
+        "Termes de volume : anurie, oligurie, polyurie.",
+        "Termes de miction : dysurie, pollakiurie, énurésie, incontinence urinaire.",
+        "Termes de contenu : hématurie, glycosurie, pyurie.",
+        "Termes de pathologie ou d’acte : lithiase urinaire, pyélonéphrite, néphrite, cystoscopie, néphrectomie."
+      ],
+      "commonErrors": [
+        "Employer un terme entendu sans en connaître le sens exact.",
+        "Reprendre un terme d’une transmission antérieure comme s’il s’agissait de son propre constat."
+      ],
+      "clinicalApplication": "Ces termes se comprennent pour lire une transmission, pas pour produire un bilan à leur place.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Appareil urinaire - vocabulaire essentiel",
+      "pages": [
+        44
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l04",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    },
+    {
+      "knowledgeId": "K-DEA-P09-010",
+      "title": "La déshydratation citée comme alerte circulatoire",
+      "summary": "Dans l’observation clinique liée au système circulatoire, le support cite la déshydratation parmi ce qu’une peau marbrée peut traduire.",
+      "keyPoints": [
+        "Les marbrures sont des zones violacées et pâles, aux genoux et aux cuisses.",
+        "Elles peuvent traduire une alerte vitale circulatoire potentielle, dont la déshydratation.",
+        "La pâleur est souvent associée à une peau froide.",
+        "La froideur des extrémités peut traduire une vasoconstriction."
+      ],
+      "commonErrors": [
+        "Attribuer des marbrures à une seule cause alors que le support en cite plusieurs.",
+        "Conclure à une déshydratation à partir du seul aspect cutané."
+      ],
+      "clinicalApplication": "Les signes cutanés se décrivent avec leur localisation ; ce qu’ils traduisent relève du médecin.",
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+      "sourceType": "training_source",
+      "section": "Observation clinique en lien avec le système circulatoire",
+      "pages": [
+        58
+      ],
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonIds": [
+        "dea-p09-l06",
+        "dea-p09-l08",
+        "dea-p09-boss"
+      ],
+      "plannedParcoursIds": [
+        "parcours-09"
+      ],
+      "status": "to_validate"
+    }
+  ]
+}

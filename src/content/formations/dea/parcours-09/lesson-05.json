@@ -1,0 +1,726 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l05",
+  "title": "Formation de l’urine",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer la première filtration au niveau de la paroi des capillaires.",
+    "Relier néphron, glomérule et tube urinifère.",
+    "Citer les seuils de variation du volume urinaire."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l04"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l05-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Où le support situe-t-il la première filtration ?",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q01-a1",
+          "text": "Au niveau de la paroi des capillaires",
+          "explanation": "C’est la localisation donnée par le support."
+        },
+        {
+          "id": "dea-p09-l05-q01-a2",
+          "text": "Dans la vessie",
+          "explanation": "La vessie est un réservoir, pas un filtre.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q01-a3",
+          "text": "Dans l’uretère",
+          "explanation": "L’uretère est un canal de transport.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q01-a4",
+          "text": "Dans le bassinet",
+          "explanation": "Le support cite ce terme comme racine, sans y situer la filtration."
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q01-a1",
+      "explanation": "Le support situe la première filtration au niveau de la paroi des capillaires.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La filtration se fait là où le sang et l’unité rénale sont au contact, pas plus loin sur le trajet.",
+        "commonMistake": "Situer la filtration dans la vessie déplace la fonction principale du rein.",
+        "keyTakeaway": "On filtre au contact du sang, pas dans le réservoir.",
+        "fieldApplication": "Comprendre où commence la production d’urine éclaire le lien entre circulation et diurèse."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La filtration se fait là où le sang et l’unité rénale sont au contact, pas plus loin sur le trajet.",
+      "common_mistake": "Situer la filtration dans la vessie déplace la fonction principale du rein.",
+      "key_takeaway": "On filtre au contact du sang, pas dans le réservoir.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Que signifie le fait que le support parle d’une « première » filtration ?",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q02-a1",
+          "text": "Que le processus ne s’arrête pas à cette étape",
+          "explanation": "Le mot suppose au moins une étape ultérieure."
+        },
+        {
+          "id": "dea-p09-l05-q02-a2",
+          "text": "Que c’est la seule filtration réalisée par le rein",
+          "explanation": "Le mot « première » indique l’inverse.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q02-a3",
+          "text": "Qu’elle a lieu une seule fois par jour",
+          "explanation": "Le mot ne renvoie pas à une fréquence.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p09-l05-q02-a4",
+          "text": "Qu’elle concerne le premier rein rencontré par le sang",
+          "explanation": "Le mot ne désigne pas un ordre entre les deux reins.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q02-a1",
+      "explanation": "Le support qualifie cette filtration de « première », ce qui suppose que l’urine se forme en plusieurs étapes.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le vocabulaire d’une source dit parfois plus que sa phrase : « première » annonce une suite.",
+        "commonMistake": "Lire « première » comme « unique » ferme un processus que le support laisse ouvert.",
+        "keyTakeaway": "Première ne veut pas dire seule.",
+        "fieldApplication": "Un contenu qui s’arrête là attend une autre source pour aller plus loin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le vocabulaire d’une source dit parfois plus que sa phrase : « première » annonce une suite.",
+      "common_mistake": "Lire « première » comme « unique » ferme un processus que le support laisse ouvert.",
+      "key_takeaway": "Première ne veut pas dire seule.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q03",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels éléments interviennent dans la formation de l’urine, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q03-a1",
+          "text": "Les néphrons, au nombre d’environ un million par rein",
+          "explanation": "Le support les décrit comme les unités du rein."
+        },
+        {
+          "id": "dea-p09-l05-q03-a2",
+          "text": "Les glomérules",
+          "explanation": "Constituant du néphron cité par le support."
+        },
+        {
+          "id": "dea-p09-l05-q03-a3",
+          "text": "Les tubes urinifères",
+          "explanation": "Constituant du néphron cité par le support."
+        },
+        {
+          "id": "dea-p09-l05-q03-a4",
+          "text": "La paroi des capillaires",
+          "explanation": "Le support y situe la première filtration."
+        },
+        {
+          "id": "dea-p09-l05-q03-a5",
+          "text": "La vessie",
+          "explanation": "Elle reçoit l’urine formée, elle ne la forme pas.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l05-q03-a1",
+        "dea-p09-l05-q03-a2",
+        "dea-p09-l05-q03-a3",
+        "dea-p09-l05-q03-a4"
+      ],
+      "explanation": "L’urine se forme dans les néphrons, à partir d’une filtration au niveau de la paroi des capillaires.",
+      "knowledgeIds": [
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Former et stocker sont deux fonctions distinctes, portées par deux structures distinctes.",
+        "commonMistake": "Faire de la vessie un lieu de formation supprime le rôle du néphron.",
+        "keyTakeaway": "Le néphron forme, la vessie stocke.",
+        "fieldApplication": "Savoir où l’urine se forme aide à comprendre ce qu’une chute de circulation peut entraîner."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Former et stocker sont deux fonctions distinctes, portées par deux structures distinctes.",
+      "common_mistake": "Faire de la vessie un lieu de formation supprime le rôle du néphron.",
+      "key_takeaway": "Le néphron forme, la vessie stocke.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q04",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support situe la première filtration au niveau de la paroi des ______.",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q04-a1",
+          "text": "capillaires",
+          "explanation": "C’est la structure nommée par le support."
+        },
+        {
+          "id": "dea-p09-l05-q04-a2",
+          "text": "uretères",
+          "explanation": "L’uretère est un canal, situé en aval.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q04-a1",
+      "explanation": "La première filtration se fait à travers la paroi des capillaires.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le lieu de la filtration est le point de contact entre le sang et l’unité rénale.",
+        "commonMistake": "Placer la filtration dans un canal en aval inverse l’ordre du processus.",
+        "keyTakeaway": "On filtre au contact du sang.",
+        "fieldApplication": "Ce point relie l’appareil urinaire et l’appareil circulatoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le lieu de la filtration est le point de contact entre le sang et l’unité rénale.",
+      "common_mistake": "Placer la filtration dans un canal en aval inverse l’ordre du processus.",
+      "key_takeaway": "On filtre au contact du sang.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "capillaires",
+          "les capillaires"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l05-q05",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue les étapes de la formation de l’urine, telles que le support les enchaîne.",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q05-a1",
+          "text": "Sang au contact de la paroi des capillaires",
+          "explanation": "Point de départ de la filtration.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p09-l05-q05-a2",
+          "text": "Première filtration",
+          "explanation": "Étape nommée par le support.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p09-l05-q05-a3",
+          "text": "Glomérule et tube urinifère",
+          "explanation": "Constituants du néphron.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p09-l05-q05-a4",
+          "text": "Urine gagnant l’uretère",
+          "explanation": "Sortie vers le réservoir.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l05-q05-a1",
+        "dea-p09-l05-q05-a2",
+        "dea-p09-l05-q05-a3",
+        "dea-p09-l05-q05-a4"
+      ],
+      "explanation": "Le sang filtré au niveau des capillaires donne une urine qui chemine dans le néphron, puis gagne l’uretère.",
+      "knowledgeIds": [
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’enchaînement montre que l’urine est un produit du sang, pas une sécrétion indépendante.",
+        "commonMistake": "Placer la filtration après le néphron inverse la cause et le produit.",
+        "keyTakeaway": "Du sang à l’urine, par filtration.",
+        "fieldApplication": "Ce lien explique pourquoi une circulation compromise retentit sur la production d’urine."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’enchaînement montre que l’urine est un produit du sang, pas une sécrétion indépendante.",
+      "common_mistake": "Placer la filtration après le néphron inverse la cause et le produit.",
+      "key_takeaway": "Du sang à l’urine, par filtration.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q06",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "À partir de quel volume le support parle-t-il de polyurie ?",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q06-a1",
+          "text": "Au-delà de 2 litres",
+          "explanation": "C’est le seuil donné par le support."
+        },
+        {
+          "id": "dea-p09-l05-q06-a2",
+          "text": "Au-delà de 1 litre",
+          "explanation": "Ce seuil correspond à l’autre variation citée.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q06-a3",
+          "text": "Au-delà de 500 millilitres",
+          "explanation": "Ce volume n’est pas cité par le support."
+        },
+        {
+          "id": "dea-p09-l05-q06-a4",
+          "text": "Au-delà de 5 litres",
+          "explanation": "Le seuil donné est nettement inférieur.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q06-a1",
+      "explanation": "Le support situe la polyurie au-delà de 2 litres, et la variation inverse en dessous de 1 litre.",
+      "knowledgeIds": [
+        "K-DEA-P09-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - variations du volume urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un seuil chiffré rend une observation transmissible, là où « beaucoup » ne dit rien.",
+        "commonMistake": "Confondre les deux seuils inverse le sens de l’anomalie transmise.",
+        "keyTakeaway": "Plus de 2 litres : polyurie.",
+        "fieldApplication": "Un volume se transmet avec la période sur laquelle il a été constaté."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un seuil chiffré rend une observation transmissible, là où « beaucoup » ne dit rien.",
+      "common_mistake": "Confondre les deux seuils inverse le sens de l’anomalie transmise.",
+      "key_takeaway": "Plus de 2 litres : polyurie.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - variations du volume urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-005"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q07",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Selon le support, un volume urinaire inférieur à 1 litre constitue une variation pathologique.",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q07-a1",
+          "text": "Vrai",
+          "explanation": "Le support cite ce seuil parmi les variations pathologiques."
+        },
+        {
+          "id": "dea-p09-l05-q07-a2",
+          "text": "Faux",
+          "explanation": "Le support range pourtant ce seuil parmi les variations pathologiques.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q07-a1",
+      "explanation": "Le support cite deux variations pathologiques du volume urinaire : au-delà de 2 litres, et en dessous de 1 litre.",
+      "knowledgeIds": [
+        "K-DEA-P09-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - variations du volume urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux seuils encadrent une plage : sortir par le haut ou par le bas est anormal dans les deux cas.",
+        "commonMistake": "Ne retenir qu’un seuil fait manquer la moitié des situations.",
+        "keyTakeaway": "Deux bornes, deux anomalies.",
+        "fieldApplication": "Un volume anormal se transmet avec la durée sur laquelle il a été relevé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux seuils encadrent une plage : sortir par le haut ou par le bas est anormal dans les deux cas.",
+      "common_mistake": "Ne retenir qu’un seuil fait manquer la moitié des situations.",
+      "key_takeaway": "Deux bornes, deux anomalies.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - variations du volume urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-005"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l05-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Une aide à domicile vous dit que le patient « n’a presque pas uriné depuis hier ». Que transmettez-vous ?",
+      "answers": [
+        {
+          "id": "dea-p09-l05-q08-a1",
+          "text": "Le constat rapporté, la période concernée, et la source de l’information",
+          "explanation": "Trois éléments qui permettent à la régulation de pondérer."
+        },
+        {
+          "id": "dea-p09-l05-q08-a2",
+          "text": "Une oligurie",
+          "explanation": "Le terme est une traduction, donc une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q08-a3",
+          "text": "Une insuffisance rénale",
+          "explanation": "C’est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l05-q08-a4",
+          "text": "Le seul constat, sans préciser qui vous l’a rapporté",
+          "explanation": "La source de l’information change la valeur du constat.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l05-q08-a1",
+      "explanation": "Un volume rapporté se transmet avec sa période et sa source. Sans quantité mesurée, c’est un témoignage, et il doit être annoncé comme tel.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l05",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La régulation pondère différemment une quantité mesurée et une impression rapportée par un tiers.",
+        "commonMistake": "Traduire le récit en terme médical fait passer un témoignage pour une mesure.",
+        "keyTakeaway": "Quoi, sur quelle période, et rapporté par qui.",
+        "fieldApplication": "Le Centre 15 décide de la suite à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La régulation pondère différemment une quantité mesurée et une impression rapportée par un tiers.",
+      "common_mistake": "Traduire le récit en terme médical fait passer un témoignage pour une mesure.",
+      "key_takeaway": "Quoi, sur quelle période, et rapporté par qui.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l05",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

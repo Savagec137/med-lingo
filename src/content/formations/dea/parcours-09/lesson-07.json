@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l07",
+  "title": "Fonctions rénales",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 9,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16, 44",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Citer les deux fonctions attribuées à l’appareil excréteur.",
+    "Repérer ce que le support ne traite pas.",
+    "Renvoyer au médecin une question qui relève de lui."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organization.organ-to-system",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l06"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l07-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelle fonction le support attribue-t-il en premier à l’appareil excréteur ?",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q01-a1",
+          "text": "La filtration",
+          "explanation": "Le tableau des sept appareils la cite en premier."
+        },
+        {
+          "id": "dea-p09-l07-q01-a2",
+          "text": "La digestion",
+          "explanation": "Elle relève de l’appareil digestif.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q01-a3",
+          "text": "La distribution",
+          "explanation": "Elle relève de l’appareil circulatoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q01-a4",
+          "text": "La coordination",
+          "explanation": "Elle relève de l’appareil neurologique."
+        }
+      ],
+      "correctAnswer": "dea-p09-l07-q01-a1",
+      "explanation": "Le tableau des sept appareils attribue à l’appareil excréteur la filtration puis l’élimination.",
+      "knowledgeIds": [
+        "K-DEA-P09-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Organisation générale du corps - les sept appareils",
+      "sourcePages": "16",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre des deux fonctions est celui du processus : filtrer produit ce qui sera éliminé.",
+        "commonMistake": "Attribuer une fonction d’un autre appareil brouille la carte des sept appareils.",
+        "keyTakeaway": "Filtrer d’abord, éliminer ensuite.",
+        "fieldApplication": "Rattacher un signe au bon appareil structure le bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre des deux fonctions est celui du processus : filtrer produit ce qui sera éliminé.",
+      "common_mistake": "Attribuer une fonction d’un autre appareil brouille la carte des sept appareils.",
+      "key_takeaway": "Filtrer d’abord, éliminer ensuite.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Organisation générale du corps - les sept appareils",
+        "sourcePages": "16",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-001"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l07-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur la fonction rénale ?",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q02-a1",
+          "text": "La filtration se fait au niveau de la paroi des capillaires",
+          "explanation": "C’est la localisation donnée."
+        },
+        {
+          "id": "dea-p09-l07-q02-a2",
+          "text": "Le support la qualifie de première filtration",
+          "explanation": "Le terme figure dans le texte."
+        },
+        {
+          "id": "dea-p09-l07-q02-a3",
+          "text": "Chaque rein contient environ un million de néphrons",
+          "explanation": "C’est l’ordre de grandeur donné."
+        },
+        {
+          "id": "dea-p09-l07-q02-a4",
+          "text": "Le rein règle à lui seul l’équilibre en eau de l’organisme",
+          "explanation": "Le support ne traite pas de l’équilibre hydrique.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q02-a5",
+          "text": "Le rein produit les cellules sanguines",
+          "explanation": "Cette fonction n’est pas attribuée au rein par le support.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l07-q02-a1",
+        "dea-p09-l07-q02-a2",
+        "dea-p09-l07-q02-a3"
+      ],
+      "explanation": "Le support s’en tient à la filtration, à sa localisation et au nombre de néphrons. Il ne traite pas de l’équilibre hydrique.",
+      "knowledgeIds": [
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir à ce que la source dit évite de lui prêter des fonctions qu’elle n’énonce pas.",
+        "commonMistake": "Ajouter une fonction plausible mais absente du support revient à inventer une source.",
+        "keyTakeaway": "Ce que la source dit, et rien de plus.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir à ce que la source dit évite de lui prêter des fonctions qu’elle n’énonce pas.",
+      "common_mistake": "Ajouter une fonction plausible mais absente du support revient à inventer une source.",
+      "key_takeaway": "Ce que la source dit, et rien de plus.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l07-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le support détaille les mécanismes par lesquels le rein règle la quantité d’eau de l’organisme.",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q03-a1",
+          "text": "Vrai",
+          "explanation": "Les deux pages consacrées à cet appareil n’abordent pas ce sujet.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q03-a2",
+          "text": "Faux",
+          "explanation": "Le support s’arrête à la filtration, sans détailler la régulation hydrique."
+        }
+      ],
+      "correctAnswer": "dea-p09-l07-q03-a2",
+      "explanation": "Les pages consacrées à l’appareil urinaire décrivent la filtration, les néphrons et les volumes ; elles ne traitent pas de la régulation hydrique.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Repérer ce qu’une source ne traite pas évite d’enseigner comme acquis ce qui ne l’est pas.",
+        "commonMistake": "Supposer qu’une source couvre un sujet parce qu’il serait logique qu’elle le fasse mène à des contenus non sourcés.",
+        "keyTakeaway": "Ce que la source ne dit pas attend une autre source.",
+        "fieldApplication": "Une notion non sourcée est déclarée comme telle, jamais présentée comme vérifiée."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Repérer ce qu’une source ne traite pas évite d’enseigner comme acquis ce qui ne l’est pas.",
+      "common_mistake": "Supposer qu’une source couvre un sujet parce qu’il serait logique qu’elle le fasse mène à des contenus non sourcés.",
+      "key_takeaway": "Ce que la source ne dit pas attend une autre source.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l07-q04",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque appareil à la fonction que le tableau du support lui attribue.",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q04-a1",
+          "text": "Appareil excréteur",
+          "explanation": "Le tableau lui attribue ces deux fonctions.",
+          "match": "Filtration et élimination"
+        },
+        {
+          "id": "dea-p09-l07-q04-a2",
+          "text": "Appareil respiratoire",
+          "explanation": "Le tableau décrit ces deux mouvements.",
+          "match": "Inspiration et expiration"
+        },
+        {
+          "id": "dea-p09-l07-q04-a3",
+          "text": "Appareil circulatoire",
+          "explanation": "Le tableau lui attribue ces deux fonctions.",
+          "match": "Distribution et récupération"
+        },
+        {
+          "id": "dea-p09-l07-q04-a4",
+          "text": "Appareil digestif",
+          "explanation": "Le tableau lui attribue ces deux fonctions.",
+          "match": "Digestion et assimilation"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l07-q04-a1",
+        "dea-p09-l07-q04-a2",
+        "dea-p09-l07-q04-a3",
+        "dea-p09-l07-q04-a4"
+      ],
+      "explanation": "Le tableau des sept appareils donne à chacun deux fonctions, sans recouvrement.",
+      "knowledgeIds": [
+        "K-DEA-P09-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Organisation générale du corps - les sept appareils",
+      "sourcePages": "16",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La carte des appareils permet de rattacher un signe observé à un ensemble, avant toute hypothèse.",
+        "commonMistake": "Mélanger les fonctions rend impossible de situer un signe dans le bon appareil.",
+        "keyTakeaway": "Un appareil, deux fonctions, aucun doublon.",
+        "fieldApplication": "Situer un signe dans le bon appareil est la première étape du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La carte des appareils permet de rattacher un signe observé à un ensemble, avant toute hypothèse.",
+      "common_mistake": "Mélanger les fonctions rend impossible de situer un signe dans le bon appareil.",
+      "key_takeaway": "Un appareil, deux fonctions, aucun doublon.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Organisation générale du corps - les sept appareils",
+        "sourcePages": "16",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-001"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-l07-q05",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le tableau des sept appareils attribue à l’appareil excréteur la filtration et l’______.",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q05-a1",
+          "text": "élimination",
+          "explanation": "C’est la seconde fonction citée."
+        },
+        {
+          "id": "dea-p09-l07-q05-a2",
+          "text": "assimilation",
+          "explanation": "L’assimilation est attribuée à l’appareil digestif.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l07-q05-a1",
+      "explanation": "Le tableau attribue à l’appareil excréteur la filtration et l’élimination.",
+      "knowledgeIds": [
+        "K-DEA-P09-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Organisation générale du corps - les sept appareils",
+      "sourcePages": "16",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux fonctions se suivent : ce qui est filtré doit ensuite être éliminé.",
+        "commonMistake": "Confondre élimination et assimilation inverse le sens du processus.",
+        "keyTakeaway": "Filtration puis élimination.",
+        "fieldApplication": "Rattacher un signe au bon appareil est la première étape du bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux fonctions se suivent : ce qui est filtré doit ensuite être éliminé.",
+      "common_mistake": "Confondre élimination et assimilation inverse le sens du processus.",
+      "key_takeaway": "Filtration puis élimination.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Organisation générale du corps - les sept appareils",
+        "sourcePages": "16",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-001"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "élimination",
+          "elimination",
+          "l’élimination"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l07-q06",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Classe ces étapes dans l’ordre où le support les décrit, de la filtration à l’élimination.",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q06-a1",
+          "text": "Filtration au niveau de la paroi des capillaires",
+          "explanation": "Point de départ décrit par le support.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p09-l07-q06-a2",
+          "text": "Cheminement dans le néphron",
+          "explanation": "Glomérule puis tube urinifère.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p09-l07-q06-a3",
+          "text": "Passage par l’uretère",
+          "explanation": "Canal vers le réservoir.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p09-l07-q06-a4",
+          "text": "Stockage dans la vessie",
+          "explanation": "Réservoir décrit par le support.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l07-q06-a1",
+        "dea-p09-l07-q06-a2",
+        "dea-p09-l07-q06-a3",
+        "dea-p09-l07-q06-a4"
+      ],
+      "explanation": "Le support décrit un enchaînement continu, de la filtration capillaire au stockage vésical.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux fonctions du tableau — filtrer, éliminer — se retrouvent dans cet enchaînement.",
+        "commonMistake": "Intervertir uretère et vessie inverse le sens de l’écoulement.",
+        "keyTakeaway": "Filtrer, cheminer, conduire, stocker.",
+        "fieldApplication": "Connaître le trajet permet de situer une plainte à un niveau précis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux fonctions du tableau — filtrer, éliminer — se retrouvent dans cet enchaînement.",
+      "common_mistake": "Intervertir uretère et vessie inverse le sens de l’écoulement.",
+      "key_takeaway": "Filtrer, cheminer, conduire, stocker.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l07-q07",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient sous dialyse vous demande à quoi sert cette machine. Que répondez-vous ?",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q07-a1",
+          "text": "Que la question relève du médecin, et vous transmettez qu’il l’a posée",
+          "explanation": "Expliquer un traitement n’appartient pas à l’ambulancier."
+        },
+        {
+          "id": "dea-p09-l07-q07-a2",
+          "text": "Qu’elle remplace la filtration que ses reins n’assurent plus",
+          "explanation": "Expliquer un traitement est une information médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q07-a3",
+          "text": "Que ce n’est pas grave et qu’il ne doit pas s’inquiéter",
+          "explanation": "Rassurer sans savoir n’est ni honnête ni utile.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q07-a4",
+          "text": "Rien, la question ne vous concernant pas",
+          "explanation": "La question posée est en elle-même une information à transmettre.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l07-q07-a1",
+      "explanation": "Renvoyer une question médicale au médecin est une réponse, pas une dérobade. Et le fait qu’elle ait été posée se transmet.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une question posée par un patient renseigne sur son inquiétude : c’est une donnée du bilan.",
+        "commonMistake": "Expliquer un traitement engage l’ambulancier sur un terrain qui n’est pas le sien.",
+        "keyTakeaway": "Renvoyer au médecin est une réponse.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui doit être expliqué et par qui."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Une question posée par un patient renseigne sur son inquiétude : c’est une donnée du bilan.",
+      "common_mistake": "Expliquer un traitement engage l’ambulancier sur un terrain qui n’est pas le sien.",
+      "key_takeaway": "Renvoyer au médecin est une réponse.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l07-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous transportez un patient dont la famille dit qu’il « n’a plus de reins qui marchent ». Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p09-l07-q08-a1",
+          "text": "Le propos rapporté tel quel, sa source, et l’état général que vous constatez",
+          "explanation": "Trois éléments distincts, chacun à sa place."
+        },
+        {
+          "id": "dea-p09-l07-q08-a2",
+          "text": "Une insuffisance rénale terminale",
+          "explanation": "Le terme est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q08-a3",
+          "text": "Le propos de la famille repris comme un antécédent établi",
+          "explanation": "Un propos rapporté n’est pas un antécédent vérifié.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l07-q08-a4",
+          "text": "Rien du propos, seul l’état constaté comptant",
+          "explanation": "Le propos oriente utilement la régulation, s’il est annoncé comme rapporté.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l07-q08-a1",
+      "explanation": "Un antécédent rapporté par un proche se transmet comme tel, avec sa source. Le nommer en termes médicaux le transformerait en constat.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l07",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La régulation sait quoi faire d’un propos rapporté, à condition de savoir que c’en est un.",
+        "commonMistake": "Transformer un propos en antécédent établi fait entrer une incertitude dans le bilan sans qu’elle soit signalée.",
+        "keyTakeaway": "Ce qu’on me dit, qui me le dit, et ce que je vois.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La régulation sait quoi faire d’un propos rapporté, à condition de savoir que c’en est un.",
+      "common_mistake": "Transformer un propos en antécédent établi fait entrer une incertitude dans le bilan sans qu’elle soit signalée.",
+      "key_takeaway": "Ce qu’on me dit, qui me le dit, et ce que je vois.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l07",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

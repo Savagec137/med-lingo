@@ -184,6 +184,7 @@ const SITUATIONAL_FLOOR: Record<string, number> = {
   "dea-p06-boss": 2, //  2/8
   "dea-p07-boss": 1, //  1/8
   "dea-p08-boss": 6, //  6/10
+  "dea-p09-boss": 5, //  5/10
   "dea-p18-boss": 4, //  4/14
 };
 

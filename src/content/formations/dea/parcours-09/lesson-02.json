@@ -1,0 +1,721 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l02",
+  "title": "Les uretères",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 8,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Nommer les deux canaux qui conduisent l’urine.",
+    "Distinguer conduire et stocker.",
+    "Décrire une douleur qui se déplace sans en nommer la cause."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organ.location",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l01"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l02-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Combien de canaux conduisent l’urine jusqu’à la vessie, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q01-a1",
+          "text": "Deux",
+          "explanation": "Le support parle de deux canaux : les uretères."
+        },
+        {
+          "id": "dea-p09-l02-q01-a2",
+          "text": "Un seul, commun aux deux reins",
+          "explanation": "Le support en décrit deux.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q01-a3",
+          "text": "Quatre, deux par rein",
+          "explanation": "Le support en décrit deux au total.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q01-a4",
+          "text": "Autant que de néphrons",
+          "explanation": "Le néphron est une unité interne au rein.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-l02-q01-a1",
+      "explanation": "Deux canaux, les uretères, conduisent l’urine des reins jusqu’à la vessie.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux canaux pour deux reins : la symétrie du trajet suit celle des organes.",
+        "commonMistake": "Imaginer un canal unique supprime l’indépendance des deux côtés.",
+        "keyTakeaway": "Un uretère par rein, deux au total.",
+        "fieldApplication": "La latéralité d’une douleur se transmet : elle a un sens quand les organes sont pairs."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux canaux pour deux reins : la symétrie du trajet suit celle des organes.",
+      "common_mistake": "Imaginer un canal unique supprime l’indépendance des deux côtés.",
+      "key_takeaway": "Un uretère par rein, deux au total.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l02-q02",
+      "type": "true_false_contextual",
+      "difficulty": "easy",
+      "question": "D’après le support, l’uretère est un canal et non un réservoir.",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q02-a1",
+          "text": "Vrai",
+          "explanation": "Le support réserve le mot « réservoir » à la vessie."
+        },
+        {
+          "id": "dea-p09-l02-q02-a2",
+          "text": "Faux",
+          "explanation": "Le support décrit l’uretère comme un canal, et la vessie comme le réservoir.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l02-q02-a1",
+      "explanation": "Le support distingue les uretères, qui sont des canaux, et la vessie, qui est le réservoir.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Conduire et stocker sont deux fonctions différentes, portées par deux structures différentes.",
+        "commonMistake": "Confondre canal et réservoir rend le trajet de l’urine incompréhensible.",
+        "keyTakeaway": "L’uretère conduit, la vessie stocke.",
+        "fieldApplication": "Nommer correctement chaque segment rend la description transmissible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Conduire et stocker sont deux fonctions différentes, portées par deux structures différentes.",
+      "common_mistake": "Confondre canal et réservoir rend le trajet de l’urine incompréhensible.",
+      "key_takeaway": "L’uretère conduit, la vessie stocke.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l02-q03",
+      "type": "ordering",
+      "difficulty": "medium",
+      "question": "Reconstitue le trajet de l’urine, du lieu de sa production jusqu’à son réservoir.",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q03-a1",
+          "text": "Néphron",
+          "explanation": "Unité du rein où l’urine se forme.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p09-l02-q03-a2",
+          "text": "Rein",
+          "explanation": "Organe qui rassemble les néphrons.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p09-l02-q03-a3",
+          "text": "Uretère",
+          "explanation": "Canal qui conduit l’urine.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p09-l02-q03-a4",
+          "text": "Vessie",
+          "explanation": "Réservoir où l’urine se déverse.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l02-q03-a1",
+        "dea-p09-l02-q03-a2",
+        "dea-p09-l02-q03-a3",
+        "dea-p09-l02-q03-a4"
+      ],
+      "explanation": "L’urine se forme dans les néphrons du rein, puis gagne la vessie par l’uretère.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet va du microscopique au macroscopique, puis du rein au réservoir.",
+        "commonMistake": "Placer la vessie avant l’uretère inverse le sens de l’écoulement.",
+        "keyTakeaway": "Du néphron à la vessie, un seul sens.",
+        "fieldApplication": "Connaître le trajet permet de situer une douleur qui se déplace."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet va du microscopique au macroscopique, puis du rein au réservoir.",
+      "common_mistake": "Placer la vessie avant l’uretère inverse le sens de l’écoulement.",
+      "key_takeaway": "Du néphron à la vessie, un seul sens.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l02-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur les uretères ?",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q04-a1",
+          "text": "Ils sont au nombre de deux",
+          "explanation": "Le support parle de deux canaux."
+        },
+        {
+          "id": "dea-p09-l02-q04-a2",
+          "text": "Ce sont des canaux",
+          "explanation": "Le support emploie ce terme."
+        },
+        {
+          "id": "dea-p09-l02-q04-a3",
+          "text": "Ils conduisent l’urine jusqu’à la vessie",
+          "explanation": "C’est leur destination selon le support."
+        },
+        {
+          "id": "dea-p09-l02-q04-a4",
+          "text": "Ils stockent l’urine avant la miction",
+          "explanation": "Le stockage est attribué à la vessie.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q04-a5",
+          "text": "Ils contiennent les glomérules",
+          "explanation": "Les glomérules appartiennent au néphron.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l02-q04-a1",
+        "dea-p09-l02-q04-a2",
+        "dea-p09-l02-q04-a3"
+      ],
+      "explanation": "Le support décrit deux canaux, les uretères, qui conduisent l’urine jusqu’au réservoir vésical.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir à ce que le support énonce évite d’attribuer aux uretères des rôles voisins.",
+        "commonMistake": "Prêter aux uretères le stockage ou la filtration mélange trois structures distinctes.",
+        "keyTakeaway": "Deux canaux, une destination, aucun autre rôle.",
+        "fieldApplication": "Ne transmettre que ce qu’on sait vrai est la même discipline que sur le terrain."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir à ce que le support énonce évite d’attribuer aux uretères des rôles voisins.",
+      "common_mistake": "Prêter aux uretères le stockage ou la filtration mélange trois structures distinctes.",
+      "key_takeaway": "Deux canaux, une destination, aucun autre rôle.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l02-q05",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "La racine ______ désigne le bassinet dans le vocabulaire du support.",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q05-a1",
+          "text": "Pyel",
+          "explanation": "Le support la traduit par bassinet."
+        },
+        {
+          "id": "dea-p09-l02-q05-a2",
+          "text": "Néphr",
+          "explanation": "Néphr désigne le rein.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l02-q05-a1",
+      "explanation": "Le support donne Pyel pour bassinet et Néphr pour rein.",
+      "knowledgeIds": [
+        "K-DEA-P09-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux racines voisines dans le champ urinaire, deux structures différentes.",
+        "commonMistake": "Confondre les deux fait situer un terme entendu au mauvais endroit.",
+        "keyTakeaway": "Pyel pour le bassinet, Néphr pour le rein.",
+        "fieldApplication": "Décomposer un terme entendu est plus sûr que le deviner."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux racines voisines dans le champ urinaire, deux structures différentes.",
+      "common_mistake": "Confondre les deux fait situer un terme entendu au mauvais endroit.",
+      "key_takeaway": "Pyel pour le bassinet, Néphr pour le rein.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-008"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "pyel",
+          "Pyel"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l02-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque racine du support à ce qu’elle désigne.",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q06-a1",
+          "text": "Néphr",
+          "explanation": "Le support la traduit par rein.",
+          "match": "Rein"
+        },
+        {
+          "id": "dea-p09-l02-q06-a2",
+          "text": "Cysto",
+          "explanation": "Le support la traduit par vessie ou vésicule.",
+          "match": "Vessie, vésicule"
+        },
+        {
+          "id": "dea-p09-l02-q06-a3",
+          "text": "Pyel",
+          "explanation": "Le support la traduit par bassinet.",
+          "match": "Bassinet"
+        },
+        {
+          "id": "dea-p09-l02-q06-a4",
+          "text": "Natr",
+          "explanation": "Le support la traduit par sodium.",
+          "match": "Sodium"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l02-q06-a1",
+        "dea-p09-l02-q06-a2",
+        "dea-p09-l02-q06-a3",
+        "dea-p09-l02-q06-a4"
+      ],
+      "explanation": "Quatre racines du champ urinaire, chacune renvoyant à une structure ou à une substance précise.",
+      "knowledgeIds": [
+        "K-DEA-P09-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+        "commonMistake": "Deviner d’après une sonorité voisine conduit à des contresens en transmission.",
+        "keyTakeaway": "Quatre racines, quatre sens précis.",
+        "fieldApplication": "Comprendre un terme ne veut pas dire pouvoir le reprendre comme un constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+      "common_mistake": "Deviner d’après une sonorité voisine conduit à des contresens en transmission.",
+      "key_takeaway": "Quatre racines, quatre sens précis.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-008"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-l02-q07",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient décrit une douleur qui part du dos et descend vers l’aine. Comment le bilan la décrit-il ?",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q07-a1",
+          "text": "Par son point de départ, son trajet et son heure de début",
+          "explanation": "Trois éléments observables, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p09-l02-q07-a2",
+          "text": "Comme une douleur d’origine urinaire",
+          "explanation": "Rattacher la douleur à un appareil est une interprétation.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q07-a3",
+          "text": "Comme une lithiase en cours de migration",
+          "explanation": "Le terme est un diagnostic.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q07-a4",
+          "text": "Comme une simple douleur du dos",
+          "explanation": "Réduire la description au point de départ perd le trajet.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l02-q07-a1",
+      "explanation": "Une douleur qui se déplace se décrit par son trajet. Ce trajet est une donnée ; ce qu’il signifie appartient au médecin.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet d’une douleur est souvent plus informatif que sa seule localisation initiale.",
+        "commonMistake": "Nommer une lithiase transforme une description utile en hypothèse.",
+        "keyTakeaway": "D’où elle part, où elle va, depuis quand.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de cette description."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le trajet d’une douleur est souvent plus informatif que sa seule localisation initiale.",
+      "common_mistake": "Nommer une lithiase transforme une description utile en hypothèse.",
+      "key_takeaway": "D’où elle part, où elle va, depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l02-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "La famille vous dit que le patient « fait une crise de rein ». Que transmettez-vous au Centre 15 ?",
+      "answers": [
+        {
+          "id": "dea-p09-l02-q08-a1",
+          "text": "Ce que la famille rapporte, présenté comme tel, et ce que vous constatez vous-même",
+          "explanation": "Les deux sources sont distinctes et se transmettent comme telles."
+        },
+        {
+          "id": "dea-p09-l02-q08-a2",
+          "text": "Le terme employé par la famille, repris comme un constat",
+          "explanation": "Ce qui est rapporté n’a pas la même valeur que ce qui est observé.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q08-a3",
+          "text": "Une colique néphrétique, compatible avec le récit",
+          "explanation": "C’est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l02-q08-a4",
+          "text": "Rien du récit de la famille, seul votre constat comptant",
+          "explanation": "Le récit fait partie du bilan, à condition d’être annoncé comme tel.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l02-q08-a1",
+      "explanation": "Un bilan distingue ce qu’il a constaté de ce qui lui a été rapporté. Les deux comptent, mais pas au même titre.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l02",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La régulation pondère différemment un constat et un récit : encore faut-il qu’elle sache lequel est lequel.",
+        "commonMistake": "Reprendre un terme employé par un proche transforme un témoignage en observation.",
+        "keyTakeaway": "Ce que je vois et ce qu’on me dit se transmettent séparément.",
+        "fieldApplication": "Préciser la source de chaque élément est une habitude qui protège tout le bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La régulation pondère différemment un constat et un récit : encore faut-il qu’elle sache lequel est lequel.",
+      "common_mistake": "Reprendre un terme employé par un proche transforme un témoignage en observation.",
+      "key_takeaway": "Ce que je vois et ce qu’on me dit se transmettent séparément.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l02",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}
