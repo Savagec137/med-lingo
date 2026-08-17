@@ -28,5 +28,24 @@ export {
   scoreAxesFromLog,
   scoreFromActionLog,
 } from "./v3-scoring.ts";
+export {
+  allGestureChoices,
+  allRefusedGestures,
+  deselectGesture,
+  gestureRoundOpenedAt,
+  gestureRoundTimeLeft,
+  isGestureJustified,
+  isGestureRoundExpired,
+  missingJustifications,
+  resolveGestureRound,
+  selectGesture,
+  GESTURE_NOT_INDICATED_FLAG,
+  GESTURE_REFUSAL_KINDS,
+  GESTURE_SCORES,
+  GESTURE_UNJUSTIFIED_FLAG,
+  type GestureRefusalKind,
+  type GestureRoundResolution,
+  type GestureSelectionResult,
+} from "./v3-gestures.ts";
 export { buildCentre15Transmission } from "./v3-transmission.ts";
 export { createDebriefReport } from "./v3-debrief.ts";

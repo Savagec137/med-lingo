@@ -54,6 +54,7 @@ export function createV3Session(
     gestureRounds: scenario.gestureRounds.map((round) => ({
       ...round,
       selected: [],
+      choices: [],
       refused: [],
       resolved: false,
       correct: false,

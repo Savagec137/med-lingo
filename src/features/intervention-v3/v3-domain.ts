@@ -404,8 +404,28 @@ export interface PriorityGestureRoundDefinition {
   offered: PriorityGesture[];
 }
 
+/**
+ * Le détail d'un geste retenu.
+ *
+ * `selected` ne dit que « ce geste a été coché ». Le jugement — était-il indiqué,
+ * était-il fondé sur un élément recueilli — doit être **figé au moment du choix**,
+ * comme une mesure. Le recalculer au débriefing donnerait une autre réponse : les
+ * constantes auront péri entre-temps, et un geste justifié à la minute six
+ * deviendrait rétroactivement une faute.
+ */
+export interface GestureChoice {
+  gestureId: string;
+  recommended: boolean;
+  justified: boolean;
+  atSeconds: number;
+  scoreDelta: number;
+  flag: string | null;
+}
+
 export interface PriorityGestureRound extends PriorityGestureRoundDefinition {
   selected: string[];
+  /** Un élément par geste retenu, dans l'ordre des choix. */
+  choices: GestureChoice[];
   refused: Array<{ gestureId: string; reason: string }>;
   resolved: boolean;
   correct: boolean;
