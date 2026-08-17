@@ -306,6 +306,15 @@ export interface ActionLogEntry {
   atSeconds: number;
   outcome: ActionOutcomeKind;
   refusalReason?: string;
+  /**
+   * Nature du refus, en plus de son message.
+   *
+   * Le message est destiné à la lecture ; s'en servir pour raisonner obligerait à
+   * le reconnaître par expression régulière, et une reformulation casserait
+   * silencieusement le raisonnement. Le débriefing s'appuie sur cette nature pour
+   * distinguer une donnée hors d'atteinte d'une donnée simplement oubliée.
+   */
+  refusalKind?: string;
   revealedFactIds: FactId[];
   scoreDelta: number;
   patientDelta: number;
@@ -666,6 +675,39 @@ export const FACT_COVERAGE_STATES = ["measured", "not_measured", "not_measurable
 
 export type FactCoverageState = (typeof FACT_COVERAGE_STATES)[number];
 
+/**
+ * Ce que le joueur a bien fait.
+ *
+ * Un débriefing qui ne liste que les fautes n'enseigne qu'à moitié : l'apprenant
+ * ne sait pas ce qu'il doit reproduire. Les réussites sont donc relevées avec la
+ * même exigence que les erreurs — à partir du journal, jamais par un compliment
+ * générique.
+ */
+export interface DebriefStrength {
+  /** Ce qui a été bien fait, en une phrase tirée de ce qui a été joué. */
+  label: string;
+  /** Nature de la réussite, pour le regroupement à l'écran. */
+  axis: ScoreAxisId;
+}
+
+/** Une erreur de transmission, avec sa nature. */
+export interface HandoverReviewEntry {
+  itemId: string;
+  label: string;
+  state: HandoverItemState;
+  /** Vrai pour un trou passé sous silence : la faute de transmission la plus grave. */
+  silent: boolean;
+  detail: string;
+}
+
+/** Un geste dangereux tenté, non indiqué, ou recommandé et manqué. */
+export interface GestureReviewEntry {
+  gestureId: string;
+  label: string;
+  kind: "refused" | "not_indicated" | "unjustified" | "missing";
+  detail: string;
+}
+
 export interface DebriefReport {
   scenarioId: string;
   passed: boolean;
@@ -685,7 +727,31 @@ export interface DebriefReport {
   reward: RewardResult;
   review: DebriefReviewEntry[];
   references: DebriefReference[];
-  factCoverage: Array<{ factId: FactId; label: string; state: FactCoverageState }>;
+  /**
+   * Couverture des données de la mission. `expected` distingue ce qui était
+   * attendu au bilan de ce qui était seulement disponible : ne pas avoir pris la
+   * température n'est pas du même ordre que ne pas avoir pris la tension.
+   */
+  factCoverage: Array<{
+    factId: FactId;
+    label: string;
+    state: FactCoverageState;
+    expected: boolean;
+  }>;
+  /** Ce que le joueur a bien fait. */
+  strengths: DebriefStrength[];
+  /** Erreurs de transmission au Centre 15. Vide si le bilan n'a pas été transmis. */
+  handoverReview: HandoverReviewEntry[];
+  /** Gestes dangereux tentés, gestes non indiqués retenus, gestes attendus manqués. */
+  gestureReview: GestureReviewEntry[];
+  /**
+   * La conduite attendue pour cette mission, assemblée depuis les déclarations du
+   * scénario — gestes recommandés, éléments attendus au bilan — et jamais rédigée
+   * en prose : une conduite écrite à la main finirait par contredire les données.
+   */
+  expectedConduct: string[];
+  /** Fiches à revoir, tirées des erreurs commises et non des actions jouées. */
+  revisionPoints: DebriefReference[];
 }
 
 /* -------------------------------------------------------------------------- */

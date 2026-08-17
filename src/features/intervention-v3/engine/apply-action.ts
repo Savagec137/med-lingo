@@ -43,6 +43,7 @@ function refusal(
   session: InterventionSession,
   actionId: PlayerActionId,
   reason: string,
+  kind?: string,
 ): ApplyActionResult {
   const logEntry: ActionLogEntry = {
     actionId,
@@ -50,6 +51,7 @@ function refusal(
     atSeconds: session.simulatedTimeSeconds,
     outcome: "refused",
     refusalReason: reason,
+    ...(kind ? { refusalKind: kind } : {}),
     revealedFactIds: [],
     scoreDelta: 0,
     patientDelta: 0,
@@ -110,7 +112,7 @@ export function applyAction(
 ): ApplyActionResult {
   const action = getAction(actionId);
   const hardFailure = actionRefusal(session, action);
-  if (hardFailure) return refusal(session, actionId, hardFailure.message);
+  if (hardFailure) return refusal(session, actionId, hardFailure.message, hardFailure.kind);
 
   const justified = softPrerequisitesMet(session, action);
   const scenario = getV3Scenario(session.scenarioId);

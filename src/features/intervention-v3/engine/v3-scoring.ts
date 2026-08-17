@@ -1,5 +1,11 @@
 import { getAction } from "../actions/action-catalog.ts";
 import {
+  handoverCommunicationScore,
+  HANDOVER_SCORES,
+  MAX_ADDITION_BONUS,
+  REGULATOR_ANSWER_SCORES,
+} from "./v3-transmission.ts";
+import {
   GRAVE_FAULT_FLAGS,
   SCORE_AXIS_IDS,
   SCORE_AXIS_LABELS,
@@ -40,6 +46,64 @@ const axisForAction = (actionId: string): ScoreAxisId => {
 
 export const scoreFromActionLog = (actionLog: readonly ActionLogEntry[]) =>
   clamp(V3_STARTING_SCORE + actionLog.reduce((sum, entry) => sum + entry.scoreDelta, 0), 0, 100);
+
+/** Points des gestes retenus. Chaque choix porte le sien, figé au moment du choix. */
+export const gestureScoreFromSession = (session: Pick<InterventionSession, "gestureRounds">) =>
+  session.gestureRounds
+    .flatMap((round) => round.choices)
+    .reduce((sum, choice) => sum + choice.scoreDelta, 0);
+
+/**
+ * Points de la transmission : la qualité de la communication et les réponses au
+ * régulateur.
+ *
+ * Recomposés depuis `transmission`, jamais lus dans `session.score`. Le débrief
+ * doit pouvoir être reconstruit, sans quoi une session modifiée après coup
+ * changerait la note sans rien changer à ce que le joueur a fait.
+ */
+export function handoverScoreFromSession(
+  session: Pick<InterventionSession, "transmission">,
+  scenario: InterventionScenario,
+): number {
+  const transmission = session.transmission;
+  if (!transmission) return 0;
+
+  const communication = handoverCommunicationScore(scenario, transmission.itemStates);
+  const additions = Math.min(
+    MAX_ADDITION_BONUS,
+    transmission.freeAdditions.length * HANDOVER_SCORES.relevantAddition,
+  );
+  const answers = Object.entries(transmission.answers).reduce((sum, [questionId, answerId]) => {
+    const question = scenario.regulatorQuestions.find((entry) => entry.id === questionId);
+    const answer = question?.answers.find((entry) => entry.id === answerId);
+    if (!answer) return sum;
+    return (
+      sum + (answer.correct ? REGULATOR_ANSWER_SCORES.correct : REGULATOR_ANSWER_SCORES.incorrect)
+    );
+  }, 0);
+  return communication + additions + answers;
+}
+
+/**
+ * La note de la mission entière.
+ *
+ * Les gestes et la transmission pèsent sur le score sans passer par le journal
+ * d'actions : un geste retenu n'est pas une action du catalogue, et la qualité
+ * d'une transmission ne se déduit pas de l'action qui l'a envoyée. Les ignorer
+ * ferait un débrief qui contredit le score affiché en cours de partie.
+ */
+export const scoreFromSession = (
+  session: Pick<InterventionSession, "actionLog" | "gestureRounds" | "transmission">,
+  scenario: InterventionScenario,
+) =>
+  clamp(
+    V3_STARTING_SCORE +
+      session.actionLog.reduce((sum, entry) => sum + entry.scoreDelta, 0) +
+      gestureScoreFromSession(session) +
+      handoverScoreFromSession(session, scenario),
+    0,
+    100,
+  );
 
 export const graveFaultCount = (actionLog: readonly ActionLogEntry[]) =>
   actionLog.filter((entry) => entry.flag && graveFlags.has(entry.flag)).length;

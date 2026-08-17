@@ -21,12 +21,15 @@ export {
   type PhaseTransitionResult,
 } from "./v3-phases.ts";
 export {
+  gestureScoreFromSession,
   graveFaultCount,
+  handoverScoreFromSession,
   isV3Failure,
   livesFromActionLog,
   rewardFromPerformance,
   scoreAxesFromLog,
   scoreFromActionLog,
+  scoreFromSession,
 } from "./v3-scoring.ts";
 export {
   allGestureChoices,
