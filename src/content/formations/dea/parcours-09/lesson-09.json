@@ -1,0 +1,946 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-boss",
+  "title": "Boss — Système urinaire",
+  "kind": "boss",
+  "status": "review",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "level": 3,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16, 43, 44, 58, 77",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 10
+  },
+  "learningObjectives": [
+    "Distinguer un constat d’un propos rapporté.",
+    "Décrire signes cutanés et aspect des urines sans les relier.",
+    "Transmettre un bilan urinaire structuré au Centre 15."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organization.organ-to-system",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l08"
+  ],
+  "bossConfiguration": {
+    "objective": "Boss — Système urinaire",
+    "scenario": "Domicile, début de matinée. Vous êtes appelé pour un homme âgé que sa fille décrit comme « très fatigué depuis hier ». Elle signale qu’il n’a presque pas uriné depuis la veille, et vous montre le bas de son dos en disant qu’il s’en plaint. Vous décrivez ce que vous constatez et transmettez au Centre 15, qui décidera de l’orientation.",
+    "initialInformation": [
+      "Patient conscient, assis dans son fauteuil, qui répond lentement aux questions.",
+      "Sa fille rapporte une diurèse très faible depuis la veille ; aucun volume n’a été mesuré.",
+      "Marbrures visibles aux genoux, extrémités fraîches au toucher.",
+      "Un recueil d’urines réalisé sur place montre un aspect trouble."
+    ],
+    "tasks": [
+      "Distinguer ce qui est constaté de ce qui est rapporté par la famille.",
+      "Décrire l’aspect des urines et les signes cutanés avec leur localisation.",
+      "Situer la plainte du dos par sa région, sans nommer l’organe atteint.",
+      "Transmettre le bilan au Centre 15 sans le conclure."
+    ],
+    "priorities": [
+      "Rapporter d’abord la période concernée : « depuis la veille » situe tout le reste.",
+      "Annoncer la source de chaque information rapportée, la famille n’ayant rien mesuré.",
+      "Décrire les signes cutanés et l’aspect des urines, disponibles sans appareil.",
+      "Signaler ce qui n’a pas pu être mesuré plutôt que de l’estimer."
+    ],
+    "pitfalls": [
+      "Traduire les propos de la famille en oligurie ou en anurie : ce sont des conclusions.",
+      "Retenir la déshydratation comme cause des marbrures, alors que le support en cite plusieurs.",
+      "Conclure à une infection à partir du seul aspect trouble des urines.",
+      "Nommer une atteinte rénale à partir d’une douleur du bas du dos.",
+      "Proposer une orientation hospitalière : la décision revient au Centre 15."
+    ],
+    "engine": "existing_lesson_engine",
+    "excludedEngine": "mode_intervention",
+    "successThreshold": 0.8,
+    "rewardConfigurable": true,
+    "debrief": {
+      "success": "Le bilan transmis sépare ce qui a été constaté de ce que la famille rapporte, situe la période concernée, et décrit l’aspect des urines et les signes cutanés sans les relier entre eux. Le médecin régulateur dispose de tout ce qu’il faut pour décider.",
+      "failure": "Un propos rapporté a été transmis comme un constat, ou plusieurs signes ont été reliés par une cause unique. Reprends ce que le support dit des marbrures : il en cite plusieurs lectures possibles, et c’est précisément pourquoi le bilan décrit sans trancher.",
+      "commonErrors": [
+        "Traduire un propos de la famille en terme médical.",
+        "Retenir une seule cause pour un signe qui en admet plusieurs.",
+        "Conclure à une infection sur le seul aspect des urines.",
+        "Transmettre un volume sans sa période ni sa source.",
+        "Proposer une orientation hospitalière."
+      ]
+    }
+  },
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-boss-q01",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Domicile, matin. Vous êtes appelé pour un homme âgé que sa fille trouve « très fatigué ». Elle signale qu’il n’a presque pas uriné depuis la veille. Que retient le bilan en premier ?",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q01-a1",
+          "text": "Le constat rapporté, sa période, et la source de l’information",
+          "explanation": "Trois éléments qui permettent à la régulation de pondérer."
+        },
+        {
+          "id": "dea-p09-boss-q01-a2",
+          "text": "Une oligurie",
+          "explanation": "Le terme est une traduction, donc une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q01-a3",
+          "text": "Une insuffisance rénale",
+          "explanation": "C’est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q01-a4",
+          "text": "La seule fatigue rapportée, le volume n’étant pas mesuré",
+          "explanation": "Un volume rapporté se transmet, annoncé comme tel.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-boss-q01-a1",
+      "explanation": "Un volume rapporté par un proche se transmet avec sa période et sa source. Le traduire en terme médical le ferait passer pour une mesure.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La régulation pondère différemment une quantité mesurée et une impression rapportée par un tiers.",
+        "commonMistake": "Traduire un récit en terme médical transforme un témoignage en constat professionnel.",
+        "keyTakeaway": "Quoi, sur quelle période, rapporté par qui.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La régulation pondère différemment une quantité mesurée et une impression rapportée par un tiers.",
+      "common_mistake": "Traduire un récit en terme médical transforme un témoignage en constat professionnel.",
+      "key_takeaway": "Quoi, sur quelle période, rapporté par qui.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Vous décrivez l’appareil concerné. Quelles affirmations correspondent au support ?",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q02-a1",
+          "text": "La vessie est un réservoir",
+          "explanation": "Terme employé par le support."
+        },
+        {
+          "id": "dea-p09-boss-q02-a2",
+          "text": "Deux uretères conduisent l’urine jusqu’à la vessie",
+          "explanation": "Nombre et destination donnés par le support."
+        },
+        {
+          "id": "dea-p09-boss-q02-a3",
+          "text": "Chaque rein contient environ un million de néphrons",
+          "explanation": "Ordre de grandeur donné par le support."
+        },
+        {
+          "id": "dea-p09-boss-q02-a4",
+          "text": "L’uretère filtre le sang",
+          "explanation": "La filtration se situe au niveau de la paroi des capillaires.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q02-a5",
+          "text": "La vessie produit l’urine",
+          "explanation": "Elle la reçoit, elle ne la produit pas.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-boss-q02-a1",
+        "dea-p09-boss-q02-a2",
+        "dea-p09-boss-q02-a3"
+      ],
+      "explanation": "Le support distingue nettement ce qui filtre, ce qui conduit et ce qui stocke.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque structure a un rôle : les confondre rend la description inutilisable.",
+        "commonMistake": "Attribuer la filtration à un canal déplace la fonction principale du rein.",
+        "keyTakeaway": "Filtrer, conduire, stocker : trois rôles distincts.",
+        "fieldApplication": "Employer le bon terme évite les malentendus en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque structure a un rôle : les confondre rend la description inutilisable.",
+      "common_mistake": "Attribuer la filtration à un canal déplace la fonction principale du rein.",
+      "key_takeaway": "Filtrer, conduire, stocker : trois rôles distincts.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q03",
+      "type": "ordering",
+      "difficulty": "hard",
+      "question": "Reconstitue le trajet de l’urine, de la filtration au réservoir.",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q03-a1",
+          "text": "Paroi des capillaires",
+          "explanation": "Lieu de la première filtration.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p09-boss-q03-a2",
+          "text": "Néphron",
+          "explanation": "Unité du rein où l’urine se forme.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p09-boss-q03-a3",
+          "text": "Uretère",
+          "explanation": "Canal vers le réservoir.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p09-boss-q03-a4",
+          "text": "Vessie",
+          "explanation": "Réservoir décrit par le support.",
+          "sequenceRank": 4
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-boss-q03-a1",
+        "dea-p09-boss-q03-a2",
+        "dea-p09-boss-q03-a3",
+        "dea-p09-boss-q03-a4"
+      ],
+      "explanation": "Le trajet va de la filtration capillaire au stockage vésical, en passant par le néphron et l’uretère.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le trajet réunit tout ce que le support énonce sur cet appareil.",
+        "commonMistake": "Placer la vessie avant l’uretère inverse le sens de l’écoulement.",
+        "keyTakeaway": "Filtrer, former, conduire, stocker.",
+        "fieldApplication": "Connaître le trajet permet de situer une plainte à un niveau précis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le trajet réunit tout ce que le support énonce sur cet appareil.",
+      "common_mistake": "Placer la vessie avant l’uretère inverse le sens de l’écoulement.",
+      "key_takeaway": "Filtrer, former, conduire, stocker.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q04",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "La fille du patient montre le bas du dos. Désigne, sur le schéma, l’organe où se fait la première filtration.",
+      "answers": [
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "explanation": "C’est l’organe de la filtration décrite par le support.",
+          "detail": "0.42,0.46"
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "explanation": "L’estomac appartient à l’appareil digestif.",
+          "detail": "0.45,0.46",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "explanation": "L’abdomen est la région, pas l’organe.",
+          "detail": "0.5,0.49",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "explanation": "Le cœur met le sang en mouvement, il ne le filtre pas.",
+          "detail": "0.54,0.31"
+        }
+      ],
+      "correctAnswer": "hotspot-kidney",
+      "explanation": "Le rein réalise la première filtration ; c’est vers lui que renvoie une douleur du flanc, sans que le bilan ait à le conclure.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Distinguer l’organe de la région qui le contient est la base d’une description anatomique.",
+        "commonMistake": "Désigner l’abdomen pour le rein confond le contenant et le contenu.",
+        "keyTakeaway": "Le rein est un organe ; l’abdomen est une région.",
+        "fieldApplication": "Une zone montrée par un proche se décrit par sa région, pas par l’organe supposé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Distinguer l’organe de la région qui le contient est la base d’une description anatomique.",
+      "common_mistake": "Désigner l’abdomen pour le rein confond le contenant et le contenu.",
+      "key_takeaway": "Le rein est un organe ; l’abdomen est une région.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "kidney"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q05",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Les urines recueillies sont troubles. Que dit le support de cet aspect ?",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q05-a1",
+          "text": "Qu’il est associé à une infection",
+          "explanation": "C’est l’association donnée par le support."
+        },
+        {
+          "id": "dea-p09-boss-q05-a2",
+          "text": "Qu’il correspond à des urines concentrées",
+          "explanation": "Le support associe cet état à une urine jaune foncé.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q05-a3",
+          "text": "Qu’il s’agit de l’aspect normal",
+          "explanation": "L’aspect normal décrit est l’urine claire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q05-a4",
+          "text": "Qu’il traduit la présence de sang",
+          "explanation": "Le support décrit alors une coloration rouge.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-boss-q05-a1",
+      "explanation": "Le support relie l’urine trouble à l’infection, l’urine jaune foncé à la concentration, et l’urine claire à l’aspect normal.",
+      "knowledgeIds": [
+        "K-DEA-P09-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Prélèvements non stériles - aspect des urines",
+      "sourcePages": "77",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces associations viennent du support : elles servent à comprendre, pas à conclure soi-même.",
+        "commonMistake": "Confondre trouble et concentré fait transmettre une observation pour une autre.",
+        "keyTakeaway": "Trois aspects, trois lectures distinctes.",
+        "fieldApplication": "L’aspect constaté se transmet ; l’interprétation revient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces associations viennent du support : elles servent à comprendre, pas à conclure soi-même.",
+      "common_mistake": "Confondre trouble et concentré fait transmettre une observation pour une autre.",
+      "key_takeaway": "Trois aspects, trois lectures distinctes.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 77",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Prélèvements non stériles - aspect des urines",
+        "sourcePages": "77",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-007"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Vous constatez des marbrures aux genoux : vous pouvez en conclure que le patient est déshydraté.",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q06-a1",
+          "text": "Vrai",
+          "explanation": "Le support cite la déshydratation parmi plusieurs possibilités, pas comme une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q06-a2",
+          "text": "Faux",
+          "explanation": "Les marbrures peuvent traduire une alerte circulatoire, dont la déshydratation parmi d’autres causes."
+        }
+      ],
+      "correctAnswer": "dea-p09-boss-q06-a2",
+      "explanation": "Le support présente la déshydratation comme une des lectures possibles d’une peau marbrée. En retenir une seule revient à conclure.",
+      "knowledgeIds": [
+        "K-DEA-P09-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Observation clinique en lien avec le système circulatoire",
+      "sourcePages": "58",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un signe à plusieurs causes possibles se décrit ; le choix d’une cause appartient au médecin.",
+        "commonMistake": "Retenir une cause parce qu’elle colle au contexte ferme le raisonnement de la régulation.",
+        "keyTakeaway": "Une marbrure se décrit, elle ne se traduit pas.",
+        "fieldApplication": "Les signes cutanés se transmettent avec leur localisation précise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un signe à plusieurs causes possibles se décrit ; le choix d’une cause appartient au médecin.",
+      "common_mistake": "Retenir une cause parce qu’elle colle au contexte ferme le raisonnement de la régulation.",
+      "key_takeaway": "Une marbrure se décrit, elle ne se traduit pas.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 58",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Observation clinique en lien avec le système circulatoire",
+        "sourcePages": "58",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-010"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q07",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quels éléments votre bilan transmet-il au Centre 15 ?",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q07-a1",
+          "text": "Le volume rapporté et la période concernée",
+          "explanation": "Une donnée rapportée, située dans le temps."
+        },
+        {
+          "id": "dea-p09-boss-q07-a2",
+          "text": "L’aspect des urines constaté",
+          "explanation": "Une observation directe."
+        },
+        {
+          "id": "dea-p09-boss-q07-a3",
+          "text": "Les signes cutanés observés, avec leur localisation",
+          "explanation": "Des constats directs."
+        },
+        {
+          "id": "dea-p09-boss-q07-a4",
+          "text": "La source de chaque information rapportée",
+          "explanation": "Elle permet à la régulation de pondérer."
+        },
+        {
+          "id": "dea-p09-boss-q07-a5",
+          "text": "Le terme médical qui résume le tableau",
+          "explanation": "Le nommer est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-boss-q07-a6",
+          "text": "Le service vers lequel orienter le patient",
+          "explanation": "L’orientation est décidée par le médecin régulateur.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-boss-q07-a1",
+        "dea-p09-boss-q07-a2",
+        "dea-p09-boss-q07-a3",
+        "dea-p09-boss-q07-a4"
+      ],
+      "explanation": "Un bilan réunit des constats, des propos rapportés avec leur source, et une période. Il ne résume pas et ne décide pas.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces quatre éléments suffisent au médecin régulateur, et aucun ne demande de conclure.",
+        "commonMistake": "Ajouter le terme qui résume ou la destination fait sortir l’ambulancier de son champ.",
+        "keyTakeaway": "Ce que je vois, ce qu’on me dit, de qui, et depuis quand.",
+        "fieldApplication": "L’orientation appartient au Centre 15."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Ces quatre éléments suffisent au médecin régulateur, et aucun ne demande de conclure.",
+      "common_mistake": "Ajouter le terme qui résume ou la destination fait sortir l’ambulancier de son champ.",
+      "key_takeaway": "Ce que je vois, ce qu’on me dit, de qui, et depuis quand.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-boss-q08",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Pour situer la plainte du patient, vous rappelez où commence la production d’urine. Le support la place au niveau de la paroi des ______.",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q08-a1",
+          "text": "capillaires",
+          "explanation": "C’est la structure nommée par le support."
+        },
+        {
+          "id": "dea-p09-boss-q08-a2",
+          "text": "uretères",
+          "explanation": "L’uretère est un canal situé en aval.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-boss-q08-a1",
+      "explanation": "La première filtration se fait à travers la paroi des capillaires.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le lieu de la filtration est le point de contact entre le sang et l’unité rénale.",
+        "commonMistake": "Placer la filtration dans un canal en aval inverse l’ordre du processus.",
+        "keyTakeaway": "On filtre au contact du sang.",
+        "fieldApplication": "Ce point relie l’appareil urinaire et l’appareil circulatoire."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le lieu de la filtration est le point de contact entre le sang et l’unité rénale.",
+      "common_mistake": "Placer la filtration dans un canal en aval inverse l’ordre du processus.",
+      "key_takeaway": "On filtre au contact du sang.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "capillaires",
+          "les capillaires"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-boss-q09",
+      "type": "association",
+      "difficulty": "hard",
+      "question": "La fille du patient emploie des termes entendus à l’hôpital. Associe chaque racine du support à ce qu’elle désigne.",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q09-a1",
+          "text": "Néphr",
+          "explanation": "Le support la traduit par rein.",
+          "match": "Rein"
+        },
+        {
+          "id": "dea-p09-boss-q09-a2",
+          "text": "Cysto",
+          "explanation": "Le support la traduit par vessie, vésicule.",
+          "match": "Vessie, vésicule"
+        },
+        {
+          "id": "dea-p09-boss-q09-a3",
+          "text": "Pyel",
+          "explanation": "Le support la traduit par bassinet.",
+          "match": "Bassinet"
+        },
+        {
+          "id": "dea-p09-boss-q09-a4",
+          "text": "Natr",
+          "explanation": "Le support la traduit par sodium.",
+          "match": "Sodium"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-boss-q09-a1",
+        "dea-p09-boss-q09-a2",
+        "dea-p09-boss-q09-a3",
+        "dea-p09-boss-q09-a4"
+      ],
+      "explanation": "Les racines du support permettent de décomposer un terme entendu plutôt que de le deviner.",
+      "knowledgeIds": [
+        "K-DEA-P09-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+        "commonMistake": "Deviner d’après une sonorité voisine conduit à des contresens en transmission.",
+        "keyTakeaway": "Quatre racines, quatre sens précis.",
+        "fieldApplication": "Comprendre un terme ne veut pas dire pouvoir le reprendre comme un constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Comprendre une racine, c’est comprendre une famille entière de termes.",
+      "common_mistake": "Deviner d’après une sonorité voisine conduit à des contresens en transmission.",
+      "key_takeaway": "Quatre racines, quatre sens précis.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-008"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-boss-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Vous relisez votre bilan avant de le transmettre. Lequel de ces énoncés ne peut pas se réclamer du support ?",
+      "answers": [
+        {
+          "id": "dea-p09-boss-q10-a1",
+          "text": "L’urètre conduit l’urine de la vessie vers l’extérieur",
+          "explanation": "Le support ne nomme pas l’urètre : cet énoncé ne peut pas s’en réclamer."
+        },
+        {
+          "id": "dea-p09-boss-q10-a2",
+          "text": "La vessie est un réservoir",
+          "explanation": "Terme employé par le support."
+        },
+        {
+          "id": "dea-p09-boss-q10-a3",
+          "text": "Chaque rein contient environ un million de néphrons",
+          "explanation": "Ordre de grandeur donné par le support."
+        },
+        {
+          "id": "dea-p09-boss-q10-a4",
+          "text": "La polyurie correspond à un volume supérieur à 2 litres",
+          "explanation": "Seuil donné par le support."
+        }
+      ],
+      "correctAnswer": "dea-p09-boss-q10-a1",
+      "explanation": "Trois de ces énoncés reprennent le support. Le premier peut être exact par ailleurs, mais il ne figure pas dans cette source.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-boss",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un énoncé peut être juste sans être sourcé : la différence se vérifie dans le texte, pas au jugé.",
+        "commonMistake": "Attribuer à une source un contenu absent, même exact, revient à inventer une référence.",
+        "keyTakeaway": "Exact ne veut pas dire sourcé.",
+        "fieldApplication": "Un contenu non sourcé se déclare comme tel avant d’être enseigné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Un énoncé peut être juste sans être sourcé : la différence se vérifie dans le texte, pas au jugé.",
+      "common_mistake": "Attribuer à une source un contenu absent, même exact, revient à inventer une référence.",
+      "key_takeaway": "Exact ne veut pas dire sourcé.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-boss",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

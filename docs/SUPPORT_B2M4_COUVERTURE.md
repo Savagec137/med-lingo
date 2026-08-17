@@ -42,7 +42,7 @@ Relevé par recherche plein texte sur les 175 pages. Les plages marquées
 | Appareil neurologique                                      | 28–33        | **exploitée** — parcours 8 |
 | Appareil locomoteur                                        | 34–38        | **exploitée** — parcours 4 |
 | Appareil digestif                                          | 39–41        | **exploitée** — parcours 7 |
-| Appareil urinaire                                          | 43–44        | disponible — parcours 9    |
+| Appareil urinaire                                          | 43–44        | **exploitée** — parcours 9 |
 | Appareil génital féminin                                   | 45–47, 51–52 | disponible                 |
 | Appareil génital masculin                                  | 48–51        | disponible                 |
 | Système endocrinien                                        | 45–52        | disponible — parcours 10   |
@@ -55,7 +55,7 @@ Relevé par recherche plein texte sur les 175 pages. Les plages marquées
 | Matériels de mesure — tensiomètre, oxymètre | 53–54 | **partiellement exploitée** — parcours 5 et 6 |
 | Mesure manuelle de la pression artérielle   | 66–68 | **exploitée** — parcours 5                    |
 | Mesure de la fréquence respiratoire, SpO₂   | 71–72 | **exploitée** — parcours 6                    |
-| Prélèvements non stériles                   | 76–78 | disponible                                    |
+| Prélèvements non stériles                   | 76–78 | **partiellement exploitée** — parcours 9      |
 
 ### Situations pathologiques
 
@@ -106,6 +106,13 @@ déclarer. **Ne pas les rattacher au support par commodité.**
 4. **Ne jamais faire dire au support plus qu'il ne dit.** Quand une question
    mêle un élément que le support énumère et un élément qu'il n'énumère pas,
    elle reste en rédaction interne.
+5. **Une leçon du plan que le support ne couvre pas reste au plan, et le dit.**
+   Le parcours 9 en donne deux exemples : « L'urètre » et « Équilibre
+   hydrique » n'apparaissent nulle part dans les deux pages consacrées à
+   l'appareil urinaire. Les titres de `roadmap-v2.json` n'ont pas été modifiés
+   pour les faire coïncider avec la source ; les leçons ont été écrites en
+   extension, et une question de chacune fait porter l'apprentissage sur ce
+   constat même — savoir où une source s'arrête fait partie du métier.
 
 ## Une limite d'outillage à connaître
 

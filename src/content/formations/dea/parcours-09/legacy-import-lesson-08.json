@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-09",
+  "id": "dea-p09-l08",
+  "title": "Synthèse",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 6,
+  "level": 1,
+  "xp": 25,
+  "tags": [
+    "import-json-xlsx",
+    "validation-medicale-requise"
+  ],
+  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pulse": null,
+  "selection": {
+    "strategy": "random",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Physiologie du système rénal"
+  ],
+  "competencyIds": [
+    "import.json-xlsx.b01.p04.l07"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l07"
+  ],
+  "items": [
+    {
+      "id": "import-b01-p04-l07-q361",
+      "difficulty": "easy",
+      "question": "Quel est le rôle principal des reins ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q361",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q361-answer-01",
+          "text": "Filtrer le sang",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q361-answer-02",
+          "text": "Produire les globules rouges",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q361-answer-03",
+          "text": "Digérer les aliments",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q361-answer-04",
+          "text": "Ventiler les poumons",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q361-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l07-q362",
+      "difficulty": "easy",
+      "question": "Comment s'appelle l'unité fonctionnelle du rein ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q362",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q362-answer-01",
+          "text": "Le néphron",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q362-answer-02",
+          "text": "Le neurone",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q362-answer-03",
+          "text": "L'alvéole",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q362-answer-04",
+          "text": "Le glomus",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q362-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l07-q363",
+      "difficulty": "easy",
+      "question": "Les reins participent au maintien de l'équilibre hydrique.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q363",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q363-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q363-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q363-true"
+    },
+    {
+      "id": "import-b01-p04-l07-q364",
+      "difficulty": "easy",
+      "question": "Toute l'eau filtrée est éliminée dans l'urine.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q364",
+        "originalType": "true_false",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "true_false_contextual",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q364-true",
+          "text": "Vrai",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q364-false",
+          "text": "Faux",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q364-false"
+    },
+    {
+      "id": "import-b01-p04-l07-q365",
+      "difficulty": "medium",
+      "question": "Associe chaque élément à sa correspondance.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q365",
+        "originalType": "matching",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      },
+      "type": "association",
+      "instruction": "Associe chaque élément à sa correspondance.",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q365-pair-01",
+          "text": "Néphron",
+          "match": "Unité fonctionnelle",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q365-pair-02",
+          "text": "Glomérule",
+          "match": "Filtration",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q365-pair-03",
+          "text": "Tubule rénal",
+          "match": "Réabsorption",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q365-pair-04",
+          "text": "Rein",
+          "match": "Équilibre interne",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l07-q365-pair-01",
+        "import-b01-p04-l07-q365-pair-02",
+        "import-b01-p04-l07-q365-pair-03",
+        "import-b01-p04-l07-q365-pair-04"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l07-q366",
+      "difficulty": "medium",
+      "question": "La première étape de la formation de l'urine est la ______ glomérulaire.",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q366",
+        "originalType": "fill_blank",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft",
+        "acceptedTextAnswers": [
+          "filtration"
+        ]
+      },
+      "type": "fill_blank",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q366-accepted-01",
+          "text": "filtration",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": [
+        "import-b01-p04-l07-q366-accepted-01"
+      ]
+    },
+    {
+      "id": "import-b01-p04-l07-q367",
+      "difficulty": "hard",
+      "question": "Quelle fonction est assurée par les reins ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q367",
+        "originalType": "multiple_choice",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "mcq",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q367-answer-01",
+          "text": "Maintenir l'équilibre hydro-électrolytique",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q367-answer-02",
+          "text": "Produire l'insuline",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q367-answer-03",
+          "text": "Fabriquer l'hémoglobine",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q367-answer-04",
+          "text": "Contrôler la digestion",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q367-answer-01"
+    },
+    {
+      "id": "import-b01-p04-l07-q368",
+      "difficulty": "hard",
+      "question": "Un patient présente une absence quasi complète d'urines depuis plusieurs heures. Quelle fonction physiologique semble principalement altérée ?",
+      "explanation": "",
+      "tags": [
+        "import-json-xlsx",
+        "validation-medicale-requise",
+        "p04",
+        "l07"
+      ],
+      "competencyIds": [
+        "import.json-xlsx.b01.p04.l07"
+      ],
+      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "metadata": {
+        "importBatch": "json-xlsx-v1-2026-07-26",
+        "originalBlockId": "B01",
+        "originalPathId": "P04",
+        "originalLessonId": "L07",
+        "originalQuestionId": "Q368",
+        "originalType": "clinical_case",
+        "sourceDocument": "JSON.xlsx",
+        "sourcePages": "non fournies",
+        "reviewStatus": "draft"
+      },
+      "type": "clinical_case",
+      "answers": [
+        {
+          "id": "import-b01-p04-l07-q368-answer-01",
+          "text": "La filtration rénale",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q368-answer-02",
+          "text": "La ventilation pulmonaire",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q368-answer-03",
+          "text": "La digestion",
+          "explanation": ""
+        },
+        {
+          "id": "import-b01-p04-l07-q368-answer-04",
+          "text": "La conduction nerveuse",
+          "explanation": ""
+        }
+      ],
+      "correctAnswer": "import-b01-p04-l07-q368-answer-01"
+    }
+  ]
+}

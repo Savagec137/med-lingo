@@ -1,0 +1,692 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l04",
+  "title": "L’urètre",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 9,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Reconnaître les termes de miction cités par le support.",
+    "Constater que le support ne nomme pas l’urètre.",
+    "Tenir le champ d’exercice devant une plainte urinaire."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l03"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l04-q01",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels termes du support décrivent une difficulté ou un trouble de la miction ?",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q01-a1",
+          "text": "Dysurie",
+          "explanation": "Le support le cite dans ses mots-clés."
+        },
+        {
+          "id": "dea-p09-l04-q01-a2",
+          "text": "Pollakiurie",
+          "explanation": "Le support le cite dans ses mots-clés."
+        },
+        {
+          "id": "dea-p09-l04-q01-a3",
+          "text": "Énurésie",
+          "explanation": "Le support le cite dans ses mots-clés."
+        },
+        {
+          "id": "dea-p09-l04-q01-a4",
+          "text": "Incontinence urinaire",
+          "explanation": "Le support la cite dans ses mots-clés."
+        },
+        {
+          "id": "dea-p09-l04-q01-a5",
+          "text": "Néphrectomie",
+          "explanation": "Ce terme désigne un acte portant sur le rein.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l04-q01-a1",
+        "dea-p09-l04-q01-a2",
+        "dea-p09-l04-q01-a3",
+        "dea-p09-l04-q01-a4"
+      ],
+      "explanation": "Le support réunit dans ses mots-clés plusieurs termes décrivant la miction et ses troubles.",
+      "knowledgeIds": [
+        "K-DEA-P09-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces termes reviennent dans les transmissions : les comprendre évite de les employer à tort.",
+        "commonMistake": "Ranger un acte chirurgical parmi les troubles de la miction mélange deux registres.",
+        "keyTakeaway": "Quatre termes de miction, un terme d’acte.",
+        "fieldApplication": "Comprendre un terme entendu n’autorise pas à le reprendre comme un constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces termes reviennent dans les transmissions : les comprendre évite de les employer à tort.",
+      "common_mistake": "Ranger un acte chirurgical parmi les troubles de la miction mélange deux registres.",
+      "key_takeaway": "Quatre termes de miction, un terme d’acte.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-009"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l04-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Le support nomme-t-il l’urètre dans sa description de l’appareil urinaire ?",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q02-a1",
+          "text": "Non : il décrit les reins, les uretères et la vessie, sans nommer l’urètre",
+          "explanation": "C’est ce que contiennent les deux pages consacrées à cet appareil."
+        },
+        {
+          "id": "dea-p09-l04-q02-a2",
+          "text": "Oui, comme le canal reliant les reins à la vessie",
+          "explanation": "Ce rôle est celui des uretères.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q02-a3",
+          "text": "Oui, comme un second réservoir",
+          "explanation": "Le seul réservoir décrit est la vessie.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q02-a4",
+          "text": "Oui, comme l’unité microscopique du rein",
+          "explanation": "Cette unité est le néphron.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-l04-q02-a1",
+      "explanation": "Les deux pages consacrées à l’appareil urinaire décrivent les reins, les uretères et la vessie. L’urètre n’y est pas nommé.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Savoir ce qu’une source ne dit pas est aussi utile que savoir ce qu’elle dit.",
+        "commonMistake": "Attribuer à l’urètre le rôle des uretères vient d’une ressemblance de nom, pas du support.",
+        "keyTakeaway": "Le support s’arrête à la vessie.",
+        "fieldApplication": "Une notion absente du support attend une autre source avant d’être enseignée comme acquise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Savoir ce qu’une source ne dit pas est aussi utile que savoir ce qu’elle dit.",
+      "common_mistake": "Attribuer à l’urètre le rôle des uretères vient d’une ressemblance de nom, pas du support.",
+      "key_takeaway": "Le support s’arrête à la vessie.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l04-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Un ambulancier peut poser une sonde urinaire pour soulager un patient qui ne parvient plus à uriner.",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q03-a1",
+          "text": "Vrai",
+          "explanation": "Ce geste ne figure pas parmi les actes de l’ambulancier.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q03-a2",
+          "text": "Faux",
+          "explanation": "Ce geste n’appartient pas au champ de l’ambulancier ; le bilan décrit et transmet."
+        }
+      ],
+      "correctAnswer": "dea-p09-l04-q03-a2",
+      "explanation": "La conduite à tenir devant une plainte urinaire tient dans la description et la transmission. Le geste appartient à une autre profession.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La limite du champ d’exercice ne dépend pas de l’urgence ressentie ni de la demande du patient.",
+        "commonMistake": "Croire qu’un geste est autorisé parce qu’il soulagerait fait franchir une limite professionnelle.",
+        "keyTakeaway": "Décrire et transmettre, pas agir sur la voie urinaire.",
+        "fieldApplication": "Le médecin régulateur décide de la suite à donner."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La limite du champ d’exercice ne dépend pas de l’urgence ressentie ni de la demande du patient.",
+      "common_mistake": "Croire qu’un geste est autorisé parce qu’il soulagerait fait franchir une limite professionnelle.",
+      "key_takeaway": "Décrire et transmettre, pas agir sur la voie urinaire.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l04-q04",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque terme du support à ce qu’il décrit.",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q04-a1",
+          "text": "Dysurie",
+          "explanation": "Terme de miction cité par le support.",
+          "match": "Difficulté à uriner"
+        },
+        {
+          "id": "dea-p09-l04-q04-a2",
+          "text": "Pollakiurie",
+          "explanation": "Terme de miction cité par le support.",
+          "match": "Mictions fréquentes"
+        },
+        {
+          "id": "dea-p09-l04-q04-a3",
+          "text": "Énurésie",
+          "explanation": "Terme de miction cité par le support.",
+          "match": "Émission involontaire"
+        },
+        {
+          "id": "dea-p09-l04-q04-a4",
+          "text": "Hématurie",
+          "explanation": "Terme de contenu cité par le support.",
+          "match": "Sang dans les urines"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l04-q04-a1",
+        "dea-p09-l04-q04-a2",
+        "dea-p09-l04-q04-a3",
+        "dea-p09-l04-q04-a4"
+      ],
+      "explanation": "Les mots-clés du support distinguent la façon d’uriner et ce que l’urine contient.",
+      "knowledgeIds": [
+        "K-DEA-P09-009"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Distinguer le trouble de la miction et le contenu de l’urine évite de confondre deux constats différents.",
+        "commonMistake": "Traduire un terme de contenu par un trouble de miction fait transmettre autre chose que ce qui a été dit.",
+        "keyTakeaway": "Comment on urine, et ce que contient l’urine.",
+        "fieldApplication": "Comprendre le terme entendu permet de lire une transmission sans la déformer."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Distinguer le trouble de la miction et le contenu de l’urine évite de confondre deux constats différents.",
+      "common_mistake": "Traduire un terme de contenu par un trouble de miction fait transmettre autre chose que ce qui a été dit.",
+      "key_takeaway": "Comment on urine, et ce que contient l’urine.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-009"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-l04-q05",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Un patient signale une gêne à uriner depuis deux jours. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q05-a1",
+          "text": "La gêne rapportée, sa durée et l’absence ou la présence d’autres plaintes",
+          "explanation": "Trois éléments transmissibles tels quels."
+        },
+        {
+          "id": "dea-p09-l04-q05-a2",
+          "text": "Une dysurie",
+          "explanation": "Le terme est une traduction, donc une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q05-a3",
+          "text": "Une infection urinaire",
+          "explanation": "C’est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q05-a4",
+          "text": "Rien, la plainte étant ancienne",
+          "explanation": "Une plainte de deux jours reste une information à transmettre.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p09-l04-q05-a1",
+      "explanation": "Une plainte urinaire se rapporte dans les mots du patient, avec sa durée. Sa traduction technique appartient au médecin.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La durée d’une plainte est ce qui permet à la régulation d’en apprécier le caractère récent ou installé.",
+        "commonMistake": "Traduire la plainte en terme médical la fait passer pour un constat professionnel.",
+        "keyTakeaway": "Ce qu’il dit, depuis quand, et ce qu’il dit d’autre.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "La durée d’une plainte est ce qui permet à la régulation d’en apprécier le caractère récent ou installé.",
+      "common_mistake": "Traduire la plainte en terme médical la fait passer pour un constat professionnel.",
+      "key_takeaway": "Ce qu’il dit, depuis quand, et ce qu’il dit d’autre.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l04-q06",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "La racine ______ désigne la vessie ou la vésicule dans le vocabulaire du support.",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q06-a1",
+          "text": "Cysto",
+          "explanation": "Le support la traduit par vessie, vésicule."
+        },
+        {
+          "id": "dea-p09-l04-q06-a2",
+          "text": "Urie",
+          "explanation": "Le support range cette racine à part, sans la rattacher à la vessie.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l04-q06-a1",
+      "explanation": "Le support donne Cysto pour vessie ou vésicule.",
+      "knowledgeIds": [
+        "K-DEA-P09-008"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une racine peut recouvrir deux organes voisins : le support le précise ici.",
+        "commonMistake": "Confondre deux racines fait situer un terme entendu au mauvais endroit.",
+        "keyTakeaway": "Cysto renvoie à la vessie comme à la vésicule.",
+        "fieldApplication": "Décomposer un terme entendu est plus sûr que le deviner."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Une racine peut recouvrir deux organes voisins : le support le précise ici.",
+      "common_mistake": "Confondre deux racines fait situer un terme entendu au mauvais endroit.",
+      "key_takeaway": "Cysto renvoie à la vessie comme à la vésicule.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - vocabulaire essentiel",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-008"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "cysto",
+          "Cysto"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l04-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Une famille insiste pour que vous « fassiez quelque chose » devant une plainte urinaire. Comment répondez-vous ?",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q07-a1",
+          "text": "En expliquant que votre rôle est de décrire et de transmettre, et en le faisant devant eux",
+          "explanation": "La réponse tient le champ d’exercice tout en rassurant la famille."
+        },
+        {
+          "id": "dea-p09-l04-q07-a2",
+          "text": "En réalisant le geste demandé pour apaiser la situation",
+          "explanation": "Un geste hors du champ d’exercice ne devient pas autorisé sous la pression.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q07-a3",
+          "text": "En affirmant qu’il n’y a rien de grave",
+          "explanation": "Rien ne permet de l’affirmer, et ce n’est pas votre rôle.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q07-a4",
+          "text": "En laissant la famille appeler elle-même le Centre 15",
+          "explanation": "La transmission du bilan vous revient.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": "dea-p09-l04-q07-a1",
+      "explanation": "Tenir son champ d’exercice n’est pas refuser d’aider : décrire et transmettre est l’action attendue.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Expliquer ce qu’on fait et pourquoi apaise souvent mieux qu’un geste hors champ.",
+        "commonMistake": "Céder à l’insistance sur un geste non autorisé engage l’ambulancier bien au-delà de la situation.",
+        "keyTakeaway": "Décrire et transmettre est une action, pas une abstention.",
+        "fieldApplication": "Le médecin régulateur décide de ce qui doit être fait ensuite."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Expliquer ce qu’on fait et pourquoi apaise souvent mieux qu’un geste hors champ.",
+      "common_mistake": "Céder à l’insistance sur un geste non autorisé engage l’ambulancier bien au-delà de la situation.",
+      "key_takeaway": "Décrire et transmettre est une action, pas une abstention.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l04-q08",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Quels éléments un bilan portant sur une plainte urinaire rassemble-t-il ?",
+      "answers": [
+        {
+          "id": "dea-p09-l04-q08-a1",
+          "text": "Ce que le patient rapporte, dans ses mots",
+          "explanation": "Une donnée de première main."
+        },
+        {
+          "id": "dea-p09-l04-q08-a2",
+          "text": "La durée depuis laquelle la plainte existe",
+          "explanation": "Elle situe la plainte dans le temps."
+        },
+        {
+          "id": "dea-p09-l04-q08-a3",
+          "text": "Les signes généraux constatés",
+          "explanation": "Ils complètent la plainte rapportée."
+        },
+        {
+          "id": "dea-p09-l04-q08-a4",
+          "text": "Le terme médical qui résume la plainte",
+          "explanation": "Le traduire est une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l04-q08-a5",
+          "text": "L’orientation hospitalière retenue",
+          "explanation": "Elle est décidée par le médecin régulateur.",
+          "distractorType": "wrong-timing"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l04-q08-a1",
+        "dea-p09-l04-q08-a2",
+        "dea-p09-l04-q08-a3"
+      ],
+      "explanation": "Un bilan rassemble une plainte, sa durée et des constats. Il ne la traduit pas et ne décide pas de la suite.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l04",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces trois éléments suffisent à la régulation, et aucun ne demande de conclure.",
+        "commonMistake": "Ajouter le terme médical ou la destination fait sortir l’ambulancier de son champ.",
+        "keyTakeaway": "Ce qu’il dit, depuis quand, ce que je vois.",
+        "fieldApplication": "L’orientation appartient au Centre 15."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Ces trois éléments suffisent à la régulation, et aucun ne demande de conclure.",
+      "common_mistake": "Ajouter le terme médical ou la destination fait sortir l’ambulancier de son champ.",
+      "key_takeaway": "Ce qu’il dit, depuis quand, ce que je vois.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l04",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

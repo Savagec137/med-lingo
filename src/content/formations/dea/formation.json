@@ -919,7 +919,7 @@
       "prerequisiteIds": [
         "dea-p08-boss"
       ],
-      "contentStatus": "awaiting_content",
+      "contentStatus": "review",
       "metadataStatus": "pending_specification",
       "pendingFields": [
         "competencies",
@@ -931,11 +931,67 @@
       "sourceAnchor": "Parcours 9 — Système urinaire",
       "lessons": [
         {
+          "id": "dea-p09-l01",
+          "title": "Les reins",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-01.json"
+        },
+        {
+          "id": "dea-p09-l02",
+          "title": "Les uretères",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-02.json"
+        },
+        {
+          "id": "dea-p09-l03",
+          "title": "La vessie",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-03.json"
+        },
+        {
+          "id": "dea-p09-l04",
+          "title": "L’urètre",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-04.json"
+        },
+        {
+          "id": "dea-p09-l05",
+          "title": "Formation de l’urine",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-05.json"
+        },
+        {
+          "id": "dea-p09-l06",
+          "title": "Équilibre hydrique",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-06.json"
+        },
+        {
+          "id": "dea-p09-l07",
+          "title": "Fonctions rénales",
+          "kind": "lesson",
+          "status": "review",
+          "file": "parcours-09/lesson-07.json"
+        },
+        {
           "id": "dea-p09-l08",
           "title": "Synthèse",
           "kind": "lesson",
           "status": "review",
           "file": "parcours-09/lesson-08.json"
+        },
+        {
+          "id": "dea-p09-boss",
+          "title": "Boss — Système urinaire",
+          "kind": "boss",
+          "status": "review",
+          "file": "parcours-09/lesson-09.json"
         }
       ]
     },

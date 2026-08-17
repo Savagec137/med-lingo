@@ -1,424 +1,747 @@
 {
   "schemaVersion": 2,
   "formation": "dea",
-  "parcours": "parcours-09",
+  "parcours": "parcours-08",
   "id": "dea-p09-l08",
   "title": "Synthèse",
   "kind": "lesson",
   "status": "review",
   "difficulty": "medium",
-  "estimatedMinutes": 6,
-  "level": 1,
-  "xp": 25,
+  "estimatedMinutes": 12,
+  "level": 3,
+  "xp": null,
   "tags": [
-    "import-json-xlsx",
-    "validation-medicale-requise"
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
   ],
-  "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16, 43, 44, 77",
   "pulse": null,
   "selection": {
-    "strategy": "random",
+    "strategy": "all",
     "count": 8
   },
   "learningObjectives": [
-    "Physiologie du système rénal"
+    "Reconstituer le trajet complet de l’urine.",
+    "Distinguer un énoncé sourcé d’un énoncé seulement plausible.",
+    "Structurer un bilan urinaire sans conclure."
   ],
   "competencyIds": [
-    "import.json-xlsx.b01.p04.l07"
+    "body.system.urinary",
+    "body.organization.organ-to-system",
+    "body.organ.function"
   ],
   "prerequisiteIds": [
     "dea-p09-l07"
   ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
   "items": [
     {
-      "id": "import-b01-p04-l07-q361",
-      "difficulty": "easy",
-      "question": "Quel est le rôle principal des reins ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q361",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q361-answer-01",
-          "text": "Filtrer le sang",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q361-answer-02",
-          "text": "Produire les globules rouges",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q361-answer-03",
-          "text": "Digérer les aliments",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q361-answer-04",
-          "text": "Ventiler les poumons",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l07-q361-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l07-q362",
-      "difficulty": "easy",
-      "question": "Comment s'appelle l'unité fonctionnelle du rein ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q362",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "mcq",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q362-answer-01",
-          "text": "Le néphron",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q362-answer-02",
-          "text": "Le neurone",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q362-answer-03",
-          "text": "L'alvéole",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q362-answer-04",
-          "text": "Le glomus",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l07-q362-answer-01"
-    },
-    {
-      "id": "import-b01-p04-l07-q363",
-      "difficulty": "easy",
-      "question": "Les reins participent au maintien de l'équilibre hydrique.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q363",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q363-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q363-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l07-q363-true"
-    },
-    {
-      "id": "import-b01-p04-l07-q364",
-      "difficulty": "easy",
-      "question": "Toute l'eau filtrée est éliminée dans l'urine.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q364",
-        "originalType": "true_false",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "true_false_contextual",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q364-true",
-          "text": "Vrai",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q364-false",
-          "text": "Faux",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": "import-b01-p04-l07-q364-false"
-    },
-    {
-      "id": "import-b01-p04-l07-q365",
+      "id": "dea-p09-l08-q01",
+      "type": "ordering",
       "difficulty": "medium",
-      "question": "Associe chaque élément à sa correspondance.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
+      "question": "Reconstitue le trajet complet de l’urine, de sa formation à son réservoir.",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q01-a1",
+          "text": "Paroi des capillaires",
+          "explanation": "Lieu de la première filtration.",
+          "sequenceRank": 1
+        },
+        {
+          "id": "dea-p09-l08-q01-a2",
+          "text": "Glomérule",
+          "explanation": "Premier constituant du néphron cité.",
+          "sequenceRank": 2
+        },
+        {
+          "id": "dea-p09-l08-q01-a3",
+          "text": "Tube urinifère",
+          "explanation": "Second constituant du néphron.",
+          "sequenceRank": 3
+        },
+        {
+          "id": "dea-p09-l08-q01-a4",
+          "text": "Uretère",
+          "explanation": "Canal vers le réservoir.",
+          "sequenceRank": 4
+        },
+        {
+          "id": "dea-p09-l08-q01-a5",
+          "text": "Vessie",
+          "explanation": "Réservoir décrit par le support.",
+          "sequenceRank": 5
+        }
       ],
+      "correctAnswer": [
+        "dea-p09-l08-q01-a1",
+        "dea-p09-l08-q01-a2",
+        "dea-p09-l08-q01-a3",
+        "dea-p09-l08-q01-a4",
+        "dea-p09-l08-q01-a5"
+      ],
+      "explanation": "Le support décrit un trajet continu, de la filtration capillaire jusqu’au réservoir vésical.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
       "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
+        "body.system.urinary",
+        "body.organ.function"
       ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ce trajet réunit tout ce que les deux pages du support énoncent sur cet appareil.",
+        "commonMistake": "Sauter une étape du néphron fait disparaître le lieu où l’urine se forme.",
+        "keyTakeaway": "Filtrer, cheminer, conduire, stocker.",
+        "fieldApplication": "Connaître le trajet permet de situer une plainte à un niveau précis."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ce trajet réunit tout ce que les deux pages du support énoncent sur cet appareil.",
+      "common_mistake": "Sauter une étape du néphron fait disparaître le lieu où l’urine se forme.",
+      "key_takeaway": "Filtrer, cheminer, conduire, stocker.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
       "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q365",
-        "originalType": "matching",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l08-q02",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quelles affirmations correspondent à ce que le support énonce sur l’appareil urinaire ?",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q02-a1",
+          "text": "La vessie est un réservoir",
+          "explanation": "Terme employé par le support."
+        },
+        {
+          "id": "dea-p09-l08-q02-a2",
+          "text": "Deux uretères conduisent l’urine",
+          "explanation": "Nombre donné par le support."
+        },
+        {
+          "id": "dea-p09-l08-q02-a3",
+          "text": "Chaque rein contient environ un million de néphrons",
+          "explanation": "Ordre de grandeur donné par le support."
+        },
+        {
+          "id": "dea-p09-l08-q02-a4",
+          "text": "La première filtration se fait au niveau de la paroi des capillaires",
+          "explanation": "Localisation donnée par le support."
+        },
+        {
+          "id": "dea-p09-l08-q02-a5",
+          "text": "L’urètre relie les reins à la vessie",
+          "explanation": "Ce rôle est celui des uretères, et l’urètre n’est pas nommé.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l08-q02-a1",
+        "dea-p09-l08-q02-a2",
+        "dea-p09-l08-q02-a3",
+        "dea-p09-l08-q02-a4"
+      ],
+      "explanation": "Quatre affirmations viennent du support ; la cinquième mélange deux termes voisins et attribue un rôle à une structure absente.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003",
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "S’en tenir aux énoncés de la source est ce qui distingue un contenu sourcé d’un contenu inventé.",
+        "commonMistake": "Attribuer aux uretères le nom d’une structure absente du support crée une source fictive.",
+        "keyTakeaway": "Ce que la source dit, et rien de plus.",
+        "fieldApplication": "Un bilan ne transmet que ce qui a été constaté ou rapporté, jamais ce qui est supposé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "S’en tenir aux énoncés de la source est ce qui distingue un contenu sourcé d’un contenu inventé.",
+      "common_mistake": "Attribuer aux uretères le nom d’une structure absente du support crée une source fictive.",
+      "key_takeaway": "Ce que la source dit, et rien de plus.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003",
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l08-q03",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque structure à ce que le support en dit.",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q03-a1",
+          "text": "Rein",
+          "explanation": "Le support y situe les néphrons.",
+          "match": "Un million de néphrons"
+        },
+        {
+          "id": "dea-p09-l08-q03-a2",
+          "text": "Glomérule",
+          "explanation": "Constituant du néphron.",
+          "match": "Constituant du néphron"
+        },
+        {
+          "id": "dea-p09-l08-q03-a3",
+          "text": "Uretère",
+          "explanation": "Deux canaux vers le réservoir.",
+          "match": "Canal vers la vessie"
+        },
+        {
+          "id": "dea-p09-l08-q03-a4",
+          "text": "Vessie",
+          "explanation": "Terme employé par le support.",
+          "match": "Réservoir"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l08-q03-a1",
+        "dea-p09-l08-q03-a2",
+        "dea-p09-l08-q03-a3",
+        "dea-p09-l08-q03-a4"
+      ],
+      "explanation": "Quatre structures, quatre rôles que le support distingue nettement.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque structure fait une chose : les confondre rend toute description imprécise.",
+        "commonMistake": "Prêter deux rôles à une même structure brouille le trajet de l’urine.",
+        "keyTakeaway": "Produire, filtrer, conduire, stocker.",
+        "fieldApplication": "Employer le bon terme évite les malentendus en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque structure fait une chose : les confondre rend toute description imprécise.",
+      "common_mistake": "Prêter deux rôles à une même structure brouille le trajet de l’urine.",
+      "key_takeaway": "Produire, filtrer, conduire, stocker.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
         "associationMode": "matching",
         "requiredSelections": 4
-      },
-      "type": "association",
-      "instruction": "Associe chaque élément à sa correspondance.",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q365-pair-01",
-          "text": "Néphron",
-          "match": "Unité fonctionnelle",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q365-pair-02",
-          "text": "Glomérule",
-          "match": "Filtration",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q365-pair-03",
-          "text": "Tubule rénal",
-          "match": "Réabsorption",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q365-pair-04",
-          "text": "Rein",
-          "match": "Équilibre interne",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l07-q365-pair-01",
-        "import-b01-p04-l07-q365-pair-02",
-        "import-b01-p04-l07-q365-pair-03",
-        "import-b01-p04-l07-q365-pair-04"
-      ]
+      }
     },
     {
-      "id": "import-b01-p04-l07-q366",
-      "difficulty": "medium",
-      "question": "La première étape de la formation de l'urine est la ______ glomérulaire.",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q366",
-        "originalType": "fill_blank",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft",
-        "acceptedTextAnswers": [
-          "filtration"
-        ]
-      },
-      "type": "fill_blank",
-      "answers": [
-        {
-          "id": "import-b01-p04-l07-q366-accepted-01",
-          "text": "filtration",
-          "explanation": ""
-        }
-      ],
-      "correctAnswer": [
-        "import-b01-p04-l07-q366-accepted-01"
-      ]
-    },
-    {
-      "id": "import-b01-p04-l07-q367",
-      "difficulty": "hard",
-      "question": "Quelle fonction est assurée par les reins ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q367",
-        "originalType": "multiple_choice",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
+      "id": "dea-p09-l08-q04",
       "type": "mcq",
+      "difficulty": "medium",
+      "question": "Quel aspect d’urine le support donne-t-il comme normal ?",
       "answers": [
         {
-          "id": "import-b01-p04-l07-q367-answer-01",
-          "text": "Maintenir l'équilibre hydro-électrolytique",
-          "explanation": ""
+          "id": "dea-p09-l08-q04-a1",
+          "text": "Clair",
+          "explanation": "C’est l’aspect que le support qualifie de normal."
         },
         {
-          "id": "import-b01-p04-l07-q367-answer-02",
-          "text": "Produire l'insuline",
-          "explanation": ""
+          "id": "dea-p09-l08-q04-a2",
+          "text": "Trouble",
+          "explanation": "Le support l’associe à l’infection.",
+          "distractorType": "frequent-error"
         },
         {
-          "id": "import-b01-p04-l07-q367-answer-03",
-          "text": "Fabriquer l'hémoglobine",
-          "explanation": ""
+          "id": "dea-p09-l08-q04-a3",
+          "text": "Jaune foncé",
+          "explanation": "Le support l’associe à des urines concentrées.",
+          "distractorType": "frequent-error"
         },
         {
-          "id": "import-b01-p04-l07-q367-answer-04",
-          "text": "Contrôler la digestion",
-          "explanation": ""
+          "id": "dea-p09-l08-q04-a4",
+          "text": "Acajou",
+          "explanation": "Le support le range parmi les aspects anormaux."
         }
       ],
-      "correctAnswer": "import-b01-p04-l07-q367-answer-01"
+      "correctAnswer": "dea-p09-l08-q04-a1",
+      "explanation": "Le support donne l’urine claire comme aspect normal, et associe les autres aspects à une signification particulière.",
+      "knowledgeIds": [
+        "K-DEA-P09-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Prélèvements non stériles - aspect des urines",
+      "sourcePages": "77",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Connaître le repère normal est ce qui permet de reconnaître un écart et de le décrire.",
+        "commonMistake": "Prendre un aspect anormal pour la référence fausse toutes les descriptions suivantes.",
+        "keyTakeaway": "Clair est le repère ; le reste s’en écarte.",
+        "fieldApplication": "L’aspect constaté se transmet avec l’heure du constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Connaître le repère normal est ce qui permet de reconnaître un écart et de le décrire.",
+      "common_mistake": "Prendre un aspect anormal pour la référence fausse toutes les descriptions suivantes.",
+      "key_takeaway": "Clair est le repère ; le reste s’en écarte.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 77",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Prélèvements non stériles - aspect des urines",
+        "sourcePages": "77",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-007"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     },
     {
-      "id": "import-b01-p04-l07-q368",
-      "difficulty": "hard",
-      "question": "Un patient présente une absence quasi complète d'urines depuis plusieurs heures. Quelle fonction physiologique semble principalement altérée ?",
-      "explanation": "",
-      "tags": [
-        "import-json-xlsx",
-        "validation-medicale-requise",
-        "p04",
-        "l07"
-      ],
-      "competencyIds": [
-        "import.json-xlsx.b01.p04.l07"
-      ],
-      "pedagogicalReference": "JSON.xlsx — banque générée par GPT ; support DEA et pages sources à confirmer",
-      "metadata": {
-        "importBatch": "json-xlsx-v1-2026-07-26",
-        "originalBlockId": "B01",
-        "originalPathId": "P04",
-        "originalLessonId": "L07",
-        "originalQuestionId": "Q368",
-        "originalType": "clinical_case",
-        "sourceDocument": "JSON.xlsx",
-        "sourcePages": "non fournies",
-        "reviewStatus": "draft"
-      },
-      "type": "clinical_case",
+      "id": "dea-p09-l08-q05",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Chaque rein contient environ un million de ______.",
       "answers": [
         {
-          "id": "import-b01-p04-l07-q368-answer-01",
-          "text": "La filtration rénale",
-          "explanation": ""
+          "id": "dea-p09-l08-q05-a1",
+          "text": "néphrons",
+          "explanation": "C’est l’unité que le support décrit."
         },
         {
-          "id": "import-b01-p04-l07-q368-answer-02",
-          "text": "La ventilation pulmonaire",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q368-answer-03",
-          "text": "La digestion",
-          "explanation": ""
-        },
-        {
-          "id": "import-b01-p04-l07-q368-answer-04",
-          "text": "La conduction nerveuse",
-          "explanation": ""
+          "id": "dea-p09-l08-q05-a2",
+          "text": "uretères",
+          "explanation": "L’uretère est un canal, il n’y en a qu’un par rein.",
+          "distractorType": "frequent-error"
         }
       ],
-      "correctAnswer": "import-b01-p04-l07-q368-answer-01"
+      "correctAnswer": "dea-p09-l08-q05-a1",
+      "explanation": "Le support indique qu’un rein contient environ un million de néphrons.",
+      "knowledgeIds": [
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - le néphron",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre de grandeur distingue l’unité microscopique de l’organe qui la contient.",
+        "commonMistake": "Confondre le néphron et l’uretère mélange une unité interne et un canal de sortie.",
+        "keyTakeaway": "Un million d’unités, un seul canal de sortie.",
+        "fieldApplication": "Une fonction peut être diminuée sans être abolie : le bilan décrit ce qu’il constate."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre de grandeur distingue l’unité microscopique de l’organe qui la contient.",
+      "common_mistake": "Confondre le néphron et l’uretère mélange une unité interne et un canal de sortie.",
+      "key_takeaway": "Un million d’unités, un seul canal de sortie.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - le néphron",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "néphrons",
+          "nephrons",
+          "néphron"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l08-q06",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Le support consacre une section à l’urètre et à l’équilibre hydrique.",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q06-a1",
+          "text": "Vrai",
+          "explanation": "Ni l’un ni l’autre n’apparaissent dans les pages consacrées à cet appareil.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l08-q06-a2",
+          "text": "Faux",
+          "explanation": "Le support décrit les reins, les uretères et la vessie, et s’arrête là."
+        }
+      ],
+      "correctAnswer": "dea-p09-l08-q06-a2",
+      "explanation": "Les deux pages consacrées à l’appareil urinaire ne nomment ni l’urètre ni l’équilibre hydrique.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Savoir où s’arrête une source est ce qui empêche de lui faire dire ce qu’elle ne dit pas.",
+        "commonMistake": "Supposer qu’une source couvre un sujet parce qu’il serait attendu mène à inventer une référence.",
+        "keyTakeaway": "La source s’arrête à la vessie.",
+        "fieldApplication": "Une notion non sourcée se déclare comme telle."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Savoir où s’arrête une source est ce qui empêche de lui faire dire ce qu’elle ne dit pas.",
+      "common_mistake": "Supposer qu’une source couvre un sujet parce qu’il serait attendu mène à inventer une référence.",
+      "key_takeaway": "La source s’arrête à la vessie.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l08-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Vous transmettez au Centre 15 pour un patient qui n’urine presque plus et dont les urines sont foncées. Que contient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q07-a1",
+          "text": "Les deux constats, leur période, la source de chacun, et l’état général observé",
+          "explanation": "Quatre éléments distincts, chacun à sa place."
+        },
+        {
+          "id": "dea-p09-l08-q07-a2",
+          "text": "Une oligurie avec urines concentrées",
+          "explanation": "Les deux termes sont des traductions, donc des conclusions.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l08-q07-a3",
+          "text": "Une déshydratation",
+          "explanation": "Le support la cite comme une possibilité parmi d’autres.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l08-q07-a4",
+          "text": "Le seul aspect des urines, le volume n’ayant pas été mesuré",
+          "explanation": "Un volume rapporté se transmet, annoncé comme rapporté.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l08-q07-a1",
+      "explanation": "Deux constats se transmettent avec leur période et leur source. Les traduire en termes médicaux ou les relier par une cause est une conclusion.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support cite plusieurs causes possibles : en retenir une revient à trancher à la place du médecin.",
+        "commonMistake": "Traduire deux constats en deux termes techniques fait passer un bilan pour un diagnostic.",
+        "keyTakeaway": "Quoi, sur quelle période, rapporté par qui, et ce que je vois.",
+        "fieldApplication": "Le Centre 15 décide de l’orientation à partir de ces éléments."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support cite plusieurs causes possibles : en retenir une revient à trancher à la place du médecin.",
+      "common_mistake": "Traduire deux constats en deux termes techniques fait passer un bilan pour un diagnostic.",
+      "key_takeaway": "Quoi, sur quelle période, rapporté par qui, et ce que je vois.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l08-q08",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Parmi ces énoncés, lequel dépasse ce que le support autorise à affirmer ?",
+      "answers": [
+        {
+          "id": "dea-p09-l08-q08-a1",
+          "text": "Le rein règle la quantité d’eau de l’organisme par plusieurs mécanismes",
+          "explanation": "Le support ne traite pas de la régulation hydrique."
+        },
+        {
+          "id": "dea-p09-l08-q08-a2",
+          "text": "La vessie est un réservoir",
+          "explanation": "Terme employé par le support."
+        },
+        {
+          "id": "dea-p09-l08-q08-a3",
+          "text": "La première filtration se fait au niveau de la paroi des capillaires",
+          "explanation": "Localisation donnée par le support."
+        },
+        {
+          "id": "dea-p09-l08-q08-a4",
+          "text": "La polyurie correspond à un volume supérieur à 2 litres",
+          "explanation": "Seuil donné par le support."
+        }
+      ],
+      "correctAnswer": "dea-p09-l08-q08-a1",
+      "explanation": "Trois de ces énoncés reprennent le support ; le premier lui prête un contenu qu’il ne comporte pas.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l08",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un énoncé plausible n’est pas un énoncé sourcé : la différence se vérifie dans le texte, pas au jugé.",
+        "commonMistake": "Prêter à une source une affirmation vraisemblable est la façon la plus courante d’inventer une référence.",
+        "keyTakeaway": "Plausible ne veut pas dire sourcé.",
+        "fieldApplication": "Un contenu non sourcé se déclare comme tel avant d’être enseigné."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un énoncé plausible n’est pas un énoncé sourcé : la différence se vérifie dans le texte, pas au jugé.",
+      "common_mistake": "Prêter à une source une affirmation vraisemblable est la façon la plus courante d’inventer une référence.",
+      "key_takeaway": "Plausible ne veut pas dire sourcé.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l08",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
     }
   ]
 }

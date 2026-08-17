@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l01",
+  "title": "Les reins",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "easy",
+  "estimatedMinutes": 9,
+  "level": 1,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16, 43, 44",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Situer l’appareil excréteur parmi les sept appareils.",
+    "Décrire le rein, ses néphrons et le trajet de l’urine.",
+    "Distinguer l’organe de la région qui le contient."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organ.composition",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l01-q01",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Quelles fonctions le tableau des sept appareils attribue-t-il à l’appareil excréteur ?",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q01-a1",
+          "text": "La filtration et l’élimination",
+          "explanation": "Ce sont les deux fonctions citées par le support."
+        },
+        {
+          "id": "dea-p09-l01-q01-a2",
+          "text": "La digestion et l’assimilation",
+          "explanation": "Ces fonctions sont attribuées à l’appareil digestif.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q01-a3",
+          "text": "La distribution et la récupération",
+          "explanation": "Ces fonctions sont attribuées à l’appareil circulatoire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q01-a4",
+          "text": "La commande et la coordination",
+          "explanation": "Ces fonctions sont attribuées à l’appareil neurologique."
+        }
+      ],
+      "correctAnswer": "dea-p09-l01-q01-a1",
+      "explanation": "Le support attribue à l’appareil excréteur deux fonctions : filtration et élimination.",
+      "knowledgeIds": [
+        "K-DEA-P09-001"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Organisation générale du corps - les sept appareils",
+      "sourcePages": "16",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Les deux fonctions vont ensemble : filtrer produit ce qui sera ensuite éliminé.",
+        "commonMistake": "Ne retenir que l’élimination fait oublier d’où vient l’urine.",
+        "keyTakeaway": "Filtrer d’abord, éliminer ensuite.",
+        "fieldApplication": "Rattacher un signe urinaire au bon appareil structure le bilan."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Les deux fonctions vont ensemble : filtrer produit ce qui sera ensuite éliminé.",
+      "common_mistake": "Ne retenir que l’élimination fait oublier d’où vient l’urine.",
+      "key_takeaway": "Filtrer d’abord, éliminer ensuite.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 16",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Organisation générale du corps - les sept appareils",
+        "sourcePages": "16",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-001"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l01-q02",
+      "type": "mcq",
+      "difficulty": "easy",
+      "question": "Dans quel réservoir l’urine se déverse-t-elle, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q02-a1",
+          "text": "La vessie",
+          "explanation": "Le support la décrit explicitement comme un réservoir."
+        },
+        {
+          "id": "dea-p09-l01-q02-a2",
+          "text": "Le bassinet",
+          "explanation": "Le support cite ce terme dans les racines, sans en faire le réservoir.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q02-a3",
+          "text": "L’uretère",
+          "explanation": "L’uretère est un canal, pas un réservoir.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q02-a4",
+          "text": "Le néphron",
+          "explanation": "Le néphron est l’unité microscopique du rein."
+        }
+      ],
+      "correctAnswer": "dea-p09-l01-q02-a1",
+      "explanation": "L’urine se déverse dans un réservoir, la vessie, au moyen de deux canaux : les uretères.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support distingue nettement les canaux qui conduisent et le réservoir qui stocke.",
+        "commonMistake": "Prendre un canal pour un réservoir rend la description du trajet incompréhensible.",
+        "keyTakeaway": "Deux canaux conduisent, un réservoir stocke.",
+        "fieldApplication": "Situer une douleur du bas-ventre suppose de savoir ce qui s’y trouve."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le support distingue nettement les canaux qui conduisent et le réservoir qui stocke.",
+      "common_mistake": "Prendre un canal pour un réservoir rend la description du trajet incompréhensible.",
+      "key_takeaway": "Deux canaux conduisent, un réservoir stocke.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l01-q03",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Combien de néphrons chaque rein contient-il environ, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q03-a1",
+          "text": "Environ un million",
+          "explanation": "C’est l’ordre de grandeur donné par le support."
+        },
+        {
+          "id": "dea-p09-l01-q03-a2",
+          "text": "Environ un millier",
+          "explanation": "Le support annonce un ordre de grandeur bien supérieur.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q03-a3",
+          "text": "Deux, un par rein",
+          "explanation": "Le néphron est une unité microscopique, présente en très grand nombre.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q03-a4",
+          "text": "Environ trente et un, un par étage vertébral",
+          "explanation": "Ce nombre est celui des paires de nerfs rachidiens.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-l01-q03-a1",
+      "explanation": "Chaque rein contient environ un million de néphrons.",
+      "knowledgeIds": [
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - le néphron",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "L’ordre de grandeur compte : un rein n’est pas une unité, c’est un million d’unités.",
+        "commonMistake": "Sous-estimer ce nombre fait croire qu’une atteinte partielle arrête tout.",
+        "keyTakeaway": "Un million d’unités par rein.",
+        "fieldApplication": "Une fonction rénale peut être diminuée sans être abolie : le bilan décrit ce qu’il constate."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "L’ordre de grandeur compte : un rein n’est pas une unité, c’est un million d’unités.",
+      "common_mistake": "Sous-estimer ce nombre fait croire qu’une atteinte partielle arrête tout.",
+      "key_takeaway": "Un million d’unités par rein.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - le néphron",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l01-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "De quoi les néphrons sont-ils constitués, selon le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q04-a1",
+          "text": "De glomérules",
+          "explanation": "Le support les cite comme constituants du néphron."
+        },
+        {
+          "id": "dea-p09-l01-q04-a2",
+          "text": "De tubes urinifères",
+          "explanation": "Le support les cite comme constituants du néphron."
+        },
+        {
+          "id": "dea-p09-l01-q04-a3",
+          "text": "D’uretères",
+          "explanation": "L’uretère est un canal qui relie le rein à la vessie.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q04-a4",
+          "text": "De fibres nerveuses",
+          "explanation": "Cette composition est celle de la moelle épinière.",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "dea-p09-l01-q04-a5",
+          "text": "De vertèbres",
+          "explanation": "Les vertèbres appartiennent à l’appareil locomoteur."
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l01-q04-a1",
+        "dea-p09-l01-q04-a2"
+      ],
+      "explanation": "Le néphron est constitué de glomérules et de tubes urinifères.",
+      "knowledgeIds": [
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - le néphron",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Deux constituants pour une même unité : le support ne les sépare pas.",
+        "commonMistake": "Ranger l’uretère parmi les constituants du néphron confond l’unité et le canal de sortie.",
+        "keyTakeaway": "Glomérules et tubes urinifères, dans chaque néphron.",
+        "fieldApplication": "Un vocabulaire juste rend la lecture d’une transmission plus sûre."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Deux constituants pour une même unité : le support ne les sépare pas.",
+      "common_mistake": "Ranger l’uretère parmi les constituants du néphron confond l’unité et le canal de sortie.",
+      "key_takeaway": "Glomérules et tubes urinifères, dans chaque néphron.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - le néphron",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l01-q05",
+      "type": "fill_blank",
+      "difficulty": "easy",
+      "question": "L’urine gagne la vessie au moyen de deux canaux appelés les ______.",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q05-a1",
+          "text": "uretères",
+          "explanation": "Le support nomme ainsi les deux canaux."
+        },
+        {
+          "id": "dea-p09-l01-q05-a2",
+          "text": "urètres",
+          "explanation": "Le support ne mentionne pas ce terme dans cette description.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l01-q05-a1",
+      "explanation": "Deux canaux, les uretères, conduisent l’urine des reins jusqu’à la vessie.",
+      "knowledgeIds": [
+        "K-DEA-P09-002"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+      "sourcePages": "43",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le nombre et le nom sont donnés ensemble par le support : deux canaux, un nom.",
+        "commonMistake": "Confondre deux termes voisins déplace un segment du trajet urinaire.",
+        "keyTakeaway": "Deux uretères, un pour chaque rein.",
+        "fieldApplication": "Décrire précisément le trajet évite les descriptions vagues d’une douleur du flanc."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Le nombre et le nom sont donnés ensemble par le support : deux canaux, un nom.",
+      "common_mistake": "Confondre deux termes voisins déplace un segment du trajet urinaire.",
+      "key_takeaway": "Deux uretères, un pour chaque rein.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - reins, uretères et vessie",
+        "sourcePages": "43",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "uretères",
+          "les uretères",
+          "ureteres"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l01-q06",
+      "type": "anatomy_location",
+      "difficulty": "medium",
+      "question": "Désigne, sur le schéma, l’organe qui filtre le sang pour produire l’urine.",
+      "answers": [
+        {
+          "id": "hotspot-kidney",
+          "text": "Rein",
+          "explanation": "C’est l’organe où se fait la première filtration.",
+          "detail": "0.42,0.46"
+        },
+        {
+          "id": "hotspot-stomach",
+          "text": "Estomac",
+          "explanation": "L’estomac appartient à l’appareil digestif.",
+          "detail": "0.45,0.46",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "hotspot-heart",
+          "text": "Cœur",
+          "explanation": "Le cœur met le sang en mouvement, il ne le filtre pas.",
+          "detail": "0.54,0.31",
+          "distractorType": "sign-misinterpretation"
+        },
+        {
+          "id": "hotspot-abdomen",
+          "text": "Abdomen",
+          "explanation": "L’abdomen est la région qui contient l’organe, pas l’organe.",
+          "detail": "0.5,0.49",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "hotspot-kidney",
+      "explanation": "Le rein réalise la première filtration ; l’urine produite gagne ensuite la vessie par les uretères.",
+      "knowledgeIds": [
+        "K-DEA-P09-004"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - filtration",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Distinguer l’organe de la région qui le contient est la base d’une description anatomique.",
+        "commonMistake": "Désigner l’abdomen pour le rein confond le contenant et le contenu.",
+        "keyTakeaway": "Le rein est un organe ; l’abdomen est une région.",
+        "fieldApplication": "Une douleur du flanc se décrit par sa région, pas par l’organe qu’on suppose atteint."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Distinguer l’organe de la région qui le contient est la base d’une description anatomique.",
+      "common_mistake": "Désigner l’abdomen pour le rein confond le contenant et le contenu.",
+      "key_takeaway": "Le rein est un organe ; l’abdomen est une région.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - filtration",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-004"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "anatomyTarget": "kidney"
+      }
+    },
+    {
+      "id": "dea-p09-l01-q07",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque élément de l’appareil urinaire à ce que le support en dit.",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q07-a1",
+          "text": "Rein",
+          "explanation": "Il contient les néphrons.",
+          "match": "Environ un million de néphrons"
+        },
+        {
+          "id": "dea-p09-l01-q07-a2",
+          "text": "Néphron",
+          "explanation": "Le support en donne les deux constituants.",
+          "match": "Glomérules et tubes urinifères"
+        },
+        {
+          "id": "dea-p09-l01-q07-a3",
+          "text": "Uretère",
+          "explanation": "Deux canaux conduisent l’urine.",
+          "match": "Canal vers la vessie"
+        },
+        {
+          "id": "dea-p09-l01-q07-a4",
+          "text": "Vessie",
+          "explanation": "Le support la décrit ainsi.",
+          "match": "Réservoir"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l01-q07-a1",
+        "dea-p09-l01-q07-a2",
+        "dea-p09-l01-q07-a3",
+        "dea-p09-l01-q07-a4"
+      ],
+      "explanation": "Quatre éléments, quatre rôles que le support distingue : produire, filtrer, conduire, stocker.",
+      "knowledgeIds": [
+        "K-DEA-P09-002",
+        "K-DEA-P09-003"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire",
+      "sourcePages": "43, 44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Chaque élément fait une chose : les confondre rend toute description imprécise.",
+        "commonMistake": "Prêter à l’uretère un rôle de réservoir supprime la distinction entre conduire et stocker.",
+        "keyTakeaway": "Filtrer, conduire, stocker : trois verbes, trois structures.",
+        "fieldApplication": "Employer le bon terme évite les malentendus en transmission."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Chaque élément fait une chose : les confondre rend toute description imprécise.",
+      "common_mistake": "Prêter à l’uretère un rôle de réservoir supprime la distinction entre conduire et stocker.",
+      "key_takeaway": "Filtrer, conduire, stocker : trois verbes, trois structures.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 43, 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire",
+        "sourcePages": "43, 44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-002",
+          "K-DEA-P09-003"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-l01-q08",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient se plaint d’une douleur du flanc droit irradiant vers le bas-ventre. Que retient le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p09-l01-q08-a1",
+          "text": "La localisation de la douleur, son irradiation et son heure de début",
+          "explanation": "Trois faits observables, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p09-l01-q08-a2",
+          "text": "Une colique néphrétique",
+          "explanation": "Le terme est un diagnostic, il appartient au médecin.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q08-a3",
+          "text": "Une atteinte de l’uretère droit",
+          "explanation": "Nommer la structure atteinte est une conclusion médicale.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l01-q08-a4",
+          "text": "Une douleur digestive, la région étant abdominale",
+          "explanation": "Rien n’autorise à rattacher la douleur à un appareil plutôt qu’à un autre.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-l01-q08-a1",
+      "explanation": "Une douleur se décrit par sa localisation, son trajet et son ancienneté. Plusieurs appareils occupent la même région : c’est pourquoi le bilan ne tranche pas.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l01",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le flanc et le bas-ventre abritent plusieurs appareils : décrire sans conclure est ici une nécessité, pas une précaution.",
+        "commonMistake": "Nommer une colique néphrétique enferme la régulation dans une hypothèse que rien ne confirme.",
+        "keyTakeaway": "On transmet où ça fait mal et comment ça se déplace, pas ce qui fait mal.",
+        "fieldApplication": "Le médecin régulateur décide de l’orientation à partir de cette description."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le flanc et le bas-ventre abritent plusieurs appareils : décrire sans conclure est ici une nécessité, pas une précaution.",
+      "common_mistake": "Nommer une colique néphrétique enferme la régulation dans une hypothèse que rien ne confirme.",
+      "key_takeaway": "On transmet où ça fait mal et comment ça se déplace, pas ce qui fait mal.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l01",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}

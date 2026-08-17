@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 2,
+  "formation": "dea",
+  "parcours": "parcours-08",
+  "id": "dea-p09-l06",
+  "title": "Équilibre hydrique",
+  "kind": "lesson",
+  "status": "review",
+  "difficulty": "medium",
+  "estimatedMinutes": 10,
+  "level": 2,
+  "xp": null,
+  "tags": [
+    "dea",
+    "parcours-09",
+    "validation-a-effectuer"
+  ],
+  "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44, 58, 77",
+  "pulse": null,
+  "selection": {
+    "strategy": "all",
+    "count": 8
+  },
+  "learningObjectives": [
+    "Décrire l’aspect d’une urine sans l’interpréter.",
+    "Reconnaître les signes cutanés que le support relie à une alerte circulatoire.",
+    "Transmettre un volume avec sa période et sa source."
+  ],
+  "competencyIds": [
+    "body.system.urinary",
+    "body.organ.function"
+  ],
+  "prerequisiteIds": [
+    "dea-p09-l05"
+  ],
+  "validationStatus": "to_validate",
+  "generationSource": "library_extracted_knowledge",
+  "items": [
+    {
+      "id": "dea-p09-l06-q01",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quels aspects d’urine le support cite-t-il comme anormaux ?",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q01-a1",
+          "text": "Foncée, acajou ou brun",
+          "explanation": "Le support les cite ensemble."
+        },
+        {
+          "id": "dea-p09-l06-q01-a2",
+          "text": "Délavée",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p09-l06-q01-a3",
+          "text": "Colorée en rouge par le sang",
+          "explanation": "Le support la cite."
+        },
+        {
+          "id": "dea-p09-l06-q01-a4",
+          "text": "Orange ou violette, associée aux infections",
+          "explanation": "Le support la cite avec cette association."
+        },
+        {
+          "id": "dea-p09-l06-q01-a5",
+          "text": "Claire",
+          "explanation": "Le support décrit l’urine claire comme un aspect normal.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l06-q01-a1",
+        "dea-p09-l06-q01-a2",
+        "dea-p09-l06-q01-a3",
+        "dea-p09-l06-q01-a4"
+      ],
+      "explanation": "Le support énumère plusieurs aspects anormaux et réserve « clair » à l’aspect normal.",
+      "knowledgeIds": [
+        "K-DEA-P09-006",
+        "K-DEA-P09-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - aspect des urines",
+      "sourcePages": "44, 77",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "La couleur est une observation directe, disponible sans aucun appareil.",
+        "commonMistake": "Ranger l’urine claire parmi les anomalies inverse le repère donné par le support.",
+        "keyTakeaway": "Clair est normal ; le reste se décrit.",
+        "fieldApplication": "Une couleur constatée se transmet telle quelle, avec l’heure du constat."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "La couleur est une observation directe, disponible sans aucun appareil.",
+      "common_mistake": "Ranger l’urine claire parmi les anomalies inverse le repère donné par le support.",
+      "key_takeaway": "Clair est normal ; le reste se décrit.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44, 77",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - aspect des urines",
+        "sourcePages": "44, 77",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-006",
+          "K-DEA-P09-007"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l06-q02",
+      "type": "mcq",
+      "difficulty": "medium",
+      "question": "Que signale une urine trouble, d’après la partie du support consacrée au recueil ?",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q02-a1",
+          "text": "Une infection",
+          "explanation": "C’est l’association que le support donne."
+        },
+        {
+          "id": "dea-p09-l06-q02-a2",
+          "text": "Des urines concentrées",
+          "explanation": "Le support associe cet état à une urine jaune foncé.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q02-a3",
+          "text": "Un aspect normal",
+          "explanation": "L’aspect normal décrit est l’urine claire.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q02-a4",
+          "text": "La présence de sang",
+          "explanation": "Le support décrit alors une coloration rouge.",
+          "distractorType": "sign-misinterpretation"
+        }
+      ],
+      "correctAnswer": "dea-p09-l06-q02-a1",
+      "explanation": "Le support relie trois aspects à leur signification : clair pour normal, trouble pour infection, jaune foncé pour concentré.",
+      "knowledgeIds": [
+        "K-DEA-P09-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Prélèvements non stériles - aspect des urines",
+      "sourcePages": "77",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Trois aspects, trois significations : le support est explicite sur chacune.",
+        "commonMistake": "Confondre trouble et concentré fait transmettre une observation pour une autre.",
+        "keyTakeaway": "Clair, trouble, jaune foncé : trois lectures distinctes.",
+        "fieldApplication": "L’ambulancier décrit l’aspect constaté ; l’interprétation revient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Trois aspects, trois significations : le support est explicite sur chacune.",
+      "common_mistake": "Confondre trouble et concentré fait transmettre une observation pour une autre.",
+      "key_takeaway": "Clair, trouble, jaune foncé : trois lectures distinctes.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 77",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Prélèvements non stériles - aspect des urines",
+        "sourcePages": "77",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-007"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l06-q03",
+      "type": "true_false_contextual",
+      "difficulty": "medium",
+      "question": "Dans l’observation clinique circulatoire, le support cite la déshydratation parmi ce qu’une peau marbrée peut traduire.",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q03-a1",
+          "text": "Vrai",
+          "explanation": "Le support cite la déshydratation parmi les alertes possibles."
+        },
+        {
+          "id": "dea-p09-l06-q03-a2",
+          "text": "Faux",
+          "explanation": "Le support la cite pourtant explicitement.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l06-q03-a1",
+      "explanation": "Les marbrures, zones violacées et pâles des genoux et des cuisses, peuvent traduire une alerte vitale circulatoire, dont la déshydratation.",
+      "knowledgeIds": [
+        "K-DEA-P09-010"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Observation clinique en lien avec le système circulatoire",
+      "sourcePages": "58",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un même signe cutané peut renvoyer à plusieurs causes : c’est pourquoi le bilan le décrit sans trancher.",
+        "commonMistake": "Attribuer les marbrures à une seule cause écarte les autres sans raison.",
+        "keyTakeaway": "Une marbrure se décrit ; ce qu’elle traduit reste ouvert.",
+        "fieldApplication": "Les signes cutanés se transmettent avec leur localisation précise."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un même signe cutané peut renvoyer à plusieurs causes : c’est pourquoi le bilan le décrit sans trancher.",
+      "common_mistake": "Attribuer les marbrures à une seule cause écarte les autres sans raison.",
+      "key_takeaway": "Une marbrure se décrit ; ce qu’elle traduit reste ouvert.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 58",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Observation clinique en lien avec le système circulatoire",
+        "sourcePages": "58",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-010"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l06-q04",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Que peut-on observer d’un patient sans aucun appareil, d’après le support ?",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q04-a1",
+          "text": "La couleur de sa peau, pâle voire livide",
+          "explanation": "Le support décrit cette observation."
+        },
+        {
+          "id": "dea-p09-l06-q04-a2",
+          "text": "La présence de marbrures aux genoux et aux cuisses",
+          "explanation": "Le support en donne la localisation."
+        },
+        {
+          "id": "dea-p09-l06-q04-a3",
+          "text": "La froideur des extrémités",
+          "explanation": "Le support la range parmi les anomalies de chaleur."
+        },
+        {
+          "id": "dea-p09-l06-q04-a4",
+          "text": "L’aspect de ses urines",
+          "explanation": "Le support en décrit plusieurs aspects."
+        },
+        {
+          "id": "dea-p09-l06-q04-a5",
+          "text": "Son volume urinaire des dernières 24 heures",
+          "explanation": "Il demande une mesure ou un recueil, pas un simple regard.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l06-q04-a1",
+        "dea-p09-l06-q04-a2",
+        "dea-p09-l06-q04-a3",
+        "dea-p09-l06-q04-a4"
+      ],
+      "explanation": "Le support décrit plusieurs observations directes : couleur de la peau, marbrures, froideur, aspect des urines.",
+      "knowledgeIds": [
+        "K-DEA-P09-010",
+        "K-DEA-P09-006"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Observation clinique et aspect des urines",
+      "sourcePages": "44, 58",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un bilan commence par ce que l’œil et la main donnent, avant tout appareil.",
+        "commonMistake": "Croire qu’un volume urinaire s’observe d’un regard confond estimation et mesure.",
+        "keyTakeaway": "Ce qui se voit et se touche, avant ce qui se mesure.",
+        "fieldApplication": "Ces observations se transmettent même quand aucun matériel n’est disponible."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un bilan commence par ce que l’œil et la main donnent, avant tout appareil.",
+      "common_mistake": "Croire qu’un volume urinaire s’observe d’un regard confond estimation et mesure.",
+      "key_takeaway": "Ce qui se voit et se touche, avant ce qui se mesure.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44, 58",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Observation clinique et aspect des urines",
+        "sourcePages": "44, 58",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-010",
+          "K-DEA-P09-006"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge"
+      }
+    },
+    {
+      "id": "dea-p09-l06-q05",
+      "type": "fill_blank",
+      "difficulty": "medium",
+      "question": "Le support situe la polyurie au-delà de ______ litres.",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q05-a1",
+          "text": "2",
+          "explanation": "C’est le seuil donné par le support."
+        },
+        {
+          "id": "dea-p09-l06-q05-a2",
+          "text": "5",
+          "explanation": "Ce volume n’est pas celui que le support retient.",
+          "distractorType": "frequent-error"
+        }
+      ],
+      "correctAnswer": "dea-p09-l06-q05-a1",
+      "explanation": "Le support fixe le seuil de la polyurie à 2 litres, et cite l’autre variation en dessous de 1 litre.",
+      "knowledgeIds": [
+        "K-DEA-P09-005"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - variations du volume urinaire",
+      "sourcePages": "44",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Un seuil chiffré rend une observation transmissible et comparable d’un relevé à l’autre.",
+        "commonMistake": "Retenir un seuil trop élevé fait passer pour normal un volume qui ne l’est pas.",
+        "keyTakeaway": "Au-delà de 2 litres.",
+        "fieldApplication": "Un volume se transmet avec la période sur laquelle il a été relevé."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Un seuil chiffré rend une observation transmissible et comparable d’un relevé à l’autre.",
+      "common_mistake": "Retenir un seuil trop élevé fait passer pour normal un volume qui ne l’est pas.",
+      "key_takeaway": "Au-delà de 2 litres.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - variations du volume urinaire",
+        "sourcePages": "44",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-005"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "acceptedTextAnswers": [
+          "2",
+          "deux",
+          "2 L"
+        ]
+      }
+    },
+    {
+      "id": "dea-p09-l06-q06",
+      "type": "association",
+      "difficulty": "medium",
+      "question": "Associe chaque aspect d’urine à ce que le support lui associe.",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q06-a1",
+          "text": "Claire",
+          "explanation": "Le support la donne comme aspect normal.",
+          "match": "Aspect normal"
+        },
+        {
+          "id": "dea-p09-l06-q06-a2",
+          "text": "Trouble",
+          "explanation": "Le support l’associe à l’infection.",
+          "match": "Infection"
+        },
+        {
+          "id": "dea-p09-l06-q06-a3",
+          "text": "Jaune foncé",
+          "explanation": "Le support l’associe à la concentration.",
+          "match": "Urines concentrées"
+        },
+        {
+          "id": "dea-p09-l06-q06-a4",
+          "text": "Rouge",
+          "explanation": "Le support l’attribue à la présence de sang.",
+          "match": "Colorée par le sang"
+        }
+      ],
+      "correctAnswer": [
+        "dea-p09-l06-q06-a1",
+        "dea-p09-l06-q06-a2",
+        "dea-p09-l06-q06-a3",
+        "dea-p09-l06-q06-a4"
+      ],
+      "explanation": "Le support relie chaque aspect à une signification, sans que l’observateur ait à conclure lui-même.",
+      "knowledgeIds": [
+        "K-DEA-P09-006",
+        "K-DEA-P09-007"
+      ],
+      "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+      "sourceSection": "Appareil urinaire - aspect des urines",
+      "sourcePages": "44, 77",
+      "pageStatus": "verified",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Ces associations viennent du support : elles servent à comprendre, pas à diagnostiquer.",
+        "commonMistake": "Employer une association du support comme une conclusion personnelle franchit une limite.",
+        "keyTakeaway": "Quatre aspects, quatre lectures possibles.",
+        "fieldApplication": "L’aspect constaté se transmet ; ce qu’il signifie appartient au médecin."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "library_extracted_knowledge",
+      "why_correct": "Ces associations viennent du support : elles servent à comprendre, pas à diagnostiquer.",
+      "common_mistake": "Employer une association du support comme une conclusion personnelle franchit une limite.",
+      "key_takeaway": "Quatre aspects, quatre lectures possibles.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "B2.M4 - Support Etudiant.pdf, p. 44, 77",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceDocument": "DOC-AFTRAL-DEA-B2-M4-2022",
+        "sourceTitle": "B2.M4 - Support Etudiant.pdf",
+        "sourceSection": "Appareil urinaire - aspect des urines",
+        "sourcePages": "44, 77",
+        "pageStatus": "verified",
+        "sourceType": "training_source",
+        "knowledgeIds": [
+          "K-DEA-P09-006",
+          "K-DEA-P09-007"
+        ],
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "library_extracted_knowledge",
+        "associationMode": "matching",
+        "requiredSelections": 4
+      }
+    },
+    {
+      "id": "dea-p09-l06-q07",
+      "type": "clinical_case",
+      "difficulty": "hard",
+      "question": "Un patient âgé présente une peau marbrée aux genoux et des urines très foncées. Que transmet le bilan ?",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q07-a1",
+          "text": "Les deux observations, avec leur localisation, sans les relier entre elles",
+          "explanation": "Deux constats distincts, transmissibles tels quels."
+        },
+        {
+          "id": "dea-p09-l06-q07-a2",
+          "text": "Une déshydratation",
+          "explanation": "Le support cite la déshydratation comme une possibilité parmi d’autres, pas comme une conclusion.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q07-a3",
+          "text": "Une infection urinaire",
+          "explanation": "C’est un diagnostic médical.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q07-a4",
+          "text": "Les seules marbrures, l’aspect des urines n’étant pas mesurable",
+          "explanation": "Un aspect s’observe et se transmet, même sans mesure.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l06-q07-a1",
+      "explanation": "Deux observations concordantes se transmettent ensemble, chacune décrite. Les relier par une cause commune est une conclusion.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Le support cite plusieurs causes possibles aux marbrures : en choisir une revient à trancher à la place du médecin.",
+        "commonMistake": "Relier deux signes par une explication unique ferme le raisonnement de la régulation.",
+        "keyTakeaway": "On transmet les deux constats, pas le lien qu’on imagine entre eux.",
+        "fieldApplication": "Le Centre 15 décide de ce qui explique quoi."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Le support cite plusieurs causes possibles aux marbrures : en choisir une revient à trancher à la place du médecin.",
+      "common_mistake": "Relier deux signes par une explication unique ferme le raisonnement de la régulation.",
+      "key_takeaway": "On transmet les deux constats, pas le lien qu’on imagine entre eux.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    },
+    {
+      "id": "dea-p09-l06-q08",
+      "type": "mcq",
+      "difficulty": "hard",
+      "question": "Pourquoi une observation d’aspect urinaire garde-t-elle sa valeur même sans mesure de volume ?",
+      "answers": [
+        {
+          "id": "dea-p09-l06-q08-a1",
+          "text": "Parce qu’elle est un constat direct, transmissible tel quel",
+          "explanation": "Elle ne dépend d’aucun appareil."
+        },
+        {
+          "id": "dea-p09-l06-q08-a2",
+          "text": "Parce qu’elle remplace la mesure du volume",
+          "explanation": "Les deux informations sont distinctes et ne se remplacent pas.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q08-a3",
+          "text": "Parce qu’elle permet de conclure à une infection",
+          "explanation": "Conclure appartient au médecin.",
+          "distractorType": "frequent-error"
+        },
+        {
+          "id": "dea-p09-l06-q08-a4",
+          "text": "Parce qu’elle dispense de transmettre les autres observations",
+          "explanation": "Elle s’ajoute aux autres, elle ne les remplace pas.",
+          "distractorType": "secondary-priority"
+        }
+      ],
+      "correctAnswer": "dea-p09-l06-q08-a1",
+      "explanation": "L’aspect et le volume sont deux informations différentes. L’une n’excuse pas l’absence de l’autre, et aucune ne conclut.",
+      "competencyIds": [
+        "body.system.urinary",
+        "body.organ.function"
+      ],
+      "lessonId": "dea-p09-l06",
+      "plannedParcoursIds": [
+        "parcours-08"
+      ],
+      "pedagogicalFeedback": {
+        "whyCorrect": "Une observation directe reste valable quand aucun matériel n’est disponible : c’est ce qui la rend précieuse.",
+        "commonMistake": "Faire d’un aspect un substitut de mesure fait dire à l’observation plus qu’elle ne dit.",
+        "keyTakeaway": "Aspect et volume se complètent, ils ne se remplacent pas.",
+        "fieldApplication": "Un bilan reste possible sans matériel, à condition de dire ce qui n’a pas pu être mesuré."
+      },
+      "validationStatus": "to_validate",
+      "generationSource": "medoca_authored_extension",
+      "why_correct": "Une observation directe reste valable quand aucun matériel n’est disponible : c’est ce qui la rend précieuse.",
+      "common_mistake": "Faire d’un aspect un substitut de mesure fait dire à l’observation plus qu’elle ne dit.",
+      "key_takeaway": "Aspect et volume se complètent, ils ne se remplacent pas.",
+      "tags": [
+        "dea",
+        "parcours-09",
+        "système-urinaire"
+      ],
+      "pedagogicalReference": "Conduite à tenir DEA en aval du support : le support décrit l’anatomie, non la transmission. Énoncé rédigé pour Medoca, relecture attendue.",
+      "level": 1,
+      "xp": 0,
+      "metadata": {
+        "lessonId": "dea-p09-l06",
+        "sourceStatus": "missing_source",
+        "sourceTrust": "internal_to_validate",
+        "competencyIds": [
+          "body.system.urinary",
+          "body.organ.function"
+        ],
+        "plannedParcoursIds": [
+          "parcours-08"
+        ],
+        "validationStatus": "to_validate",
+        "generationSource": "medoca_authored_extension"
+      }
+    }
+  ]
+}
