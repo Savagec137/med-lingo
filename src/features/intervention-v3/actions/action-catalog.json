@@ -637,7 +637,7 @@
       "hint": "Comparer à l'état précédent",
       "category": "examine",
       "requires": {
-        "phases": ["reevaluation", "transport"],
+        "phases": ["vitals", "reevaluation", "transport"],
         "equipment": [],
         "blockingActions": [],
         "justifyingFacts": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr", "fact.glasgow"],

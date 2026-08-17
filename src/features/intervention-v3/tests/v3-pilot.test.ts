@@ -98,7 +98,11 @@ test("les valeurs cliniques sont marquées comme restant à valider", () => {
 /* -------------------------------------------------------------------------- */
 
 test("chaque question du régulateur naît d'un fait attendu au bilan", () => {
-  assert.equal(scenario.regulatorQuestions.length, 4);
+  // Cinq questions : conscience exacte, tension, antécédents, perte de
+  // connaissance initiale, glycémie. La dernière a été ajoutée avec la
+  // transmission choisie — un trouble de conscience impose d'écarter une
+  // hypoglycémie, et la régulation doit pouvoir le demander.
+  assert.equal(scenario.regulatorQuestions.length, 5);
   for (const question of scenario.regulatorQuestions) {
     assert.ok(scenario.expectedHandoverFactIds.includes(question.triggeredByFactId), question.id);
     assert.equal(question.answers.filter((answer) => answer.correct).length, 1, question.id);

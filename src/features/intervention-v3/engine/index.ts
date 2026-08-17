@@ -68,5 +68,26 @@ export {
   type ReevaluationValidation,
   type TransportReadiness,
 } from "./v3-reevaluation.ts";
-export { buildCentre15Transmission } from "./v3-transmission.ts";
+export {
+  answerRegulatorQuestion,
+  buildCentre15Transmission,
+  handoverCommunicationScore,
+  handoverItemStates,
+  handoverOffers,
+  regulatorQuestionsForTransmission,
+  reviewAdditions,
+  unansweredQuestions,
+  DIAGNOSTIC_FORMULATION_FLAG,
+  HANDOVER_SCORES,
+  MAX_ADDITION_BONUS,
+  REGULATOR_ANSWER_SCORES,
+  SILENT_GAP_FLAG,
+  type AdditionReview,
+  type HandoverFactOffer,
+  type HandoverFactStatus,
+  type HandoverItemOffer,
+  type HandoverSelection,
+  type RegulatorAnswerResult,
+} from "./v3-transmission.ts";
+export { transmitHandover, type TransmissionResult } from "./v3-handover.ts";
 export { createDebriefReport } from "./v3-debrief.ts";

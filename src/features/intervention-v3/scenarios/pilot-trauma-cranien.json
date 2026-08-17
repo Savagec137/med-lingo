@@ -77,9 +77,18 @@
       "kind": "text",
       "value": "Traumatisme crânien sur chute avec inconscience"
     },
-    "fact.lieu": { "kind": "text", "value": "Axe N104, borne 24" },
-    "fact.priorite": { "kind": "text", "value": "Élevée" },
-    "fact.contexte-appel": { "kind": "text", "value": "Appel témoin" },
+    "fact.lieu": {
+      "kind": "text",
+      "value": "Axe N104, borne 24"
+    },
+    "fact.priorite": {
+      "kind": "text",
+      "value": "Élevée"
+    },
+    "fact.contexte-appel": {
+      "kind": "text",
+      "value": "Appel témoin"
+    },
     "fact.circonstances": {
       "kind": "text",
       "value": "Chute signalée par un témoin, patient retrouvé inconscient au bord de la voie"
@@ -120,8 +129,16 @@
       "value": true,
       "formatted": "Respiration spontanée, ample"
     },
-    "fact.coloration": { "kind": "enum", "value": "normale", "formatted": "Coloration normale" },
-    "fact.sudation": { "kind": "enum", "value": "moderee", "formatted": "Peau moite" },
+    "fact.coloration": {
+      "kind": "enum",
+      "value": "normale",
+      "formatted": "Coloration normale"
+    },
+    "fact.sudation": {
+      "kind": "enum",
+      "value": "moderee",
+      "formatted": "Peau moite"
+    },
     "fact.plaintes": {
       "kind": "text",
       "value": "Se plaint de la tête, répète les mêmes questions, ne se souvient pas de la chute"
@@ -139,7 +156,10 @@
       "kind": "text",
       "value": "Environ deux minutes selon les témoins"
     },
-    "fact.heure-debut": { "kind": "text", "value": "Chute vers 22:35, appel à 22:38" },
+    "fact.heure-debut": {
+      "kind": "text",
+      "value": "Chute vers 22:35, appel à 22:38"
+    },
     "fact.antecedents": {
       "kind": "text",
       "value": "Hypertension artérielle traitée, fibrillation auriculaire connue"
@@ -148,7 +168,10 @@
       "kind": "text",
       "value": "Anticoagulant oral quotidien, antihypertenseur"
     },
-    "fact.allergies": { "kind": "text", "value": "Aucune allergie connue" }
+    "fact.allergies": {
+      "kind": "text",
+      "value": "Aucune allergie connue"
+    }
   },
   "expectedHandoverFactIds": [
     "fact.conscience-qualitative",
@@ -366,6 +389,32 @@
           "text": "Probablement, vu le mécanisme",
           "correct": false,
           "rationale": "Déduire une perte de connaissance du mécanisme, c'est transmettre une hypothèse comme un constat. Le témoin donne un fait ; le mécanisme ne donne qu'une vraisemblance."
+        }
+      ]
+    },
+    {
+      "id": "question.glycemie",
+      "text": "Avez-vous une glycémie ?",
+      "triggeredByFactId": "fact.glycemie",
+      "onOmission": true,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Annoncer la valeur capillaire mesurée et l'heure du relevé",
+          "correct": true,
+          "rationale": "Un trouble de conscience impose d'écarter une hypoglycémie : la valeur et son heure font partie du bilan."
+        },
+        {
+          "id": "a2",
+          "text": "Non, le patient n'est pas diabétique",
+          "correct": false,
+          "rationale": "L'absence d'antécédent diabétique n'écarte pas une hypoglycémie, et l'ambulancier ne la présume pas."
+        },
+        {
+          "id": "a3",
+          "text": "Non, sa confusion s'explique par le traumatisme",
+          "correct": false,
+          "rationale": "Expliquer un trouble de conscience par le mécanisme est une conclusion : elle revient au médecin, pas au transmetteur."
         }
       ]
     }
