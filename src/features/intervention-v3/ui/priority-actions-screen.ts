@@ -1,4 +1,4 @@
-import type { FactId, InterventionSessionView } from "../v3-domain.ts";
+import type { FactId, InterventionSessionView, PlayerActionId } from "../v3-domain.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { getFact } from "../facts/fact-registry.ts";
 import {
@@ -6,6 +6,8 @@ import {
   isGestureJustified,
   isGestureRoundExpired,
   missingJustifications,
+  outOfScopeActionsForPhase,
+  outOfScopeReason,
 } from "../engine/queries.ts";
 
 /**
@@ -66,10 +68,30 @@ export interface PriorityActionsScreenModel {
   expired: boolean;
   resolved: boolean;
   cards: GestureCardModel[];
+  /**
+   * Actes du catalogue hors du champ de l'ambulancier, proposés à cette phase.
+   *
+   * Ils sont **présentés et non masqués**. Un acte absent de l'écran n'enseigne
+   * rien ; un acte présenté, tenté et refusé avec son motif juridique est le
+   * moment où la limite s'apprend. Perfusion, voie veineuse, cathéter, seringue,
+   * injection, médicament intraveineux, diagnostic définitif, geste invasif : le
+   * joueur doit les voir barrés, pas les ignorer.
+   */
+  outOfScopeActs: OutOfScopeActModel[];
   /** Validation possible : le compte attendu est atteint et le tour est ouvert. */
   canResolve: boolean;
   /** Tentatives refusées du tour, pour le rappel à l'écran. */
   refusedAttempts: Array<{ gestureId: string; label: string; reason: string }>;
+}
+
+export interface OutOfScopeActModel {
+  id: PlayerActionId;
+  label: string;
+  hint: string;
+  /** Toujours faux : la carte est barrée, et le clic produit le refus. */
+  enabled: false;
+  /** Motif du catalogue, avec sa source réglementaire. Jamais une phrase creuse. */
+  refusalReason: string;
 }
 
 export function priorityActionsScreenModel(
@@ -129,6 +151,13 @@ export function priorityActionsScreenModel(
     expired: isGestureRoundExpired(session, round),
     resolved: round.resolved,
     cards,
+    outOfScopeActs: outOfScopeActionsForPhase(session.phase).map((action) => ({
+      id: action.id,
+      label: action.label,
+      hint: action.hint,
+      enabled: false as const,
+      refusalReason: outOfScopeReason(action),
+    })),
     canResolve: !round.resolved && full,
     refusedAttempts: round.refused.map((attempt) => ({
       gestureId: attempt.gestureId,

@@ -85,4 +85,12 @@ export {
   type HandoverSelection,
 } from "./v3-transmission.ts";
 
+export {
+  outOfScopeActionForTerm,
+  outOfScopeActionsForPhase,
+  outOfScopeReason,
+  OUT_OF_SCOPE_TERMS,
+  type OutOfScopeTerm,
+} from "./out-of-scope.ts";
+
 export { V3_PHASE_SEQUENCE, nextV3Phase } from "./v3-phases.ts";

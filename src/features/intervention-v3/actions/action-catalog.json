@@ -704,7 +704,7 @@
     {
       "id": "action.poser-voie-veineuse",
       "label": "Poser une voie veineuse",
-      "hint": "Abord vasculaire périphérique",
+      "hint": "Abord vasculaire périphérique, cathéter court",
       "category": "care",
       "requires": {
         "phases": ["priority_actions"],
@@ -733,7 +733,7 @@
     {
       "id": "action.injecter-produit",
       "label": "Injecter un produit",
-      "hint": "Administration par voie injectable",
+      "hint": "Seringue, médicament par voie intraveineuse",
       "category": "care",
       "requires": {
         "phases": ["priority_actions"],
@@ -762,7 +762,7 @@
     {
       "id": "action.perfuser",
       "label": "Poser une perfusion",
-      "hint": "Remplissage vasculaire",
+      "hint": "Remplissage vasculaire, geste invasif",
       "category": "care",
       "requires": {
         "phases": ["priority_actions"],
@@ -791,7 +791,7 @@
     {
       "id": "action.sonder-invasif",
       "label": "Introduire une sonde",
-      "hint": "Geste invasif",
+      "hint": "Introduire une sonde ou un cathéter, geste invasif",
       "category": "care",
       "requires": {
         "phases": ["priority_actions"],
@@ -820,7 +820,7 @@
     {
       "id": "action.poser-diagnostic",
       "label": "Annoncer un diagnostic",
-      "hint": "Nommer la pathologie au patient",
+      "hint": "Annoncer un diagnostic médical définitif au patient",
       "category": "communicate",
       "requires": {
         "phases": ["patient_assessment", "vitals", "centre15_call", "priority_actions"],
