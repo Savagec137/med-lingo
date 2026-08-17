@@ -65,7 +65,7 @@
       "hint": "Évaluer l'état initial et la conscience",
       "category": "examine",
       "requires": {
-        "phases": ["scene_assessment", "patient_assessment"],
+        "phases": ["arrival", "scene_assessment", "patient_assessment"],
         "equipment": [],
         "blockingActions": [],
         "justifyingFacts": ["fact.scene-securisee"],
@@ -93,6 +93,49 @@
       "outOfScope": false,
       "outOfScopeReason": null,
       "knowledgeId": "intervention.bilan-primaire"
+    },
+    {
+      "id": "action.demander-renfort",
+      "label": "Demander renfort",
+      "hint": "Solliciter un moyen supplémentaire si nécessaire",
+      "category": "communicate",
+      "requires": {
+        "phases": [
+          "arrival",
+          "scene_assessment",
+          "patient_assessment",
+          "vitals",
+          "centre15_call",
+          "priority_actions",
+          "reevaluation"
+        ],
+        "equipment": [],
+        "blockingActions": [],
+        "justifyingFacts": [],
+        "justifyingActions": ["action.observer-environnement"],
+        "maxUses": 1
+      },
+      "reveals": [],
+      "timeSeconds": 45,
+      "effect": {
+        "score": 4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": null,
+        "therapeutic": false
+      },
+      "unjustifiedEffect": {
+        "score": -4,
+        "patient": 0,
+        "timeSeconds": 45,
+        "flag": "reinforcement-without-assessment",
+        "therapeutic": false
+      },
+      "actId": null,
+      "competencyIds": ["dea.c10"],
+      "outOfScope": false,
+      "outOfScopeReason": null,
+      "knowledgeId": "intervention.transmission-au-medecin-regulateur"
     },
     {
       "id": "action.interroger-patient",

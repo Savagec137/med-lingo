@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createV3Session } from "../v3-session.ts";
-import type { InterventionSessionView } from "../v3-domain.ts";
+import { GRAVE_FAULT_FLAGS, type InterventionSessionView } from "../v3-domain.ts";
+import { getAction } from "../actions/action-catalog.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { hudModel, xpProgress, HUD_VARIANTS, type PlayerHud } from "../ui/hud-model.ts";
 import { newCallScreenModel, receivedInformation } from "../ui/new-call-screen.ts";
@@ -260,35 +261,60 @@ test("aucune action proposée à l'arrivée n'est hors du champ DEA", () => {
 });
 
 /* -------------------------------------------------------------------------- */
-/* Cliquet : l'écart avec la maquette 2 est consigné, il ne peut que réduire   */
+/* La maquette 2 est désormais couverte en entier                             */
 /* -------------------------------------------------------------------------- */
 
 /**
- * La maquette 2 montre quatre actions ; le catalogue n'en propose que deux à la
- * phase `arrival`. Cet écart attend un arbitrage — il n'est ni comblé en
- * inventant des actions, ni effacé en retouchant la maquette.
- *
- * **Cette liste ne peut que rétrécir.**
+ * Il manquait deux actions au catalogue : « Approcher le patient » n'était
+ * déclarée qu'à partir de `scene_assessment`, et « Demander renfort » n'existait
+ * pas. Le catalogue a été étendu, l'écart est nul, et ce test interdit qu'il se
+ * rouvre.
  */
-const ARRIVAL_ACTIONS_MISSING_FROM_CATALOG: readonly string[] = [
-  // Existe au catalogue, mais déclarée pour `scene_assessment` et au-delà.
-  "Approcher le patient",
-  // N'existe pas du tout au catalogue.
-  "Demander renfort",
-];
-
-test("l'écart entre la maquette 2 et le catalogue est exactement celui consigné", () => {
+test("les quatre actions de la maquette 2 sont toutes proposées à l'arrivée", () => {
   const model = arrivalScreenModel(view({ phase: "arrival" }), { totalSteps: 12 });
   const offered = new Set(model.actions.map((action) => action.label));
   const missing = ARRIVAL_MOCKUP_ACTIONS.filter((label) => !offered.has(label));
-  assert.deepEqual(
-    missing,
-    [...ARRIVAL_ACTIONS_MISSING_FROM_CATALOG],
-    "l'écart avec la maquette a changé : mets à jour la liste ou comble-le",
-  );
+  assert.deepEqual(missing, [], "une action de la maquette 2 a disparu du catalogue");
+});
+
+test("l'ordre des actions de la maquette 2 est respecté", () => {
+  const model = arrivalScreenModel(view({ phase: "arrival" }), { totalSteps: 12 });
+  const labels = model.actions.map((action) => action.label);
+  const positions = ARRIVAL_MOCKUP_ACTIONS.map((label) => labels.indexOf(label));
   assert.ok(
-    ARRIVAL_ACTIONS_MISSING_FROM_CATALOG.length <= 2,
-    "le budget d'écart ne peut que baisser",
+    positions.every((position, index) => index === 0 || position > positions[index - 1]!),
+    `ordre obtenu : ${labels.join(", ")}`,
+  );
+});
+
+test("demander renfort sans avoir observé la scène reste jouable mais fautif", () => {
+  // Le prérequis est souple : l'action n'est pas refusée, elle est sanctionnée.
+  // C'est le principe du mode — l'erreur est possible, et elle coûte.
+  const reinforcement = getAction("action.demander-renfort");
+  assert.deepEqual(reinforcement.requires.justifyingActions, ["action.observer-environnement"]);
+  assert.deepEqual(reinforcement.requires.blockingActions, []);
+  assert.ok(reinforcement.unjustifiedEffect, "l'effet du manque de justification doit être décrit");
+  assert.ok(reinforcement.unjustifiedEffect!.score < 0);
+  assert.equal(reinforcement.unjustifiedEffect!.therapeutic, false);
+  assert.equal(reinforcement.unjustifiedEffect!.patient, 0);
+  // Le prérequis souple n'empêche pas l'action d'être affichée active.
+  const model = arrivalScreenModel(view({ phase: "arrival" }), { totalSteps: 12 });
+  const card = model.actions.find((action) => action.id === "action.demander-renfort")!;
+  assert.equal(card.enabled, true);
+  assert.equal(card.hint, "Solliciter un moyen supplémentaire si nécessaire");
+});
+
+test("approcher le patient sans scène sécurisée est une faute grave, pas un refus", () => {
+  const approach = getAction("action.approcher-patient");
+  assert.ok(approach.requires.phases.includes("arrival"), "la maquette la montre dès l'arrivée");
+  assert.deepEqual(approach.requires.justifyingFacts, ["fact.scene-securisee"]);
+  assert.deepEqual(approach.requires.blockingActions, [], "le garde-fou est souple, pas bloquant");
+  assert.equal(approach.unjustifiedEffect!.flag, "unsafe-approach");
+  assert.ok(
+    GRAVE_FAULT_FLAGS.includes(
+      approach.unjustifiedEffect!.flag as (typeof GRAVE_FAULT_FLAGS)[number],
+    ),
+    "une approche sur scène non sécurisée doit rester une faute grave",
   );
 });
 
