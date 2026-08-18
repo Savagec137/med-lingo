@@ -130,6 +130,14 @@ export interface ClinicalFact {
   dependsOn: FactId[];
   /** Secondes simulées au-delà desquelles la mesure est périmée. */
   freshnessSeconds: number | null;
+  /**
+   * Plage de référence affichée sous la valeur : « 95 - 100 % ».
+   *
+   * Connaissance de formation, pas donnée du patient : la même pour tous, et
+   * visible avant toute mesure sans rien révéler. Absente pour les faits qu'aucun
+   * chiffre ne porte.
+   */
+  referenceRange?: string | null;
 }
 
 /** Une prise de mesure horodatée. Un fait `probe` en accumule plusieurs. */

@@ -164,9 +164,14 @@ test("aucun présentateur ne nomme la session complète", () => {
     // de constantes s'appelle légitimement `vitalsScreenModel` et rend un tableau
     // `vitals` de cartes déjà dérivées. Ce qui est interdit, c'est de lire le
     // champ sur un objet — `session.vitals` — quelle qu'en soit la provenance.
+    //
+    // Le point doit être précédé d'un identifiant. Sans cette exigence, le
+    // segment `../physiology/` d'un chemin d'import se lit comme un accès à
+    // `.physiology`, et la garde se déclenche sur l'import des **types** de
+    // surveillance — les seuls que la couche présentation ait le droit de nommer.
     for (const field of Object.keys(HIDDEN_SESSION_FIELDS)) {
       assert.ok(
-        !new RegExp(`\\.${field}\\b`).test(source),
+        !new RegExp(`[\\w\\)\\]]\\.${field}\\b`).test(source),
         `${file} lit « .${field} » : c'est un champ caché de la session`,
       );
     }

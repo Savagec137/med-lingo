@@ -16,7 +16,8 @@
     "validate:intervention-v2": "node --experimental-strip-types scripts/validate-intervention-v2.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "db:phase1": "node scripts/build-enterprise-phase1-migration.mjs"
+    "db:phase1": "node scripts/build-enterprise-phase1-migration.mjs",
+    "capture:intervention-v3": "node scripts/capture-intervention-v3.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

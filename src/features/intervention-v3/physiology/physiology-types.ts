@@ -221,6 +221,92 @@ export interface LiveVitalView {
   severity: "normal" | "warning" | "critical";
 }
 
+/**
+ * Un tracé prêt à dessiner : des points dans [-1, 1], sans unité ni valeur.
+ *
+ * Le tracé est calculé par le moteur et non par le composant. Un composant qui
+ * fabriquerait sa propre onde aurait besoin de la fréquence réelle du patient, et
+ * la lui donner rouvrirait exactement la porte que le mode ferme.
+ */
+export interface WaveformTrace {
+  /** Points normalisés. Vide quand rien n'est surveillé. */
+  points: number[];
+  /** Durée couverte par le tracé, en secondes. */
+  windowSeconds: number;
+  quality: SignalQuality;
+  /**
+   * Cadence du tracé. Elle vient toujours d'une **mesure du joueur**, jamais du
+   * moteur : sans mesure, pas de tracé, parce qu'une onde qui bat à la bonne
+   * fréquence révèle cette fréquence aussi sûrement qu'un chiffre.
+   */
+  ratePerMinute: number | null;
+}
+
+/** Un capteur en place, tel que le moniteur le présente. */
+export interface AttachedSensorView {
+  equipment: string;
+  label: string;
+  quality: SignalQuality;
+  qualityLabel: string;
+  /** Depuis combien de secondes le capteur est en place. */
+  attachedForSeconds: number;
+  acquiring: boolean;
+}
+
+/**
+ * L'état du moniteur, tel qu'un soignant le lit en levant les yeux.
+ *
+ * `statusLabel` ne dit jamais rien du patient — « saturomètre non posé »,
+ * « acquisition du signal ». Un bandeau qui annoncerait « patient stable »
+ * offrirait la conclusion que le joueur doit tirer lui-même.
+ */
+export interface MonitoringStateView {
+  anyLive: boolean;
+  sensors: AttachedSensorView[];
+  /**
+   * Les constantes surveillées en direct.
+   *
+   * Nommées `liveVitals` et non `vitals` : `vitals` est le champ caché de la
+   * session, celui qui porte les constantes réelles. Une garde interdit d'y
+   * accéder depuis un écran, et elle le fait sans regarder le type de l'objet —
+   * délibérément, parce qu'un contrôle qui distinguerait les provenances se
+   * laisserait contourner. Deux champs homonymes obligeraient donc à
+   * l'assouplir ; le nom cède, pas la garde.
+   */
+  liveVitals: LiveVitalView[];
+  statusLabel: string;
+}
+
+export interface WaveformStateView {
+  pulse: WaveformTrace;
+  respiration: WaveformTrace;
+}
+
+/** Une mesure que le temps a périmée. Affichée, mais nommée comme datée. */
+export interface StaleVitalView {
+  factId: string;
+  label: string;
+  ageSeconds: number;
+  freshnessSeconds: number;
+  /** Ce que la carte affiche sous la valeur périmée. */
+  noticeLabel: string;
+}
+
+/**
+ * Tout ce que l'interface reçoit de la physiologie, en un seul objet.
+ *
+ * Le regrouper permet à un écran de le déclarer en un paramètre, et surtout de le
+ * rendre **facultatif** : un modèle d'écran doit rester juste sans surveillance,
+ * parce que c'est l'état d'un début d'intervention.
+ */
+export interface MonitoringSnapshot {
+  /** Instant auquel l'instantané a été pris, en secondes simulées. */
+  atSeconds: number;
+  monitoring: MonitoringStateView;
+  waveform: WaveformStateView;
+  stale: StaleVitalView[];
+}
+
 /** Bornes physiologiques et pas d'échantillonnage d'une constante. */
 export interface SignalDynamics {
   mode: MonitoringMode;

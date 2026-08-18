@@ -30,7 +30,16 @@ import { EQUIPMENT_LABELS } from "../v3-domain.ts";
 import { getFact, CLINICAL_FACTS } from "../facts/fact-registry.ts";
 import { readFact } from "../facts/read-fact.ts";
 import { vitalSeverity } from "../clinical/intervention-vitals.ts";
-import type { LiveVitalView, SignalQuality, VitalSignal } from "./physiology-types.ts";
+import type {
+  AttachedSensorView,
+  LiveVitalView,
+  MonitoringSnapshot,
+  MonitoringStateView,
+  SignalQuality,
+  StaleVitalView,
+  VitalSignal,
+  WaveformStateView,
+} from "./physiology-types.ts";
 import { SIGNAL_QUALITY_LABELS } from "./physiology-types.ts";
 import { samplePhysiology } from "./physiology-engine.ts";
 import { SIGNAL_DYNAMICS } from "./vital-trends.ts";
@@ -41,7 +50,6 @@ import {
   qualityAllowsReading,
   respirationTrace,
   signalQualityAt,
-  type WaveformTrace,
 } from "./equipment-monitoring.ts";
 
 /* -------------------------------------------------------------------------- */
@@ -204,23 +212,15 @@ export function getVisibleLiveVitals(
 /* État de surveillance                                                       */
 /* -------------------------------------------------------------------------- */
 
-export interface AttachedSensorView {
-  equipment: EquipmentId;
-  label: string;
-  quality: SignalQuality;
-  qualityLabel: string;
-  /** Depuis combien de secondes le capteur est en place. */
-  attachedForSeconds: number;
-  acquiring: boolean;
-}
-
-export interface MonitoringStateView {
-  anyLive: boolean;
-  sensors: AttachedSensorView[];
-  vitals: LiveVitalView[];
-  /** Ce que le bandeau du moniteur affiche. Jamais une donnée clinique. */
-  statusLabel: string;
-}
+/*
+ * Les types de vue vivent dans `physiology-types.ts`, pas ici.
+ *
+ * L'interface a besoin de les nommer — un composant doit pouvoir déclarer qu'il
+ * reçoit un `MonitoringStateView` — et elle n'a pas le droit d'importer ce
+ * module, qui donne accès au moteur. Les déclarer là-bas est ce qui permet aux
+ * deux règles de tenir ensemble : les contrats sont publics, les moteurs ne le
+ * sont pas.
+ */
 
 /**
  * L'état du moniteur, tel qu'un soignant le lit en levant les yeux.
@@ -248,28 +248,23 @@ export function getVisibleMonitoringState(
     });
   }
 
-  const vitals = getVisibleLiveVitals(session, atSeconds);
+  const liveVitals = getVisibleLiveVitals(session, atSeconds);
   const statusLabel =
     sensors.length === 0
       ? "Saturomètre non posé"
       : sensors.some((sensor) => sensor.acquiring)
         ? "Acquisition du signal"
-        : vitals.length === 0
+        : liveVitals.length === 0
           ? "Capteur en place — aucune constante relevée"
           : (sensors.find((sensor) => sensor.quality !== "good")?.qualityLabel ??
             "Surveillance active");
 
-  return { anyLive: vitals.length > 0, sensors, vitals, statusLabel };
+  return { anyLive: liveVitals.length > 0, sensors, liveVitals, statusLabel };
 }
 
 /* -------------------------------------------------------------------------- */
 /* Tracés                                                                     */
 /* -------------------------------------------------------------------------- */
-
-export interface WaveformStateView {
-  pulse: WaveformTrace;
-  respiration: WaveformTrace;
-}
 
 /**
  * Les tracés autorisés à l'instant demandé.
@@ -321,15 +316,6 @@ export function getVisibleWaveformState(
 /* Mesures datées                                                             */
 /* -------------------------------------------------------------------------- */
 
-export interface StaleVitalView {
-  factId: FactId;
-  label: string;
-  ageSeconds: number;
-  freshnessSeconds: number;
-  /** Ce que la carte affiche sous la valeur périmée. */
-  noticeLabel: string;
-}
-
 /**
  * Les mesures que le temps a périmées.
  *
@@ -358,4 +344,28 @@ export function getVisibleStaleVitals(
     });
   }
   return stale;
+}
+
+/* -------------------------------------------------------------------------- */
+/* L'instantané complet                                                       */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Tout ce que l'interface reçoit de la physiologie, en un seul appel.
+ *
+ * C'est la seule fonction que le hook appelle, et c'est voulu : un appelant qui
+ * compose lui-même les quatre sélecteurs finit tôt ou tard par en oublier un, ou
+ * par les évaluer à des instants différents — et un moniteur dont l'onde et le
+ * chiffre décrivent deux moments distincts est un moniteur qui ment.
+ */
+export function monitoringSnapshot(
+  session: InterventionSession,
+  atSeconds: number,
+): MonitoringSnapshot {
+  return {
+    atSeconds,
+    monitoring: getVisibleMonitoringState(session, atSeconds),
+    waveform: getVisibleWaveformState(session, atSeconds),
+    stale: getVisibleStaleVitals(session, atSeconds),
+  };
 }

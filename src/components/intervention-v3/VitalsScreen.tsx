@@ -1,4 +1,16 @@
-import { Check, Stethoscope } from "lucide-react";
+import {
+  Activity,
+  Brain,
+  Check,
+  Droplet,
+  Frown,
+  Gauge,
+  Hand,
+  HeartPulse,
+  Stethoscope,
+  Thermometer,
+  Wind,
+} from "lucide-react";
 import type {
   EquipmentChipModel,
   QuickMeasureModel,
@@ -6,8 +18,6 @@ import type {
 } from "@/features/intervention-v3/ui/vitals-screen";
 import { MeasurementAnimation } from "./monitoring/MeasurementAnimation";
 import { MonitoringStatusBadge } from "./monitoring/MonitoringStatusBadge";
-import { PulseWaveform } from "./monitoring/PulseWaveform";
-import { RespiratoryWaveform } from "./monitoring/RespiratoryWaveform";
 import { useReducedMotion } from "./monitoring/use-reduced-motion";
 import { VitalCard } from "./monitoring/VitalCard";
 
@@ -32,6 +42,24 @@ interface Props {
 }
 
 const SENSOR_FACT_IDS = new Set(["fact.spo2", "fact.fc"]);
+
+/**
+ * Le tracé qui accompagne une carte, s'il y en a un.
+ *
+ * La correspondance est courte et explicite : l'onde pléthysmographique
+ * accompagne la saturation et le pouls, qu'un même capteur porte ; le tracé
+ * respiratoire accompagne la fréquence comptée. Toutes les autres cartes — la
+ * tension, la glycémie, la température — n'en ont aucun, parce qu'aucun appareil
+ * ne les suit en continu et qu'une courbe leur donnerait une nature qu'elles
+ * n'ont pas.
+ */
+function traceFor(factId: string, model: VitalsScreenModel) {
+  const waveform = model.monitoring.waveform;
+  if (!waveform) return null;
+  if (SENSOR_FACT_IDS.has(factId)) return waveform.pulse;
+  if (factId === "fact.fr") return waveform.respiration;
+  return null;
+}
 
 export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: Props) {
   const reducedMotion = useReducedMotion();
@@ -65,29 +93,46 @@ export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: P
 
       <p className="text-sm leading-relaxed text-slate-300/90">{model.narrative}</p>
 
-      {/* Les ondes. Elles ne s'affichent que si le modèle donne une cadence, et le
-          modèle n'en donne une qu'après la mesure correspondante. */}
-      <div className="grid gap-2 sm:grid-cols-2">
-        <figure className="rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-3">
-          <figcaption className="mb-2 text-[10px] font-black uppercase tracking-wider text-slate-500">
-            Onde de pouls
-          </figcaption>
-          <PulseWaveform
-            pulseBpm={model.monitoring.pulseBpm}
-            isLive={model.monitoring.anyLive}
-            reducedMotion={reducedMotion}
-          />
-        </figure>
-        <figure className="rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-3">
-          <figcaption className="mb-2 text-[10px] font-black uppercase tracking-wider text-slate-500">
-            Rythme respiratoire
-          </figcaption>
-          <RespiratoryWaveform
-            respiratoryRatePerMinute={model.monitoring.respiratoryRatePerMinute}
-            reducedMotion={reducedMotion}
-          />
-        </figure>
+      {/* Le bandeau du moniteur. Il parle de l'appareil — « saturomètre non
+          posé », « acquisition du signal », « signal faible » — et jamais du
+          patient : annoncer « patient stable » donnerait la conclusion que le
+          joueur doit tirer lui-même de ses mesures. */}
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-2.5">
+        <div className="min-w-0">
+          <p className="text-[11px] font-black uppercase tracking-wider text-slate-500">
+            Surveillance
+          </p>
+          <p className="text-sm font-bold text-slate-200">{model.monitoring.statusLabel}</p>
+          {model.monitoring.sensors.length > 0 && (
+            <p className="mt-0.5 text-[11px] text-slate-500">
+              {model.monitoring.sensors
+                .map((sensor) => `${sensor.label} — ${sensor.qualityLabel}`)
+                .join(" · ")}
+            </p>
+          )}
+        </div>
+        {model.sensorControls.map((control) => (
+          <button
+            key={control.id}
+            type="button"
+            disabled={!control.enabled}
+            onClick={() => onMeasure(control.id)}
+            title={control.disabledReason ?? undefined}
+            className="press shrink-0 rounded-full border border-red-400/40 bg-red-400/[0.08] px-3 py-1.5 text-xs font-black text-red-200 disabled:cursor-not-allowed disabled:border-white/10 disabled:bg-white/[0.03] disabled:text-slate-500"
+          >
+            {control.label}
+          </button>
+        ))}
       </div>
+
+      {/* Ce que le temps a périmé. Les mesures restent affichées — les effacer
+          reprendrait au joueur ce qu'il a relevé — mais elles sont nommées comme
+          datées, et c'est ce qui déclenche la réévaluation. */}
+      {model.monitoring.stale.length > 0 && (
+        <p className="rounded-2xl border border-amber-400/30 bg-amber-400/[0.05] px-3 py-2 text-xs font-bold text-amber-200">
+          À réévaluer : {model.monitoring.stale.map((entry) => entry.label).join(", ")}
+        </p>
+      )}
 
       {pendingMeasure && (
         <MeasurementAnimation
@@ -98,21 +143,29 @@ export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: P
         />
       )}
 
-      <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-        {model.vitals.map((card) => (
-          <li key={card.factId}>
-            <VitalCard
-              card={card}
-              pulseBpm={model.monitoring.pulseBpm}
-              reducedMotion={reducedMotion}
-            />
-          </li>
-        ))}
-      </ul>
+      {/* Deux colonnes dès le mobile, comme la maquette : les cartes SpO₂ et
+          pouls s'y lisent côte à côte, tracé compris. */}
+      <Panel title="Signes vitaux">
+        <ul className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+          {model.vitals.map((card) => (
+            <li key={card.factId}>
+              <VitalCard
+                card={card}
+                pulseBpm={model.monitoring.pulseBpm}
+                reducedMotion={reducedMotion}
+                trace={traceFor(card.factId, model)}
+              />
+            </li>
+          ))}
+        </ul>
+      </Panel>
 
+      {/* Les gestes de capteur ne figurent plus ici : ils vivent dans le bandeau
+          de surveillance, à côté de l'état qu'ils changent. Les mêler aux mesures
+          laisserait croire que retirer un capteur relève une constante. */}
       <Panel title="Mesures rapides">
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {[...model.quickMeasures, ...model.sensorControls].map((measure) => (
+        <ul className="grid grid-cols-3 gap-2">
+          {model.quickMeasures.map((measure) => (
             <li key={measure.id}>
               <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
             </li>
@@ -188,29 +241,49 @@ function Panel({ title, children }: { title: string; children: React.ReactNode }
   );
 }
 
+/**
+ * Icône d'une mesure, comme sur la maquette.
+ *
+ * La table est indexée par l'identifiant de l'action, pas par un mot du libellé :
+ * une correspondance sur le texte se casserait à la première reformulation, et
+ * silencieusement — la carte perdrait son icône sans que rien ne le signale.
+ * Une action sans entrée retombe sur le stéthoscope.
+ */
+const MEASURE_ICONS: Record<string, typeof Activity> = {
+  "action.poser-saturometre": Activity,
+  "action.retirer-saturometre": Activity,
+  "action.prendre-tension": Gauge,
+  "action.compter-fr": Wind,
+  "action.faire-glycemie": Droplet,
+  "action.prendre-temperature": Thermometer,
+  "action.palper-pouls": HeartPulse,
+  "action.evaluer-douleur": Frown,
+  "action.evaluer-conscience": Brain,
+  "action.observer-peau": Hand,
+};
+
 function MeasureButton({ measure, onClick }: { measure: QuickMeasureModel; onClick: () => void }) {
+  const Icon = MEASURE_ICONS[measure.id] ?? Stethoscope;
   return (
     <button
       type="button"
       disabled={!measure.enabled}
       onClick={onClick}
-      className="press w-full rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-2.5 text-left disabled:cursor-not-allowed disabled:opacity-55"
+      title={measure.disabledReason ?? undefined}
+      className="press flex h-full w-full flex-col gap-1 rounded-2xl border border-white/8 bg-white/[0.03] px-2.5 py-2.5 text-left disabled:cursor-not-allowed disabled:opacity-55"
     >
-      <div className="flex items-start justify-between gap-2">
-        <p className="text-sm font-bold text-slate-100">{measure.label}</p>
+      <div className="flex items-center justify-between gap-1">
+        <Icon className="h-4 w-4 shrink-0 text-cyan-300/80" aria-hidden="true" />
         {measure.alreadyDone && (
-          <Check className="h-4 w-4 shrink-0 text-emerald-300" aria-label="Déjà relevée" />
+          <Check className="h-3.5 w-3.5 shrink-0 text-emerald-300" aria-label="Déjà relevée" />
         )}
       </div>
-      <p className="mt-0.5 text-xs text-slate-400">{measure.hint}</p>
-      {measure.equipment.length > 0 && (
-        <p className="mt-1 flex items-center gap-1 text-[11px] text-slate-500">
-          <Stethoscope className="h-3 w-3" aria-hidden="true" />
-          {measure.equipment.join(", ")}
-        </p>
-      )}
+      <p className="text-[13px] font-bold leading-tight text-slate-100">{measure.label}</p>
+      <p className="text-[11px] leading-tight text-slate-400">{measure.hint}</p>
       {measure.disabledReason && (
-        <p className="mt-1 text-[11px] font-bold text-amber-300/80">{measure.disabledReason}</p>
+        <p className="mt-auto text-[10px] font-bold leading-tight text-amber-300/80">
+          {measure.disabledReason}
+        </p>
       )}
     </button>
   );

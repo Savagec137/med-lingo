@@ -17,6 +17,7 @@ import {
 } from "../physiology/physiology-engine.ts";
 import {
   getVisibleLiveVitals,
+  monitoringSnapshot,
   getVisibleMonitoringState,
   getVisibleStaleVitals,
   getVisibleWaveformState,
@@ -26,6 +27,7 @@ import { VITAL_SIGNALS, type VitalSignal } from "../physiology/physiology-types.
 import { PILOT_SCENARIO_ID, getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { ALL_EQUIPMENT, createV3Session } from "../v3-session.ts";
 import { SESSION_VIEW_FIELDS, toSessionView } from "../v3-domain.ts";
+import { vitalsScreenModel } from "../ui/vitals-screen.ts";
 import type { InterventionPhase, InterventionSession } from "../v3-domain.ts";
 
 /**
@@ -555,6 +557,100 @@ test("les sélecteurs ne rendent que des constantes réellement mesurées", () =
   for (const signal of ["sbp", "dbp", "glycemia", "temperature", "gcs", "pain", "rr"] as const) {
     assert.equal(exposed.has(signal), false, `${signal} exposée sans mesure`);
   }
+});
+
+/* -------------------------------------------------------------------------- */
+/* L'écran des constantes                                                     */
+/* -------------------------------------------------------------------------- */
+
+test("sans instantané, l'écran reste juste : aucune carte en direct", () => {
+  const session = play(activeAt("vitals"), "action.poser-saturometre");
+  const model = vitalsScreenModel(toSessionView(session));
+  assert.equal(
+    model.vitals.some((card) => card.isLive),
+    false,
+  );
+  assert.equal(model.monitoring.waveform, null);
+  assert.equal(model.monitoring.statusLabel, "Saturomètre non posé");
+});
+
+test("avec l'instantané, la carte affiche la valeur du moniteur", () => {
+  const session = play(activeAt("vitals"), "action.poser-saturometre");
+  const at = session.simulatedTimeSeconds + 120;
+  const model = vitalsScreenModel(toSessionView(session), monitoringSnapshot(session, at));
+
+  const spo2 = model.vitals.find((card) => card.factId === "fact.spo2");
+  assert.ok(spo2);
+  assert.equal(spo2.isLive, true);
+  assert.equal(spo2.measured, true);
+  assert.equal(spo2.signalQuality, "good");
+  // La valeur suit le moniteur, pas le relevé initial : c'est ce qu'un soignant
+  // lit en levant les yeux deux minutes plus tard.
+  assert.equal(spo2.value, String(samplePhysiology(session.physiology, at).spo2));
+  assert.ok(model.monitoring.waveform!.pulse.points.length > 0);
+});
+
+test("la tension reste un instantané même sous surveillance", () => {
+  const session = play(activeAt("vitals"), "action.poser-saturometre", "action.prendre-tension");
+  const at = session.simulatedTimeSeconds + 60;
+  const model = vitalsScreenModel(toSessionView(session), monitoringSnapshot(session, at));
+  const tension = model.vitals.find((card) => card.factId === "fact.ta");
+  assert.ok(tension);
+  assert.equal(tension.measured, true);
+  assert.equal(tension.isLive, false);
+});
+
+test("une carte non mesurée ne porte ni valeur, ni tracé, ni qualité de signal", () => {
+  const session = play(activeAt("vitals"), "action.poser-saturometre");
+  const at = session.simulatedTimeSeconds;
+  const model = vitalsScreenModel(toSessionView(session), monitoringSnapshot(session, at));
+  for (const card of model.vitals.filter((entry) => !entry.measured)) {
+    assert.equal(card.numericValue, null, card.factId);
+    assert.equal(card.signalQuality, null, card.factId);
+    assert.equal(card.isLive, false, card.factId);
+    // Le gabarit ne contient jamais de chiffre : c'est l'invariant du registre,
+    // et c'est lui qui garde la grille vierge muette.
+    assert.equal(/[0-9]/u.test(card.value), false, `${card.factId} : « ${card.value} »`);
+  }
+});
+
+test("chaque constante chiffrée porte sa plage de référence", () => {
+  const model = vitalsScreenModel(toSessionView(activeAt("vitals")));
+  for (const card of model.vitals) {
+    assert.ok(
+      card.referenceRange,
+      `${card.factId} n'a pas de plage de référence : le chiffre relevé restera sans repère`,
+    );
+  }
+});
+
+test("une plage de référence ne contient jamais la valeur du patient", () => {
+  // La plage est une connaissance de formation. Si elle était dérivée du patient,
+  // elle le décrirait — et l'afficherait avant toute mesure.
+  const first = createV3Session(scenario, { physiologySalt: 1 });
+  const second = createV3Session(scenario, { physiologySalt: 2 });
+  const rangesOf = (session: InterventionSession) =>
+    vitalsScreenModel(toSessionView(session)).vitals.map((card) => card.referenceRange);
+  assert.deepEqual(rangesOf(first), rangesOf(second));
+});
+
+test("retirer le capteur éteint le direct dans le modèle d'écran", () => {
+  const session = play(
+    activeAt("vitals"),
+    "action.poser-saturometre",
+    "action.retirer-saturometre",
+  );
+  const at = session.simulatedTimeSeconds;
+  const model = vitalsScreenModel(toSessionView(session), monitoringSnapshot(session, at));
+
+  assert.equal(model.monitoring.anyLive, false);
+  assert.equal(model.monitoring.statusLabel, "Saturomètre non posé");
+  assert.deepEqual(model.monitoring.waveform!.pulse.points, []);
+
+  // La dernière mesure demeure : ce que le joueur a gagné ne lui est pas repris.
+  const spo2 = model.vitals.find((card) => card.factId === "fact.spo2");
+  assert.equal(spo2?.measured, true);
+  assert.equal(spo2?.isLive, false);
 });
 
 /* -------------------------------------------------------------------------- */

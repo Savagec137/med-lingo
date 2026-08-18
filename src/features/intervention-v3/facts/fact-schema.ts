@@ -37,8 +37,26 @@ const factSchema = z
     revealedBy: z.array(label),
     dependsOn: z.array(label),
     freshnessSeconds: z.number().int().min(60).nullable(),
+    /**
+     * Plage de référence affichée sous la valeur : « 95 - 100 % ».
+     *
+     * C'est une **connaissance de formation**, identique pour tous les patients
+     * et présente dans n'importe quel manuel : la montrer avant toute mesure ne
+     * révèle donc rien du patient. C'est même l'inverse — sans repère, un chiffre
+     * relevé n'apprend rien à qui ne connaît pas encore les normes.
+     */
+    referenceRange: label.nullable().optional(),
   })
   .superRefine((fact, context) => {
+    // Une plage de référence n'a de sens que sur une mesure chiffrée. L'attacher
+    // à un antécédent ou à une circonstance n'aurait rien à encadrer.
+    if (fact.referenceRange && fact.vitalKey === null) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["referenceRange"],
+        message: `${fact.id} déclare une plage de référence sans être une mesure chiffrée.`,
+      });
+    }
     // **L'invariant central du registre.** Un gabarit qui contient un chiffre
     // laisse deviner un ordre de grandeur, donc révèle une partie de la mesure
     // avant qu'elle soit prise.

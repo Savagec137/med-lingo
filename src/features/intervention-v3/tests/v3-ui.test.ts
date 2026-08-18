@@ -10,6 +10,7 @@ import {
   type PlayerActionId,
 } from "../v3-domain.ts";
 import { getAction } from "../actions/action-catalog.ts";
+import { monitoringSnapshot } from "../physiology/physiology-selectors.ts";
 import { applyAction } from "../engine/apply-action.ts";
 import { getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { hudModel, xpProgress, HUD_VARIANTS, type PlayerHud } from "../ui/hud-model.ts";
@@ -746,7 +747,14 @@ test("sur session vierge, aucune animation n'a de cadence", () => {
 
 test("poser le saturomètre ouvre la surveillance continue de la SpO₂ et du pouls", () => {
   const played = play(atVitals(), "action.poser-saturometre");
-  const model = vitalsScreenModel(toSessionView(played));
+  // Le modèle reçoit l'instantané de surveillance : « en direct » veut dire
+  // « tenu à jour à cet instant », et cela demande un rafraîchissement, pas
+  // seulement un capteur posé. Sans instantané, une carte qui battrait
+  // afficherait une valeur figée.
+  const model = vitalsScreenModel(
+    toSessionView(played),
+    monitoringSnapshot(played, played.simulatedTimeSeconds),
+  );
 
   assert.equal(model.monitoring.anyLive, true);
   assert.ok(model.monitoring.liveFactIds.includes("fact.spo2"));

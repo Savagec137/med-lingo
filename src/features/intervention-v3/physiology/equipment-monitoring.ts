@@ -20,7 +20,12 @@
  */
 
 import type { EquipmentId } from "../v3-domain.ts";
-import type { MonitoringMode, SignalQuality, VitalSignal } from "./physiology-types.ts";
+import type {
+  MonitoringMode,
+  SignalQuality,
+  VitalSignal,
+  WaveformTrace,
+} from "./physiology-types.ts";
 import { SIGNAL_DYNAMICS } from "./vital-trends.ts";
 import { hashSeed, inRecurringWindow, smoothNoise } from "./vital-noise.ts";
 
@@ -106,21 +111,6 @@ export function qualityAllowsReading(quality: SignalQuality): boolean {
 /* Tracés                                                                     */
 /* -------------------------------------------------------------------------- */
 
-/** Un tracé prêt à dessiner : des points dans [-1, 1], sans unité ni valeur. */
-export interface WaveformTrace {
-  /** Points normalisés. Vide quand rien n'est surveillé. */
-  points: number[];
-  /** Durée couverte par le tracé, en secondes. */
-  windowSeconds: number;
-  quality: SignalQuality;
-  /**
-   * Cadence du tracé. Elle vient toujours d'une **mesure du joueur**, jamais du
-   * moteur : sans mesure, pas de tracé, parce qu'une onde qui bat à la bonne
-   * fréquence révèle cette fréquence aussi sûrement qu'un chiffre.
-   */
-  ratePerMinute: number | null;
-}
-
 const EMPTY_TRACE = (quality: SignalQuality): WaveformTrace => ({
   points: [],
   windowSeconds: 0,
@@ -168,7 +158,16 @@ export interface TraceInput {
   /** Cadence mesurée par le joueur. `null` interdit tout tracé. */
   ratePerMinute: number | null;
   quality: SignalQuality;
-  windowSeconds?: number;
+  /**
+   * Nombre de cycles couverts par le tracé.
+   *
+   * La fenêtre est exprimée en **cycles** et non en secondes, et c'est ce qui
+   * rend le tracé bouclable : à un nombre entier de cycles, le dernier point
+   * rejoint le premier, et l'écran peut faire défiler deux copies bout à bout
+   * sans saut visible. Une fenêtre en secondes fixes tomberait presque toujours
+   * au milieu d'un battement.
+   */
+  cycles?: number;
   /** Nombre de points rendus. Fixe la finesse du tracé, pas sa vitesse. */
   resolution?: number;
 }
@@ -182,9 +181,12 @@ const QUALITY_AMPLITUDE: Record<SignalQuality, number> = {
   lost: 0,
 };
 
-function trace(input: TraceInput, shape: (phase: number) => number): WaveformTrace {
+function trace(
+  input: TraceInput,
+  shape: (phase: number) => number,
+  defaultCycles: number,
+): WaveformTrace {
   const { seed, atSeconds, ratePerMinute, quality } = input;
-  const windowSeconds = input.windowSeconds ?? 6;
   const resolution = input.resolution ?? 120;
 
   // Deux verrous, et le premier est le plus important : sans cadence mesurée, il
@@ -194,6 +196,7 @@ function trace(input: TraceInput, shape: (phase: number) => number): WaveformTra
 
   const amplitude = QUALITY_AMPLITUDE[quality];
   const cyclesPerSecond = ratePerMinute / 60;
+  const windowSeconds = (input.cycles ?? defaultCycles) / cyclesPerSecond;
   const points: number[] = [];
   for (let index = 0; index < resolution; index += 1) {
     const offset = (index / (resolution - 1)) * windowSeconds;
@@ -209,10 +212,15 @@ function trace(input: TraceInput, shape: (phase: number) => number): WaveformTra
   return { points, windowSeconds, quality, ratePerMinute };
 }
 
-/** Tracé pléthysmographique du saturomètre. */
+/** Tracé pléthysmographique du saturomètre : quatre battements sous les yeux. */
 export const plethysmographTrace = (input: TraceInput): WaveformTrace =>
-  trace(input, plethysmographPhase);
+  trace(input, plethysmographPhase, 4);
 
-/** Tracé respiratoire, visible seulement après un comptage de la fréquence. */
+/**
+ * Tracé respiratoire, visible seulement après un comptage de la fréquence.
+ *
+ * Deux cycles suffisent : à dix-huit par minute, cela couvre déjà près de sept
+ * secondes, et en montrer davantage écraserait le tracé.
+ */
 export const respirationTrace = (input: TraceInput): WaveformTrace =>
-  trace({ ...input, windowSeconds: input.windowSeconds ?? 12 }, respirationPhase);
+  trace(input, respirationPhase, 2);

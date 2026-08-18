@@ -14,6 +14,14 @@ import { actionsForPhase, findAction, PLAYER_ACTIONS } from "../actions/action-c
 import { successfulActionIds } from "../engine/action-gate.ts";
 import { actionAvailability } from "./action-availability.ts";
 import { formatGlycemiaMmolForUi } from "../format-glycemia.ts";
+import type {
+  AttachedSensorView,
+  LiveVitalView,
+  MonitoringSnapshot,
+  SignalQuality,
+  StaleVitalView,
+  WaveformStateView,
+} from "../physiology/physiology-types.ts";
 
 /**
  * Écran 3 — « Constantes en direct ».
@@ -30,6 +38,25 @@ import { formatGlycemiaMmolForUi } from "../format-glycemia.ts";
  * constats sur le patient qu'aucun appareil ne chiffre. Un écran qui listerait
  * ces faits en dur cesserait d'être juste au premier scénario suivant.
  */
+
+/**
+ * Les types de surveillance, réexportés depuis cet écran.
+ *
+ * Ce n'est pas de la commodité. Une garde interdit aux composants animés
+ * d'importer quoi que ce soit hors de `ui/`, et elle est **volontairement
+ * aveugle** : elle ne cherche pas à distinguer un module de contrats d'un module
+ * de moteur, parce qu'un contrôle qui trierait finirait par se tromper. La
+ * couche présentation est donc le seul vocabulaire des composants, et ce qu'ils
+ * doivent pouvoir nommer passe par elle.
+ */
+export type {
+  AttachedSensorView,
+  MonitoringSnapshot,
+  SignalQuality,
+  StaleVitalView,
+  WaveformStateView,
+  WaveformTrace,
+} from "../physiology/physiology-types.ts";
 
 /* Types repris de `FactRead` plutôt qu'importés du moteur clinique : la couche
  * présentation ne nomme pas le module des constantes réelles. */
@@ -69,9 +96,13 @@ export interface VitalCardModel {
   /** La même valeur dans l'autre unité, sans interprétation. Glycémie seule. */
   secondaryValue: string | null;
   /**
-   * Surveillance continue en cours : un capteur en place tient cette constante à
-   * jour. Faux pour un instantané — une tension prise au brassard reste la valeur
-   * du moment où on l'a prise, et l'animer en continu mentirait sur sa nature.
+   * La valeur affichée est **tenue à jour en ce moment**.
+   *
+   * Cela demande un instantané de surveillance, et pas seulement un capteur posé.
+   * La nuance est ce qui empêche une carte de battre et de défiler en montrant
+   * une valeur figée : sans rafraîchissement, rien n'est en direct, même capteur
+   * en place. Faux aussi pour un instantané de mesure — une tension prise au
+   * brassard vaut pour son moment, et l'animer mentirait sur sa nature.
    */
   isLive: boolean;
   /** État du capteur qui porte la mesure. Nul si aucun appareil n'y est rattaché. */
@@ -84,6 +115,24 @@ export interface VitalCardModel {
    * de trahir une constante que le joueur n'a pas relevée.
    */
   numericValue: number | null;
+  /**
+   * Qualité du signal du capteur qui porte cette constante.
+   *
+   * Elle décrit l'appareil et jamais le patient : un signal faible sur quelqu'un
+   * qui va très bien est une situation banale. C'est ce qui la rend sûre à
+   * afficher — elle n'apprend rien de clinique.
+   */
+  signalQuality: SignalQuality | null;
+  /**
+   * Plage de référence, telle que la maquette l'affiche sous la valeur
+   * (« 95 - 100 % », « 60 - 100 bpm »).
+   *
+   * C'est une **connaissance de formation**, pas une donnée du patient : elle est
+   * la même pour tous les patients et se trouve dans n'importe quel manuel. La
+   * montrer avant toute mesure ne révèle donc rien — et la cacher priverait
+   * l'apprenant du repère qui donne son sens au chiffre.
+   */
+  referenceRange: string | null;
 }
 
 /**
@@ -106,6 +155,23 @@ export interface MonitoringModel {
   respiratoryRatePerMinute: number | null;
   /** Constantes actuellement tenues à jour par un capteur en place. */
   liveFactIds: FactId[];
+  /**
+   * Ce que le bandeau du moniteur affiche : « Saturomètre non posé »,
+   * « Acquisition du signal », « Signal faible — repositionner le capteur ».
+   *
+   * Il ne dit jamais rien du patient. Un bandeau qui annoncerait « patient
+   * stable » offrirait la conclusion que le joueur doit tirer de ses mesures.
+   */
+  statusLabel: string;
+  /** Capteurs en place, avec leur qualité de signal. Vide si rien n'est posé. */
+  sensors: AttachedSensorView[];
+  /**
+   * Tracés autorisés à cet instant. Nul tant qu'aucune surveillance n'est en
+   * cours — et les points restent vides tant que la cadence n'a pas été mesurée.
+   */
+  waveform: WaveformStateView | null;
+  /** Mesures que le temps a périmées, à réévaluer. */
+  stale: StaleVitalView[];
 }
 
 export interface QuickMeasureModel {
@@ -289,8 +355,9 @@ function secondaryValueOf(read: KnownRead): string | null {
 }
 
 interface MonitoringContext {
-  live: Set<FactId>;
   equipmentByFact: Map<FactId, EquipmentUsageState>;
+  /** Ce que le moniteur affiche à cet instant, par fait. Vide sans surveillance. */
+  liveByFact: Map<FactId, LiveVitalView>;
 }
 
 function vitalCard(
@@ -301,6 +368,8 @@ function vitalCard(
   const read = readFact(session, factId);
   const fact = read.fact;
   const equipmentState = context.equipmentByFact.get(factId) ?? null;
+  const monitored = context.liveByFact.get(factId) ?? null;
+  const referenceRange = fact.referenceRange ?? null;
 
   if (read.status === "unknown") {
     return {
@@ -324,29 +393,48 @@ function vitalCard(
       equipmentState,
       measuredAtSeconds: null,
       numericValue: null,
+      signalQuality: null,
+      referenceRange,
     };
   }
 
-  const shown = splitFormattedValue(displayValue(read.value), fact.unit);
+  const frozen = splitFormattedValue(displayValue(read.value), fact.unit);
+
+  /*
+   * Deux valeurs possibles pour une même carte, et l'ordre compte.
+   *
+   * Quand un capteur est en place, la carte montre **ce que le moniteur affiche
+   * maintenant** : c'est ce qu'un soignant lit en levant les yeux, et une carte
+   * qui garderait le chiffre du relevé initial pendant que l'appareil en affiche
+   * un autre serait fausse.
+   *
+   * Sans capteur, elle montre **la valeur figée au moment du relevé**. Une tension
+   * prise il y a six minutes vaut ce qu'elle valait ; la recalculer donnerait au
+   * joueur une mesure qu'il n'a pas prise.
+   */
+  const shown = monitored?.value !== undefined && monitored.value !== null;
 
   return {
     factId,
     label: fact.label,
-    value: shown.value,
-    unit: shown.unit,
+    value: shown ? monitored!.value! : frozen.value,
+    unit: shown ? monitored!.unit : frozen.unit,
     measured: true,
-    severity: read.severity,
-    trend: read.trend ?? null,
-    delta: read.delta ?? null,
-    isStale: read.isStale,
-    ageSeconds: read.ageSeconds,
+    severity: monitored ? monitored.severity : read.severity,
+    trend: monitored ? monitored.trendDirection : (read.trend ?? null),
+    delta: monitored ? null : (read.delta ?? null),
+    // Une constante tenue à jour par un capteur ne peut pas être périmée.
+    isStale: monitored ? monitored.isStale : read.isStale,
+    ageSeconds: monitored ? 0 : read.ageSeconds,
     missingLabel: null,
     outOfReach: false,
     secondaryValue: secondaryValueOf(read),
-    isLive: context.live.has(factId),
+    isLive: monitored?.isLive ?? false,
     equipmentState,
     measuredAtSeconds: session.simulatedTimeSeconds - read.ageSeconds,
-    numericValue: numericOf(read),
+    numericValue: shown ? monitored!.numericValue : numericOf(read),
+    signalQuality: monitored?.signalQuality ?? null,
+    referenceRange,
   };
 }
 
@@ -465,26 +553,6 @@ function equipmentChips(session: InterventionSessionView): EquipmentChipModel[] 
 const ATTACHABLE_EQUIPMENT = new Set<EquipmentId>(["saturometre"]);
 
 /**
- * Constantes qu'un capteur en place tient à jour en continu.
- *
- * Dérivé et non écrit en dur : un capteur posé surveille ce que son geste de pose
- * révèle. Le saturomètre donne SpO₂ et pouls tant qu'il est au doigt ; le
- * tensiomètre, lui, ne reste pas en place — une tension est un instantané, et
- * l'animer en continu mentirait sur sa nature.
- */
-function liveFactIds(session: InterventionSessionView): Set<FactId> {
-  const live = new Set<FactId>();
-  for (const item of session.equipment) {
-    if (!item.attached) continue;
-    for (const action of PLAYER_ACTIONS) {
-      if (!action.requires.equipment.includes(item.id)) continue;
-      for (const factId of action.reveals) live.add(factId);
-    }
-  }
-  return live;
-}
-
-/**
  * Valeur numérique d'un relevé, ou rien.
  *
  * C'est la seule porte par laquelle un nombre atteint une animation, et elle est
@@ -498,11 +566,28 @@ function numericOf(read: FactRead): number | null {
   return null;
 }
 
-export function vitalsScreenModel(session: InterventionSessionView): VitalsScreenModel {
+/**
+ * L'écran des constantes.
+ *
+ * `snapshot` est **facultatif**, et ce n'est pas une commodité : le modèle doit
+ * rester juste sans surveillance, parce que c'est l'état d'un début
+ * d'intervention. Sans instantané, les cartes montrent ce que le joueur a relevé,
+ * figé au moment du relevé ; avec, celles qu'un capteur tient à jour montrent la
+ * valeur du moment.
+ *
+ * L'instantané vient du hook, jamais d'un composant : c'est un résultat de
+ * sélecteur, déjà filtré par la double condition mesurée + capteur en place.
+ */
+export function vitalsScreenModel(
+  session: InterventionSessionView,
+  snapshot?: MonitoringSnapshot,
+): VitalsScreenModel {
   const scenario = getV3Scenario(session.scenarioId);
   const carried = equipmentChips(session);
   const context: MonitoringContext = {
-    live: liveFactIds(session),
+    liveByFact: new Map(
+      (snapshot?.monitoring.liveVitals ?? []).map((entry) => [entry.factId, entry] as const),
+    ),
     equipmentByFact: new Map(
       carried.flatMap((chip) =>
         PLAYER_ACTIONS.filter((action) => action.requires.equipment.includes(chip.id)).flatMap(
@@ -542,13 +627,17 @@ export function vitalsScreenModel(session: InterventionSessionView): VitalsScree
       .filter((action) => action.category === "communicate" && !action.outOfScope)
       .map((action) => quickMeasure(session, action)),
     monitoring: {
-      anyLive: context.live.size > 0,
-      // Les cadences viennent des cartes, donc de `readFact`, donc de ce que le
-      // joueur a relevé. Aucune animation ne peut battre à une fréquence que
-      // personne n'a mesurée.
+      anyLive: snapshot?.monitoring.anyLive ?? false,
+      // Les cadences viennent des cartes, donc de `readFact` ou du moniteur, donc
+      // de ce que le joueur a relevé. Aucune animation ne peut battre à une
+      // fréquence que personne n'a mesurée.
       pulseBpm: measuredOf("fact.fc"),
       respiratoryRatePerMinute: measuredOf("fact.fr"),
-      liveFactIds: [...context.live],
+      liveFactIds: (snapshot?.monitoring.liveVitals ?? []).map((entry) => entry.factId),
+      statusLabel: snapshot?.monitoring.statusLabel ?? "Saturomètre non posé",
+      sensors: snapshot?.monitoring.sensors ?? [],
+      waveform: snapshot?.waveform ?? null,
+      stale: snapshot?.stale ?? [],
     },
     evaluations: evaluationFactIds(session.scenarioId).map((factId) => evaluation(session, factId)),
     carriedEquipment: carried,

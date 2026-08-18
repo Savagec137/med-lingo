@@ -1,5 +1,7 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { applyAction } from "./engine/apply-action.ts";
+import { monitoringSnapshot } from "./physiology/physiology-selectors.ts";
+import type { MonitoringSnapshot } from "./physiology/physiology-types.ts";
 import { createDebriefReport } from "./engine/v3-debrief.ts";
 import { commitGestureRound, transmitHandover } from "./engine/v3-handover.ts";
 import { deselectGesture, selectGesture } from "./engine/v3-gestures.ts";
@@ -45,6 +47,14 @@ export interface InterventionV3Controller {
   /** Retour de la dernière commande, ou rien. */
   feedback: InterventionFeedback | null;
   clearFeedback: () => void;
+  /**
+   * Ce que le moniteur affiche à cet instant.
+   *
+   * Déjà filtré par la double condition — constante relevée **et** capteur en
+   * place — si bien qu'un composant qui le reçoit n'y trouve rien qui n'ait été
+   * gagné. Sur une session vierge, il ne contient que des absences.
+   */
+  monitoring: MonitoringSnapshot;
 
   play: (actionId: PlayerActionId) => void;
   chooseGesture: (roundId: string, gestureId: string) => void;
@@ -71,6 +81,15 @@ export interface InterventionV3Options {
   scenarioId?: string;
   preparedEquipment?: readonly EquipmentId[];
 }
+
+/**
+ * Cadence de rafraîchissement du moniteur.
+ *
+ * Une seconde, et pas davantage : c'est la cadence d'un vrai moniteur, et c'est
+ * aussi ce qui garde le coût raisonnable. Le tracé, lui, défile en continu — son
+ * mouvement est porté par une animation CSS, pas par un rendu React.
+ */
+const MONITOR_TICK_SECONDS = 1;
 
 export function useInterventionV3(options: InterventionV3Options = {}): InterventionV3Controller {
   const scenarioId = options.scenarioId ?? PILOT_SCENARIO_ID;
@@ -205,10 +224,48 @@ export function useInterventionV3(options: InterventionV3Options = {}): Interven
 
   const view = useMemo(() => toSessionView(session), [session]);
 
+  /*
+   * L'horloge du moniteur.
+   *
+   * Le temps simulé n'avance qu'aux actions : il compte ce que les gestes
+   * coûtent. Un moniteur, lui, ne s'arrête pas parce que l'équipe réfléchit — le
+   * patient continue de vivre pendant qu'on le regarde. Cette horloge avance donc
+   * en temps réel, à partir du temps simulé.
+   *
+   * Elle est **monotone par construction** : `Math.max` avec le temps simulé
+   * interdit tout retour en arrière. Sans cela, un long temps d'arrêt suivi d'une
+   * action courte ferait reculer l'affichage — le moniteur montrerait le patient
+   * plus jeune qu'une seconde auparavant.
+   */
+  const [monitorSeconds, setMonitorSeconds] = useState(session.simulatedTimeSeconds);
+
+  useEffect(() => {
+    setMonitorSeconds((current) => Math.max(current, session.simulatedTimeSeconds));
+  }, [session.simulatedTimeSeconds]);
+
+  const monitoringActive = view.equipment.some((item) => item.attached);
+
+  useEffect(() => {
+    // Aucun capteur en place : rien à rafraîchir, et une horloge qui tournerait
+    // dans le vide ferait travailler l'appareil pour un écran immobile.
+    if (!monitoringActive) return;
+    const timer = setInterval(
+      () => setMonitorSeconds((current) => current + MONITOR_TICK_SECONDS),
+      MONITOR_TICK_SECONDS * 1000,
+    );
+    return () => clearInterval(timer);
+  }, [monitoringActive]);
+
+  const monitoring = useMemo(
+    () => monitoringSnapshot(session, Math.max(monitorSeconds, session.simulatedTimeSeconds)),
+    [session, monitorSeconds],
+  );
+
   return {
     session: view,
     debrief,
     feedback,
+    monitoring,
     clearFeedback: useCallback(() => setFeedback(null), []),
     play,
     chooseGesture,

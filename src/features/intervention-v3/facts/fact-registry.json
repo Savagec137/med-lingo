@@ -123,7 +123,9 @@
       "placeholder": "Zone non sécurisée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.securiser-scene"],
+      "revealedBy": [
+        "action.securiser-scene"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -137,7 +139,9 @@
       "placeholder": "Dangers non recherchés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.observer-environnement"],
+      "revealedBy": [
+        "action.observer-environnement"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -151,7 +155,9 @@
       "placeholder": "Indices non recherchés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.observer-environnement"],
+      "revealedBy": [
+        "action.observer-environnement"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -165,7 +171,10 @@
       "placeholder": "Conscience non appréciée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.approcher-patient", "action.reevaluer-patient"],
+      "revealedBy": [
+        "action.approcher-patient",
+        "action.reevaluer-patient"
+      ],
       "dependsOn": [],
       "freshnessSeconds": 300
     },
@@ -179,7 +188,10 @@
       "placeholder": "Respiration non appréciée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.approcher-patient", "action.reevaluer-patient"],
+      "revealedBy": [
+        "action.approcher-patient",
+        "action.reevaluer-patient"
+      ],
       "dependsOn": [],
       "freshnessSeconds": 300
     },
@@ -192,10 +204,15 @@
       "unit": "%",
       "placeholder": "--",
       "vitalKey": "spo2",
-      "requiresEquipment": ["saturometre"],
-      "revealedBy": ["action.poser-saturometre"],
+      "requiresEquipment": [
+        "saturometre"
+      ],
+      "revealedBy": [
+        "action.poser-saturometre"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 300
+      "freshnessSeconds": 300,
+      "referenceRange": "95 - 100 %"
     },
     {
       "id": "fact.fc",
@@ -207,9 +224,13 @@
       "placeholder": "--",
       "vitalKey": "hr",
       "requiresEquipment": [],
-      "revealedBy": ["action.palper-pouls", "action.poser-saturometre"],
+      "revealedBy": [
+        "action.palper-pouls",
+        "action.poser-saturometre"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 300
+      "freshnessSeconds": 300,
+      "referenceRange": "60 - 100 /min"
     },
     {
       "id": "fact.ta",
@@ -220,10 +241,15 @@
       "unit": "mmHg",
       "placeholder": "--/--",
       "vitalKey": "sbp",
-      "requiresEquipment": ["tensiometre"],
-      "revealedBy": ["action.prendre-tension"],
+      "requiresEquipment": [
+        "tensiometre"
+      ],
+      "revealedBy": [
+        "action.prendre-tension"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 300
+      "freshnessSeconds": 300,
+      "referenceRange": "90 - 140 mmHg"
     },
     {
       "id": "fact.fr",
@@ -235,9 +261,12 @@
       "placeholder": "--",
       "vitalKey": "rr",
       "requiresEquipment": [],
-      "revealedBy": ["action.compter-fr"],
+      "revealedBy": [
+        "action.compter-fr"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 300
+      "freshnessSeconds": 300,
+      "referenceRange": "12 - 20 /min"
     },
     {
       "id": "fact.temperature",
@@ -248,10 +277,15 @@
       "unit": "°C",
       "placeholder": "--,-",
       "vitalKey": "temperature",
-      "requiresEquipment": ["thermometre"],
-      "revealedBy": ["action.prendre-temperature"],
+      "requiresEquipment": [
+        "thermometre"
+      ],
+      "revealedBy": [
+        "action.prendre-temperature"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 900
+      "freshnessSeconds": 900,
+      "referenceRange": "36,1 - 37,8 °C"
     },
     {
       "id": "fact.glycemie",
@@ -262,10 +296,15 @@
       "unit": "mmol/L",
       "placeholder": "--,-",
       "vitalKey": "glycemia",
-      "requiresEquipment": ["glucometre"],
-      "revealedBy": ["action.faire-glycemie"],
+      "requiresEquipment": [
+        "glucometre"
+      ],
+      "revealedBy": [
+        "action.faire-glycemie"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 900
+      "freshnessSeconds": 900,
+      "referenceRange": "0,70 - 1,10 g/L"
     },
     {
       "id": "fact.eva",
@@ -277,9 +316,12 @@
       "placeholder": "--",
       "vitalKey": "pain",
       "requiresEquipment": [],
-      "revealedBy": ["action.evaluer-douleur"],
+      "revealedBy": [
+        "action.evaluer-douleur"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 600
+      "freshnessSeconds": 600,
+      "referenceRange": "0 = aucune douleur"
     },
     {
       "id": "fact.glasgow",
@@ -291,9 +333,12 @@
       "placeholder": "--",
       "vitalKey": "gcs",
       "requiresEquipment": [],
-      "revealedBy": ["action.evaluer-conscience"],
+      "revealedBy": [
+        "action.evaluer-conscience"
+      ],
       "dependsOn": [],
-      "freshnessSeconds": 300
+      "freshnessSeconds": 300,
+      "referenceRange": "15 = normal"
     },
     {
       "id": "fact.coloration",
@@ -305,7 +350,9 @@
       "placeholder": "Peau non observée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.observer-peau"],
+      "revealedBy": [
+        "action.observer-peau"
+      ],
       "dependsOn": [],
       "freshnessSeconds": 600
     },
@@ -319,7 +366,9 @@
       "placeholder": "Peau non observée",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.observer-peau"],
+      "revealedBy": [
+        "action.observer-peau"
+      ],
       "dependsOn": [],
       "freshnessSeconds": 600
     },
@@ -333,7 +382,9 @@
       "placeholder": "Patient non interrogé",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.interroger-patient"],
+      "revealedBy": [
+        "action.interroger-patient"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -347,7 +398,9 @@
       "placeholder": "Patient non interrogé",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.interroger-patient"],
+      "revealedBy": [
+        "action.interroger-patient"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -361,7 +414,9 @@
       "placeholder": "Témoins non interrogés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.interroger-temoin"],
+      "revealedBy": [
+        "action.interroger-temoin"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -375,7 +430,9 @@
       "placeholder": "Témoins non interrogés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.interroger-temoin"],
+      "revealedBy": [
+        "action.interroger-temoin"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -389,7 +446,9 @@
       "placeholder": "Témoins non interrogés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.interroger-temoin"],
+      "revealedBy": [
+        "action.interroger-temoin"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -403,7 +462,10 @@
       "placeholder": "Antécédents non recherchés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.consulter-documents", "action.interroger-temoin"],
+      "revealedBy": [
+        "action.consulter-documents",
+        "action.interroger-temoin"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -417,7 +479,9 @@
       "placeholder": "Traitements non recherchés",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.consulter-documents"],
+      "revealedBy": [
+        "action.consulter-documents"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -431,7 +495,9 @@
       "placeholder": "Allergies non recherchées",
       "vitalKey": null,
       "requiresEquipment": [],
-      "revealedBy": ["action.consulter-documents"],
+      "revealedBy": [
+        "action.consulter-documents"
+      ],
       "dependsOn": [],
       "freshnessSeconds": null
     },
@@ -446,7 +512,11 @@
       "vitalKey": null,
       "requiresEquipment": [],
       "revealedBy": [],
-      "dependsOn": ["fact.spo2", "fact.fc", "fact.fr"],
+      "dependsOn": [
+        "fact.spo2",
+        "fact.fc",
+        "fact.fr"
+      ],
       "freshnessSeconds": null
     }
   ]

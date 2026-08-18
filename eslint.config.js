@@ -68,6 +68,23 @@ export default tseslint.config(
               ],
               message: "Un composant passe par le hook use-intervention-v3, jamais par le moteur.",
             },
+            {
+              // Le moteur physiologique connaît toutes les constantes à tout
+              // instant. Un composant qui l'importerait pourrait échantillonner
+              // une saturation que personne n'a mesurée. Seul
+              // `physiology-types` reste ouvert : il ne porte que des contrats,
+              // et un composant doit pouvoir nommer ce qu'il reçoit.
+              group: [
+                "**/physiology/physiology-engine*",
+                "**/physiology/physiology-selectors*",
+                "**/physiology/clinical-profiles*",
+                "**/physiology/vital-trends*",
+                "**/physiology/vital-noise*",
+                "**/physiology/equipment-monitoring*",
+              ],
+              message:
+                "Un composant reçoit l'instantané de surveillance du hook, il n'interroge pas le moteur physiologique.",
+            },
           ],
         },
       ],
@@ -108,6 +125,20 @@ export default tseslint.config(
               ],
               message:
                 "Un présentateur décrit un écran : il interroge action-gate, il n'exécute pas le moteur.",
+            },
+            {
+              // Même raison pour la couche présentation : le modèle d'écran
+              // reçoit l'instantané en argument, il ne va pas le chercher.
+              group: [
+                "**/physiology/physiology-engine*",
+                "**/physiology/physiology-selectors*",
+                "**/physiology/clinical-profiles*",
+                "**/physiology/vital-trends*",
+                "**/physiology/vital-noise*",
+                "**/physiology/equipment-monitoring*",
+              ],
+              message:
+                "Un présentateur reçoit l'instantané de surveillance en argument, il n'interroge pas le moteur physiologique.",
             },
           ],
         },

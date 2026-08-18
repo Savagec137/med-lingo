@@ -111,7 +111,11 @@ function InterventionV3Route() {
       case "transport":
         return (
           <VitalsScreen
-            model={vitalsScreenModel(session)}
+            // L'instantané de surveillance vient du hook, seul endroit où la
+            // session complète existe. Le modèle d'écran le reçoit, il ne va pas
+            // le chercher — c'est ce qui interdit à la couche présentation
+            // d'atteindre le moteur physiologique.
+            model={vitalsScreenModel(session, game.monitoring)}
             pendingMeasure={null}
             onMeasure={game.play}
             onEvaluate={game.play}
