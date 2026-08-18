@@ -1,5 +1,6 @@
 import {
   Activity,
+  ArrowLeft,
   Brain,
   Check,
   Droplet,
@@ -7,17 +8,22 @@ import {
   Gauge,
   Hand,
   HeartPulse,
+  Info,
+  MessageCircle,
+  RotateCcw,
   Stethoscope,
   Thermometer,
+  User,
   Wind,
 } from "lucide-react";
+import sceneBackdrop from "@/assets/game/bg-ambulance.jpg";
 import type {
-  EquipmentChipModel,
+  EquipmentCheckModel,
+  PatientReadoutLine,
   QuickMeasureModel,
   VitalsScreenModel,
 } from "@/features/intervention-v3/ui/vitals-screen";
 import { MeasurementAnimation } from "./monitoring/MeasurementAnimation";
-import { MonitoringStatusBadge } from "./monitoring/MonitoringStatusBadge";
 import { useReducedMotion } from "./monitoring/use-reduced-motion";
 import { VitalCard } from "./monitoring/VitalCard";
 
@@ -29,8 +35,9 @@ import { VitalCard } from "./monitoring/VitalCard";
  * sans capteur posé il n'y a pas de surveillance continue. Ces deux verrous sont
  * dans le modèle, pas ici — le composant ne fait que les respecter.
  *
- * Deux panneaux de matériel, jamais mélangés : « Matériel embarqué » dit ce que
- * l'équipe a, « Matériel utilisé » ce qu'elle a sorti.
+ * L'ordre suit la maquette : en-tête, bloc patient avec ses deux panneaux
+ * flottants, signes vitaux surveillés, bandeau du capteur, autres constantes,
+ * puis les actions séparées en mesures et évaluations.
  */
 
 interface Props {
@@ -39,6 +46,10 @@ interface Props {
   pendingMeasure: { actionId: string; durationSeconds: number } | null;
   onMeasure: (actionId: string) => void;
   onEvaluate: (actionId: string) => void;
+  /** Revenir en arrière. Absent si l'écran n'a rien derrière lui. */
+  onBack?: (() => void) | undefined;
+  /** Reprendre la mission depuis le début. */
+  onRestart?: (() => void) | undefined;
 }
 
 const SENSOR_FACT_IDS = new Set(["fact.spo2", "fact.fc"]);
@@ -61,69 +72,137 @@ function traceFor(factId: string, model: VitalsScreenModel) {
   return null;
 }
 
-export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: Props) {
+export function VitalsScreen({
+  model,
+  pendingMeasure,
+  onMeasure,
+  onEvaluate,
+  onBack,
+  onRestart,
+}: Props) {
   const reducedMotion = useReducedMotion();
-  const anySensorUsed = model.usedEquipment.some((chip) => SENSOR_FACT_IDS.size > 0 && chip.used);
-  const monitoringState = model.monitoring.anyLive
-    ? "live"
-    : anySensorUsed
-      ? "interrupted"
-      : "never";
+  const monitored = model.monitoring.anyLive;
 
   return (
-    <section className="flex flex-col gap-5">
-      <header className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="text-[10px] font-black uppercase tracking-wider text-cyan-300/70">
-            {model.eyebrow}
-          </p>
-          <h1 className="text-xl font-black text-slate-100">{model.title}</h1>
+    <section className="flex flex-col gap-4">
+      {/* En-tête de la maquette : retour, titre, sous-titre, réinitialiser, et
+          une pastille d'état qui parle du capteur et jamais du patient. */}
+      <header className="rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-3">
+        <div className="flex items-start gap-3">
+          {onBack && (
+            <button
+              type="button"
+              onClick={onBack}
+              aria-label="Revenir en arrière"
+              className="press shrink-0 rounded-xl border border-white/12 bg-white/[0.05] p-2 text-slate-300"
+            >
+              <ArrowLeft className="h-4 w-4" />
+            </button>
+          )}
+          <div className="min-w-0 flex-1">
+            <h1 className="truncate font-display text-base font-black uppercase tracking-wide text-white">
+              {model.title}
+            </h1>
+            <p className="text-xs font-bold text-cyan-300/80">{model.subtitle}</p>
+          </div>
+          {onRestart && (
+            <button
+              type="button"
+              onClick={onRestart}
+              aria-label="Réinitialiser la mission"
+              className="press shrink-0 rounded-xl border border-white/12 bg-white/[0.05] p-2 text-slate-300"
+            >
+              <RotateCcw className="h-4 w-4" aria-hidden="true" />
+            </button>
+          )}
         </div>
-        <div className="flex items-center gap-2">
-          <MonitoringStatusBadge
-            state={monitoringState}
-            reducedMotion={reducedMotion}
-            liveCount={model.monitoring.liveFactIds.length}
+
+        <p className="mt-2 flex items-center gap-2 text-xs font-bold text-slate-300">
+          <span
+            className={`h-2 w-2 shrink-0 rounded-full ${
+              monitored ? `bg-emerald-400 ${reducedMotion ? "" : "animate-pulse"}` : "bg-slate-600"
+            }`}
+            aria-hidden="true"
           />
-          <span className="text-xs font-black tabular-nums text-slate-400">
+          {model.monitoring.statusLabel}
+          <span className="ml-auto tabular-nums text-slate-500">
             {model.measuredCount} / {model.expectedCount}
           </span>
-        </div>
+        </p>
       </header>
+
+      {/* Le bloc patient. Deux panneaux flottants sur la scène : ce que l'on sait
+          du patient à gauche, ce que l'on a sorti du sac à droite. */}
+      <div className="relative min-h-[9.5rem] overflow-hidden rounded-2xl border border-white/8">
+        <img
+          src={sceneBackdrop}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/85"
+          aria-hidden="true"
+        />
+        <div className="relative flex items-start justify-between gap-2 p-2.5">
+          <PatientReadoutPanel lines={model.patientReadout} />
+          <EquipmentPanel checks={model.equipmentChecks} />
+        </div>
+      </div>
 
       <p className="text-sm leading-relaxed text-slate-300/90">{model.narrative}</p>
 
-      {/* Le bandeau du moniteur. Il parle de l'appareil — « saturomètre non
-          posé », « acquisition du signal », « signal faible » — et jamais du
-          patient : annoncer « patient stable » donnerait la conclusion que le
-          joueur doit tirer lui-même de ses mesures. */}
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-2.5">
-        <div className="min-w-0">
-          <p className="text-[11px] font-black uppercase tracking-wider text-slate-500">
-            Surveillance
+      {/* « Signes vitaux » : la maquette n'y met que les constantes qu'un capteur
+          tient à jour, en deux grandes cartes avec leur tracé. */}
+      {model.monitoredVitals.length > 0 && (
+        <Panel title="Signes vitaux">
+          <ul className="grid grid-cols-2 gap-2">
+            {model.monitoredVitals.map((card) => (
+              <li key={card.factId}>
+                <VitalCard
+                  card={card}
+                  pulseBpm={model.monitoring.pulseBpm}
+                  reducedMotion={reducedMotion}
+                  trace={traceFor(card.factId, model)}
+                />
+              </li>
+            ))}
+          </ul>
+        </Panel>
+      )}
+
+      {/* Le bandeau du capteur. Il parle de l'appareil et jamais du patient :
+          annoncer « patient stable » donnerait la conclusion que le joueur doit
+          tirer lui-même de ses mesures. */}
+      {model.sensorControls.length > 0 && (
+        <div className="flex items-center justify-between gap-2 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-2.5">
+          <p className="flex min-w-0 flex-1 items-start gap-2">
+            <Info className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300/80" aria-hidden="true" />
+            <span className="min-w-0">
+              <span className="block text-sm font-bold text-slate-100">
+                {monitored ? "Le saturomètre est posé." : "Le saturomètre n'est pas posé."}
+              </span>
+              <span className="block text-xs text-slate-400">
+                {monitored
+                  ? "Retirez-le pour arrêter la mesure."
+                  : "Posez-le pour suivre la SpO₂ et le pouls."}
+              </span>
+            </span>
           </p>
-          <p className="text-sm font-bold text-slate-200">{model.monitoring.statusLabel}</p>
-          {model.monitoring.sensors.length > 0 && (
-            <p className="mt-0.5 text-[11px] text-slate-500">
-              {model.monitoring.sensors
-                .map((sensor) => `${sensor.label} — ${sensor.qualityLabel}`)
-                .join(" · ")}
-            </p>
-          )}
+          {model.sensorControls.map((control) => (
+            <button
+              key={control.id}
+              type="button"
+              disabled={!control.enabled}
+              onClick={() => onMeasure(control.id)}
+              title={control.disabledReason ?? undefined}
+              className="press shrink-0 rounded-full border border-red-400/40 bg-red-400/[0.08] px-3 py-1.5 text-[11px] font-black leading-tight text-red-200 disabled:cursor-not-allowed disabled:border-white/10 disabled:bg-white/[0.03] disabled:text-slate-500"
+            >
+              {control.label}
+            </button>
+          ))}
         </div>
-        {model.sensorControls.map((control) => (
-          <button
-            key={control.id}
-            type="button"
-            disabled={!control.enabled}
-            onClick={() => onMeasure(control.id)}
-            title={control.disabledReason ?? undefined}
-            className="press shrink-0 rounded-full border border-red-400/40 bg-red-400/[0.08] px-3 py-1.5 text-xs font-black text-red-200 disabled:cursor-not-allowed disabled:border-white/10 disabled:bg-white/[0.03] disabled:text-slate-500"
-          >
-            {control.label}
-          </button>
-        ))}
-      </div>
+      )}
 
       {/* Ce que le temps a périmé. Les mesures restent affichées — les effacer
           reprendrait au joueur ce qu'il a relevé — mais elles sont nommées comme
@@ -143,49 +222,68 @@ export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: P
         />
       )}
 
-      {/* Deux colonnes dès le mobile, comme la maquette : les cartes SpO₂ et
-          pouls s'y lisent côte à côte, tracé compris. */}
-      <Panel title="Signes vitaux">
-        <ul className="grid grid-cols-2 gap-2 lg:grid-cols-4">
-          {model.vitals.map((card) => (
-            <li key={card.factId}>
-              <VitalCard
-                card={card}
-                pulseBpm={model.monitoring.pulseBpm}
-                reducedMotion={reducedMotion}
-                trace={traceFor(card.factId, model)}
-              />
-            </li>
-          ))}
-        </ul>
-      </Panel>
-
-      {/* Les gestes de capteur ne figurent plus ici : ils vivent dans le bandeau
-          de surveillance, à côté de l'état qu'ils changent. Les mêler aux mesures
-          laisserait croire que retirer un capteur relève une constante. */}
-      <Panel title="Mesures rapides">
-        <ul className="grid grid-cols-3 gap-2">
-          {model.quickMeasures.map((measure) => (
-            <li key={measure.id}>
-              <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
-            </li>
-          ))}
-        </ul>
-      </Panel>
-
-      {model.communications.length > 0 && (
-        <Panel title="Communication">
-          <ul className="grid gap-2 sm:grid-cols-2">
-            {model.communications.map((measure) => (
-              <li key={measure.id}>
-                <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
+      {model.otherVitals.length > 0 && (
+        <Panel title="Autres constantes">
+          <ul className="grid grid-cols-2 gap-2 lg:grid-cols-3">
+            {model.otherVitals.map((card) => (
+              <li key={card.factId}>
+                <VitalCard
+                  card={card}
+                  pulseBpm={model.monitoring.pulseBpm}
+                  reducedMotion={reducedMotion}
+                  trace={traceFor(card.factId, model)}
+                />
               </li>
             ))}
           </ul>
         </Panel>
       )}
 
-      <Panel title="Évaluations cliniques">
+      <section className="flex flex-col gap-3">
+        <h2 className="text-xs font-black uppercase tracking-wider text-cyan-300/80">
+          Actions et mesures
+        </h2>
+
+        {/* Les gestes de capteur ne figurent pas ici : ils vivent dans le bandeau
+            de surveillance, à côté de l'état qu'ils changent. Les mêler aux
+            mesures laisserait croire que retirer un capteur relève une constante. */}
+        <Panel title="Mesures rapides">
+          <ul className="grid grid-cols-3 gap-2">
+            {model.quickMeasures.map((measure) => (
+              <li key={measure.id}>
+                <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
+              </li>
+            ))}
+          </ul>
+        </Panel>
+
+        <Panel title="Évaluations cliniques">
+          <ul className="grid grid-cols-3 gap-2">
+            {model.clinicalAssessments.map((measure) => (
+              <li key={measure.id}>
+                <MeasureButton measure={measure} onClick={() => onEvaluate(measure.id)} />
+              </li>
+            ))}
+          </ul>
+        </Panel>
+
+        {model.communications.length > 0 && (
+          <Panel title="Communication">
+            <ul className="grid gap-2 sm:grid-cols-2">
+              {model.communications.map((measure) => (
+                <li key={measure.id}>
+                  <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
+                </li>
+              ))}
+            </ul>
+          </Panel>
+        )}
+      </section>
+
+      {/* Le détail de ce qui a été recueilli, sous les cartes : la maquette le
+          garde hors de l'écran principal, mais le retirer priverait le joueur du
+          seul endroit où il relit ses constats en clair. */}
+      <Panel title="Recueil du patient">
         <ul className="flex flex-col gap-2">
           {model.evaluations.map((entry) => (
             <li
@@ -223,14 +321,95 @@ export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: P
       <Panel title={model.equipmentPanelLabels.carried}>
         <EquipmentList chips={model.carriedEquipment} />
       </Panel>
-      {model.usedEquipment.length > 0 && (
-        <Panel title={model.equipmentPanelLabels.used}>
-          <EquipmentList chips={model.usedEquipment} />
-        </Panel>
-      )}
     </section>
   );
 }
+
+/* -------------------------------------------------------------------------- */
+/* Les panneaux flottants                                                     */
+/* -------------------------------------------------------------------------- */
+
+const PATIENT_READOUT_ICONS = {
+  stabilite: HeartPulse,
+  conscience: User,
+  communication: MessageCircle,
+} as const;
+
+const PATIENT_READOUT_TONES: Record<PatientReadoutLine["tone"], string> = {
+  positive: "text-emerald-300",
+  neutral: "text-sky-300",
+  warning: "text-amber-300",
+  critical: "text-red-300",
+};
+
+function PatientReadoutPanel({ lines }: { lines: PatientReadoutLine[] }) {
+  return (
+    <div className="max-w-[52%] rounded-xl border border-white/10 bg-slate-950/75 px-2.5 py-2 backdrop-blur-sm">
+      <h2 className="text-[9px] font-black uppercase tracking-wider text-slate-400">
+        État du patient
+      </h2>
+      <ul className="mt-1.5 flex flex-col gap-1.5">
+        {lines.map((line) => {
+          const Icon = PATIENT_READOUT_ICONS[line.id];
+          return (
+            <li key={line.id} className="flex items-start gap-1.5">
+              <Icon
+                className={`mt-px h-3.5 w-3.5 shrink-0 ${
+                  line.known ? PATIENT_READOUT_TONES[line.tone] : "text-slate-600"
+                }`}
+                aria-hidden="true"
+              />
+              <span
+                className={`text-[11px] font-bold leading-tight ${
+                  line.known ? "text-slate-100" : "text-slate-500"
+                }`}
+              >
+                {line.label}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function EquipmentPanel({ checks }: { checks: EquipmentCheckModel[] }) {
+  return (
+    <div className="max-w-[46%] rounded-xl border border-white/10 bg-slate-950/75 px-2.5 py-2 backdrop-blur-sm">
+      <h2 className="text-[9px] font-black uppercase tracking-wider text-slate-400">
+        Matériel utilisé
+      </h2>
+      <ul className="mt-1.5 flex flex-col gap-1">
+        {checks.map((check) => (
+          <li key={check.id} className="flex items-center gap-1.5">
+            <span
+              className={`flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border ${
+                check.done
+                  ? "border-emerald-400/70 bg-emerald-400/20"
+                  : "border-white/20 bg-transparent"
+              }`}
+              aria-hidden="true"
+            >
+              {check.done && <Check className="h-2.5 w-2.5 text-emerald-300" />}
+            </span>
+            <span
+              className={`truncate text-[11px] font-bold ${
+                check.done ? "text-slate-100" : "text-slate-500"
+              }`}
+            >
+              {check.label}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Le reste                                                                   */
+/* -------------------------------------------------------------------------- */
 
 function Panel({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -289,7 +468,7 @@ function MeasureButton({ measure, onClick }: { measure: QuickMeasureModel; onCli
   );
 }
 
-function EquipmentList({ chips }: { chips: EquipmentChipModel[] }) {
+function EquipmentList({ chips }: { chips: VitalsScreenModel["carriedEquipment"] }) {
   return (
     <ul className="flex flex-wrap gap-2">
       {chips.map((chip) => (

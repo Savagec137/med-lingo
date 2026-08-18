@@ -178,6 +178,8 @@ function InterventionV3Game({
             pendingMeasure={null}
             onMeasure={game.play}
             onEvaluate={game.play}
+            onBack={onLeaveMission}
+            onRestart={game.restart}
           />
         );
 

@@ -122,7 +122,8 @@
     "fact.conscience-qualitative": {
       "kind": "enum",
       "value": "confus",
-      "formatted": "Ouvre les yeux à l'appel, réponses décalées, désorienté"
+      "formatted": "Ouvre les yeux à l'appel, réponses décalées, désorienté",
+      "short": "Confus"
     },
     "fact.respiration-presente": {
       "kind": "boolean",
@@ -198,77 +199,105 @@
     {
       "id": "item.motif",
       "label": "Motif d'appel",
-      "factIds": ["fact.motif-appel"],
+      "factIds": [
+        "fact.motif-appel"
+      ],
       "expected": false,
       "disclosable": false
     },
     {
       "id": "item.circonstances",
       "label": "Circonstances",
-      "factIds": ["fact.circonstances", "fact.indices-mecanisme"],
+      "factIds": [
+        "fact.circonstances",
+        "fact.indices-mecanisme"
+      ],
       "expected": false,
       "disclosable": false
     },
     {
       "id": "item.conscience",
       "label": "Niveau de conscience",
-      "factIds": ["fact.conscience-qualitative", "fact.glasgow"],
+      "factIds": [
+        "fact.conscience-qualitative",
+        "fact.glasgow"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.constantes",
       "label": "Constantes mesurées",
-      "factIds": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr"],
+      "factIds": [
+        "fact.spo2",
+        "fact.fc",
+        "fact.ta",
+        "fact.fr"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.glycemie",
       "label": "Glycémie",
-      "factIds": ["fact.glycemie"],
+      "factIds": [
+        "fact.glycemie"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.douleur",
       "label": "Douleur",
-      "factIds": ["fact.eva"],
+      "factIds": [
+        "fact.eva"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.perte-de-connaissance",
       "label": "Perte de connaissance initiale",
-      "factIds": ["fact.pci", "fact.duree-inconscience"],
+      "factIds": [
+        "fact.pci",
+        "fact.duree-inconscience"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.antecedents",
       "label": "Antécédents",
-      "factIds": ["fact.antecedents"],
+      "factIds": [
+        "fact.antecedents"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.traitements",
       "label": "Traitements",
-      "factIds": ["fact.traitements"],
+      "factIds": [
+        "fact.traitements"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.allergies",
       "label": "Allergies",
-      "factIds": ["fact.allergies"],
+      "factIds": [
+        "fact.allergies"
+      ],
       "expected": false,
       "disclosable": true
     },
     {
       "id": "item.heure-debut",
       "label": "Heure de début",
-      "factIds": ["fact.heure-debut"],
+      "factIds": [
+        "fact.heure-debut"
+      ],
       "expected": false,
       "disclosable": true
     },
@@ -432,10 +461,16 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.conscience-qualitative", "fact.indices-mecanisme"],
+          "justifiedBy": [
+            "fact.conscience-qualitative",
+            "fact.indices-mecanisme"
+          ],
           "consequenceFamily": "risk_reduction",
           "actId": null,
-          "competencyIds": ["dea.c02", "dea.c05"],
+          "competencyIds": [
+            "dea.c02",
+            "dea.c05"
+          ],
           "knowledgeId": "intervention.traumatisme"
         },
         {
@@ -445,10 +480,15 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.conscience-qualitative", "fact.respiration-presente"],
+          "justifiedBy": [
+            "fact.conscience-qualitative",
+            "fact.respiration-presente"
+          ],
           "consequenceFamily": "stability",
           "actId": "acte.r6311-17.ii.4",
-          "competencyIds": ["dea.c04"],
+          "competencyIds": [
+            "dea.c04"
+          ],
           "knowledgeId": "intervention.surveillance-du-patient"
         },
         {
@@ -458,10 +498,15 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.spo2", "fact.fc"],
+          "justifiedBy": [
+            "fact.spo2",
+            "fact.fc"
+          ],
           "consequenceFamily": "handover_quality",
           "actId": "acte.r6311-17.ii.1",
-          "competencyIds": ["dea.c04"],
+          "competencyIds": [
+            "dea.c04"
+          ],
           "knowledgeId": "intervention.constantes-vitales"
         },
         {
@@ -471,10 +516,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.spo2"],
+          "justifiedBy": [
+            "fact.spo2"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c05"],
+          "competencyIds": [
+            "dea.c05"
+          ],
           "knowledgeId": null
         },
         {
@@ -484,10 +533,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.conscience-qualitative"],
+          "justifiedBy": [
+            "fact.conscience-qualitative"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c01"],
+          "competencyIds": [
+            "dea.c01"
+          ],
           "knowledgeId": "intervention.bilan-secondaire"
         },
         {
@@ -497,10 +550,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.conscience-qualitative"],
+          "justifiedBy": [
+            "fact.conscience-qualitative"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c02"],
+          "competencyIds": [
+            "dea.c02"
+          ],
           "knowledgeId": "intervention.transport-sanitaire"
         },
         {
@@ -513,7 +570,9 @@
           "justifiedBy": [],
           "consequenceFamily": "handover_quality",
           "actId": null,
-          "competencyIds": ["dea.c06"],
+          "competencyIds": [
+            "dea.c06"
+          ],
           "knowledgeId": "intervention.transport-sanitaire"
         },
         {
@@ -523,10 +582,15 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.glasgow"],
+          "justifiedBy": [
+            "fact.glasgow"
+          ],
           "consequenceFamily": "risk_reduction",
           "actId": null,
-          "competencyIds": ["dea.c10", "dea.c11"],
+          "competencyIds": [
+            "dea.c10",
+            "dea.c11"
+          ],
           "knowledgeId": "intervention.transmission-au-medecin-regulateur"
         },
         {

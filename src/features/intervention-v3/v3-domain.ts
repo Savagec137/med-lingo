@@ -97,7 +97,7 @@ export type FactValue =
   | { kind: "ratio"; systolic: number; diastolic: number; formatted: string }
   | { kind: "text"; value: string }
   | { kind: "boolean"; value: boolean; formatted: string }
-  | { kind: "enum"; value: string; formatted: string };
+  | { kind: "enum"; value: string; formatted: string; short?: string };
 
 /**
  * Texte à afficher pour une valeur, quelle que soit sa forme. Un fait `text` n'a

@@ -73,6 +73,17 @@ const FACT_BY_SIGNAL = new Map<VitalSignal, FactId>(
 export const factIdForSignal = (signal: VitalSignal): FactId | undefined =>
   FACT_BY_SIGNAL.get(signal);
 
+/**
+ * Les constantes qu'un capteur peut suivre en continu.
+ *
+ * Dérivé de la table du matériel et du mode d'échantillonnage, jamais écrit :
+ * c'est la même source qui décide de ce qui est surveillable et de ce qui est
+ * un instantané, si bien que les deux ne peuvent pas se contredire.
+ */
+export const MONITORABLE_FACT_IDS: string[] = [...FACT_BY_SIGNAL.entries()]
+  .filter(([signal]) => monitoringModeOf(signal) === "continuous" && SIGNAL_EQUIPMENT[signal])
+  .map(([, factId]) => factId);
+
 /* -------------------------------------------------------------------------- */
 /* État du matériel                                                           */
 /* -------------------------------------------------------------------------- */
@@ -364,6 +375,7 @@ export function monitoringSnapshot(
 ): MonitoringSnapshot {
   return {
     atSeconds,
+    monitorableFactIds: MONITORABLE_FACT_IDS,
     monitoring: getVisibleMonitoringState(session, atSeconds),
     waveform: getVisibleWaveformState(session, atSeconds),
     stale: getVisibleStaleVitals(session, atSeconds),

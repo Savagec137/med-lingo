@@ -14,6 +14,8 @@ import { getV3Scenario, PILOT_SCENARIO_ID } from "../scenarios/v3-catalog.ts";
 import { centre15ScreenModel } from "../ui/centre15-screen.ts";
 import { priorityActionsScreenModel } from "../ui/priority-actions-screen.ts";
 import { reevaluationScreenModel } from "../ui/reevaluation-screen.ts";
+import { vitalsScreenModel } from "../ui/vitals-screen.ts";
+import { monitoringSnapshot } from "../physiology/physiology-selectors.ts";
 
 /**
  * Les écrans 4, 5 et 6 en couche présentation.
@@ -465,4 +467,122 @@ test("les requêtes du moteur ne rendent jamais de session", () => {
   ]) {
     assert.ok(!source.includes(mutator), `queries.ts expose « ${mutator} », qui a un effet`);
   }
+});
+
+/* -------------------------------------------------------------------------- */
+/* Écran 3 — les blocs de la maquette                                         */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * La maquette de l'écran des constantes porte trois blocs que le modèle doit
+ * savoir produire : le panneau « État du patient », la liste à cocher
+ * « Matériel utilisé », et le partage entre mesures rapides et évaluations
+ * cliniques.
+ *
+ * Le premier est le plus exposé du mode : il donne une lecture clinique en trois
+ * mots. Les tests qui suivent vérifient d'abord qu'il se tait.
+ */
+
+const atVitalsPhase = (): InterventionSession => ({
+  ...createV3Session(scenario, { preparedEquipment: ALL_EQUIPMENT }),
+  phase: "vitals",
+  status: "active" as const,
+});
+
+test("le panneau « État du patient » ne dit rien sur une session vierge", () => {
+  const model = vitalsScreenModel(toSessionView(atVitalsPhase()));
+  assert.equal(model.patientReadout.length, 3);
+  for (const line of model.patientReadout) {
+    assert.equal(line.known, false, line.id);
+  }
+  // Aucune des trois phrases n'affirme quoi que ce soit du patient.
+  const labels = model.patientReadout.map((line) => line.label).join(" | ");
+  assert.equal(/stable|conscient|répond/iu.test(labels), false, labels);
+});
+
+test("« Stable » n'apparaît qu'après trois constantes relevées", () => {
+  // La stabilité est calculée depuis les sévérités de la SpO₂, du pouls et de la
+  // fréquence respiratoire. Deux mesures ne suffisent pas : le panneau reste muet.
+  const twoMeasures = play(atVitalsPhase(), "action.poser-saturometre");
+  const partial = vitalsScreenModel(toSessionView(twoMeasures)).patientReadout;
+  assert.equal(partial.find((line) => line.id === "stabilite")?.known, false);
+
+  const threeMeasures = play(twoMeasures, "action.compter-fr");
+  const complete = vitalsScreenModel(toSessionView(threeMeasures)).patientReadout;
+  const stability = complete.find((line) => line.id === "stabilite");
+  assert.equal(stability?.known, true);
+  assert.equal(stability?.label, "Stable");
+  assert.equal(stability?.tone, "positive");
+});
+
+test("« Répond aux questions » demande d'avoir interrogé le patient", () => {
+  const before = vitalsScreenModel(toSessionView(atVitalsPhase())).patientReadout;
+  assert.equal(before.find((line) => line.id === "communication")?.label, "Patient non interrogé");
+
+  const asked = play(atVitalsPhase(), "action.interroger-patient");
+  const after = vitalsScreenModel(toSessionView(asked)).patientReadout;
+  assert.equal(after.find((line) => line.id === "communication")?.label, "Répond aux questions");
+});
+
+test("la liste « Matériel utilisé » tient en libellés courts, tous décochés au départ", () => {
+  const model = vitalsScreenModel(toSessionView(atVitalsPhase()));
+  assert.deepEqual(
+    model.equipmentChecks.map((check) => check.label),
+    // Le nom de l'appareil quand il y en a un, celui de la donnée relevée sinon :
+    // exactement les six lignes de la maquette.
+    ["Saturomètre", "Tensiomètre", "Glucomètre", "Thermomètre", "Douleur", "Glasgow"],
+  );
+  assert.equal(
+    model.equipmentChecks.every((check) => !check.done),
+    true,
+  );
+
+  const posed = play(atVitalsPhase(), "action.poser-saturometre");
+  const after = vitalsScreenModel(toSessionView(posed)).equipmentChecks;
+  assert.equal(after.find((check) => check.id === "action.poser-saturometre")?.done, true);
+  assert.equal(after.find((check) => check.id === "action.prendre-tension")?.done, false);
+});
+
+test("mesures et évaluations se partagent comme dans la maquette", () => {
+  const model = vitalsScreenModel(toSessionView(atVitalsPhase()));
+
+  // Six mesures rapides : ce qui se lit sur un instrument.
+  assert.deepEqual(model.quickMeasures.map((measure) => measure.id).sort(), [
+    "action.compter-fr",
+    "action.faire-glycemie",
+    "action.palper-pouls",
+    "action.poser-saturometre",
+    "action.prendre-temperature",
+    "action.prendre-tension",
+  ]);
+  // Trois évaluations : un score sur une échelle, ou un constat sans unité.
+  assert.deepEqual(model.clinicalAssessments.map((measure) => measure.id).sort(), [
+    "action.evaluer-conscience",
+    "action.evaluer-douleur",
+    "action.observer-peau",
+  ]);
+  // Le retrait du capteur n'est ni l'un ni l'autre : il ne relève rien.
+  assert.deepEqual(
+    model.sensorControls.map((measure) => measure.id),
+    ["action.retirer-saturometre"],
+  );
+});
+
+test("« Signes vitaux » ne retient que les constantes surveillables", () => {
+  const session = atVitalsPhase();
+  const model = vitalsScreenModel(
+    toSessionView(session),
+    monitoringSnapshot(session, session.simulatedTimeSeconds),
+  );
+  assert.deepEqual(model.monitoredVitals.map((card) => card.factId).sort(), [
+    "fact.fc",
+    "fact.spo2",
+  ]);
+  // Les autres restent visibles : c'est cette grille en gabarits qui montre au
+  // joueur tout ce qu'il n'a pas encore relevé.
+  assert.ok(model.otherVitals.length >= 4);
+  assert.equal(
+    model.otherVitals.some((card) => card.factId === "fact.ta"),
+    true,
+  );
 });

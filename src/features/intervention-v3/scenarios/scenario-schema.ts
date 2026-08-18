@@ -55,7 +55,18 @@ const factValueSchema = z.discriminatedUnion("kind", [
   }),
   z.object({ kind: z.literal("text"), value: label }),
   z.object({ kind: z.literal("boolean"), value: z.boolean(), formatted: label }),
-  z.object({ kind: z.literal("enum"), value: label, formatted: label }),
+  z.object({
+    kind: z.literal("enum"),
+    value: label,
+    formatted: label,
+    /**
+     * Forme courte, pour les panneaux étroits — le bandeau « État du patient »
+     * de la maquette tient en trois lignes. Elle est **écrite**, jamais dérivée
+     * de l'identifiant : « consciente-anxieuse » abrégé mécaniquement donnerait
+     * « Consciente anxieuse », qui n'est pas du français.
+     */
+    short: label.optional(),
+  }),
 ]);
 
 const handoverItemSchema = z.object({

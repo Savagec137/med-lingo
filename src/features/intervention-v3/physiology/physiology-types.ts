@@ -302,6 +302,17 @@ export interface StaleVitalView {
 export interface MonitoringSnapshot {
   /** Instant auquel l'instantané a été pris, en secondes simulées. */
   atSeconds: number;
+  /**
+   * Les constantes qu'un capteur **peut** tenir à jour dans ce mode, posé ou non.
+   *
+   * À ne pas confondre avec celles qui le sont : cette liste ne dépend ni de ce
+   * que le joueur a mesuré, ni de ce qu'il a posé. Elle dit seulement « la
+   * saturation et le pouls se surveillent, la tension non », ce qui est une
+   * propriété du matériel d'une ambulance et n'apprend rien du patient. C'est
+   * elle qui permet à l'écran de réserver sa section « Signes vitaux » aux deux
+   * constantes surveillables, comme la maquette.
+   */
+  monitorableFactIds: string[];
   monitoring: MonitoringStateView;
   waveform: WaveformStateView;
   stale: StaleVitalView[];

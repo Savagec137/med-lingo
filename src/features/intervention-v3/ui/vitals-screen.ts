@@ -174,6 +174,49 @@ export interface MonitoringModel {
   stale: StaleVitalView[];
 }
 
+/**
+ * Le panneau « État du patient » de la maquette, en trois lignes.
+ *
+ * Chacune vient d'un fait, et **aucune n'est lisible sans l'action qui le
+ * révèle**. C'est le panneau le plus exposé de l'écran : il donne une lecture
+ * clinique en trois mots, et l'afficher gratuitement offrirait au joueur la
+ * conclusion qu'il doit construire. Sur une session vierge, les trois lignes
+ * disent leur absence.
+ */
+export interface PatientReadoutLine {
+  id: "stabilite" | "conscience" | "communication";
+  /** Ce que la ligne affiche : « Stable », « Confus », « Non évalué ». */
+  label: string;
+  known: boolean;
+  tone: "positive" | "neutral" | "warning" | "critical";
+}
+
+/**
+ * Le panneau « Matériel utilisé » de la maquette.
+ *
+ * Il ne liste pas le sac : il liste **ce qui a servi ou reste à faire**, appareils
+ * et évaluations chiffrées confondus — c'est exactement ce que la maquette y met,
+ * évaluation de la douleur et de la conscience comprises.
+ *
+ * Le critère est dérivé, jamais recopié : une ligne y figure si le geste mobilise
+ * un appareil **ou** produit un score sur une échelle (« /10 », « /15 »). Compter
+ * la fréquence respiratoire, palper le pouls et observer la peau en sont donc
+ * exclus, comme dans la maquette — et ils le resteront si le catalogue change,
+ * parce que le critère porte sur la nature du geste et non sur son nom.
+ */
+export interface EquipmentCheckModel {
+  id: PlayerActionId;
+  /**
+   * Libellé court, adapté à un panneau étroit : « Saturomètre », « Douleur ».
+   *
+   * Ce n'est pas le libellé du geste — « Poser le saturomètre » déborde et se
+   * fait tronquer. Il est dérivé de ce que la ligne désigne réellement : le nom
+   * de l'appareil quand il y en a un, celui de la donnée relevée sinon.
+   */
+  label: string;
+  done: boolean;
+}
+
 export interface QuickMeasureModel {
   id: PlayerActionId;
   label: string;
@@ -239,10 +282,36 @@ export interface EquipmentChipModel {
 export interface VitalsScreenModel {
   eyebrow: string;
   title: string;
+  /** Sous-titre de la maquette : « Surveillance et mesures ». */
+  subtitle: string;
+  /**
+   * Les trois lignes du panneau « État du patient » de la maquette.
+   *
+   * Le champ ne s'appelle pas `patientState` : c'est le nom du **champ caché**
+   * de la session, celui qui porte l'indice de santé simulé du patient. Une
+   * garde l'interdit partout dans un composant, sans regarder de quel objet il
+   * s'agit — délibérément, parce qu'un contrôle qui trierait les provenances se
+   * laisserait contourner. Deux champs homonymes obligeraient à l'assouplir ; le
+   * nom cède, pas la garde.
+   */
+  patientReadout: PatientReadoutLine[];
+  /** La liste à cocher du panneau « Matériel utilisé ». */
+  equipmentChecks: EquipmentCheckModel[];
   /** Récit de la phase, écrit dans le scénario. */
   narrative: string;
   /** Constantes chiffrées, dans l'ordre du registre de faits. */
   vitals: VitalCardModel[];
+  /**
+   * Les constantes qu'un capteur peut tenir à jour — la saturation et le pouls.
+   *
+   * La maquette leur donne la section « Signes vitaux » à elles seules, en deux
+   * grandes cartes avec leur tracé. Les autres suivent dans une grille dense :
+   * elles restent visibles, gabarits compris, parce que c'est cette grille vierge
+   * qui montre au joueur tout ce qu'il n'a pas encore relevé.
+   */
+  monitoredVitals: VitalCardModel[];
+  /** Le reste des constantes du scénario, dans l'ordre du registre. */
+  otherVitals: VitalCardModel[];
   /** Combien de constantes attendues sont relevées, pour la jauge de la maquette. */
   measuredCount: number;
   expectedCount: number;
@@ -263,6 +332,18 @@ export interface VitalsScreenModel {
    * de le joindre.
    */
   communications: QuickMeasureModel[];
+  /**
+   * Les évaluations cliniques, séparées des mesures rapides comme dans la
+   * maquette.
+   *
+   * Le partage est dérivé du registre : une **mesure** lit une grandeur physique
+   * — un pourcentage, des millimètres de mercure, des cycles par minute. Une
+   * **évaluation** produit un score sur une échelle (« /10 », « /15 ») ou une
+   * description sans unité. Ce critère rend exactement les trois cartes de la
+   * maquette, et il tiendra si le catalogue s'étend, contrairement à une liste
+   * écrite à la main ou déduite du nom des actions.
+   */
+  clinicalAssessments: QuickMeasureModel[];
   /** Ce qui anime l'écran. Tout y est nul tant que la mesure n'est pas prise. */
   monitoring: MonitoringModel;
   evaluations: EvaluationModel[];
@@ -566,6 +647,118 @@ function numericOf(read: FactRead): number | null {
   return null;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Le panneau « État du patient »                                             */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Correspondance entre l'énumération de stabilité produite par le moteur et le
+ * mot que la maquette affiche.
+ *
+ * L'énumération vient de `read-fact`, qui la calcule depuis les sévérités des
+ * constantes relevées. Elle n'existe donc pas tant que trois mesures n'ont pas
+ * été prises, et c'est ce qui rend cette ligne sûre.
+ */
+const STABILITY_LABELS: Record<string, { label: string; tone: PatientReadoutLine["tone"] }> = {
+  stables: { label: "Stable", tone: "positive" },
+  surveiller: { label: "À surveiller", tone: "warning" },
+  degrades: { label: "Paramètres dégradés", tone: "critical" },
+};
+
+/**
+ * Les trois lignes du panneau « État du patient ».
+ *
+ * Chacune est une lecture, jamais une déduction : la stabilité vient des
+ * constantes relevées, la conscience de l'évaluation faite, la communication du
+ * fait d'avoir interrogé le patient. Sur une session vierge, les trois disent
+ * leur absence — et c'est ce panneau, plus qu'aucun autre, qui doit se taire :
+ * « Stable » affiché gratuitement donnerait au joueur la conclusion qu'il est
+ * censé construire.
+ */
+export function patientReadoutLines(session: InterventionSessionView): PatientReadoutLine[] {
+  const stability = readFact(session, "fact.stabilite-parametres");
+  const consciousness = readFact(session, "fact.conscience-qualitative");
+  const interview = readFact(session, "fact.plaintes");
+
+  const stabilityEntry =
+    stability.status === "known" && stability.value.kind === "enum"
+      ? STABILITY_LABELS[stability.value.value]
+      : undefined;
+
+  return [
+    {
+      id: "stabilite",
+      label: stabilityEntry?.label ?? "Stabilité non évaluée",
+      known: stabilityEntry !== undefined,
+      tone: stabilityEntry?.tone ?? "neutral",
+    },
+    {
+      id: "conscience",
+      // La forme courte est **écrite dans le scénario**. À défaut, la forme longue
+      // est affichée telle quelle : mieux vaut une ligne qui déborde qu'un
+      // abrégé fabriqué à partir d'un identifiant.
+      label:
+        consciousness.status === "known"
+          ? consciousness.value.kind === "enum"
+            ? (consciousness.value.short ?? consciousness.value.formatted)
+            : displayValue(consciousness.value)
+          : "Conscience non évaluée",
+      known: consciousness.status === "known",
+      tone: consciousness.status === "known" ? "neutral" : "neutral",
+    },
+    {
+      id: "communication",
+      label: interview.status === "known" ? "Répond aux questions" : "Patient non interrogé",
+      known: interview.status === "known",
+      tone: "neutral",
+    },
+  ];
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mesures et évaluations                                                     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Une unité qui n'est qu'un dénominateur d'échelle : « /10 », « /15 ».
+ *
+ * À distinguer d'un débit comme « /min », qui est bien une grandeur physique.
+ * C'est ce seul caractère qui sépare une évaluation d'une mesure, et il se lit
+ * dans le registre plutôt que dans le nom du geste.
+ */
+const isScaleUnit = (unit: string | null): boolean => unit !== null && /^\/\d+$/u.test(unit);
+
+/**
+ * Un geste est une **évaluation clinique** si rien de ce qu'il révèle ne se lit
+ * sur un instrument : que des scores sur une échelle, ou des constats sans unité.
+ * Tout le reste est une mesure.
+ */
+export function isClinicalAssessment(action: PlayerAction): boolean {
+  if (action.reveals.length === 0) return false;
+  return action.reveals.every((factId) => {
+    const unit = getFact(factId).unit;
+    return unit === null || isScaleUnit(unit);
+  });
+}
+
+/**
+ * Un geste figure au panneau « Matériel utilisé » s'il mobilise un appareil ou
+ * s'il produit un score sur une échelle. C'est ce que la maquette y met — les
+ * quatre appareils, plus l'évaluation de la douleur et celle de la conscience.
+ */
+function belongsToEquipmentPanel(action: PlayerAction): boolean {
+  if (action.requires.equipment.length > 0) return true;
+  return action.reveals.some((factId) => isScaleUnit(getFact(factId).unit));
+}
+
+/** Le nom court d'une ligne du panneau : l'appareil, ou la donnée qu'elle relève. */
+function equipmentCheckLabel(action: PlayerAction): string {
+  const [equipment] = action.requires.equipment;
+  if (equipment) return EQUIPMENT_LABELS[equipment];
+  const [factId] = action.reveals;
+  return factId ? getFact(factId).label : action.label;
+}
+
 /**
  * L'écran des constantes.
  *
@@ -604,6 +797,12 @@ export function vitalsScreenModel(
   const probeActions = actionsForPhase(session.phase).filter(
     (action) => action.category === "probe",
   );
+  const revealingProbes = probeActions.filter((action) => action.reveals.length > 0);
+
+  // Les constantes qu'un capteur peut tenir à jour, qu'il soit posé ou non : la
+  // maquette leur réserve la section « Signes vitaux ». Sans instantané, la
+  // distinction n'a pas lieu d'être et tout retombe dans la grille dense.
+  const monitorable = new Set(snapshot?.monitorableFactIds ?? []);
 
   // La jauge compte les constantes **attendues au bilan**, pas toutes celles que
   // le scénario mobilise : c'est sur le bilan que le joueur est évalué.
@@ -613,12 +812,24 @@ export function vitalsScreenModel(
   return {
     eyebrow: "Intervention en cours",
     title: "Constantes en direct",
+    subtitle: "Surveillance et mesures",
+    patientReadout: patientReadoutLines(session),
+    equipmentChecks: revealingProbes.filter(belongsToEquipmentPanel).map((action) => ({
+      id: action.id,
+      label: equipmentCheckLabel(action),
+      done: actionAvailability(session, action).alreadyDone,
+    })),
     narrative: scenario.narrative[session.phase],
     vitals,
+    monitoredVitals: vitals.filter((card) => monitorable.has(card.factId)),
+    otherVitals: vitals.filter((card) => !monitorable.has(card.factId)),
     measuredCount: expectedVitals.filter((card) => card.measured && !card.isStale).length,
     expectedCount: expectedVitals.length,
-    quickMeasures: probeActions
-      .filter((action) => action.reveals.length > 0)
+    quickMeasures: revealingProbes
+      .filter((action) => !isClinicalAssessment(action))
+      .map((action) => quickMeasure(session, action)),
+    clinicalAssessments: revealingProbes
+      .filter((action) => isClinicalAssessment(action))
       .map((action) => quickMeasure(session, action)),
     sensorControls: probeActions
       .filter((action) => action.reveals.length === 0)

@@ -5,7 +5,7 @@
   "specialty": "Pneumologie",
   "learningObjective": "Reconnaître une hypoxie qui ne se voit qu'à la mesure, et comprendre qu'un patient non pris en charge continue de se dégrader pendant que l'on recueille le bilan.",
   "difficulty": "intermediate",
-  "illustration": "medical",
+  "illustration": "respiratory",
   "estimatedMinutes": 12,
   "baseXp": 190,
   "startingPatient": 45,
@@ -122,7 +122,8 @@
     "fact.conscience-qualitative": {
       "kind": "enum",
       "value": "consciente-anxieuse",
-      "formatted": "Consciente et orientée, très anxieuse, parle par mots isolés"
+      "formatted": "Consciente et orientée, très anxieuse, parle par mots isolés",
+      "short": "Consciente, anxieuse"
     },
     "fact.respiration-presente": {
       "kind": "boolean",
@@ -196,77 +197,104 @@
     {
       "id": "item.motif",
       "label": "Motif d'appel",
-      "factIds": ["fact.motif-appel"],
+      "factIds": [
+        "fact.motif-appel"
+      ],
       "expected": false,
       "disclosable": false
     },
     {
       "id": "item.circonstances",
       "label": "Circonstances",
-      "factIds": ["fact.circonstances", "fact.position-patient"],
+      "factIds": [
+        "fact.circonstances",
+        "fact.position-patient"
+      ],
       "expected": false,
       "disclosable": false
     },
     {
       "id": "item.conscience",
       "label": "Niveau de conscience",
-      "factIds": ["fact.conscience-qualitative"],
+      "factIds": [
+        "fact.conscience-qualitative"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.constantes",
       "label": "Constantes mesurées",
-      "factIds": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr"],
+      "factIds": [
+        "fact.spo2",
+        "fact.fc",
+        "fact.ta",
+        "fact.fr"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.temperature",
       "label": "Température",
-      "factIds": ["fact.temperature"],
+      "factIds": [
+        "fact.temperature"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.coloration",
       "label": "Coloration cutanée",
-      "factIds": ["fact.coloration"],
+      "factIds": [
+        "fact.coloration"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.heure-debut",
       "label": "Heure de début",
-      "factIds": ["fact.heure-debut"],
+      "factIds": [
+        "fact.heure-debut"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.antecedents",
       "label": "Antécédents",
-      "factIds": ["fact.antecedents"],
+      "factIds": [
+        "fact.antecedents"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.traitements",
       "label": "Traitements",
-      "factIds": ["fact.traitements"],
+      "factIds": [
+        "fact.traitements"
+      ],
       "expected": true,
       "disclosable": true
     },
     {
       "id": "item.allergies",
       "label": "Allergies",
-      "factIds": ["fact.allergies"],
+      "factIds": [
+        "fact.allergies"
+      ],
       "expected": false,
       "disclosable": true
     },
     {
       "id": "item.douleur",
       "label": "Douleur",
-      "factIds": ["fact.eva", "fact.douleur-declaree"],
+      "factIds": [
+        "fact.eva",
+        "fact.douleur-declaree"
+      ],
       "expected": false,
       "disclosable": true
     },
@@ -430,10 +458,15 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.spo2", "fact.coloration"],
+          "justifiedBy": [
+            "fact.spo2",
+            "fact.coloration"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c05"],
+          "competencyIds": [
+            "dea.c05"
+          ],
           "knowledgeId": "intervention.detresse-respiratoire"
         },
         {
@@ -443,10 +476,15 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.respiration-presente", "fact.position-patient"],
+          "justifiedBy": [
+            "fact.respiration-presente",
+            "fact.position-patient"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c02"],
+          "competencyIds": [
+            "dea.c02"
+          ],
           "knowledgeId": "intervention.transport-sanitaire"
         },
         {
@@ -456,10 +494,15 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.fr", "fact.spo2"],
+          "justifiedBy": [
+            "fact.fr",
+            "fact.spo2"
+          ],
           "consequenceFamily": "stability",
           "actId": "acte.r6311-17.ii.4",
-          "competencyIds": ["dea.c04"],
+          "competencyIds": [
+            "dea.c04"
+          ],
           "knowledgeId": "intervention.surveillance-du-patient"
         },
         {
@@ -469,10 +512,16 @@
           "recommended": true,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.spo2", "fact.fr"],
+          "justifiedBy": [
+            "fact.spo2",
+            "fact.fr"
+          ],
           "consequenceFamily": "risk_reduction",
           "actId": null,
-          "competencyIds": ["dea.c10", "dea.c11"],
+          "competencyIds": [
+            "dea.c10",
+            "dea.c11"
+          ],
           "knowledgeId": "intervention.transmission-au-medecin-regulateur"
         },
         {
@@ -482,10 +531,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.conscience-qualitative"],
+          "justifiedBy": [
+            "fact.conscience-qualitative"
+          ],
           "consequenceFamily": "stability",
           "actId": null,
-          "competencyIds": ["dea.c01"],
+          "competencyIds": [
+            "dea.c01"
+          ],
           "knowledgeId": "intervention.bilan-secondaire"
         },
         {
@@ -495,10 +548,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.spo2"],
+          "justifiedBy": [
+            "fact.spo2"
+          ],
           "consequenceFamily": "handover_quality",
           "actId": "acte.r6311-17.ii.1",
-          "competencyIds": ["dea.c04"],
+          "competencyIds": [
+            "dea.c04"
+          ],
           "knowledgeId": "intervention.constantes-vitales"
         },
         {
@@ -508,10 +565,14 @@
           "recommended": false,
           "outOfScope": false,
           "outOfScopeReason": null,
-          "justifiedBy": ["fact.dangers"],
+          "justifiedBy": [
+            "fact.dangers"
+          ],
           "consequenceFamily": "handover_quality",
           "actId": null,
-          "competencyIds": ["dea.c06"],
+          "competencyIds": [
+            "dea.c06"
+          ],
           "knowledgeId": "intervention.transport-sanitaire"
         },
         {
