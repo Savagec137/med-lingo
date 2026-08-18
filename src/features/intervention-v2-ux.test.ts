@@ -10,8 +10,12 @@ function source(path: string) {
   return readFileSync(resolve(root, path), "utf8");
 }
 
-test("la route expose la garde V2 et respecte reduced-motion", () => {
-  const route = source("src/routes/intervention.tsx");
+test("l'écran de garde V2 expose son expérience et respecte reduced-motion", () => {
+  // Le contrôle portait sur `routes/intervention.tsx`. Cette adresse redirige
+  // désormais vers le simulateur, et l'écran de garde vit hors circuit dans
+  // `components/InterventionLegacyScreen.tsx`. Le sujet du test n'a pas changé —
+  // seul l'endroit où il se trouve.
+  const route = source("src/components/InterventionLegacyScreen.tsx");
 
   assert.match(route, /InterventionShiftExperience/);
   assert.match(route, /useReducedMotion/);

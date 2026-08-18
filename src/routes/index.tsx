@@ -10,7 +10,6 @@ import {
   ChevronRight,
   User as UserIcon,
   Ambulance as AmbulanceIcon,
-  Activity as ActivityIcon,
 } from "lucide-react";
 import { LessonIcon, MissionIcon } from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
@@ -208,49 +207,32 @@ const Home = memo(function Home() {
             </Link>
           )}
 
-          {/* Simulation d'intervention — le mode où chaque donnée se gagne */}
+          {/*
+            Mode Intervention — une seule entrée, et elle mène au simulateur.
+            Il y en avait deux : « Simulation » vers le mode V3, et « Garde »
+            vers l'ancien moteur à questions. Un joueur qui cherchait le mode
+            intervention tombait une fois sur deux sur le quiz.
+          */}
           <Link
             to="/intervention-v3"
             search={{}}
             className="mb-4 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-md border border-emerald-400/30 p-4 shadow-xl hover:shadow-2xl transition-all active:scale-95"
           >
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-emerald-400 text-slate-900">
-              <ActivityIcon className="h-7 w-7" />
+              <AmbulanceIcon className="h-7 w-7" />
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-xs font-extrabold uppercase tracking-wider text-emerald-300">
                 Simulation
               </div>
               <div className="font-display text-base font-extrabold text-white">
-                Intervention en temps réel
+                Mode Intervention
               </div>
               <div className="text-sm text-emerald-200/70">
                 Aucune constante affichée : tu la prends, tu la demandes, tu la transmets
               </div>
             </div>
             <ChevronRight className="h-6 w-6 text-emerald-300" />
-          </Link>
-
-          {/* Mode Intervention CTA */}
-          <Link
-            to="/intervention"
-            className="mb-4 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 backdrop-blur-md border border-cyan-400/30 p-4 shadow-xl hover:shadow-2xl transition-all active:scale-95"
-          >
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-cyan-400 text-slate-900">
-              <AmbulanceIcon className="h-7 w-7" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <div className="text-xs font-extrabold uppercase tracking-wider text-cyan-300">
-                Garde
-              </div>
-              <div className="font-display text-base font-extrabold text-white">
-                Mode Intervention
-              </div>
-              <div className="text-sm text-cyan-200/70">
-                Quinze missions à décisions, enchaînées sur une garde
-              </div>
-            </div>
-            <ChevronRight className="h-6 w-6 text-cyan-300" />
           </Link>
 
           {/* Daily missions */}

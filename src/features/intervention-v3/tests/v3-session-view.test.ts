@@ -299,3 +299,26 @@ test("les composants animés ne reçoivent que des cadences déjà dérivées", 
     );
   }
 });
+
+test("aucun composant animé ne se donne de cadence par défaut", () => {
+  // La faute vient du prototype Bolt, dont l'onde écrivait `heartRate ?? 80` :
+  // sans mesure, elle battait quand même, à quatre-vingts. Une onde qui bat
+  // révèle une fréquence aussi sûrement qu'un chiffre — c'est la fuite que le
+  // mode interdit, et elle se glisse dans une valeur de repli anodine.
+  const root = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+  const monitoringDir = join(root, "components", "intervention-v3", "monitoring");
+
+  for (const file of readdirSync(monitoringDir).filter((name) => name.endsWith(".tsx"))) {
+    const source = readFileSync(join(monitoringDir, file), "utf8")
+      .replace(/\/\*[\s\S]*?\*\//g, " ")
+      .replace(/\/\/[^\n]*/g, " ");
+    // Un repli numérique sur une cadence : `rate ?? 80`, `pulseBpm || 72`.
+    const fallback =
+      /\b(rate|bpm|pulseBpm|heartRate|ratePerMinute|respiratoryRate\w*)\s*(\?\?|\|\|)\s*\d/i;
+    assert.equal(
+      fallback.test(source),
+      false,
+      `${file} se donne une cadence par défaut : l'animation battrait sans mesure`,
+    );
+  }
+});

@@ -29,10 +29,27 @@ const ITEMS: NavItem[] = [
 
 const HIDDEN_PREFIXES = ["/lecon", "/auth", "/onboarding"];
 
+/**
+ * Une intervention engagée est un contexte fermé, comme une leçon.
+ *
+ * La barre principale s'y efface au profit de la barre de mission, qui dit où
+ * l'on en est du bilan. Deux barres empilées se recouvriraient, et surtout la
+ * seconde perdrait son sens : on ne quitte pas une intervention en cours pour
+ * aller à la boutique.
+ *
+ * Le contrôle porte sur le paramètre de mission et non sur la seule adresse :
+ * `/intervention-v3` sans mission engagée est l'écran de choix, où la barre
+ * principale reste utile.
+ */
+const isEngagedIntervention = (pathname: string, search: string): boolean =>
+  pathname.startsWith("/intervention-v3") && /(^|[?&])scenario=/.test(search);
+
 export function BottomNav() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const searchString = useRouterState({ select: (state) => state.location.searchStr });
 
   if (HIDDEN_PREFIXES.some((prefix) => pathname.startsWith(prefix))) return null;
+  if (isEngagedIntervention(pathname, searchString)) return null;
 
   return (
     <nav

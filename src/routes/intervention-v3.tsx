@@ -2,6 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
 import { TopBar } from "@/components/TopBar";
 import { MissionListScreen } from "@/components/intervention-v3/MissionListScreen";
+import { MissionNav } from "@/components/intervention-v3/MissionNav";
 import { ArrivalScreen } from "@/components/intervention-v3/ArrivalScreen";
 import { Centre15Screen } from "@/components/intervention-v3/Centre15Screen";
 import { DebriefScreen } from "@/components/intervention-v3/DebriefScreen";
@@ -18,6 +19,7 @@ import { newCallScreenModel } from "@/features/intervention-v3/ui/new-call-scree
 import { priorityActionsScreenModel } from "@/features/intervention-v3/ui/priority-actions-screen";
 import { reevaluationScreenModel } from "@/features/intervention-v3/ui/reevaluation-screen";
 import { missionListScreenModel } from "@/features/intervention-v3/ui/mission-list-screen";
+import { missionStations } from "@/features/intervention-v3/ui/mission-nav";
 import { vitalsScreenModel } from "@/features/intervention-v3/ui/vitals-screen";
 import { findV3Scenario } from "@/features/intervention-v3/scenarios/v3-catalog";
 
@@ -253,6 +255,9 @@ function InterventionV3Game({
         {screen()}
         <PhaseAdvance game={game} />
       </main>
+      {/* La barre de mission de la maquette. Elle indique où l'on en est ; elle
+          ne permet pas d'y sauter, parce que les phases s'enchaînent. */}
+      <MissionNav stations={missionStations(session.phase)} />
     </div>
   );
 }

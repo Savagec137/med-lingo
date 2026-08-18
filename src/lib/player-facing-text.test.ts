@@ -25,10 +25,12 @@ test("la page d'accueil mène au mode simulation", () => {
   );
 });
 
-test("la page Mode Intervention mène au mode simulation", () => {
+test("l'ancienne adresse du Mode Intervention mène au simulateur", () => {
+  // Elle y menait par un lien, à côté de l'ancien quiz. Elle y mène désormais
+  // par une redirection : le quiz n'est plus une destination possible.
   assert.match(
     read("routes/intervention.tsx"),
-    /to="\/intervention-v3"/u,
+    /redirect\(\{\s*to:\s*"\/intervention-v3"/u,
     "Les deux modes tournent sur des moteurs différents : celui qui n'est lié nulle part est invisible.",
   );
 });

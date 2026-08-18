@@ -24,6 +24,7 @@ import type {
   VitalsScreenModel,
 } from "@/features/intervention-v3/ui/vitals-screen";
 import { MeasurementAnimation } from "./monitoring/MeasurementAnimation";
+import { PlethCanvas } from "./monitoring/PlethCanvas";
 import { useReducedMotion } from "./monitoring/use-reduced-motion";
 import { VitalCard } from "./monitoring/VitalCard";
 
@@ -153,9 +154,18 @@ export function VitalsScreen({
       <p className="text-sm leading-relaxed text-slate-300/90">{model.narrative}</p>
 
       {/* « Signes vitaux » : la maquette n'y met que les constantes qu'un capteur
-          tient à jour, en deux grandes cartes avec leur tracé. */}
+          tient à jour, en deux grandes cartes avec leur tracé.
+
+          Le tracé large au-dessus vient du prototype Bolt : un vrai moniteur
+          montre l'onde en grand, pas seulement une vignette dans une carte. Il
+          reste muet tant que le pouls n'a pas été relevé. */}
       {model.monitoredVitals.length > 0 && (
         <Panel title="Signes vitaux">
+          <PlethCanvas
+            trace={model.monitoring.waveform?.pulse ?? null}
+            reducedMotion={reducedMotion}
+            placeholder={monitored ? "Aucune constante relevée" : "Saturomètre non posé"}
+          />
           <ul className="grid grid-cols-2 gap-2">
             {model.monitoredVitals.map((card) => (
               <li key={card.factId}>
