@@ -440,7 +440,7 @@
       "id": "fact.heure-debut",
       "category": "interview",
       "visibility": "on_action",
-      "label": "Heure de la chute",
+      "label": "Heure de début",
       "valueKind": "text",
       "unit": null,
       "placeholder": "Témoins non interrogés",

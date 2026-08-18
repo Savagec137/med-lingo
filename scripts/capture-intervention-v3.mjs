@@ -22,6 +22,8 @@ import { mkdirSync } from "node:fs";
 
 const OUT = process.env.CAPTURE_DIR ?? "captures-v3";
 const BASE = process.env.CAPTURE_BASE_URL ?? "http://127.0.0.1:5180";
+/** Mission à capturer. Par défaut le pilote ; « v3-detresse-respiratoire » pour l'autre. */
+const SCENARIO = process.env.CAPTURE_SCENARIO ?? "v3-pilot-trauma-cranien";
 mkdirSync(OUT, { recursive: true });
 
 const browser = await chromium.launch({
@@ -53,7 +55,13 @@ const scrollTo = async (text) => {
   await page.waitForTimeout(400);
 };
 
+// La liste d'abord : c'est l'état d'entrée du mode, et c'est ce qui rend la
+// seconde mission joignable.
 await page.goto(`${BASE}/intervention-v3`, { waitUntil: "networkidle" });
+await page.waitForTimeout(1000);
+await shot("0-liste-missions");
+
+await page.goto(`${BASE}/intervention-v3?scenario=${SCENARIO}`, { waitUntil: "networkidle" });
 await page.waitForTimeout(1000);
 await shot("1-nouvel-appel");
 

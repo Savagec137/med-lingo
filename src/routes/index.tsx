@@ -211,6 +211,7 @@ const Home = memo(function Home() {
           {/* Simulation d'intervention — le mode où chaque donnée se gagne */}
           <Link
             to="/intervention-v3"
+            search={{}}
             className="mb-4 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-md border border-emerald-400/30 p-4 shadow-xl hover:shadow-2xl transition-all active:scale-95"
           >
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-emerald-400 text-slate-900">

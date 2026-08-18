@@ -73,6 +73,7 @@ function InterventionRoute() {
             */}
             <Link
               to="/intervention-v3"
+              search={{}}
               className="relative mb-6 flex items-center gap-3 rounded-2xl border border-emerald-300/25 bg-emerald-300/[0.06] p-4 transition hover:bg-emerald-300/[0.1] active:scale-[0.99]"
             >
               <Activity className="h-6 w-6 shrink-0 text-emerald-300" />

@@ -18,6 +18,8 @@ interface Props {
   model: DebriefScreenModel;
   /** Rejouer la mission depuis le début. */
   onReplay: () => void;
+  /** Revenir au choix de mission. La maquette porte ce bouton depuis le début. */
+  onChooseAnotherMission?: (() => void) | undefined;
   /** Ouvrir une fiche de révision. */
   onOpenKnowledge: (knowledgeId: string) => void;
 }
@@ -36,7 +38,7 @@ const TONE_ICONS: Record<DebriefTone, typeof Check> = {
   critical: AlertOctagon,
 };
 
-export function DebriefScreen({ model, onReplay, onOpenKnowledge }: Props) {
+export function DebriefScreen({ model, onReplay, onChooseAnotherMission, onOpenKnowledge }: Props) {
   return (
     <section className="flex flex-col gap-5">
       <header className="flex flex-col gap-3">
@@ -109,13 +111,24 @@ export function DebriefScreen({ model, onReplay, onOpenKnowledge }: Props) {
         <DebriefSection key={entry.id} section={entry} onOpenKnowledge={onOpenKnowledge} />
       ))}
 
-      <button
-        type="button"
-        onClick={onReplay}
-        className="press rounded-2xl bg-cyan-400/90 px-4 py-3 text-sm font-black text-slate-950"
-      >
-        Rejouer la mission
-      </button>
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <button
+          type="button"
+          onClick={onReplay}
+          className="press flex-1 rounded-2xl bg-cyan-400/90 px-4 py-3 text-sm font-black text-slate-950"
+        >
+          Rejouer la mission
+        </button>
+        {onChooseAnotherMission && (
+          <button
+            type="button"
+            onClick={onChooseAnotherMission}
+            className="press flex-1 rounded-2xl border border-white/12 bg-white/[0.05] px-4 py-3 text-sm font-black text-slate-200"
+          >
+            Choisir une autre mission
+          </button>
+        )}
+      </div>
     </section>
   );
 }

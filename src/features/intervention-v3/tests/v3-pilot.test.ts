@@ -16,10 +16,19 @@ const scenario = getV3Scenario(PILOT_SCENARIO_ID);
 /* Périmètre de livraison                                                     */
 /* -------------------------------------------------------------------------- */
 
-test("le catalogue V3 ne contient que le scénario pilote", () => {
-  // Un seul scénario livré : c'est la condition du premier lot.
-  assert.equal(V3_SCENARIOS.length, 1);
-  assert.equal(V3_SCENARIOS[0]?.id, PILOT_SCENARIO_ID);
+test("tout scénario du catalogue V3 valide son schéma", () => {
+  // Le contrôle portait sur le **nombre** de scénarios, ce qui n'affirmait
+  // qu'une décision de lot : il se cassait à l'ajout du deuxième cas sans
+  // qu'aucune règle ait été enfreinte. Ce qui doit tenir, c'est que chaque
+  // scénario livré soit valide et identifié de façon unique.
+  assert.ok(V3_SCENARIOS.length >= 1);
+  assert.ok(V3_SCENARIOS.some((entry) => entry.id === PILOT_SCENARIO_ID));
+
+  const ids = V3_SCENARIOS.map((entry) => entry.id);
+  assert.equal(new Set(ids).size, ids.length, "deux scénarios portent le même identifiant");
+  for (const entry of V3_SCENARIOS) {
+    assert.equal(scenarioSchema.safeParse(entry).success, true, entry.id);
+  }
 });
 
 test("le scénario pilote valide son schéma", () => {

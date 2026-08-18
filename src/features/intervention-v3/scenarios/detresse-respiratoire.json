@@ -1,0 +1,602 @@
+{
+  "id": "v3-detresse-respiratoire",
+  "schemaVersion": 1,
+  "title": "Détresse respiratoire d'aggravation progressive",
+  "specialty": "Pneumologie",
+  "learningObjective": "Reconnaître une hypoxie qui ne se voit qu'à la mesure, et comprendre qu'un patient non pris en charge continue de se dégrader pendant que l'on recueille le bilan.",
+  "difficulty": "intermediate",
+  "illustration": "medical",
+  "estimatedMinutes": 12,
+  "baseXp": 190,
+  "startingPatient": 45,
+  "hintPolicy": "gap_list",
+  "alert": {
+    "patient": "Femme",
+    "age": "environ 74 ans",
+    "reason": "Gêne respiratoire d'aggravation progressive",
+    "priority": "Élevée",
+    "distance": "3,1 km",
+    "location": "12 rue des Lilas, 3e étage sans ascenseur",
+    "time": "06:12",
+    "dispatchNote": "Appel du fils : sa mère respire mal depuis deux jours, ne peut plus terminer ses phrases depuis cette nuit. Elle est consciente. Temps sec, 9 °C."
+  },
+  "clinical": {
+    "ageBand": "adult",
+    "cardiacArrest": false,
+    "glycemiaRelevant": true,
+    "baseline": {
+      "hr": 112,
+      "sbp": 142,
+      "dbp": 88,
+      "spo2": 89,
+      "rr": 28,
+      "temperature": 37.4,
+      "gcs": 15,
+      "pain": 3,
+      "glycemia": 5.8
+    }
+  },
+  "clinicalTrust": "internal_to_validate",
+  "clinicalReviewNote": "Les valeurs cliniques et la vitesse de dégradation de ce scénario sont un contenu de jeu, construit à partir des tableaux usuels de détresse respiratoire de l'adulte. Elles ne sont pas l'extrait d'un document lisible de la bibliothèque et doivent être relues par le binôme médecin urgentiste et formateur DEA avant publication, au même titre que les affirmations suivies dans INTERVENTION_MEDICAL_REVIEW.md. Le seuil d'oxygénothérapie retenu est celui de l'adulte sans insuffisance respiratoire chronique : la conduite diffère chez un patient dont la cible de saturation est abaissée.",
+  "factIds": [
+    "fact.motif-appel",
+    "fact.lieu",
+    "fact.priorite",
+    "fact.contexte-appel",
+    "fact.circonstances",
+    "fact.position-patient",
+    "fact.temoins-presents",
+    "fact.scene-visible",
+    "fact.scene-securisee",
+    "fact.dangers",
+    "fact.indices-mecanisme",
+    "fact.conscience-qualitative",
+    "fact.respiration-presente",
+    "fact.spo2",
+    "fact.fc",
+    "fact.ta",
+    "fact.fr",
+    "fact.temperature",
+    "fact.glycemie",
+    "fact.eva",
+    "fact.glasgow",
+    "fact.coloration",
+    "fact.sudation",
+    "fact.plaintes",
+    "fact.douleur-declaree",
+    "fact.pci",
+    "fact.duree-inconscience",
+    "fact.heure-debut",
+    "fact.antecedents",
+    "fact.traitements",
+    "fact.allergies",
+    "fact.stabilite-parametres"
+  ],
+  "factValues": {
+    "fact.motif-appel": {
+      "kind": "text",
+      "value": "Gêne respiratoire d'aggravation progressive"
+    },
+    "fact.lieu": {
+      "kind": "text",
+      "value": "12 rue des Lilas, 3e étage sans ascenseur"
+    },
+    "fact.priorite": {
+      "kind": "text",
+      "value": "Élevée"
+    },
+    "fact.contexte-appel": {
+      "kind": "text",
+      "value": "Appel du fils, présent sur place"
+    },
+    "fact.circonstances": {
+      "kind": "text",
+      "value": "Gêne respiratoire depuis deux jours, aggravée cette nuit ; la patiente ne termine plus ses phrases"
+    },
+    "fact.position-patient": {
+      "kind": "text",
+      "value": "Assise au bord du lit, penchée en avant, appuyée sur les bras"
+    },
+    "fact.temoins-presents": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Oui, le fils de la patiente"
+    },
+    "fact.scene-visible": {
+      "kind": "text",
+      "value": "Chambre encombrée, fenêtre fermée, boîte d'aérosol sur la table de nuit, ordonnance posée à côté"
+    },
+    "fact.scene-securisee": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Passage dégagé jusqu'à l'escalier"
+    },
+    "fact.dangers": {
+      "kind": "text",
+      "value": "Escalier étroit sans ascenseur, tapis glissants dans le couloir"
+    },
+    "fact.indices-mecanisme": {
+      "kind": "text",
+      "value": "Aucun traumatisme : l'aggravation est progressive, sans chute ni contexte accidentel"
+    },
+    "fact.conscience-qualitative": {
+      "kind": "enum",
+      "value": "consciente-anxieuse",
+      "formatted": "Consciente et orientée, très anxieuse, parle par mots isolés"
+    },
+    "fact.respiration-presente": {
+      "kind": "boolean",
+      "value": true,
+      "formatted": "Respiration rapide et superficielle, tirage sus-claviculaire"
+    },
+    "fact.coloration": {
+      "kind": "enum",
+      "value": "cyanose",
+      "formatted": "Lèvres et extrémités bleutées"
+    },
+    "fact.sudation": {
+      "kind": "enum",
+      "value": "marquee",
+      "formatted": "Sueurs abondantes"
+    },
+    "fact.plaintes": {
+      "kind": "text",
+      "value": "Dit manquer d'air, ne supporte pas d'être allongée, tousse depuis deux jours"
+    },
+    "fact.douleur-declaree": {
+      "kind": "text",
+      "value": "Gêne à la base du thorax droit à l'inspiration profonde, sans douleur constrictive"
+    },
+    "fact.pci": {
+      "kind": "boolean",
+      "value": false,
+      "formatted": "Non, aucune perte de connaissance rapportée"
+    },
+    "fact.duree-inconscience": {
+      "kind": "text",
+      "value": "Sans objet : la patiente est restée consciente en permanence"
+    },
+    "fact.heure-debut": {
+      "kind": "text",
+      "value": "Gêne apparue il y a deux jours, aggravation nette vers 03:00 cette nuit"
+    },
+    "fact.antecedents": {
+      "kind": "text",
+      "value": "Bronchite chronique suivie, hypertension artérielle, tabagisme sevré depuis cinq ans"
+    },
+    "fact.traitements": {
+      "kind": "text",
+      "value": "Bronchodilatateur inhalé quotidien, antihypertenseur ; aérosol pris deux fois cette nuit sans amélioration"
+    },
+    "fact.allergies": {
+      "kind": "text",
+      "value": "Allergie déclarée à la pénicilline"
+    }
+  },
+  "expectedHandoverFactIds": [
+    "fact.conscience-qualitative",
+    "fact.spo2",
+    "fact.fc",
+    "fact.ta",
+    "fact.fr",
+    "fact.temperature",
+    "fact.coloration",
+    "fact.heure-debut",
+    "fact.antecedents",
+    "fact.traitements"
+  ],
+  "handoverItems": [
+    {
+      "id": "item.identite",
+      "label": "Identité — sexe, âge",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.motif",
+      "label": "Motif d'appel",
+      "factIds": ["fact.motif-appel"],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.circonstances",
+      "label": "Circonstances",
+      "factIds": ["fact.circonstances", "fact.position-patient"],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.conscience",
+      "label": "Niveau de conscience",
+      "factIds": ["fact.conscience-qualitative"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.constantes",
+      "label": "Constantes mesurées",
+      "factIds": ["fact.spo2", "fact.fc", "fact.ta", "fact.fr"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.temperature",
+      "label": "Température",
+      "factIds": ["fact.temperature"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.coloration",
+      "label": "Coloration cutanée",
+      "factIds": ["fact.coloration"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.heure-debut",
+      "label": "Heure de début",
+      "factIds": ["fact.heure-debut"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.antecedents",
+      "label": "Antécédents",
+      "factIds": ["fact.antecedents"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.traitements",
+      "label": "Traitements",
+      "factIds": ["fact.traitements"],
+      "expected": true,
+      "disclosable": true
+    },
+    {
+      "id": "item.allergies",
+      "label": "Allergies",
+      "factIds": ["fact.allergies"],
+      "expected": false,
+      "disclosable": true
+    },
+    {
+      "id": "item.douleur",
+      "label": "Douleur",
+      "factIds": ["fact.eva", "fact.douleur-declaree"],
+      "expected": false,
+      "disclosable": true
+    },
+    {
+      "id": "item.gestes-realises",
+      "label": "Gestes réalisés",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    },
+    {
+      "id": "item.demande-de-renfort",
+      "label": "Demande de renfort",
+      "factIds": [],
+      "expected": false,
+      "disclosable": false
+    }
+  ],
+  "regulatorQuestions": [
+    {
+      "id": "question.saturation",
+      "text": "Quelle est sa saturation, et sous quel débit d'oxygène ?",
+      "triggeredByFactId": "fact.spo2",
+      "onOmission": true,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Annoncer la valeur mesurée, l'heure du relevé, et préciser si l'oxygène est en place",
+          "correct": true,
+          "rationale": "Une saturation ne se transmet jamais seule : la même valeur n'a pas le même sens à l'air ambiant et sous oxygène. Le régulateur décide sur les deux informations, pas sur le chiffre."
+        },
+        {
+          "id": "a2",
+          "text": "Elle est basse, mais elle parle encore",
+          "correct": false,
+          "rationale": "La parole conservée ne remplace pas une mesure. Un patient hypoxique parle jusqu'à un stade avancé, et le chiffre est le seul élément comparable d'un relevé à l'autre."
+        },
+        {
+          "id": "a3",
+          "text": "Je n'ai pas de saturomètre disponible",
+          "correct": false,
+          "rationale": "Annoncer une absence de matériel qu'on n'a pas vérifiée est une information fausse. Si le saturomètre manque réellement, cela se dit, et cela se dit tôt."
+        }
+      ]
+    },
+    {
+      "id": "question.frequence-respiratoire",
+      "text": "Quelle est sa fréquence respiratoire ?",
+      "triggeredByFactId": "fact.fr",
+      "onOmission": true,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Annoncer le nombre de cycles comptés sur une minute",
+          "correct": true,
+          "rationale": "La fréquence respiratoire est le paramètre qui se dégrade le premier et le plus souvent oublié. Elle se compte, sur une minute, et se transmet chiffrée."
+        },
+        {
+          "id": "a2",
+          "text": "Elle respire vite, très vite",
+          "correct": false,
+          "rationale": "« Vite » ne se compare pas. Vingt-quatre et trente-six cycles décrivent deux situations différentes, et seule la seconde impose une réponse immédiate."
+        },
+        {
+          "id": "a3",
+          "text": "Je l'estimerai pendant le transport",
+          "correct": false,
+          "rationale": "Compter une fréquence prend une minute et se fait sur place. Différer prive la régulation du paramètre le plus précoce au moment où elle décide."
+        }
+      ]
+    },
+    {
+      "id": "question.coloration",
+      "text": "Quelle est la coloration de la patiente ?",
+      "triggeredByFactId": "fact.coloration",
+      "onOmission": true,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Décrire ce qui a été observé : lèvres et extrémités",
+          "correct": true,
+          "rationale": "La coloration est un constat visuel gratuit et immédiat, que rien ne remplace : elle témoigne du retentissement de l'hypoxie là où le saturomètre peut être pris en défaut."
+        },
+        {
+          "id": "a2",
+          "text": "Normale, elle n'a pas l'air si mal",
+          "correct": false,
+          "rationale": "Annoncer une coloration normale sans avoir observé la peau transforme une absence d'observation en information fausse, et rassure à tort la régulation."
+        },
+        {
+          "id": "a3",
+          "text": "Elle est cyanosée, donc c'est une insuffisance respiratoire",
+          "correct": false,
+          "rationale": "Le constat est juste, la conclusion ne l'est pas : nommer une insuffisance respiratoire est un diagnostic, qui revient au médecin régulateur."
+        }
+      ]
+    },
+    {
+      "id": "question.traitements",
+      "text": "Quels traitements prend-elle, et en a-t-elle pris cette nuit ?",
+      "triggeredByFactId": "fact.traitements",
+      "onOmission": false,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Rapporter les traitements habituels et les prises récentes, telles que l'entourage les décrit",
+          "correct": true,
+          "rationale": "Un traitement pris sans effet est une information de gravité : elle dit que la situation a déjà résisté à ce qui la soulage d'ordinaire."
+        },
+        {
+          "id": "a2",
+          "text": "Je n'ai pas regardé, elle était trop gênée pour parler",
+          "correct": false,
+          "rationale": "Une patiente qui ne peut pas parler ne rend pas l'information inaccessible : l'ordonnance était sur la table de nuit et le fils est présent."
+        },
+        {
+          "id": "a3",
+          "text": "Rien de particulier",
+          "correct": false,
+          "rationale": "« Rien » affirme une absence. Tant que les documents n'ont pas été consultés, la réponse exacte est « non recherché », pas « aucun »."
+        }
+      ]
+    },
+    {
+      "id": "question.debut-des-signes",
+      "text": "Depuis quand est-elle comme ça ?",
+      "triggeredByFactId": "fact.heure-debut",
+      "onOmission": false,
+      "answers": [
+        {
+          "id": "a1",
+          "text": "Donner le début de la gêne et l'heure de l'aggravation, telles que le fils les rapporte",
+          "correct": true,
+          "rationale": "Deux jours de gêne et une aggravation nocturne ne décrivent pas la même urgence qu'un début brutal il y a une heure. La chronologie oriente la conduite."
+        },
+        {
+          "id": "a2",
+          "text": "Depuis ce matin, je crois",
+          "correct": false,
+          "rationale": "Une chronologie devinée est une information fausse. Le fils était présent : c'est à lui que la question se pose."
+        },
+        {
+          "id": "a3",
+          "text": "Je ne sais pas, elle ne peut pas parler",
+          "correct": false,
+          "rationale": "L'impossibilité de parler est une raison d'interroger l'entourage, pas de renoncer à la chronologie."
+        }
+      ]
+    }
+  ],
+  "gestureRounds": [
+    {
+      "id": "round.gestes-prioritaires",
+      "requiredSelections": 4,
+      "timerSeconds": 300,
+      "offered": [
+        {
+          "id": "geste.administrer-oxygene",
+          "label": "Administrer l'oxygène si indiqué",
+          "hint": "Selon la SpO₂ mesurée et le protocole en vigueur",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.spo2", "fact.coloration"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c05"],
+          "knowledgeId": "intervention.detresse-respiratoire"
+        },
+        {
+          "id": "geste.installer-selon-tolerance",
+          "label": "Installer selon la tolérance",
+          "hint": "Position demi-assise, celle que la patiente supporte",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.respiration-presente", "fact.position-patient"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c02"],
+          "knowledgeId": "intervention.transport-sanitaire"
+        },
+        {
+          "id": "geste.surveiller-conscience-ventilation",
+          "label": "Surveiller conscience et ventilation",
+          "hint": "Réévaluation rapprochée des fonctions vitales",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.fr", "fact.spo2"],
+          "consequenceFamily": "stability",
+          "actId": "acte.r6311-17.ii.4",
+          "competencyIds": ["dea.c04"],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        },
+        {
+          "id": "geste.demander-renfort",
+          "label": "Demander un renfort médicalisé",
+          "hint": "Solliciter la régulation devant une hypoxie qui persiste",
+          "recommended": true,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.spo2", "fact.fr"],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": ["dea.c10", "dea.c11"],
+          "knowledgeId": "intervention.transmission-au-medecin-regulateur"
+        },
+        {
+          "id": "geste.rassurer-surveiller",
+          "label": "Rassurer et surveiller",
+          "hint": "Maintenir le contact verbal, limiter l'anxiété",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.conscience-qualitative"],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": ["dea.c01"],
+          "knowledgeId": "intervention.bilan-secondaire"
+        },
+        {
+          "id": "geste.reevaluer-constantes",
+          "label": "Réévaluer les constantes",
+          "hint": "Nouveau relevé après mise sous oxygène",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.spo2"],
+          "consequenceFamily": "handover_quality",
+          "actId": "acte.r6311-17.ii.1",
+          "competencyIds": ["dea.c04"],
+          "knowledgeId": "intervention.constantes-vitales"
+        },
+        {
+          "id": "geste.preparer-le-transport",
+          "label": "Préparer le transport",
+          "hint": "Portage adapté dans un escalier étroit",
+          "recommended": false,
+          "outOfScope": false,
+          "outOfScopeReason": null,
+          "justifiedBy": ["fact.dangers"],
+          "consequenceFamily": "handover_quality",
+          "actId": null,
+          "competencyIds": ["dea.c06"],
+          "knowledgeId": "intervention.transport-sanitaire"
+        },
+        {
+          "id": "geste.allonger-a-plat",
+          "label": "Allonger la patiente à plat",
+          "hint": "Position horizontale sur le brancard",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Une patiente en détresse respiratoire choisit d'elle-même la position qui la soulage. L'allonger à plat contre sa tolérance aggrave la gêne et peut précipiter l'épuisement respiratoire.",
+          "justifiedBy": [],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.detresse-respiratoire"
+        },
+        {
+          "id": "geste.administrer-bronchodilatateur",
+          "label": "Administrer un bronchodilatateur",
+          "hint": "Donner un aérosol trouvé sur place",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Administrer un médicament, même inhalé et même appartenant au patient, ne figure pas parmi les actes que l'ambulancier accomplit. La prise se fait sur prescription, par un professionnel habilité ; l'ambulancier signale à la régulation ce qui a déjà été pris.",
+          "justifiedBy": [],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": null
+        },
+        {
+          "id": "geste.transporter-sans-reevaluation",
+          "label": "Transporter immédiatement sans réévaluation",
+          "hint": "Départ direct vers l'hôpital",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Descendre trois étages avec une patiente hypoxique sans avoir réévalué engage le transport sur un bilan périmé, au moment précis où l'effort du portage peut aggraver la situation.",
+          "justifiedBy": [],
+          "consequenceFamily": "risk_reduction",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        },
+        {
+          "id": "geste.attendre-sans-surveillance",
+          "label": "Attendre sans surveillance",
+          "hint": "Patienter jusqu'à l'arrivée du renfort",
+          "recommended": false,
+          "outOfScope": true,
+          "outOfScopeReason": "Attendre un renfort est parfois la bonne décision, mais jamais sans surveiller : une hypoxie s'aggrave en quelques minutes, et rien ne le signale si personne ne regarde.",
+          "justifiedBy": [],
+          "consequenceFamily": "stability",
+          "actId": null,
+          "competencyIds": [],
+          "knowledgeId": "intervention.surveillance-du-patient"
+        }
+      ]
+    }
+  ],
+  "narrative": {
+    "new_call": "Le Centre 15 transmet l'appel du fils d'une femme de 74 ans : sa mère respire mal depuis deux jours et ne termine plus ses phrases depuis cette nuit. Troisième étage, sans ascenseur.",
+    "arrival": "Le fils ouvre et guide l'équipe. La chambre est au fond du couloir. La patiente est assise au bord du lit, penchée en avant, appuyée sur les bras.",
+    "scene_assessment": "L'escalier est étroit, le couloir encombré de tapis. Une boîte d'aérosol et une ordonnance sont posées sur la table de nuit. Le fils est présent et répond aux questions.",
+    "patient_assessment": "La patiente est consciente et orientée, mais parle par mots isolés. Elle respire vite, superficiellement, et refuse d'être allongée.",
+    "vitals": "Rien de ce qui compte ici ne se voit à l'œil nu. La respiration paraît rapide, mais seul le comptage donne un chiffre, et seul le saturomètre dit ce que le sang transporte.",
+    "centre15_call": "La régulation attend le bilan. Ce qui n'a pas été recueilli apparaîtra en clair dans le résumé transmis.",
+    "priority_actions": "La patiente s'épuise. Quatre gestes sont à retenir, pas plus, et le temps compte.",
+    "reevaluation": "La patiente est installée. Les constantes déjà relevées peuvent être comparées à ce qu'elles sont devenues ; celles qui n'ont jamais été prises n'ont rien à comparer.",
+    "transport": "La descente des trois étages commence. La surveillance ne s'interrompt pas pendant le portage : c'est le moment où l'effort pèse le plus sur la patiente.",
+    "debrief": "L'intervention est terminée. Le service d'accueil a retenu une détresse respiratoire aiguë chez une patiente à bronchite chronique, sur la base du bilan transmis."
+  },
+  "regulatorInstruction": "Le médecin régulateur demande une oxygénothérapie adaptée à la saturation mesurée, un transport en position demi-assise vers un service d'accueil des urgences, et un rappel immédiat si la saturation continue de baisser malgré l'oxygène.",
+  "rejectedAdditions": [
+    "Je pense à une pneumonie",
+    "C'est une décompensation de sa bronchite chronique",
+    "Elle fait sûrement un œdème pulmonaire",
+    "Il faudrait un aérosol tout de suite"
+  ],
+  "freeAdditions": [
+    "La patiente refuse d'être allongée et se penche en avant",
+    "Elle a pris son aérosol deux fois cette nuit sans amélioration",
+    "Le fils décrit une toux depuis deux jours",
+    "L'appartement est au troisième étage sans ascenseur"
+  ],
+  "reward": {
+    "coins": 160,
+    "badge": "Professionnel de terrain",
+    "badgeMinimumScore": 82
+  }
+}

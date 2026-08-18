@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
 import { TopBar } from "@/components/TopBar";
+import { MissionListScreen } from "@/components/intervention-v3/MissionListScreen";
 import { ArrivalScreen } from "@/components/intervention-v3/ArrivalScreen";
 import { Centre15Screen } from "@/components/intervention-v3/Centre15Screen";
 import { DebriefScreen } from "@/components/intervention-v3/DebriefScreen";
@@ -16,7 +17,9 @@ import { debriefScreenModel } from "@/features/intervention-v3/ui/debrief-screen
 import { newCallScreenModel } from "@/features/intervention-v3/ui/new-call-screen";
 import { priorityActionsScreenModel } from "@/features/intervention-v3/ui/priority-actions-screen";
 import { reevaluationScreenModel } from "@/features/intervention-v3/ui/reevaluation-screen";
+import { missionListScreenModel } from "@/features/intervention-v3/ui/mission-list-screen";
 import { vitalsScreenModel } from "@/features/intervention-v3/ui/vitals-screen";
+import { findV3Scenario } from "@/features/intervention-v3/scenarios/v3-catalog";
 
 /**
  * Le Mode Intervention V3, sur sa propre route.
@@ -30,7 +33,22 @@ import { vitalsScreenModel } from "@/features/intervention-v3/ui/vitals-screen";
  * est cliquable, qui vient des modèles.
  */
 
-export const Route = createFileRoute("/intervention-v3")({ component: InterventionV3Route });
+/**
+ * La mission choisie voyage dans l'URL.
+ *
+ * Deux raisons. Elle devient partageable et rejouable — un formateur peut
+ * envoyer un lien vers l'exercice exact. Et surtout, elle sépare proprement deux
+ * états qui n'ont rien à voir : « aucune mission engagée », qui montre la liste,
+ * et « cette mission-là », qui démarre à l'appel du 15.
+ */
+export const Route = createFileRoute("/intervention-v3")({
+  component: InterventionV3Route,
+  // La clé est **absente** quand aucune mission n'est engagée, et non présente
+  // à `undefined` : un lien vers la liste ne doit pas avoir à nommer un
+  // paramètre qu'il ne porte pas.
+  validateSearch: (search: Record<string, unknown>): { scenario?: string } =>
+    typeof search.scenario === "string" ? { scenario: search.scenario } : {},
+});
 
 /** Nombre d'étapes affiché par la barre de progression de l'écran d'arrivée. */
 const TOTAL_STEPS = 12;
@@ -69,8 +87,49 @@ function PhaseAdvance({ game }: { game: ReturnType<typeof useInterventionV3> }) 
   );
 }
 
+/**
+ * La route : elle choisit entre la liste et la mission, et rien d'autre.
+ *
+ * Le jeu est monté avec la mission pour **clé**. Changer de mission remonte donc
+ * le composant, ce qui repart d'une session neuve — la sémantique exacte de
+ * « choisir une autre mission ». Sans cette clé, l'état interne du hook
+ * survivrait au changement et le joueur reprendrait la nouvelle intervention au
+ * milieu de la précédente.
+ */
 function InterventionV3Route() {
-  const game = useInterventionV3();
+  const { scenario } = Route.useSearch();
+  const navigate = useNavigate({ from: Route.fullPath });
+
+  const chooseMission = (scenarioId: string) => navigate({ search: { scenario: scenarioId } });
+
+  if (!scenario || !findV3Scenario(scenario)) {
+    return (
+      <div className="min-h-screen bg-background pb-24">
+        <TopBar />
+        <main className="mx-auto max-w-3xl px-4 py-4">
+          <MissionListScreen model={missionListScreenModel()} onChoose={chooseMission} />
+        </main>
+      </div>
+    );
+  }
+
+  return (
+    <InterventionV3Game
+      key={scenario}
+      scenarioId={scenario}
+      onLeaveMission={() => navigate({ search: {} })}
+    />
+  );
+}
+
+function InterventionV3Game({
+  scenarioId,
+  onLeaveMission,
+}: {
+  scenarioId: string;
+  onLeaveMission: () => void;
+}) {
+  const game = useInterventionV3({ scenarioId });
   const { session } = game;
 
   // Sélection de l'appel au 15 : un état d'interface, pas un état de jeu. Le
@@ -163,6 +222,7 @@ function InterventionV3Route() {
           <DebriefScreen
             model={debriefScreenModel(game.debrief)}
             onReplay={game.restart}
+            onChooseAnotherMission={onLeaveMission}
             onOpenKnowledge={() => undefined}
           />
         ) : null;

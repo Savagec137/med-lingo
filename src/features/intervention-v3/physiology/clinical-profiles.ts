@@ -224,6 +224,7 @@ export function findPhysiologyProfile(id: string): PhysiologyProfile | undefined
 /** Correspondance entre un identifiant de scénario et son profil physiologique. */
 const SCENARIO_PROFILES: Record<string, string> = {
   "v3-pilot-trauma-cranien": TRAUMA_CRANIEN_N104.id,
+  "v3-detresse-respiratoire": DETRESSE_RESPIRATOIRE.id,
 };
 
 /**
