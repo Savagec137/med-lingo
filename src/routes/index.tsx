@@ -10,6 +10,7 @@ import {
   ChevronRight,
   User as UserIcon,
   Ambulance as AmbulanceIcon,
+  Activity as ActivityIcon,
 } from "lucide-react";
 import { LessonIcon, MissionIcon } from "@/lib/icon-map";
 import { allLessonsInOrder, findLesson } from "@/lib/curriculum";
@@ -88,7 +89,6 @@ const Home = memo(function Home() {
         aria-hidden
         className="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-950 to-cyan-950"
       />
-
 
       {/* ========================================== */}
       {/* CONTENU PRINCIPAL (par-dessus le décor)    */}
@@ -208,6 +208,28 @@ const Home = memo(function Home() {
             </Link>
           )}
 
+          {/* Simulation d'intervention — le mode où chaque donnée se gagne */}
+          <Link
+            to="/intervention-v3"
+            className="mb-4 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-md border border-emerald-400/30 p-4 shadow-xl hover:shadow-2xl transition-all active:scale-95"
+          >
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-emerald-400 text-slate-900">
+              <ActivityIcon className="h-7 w-7" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-xs font-extrabold uppercase tracking-wider text-emerald-300">
+                Simulation
+              </div>
+              <div className="font-display text-base font-extrabold text-white">
+                Intervention en temps réel
+              </div>
+              <div className="text-sm text-emerald-200/70">
+                Aucune constante affichée : tu la prends, tu la demandes, tu la transmets
+              </div>
+            </div>
+            <ChevronRight className="h-6 w-6 text-emerald-300" />
+          </Link>
+
           {/* Mode Intervention CTA */}
           <Link
             to="/intervention"
@@ -218,13 +240,13 @@ const Home = memo(function Home() {
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-xs font-extrabold uppercase tracking-wider text-cyan-300">
-                Nouveau mode
+                Garde
               </div>
               <div className="font-display text-base font-extrabold text-white">
                 Mode Intervention
               </div>
               <div className="text-sm text-cyan-200/70">
-                Missions préhospitalières et décisions immersives
+                Quinze missions à décisions, enchaînées sur une garde
               </div>
             </div>
             <ChevronRight className="h-6 w-6 text-cyan-300" />

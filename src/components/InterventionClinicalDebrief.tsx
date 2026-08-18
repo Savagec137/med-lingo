@@ -1,5 +1,6 @@
 import { AlertTriangle, BadgeCheck, BookOpenCheck, Brain, HeartPulse, Radio } from "lucide-react";
 import type { ShiftCompletedIntervention } from "@/features/intervention-shift-domain";
+import { documentLabel } from "@/lib/document-label";
 
 export function InterventionClinicalDebrief({
   completed,
@@ -120,12 +121,16 @@ export function InterventionClinicalDebrief({
                 className="rounded-xl border border-white/8 bg-slate-950/50 p-3"
               >
                 <div className="text-sm font-black text-slate-200">{reference.title}</div>
+                {/*
+                  Ni l'identifiant technique de la fiche ni le chemin du fichier dans
+                  le dépôt ne sont montrés : ce sont des repères de développement, et
+                  affichés tels quels ils ressemblent à du code égaré dans le
+                  débriefing. Reste ce qu'un apprenant peut aller vérifier — le
+                  document et sa page.
+                */}
                 <div className="mt-1 text-xs text-slate-500">
-                  {reference.knowledgeId} · {reference.sourceDocument} · p. {reference.sourcePages}
+                  {documentLabel(reference.sourceDocument)} · p. {reference.sourcePages}
                 </div>
-                <code className="mt-2 block break-all text-[10px] leading-relaxed text-slate-500">
-                  {reference.repositoryPath}
-                </code>
               </li>
             ))}
           </ul>

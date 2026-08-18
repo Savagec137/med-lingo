@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import {
+  Activity,
   Ambulance,
   CheckCircle2,
   ChevronRight,
@@ -64,6 +65,29 @@ function InterventionRoute() {
                 </div>
               </div>
             </header>
+
+            {/*
+              Le mode simulation tourne sur un autre moteur, sur sa propre route.
+              Sans ce lien, rien dans l'application n'y mène : la page d'accueil et
+              cette page renvoyaient toutes les deux sur les scénarios à décisions.
+            */}
+            <Link
+              to="/intervention-v3"
+              className="relative mb-6 flex items-center gap-3 rounded-2xl border border-emerald-300/25 bg-emerald-300/[0.06] p-4 transition hover:bg-emerald-300/[0.1] active:scale-[0.99]"
+            >
+              <Activity className="h-6 w-6 shrink-0 text-emerald-300" />
+              <div className="min-w-0 flex-1">
+                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-300">
+                  Simulation
+                </div>
+                <div className="text-sm font-black text-white">Intervention en temps réel</div>
+                <div className="text-xs leading-relaxed text-slate-400">
+                  Aucune constante n’est affichée d’avance : tu poses le saturomètre, tu prends la
+                  tension, tu interroges, tu consultes les documents, puis tu transmets au 15.
+                </div>
+              </div>
+              <ChevronRight className="h-5 w-5 shrink-0 text-emerald-300" />
+            </Link>
 
             <div
               role="tablist"
@@ -191,4 +215,3 @@ function InterventionRoute() {
     </div>
   );
 }
-

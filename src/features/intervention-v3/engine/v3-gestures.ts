@@ -24,6 +24,8 @@
  */
 
 import { readFact } from "../facts/read-fact.ts";
+import { physiologyEventForGesture } from "../physiology/action-physiology.ts";
+import { withPhysiologyEvent } from "../physiology/physiology-engine.ts";
 import type {
   GestureChoice,
   InterventionSession,
@@ -337,8 +339,21 @@ export function resolveGestureRound(
     .map((choice) => choice.gestureId);
   const correct = missing.length === 0 && notIndicated.length === 0;
 
+  // Les conséquences physiologiques s'inscrivent **à la validation**, pas au
+  // cochage : cocher une carte n'est pas faire le geste, et le joueur peut se
+  // reprendre tant que le tour est ouvert. Un événement inscrit au cochage
+  // survivrait au décochage, et l'oxygène continuerait d'agir après avoir été
+  // retiré de la liste.
+  const resolvedSession = replaceRound(session, { ...round, resolved: true, correct });
+  let physiology = resolvedSession.physiology;
+  for (const choice of round.choices) {
+    const kind = physiologyEventForGesture(choice.gestureId);
+    if (kind)
+      physiology = withPhysiologyEvent(physiology, kind, choice.atSeconds, choice.gestureId);
+  }
+
   return {
-    session: replaceRound(session, { ...round, resolved: true, correct }),
+    session: { ...resolvedSession, physiology },
     correct,
     missing,
     notIndicated,

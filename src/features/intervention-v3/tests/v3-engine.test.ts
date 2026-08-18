@@ -10,6 +10,7 @@ import {
 import { advanceV3Phase } from "../engine/v3-phases.ts";
 import { readFact } from "../facts/read-fact.ts";
 import { revealFacts } from "../facts/reveal-fact.ts";
+import { samplePhysiology } from "../physiology/physiology-engine.ts";
 import { PILOT_SCENARIO_ID, getV3Scenario } from "../scenarios/v3-catalog.ts";
 import { ALL_EQUIPMENT, createV3Session } from "../v3-session.ts";
 import type { InterventionPhase, InterventionSession } from "../v3-domain.ts";
@@ -75,9 +76,22 @@ test("une mesure reste figée alors que le moteur clinique évolue", () => {
   session = applyAction(session, "action.interroger-patient").session;
   const second = readFact(session, "fact.fc");
   assert.equal(second.status, "known");
-  assert.notEqual(session.vitals.hr, frozen);
   if (second.status === "known" && second.value.kind === "numeric")
     assert.equal(second.value.value, frozen);
+
+  // Le patient, lui, continue de vivre. On ne l'affirme pas en exigeant que sa
+  // fréquence ait bougé entre deux gestes : sur un patient stable, elle peut
+  // parfaitement retomber sur le même entier trente secondes plus tard, et c'est
+  // le comportement juste. On l'affirme en échantillonnant le moteur sur
+  // plusieurs minutes, où l'immobilité complète serait, elle, une anomalie.
+  const window = Array.from(
+    { length: 40 },
+    (_, index) => samplePhysiology(session.physiology, index * 15).hr,
+  );
+  assert.ok(
+    new Set(window).size > 1,
+    "la fréquence cardiaque du patient ne bouge jamais : le moteur physiologique est figé",
+  );
 });
 
 test("une mesure stale redevient un trou de bilan", () => {

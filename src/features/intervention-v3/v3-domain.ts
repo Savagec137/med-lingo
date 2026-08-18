@@ -29,6 +29,7 @@ import type {
   VitalSeverity,
   VitalTrend,
 } from "./clinical/intervention-vitals.ts";
+import type { PhysiologyState } from "./physiology/physiology-types.ts";
 
 /* -------------------------------------------------------------------------- */
 /* Phases                                                                     */
@@ -569,6 +570,16 @@ export interface InterventionSession {
    */
   vitals: InterventionVitals;
   vitalsHistory: V3VitalsSample[];
+  /**
+   * Le patient simulé : sa base, sa trajectoire, et ce qui lui est arrivé.
+   *
+   * C'est de loin le champ le plus sensible de la session. Il ne contient aucune
+   * constante — les valeurs n'existent qu'à l'instant où on les demande — mais il
+   * permet de les calculer toutes, à n'importe quel moment, y compris avant que
+   * le joueur ait posé le moindre capteur. Le donner à un composant reviendrait à
+   * lui donner le dossier médical complet avant l'arrivée sur les lieux.
+   */
+  physiology: PhysiologyState;
   roscAchieved: boolean;
   transmission: Centre15Transmission | null;
   gestureRounds: PriorityGestureRound[];
@@ -620,6 +631,8 @@ export type SessionViewField = (typeof SESSION_VIEW_FIELDS)[number];
 export const HIDDEN_SESSION_FIELDS = {
   vitals: "Constantes réelles du patient, connues du moteur dès la première seconde.",
   vitalsHistory: "Historique physiologique, d'où l'on pourrait relire les constantes.",
+  physiology:
+    "Patient simulé complet : base, trajectoire et événements. Il ne porte aucune valeur, mais permet de calculer toutes les constantes à tout instant — y compris celles que le joueur n'a pas mesurées.",
   patientState:
     "État de santé simulé. Aucune action ne le révèle : l'afficher donnerait une lecture clinique gratuite.",
   roscAchieved:

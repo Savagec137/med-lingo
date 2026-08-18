@@ -8,6 +8,12 @@
  */
 
 import { normalizeVitals } from "./clinical/intervention-vitals.ts";
+import { profileFromScenario } from "./physiology/clinical-profiles.ts";
+import {
+  createPhysiology,
+  physiologySeed,
+  samplePhysiology,
+} from "./physiology/physiology-engine.ts";
 import {
   EQUIPMENT_IDS,
   V3_STARTING_LIVES,
@@ -21,6 +27,15 @@ import {
 export interface SessionOptions {
   /** Matériel embarqué, choisi à l'écran d'appel. Rien par défaut. */
   preparedEquipment?: readonly EquipmentId[];
+  /**
+   * Sel de la graine physiologique.
+   *
+   * Deux sessions du même scénario et du même sel donnent **exactement** les
+   * mêmes courbes : c'est ce qui rend un rejeu fidèle et un test possible. Le
+   * défaut est zéro — une mission rejouée est identique tant que l'appelant ne
+   * demande pas autre chose, ce qui est le comportement attendu d'un exercice.
+   */
+  physiologySalt?: number;
 }
 
 function equipmentStates(prepared: readonly EquipmentId[]): EquipmentState[] {
@@ -35,6 +50,11 @@ export function createV3Session(
   scenario: InterventionScenario,
   options: SessionOptions = {},
 ): InterventionSession {
+  const physiology = createPhysiology(
+    profileFromScenario(scenario.id, scenario.clinical),
+    physiologySeed(scenario.id, options.physiologySalt ?? 0),
+  );
+
   return {
     scenarioId: scenario.id,
     phase: "new_call",
@@ -47,8 +67,13 @@ export function createV3Session(
     revealedFacts: {},
     actionLog: [],
     flags: [],
-    vitals: normalizeVitals(scenario.clinical.baseline),
+    // Les constantes de départ viennent du moteur physiologique, pas de la ligne
+    // de base recopiée : à la seconde zéro, le patient a déjà le bruit de ses
+    // capteurs. Prendre la ligne de base telle quelle donnerait un patient
+    // parfaitement rond, ce qui n'existe pas.
+    vitals: normalizeVitals(samplePhysiology(physiology, 0)),
     vitalsHistory: [],
+    physiology,
     roscAchieved: false,
     transmission: null,
     gestureRounds: scenario.gestureRounds.map((round) => ({

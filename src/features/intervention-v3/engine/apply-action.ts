@@ -12,6 +12,8 @@ import {
   type PlayerAction,
   type PlayerActionId,
 } from "../v3-domain.ts";
+import { samplePhysiology, withPhysiologyEvent } from "../physiology/physiology-engine.ts";
+import { physiologyEventForAction } from "../physiology/action-physiology.ts";
 import { actionRefusal, successfulActionIds } from "./action-gate.ts";
 import { STALE_TRANSPORT_FLAG, staleTransportPenalty } from "./v3-reevaluation.ts";
 import { phaseAfterAction } from "./v3-phases.ts";
@@ -74,6 +76,23 @@ function updateEquipment(session: InterventionSession, actionId: PlayerActionId)
   );
 }
 
+/**
+ * Les constantes du patient après l'action.
+ *
+ * Deux chemins, et la frontière est nette.
+ *
+ * Le cas courant passe par le **moteur physiologique** : les constantes ne sont
+ * pas « avancées d'un pas », elles sont **échantillonnées à la nouvelle heure**.
+ * La différence n'est pas théorique — une machine à pas donne des valeurs qui
+ * dépendent du nombre d'actions jouées, si bien que deux joueurs arrivés à la
+ * même minute par des chemins différents trouveraient des patients différents.
+ *
+ * L'arrêt cardio-respiratoire garde l'ancienne évolution. Le no-flow, la
+ * réanimation et la reprise d'activité circulatoire sont un modèle à part
+ * entière, que le moteur physiologique ne couvre pas encore ; le porter à moitié
+ * produirait des chiffres faux là où ils comptent le plus. Aucun scénario V3
+ * n'est en arrêt à ce jour : cette branche est un filet, pas un chemin.
+ */
 function evolveForAction(
   session: InterventionSession,
   action: PlayerAction,
@@ -81,19 +100,23 @@ function evolveForAction(
   isFault: boolean,
 ) {
   const scenario = getV3Scenario(session.scenarioId);
-  const quality = isFault ? 0.15 : effect.therapeutic ? 0.9 : 0.55;
-  const evolved = evolveInterventionVitals(session.vitals, scenario.clinical, {
-    quality,
-    minutes: effect.timeSeconds / 60,
-    resuscitationEffective: effect.therapeutic && !isFault,
-    roscAchieved: session.roscAchieved,
-  });
+  const atSeconds = session.simulatedTimeSeconds + effect.timeSeconds;
+
+  const evolved = scenario.clinical.cardiacArrest
+    ? evolveInterventionVitals(session.vitals, scenario.clinical, {
+        quality: isFault ? 0.15 : effect.therapeutic ? 0.9 : 0.55,
+        minutes: effect.timeSeconds / 60,
+        resuscitationEffective: effect.therapeutic && !isFault,
+        roscAchieved: session.roscAchieved,
+      })
+    : { vitals: samplePhysiology(session.physiology, atSeconds), roscAchieved: false };
+
   return {
     ...evolved,
     sample: {
       phase: session.phase,
       label: action.label,
-      simulatedTimeSeconds: session.simulatedTimeSeconds + effect.timeSeconds,
+      simulatedTimeSeconds: atSeconds,
       vitals: evolved.vitals,
       alerts: currentVitalAlerts(evolved.vitals, scenario.clinical),
     },
@@ -130,7 +153,24 @@ export function applyAction(
   const stalePenalty =
     actionId === "action.preparer-transport" ? staleTransportPenalty(session, scenario) : 0;
 
-  const evolved = evolveForAction(session, action, effect, isFault);
+  // L'événement physiologique est daté du **début** de l'action, pas de sa fin :
+  // poser un masque à oxygène agit pendant qu'on le pose. L'inscrire avant
+  // l'échantillonnage est donc indispensable, sinon l'effet ne commencerait qu'au
+  // geste suivant.
+  const eventKind = physiologyEventForAction(actionId);
+  const withEvent: InterventionSession = eventKind
+    ? {
+        ...session,
+        physiology: withPhysiologyEvent(
+          session.physiology,
+          eventKind,
+          session.simulatedTimeSeconds,
+          actionId,
+        ),
+      }
+    : session;
+
+  const evolved = evolveForAction(withEvent, action, effect, isFault);
   const flag =
     effect.flag ??
     (incompleteHandover
@@ -143,7 +183,7 @@ export function applyAction(
   const handoverPenalty = incompleteHandover ? Math.min(15, handoverGaps.length * 2) : 0;
   const scoreDelta = effect.score - handoverPenalty - stalePenalty;
   let updated: InterventionSession = {
-    ...session,
+    ...withEvent,
     score: clamp(session.score + scoreDelta, 0, 100),
     patientState: clamp(session.patientState + patientDelta, 0, 100),
     lives: grave ? Math.max(0, session.lives - 1) : session.lives,
