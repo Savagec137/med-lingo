@@ -1,9 +1,13 @@
 # Mode Intervention V3 — contrat de données
 
-Couche autonome du Mode Intervention V3. Le contrat de données Claude reste
-inchangé et un moteur d'exécution minimal l'entoure désormais. **Aucune interface
-finale n'est encore livrée** : l'UI consommera le moteur via `engine/index.ts` et
-les données cliniques uniquement via `readFact`.
+Couche autonome du Mode Intervention V3 : contrat de données, moteur, couche
+présentation, composants et route. Les sept écrans sont jouables sur
+`/intervention-v3`, séparée de `/intervention` où tournent les quinze missions
+historiques.
+
+Une règle traverse tout : **aucune donnée clinique n'apparaît si le joueur n'a pas
+fait l'action correspondante.** Les données ne se lisent que par `readFact`, et le
+moteur ne s'atteint que par `engine/queries.ts` — sans effet — ou par le hook.
 
 Les deux documents de conception restent la référence :
 `../INTERVENTION_V3_SPECIFICATION.md` pour le fonctionnel écran par écran,
@@ -39,7 +43,8 @@ Les deux documents de conception restent la référence :
 | `engine/v3-gestures.ts`               | gestes prioritaires et leurs conséquences                  |
 | `engine/v3-reevaluation.ts`           | cycles de réévaluation et sanction du départ               |
 | `engine/v3-handover.ts`               | transmission choisie, validation du tour de gestes         |
-| `tests/`                              | 237 tests V3                                               |
+| `use-intervention-v3.ts`              | le seul point où la session complète existe côté interface |
+| `tests/`                              | 287 tests V3                                               |
 
 ## Les deux axes d'un fait
 
@@ -114,9 +119,10 @@ glycémie ; aucun délai pour les données d'interrogatoire.
 
 **Barrière 1 — les types.** `v3-domain.ts` n'exporte ni `InterventionVitals`, ni
 `DisplayedVital`, ni `VitalsSample`. Un composant ne peut pas nommer le type des
-constantes réelles. Et `InterventionSessionView` — ce que l'interface reçoit —
-retire structurellement `vitals` et `vitalsHistory`, si bien qu'un composant ne
-peut pas les atteindre même sans nommer leur type.
+constantes réelles. Et `InterventionSessionView` est définie par **liste
+d'autorisation** — `SESSION_VIEW_FIELDS` — et non par exclusion : une liste
+d'exclusion laisserait passer par défaut tout champ ajouté ensuite, ce qui avait
+déjà exposé `patientState` et `roscAchieved` sans que personne l'ait décidé.
 
 **Barrière 2 — ESLint.** `eslint.config.js` interdit à
 `src/components/intervention-v3/**` d'importer `clinical/intervention-vitals`,
@@ -220,7 +226,7 @@ base réglementaire. Elle est donc rattachée à `dea.c05` et au protocole local
 
 ## Tests
 
-`npm test` couvre les 237 tests du mode, en plus des 214 autres tests du projet.
+`npm test` couvre les 287 tests du mode, en plus des 214 autres tests du projet.
 
 | Fichier                      | Couvre                                                                                                          |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -279,10 +285,18 @@ n'apparaît dans le texte de l'écran — ni dans les cartes, ni dans les
 
 ## Reste à faire
 
-**Interface.** Le débriefing en couche présentation — `DebriefReport` est déjà
-prêt à afficher, un présentateur n'y ajouterait qu'un habillage — puis les
-composants React, le hook, la persistance/reprise et la route. Les maquettes
-restent la référence visuelle.
+**Interface.** La persistance et la reprise d'une mission interrompue. Les
+composants ne sont **pas exécutables dans l'environnement de développement
+distant** : ni `vite build` ni outillage de rendu DOM n'y tournent. Ce qui est
+vérifié d'eux est leur surface d'accès — de quoi ils dépendent — et non leur
+rendu. Un composant qui n'importe que des types de modèle et des icônes ne peut
+lire aucune donnée cachée, qu'on puisse le rendre ou non, mais que le JSX câble
+correctement les modèles reste à vérifier sur une machine qui sait les lancer.
+
+**L'arbre de routes** `routeTree.gen.ts` est régénéré par le plugin Vite, qui ne
+tourne pas ici. L'entrée de `/intervention-v3` y a été ajoutée à la main en
+suivant exactement le motif des autres routes ; la prochaine régénération la
+réécrira à l'identique.
 
 **Deux points ouverts, connus et non corrigés.** « Réévaluer le patient »
 rapporte huit points sans plafond d'utilisation : un joueur qui a des constantes

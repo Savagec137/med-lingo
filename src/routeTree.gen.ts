@@ -18,6 +18,7 @@ import { Route as BoutiqueRouteImport } from './routes/boutique'
 import { Route as ClassementRouteImport } from './routes/classement'
 import { Route as GardeRouteImport } from './routes/garde'
 import { Route as InterventionRouteImport } from './routes/intervention'
+import { Route as InterventionV3RouteImport } from './routes/intervention-v3'
 import { Route as InventaireRouteImport } from './routes/inventaire'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as ProfilRouteImport } from './routes/profil'
@@ -72,6 +73,11 @@ const GardeRoute = GardeRouteImport.update({
 const InterventionRoute = InterventionRouteImport.update({
   id: '/intervention',
   path: '/intervention',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterventionV3Route = InterventionV3RouteImport.update({
+  id: '/intervention-v3',
+  path: '/intervention-v3',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InventaireRoute = InventaireRouteImport.update({
@@ -135,6 +141,7 @@ export interface FileRoutesByFullPath {
   '/classement': typeof ClassementRoute
   '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
+  '/intervention-v3': typeof InterventionV3Route
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
@@ -156,6 +163,7 @@ export interface FileRoutesByTo {
   '/classement': typeof ClassementRoute
   '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
+  '/intervention-v3': typeof InterventionV3Route
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
@@ -178,6 +186,7 @@ export interface FileRoutesById {
   '/classement': typeof ClassementRoute
   '/garde': typeof GardeRoute
   '/intervention': typeof InterventionRoute
+  '/intervention-v3': typeof InterventionV3Route
   '/inventaire': typeof InventaireRoute
   '/onboarding': typeof OnboardingRoute
   '/profil': typeof ProfilRoute
@@ -201,6 +210,7 @@ export interface FileRouteTypes {
     | '/classement'
     | '/garde'
     | '/intervention'
+    | '/intervention-v3'
     | '/inventaire'
     | '/onboarding'
     | '/profil'
@@ -222,6 +232,7 @@ export interface FileRouteTypes {
     | '/classement'
     | '/garde'
     | '/intervention'
+    | '/intervention-v3'
     | '/inventaire'
     | '/onboarding'
     | '/profil'
@@ -243,6 +254,7 @@ export interface FileRouteTypes {
     | '/classement'
     | '/garde'
     | '/intervention'
+    | '/intervention-v3'
     | '/inventaire'
     | '/onboarding'
     | '/profil'
@@ -265,6 +277,7 @@ export interface RootRouteChildren {
   ClassementRoute: typeof ClassementRoute
   GardeRoute: typeof GardeRoute
   InterventionRoute: typeof InterventionRoute
+  InterventionV3Route: typeof InterventionV3Route
   InventaireRoute: typeof InventaireRoute
   OnboardingRoute: typeof OnboardingRoute
   ProfilRoute: typeof ProfilRoute
@@ -339,6 +352,13 @@ declare module '@tanstack/react-router' {
       path: '/intervention'
       fullPath: '/intervention'
       preLoaderRoute: typeof InterventionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intervention-v3': {
+      id: '/intervention-v3'
+      path: '/intervention-v3'
+      fullPath: '/intervention-v3'
+      preLoaderRoute: typeof InterventionV3RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inventaire': {
@@ -436,6 +456,7 @@ const rootRouteChildren: RootRouteChildren = {
   ClassementRoute: ClassementRoute,
   GardeRoute: GardeRoute,
   InterventionRoute: InterventionRoute,
+  InterventionV3Route: InterventionV3Route,
   InventaireRoute: InventaireRoute,
   OnboardingRoute: OnboardingRoute,
   ProfilRoute: ProfilRoute,

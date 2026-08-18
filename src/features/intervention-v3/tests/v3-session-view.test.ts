@@ -252,13 +252,23 @@ test("aucun composant du Mode Intervention V3 n'atteint le moteur ni le scénari
         `${file.split("/").pop()} importe « ${pattern} » : un composant reçoit des propriétés, il ne va rien chercher`,
       );
     }
-    // Et jamais l'accès direct à un champ caché, quelle qu'en soit la provenance.
-    for (const field of Object.keys(HIDDEN_SESSION_FIELDS)) {
+    // Et jamais l'accès à un champ caché de la **session**.
+    //
+    // Le contrôle ne peut pas porter sur le mot seul : l'écran des constantes rend
+    // légitimement un tableau `vitals` de cartes déjà dérivées, et `model.vitals`
+    // n'a rien à voir avec `session.vitals`. Trois des quatre champs cachés n'ont
+    // aucun sens dans un modèle d'écran et sont donc interdits partout ; pour le
+    // quatrième, c'est la lecture sur une session qui est interdite.
+    for (const field of ["vitalsHistory", "patientState", "roscAchieved"]) {
       assert.ok(
-        !new RegExp(`\\.${field}\\b`).test(source),
-        `${file.split("/").pop()} lit « .${field} »`,
+        !new RegExp(`\\b${field}\\b`).test(source),
+        `${file.split("/").pop()} mentionne « ${field} »`,
       );
     }
+    assert.ok(
+      !/\bsession\s*[.?]/.test(source),
+      `${file.split("/").pop()} lit une session : un composant reçoit un modèle`,
+    );
   }
 });
 
