@@ -5,6 +5,7 @@ import { commitGestureRound, transmitHandover } from "./engine/v3-handover.ts";
 import { deselectGesture, selectGesture } from "./engine/v3-gestures.ts";
 import { answerRegulatorQuestion } from "./engine/v3-transmission.ts";
 import { openReevaluation, validateReevaluation } from "./engine/v3-reevaluation.ts";
+import { advanceV3Phase } from "./engine/v3-phases.ts";
 import { getV3Scenario, PILOT_SCENARIO_ID } from "./scenarios/v3-catalog.ts";
 import { createV3Session, ALL_EQUIPMENT } from "./v3-session.ts";
 import {
@@ -53,6 +54,16 @@ export interface InterventionV3Controller {
   answerRegulator: (questionId: string, answerId: string) => void;
   beginReevaluation: () => void;
   closeReevaluation: (note?: string) => void;
+  /**
+   * Passe à l'étape suivante de la mission.
+   *
+   * Toutes les transitions ne découlent pas d'une action : accepter l'appel,
+   * passer du bilan circonstanciel à l'évaluation du patient, ouvrir le relevé
+   * des constantes. Sans cette commande la mission ne démarrait pas — le premier
+   * geste de terrain n'existe qu'à partir de la phase d'arrivée, et rien ne l'y
+   * amenait.
+   */
+  advance: () => void;
   restart: () => void;
 }
 
@@ -164,6 +175,18 @@ export function useInterventionV3(options: InterventionV3Options = {}): Interven
     });
   }, []);
 
+  const advance = useCallback(() => {
+    setSession((current) => {
+      const result = advanceV3Phase(current);
+      setFeedback(
+        result.transitioned
+          ? null
+          : { kind: "refused", message: result.reason ?? "Transition impossible." },
+      );
+      return result.session;
+    });
+  }, []);
+
   const restart = useCallback(() => {
     setSession(start());
     setFeedback(null);
@@ -195,6 +218,7 @@ export function useInterventionV3(options: InterventionV3Options = {}): Interven
     answerRegulator,
     beginReevaluation,
     closeReevaluation,
+    advance,
     restart,
   };
 }

@@ -120,6 +120,18 @@ export function VitalsScreen({ model, pendingMeasure, onMeasure, onEvaluate }: P
         </ul>
       </Panel>
 
+      {model.communications.length > 0 && (
+        <Panel title="Communication">
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {model.communications.map((measure) => (
+              <li key={measure.id}>
+                <MeasureButton measure={measure} onClick={() => onMeasure(measure.id)} />
+              </li>
+            ))}
+          </ul>
+        </Panel>
+      )}
+
       <Panel title="Évaluations cliniques">
         <ul className="flex flex-col gap-2">
           {model.evaluations.map((entry) => (

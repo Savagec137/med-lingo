@@ -9,6 +9,7 @@ import { PriorityActionsScreen } from "@/components/intervention-v3/PriorityActi
 import { ReevaluationScreen } from "@/components/intervention-v3/ReevaluationScreen";
 import { VitalsScreen } from "@/components/intervention-v3/VitalsScreen";
 import { useInterventionV3 } from "@/features/intervention-v3/use-intervention-v3";
+import { nextPhaseBlocker, nextPhaseLabel } from "@/features/intervention-v3/engine/queries";
 import { arrivalScreenModel } from "@/features/intervention-v3/ui/arrival-screen";
 import { centre15ScreenModel } from "@/features/intervention-v3/ui/centre15-screen";
 import { debriefScreenModel } from "@/features/intervention-v3/ui/debrief-screen";
@@ -34,6 +35,40 @@ export const Route = createFileRoute("/intervention-v3")({ component: Interventi
 /** Nombre d'étapes affiché par la barre de progression de l'écran d'arrivée. */
 const TOTAL_STEPS = 12;
 
+/**
+ * Le passage à l'étape suivante, là où aucune action ne le porte.
+ *
+ * Quatre transitions découlent d'une action — joindre le 15, transmettre,
+ * valider les gestes, préparer le transport — et se font toutes seules. Les
+ * autres sont une décision du joueur : « j'ai fini d'observer la scène »,
+ * « je passe au relevé des constantes ». Le bouton dit ce qui manque quand il
+ * est bloqué, plutôt que de rester inerte sans expliquer.
+ */
+function PhaseAdvance({ game }: { game: ReturnType<typeof useInterventionV3> }) {
+  const { session } = game;
+  // Sur ces phases, l'avance est portée par une action de l'écran lui-même.
+  const ACTION_DRIVEN = ["new_call", "centre15_call", "priority_actions", "debrief"];
+  if (ACTION_DRIVEN.includes(session.phase)) return null;
+
+  const blocker = nextPhaseBlocker(session);
+  const label = nextPhaseLabel(session);
+  if (!label) return null;
+
+  return (
+    <div className="mt-5 flex flex-col gap-1.5">
+      <button
+        type="button"
+        disabled={blocker !== null}
+        onClick={game.advance}
+        className="press rounded-2xl border border-cyan-300/40 bg-cyan-300/10 px-4 py-3 text-sm font-black text-cyan-100 disabled:cursor-not-allowed disabled:border-white/8 disabled:bg-white/[0.03] disabled:text-slate-500"
+      >
+        Continuer → {label}
+      </button>
+      {blocker && <p className="px-1 text-[11px] text-amber-300/80">{blocker}</p>}
+    </div>
+  );
+}
+
 function InterventionV3Route() {
   const game = useInterventionV3();
   const { session } = game;
@@ -54,10 +89,10 @@ function InterventionV3Route() {
           <NewCallScreen
             model={newCallScreenModel(session)}
             onAction={(id) => {
-              // Les trois boutons de la maquette 1 mènent au terrain : le mode ne
-              // simule pas encore la préparation du matériel, qui est choisie à la
-              // création de la session.
-              if (id === "accept") game.play("action.securiser-scene");
+              // Accepter fait **avancer la phase**, et ne joue aucune action : le
+              // premier geste de terrain n'existe qu'à partir de l'arrivée, et le
+              // jouer ici serait refusé — la mission ne démarrerait jamais.
+              if (id === "accept") game.advance();
             }}
           />
         );
@@ -150,6 +185,7 @@ function InterventionV3Route() {
           </button>
         )}
         {screen()}
+        <PhaseAdvance game={game} />
       </main>
     </div>
   );

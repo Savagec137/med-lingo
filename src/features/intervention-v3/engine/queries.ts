@@ -93,4 +93,4 @@ export {
   type OutOfScopeTerm,
 } from "./out-of-scope.ts";
 
-export { V3_PHASE_SEQUENCE, nextV3Phase } from "./v3-phases.ts";
+export { nextPhaseBlocker, nextPhaseLabel, nextV3Phase, V3_PHASE_SEQUENCE } from "./v3-phases.ts";

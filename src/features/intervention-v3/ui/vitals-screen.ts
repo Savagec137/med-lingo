@@ -187,6 +187,16 @@ export interface VitalsScreenModel {
    * rendrait le retrait du saturomètre injouable depuis cet écran.
    */
   sensorControls: QuickMeasureModel[];
+  /**
+   * Gestes de communication proposés à cette phase — joindre la régulation,
+   * demander un renfort.
+   *
+   * Ils ne mesurent rien, et c'est précisément pourquoi ils manquaient : l'écran
+   * ne listait que les gestes de mesure. La mission butait alors sur « joindre le
+   * Centre 15 avant d'ouvrir la transmission » sans qu'aucun bouton ne permette
+   * de le joindre.
+   */
+  communications: QuickMeasureModel[];
   /** Ce qui anime l'écran. Tout y est nul tant que la mesure n'est pas prise. */
   monitoring: MonitoringModel;
   evaluations: EvaluationModel[];
@@ -527,6 +537,9 @@ export function vitalsScreenModel(session: InterventionSessionView): VitalsScree
       .map((action) => quickMeasure(session, action)),
     sensorControls: probeActions
       .filter((action) => action.reveals.length === 0)
+      .map((action) => quickMeasure(session, action)),
+    communications: actionsForPhase(session.phase)
+      .filter((action) => action.category === "communicate" && !action.outOfScope)
       .map((action) => quickMeasure(session, action)),
     monitoring: {
       anyLive: context.live.size > 0,

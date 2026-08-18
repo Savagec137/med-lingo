@@ -1,4 +1,9 @@
-import type { InterventionPhase, InterventionSession } from "../v3-domain.ts";
+import { PHASE_LABELS } from "../v3-domain.ts";
+import type {
+  InterventionPhase,
+  InterventionSession,
+  InterventionSessionView,
+} from "../v3-domain.ts";
 
 export const V3_PHASE_SEQUENCE: readonly InterventionPhase[] = [
   "new_call",
@@ -15,7 +20,7 @@ export const V3_PHASE_SEQUENCE: readonly InterventionPhase[] = [
 
 const phaseIndex = new Map(V3_PHASE_SEQUENCE.map((phase, index) => [phase, index]));
 
-const completedActionIds = (session: InterventionSession) =>
+const completedActionIds = (session: InterventionSessionView) =>
   new Set(
     session.actionLog
       .filter((entry) => entry.outcome === "applied" || entry.outcome === "unjustified")
@@ -34,7 +39,7 @@ export function nextV3Phase(phase: InterventionPhase): InterventionPhase | undef
 }
 
 function transitionRequirement(
-  session: InterventionSession,
+  session: InterventionSessionView,
   target: InterventionPhase,
 ): string | undefined {
   const actions = completedActionIds(session);
@@ -120,3 +125,23 @@ export function phaseAfterAction(
   if (!target) return session;
   return { ...session, phase: target, status: target === "debrief" ? "debrief" : "active" };
 }
+
+/**
+ * Ce qui empêche la mission d'avancer d'une étape, ou `null` si rien.
+ *
+ * Une **requête**, sans effet : l'interface a besoin de savoir si le bouton
+ * « continuer » est actif, et de dire pourquoi il ne l'est pas. Sans elle, un
+ * écran devrait tenter la transition pour découvrir qu'elle est refusée — ou
+ * réécrire les conditions de son côté, ce qui finirait par diverger.
+ */
+export function nextPhaseBlocker(session: InterventionSessionView): string | null {
+  const target = nextV3Phase(session.phase);
+  if (!target) return "La mission est terminée.";
+  return transitionRequirement(session, target) ?? null;
+}
+
+/** Étape suivante, telle que l'interface doit la nommer. Nulle à la fin. */
+export const nextPhaseLabel = (session: InterventionSessionView): string | null => {
+  const target = nextV3Phase(session.phase);
+  return target ? PHASE_LABELS[target] : null;
+};
