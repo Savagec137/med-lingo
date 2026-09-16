@@ -27,6 +27,7 @@ import { Route as ApiPulseRouteImport } from './routes/api/pulse'
 import { Route as BlocBlocIdRouteImport } from './routes/bloc.$blocId'
 import { Route as BossBossIdRouteImport } from './routes/boss.$bossId'
 import { Route as LeconLessonIdRouteImport } from './routes/lecon.$lessonId'
+import { Route as LogigrammeLogigrammeIdRouteImport } from './routes/logigramme.$logigrammeId'
 import { Route as ParcoursParcoursIdRouteImport } from './routes/parcours.$parcoursId'
 import { Route as BlocBlocIdFinRouteImport } from './routes/bloc.$blocId.fin'
 
@@ -120,6 +121,11 @@ const LeconLessonIdRoute = LeconLessonIdRouteImport.update({
   path: '/lecon/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LogigrammeLogigrammeIdRoute = LogigrammeLogigrammeIdRouteImport.update({
+  id: '/logigramme/$logigrammeId',
+  path: '/logigramme/$logigrammeId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParcoursParcoursIdRoute = ParcoursParcoursIdRouteImport.update({
   id: '/parcours/$parcoursId',
   path: '/parcours/$parcoursId',
@@ -150,6 +156,7 @@ export interface FileRoutesByFullPath {
   '/bloc/$blocId': typeof BlocBlocIdRouteWithChildren
   '/boss/$bossId': typeof BossBossIdRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
+  '/logigramme/$logigrammeId': typeof LogigrammeLogigrammeIdRoute
   '/parcours/$parcoursId': typeof ParcoursParcoursIdRoute
   '/bloc/$blocId/fin': typeof BlocBlocIdFinRoute
 }
@@ -172,6 +179,7 @@ export interface FileRoutesByTo {
   '/bloc/$blocId': typeof BlocBlocIdRouteWithChildren
   '/boss/$bossId': typeof BossBossIdRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
+  '/logigramme/$logigrammeId': typeof LogigrammeLogigrammeIdRoute
   '/parcours/$parcoursId': typeof ParcoursParcoursIdRoute
   '/bloc/$blocId/fin': typeof BlocBlocIdFinRoute
 }
@@ -195,6 +203,7 @@ export interface FileRoutesById {
   '/bloc/$blocId': typeof BlocBlocIdRouteWithChildren
   '/boss/$bossId': typeof BossBossIdRoute
   '/lecon/$lessonId': typeof LeconLessonIdRoute
+  '/logigramme/$logigrammeId': typeof LogigrammeLogigrammeIdRoute
   '/parcours/$parcoursId': typeof ParcoursParcoursIdRoute
   '/bloc/$blocId/fin': typeof BlocBlocIdFinRoute
 }
@@ -219,6 +228,7 @@ export interface FileRouteTypes {
     | '/bloc/$blocId'
     | '/boss/$bossId'
     | '/lecon/$lessonId'
+    | '/logigramme/$logigrammeId'
     | '/parcours/$parcoursId'
     | '/bloc/$blocId/fin'
   fileRoutesByTo: FileRoutesByTo
@@ -241,6 +251,7 @@ export interface FileRouteTypes {
     | '/bloc/$blocId'
     | '/boss/$bossId'
     | '/lecon/$lessonId'
+    | '/logigramme/$logigrammeId'
     | '/parcours/$parcoursId'
     | '/bloc/$blocId/fin'
   id:
@@ -263,6 +274,7 @@ export interface FileRouteTypes {
     | '/bloc/$blocId'
     | '/boss/$bossId'
     | '/lecon/$lessonId'
+    | '/logigramme/$logigrammeId'
     | '/parcours/$parcoursId'
     | '/bloc/$blocId/fin'
   fileRoutesById: FileRoutesById
@@ -286,6 +298,7 @@ export interface RootRouteChildren {
   BlocBlocIdRoute: typeof BlocBlocIdRouteWithChildren
   BossBossIdRoute: typeof BossBossIdRoute
   LeconLessonIdRoute: typeof LeconLessonIdRoute
+  LogigrammeLogigrammeIdRoute: typeof LogigrammeLogigrammeIdRoute
   ParcoursParcoursIdRoute: typeof ParcoursParcoursIdRoute
 }
 
@@ -417,6 +430,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeconLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/logigramme/$logigrammeId': {
+      id: '/logigramme/$logigrammeId'
+      path: '/logigramme/$logigrammeId'
+      fullPath: '/logigramme/$logigrammeId'
+      preLoaderRoute: typeof LogigrammeLogigrammeIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/parcours/$parcoursId': {
       id: '/parcours/$parcoursId'
       path: '/parcours/$parcoursId'
@@ -465,6 +485,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlocBlocIdRoute: BlocBlocIdRouteWithChildren,
   BossBossIdRoute: BossBossIdRoute,
   LeconLessonIdRoute: LeconLessonIdRoute,
+  LogigrammeLogigrammeIdRoute: LogigrammeLogigrammeIdRoute,
   ParcoursParcoursIdRoute: ParcoursParcoursIdRoute,
 }
 export const routeTree = rootRouteImport

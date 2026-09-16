@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight, Lock, Workflow } from "lucide-react";
 import { RoadmapPageShell } from "@/components/roadmap/RoadmapPageShell";
 import { RoadmapBlockArtwork, RoadmapParcoursArtwork } from "@/lib/icon-map";
 import { useProgress } from "@/lib/use-progress";
@@ -8,6 +8,7 @@ import {
   getParcoursProgress,
   isParcoursUnlocked,
 } from "@/content/roadmap-progress";
+import { findLogigrammeForBloc } from "@/content/logigramme/logigramme-registry";
 import { getBlockParcours, getRoadmapBlock } from "@/content/roadmap-registry";
 
 export const Route = createFileRoute("/bloc/$blocId")({
@@ -33,6 +34,7 @@ function BlockPage() {
 
   const parcours = getBlockParcours(block.id);
   const blockProgress = getBlockProgress(block, progress);
+  const logigramme = findLogigrammeForBloc(block.id);
 
   return (
     <RoadmapPageShell
@@ -57,6 +59,26 @@ function BlockPage() {
           </div>
         </div>
       </div>
+
+      {logigramme ? (
+        <Link
+          to="/logigramme/$logigrammeId"
+          params={{ logigrammeId: logigramme.id }}
+          className="mb-6 flex items-center gap-4 rounded-2xl border border-cyan-400/25 bg-cyan-400/10 p-4 transition hover:border-cyan-400/45 hover:bg-cyan-400/15"
+        >
+          <Workflow className="h-6 w-6 shrink-0 text-cyan-300" aria-hidden="true" />
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">
+              {logigramme.subtitle}
+            </p>
+            <h2 className="font-display text-lg font-extrabold">{logigramme.title}</h2>
+            <p className="text-sm text-white/55">
+              {logigramme.nodes.length} cases cliquables, une fiche détaillée par case.
+            </p>
+          </div>
+          <ChevronRight className="h-5 w-5 text-white/35" />
+        </Link>
+      ) : null}
 
       <div className="grid gap-4">
         {parcours.map((item) => {

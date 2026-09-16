@@ -1,0 +1,1677 @@
+{
+  "schemaVersion": 1,
+  "id": "bloc-05",
+  "blocId": "bloc-05",
+  "deaBlocId": "dea.bloc-05",
+  "title": "Logigramme de l'intervention",
+  "subtitle": "De la réception de la mission à la remise en disponibilité",
+  "description": "Le déroulé complet d'une mission d'ambulance, étape par étape et décision par décision. Chaque case ouvre une fiche : ce que l'ambulancier fait à cette étape, dans quel ordre, ce que le référentiel exige et ce qui se rate le plus souvent.",
+  "sourceNote": "Schéma repris du logigramme de formation « Bloc 5 » fourni par l'équipe pédagogique. Les points clés marqués « officiel » citent un texte indexé dans la bibliothèque ; tous les autres sont des affirmations MedLingo en attente de relecture par un formateur DEA.",
+  "nodes": [
+    {
+      "id": "reception-mission",
+      "kind": "start",
+      "title": "Réception de la mission",
+      "boardLabel": ["Réception", "mission"],
+      "column": 1,
+      "row": 0,
+      "fiche": {
+        "role": "Recevoir la demande, en vérifier les éléments et confirmer la prise de mission.",
+        "summary": "La mission arrive du centre 15, d'une régulation ou d'un établissement. Ce qui est noté à cet instant conditionne tout le reste : lieu exact, motif, âge, moyens demandés, heure de départ. Le motif reçu oriente la préparation du matériel — il ne remplace pas le bilan.",
+        "checklist": [
+          "Noter le lieu exact : adresse, étage, code, point de rendez-vous",
+          "Noter le motif, l'âge, le nombre de patients et les moyens déjà engagés",
+          "Vérifier que le type de transport demandé correspond au véhicule et à l'équipage",
+          "Confirmer la prise de mission et horodater le départ",
+          "Adapter le matériel embarqué au motif annoncé"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et des activités est la compétence 10 du référentiel : la mission se trace dès sa réception.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Une adresse approximative se paie en minutes sur place : l'accès, l'étage et le code se confirment avant de partir, pas devant la porte.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Le motif régulé est une hypothèse de travail. Il sert à préparer le matériel et à anticiper les gestes ; l'état réel du patient ne se connaît qu'au bilan.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Partir sans avoir confirmé l'adresse exacte et les conditions d'accès.",
+          "Traiter le motif annoncé par la régulation comme un diagnostic.",
+          "Omettre l'horodatage de la prise de mission, qui ouvre la traçabilité."
+        ],
+        "competencyIds": ["dea.c10", "dea.c11"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-47",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "delai-itineraire-avertisseurs",
+      "kind": "step",
+      "title": "Délai, itinéraire et avertisseurs",
+      "boardLabel": ["Délai", "Itinéraire adapté", "Avertisseurs ?"],
+      "column": 1,
+      "row": 1,
+      "fiche": {
+        "role": "Choisir l'itinéraire et le régime de conduite qui font arriver l'équipage entier et à l'heure.",
+        "summary": "Le délai annoncé se tient par l'itinéraire, pas par la vitesse. Les avertisseurs sonores et lumineux ne suppriment aucune règle de priorité : ils demandent le passage, ils ne l'obtiennent pas. Leur emploi dépend du caractère urgent de la mission et des consignes de la régulation.",
+        "checklist": [
+          "Choisir l'itinéraire selon le trafic, les travaux et l'accès final",
+          "Décider de l'emploi des avertisseurs selon le degré d'urgence de la mission",
+          "Annoncer à la régulation tout délai qui s'allonge",
+          "Adapter la vitesse à la visibilité, à la charge et à l'état du patient"
+        ],
+        "keyPoints": [
+          {
+            "text": "Conduire le véhicule adapté au transport sanitaire terrestre dans le respect des règles de circulation et de sécurité routière et de façon adaptée à l'état de santé du patient est la compétence 7 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 7"
+          },
+          {
+            "text": "Les avertisseurs demandent la priorité, ils ne la donnent pas : chaque intersection reste abordée en s'assurant que les autres usagers ont vu et cédé.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Un retard annoncé tôt permet à la régulation d'engager un autre moyen ; un retard constaté à l'arrivée ne permet plus rien.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Utiliser les avertisseurs comme un droit de passage.",
+          "Garder un retard pour soi au lieu de le transmettre à la régulation.",
+          "Choisir l'itinéraire le plus court sans tenir compte de l'accès au point de prise en charge."
+        ],
+        "competencyIds": ["dea.c07", "dea.c11"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-48",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "arrivee-stationnement-materiel",
+      "kind": "step",
+      "title": "Arrivée, stationnement et matériel adaptés",
+      "boardLabel": ["Arrivée", "Stationnement", "Matériel adaptés"],
+      "column": 1,
+      "row": 2,
+      "fiche": {
+        "role": "Stationner sans créer de danger, évaluer la scène et descendre avec le matériel utile.",
+        "summary": "L'arrivée est d'abord une lecture de la scène : dangers, accès, nombre de victimes, moyens présents. Le stationnement protège l'équipage et ménage la sortie du brancard. Le matériel descend en une fois, choisi sur le motif : remonter le chercher coûte des minutes.",
+        "checklist": [
+          "Repérer les dangers avant d'ouvrir les portes : circulation, gaz, électricité, animaux, tiers",
+          "Stationner en protection, feux allumés, sortie du brancard dégagée",
+          "Évaluer le nombre de victimes et demander les renforts nécessaires",
+          "Descendre avec le sac de premiers secours, l'oxygène et le brancardage adapté à l'accès"
+        ],
+        "keyPoints": [
+          {
+            "text": "Coopérer au sein d'une équipe pluriprofessionnelle, organiser et contrôler son activité dans le cadre d'une démarche qualité / gestion des risques est la compétence 11 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 11"
+          },
+          {
+            "text": "Le soin ne commence pas avant que le danger soit traité : s'approcher d'une victime près d'une machine non consignée ou d'une atmosphère non contrôlée expose l'équipage et ajoute des victimes.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "La sécurisation est proportionnée : sur un arrêt cardio-respiratoire dans un hall sans danger particulier, une sécurisation exhaustive retarde le massage.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Commencer le bilan pendant qu'un équipier cherche encore les dangers.",
+          "Stationner au plus près sans préserver la sortie du brancard.",
+          "Monter sans oxygène parce que le motif « ne le justifiait pas »."
+        ],
+        "competencyIds": ["dea.c11", "dea.c06"],
+        "knowledgeId": "intervention.securite-de-scene",
+        "parcoursId": "parcours-16",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "presentation-identitovigilance",
+      "kind": "step",
+      "title": "Présentation, identitovigilance et confirmation de la mission",
+      "boardLabel": ["Présentation", "Identitovigilance", "Confirmation mission"],
+      "column": 1,
+      "row": 3,
+      "fiche": {
+        "role": "Se présenter, vérifier l'identité du patient et confirmer que la mission reçue est bien celle qui se présente.",
+        "summary": "L'identitovigilance est la vérification que le patient pris en charge est bien celui pour lequel le transport a été demandé. Elle se fait avec le patient quand il peut répondre, sur pièce sinon, et se recoupe avec la prescription et les documents. Une erreur d'identité entraîne une erreur de destination, de dossier et parfois de traitement.",
+        "checklist": [
+          "Se présenter par sa fonction et annoncer le motif de la venue",
+          "Faire décliner nom, nom de naissance, prénom et date de naissance par le patient lui-même",
+          "Recouper avec une pièce d'identité ou la carte Vitale quand le patient ne peut pas répondre",
+          "Confirmer que la mission, la destination et le mode de transport correspondent à la prescription",
+          "Signaler immédiatement à la régulation toute discordance"
+        ],
+        "keyPoints": [
+          {
+            "text": "Établir une communication adaptée pour informer et accompagner le patient et son entourage est la compétence 1 du référentiel : la présentation en est le premier geste.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 1"
+          },
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10 : l'identité est la première de ces informations.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Une identité se fait décliner, elle ne se fait pas confirmer : demander « vous êtes bien Madame Martin ? » obtient un oui de politesse, y compris d'un patient confus.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Une discordance entre la personne présente et la mission reçue se règle avec la régulation avant tout déplacement, jamais sur place et seul.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Poser une question fermée sur l'identité et prendre le « oui » pour une vérification.",
+          "Se fier au nom sur la porte, sur le lit ou annoncé par un tiers.",
+          "Partir avec une prescription qui ne correspond ni au patient ni à la destination."
+        ],
+        "competencyIds": ["dea.c01", "dea.c10"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-12",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "uph-15",
+      "kind": "decision",
+      "title": "Urgence préhospitalière : appel du centre 15 ?",
+      "boardLabel": ["UPH", "15"],
+      "column": 1,
+      "row": 4,
+      "fiche": {
+        "role": "Décider si l'état du patient impose d'appeler le centre 15 avant d'aller plus loin.",
+        "summary": "C'est la décision qui sépare les deux moitiés du logigramme. À gauche, un transport programmé se poursuit normalement. À droite, une urgence préhospitalière : gestes de secours, bilan et transmission au médecin régulateur, qui décide de la suite. Le doute se tranche du côté de l'appel.",
+        "checklist": [
+          "Rechercher une détresse vitale : conscience, ventilation, circulation",
+          "Comparer l'état constaté au motif du transport",
+          "Appeler le 15 devant toute détresse, toute aggravation ou tout doute",
+          "Poursuivre la prise en charge prévue si aucun critère d'urgence n'est retrouvé"
+        ],
+        "keyPoints": [
+          {
+            "text": "Apprécier l'état clinique du patient dans son domaine de compétences est la compétence 4 du référentiel : la décision d'appel repose sur cette appréciation.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 2, compétence 4"
+          },
+          {
+            "text": "Les actes du II de l'article R. 6311-17 sont accomplis en lien constant avec le médecin, ceux du III sur prescription médicale lorsque l'urgence l'impose : l'appel est ce qui ouvre ce lien.",
+            "provenance": "official",
+            "sourceDocumentId": "decret-2022-629",
+            "sourceSection": "Article R. 6311-17, II et III"
+          },
+          {
+            "text": "Le doute est un motif d'appel suffisant : le régulateur dispose d'éléments que l'équipage n'a pas, et un appel de trop coûte moins qu'un appel manquant.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Différer l'appel pour « voir si ça s'améliore ».",
+          "Décider seul qu'un transport simple suffit alors que l'état a changé depuis la commande.",
+          "Appeler sans avoir cherché les détresses, et donc sans rien à transmettre."
+        ],
+        "competencyIds": ["dea.c04", "dea.c10"],
+        "knowledgeId": "intervention.bilan-primaire",
+        "parcoursId": "parcours-47",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "geste-secours-cat-prealerte",
+      "kind": "step",
+      "title": "Gestes de secours, conduite à tenir et pré-alerte",
+      "boardLabel": ["Gestes de secours", "CAT", "Pré-alerte"],
+      "column": 3,
+      "row": 4,
+      "fiche": {
+        "role": "Faire les gestes qui sauvent sans attendre, et alerter pendant qu'ils se font.",
+        "summary": "Devant une détresse, les gestes de secours ne se négocient pas : ils précèdent le bilan détaillé. L'équipage se répartit les rôles — un équipier agit, l'autre alerte — pour que l'alerte ne retarde pas le geste et que le geste ne retarde pas l'alerte.",
+        "checklist": [
+          "Traiter la détresse trouvée : libération des voies aériennes, compression d'une hémorragie, réanimation cardio-pulmonaire, DAE",
+          "Installer le patient dans la position adaptée à sa détresse",
+          "Débuter l'oxygénothérapie selon le protocole du service",
+          "Pré-alerter le centre 15 pendant la réalisation des gestes",
+          "Préparer les éléments du bilan à transmettre"
+        ],
+        "keyPoints": [
+          {
+            "text": "Mettre en œuvre les soins adaptés à l'état du patient, notamment ceux relevant de l'urgence, est la compétence 5 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 2, compétence 5"
+          },
+          {
+            "text": "La pré-alerte n'est pas le bilan : elle annonce en quelques mots une détresse et un besoin de moyens, et prépare l'écoute du régulateur pour le bilan qui suit.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Sur un arrêt cardio-respiratoire, la mise en œuvre du défibrillateur automatisé externe et les compressions priment sur tout recueil de constantes.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Terminer le bilan complet avant de comprimer une hémorragie.",
+          "Alerter seul en interrompant les gestes alors qu'un équipier est disponible.",
+          "Déplacer un patient en détresse avant d'avoir traité la détresse."
+        ],
+        "competencyIds": ["dea.c05", "dea.c04"],
+        "knowledgeId": "intervention.arret-cardio-respiratoire",
+        "parcoursId": "parcours-22",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "bilan",
+      "kind": "step",
+      "title": "Bilan",
+      "boardLabel": ["Bilan"],
+      "column": 4,
+      "row": 4,
+      "fiche": {
+        "role": "Recueillir, dans un ordre fixe, ce que le médecin régulateur a besoin de savoir.",
+        "summary": "Le bilan se construit en trois temps : circonstanciel (ce qui s'est passé), primaire (les détresses, dans l'ordre ABCDE), secondaire (l'examen, les antécédents, les traitements, les constantes). L'ordre n'est pas une formalité : il fait remonter en premier ce qui tue en premier.",
+        "checklist": [
+          "Bilan circonstanciel : lieu, mécanisme, heure de début, témoins",
+          "Bilan primaire ABCDE : voies aériennes, ventilation, circulation, neurologique, exposition",
+          "Constantes : pouls, pression artérielle, fréquence respiratoire, SpO₂, glycémie, température, douleur",
+          "Antécédents, traitements et allergies (démarche SAMPLE)",
+          "Noter l'heure de chaque mesure"
+        ],
+        "keyPoints": [
+          {
+            "text": "Apprécier l'état clinique du patient dans son domaine de compétences est la compétence 4 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 2, compétence 4"
+          },
+          {
+            "text": "La prise de température, de pulsation cardiaque et de pression artérielle par voie non invasive, le recueil de la glycémie capillaire, de la saturation en oxygène et l'évaluation de la douleur figurent parmi les actes que l'ambulancier accomplit en lien constant avec le médecin.",
+            "provenance": "official",
+            "sourceDocumentId": "decret-2022-629",
+            "sourceSection": "Article R. 6311-17, II"
+          },
+          {
+            "text": "Une constante sans heure n'est pas exploitable : c'est l'évolution entre deux mesures qui informe le régulateur, pas la valeur isolée.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Commencer par les antécédents et finir par les détresses.",
+          "Transmettre une interprétation (« il fait un AVC ») à la place du fait observé.",
+          "Relever une seule série de constantes pour toute l'intervention."
+        ],
+        "competencyIds": ["dea.c04", "dea.c10"],
+        "knowledgeId": "intervention.bilan-primaire",
+        "parcoursId": "parcours-17",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "transmission-15",
+      "kind": "step",
+      "title": "Transmission au centre 15",
+      "boardLabel": ["Transmission", "15"],
+      "column": 5,
+      "row": 4,
+      "fiche": {
+        "role": "Transmettre les faits observés au médecin régulateur et recevoir sa décision.",
+        "summary": "La transmission va des détresses vitales vers l'administratif. L'ambulancier rapporte ce qu'il voit et ce qu'il mesure ; le médecin régulateur décide de l'orientation, de la médicalisation et des soins. La décision revient au médecin, la description revient à l'équipage.",
+        "checklist": [
+          "Annoncer l'identification de l'équipage et le lieu",
+          "Transmettre les détresses, puis les constantes avec leur heure",
+          "Donner les antécédents, traitements et allergies utiles",
+          "Reformuler la décision reçue et la noter",
+          "Rappeler le 15 à toute modification de l'état"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Un module de formation « Recueil et Traçabilité » de 3,5 heures est prévu par le référentiel de formation aux actes de l'aide médicale urgente.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-10-31-actes-amu",
+            "sourceSection": "Annexe I — module 3"
+          },
+          {
+            "text": "Poser un diagnostic, réclamer une filière ou un examen, décider d'un non-transport ou choisir seul la destination sort du rôle de l'ambulancier.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "La décision reçue se reformule à voix haute avant de raccrocher : c'est la seule vérification possible que le message est passé dans les deux sens.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Commencer par l'état civil et finir par la détresse.",
+          "Demander une destination sans avoir transmis le bilan.",
+          "Raccrocher sans avoir reformulé la conduite à tenir prescrite."
+        ],
+        "competencyIds": ["dea.c10"],
+        "knowledgeId": "intervention.transmission-au-medecin-regulateur",
+        "parcoursId": "parcours-47",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "cat-soins-prescrits",
+      "kind": "step",
+      "title": "Conduite à tenir et soins prescrits",
+      "boardLabel": ["CAT", "Soins prescrits"],
+      "column": 5,
+      "row": 5,
+      "fiche": {
+        "role": "Appliquer la conduite à tenir décidée par le médecin régulateur, dans les limites des actes autorisés.",
+        "summary": "Les soins qui suivent la transmission sont prescrits : ils se font en lien constant avec le médecin, ou sur prescription lorsque l'urgence l'impose. L'ambulancier applique, surveille l'effet et rend compte. Un acte hors de la liste réglementaire ne devient pas autorisé parce qu'il est demandé oralement.",
+        "checklist": [
+          "Reformuler la prescription reçue avant de l'appliquer",
+          "Réaliser les actes prescrits qui relèvent de la compétence ambulancière",
+          "Noter l'heure de chaque acte et le produit administré",
+          "Surveiller l'effet attendu et les effets indésirables",
+          "Rappeler la régulation si l'effet attendu n'est pas obtenu"
+        ],
+        "keyPoints": [
+          {
+            "text": "Les actes du II de l'article R. 6311-17 sont accomplis en lien constant avec le médecin ; ceux du III le sont sur prescription médicale lorsque l'urgence l'impose.",
+            "provenance": "official",
+            "sourceDocumentId": "decret-2022-629",
+            "sourceSection": "Article R. 6311-17, II et III"
+          },
+          {
+            "text": "Mettre en œuvre les soins adaptés à l'état du patient, notamment ceux relevant de l'urgence, est la compétence 5 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 2, compétence 5"
+          },
+          {
+            "text": "Ce qui est administré, à quelle heure et par qui se note au moment où c'est fait : une reconstitution en fin de mission n'a pas la même valeur.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Appliquer une prescription mal comprise sans la faire répéter.",
+          "Réaliser un acte hors du champ réglementaire parce qu'il a été demandé.",
+          "Ne pas signaler l'absence d'effet du traitement administré."
+        ],
+        "competencyIds": ["dea.c05", "dea.c10"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-44",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "medicalisation",
+      "kind": "decision",
+      "title": "Médicalisation ?",
+      "boardLabel": ["Médicalisation"],
+      "column": 5,
+      "row": 6,
+      "fiche": {
+        "role": "Recevoir du régulateur la décision d'envoyer ou non une équipe médicale, et préparer son arrivée.",
+        "summary": "La médicalisation ne se demande pas, elle se décide par le médecin régulateur à partir du bilan transmis. L'équipage l'anticipe : il prépare l'accès, dégage l'espace autour du patient et poursuit les gestes jusqu'à l'arrivée du SMUR.",
+        "checklist": [
+          "Noter la décision du régulateur et l'heure",
+          "Préparer l'accès et l'espace autour du patient si un SMUR est engagé",
+          "Poursuivre les gestes et la surveillance sans interruption",
+          "Faire guider l'équipe médicale jusqu'au patient"
+        ],
+        "keyPoints": [
+          {
+            "text": "Coopérer au sein d'une équipe pluriprofessionnelle et organiser son activité est la compétence 11 du référentiel : l'arrivée d'une équipe médicale se prépare.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 11"
+          },
+          {
+            "text": "L'attente d'un renfort médical n'est pas une suspension de la prise en charge : la surveillance et les gestes continuent jusqu'à la relève effective.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Interrompre les gestes dès que le SMUR est annoncé.",
+          "Laisser l'équipe médicale chercher le patient au lieu de la guider.",
+          "Ranger le matériel avant que la relève ne soit faite."
+        ],
+        "competencyIds": ["dea.c11", "dea.c10"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-49",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "smur",
+      "kind": "end",
+      "title": "Relais SMUR",
+      "boardLabel": ["SMUR"],
+      "column": 6,
+      "row": 6,
+      "fiche": {
+        "role": "Passer le relais à l'équipe médicale et rester à sa disposition.",
+        "summary": "Le SMUR prend la direction de la prise en charge. L'ambulancier transmet ce qu'il a fait, avec les heures, puis se met à disposition : il continue souvent à assurer les gestes, le brancardage et le transport sous responsabilité médicale.",
+        "checklist": [
+          "Transmettre à l'équipe médicale l'histoire, les constantes et les actes réalisés avec leur heure",
+          "Rester à disposition pour les gestes, le matériel et le brancardage",
+          "Compléter la fiche bilan avec les éléments de la relève",
+          "Reprendre la mission sous la responsabilité du médecin si le transport se poursuit"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins est la compétence 10 du référentiel : la relève en est le moment le plus exposé.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Une relève se transmet avec les heures : ce qui a été fait il y a deux minutes et ce qui a été fait il y a vingt minutes n'ont pas le même sens pour le médecin.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Résumer la prise en charge sans donner les heures des gestes.",
+          "Considérer la mission terminée à l'arrivée du SMUR.",
+          "Oublier de consigner les actes réalisés avant la relève."
+        ],
+        "competencyIds": ["dea.c10", "dea.c11"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-49",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "transport-decision",
+      "kind": "decision",
+      "title": "Transport ?",
+      "boardLabel": ["Transport"],
+      "column": 5,
+      "row": 7,
+      "fiche": {
+        "role": "Recevoir la décision de transporter ou non, et vers quelle destination.",
+        "summary": "Après la conduite à tenir, le régulateur tranche : transport vers une destination qu'il désigne, ou pas de transport. La destination n'est jamais choisie par l'équipage. Si le transport est décidé, la mission rejoint le déroulé commun : documents, soins, installation, trajet.",
+        "checklist": [
+          "Noter la décision, la destination et l'heure",
+          "Vérifier que le véhicule et l'équipage correspondent au transport décidé",
+          "Informer le patient et son entourage de la destination",
+          "Rejoindre le déroulé commun : documents, soins, installation"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité des soins est la compétence 10 : la destination reçue se note et se transmet.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Choisir seul la destination, la demander pour des raisons de proximité ou d'habitude, sort du rôle de l'ambulancier : l'orientation relève du médecin régulateur.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Annoncer une destination au patient avant que le régulateur ne l'ait décidée.",
+          "Partir vers l'hôpital le plus proche par habitude.",
+          "Ne pas vérifier que le véhicule correspond au transport décidé."
+        ],
+        "competencyIds": ["dea.c10", "dea.c11"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-45",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "decision-non-transport",
+      "kind": "step",
+      "title": "Décision de non-transport",
+      "boardLabel": ["Décision"],
+      "column": 5,
+      "row": 8,
+      "fiche": {
+        "role": "Tracer la décision médicale de ne pas transporter et ce qui a été dit au patient.",
+        "summary": "Un non-transport est une décision médicale, prise par le régulateur, jamais par l'équipage. Elle se trace : qui a décidé, à quelle heure, quelles consignes ont été laissées au patient et à l'entourage, et quels signes doivent faire rappeler le 15.",
+        "checklist": [
+          "Faire confirmer la décision par le médecin régulateur et la noter avec son heure",
+          "Transmettre au patient les consignes de surveillance et les motifs de rappel du 15",
+          "Recueillir et tracer un éventuel refus de soins ou de transport",
+          "Laisser le patient dans un environnement sûr, avec un moyen d'alerter",
+          "Rendre compte de la fin de mission à la régulation"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la traçabilité des soins et des activités est la compétence 10 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Un refus de soins ou de transport se recueille auprès d'un patient informé des risques, et se trace : la trace protège le patient autant que l'équipage.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Laisser un patient sur place sans décision médicale tracée expose l'équipage : la décision appartient au régulateur, l'écrit appartient à l'équipage.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Renoncer au transport sur l'avis de l'équipage ou de la famille.",
+          "Laisser le patient sans consigne de surveillance ni moyen d'alerter.",
+          "Ne pas faire signer ni tracer un refus de transport."
+        ],
+        "competencyIds": ["dea.c10", "dea.c01"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-44",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "gestion-doc-transmission",
+      "kind": "step",
+      "title": "Gestion documentaire et transmission",
+      "boardLabel": ["Gestion Doc", "Transmission"],
+      "column": 1,
+      "row": 7,
+      "fiche": {
+        "role": "Réunir les documents du patient et recueillir les transmissions de ceux qui le prennent en charge.",
+        "summary": "Le dossier suit le patient : prescription médicale de transport, documents d'identité et de couverture, courrier, ordonnances, dernières transmissions du service ou de l'entourage. Un document manquant se demande sur place — il ne se retrouve pas à l'arrivée.",
+        "checklist": [
+          "Récupérer la prescription médicale de transport et les pièces administratives",
+          "Recueillir les transmissions du service, du médecin ou de l'entourage",
+          "Réunir courriers, examens, ordonnances et traitements à emporter",
+          "Compléter la fiche bilan avec ce qui vient d'être recueilli",
+          "Vérifier les effets personnels du patient et les tracer"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et des activités est la compétence 10 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Un module de formation « Recueil et Traçabilité » de 3,5 heures est prévu par le référentiel de formation aux actes de l'aide médicale urgente.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-10-31-actes-amu",
+            "sourceSection": "Annexe I — module 3"
+          },
+          {
+            "text": "Les effets personnels se comptent et se tracent au départ : une prothèse dentaire, des lunettes ou un téléphone perdus deviennent introuvables une fois la mission terminée.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Partir sans prescription médicale de transport.",
+          "Recueillir les transmissions oralement sans rien noter.",
+          "Emporter des effets personnels sans les tracer."
+        ],
+        "competencyIds": ["dea.c10", "dea.c11"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-44",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "soins-hygiene-confort",
+      "kind": "decision",
+      "title": "Soins d'hygiène et de confort nécessaires ?",
+      "boardLabel": ["Soins", "Hygiène", "confort"],
+      "column": 1,
+      "row": 8,
+      "fiche": {
+        "role": "Déterminer si l'état du patient impose des soins d'hygiène et de confort avant le départ.",
+        "summary": "Un patient souillé, mouillé, douloureux ou installé sans appui ne supportera pas le trajet. La question se pose avant le transfert, parce qu'elle change le matériel à préparer et le temps à prévoir — et parce qu'elle ne se rattrape pas en roulant.",
+        "checklist": [
+          "Observer l'état cutané, les protections, les dispositifs en place",
+          "Évaluer la douleur et les positions qui la soulagent",
+          "Décider des soins à faire avant le départ",
+          "Prévenir le patient de ce qui va être fait et recueillir son accord"
+        ],
+        "keyPoints": [
+          {
+            "text": "Mettre en œuvre des soins d'hygiène et de confort adaptés aux besoins et à la situation du patient est la compétence 3 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 3"
+          },
+          {
+            "text": "Le confort n'est pas un supplément : une installation douloureuse ou une protection souillée aggravent l'état pendant le trajet et rendent la surveillance illisible.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Reporter un soin d'hygiène « à l'arrivée » pour tenir un horaire.",
+          "Faire un soin sans prévenir le patient ni préserver son intimité.",
+          "Négliger la douleur provoquée par la position de transport."
+        ],
+        "competencyIds": ["dea.c03", "dea.c02"],
+        "knowledgeId": "intervention.hygiene-et-desinfection",
+        "parcoursId": "parcours-14",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "materiel-epi-adapte",
+      "kind": "step",
+      "title": "Matériel et EPI adaptés",
+      "boardLabel": ["Matériel", "EPI adapté"],
+      "column": 0,
+      "row": 8,
+      "fiche": {
+        "role": "Se protéger et préparer le matériel avant de toucher le patient.",
+        "summary": "La protection individuelle précède le contact : gants, et selon la situation masque, lunettes, surblouse. Le matériel du soin est réuni avant de commencer, à portée de main, pour ne pas interrompre le soin en cours et contaminer l'environnement en allant chercher ce qui manque.",
+        "checklist": [
+          "Réaliser l'hygiène des mains avant et après le contact",
+          "Choisir les protections selon le risque : contact, gouttelettes, projections",
+          "Réunir le matériel du soin et un sac à déchets avant de commencer",
+          "Prévoir l'élimination des déchets d'activités de soins à risque infectieux"
+        ],
+        "keyPoints": [
+          {
+            "text": "Mettre en œuvre des soins d'hygiène et de confort adaptés aux besoins et à la situation du patient est la compétence 3 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 3"
+          },
+          {
+            "text": "Utiliser des techniques d'entretien du matériel et des installations en prenant en compte la prévention des risques associés est la compétence 8 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 4, compétence 8"
+          },
+          {
+            "text": "La protection face au sang précède le contact avec le patient : s'approcher sans protection pour gagner du temps est une erreur, y compris devant une hémorragie.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Enfiler les gants après avoir touché le patient.",
+          "Interrompre un soin pour aller chercher le matériel oublié.",
+          "Garder les mêmes gants d'un patient ou d'un geste à l'autre."
+        ],
+        "competencyIds": ["dea.c03", "dea.c08"],
+        "knowledgeId": "intervention.hygiene-et-desinfection",
+        "parcoursId": "parcours-15",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "cat-consentement-soins",
+      "kind": "step",
+      "title": "Conduite à tenir, consentement et soins",
+      "boardLabel": ["CAT", "Consentement", "Soins"],
+      "column": 0,
+      "row": 9,
+      "fiche": {
+        "role": "Expliquer le soin, obtenir l'accord du patient, puis le réaliser en préservant son intimité.",
+        "summary": "Aucun soin ne commence sans que le patient sache ce qui va être fait et l'ait accepté, y compris un simple changement de protection. Le consentement se recherche même chez un patient confus, en adaptant l'explication. Un refus se respecte, se comprend et se transmet.",
+        "checklist": [
+          "Expliquer le geste, sa raison et sa durée avec des mots simples",
+          "Recueillir l'accord du patient et respecter un refus",
+          "Préserver l'intimité : fermer, couvrir, écarter les tiers",
+          "Réaliser le soin à deux quand la mobilisation l'exige",
+          "Tracer le soin réalisé et un éventuel refus"
+        ],
+        "keyPoints": [
+          {
+            "text": "Établir une communication adaptée pour informer et accompagner le patient et son entourage est la compétence 1 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 1"
+          },
+          {
+            "text": "Mettre en œuvre des soins d'hygiène et de confort adaptés aux besoins et à la situation du patient est la compétence 3 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 3"
+          },
+          {
+            "text": "La préservation de l'intimité fait partie de l'organisation de l'espace de soins : un soin réalisé porte ouverte ou devant des tiers reste un soin mal fait.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Commencer un soin en annonçant seulement « on va vous bouger ».",
+          "Passer outre un refus au motif que le soin est nécessaire.",
+          "Réaliser seul une mobilisation qui demande deux personnes."
+        ],
+        "competencyIds": ["dea.c01", "dea.c03"],
+        "knowledgeId": "intervention.hygiene-et-desinfection",
+        "parcoursId": "parcours-13",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "dependance",
+      "kind": "decision",
+      "title": "Dépendance ?",
+      "boardLabel": ["Dépendance"],
+      "column": 1,
+      "row": 9,
+      "fiche": {
+        "role": "Évaluer ce que le patient peut faire seul, pour choisir entre accompagnement et transfert avec matériel.",
+        "summary": "La question n'est pas « est-il malade ? » mais « que peut-il faire lui-même, aujourd'hui, ici ? ». Un patient autonome se fatigue moins en marchant accompagné qu'en étant porté ; un patient dépendant transféré sans matériel adapté expose son dos et celui de l'équipage.",
+        "checklist": [
+          "Évaluer la mobilité réelle : se lever, tenir debout, marcher, monter un escalier",
+          "Tenir compte de la douleur, de la perfusion, de l'oxygène et des dispositifs",
+          "Prendre en compte l'environnement : escaliers, ascenseur, largeur des portes",
+          "Choisir entre accompagnement et matériel de transfert adapté"
+        ],
+        "keyPoints": [
+          {
+            "text": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources et en utilisant le matériel adapté est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "Mobiliser les ressources du patient fait partie du soin : faire porter un patient qui peut marcher lui fait perdre de l'autonomie et retarde la mission.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "L'évaluation porte sur l'état du jour : une autonomie habituelle ne dit rien de la capacité à se lever après une chute ou un malaise.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Décider du matériel avant d'avoir vu le patient se lever.",
+          "Faire descendre seul un patient par l'escalier.",
+          "Se fier à l'autonomie déclarée par l'entourage."
+        ],
+        "competencyIds": ["dea.c02", "dea.c04"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-45",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "materiel-transfert-adapte",
+      "kind": "step",
+      "title": "Matériel de transfert adapté",
+      "boardLabel": ["Matériel", "adapté"],
+      "column": 2,
+      "row": 9,
+      "fiche": {
+        "role": "Choisir le matériel de relevage et de brancardage que l'état du patient et les lieux imposent.",
+        "summary": "Brancard, portoir, chaise portoir, matelas immobilisateur à dépression, plan dur, drap de glisse : le choix dépend de la pathologie et de l'accès. Un matériel mal choisi se paie au moment du portage, quand il n'est plus possible d'en changer sans reposer le patient.",
+        "checklist": [
+          "Choisir le matériel selon la pathologie et selon l'accès (escalier, ascenseur, couloir)",
+          "Vérifier l'état et les sangles du matériel avant de mobiliser",
+          "Préparer le chemin : portes, tapis, obstacles",
+          "Répartir les rôles et désigner celui qui commande le mouvement"
+        ],
+        "keyPoints": [
+          {
+            "text": "Accompagner le patient dans son installation et ses déplacements en utilisant le matériel adapté est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "Réaliser la préparation, le contrôle et l'entretien du véhicule adapté au transport sanitaire afin de garantir la sécurité du transport est la compétence 6 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 6"
+          },
+          {
+            "text": "L'ordre de mobilisation dépend de la pathologie : saignement contrôlé avant de bouger, rachis immobilisé avant tout déplacement, position latérale conservée pendant le portage.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Monter une chaise portoir pour un patient qui doit rester allongé.",
+          "Découvrir un obstacle une fois le patient soulevé.",
+          "Commencer le mouvement sans que personne ne le commande."
+        ],
+        "competencyIds": ["dea.c02", "dea.c06"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-46",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "transfert-cat",
+      "kind": "step",
+      "title": "Transfert et conduite à tenir",
+      "boardLabel": ["Transfert", "CAT"],
+      "column": 2,
+      "row": 10,
+      "fiche": {
+        "role": "Relever et porter le patient en un seul mouvement commandé, sans aggraver sa lésion.",
+        "summary": "Le relevage est unique et commandé : les reprises successives multiplient les contraintes sur une lésion instable et fatiguent l'équipage. Le mouvement se prépare — annonce au patient, prise, chemin, commandement — puis s'exécute d'un bloc.",
+        "checklist": [
+          "Expliquer au patient ce qui va se passer et à quel signal",
+          "Vérifier une dernière fois les dispositifs : perfusion, oxygène, drains, pansements",
+          "Commander le mouvement d'une seule voix",
+          "Sangler le patient et vérifier sa position avant de rouler le brancard",
+          "Réévaluer l'état du patient après le transfert"
+        ],
+        "keyPoints": [
+          {
+            "text": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources et en utilisant le matériel adapté est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "Le relevage est unique et commandé : les reprises successives du mouvement multiplient les contraintes sur une lésion instable.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Un dispositif se vérifie avant le mouvement, pas après : une perfusion arrachée pendant un portage interrompt le traitement au pire moment.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Porter le patient sans briefing préalable de l'équipe.",
+          "Retirer un dispositif de contrôle avant le départ pour vérifier une plaie.",
+          "Enchaîner plusieurs reprises de mouvement faute de préparation."
+        ],
+        "competencyIds": ["dea.c02", "dea.c05"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-45",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "accompagnement",
+      "kind": "step",
+      "title": "Accompagnement",
+      "boardLabel": ["Accompagnement"],
+      "column": 1,
+      "row": 10,
+      "fiche": {
+        "role": "Accompagner à pied un patient autonome, en restant à portée de rattrapage.",
+        "summary": "Un patient autonome se déplace seul, accompagné : l'ambulancier marche à hauteur, du côté le plus faible, prêt à retenir. C'est aussi le moment où se repèrent une instabilité, un essoufflement ou un malaise à l'effort que le patient n'avait pas signalés.",
+        "checklist": [
+          "Proposer l'appui plutôt que l'imposer, et rester du côté le plus faible",
+          "Surveiller la marche, l'essoufflement et la coloration pendant le déplacement",
+          "Prévoir un temps d'arrêt et une assise en cas de fatigue",
+          "Sécuriser le franchissement des marches et du seuil du véhicule",
+          "Réévaluer après l'effort et le signaler s'il a été mal supporté"
+        ],
+        "keyPoints": [
+          {
+            "text": "Accompagner le patient dans son installation et ses déplacements en mobilisant ses ressources est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "Le déplacement est un test d'effort involontaire : un essoufflement ou une pâleur apparus en marchant sont des éléments de bilan à transmettre.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Marcher devant le patient au lieu de rester à sa hauteur.",
+          "Laisser un patient monter seul dans le véhicule.",
+          "Ignorer un essoufflement apparu pendant le trajet à pied."
+        ],
+        "competencyIds": ["dea.c02", "dea.c01"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-45",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "installation-ambulance-securisation",
+      "kind": "step",
+      "title": "Installation en ambulance et sécurisation",
+      "boardLabel": ["Installation", "Ambulance", "Sécurisation"],
+      "column": 2,
+      "row": 11,
+      "fiche": {
+        "role": "Installer le patient dans la position que son état impose et tout arrimer avant de démarrer.",
+        "summary": "La position d'installation découle de la pathologie : demi-assise pour une détresse respiratoire, allongée jambes surélevées pour un état de choc, latérale de sécurité pour une inconscience qui ventile. Rien ne roule sans être arrimé : patient, brancard, matériel, bouteille d'oxygène.",
+        "checklist": [
+          "Installer dans la position adaptée à la pathologie et au confort",
+          "Sangler le patient et verrouiller le brancard sur son rail",
+          "Arrimer le matériel, la bouteille d'oxygène et les sacs",
+          "Attacher l'accompagnant et l'installer à une place prévue",
+          "Vérifier l'éclairage, le chauffage et l'accès au patient avant de démarrer"
+        ],
+        "keyPoints": [
+          {
+            "text": "Réaliser la préparation, le contrôle et l'entretien du véhicule adapté au transport sanitaire terrestre afin de garantir la sécurité du transport est la compétence 6 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 6"
+          },
+          {
+            "text": "Accompagner le patient dans son installation en utilisant le matériel adapté est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "Un matériel non arrimé devient un projectile au premier freinage : la vérification se fait portes fermées, avant de s'installer au volant.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Allonger à plat un patient en détresse respiratoire.",
+          "Démarrer avec une bouteille d'oxygène ou un sac non arrimé.",
+          "Installer l'accompagnant à une place qui bloque l'accès au patient."
+        ],
+        "competencyIds": ["dea.c02", "dea.c06"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-46",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "transport-itineraire-conduite",
+      "kind": "step",
+      "title": "Transport : itinéraire et conduite adaptés",
+      "boardLabel": ["Transport", "Itinéraire", "Conduite adaptée"],
+      "column": 2,
+      "row": 12,
+      "fiche": {
+        "role": "Conduire de la façon que l'état du patient impose, sur l'itinéraire qui le supporte le mieux.",
+        "summary": "La conduite sanitaire n'est pas une conduite rapide : accélérations et freinages progressifs, virages anticipés, revêtement choisi. Un patient douloureux, nauséeux, immobilisé ou instable subit chaque irrégularité. L'équipier en cellule reste en mesure de communiquer avec le conducteur.",
+        "checklist": [
+          "Adapter la vitesse et la trajectoire à l'état du patient",
+          "Choisir l'itinéraire le plus supportable, pas seulement le plus court",
+          "Maintenir la liaison entre la cellule et la cabine",
+          "Prévenir la régulation ou la destination des évolutions notables",
+          "Annoncer l'arrivée quand le service d'accueil doit se préparer"
+        ],
+        "keyPoints": [
+          {
+            "text": "Conduire le véhicule adapté au transport sanitaire terrestre dans le respect des règles de circulation et de sécurité routière et de façon adaptée à l'état de santé du patient est la compétence 7 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 7"
+          },
+          {
+            "text": "Une conduite souple fait partie du soin : sur un rachis immobilisé ou une fracture, chaque freinage brutal est une reprise de douleur.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Prendre l'itinéraire le plus court malgré des ralentisseurs et un mauvais revêtement.",
+          "Rouler vite pour « rattraper » un retard au détriment du patient.",
+          "Perdre le contact avec l'équipier resté en cellule."
+        ],
+        "competencyIds": ["dea.c07", "dea.c11"],
+        "knowledgeId": "intervention.transport-sanitaire",
+        "parcoursId": "parcours-48",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "surveillance",
+      "kind": "step",
+      "title": "Surveillance pendant le transport",
+      "boardLabel": ["Surveillance"],
+      "column": 2,
+      "row": 13,
+      "fiche": {
+        "role": "Réévaluer le patient à intervalles réguliers pendant tout le trajet et horodater ce qui change.",
+        "summary": "La surveillance ne s'arrête pas parce que le patient va mieux : une amélioration apparente n'écarte pas la récidive, notamment après une convulsion, une anaphylaxie ou une inhalation de fumées. Les constantes se reprennent à intervalles réguliers, et chaque mesure porte son heure.",
+        "checklist": [
+          "Reprendre conscience, ventilation, circulation et douleur à intervalles réguliers",
+          "Horodater chaque mesure et chaque changement observé",
+          "Surveiller les dispositifs : oxygène, perfusion, pansements, immobilisations",
+          "Garder le patient dans le champ de vision et maintenir le contact verbal",
+          "Alerter le 15 dès qu'un élément se dégrade"
+        ],
+        "keyPoints": [
+          {
+            "text": "Conduire le véhicule de façon adaptée à l'état de santé du patient est la compétence 7 du référentiel : la surveillance pendant le trajet en relève.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 7"
+          },
+          {
+            "text": "Une amélioration apparente ne dispense pas de réévaluer : le risque de récidive persiste après une convulsion, une anaphylaxie ou une inhalation de fumées.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Chez le nourrisson, l'évolution de la réactivité pendant le transport est un élément de surveillance à transmettre.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Interrompre la surveillance pour ranger le matériel.",
+          "Installer un enfant hors de vue pour le laisser dormir.",
+          "Minimiser une dégradation parce que le patient reste conscient."
+        ],
+        "competencyIds": ["dea.c04", "dea.c07"],
+        "knowledgeId": "intervention.surveillance-du-patient",
+        "parcoursId": "parcours-18",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "degradation-evolution",
+      "kind": "decision",
+      "title": "Dégradation ou évolution de l'état clinique ?",
+      "boardLabel": ["Dégradation", "Évolution état", "Clinique"],
+      "column": 2,
+      "row": 14,
+      "fiche": {
+        "role": "Décider, pendant le trajet, si l'état du patient impose de reprendre contact avec le centre 15.",
+        "summary": "C'est la boucle du logigramme : une dégradation en cours de transport renvoie à la décision d'appel. L'équipage s'arrête si le geste l'exige, rappelle le 15, transmet l'évolution et reçoit une nouvelle conduite à tenir — qui peut changer la destination.",
+        "checklist": [
+          "Comparer l'état actuel aux dernières constantes relevées",
+          "S'arrêter en sécurité si un geste ou un examen l'impose",
+          "Rappeler le centre 15 et transmettre l'évolution avec les heures",
+          "Appliquer la nouvelle conduite à tenir et noter le changement de destination éventuel",
+          "Poursuivre si rien ne change : arrivée à destination"
+        ],
+        "keyPoints": [
+          {
+            "text": "Apprécier l'état clinique du patient dans son domaine de compétences est la compétence 4 du référentiel : elle s'exerce pendant tout le transport.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 2, compétence 4"
+          },
+          {
+            "text": "Une dégradation se transmet au moment où elle est constatée, pas à l'arrivée : c'est ce délai qui permet au régulateur de changer l'orientation.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Accélérer pour « arriver plus vite » ne remplace pas un appel : la destination initiale peut ne plus convenir à l'état du patient.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Accélérer sans rappeler la régulation.",
+          "Attendre l'arrivée pour signaler une aggravation.",
+          "Réaliser un geste en roulant alors qu'un arrêt en sécurité était possible."
+        ],
+        "competencyIds": ["dea.c04", "dea.c10"],
+        "knowledgeId": "intervention.surveillance-du-patient",
+        "parcoursId": "parcours-17",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "arrivee-destination",
+      "kind": "step",
+      "title": "Arrivée à destination : stationnement et matériel adaptés",
+      "boardLabel": ["Arrivée", "Stationnement", "Matériel adaptés"],
+      "column": 3.5,
+      "row": 14,
+      "fiche": {
+        "role": "Stationner au bon accès et préparer le matériel de transfert avant d'ouvrir la cellule.",
+        "summary": "L'arrivée se prépare : accès des urgences ou entrée du service, place réservée aux ambulances, sortie du brancard dégagée. Le matériel de transfert est prêt avant l'ouverture, pour que le patient ne reste pas exposé au froid, à la pluie ou au regard des passants.",
+        "checklist": [
+          "Stationner à l'accès prévu, sans gêner les autres moyens de secours",
+          "Préparer le matériel de transfert avant d'ouvrir la cellule",
+          "Protéger le patient du froid et des regards pendant le trajet extérieur",
+          "Vérifier les effets personnels et les documents avant de descendre le patient"
+        ],
+        "keyPoints": [
+          {
+            "text": "Réaliser la préparation, le contrôle et l'entretien du véhicule adapté au transport sanitaire afin de garantir la sécurité du transport est la compétence 6 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 3, compétence 6"
+          },
+          {
+            "text": "Un stationnement qui bloque l'accès des secours à l'entrée des urgences pénalise la mission suivante, pas seulement la sienne.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Ouvrir la cellule avant d'avoir préparé le matériel de transfert.",
+          "Stationner devant l'accès des urgences sans nécessité.",
+          "Laisser les effets personnels dans la cellule au moment du transfert."
+        ],
+        "competencyIds": ["dea.c06", "dea.c11"],
+        "knowledgeId": "intervention.securite-de-scene",
+        "parcoursId": "parcours-46",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "gestion-doc-destination",
+      "kind": "step",
+      "title": "Gestion documentaire et transmissions à l'arrivée",
+      "boardLabel": ["Gestion Doc", "Transmissions"],
+      "column": 5,
+      "row": 14,
+      "fiche": {
+        "role": "Transmettre oralement et par écrit au service qui prend le relais, et remettre le dossier.",
+        "summary": "La transmission d'arrivée ferme la chaîne de continuité ouverte à la réception de la mission : qui est le patient, ce qui s'est passé, ce qui a été fait, avec les heures, et ce qui a changé pendant le trajet. Le dossier, les documents et les effets personnels sont remis et tracés.",
+        "checklist": [
+          "Transmettre oralement au soignant qui prend le relais : identité, motif, évolution, actes réalisés avec leur heure",
+          "Remettre la fiche bilan et les documents du patient",
+          "Remettre les effets personnels et les tracer",
+          "Faire viser la prise en charge et conserver l'exemplaire de l'équipage",
+          "Rendre compte de la fin de mission à la régulation"
+        ],
+        "keyPoints": [
+          {
+            "text": "Rechercher, traiter et transmettre les informations pertinentes pour assurer la continuité et la traçabilité des soins et des activités est la compétence 10 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 10"
+          },
+          {
+            "text": "Un module de formation « Recueil et Traçabilité » de 3,5 heures est prévu par le référentiel de formation aux actes de l'aide médicale urgente.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-10-31-actes-amu",
+            "sourceSection": "Annexe I — module 3"
+          },
+          {
+            "text": "Une transmission faite à un couloir n'est pas une transmission : elle se fait à une personne identifiée, qui prend le relais.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Déposer le patient sans transmission orale à un soignant identifié.",
+          "Laisser partir le dossier sans conserver l'exemplaire de l'équipage.",
+          "Omettre l'évolution survenue pendant le trajet."
+        ],
+        "competencyIds": ["dea.c10", "dea.c11"],
+        "knowledgeId": "intervention.transmission-au-medecin-regulateur",
+        "parcoursId": "parcours-47",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "installation-transfert",
+      "kind": "step",
+      "title": "Installation et transfert du patient",
+      "boardLabel": ["Installation", "Transfert"],
+      "column": 5,
+      "row": 12,
+      "fiche": {
+        "role": "Installer le patient dans le service d'accueil et ne le quitter qu'une fois le relais pris.",
+        "summary": "Le transfert vers le lit ou le brancard d'accueil est le dernier mouvement de la mission, et le plus souvent celui où l'on se relâche. Il se prépare comme les précédents, et la surveillance continue jusqu'à ce qu'un soignant ait effectivement pris le relais.",
+        "checklist": [
+          "Préparer le transfert : matériel, chemin, rôles, commandement",
+          "Installer le patient en position adaptée et le couvrir",
+          "Maintenir la surveillance jusqu'à la prise en charge effective",
+          "Récupérer le matériel de l'équipage et vérifier qu'il est complet"
+        ],
+        "keyPoints": [
+          {
+            "text": "Accompagner le patient dans son installation et ses déplacements en utilisant le matériel adapté est la compétence 2 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 1, compétence 2"
+          },
+          {
+            "text": "La responsabilité de l'équipage ne s'arrête pas au seuil du service : elle cesse quand un soignant a pris le relais, pas quand le brancard est vide.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Laisser le patient sur un brancard d'accueil sans prévenir personne.",
+          "Interrompre la surveillance dès l'entrée dans le service.",
+          "Repartir avec du matériel du service ou en y laissant le sien."
+        ],
+        "competencyIds": ["dea.c02", "dea.c11"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-45",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "desinfection-rearmement-tracabilite",
+      "kind": "step",
+      "title": "Désinfection, réarmement et traçabilité",
+      "boardLabel": ["Désinfection", "Réarmement", "traçabilité"],
+      "column": 5,
+      "row": 11,
+      "fiche": {
+        "role": "Remettre le véhicule et le matériel en état d'intervenir, et écrire ce qui a été fait.",
+        "summary": "Entre deux patients, la cellule se nettoie et se désinfecte, les déchets de soins partent dans la filière prévue, le matériel consommé est remplacé et les bouteilles d'oxygène vérifiées. Ce qui n'est pas tracé n'a, pour le service suivant, pas été fait — et une anomalie non signalée revient sur la mission suivante.",
+        "checklist": [
+          "Éliminer les déchets d'activités de soins à risque infectieux dans la filière prévue",
+          "Nettoyer puis désinfecter les surfaces et le matériel selon le protocole du service",
+          "Réarmer : consommables, oxygène, draps, matériel de relevage",
+          "Tracer la désinfection, le réarmement et les contrôles effectués",
+          "Signaler toute anomalie ou dysfonctionnement du véhicule et du matériel"
+        ],
+        "keyPoints": [
+          {
+            "text": "Utiliser des techniques d'entretien du matériel et des installations adaptées en prenant en compte la prévention des risques associés est la compétence 8 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 4, compétence 8"
+          },
+          {
+            "text": "Repérer, signaler et traiter les anomalies et dysfonctionnements en lien avec l'entretien du véhicule, du matériel et des installations et en assurer la traçabilité est la compétence 9 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 4, compétence 9"
+          },
+          {
+            "text": "Le nettoyage précède la désinfection : désinfecter une surface souillée ne fait que déplacer la souillure.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          },
+          {
+            "text": "Un réarmement non tracé oblige l'équipage suivant à tout revérifier, ou pire, à découvrir le manque en intervention.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Désinfecter sans avoir nettoyé au préalable.",
+          "Se remettre disponible avec un consommable manquant.",
+          "Ne pas signaler une anomalie jugée mineure."
+        ],
+        "competencyIds": ["dea.c08", "dea.c09"],
+        "knowledgeId": "intervention.hygiene-et-desinfection",
+        "parcoursId": "parcours-15",
+        "status": "to_validate"
+      }
+    },
+    {
+      "id": "disponible",
+      "kind": "end",
+      "title": "Disponible",
+      "boardLabel": ["Disponible"],
+      "column": 5,
+      "row": 9,
+      "fiche": {
+        "role": "Annoncer la disponibilité seulement lorsque l'équipage, le véhicule et le dossier le sont réellement.",
+        "summary": "La disponibilité est une information opérationnelle : la régulation engage sur elle la mission suivante. Elle suppose un véhicule désinfecté et réarmé, un dossier clos et un équipage en état d'intervenir. Se déclarer disponible « pour gagner du temps » revient à accepter la mission suivante sans les moyens de la faire.",
+        "checklist": [
+          "Vérifier que la désinfection et le réarmement sont faits et tracés",
+          "Clore le dossier de la mission et transmettre les éléments attendus",
+          "Signaler à la régulation toute limitation du véhicule ou de l'équipage",
+          "Annoncer la disponibilité et l'horodater"
+        ],
+        "keyPoints": [
+          {
+            "text": "Organiser et contrôler son activité, coopérer au sein d'une équipe pluriprofessionnelle et améliorer sa pratique dans le cadre d'une démarche qualité / gestion des risques est la compétence 11 du référentiel.",
+            "provenance": "official",
+            "sourceDocumentId": "arrete-2022-04-11-dea",
+            "sourceSection": "Annexe II — Bloc 5, compétence 11"
+          },
+          {
+            "text": "Se déclarer disponible engage la mission suivante : une disponibilité annoncée avant le réarmement se paie sur l'intervention d'après.",
+            "provenance": "internal",
+            "sourceDocumentId": null,
+            "sourceSection": null
+          }
+        ],
+        "commonErrors": [
+          "Annoncer la disponibilité pendant la désinfection.",
+          "Clore la mission sans avoir terminé la fiche bilan.",
+          "Taire une limitation du véhicule pour ne pas immobiliser l'équipage."
+        ],
+        "competencyIds": ["dea.c11", "dea.c09"],
+        "knowledgeId": null,
+        "parcoursId": "parcours-49",
+        "status": "to_validate"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "reception-mission",
+      "to": "delai-itineraire-avertisseurs",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "delai-itineraire-avertisseurs",
+      "to": "arrivee-stationnement-materiel",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "arrivee-stationnement-materiel",
+      "to": "presentation-identitovigilance",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "presentation-identitovigilance",
+      "to": "uph-15",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "uph-15",
+      "to": "geste-secours-cat-prealerte",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "uph-15",
+      "to": "gestion-doc-transmission",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "geste-secours-cat-prealerte",
+      "to": "bilan",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "bilan",
+      "to": "transmission-15",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "transmission-15",
+      "to": "cat-soins-prescrits",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "cat-soins-prescrits",
+      "to": "medicalisation",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "medicalisation",
+      "to": "smur",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "medicalisation",
+      "to": "transport-decision",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "transport-decision",
+      "to": "gestion-doc-transmission",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "transport-decision",
+      "to": "decision-non-transport",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "decision-non-transport",
+      "to": "disponible",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "gestion-doc-transmission",
+      "to": "soins-hygiene-confort",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "soins-hygiene-confort",
+      "to": "materiel-epi-adapte",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "soins-hygiene-confort",
+      "to": "dependance",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "materiel-epi-adapte",
+      "to": "cat-consentement-soins",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "cat-consentement-soins",
+      "to": "dependance",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "dependance",
+      "to": "materiel-transfert-adapte",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "dependance",
+      "to": "accompagnement",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "materiel-transfert-adapte",
+      "to": "transfert-cat",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "transfert-cat",
+      "to": "installation-ambulance-securisation",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "accompagnement",
+      "to": "installation-ambulance-securisation",
+      "label": null,
+      "tone": "neutral",
+      "shape": "elbow-vh",
+      "lane": null
+    },
+    {
+      "from": "installation-ambulance-securisation",
+      "to": "transport-itineraire-conduite",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "transport-itineraire-conduite",
+      "to": "surveillance",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "surveillance",
+      "to": "degradation-evolution",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "degradation-evolution",
+      "to": "uph-15",
+      "label": "Oui",
+      "tone": "yes",
+      "shape": "loop",
+      "lane": -0.62
+    },
+    {
+      "from": "degradation-evolution",
+      "to": "arrivee-destination",
+      "label": "Non",
+      "tone": "no",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "arrivee-destination",
+      "to": "gestion-doc-destination",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "gestion-doc-destination",
+      "to": "installation-transfert",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "installation-transfert",
+      "to": "desinfection-rearmement-tracabilite",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    },
+    {
+      "from": "desinfection-rearmement-tracabilite",
+      "to": "disponible",
+      "label": null,
+      "tone": "neutral",
+      "shape": "direct",
+      "lane": null
+    }
+  ]
+}
