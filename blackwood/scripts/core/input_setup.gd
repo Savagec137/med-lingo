@@ -19,11 +19,19 @@ const BINDINGS := {
 	"dodge": [KEY_SPACE],
 	"quick_heal": [KEY_H],
 	"debug_perf": [KEY_F3],
+	"toggle_view": [KEY_V],
+	"weapon_1": [KEY_1],
+	"weapon_2": [KEY_2],
+	"weapon_3": [KEY_3],
+	"weapon_4": [KEY_4],
+	"weapon_5": [KEY_5],
 }
 
 const MOUSE_BINDINGS := {
 	"fire": [MOUSE_BUTTON_LEFT],
 	"aim": [MOUSE_BUTTON_RIGHT],
+	"weapon_next": [MOUSE_BUTTON_WHEEL_DOWN],
+	"weapon_prev": [MOUSE_BUTTON_WHEEL_UP],
 }
 
 

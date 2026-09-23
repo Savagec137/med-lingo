@@ -138,16 +138,26 @@ func _build_environment() -> void:
 
 
 ## Applique le préréglage de qualité (options).
-func apply_quality(q: int) -> void:
-	env.volumetric_fog_enabled = q >= Settings.Quality.MEDIUM
-	env.ssao_enabled = q >= Settings.Quality.HIGH
-	env.glow_enabled = q >= Settings.Quality.MEDIUM
-	moon.shadow_enabled = q >= Settings.Quality.MEDIUM
+func apply_quality(_q: int = 0) -> void:
+	apply_graphics()
+
+
+## Applique les options graphiques (Settings) à l'environnement et aux lumières.
+func apply_graphics() -> void:
+	env.volumetric_fog_enabled = Settings.volumetric_fog
+	env.ssao_enabled = Settings.ssao
+	env.ssil_enabled = Settings.ssil
+	env.ssr_enabled = Settings.ssr
+	env.ssr_max_steps = 48
+	env.ssr_fade_in = 0.2
+	env.ssr_fade_out = 2.5
+	env.glow_enabled = Settings.glow
+	moon.shadow_enabled = Settings.shadows >= 1
 	for l in lights:
 		if l.light and l.has_meta("shadow"):
-			l.light.shadow_enabled = q >= Settings.Quality.HIGH
-	var fallback_fog := q < Settings.Quality.MEDIUM
-	env.fog_enabled = fallback_fog
+			l.light.shadow_enabled = Settings.shadows >= 2
+	# Sans brouillard volumétrique : brouillard classique pour garder l'ambiance
+	env.fog_enabled = not Settings.volumetric_fog
 	env.fog_light_color = Color(0.05, 0.055, 0.07)
 	env.fog_density = 0.03
 

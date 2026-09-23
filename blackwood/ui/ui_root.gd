@@ -185,6 +185,10 @@ func _screen(s: UIScreen) -> Variant:
 
 func _apply_settings() -> void:
 	post_mat.set_shader_parameter("brightness", Settings.brightness)
+	post_mat.set_shader_parameter("grain", 0.06 if Settings.film_grain else 0.0)
+	post_mat.set_shader_parameter("aberration", 0.0015 if Settings.chromatic_aberration else 0.0)
+	subtitle_label.add_theme_font_size_override("font_size", [24, 30, 38][clampi(Settings.subtitle_size, 0, 2)])
+	subtitle_label.visible = Settings.subtitles
 
 
 # --- Pile d'écrans -----------------------------------------------------------------

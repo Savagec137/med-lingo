@@ -87,18 +87,21 @@ func interact(player: Node) -> void:
 			if item_id == "battery":
 				GameState.flashlight_battery = 100.0
 				_announce(pickup_msg if pickup_msg != "" else "Piles neuves. La lampe torche retrouve toute sa puissance.")
+		"weapon":
+			var first := not GameState.has_weapon(item_id)
+			GameState.give_weapon(item_id)
+			if player.has_method("_update_equipment_visibility"):
+				player._update_equipment_visibility()
+			var slot := WeaponDB.ORDER.find(item_id) + 1
+			_announce(pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. [%d] pour l'équiper." % [item_name, slot] if first else "%s : déjà en votre possession." % item_name))
 		_:
+			if ItemDB.kind(item_id) == "ammo":
+				count = maxi(1, roundi(count * Settings.ammo_mult()))
 			if not GameState.can_add(item_id, count):
 				GameState.show_message("Inventaire plein. Impossible de prendre : %s." % item_name, 3.0)
 				Audio.ui("ui_error", -6.0)
 				return
 			GameState.add_item(item_id, count)
-			if item_id == "pistol":
-				GameState.set_flag("has_pistol", true)
-				if GameState.pistol_mag <= 0:
-					GameState.pistol_mag = GameState.MAG_SIZE
-				if player.has_method("_update_equipment_visibility"):
-					player._update_equipment_visibility()
 			var label := item_name if count <= 1 else "%s (x%d)" % [item_name, count]
 			_announce(pickup_msg if pickup_msg != "" else "Vous obtenez : %s." % label)
 	if pickup_id != "":

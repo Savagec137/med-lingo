@@ -10,6 +10,7 @@ signal message(text: String, duration: float)
 signal document_collected(doc_id: String)
 signal objective_changed(text: String)
 signal noise_emitted(pos: Vector3, radius: float, source: Node)
+signal weapons_changed
 
 const MAX_HP := 100.0
 const INVENTORY_SLOTS := 6
@@ -24,7 +25,9 @@ var door_states := {}
 var dead_enemies := {}
 var flashlight_battery := 100.0
 var flashlight_on := false
-var pistol_mag := 0
+## Armes possédées : id → {"mag": balles dans le chargeur}. Ceinture à part des 6 emplacements.
+var weapons := {}
+var equipped := ""
 var playtime := 0.0
 var current_zone := "parking"
 
@@ -52,12 +55,48 @@ func reset() -> void:
 	dead_enemies.clear()
 	flashlight_battery = 100.0
 	flashlight_on = false
-	pistol_mag = 0
+	weapons.clear()
+	equipped = ""
 	playtime = 0.0
 	current_zone = "parking"
 	_last_objective = ""
 	inventory_changed.emit()
 	hp_changed.emit(hp, MAX_HP)
+
+
+# --- Armes -----------------------------------------------------------------
+
+func has_weapon(id: String) -> bool:
+	return weapons.has(id)
+
+
+func give_weapon(id: String, loaded: bool = true) -> void:
+	if not WeaponDB.is_weapon(id):
+		return
+	if not weapons.has(id):
+		weapons[id] = {"mag": int(WeaponDB.get_weapon(id).get("mag", 0)) if loaded else 0}
+	set_flag("has_" + id, true)
+	if equipped == "" or equipped == "baton":
+		equipped = id
+	weapons_changed.emit()
+
+
+func weapon_mag(id: String = "") -> int:
+	var w := id if id != "" else equipped
+	return int(weapons.get(w, {}).get("mag", 0))
+
+
+func set_weapon_mag(id: String, n: int) -> void:
+	if weapons.has(id):
+		weapons[id]["mag"] = n
+		weapons_changed.emit()
+
+
+## Munitions en réserve pour l'arme (0 pour la matraque).
+func weapon_reserve(id: String = "") -> int:
+	var w := id if id != "" else equipped
+	var ammo := String(WeaponDB.get_weapon(w).get("ammo", ""))
+	return count_item(ammo) if ammo != "" else 0
 
 
 # --- Drapeaux -----------------------------------------------------------
@@ -216,7 +255,8 @@ func to_dict() -> Dictionary:
 		"dead_enemies": dead_enemies.duplicate(),
 		"flashlight_battery": flashlight_battery,
 		"flashlight_on": flashlight_on,
-		"pistol_mag": pistol_mag,
+		"weapons": weapons.duplicate(true),
+		"equipped": equipped,
 		"playtime": playtime,
 		"current_zone": current_zone,
 	}
@@ -236,9 +276,13 @@ func from_dict(d: Dictionary) -> void:
 	dead_enemies = d.get("dead_enemies", {}).duplicate()
 	flashlight_battery = float(d.get("flashlight_battery", 100.0))
 	flashlight_on = bool(d.get("flashlight_on", false))
-	pistol_mag = int(d.get("pistol_mag", 0))
+	weapons = d.get("weapons", {}).duplicate(true)
+	for w in weapons:
+		weapons[w]["mag"] = int(weapons[w].get("mag", 0))
+	equipped = String(d.get("equipped", ""))
 	playtime = float(d.get("playtime", 0.0))
 	current_zone = String(d.get("current_zone", "parking"))
 	inventory_changed.emit()
+	weapons_changed.emit()
 	hp_changed.emit(hp, MAX_HP)
 	refresh_objective()

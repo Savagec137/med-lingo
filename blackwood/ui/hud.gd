@@ -9,6 +9,7 @@ var hp_label: Label
 var weapon_box: Control
 var weapon_label: Label
 var ammo_label: Label
+var belt_label: Label
 var battery_bar: ProgressBar
 var battery_box: Control
 var crosshair: Control
@@ -50,6 +51,10 @@ func _ready() -> void:
 	ammo_label = UITheme.label("12 | 24", 34, UITheme.COL_TEXT, UITheme.font_ui_bold())
 	ammo_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	weapon_box.add_child(ammo_label)
+	# Ceinture d'armes : 1 à 5, arme en main en surbrillance
+	belt_label = UITheme.label("", 14, UITheme.COL_FAINT, UITheme.font_ui_bold())
+	belt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	weapon_box.add_child(belt_label)
 
 	# Batterie de la lampe (bas droite, sous l'arme)
 	battery_box = HBoxContainer.new()
@@ -116,17 +121,26 @@ func _process(delta: float) -> void:
 	status_label.text = {"fine": "BON", "caution": "ATTENTION", "danger": "DANGER"}[status]
 	status_label.add_theme_color_override("font_color", UITheme.COL_FINE if status == "fine" else (UITheme.COL_CAUTION if status == "caution" else UITheme.COL_DANGER))
 	hp_label.text = "PV %d" % int(ceil(GameState.hp))
-	var armed := p.has_pistol()
+	var armed := p.is_armed()
 	weapon_box.visible = armed
 	if armed:
-		var reserve := GameState.count_item("ammo_9mm")
-		ammo_label.text = "%d | %d" % [GameState.pistol_mag, reserve]
-		var low := GameState.pistol_mag == 0
-		ammo_label.add_theme_color_override("font_color", UITheme.COL_DANGER if low else UITheme.COL_TEXT)
-		weapon_label.text = "PISTOLET 9MM" + ("  —  RECHARGEMENT" if p.pistol.reloading else "")
+		var d := p.weapons.def()
+		var melee := String(d.get("kind", "")) == "melee"
+		var mag := GameState.weapon_mag()
+		ammo_label.text = "—" if melee else "%d | %d" % [mag, GameState.weapon_reserve()]
+		ammo_label.add_theme_color_override("font_color", UITheme.COL_DANGER if (mag == 0 and not melee) else UITheme.COL_TEXT)
+		weapon_label.text = String(d.get("short", "")) + ("  —  RECHARGEMENT" if p.weapons.reloading else "")
+		var belt := ""
+		for i in WeaponDB.ORDER.size():
+			var w: String = WeaponDB.ORDER[i]
+			if GameState.has_weapon(w):
+				belt += ("[%d]" if w == GameState.equipped else " %d ") % (i + 1)
+			else:
+				belt += " · "
+		belt_label.text = belt
 	battery_box.visible = GameState.get_flag("has_flashlight")
 	battery_bar.value = GameState.flashlight_battery
-	crosshair.visible = p.aiming and armed
+	crosshair.visible = Settings.crosshair and armed and (p.aiming or p.is_first_person())
 	(crosshair as Crosshair).spread = 1.0 if Input.is_action_pressed("aim") else 2.6
 	var f := p.focused
 	var show_prompt := f != null and p.controls_enabled and not p.is_dead

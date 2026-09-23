@@ -1,8 +1,9 @@
 class_name PlayerCamera
 extends Node3D
-## Caméra troisième personne : suit le joueur avec inertie, contourne les murs
-## (SpringArm3D), se rapproche de l'épaule en visée, tremble sur les tirs et les
-## chocs, et peut être « détournée » vers un point d'intérêt pendant un événement.
+## Caméra du joueur, en troisième personne (épaule, amorti, contourne les murs
+## avec un SpringArm3D, se rapproche en visée) ou en première personne (à hauteur
+## des yeux, corps masqué, bras et arme au calque 11). Tremble sur les tirs et
+## les chocs, et peut être « détournée » vers un point d'intérêt.
 
 const MOUSE_SCALE := 0.0022
 const PITCH_MIN := -1.15
@@ -23,6 +24,9 @@ var arm_length := 2.45
 var aim_arm_length := 1.1
 var aim_shoulder := 0.52
 var aiming := false
+var first_person := false
+## Hauteur des yeux en première personne.
+var eye_height := 1.62
 var trauma := 0.0
 var recoil := 0.0
 var input_enabled := true
@@ -59,7 +63,7 @@ func _ready() -> void:
 	cam.fov = Settings.fov
 	cam.near = 0.05
 	cam.far = 220.0
-	cam.cull_mask = 0xFFFFF
+	cam.cull_mask = 0xFFFFF & ~ViewModel.LAYER
 	arm.add_child(cam)
 	# Lumière d'appoint qui n'éclaire que le personnage (calque de rendu 2) :
 	# Ethan reste lisible dans le noir sans que le décor soit éclairé.
@@ -79,6 +83,29 @@ func _ready() -> void:
 			arm.add_excluded_object((target as CollisionObject3D).get_rid())
 	_smoothed_yaw = yaw
 	_smoothed_pitch = pitch
+	Settings.changed.connect(_on_settings)
+	set_first_person(Settings.camera_view == Settings.View.FIRST_PERSON)
+
+
+func _on_settings() -> void:
+	var want := Settings.camera_view == Settings.View.FIRST_PERSON
+	if want != first_person:
+		set_first_person(want)
+
+
+## Bascule première / troisième personne (le corps reste visible dans les ombres).
+func set_first_person(on: bool) -> void:
+	first_person = on
+	if on:
+		cam.cull_mask = (0xFFFFF & ~2) | ViewModel.LAYER
+		cam.near = 0.02
+		arm.spring_length = 0.0
+		arm.position.x = 0.0
+	else:
+		cam.cull_mask = 0xFFFFF & ~ViewModel.LAYER
+		cam.near = 0.05
+	if target and target.has_method("_on_view_changed"):
+		target._on_view_changed(on)
 
 
 func setup(p_target: Node3D, p_yaw: float) -> void:
@@ -115,7 +142,7 @@ func add_look(dyaw: float, dpitch: float) -> void:
 
 
 func shake(amount: float) -> void:
-	trauma = clampf(trauma + amount, 0.0, 1.0)
+	trauma = clampf(trauma + amount * Settings.camera_shake, 0.0, 1.0)
 
 
 func kick(amount: float) -> void:
@@ -142,8 +169,17 @@ func _process(delta: float) -> void:
 	if target == null:
 		return
 	_t += delta
-	var goal: Vector3 = target.global_position + Vector3.UP * height
-	global_position = global_position.lerp(goal, 1.0 - exp(-follow_speed * delta))
+	if first_person:
+		# À hauteur des yeux : suit le bassin (marche, esquive, chute) sans retard horizontal
+		var dip := 0.0
+		if target is Player and (target as Player).rig:
+			var r := (target as Player).rig
+			dip = r.joint("hips").position.y - r.base_hips_height
+		var eye: Vector3 = target.global_position + Vector3.UP * (eye_height + dip * 0.8)
+		global_position = Vector3(eye.x, lerpf(global_position.y, eye.y, 1.0 - exp(-25.0 * delta)), eye.z)
+	else:
+		var goal: Vector3 = target.global_position + Vector3.UP * height
+		global_position = global_position.lerp(goal, 1.0 - exp(-follow_speed * delta))
 
 	# Point d'intérêt cinématique : la vue glisse vers la cible puis revient
 	var y := yaw
@@ -165,9 +201,13 @@ func _process(delta: float) -> void:
 	pitch_pivot.rotation.x = _smoothed_pitch + recoil
 
 	var k2 := 1.0 - exp(-10.0 * delta)
-	arm.spring_length = lerpf(arm.spring_length, aim_arm_length if aiming else arm_length, k2)
-	arm.position.x = lerpf(arm.position.x, aim_shoulder if aiming else shoulder, k2)
-	var want_fov := Settings.fov - (16.0 if aiming else 0.0)
+	if first_person:
+		arm.spring_length = 0.0
+		arm.position.x = 0.0
+	else:
+		arm.spring_length = lerpf(arm.spring_length, aim_arm_length if aiming else arm_length, k2)
+		arm.position.x = lerpf(arm.position.x, aim_shoulder if aiming else shoulder, k2)
+	var want_fov := Settings.fov - ((12.0 if first_person else 16.0) if aiming else 0.0)
 	cam.fov = lerpf(cam.fov, want_fov, k2)
 
 	recoil = lerpf(recoil, 0.0, 1.0 - exp(-9.0 * delta))
@@ -178,4 +218,4 @@ func _process(delta: float) -> void:
 		_noise.get_noise_2d(_t * 40.0, 50.0) * 0.06 * t2,
 		_noise.get_noise_2d(_t * 40.0, 99.0) * 0.08 * t2)
 	# Respiration discrète de la caméra
-	cam.position.y = sin(_t * 1.3) * 0.012
+	cam.position.y = sin(_t * 1.3) * (0.004 if first_person else 0.012)

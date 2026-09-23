@@ -9,13 +9,20 @@ extends RefCounted
 ##   tool    : équipement permanent (lampe torche, hors emplacements)
 
 const ITEMS := {
-	"pistol": {
-		"name": "Pistolet 9mm",
-		"kind": "weapon",
-		"max_stack": 1,
-		"icon": "pistol",
-		"desc": "Pistolet semi-automatique de service. Chargeur de 12 balles. Chaque balle compte.",
-	},
+	"baton": {"name": "Matraque télescopique", "kind": "weapon", "max_stack": 1, "icon": "baton",
+		"desc": "Matraque d'agent de sécurité. Silencieuse : économise les munitions."},
+	"pistol": {"name": "Pistolet 9mm", "kind": "weapon", "max_stack": 1, "icon": "pistol",
+		"desc": "Pistolet semi-automatique de service. Chargeur de 12 balles. Chaque balle compte."},
+	"shotgun": {"name": "Fusil à pompe", "kind": "weapon", "max_stack": 1, "icon": "shotgun",
+		"desc": "Calibre 12. Dévastateur de près. Très peu de cartouches."},
+	"smg": {"name": "Pistolet-mitrailleur", "kind": "weapon", "max_stack": 1, "icon": "smg",
+		"desc": "Rafales rapides. Consomme énormément de 9mm."},
+	"magnum": {"name": "Magnum .357", "kind": "weapon", "max_stack": 1, "icon": "magnum",
+		"desc": "Six coups de gros calibre. Pour ce qui ne devrait plus marcher."},
+	"ammo_shells": {"name": "Cartouches calibre 12", "kind": "ammo", "max_stack": 30, "icon": "shells",
+		"desc": "Cartouches de chevrotine pour le fusil à pompe. Rares : à garder pour les urgences."},
+	"ammo_magnum": {"name": "Balles .357 Magnum", "kind": "ammo", "max_stack": 18, "icon": "magnum_ammo",
+		"desc": "Munitions de gros calibre pour le Magnum. Chaque balle est précieuse."},
 	"ammo_9mm": {
 		"name": "Munitions 9mm",
 		"kind": "ammo",

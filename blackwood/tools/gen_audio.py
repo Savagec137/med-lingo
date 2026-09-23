@@ -246,6 +246,78 @@ def s_gunshot():
     return reverb(dist(x, 2.5), 1.4, 0.25)
 
 
+def s_shotgun_blast():
+    d = 2.2
+    crack = bp(white(0.03), 900, 8000) * env_exp(n(0.03), 0.006)
+    body = lp(white(0.4), 1800) * env_exp(n(0.4), 0.09)
+    boom = sine(sweep(90, 30, 0.35, 0.5), 0.35) * env_exp(n(0.35), 0.1)
+    tail = lp(pink(d), 900) * env_exp(n(d), 0.55) * 0.45
+    x = mix(crack * 1.4, body * 1.2, boom * 1.6, tail)
+    return reverb(dist(x, 3.0), 1.8, 0.3)
+
+
+def s_shotgun_pump():
+    total = 0.55
+    back = mix(click(1700, 0.04, 5), bp(white(0.1), 600, 3500) * env_exp(n(0.1), 0.03) * 0.5)
+    fwd = mix(click(2600, 0.035, 6), lp(white(0.05), 2500) * env_exp(n(0.05), 0.01) * 0.6)
+    return mix(at(back, 0.0, total), at(fwd, 0.24, total))
+
+
+def s_magnum_shot():
+    d = 2.8
+    crack = bp(white(0.025), 1200, 10000) * env_exp(n(0.025), 0.005)
+    body = lp(white(0.35), 2200) * env_exp(n(0.35), 0.07)
+    boom = sine(sweep(130, 32, 0.3, 0.45), 0.3) * env_exp(n(0.3), 0.09)
+    tail = lp(pink(d), 1100) * env_exp(n(d), 0.7) * 0.5
+    x = mix(crack * 2.0, body * 1.1, boom * 1.8, tail)
+    return reverb(dist(x, 3.5), 2.2, 0.32)
+
+
+def s_smg_shot():
+    d = 0.45
+    crack = bp(white(0.015), 1800, 9000) * env_exp(n(0.015), 0.003)
+    body = lp(white(0.12), 2800) * env_exp(n(0.12), 0.03)
+    thump = sine(sweep(140, 60, 0.08, 0.5), 0.08) * env_exp(n(0.08), 0.025)
+    tail = lp(pink(d), 1500) * env_exp(n(d), 0.12) * 0.25
+    return dist(mix(crack * 1.3, body * 0.8, thump, tail), 2.2)
+
+
+def s_baton_swing():
+    d = 0.28
+    f = np.concatenate([np.linspace(500, 1800, n(d * 0.45)), np.linspace(1800, 400, n(d) - n(d * 0.45))])
+    x = np.zeros(n(d))
+    w = white(d)
+    for i in range(0, n(d), 256):
+        seg = w[i:i + 256]
+        x[i:i + len(seg)] = bp(np.pad(seg, (0, 256 - len(seg))), max(f[i] * 0.7, 80), f[i] * 1.3)[:len(seg)]
+    return x * np.sin(np.linspace(0, np.pi, n(d))) * 0.8
+
+
+def s_baton_hit():
+    thwack = mix(lp(white(0.12), 1600) * env_exp(n(0.12), 0.025), sine(sweep(180, 70, 0.1), 0.1) * env_exp(n(0.1), 0.03))
+    ring = fm(900, 330, 1.5, 0.25) * env_exp(n(0.25), 0.05) * 0.25
+    return mix(thwack * 1.3, ring, at(s_impact_flesh() * 0.6, 0.005, 0.3))
+
+
+def s_baton_extend():
+    total = 0.3
+    c1 = mix(click(3600, 0.02, 8), fm(2400, 700, 2.0, 0.08) * env_exp(n(0.08), 0.02) * 0.4)
+    c2 = mix(click(4200, 0.025, 9), fm(3100, 900, 2.5, 0.12) * env_exp(n(0.12), 0.03) * 0.5)
+    return mix(at(c1, 0.0, total), at(c2, 0.07, total))
+
+
+def s_weapon_switch():
+    total = 0.4
+    cloth = bp(white(0.18), 400, 2500) * env_ad(0.18, 0.04, 0.06) * 0.35
+    return mix(at(cloth, 0.0, total), at(click(2400, 0.03, 6), 0.2, total), at(click(3300, 0.02, 8) * 0.6, 0.27, total))
+
+
+def s_reload_shell():
+    total = 0.45
+    push = mix(click(2000, 0.03, 5), bp(white(0.07), 700, 3000) * env_exp(n(0.07), 0.02) * 0.4)
+    return mix(at(bp(white(0.08), 1200, 5000) * env_exp(n(0.08), 0.03) * 0.3, 0.0, total), at(push, 0.1, total))
+
+
 def s_gun_empty():
     return mix(click(2800, 0.02, 10), at(click(1900, 0.03, 12) * 0.5, 0.01, 0.1))
 
@@ -1003,6 +1075,9 @@ def s_music_end():
 SOUNDS = {
     "flashlight_click": s_flashlight_click, "gunshot": s_gunshot, "gun_empty": s_gun_empty,
     "shell_casing": s_shell_casing, "reload": s_reload, "impact_wall": s_impact_wall,
+    "shotgun_blast": s_shotgun_blast, "shotgun_pump": s_shotgun_pump, "magnum_shot": s_magnum_shot,
+    "smg_shot": s_smg_shot, "baton_swing": s_baton_swing, "baton_hit": s_baton_hit,
+    "baton_extend": s_baton_extend, "weapon_switch": s_weapon_switch, "reload_shell": s_reload_shell,
     "impact_metal": s_impact_metal, "impact_flesh": s_impact_flesh, "hit_flesh": s_hit_flesh,
     "swing": s_swing, "swing_heavy": lambda: s_swing(True), "step_shuffle": s_step_shuffle,
     "step_heavy": s_step_heavy, "dodge": s_dodge, "spray": s_spray, "player_death": s_player_death,

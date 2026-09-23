@@ -412,14 +412,14 @@ func fight(e: Enemy, timeout: float = 45.0) -> bool:
 			continue
 		if GameState.hp < 45.0 and GameState.has_item("spray"):
 			await press("quick_heal")
-		if GameState.pistol_mag == 0:
+		if GameState.weapon_mag() == 0:
 			if GameState.count_item("ammo_9mm") == 0:
 				_log("Plus de munitions : on fuit")
 				release_all()
 				return false
 			Input.action_release("fire")
 			Input.action_release("aim")
-			if player.pistol.reloading:
+			if player.weapons.reloading:
 				# Rechargement en cours : on recule sans esquiver (l'esquive l'annulerait).
 				face(e.global_position + Vector3.UP * 1.5)
 				Input.action_press("move_back")
@@ -443,18 +443,18 @@ func fight(e: Enemy, timeout: float = 45.0) -> bool:
 			Input.action_press("move_back")
 		else:
 			Input.action_release("move_back")
-		if player.aim_blend > 0.85 and player.pistol.can_fire() and aimed_at(head, 0.1):
-			var mag := GameState.pistol_mag
+		if player.aim_blend > 0.85 and player.weapons.can_fire() and aimed_at(head, 0.1):
+			var mag := GameState.weapon_mag()
 			Input.action_press("fire")
 			await _frames(2)
 			Input.action_release("fire")
-			if GameState.pistol_mag < mag:
-				_log("  tir → %s  (cible %s, d=%.1f, PV %d)" % [player.pistol.last_hit, head, d, int(e.hp)])
+			if GameState.weapon_mag() < mag:
+				_log("  tir → %s  (cible %s, d=%.1f, PV %d)" % [player.weapons.last_hit, head, d, int(e.hp)])
 		await _frames(2)
 		t += 4.0 / 60.0
 	release_all()
 	if e.is_dead():
-		_log("  %s abattu. Munitions : %d | %d  PV : %d" % [e.enemy_id, GameState.pistol_mag, GameState.count_item("ammo_9mm"), int(GameState.hp)])
+		_log("  %s abattu. Munitions : %d | %d  PV : %d" % [e.enemy_id, GameState.weapon_mag(), GameState.count_item("ammo_9mm"), int(GameState.hp)])
 		await _secs(0.8)
 	return e.is_dead()
 
@@ -644,11 +644,11 @@ func _run() -> void:
 	if not await pick("security_pistol"):
 		await _fail("pistolet")
 		return
-	if GameState.pistol_mag != 12:
-		await _fail("chargeur du pistolet = %d" % GameState.pistol_mag)
+	if GameState.weapon_mag() != 12:
+		await _fail("chargeur du pistolet = %d" % GameState.weapon_mag())
 		return
 	await pick("security_ammo")
-	_log("Munitions : %d | %d (attendu 12 | 12 = 24 au total)" % [GameState.pistol_mag, GameState.count_item("ammo_9mm")])
+	_log("Munitions : %d | %d (attendu 12 | 12 = 24 au total)" % [GameState.weapon_mag(), GameState.count_item("ammo_9mm")])
 	if guard and not guard.is_dead():
 		if not await fight(guard):
 			await _fail("combat contre la créature de la sécurité")
@@ -978,17 +978,17 @@ func boss_fight() -> bool:
 				var head := boss.rig.joint("head").global_position
 				Input.action_press("aim")
 				face(head, true)
-				if player.aim_blend > 0.85 and player.pistol.can_fire() and GameState.pistol_mag > 0:
+				if player.aim_blend > 0.85 and player.weapons.can_fire() and GameState.weapon_mag() > 0:
 					Input.action_press("fire")
 					await _frames(2)
 					Input.action_release("fire")
-				elif GameState.pistol_mag == 0 and GameState.count_item("ammo_9mm") > 0:
+				elif GameState.weapon_mag() == 0 and GameState.count_item("ammo_9mm") > 0:
 					Input.action_release("aim")
 					await press("reload")
 		await _frames(3)
 		t += 0.05
 	release_all()
-	_log("Chirurgien vaincu : %s (décharges : %d, munitions restantes : %d | %d)" % [boss.is_dead(), electro, GameState.pistol_mag, GameState.count_item("ammo_9mm")])
+	_log("Chirurgien vaincu : %s (décharges : %d, munitions restantes : %d | %d)" % [boss.is_dead(), electro, GameState.weapon_mag(), GameState.count_item("ammo_9mm")])
 	return boss.is_dead()
 
 

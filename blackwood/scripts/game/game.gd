@@ -45,7 +45,7 @@ func setup(save: Dictionary) -> void:
 	facility.name = "Facility"
 	add_child(facility)
 	facility.build()
-	facility.apply_quality(Settings.quality)
+	facility.apply_graphics()
 
 	player = Player.new()
 	player.name = "Player"
@@ -61,7 +61,7 @@ func setup(save: Dictionary) -> void:
 		yaw = float(pdata.get("yaw", 0.0))
 	camera_rig.setup(player, yaw)
 	add_child(camera_rig)
-	player.camera_rig = camera_rig
+	player.attach_camera(camera_rig)
 	player.place(start, yaw)
 	camera_rig.make_current()
 
@@ -235,4 +235,4 @@ func _on_player_died() -> void:
 
 func _on_settings() -> void:
 	if facility:
-		facility.apply_quality(Settings.quality)
+		facility.apply_graphics()

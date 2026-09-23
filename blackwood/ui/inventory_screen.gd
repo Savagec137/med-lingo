@@ -189,11 +189,11 @@ func _refresh() -> void:
 		match String(item.kind):
 			"key":
 				extra = "\n\nS'utilise automatiquement au bon endroit."
-			"weapon":
-				extra = "\n\nChargeur : %d / %d" % [GameState.pistol_mag, GameState.MAG_SIZE]
+			"ammo":
+				extra = "\n\nArmes : " + _ammo_users(sel.id)
 		desc_label.text = String(item.desc) + extra
-		use_btn.visible = String(item.kind) == "heal" or (String(item.kind) == "weapon" and GameState.count_item("ammo_9mm") > 0 and GameState.pistol_mag < GameState.MAG_SIZE)
-		use_btn.text = "UTILISER" if String(item.kind) == "heal" else "RECHARGER"
+		use_btn.visible = String(item.kind) == "heal"
+		use_btn.text = "UTILISER"
 	var status := GameState.health_status()
 	status_label.text = "ÉTAT : " + {"fine": "BON", "caution": "ATTENTION", "danger": "DANGER"}[status] + "   (%d PV)" % int(ceil(GameState.hp))
 	status_label.add_theme_color_override("font_color", UITheme.COL_FINE if status == "fine" else (UITheme.COL_CAUTION if status == "caution" else UITheme.COL_DANGER))
@@ -220,17 +220,16 @@ func _use_selected() -> void:
 			var p := GameState.player as Player
 			if p and p.use_heal():
 				_refresh()
-		"weapon":
-			var p2 := GameState.player as Player
-			if p2 and p2.has_pistol():
-				# Rechargement instantané depuis l'inventaire (jeu en pause)
-				var need := GameState.MAG_SIZE - GameState.pistol_mag
-				var n := mini(need, GameState.count_item("ammo_9mm"))
-				if n > 0:
-					GameState.remove_item("ammo_9mm", n)
-					GameState.pistol_mag += n
-					Audio.ui("reload", -4.0)
-				_refresh()
+		_:
+			pass
+
+
+func _ammo_users(ammo: String) -> String:
+	var names: Array = []
+	for w in WeaponDB.ORDER:
+		if String(WeaponDB.get_weapon(w).get("ammo", "")) == ammo:
+			names.append(String(WeaponDB.get_weapon(w).name))
+	return ", ".join(names)
 
 
 func handle_input(event: InputEvent) -> bool:

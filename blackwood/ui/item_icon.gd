@@ -29,6 +29,33 @@ func _draw() -> void:
 				Vector2(0.46, 0.56), Vector2(0.4, 0.8), Vector2(0.24, 0.8), Vector2(0.3, 0.48), Vector2(0.14, 0.48)], s, o, metal)
 			draw_rect(Rect2(o + Vector2(0.16, 0.36) * s, Vector2(0.68, 0.04) * s), dark)
 			draw_arc(o + Vector2(0.42, 0.52) * s, 0.06 * s, 0.0, PI, 8, dark, 2.0)
+		"baton":
+			draw_line(o + Vector2(0.18, 0.78) * s, o + Vector2(0.46, 0.5) * s, dark, 0.09 * s)
+			draw_line(o + Vector2(0.46, 0.5) * s, o + Vector2(0.84, 0.16) * s, metal, 0.05 * s)
+			draw_circle(o + Vector2(0.84, 0.16) * s, 0.04 * s, metal)
+		"shotgun":
+			draw_rect(Rect2(o + Vector2(0.08, 0.4) * s, Vector2(0.62, 0.05) * s), dark)
+			draw_rect(Rect2(o + Vector2(0.22, 0.46) * s, Vector2(0.2, 0.07) * s), Color(0.45, 0.28, 0.15))
+			_poly([Vector2(0.6, 0.38), Vector2(0.94, 0.44), Vector2(0.94, 0.62), Vector2(0.62, 0.52)], s, o, Color(0.45, 0.28, 0.15))
+		"smg":
+			draw_rect(Rect2(o + Vector2(0.18, 0.34) * s, Vector2(0.56, 0.14) * s), dark)
+			draw_rect(Rect2(o + Vector2(0.08, 0.38) * s, Vector2(0.12, 0.05) * s), dark)
+			draw_rect(Rect2(o + Vector2(0.38, 0.48) * s, Vector2(0.08, 0.3) * s), metal)
+			draw_rect(Rect2(o + Vector2(0.6, 0.48) * s, Vector2(0.08, 0.2) * s), dark)
+		"magnum":
+			draw_rect(Rect2(o + Vector2(0.12, 0.34) * s, Vector2(0.42, 0.07) * s), metal)
+			draw_circle(o + Vector2(0.58, 0.42) * s, 0.09 * s, metal)
+			_poly([Vector2(0.62, 0.4), Vector2(0.78, 0.44), Vector2(0.86, 0.8), Vector2(0.7, 0.8)], s, o, Color(0.45, 0.28, 0.15))
+		"shells":
+			for i in 4:
+				var xs := 0.22 + i * 0.15
+				draw_rect(Rect2(o + Vector2(xs, 0.3) * s, Vector2(0.11, 0.36) * s), Color(0.7, 0.12, 0.08))
+				draw_rect(Rect2(o + Vector2(xs, 0.58) * s, Vector2(0.11, 0.1) * s), Color(0.8, 0.65, 0.3))
+		"magnum_ammo":
+			for i in 3:
+				var xm := 0.28 + i * 0.16
+				draw_rect(Rect2(o + Vector2(xm, 0.34) * s, Vector2(0.1, 0.36) * s), Color(0.8, 0.65, 0.3))
+				draw_circle(o + Vector2(xm + 0.05, 0.34) * s, 0.05 * s, Color(0.6, 0.45, 0.3))
 		"ammo":
 			draw_rect(Rect2(o + Vector2(0.2, 0.38) * s, Vector2(0.6, 0.38) * s), Color(0.55, 0.42, 0.22))
 			draw_rect(Rect2(o + Vector2(0.2, 0.38) * s, Vector2(0.6, 0.1) * s), Color(0.75, 0.6, 0.15))

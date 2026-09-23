@@ -67,6 +67,7 @@ const TEXTURED := {
 	"wood_light": {"tex": "floor_wood", "grime": 0.25},
 	"cloth_jeans": {"tex": "denim", "grime": 0.2, "scale": 2.0},
 	"cloth_jacket": {"tex": "leather", "tint": Color(0.55, 0.42, 0.32), "grime": 0.25},
+	"glove": {"tex": "leather", "saturation": 0.2, "brightness": 0.35, "grime": 0.1, "scale": 0.5},
 }
 
 ## Surfaces du décor (shader surface.gdshader).

@@ -6,11 +6,20 @@ extends RefCounted
 
 static func build(id: String) -> Node3D:
 	var root := Node3D.new()
+	if WeaponDB.is_weapon(id):
+		# Arme posée à plat, canon vers +X
+		var w := WeaponModels.build(id, 1)
+		w.rotation = Vector3(0, -PI / 2.0, PI / 2.0)
+		w.position = Vector3(0, 0.03, 0)
+		root.add_child(w)
+		return root
 	match id:
-		"pistol":
-			_box(root, Vector3(0.2, 0.034, 0.032), Vector3(0, 0.03, 0), "metal_dark")
-			var g := _box(root, Vector3(0.045, 0.1, 0.028), Vector3(0.06, -0.02, 0), "plastic_dark")
-			g.rotation.z = -0.25
+		"ammo_shells":
+			_box(root, Vector3(0.12, 0.07, 0.08), Vector3(0, 0.035, 0), "cardboard")
+			_box(root, Vector3(0.121, 0.025, 0.081), Vector3(0, 0.055, 0), "emit_red")
+		"ammo_magnum":
+			_box(root, Vector3(0.09, 0.05, 0.07), Vector3(0, 0.025, 0), "metal_dark")
+			_box(root, Vector3(0.091, 0.015, 0.071), Vector3(0, 0.045, 0), "metal_yellow")
 		"ammo_9mm":
 			_box(root, Vector3(0.14, 0.06, 0.09), Vector3(0, 0.03, 0), "cardboard")
 			_box(root, Vector3(0.141, 0.02, 0.091), Vector3(0, 0.05, 0), "metal_yellow")

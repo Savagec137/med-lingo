@@ -243,6 +243,18 @@ func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -
 		set_state(State.CHASE)
 
 
+## Choc d'arme lourde : titube (power 0..1) et recule.
+func stagger(power: float, dir: Vector3 = Vector3.ZERO, knockback: float = 0.0) -> void:
+	if state == State.DEAD or power <= 0.0:
+		return
+	if _rng.randf() < power:
+		_stagger_t = maxf(_stagger_t, 0.25 + power * 0.55)
+		if state == State.ATTACK:
+			set_state(State.CHASE)
+	if knockback > 0.0:
+		velocity += Vector3(dir.x, 0, dir.z).normalized() * knockback
+
+
 func die(dir: Vector3 = Vector3.ZERO) -> void:
 	if state == State.DEAD:
 		return

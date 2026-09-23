@@ -14,7 +14,7 @@ func _ready() -> void:
 	facility = Facility.new()
 	add_child(facility)
 	facility.build_exterior_only()
-	facility.apply_quality(Settings.quality)
+	facility.apply_graphics()
 	cam = Camera3D.new()
 	cam.fov = 55.0
 	cam.far = 250.0
