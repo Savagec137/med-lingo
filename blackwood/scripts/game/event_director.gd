@@ -249,6 +249,14 @@ func _frame_falls() -> void:
 
 # --- 4. Archives : la porte claque, le noir, un bruit… personne -------------------------
 
+## Fait basculer le carton du haut de l'étagère (il tombe dans l'allée).
+static func push_box(box: RigidBody3D) -> void:
+	box.freeze = false
+	box.sleeping = false
+	box.apply_central_impulse(Vector3(0.8, 1.2, 8.0))
+	box.apply_torque_impulse(Vector3(1.4, 0.3, 0.25))
+
+
 func _archives_blackout() -> void:
 	await _wait(0.5)
 	var door: Door = facility.doors.get("archives_door")
@@ -264,8 +272,7 @@ func _archives_blackout() -> void:
 	await _wait(1.2)
 	var box: RigidBody3D = facility.nodes.get("falling_box")
 	if box:
-		box.freeze = false
-		box.apply_central_impulse(Vector3(0.6, 0.3, 1.8))
+		push_box(box)
 	await _wait(0.5)
 	Audio.play_3d("object_fall", Vector3(-19.4, 0.5, -8.3), 3.0, 0.0, 20.0, 4.0)
 	_shake(0.2)
@@ -318,12 +325,13 @@ func _security_breach() -> void:
 # --- 6. Confinement : le fusible réveille le bâtiment -----------------------------------
 
 func _lockdown() -> void:
-	game.autosave("fusible")
 	_power_lab_wing(true)
 	await _wait(1.5)
 	_alarm(true)
 	_say("HAUT-PARLEURS : « CONFINEMENT ACTIVÉ. PROTOCOLE DE QUARANTAINE. TOUTES LES ISSUES SONT VERROUILLÉES. »", 5.0)
 	_lockdown_visuals(true)
+	# Sauvegarde une fois l'entrée condamnée (état cohérent), avant l'irruption de la créature.
+	game.autosave("fusible")
 	await _wait(3.0)
 	var caf: Door = facility.nodes.get("cafeteria_door")
 	if caf and not GameState.dead_enemies.has("h_cafeteria"):

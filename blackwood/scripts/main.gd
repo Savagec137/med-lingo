@@ -98,11 +98,16 @@ func start_new_game() -> void:
 
 
 func load_game(slot: int) -> void:
-	if _busy:
-		return
 	var data := SaveSystem.load_slot(slot)
 	if data.is_empty():
 		GameState.show_message("Sauvegarde introuvable.", 2.5)
+		return
+	load_data(data)
+
+
+## Reprend une partie à partir de données de sauvegarde (emplacement ou test).
+func load_data(data: Dictionary) -> void:
+	if _busy:
 		return
 	_busy = true
 	await _transition()

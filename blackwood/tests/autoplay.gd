@@ -41,8 +41,32 @@ func _fail(msg: String) -> void:
 
 
 func _step(n: String) -> void:
+	_keep_checkpoint()
 	step_name = n
 	_log("── ÉTAPE : " + n)
+
+
+## Copie chaque nouvelle sauvegarde automatique dans user://test_checkpoints/
+## (rechargées ensuite par tests/checkpoints.gd).
+const CHECKPOINT_DIR := "user://test_checkpoints"
+var _last_checkpoint := -1.0
+var _checkpoint_count := 0
+
+
+func _keep_checkpoint() -> void:
+	var d := SaveSystem.load_slot(0)
+	if d.is_empty():
+		return
+	var t := float(d.get("saved_at", 0.0))
+	if t == _last_checkpoint:
+		return
+	_last_checkpoint = t
+	d["checkpoint_step"] = step_name
+	DirAccess.make_dir_recursive_absolute(CHECKPOINT_DIR)
+	var f := FileAccess.open("%s/%02d.json" % [CHECKPOINT_DIR, _checkpoint_count], FileAccess.WRITE)
+	if f:
+		f.store_string(JSON.stringify(d))
+		_checkpoint_count += 1
 
 
 func _frames(k: int) -> void:
@@ -438,6 +462,11 @@ func dodge_away_from(e: Enemy) -> void:
 # --- Campagne --------------------------------------------------------------------------
 
 func _run() -> void:
+	# Repart d'une ardoise propre : anciens points de passage et sauvegarde auto.
+	for f in DirAccess.get_files_at(CHECKPOINT_DIR):
+		DirAccess.remove_absolute("%s/%s" % [CHECKPOINT_DIR, f])
+	if SaveSystem.has_slot(0):
+		DirAccess.remove_absolute(SaveSystem.slot_path(0))
 	_step("Menu principal → NEW GAME")
 	var ui := get_parent().get("ui") as UIRoot
 	for i in 300:
@@ -825,6 +854,7 @@ func _run() -> void:
 		return
 
 	_step("Fin")
+	_keep_checkpoint()
 	if not await wait_flag("game_complete", 5.0):
 		await _fail("épilogue non déclenché")
 		return
