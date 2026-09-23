@@ -10,7 +10,8 @@ Format : du plus récent au plus ancien. Chaque version a été compilée, lanc�
   CONNECTING…, CONNECTION FAILED, LEAVE. Serveur d'écoute ENet (hôte = joueur 1).
 - **Serveur autoritaire** : l'invité envoie des demandes, l'hôte valide et exécute (interactions,
   codes, trajets d'ascenseur, tirs rejoués avec la même dispersion, munitions, soins, lampe).
-- Données par joueur (santé, 6 cases, armes, lampe) ; porte-clés et documents communs.
+- Données par joueur (santé, 6 cases, armes, lampe) ; porte-clés et documents communs ; chaque
+  joueur prend son propre exemplaire d'une arme trouvée.
 - Réplication : joueurs (20/s), créatures (12/s, animées chez l'invité), monde par différences
   (drapeaux, portes, objets, créatures mortes), mise en scène du scénario (sons, sous-titres,
   cinématiques, barre de boss) rejouée chez l'invité.
@@ -19,11 +20,14 @@ Format : du plus récent au plus ancien. Chaque version a été compilée, lanc�
   **GAME OVER** commun et RETRY par l'hôte ; déconnexion sans plantage, reconnexion en cours de
   partie avec l'inventaire ; troisième joueur refusé.
 - Sauvegardes par l'hôte, avec les deux joueurs. Pas de pause des menus en coopération.
-- Nouveau test `coop_test` (vrais processus, vraie connexion, 108 vérifications) et relais de
-  latence (90 ms ± 25 ms, 1 % de pertes) : tout est OK.
+- Nouveau test `coop_test` (vrais processus, vraie connexion, 119 vérifications, aucune erreur de
+  script tolérée) et relais de latence (90 ms ± 25 ms, 1 % de pertes) : tout est OK, aussi avec
+  l'exécutable Linux exporté.
 - Corrigé en chemin : le Chirurgien pouvait rester coincé entre la table d'opération et un
   plateau (petits meubles désormais évités par les grandes créatures) ; une créature pouvait être
-  emportée par un joueur comme par une plateforme mobile (seul le décor porte désormais).
+  emportée par un joueur comme par une plateforme mobile (seul le décor porte désormais) ;
+  chez l'hôte, un objet d'un étage masqué (loin de son joueur) refusait l'interaction de
+  l'invité.
 
 ## 0.4 — Mode DEBUG, batterie à paliers, exécutables (23/09/2026)
 

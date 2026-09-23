@@ -18,7 +18,7 @@ func _ready() -> void:
 func can_interact() -> bool:
 	if once and done_flag != "" and GameState.get_flag(done_flag):
 		return false
-	return enabled and is_visible_in_tree()
+	return enabled and is_shown()
 
 
 func interact(_player: Node) -> void:

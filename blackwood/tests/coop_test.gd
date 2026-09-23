@@ -33,11 +33,30 @@ var _inbox: Array = []
 var _client_pid := -1
 var _client_failures := -1
 var _proxy: LatencyProxy
+var _errors := ErrorCounter.new()
+
+
+## Compte les erreurs du moteur et des scripts : une seule fait échouer le test.
+class ErrorCounter extends Logger:
+	var count := 0
+	var first := ""
+
+	func _log_error(function: String, file: String, line: int, code: String, rationale: String, _editor_notify: bool,
+			error_type: int, _script_backtraces: Array[ScriptBacktrace]) -> void:
+		if error_type == Logger.ERROR_TYPE_WARNING:
+			return
+		count += 1
+		if first == "":
+			first = "%s — %s:%d (%s)" % [rationale if rationale != "" else code, file.get_file(), line, function]
+
+	func _log_message(_message: String, _error: bool) -> void:
+		pass
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	Engine.max_fps = 60
+	OS.add_logger(_errors)
 	t0 = Time.get_ticks_msec()
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--role="):
@@ -204,6 +223,7 @@ func _run_host() -> void:
 	_send("start")
 	await _test_movement()
 	await _test_pickups()
+	await _test_weapon_copies()
 	await _test_doors()
 	await _test_document()
 	await _test_save_point()
@@ -223,8 +243,11 @@ func _run_host() -> void:
 
 
 func _spawn(r: String, p: int) -> int:
-	var args := PackedStringArray(["--headless", "--path", ProjectSettings.globalize_path("res://"), "--",
-		"--test=coop_test", "--role=" + r, "--addr=127.0.0.1", "--port=%d" % p])
+	var args := PackedStringArray(["--headless"])
+	# Exécutable exporté : le jeu est intégré ; depuis Godot : chemin du projet
+	if not OS.has_feature("template"):
+		args.append_array(["--path", ProjectSettings.globalize_path("res://")])
+	args.append_array(["--", "--test=coop_test", "--role=" + r, "--addr=127.0.0.1", "--port=%d" % p])
 	return OS.create_process(OS.get_executable_path(), args, false)
 
 
@@ -306,6 +329,32 @@ func _test_pickups() -> void:
 	_check("key_pharmacy" in GameState.key_items, "clé PARTAGÉE : sur le porte-clés commun chez l'hôte")
 	_check(not GameState.data(2).has_item("key_pharmacy"), "…pas dans les 6 cases du joueur 2")
 	_check(bool(r.get("has_key", false)), "chez l'invité : la clé est aussi sur son porte-clés (%s)" % kid)
+
+
+## Les armes sont personnelles : chaque joueur prend son exemplaire.
+func _test_weapon_copies() -> void:
+	_log("── Arme : un exemplaire par joueur")
+	var gun: Pickup = _game().facility.nodes.get("f3_shotgun")
+	if not _check(gun != null and is_instance_valid(gun), "fusil à pompe du 3e présent"):
+		return
+	await _place_client(_stand_near(gun.global_position, 0.9), gun.global_position)
+	_send("interact", {"key": gun.net_key})
+	var r := await _expect("interacted", 15.0)
+	await _sleep(0.3)
+	_check(GameState.data(2).has_weapon("shotgun") and not GameState.data(1).has_weapon("shotgun"), "l'invité prend le fusil (et pas l'hôte)")
+	_check(is_instance_valid(gun) and not GameState.taken_pickups.has("f3_shotgun"), "le fusil reste en place pour l'hôte")
+	_check(not bool(r.get("gone", true)), "…aussi chez l'invité")
+	var spot := _stand_near(gun.global_position, 0.9)
+	await _place_host(spot, gun.global_position)
+	var focus := await _wait_for(func() -> bool: return is_instance_valid(gun) and _player().focused == gun, 3.0)
+	_check(focus, "l'hôte vise le fusil")
+	await key(KEY_E)
+	await _sleep(0.3)
+	_check(GameState.data(1).has_weapon("shotgun") and GameState.taken_pickups.has("f3_shotgun"), "l'hôte prend le sien : l'objet disparaît")
+	await _sleep(0.5 + latency / 500.0)
+	_send("check_gone", {"key": "pk:f3_shotgun"})
+	r = await _expect("gone_state", 10.0)
+	_check(bool(r.get("gone", false)), "…chez l'invité aussi")
 
 
 func _find_door(want_locked: bool) -> Door:
@@ -697,6 +746,7 @@ func _finish() -> void:
 		await _wait_for(func() -> bool: return not OS.is_process_running(_client_pid), 15.0)
 	if _proxy:
 		_log("relais : %d paquets transmis, %d perdus" % [_proxy.forwarded, _proxy.dropped])
+	_check(_errors.count == 0, "hôte : aucune erreur de script ou du moteur (%d%s)" % [_errors.count, (" : " + _errors.first) if _errors.first != "" else ""])
 	var total := failures + maxi(_client_failures, 0) + (1 if _client_failures < 0 else 0)
 	_log("Coopération en réseau : %s (hôte : %d échec(s), invité : %s)." % [
 		"tout est OK" if total == 0 else "ÉCHECS", failures, str(_client_failures) if _client_failures >= 0 else "sans réponse"])
@@ -727,6 +777,9 @@ func _run_client() -> void:
 				_send("host_pos_seen", {"ok": dist < 1.0, "dist": dist})
 			"interact":
 				await _client_interact(String(d.key))
+			"check_gone":
+				var n := _game().net_node(String(d.key))
+				_send("gone_state", {"gone": n == null or not is_instance_valid(n) or n.is_queued_for_deletion()})
 			"check_door":
 				await _sleep(0.2)
 				var door := _game().net_node(String(d.key)) as Door
@@ -777,10 +830,12 @@ func _run_client() -> void:
 				_send("ready_for_host_quit")
 				var back := await _wait_for(func() -> bool: return ui.top_screen() is MainMenu, 20.0)
 				_check(back and not Net.active, "l'hôte est parti : retour au menu principal, sans plantage")
+				_check(_errors.count == 0, "invité : aucune erreur de script ou du moteur (%d%s)" % [_errors.count, (" : " + _errors.first) if _errors.first != "" else ""])
 				_log("Invité : %d échec(s)." % failures)
 				get_parent().call("quit_game", mini(failures, 100))
 				return
 			"done":
+				_check(_errors.count == 0, "invité : aucune erreur de script ou du moteur (%d%s)" % [_errors.count, (" : " + _errors.first) if _errors.first != "" else ""])
 				_send("client_result", {"failures": failures})
 				await _sleep(0.5)
 				get_parent().call("quit_game", 0 if failures == 0 else 1)
@@ -1013,4 +1068,5 @@ func _run_intruder() -> void:
 	var failed := await _wait_for(func() -> bool: return String(reason[0]) != "", 25.0)
 	_check(failed and "complète" in String(reason[0]), "refusé : « %s »" % String(reason[0]))
 	_check(ui.coop_menu.page == "failed" and ui.coop_menu.title.text == "CONNECTION FAILED", "écran CONNECTION FAILED")
+	_check(_errors.count == 0, "intrus : aucune erreur (%d%s)" % [_errors.count, (" : " + _errors.first) if _errors.first != "" else ""])
 	get_parent().call("quit_game", 0 if failures == 0 else 1)

@@ -154,9 +154,10 @@ func register_net_node(it: Interactable, key: String) -> void:
 ## Objet interactif par sa clé réseau (les objets apparus plus tard, comme le
 ## contenu d'un casier, sont retrouvés par leur identifiant).
 func net_node(key: String) -> Node:
-	var n: Node = net_nodes.get(key)
-	if n and is_instance_valid(n):
-		return n
+	var n: Variant = net_nodes.get(key)
+	if n != null and is_instance_valid(n):
+		return n as Node
+	net_nodes.erase(key)
 	for c in get_tree().get_nodes_in_group("interactable"):
 		var it := c as Interactable
 		if it == null:

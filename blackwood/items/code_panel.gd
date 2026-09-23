@@ -50,7 +50,7 @@ func get_prompt() -> String:
 
 
 func can_interact() -> bool:
-	return enabled and not is_open() and is_visible_in_tree()
+	return enabled and not is_open() and is_shown()
 
 
 func interact(player: Node) -> void:

@@ -254,7 +254,9 @@ static func apply(method: String, args: Array) -> void:
 			if g and g.player:
 				g.player.controls_enabled = false
 				g.player.velocity = Vector3.ZERO
-				g.player.place(args[0], args[1])
+				# Deux joueurs : côte à côte
+				var side := Basis(Vector3.UP, float(args[1])) * Vector3.RIGHT * 1.1 * float(GameState.local_slot - 1)
+				g.player.place(args[0] + side, args[1])
 		"dust":
 			if g:
 				FX.dust(g, args[0], args[1], args[2])

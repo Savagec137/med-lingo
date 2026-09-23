@@ -68,6 +68,9 @@ func _notification(what: int) -> void:
 ## Quitte proprement : les sons encore en lecture sont arrêtés d'abord, sinon
 ## Godot les signale comme des fuites dans la console en sortant.
 func quit_game(code: int = 0) -> void:
+	# Coop : on prévient l'autre machine tout de suite (sinon délai d'ENet)
+	if Net.active:
+		Net.leave()
 	for type in ["AudioStreamPlayer", "AudioStreamPlayer3D"]:
 		for n in get_tree().root.find_children("*", type, true, false):
 			n.stop()

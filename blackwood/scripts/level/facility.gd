@@ -73,6 +73,9 @@ func floor_root(f: int) -> Node3D:
 	if not floor_roots.has(f):
 		var n := Node3D.new()
 		n.name = "Floor_%d" % f
+		# Masqué quand le joueur local est loin : affichage seulement (voir
+		# Interactable.is_shown : en coop, l'autre joueur peut y être)
+		n.add_to_group("floor_root")
 		add_child(n)
 		floor_roots[f] = n
 	return floor_roots[f]

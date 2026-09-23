@@ -25,7 +25,21 @@ func get_prompt() -> String:
 
 
 func can_interact() -> bool:
-	return enabled and is_visible_in_tree()
+	return enabled and is_shown()
+
+
+## Visible pour le jeu : l'objet et ses parents, sans compter le masquage des
+## étages éloignés du joueur local (simple optimisation d'affichage : en coop,
+## l'hôte valide les actions de l'invité sur un étage qu'il ne voit pas).
+func is_shown() -> bool:
+	var n: Node = self
+	while n:
+		if n.is_in_group("floor_root"):
+			return true
+		if n is Node3D and not (n as Node3D).visible:
+			return false
+		n = n.get_parent()
+	return true
 
 
 func interact(_player: Node) -> void:

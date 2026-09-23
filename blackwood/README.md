@@ -55,7 +55,8 @@ Fonctionnement :
   tir, rechargement, code, trajet d'ascenseur) que l'hôte valide ; il ne décide jamais seul d'un
   dégât, d'un objet ou d'une porte. Les tirs de l'invité sont rejoués chez l'hôte avec la même
   dispersion ; ses munitions sont décomptées par l'hôte.
-- **Objets personnels** (munitions, soins, piles, armes : chacun son inventaire de 6 cases) et
+- **Objets personnels** (munitions, soins, piles, armes : chacun son inventaire de 6 cases ;
+  chaque joueur prend son propre exemplaire d'une arme trouvée) et
   **objets partagés** (clés, cartes, fusibles, objets d'énigme : porte-clés commun). Documents :
   archives communes, affichés sur l'écran de celui qui les ramasse.
 - Chaque joueur a sa **lampe torche** et ses piles ; les créatures choisissent leur cible
@@ -150,8 +151,9 @@ godot --headless --fixed-fps 60 --path . -- --test=ui_flows
 godot --headless --fixed-fps 60 --path . -- --test=debug_mode
 
 # Coopération en réseau : l'hôte lance lui-même un second processus (l'invité) puis un
-# troisième (refusé) ; 108 vérifications (salon, objets, portes, tirs, boss, à terre,
-# GAME OVER/RETRY, déconnexion/reconnexion…). Temps réel (pas de --fixed-fps).
+# troisième (refusé) ; 119 vérifications (salon, objets, portes, tirs, boss, à terre,
+# GAME OVER/RETRY, déconnexion/reconnexion…) et aucune erreur de script tolérée des
+# trois côtés. Temps réel (pas de --fixed-fps).
 godot --headless --path . -- --test=coop_test
 # Même test à travers un relais UDP : 90 ms ± 25 ms de latence, 1 % de pertes
 godot --headless --path . -- --test=coop_test --latency=90

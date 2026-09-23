@@ -253,6 +253,15 @@ func _net_apply_extra(a: Array) -> void:
 	_electro_t = float(a[4])
 
 
+## Mort : les boucles sonores s'arrêtent (aussi sur la réplique de l'invité).
+func die(dir: Vector3 = Vector3.ZERO) -> void:
+	super.die(dir)
+	if _breath and _breath.playing:
+		_breath.stop()
+	if _scrape and _scrape.playing:
+		_scrape.stop()
+
+
 func _puppet_custom(delta: float) -> bool:
 	_stun_t = maxf(_stun_t - delta, 0.0)
 	_electro_t = maxf(_electro_t - delta, 0.0)

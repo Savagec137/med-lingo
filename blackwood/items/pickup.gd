@@ -96,7 +96,15 @@ func interact(player: Node) -> void:
 			if player.has_method("_update_equipment_visibility"):
 				player._update_equipment_visibility()
 			var slot := WeaponDB.ORDER.find(item_id) + 1
+			var partner := _partner_lacks_weapon()
+			if not first and partner:
+				_tell(player, "%s : déjà en votre possession. Celle-ci revient à votre partenaire." % item_name, 3.0)
+				return
 			_announce(player, pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. [%d] pour l'équiper." % [item_name, slot] if first else "%s : déjà en votre possession." % item_name))
+			# Coop : l'arme est personnelle, chaque joueur prend SON exemplaire
+			if partner:
+				GameState.set_flag("picked_" + pickup_id, true)
+				return
 		_:
 			if ItemDB.kind(item_id) == "ammo":
 				count = maxi(1, roundi(count * Settings.ammo_mult()))
@@ -110,6 +118,17 @@ func interact(player: Node) -> void:
 		GameState.taken_pickups[pickup_id] = true
 	GameState.set_flag("picked_" + pickup_id, true)
 	queue_free()
+
+
+## Coop : un joueur de la partie n'a pas encore cette arme.
+func _partner_lacks_weapon() -> bool:
+	var g := GameState.game as Game
+	if g == null or g.players.size() < 2:
+		return false
+	for slot in g.players:
+		if not GameState.data(int(slot)).has_weapon(item_id):
+			return true
+	return false
 
 
 ## Invité : ramassé par quelqu'un (chez l'hôte) : il disparaît ici aussi.
