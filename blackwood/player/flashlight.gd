@@ -95,7 +95,10 @@ func _data() -> PlayerData:
 	return GameState.data_for(owner_player)
 
 
+## Avertissement sur l'écran du porteur (chaque machine avertit son propre joueur).
 func _notify(text: String, duration: float) -> void:
+	if owner_player and owner_player.get("is_local") == false:
+		return
 	if owner_player and owner_player.has_method("notify"):
 		owner_player.notify(text, duration)
 	else:
@@ -117,6 +120,9 @@ func set_on(on: bool) -> void:
 	_data().changed.emit("flashlight")
 	Audio.play_3d("flashlight_click", global_position, -6.0, 0.05, 10.0, 2.0)
 	_apply_visibility()
+	# Invité : l'hôte tient l'état de la lampe (et de ses piles)
+	if Net.is_client() and owner_player and owner_player.get("is_local") == true and Coop.instance():
+		Coop.instance().rq_flashlight.rpc_id(1, on)
 
 
 func toggle() -> void:

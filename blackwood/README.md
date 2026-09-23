@@ -36,6 +36,42 @@ godot --path blackwood -- --load=1           # charge l'emplacement 1 (0 = sauve
 godot --path blackwood -- --debug            # mode DEBUG actif (console F1)
 ```
 
+## Coopération en ligne (2 joueurs)
+
+Menu principal → **CO-OP** :
+
+- **HOST GAME** (joueur 1) ouvre la partie sur le port **UDP 24890** et affiche l'adresse à donner
+  au partenaire, puis **NOUVELLE PARTIE** ou **CONTINUER** (dernière sauvegarde). Option **TIR AMI**
+  (désactivé par défaut). Le partenaire peut aussi rejoindre une partie déjà commencée.
+- **JOIN GAME** (joueur 2) : adresse IP de l'hôte (`192.168.1.20` ou `adresse:port`), ou
+  **SEARCH SESSION** pour trouver les parties du réseau local (port UDP 24891). Écrans
+  **CONNECTING…** et **CONNECTION FAILED** (raison affichée : hôte injoignable, partie complète…).
+- Par Internet : l'hôte ouvre (redirige) le port UDP 24890 de sa box vers son PC.
+
+Fonctionnement :
+
+- **L'hôte fait autorité** : créatures, scénario, portes, objets, dégâts, santé, munitions, mort et
+  sauvegarde sont décidés sur sa machine. L'invité envoie des demandes (déplacement, interaction,
+  tir, rechargement, code, trajet d'ascenseur) que l'hôte valide ; il ne décide jamais seul d'un
+  dégât, d'un objet ou d'une porte. Les tirs de l'invité sont rejoués chez l'hôte avec la même
+  dispersion ; ses munitions sont décomptées par l'hôte.
+- **Objets personnels** (munitions, soins, piles, armes : chacun son inventaire de 6 cases) et
+  **objets partagés** (clés, cartes, fusibles, objets d'énigme : porte-clés commun). Documents :
+  archives communes, affichés sur l'écran de celui qui les ramasse.
+- Chaque joueur a sa **lampe torche** et ses piles ; les créatures choisissent leur cible
+  (le joueur le plus proche, avec changement de cible).
+- **À terre** : à 0 PV, un joueur tombe pendant **30 s** ; son partenaire le relève avec
+  **[E] RÉANIMER** (2 s, retour à 25 PV), sinon il meurt. « JOUEUR 2 EST À TERRE » s'affiche chez
+  les deux. Un joueur mort suit son partenaire des yeux et revient en renfort au prochain point de
+  sauvegarde automatique. **GAME OVER** quand plus personne n'est debout ; RETRY (hôte) recharge
+  la partie pour les deux.
+- Énigmes, événements et boss sont déclenchés **une seule fois, par l'hôte**, et joués chez les deux
+  (sons, sous-titres, cinématiques, barre de vie).
+- **Sauvegarde** : par l'hôte seulement (les magnétophones le rappellent à l'invité) ; elle contient
+  les deux joueurs. **Déconnexion** : « JOUEUR 2 DÉCONNECTÉ », la partie continue ; en revenant,
+  le joueur 2 retrouve son inventaire. Un troisième joueur est refusé (« partie complète »).
+- Les menus ne mettent pas le jeu en pause en coopération.
+
 ## Contrôles
 
 Touches liées à leur **position physique** : sur un clavier AZERTY, WASD devient ZQSD.
@@ -47,7 +83,7 @@ Touches liées à leur **position physique** : sur un clavier AZERTY, WASD devie
 | Caméra | Souris |
 | Viser / tirer / frapper | Clic droit / clic gauche |
 | Recharger | R |
-| Interagir, ouvrir, ramasser, lire | E |
+| Interagir, ouvrir, ramasser, lire, réanimer (coop) | E |
 | Lampe torche | F |
 | Armes 1 à 5 / arme suivante | 1–5 / molette |
 | Esquive | Espace |
@@ -113,6 +149,13 @@ godot --headless --fixed-fps 60 --path . -- --test=ui_flows
 # Mode DEBUG (console tapée au clavier), batterie de la lampe, épreuve des 9 créatures
 godot --headless --fixed-fps 60 --path . -- --test=debug_mode
 
+# Coopération en réseau : l'hôte lance lui-même un second processus (l'invité) puis un
+# troisième (refusé) ; 108 vérifications (salon, objets, portes, tirs, boss, à terre,
+# GAME OVER/RETRY, déconnexion/reconnexion…). Temps réel (pas de --fixed-fps).
+godot --headless --path . -- --test=coop_test
+# Même test à travers un relais UDP : 90 ms ± 25 ms de latence, 1 % de pertes
+godot --headless --path . -- --test=coop_test --latency=90
+
 # Chaque objet interactif est-il atteignable et visible ?
 godot --headless --path . res://tests/interact_audit.tscn
 
@@ -131,8 +174,9 @@ items/        portes, ascenseurs, claviers, coffres, casiers, vitres, bouteilles
 materials/    matériaux et shaders
 player/       joueur, caméra, lampe, armes, squelette articulé
 save/         sauvegardes (user://saves)
-scripts/      core/ (autoloads, DEBUG), level/ (Facility, hospital/ : un fichier par étage),
-              game/ (partie, scénario, zones, navigation)
+scripts/      core/ (autoloads, DEBUG, données des joueurs), level/ (Facility, hospital/ : un
+              fichier par étage), game/ (partie, scénario, zones, navigation),
+              net/ (Net : session ENet ; Coop : échanges hôte/invité ; Stage : mise en scène partagée)
 tests/        robot de campagne, points de passage, menus, DEBUG, audit, visite
 tools/        gen_audio.py (synthèse des sons)
 ui/           menus, HUD, inventaire, documents, claviers, ascenseurs, console DEBUG

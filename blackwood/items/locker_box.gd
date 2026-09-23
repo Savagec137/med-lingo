@@ -49,6 +49,13 @@ func _ready() -> void:
 		is_open = true
 		_door.rotation.y = -1.9
 		_spawn_contents()
+	add_to_group("net_refresh")
+
+
+## Invité : ouvert chez l'hôte.
+func net_refresh() -> void:
+	if not is_open and open_flag != "" and GameState.get_flag(open_flag):
+		_open_visual()
 
 
 func get_prompt() -> String:
@@ -68,9 +75,13 @@ func interact(_player: Node) -> void:
 		return
 	if key_item != "":
 		GameState.remove_item(key_item, 1)
-	is_open = true
 	if open_flag != "":
 		GameState.set_flag(open_flag, true)
+	_open_visual()
+
+
+func _open_visual() -> void:
+	is_open = true
 	Audio.play_3d("door_unlock", global_position + Vector3.UP, -2.0, 0.03, 8.0, 2.0)
 	var tw := create_tween()
 	tw.tween_property(_door, "rotation:y", -1.9, 0.8).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

@@ -54,6 +54,13 @@ func _hitbox_scale() -> float:
 
 
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_click_t -= delta
+		if _click_t <= 0.0 and state != State.DEAD and not dormant:
+			_click_t = randf_range(1.2, 3.0) if state == State.CHASE else randf_range(2.5, 6.0)
+			Audio.play_3d("veilleur_click", global_position + Vector3.UP * 2.0, -2.0, 0.15, 22.0, 3.0)
+		_puppet_process(delta)
+		return
 	if state != State.DEAD and not dormant and not passive:
 		# Le mouvement du joueur le trahit : il « entend » sa vitesse
 		_listen_t -= delta

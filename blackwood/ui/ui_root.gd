@@ -38,6 +38,7 @@ var save_screen: SaveScreen
 var death_screen: DeathScreen
 var ending_screen: EndingScreen
 var debug_console: DebugConsole
+var coop_menu: CoopMenu
 
 var in_game := false
 var _stack: Array[UIScreen] = []
@@ -138,6 +139,7 @@ func _ready() -> void:
 	death_screen = _screen(DeathScreen.new())
 	ending_screen = _screen(EndingScreen.new())
 	debug_console = _screen(DebugConsole.new())
+	coop_menu = _screen(CoopMenu.new())
 
 	black = ColorRect.new()
 	black.color = Color(0, 0, 0, 1)
@@ -238,8 +240,9 @@ func _update_pause() -> void:
 	for s in _stack:
 		if s.pauses_game:
 			modal = true
+	# Coop : le monde continue de tourner (l'autre joueur, les créatures)
 	if in_game:
-		get_tree().paused = modal
+		get_tree().paused = modal and not Net.active
 	var want_mouse := modal or not in_game
 	if DisplayServer.get_name() != "headless":
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if want_mouse else Input.MOUSE_MODE_CAPTURED
@@ -298,6 +301,10 @@ func show_main_menu() -> void:
 func open_elevator(elevator_id: String, level: int) -> void:
 	elevator_screen.open_for(elevator_id, level)
 	open_screen(elevator_screen)
+
+
+func open_coop() -> void:
+	open_screen(coop_menu)
 
 
 func open_inventory() -> void:

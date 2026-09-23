@@ -18,6 +18,15 @@ charges (« Première action obligatoire »). Rien n'a été supprimé.
 > inaccessible depuis cet environnement (nouvelle vérification faite à la demande : aucun binaire,
 > aucun connecteur, aucune session ouverte sur la machine de l'utilisateur).
 
+> **Mise à jour — coopération (23/09/2026)** — Les étapes 2 à 10 du §9 sont faites : état de jeu
+> séparé (`PlayerData` par joueur, monde commun), session ENet (`scripts/net/net.gd`), échanges
+> hôte/invité avec serveur autoritaire (`scripts/net/coop.gd`), mise en scène partagée
+> (`scripts/net/stage.gd`), menus CO-OP, à terre / réanimation / GAME OVER, sauvegarde par l'hôte,
+> déconnexion et reconnexion. Vérifié par `tests/coop_test.gd` (hôte + invité + intrus en processus
+> séparés, 108 vérifications, 0 échec, y compris à travers un relais à 90 ms ± 25 ms et 1 % de
+> pertes). La campagne solo reste vérifiée de bout en bout. Architecture prête pour un serveur
+> dédié (`Net.host(port, false)`) mais le jeu sans joueur local n'est pas encore branché.
+
 ---
 
 ## 0. Verdict

@@ -7,6 +7,10 @@ extends Node
 ##   --autoplay      lance le test automatisé de la campagne complète
 ##   --test=NOM      lance le robot de test res://tests/NOM.gd (ex. ui_flows)
 ##   --shots=DOSSIER captures d'écran des tests
+##
+## Coopération : l'hôte lance ou charge une partie comme en solo, avec une
+## session réseau ouverte (Net) ; l'invité reçoit l'état complet de la partie
+## (Net.snapshot_received) et la reconstruit ici.
 
 var ui: UIRoot
 var world: Node3D
@@ -31,6 +35,7 @@ func _ready() -> void:
 	ui.retry_requested.connect(retry)
 	ui.quit_to_menu_requested.connect(quit_to_menu)
 	ui.quit_requested.connect(quit_game)
+	Net.snapshot_received.connect(load_coop)
 	var args := OS.get_cmdline_user_args()
 	var test := "autoplay" if "--autoplay" in args else ""
 	for a in args:
@@ -116,7 +121,27 @@ func load_data(data: Dictionary) -> void:
 	_busy = false
 
 
+## Invité : l'hôte envoie la partie (arrivée, reconnexion, RETRY de l'hôte).
+func load_coop(data: Dictionary) -> void:
+	if _busy:
+		await get_tree().create_timer(0.8, true).timeout
+		if _busy:
+			return
+	_busy = true
+	await _transition()
+	GameState.from_dict(data.get("state", {}))
+	var info: Dictionary = data.get("coop", {})
+	GameState.local_slot = int(info.get("slot", 2))
+	GameState.bind_local()
+	Net.friendly_fire = bool(info.get("friendly_fire", false))
+	_start_game(data)
+	_busy = false
+
+
 func retry() -> void:
+	# Coop : seul l'hôte relance (l'invité recharge avec lui)
+	if Net.is_client():
+		return
 	if SaveSystem.has_slot(0):
 		load_game(0)
 	else:
@@ -127,6 +152,8 @@ func quit_to_menu() -> void:
 	if _busy:
 		return
 	_busy = true
+	if Net.active:
+		Net.leave()
 	await _transition()
 	show_menu()
 	_busy = false

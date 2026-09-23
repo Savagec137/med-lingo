@@ -17,10 +17,18 @@ func _ready() -> void:
 	add_child(_handset)
 	ItemModels._box(_handset, Vector3(0.22, 0.04, 0.05), Vector3(0, 0.09, -0.04), "plastic_beige")
 	ItemModels._box(self, Vector3(0.1, 0.005, 0.08), Vector3(0, 0.072, 0.04), "plastic_dark")
+	add_to_group("net_refresh")
 
 
 func can_interact() -> bool:
 	return enabled and ringing and not answered
+
+
+## Invité : décroché chez l'hôte.
+func net_refresh() -> void:
+	if not answered and GameState.get_flag("phone_answered") and ringing:
+		answered = true
+		stop_ringing()
 
 
 func get_prompt() -> String:

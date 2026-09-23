@@ -1,6 +1,6 @@
 class_name MainMenu
 extends UIScreen
-## Menu principal : BLACKWOOD HOSPITAL — NEW GAME / CONTINUE / LOAD GAME / OPTIONS / QUIT
+## Menu principal : BLACKWOOD HOSPITAL — NEW GAME / CONTINUE / LOAD GAME / CO-OP / OPTIONS / QUIT
 ## (CONTINUE reprend la sauvegarde la plus récente, LOAD GAME ouvre la liste.)
 
 var title: Label
@@ -66,6 +66,9 @@ func _ready() -> void:
 	load_btn = UITheme.button("LOAD GAME", 30)
 	load_btn.pressed.connect(func(): ui.open_load_menu())
 	buttons.add_child(load_btn)
+	var b_coop := UITheme.button("CO-OP", 30)
+	b_coop.pressed.connect(func(): ui.open_coop())
+	buttons.add_child(b_coop)
 	var b_opt := UITheme.button("OPTIONS", 30)
 	b_opt.pressed.connect(func(): ui.open_options())
 	buttons.add_child(b_opt)

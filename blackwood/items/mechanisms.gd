@@ -44,6 +44,18 @@ func _ready() -> void:
 	_led.emission_energy_multiplier = 4.0
 	led_mesh.material_override = _led
 	_update_led()
+	add_to_group("net_refresh")
+	if _is_done() and _cover:
+		_cover.rotation.y = 0.0
+
+
+## Invité : fusible posé / carte passée chez l'hôte.
+func net_refresh() -> void:
+	var was_off := _led.emission.g < 0.5
+	_update_led()
+	if was_off and _is_done() and _cover:
+		var tw := create_tween()
+		tw.tween_property(_cover, "rotation:y", 0.0, 0.5)
 
 
 func _is_done() -> bool:

@@ -21,6 +21,7 @@ var _was_open := false
 
 func _ready() -> void:
 	add_to_group("auto_doors")
+	add_to_group("net_refresh")
 	var fw := 0.1
 	_part(self, Vector3(-width * 0.5 - fw * 0.5, height * 0.5, 0), Vector3(fw, height, 0.22), "metal_dark")
 	_part(self, Vector3(width * 0.5 + fw * 0.5, height * 0.5, 0), Vector3(fw, height, 0.22), "metal_dark")
@@ -109,10 +110,18 @@ func _physics_process(delta: float) -> void:
 			Audio.play_3d("door_open_glass" if now_open else "door_close_glass", global_position + Vector3.UP * 2.0, -4.0, 0.05, 16.0, 3.0)
 
 
+## Invité : état de la porte (verrouillée, alimentée) tenu par l'hôte.
+func net_refresh() -> void:
+	if door_id != "" and GameState.door_states.has(door_id):
+		var st: Dictionary = GameState.door_states[door_id]
+		locked = bool(st.get("locked", locked))
+		powered = bool(st.get("powered", powered))
+
+
 func _someone_near() -> bool:
-	var p := GameState.player as Node3D
-	if p and _near(p.global_position):
-		return true
+	for p in get_tree().get_nodes_in_group("players"):
+		if _near((p as Node3D).global_position):
+			return true
 	for e in get_tree().get_nodes_in_group("enemies"):
 		var en := e as Enemy
 		if en and not en.is_dead() and _near(en.global_position):

@@ -42,7 +42,11 @@ func _process(delta: float) -> void:
 	_led.emission_energy_multiplier = 4.0 if fmod(_t, 1.6) < 0.8 else 0.3
 
 
-func interact(_player: Node) -> void:
+func interact(player: Node) -> void:
 	Audio.play_3d("tape_click", global_position, -2.0, 0.02, 8.0, 2.0)
+	# Coop : c'est l'hôte qui tient la sauvegarde (les deux joueurs y figurent)
+	if player and player.get("is_local") == false:
+		GameState.show_message("Seul l'hôte (joueur 1) peut enregistrer la partie. Les sauvegardes automatiques vous incluent.", 3.5)
+		return
 	if GameState.ui:
 		GameState.ui.open_save_menu()

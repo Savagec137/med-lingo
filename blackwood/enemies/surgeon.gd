@@ -239,7 +239,39 @@ func _cancel_charge() -> void:
 	_charge_t = -1.0
 
 
+func _net_extra() -> Array:
+	return [active, _roar_t >= 0.0, _charge_t >= 0.0, _stun_t, _electro_t]
+
+
+func _net_apply_extra(a: Array) -> void:
+	if a.size() < 5:
+		return
+	active = bool(a[0])
+	_roar_t = 0.1 if bool(a[1]) else -1.0
+	_charge_t = 0.1 if bool(a[2]) else -1.0
+	_stun_t = float(a[3])
+	_electro_t = float(a[4])
+
+
+func _puppet_custom(delta: float) -> bool:
+	_stun_t = maxf(_stun_t - delta, 0.0)
+	_electro_t = maxf(_electro_t - delta, 0.0)
+	if _scrape:
+		_scrape.volume_db = lerpf(_scrape.volume_db, -8.0 if _speed_now > 0.3 else -60.0, delta * 4.0)
+	if lamp:
+		lamp.light_energy = lerpf(lamp.light_energy, 2.6, delta * 6.0)
+	if _saw:
+		_saw.rotation.y += delta * (30.0 if state == State.ATTACK or _charge_t >= 0.0 else 4.0)
+	if not active:
+		_animate_idle_operating(delta)
+		return true
+	return false
+
+
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	# Boucles sonores : grattement de la lame quand il marche
 	if _scrape and state != State.DEAD:
 		var want := -8.0 if _speed_now > 0.3 else -60.0

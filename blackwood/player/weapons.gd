@@ -30,6 +30,15 @@ var _flash_world: MeshInstance3D
 var _flash_view: MeshInstance3D
 var _flash_timer := 0.0
 var _melee_t := -1.0
+## Dispersion des plombs : graine transmise pour que l'hôte rejoue exactement
+## le tir de l'invité (et l'invité, les effets du tir de l'hôte).
+var _rng := RandomNumberGenerator.new()
+var _forced_seed := -1
+## Rejeu d'un tir distant : effets seulement (ni munitions, ni dégâts, ni bruit).
+var _replaying := false
+## Invité : tirs envoyés à l'hôte et pas encore confirmés (numéro, arme).
+var _pending: Array = []
+var _seq := 0
 
 
 func setup(p_player: Node3D, p_hand: Node3D, p_view: ViewModel) -> void:
@@ -66,6 +75,36 @@ func _pd() -> PlayerData:
 	return GameState.data_for(player)
 
 
+## Invité, joueur local : on anticipe à l'écran, l'hôte décide.
+func _predicting() -> bool:
+	return Net.is_client() and player.get("is_local") == true
+
+
+## Invité : réplique de l'hôte (effets seulement).
+func _replica() -> bool:
+	return Net.is_client() and player.get("is_local") == false
+
+
+## Balles dans le chargeur, tirs non confirmés déduits (invité).
+func mag_now(id: String = "") -> int:
+	var w := id if id != "" else current
+	var n := _pd().weapon_mag(w)
+	if _predicting():
+		for p in _pending:
+			if String(p[1]) == w:
+				n -= 1
+	return maxi(n, 0)
+
+
+## L'hôte a traité les tirs jusqu'au numéro « ack » : ses chargeurs font foi.
+func ack_shots(ack: int) -> void:
+	var keep: Array = []
+	for p in _pending:
+		if int(p[0]) > ack:
+			keep.append(p)
+	_pending = keep
+
+
 func def() -> Dictionary:
 	return WeaponDB.get_weapon(current)
 
@@ -80,18 +119,22 @@ func is_auto() -> bool:
 
 func can_fire() -> bool:
 	return current != "" and cooldown <= 0.0 and switching <= 0.0 and _melee_t < 0.0 \
-		and (not reloading or (bool(def().get("reload_one", false)) and _pd().weapon_mag(current) > 0))
+		and (not reloading or (bool(def().get("reload_one", false)) and mag_now(current) > 0))
 
 
-## Équipe une arme possédée (« » = mains nues).
-func equip(id: String, instant: bool = false) -> void:
-	if id != "" and not _pd().has_weapon(id):
+## Équipe une arme possédée (« » = mains nues). « force » : réplique réseau
+## (l'arme affichée est celle que tient l'autre joueur).
+func equip(id: String, instant: bool = false, force: bool = false) -> void:
+	if id != "" and not force and not _pd().has_weapon(id):
 		return
 	if id == current and world_model != null:
 		return
 	cancel_reload()
 	current = id
-	_pd().equipped = id
+	if not force:
+		_pd().equipped = id
+		if _predicting() and Coop.instance():
+			Coop.instance().rq_equip.rpc_id(1, id)
 	if world_model:
 		world_model.queue_free()
 		world_model = null
@@ -133,10 +176,14 @@ func trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, exclude: 
 		if view:
 			view.swing()
 		Audio.play_3d("baton_swing", global_position, -4.0, 0.08, 10.0, 2.0)
-		GameState.emit_noise(player.global_position, float(d.noise), player)
+		if _predicting():
+			_seq += 1
+			Coop.instance().rq_fire.rpc_id(1, origin, dir, aimed, moving, 0, _seq)
+		else:
+			GameState.emit_noise(player.global_position, float(d.noise), player)
 		fired.emit(current)
 		return true
-	var mag := _pd().weapon_mag(current)
+	var mag := mag_now(current)
 	if mag <= 0:
 		cooldown = 0.35
 		Audio.play_3d("gun_empty", global_position, -4.0, 0.03, 12.0, 3.0)
@@ -148,7 +195,17 @@ func trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, exclude: 
 		return false
 	if reloading:
 		cancel_reload()
-	_pd().set_weapon_mag(current, mag - 1)
+	var shot_seed := _forced_seed if _forced_seed >= 0 else randi()
+	_rng.seed = shot_seed
+	if _predicting():
+		# L'hôte décomptera la balle et appliquera les dégâts
+		_seq += 1
+		_pending.append([_seq, current])
+		Coop.instance().rq_fire.rpc_id(1, origin, dir, aimed, moving, shot_seed, _seq)
+	else:
+		_pd().set_weapon_mag(current, mag - 1)
+		if Net.active and Net.is_server() and Coop.instance():
+			Coop.instance().broadcast_shot(int(player.get("slot")), current, origin, dir, aimed, moving, shot_seed)
 	cooldown = float(d.interval)
 	var pellets := int(d.get("pellets", 1))
 	var spread := float(d.spread_aim if aimed else d.spread_hip) * (1.5 if moving else 1.0) + heat
@@ -163,6 +220,12 @@ func trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, exclude: 
 			continue
 		var col: Object = hit.collider
 		last_hit = "%s @ %s" % [(col as Node).name if col is Node else "?", hit.position]
+		if col is Player:
+			# Tir ami (option de l'hôte, désactivé par défaut) : demi-dégâts, décidés par l'hôte
+			if col != player and not _predicting():
+				(col as Player).take_damage(float(d.damage) * 0.5, origin, "friendly_fire")
+				FX.blood(_world(), hit.position, -shot, 8)
+			continue
 		if col is Area3D and col.has_meta("enemy"):
 			var enemy: Node = col.get_meta("enemy")
 			var is_head: bool = col.get_meta("head", false)
@@ -212,6 +275,77 @@ func trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, exclude: 
 	return true
 
 
+## Hôte : exécute le tir demandé par l'invité (sa réplique, sa graine). La
+## cadence est contrôlée par Coop ; munitions, dégâts et bruit comme en solo.
+func remote_trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, shot_seed: int) -> void:
+	cooldown = 0.0
+	switching = 0.0
+	_melee_t = -1.0
+	# Le rechargement de l'invité a démarré un peu plus tard ici : on le termine
+	if reloading:
+		if reload_timer <= 0.35:
+			reload_timer = 0.0
+			_process(0.0)
+		elif not bool(def().get("reload_one", false)):
+			return
+	_forced_seed = shot_seed if shot_seed > 0 else -1
+	var ex: Array[RID] = [(player as CollisionObject3D).get_rid()]
+	trigger(origin, dir, aimed, moving, ex)
+	_forced_seed = -1
+
+
+## Invité : effets d'un tir de l'hôte (flamme, son, impacts), sans dégâts.
+func replay_shot(weapon: String, origin: Vector3, dir: Vector3, aimed: bool, moving: bool, shot_seed: int) -> void:
+	if weapon != current:
+		equip(weapon, true, true)
+	if is_melee():
+		replay_swing()
+		return
+	var d := def()
+	_replaying = true
+	_rng.seed = shot_seed
+	var pellets := int(d.get("pellets", 1))
+	var spread := float(d.spread_aim if aimed else d.spread_hip) * (1.5 if moving else 1.0)
+	var ex: Array[RID] = [(player as CollisionObject3D).get_rid()]
+	for i in pellets:
+		var shot := _spread_dir(dir, spread)
+		var hit := _cast(origin, shot, float(d.range), ex)
+		if hit.is_empty():
+			continue
+		var col: Object = hit.collider
+		if col is Player:
+			continue
+		if col is Area3D and col.has_meta("enemy"):
+			if i < 3:
+				FX.blood(_world(), hit.position, -shot, 12)
+				Audio.play_3d("impact_flesh", hit.position, 0.0, 0.1, 20.0, 3.0)
+			var enemy: Node = col.get_meta("enemy")
+			if enemy and enemy.has_method("take_damage"):
+				enemy.take_damage(0.0, hit.position, shot, false)
+		elif i < 4:
+			var metal: bool = col is Node and (col as Node).is_in_group("metal")
+			FX.impact(_world(), hit.position, hit.normal, metal)
+			Audio.play_3d("impact_metal" if metal else "impact_wall", hit.position, -2.0, 0.12, 25.0, 3.0)
+	_replaying = false
+	_muzzle_flash()
+	var shot_sound: String = {"shotgun": "shotgun_blast", "magnum": "magnum_shot", "smg": "smg_shot"}.get(current, "gunshot")
+	if not Audio.has_sound(shot_sound):
+		shot_sound = "gunshot"
+	Audio.play_3d(shot_sound, global_position, 3.0, 0.04, 90.0, 10.0)
+	Audio.play_3d("shell_casing", global_position + Vector3(0.1, -0.5, 0.0), -10.0, 0.15, 10.0, 2.0)
+	if current == "shotgun":
+		_pump_later()
+
+
+## Invité : coup de matraque de l'hôte (geste et son ; l'impact est décidé chez l'hôte).
+func replay_swing() -> void:
+	if _melee_t >= 0.0:
+		return
+	_replaying = true
+	_melee_t = 0.0
+	Audio.play_3d("baton_swing", global_position, -4.0, 0.08, 10.0, 2.0)
+
+
 func _pump_later() -> void:
 	await get_tree().create_timer(0.3).timeout
 	if is_inside_tree() and current == "shotgun":
@@ -224,22 +358,24 @@ func _spread_dir(dir: Vector3, spread_deg: float) -> Vector3:
 	var ref := Vector3.UP if absf(d.y) < 0.95 else Vector3.RIGHT
 	var u := d.cross(ref).normalized()
 	var v := d.cross(u).normalized()
-	var r := sqrt(randf()) * tan(s)
-	var a := randf() * TAU
+	var r := sqrt(_rng.randf()) * tan(s)
+	var a := _rng.randf() * TAU
 	return (d + u * cos(a) * r + v * sin(a) * r).normalized()
 
 
 ## Rayon depuis la caméra, puis trajectoire réelle depuis le canon.
 func _cast(origin: Vector3, dir: Vector3, dist: float, exclude: Array[RID]) -> Dictionary:
 	var space := get_world_3d().direct_space_state
-	var q1 := PhysicsRayQueryParameters3D.create(origin, origin + dir * dist, 1 | 8 | 16)
+	# Les balles traversent le partenaire, sauf tir ami activé par l'hôte
+	var mask := 1 | 8 | 16 | (2 if Net.active and Net.friendly_fire else 0)
+	var q1 := PhysicsRayQueryParameters3D.create(origin, origin + dir * dist, mask)
 	q1.collide_with_areas = true
 	q1.exclude = exclude
 	var hit1 := space.intersect_ray(q1)
 	var target: Vector3 = hit1.position if not hit1.is_empty() else origin + dir * dist
 	var from := muzzle_position()
 	var shot_dir := (target - from).normalized()
-	var q2 := PhysicsRayQueryParameters3D.create(from, target + shot_dir * 0.3, 1 | 8 | 16)
+	var q2 := PhysicsRayQueryParameters3D.create(from, target + shot_dir * 0.3, mask)
 	q2.collide_with_areas = true
 	q2.exclude = exclude
 	var hit := space.intersect_ray(q2)
@@ -275,9 +411,13 @@ func _muzzle_flash() -> void:
 
 ## Coup de matraque : touche la créature la plus proche dans l'arc devant soi.
 func _melee_hit() -> void:
+	# Réplique de l'hôte chez l'invité, ou geste anticipé de l'invité : l'hôte
+	# résout le coup (dégâts) ; ici, rien que le geste.
+	if _replaying or _predicting():
+		_replaying = false
+		return
 	var d := def()
-	var cam: Camera3D = player.camera_rig.cam if player.camera_rig else null
-	var dir: Vector3 = -cam.global_transform.basis.z if cam else -player.global_transform.basis.z
+	var dir: Vector3 = player.look_dir() if player.has_method("look_dir") else -player.global_transform.basis.z
 	var origin: Vector3 = player.global_position + Vector3.UP * 1.3
 	var space := get_world_3d().direct_space_state
 	var shape := SphereShape3D.new()
@@ -336,8 +476,10 @@ func start_reload() -> void:
 	var d := def()
 	if current == "" or is_melee() or reloading:
 		return
-	if _pd().weapon_mag(current) >= int(d.mag) or _pd().weapon_reserve(current) <= 0:
+	if mag_now(current) >= int(d.mag) or _pd().weapon_reserve(current) <= 0:
 		return
+	if _predicting() and Coop.instance():
+		Coop.instance().rq_reload.rpc_id(1)
 	reloading = true
 	reload_timer = float(d.reload)
 	if view:
@@ -361,7 +503,8 @@ func delay_reload(seconds: float) -> void:
 func _process(delta: float) -> void:
 	cooldown = maxf(cooldown - delta, 0.0)
 	switching = maxf(switching - delta, 0.0)
-	heat = maxf(heat - delta * (3.0 if not Input.is_action_pressed("fire") else 0.6), 0.0)
+	var firing := Input.is_action_pressed("fire") if player.get("is_local") == true else cooldown > 0.0
+	heat = maxf(heat - delta * (3.0 if not firing else 0.6), 0.0)
 	if _flash_timer > 0.0:
 		_flash_timer -= delta
 		flash_light.global_position = muzzle_position()
@@ -383,10 +526,11 @@ func _process(delta: float) -> void:
 			var ammo := String(d.ammo)
 			var need := int(d.mag) - _pd().weapon_mag(current)
 			var n := mini(1 if bool(d.get("reload_one", false)) else need, _pd().count_item(ammo))
-			if n > 0:
+			# Invité : l'hôte remplit le chargeur (ses données reviennent ensuite)
+			if n > 0 and not _predicting() and not _replica():
 				_pd().remove_item(ammo, n)
 				_pd().set_weapon_mag(current, _pd().weapon_mag(current) + n)
-			if bool(d.get("reload_one", false)) and _pd().weapon_mag(current) < int(d.mag) and _pd().count_item(ammo) > 0:
+			if bool(d.get("reload_one", false)) and mag_now(current) + (n if _predicting() else 0) < int(d.mag) and _pd().count_item(ammo) > (n if _predicting() else 0):
 				reload_timer = float(d.reload)
 				if view:
 					view.play_reload(0.6)

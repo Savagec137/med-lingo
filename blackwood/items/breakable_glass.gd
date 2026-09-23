@@ -25,6 +25,13 @@ func _ready() -> void:
 	add_child(_mesh)
 	if glass_id != "" and GameState.get_flag("glass_" + glass_id):
 		_set_broken()
+	add_to_group("net_refresh")
+
+
+## Invité : brisée chez l'hôte.
+func net_refresh() -> void:
+	if not broken and glass_id != "" and GameState.get_flag("glass_" + glass_id):
+		shatter()
 
 
 ## Une vitre qui descend jusqu'au sol barre le passage aux créatures.
@@ -48,6 +55,9 @@ func footprint() -> Rect2:
 
 
 func on_shot(_pos: Vector3) -> void:
+	# Coop : l'hôte décide (le tir de l'invité y est rejoué)
+	if Net.is_client():
+		return
 	shatter()
 
 

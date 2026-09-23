@@ -65,5 +65,5 @@ func can_interact() -> bool:
 
 
 func interact(_player: Node) -> void:
-	Audio.play_3d("breaker", global_position + focus_offset, -2.0, 0.03, 16.0, 3.0)
+	Stage.play_3d("breaker", global_position + focus_offset, -2.0, 0.03, 16.0, 3.0)
 	switched.emit(self)

@@ -12,6 +12,8 @@ var focus_offset := Vector3(0, 1.0, 0)
 var enabled := true
 ## Identifiant stable pour la sauvegarde.
 var uid := ""
+## Coop : clé identique sur les deux machines (demandes du client au serveur).
+var net_key := ""
 
 
 func _enter_tree() -> void:

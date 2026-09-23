@@ -50,7 +50,31 @@ func _hitbox_scale() -> float:
 	return 0.6
 
 
+func _net_extra() -> Array:
+	return [_hidden_t >= 0.0]
+
+
+func _net_apply_extra(a: Array) -> void:
+	if a.is_empty():
+		return
+	var hidden := bool(a[0])
+	if hidden == (_hidden_t >= 0.0):
+		return
+	_hidden_t = 1.0 if hidden else -1.0
+	body_visible = not hidden
+	visible = not hidden
+	if hidden:
+		Audio.play_3d("neonatal_skitter", global_position + Vector3.UP * 0.4, -2.0, 0.1, 20.0, 3.0)
+
+
+func _puppet_custom(_delta: float) -> bool:
+	return _hidden_t >= 0.0
+
+
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	if state == State.DEAD:
 		super._physics_process(delta)
 		return
@@ -93,6 +117,7 @@ func _hide() -> void:
 	_flee = false
 	_hidden_t = randf_range(6.0, 11.0)
 	visible = false
+	body_visible = false
 	collision_layer = 0
 	for h in _hitboxes:
 		h.set_deferred("monitorable", false)
@@ -104,7 +129,7 @@ func _reappear() -> void:
 	var p := player()
 	var spot: Vector3 = global_position
 	if p and not vents.is_empty():
-		var fwd := -p.camera_rig.cam.global_transform.basis.z if p.camera_rig else Vector3.FORWARD
+		var fwd := p.look_dir()
 		var best_score := -INF
 		for v in vents:
 			var vv: Vector3 = v
@@ -120,6 +145,7 @@ func _reappear() -> void:
 				spot = vv
 	place(spot, facing)
 	visible = true
+	body_visible = true
 	collision_layer = 4
 	for h in _hitboxes:
 		h.set_deferred("monitorable", true)

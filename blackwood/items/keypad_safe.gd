@@ -53,6 +53,13 @@ func _ready() -> void:
 		_door_pivot.rotation.y = -1.9
 		_set_led(true)
 		_spawn_contents()
+	add_to_group("net_refresh")
+
+
+## Invité : ouvert chez l'hôte (bon code saisi par l'un des joueurs).
+func net_refresh() -> void:
+	if not is_open and GameState.get_flag(open_flag):
+		open_safe()
 
 
 func get_prompt() -> String:
@@ -63,7 +70,9 @@ func can_interact() -> bool:
 	return enabled and not is_open
 
 
-func interact(_player: Node) -> void:
+func interact(player: Node) -> void:
+	if GameState.open_remote_ui(player, "keypad", [net_key]):
+		return
 	if GameState.ui:
 		GameState.ui.open_keypad(self)
 

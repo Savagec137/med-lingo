@@ -11,6 +11,7 @@ func _ready() -> void:
 	if GameState.has_document(doc_id):
 		queue_free()
 		return
+	add_to_group("net_refresh")
 	prompt_text = "LIRE"
 	interact_radius = 1.6
 	focus_offset = Vector3(0, 0.1, 0)
@@ -40,9 +41,17 @@ func _process(_delta: float) -> void:
 		_glint.scale = Vector3.ONE * (0.4 + pulse * 1.2)
 
 
-func interact(_player: Node) -> void:
+func interact(player: Node) -> void:
 	GameState.add_document(doc_id)
-	Audio.play_2d("paper", -2.0)
-	if GameState.ui:
-		GameState.ui.show_document(doc_id)
+	# Le document s'ouvre chez le joueur qui le ramasse ; il rejoint les
+	# archives communes (lisibles par les deux joueurs via l'inventaire).
+	if not GameState.open_remote_ui(player, "document", [doc_id]):
+		Audio.play_2d("paper", -2.0)
+		if GameState.ui:
+			GameState.ui.show_document(doc_id)
 	queue_free()
+
+
+func net_refresh() -> void:
+	if GameState.has_document(doc_id) and not is_queued_for_deletion():
+		queue_free()

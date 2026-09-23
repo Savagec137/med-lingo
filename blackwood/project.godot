@@ -25,6 +25,7 @@ Settings="*res://scripts/core/settings.gd"
 GameState="*res://scripts/core/game_state.gd"
 Audio="*res://scripts/core/audio_manager.gd"
 SaveSystem="*res://save/save_system.gd"
+Net="*res://scripts/net/net.gd"
 
 [display]
 

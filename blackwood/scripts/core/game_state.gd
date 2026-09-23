@@ -44,6 +44,9 @@ var ui: Node = null
 
 var _last_objective := ""
 var _bound: PlayerData = null
+## Coop : joueur pour le compte duquel le serveur exécute une interaction. Ses
+## messages et ses écrans (clavier, document…) s'affichent chez lui.
+var actor: Node = null
 
 # --- Données du joueur local (compatibilité : l'API historique vise le joueur
 # de cette machine ; le serveur agit sur un autre joueur via les *_for) ------
@@ -300,8 +303,28 @@ func has_document(doc_id: String) -> bool:
 
 # --- Divers ----------------------------------------------------------------
 
+## Message à l'écran du joueur qui agit (ou du joueur local).
 func show_message(text: String, duration: float = 3.0) -> void:
+	if actor and actor.get("is_local") == false and actor.has_method("notify"):
+		actor.notify(text, duration)
+		return
 	message.emit(text, duration)
+
+
+## Message sur l'écran de cette machine, quel que soit le joueur qui agit.
+func show_local_message(text: String, duration: float = 3.0) -> void:
+	message.emit(text, duration)
+
+
+## Coop : si « player » est la réplique d'un joueur distant, l'écran demandé
+## (clavier, document, ascenseur…) s'ouvre chez lui. Retourne true dans ce cas.
+func open_remote_ui(player: Node, kind: String, args: Array) -> bool:
+	if player == null or player.get("is_local") != false:
+		return false
+	var c := Coop.instance()
+	if c:
+		c.open_ui_for(int(player.get("slot")), kind, args)
+	return true
 
 
 ## Un bruit se propage : les ennemis à portée l'entendent.

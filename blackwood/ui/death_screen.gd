@@ -14,6 +14,8 @@ const TIPS := [
 var box: VBoxContainer
 var title: Label
 var tip: Label
+var retry_btn: Button
+var waiting: Label
 var _t := 0.0
 
 
@@ -42,6 +44,11 @@ func _ready() -> void:
 	retry.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	retry.pressed.connect(func(): ui.request_retry())
 	box.add_child(retry)
+	retry_btn = retry
+	waiting = UITheme.label("En attente de l'hôte : il relance la partie pour vous deux.", 18, UITheme.COL_DIM)
+	waiting.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	waiting.visible = false
+	box.add_child(waiting)
 	var quit := UITheme.button("QUIT TO MENU", 26)
 	quit.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	quit.pressed.connect(func(): ui.request_quit_to_menu())
@@ -49,6 +56,11 @@ func _ready() -> void:
 
 
 func on_open() -> void:
+	# Coop : GAME OVER quand plus personne n'est debout ; seul l'hôte relance
+	var coop := Net.active and GameState.game != null and (GameState.game as Game).players.size() >= 2
+	title.text = "GAME OVER" if coop else "YOU DIED"
+	retry_btn.visible = not Net.is_client()
+	waiting.visible = Net.is_client()
 	tip.text = TIPS[randi() % TIPS.size()]
 	_t = 0.0
 	modulate.a = 0.0

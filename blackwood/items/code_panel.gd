@@ -28,6 +28,11 @@ func _ready() -> void:
 	_led.emission_energy_multiplier = 4.0
 	led_mesh.material_override = _led
 	_update_led()
+	add_to_group("net_refresh")
+
+
+func net_refresh() -> void:
+	_update_led()
 
 
 func is_open() -> bool:
@@ -48,7 +53,9 @@ func can_interact() -> bool:
 	return enabled and not is_open() and is_visible_in_tree()
 
 
-func interact(_player: Node) -> void:
+func interact(player: Node) -> void:
+	if GameState.open_remote_ui(player, "keypad", [net_key]):
+		return
 	if GameState.ui:
 		GameState.ui.open_keypad(self)
 

@@ -44,7 +44,7 @@ func _def() -> Dictionary:
 	return g.facility.elevators.get(elevator_id, {}) if g and g.facility else {}
 
 
-func interact(_player: Node) -> void:
+func interact(player: Node) -> void:
 	var e := _def()
 	if GameState.get_flag("self_destruct") and elevator_id != "freight":
 		Audio.play_3d("ui_error", global_position, -6.0, 0.0, 6.0, 1.0)
@@ -56,5 +56,7 @@ func interact(_player: Node) -> void:
 		GameState.show_message(String(e.get("no_power_msg", "Aucune réaction. L'ascenseur n'est pas alimenté.")), 3.0)
 		return
 	Audio.play_3d("keypad_beep", global_position, -6.0, 0.05, 6.0, 1.0)
+	if GameState.open_remote_ui(player, "elevator", [elevator_id, level]):
+		return
 	if GameState.ui:
 		GameState.ui.open_elevator(elevator_id, level)

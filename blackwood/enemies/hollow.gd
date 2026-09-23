@@ -179,6 +179,9 @@ func skin_look() -> Dictionary:
 
 
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	# L'infirmier contaminé sprinte par à-coups quand il poursuit sa proie
 	if variant == "nurse" and state != State.DEAD:
 		_sprint_cd = maxf(_sprint_cd - delta, 0.0)

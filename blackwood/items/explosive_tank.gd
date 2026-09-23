@@ -39,10 +39,20 @@ func _ready() -> void:
 		exploded = true
 		visible = false
 		collision_layer = 0
+	add_to_group("net_refresh")
+
+
+## Invité : explosée chez l'hôte (effets seulement, les dégâts sont chez lui).
+func net_refresh() -> void:
+	if not exploded and tank_id != "" and GameState.get_flag("tank_" + tank_id):
+		exploded = true
+		_blast_visual()
 
 
 ## Appelé par les armes quand une balle touche la bouteille.
 func on_shot(_pos: Vector3) -> void:
+	if Net.is_client():
+		return
 	explode()
 
 
@@ -52,6 +62,12 @@ func explode() -> void:
 	exploded = true
 	if tank_id != "":
 		GameState.set_flag("tank_" + tank_id, true)
+	var center := _blast_visual()
+	_blast_damage(center)
+
+
+## Explosion : son, flamme, fumée, lumière (sur chaque machine).
+func _blast_visual() -> Vector3:
 	var center := global_position + Vector3.UP * 0.8
 	visible = false
 	collision_layer = 0
@@ -69,6 +85,14 @@ func explode() -> void:
 	var tw := flash.create_tween()
 	tw.tween_property(flash, "light_energy", 0.0, 0.6)
 	tw.tween_callback(flash.queue_free)
+	var lp := GameState.player as Player
+	if lp and lp.camera_rig:
+		lp.camera_rig.shake(clampf(1.2 - lp.global_position.distance_to(global_position) / 12.0, 0.2, 1.0))
+	return center
+
+
+## Dégâts de l'explosion (hôte ou solo) : créatures et joueurs à portée.
+func _blast_damage(center: Vector3) -> void:
 	GameState.emit_noise(center, 40.0, self)
 	for e in get_tree().get_nodes_in_group("enemies"):
 		var en := e as Enemy
@@ -82,10 +106,10 @@ func explode() -> void:
 			en.stagger(1.0, dir, 6.0 * k)
 			if en.has_method("on_explosion"):
 				en.on_explosion(k)
-	var p := GameState.player as Player
-	if p and not p.is_dead:
+	for n in get_tree().get_nodes_in_group("players"):
+		var p := n as Player
+		if p == null or p.is_dead:
+			continue
 		var dp := p.global_position.distance_to(global_position)
 		if dp < RADIUS:
 			p.take_damage(55.0 * (1.0 - dp / RADIUS), global_position)
-		if p.camera_rig:
-			p.camera_rig.shake(clampf(1.2 - dp / 12.0, 0.2, 1.0))

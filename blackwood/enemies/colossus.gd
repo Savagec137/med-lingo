@@ -72,7 +72,27 @@ func on_explosion(k: float) -> void:
 	_down_t = maxf(_down_t, 3.0 + 3.0 * k)
 
 
+func _net_extra() -> Array:
+	return [_down_t]
+
+
+func _net_apply_extra(a: Array) -> void:
+	if a.size() >= 1:
+		_down_t = float(a[0])
+
+
+func _puppet_custom(delta: float) -> bool:
+	if _down_t > 0.0:
+		_down_t = maxf(_down_t - delta, 0.0)
+		_animate_down(delta)
+		return true
+	return false
+
+
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	if state == State.DEAD:
 		super._physics_process(delta)
 		return

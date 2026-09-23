@@ -117,7 +117,16 @@ func submit() -> void:
 		status.text = "Il faut %d chiffres." % _digits()
 		Audio.ui("keypad_error", -6.0)
 		return
-	if safe and safe.call("try_code", entry):
+	var ok := false
+	if safe and Net.is_client() and Coop.instance():
+		# Invité : l'hôte vérifie le code (et ouvre ce qu'il faut chez lui)
+		_busy = true
+		status.text = "VÉRIFICATION…"
+		ok = await _server_check(String(safe.get("net_key")), entry)
+		_busy = false
+	elif safe:
+		ok = bool(safe.call("try_code", entry))
+	if ok:
 		status.text = "CODE ACCEPTÉ"
 		display.add_theme_color_override("font_color", Color(0.3, 1.0, 0.45))
 		_busy = true
@@ -130,6 +139,27 @@ func submit() -> void:
 		_error_t = 0.8
 		entry = ""
 		_update()
+
+
+## Envoie le code à l'hôte et attend sa réponse (3 s au plus).
+func _server_check(key: String, code: String) -> bool:
+	var res := [false, false]
+	var cb := func(k: String, ok: bool) -> void:
+		if k == key:
+			res[0] = true
+			res[1] = ok
+	var c := Coop.instance()
+	c.code_result.connect(cb)
+	c.request_code(safe, code)
+	var t := 0
+	while not bool(res[0]) and t < 180:
+		await get_tree().process_frame
+		t += 1
+	if is_instance_valid(c) and c.code_result.is_connected(cb):
+		c.code_result.disconnect(cb)
+	if not bool(res[0]):
+		Audio.ui("keypad_error", -6.0)
+	return bool(res[1])
 
 
 func _update() -> void:

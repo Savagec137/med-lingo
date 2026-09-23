@@ -87,6 +87,20 @@ var _speed_now := 0.0
 var _rng := RandomNumberGenerator.new()
 var _hitboxes: Array[Area3D] = []
 
+## Coop, chez l'invité : réplique animée d'une créature simulée par l'hôte.
+var net_puppet := false
+## Visible hors culling (la créature peut se cacher : Néonatal dans les gaines).
+var body_visible := true
+## Coop, chez l'hôte : joueur visé (le plus proche, avec une préférence pour
+## la cible actuelle) ; réévalué deux fois par seconde.
+var _target: Player = null
+var _target_t := 0.0
+var _net_pos := Vector3.ZERO
+var _net_facing := 0.0
+var _net_speed := 0.0
+var _net_seen := false
+var _step_dist := 0.0
+
 
 func _ready() -> void:
 	add_to_group("enemies")
@@ -96,6 +110,8 @@ func _ready() -> void:
 	hp = max_hp
 	collision_layer = 4
 	collision_mask = 1 | 2 | 4 | 16
+	# Seul le décor sert de sol porteur (jamais un joueur ou une autre créature)
+	platform_floor_layers = 1
 	floor_max_angle = deg_to_rad(46.0)
 	floor_snap_length = 0.4
 	var cs := CollisionShape3D.new()
@@ -138,7 +154,33 @@ func add_hitbox(joint_name: String, shape: Shape3D, offset: Vector3, is_head: bo
 
 
 func player() -> Player:
-	return GameState.player as Player
+	if not Net.active or net_puppet:
+		return GameState.player as Player
+	if _target == null or not is_instance_valid(_target) or not _target.can_be_targeted():
+		_choose_target()
+	return _target
+
+
+## Choisit le joueur visé : le plus proche au même étage, la cible actuelle
+## gardée tant qu'un autre n'est pas nettement plus près (changement de cible).
+func _choose_target() -> void:
+	var g := GameState.game as Game
+	if g == null:
+		_target = GameState.player as Player
+		return
+	var best: Player = null
+	var best_score := INF
+	for c in g.active_players():
+		var p := c as Player
+		var d := global_position.distance_to(p.global_position)
+		if absf(p.global_position.y - global_position.y) > 2.5:
+			d += 30.0
+		if p == _target:
+			d -= 2.5
+		if d < best_score:
+			best_score = d
+			best = p
+	_target = best
 
 
 func is_dead() -> bool:
@@ -173,7 +215,7 @@ func _voice(kind: String) -> void:
 # --- Sens --------------------------------------------------------------------
 
 func _on_noise(pos: Vector3, radius: float, source: Node) -> void:
-	if state == State.DEAD or source == self or passive:
+	if state == State.DEAD or source == self or passive or net_puppet:
 		return
 	if dormant and deep_sleep:
 		return
@@ -188,7 +230,7 @@ func _on_noise(pos: Vector3, radius: float, source: Node) -> void:
 		return
 	if _rise_t >= 0.0:
 		return
-	var from_player := source == GameState.player
+	var from_player := source is Player
 	if from_player:
 		last_known = pos
 		_contact_t = 0.0
@@ -235,6 +277,10 @@ func _can_see_player() -> bool:
 func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -> void:
 	if state == State.DEAD:
 		return
+	# Réplique chez l'invité : l'impact se voit, l'hôte décide des dégâts
+	if net_puppet:
+		_hit_flash = 1.0
+		return
 	passive = false
 	if dormant:
 		deep_sleep = false
@@ -260,7 +306,7 @@ func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -
 
 ## Choc d'arme lourde : titube (power 0..1) et recule.
 func stagger(power: float, dir: Vector3 = Vector3.ZERO, knockback: float = 0.0) -> void:
-	if state == State.DEAD or power <= 0.0:
+	if state == State.DEAD or power <= 0.0 or net_puppet:
 		return
 	if _rng.randf() < power:
 		_stagger_t = maxf(_stagger_t, 0.25 + power * 0.55)
@@ -341,6 +387,9 @@ func _update_rise(delta: float) -> bool:
 # --- Boucle principale -----------------------------------------------------------
 
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	if state == State.DEAD:
 		_death_t += delta
 		_animate_death(delta)
@@ -348,6 +397,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= 20.0 * delta
 		move_and_slide()
 		return
+	if Net.active:
+		_target_t -= delta
+		if _target_t <= 0.0:
+			_target_t = 0.5
+			_choose_target()
 	_hit_flash = maxf(_hit_flash - delta * 5.0, 0.0)
 	if flesh_mat:
 		flesh_mat.set_shader_parameter("hit_flash", _hit_flash)
@@ -649,6 +703,92 @@ func place(pos: Vector3, rot: float) -> void:
 	if rig:
 		rig.rotation.y = rot
 	velocity = Vector3.ZERO
+
+
+# --- Coop : état réseau et réplique chez l'invité ------------------------------------
+
+## État envoyé à l'invité : [id, position, orientation, état, PV, PV max,
+## vitesse, sonnée, dormante, passive, en train de se relever, détails].
+func net_state() -> Array:
+	return [enemy_id, global_position, facing, state, hp, max_hp, _speed_now, _stagger_t > 0.0,
+		dormant, passive, _rise_t >= 0.0, _net_extra()]
+
+
+## Détails propres à une créature (charge, genou à terre, cachée…).
+func _net_extra() -> Array:
+	return []
+
+
+func _net_apply_extra(_a: Array) -> void:
+	pass
+
+
+func apply_net_state(s: Array) -> void:
+	_net_pos = s[1]
+	_net_facing = float(s[2])
+	var new_state := int(s[3])
+	hp = float(s[4])
+	max_hp = float(s[5])
+	_net_speed = float(s[6])
+	_stagger_t = 0.3 if bool(s[7]) else 0.0
+	if not _net_seen:
+		_net_seen = true
+		global_position = _net_pos
+		facing = _net_facing
+	if dormant and not bool(s[8]):
+		# Réveil chez l'hôte : elle se relève ici aussi
+		wake_up()
+	passive = bool(s[9])
+	if new_state != state and new_state != State.DEAD and state != State.DEAD:
+		var prev := state
+		state = new_state
+		state_time = 0.0
+		if new_state == State.ATTACK:
+			_attack_t = 0.0
+			_voice("attack")
+		else:
+			_on_state_enter(prev, new_state)
+	_net_apply_extra(s[11])
+
+
+## Réplique : suit la position reçue, s'anime, fait ses bruits (sans décider).
+func _puppet_process(delta: float) -> void:
+	if state == State.DEAD:
+		_death_t += delta
+		_animate_death(delta)
+		return
+	_hit_flash = maxf(_hit_flash - delta * 5.0, 0.0)
+	if flesh_mat:
+		flesh_mat.set_shader_parameter("hit_flash", _hit_flash)
+	if dormant:
+		return
+	if _update_rise(delta):
+		return
+	if _net_seen:
+		var before := global_position
+		if global_position.distance_to(_net_pos) > 3.0:
+			global_position = _net_pos
+		else:
+			global_position = global_position.lerp(_net_pos, 1.0 - exp(-10.0 * delta))
+		_step_dist += Vector2(global_position.x - before.x, global_position.z - before.z).length()
+		facing = lerp_angle(facing, _net_facing, 1.0 - exp(-12.0 * delta))
+	rig.rotation.y = facing
+	_speed_now = _net_speed
+	state_time += delta
+	if state == State.ATTACK:
+		_attack_t += delta
+	if _step_dist > 0.75:
+		_step_dist = 0.0
+		_footstep()
+	_ambient_voice(delta)
+	if _puppet_custom(delta):
+		return
+	_animate(delta)
+
+
+## Animation propre à une créature en réplique (retourne true si elle s'en charge).
+func _puppet_custom(_delta: float) -> bool:
+	return false
 
 
 func debug_state() -> String:

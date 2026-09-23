@@ -53,6 +53,7 @@ var _bang_cd := 0.0
 
 func _ready() -> void:
 	add_to_group("doors")
+	add_to_group("net_refresh")
 	interact_radius = 1.9
 	focus_offset = Vector3(0, 1.1, 0)
 	_build()
@@ -339,6 +340,26 @@ func _apply_saved_state() -> void:
 		for i in _pivots.size():
 			var side := 1.0 if i == 0 else -1.0
 			_pivots[i].rotation.y = open_angle * _dir * side
+
+
+## Invité : l'hôte a changé la porte (ouverte, fermée, déverrouillée).
+func net_refresh() -> void:
+	if door_id == "" or not GameState.door_states.has(door_id):
+		return
+	var st: Dictionary = GameState.door_states[door_id]
+	var new_lock := int(st.get("lock", lock))
+	if new_lock != lock:
+		lock = new_lock
+		_update_nav()
+	var want_open := bool(st.get("open", false))
+	if want_open and not is_open:
+		_dir = float(st.get("dir", _dir))
+		var keep := fixed_dir
+		fixed_dir = 0.0
+		open_door()
+		fixed_dir = keep
+	elif not want_open and is_open:
+		close_door()
 
 
 func _update_nav() -> void:

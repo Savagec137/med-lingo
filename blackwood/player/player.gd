@@ -31,6 +31,8 @@ var slot := 1
 var data: PlayerData
 ## Joueur de cette machine (entrées, caméra) ; sinon réplique réseau.
 var is_local := true
+## Coop : point « [E] RÉANIMER » quand ce joueur est à terre.
+var revive_spot: ReviveSpot
 
 var camera_rig: PlayerCamera
 var rig: HumanoidRig
@@ -63,6 +65,22 @@ var _heal_cd := 0.0
 var _breath_level := 0.0
 var _move_speed := 0.0
 var _fire_was_down := false
+var _downed_t := 0.0
+
+# Réplique réseau : dernier état reçu
+var _net_pos := Vector3.ZERO
+var _net_yaw := 0.0
+var _net_pitch := 0.0
+var _net_speed := 0.0
+var _net_flags := 0
+var _net_aim := Vector3.FORWARD
+var _net_weapon := -1
+var _net_seen := false
+var _traveling_allowed := false
+## Téléportation décidée par l'hôte : numéro attendu (hôte) / reçu (invité).
+## Les positions envoyées avant la téléportation sont ignorées.
+var tp_id := 0
+var tp_ack := 0
 
 
 func _ready() -> void:
@@ -70,6 +88,7 @@ func _ready() -> void:
 		data = GameState.data(slot)
 	collision_layer = 2
 	collision_mask = 1 | 4 | 16
+	platform_floor_layers = 1
 	floor_max_angle = deg_to_rad(46.0)
 	floor_snap_length = 0.45
 	var cs := CollisionShape3D.new()
@@ -98,6 +117,13 @@ func _ready() -> void:
 	_update_equipment_visibility()
 	if is_local:
 		GameState.player = self
+	add_to_group("players")
+	revive_spot = ReviveSpot.new()
+	revive_spot.name = "ReviveSpot"
+	revive_spot.owner_player = self
+	add_child(revive_spot)
+	if GameState.game and GameState.game.has_method("register_net_node"):
+		GameState.game.register_net_node(revive_spot, "revive:%d" % slot)
 	data.changed.connect(_on_data_changed)
 	GameState.flag_changed.connect(func(f: String, _v: Variant) -> void:
 		if f == "has_flashlight":
@@ -117,9 +143,21 @@ func notify(text: String, duration: float = 3.0, sound: String = "") -> void:
 	if is_local:
 		if sound != "":
 			Audio.play_2d(sound, -4.0)
-		GameState.show_message(text, duration)
-	elif GameState.game and GameState.game.has_method("notify_player"):
-		GameState.game.notify_player(slot, text, duration, sound)
+		GameState.show_local_message(text, duration)
+	elif Coop.instance():
+		Coop.instance().notify_slot(slot, text, duration, sound)
+
+
+## Direction du regard (caméra pour le joueur local, visée reçue pour une réplique).
+func look_dir() -> Vector3:
+	if is_local and camera_rig:
+		return -camera_rig.cam.global_transform.basis.z
+	return _net_aim if _net_aim.length() > 0.1 else Basis(Vector3.UP, facing_yaw) * Vector3.FORWARD
+
+
+## Peut être pris pour cible par une créature (ni mort ni à terre).
+func can_be_targeted() -> bool:
+	return not is_dead and not data.downed
 
 
 ## Relie la caméra : bras et arme à l'écran pour la vue première personne.
@@ -212,7 +250,11 @@ func _weapon_key(event: InputEvent) -> int:
 
 func try_interact() -> void:
 	if focused and focused.can_interact():
-		focused.interact(self)
+		# Invité : c'est l'hôte qui exécute (et valide) l'interaction
+		if Net.is_client() and Coop.instance():
+			Coop.instance().request_interact(focused)
+		else:
+			focused.interact(self)
 
 
 func try_dodge() -> void:
@@ -231,11 +273,17 @@ func try_dodge() -> void:
 
 
 func use_heal() -> bool:
-	if _heal_cd > 0.0 or not data.has_item("spray"):
+	if _heal_cd > 0.0 or not data.has_item("spray") or data.downed:
 		return false
 	if data.hp >= PlayerData.MAX_HP:
 		notify("Santé déjà au maximum.", 2.0)
 		return false
+	# Invité : le soin est appliqué (et décompté) par l'hôte
+	if Net.is_client() and is_local and Coop.instance():
+		_heal_cd = 1.0
+		Audio.play_2d("spray", -2.0)
+		Coop.instance().rq_heal.rpc_id(1)
+		return true
 	data.remove_item("spray", 1)
 	data.set_hp(data.hp + float(ItemDB.get_item("spray").heal))
 	_heal_cd = 1.0
@@ -246,12 +294,18 @@ func use_heal() -> bool:
 
 
 func _physics_process(delta: float) -> void:
+	if not is_local:
+		_remote_process(delta)
+		return
 	if is_dead:
 		_animate_death(delta)
 		velocity.x = move_toward(velocity.x, 0.0, DECEL * delta)
 		velocity.z = move_toward(velocity.z, 0.0, DECEL * delta)
 		velocity.y -= GRAVITY * delta
 		move_and_slide()
+		return
+	if data.downed:
+		_downed_process(delta)
 		return
 	_dodge_cd = maxf(_dodge_cd - delta, 0.0)
 	_invuln = maxf(_invuln - delta, 0.0)
@@ -261,10 +315,12 @@ func _physics_process(delta: float) -> void:
 	var input := Vector2.ZERO
 	var want_aim := false
 	var want_run := false
-	var fire_down := Input.is_action_pressed("fire") and controls_enabled
+	# Coop : le jeu ne se met pas en pause, un écran ouvert coupe les commandes
+	var can_act := controls_enabled and not _ui_blocks()
+	var fire_down := Input.is_action_pressed("fire") and can_act
 	var fire_edge := fire_down and not _fire_was_down
 	_fire_was_down = fire_down
-	if controls_enabled:
+	if can_act:
 		input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		want_aim = Input.is_action_pressed("aim") and is_armed() and not weapons.is_melee()
 		want_run = Input.is_action_pressed("run")
@@ -337,10 +393,15 @@ func _physics_process(delta: float) -> void:
 		view_model.aiming = Input.is_action_pressed("aim") and aiming
 		view_model.update(delta, camera_yaw(), camera_rig.pitch if camera_rig else 0.0, _move_speed, running)
 
-	_footsteps(delta, hvel.length())
+	_footsteps(delta, hvel.length(), is_on_floor())
 	_animate(delta, hvel.length())
 	_update_focus(delta)
 	_update_breathing(delta)
+
+
+## Coop : un écran (inventaire, document…) est ouvert sur cette machine.
+func _ui_blocks() -> bool:
+	return Net.active and GameState.ui != null and GameState.ui.top_screen() != null
 
 
 func _update_aim(delta: float) -> void:
@@ -380,8 +441,8 @@ func _do_fire() -> void:
 		_quick_aim = maxf(_quick_aim, 0.5)
 
 
-func _footsteps(delta: float, speed: float) -> void:
-	if not is_on_floor() or speed < 0.4:
+func _footsteps(delta: float, speed: float, grounded: bool = true) -> void:
+	if not grounded or speed < 0.4:
 		_stride = 0.0
 		return
 	_stride += speed * delta
@@ -410,7 +471,7 @@ func _update_focus(delta: float) -> void:
 	cam_look = cam_look.normalized()
 	for n in get_tree().get_nodes_in_group("interactable"):
 		var it := n as Interactable
-		if it == null or not it.can_interact():
+		if it == null or it == revive_spot or not it.can_interact():
 			continue
 		var fp := it.focus_position()
 		var to := fp - me
@@ -444,16 +505,37 @@ func _update_breathing(delta: float) -> void:
 
 
 func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
-	if is_dead or _invuln > 0.0 or DebugTools.god_mode:
+	if is_dead or data.downed or _invuln > 0.0 or (DebugTools.god_mode and is_local):
+		return
+	# Coop : seul le serveur décide des dégâts
+	if Net.is_client():
 		return
 	# Portes de l'ascenseur refermées : plus rien ne peut l'atteindre
-	if GameState.game and GameState.game.get("traveling") == true and amount < 1000.0:
+	if is_local and GameState.game and GameState.game.get("traveling") == true and amount < 1000.0:
 		return
 	amount *= Settings.damage_taken_mult()
 	data.set_hp(data.hp - amount)
 	_hurt = 0.45
 	_invuln = 0.5
 	weapons.delay_reload(0.35)
+	if is_local:
+		hurt_feedback(amount, from)
+	elif Coop.instance():
+		Coop.instance().hurt_player(slot, amount, from)
+		Audio.play_3d("player_hurt", global_position + Vector3.UP * 1.4, -4.0, 0.05, 14.0, 3.0)
+	if data.hp <= 0.0:
+		var g := GameState.game as Game
+		if g and g.coop_revive_enabled() and amount < 1000.0 and Coop.instance():
+			Coop.instance().player_downed(slot)
+		elif g and g.coop and Coop.instance():
+			Coop.instance().player_died(slot)
+		else:
+			die()
+
+
+## Réaction à un coup sur l'écran de ce joueur (secousse, voile rouge, son).
+func hurt_feedback(amount: float, from: Vector3) -> void:
+	_hurt = 0.45
 	var push := (global_position - from)
 	push.y = 0.0
 	if push.length() > 0.01:
@@ -463,8 +545,181 @@ func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
 	Audio.play_2d("player_hurt", -2.0)
 	if GameState.game and GameState.game.has_method("on_player_hurt"):
 		GameState.game.on_player_hurt(amount)
-	if data.hp <= 0.0:
-		die()
+
+
+# --- Coop : à terre, réanimation -------------------------------------------------
+
+## Tombe à terre : immobile, réanimable par le partenaire pendant 30 s.
+func enter_downed() -> void:
+	aiming = false
+	_pending_shot = false
+	_downed_t = 0.0
+	weapons.cancel_reload()
+	if camera_rig:
+		camera_rig.aiming = false
+		if camera_rig.first_person:
+			camera_rig.set_first_person(false)
+	Audio.play_3d("body_fall", global_position, -2.0, 0.05, 15.0, 3.0)
+	if is_local:
+		Audio.play_2d("player_death", -6.0)
+
+
+## Relevé (réanimation) ou revenu en renfort : pose et commandes normales.
+func revive_state() -> void:
+	is_dead = false
+	_death_t = 0.0
+	_downed_t = 0.0
+	# Une seconde de répit pour se relever
+	_invuln = 1.0
+	controls_enabled = true
+	rig.rotation.x = 0.0
+	rig.position.y = 0.0
+	if is_local and camera_rig:
+		camera_rig.target = self
+
+
+func _downed_process(delta: float) -> void:
+	_downed_t += delta
+	velocity.x = move_toward(velocity.x, 0.0, DECEL * delta)
+	velocity.z = move_toward(velocity.z, 0.0, DECEL * delta)
+	velocity.y = -0.5 if is_on_floor() else velocity.y - GRAVITY * delta
+	move_and_slide()
+	_animate_downed(delta)
+	if is_local:
+		_update_aim(delta)
+		_update_breathing(delta)
+
+
+## À terre : assis contre le sol, une main sur la blessure.
+func _animate_downed(delta: float) -> void:
+	var t := clampf(_downed_t / 0.6, 0.0, 1.0)
+	rig.reset_pose()
+	rig.pose("hip_l", Vector3(1.3, 0, -0.1))
+	rig.pose("hip_r", Vector3(1.1, 0, 0.2))
+	rig.pose("knee_l", Vector3(-0.9, 0, 0))
+	rig.pose("knee_r", Vector3(-1.4, 0, 0))
+	rig.pose("spine", Vector3(-0.35, 0, 0.1))
+	rig.pose("shoulder_l", Vector3(0.9, 0, -0.3))
+	rig.pose("elbow_l", Vector3(1.4, 0, 0))
+	rig.pose("shoulder_r", Vector3(0.2, 0, 0.5))
+	rig.pose("head", Vector3(0.25 + sin(_downed_t * 1.7) * 0.05, 0.3, 0))
+	rig.apply(delta, 0.4)
+	rig.position.y = lerpf(0.0, -0.55, t * t)
+
+
+# --- Coop : réplique réseau --------------------------------------------------------
+
+## État envoyé au réseau : position, allure, visée, lampe, arme, santé.
+func net_state() -> Array:
+	var flags := 0
+	if running:
+		flags |= Coop.F_RUN
+	if aiming:
+		flags |= Coop.F_AIM
+	if weapons.reloading:
+		flags |= Coop.F_RELOAD
+	if flashlight and flashlight.spot.visible:
+		flags |= Coop.F_LIGHT
+	if _dodge_timer > 0.0:
+		flags |= Coop.F_DODGE
+	if weapons._melee_t >= 0.0:
+		flags |= Coop.F_SWING
+	var aim := look_dir()
+	var st := 2 if (is_dead or data.dead) else (1 if data.downed else 0)
+	return [global_position.x, global_position.y, global_position.z, facing_yaw, aim_pitch, _move_speed, flags,
+		WeaponDB.ORDER.find(weapons.current), data.hp, data.flashlight_battery, st, aim.x, aim.y, aim.z, data.bleed_t, tp_ack]
+
+
+## Applique l'état reçu (du propriétaire côté serveur, de l'hôte côté client).
+func apply_net_state(s: Array, from_owner: bool) -> void:
+	# Position d'avant une téléportation décidée par l'hôte : périmée
+	if from_owner and s.size() > 15 and int(s[15]) < tp_id:
+		return
+	var pos := Vector3(float(s[0]), float(s[1]), float(s[2]))
+	# Serveur : pas de téléportation hors ascenseur (déplacement plausible)
+	if from_owner and _net_seen and pos.distance_to(_net_pos) > 8.0 and not _traveling_allowed:
+		pos = _net_pos
+	_net_pos = pos
+	_net_yaw = float(s[3])
+	_net_pitch = float(s[4])
+	_net_speed = float(s[5])
+	_net_flags = int(s[6])
+	_net_aim = Vector3(float(s[11]), float(s[12]), float(s[13]))
+	if not _net_seen:
+		_net_seen = true
+		global_position = _net_pos
+	var widx := int(s[7])
+	if widx != _net_weapon and not from_owner:
+		_net_weapon = widx
+		weapons.equip(WeaponDB.ORDER[widx] if widx >= 0 else "", true, true)
+	if not from_owner:
+		# Chez l'invité : santé, lampe et état de l'hôte (affichage)
+		data.hp = float(s[8])
+		data.flashlight_battery = float(s[9])
+		data.bleed_t = float(s[14])
+		var lit := (_net_flags & Coop.F_LIGHT) != 0
+		if lit != data.flashlight_on:
+			data.flashlight_on = lit
+			flashlight._apply_visibility()
+		var st := int(s[10])
+		if st == 2 and not is_dead:
+			data.dead = true
+			die()
+		elif st == 1 and not data.downed:
+			data.downed = true
+			enter_downed()
+		elif st == 0 and (data.downed or is_dead):
+			data.downed = false
+			data.dead = false
+			revive_state()
+
+
+## Recale la réplique sur sa position (arrivée d'ascenseur, apparition).
+func snap_net_position() -> void:
+	_net_pos = global_position
+	_traveling_allowed = true
+	await get_tree().create_timer(1.0).timeout
+	_traveling_allowed = false
+
+
+func _remote_process(delta: float) -> void:
+	if is_dead:
+		_animate_death(delta)
+		return
+	var before := global_position
+	var d := global_position.distance_to(_net_pos)
+	if d > 4.0:
+		global_position = _net_pos
+	else:
+		global_position = global_position.lerp(_net_pos, 1.0 - exp(-14.0 * delta))
+	# Vitesse apparente (le Veilleur « entend » les pas rapides)
+	if delta > 0.0 and d <= 4.0:
+		velocity = Vector3((global_position.x - before.x) / delta, 0.0, (global_position.z - before.z) / delta)
+	facing_yaw = lerp_angle(facing_yaw, _net_yaw, 1.0 - exp(-16.0 * delta))
+	rig.rotation.y = facing_yaw
+	if data.downed:
+		_downed_t += delta
+		_animate_downed(delta)
+		return
+	aim_pitch = _net_pitch
+	running = (_net_flags & Coop.F_RUN) != 0
+	aiming = (_net_flags & Coop.F_AIM) != 0
+	aim_blend = move_toward(aim_blend, 1.0 if aiming else 0.0, delta * 7.0)
+	_dodge_timer = 0.2 if (_net_flags & Coop.F_DODGE) != 0 else 0.0
+	_hurt = maxf(_hurt - delta, 0.0)
+	_invuln = maxf(_invuln - delta, 0.0)
+	_heal_cd = maxf(_heal_cd - delta, 0.0)
+	if Net.is_client() and (_net_flags & Coop.F_SWING) != 0 and weapons._melee_t < 0.0 and weapons.is_melee():
+		weapons.replay_swing()
+	_move_speed = _net_speed
+	if flashlight:
+		flashlight.update_light(delta, look_dir())
+	_footsteps(delta, _move_speed)
+	_animate(delta, _move_speed)
+
+
+func _reloading_anim() -> bool:
+	return weapons.reloading or (not is_local and (_net_flags & Coop.F_RELOAD) != 0)
 
 
 func die() -> void:
@@ -521,7 +776,7 @@ func _animate(delta: float, speed: float) -> void:
 		rig.pose("shoulder_r", Vector3(1.2 + 1.2 * wind - 0.6 * strike, 0.3 * wind, 0.5 * wind - 0.3 * strike))
 		rig.pose("elbow_r", Vector3(1.0 * wind + 0.2, 0, 0))
 		rig.pose("chest", Vector3(0, 0.4 * wind - 0.5 * strike, 0))
-	elif weapons.reloading:
+	elif _reloading_anim():
 		rig.pose("shoulder_r", Vector3(0.9, 0, -0.2))
 		rig.pose("elbow_r", Vector3(1.0, 0, 0))
 		var jiggle := sin(weapons.reload_timer * 12.0) * 0.15

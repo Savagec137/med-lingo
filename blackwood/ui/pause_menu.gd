@@ -49,6 +49,12 @@ func _ready() -> void:
 func on_open() -> void:
 	confirm.visible = false
 	objective.text = "Objectif : " + GameState.objective()
+	if Net.active:
+		objective.text += "\nCO-OP — vous êtes le joueur %d (%s) · %d joueur(s). Le jeu n'est pas en pause." % [
+			GameState.local_slot, "hôte" if Net.is_server() else "invité", Net.player_count()]
+		(confirm.get_child(0) as Label).text = "Quitter la session ? " + ("Votre partenaire sera renvoyé au menu ; la progression depuis la dernière sauvegarde sera perdue." if Net.is_server() else "L'hôte continue sans vous ; vous pourrez revenir.")
+	else:
+		(confirm.get_child(0) as Label).text = "Revenir au menu ? La progression depuis la dernière sauvegarde sera perdue."
 	focus_first(box)
 
 

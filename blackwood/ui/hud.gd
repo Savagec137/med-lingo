@@ -18,6 +18,9 @@ var prompt_label: Label
 var prompt_key: Label
 var prompt_box: Control
 var countdown_label: Label
+## Coop : état du partenaire (haut gauche) et bandeau « À TERRE ».
+var partner_label: Label
+var downed_label: Label
 var _countdown := -1.0
 var _fade := 1.0
 
@@ -93,6 +96,24 @@ func _ready() -> void:
 	countdown_label.visible = false
 	add_child(countdown_label)
 
+	# Coop : partenaire (haut gauche) et joueur à terre (centre)
+	partner_label = UITheme.label("", 17, UITheme.COL_DIM, UITheme.font_ui_bold())
+	partner_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.9))
+	partner_label.add_theme_constant_override("shadow_offset_x", 2)
+	partner_label.add_theme_constant_override("shadow_offset_y", 2)
+	UITheme.anchor(partner_label, 0.0, 0.0, 34, 26, 1, 1)
+	partner_label.visible = false
+	add_child(partner_label)
+	downed_label = UITheme.label("", 30, UITheme.COL_DANGER, UITheme.font_ui_bold())
+	downed_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	downed_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.95))
+	downed_label.add_theme_constant_override("shadow_offset_x", 2)
+	downed_label.add_theme_constant_override("shadow_offset_y", 2)
+	UITheme.anchor(downed_label, 0.5, 0.5, 0, 90, 0, 0)
+	downed_label.custom_minimum_size = Vector2(900, 0)
+	downed_label.visible = false
+	add_child(downed_label)
+
 	# Réticule
 	crosshair = Crosshair.new()
 	add_child(crosshair)
@@ -152,7 +173,7 @@ func _process(delta: float) -> void:
 	if armed:
 		var d := p.weapons.def()
 		var melee := String(d.get("kind", "")) == "melee"
-		var mag := GameState.weapon_mag()
+		var mag := p.weapons.mag_now()
 		ammo_label.text = "—" if melee else "%d | %d" % [mag, GameState.weapon_reserve()]
 		ammo_label.add_theme_color_override("font_color", UITheme.COL_DANGER if (mag == 0 and not melee) else UITheme.COL_TEXT)
 		weapon_label.text = String(d.get("short", "")) + ("  —  RECHARGEMENT" if p.weapons.reloading else "")
@@ -168,8 +189,9 @@ func _process(delta: float) -> void:
 	_update_battery()
 	crosshair.visible = Settings.crosshair and armed and (p.aiming or p.is_first_person())
 	(crosshair as Crosshair).spread = 1.0 if Input.is_action_pressed("aim") else 2.6
+	_update_coop(p)
 	var f := p.focused
-	var show_prompt := f != null and p.controls_enabled and not p.is_dead
+	var show_prompt := f != null and p.controls_enabled and not p.is_dead and not p.data.downed
 	prompt_box.visible = show_prompt
 	if show_prompt:
 		prompt_label.text = f.get_prompt()
@@ -195,6 +217,35 @@ class Crosshair extends Control:
 		draw_line(c - Vector2(g, 0), c - Vector2(g + 6, 0), col, 1.5)
 		draw_line(c + Vector2(0, g), c + Vector2(0, g + 6), col, 1.5)
 		draw_line(c - Vector2(0, g), c - Vector2(0, g + 6), col, 1.5)
+
+
+## Coop : santé et état du partenaire ; bandeau quand on est soi-même à terre.
+func _update_coop(p: Player) -> void:
+	var g := GameState.game as Game
+	var coop := g != null and g.coop != null and g.players.size() >= 2
+	partner_label.visible = coop
+	if coop:
+		var lines: Array = []
+		for slot in g.players:
+			if int(slot) == p.slot:
+				continue
+			var pd := GameState.data(int(slot))
+			var state := "PV %d" % int(ceil(pd.hp))
+			if pd.dead:
+				state = "MORT"
+			elif pd.downed:
+				state = "À TERRE — %d s" % int(ceil(maxf(pd.bleed_t, 0.0)))
+			lines.append("JOUEUR %d  ·  %s" % [int(slot), state])
+		partner_label.text = "\n".join(lines)
+		var any_down := false
+		for slot in g.players:
+			if int(slot) != p.slot and GameState.data(int(slot)).downed:
+				any_down = true
+		partner_label.add_theme_color_override("font_color", UITheme.COL_DANGER if any_down else UITheme.COL_DIM)
+	downed_label.visible = p.data.downed and not p.data.dead
+	if downed_label.visible:
+		downed_label.text = "À TERRE — %d s\nVotre partenaire peut vous relever ([%s] près de vous)." % [
+			int(ceil(maxf(p.data.bleed_t, 0.0))), InputSetup.key_label("interact")]
 
 
 ## Segments allumés selon le palier ; clignote en rouge à 10 %, grisé à 0 %.

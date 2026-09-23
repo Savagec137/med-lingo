@@ -18,6 +18,7 @@ func _ready() -> void:
 	if pickup_id != "" and GameState.taken_pickups.has(pickup_id):
 		queue_free()
 		return
+	add_to_group("net_refresh")
 	if prompt_text == "EXAMINER":
 		prompt_text = "RAMASSER"
 	interact_radius = 1.6
@@ -109,6 +110,12 @@ func interact(player: Node) -> void:
 		GameState.taken_pickups[pickup_id] = true
 	GameState.set_flag("picked_" + pickup_id, true)
 	queue_free()
+
+
+## Invité : ramassé par quelqu'un (chez l'hôte) : il disparaît ici aussi.
+func net_refresh() -> void:
+	if pickup_id != "" and GameState.taken_pickups.has(pickup_id) and not is_queued_for_deletion():
+		queue_free()
 
 
 func _announce(player: Node, text: String) -> void:

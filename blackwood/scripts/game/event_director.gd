@@ -6,6 +6,10 @@ extends Node
 ## Acte 2 : Sarah, le Chirurgien, le 6e (le twist), le 8e (la vidéo, le Colossus).
 ## Acte 3 : Sarah au centre de contrôle, le Patient Zéro, l'autodestruction, la fuite.
 ## Les jumpscares restent rares : la peur vient de l'attente, du son, du noir.
+##
+## Coopération : le scénario ne tourne que sur l'hôte (serveur). Sa mise en
+## scène (sons, sous-titres, caméra, barre de boss…) passe par Stage, qui la
+## rejoue chez l'invité ; les effets visuels du monde sont les « visual_* ».
 
 const SWITCH_ORDER := ["pump", "g1", "transfer"]
 const COUNTDOWN := [300.0, 240.0, 200.0]
@@ -24,6 +28,9 @@ var _surgeon_waking := false
 func setup(p_game: Node, p_facility: Facility) -> void:
 	game = p_game
 	facility = p_facility
+	# Invité : le scénario tourne chez l'hôte
+	if Net.is_client():
+		return
 	for t in facility.triggers.values():
 		(t as TriggerZone).triggered.connect(_on_trigger)
 	GameState.flag_changed.connect(_on_flag)
@@ -43,8 +50,7 @@ func _player() -> Player:
 
 
 func _say(text: String, duration: float = 3.5) -> void:
-	if GameState.ui:
-		GameState.ui.show_subtitle(text, duration)
+	Stage.subtitle(text, duration)
 
 
 ## Dialogue : répliques successives (texte, durée).
@@ -54,28 +60,28 @@ func _lines(lines: Array) -> void:
 		await _wait(float(l[1]) + 0.3)
 
 
+## Immobilise le joueur de CETTE machine (trajet d'ascenseur, cinématique).
 func lock_player(on: bool) -> void:
-	_lock(on)
-
-
-func _lock(on: bool) -> void:
 	var p := _player()
 	if p:
-		p.controls_enabled = not on
+		p.controls_enabled = not on and not p.data.downed
 	if game.camera_rig:
 		game.camera_rig.input_enabled = not on
 	if GameState.ui:
 		GameState.ui.set_letterbox(on)
 
 
+## Cinématique : les deux joueurs sont immobilisés.
+func _lock(on: bool) -> void:
+	Stage.lock(on)
+
+
 func _focus(point: Vector3, duration: float, strength: float = 1.0) -> void:
-	if game.camera_rig:
-		game.camera_rig.focus_on(point, duration, strength)
+	Stage.focus(point, duration, strength)
 
 
 func _shake(amount: float) -> void:
-	if game.camera_rig:
-		game.camera_rig.shake(amount)
+	Stage.shake(amount)
 
 
 func _enemy(id: String) -> Enemy:
@@ -100,30 +106,34 @@ func apply_world_state() -> void:
 		if phone and GameState.get_flag("phone_answered"):
 			phone.answered = true
 	# Boss : branchements et reprise en plein combat
+	var server := not Net.is_client()
 	var surgeon := _enemy("f3_surgeon") as Surgeon
 	if surgeon:
-		surgeon.boss_hp_changed.connect(_on_boss_hp)
-		surgeon.died.connect(func(_e: Enemy) -> void: _surgeon_defeated())
+		if server:
+			surgeon.boss_hp_changed.connect(_on_boss_hp)
+			surgeon.died.connect(func(_e: Enemy) -> void: _surgeon_defeated())
 		if GameState.get_flag("surgeon_started"):
 			_open_or_door(false)
 			surgeon.activate()
 			_boss_bar("LE CHIRURGIEN — DR MARKUS KELLER", surgeon.hp, surgeon.max_hp)
-		elif GameState.has_document("doc_sarah_note"):
+		elif GameState.has_document("doc_sarah_note") and server:
 			# Sauvegarde faite entre la note et la sortie du Chirurgien
 			_surgeon_intro()
 	var sarah := _enemy("f11_sarah") as SarahBoss
 	if sarah:
-		sarah.boss_hp_changed.connect(_on_boss_hp)
-		sarah.hesitated.connect(_on_sarah_hesitated)
-		sarah.died.connect(func(_e: Enemy) -> void: _sarah_defeated())
+		if server:
+			sarah.boss_hp_changed.connect(_on_boss_hp)
+			sarah.hesitated.connect(_on_sarah_hesitated)
+			sarah.died.connect(func(_e: Enemy) -> void: _sarah_defeated())
 		if GameState.get_flag("sarah_boss_started"):
 			sarah.start_fight_immediately()
 			_boss_bar("SARAH", sarah.hp, sarah.max_hp)
 	var zero := _enemy("f12_zero") as PatientZero
 	if zero:
-		zero.boss_hp_changed.connect(_on_boss_hp)
-		zero.summon_mutants.connect(_summon_mutants)
-		zero.died.connect(func(_e: Enemy) -> void: _zero_defeated())
+		if server:
+			zero.boss_hp_changed.connect(_on_boss_hp)
+			zero.summon_mutants.connect(_summon_mutants)
+			zero.died.connect(func(_e: Enemy) -> void: _zero_defeated())
 		if GameState.get_flag("zero_released"):
 			var glass: BreakableGlass = facility.nodes.get("glass_f12_cell")
 			if glass:
@@ -284,7 +294,7 @@ func on_elevator_arrived(elevator_id: String, level: int) -> void:
 			v.place(facility.anchors["veilleur_ambush"], PI * 0.5)
 			v.set_state(Enemy.State.PATROL)
 		await _wait(1.5)
-		Audio.play_3d("veilleur_click", facility.anchors["veilleur_ambush"] + Vector3.UP * 2.0, 2.0, 0.1, 30.0, 5.0)
+		Stage.play_3d("veilleur_click", facility.anchors["veilleur_ambush"] + Vector3.UP * 2.0, 2.0, 0.1, 30.0, 5.0)
 		_say("Thomas (à voix basse) : « Il est entre moi et le monte-charge. Marcher. Ne pas courir. »", 4.5)
 	if elevator_id == "freight" and level == 8 and not GameState.get_flag("reached_f8"):
 		GameState.set_flag("reached_f8", true)
@@ -295,13 +305,12 @@ func on_elevator_arrived(elevator_id: String, level: int) -> void:
 
 func play_intro() -> void:
 	_lock(true)
-	if GameState.ui:
-		GameState.ui.set_black(1.0)
+	Stage.set_black(1.0)
 	await _wait(1.0)
-	Audio.play_2d("phone_vibrate", -4.0)
+	Stage.play_2d("phone_vibrate", -4.0)
 	_say("Messagerie — 1 nouveau message — reçu à 23 h 58", 2.8)
 	await _wait(3.0)
-	Audio.set_loop("phone_static", 0.45, 0.5, "SFX")
+	Stage.set_loop("phone_static", 0.45, 0.5, "SFX")
 	await _lines([
 		["Sarah : « Thomas… c'est moi. »", 2.4],
 		["Sarah : « Si tu reçois ce message, ne viens surtout pas à l'hôpital. »", 3.4],
@@ -309,17 +318,15 @@ func play_intro() -> void:
 		["Sarah : « Ils ne sont pas morts, Thomas. Ils ne sont pas morts. »", 3.4],
 		["[ fin du message ]", 2.0],
 	])
-	Audio.set_loop("phone_static", 0.0, 0.3, "SFX")
-	Audio.play_2d("phone_hangup", -4.0)
+	Stage.set_loop("phone_static", 0.0, 0.3, "SFX")
+	Stage.play_2d("phone_hangup", -4.0)
 	GameState.add_document("doc_voicemail")
 	await _wait(1.0)
-	if GameState.ui:
-		GameState.ui.show_title_card("BLACKWOOD HOSPITAL", "Chapitre 1 — Le Message", 4.2)
+	Stage.title_card("BLACKWOOD HOSPITAL", "Chapitre 1 — Le Message", 4.2)
 	await _wait(4.8)
 	_say("Trois heures de route plus tard. Centre hospitalier universitaire Blackwood.", 3.8)
 	await _wait(1.2)
-	if GameState.ui:
-		GameState.ui.fade_from_black(2.5)
+	Stage.fade_from_black(2.5)
 	_focus(Vector3(0, 30.0, -6.0), 4.0, 0.8)
 	await _wait(3.0)
 	_lock(false)
@@ -336,25 +343,25 @@ func _er_enter() -> void:
 	await _wait(2.5)
 	var phone: Phone = facility.nodes.get("triage_phone")
 	if phone and not phone.answered:
-		phone.start_ringing()
+		Stage.node_call("triage_phone", "start_ringing")
 		_say("Un téléphone sonne, sur le comptoir de l'accueil.", 3.0)
 
 
 func on_phone_answered() -> void:
 	_lock(true)
-	Audio.set_loop("phone_static", 0.3, 0.2, "SFX")
+	Stage.set_loop("phone_static", 0.3, 0.2, "SFX")
 	await _lines([
 		["Répondeur : « Centre hospitalier Blackwood. En raison d'une mesure sanitaire exceptionnelle, les urgences sont fermées. »", 4.6],
 		["Répondeur : « Restez chez vous. Ne vous présentez pas à l'hôpital. »", 3.4],
 	])
-	Audio.play_2d("breath_phone", -6.0)
+	Stage.play_2d("breath_phone", -6.0)
 	_say("(Un déclic. Quelqu'un d'autre est sur la ligne. Une respiration.)", 3.0)
 	await _wait(3.2)
 	_say("Voix de femme, très bas : « …Thomas ? … Pars. »", 3.2)
 	_shake(0.15)
 	await _wait(3.3)
-	Audio.set_loop("phone_static", 0.0, 0.1, "SFX")
-	Audio.play_2d("phone_hangup", -2.0)
+	Stage.set_loop("phone_static", 0.0, 0.1, "SFX")
+	Stage.play_2d("phone_hangup", -2.0)
 	_say("Thomas : « Sarah ? SARAH ! » … Tonalité. Elle me voit. Elle est quelque part, là-haut.", 4.5)
 	await _wait(1.0)
 	_lock(false)
@@ -371,8 +378,8 @@ func _nurse_encounter() -> void:
 	await _wait(0.5)
 	_say("Thomas : « Madame ? Vous avez besoin d'aide ? »", 2.4)
 	await _wait(2.0)
-	Audio.play_3d("hollow_alert", nurse.global_position + Vector3.UP * 1.5, 4.0, 0.0, 40.0, 6.0, 1.2)
-	Audio.play_2d("stinger", -2.0)
+	Stage.play_3d("hollow_alert", nurse.global_position + Vector3.UP * 1.5, 4.0, 0.0, 40.0, 6.0, 1.2)
+	Stage.play_2d("stinger", -2.0)
 	_shake(0.3)
 	nurse.activate_hunt()
 	await _wait(0.4)
@@ -391,7 +398,7 @@ func _nurse_escape() -> void:
 	await _wait(0.9)
 	for i in 3:
 		if door:
-			Audio.play_3d("door_bang", door.global_position + Vector3.UP, 4.0, 0.05, 30.0, 5.0)
+			Stage.play_3d("door_bang", door.global_position + Vector3.UP, 4.0, 0.05, 30.0, 5.0)
 		_shake(0.2)
 		await _wait(0.8)
 	_say("Thomas (haletant) : « …Elle me regardait comme si elle me connaissait. »", 4.0)
@@ -402,12 +409,12 @@ func _nurse_escape() -> void:
 
 func _hall_announcement() -> void:
 	await _wait(1.5)
-	Audio.play_2d("relay_click", -6.0)
+	Stage.play_2d("relay_click", -6.0)
 	await _lines([
 		["HAUT-PARLEURS : « …Confinement sanitaire en cours. Restez dans vos chambres. »", 4.0],
 		["HAUT-PARLEURS : « Ne tentez pas de quitter l'établissement. Le personnel soignant va… »", 4.0],
 	])
-	Audio.play_2d("phone_hangup", -10.0)
+	Stage.play_2d("phone_hangup", -10.0)
 	_say("(Le message se coupe au milieu du mot. Puis recommence, plus loin, dans un autre étage.)", 3.8)
 
 
@@ -419,7 +426,7 @@ func _guard_wakes() -> void:
 		return
 	g.deep_sleep = false
 	g.wake_up()
-	Audio.play_3d("hollow_wake", g.global_position + Vector3.UP, 2.0, 0.0, 20.0, 4.0)
+	Stage.play_3d("hollow_wake", g.global_position + Vector3.UP, 2.0, 0.0, 20.0, 4.0)
 	_say("Derrière moi… l'agent. Il se relève.", 2.5)
 
 
@@ -431,7 +438,7 @@ func _b2_arrive() -> void:
 	await _wait(2.0)
 	var v := _enemy("b2_veilleur")
 	var pos: Vector3 = v.global_position if v else Vector3(15, -6, 0)
-	Audio.play_3d("veilleur_scream", pos + Vector3.UP * 2.0, -4.0, 0.0, 60.0, 8.0)
+	Stage.play_3d("veilleur_scream", pos + Vector3.UP * 2.0, -4.0, 0.0, 60.0, 8.0)
 	await _wait(2.2)
 	_say("Thomas : « …Qu'est-ce que c'était ? » Un cliquetis, loin, dans le parking.", 3.8)
 
@@ -446,18 +453,18 @@ func _on_switch(panel: SwitchPanel) -> void:
 		return
 	var expected: String = SWITCH_ORDER[_switch_step] if _switch_step < SWITCH_ORDER.size() else ""
 	if panel.switch_id == expected:
-		panel.set_on(true)
+		Stage.node_call("switch_" + expected, "set_on", [true, true])
 		GameState.set_flag("switch_" + expected, true)
 		_switch_step += 1
 		match expected:
 			"pump":
-				Audio.play_3d("relay_click", panel.global_position + Vector3.UP * 1.3, 0.0, 0.0, 15.0, 3.0)
-				GameState.show_message("La pompe à gasoil ronronne. Étape 1 sur 3.", 3.0)
+				Stage.play_3d("relay_click", panel.global_position + Vector3.UP * 1.3, 0.0, 0.0, 15.0, 3.0)
+				Stage.message("La pompe à gasoil ronronne. Étape 1 sur 3.", 3.0)
 			"g1":
-				Audio.play_3d("power_up", panel.global_position + Vector3.UP, 4.0, 0.0, 40.0, 6.0)
-				Audio.set_loop("amb_generator", 0.8, 3.0)
+				Stage.play_3d("power_up", panel.global_position + Vector3.UP, 4.0, 0.0, 40.0, 6.0)
+				Stage.set_loop("amb_generator", 0.8, 3.0)
 				_shake(0.25)
-				GameState.show_message("Le groupe G1 démarre dans un vacarme de pistons. Étape 2 sur 3.", 3.5)
+				Stage.message("Le groupe G1 démarre dans un vacarme de pistons. Étape 2 sur 3.", 3.5)
 				# Le vacarme attire forcément quelque chose
 				GameState.emit_noise(panel.global_position, 35.0, panel)
 			"transfer":
@@ -467,28 +474,23 @@ func _on_switch(panel: SwitchPanel) -> void:
 		_switch_step = 0
 		for id in SWITCH_ORDER:
 			GameState.set_flag("switch_" + id, false)
-			var sp: SwitchPanel = facility.nodes.get("switch_" + id)
-			if sp:
-				sp.set_on(false)
-		Audio.play_3d("power_down", panel.global_position + Vector3.UP, 4.0, 0.0, 40.0, 6.0)
-		Audio.set_loop("amb_generator", 0.25, 1.5)
+			Stage.node_call("switch_" + id, "set_on", [false, true])
+		Stage.play_3d("power_down", panel.global_position + Vector3.UP, 4.0, 0.0, 40.0, 6.0)
+		Stage.set_loop("amb_generator", 0.25, 1.5)
 		GameState.emit_noise(panel.global_position, 30.0, panel)
-		GameState.show_message("Le groupe tousse et cale. Il faut suivre la procédure du local technique, dans l'ordre.", 4.5)
+		Stage.message("Le groupe tousse et cale. Il faut suivre la procédure du local technique, dans l'ordre.", 4.5)
 
 
 func _power_on(animate: bool) -> void:
 	GameState.set_flag("power_restored", true)
-	for id in SWITCH_ORDER:
-		var sp: SwitchPanel = facility.nodes.get("switch_" + id)
-		if sp:
-			sp.set_on(true, animate)
-			sp.locked = true
-	for l in facility.grid_lights:
-		l.set_power(true)
+	if animate:
+		Stage.scene("visual_power", [true])
+	else:
+		visual_power(false)
 	if not animate:
 		return
-	Audio.play_2d("power_up", 0.0)
-	Audio.set_loop("amb_generator", 0.7, 2.0)
+	Stage.play_2d("power_up", 0.0)
+	Stage.set_loop("amb_generator", 0.7, 2.0)
 	_shake(0.3)
 	await _wait(1.5)
 	_say("HAUT-PARLEURS : « ALIMENTATION DE SECOURS ÉTABLIE. ASCENSEURS EN SERVICE. »", 4.5)
@@ -497,15 +499,26 @@ func _power_on(animate: bool) -> void:
 	_say("Thomas : « Les ascenseurs… Le 3e. Le service de Sarah. »", 3.5)
 
 
+## Le courant revient : interrupteurs verrouillés, éclairage du réseau.
+func visual_power(animate: bool) -> void:
+	for id in SWITCH_ORDER:
+		var sp: SwitchPanel = facility.nodes.get("switch_" + id)
+		if sp:
+			sp.set_on(true, animate)
+			sp.locked = true
+	for l in facility.grid_lights:
+		l.set_power(true)
+
+
 # --- 3e étage : le Chirurgien ----------------------------------------------------------
 
 func _surgeon_intro() -> void:
 	var boss := _enemy("f3_surgeon") as Surgeon
-	if boss == null or boss.is_dead() or GameState.get_flag("surgeon_started") or _surgeon_waking:
+	if Net.is_client() or boss == null or boss.is_dead() or GameState.get_flag("surgeon_started") or _surgeon_waking:
 		return
 	_surgeon_waking = true
 	await _wait(2.5)
-	Audio.play_2d("surgeon_distant", 0.0)
+	Stage.play_2d("surgeon_distant", 0.0)
 	_shake(0.3)
 	_say("Un fracas métallique, au bout du couloir. Le bloc de neurochirurgie.", 3.0)
 	await _wait(2.5)
@@ -514,8 +527,8 @@ func _surgeon_intro() -> void:
 	GameState.set_flag("surgeon_started", true)
 	_open_or_door(true)
 	boss.activate()
-	Audio.play_3d("surgeon_roar", boss.global_position + Vector3.UP * 2.2, 6.0, 0.0, 60.0, 8.0)
-	Audio.play_music("music_boss", 0.9, 1.0)
+	Stage.play_3d("surgeon_roar", boss.global_position + Vector3.UP * 2.2, 6.0, 0.0, 60.0, 8.0)
+	Stage.play_music("music_boss", 0.9, 1.0)
 	_boss_bar("LE CHIRURGIEN — DR MARKUS KELLER", boss.hp, boss.max_hp)
 	await _wait(3.0)
 	_say("Thomas : « Les bouteilles d'oxygène… Si je le fais passer à côté… »", 4.0)
@@ -527,8 +540,8 @@ func _open_or_door(loud: bool) -> void:
 	if door == null:
 		return
 	if loud:
-		Audio.play_3d("door_burst", door.global_position + Vector3.UP, 8.0, 0.0, 50.0, 8.0)
-		FX.dust(game, door.global_position + Vector3.UP, 18, 0.5)
+		Stage.play_3d("door_burst", door.global_position + Vector3.UP, 8.0, 0.0, 50.0, 8.0)
+		Stage.dust(door.global_position + Vector3.UP, 18, 0.5)
 	if door.lock != Door.Lock.NONE:
 		door.unlock()
 	if not door.is_open:
@@ -539,7 +552,7 @@ func _surgeon_defeated() -> void:
 	if GameState.get_flag("surgeon_dead"):
 		return
 	GameState.set_flag("surgeon_dead", true)
-	Audio.play_music("music_boss", 0.0, 3.0)
+	Stage.play_music("music_boss", 0.0, 3.0)
 	_hide_boss_bar()
 	await _wait(2.5)
 	_say("Thomas : « Une pastille métallique à la nuque… « ECHO ». Comme les autres. »", 4.0)
@@ -551,11 +564,11 @@ func _surgeon_defeated() -> void:
 func _neonatal_scare() -> void:
 	var door: Door = facility.doors.get("stair_b_5")
 	var pos: Vector3 = door.global_position + Vector3.UP * 0.4 if door else Vector3(28, 20.4, -16)
-	Audio.play_3d("neonatal_screech", pos, 2.0, 0.0, 25.0, 4.0)
+	Stage.play_3d("neonatal_screech", pos, 2.0, 0.0, 25.0, 4.0)
 	await _wait(0.6)
-	Audio.play_3d("door_bang", pos + Vector3.UP * 0.6, 0.0, 0.05, 20.0, 4.0)
+	Stage.play_3d("door_bang", pos + Vector3.UP * 0.6, 0.0, 0.05, 20.0, 4.0)
 	await _wait(0.5)
-	Audio.play_3d("neonatal_skitter", pos, 0.0, 0.1, 20.0, 4.0)
+	Stage.play_3d("neonatal_skitter", pos, 0.0, 0.1, 20.0, 4.0)
 	_shake(0.15)
 	await _wait(1.0)
 	_say("Thomas : « Des petites mains… sous la porte de la pédiatrie. »", 3.5)
@@ -563,12 +576,12 @@ func _neonatal_scare() -> void:
 
 func _airlock() -> void:
 	_lock(true)
-	Audio.play_2d("relay_click", -4.0)
+	Stage.play_2d("relay_click", -4.0)
 	_say("SAS : « DÉCONTAMINATION EN COURS. NE BOUGEZ PAS. »", 3.0)
-	var p := _player()
+	var p := (GameState.actor as Player) if GameState.actor is Player else _player()
 	if p:
-		FX.dust(game, p.global_position + Vector3.UP * 2.5, 40, 1.2)
-	Audio.play_2d("whoosh", -2.0)
+		Stage.dust(p.global_position + Vector3.UP * 2.5, 40, 1.2)
+	Stage.play_2d("whoosh", -2.0)
 	await _wait(2.8)
 	_say("SAS : « DÉCONTAMINATION TERMINÉE. »", 2.0)
 	_lock(false)
@@ -583,7 +596,7 @@ func _q604_breakout() -> void:
 	if glass:
 		glass.shatter()
 	_shake(0.35)
-	Audio.play_2d("stinger", -3.0)
+	Stage.play_2d("stinger", -3.0)
 	e.place(facility.anchors["f6_q604_glass"] + Vector3(-0.5, -1.45, -0.8), PI)
 	e.activate_hunt()
 
@@ -596,10 +609,8 @@ func _sarah_video(point: EventPoint) -> void:
 	_busy = true
 	_lock(true)
 	var cam := _cutscene_camera(facility.anchors["video_cam"], facility.anchors["video_look"])
-	var scr: MeshInstance3D = facility.nodes.get("video_screen")
-	if scr:
-		scr.material_override = Mats.screen(1, Color(0.8, 0.9, 1.0))
-	Audio.set_loop("phone_static", 0.15, 0.5, "SFX")
+	Stage.scene("visual_video_screen", [true])
+	Stage.set_loop("phone_static", 0.15, 0.5, "SFX")
 	await _lines([
 		["[ Enregistrement — S. REED — 11/11 — 23 h 40 ]", 2.5],
 		["Sarah : « Je m'appelle Sarah Reed. Infirmière en neurologie. »", 3.2],
@@ -611,9 +622,8 @@ func _sarah_video(point: EventPoint) -> void:
 		["Sarah : « Si tout tourne mal… je fermerai le bâtiment. Moi avec. »", 3.8],
 		["[ Un choc hors champ. Sarah se retourne. L'image se fige. ]", 3.0],
 	])
-	Audio.set_loop("phone_static", 0.0, 0.3, "SFX")
-	if scr:
-		scr.material_override = Mats.get_mat("screen_error")
+	Stage.set_loop("phone_static", 0.0, 0.3, "SFX")
+	Stage.scene("visual_video_screen", [false])
 	GameState.add_document("doc_video")
 	GameState.set_flag("sarah_video_seen", true)
 	_end_cutscene(cam)
@@ -623,13 +633,20 @@ func _sarah_video(point: EventPoint) -> void:
 	game.autosave("vidéo de Sarah")
 
 
+## Écran de la vidéo de Sarah : allumé pendant la lecture, figé ensuite.
+func visual_video_screen(playing: bool) -> void:
+	var scr: MeshInstance3D = facility.nodes.get("video_screen")
+	if scr:
+		scr.material_override = Mats.screen(1, Color(0.8, 0.9, 1.0)) if playing else Mats.get_mat("screen_error")
+
+
 func _colossus_breakout() -> void:
 	if GameState.get_flag("colossus_free"):
 		return
 	GameState.set_flag("colossus_free", true)
 	await _wait(1.8)
 	var c := _enemy("f8_colossus")
-	Audio.play_3d("colossus_roar", (c.global_position if c else Vector3(-18, 34, -21)) + Vector3.UP * 2.5, 8.0, 0.0, 90.0, 10.0)
+	Stage.play_3d("colossus_roar", (c.global_position if c else Vector3(-18, 34, -21)) + Vector3.UP * 2.5, 8.0, 0.0, 90.0, 10.0)
 	_shake(0.6)
 	await _wait(1.2)
 	var glass: BreakableGlass = facility.nodes.get("glass_f8_c7")
@@ -640,7 +657,7 @@ func _colossus_breakout() -> void:
 		door.smash(c)
 	if c:
 		c.activate_hunt()
-	Audio.play_music("music_boss", 0.7, 1.0)
+	Stage.play_music("music_boss", 0.7, 1.0)
 	_say("COURS ! L'ascenseur de direction, à l'est du couloir !", 3.5)
 
 
@@ -654,7 +671,7 @@ func _sarah_scene() -> void:
 	GameState.set_flag("sarah_talked", true)
 	_lock(true)
 	var cam := _cutscene_camera(facility.anchors["sarah_cam"], facility.anchors["sarah_look"])
-	Audio.stop_all_loops(2.0)
+	Stage.stop_all_loops(2.0)
 	await _lines([
 		["Thomas : « Sarah ! »", 1.8],
 		["Sarah (dans un souffle) : « …Thomas. Tu n'aurais jamais dû venir. »", 3.6],
@@ -666,8 +683,8 @@ func _sarah_scene() -> void:
 	if door:
 		door.set_lock(Door.Lock.NONE)
 	GameState.add_item("key_main_lab", 1)
-	GameState.show_message("Sarah vous donne sa carte d'accès — Niveau 5. L'escalier C est déverrouillé.", 4.0)
-	Audio.play_2d("pickup_key", -4.0)
+	Stage.message("Sarah vous donne sa carte d'accès — Niveau 5. L'escalier C est déverrouillé.", 4.0)
+	Stage.play_2d("pickup_key", -4.0)
 	await _lines([
 		["Sarah : « Prends ma carte. L'escalier C est ouvert. Là-haut, une console : le protocole Oméga. »", 4.6],
 		["Sarah : « Quand tu arriveras en haut… ne me cherche pas. »", 3.4],
@@ -677,7 +694,7 @@ func _sarah_scene() -> void:
 	game.autosave("Sarah")
 	sarah.begin_mutation()
 	_shake(0.5)
-	Audio.play_music("music_boss", 0.9, 1.0)
+	Stage.play_music("music_boss", 0.9, 1.0)
 	_boss_bar("SARAH", sarah.hp, sarah.max_hp)
 	await _wait(1.2)
 	_end_cutscene(cam)
@@ -696,7 +713,7 @@ func _sarah_defeated() -> void:
 	if GameState.get_flag("sarah_dead"):
 		return
 	GameState.set_flag("sarah_dead", true)
-	Audio.play_music("music_boss", 0.0, 3.0)
+	Stage.play_music("music_boss", 0.0, 3.0)
 	_hide_boss_bar()
 	await _wait(2.5)
 	await _lines([
@@ -714,7 +731,7 @@ func _zero_intercom(point: EventPoint) -> void:
 		return
 	_busy = true
 	GameState.set_flag("zero_talked", true)
-	Audio.play_2d("relay_click", -4.0)
+	Stage.play_2d("relay_click", -4.0)
 	await _lines([
 		["Élias (interphone) : « Tu n'es pas un médecin. Tu es… le frère. Tu as ses yeux. »", 4.2],
 		["Élias : « Sarah venait la nuit. Elle me lisait des histoires, pour que je n'oublie pas mon nom. »", 4.6],
@@ -743,10 +760,10 @@ func _release_zero() -> void:
 	_busy = true
 	game.autosave("console Oméga")
 	GameState.set_flag("zero_released", true)
-	GameState.show_message("PROTOCOLE OMÉGA — Confirmation requise…", 2.5)
+	Stage.message("PROTOCOLE OMÉGA — Confirmation requise…", 2.5)
 	_set_floor_alert(12, true)
 	await _wait(1.0)
-	Audio.play_3d("zero_scream", zero.global_position + Vector3.UP * 1.7, 8.0, 0.0, 70.0, 8.0)
+	Stage.play_3d("zero_scream", zero.global_position + Vector3.UP * 1.7, 8.0, 0.0, 70.0, 8.0)
 	_say("Élias : « NON ! PAS MES ENFANTS ! »", 3.0)
 	await _wait(0.8)
 	var glass: BreakableGlass = facility.nodes.get("glass_f12_cell")
@@ -754,7 +771,7 @@ func _release_zero() -> void:
 		glass.shatter()
 	_shake(0.6)
 	zero.release()
-	Audio.play_music("music_boss", 1.0, 1.0)
+	Stage.play_music("music_boss", 1.0, 1.0)
 	_boss_bar("PATIENT ZÉRO — ÉLIAS BRANDT", zero.hp, zero.max_hp)
 	_busy = false
 
@@ -774,7 +791,7 @@ func _summon_mutants() -> void:
 			# À peine sortis des cuves : encore faibles
 			e.hp = e.max_hp * 0.6
 			e.activate_hunt()
-		Audio.play_3d("glass_crash", (s as Vector3) + Vector3.UP * 1.5, 6.0, 0.05, 40.0, 6.0)
+		Stage.play_3d("glass_crash", (s as Vector3) + Vector3.UP * 1.5, 6.0, 0.05, 40.0, 6.0)
 	_say("Les cuves éclatent. Des sujets en sortent en titubant.", 3.0)
 
 
@@ -782,7 +799,7 @@ func _zero_defeated() -> void:
 	if GameState.get_flag("zero_dead"):
 		return
 	GameState.set_flag("zero_dead", true)
-	Audio.play_music("music_boss", 0.0, 3.0)
+	Stage.play_music("music_boss", 0.0, 3.0)
 	_hide_boss_bar()
 	await _wait(2.0)
 	await _lines([
@@ -796,7 +813,7 @@ func _zero_defeated() -> void:
 func _engage_self_destruct() -> void:
 	GameState.set_flag("self_destruct", true)
 	GameState.refresh_objective()
-	Audio.play_2d("keypad_success", -2.0)
+	Stage.play_2d("keypad_success", -2.0)
 	_say("HAUT-PARLEURS : « PROTOCOLE OMÉGA ENGAGÉ. DESTRUCTION DE L'INSTALLATION DANS QUATRE MINUTES. »", 5.0)
 	# Les monstres restants sont libérés ; le -1 est envahi
 	for id in ["b1_esc1", "b1_esc2", "b1_esc3"]:
@@ -822,6 +839,11 @@ func _start_countdown(fresh: bool) -> void:
 
 
 func _set_floor_alert(level: int, on: bool) -> void:
+	Stage.scene("visual_floor_alert", [level, on])
+
+
+## Alerte : lumières rouges pulsées sur un étage.
+func visual_floor_alert(level: int, on: bool) -> void:
 	for zone_name in facility.zone_lights:
 		var def: Dictionary = Facility.ZONES.get(zone_name, {})
 		if int(def.get("floor", -99)) != level:
@@ -836,7 +858,7 @@ func _set_floor_alert(level: int, on: bool) -> void:
 
 func _alarm(on: bool) -> void:
 	_alarm_on = on
-	Audio.set_loop("alarm", 0.45 if on else 0.0, 0.5, "SFX")
+	Stage.set_loop("alarm", 0.45 if on else 0.0, 0.5, "SFX")
 
 
 # --- Fin ------------------------------------------------------------------------------
@@ -846,61 +868,56 @@ func play_ending() -> void:
 		return
 	GameState.set_flag("game_complete", true)
 	countdown = -1.0
-	if GameState.ui:
-		GameState.ui.set_countdown(-1.0)
+	Stage.countdown(-1.0)
 	_lock(true)
 	_alarm(false)
-	var p := _player()
-	if p:
-		p.controls_enabled = false
-		p.velocity = Vector3.ZERO
 	await _wait(0.8)
 	var cam := _cutscene_camera(facility.anchors["ending_cam"], facility.anchors["ending_look"])
-	if p:
-		p.place(facility.anchors["ending_player"], PI)
-	facility.moon.visible = true
+	Stage.place_players(facility.anchors["ending_player"], PI)
+	Stage.scene("visual_moon", [true])
 	await _wait(1.5)
 	# L'explosion : étage par étage, du 12e aux sous-sols
 	var center: Vector3 = facility.anchors["explosion_center"]
 	for i in 5:
 		var y := 48.0 - i * 10.0
-		_fireball(Vector3(randf_range(-20, 20), y, -2.0))
-		Audio.play_2d("explosion", 4.0 - i * 0.5, randf_range(0.7, 0.9))
+		Stage.scene("visual_fireball", [Vector3(randf_range(-20, 20), y, -2.0), 1.0])
+		Stage.play_2d("explosion", 4.0 - i * 0.5, randf_range(0.7, 0.9))
 		_shake(0.9)
 		await _wait(0.45)
-	Audio.play_2d("explosion", 8.0, 0.55)
-	_fireball(center + Vector3(0, 0, 3.0), 3.0)
+	Stage.play_2d("explosion", 8.0, 0.55)
+	Stage.scene("visual_fireball", [center + Vector3(0, 0, 3.0), 3.0])
 	_shake(1.2)
 	await _wait(4.0)
-	Audio.stop_all_loops(3.0)
-	Audio.set_loop("amb_rain", 0.8, 3.0)
+	Stage.stop_all_loops(3.0)
+	Stage.set_loop("amb_rain", 0.8, 3.0)
 	await _wait(5.0)
-	Audio.play_2d("phone_vibrate", -2.0)
+	Stage.play_2d("phone_vibrate", -2.0)
 	_say("Appel entrant : NUMÉRO INCONNU", 2.6)
 	await _wait(3.0)
-	Audio.set_loop("phone_static", 0.2, 0.5, "SFX")
+	Stage.set_loop("phone_static", 0.2, 0.5, "SFX")
 	await _lines([
 		["Thomas : « …Allô ? »", 2.0],
 		["Voix : « Vous avez détruit notre laboratoire. »", 3.2],
 		["Thomas : « Qui êtes-vous ? »", 2.2],
 		["Voix : « Vous n'avez aucune idée de ce que vous venez d'empêcher. »", 4.0],
 	])
-	Audio.set_loop("phone_static", 0.0, 0.3, "SFX")
-	Audio.play_2d("phone_hangup", -2.0)
+	Stage.set_loop("phone_static", 0.0, 0.3, "SFX")
+	Stage.play_2d("phone_hangup", -2.0)
 	await _wait(1.5)
-	if GameState.ui:
-		GameState.ui.fade_to_black(2.5)
+	Stage.fade_to_black(2.5)
 	await _wait(3.0)
-	if GameState.ui:
-		GameState.ui.show_title_card("BLACKWOOD HOSPITAL", "FIN DU CHAPITRE 1", 5.0)
+	Stage.title_card("BLACKWOOD HOSPITAL", "FIN DU CHAPITRE 1", 5.0)
 	await _wait(5.6)
 	_end_cutscene(cam)
-	Audio.play_music("music_end", 0.8, 2.0)
-	if GameState.ui:
-		GameState.ui.show_ending()
+	Stage.play_music("music_end", 0.8, 2.0)
+	Stage.show_ending()
 
 
-func _fireball(pos: Vector3, scale: float = 1.0) -> void:
+func visual_moon(on: bool) -> void:
+	facility.moon.visible = on
+
+
+func visual_fireball(pos: Vector3, scale: float = 1.0) -> void:
 	var light := OmniLight3D.new()
 	light.light_color = Color(1.0, 0.55, 0.2)
 	light.light_energy = 12.0 * scale
@@ -930,44 +947,45 @@ func _fireball(pos: Vector3, scale: float = 1.0) -> void:
 # --- Caméra de cinématique --------------------------------------------------------------
 
 func _cutscene_camera(from: Vector3, look: Vector3) -> Camera3D:
-	var cam := Camera3D.new()
-	cam.fov = 55.0
-	cam.far = 400.0
-	game.add_child(cam)
-	cam.global_position = from
-	cam.look_at(look, Vector3.UP)
-	cam.make_current()
-	return cam
+	Stage.cutscene(from, look)
+	return null
 
 
-func _end_cutscene(cam: Camera3D) -> void:
-	if game.camera_rig:
-		game.camera_rig.cam.make_current()
-	if is_instance_valid(cam):
-		cam.queue_free()
+func _end_cutscene(_cam: Camera3D) -> void:
+	Stage.end_cutscene()
 
 
 # --- Boss : barre de vie ---------------------------------------------------------------
 
+var _boss_state: Array = []
+
+
 func _boss_bar(title: String, hp: float, max_hp: float) -> void:
-	if GameState.ui:
-		GameState.ui.show_boss_bar(title, hp, max_hp)
+	_boss_state = [title, hp, max_hp]
+	Stage.boss_bar(title, hp, max_hp)
 
 
 func _hide_boss_bar() -> void:
-	if GameState.ui:
-		GameState.ui.hide_boss_bar()
+	_boss_state = []
+	Stage.boss_hide()
 
 
 func _on_boss_hp(hp: float, mx: float) -> void:
-	if GameState.ui:
-		GameState.ui.update_boss_bar(hp, mx)
+	if _boss_state.size() == 3:
+		_boss_state[1] = hp
+		_boss_state[2] = mx
+	Stage.boss_hp(hp, mx)
+
+
+## Barre de boss affichée (pour un joueur qui rejoint en plein combat).
+func boss_bar_state() -> Array:
+	return _boss_state.duplicate()
 
 
 # --- Compte à rebours, ambiance ------------------------------------------------------------
 
 func _process(delta: float) -> void:
-	if countdown >= 0.0 and not GameState.get_flag("game_complete"):
+	if countdown >= 0.0 and not GameState.get_flag("game_complete") and not Net.is_client():
 		var p := _player()
 		if p and not p.is_dead and not game.traveling:
 			countdown -= delta
@@ -995,15 +1013,18 @@ func _process(delta: float) -> void:
 
 
 func _time_up() -> void:
-	if GameState.ui:
-		GameState.ui.set_countdown(-1.0)
-	Audio.play_2d("explosion", 8.0, 0.6)
+	Stage.countdown(-1.0)
+	Stage.play_2d("explosion", 8.0, 0.6)
 	_shake(1.2)
-	if GameState.ui:
-		GameState.ui.fade_to_black(0.3)
-	var p := _player()
-	if p and not p.is_dead:
-		p.take_damage(9999.0, p.global_position + Vector3.UP)
+	Stage.fade_to_black(0.3)
+	for slot in game.players:
+		var p: Player = game.players[slot]
+		if not is_instance_valid(p) or p.is_dead:
+			continue
+		if game.coop:
+			game.coop.player_died(int(slot))
+		else:
+			p.take_damage(9999.0, p.global_position + Vector3.UP)
 
 
 func _lightning(outdoor: bool) -> void:

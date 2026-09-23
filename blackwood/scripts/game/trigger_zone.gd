@@ -32,7 +32,8 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body != GameState.player:
+	# N'importe quel joueur déclenche ; en coop, seul l'hôte (le scénario) écoute
+	if not (body is Player) or Net.is_client():
 		return
 	if once and (_fired or GameState.get_flag("trig_" + trigger_name)):
 		return
@@ -41,7 +42,10 @@ func _on_body_entered(body: Node3D) -> void:
 	_fired = true
 	if once:
 		GameState.set_flag("trig_" + trigger_name, true)
+	var prev: Node = GameState.actor
+	GameState.actor = body
 	triggered.emit(trigger_name)
+	GameState.actor = prev
 
 
 ## Réarme un déclencheur (quand sa condition n'était pas encore remplie).

@@ -78,7 +78,23 @@ func _hold_still(delta: float) -> void:
 	_speed_now = 0.0
 
 
+func _net_extra() -> Array:
+	return [active, _lunge_wind >= 0.0, _lunge_t >= 0.0, _hesitate_t]
+
+
+func _net_apply_extra(a: Array) -> void:
+	if a.size() < 4:
+		return
+	active = bool(a[0])
+	_lunge_wind = 0.1 if bool(a[1]) else -1.0
+	_lunge_t = 0.1 if bool(a[2]) else -1.0
+	_hesitate_t = float(a[3])
+
+
 func _physics_process(delta: float) -> void:
+	if net_puppet:
+		_puppet_process(delta)
+		return
 	if state == State.DEAD:
 		super._physics_process(delta)
 		return

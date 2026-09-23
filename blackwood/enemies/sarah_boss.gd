@@ -82,6 +82,28 @@ func _hitbox_scale() -> float:
 
 
 ## Début de la mutation (après le dialogue) : 3,5 s de convulsions puis le combat.
+func _net_extra() -> Array:
+	var a := super._net_extra()
+	a.append_array([sitting, _mutating])
+	return a
+
+
+func _net_apply_extra(a: Array) -> void:
+	super._net_apply_extra(a)
+	if a.size() < 6:
+		return
+	if sitting and not bool(a[4]):
+		# Chez l'hôte, elle se transforme (ou s'est déjà transformée)
+		if bool(a[5]):
+			begin_mutation()
+		else:
+			start_fight_immediately()
+
+
+func _puppet_custom(delta: float) -> bool:
+	return _pre_physics(delta)
+
+
 func begin_mutation() -> void:
 	_mutating = true
 	sitting = false
@@ -124,7 +146,7 @@ func _finish_mutation() -> void:
 
 
 func _on_lucid(n: int) -> void:
-	Audio.play_3d("zero_whisper", global_position + Vector3.UP * 1.6, 2.0, 0.0, 25.0, 4.0, 1.25)
+	Stage.play_3d("zero_whisper", global_position + Vector3.UP * 1.6, 2.0, 0.0, 25.0, 4.0, 1.25)
 	if n == 2:
 		chase_speed = 4.1
 		attack_windup = 0.38

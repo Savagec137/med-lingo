@@ -97,6 +97,26 @@ func _hitbox_scale() -> float:
 
 
 ## Brise la vitre de sa cellule : le combat commence.
+func _net_extra() -> Array:
+	var a := super._net_extra()
+	a.append(in_cell)
+	return a
+
+
+func _net_apply_extra(a: Array) -> void:
+	super._net_apply_extra(a)
+	if a.size() >= 5 and in_cell and not bool(a[4]):
+		release()
+
+
+func _puppet_custom(delta: float) -> bool:
+	if in_cell:
+		_hold_still(delta)
+		_animate(delta)
+		return true
+	return false
+
+
 func release() -> void:
 	in_cell = false
 	active = true
@@ -128,9 +148,8 @@ func _regen_cap() -> float:
 
 
 func _on_lucid(n: int) -> void:
-	if GameState.ui:
-		GameState.ui.show_subtitle(LUCID[mini(n - 1, LUCID.size() - 1)], lucid_time)
-	Audio.play_3d("zero_whisper", global_position + Vector3.UP * 1.7, 4.0, 0.0, 30.0, 5.0)
+	Stage.subtitle(LUCID[mini(n - 1, LUCID.size() - 1)], lucid_time)
+	Stage.play_3d("zero_whisper", global_position + Vector3.UP * 1.7, 4.0, 0.0, 30.0, 5.0)
 
 
 func _pre_physics(delta: float) -> bool:
@@ -153,9 +172,9 @@ func _pre_physics(delta: float) -> bool:
 		_talk_t = randf_range(8.0, 12.0)
 		var p := player()
 		if p and global_position.distance_to(p.global_position) < 16.0 and GameState.ui:
-			GameState.ui.show_subtitle(LINES[_line_i % LINES.size()], 3.5)
+			Stage.subtitle(LINES[_line_i % LINES.size()], 3.5)
 			_line_i += 1
-			Audio.play_3d("zero_whisper", global_position + Vector3.UP * 1.7, 0.0, 0.1, 25.0, 4.0)
+			Stage.play_3d("zero_whisper", global_position + Vector3.UP * 1.7, 0.0, 0.1, 25.0, 4.0)
 	return false
 
 
