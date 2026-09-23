@@ -205,6 +205,9 @@ func add_door(id: String, zone: String, pos: Vector3, along_z: bool, width: floa
 	d.sign_text = String(opts.get("sign", ""))
 	d.heavy = bool(opts.get("heavy", false))
 	d.start_open = bool(opts.get("open", false))
+	# Sens d'ouverture initial (+1 : le vantail part vers -Z local ; -1 : vers +Z).
+	# Les portes déjà ouvertes s'effacent dans la pièce, pas dans le couloir.
+	d.start_dir = float(opts.get("dir", 1.0))
 	d.sound_open = String(opts.get("sound_open", "door_open_metal" if d.heavy else "door_open"))
 	d.sound_close = String(opts.get("sound_close", "door_close_metal" if d.heavy else "door_close"))
 	d.nav_floor = 1 if pos.y < -2.0 else 0

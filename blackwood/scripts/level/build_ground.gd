@@ -253,7 +253,7 @@ static func _admin(f: Facility, g: Geo) -> void:
 	f.add_door("archives_door", Z, Vector3(-20.5, 0, -2.5), false, 1.3, {"sign": "ARCHIVES"})
 	f.add_door("closet_door", Z, Vector3(-13.5, 0, -2.5), false, 1.3,
 		{"lock": Door.Lock.LOCKED, "sign": "LOCAL TECHNIQUE", "mat": "metal_gray", "locked_msg": "Local technique. Verrouillé."})
-	f.add_door("breakroom_door", Z, Vector3(-28.0, 0, 0.5), false, 1.3, {"sign": "SALLE DE REPOS", "window": true, "open": true})
+	f.add_door("breakroom_door", Z, Vector3(-28.0, 0, 0.5), false, 1.3, {"sign": "SALLE DE REPOS", "window": true, "open": true, "dir": -1.0})
 	f.add_door("office_door", Z, Vector3(-20.5, 0, 0.5), false, 1.3, {"sign": "DR L. COLE — NEUROLOGIE"})
 	f.add_door("hr_door", Z, Vector3(-14.5, 0, 0.5), false, 1.3,
 		{"lock": Door.Lock.LOCKED, "sign": "RESSOURCES HUMAINES", "locked_msg": "Ressources humaines. Verrouillé."})

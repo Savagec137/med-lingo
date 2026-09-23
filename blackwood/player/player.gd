@@ -350,7 +350,7 @@ func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
 	GameState.set_hp(GameState.hp - amount)
 	_hurt = 0.45
 	_invuln = 0.5
-	pistol.cancel_reload()
+	pistol.delay_reload(0.35)
 	var push := (global_position - from)
 	push.y = 0.0
 	if push.length() > 0.01:

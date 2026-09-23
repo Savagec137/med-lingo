@@ -188,7 +188,8 @@ static func hospital_bed(g: Geo, zone: String, pos: Vector3, rot: float = 0.0, s
 		_b(g, zone, "gown", xf, Vector3(-0.05, 0.675, 0.1), Vector3(0.7, 0.01, 0.9))
 	for s in [-1.0, 1.0]:
 		_b(g, zone, "metal_steel", xf, Vector3(s * 0.47, 0.78, 0.1), Vector3(0.02, 0.2, 0.9))
-	_solid(g, zone, xf, Vector3(0, 0.5, 0), Vector3(0.95, 1.0, 2.05))
+	# Collision à hauteur du matelas : les objets posés dessus restent visibles et atteignables.
+	_solid(g, zone, xf, Vector3(0, 0.33, 0), Vector3(0.95, 0.66, 2.05))
 
 
 static func gurney(g: Geo, zone: String, pos: Vector3, rot: float = 0.0, tipped: bool = false) -> void:

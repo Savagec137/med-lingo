@@ -129,7 +129,7 @@ static func _parking(f: Facility, g: Geo) -> void:
 	Props.car(g, Z, Vector3(14.0, 0, 22.4), PI + 0.1, "car_gray")
 	Props.car(g, Z, Vector3(21.0, 0, 31.5), 1.45, "car_red")
 	Props.ambulance(g, Z, Vector3(10.5, 0, 15.2), -PI / 2.0 + 0.12)
-	f.add_examine(Z, Vector3(8.6, 1.3, 15.4), "Une ambulance du centre. Les portes arrière sont ouvertes. À l'intérieur, un brancard vide et des sangles arrachées.")
+	f.add_examine(Z, Vector3(7.67, 1.3, 15.54), "Une ambulance du centre. Les portes arrière sont ouvertes. À l'intérieur, un brancard vide et des sangles arrachées.")
 	f.add_examine(Z, Vector3(-8.4, 1.0, 19.6), "Une voiture couverte de feuilles mortes. Elle est là depuis des mois.")
 	f.add_examine(Z, Vector3(4.6, 1.0, 34.5), "Ma voiture. Le moteur tourne encore… Lena, qu'est-ce que tu fais ici ?", {"prompt": "EXAMINER"})
 	# Lampadaires

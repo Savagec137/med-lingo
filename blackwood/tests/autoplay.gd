@@ -394,6 +394,9 @@ func fight(e: Enemy, timeout: float = 45.0) -> bool:
 				return false
 			Input.action_release("fire")
 			Input.action_release("aim")
+			# Au contact, on prend d'abord de la distance (esquive) avant de recharger.
+			if e.global_position.distance_to(player.global_position) < 3.0:
+				await dodge_away_from(e)
 			await press("reload")
 			await _secs(1.8)
 			continue

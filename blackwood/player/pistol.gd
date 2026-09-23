@@ -161,6 +161,13 @@ func cancel_reload() -> void:
 	reloading = false
 
 
+## Un coup reçu ralentit le rechargement sans l'annuler (sinon une créature au
+## contact, qui frappe plus vite qu'on ne recharge, bloquerait le joueur).
+func delay_reload(seconds: float) -> void:
+	if reloading:
+		reload_timer = minf(reload_timer + seconds, RELOAD_TIME)
+
+
 func _process(delta: float) -> void:
 	cooldown = maxf(cooldown - delta, 0.0)
 	if _flash_timer > 0.0:

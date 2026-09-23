@@ -37,6 +37,8 @@ var sound_open := "door_open"
 var sound_close := "door_close"
 var heavy := false
 var start_open := false
+## Sens du vantail pour une porte ouverte au départ (voir Facility.add_door).
+var start_dir := 1.0
 
 var _pivots: Array[Node3D] = []
 var _bodies: Array[AnimatableBody3D] = []
@@ -53,6 +55,7 @@ func _ready() -> void:
 	focus_offset = Vector3(0, 1.1, 0)
 	_build()
 	if start_open and not GameState.door_states.has(door_id):
+		_dir = start_dir
 		is_open = true
 		_amount = 1.0
 		_target = 1.0

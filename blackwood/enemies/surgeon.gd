@@ -14,7 +14,9 @@ signal boss_hp_changed(hp: float, max_hp: float)
 const CHARGE_SPEED := 6.2
 const CHARGE_TIME := 1.5
 const ROAR_TIME := 0.85
-const ELECTRO_DAMAGE := 220.0
+const ELECTRO_DAMAGE := 260.0
+## Le masque et la visière de cuir absorbent une partie des balles à la tête.
+const HEAD_ARMOR := 0.5
 
 var active := false          # inerte (« opère ») jusqu'à l'introduction du combat
 var charge_cd := 3.0
@@ -33,7 +35,7 @@ var _lamp_mat: StandardMaterial3D
 
 
 func _init() -> void:
-	max_hp = 650.0
+	max_hp = 900.0
 	hp = max_hp
 	walk_speed = 0.95
 	chase_speed = 1.95
@@ -179,6 +181,8 @@ func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -
 		return
 	if not active:
 		activate()
+	if is_head:
+		amount *= HEAD_ARMOR
 	super.take_damage(amount, hit_pos, dir, is_head)
 	boss_hp_changed.emit(maxf(hp, 0.0), max_hp)
 	_flinch_acc += amount
