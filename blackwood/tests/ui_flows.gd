@@ -20,7 +20,7 @@ func _log(msg: String) -> void:
 
 func _fail(msg: String) -> void:
 	_log("ÉCHEC : " + msg)
-	get_tree().quit(1)
+	_quit(1)
 
 
 func _frames(k: int) -> void:
@@ -204,4 +204,12 @@ func _run() -> void:
 	if not await expect(await wait_game(60.0), "la sauvegarde se charge et la partie reprend"):
 		return
 	_log("Parcours des menus : tout est OK.")
-	get_tree().quit(0)
+	_quit(0)
+
+
+func _quit(code: int) -> void:
+	var main := get_parent()
+	if main and main.has_method("quit_game"):
+		main.quit_game(code)
+	else:
+		get_tree().quit(code)

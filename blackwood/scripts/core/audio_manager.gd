@@ -36,6 +36,24 @@ func _ready() -> void:
 	Settings.changed.connect(apply_volumes)
 
 
+func _exit_tree() -> void:
+	# Arrête tout avant de quitter : sinon les flux encore en lecture sont
+	# signalés comme « fuites » dans la console de Godot.
+	for p in _pool:
+		p.stop()
+		p.stream = null
+	for sound_name in _loops:
+		_loops[sound_name].player.stop()
+		_loops[sound_name].player.stream = null
+	_loops.clear()
+	for c in get_children():
+		if c is AudioStreamPlayer:
+			(c as AudioStreamPlayer).stop()
+			(c as AudioStreamPlayer).stream = null
+	streams.clear()
+	variants.clear()
+
+
 func _setup_buses() -> void:
 	for bus_name in BUSES:
 		if AudioServer.get_bus_index(bus_name) == -1:

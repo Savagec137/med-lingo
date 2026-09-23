@@ -17,6 +17,8 @@ var _busy := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	# Fermeture de la fenêtre : on passe par quit_game() pour couper les sons.
+	get_tree().auto_accept_quit = false
 	world = Node3D.new()
 	world.name = "World"
 	world.process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -28,7 +30,7 @@ func _ready() -> void:
 	ui.load_requested.connect(load_game)
 	ui.retry_requested.connect(retry)
 	ui.quit_to_menu_requested.connect(quit_to_menu)
-	ui.quit_requested.connect(func(): get_tree().quit())
+	ui.quit_requested.connect(quit_game)
 	var args := OS.get_cmdline_user_args()
 	var test := "autoplay" if "--autoplay" in args else ""
 	for a in args:
@@ -51,6 +53,25 @@ func _ready() -> void:
 		var bot: Node = bot_script.new()
 		bot.name = "TestBot"
 		add_child(bot)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		quit_game()
+
+
+## Quitte proprement : les sons encore en lecture sont arrêtés d'abord, sinon
+## Godot les signale comme des fuites dans la console en sortant.
+func quit_game(code: int = 0) -> void:
+	for type in ["AudioStreamPlayer", "AudioStreamPlayer3D"]:
+		for n in get_tree().root.find_children("*", type, true, false):
+			n.stop()
+			n.stream = null
+	await get_tree().process_frame
+	# Laisse au fil audio le temps de libérer les lectures arrêtées (temps réel).
+	OS.delay_msec(80)
+	await get_tree().process_frame
+	get_tree().quit(code)
 
 
 func show_menu() -> void:

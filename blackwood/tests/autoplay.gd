@@ -37,7 +37,7 @@ func _fail(msg: String) -> void:
 	_log("Position joueur : %s  PV : %d  zone : %s" % [player.global_position if player else Vector3.ZERO, int(GameState.hp), GameState.current_zone])
 	_log("Drapeaux : %s" % str(GameState.flags.keys()))
 	await _shot("echec")
-	get_tree().quit(1)
+	_quit(1)
 
 
 func _step(n: String) -> void:
@@ -852,7 +852,7 @@ func _run() -> void:
 	var back := ui.top_screen() == ui.main_menu
 	_log("Menu principal affiché : %s · CONTINUE disponible : %s" % [back, not ui.main_menu.continue_btn.disabled])
 	await _shot("17_menu_retour")
-	get_tree().quit(0 if back else 1)
+	_quit(0 if back else 1)
 
 
 func _reach_security(guard: Enemy) -> bool:
@@ -984,3 +984,11 @@ func _find_mechanism(kind: String) -> Mechanism:
 		if n is Mechanism and (n as Mechanism).kind == kind:
 			return n
 	return null
+
+
+func _quit(code: int) -> void:
+	var main := get_parent()
+	if main and main.has_method("quit_game"):
+		main.quit_game(code)
+	else:
+		get_tree().quit(code)
