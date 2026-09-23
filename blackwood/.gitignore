@@ -1,0 +1,7 @@
+# Cache et imports générés par l'éditeur Godot
+.godot/
+/android/
+*.tmp
+# Exports
+/export/
+/build/

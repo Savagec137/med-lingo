@@ -1,0 +1,125 @@
+extends Node
+## Point d'entrée : menu principal ↔ partie, chargement, mort / RETRY, fin.
+##
+## Arguments utiles (après « -- ») :
+##   --new-game      démarre directement une nouvelle partie
+##   --load=N        charge l'emplacement N (0 = sauvegarde automatique)
+##   --autoplay      lance le test automatisé de la campagne complète
+##   --shots=DOSSIER captures d'écran des tests
+
+var ui: UIRoot
+var world: Node3D
+var game: Game
+var backdrop: MenuBackdrop
+var _busy := false
+
+
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	world = Node3D.new()
+	world.name = "World"
+	world.process_mode = Node.PROCESS_MODE_PAUSABLE
+	add_child(world)
+	ui = UIRoot.new()
+	ui.name = "UI"
+	add_child(ui)
+	ui.new_game_requested.connect(start_new_game)
+	ui.load_requested.connect(load_game)
+	ui.retry_requested.connect(retry)
+	ui.quit_to_menu_requested.connect(quit_to_menu)
+	ui.quit_requested.connect(func(): get_tree().quit())
+	var args := OS.get_cmdline_user_args()
+	var autoplay := "--autoplay" in args
+	for a in args:
+		if a.begins_with("--load="):
+			load_game(int(a.substr(7)))
+			return
+	if "--new-game" in args or autoplay:
+		start_new_game()
+		if autoplay:
+			var bot: Node = load("res://tests/autoplay.gd").new()
+			bot.name = "Autoplay"
+			add_child(bot)
+		return
+	show_menu()
+
+
+func show_menu() -> void:
+	_clear_world()
+	backdrop = MenuBackdrop.new()
+	world.add_child(backdrop)
+	ui.show_main_menu()
+	Audio.set_muffled(false)
+	Audio.stop_all_loops(1.0)
+	Audio.play_music("music_menu", 0.75, 2.5)
+	Audio.set_loop("amb_rain", 0.45, 2.0)
+	Audio.set_loop("amb_wind", 0.3, 2.0)
+	ui.fade_from_black(1.5)
+
+
+func start_new_game() -> void:
+	if _busy:
+		return
+	_busy = true
+	await _transition()
+	GameState.reset()
+	_start_game({})
+	_busy = false
+
+
+func load_game(slot: int) -> void:
+	if _busy:
+		return
+	var data := SaveSystem.load_slot(slot)
+	if data.is_empty():
+		GameState.show_message("Sauvegarde introuvable.", 2.5)
+		return
+	_busy = true
+	await _transition()
+	GameState.from_dict(data.get("state", {}))
+	_start_game(data)
+	_busy = false
+
+
+func retry() -> void:
+	if SaveSystem.has_slot(0):
+		load_game(0)
+	else:
+		start_new_game()
+
+
+func quit_to_menu() -> void:
+	if _busy:
+		return
+	_busy = true
+	await _transition()
+	show_menu()
+	_busy = false
+
+
+func _transition() -> void:
+	ui.fade_to_black(0.6)
+	await get_tree().create_timer(0.65, true).timeout
+
+
+func _start_game(data: Dictionary) -> void:
+	_clear_world()
+	Audio.stop_all_loops(0.3)
+	Audio.set_muffled(false)
+	ui.leave_game()
+	game = Game.new()
+	game.name = "Game"
+	world.add_child(game)
+	ui.enter_game()
+	game.setup(data)
+
+
+func _clear_world() -> void:
+	get_tree().paused = false
+	for c in world.get_children():
+		world.remove_child(c)
+		c.queue_free()
+	game = null
+	backdrop = null
+	GameState.player = null
+	GameState.game = null
