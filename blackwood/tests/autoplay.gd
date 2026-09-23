@@ -437,6 +437,21 @@ func dodge_away_from(e: Enemy) -> void:
 # --- Campagne --------------------------------------------------------------------------
 
 func _run() -> void:
+	_step("Menu principal → NEW GAME")
+	var ui := get_parent().get("ui") as UIRoot
+	for i in 300:
+		await _frames(1)
+		if ui and ui.top_screen() is MainMenu:
+			break
+	if ui == null or not (ui.top_screen() is MainMenu):
+		await _fail("le menu principal ne s'affiche pas")
+		return
+	await _secs(2.5)
+	await _shot("00_menu")
+	var focus := get_viewport().gui_get_focus_owner() as Button
+	_log("Menu principal affiché, bouton sélectionné : %s" % (focus.text if focus else "aucun"))
+	# Entrée sur le bouton sélectionné (NEW GAME), comme au clavier / à la manette.
+	await key(KEY_ENTER)
 	for i in 600:
 		await _frames(1)
 		if GameState.game != null and GameState.player != null:
@@ -827,11 +842,16 @@ func _run() -> void:
 	_log("Temps de jeu : %s · Documents : %d/%d · Créatures abattues : %d · PV : %d · Morts : %d" % [
 		SaveSystem.format_time(GameState.playtime), GameState.documents.size(), DocumentDB.DOCS.size(),
 		GameState.dead_enemies.size(), int(GameState.hp), deaths])
-	_log("Retour au menu…")
-	GameState.ui.request_quit_to_menu()
+	ui = GameState.ui
+	focus = get_viewport().gui_get_focus_owner() as Button
+	_log("Retour au menu (bouton sélectionné : %s, souris : %s)…" % [focus.text if focus else "aucun",
+		"visible" if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE else "capturée"])
+	await key(KEY_ENTER)
 	await _secs(3.0)
-	_log("Menu principal affiché : %s" % (GameState.ui.top_screen() == GameState.ui.main_menu))
-	get_tree().quit(0)
+	var back := ui.top_screen() == ui.main_menu
+	_log("Menu principal affiché : %s · CONTINUE disponible : %s" % [back, not ui.main_menu.continue_btn.disabled])
+	await _shot("17_menu_retour")
+	get_tree().quit(0 if back else 1)
 
 
 func _reach_security(guard: Enemy) -> bool:

@@ -5,6 +5,7 @@ extends Node
 ##   --new-game      démarre directement une nouvelle partie
 ##   --load=N        charge l'emplacement N (0 = sauvegarde automatique)
 ##   --autoplay      lance le test automatisé de la campagne complète
+##   --test=NOM      lance le robot de test res://tests/NOM.gd (ex. ui_flows)
 ##   --shots=DOSSIER captures d'écran des tests
 
 var ui: UIRoot
@@ -29,19 +30,27 @@ func _ready() -> void:
 	ui.quit_to_menu_requested.connect(quit_to_menu)
 	ui.quit_requested.connect(func(): get_tree().quit())
 	var args := OS.get_cmdline_user_args()
-	var autoplay := "--autoplay" in args
+	var test := "autoplay" if "--autoplay" in args else ""
 	for a in args:
 		if a.begins_with("--load="):
 			load_game(int(a.substr(7)))
 			return
-	if "--new-game" in args or autoplay:
+		if a.begins_with("--test="):
+			test = a.substr(7)
+	if "--new-game" in args:
 		start_new_game()
-		if autoplay:
-			var bot: Node = load("res://tests/autoplay.gd").new()
-			bot.name = "Autoplay"
-			add_child(bot)
 		return
 	show_menu()
+	if test != "":
+		# Les robots de test partent du menu principal, comme un joueur.
+		var bot_script: GDScript = load("res://tests/%s.gd" % test)
+		if bot_script == null or not bot_script.can_instantiate():
+			push_error("Test « %s » : script invalide." % test)
+			get_tree().quit(2)
+			return
+		var bot: Node = bot_script.new()
+		bot.name = "TestBot"
+		add_child(bot)
 
 
 func show_menu() -> void:
