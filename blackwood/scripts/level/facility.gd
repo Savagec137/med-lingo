@@ -393,7 +393,12 @@ func _build_nav() -> void:
 		if big_floors.has(f):
 			nav_grids_big[f] = NavGrid.new(nav_rects[f], float(FLOOR_Y[f]), BIG_INFLATE)
 	for o in geo.obstacles:
-		for grid in _grids(_floor_of_level_index(o.floor)):
+		var fl := _floor_of_level_index(o.floor)
+		if bool(o.get("big_only", false)):
+			if nav_grids_big.has(fl):
+				(nav_grids_big[fl] as NavGrid).block_rect(o.rect)
+			continue
+		for grid in _grids(fl):
 			grid.block_rect(o.rect)
 	for id in doors:
 		var d: Door = doors[id]

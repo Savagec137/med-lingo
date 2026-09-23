@@ -26,6 +26,12 @@ const THOMAS := {
 	"mat_hair": "hair_dark", "hair": true, "torso_shape": "jacket",
 }
 
+## Numéro du joueur (1 = hôte / solo, 2 = invité) et ses données.
+var slot := 1
+var data: PlayerData
+## Joueur de cette machine (entrées, caméra) ; sinon réplique réseau.
+var is_local := true
+
 var camera_rig: PlayerCamera
 var rig: HumanoidRig
 var flashlight: Flashlight
@@ -60,6 +66,8 @@ var _fire_was_down := false
 
 
 func _ready() -> void:
+	if data == null:
+		data = GameState.data(slot)
 	collision_layer = 2
 	collision_mask = 1 | 4 | 16
 	floor_max_angle = deg_to_rad(46.0)
@@ -84,12 +92,34 @@ func _ready() -> void:
 	weapons.setup(self, rig.joint("wrist_r"), null)
 
 	flashlight = Flashlight.new()
+	flashlight.owner_player = self
 	rig.joint("chest").add_child(flashlight)
 	flashlight.position = Vector3(-0.16, 0.12, -0.12)
 	_update_equipment_visibility()
-	GameState.player = self
-	GameState.inventory_changed.connect(_update_equipment_visibility)
-	GameState.weapons_changed.connect(_on_weapons_changed)
+	if is_local:
+		GameState.player = self
+	data.changed.connect(_on_data_changed)
+	GameState.flag_changed.connect(func(f: String, _v: Variant) -> void:
+		if f == "has_flashlight":
+			_update_equipment_visibility())
+
+
+func _on_data_changed(what: String) -> void:
+	match what:
+		"inventory":
+			_update_equipment_visibility()
+		"weapons":
+			_on_weapons_changed()
+
+
+## Message pour CE joueur (écran local, ou envoyé à son propriétaire en coop).
+func notify(text: String, duration: float = 3.0, sound: String = "") -> void:
+	if is_local:
+		if sound != "":
+			Audio.play_2d(sound, -4.0)
+		GameState.show_message(text, duration)
+	elif GameState.game and GameState.game.has_method("notify_player"):
+		GameState.game.notify_player(slot, text, duration, sound)
 
 
 ## Relie la caméra : bras et arme à l'écran pour la vue première personne.
@@ -104,8 +134,8 @@ func attach_camera(c: PlayerCamera) -> void:
 
 
 func _on_weapons_changed() -> void:
-	if weapons and GameState.equipped != weapons.current:
-		weapons.equip(GameState.equipped, true)
+	if weapons and data.equipped != weapons.current:
+		weapons.equip(data.equipped, true)
 	_update_equipment_visibility()
 
 
@@ -201,16 +231,17 @@ func try_dodge() -> void:
 
 
 func use_heal() -> bool:
-	if _heal_cd > 0.0 or not GameState.has_item("spray"):
+	if _heal_cd > 0.0 or not data.has_item("spray"):
 		return false
-	if GameState.hp >= GameState.MAX_HP:
-		GameState.show_message("Santé déjà au maximum.", 2.0)
+	if data.hp >= PlayerData.MAX_HP:
+		notify("Santé déjà au maximum.", 2.0)
 		return false
-	GameState.remove_item("spray", 1)
-	GameState.set_hp(GameState.hp + float(ItemDB.get_item("spray").heal))
+	data.remove_item("spray", 1)
+	data.set_hp(data.hp + float(ItemDB.get_item("spray").heal))
 	_heal_cd = 1.0
-	Audio.play_2d("spray", -2.0)
-	GameState.show_message("Medical Spray utilisé. +40 PV", 2.0)
+	if is_local:
+		Audio.play_2d("spray", -2.0)
+	notify("Medical Spray utilisé. +40 PV", 2.0)
 	return true
 
 
@@ -270,7 +301,7 @@ func _physics_process(delta: float) -> void:
 				target_speed = WALK_SPEED
 			if _hurt > 0.0:
 				target_speed *= 0.6
-			if GameState.hp < 30.0:
+			if data.hp < 30.0:
 				target_speed *= 0.82
 		var want_v := move_dir.normalized() * target_speed * minf(move_dir.length(), 1.0)
 		var accel := ACCEL if want_v.length() > 0.01 else DECEL
@@ -406,7 +437,7 @@ func _update_focus(delta: float) -> void:
 
 func _update_breathing(delta: float) -> void:
 	var want := 0.0
-	if GameState.hp < 30.0:
+	if data.hp < 30.0:
 		want = 0.55
 	_breath_level = move_toward(_breath_level, want, delta * 0.5)
 	Audio.set_loop("heartbeat", _breath_level, 1.0, "SFX")
@@ -419,7 +450,7 @@ func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
 	if GameState.game and GameState.game.get("traveling") == true and amount < 1000.0:
 		return
 	amount *= Settings.damage_taken_mult()
-	GameState.set_hp(GameState.hp - amount)
+	data.set_hp(data.hp - amount)
 	_hurt = 0.45
 	_invuln = 0.5
 	weapons.delay_reload(0.35)
@@ -432,7 +463,7 @@ func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
 	Audio.play_2d("player_hurt", -2.0)
 	if GameState.game and GameState.game.has_method("on_player_hurt"):
 		GameState.game.on_player_hurt(amount)
-	if GameState.hp <= 0.0:
+	if data.hp <= 0.0:
 		die()
 
 

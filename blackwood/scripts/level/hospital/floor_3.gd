@@ -171,7 +171,7 @@ static func _surgery(f: Facility, k: HKit) -> void:
 	Props.operating_table(g, O, k.p(24.0, -5.5), 0.0)
 	HProps.corpse(f, O, k.p(24.0, -6.4, 0.9), 0.0, "back", {"blood": 1.0, "pallor": 0.6, "cloth_mix": 0.0})
 	for p in [k.p(22.5, -3.5), k.p(25.6, -7.5)]:
-		Props.instrument_tray(g, O, p, randf() * TAU)
+		Props.instrument_tray(g, O, p, fposmod(p.x * 1.7 + p.z * 0.9, TAU))
 	HProps.console(f, O, k.p(30.8, -6.0), PI / 2.0, 3.0, "screen_ecg", 2)
 	Props.medical_cabinet(g, O, k.p(17.0, -0.5), 0.0)
 	Props.medical_cabinet(g, O, k.p(18.0, -0.5), 0.0)

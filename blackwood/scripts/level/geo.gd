@@ -15,9 +15,9 @@ var zone_parent: Callable
 ## Collision par défaut des boîtes (désactivée pour le décor inaccessible).
 var collide_default := true
 var root: Node3D
-var obstacles: Array = []        # {floor:int, rect:Rect2}
+var obstacles: Array = []        # {floor:int, rect:Rect2, big_only:bool}
 var _batches := {}
-var _obstacle_aabbs: Array[AABB] = []
+var _obstacle_aabbs: Array = []   # {aabb: AABB, big_only: bool}
 var _bodies := {}
 var _zone_roots := {}
 
@@ -96,8 +96,9 @@ func add_collision_box(zone: String, xf: Transform3D, size: Vector3) -> void:
 func solid(zone: String, center: Vector3, size: Vector3, basis: Basis = Basis.IDENTITY, nav: bool = true) -> void:
 	var xf := Transform3D(basis, center)
 	add_collision_box(zone, xf, size)
-	if nav:
-		_record_obstacle(xf, size)
+	# Petit meuble que les créatures frôlent (nav = false) : seules les grandes
+	# créatures (Chirurgien, Colossus) le contournent, pour ne pas s'y coincer.
+	_record_obstacle(xf, size, not nav)
 
 
 ## Obstacle de navigation sans géométrie (ex. zone inondée à éviter).
@@ -105,20 +106,22 @@ func nav_block(center: Vector3, size: Vector3, rot: float = 0.0) -> void:
 	_record_obstacle(Transform3D(Basis(Vector3.UP, rot), center), size)
 
 
-func _record_obstacle(xf: Transform3D, size: Vector3) -> void:
+func _record_obstacle(xf: Transform3D, size: Vector3, big_only: bool = false) -> void:
 	var aabb := xf * AABB(-size * 0.5, size)
-	_obstacle_aabbs.append(aabb)
+	_obstacle_aabbs.append({"aabb": aabb, "big_only": big_only})
 
 
 ## Répartit les obstacles par sol (appelé à la construction, une fois les
 ## hauteurs de sols connues).
 func _dispatch_obstacles() -> void:
 	obstacles.clear()
-	for aabb in _obstacle_aabbs:
+	for o in _obstacle_aabbs:
+		var aabb: AABB = o.aabb
 		for f in floor_levels.size():
 			var y0: float = floor_levels[f]
 			if aabb.position.y < y0 + 1.7 and aabb.end.y > y0 + 0.12:
-				obstacles.append({"floor": f, "rect": Rect2(aabb.position.x, aabb.position.z, aabb.size.x, aabb.size.z)})
+				obstacles.append({"floor": f, "rect": Rect2(aabb.position.x, aabb.position.z, aabb.size.x, aabb.size.z),
+					"big_only": bool(o.big_only)})
 
 
 ## Cylindre entre deux points (tuyaux, piliers, pieds de meubles).

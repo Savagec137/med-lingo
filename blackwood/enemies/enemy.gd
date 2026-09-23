@@ -215,7 +215,7 @@ func _can_see_player() -> bool:
 		return false
 	var to := target - eye
 	var dist := to.length()
-	var lit := GameState.flashlight_on and p.flashlight and p.flashlight.spot.visible
+	var lit := p.data.flashlight_on and p.flashlight and p.flashlight.spot.visible
 	var rng := vision_range_lit if lit else vision_range
 	if dist > rng:
 		return false

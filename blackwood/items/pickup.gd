@@ -76,40 +76,50 @@ func get_prompt() -> String:
 
 func interact(player: Node) -> void:
 	var item_name := ItemDB.item_name(item_id)
+	var pd := GameState.data_for(player)
 	match ItemDB.kind(item_id):
 		"tool":
 			GameState.set_flag("has_" + item_id, true)
 			if item_id == "flashlight" and player.flashlight:
 				player._update_equipment_visibility()
 				player.flashlight.set_on(true)
-			_announce(pickup_msg if pickup_msg != "" else "Vous obtenez : %s. [%s] pour l'allumer ou l'éteindre." % [item_name, InputSetup.key_label("flashlight")])
+			_announce(player, pickup_msg if pickup_msg != "" else "Vous obtenez : %s. [%s] pour l'allumer ou l'éteindre." % [item_name, InputSetup.key_label("flashlight")])
 		"instant":
 			if item_id == "battery":
-				GameState.flashlight_battery = 100.0
-				_announce(pickup_msg if pickup_msg != "" else "Piles neuves. La lampe torche retrouve toute sa puissance.")
+				pd.flashlight_battery = 100.0
+				pd.changed.emit("flashlight")
+				_announce(player, pickup_msg if pickup_msg != "" else "Piles neuves. La lampe torche retrouve toute sa puissance.")
 		"weapon":
-			var first := not GameState.has_weapon(item_id)
-			GameState.give_weapon(item_id)
+			var first := not pd.has_weapon(item_id)
+			GameState.give_weapon_for(pd, item_id)
 			if player.has_method("_update_equipment_visibility"):
 				player._update_equipment_visibility()
 			var slot := WeaponDB.ORDER.find(item_id) + 1
-			_announce(pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. [%d] pour l'équiper." % [item_name, slot] if first else "%s : déjà en votre possession." % item_name))
+			_announce(player, pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. [%d] pour l'équiper." % [item_name, slot] if first else "%s : déjà en votre possession." % item_name))
 		_:
 			if ItemDB.kind(item_id) == "ammo":
 				count = maxi(1, roundi(count * Settings.ammo_mult()))
-			if not GameState.can_add(item_id, count):
-				GameState.show_message("Inventaire plein. Impossible de prendre : %s." % item_name, 3.0)
-				Audio.ui("ui_error", -6.0)
+			if not GameState.can_add_for(pd, item_id, count):
+				_tell(player, "Inventaire plein. Impossible de prendre : %s." % item_name, 3.0, "ui_error")
 				return
-			GameState.add_item(item_id, count)
+			GameState.add_item_for(pd, item_id, count)
 			var label := item_name if count <= 1 else "%s (x%d)" % [item_name, count]
-			_announce(pickup_msg if pickup_msg != "" else "Vous obtenez : %s." % label)
+			_announce(player, pickup_msg if pickup_msg != "" else "Vous obtenez : %s." % label)
 	if pickup_id != "":
 		GameState.taken_pickups[pickup_id] = true
 	GameState.set_flag("picked_" + pickup_id, true)
 	queue_free()
 
 
-func _announce(text: String) -> void:
-	Audio.play_2d("pickup_key" if ItemDB.kind(item_id) == "key" else "pickup", -4.0)
-	GameState.show_message(text, 3.5)
+func _announce(player: Node, text: String) -> void:
+	_tell(player, text, 3.5, "pickup_key" if ItemDB.kind(item_id) == "key" else "pickup")
+
+
+## Message (et son d'interface) pour le joueur qui ramasse, sur SON écran.
+func _tell(player: Node, text: String, duration: float, sound: String = "") -> void:
+	if player and player.has_method("notify"):
+		player.notify(text, duration, sound)
+	else:
+		if sound != "":
+			Audio.play_2d(sound, -4.0)
+		GameState.show_message(text, duration)

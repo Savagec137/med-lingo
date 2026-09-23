@@ -22,6 +22,8 @@ var _flicker := 1.0
 var _flicker_timer := 0.0
 var _aim_dir := Vector3.FORWARD
 var _space_state: PhysicsDirectSpaceState3D
+## Joueur porteur (ses piles, son interrupteur).
+var owner_player: Node = null
 
 
 func _ready() -> void:
@@ -89,18 +91,30 @@ func _make_projector() -> GradientTexture2D:
 	return tex
 
 
+func _data() -> PlayerData:
+	return GameState.data_for(owner_player)
+
+
+func _notify(text: String, duration: float) -> void:
+	if owner_player and owner_player.has_method("notify"):
+		owner_player.notify(text, duration)
+	else:
+		GameState.show_message(text, duration)
+
+
 func is_on() -> bool:
-	return GameState.flashlight_on
+	return _data().flashlight_on
 
 
 func set_on(on: bool) -> void:
 	if on and not GameState.get_flag("has_flashlight"):
 		return
-	if on and GameState.flashlight_battery <= 0.0:
+	if on and _data().flashlight_battery <= 0.0:
 		Audio.play_3d("flashlight_click", global_position, -6.0, 0.05, 10.0, 2.0)
-		GameState.show_message("Rien. La pile est à plat : il faut des piles neuves.", 2.5)
+		_notify("Rien. La pile est à plat : il faut des piles neuves.", 2.5)
 		return
-	GameState.flashlight_on = on
+	_data().flashlight_on = on
+	_data().changed.emit("flashlight")
 	Audio.play_3d("flashlight_click", global_position, -6.0, 0.05, 10.0, 2.0)
 	_apply_visibility()
 
@@ -113,14 +127,15 @@ func toggle() -> void:
 func _on_level_drop(level: int) -> void:
 	match level:
 		25:
-			GameState.show_message("Lampe : 25 %. Le faisceau faiblit.", 2.5)
+			_notify("Lampe : 25 %. Le faisceau faiblit.", 2.5)
 		10:
-			GameState.show_message("Lampe : 10 %. Elle ne tiendra plus longtemps.", 3.0)
+			_notify("Lampe : 10 %. Elle ne tiendra plus longtemps.", 3.0)
 		0:
-			GameState.flashlight_on = false
+			_data().flashlight_on = false
+			_data().changed.emit("flashlight")
 			_apply_visibility()
 			Audio.play_3d("light_flicker", global_position, -6.0, 0.05, 8.0, 2.0)
-			GameState.show_message("La lampe s'éteint. Pile à plat : il faut des piles neuves.", 3.5)
+			_notify("La lampe s'éteint. Pile à plat : il faut des piles neuves.", 3.5)
 
 
 ## Coupe la lampe quelques secondes (événement scripté).
@@ -169,7 +184,7 @@ static func battery_level(b: float) -> int:
 
 
 func _energy_scale() -> float:
-	var e: float = LEVEL_POWER[battery_level(GameState.flashlight_battery)]
+	var e: float = LEVEL_POWER[battery_level(_data().flashlight_battery)]
 	return e * _flicker * Settings.flashlight_intensity
 
 
@@ -189,17 +204,19 @@ func update_light(delta: float, aim_dir: Vector3) -> void:
 		_apply_visibility()
 
 	if is_on():
-		var before := battery_level(GameState.flashlight_battery)
-		GameState.flashlight_battery = maxf(GameState.flashlight_battery - DRAIN_PER_SEC * delta, 0.0)
-		var now := battery_level(GameState.flashlight_battery)
+		var pd := _data()
+		var before := battery_level(pd.flashlight_battery)
+		pd.flashlight_battery = maxf(pd.flashlight_battery - DRAIN_PER_SEC * delta, 0.0)
+		var now := battery_level(pd.flashlight_battery)
 		if now != before:
 			_on_level_drop(now)
 
 	# Clignotements : batterie faible ou interférences
 	_flicker_timer -= delta
 	var chance := interference
-	if GameState.flashlight_battery < 20.0:
-		chance = maxf(chance, 0.15 + (20.0 - GameState.flashlight_battery) / 40.0)
+	var bat := _data().flashlight_battery
+	if bat < 20.0:
+		chance = maxf(chance, 0.15 + (20.0 - bat) / 40.0)
 	if _flicker_timer <= 0.0:
 		if randf() < chance * 0.5:
 			_flicker = randf_range(0.0, 0.5)
@@ -208,5 +225,5 @@ func update_light(delta: float, aim_dir: Vector3) -> void:
 			_flicker = 1.0
 			_flicker_timer = randf_range(0.05, 0.4)
 	spot.light_energy = BASE_ENERGY * _energy_scale()
-	spot.spot_range = BASE_RANGE * sqrt(maxf(float(LEVEL_POWER[battery_level(GameState.flashlight_battery)]), 0.1))
+	spot.spot_range = BASE_RANGE * sqrt(maxf(float(LEVEL_POWER[battery_level(_data().flashlight_battery)]), 0.1))
 	lens_mat.emission_energy_multiplier = 3.0 * _energy_scale() if spot.visible else 0.0

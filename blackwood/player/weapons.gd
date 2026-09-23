@@ -45,7 +45,7 @@ func setup(p_player: Node3D, p_hand: Node3D, p_view: ViewModel) -> void:
 	add_child(flash_light)
 	_flash_world = _flash_quad(2)
 	_flash_view = _flash_quad(ViewModel.LAYER)
-	equip(GameState.equipped, true)
+	equip(_pd().equipped, true)
 
 
 func _flash_quad(layer: int) -> MeshInstance3D:
@@ -59,6 +59,11 @@ func _flash_quad(layer: int) -> MeshInstance3D:
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	add_child(mi)
 	return mi
+
+
+## Données du joueur qui porte ces armes (ses chargeurs, ses munitions).
+func _pd() -> PlayerData:
+	return GameState.data_for(player)
 
 
 func def() -> Dictionary:
@@ -75,18 +80,18 @@ func is_auto() -> bool:
 
 func can_fire() -> bool:
 	return current != "" and cooldown <= 0.0 and switching <= 0.0 and _melee_t < 0.0 \
-		and (not reloading or (bool(def().get("reload_one", false)) and GameState.weapon_mag(current) > 0))
+		and (not reloading or (bool(def().get("reload_one", false)) and _pd().weapon_mag(current) > 0))
 
 
 ## Équipe une arme possédée (« » = mains nues).
 func equip(id: String, instant: bool = false) -> void:
-	if id != "" and not GameState.has_weapon(id):
+	if id != "" and not _pd().has_weapon(id):
 		return
 	if id == current and world_model != null:
 		return
 	cancel_reload()
 	current = id
-	GameState.equipped = id
+	_pd().equipped = id
 	if world_model:
 		world_model.queue_free()
 		world_model = null
@@ -108,7 +113,7 @@ func equip(id: String, instant: bool = false) -> void:
 func cycle(dir: int) -> void:
 	var owned: Array = []
 	for w in WeaponDB.ORDER:
-		if GameState.has_weapon(w):
+		if _pd().has_weapon(w):
 			owned.append(w)
 	if owned.is_empty():
 		return
@@ -131,18 +136,19 @@ func trigger(origin: Vector3, dir: Vector3, aimed: bool, moving: bool, exclude: 
 		GameState.emit_noise(player.global_position, float(d.noise), player)
 		fired.emit(current)
 		return true
-	var mag := GameState.weapon_mag(current)
+	var mag := _pd().weapon_mag(current)
 	if mag <= 0:
 		cooldown = 0.35
 		Audio.play_3d("gun_empty", global_position, -4.0, 0.03, 12.0, 3.0)
-		if GameState.weapon_reserve(current) > 0:
+		if _pd().weapon_reserve(current) > 0:
 			start_reload()
 		else:
-			GameState.show_message("Plus de munitions pour : %s." % String(d.name), 2.0)
+			if player.has_method("notify"):
+				player.notify("Plus de munitions pour : %s." % String(d.name), 2.0)
 		return false
 	if reloading:
 		cancel_reload()
-	GameState.set_weapon_mag(current, mag - 1)
+	_pd().set_weapon_mag(current, mag - 1)
 	cooldown = float(d.interval)
 	var pellets := int(d.get("pellets", 1))
 	var spread := float(d.spread_aim if aimed else d.spread_hip) * (1.5 if moving else 1.0) + heat
@@ -330,7 +336,7 @@ func start_reload() -> void:
 	var d := def()
 	if current == "" or is_melee() or reloading:
 		return
-	if GameState.weapon_mag(current) >= int(d.mag) or GameState.weapon_reserve(current) <= 0:
+	if _pd().weapon_mag(current) >= int(d.mag) or _pd().weapon_reserve(current) <= 0:
 		return
 	reloading = true
 	reload_timer = float(d.reload)
@@ -375,12 +381,12 @@ func _process(delta: float) -> void:
 		if reload_timer <= 0.0:
 			var d := def()
 			var ammo := String(d.ammo)
-			var need := int(d.mag) - GameState.weapon_mag(current)
-			var n := mini(1 if bool(d.get("reload_one", false)) else need, GameState.count_item(ammo))
+			var need := int(d.mag) - _pd().weapon_mag(current)
+			var n := mini(1 if bool(d.get("reload_one", false)) else need, _pd().count_item(ammo))
 			if n > 0:
-				GameState.remove_item(ammo, n)
-				GameState.set_weapon_mag(current, GameState.weapon_mag(current) + n)
-			if bool(d.get("reload_one", false)) and GameState.weapon_mag(current) < int(d.mag) and GameState.count_item(ammo) > 0:
+				_pd().remove_item(ammo, n)
+				_pd().set_weapon_mag(current, _pd().weapon_mag(current) + n)
+			if bool(d.get("reload_one", false)) and _pd().weapon_mag(current) < int(d.mag) and _pd().count_item(ammo) > 0:
 				reload_timer = float(d.reload)
 				if view:
 					view.play_reload(0.6)
