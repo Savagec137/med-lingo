@@ -21,7 +21,10 @@ const LUCID := [
 ]
 
 ## Régénération (part des PV max par seconde) quand on le laisse souffler.
-const REGEN_RATE := 0.012
+const REGEN_RATE := 0.008
+## Paliers du combat (part des PV max) : une fois franchi, un palier est acquis —
+## la régénération ne le fait jamais remonter au-dessus.
+const PHASES := [0.7, 0.5, 0.35]
 
 var in_cell := true
 var _regen_delay := 0.0
@@ -40,7 +43,7 @@ func _init() -> void:
 	turn_speed = 7.0
 	attack_range = 1.9
 	attack_damage = 24.0
-	attack_windup = 0.5
+	attack_windup = 0.62
 	attack_recovery = 0.7
 	vision_range = 18.0
 	vision_range_lit = 22.0
@@ -55,7 +58,7 @@ func _init() -> void:
 	body_height = 1.95
 	lunge_speed = 9.0
 	lunge_time = 0.55
-	lunge_damage = 28.0
+	lunge_damage = 24.0
 	lunge_max = 11.0
 	scream_sound = "zero_scream"
 	scream_damage = 8.0
@@ -115,6 +118,15 @@ func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -
 		summon_mutants.emit()
 
 
+## Plafond de régénération : le dernier palier franchi.
+func _regen_cap() -> float:
+	var cap := max_hp
+	for f in PHASES:
+		if hp <= max_hp * float(f):
+			cap = max_hp * float(f)
+	return cap
+
+
 func _on_lucid(n: int) -> void:
 	if GameState.ui:
 		GameState.ui.show_subtitle(LUCID[mini(n - 1, LUCID.size() - 1)], lucid_time)
@@ -128,8 +140,9 @@ func _pre_physics(delta: float) -> bool:
 		return true
 	# Régénération dès qu'on le laisse souffler
 	_regen_delay = maxf(_regen_delay - delta, 0.0)
-	if active and _regen_delay <= 0.0 and hp < max_hp:
-		hp = minf(max_hp, hp + max_hp * REGEN_RATE * delta)
+	var cap := _regen_cap()
+	if active and _regen_delay <= 0.0 and hp < cap:
+		hp = minf(cap, hp + max_hp * REGEN_RATE * delta)
 		_hp_emit_t -= delta
 		if _hp_emit_t <= 0.0:
 			_hp_emit_t = 0.5

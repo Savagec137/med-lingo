@@ -413,7 +413,7 @@ func _update_breathing(delta: float) -> void:
 
 
 func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
-	if is_dead or _invuln > 0.0:
+	if is_dead or _invuln > 0.0 or DebugTools.god_mode:
 		return
 	# Portes de l'ascenseur refermées : plus rien ne peut l'atteindre
 	if GameState.game and GameState.game.get("traveling") == true and amount < 1000.0:

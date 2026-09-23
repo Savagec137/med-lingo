@@ -1,7 +1,7 @@
 extends Node
 ## Parcours des menus qu'un joueur utilise en dehors de la campagne :
 ## OPTIONS, NEW GAME, pause (RESUME / OPTIONS), inventaire, mort → YOU DIED →
-## RETRY, QUIT TO MENU (avec confirmation), CONTINUE → chargement.
+## RETRY, QUIT TO MENU (avec confirmation), LOAD GAME → chargement, CONTINUE direct.
 ## Usage : godot --headless --fixed-fps 60 --path . -- --test=ui_flows
 
 var ui: UIRoot
@@ -193,15 +193,27 @@ func _run() -> void:
 	if not await expect(await wait_top(MainMenu, 5.0), "QUIT TO MENU → menu principal"):
 		return
 
-	# CONTINUE → liste des sauvegardes → chargement
+	# LOAD GAME → liste des sauvegardes → chargement
 	await _secs(1.0)
-	await choose("CONTINUE")
-	if not await expect(await wait_top(SaveScreen), "CONTINUE ouvre la liste des sauvegardes"):
+	await choose("LOAD GAME")
+	if not await expect(await wait_top(SaveScreen), "LOAD GAME ouvre la liste des sauvegardes"):
 		return
 	focus = get_viewport().gui_get_focus_owner() as Button
 	_log("    sauvegarde proposée : %s" % (focus.text if focus else "aucune"))
 	await key(KEY_ENTER)
 	if not await expect(await wait_game(60.0), "la sauvegarde se charge et la partie reprend"):
+		return
+
+	# CONTINUE : reprise directe de la sauvegarde la plus récente
+	await key(KEY_ESCAPE)
+	await wait_top(PauseMenu)
+	await choose("QUIT TO MENU")
+	await choose("OUI, QUITTER")
+	if not await expect(await wait_top(MainMenu, 5.0), "retour au menu principal"):
+		return
+	await _secs(1.0)
+	await choose("CONTINUE")
+	if not await expect(await wait_game(60.0), "CONTINUE reprend directement la dernière sauvegarde"):
 		return
 	_log("Parcours des menus : tout est OK.")
 	_quit(0)

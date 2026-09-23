@@ -10,8 +10,9 @@ var weapon_box: Control
 var weapon_label: Label
 var ammo_label: Label
 var belt_label: Label
-var battery_bar: ProgressBar
 var battery_box: Control
+var battery_segments: Array[ColorRect] = []
+var battery_pct: Label
 var crosshair: Control
 var prompt_label: Label
 var prompt_key: Label
@@ -66,18 +67,20 @@ func _ready() -> void:
 	add_child(battery_box)
 	var bl := UITheme.label("LAMPE", 14, UITheme.COL_DIM)
 	battery_box.add_child(bl)
-	battery_bar = ProgressBar.new()
-	battery_bar.custom_minimum_size = Vector2(90, 8)
-	battery_bar.show_percentage = false
-	battery_bar.max_value = 100.0
-	var bg := StyleBoxFlat.new()
-	bg.bg_color = Color(0.2, 0.2, 0.2, 0.6)
-	var fill := StyleBoxFlat.new()
-	fill.bg_color = Color(0.9, 0.85, 0.6, 0.8)
-	battery_bar.add_theme_stylebox_override("background", bg)
-	battery_bar.add_theme_stylebox_override("fill", fill)
-	battery_bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	battery_box.add_child(battery_bar)
+	# Indicateur à paliers (100/75/50/25/10/0) : quatre segments + pourcentage
+	var segs := HBoxContainer.new()
+	segs.add_theme_constant_override("separation", 3)
+	segs.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	battery_box.add_child(segs)
+	for i in 4:
+		var r := ColorRect.new()
+		r.custom_minimum_size = Vector2(18, 9)
+		segs.add_child(r)
+		battery_segments.append(r)
+	battery_pct = UITheme.label("100 %", 14, UITheme.COL_DIM, UITheme.font_ui_bold())
+	battery_pct.custom_minimum_size = Vector2(46, 0)
+	battery_pct.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	battery_box.add_child(battery_pct)
 
 	# Compte à rebours (autodestruction), haut centre
 	countdown_label = UITheme.label("", 30, UITheme.COL_DANGER, UITheme.font_ui_bold())
@@ -162,7 +165,7 @@ func _process(delta: float) -> void:
 				belt += " · "
 		belt_label.text = belt
 	battery_box.visible = GameState.get_flag("has_flashlight")
-	battery_bar.value = GameState.flashlight_battery
+	_update_battery()
 	crosshair.visible = Settings.crosshair and armed and (p.aiming or p.is_first_person())
 	(crosshair as Crosshair).spread = 1.0 if Input.is_action_pressed("aim") else 2.6
 	var f := p.focused
@@ -192,3 +195,16 @@ class Crosshair extends Control:
 		draw_line(c - Vector2(g, 0), c - Vector2(g + 6, 0), col, 1.5)
 		draw_line(c + Vector2(0, g), c + Vector2(0, g + 6), col, 1.5)
 		draw_line(c - Vector2(0, g), c - Vector2(0, g + 6), col, 1.5)
+
+
+## Segments allumés selon le palier ; clignote en rouge à 10 %, grisé à 0 %.
+func _update_battery() -> void:
+	var level := Flashlight.battery_level(GameState.flashlight_battery)
+	var lit := {100: 4, 75: 3, 50: 2, 25: 1, 10: 1, 0: 0}[level] as int
+	var warn := level <= 10
+	var blink := warn and level > 0 and int(Time.get_ticks_msec() / 400) % 2 == 0
+	for i in battery_segments.size():
+		var on := i < lit and not blink
+		battery_segments[i].color = (Color(0.95, 0.25, 0.2, 0.9) if warn else Color(0.9, 0.85, 0.6, 0.85)) if on else Color(0.25, 0.25, 0.25, 0.55)
+	battery_pct.text = ("%d %%" % level) if level > 0 else "VIDE"
+	battery_pct.add_theme_color_override("font_color", UITheme.COL_DANGER if warn else UITheme.COL_DIM)

@@ -6,6 +6,11 @@ extends Node3D
 
 const DRAIN_PER_SEC := 0.1       # 100 % ≈ 16 min allumée
 const BASE_ENERGY := 5.0
+const BASE_RANGE := 24.0
+## Paliers de la batterie (%) et puissance de la lampe à chaque palier :
+## 100 → 75 → 50 → 25 → 10 → 0 (éteinte, il faut des piles).
+const LEVELS := [100, 75, 50, 25, 10, 0]
+const LEVEL_POWER := {100: 1.0, 75: 0.9, 50: 0.78, 25: 0.6, 10: 0.38, 0: 0.0}
 
 var spot: SpotLight3D
 var bounce: OmniLight3D
@@ -91,6 +96,10 @@ func is_on() -> bool:
 func set_on(on: bool) -> void:
 	if on and not GameState.get_flag("has_flashlight"):
 		return
+	if on and GameState.flashlight_battery <= 0.0:
+		Audio.play_3d("flashlight_click", global_position, -6.0, 0.05, 10.0, 2.0)
+		GameState.show_message("Rien. La pile est à plat : il faut des piles neuves.", 2.5)
+		return
 	GameState.flashlight_on = on
 	Audio.play_3d("flashlight_click", global_position, -6.0, 0.05, 10.0, 2.0)
 	_apply_visibility()
@@ -98,6 +107,20 @@ func set_on(on: bool) -> void:
 
 func toggle() -> void:
 	set_on(not is_on())
+
+
+## La batterie passe un palier : avertissement, et extinction à 0 %.
+func _on_level_drop(level: int) -> void:
+	match level:
+		25:
+			GameState.show_message("Lampe : 25 %. Le faisceau faiblit.", 2.5)
+		10:
+			GameState.show_message("Lampe : 10 %. Elle ne tiendra plus longtemps.", 3.0)
+		0:
+			GameState.flashlight_on = false
+			_apply_visibility()
+			Audio.play_3d("light_flicker", global_position, -6.0, 0.05, 8.0, 2.0)
+			GameState.show_message("La lampe s'éteint. Pile à plat : il faut des piles neuves.", 3.5)
 
 
 ## Coupe la lampe quelques secondes (événement scripté).
@@ -130,13 +153,23 @@ func _physics_process(delta: float) -> void:
 		bounce.light_energy = 0.0
 
 
-func _energy_scale() -> float:
-	var b := GameState.flashlight_battery
-	var e := 1.0
+## Palier courant de la batterie : 100, 75, 50, 25, 10 ou 0.
+static func battery_level(b: float) -> int:
 	if b <= 0.0:
-		e = 0.12
-	elif b < 20.0:
-		e = 0.35 + b / 20.0 * 0.65
+		return 0
+	if b <= 10.0:
+		return 10
+	if b <= 25.0:
+		return 25
+	if b <= 50.0:
+		return 50
+	if b <= 75.0:
+		return 75
+	return 100
+
+
+func _energy_scale() -> float:
+	var e: float = LEVEL_POWER[battery_level(GameState.flashlight_battery)]
 	return e * _flicker * Settings.flashlight_intensity
 
 
@@ -156,7 +189,11 @@ func update_light(delta: float, aim_dir: Vector3) -> void:
 		_apply_visibility()
 
 	if is_on():
+		var before := battery_level(GameState.flashlight_battery)
 		GameState.flashlight_battery = maxf(GameState.flashlight_battery - DRAIN_PER_SEC * delta, 0.0)
+		var now := battery_level(GameState.flashlight_battery)
+		if now != before:
+			_on_level_drop(now)
 
 	# Clignotements : batterie faible ou interférences
 	_flicker_timer -= delta
@@ -171,4 +208,5 @@ func update_light(delta: float, aim_dir: Vector3) -> void:
 			_flicker = 1.0
 			_flicker_timer = randf_range(0.05, 0.4)
 	spot.light_energy = BASE_ENERGY * _energy_scale()
+	spot.spot_range = BASE_RANGE * sqrt(maxf(float(LEVEL_POWER[battery_level(GameState.flashlight_battery)]), 0.1))
 	lens_mat.emission_energy_multiplier = 3.0 * _energy_scale() if spot.visible else 0.0

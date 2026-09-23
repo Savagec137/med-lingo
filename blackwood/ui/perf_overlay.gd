@@ -1,7 +1,8 @@
 class_name PerfOverlay
 extends Label
 ## Compteur de performances (F3) : images par seconde, temps d'image,
-## appels de dessin et objets affichés. Masqué par défaut.
+## appels de dessin et objets affichés ; en mode DEBUG, aussi la position, la
+## zone, les créatures proches et leur état. Masqué par défaut.
 
 var _t := 0.0
 
@@ -31,6 +32,8 @@ func _process(delta: float) -> void:
 		return
 	_t = 0.25
 	text = PerfOverlay.summary()
+	if DebugTools.enabled() and GameState.game:
+		text += "\n" + DebugTools.info_lines()
 
 
 ## Résumé lisible (aussi utilisé par les tests en mode rendu).

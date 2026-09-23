@@ -19,6 +19,7 @@ const BINDINGS := {
 	"dodge": [KEY_SPACE],
 	"quick_heal": [KEY_H],
 	"debug_perf": [KEY_F3],
+	"debug_console": [KEY_F1],
 	"toggle_view": [KEY_V],
 	"weapon_1": [KEY_1],
 	"weapon_2": [KEY_2],

@@ -653,3 +653,19 @@ func place(pos: Vector3, rot: float) -> void:
 
 func debug_state() -> String:
 	return "%s %s hp=%d" % [enemy_id, STATE_NAMES[state], int(hp)]
+
+
+## État affiché par le mode DEBUG : l'état de l'automate, précisé quand la
+## créature est sonnée (STAGGER), en fuite (FLEE), endormie ou passive.
+func ai_state_name() -> String:
+	if state == State.DEAD:
+		return "DEAD"
+	if dormant:
+		return "DORMANT"
+	if passive:
+		return "PASSIVE"
+	if _stagger_t > 0.0:
+		return "STAGGER"
+	if get("_flee") == true:
+		return "FLEE"
+	return STATE_NAMES[state]

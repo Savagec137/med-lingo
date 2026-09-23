@@ -37,6 +37,7 @@ var elevator_screen: ElevatorScreen
 var save_screen: SaveScreen
 var death_screen: DeathScreen
 var ending_screen: EndingScreen
+var debug_console: DebugConsole
 
 var in_game := false
 var _stack: Array[UIScreen] = []
@@ -136,6 +137,7 @@ func _ready() -> void:
 	save_screen = _screen(SaveScreen.new())
 	death_screen = _screen(DeathScreen.new())
 	ending_screen = _screen(EndingScreen.new())
+	debug_console = _screen(DebugConsole.new())
 
 	black = ColorRect.new()
 	black.color = Color(0, 0, 0, 1)
@@ -257,6 +259,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("pause"):
 		open_screen(pause_menu)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("debug_console") and DebugTools.enabled():
+		open_screen(debug_console)
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("inventory") and p.controls_enabled:
 		open_inventory()

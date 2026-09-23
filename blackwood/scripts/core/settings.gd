@@ -65,6 +65,7 @@ var invert_y := false
 var difficulty := 1
 var crosshair := true
 var flashlight_intensity := 1.0
+var debug_mode := false
 
 const _KEYS := [
 	"quality", "shadows", "volumetric_fog", "ssao", "ssil", "ssr", "glow", "antialiasing", "render_scale",
@@ -72,6 +73,7 @@ const _KEYS := [
 	"window_mode", "vsync", "max_fps", "brightness", "fov", "camera_shake", "head_bob",
 	"master_volume", "music_volume", "sfx_volume", "ambience_volume", "subtitles", "subtitle_size",
 	"camera_view", "mouse_sensitivity", "invert_y", "difficulty", "crosshair", "flashlight_intensity",
+	"debug_mode",
 ]
 const _GRAPHIC_KEYS := ["shadows", "volumetric_fog", "ssao", "ssil", "ssr", "glow", "antialiasing", "render_scale"]
 const _WINDOW_KEYS := ["window_mode", "vsync", "max_fps"]

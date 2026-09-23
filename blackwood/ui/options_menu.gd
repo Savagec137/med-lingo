@@ -147,6 +147,7 @@ func _build_game(p: VBoxContainer) -> void:
 	_toggle(p, "Réticule", "crosshair")
 	_slider(p, "Intensité de la lampe torche", "flashlight_intensity", 0.5, 1.6, "%")
 	_hint(p, "La difficulté règle les dégâts reçus, la résistance des créatures et les munitions trouvées.")
+	_toggle(p, "Mode DEBUG (F1 : console · F3 : infos)", "debug_mode")
 
 
 func _build_controls(p: VBoxContainer) -> void:

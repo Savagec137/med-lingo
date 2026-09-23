@@ -1,10 +1,12 @@
 class_name MainMenu
 extends UIScreen
-## Menu principal : BLACKWOOD HOSPITAL — NEW GAME / CONTINUE / OPTIONS / QUIT
+## Menu principal : BLACKWOOD HOSPITAL — NEW GAME / CONTINUE / LOAD GAME / OPTIONS / QUIT
+## (CONTINUE reprend la sauvegarde la plus récente, LOAD GAME ouvre la liste.)
 
 var title: Label
 var buttons: VBoxContainer
 var continue_btn: Button
+var load_btn: Button
 var _t := 0.0
 
 
@@ -56,8 +58,14 @@ func _ready() -> void:
 	b_new.pressed.connect(func(): ui.request_new_game())
 	buttons.add_child(b_new)
 	continue_btn = UITheme.button("CONTINUE", 30)
-	continue_btn.pressed.connect(func(): ui.open_load_menu())
+	continue_btn.pressed.connect(func():
+		var slot := SaveSystem.latest_slot()
+		if slot >= 0:
+			ui.request_load(slot))
 	buttons.add_child(continue_btn)
+	load_btn = UITheme.button("LOAD GAME", 30)
+	load_btn.pressed.connect(func(): ui.open_load_menu())
+	buttons.add_child(load_btn)
 	var b_opt := UITheme.button("OPTIONS", 30)
 	b_opt.pressed.connect(func(): ui.open_options())
 	buttons.add_child(b_opt)
@@ -72,6 +80,7 @@ func _ready() -> void:
 
 func on_open() -> void:
 	continue_btn.disabled = not SaveSystem.has_any()
+	load_btn.disabled = continue_btn.disabled
 	focus_first(buttons)
 
 

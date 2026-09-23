@@ -14,6 +14,8 @@ extends Node
 const CHAPTERS := ["exterieur", "urgences", "rdc", "premier", "sous_sol", "neurologie", "chirurgien",
 	"escalier_b", "sixieme", "monte_charge", "huitieme", "onzieme", "douzieme", "evasion", "fin"]
 const BOT_CK_DIR := "user://bot_checkpoints"
+## Tentatives après une mort (RETRY), pour toute la campagne.
+const MAX_RETRIES := 3
 const CHECKPOINT_DIR := "user://test_checkpoints"
 ## Cages d'escalier : x ouest / est. Palier d'étage z ∈ [-17.6, -16], palier
 ## intermédiaire z < -22.6 (voir HKit.stairwell).
@@ -29,10 +31,13 @@ var from_chapter := ""
 var step_name := ""
 var t0 := 0
 var deaths := 0
+var retries := 0
 var kills_at_start := 0
 var _last_checkpoint := -1.0
 var _checkpoint_count := 0
 var _min_fps := 999.0
+## Zones où le robot a le droit de se replier pendant un combat de boss.
+var _arena: Array = []
 var _fps_samples := 0
 var _fps_sum := 0.0
 
@@ -71,7 +76,6 @@ func _fail(msg: String) -> void:
 	_log("Inventaire : %s | porte-clés : %s | armes : %s" % [_inv(), str(GameState.key_items), str(GameState.weapons.keys())])
 	_log("Drapeaux : %s" % str(GameState.flags.keys()))
 	await _shot("echec")
-	_quit(1)
 
 
 func _step(n: String) -> void:
@@ -413,6 +417,9 @@ func interact_with(n: Node3D, approach: float = 0.9) -> bool:
 
 func node(n: String) -> Node3D:
 	var v: Variant = game.facility.nodes.get(n)
+	# Les objets ramassés sont libérés : la référence n'est plus valide
+	if typeof(v) == TYPE_OBJECT and not is_instance_valid(v):
+		return null
 	return v as Node3D if v is Node3D else null
 
 
@@ -614,7 +621,7 @@ func _visible_threat(max_dist: float = 11.0) -> Enemy:
 	var best_d := max_dist
 	for e in get_tree().get_nodes_in_group("enemies"):
 		var en := e as Enemy
-		if not _is_threat(en) or en is Colossus:
+		if not _is_threat(en) or en is Colossus or en is BossHumanoid or en is Surgeon:
 			continue
 		if absf(en.global_position.y - player.global_position.y) > 2.0:
 			continue
@@ -627,6 +634,16 @@ func _visible_threat(max_dist: float = 11.0) -> Enemy:
 
 
 ## Ligne de vue dégagée (décor et portes).
+## Boss actif (Chirurgien, Sarah, Patient Zéro) à moins de « radius » mètres.
+func _boss_near(radius: float) -> Enemy:
+	for e in get_tree().get_nodes_in_group("enemies"):
+		var en := e as Enemy
+		if (en is BossHumanoid or en is Surgeon) and _is_threat(en) \
+				and en.global_position.distance_to(player.global_position) < radius:
+			return en
+	return null
+
+
 func _clear_line(to: Vector3) -> bool:
 	var q := PhysicsRayQueryParameters3D.create(player.global_position + Vector3.UP * 1.5, to, 1 | 16)
 	q.exclude = [player.get_rid()]
@@ -658,6 +675,11 @@ func _choose_weapon(e: Enemy, d: float) -> String:
 		order = ["shotgun", "smg", "pistol"]
 	else:
 		order = ["shotgun", "pistol", "smg"] if d < 3.5 else ["pistol", "smg", "shotgun"]
+	# Au contact, une arme chargée plutôt qu'un rechargement de 2 s
+	if d < 6.0:
+		for w in order:
+			if GameState.has_weapon(w) and GameState.weapon_mag(w) > 0:
+				return w
 	for w in order:
 		if GameState.has_weapon(w) and _ammo_total(w) > 0:
 			return w
@@ -695,6 +717,11 @@ func fight(e: Enemy, timeout: float = 60.0) -> bool:
 			t += 0.05
 			continue
 		if not _is_threat(e):
+			break
+		# Un boss arrive au contact : on laisse ce combat pour se replier
+		var bz := _boss_near(4.0)
+		if bz and bz != e:
+			_log("  %s au contact : on se replie" % bz.enemy_id)
 			break
 		# Une autre créature au contact passe en priorité
 		var close := _visible_threat(2.6)
@@ -822,20 +849,57 @@ func _run() -> void:
 		if SaveSystem.has_slot(0):
 			DirAccess.remove_absolute(SaveSystem.slot_path(0))
 		if not await _start_from_menu():
+			_quit(1)
 			return
 	else:
 		if not await _start_from_checkpoint(from_chapter):
+			_quit(1)
 			return
 	for i in range(start, CHAPTERS.size()):
 		var ch: String = CHAPTERS[i]
 		if i > start:
 			_save_bot_checkpoint(ch)
-		var ok: bool = await call("_ch_" + ch)
-		if not ok:
-			if step_name != "":
-				_log("Chapitre « %s » interrompu." % ch)
+		while true:
+			var ok: bool = await call("_ch_" + ch)
+			if ok:
+				break
+			# Mort : comme un joueur, RETRY depuis la dernière sauvegarde automatique
+			if player and is_instance_valid(player) and player.is_dead and retries < MAX_RETRIES:
+				retries += 1
+				_log("── RETRY n° %d : reprise à la dernière sauvegarde automatique" % retries)
+				if await _retry_after_death():
+					continue
+			_log("Chapitre « %s » interrompu." % ch)
+			_quit(1)
 			return
 	_log("════ CAMPAGNE TERMINÉE ════")
+
+
+## Écran de mort → RETRY (sélectionné par défaut) → la partie reprend.
+func _retry_after_death() -> bool:
+	release_all()
+	var ui: UIRoot = GameState.ui
+	var t := 0.0
+	while t < 15.0 and not (ui.top_screen() is DeathScreen):
+		await _frames(6)
+		t += 0.1
+	if not (ui.top_screen() is DeathScreen):
+		_log("L'écran de mort ne s'affiche pas")
+		return false
+	await _secs(1.0)
+	var focus := get_viewport().gui_get_focus_owner() as Button
+	_log("Écran de mort, bouton sélectionné : %s" % (focus.text if focus else "aucun"))
+	var old_game := game
+	await key(KEY_ENTER)
+	for i in 1200:
+		await _frames(1)
+		if GameState.game != null and GameState.game != old_game and GameState.player != null:
+			break
+	if not await _attach_game():
+		return false
+	await wait_controls(20.0)
+	_log("Reprise : %s, %d PV, objectif : %s" % [GameState.current_zone, int(GameState.hp), GameState.objective()])
+	return true
 
 
 func _start_from_menu() -> bool:
@@ -1136,19 +1200,23 @@ func _ch_sous_sol() -> bool:
 	if not await open_door("b2_generator_door"):
 		await _fail("porte des groupes")
 		return false
-	# Une erreur d'abord (le groupe cale), puis la bonne procédure.
-	if not await interact_with(node("switch_g1"), 0.8):
-		await _fail("commutateur G1")
-		return false
-	await _secs(1.5)
-	_log("Mauvais ordre → message : %s" % GameState.ui.message_label.text)
-	await clear_area(14.0)
-	for id in ["pump", "g1", "transfer"]:
-		if not await interact_with(node("switch_" + id), 0.8):
-			await _fail("commutateur %s" % id)
-			return false
-		await _secs(1.2)
-		await clear_area(14.0)
+	if not GameState.get_flag("power_restored"):
+		# Une erreur d'abord (le groupe cale), puis la bonne procédure.
+		if not GameState.get_flag("switch_pump"):
+			if not await interact_with(node("switch_g1"), 0.8):
+				await _fail("commutateur G1")
+				return false
+			await _secs(1.5)
+			_log("Mauvais ordre → message : %s" % GameState.ui.message_label.text)
+			await clear_area(14.0)
+		for id in ["pump", "g1", "transfer"]:
+			if GameState.get_flag("switch_" + id):
+				continue
+			if not await interact_with(node("switch_" + id), 0.8):
+				await _fail("commutateur %s" % id)
+				return false
+			await _secs(1.2)
+			await clear_area(14.0)
 	if not await wait_flag("power_restored", 5.0):
 		await _fail("le courant n'est pas rétabli")
 		return false
@@ -1208,7 +1276,7 @@ func _ch_neurologie() -> bool:
 		return false
 	await examine(Vector3(-23.4, 13.5, -20.0))
 	await close_modal()
-	if not await interact_with(node("sarah_locker"), 0.8):
+	if not GameState.get_flag("sarah_locker_open") and not await interact_with(node("sarah_locker"), 0.8):
 		await _fail("casier de Sarah")
 		return false
 	if not await wait_flag("sarah_locker_open", 3.0):
@@ -1241,7 +1309,7 @@ func _ch_chirurgien() -> bool:
 		if not await goto(Vector3(-18.0, 12, -14.0), 0.8, true, 10.0, false):
 			await _fail("sortie de la salle des infirmières")
 			return false
-		if not await boss_fight(boss, 300.0):
+		if not await boss_fight(boss, 300.0, ["f3_corridor", "f3_dayroom"]):
 			await _fail("combat contre le Chirurgien")
 			return false
 	await _shot("14_chirurgien")
@@ -1262,18 +1330,19 @@ func _ch_escalier_b() -> bool:
 		await _fail("couloir du 1er, côté est")
 		return false
 	var cp := node("stair_b_code")
-	if not await interact_with(cp, 0.8):
-		await _fail("clavier de l'escalier B")
-		return false
-	await _frames(20)
-	if not (GameState.ui.top_screen() is KeypadScreen):
-		await _fail("l'écran du clavier ne s'ouvre pas")
-		return false
-	await type_code("1234")
-	_log("Code erroné 1234 → escalier ouvert : %s (attendu : non)" % GameState.get_flag("stair_b_open"))
-	await type_code("0612")
-	await _secs(1.2)
-	await close_modal()
+	if not GameState.get_flag("stair_b_open"):
+		if not await interact_with(cp, 0.8):
+			await _fail("clavier de l'escalier B")
+			return false
+		await _frames(20)
+		if not (GameState.ui.top_screen() is KeypadScreen):
+			await _fail("l'écran du clavier ne s'ouvre pas")
+			return false
+		await type_code("1234")
+		_log("Code erroné 1234 → escalier ouvert : %s (attendu : non)" % GameState.get_flag("stair_b_open"))
+		await type_code("0612")
+		await _secs(1.2)
+		await close_modal()
 	if not GameState.get_flag("stair_b_open"):
 		await _fail("le code 0612 n'ouvre pas l'escalier B")
 		return false
@@ -1341,7 +1410,7 @@ func _ch_sixieme() -> bool:
 	await clear_area(12.0)
 
 	_step("Cellule de crise : le fusible")
-	if not await interact_with(node("f6_fuse_box"), 0.8):
+	if not GameState.get_flag("f6_fuse_inserted") and not await interact_with(node("f6_fuse_box"), 0.8):
 		await _fail("boîtier électrique")
 		return false
 	if not await wait_flag("f6_fuse_inserted", 3.0):
@@ -1400,7 +1469,7 @@ func _ch_huitieme() -> bool:
 	if not await open_door("f8_video_door"):
 		await _fail("porte du bureau de recherche")
 		return false
-	if not await interact_with(node("sarah_video_point"), 0.9):
+	if not GameState.get_flag("sarah_video_seen") and not await interact_with(node("sarah_video_point"), 0.9):
 		await _fail("ordinateur de la vidéo")
 		return false
 	if not await wait_flag("sarah_video_seen", 60.0):
@@ -1418,16 +1487,17 @@ func _ch_huitieme() -> bool:
 		return false
 	await read_doc("doc_vance_memo")
 	var safe := node("vance_safe") as KeypadSafe
-	if not await interact_with(safe, 0.8):
-		await _fail("clavier du coffre")
-		return false
-	await _frames(20)
-	if not (GameState.ui.top_screen() is KeypadScreen):
-		await _fail("l'écran du coffre ne s'ouvre pas")
-		return false
-	await type_code("0309")
-	await _secs(1.5)
-	await close_modal()
+	if not GameState.get_flag("vance_safe_open"):
+		if not await interact_with(safe, 0.8):
+			await _fail("clavier du coffre")
+			return false
+		await _frames(20)
+		if not (GameState.ui.top_screen() is KeypadScreen):
+			await _fail("l'écran du coffre ne s'ouvre pas")
+			return false
+		await type_code("0309")
+		await _secs(1.5)
+		await close_modal()
 	if not GameState.get_flag("vance_safe_open"):
 		await _fail("le code 0309 n'ouvre pas le coffre")
 		return false
@@ -1462,52 +1532,54 @@ func _ch_onzieme() -> bool:
 	if not await wait_flag("reached_f11", 5.0):
 		await _fail("arrivée au 11e non détectée")
 		return false
-	await open_door("f11_board_door")
-	await read_doc("doc_board")
-	for id in ["f11_board_ammo", "f11_board_shells", "f11_board_spray"]:
-		await pick(id)
-	if not await goto(Vector3(22.0, 44, -14.0), 0.8):
-		await _fail("couloir du 11e")
-		return false
-	if not await open_door("f11_director_door"):
-		await _fail("porte du directeur")
-		return false
-	await read_doc("doc_director")
-	await pick("f11_dir_magammo")
-	await pick("f11_dir_spray")
+	if not GameState.get_flag("sarah_talked"):
+		await open_door("f11_board_door")
+		await read_doc("doc_board")
+		for id in ["f11_board_ammo", "f11_board_shells", "f11_board_spray"]:
+			await pick(id)
+		if not await goto(Vector3(22.0, 44, -14.0), 0.8):
+			await _fail("couloir du 11e")
+			return false
+		if not await open_door("f11_director_door"):
+			await _fail("porte du directeur")
+			return false
+		await read_doc("doc_director")
+		await pick("f11_dir_magammo")
+		await pick("f11_dir_spray")
 
-	_step("Centre de contrôle : Sarah")
-	if not await goto(Vector3(-24.0, 44, -14.0), 0.8):
-		await _fail("couloir")
-		return false
-	if not await open_door("f11_control_door"):
-		await _fail("porte du centre de contrôle")
-		return false
-	await heal_up(80.0)
-	await goto(Vector3(0.0, 44, -9.0), 0.8, false, 12.0, false)
-	if not await wait_flag("sarah_talked", 5.0):
-		await _fail("la scène avec Sarah ne se déclenche pas")
-		return false
-	await _shot("20_sarah")
+		_step("Centre de contrôle : Sarah")
+		if not await goto(Vector3(-24.0, 44, -14.0), 0.8):
+			await _fail("couloir")
+			return false
+		if not await open_door("f11_control_door"):
+			await _fail("porte du centre de contrôle")
+			return false
+		await heal_up(80.0)
+		await goto(Vector3(0.0, 44, -9.0), 0.8, false, 12.0, false)
+		if not await wait_flag("sarah_talked", 5.0):
+			await _fail("la scène avec Sarah ne se déclenche pas")
+			return false
+		await _shot("20_sarah")
 	await wait_controls(60.0)
 	if not GameState.has_item("key_main_lab"):
 		await _fail("Sarah n'a pas donné sa carte")
 		return false
 
-	_step("Boss : Sarah")
-	var sarah := game.enemies.get("f11_sarah") as SarahBoss
-	if sarah == null:
-		await _fail("Sarah absente")
-		return false
-	await _secs(3.0)
-	if not await boss_fight(sarah, 300.0):
-		await _fail("combat contre Sarah")
-		return false
-	if not await wait_flag("sarah_dead", 5.0):
-		await _fail("mort de Sarah non enregistrée")
-		return false
-	await idle(12.0)
-	await _shot("21_adieux")
+	if not GameState.get_flag("sarah_dead"):
+		_step("Boss : Sarah")
+		var sarah := game.enemies.get("f11_sarah") as SarahBoss
+		if sarah == null:
+			await _fail("Sarah absente")
+			return false
+		await _secs(3.0)
+		if not await boss_fight(sarah, 300.0, ["f11_control"]):
+			await _fail("combat contre Sarah")
+			return false
+		if not await wait_flag("sarah_dead", 5.0):
+			await _fail("mort de Sarah non enregistrée")
+			return false
+		await idle(12.0)
+		await _shot("21_adieux")
 
 	_step("Escalier C : montée au 12e")
 	if not await enter_stair("c", "stair_c_11"):
@@ -1527,50 +1599,56 @@ func _ch_douzieme() -> bool:
 		return false
 	await _shot("22_labo")
 	await read_doc("doc_zero")
-	if not await interact_with(node("zero_intercom"), 0.8):
-		await _fail("interphone de la cellule")
-		return false
-	await _secs(18.0)
+	if not GameState.get_flag("zero_talked"):
+		if not await interact_with(node("zero_intercom"), 0.8):
+			await _fail("interphone de la cellule")
+			return false
+		await _secs(18.0)
 	for id in ["f12_magammo", "f12_ammo", "f12_shells", "f12_spray"]:
 		await pick(id)
 
-	await heal_up(80.0)
-	_step("Console Oméga : le Patient Zéro se libère")
-	if not await open_door("f12_core_door"):
-		await _fail("porte du poste de commande")
-		return false
-	if not await interact_with(node("self_destruct_point"), 0.9):
-		await _fail("console d'autodestruction")
-		return false
-	if not await wait_flag("zero_released", 5.0):
-		await _fail("le Patient Zéro ne sort pas")
-		return false
-	await _secs(2.0)
-	await _shot("23_zero")
+	if not GameState.get_flag("zero_dead"):
+		await heal_up(80.0)
+		if not GameState.get_flag("zero_released"):
+			_step("Console Oméga : le Patient Zéro se libère")
+			if not await open_door("f12_core_door"):
+				await _fail("porte du poste de commande")
+				return false
+			if not await interact_with(node("self_destruct_point"), 0.9):
+				await _fail("console d'autodestruction")
+				return false
+			if not await wait_flag("zero_released", 5.0):
+				await _fail("le Patient Zéro ne sort pas")
+				return false
+			await _secs(2.0)
+			await _shot("23_zero")
 
-	_step("Boss final : le Patient Zéro")
-	var zero := game.enemies.get("f12_zero") as PatientZero
-	if not await boss_fight(zero, 420.0):
-		await _fail("combat contre le Patient Zéro")
-		return false
-	if not await wait_flag("zero_dead", 5.0):
-		await _fail("mort du Patient Zéro non enregistrée")
-		return false
-	await clear_area(20.0)
-	await idle(8.0)
+		_step("Boss final : le Patient Zéro")
+		var zero := game.enemies.get("f12_zero") as PatientZero
+		# Le poste de commande est un cul-de-sac : on se bat dans le grand laboratoire
+		await goto(Vector3(14.0, 48, -8.0), 0.8, true, 6.0, false)
+		if not await boss_fight(zero, 420.0, ["f12_lab"]):
+			await _fail("combat contre le Patient Zéro")
+			return false
+		if not await wait_flag("zero_dead", 5.0):
+			await _fail("mort du Patient Zéro non enregistrée")
+			return false
+		await clear_area(20.0)
+		await idle(8.0)
 	await clear_area(20.0)
 	await heal_up(60.0)
 
-	_step("Autodestruction")
-	if not await goto(Vector3(11.0, 48, -14.0), 0.8):
-		await _fail("retour au poste de commande")
-		return false
-	if not await interact_with(node("self_destruct_point"), 0.9):
-		await _fail("console d'autodestruction (2)")
-		return false
-	if not await wait_flag("self_destruct", 5.0):
-		await _fail("l'autodestruction ne s'engage pas")
-		return false
+	if not GameState.get_flag("self_destruct"):
+		_step("Autodestruction")
+		if not await goto(Vector3(11.0, 48, -14.0), 0.8):
+			await _fail("retour au poste de commande")
+			return false
+		if not await interact_with(node("self_destruct_point"), 0.9):
+			await _fail("console d'autodestruction (2)")
+			return false
+		if not await wait_flag("self_destruct", 5.0):
+			await _fail("l'autodestruction ne s'engage pas")
+			return false
 	await read_doc("doc_order")
 	await _shot("24_autodestruction")
 	return true
@@ -1665,7 +1743,8 @@ func _ch_fin() -> bool:
 
 ## Combat de boss générique : garder la distance, viser, recharger à couvert,
 ## esquiver les charges, utiliser les bouteilles d'oxygène quand il y en a.
-func boss_fight(boss: Enemy, timeout: float) -> bool:
+func boss_fight(boss: Enemy, timeout: float, arena: Array = []) -> bool:
+	_arena = arena
 	var t := 0.0
 	var tanks: Array = []
 	for n in get_tree().get_nodes_in_group("explosive_tanks"):
@@ -1687,17 +1766,23 @@ func boss_fight(boss: Enemy, timeout: float) -> bool:
 			last_log = t
 			_log("  … %s : %d PV, Thomas %d PV à %s, %s %d | %d — boss %s" % [boss.enemy_id, int(boss.hp), int(GameState.hp),
 				_fmt(player.global_position), GameState.equipped, GameState.weapon_mag(), GameState.weapon_reserve(), boss.debug_state() + " à " + _fmt(boss.global_position)])
-		if GameState.hp < 50.0 and GameState.has_item("spray"):
+		if GameState.hp < 60.0 and GameState.has_item("spray"):
 			release_all()
 			await press("quick_heal")
 		# Sbires (mutants du Patient Zéro) : d'abord eux s'ils sont au contact
 		var minion := _visible_threat(6.0)
-		if minion and minion != boss:
+		if minion and minion != boss and boss.global_position.distance_to(player.global_position) > 7.0:
 			await fight(minion, 20.0)
 			continue
 		var d := boss.global_position.distance_to(player.global_position)
 		# Le Chirurgien rugit avant de charger : pas de côté
 		if boss is Surgeon and float(boss.get("_roar_t")) >= 0.0 and d < 12.0:
+			await _sidestep_from(boss)
+			t += 0.6
+			continue
+		# Élan ou coup préparé d'un boss humanoïde : esquive (brève invulnérabilité)
+		if boss is BossHumanoid and d < 9.0 and (float(boss.get("_lunge_wind")) >= 0.0 \
+				or (boss.state == Enemy.State.ATTACK and boss._attack_t < boss.attack_windup and d < boss.attack_range + 1.2)):
 			await _sidestep_from(boss)
 			t += 0.6
 			continue
@@ -1765,6 +1850,7 @@ func boss_fight(boss: Enemy, timeout: float) -> bool:
 		await _frames(2)
 		t += 4.0 / 60.0
 	release_all()
+	_arena = []
 	_log("  Tirs sur %s : %d, touchés : %d" % [boss.enemy_id, shots, hits])
 	if is_instance_valid(boss) and boss.is_dead():
 		_log("%s vaincu en %.0f s. Munitions : pistolet %d, fusil %d, PM %d, magnum %d · PV %d" % [boss.enemy_id, t,
@@ -1850,6 +1936,8 @@ func _retreat_from(boss: Enemy) -> void:
 		for dist in [9.0, 6.0]:
 			var p: Vector3 = pos + dir * float(dist)
 			if grid == null or not grid.is_walkable(p) or not grid.has_point_path(pos, p):
+				continue
+			if not _arena.is_empty() and not Facility.zone_at(p) in _arena:
 				continue
 			# On fuit à l'opposé, loin du boss, et jamais dans un coin
 			var open := 0

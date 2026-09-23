@@ -150,9 +150,14 @@ func _cull_enemies() -> void:
 		var ef := Facility.floor_at(e.global_position.y)
 		var near: bool = absi(facility._floor_rank(ef) - facility._floor_rank(pf)) <= 1
 		e.visible = near
-		var active: bool = ef == pf or e.state == Enemy.State.CHASE or e.state == Enemy.State.DEAD
+		var active: bool = (ef == pf or e.state == Enemy.State.CHASE or e.state == Enemy.State.DEAD) and DebugTools.ai_enabled
 		if e.is_physics_processing() != active:
 			e.set_physics_process(active)
+
+
+## Recalcule tout de suite quelles créatures sont animées (mode DEBUG).
+func refresh_enemy_activity() -> void:
+	_cull_enemies()
 
 
 # --- Ascenseurs ----------------------------------------------------------------------
