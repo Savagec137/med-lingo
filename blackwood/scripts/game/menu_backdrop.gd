@@ -1,6 +1,6 @@
 class_name MenuBackdrop
 extends Node3D
-## Décor du menu principal : la façade de Blackwood sous la pluie, de nuit,
+## Décor du menu principal : la tour de Blackwood Hospital sous la pluie, de nuit,
 ## filmée par une caméra qui dérive lentement. Des éclairs de temps en temps.
 
 var facility: Facility
@@ -54,10 +54,11 @@ func _process(delta: float) -> void:
 
 
 func _update_cam(_delta: float) -> void:
+	# Contre-plongée depuis la rue : la tour de douze étages sous la pluie
 	var a := _t * 0.02
-	var pos := Vector3(7.0 + sin(a) * 6.0, 1.9 + sin(_t * 0.1) * 0.2, 31.0 + cos(a) * 2.0)
+	var pos := Vector3(9.0 + sin(a) * 6.0, 1.8 + sin(_t * 0.1) * 0.2, 33.0 + cos(a) * 2.0)
 	cam.global_position = pos
-	cam.look_at(Vector3(-1.0, 3.2, 10.0), Vector3.UP)
+	cam.look_at(Vector3(-1.0, 13.0, -10.0), Vector3.UP)
 	rain.global_position = pos + Vector3(0, 8.0, -4.0)
 
 

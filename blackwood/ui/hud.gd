@@ -16,6 +16,8 @@ var crosshair: Control
 var prompt_label: Label
 var prompt_key: Label
 var prompt_box: Control
+var countdown_label: Label
+var _countdown := -1.0
 var _fade := 1.0
 
 
@@ -77,6 +79,17 @@ func _ready() -> void:
 	battery_bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	battery_box.add_child(battery_bar)
 
+	# Compte à rebours (autodestruction), haut centre
+	countdown_label = UITheme.label("", 30, UITheme.COL_DANGER, UITheme.font_ui_bold())
+	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	countdown_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.9))
+	countdown_label.add_theme_constant_override("shadow_offset_x", 2)
+	countdown_label.add_theme_constant_override("shadow_offset_y", 2)
+	UITheme.anchor(countdown_label, 0.5, 0.0, 0, 26, 0, 1)
+	countdown_label.custom_minimum_size = Vector2(520, 0)
+	countdown_label.visible = false
+	add_child(countdown_label)
+
 	# Réticule
 	crosshair = Crosshair.new()
 	add_child(crosshair)
@@ -109,6 +122,16 @@ func _ready() -> void:
 	prompt_label.add_theme_constant_override("shadow_offset_x", 2)
 	prompt_label.add_theme_constant_override("shadow_offset_y", 2)
 	prompt_box.add_child(prompt_label)
+
+
+## Affiche le compte à rebours (secondes restantes ; < 0 pour le masquer).
+func set_countdown(t: float) -> void:
+	_countdown = t
+	countdown_label.visible = t >= 0.0
+	if t >= 0.0:
+		var s := int(ceil(t))
+		countdown_label.text = "AUTODESTRUCTION — %02d:%02d" % [s / 60, s % 60]
+		countdown_label.modulate.a = 1.0 if t > 30.0 or fmod(t, 0.6) < 0.4 else 0.35
 
 
 func _process(delta: float) -> void:

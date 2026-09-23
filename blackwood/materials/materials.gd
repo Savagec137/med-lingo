@@ -31,6 +31,13 @@ const TEXTURED := {
 	"wall_hospital_dirty": {"tex": "wall_plaster_worn", "tint": Color(0.84, 0.88, 0.84), "band": 1.1, "band_tint": Color(0.46, 0.56, 0.52), "rail": Color(0.25, 0.28, 0.26), "grime": 0.8},
 	"wall_admin": {"tex": "wall_plaster", "tint": Color(0.93, 0.88, 0.8), "band": 0.95, "band_tint": Color(0.55, 0.42, 0.3), "rail": Color(0.28, 0.2, 0.13), "grime": 0.4},
 	"wall_pediatric": {"tex": "wall_plaster", "tint": Color(0.95, 0.9, 0.78), "band": 1.0, "band_tint": Color(0.55, 0.7, 0.82), "rail": Color(0.8, 0.5, 0.2), "grime": 0.55},
+	"wall_stair": {"tex": "wall_plaster_worn", "tint": Color(0.82, 0.84, 0.82), "band": 1.0, "band_tint": Color(0.42, 0.46, 0.45), "rail": Color(0.2, 0.2, 0.2), "grime": 0.7},
+	"floor_stair": {"tex": "floor_concrete", "brightness": 0.95, "grime": 0.6},
+	"wall_ward": {"tex": "wall_plaster", "tint": Color(0.9, 0.9, 0.86), "band": 1.1, "band_tint": Color(0.62, 0.68, 0.78), "rail": Color(0.35, 0.4, 0.5), "grime": 0.5},
+	"wall_neuro": {"tex": "wall_plaster", "tint": Color(0.9, 0.88, 0.84), "band": 1.1, "band_tint": Color(0.72, 0.6, 0.66), "rail": Color(0.4, 0.3, 0.35), "grime": 0.5},
+	"wall_infect": {"tex": "wall_plaster", "tint": Color(0.88, 0.9, 0.86), "band": 1.2, "band_tint": Color(0.85, 0.72, 0.35), "rail": Color(0.45, 0.35, 0.1), "grime": 0.55},
+	"wall_lab": {"tex": "wall_tile_big", "tint": Color(0.92, 0.95, 0.97), "grime": 0.35},
+	"floor_ward": {"tex": "floor_retro", "saturation": 0.5, "tint": Color(0.95, 0.98, 1.0), "grime": 0.45},
 	"wall_tile_white": {"tex": "wall_tile", "grime": 0.4, "rough_mul": 0.9},
 	"wall_tile_dirty": {"tex": "wall_tile", "grime": 0.85, "brightness": 0.85},
 	"wall_tile_big": {"tex": "wall_tile_big", "grime": 0.45},
@@ -278,6 +285,22 @@ static func _special(mat_name: String) -> Material:
 			return _emissive(Color(1.0, 0.6, 0.1), 3.0)
 		"emit_white_dim":
 			return _emissive(Color(0.9, 0.92, 1.0), 1.2)
+		"plastic_sheet":
+			var ps := StandardMaterial3D.new()
+			ps.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+			ps.albedo_color = Color(0.85, 0.88, 0.9, 0.45)
+			ps.roughness = 0.35
+			ps.cull_mode = BaseMaterial3D.CULL_DISABLED
+			return ps
+		"blinds":
+			var bl := StandardMaterial3D.new()
+			bl.albedo_color = Color(0.36, 0.35, 0.32)
+			bl.roughness = 0.8
+			return bl
+		"emit_window":
+			return _emissive(Color(1.0, 0.8, 0.55), 0.6)
+		"emit_window_cold":
+			return _emissive(Color(0.7, 0.85, 1.0), 0.5)
 		"light_off":
 			var off := StandardMaterial3D.new()
 			off.albedo_color = Color(0.3, 0.3, 0.3)

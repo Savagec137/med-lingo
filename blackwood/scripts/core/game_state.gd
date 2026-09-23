@@ -18,6 +18,8 @@ const MAG_SIZE := 12
 
 var hp := MAX_HP
 var inventory: Array = []
+## Porte-clés : les objets clés (kind « key ») n'occupent pas d'emplacement.
+var key_items: Array = []
 var documents: Array = []
 var flags := {}
 var taken_pickups := {}
@@ -29,7 +31,7 @@ var flashlight_on := false
 var weapons := {}
 var equipped := ""
 var playtime := 0.0
-var current_zone := "parking"
+var current_zone := "exterior"
 
 # Références d'exécution (non sauvegardées)
 var game: Node = null
@@ -49,6 +51,7 @@ func reset() -> void:
 	for i in INVENTORY_SLOTS:
 		inventory.append({"id": "", "count": 0})
 	documents.clear()
+	key_items.clear()
 	flags.clear()
 	taken_pickups.clear()
 	door_states.clear()
@@ -58,7 +61,7 @@ func reset() -> void:
 	weapons.clear()
 	equipped = ""
 	playtime = 0.0
-	current_zone = "parking"
+	current_zone = "exterior"
 	_last_objective = ""
 	inventory_changed.emit()
 	hp_changed.emit(hp, MAX_HP)
@@ -132,6 +135,12 @@ func health_status() -> String:
 
 ## Ajoute un objet. Retourne la quantité qui n'a pas pu être rangée (0 = tout rangé).
 func add_item(id: String, count: int = 1) -> int:
+	if ItemDB.kind(id) == "key":
+		if not id in key_items:
+			key_items.append(id)
+		inventory_changed.emit()
+		refresh_objective()
+		return 0
 	var remaining := count
 	var stack := ItemDB.max_stack(id)
 	for slot in inventory:
@@ -156,6 +165,8 @@ func add_item(id: String, count: int = 1) -> int:
 
 ## Vérifie qu'un objet peut entrer entièrement dans l'inventaire.
 func can_add(id: String, count: int = 1) -> bool:
+	if ItemDB.kind(id) == "key":
+		return true
 	var space := 0
 	var stack := ItemDB.max_stack(id)
 	for slot in inventory:
@@ -167,6 +178,13 @@ func can_add(id: String, count: int = 1) -> bool:
 
 
 func remove_item(id: String, count: int = 1) -> bool:
+	if ItemDB.kind(id) == "key":
+		if not id in key_items:
+			return false
+		key_items.erase(id)
+		inventory_changed.emit()
+		refresh_objective()
+		return true
 	if count_item(id) < count:
 		return false
 	var remaining := count
@@ -186,6 +204,8 @@ func remove_item(id: String, count: int = 1) -> bool:
 
 
 func count_item(id: String) -> int:
+	if id in key_items:
+		return 1
 	var total := 0
 	for slot in inventory:
 		if slot.id == id:
@@ -248,6 +268,7 @@ func to_dict() -> Dictionary:
 	return {
 		"hp": hp,
 		"inventory": inventory.duplicate(true),
+		"keys": key_items.duplicate(),
 		"documents": documents.duplicate(),
 		"flags": flags.duplicate(true),
 		"taken_pickups": taken_pickups.duplicate(),
@@ -268,6 +289,15 @@ func from_dict(d: Dictionary) -> void:
 	var inv: Array = d.get("inventory", [])
 	for i in mini(inv.size(), INVENTORY_SLOTS):
 		inventory[i] = {"id": String(inv[i].get("id", "")), "count": int(inv[i].get("count", 0))}
+	for kid in d.get("keys", []):
+		key_items.append(String(kid))
+	# Anciennes sauvegardes : clés rangées dans les emplacements → porte-clés
+	for slot in inventory:
+		if slot.id != "" and ItemDB.kind(String(slot.id)) == "key":
+			if not slot.id in key_items:
+				key_items.append(String(slot.id))
+			slot.id = ""
+			slot.count = 0
 	for doc in d.get("documents", []):
 		documents.append(String(doc))
 	flags = d.get("flags", {}).duplicate(true)
@@ -281,7 +311,7 @@ func from_dict(d: Dictionary) -> void:
 		weapons[w]["mag"] = int(weapons[w].get("mag", 0))
 	equipped = String(d.get("equipped", ""))
 	playtime = float(d.get("playtime", 0.0))
-	current_zone = String(d.get("current_zone", "parking"))
+	current_zone = String(d.get("current_zone", "exterior"))
 	inventory_changed.emit()
 	weapons_changed.emit()
 	hp_changed.emit(hp, MAX_HP)

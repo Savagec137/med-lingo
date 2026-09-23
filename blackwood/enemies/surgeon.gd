@@ -1,13 +1,13 @@
 class_name Surgeon
 extends Enemy
-## THE SURGEON — ce qu'est devenu le Dr. Aldous Marrow après s'être injecté la
+## LE CHIRURGIEN — ce qu'est devenu le Dr Markus Keller après s'être injecté la
 ## formule complète. Immense, lent, extrêmement résistant. Une lame à la place
 ## de la main droite, une scie à la gauche, une lampe frontale qui fouille le
 ## noir. Sa présence s'annonce : pas lourds, souffle, métal qui racle le sol.
 ##
 ## Capacités : coup de lame puissant (armement long, esquivable) et charge
 ## après un rugissement. Une charge qui finit contre un mur l'étourdit.
-## Point faible : l'eau du générateur électrifiée par les disjoncteurs.
+## Point faible : les bouteilles d'oxygène du couloir, qui explosent quand on les touche.
 
 signal boss_hp_changed(hp: float, max_hp: float)
 
@@ -69,6 +69,19 @@ func _build_body() -> void:
 		"mat_arms": flesh_mat, "mat_forearms": "surgical_cloth", "mat_hands": flesh_mat,
 		"mat_legs": "apron", "mat_shins": "cloth_jeans", "mat_feet": "leather_boots",
 	})
+	# Corps réaliste (modèle Higgsfield) : le rig procédural pilote le squelette ;
+	# masque, lampe frontale, lame et scie restent attachés aux articulations.
+	if SkinnedBody.available():
+		for m in rig.meshes:
+			m.visible = false
+		var skin := SkinnedBody.new()
+		skin.name = "Skin"
+		rig.add_child(skin)
+		skin.setup(rig, {"scale": 1.38 / 0.946, "cloth_tint": Color(0.24, 0.38, 0.34), "cloth_mix": 0.92, "blood": 0.95,
+			"pallor": 0.3, "wet": 0.45,
+			"bone_scale": {"Spine": Vector3(1.45, 1.0, 1.4), "Spine01": Vector3(1.4, 1.0, 1.35), "Spine02": Vector3(1.3, 1.0, 1.25),
+				"LeftArm": Vector3(1.35, 1.0, 1.35), "RightArm": Vector3(1.35, 1.0, 1.35), "neck": Vector3(1.3, 1.0, 1.3)}})
+		flesh_mat = skin.material
 	# Masque chirurgical et lampe frontale
 	rig.attach_mesh("head", rig._box(Vector3(0.2, 0.13, 0.06)), "surgical_cloth", Vector3(0, 0.06, -0.1))
 	var lamp_body := CylinderMesh.new()
@@ -192,6 +205,16 @@ func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -
 		_cancel_charge()
 	if lamp:
 		lamp.light_energy = 0.6
+
+
+## Bouteille d'oxygène qui explose près de lui : sonné.
+func on_explosion(k: float) -> void:
+	if state == State.DEAD:
+		return
+	if not active:
+		activate()
+	_stun_t = maxf(_stun_t, 1.2 + 1.8 * k)
+	_cancel_charge()
 
 
 ## Décharge électrique (disjoncteur actionné quand il se tient dans l'eau).

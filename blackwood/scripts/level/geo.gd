@@ -6,11 +6,18 @@ extends RefCounted
 ## le bâtiment. Les collisions sont ajoutées à un StaticBody3D par zone, et les
 ## empreintes au sol sont mémorisées pour construire les grilles de navigation.
 
-const FLOOR_LEVELS := [0.0, -4.5]
+## Hauteurs des sols (une grille de navigation par sol) : les obstacles sont
+## enregistrés pour chaque sol qu'ils traversent.
+var floor_levels: Array = [0.0]
+## Callable(zone) → Node3D parent de la zone (visibilité par étage).
+var zone_parent: Callable
 
+## Collision par défaut des boîtes (désactivée pour le décor inaccessible).
+var collide_default := true
 var root: Node3D
 var obstacles: Array = []        # {floor:int, rect:Rect2}
 var _batches := {}
+var _obstacle_aabbs: Array[AABB] = []
 var _bodies := {}
 var _zone_roots := {}
 
@@ -34,7 +41,8 @@ func zone_root(zone: String) -> Node3D:
 	if not _zone_roots.has(zone):
 		var n := Node3D.new()
 		n.name = "Zone_" + zone
-		root.add_child(n)
+		var parent: Node3D = zone_parent.call(zone) if zone_parent.is_valid() else root
+		parent.add_child(n)
 		_zone_roots[zone] = n
 	return _zone_roots[zone]
 
@@ -68,7 +76,7 @@ func box(zone: String, mat: String, center: Vector3, size: Vector3, opts: Dictio
 	var xf := Transform3D(basis, center)
 	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
 	_emit_box(b, xf, size)
-	if opts.get("collide", true):
+	if opts.get("collide", collide_default):
 		add_collision_box(zone, xf, size)
 		if opts.get("nav", true):
 			_record_obstacle(xf, size)
@@ -99,10 +107,18 @@ func nav_block(center: Vector3, size: Vector3, rot: float = 0.0) -> void:
 
 func _record_obstacle(xf: Transform3D, size: Vector3) -> void:
 	var aabb := xf * AABB(-size * 0.5, size)
-	for f in FLOOR_LEVELS.size():
-		var y0: float = FLOOR_LEVELS[f]
-		if aabb.position.y < y0 + 1.7 and aabb.end.y > y0 + 0.12:
-			obstacles.append({"floor": f, "rect": Rect2(aabb.position.x, aabb.position.z, aabb.size.x, aabb.size.z)})
+	_obstacle_aabbs.append(aabb)
+
+
+## Répartit les obstacles par sol (appelé à la construction, une fois les
+## hauteurs de sols connues).
+func _dispatch_obstacles() -> void:
+	obstacles.clear()
+	for aabb in _obstacle_aabbs:
+		for f in floor_levels.size():
+			var y0: float = floor_levels[f]
+			if aabb.position.y < y0 + 1.7 and aabb.end.y > y0 + 0.12:
+				obstacles.append({"floor": f, "rect": Rect2(aabb.position.x, aabb.position.z, aabb.size.x, aabb.size.z)})
 
 
 ## Cylindre entre deux points (tuyaux, piliers, pieds de meubles).
@@ -258,10 +274,11 @@ func _wall(zone: String, mat: String, mat_b: String, s1: float, s2: float, depth
 				var s2v := Vector3(thick * 0.5, ph, length) if along_z else Vector3(length, ph, thick * 0.5)
 				box(zone, mat if side < 0 else mat_b, c2, s2v, {"collide": false})
 			# Une seule collision couvrant toute l'épaisseur du mur
-			var cfull := Vector3(depth, cy, mid) if along_z else Vector3(mid, cy, depth)
-			var sfull := Vector3(thick, ph, length) if along_z else Vector3(length, ph, thick)
-			add_collision_box(zone, Transform3D(Basis.IDENTITY, cfull), sfull)
-			_record_obstacle(Transform3D(Basis.IDENTITY, cfull), sfull)
+			if collide_default:
+				var cfull := Vector3(depth, cy, mid) if along_z else Vector3(mid, cy, depth)
+				var sfull := Vector3(thick, ph, length) if along_z else Vector3(length, ph, thick)
+				add_collision_box(zone, Transform3D(Basis.IDENTITY, cfull), sfull)
+				_record_obstacle(Transform3D(Basis.IDENTITY, cfull), sfull)
 
 
 ## Dalle de sol (dessus à y_top) sur un rectangle XZ.
@@ -280,6 +297,7 @@ func ceiling(zone: String, mat: String, x1: float, z1: float, x2: float, z2: flo
 
 ## Construit tous les maillages fusionnés. À appeler une fois le décor décrit.
 func build() -> void:
+	_dispatch_obstacles()
 	for key in _batches:
 		var b: Batch = _batches[key]
 		if b.verts.is_empty():

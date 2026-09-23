@@ -15,16 +15,16 @@ func _ready() -> void:
 	super._ready()
 	add_dim(1.0)
 	box = centered_vbox(720)
-	var t := UITheme.label("BLACKWOOD", 92, Color(0.86, 0.84, 0.8), UITheme.font_title())
+	var t := UITheme.label("BLACKWOOD HOSPITAL", 76, Color(0.86, 0.84, 0.8), UITheme.font_title())
 	t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(t)
-	var s := UITheme.label("FIN DU CHAPITRE 1 — LE SIGNAL", 24, UITheme.COL_ACCENT_HI)
+	var s := UITheme.label("FIN DU CHAPITRE 1 — LE MESSAGE", 24, UITheme.COL_ACCENT_HI)
 	s.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(s)
 	var sp := Control.new()
 	sp.custom_minimum_size = Vector2(0, 26)
 	box.add_child(sp)
-	var n := UITheme.label("Lena est vivante. Ou quelque chose qui porte sa voix.\nHalvorsen Biomedical sait qui est Ethan Cole.\nEt quelque part dans la vallée, le Site 2 attend.", 20, UITheme.COL_TEXT, UITheme.font_title_light())
+	var n := UITheme.label("Sarah a tenu sa promesse : personne n'est sorti de Blackwood.\nThomas a tenu la sienne : le Projet ECHO a brûlé avec la tour.\nMais quatre mille doses étaient attendues ailleurs. Et quelqu'un sait qui est Thomas Reed.", 20, UITheme.COL_TEXT, UITheme.font_title_light())
 	n.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	n.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(n)

@@ -1,32 +1,11 @@
 class_name Game
 extends Node3D
-## Racine d'une partie : construit le centre, place Ethan, fait apparaître les
-## créatures selon la progression, gère la météo, les sauvegardes automatiques,
-## la mort et l'épilogue.
+## Racine d'une partie : construit Blackwood Hospital, place Thomas, fait
+## apparaître les créatures selon la progression, gère les ascenseurs, la
+## météo, la visibilité des étages, les sauvegardes automatiques, la mort et
+## l'épilogue.
 
 signal ended
-
-## Définition des créatures. « event » : n'apparaît que via un événement
-## scripté (puis à sa position d'origine lors d'un chargement).
-const ENEMIES := {
-	"h_guard": {"type": "hollow", "variant": "guard", "pos": Vector3(-33.4, 0.05, -1.0), "rot": -PI / 2.0,
-		"home": Vector3(-24.0, 0.05, -1.0), "patrol": [Vector3(-16.0, 0.05, -1.0), Vector3(-30.5, 0.05, -1.0)],
-		"flag": "security_breach", "event": true},
-	"h_cafeteria": {"type": "hollow", "pos": Vector3(5.0, 0.05, -11.8), "rot": PI,
-		"home": Vector3(0.0, 0.05, 1.5), "patrol": [Vector3(-6.0, 0.05, -0.5), Vector3(7.5, 0.05, 0.0), Vector3(0.5, 0.05, 3.5)],
-		"flag": "fuse_inserted", "event": true},
-	"h_exam": {"type": "hollow", "pos": Vector3(19.5, 0.93, 4.4), "rot": PI / 2.0, "dormant": true,
-		"home": Vector3(19.5, 0.05, 2.4), "patrol": [Vector3(15.5, 0.05, -1.0), Vector3(29.0, 0.05, -1.0)]},
-	"h_lab": {"type": "hollow", "pos": Vector3(21.5, 0.05, -10.9), "rot": PI,
-		"home": Vector3(21.0, 0.05, -11.0), "patrol": [Vector3(17.0, 0.05, -11.0), Vector3(26.5, 0.05, -11.0), Vector3(24.5, 0.05, -5.5)],
-		"flag": "lab_blackout_done", "event": true},
-	"h_morgue": {"type": "hollow", "pos": Vector3(18.2, -4.45, -45.6), "rot": 0.4, "dormant": true,
-		"home": Vector3(19.0, -4.45, -42.0)},
-	"h_basement": {"type": "hollow", "pos": Vector3(15.0, -4.45, -36.4), "rot": PI / 2.0,
-		"home": Vector3(15.0, -4.45, -36.4), "patrol_anchor": "basement_patrol"},
-	"surgeon": {"type": "surgeon", "pos": Vector3(-11.0, -4.45, -32.7), "rot": PI,
-		"home": Vector3(-8.0, -4.45, -38.0), "patrol_anchor": "boss_patrol"},
-}
 
 var facility: Facility
 var player: Player
@@ -35,8 +14,10 @@ var zones: ZoneManager
 var events: EventDirector
 var enemies := {}
 var rain: CPUParticles3D
+var traveling := false
 var _dead_handled := false
 var _autosave_cd := 0.0
+var _cull_t := 0.0
 
 
 func setup(save: Dictionary) -> void:
@@ -64,6 +45,7 @@ func setup(save: Dictionary) -> void:
 	player.attach_camera(camera_rig)
 	player.place(start, yaw)
 	camera_rig.make_current()
+	facility.set_active_floor(Facility.floor_at(start.y))
 
 	zones = ZoneManager.new()
 	zones.facility = facility
@@ -96,13 +78,14 @@ func _exit_tree() -> void:
 # --- Créatures -----------------------------------------------------------------
 
 func _spawn_initial_enemies() -> void:
-	for id in ENEMIES:
+	for id in facility.spawns:
 		if GameState.dead_enemies.has(id):
 			continue
-		var def: Dictionary = ENEMIES[id]
-		if def.get("event", false):
-			if GameState.get_flag(String(def.get("flag", ""))):
-				spawn_enemy(id, def.home)
+		var def: Dictionary = facility.spawns[id]
+		if bool(def.get("event", false)):
+			var flag := String(def.get("flag", ""))
+			if flag != "" and GameState.get_flag(flag):
+				spawn_enemy(id, def.get("home", def.pos))
 			continue
 		spawn_enemy(id)
 
@@ -110,25 +93,42 @@ func _spawn_initial_enemies() -> void:
 func spawn_enemy(id: String, at: Vector3 = Vector3.INF) -> Enemy:
 	if enemies.has(id) or GameState.dead_enemies.has(id):
 		return enemies.get(id)
-	var def: Dictionary = ENEMIES[id]
+	var def: Dictionary = facility.spawns.get(id, {})
+	if def.is_empty():
+		return null
 	var e: Enemy
-	if def.type == "surgeon":
-		e = Surgeon.new()
-	else:
-		var h := Hollow.new()
-		h.variant = String(def.get("variant", "patient"))
-		e = h
+	match String(def.type):
+		"surgeon":
+			e = Surgeon.new()
+		"veilleur":
+			e = Veilleur.new()
+		"neonatal":
+			e = Neonatal.new()
+		"colossus":
+			e = Colossus.new()
+		"sarah":
+			e = SarahBoss.new()
+		"zero":
+			e = PatientZero.new()
+		_:
+			var h := Hollow.new()
+			h.variant = String(def.get("variant", "patient"))
+			e = h
 	e.enemy_id = id
 	e.name = id
 	var pos: Vector3 = def.pos if at == Vector3.INF else at
-	e.home_pos = def.home
+	e.home_pos = def.get("home", def.pos)
 	e.home_rot = float(def.get("rot", 0.0))
 	e.dormant = bool(def.get("dormant", false)) and at == Vector3.INF
-	if def.has("patrol"):
+	e.deep_sleep = bool(def.get("deep_sleep", false))
+	e.passive = bool(def.get("passive", false)) and at == Vector3.INF
+	if not (def.patrol as Array).is_empty():
 		e.patrol_points = def.patrol
 	elif def.has("patrol_anchor"):
-		e.patrol_points = facility.anchors.get(def.patrol_anchor, [])
-	e.nav = facility.nav_grids[1 if pos.y < -2.0 else 0]
+		e.patrol_points = facility.anchors.get(String(def.patrol_anchor), [])
+	if def.has("vents") and e is Neonatal:
+		(e as Neonatal).vents = def.vents
+	e.nav = facility.nav_grid_for(pos, e.body_radius)
 	add_child(e)
 	e.place(pos, float(def.get("rot", 0.0)))
 	enemies[id] = e
@@ -138,6 +138,51 @@ func spawn_enemy(id: String, at: Vector3 = Vector3.INF) -> Enemy:
 
 func _on_enemy_died(e: Enemy) -> void:
 	GameState.set_flag("killed_" + e.enemy_id, true)
+
+
+## N'anime que les créatures de l'étage du joueur (et celles qui le poursuivent).
+func _cull_enemies() -> void:
+	var pf := facility.active_floor
+	for id in enemies:
+		var e: Enemy = enemies[id]
+		if not is_instance_valid(e):
+			continue
+		var ef := Facility.floor_at(e.global_position.y)
+		var near: bool = absi(facility._floor_rank(ef) - facility._floor_rank(pf)) <= 1
+		e.visible = near
+		var active: bool = ef == pf or e.state == Enemy.State.CHASE or e.state == Enemy.State.DEAD
+		if e.is_physics_processing() != active:
+			e.set_physics_process(active)
+
+
+# --- Ascenseurs ----------------------------------------------------------------------
+
+func travel_elevator(elevator_id: String, from_level: int, to_level: int) -> void:
+	if traveling or player == null or player.is_dead:
+		return
+	var anchor: Variant = facility.anchors.get("elev_%s_%d" % [elevator_id, to_level])
+	if anchor == null:
+		return
+	traveling = true
+	events.lock_player(true)
+	Audio.play_3d("elevator_ding", player.global_position + Vector3.UP * 2.0, -2.0, 0.0, 12.0, 3.0)
+	if GameState.ui:
+		GameState.ui.fade_to_black(0.6)
+	await get_tree().create_timer(0.7, false).timeout
+	Audio.play_2d("elevator_move", -3.0)
+	var ride := clampf(1.4 + 0.22 * absi(to_level - from_level), 1.6, 4.0)
+	await get_tree().create_timer(ride, false).timeout
+	player.place((anchor as Vector3) + Vector3(0, 0.1, 0), PI)
+	facility.set_active_floor(to_level)
+	zones.force_refresh()
+	_cull_enemies()
+	Audio.play_3d("elevator_ding", player.global_position + Vector3.UP * 2.0, -2.0, 0.0, 12.0, 3.0)
+	if GameState.ui:
+		GameState.ui.fade_from_black(0.8)
+	await get_tree().create_timer(0.4, false).timeout
+	traveling = false
+	events.lock_player(false)
+	events.on_elevator_arrived(elevator_id, to_level)
 
 
 # --- Météo : pluie autour de la caméra quand on est dehors ------------------------
@@ -171,8 +216,14 @@ func _build_rain() -> void:
 func _process(delta: float) -> void:
 	GameState.playtime += delta
 	_autosave_cd = maxf(_autosave_cd - delta, 0.0)
+	if player and not traveling:
+		facility.set_active_floor(Facility.floor_at(player.global_position.y + 0.2))
+	_cull_t -= delta
+	if _cull_t <= 0.0:
+		_cull_t = 0.5
+		_cull_enemies()
 	if rain and camera_rig:
-		var outdoor := GameState.current_zone == "parking"
+		var outdoor := GameState.current_zone == "exterior"
 		rain.emitting = outdoor
 		rain.global_position = camera_rig.cam.global_position + Vector3(0, 8.0, 0)
 
@@ -184,11 +235,12 @@ func build_save_data() -> Dictionary:
 	return {
 		"state": GameState.to_dict(),
 		"player": {"pos": [p.x, p.y, p.z], "yaw": player.facing_yaw},
+		"zone_name": HospitalLevel.place_name(GameState.current_zone, Facility.floor_at(p.y + 0.2)),
 	}
 
 
-func autosave(reason: String = "") -> void:
-	if player == null or player.is_dead or GameState.get_flag("game_complete"):
+func autosave(_reason: String = "") -> void:
+	if player == null or player.is_dead or GameState.get_flag("game_complete") or traveling:
 		return
 	if _autosave_cd > 0.0:
 		return

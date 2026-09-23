@@ -1,6 +1,6 @@
 class_name SavePoint
 extends Interactable
-## Magnétophone : Ethan enregistre une note vocale (sauvegarde sur 3 emplacements).
+## Magnétophone : Thomas enregistre une note vocale (sauvegarde sur 3 emplacements).
 
 var _led: StandardMaterial3D
 var _t := 0.0

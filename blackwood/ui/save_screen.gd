@@ -33,7 +33,7 @@ func _ready() -> void:
 func on_open() -> void:
 	confirm_slot = -1
 	title.text = "ENREGISTRER UNE NOTE VOCALE" if mode == "save" else "CONTINUER"
-	note.text = "Ethan enregistre sa progression sur le magnétophone." if mode == "save" else "Choisissez une sauvegarde."
+	note.text = "Thomas enregistre sa progression sur le magnétophone." if mode == "save" else "Choisissez une sauvegarde."
 	_fill()
 
 

@@ -1,8 +1,10 @@
 class_name KeypadScreen
 extends UIScreen
-## Clavier du coffre des archives : code à 3 chiffres.
+## Clavier à code (coffres, portes) : le nombre de chiffres suit le code attendu.
+## « safe » est un KeypadSafe ou un CodePanel (code, title, success_msg, try_code).
 
-var safe: KeypadSafe
+var safe: Interactable
+var title_label: Label
 var entry := ""
 var display: Label
 var status: Label
@@ -32,9 +34,9 @@ func _ready() -> void:
 	var col := VBoxContainer.new()
 	col.add_theme_constant_override("separation", 14)
 	plate.add_child(col)
-	var t := UITheme.label("COFFRE — ARCHIVES", 22, UITheme.COL_DIM, UITheme.font_ui_bold())
-	t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	col.add_child(t)
+	title_label = UITheme.label("COFFRE", 22, UITheme.COL_DIM, UITheme.font_ui_bold())
+	title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	col.add_child(title_label)
 	var screen := PanelContainer.new()
 	var ss := StyleBoxFlat.new()
 	ss.bg_color = Color(0.02, 0.06, 0.03)
@@ -71,10 +73,15 @@ func _ready() -> void:
 	col.add_child(hint)
 
 
+func _digits() -> int:
+	return String(safe.get("code")).length() if safe else 3
+
+
 func on_open() -> void:
 	entry = ""
 	_update()
-	status.text = "Code à 3 chiffres"
+	title_label.text = String(safe.get("title")) if safe and safe.get("title") != null else "COFFRE"
+	status.text = "Code à %d chiffres" % _digits()
 	display.add_theme_color_override("font_color", Color(0.3, 1.0, 0.45))
 	_busy = false
 
@@ -90,34 +97,34 @@ func _press(k: String) -> void:
 			submit()
 			return
 		_:
-			if entry.length() < 3:
+			if entry.length() < _digits():
 				entry += k
 				Audio.ui("keypad_beep", -6.0)
 	_update()
-	# Validation automatique au troisième chiffre.
-	if entry.length() == 3:
+	# Validation automatique au dernier chiffre.
+	if entry.length() == _digits():
 		_busy = true
 		await get_tree().create_timer(0.25, true).timeout
 		_busy = false
-		if entry.length() == 3 and visible:
+		if entry.length() == _digits() and visible:
 			submit()
 
 
 func submit() -> void:
 	if _busy:
 		return
-	if entry.length() < 3:
-		status.text = "Il faut trois chiffres."
+	if entry.length() < _digits():
+		status.text = "Il faut %d chiffres." % _digits()
 		Audio.ui("keypad_error", -6.0)
 		return
-	if safe and safe.try_code(entry):
+	if safe and safe.call("try_code", entry):
 		status.text = "CODE ACCEPTÉ"
 		display.add_theme_color_override("font_color", Color(0.3, 1.0, 0.45))
 		_busy = true
 		await get_tree().create_timer(0.6, true).timeout
 		_busy = false
 		ui.close_screen(self)
-		GameState.show_message("Le coffre s'ouvre dans un déclic lourd.", 3.0)
+		GameState.show_message(String(safe.get("success_msg")), 3.0)
 	else:
 		status.text = "CODE INCORRECT"
 		_error_t = 0.8
@@ -127,8 +134,9 @@ func submit() -> void:
 
 func _update() -> void:
 	var shown := ""
-	for i in 3:
-		shown += (entry[i] if i < entry.length() else "_") + (" " if i < 2 else "")
+	var n := _digits()
+	for i in n:
+		shown += (entry[i] if i < entry.length() else "_") + (" " if i < n - 1 else "")
 	display.text = shown
 
 

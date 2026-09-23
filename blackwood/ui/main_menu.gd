@@ -1,6 +1,6 @@
 class_name MainMenu
 extends UIScreen
-## Menu principal : BLACKWOOD — NEW GAME / CONTINUE / OPTIONS / QUIT
+## Menu principal : BLACKWOOD HOSPITAL — NEW GAME / CONTINUE / OPTIONS / QUIT
 
 var title: Label
 var buttons: VBoxContainer
@@ -40,9 +40,10 @@ func _ready() -> void:
 	UITheme.anchor(col, 0.0, 0.5, 110, 0, 1, 0)
 	col.add_theme_constant_override("separation", 6)
 	title = UITheme.label("BLACKWOOD", 104, Color(0.86, 0.84, 0.8), UITheme.font_title())
+	title.tooltip_text = "Blackwood Hospital"
 	title.add_theme_constant_override("outline_size", 0)
 	col.add_child(title)
-	var sub := UITheme.label("CHAPITRE 1  —  LE SIGNAL", 20, UITheme.COL_ACCENT_HI, UITheme.font_ui())
+	var sub := UITheme.label("H O S P I T A L   —   CHAPITRE 1 : LE MESSAGE", 20, UITheme.COL_ACCENT_HI, UITheme.font_ui())
 	col.add_child(sub)
 	var spacer := Control.new()
 	spacer.custom_minimum_size = Vector2(0, 40)

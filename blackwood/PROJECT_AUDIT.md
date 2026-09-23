@@ -8,6 +8,16 @@ charges (« Première action obligatoire »). Rien n'a été supprimé.
 - Le jeu vit dans `blackwood/`. La racine du dépôt contient l'application MedLingo (Lovable, React) :
   hors périmètre, non modifiée.
 
+> **Mise à jour du 23/09/2026 (après l'audit)** — Blackwood Hospital est maintenant commité et jouable :
+> les 9 niveaux construits compilent, la campagne complète se termine depuis le menu principal
+> (robot `tests/autoplay.gd` : 0 erreur, 0 mort, fin + retour au menu), les 21 sauvegardes automatiques
+> se rechargent sans anomalie (`tests/checkpoints.gd`), les 230 objets interactifs sont accessibles
+> (`tests/interact_audit.gd`) et les 17 contrôles de navigation passent (`tests/level_tour.tscn`).
+> L'ancien niveau (centre de recherche) et le correctif provisoire `wip/` ont été retirés, puisque
+> remplacés. Le verdict ci-dessous décrit l'état **au moment de l'audit**. Unreal Engine reste
+> inaccessible depuis cet environnement (nouvelle vérification faite à la demande : aucun binaire,
+> aucun connecteur, aucune session ouverte sur la machine de l'utilisateur).
+
 ---
 
 ## 0. Verdict

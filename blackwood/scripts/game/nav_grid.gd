@@ -12,13 +12,21 @@ var astar := AStarGrid2D.new()
 var origin := Vector2.ZERO
 var size := Vector2i.ZERO
 var floor_y := 0.0
+## Marge autour du décor : rayon des créatures qui utilisent cette grille.
+var inflate := INFLATE
 var _base_solid := {}      # cellules bloquées par le décor
 var _door_cells := {}      # door_id → [Vector2i]
+var _door_blocked := {}    # door_id → bool
+var _cell_door := {}       # cellule → door_id (ouverture de porte)
+var _jamb := {}            # cellules de la baie trop proches des montants (toujours bloquées)
+var _overlay := {}         # id → [Vector2i] (vantaux ouverts…)
+var _overlay_count := {}   # cellule → nombre d'overlays qui la bloquent
 
 
-func _init(rect: Rect2, p_floor_y: float) -> void:
+func _init(rect: Rect2, p_floor_y: float, p_inflate: float = INFLATE) -> void:
 	origin = rect.position
 	floor_y = p_floor_y
+	inflate = p_inflate
 	size = Vector2i(ceili(rect.size.x / CELL), ceili(rect.size.y / CELL))
 	astar.region = Rect2i(Vector2i.ZERO, size)
 	astar.cell_size = Vector2(CELL, CELL)
@@ -42,8 +50,8 @@ func in_bounds(c: Vector2i) -> bool:
 
 
 ## Bloque toutes les cellules dont le centre tombe dans le rectangle gonflé.
-func block_rect(r: Rect2, inflate: float = INFLATE) -> void:
-	var rr := r.grow(inflate)
+func block_rect(r: Rect2, grow_by: float = -1.0) -> void:
+	var rr := r.grow(inflate if grow_by < 0.0 else grow_by)
 	var c0 := world_to_cell(Vector3(rr.position.x, 0, rr.position.y))
 	var c1 := world_to_cell(Vector3(rr.end.x, 0, rr.end.y))
 	for x in range(maxi(c0.x, 0), mini(c1.x + 1, size.x)):
@@ -67,20 +75,68 @@ func clear_rect(r: Rect2) -> Array:
 	return cells
 
 
-## Déclare les cellules d'une porte. Une porte fermée à clé les bloque.
-func register_door(door_id: String, r: Rect2) -> void:
+## Déclare les cellules d'une porte (baie « r »). Une porte fermée à clé les
+## bloque. Si « passage » est fourni, seules ses cellules sont franchissables
+## une fois la porte ouverte : le reste de la baie (contre les montants) reste
+## bloqué, pour que les créatures passent au milieu.
+func register_door(door_id: String, r: Rect2, passage: Rect2 = Rect2()) -> void:
 	var cells := clear_rect(r)
 	_door_cells[door_id] = cells
 	for c in cells:
-		astar.set_point_solid(c, false)
 		_base_solid.erase(c)
+		_cell_door[c] = door_id
+		if passage.has_area():
+			var wc := cell_to_world(c)
+			if not passage.has_point(Vector2(wc.x, wc.z)):
+				_jamb[c] = true
+		_refresh(c)
 
 
 func set_door_blocked(door_id: String, blocked: bool) -> void:
 	if not _door_cells.has(door_id):
 		return
+	_door_blocked[door_id] = blocked
 	for c in _door_cells[door_id]:
-		astar.set_point_solid(c, blocked)
+		_refresh(c)
+
+
+## Bloque temporairement les cellules le long de segments (vantail ouvert qui
+## dépasse du mur). Remplace l'overlay précédent du même identifiant.
+func set_overlay_segments(id: String, segments: Array, radius: float = 0.18) -> void:
+	for c in _overlay.get(id, []):
+		_overlay_count[c] = int(_overlay_count.get(c, 1)) - 1
+		if int(_overlay_count[c]) <= 0:
+			_overlay_count.erase(c)
+		_refresh(c)
+	var cells := {}
+	for seg in segments:
+		var a: Vector3 = seg[0]
+		var b: Vector3 = seg[1]
+		var n := maxi(int(a.distance_to(b) / (CELL * 0.5)), 1)
+		for i in n + 1:
+			var p := a.lerp(b, float(i) / n)
+			var c0 := world_to_cell(p)
+			for dx in range(-1, 2):
+				for dy in range(-1, 2):
+					var c := c0 + Vector2i(dx, dy)
+					if not in_bounds(c):
+						continue
+					var wc := cell_to_world(c)
+					if Vector2(wc.x - p.x, wc.z - p.z).length() <= radius + CELL * 0.5:
+						cells[c] = true
+	var list: Array = cells.keys()
+	_overlay[id] = list
+	for c in list:
+		_overlay_count[c] = int(_overlay_count.get(c, 0)) + 1
+		_refresh(c)
+
+
+## État d'une cellule : décor, porte verrouillée ou overlay.
+func _refresh(c: Vector2i) -> void:
+	var solid := _base_solid.has(c) or _jamb.has(c) or int(_overlay_count.get(c, 0)) > 0
+	if not solid and _cell_door.has(c):
+		solid = bool(_door_blocked.get(_cell_door[c], false))
+	astar.set_point_solid(c, solid)
 
 
 func is_walkable(p: Vector3) -> bool:

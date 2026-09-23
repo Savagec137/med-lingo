@@ -66,7 +66,7 @@ func _ready() -> void:
 	cam.cull_mask = 0xFFFFF & ~ViewModel.LAYER
 	arm.add_child(cam)
 	# Lumière d'appoint qui n'éclaire que le personnage (calque de rendu 2) :
-	# Ethan reste lisible dans le noir sans que le décor soit éclairé.
+	# Thomas reste lisible dans le noir sans que le décor soit éclairé.
 	var fill := OmniLight3D.new()
 	fill.light_color = Color(0.72, 0.78, 1.0)
 	fill.light_energy = 0.5

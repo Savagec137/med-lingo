@@ -81,7 +81,7 @@ func _verify(fname: String, data: Dictionary) -> void:
 	var saved: Array = data.get("player", {}).get("pos", [0, 0, 0])
 	var spos := Vector3(float(saved[0]), float(saved[1]), float(saved[2]))
 	_check(p.global_position.distance_to(spos) < 1.0, "position %s au lieu de %s" % [p.global_position, spos])
-	_check(not p.is_dead, "Ethan meurt juste après le chargement")
+	_check(not p.is_dead, "Thomas meurt juste après le chargement")
 	_check(is_equal_approx(GameState.hp, float(st.get("hp", 100.0))) or GameState.hp < float(st.get("hp", 100.0)), "PV incohérents")
 	_check(GameState.current_zone == String(st.get("current_zone", "")), "zone %s au lieu de %s" % [GameState.current_zone, st.get("current_zone", "")])
 	var inv: Array = st.get("inventory", [])

@@ -19,7 +19,7 @@ const DODGE_COOLDOWN := 0.9
 const STRIDE_WALK := 0.8
 const STRIDE_RUN := 1.2
 
-const ETHAN := {
+const THOMAS := {
 	"height": 1.0, "bulk": 1.0, "shoulder_width": 1.05,
 	"mat_torso": "cloth_jacket", "mat_arms": "cloth_jacket", "mat_forearms": "cloth_jacket",
 	"mat_legs": "cloth_jeans", "mat_skin": "skin_human", "mat_feet": "leather_boots",
@@ -75,7 +75,7 @@ func _ready() -> void:
 	rig = HumanoidRig.new()
 	rig.name = "Rig"
 	add_child(rig)
-	rig.build(ETHAN)
+	rig.build(THOMAS)
 	rig.set_render_layers(2)
 
 	weapons = Weapons.new()
@@ -415,6 +415,10 @@ func _update_breathing(delta: float) -> void:
 func take_damage(amount: float, from: Vector3, _kind: String = "melee") -> void:
 	if is_dead or _invuln > 0.0:
 		return
+	# Portes de l'ascenseur refermées : plus rien ne peut l'atteindre
+	if GameState.game and GameState.game.get("traveling") == true and amount < 1000.0:
+		return
+	amount *= Settings.damage_taken_mult()
 	GameState.set_hp(GameState.hp - amount)
 	_hurt = 0.45
 	_invuln = 0.5

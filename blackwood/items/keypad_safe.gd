@@ -1,13 +1,15 @@
 class_name KeypadSafe
 extends Interactable
-## Coffre mural à code à trois chiffres (salle d'archives).
-## Le code suit « l'ordre du protocole » : endormir (lune, 3), arrêter le cœur
-## (cœur, 1), réveiller (œil, 4) → 3-1-4.
+## Coffre mural à code (bureau du Dr Vance…). Le code peut avoir 3 ou 4 chiffres.
 
 signal opened
 
 var code := "314"
 var safe_id := "archives_safe"
+var title := "COFFRE"
+var success_msg := "Le coffre s'ouvre dans un déclic lourd."
+## Drapeau posé à l'ouverture (état sauvegardé).
+var open_flag := "safe_open"
 ## Contenu : [{item, count, id}] ou [{doc, id}]
 var contents: Array = []
 var is_open := false
@@ -46,7 +48,7 @@ func _ready() -> void:
 	_content_root = Node3D.new()
 	_content_root.position = Vector3(0, -0.25, -0.05)
 	add_child(_content_root)
-	if GameState.get_flag("safe_open"):
+	if GameState.get_flag(open_flag):
 		is_open = true
 		_door_pivot.rotation.y = -1.9
 		_set_led(true)
@@ -79,7 +81,7 @@ func open_safe() -> void:
 	if is_open:
 		return
 	is_open = true
-	GameState.set_flag("safe_open", true)
+	GameState.set_flag(open_flag, true)
 	_set_led(true)
 	Audio.play_3d("keypad_success", global_position, -2.0, 0.0, 10.0, 2.0)
 	Audio.play_3d("safe_open", global_position, 0.0, 0.0, 14.0, 3.0)

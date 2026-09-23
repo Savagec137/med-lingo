@@ -182,7 +182,7 @@ func _run() -> void:
 	if not await expect(await wait_game(60.0), "RETRY relance depuis la sauvegarde automatique"):
 		return
 	p = GameState.player as Player
-	if not await expect(p != null and not p.is_dead and GameState.hp > 0.0, "Ethan est vivant (%d PV) dans la zone « %s »" % [int(GameState.hp), GameState.current_zone]):
+	if not await expect(p != null and not p.is_dead and GameState.hp > 0.0, "Thomas est vivant (%d PV) dans la zone « %s »" % [int(GameState.hp), GameState.current_zone]):
 		return
 
 	# QUIT TO MENU (avec confirmation)

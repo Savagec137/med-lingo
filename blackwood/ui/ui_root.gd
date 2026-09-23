@@ -33,6 +33,7 @@ var options_menu: OptionsMenu
 var inventory: InventoryScreen
 var doc_viewer: DocumentViewer
 var keypad: KeypadScreen
+var elevator_screen: ElevatorScreen
 var save_screen: SaveScreen
 var death_screen: DeathScreen
 var ending_screen: EndingScreen
@@ -131,6 +132,7 @@ func _ready() -> void:
 	inventory = _screen(InventoryScreen.new())
 	doc_viewer = _screen(DocumentViewer.new())
 	keypad = _screen(KeypadScreen.new())
+	elevator_screen = _screen(ElevatorScreen.new())
 	save_screen = _screen(SaveScreen.new())
 	death_screen = _screen(DeathScreen.new())
 	ending_screen = _screen(EndingScreen.new())
@@ -288,6 +290,11 @@ func show_main_menu() -> void:
 	open_screen(main_menu)
 
 
+func open_elevator(elevator_id: String, level: int) -> void:
+	elevator_screen.open_for(elevator_id, level)
+	open_screen(elevator_screen)
+
+
 func open_inventory() -> void:
 	open_screen(inventory)
 
@@ -314,7 +321,7 @@ func show_document(doc_id: String, from_inventory: bool = false) -> void:
 		show_message("Document ajouté : « %s » (Tab → Documents)" % String(DocumentDB.get_doc(doc_id).title), 3.5)
 
 
-func open_keypad(safe: KeypadSafe) -> void:
+func open_keypad(safe: Interactable) -> void:
 	keypad.safe = safe
 	open_screen(keypad)
 
@@ -427,6 +434,11 @@ func update_boss_bar(hp: float, max_hp: float) -> void:
 
 func hide_boss_bar() -> void:
 	boss_box.visible = false
+
+
+func set_countdown(t: float) -> void:
+	if hud:
+		hud.set_countdown(t)
 
 
 func _process(delta: float) -> void:

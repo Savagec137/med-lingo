@@ -54,7 +54,7 @@ obligatoire (les auteurs sont crédités ci-dessous par courtoisie).
 
 | Nom | Emplacement | Auteur | Source | Licence | Date | Utilisation autorisée | Attribution nécessaire |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 134 effets et ambiances (pas, portes, néons, alarmes, créatures, armes, pluie…) | `audio/*.ogg` | synthèse numérique par `tools/gen_audio.py` (aucun échantillon externe) | ce projet | originale (projet) | 2026-09-23 | Toute utilisation | Non |
+| 153 effets et ambiances (pas sur 7 sols, portes, néons, alarmes, ascenseurs, explosion, créatures et boss, armes, pluie…) | `audio/*.ogg` | synthèse numérique par `tools/gen_audio.py` (aucun échantillon externe) | ce projet | originale (projet) | 2026-09-23 | Toute utilisation | Non |
 
 ## Polices — Google Fonts
 

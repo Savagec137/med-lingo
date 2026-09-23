@@ -27,7 +27,7 @@ static func build(id: String) -> Node3D:
 			_cyl(root, 0.03, 0.15, Vector3(0, 0.075, 0), "plastic_white")
 			_cyl(root, 0.018, 0.03, Vector3(0, 0.165, 0), "plastic_dark")
 			_box(root, Vector3(0.062, 0.03, 0.02), Vector3(0, 0.1, 0.022), "emit_red")
-		"admin_key":
+		"key_boxes", "key_technical", "key_pharmacy", "key_locker", "key_private", "admin_key":
 			_box(root, Vector3(0.07, 0.005, 0.018), Vector3(0.02, 0.003, 0), "metal_yellow")
 			_cyl(root, 0.018, 0.006, Vector3(-0.025, 0.003, 0), "metal_yellow")
 			_box(root, Vector3(0.05, 0.004, 0.035), Vector3(-0.07, 0.002, 0.02), "paper")
@@ -35,7 +35,7 @@ static func build(id: String) -> Node3D:
 			_cyl(root, 0.025, 0.12, Vector3(0, 0.025, 0), "plastic_white", Vector3(0, 0, PI / 2.0))
 			_cyl(root, 0.028, 0.02, Vector3(-0.065, 0.025, 0), "metal_steel", Vector3(0, 0, PI / 2.0))
 			_cyl(root, 0.028, 0.02, Vector3(0.065, 0.025, 0), "metal_steel", Vector3(0, 0, PI / 2.0))
-		"keycard_b":
+		"card_research", "key_main_lab", "keycard_b":
 			_box(root, Vector3(0.085, 0.003, 0.054), Vector3(0, 0.002, 0), "plastic_white")
 			_box(root, Vector3(0.086, 0.004, 0.012), Vector3(0, 0.003, -0.015), "metal_blue")
 		"crowbar":

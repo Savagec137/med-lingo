@@ -17,6 +17,8 @@ signal state_changed(enemy: Enemy, new_state: int)
 
 enum State { IDLE, PATROL, INVESTIGATE, CHASE, ATTACK, SEARCH, RETURN, DEAD }
 const STATE_NAMES := ["IDLE", "PATROL", "INVESTIGATE", "CHASE", "ATTACK", "SEARCH", "RETURN", "DEAD"]
+## Hauteur maximale de la capsule de collision (sous le linteau des portes).
+const MAX_COLLISION_HEIGHT := 2.1
 
 var enemy_id := ""
 var max_hp := 100.0
@@ -47,6 +49,10 @@ var patrol_points: Array = []
 var nav: NavGrid
 var dormant := false
 var wake_radius := 3.2
+## Dormante qui ne se réveille que sur un événement (ni bruit ni proximité).
+var deep_sleep := false
+## Immobile et sourde jusqu'à son activation par un événement (infirmière du -1…).
+var passive := false
 
 var state: int = State.IDLE
 var state_time := 0.0
@@ -85,6 +91,9 @@ var _hitboxes: Array[Area3D] = []
 func _ready() -> void:
 	add_to_group("enemies")
 	_rng.randomize()
+	# Difficulté : points de vie des créatures
+	max_hp *= Settings.enemy_hp_mult()
+	hp = max_hp
 	collision_layer = 4
 	collision_mask = 1 | 2 | 4 | 16
 	floor_max_angle = deg_to_rad(46.0)
@@ -92,9 +101,11 @@ func _ready() -> void:
 	var cs := CollisionShape3D.new()
 	var cap := CapsuleShape3D.new()
 	cap.radius = body_radius
-	cap.height = body_height
+	# Les baies de porte font 2,25 m : les grandes créatures (Chirurgien,
+	# Colossus) se baissent pour passer — leur collision est plafonnée.
+	cap.height = minf(body_height, MAX_COLLISION_HEIGHT)
 	cs.shape = cap
-	cs.position.y = body_height * 0.5
+	cs.position.y = cap.height * 0.5
 	add_child(cs)
 	_build_body()
 	facing = home_rot
@@ -162,7 +173,9 @@ func _voice(kind: String) -> void:
 # --- Sens --------------------------------------------------------------------
 
 func _on_noise(pos: Vector3, radius: float, source: Node) -> void:
-	if state == State.DEAD or source == self:
+	if state == State.DEAD or source == self or passive:
+		return
+	if dormant and deep_sleep:
 		return
 	if absf(pos.y - global_position.y) > 3.0:
 		return
@@ -222,7 +235,9 @@ func _can_see_player() -> bool:
 func take_damage(amount: float, hit_pos: Vector3, dir: Vector3, is_head: bool) -> void:
 	if state == State.DEAD:
 		return
+	passive = false
 	if dormant:
+		deep_sleep = false
 		wake_up()
 	hp -= amount
 	_hit_flash = 1.0
@@ -341,6 +356,9 @@ func _physics_process(delta: float) -> void:
 		return
 	if _update_rise(delta):
 		return
+	if passive:
+		_passive_idle(delta)
+		return
 	var p := player()
 	var far := p == null or global_position.distance_to(p.global_position) > 45.0
 	state_time += delta
@@ -363,6 +381,9 @@ func _physics_process(delta: float) -> void:
 			if not patrol_points.is_empty() and state_time > patrol_wait:
 				set_state(State.PATROL)
 		State.PATROL:
+			if patrol_points.is_empty():
+				# Pas de ronde définie : errance autour de son poste
+				patrol_points = [home_pos, nav.random_point_near(home_pos, 6.0, _rng) if nav else home_pos]
 			var goal: Vector3 = patrol_points[_patrol_i % patrol_points.size()]
 			if _flat_dist(goal) < 0.6:
 				_patrol_i += 1
@@ -425,6 +446,31 @@ func _physics_process(delta: float) -> void:
 	_animate(delta)
 
 
+## Immobile (passive) : reste sur place, animation d'attente.
+func _passive_idle(delta: float) -> void:
+	velocity.x = move_toward(velocity.x, 0.0, delta * 8.0)
+	velocity.z = move_toward(velocity.z, 0.0, delta * 8.0)
+	velocity.y = -0.5 if is_on_floor() else velocity.y - 20.0 * delta
+	move_and_slide()
+	_speed_now = 0.0
+	rig.rotation.y = facing
+	_animate(delta)
+
+
+## Sort de la passivité : la créature repère immédiatement le joueur.
+func activate_hunt() -> void:
+	passive = false
+	if dormant:
+		wake_up()
+		return
+	var p := player()
+	if p:
+		last_known = p.global_position
+		target_pos = last_known
+		_contact_t = 0.0
+	set_state(State.CHASE)
+
+
 func _pick_search_point() -> void:
 	target_pos = nav.random_point_near(last_known, 5.0, _rng) if nav else last_known
 	target_pos.y = global_position.y
@@ -432,6 +478,8 @@ func _pick_search_point() -> void:
 
 
 func _check_dormant_wake() -> void:
+	if deep_sleep:
+		return
 	var p := player()
 	if p == null or p.is_dead:
 		return

@@ -35,7 +35,9 @@ func _ready() -> void:
 		pq.position = fp
 		pq.collision_mask = 1
 		var inside := not space.intersect_point(pq, 1).is_empty()
-		var floor_y := -4.5 if fp.y < -2.2 else 0.0
+		# Sol du niveau de l'objet (4 m par niveau ; paliers compris sur les
+		# niveaux non construits, où ne subsistent que les cages d'escalier)
+		var floor_y := floorf((fp.y + 0.3) / 4.0) * 4.0
 		var best := INF
 		var reach := it.interact_radius - 0.08
 		var r := 0.35

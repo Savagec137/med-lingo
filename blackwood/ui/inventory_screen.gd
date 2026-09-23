@@ -199,6 +199,11 @@ func _refresh() -> void:
 	status_label.add_theme_color_override("font_color", UITheme.COL_FINE if status == "fine" else (UITheme.COL_CAUTION if status == "caution" else UITheme.COL_DANGER))
 	var lamp := "Lampe torche : %d %%" % int(GameState.flashlight_battery) if GameState.get_flag("has_flashlight") else "Pas de lampe torche"
 	info_label.text = lamp + "   ·   Documents : %d" % GameState.documents.size()
+	if not GameState.key_items.is_empty():
+		var names: Array = []
+		for kid in GameState.key_items:
+			names.append(ItemDB.item_name(String(kid)))
+		info_label.text += "\nPorte-clés : " + ", ".join(names)
 	objective_label.text = "Objectif : " + GameState.objective()
 
 

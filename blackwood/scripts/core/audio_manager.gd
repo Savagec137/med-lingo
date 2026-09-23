@@ -137,7 +137,7 @@ func _set_bus_volume(bus_name: String, v: float) -> void:
 
 ## Son positionné dans le monde.
 func play_3d(sound_name: String, pos: Vector3, volume_db: float = 0.0, pitch_var: float = 0.06,
-		max_distance: float = 40.0, unit_size: float = 5.0) -> AudioStreamPlayer3D:
+		max_distance: float = 40.0, unit_size: float = 5.0, pitch: float = 1.0) -> AudioStreamPlayer3D:
 	var stream := get_stream(sound_name)
 	if stream == null:
 		return null
@@ -145,7 +145,7 @@ func play_3d(sound_name: String, pos: Vector3, volume_db: float = 0.0, pitch_var
 	p.stream = stream
 	p.global_position = pos
 	p.volume_db = volume_db
-	p.pitch_scale = 1.0 + randf_range(-pitch_var, pitch_var)
+	p.pitch_scale = pitch * (1.0 + randf_range(-pitch_var, pitch_var))
 	p.max_distance = max_distance
 	p.unit_size = unit_size
 	p.play()

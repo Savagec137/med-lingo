@@ -6,20 +6,6 @@ const DIR := "user://saves"
 const SLOT_COUNT := 3
 const VERSION := 1
 
-const ZONE_NAMES := {
-	"parking": "Parking",
-	"entrance": "Entrée principale",
-	"hall": "Hall d'accueil",
-	"admin": "Couloir administratif",
-	"archives": "Salle d'archives",
-	"security": "Salle de sécurité",
-	"lab_wing": "Aile des laboratoires",
-	"lab": "Laboratoire",
-	"basement": "Sous-sol — Niveau B",
-	"generator": "Salle du générateur",
-	"exit": "Tunnel de service",
-}
-
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -74,10 +60,10 @@ func slot_info(slot: int) -> Dictionary:
 	if d.is_empty():
 		return {"exists": false}
 	var state: Dictionary = d.get("state", {})
-	var zone := String(state.get("current_zone", "parking"))
+	var zone := String(state.get("current_zone", ""))
 	return {
 		"exists": true,
-		"zone": ZONE_NAMES.get(zone, zone),
+		"zone": String(d.get("zone_name", zone)),
 		"date": String(d.get("saved_at_text", "")),
 		"time": float(d.get("saved_at", 0.0)),
 		"playtime": format_time(float(state.get("playtime", 0.0))),

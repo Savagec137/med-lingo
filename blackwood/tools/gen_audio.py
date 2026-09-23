@@ -393,6 +393,12 @@ def step(kind):
         x = mix(grit, sine(70, 0.06) * env_exp(n(0.06), 0.02) * 0.7, at(bp(white(0.05), 2000, 6000) * env_exp(n(0.05), 0.02) * 0.2, 0.03, 0.1))
     elif kind == "metal":
         x = mix(lp(white(0.04), 3000) * env_exp(n(0.04), 0.008), fm(520 + rng.random() * 200, 190, 2.5, 0.25) * env_exp(n(0.25), 0.05) * 0.5)
+    elif kind == "carpet":  # moquette : un pas étouffé, presque sans attaque
+        x = mix(lp(white(0.09), 600) * env_ad(0.09, 0.012, 0.06) * 0.8, sine(65, 0.07) * env_exp(n(0.07), 0.02) * 0.5)
+    elif kind == "wood":  # parquet : coup sourd et creux, léger craquement
+        knock = sine(170 + rng.random() * 40, 0.12) * env_exp(n(0.12), 0.03) * 0.6
+        creak = bp(white(0.1), 900, 2400) * env_exp(n(0.1), 0.03) * 0.25 * (rng.random() > 0.5)
+        x = mix(lp(white(0.05), 2200) * env_exp(n(0.05), 0.01), knock, at(creak, 0.02, 0.12))
     else:  # extérieur : asphalte détrempé
         x = mix(lp(white(0.06), 2000) * env_exp(n(0.06), 0.015), bp(white(0.16), 1800, 6000) * env_exp(n(0.16), 0.05) * 0.6 * (rng.random(n(0.16)) > 0.6))
     return reverb(x, 0.3, 0.12)
@@ -1072,6 +1078,105 @@ def s_music_end():
 # Liste des sons
 # --------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------
+# Blackwood Hospital : monstres, ascenseurs, explosion
+# --------------------------------------------------------------------------
+
+def s_explosion():
+    d = 4.0
+    boom = sine(sweep(60, 22, 1.6, 0.6), 1.6) * env_exp(n(1.6), 0.5)
+    rumble = lp(brown(d), 240) * env_ad(d, 0.02, 1.4) * 0.9
+    blast = lp(white(0.8), 2500) * env_exp(n(0.8), 0.12)
+    debris = mix(*[at(thud(0.1, 120 + rng.random() * 300, 3000) * 0.18, 0.3 + rng.random() * 2.2, d) for _ in range(26)])
+    return reverb(dist(mix(at(boom, 0.0, d), rumble, at(blast, 0.0, d), debris), 2.2), 2.4, 0.35)
+
+
+def s_elevator_ding():
+    d = 1.6
+    a = (sine(988, d) + 0.3 * sine(1976, d)) * env_ad(d, 0.005, 0.5)
+    b = (sine(784, d) + 0.3 * sine(1568, d)) * env_ad(d, 0.005, 0.6)
+    return reverb(mix(a, at(b, 0.28, d)), 0.8, 0.2)
+
+
+def s_elevator_move():
+    d = 3.2
+    motor = (saw(sweep(55, 62, d), d) * 0.3 + sine(110, d) * 0.4)
+    motor = lp(motor, 400) * env_ad(d, 0.4, 3.0)
+    whine = sine(sweep(700, 760, d), d) * 0.05
+    cable = bp(white(d), 200, 1200) * 0.08 * (0.6 + 0.4 * np.sin(2 * np.pi * 1.3 * t_axis(d)))
+    clunk = thud(0.3, 90, 1200)
+    return mix(motor, whine, cable, at(clunk, 0.0, d), at(clunk * 0.7, d - 0.35, d))
+
+
+def s_veilleur_click():
+    total = 0.9
+    parts = []
+    t = 0.0
+    while t < 0.7:
+        parts.append(at(click(3200 + rng.random() * 2500, 0.01, 9) * (0.6 + rng.random() * 0.4), t, total))
+        t += 0.03 + rng.random() * 0.07
+    return reverb(mix(*parts), 1.0, 0.25, 6000)
+
+
+def s_veilleur_scream():
+    d = 1.5
+    f = sweep(480, 900, d, 0.4) * (1 + 0.08 * np.sin(2 * np.pi * 11 * t_axis(d)))
+    x = voice(f, d, "e", "a", 1.35, 0.5, 0.15, 5.0, gurgle=0.4)
+    hiss = hp(white(d), 3000) * 0.25
+    return reverb(mix(x, hiss) * env_ad(d, 0.03, 0.7), 1.6, 0.35)
+
+
+def s_neonatal_screech():
+    d = 1.0
+    f = sweep(620, 1050, d, 0.5) * (1 + 0.12 * np.sin(2 * np.pi * 7 * t_axis(d)))
+    x = voice(f, d, "a", "e", 1.45, 0.35, 0.2, 4.0, gurgle=0.5)
+    return reverb(x * env_ad(d, 0.02, 0.45), 1.0, 0.3)
+
+
+def s_neonatal_skitter():
+    total = 0.9
+    taps = []
+    t = 0.0
+    while t < 0.8:
+        taps.append(at(thud(0.03, 300 + rng.random() * 500, 4000) * (0.5 + rng.random() * 0.5), t, total))
+        taps.append(at(click(2000 + rng.random() * 3000, 0.008, 5) * 0.3, t + 0.01, total))
+        t += 0.025 + rng.random() * 0.04
+    return mix(*taps)
+
+
+def s_colossus_roar():
+    d = 2.6
+    head = sweep(40, 72, 0.4)
+    rest = n(d) - len(head)
+    f = np.concatenate([head, 72.0 * (1 + 0.05 * np.sin(2 * np.pi * 4 * np.arange(rest) / SR))])
+    x = voice(f, d, "o", "a", 0.6, 0.6, 0.12, 6.0, gurgle=0.4, sub=1.2)
+    rumble = lp(brown(d), 180) * 0.6
+    return reverb(mix(x, rumble) * env_ad(d, 0.08, 1.1), 2.2, 0.35)
+
+
+def s_sarah_scream():
+    d = 1.6
+    f = sweep(340, 620, d, 0.6) * (1 + 0.04 * np.sin(2 * np.pi * 6 * t_axis(d)))
+    clean = voice(f, d, "a", "e", 1.2, 0.25, 0.05, 1.6)
+    torn = voice(f * 0.5, d, "a", "uh", 0.9, 0.4, 0.15, 5.0, gurgle=0.5, sub=0.5)
+    morph = np.linspace(0, 1, n(d)) ** 1.5
+    return reverb((clean * (1 - morph) + torn * morph) * env_ad(d, 0.04, 0.8), 1.4, 0.3)
+
+
+def s_zero_scream():
+    d = 1.8
+    f = sweep(170, 320, d, 0.5) * (1 + 0.06 * np.sin(2 * np.pi * 8 * t_axis(d)))
+    x = voice(f, d, "a", "o", 0.9, 0.5, 0.12, 5.0, gurgle=0.6, sub=0.6)
+    return reverb(x * env_ad(d, 0.05, 0.9), 1.8, 0.35)
+
+
+def s_zero_whisper():
+    d = 1.6
+    src = hp(white(d), 400, 2) * (0.5 + 0.5 * lfo_noise(d, 9))
+    y = vowel(src, "uh", 1.0) * 0.5 + vowel(src, "e", 1.1) * 0.5
+    return reverb(norm(y) * env_ad(d, 0.15, 0.7) * 0.7, 1.2, 0.3)
+
+
 SOUNDS = {
     "flashlight_click": s_flashlight_click, "gunshot": s_gunshot, "gun_empty": s_gun_empty,
     "shell_casing": s_shell_casing, "reload": s_reload, "impact_wall": s_impact_wall,
@@ -1101,13 +1206,18 @@ SOUNDS = {
     "distant_thump": s_distant_thump, "metal_creak": s_metal_creak, "pipe_groan": s_pipe_groan,
     "thunder": s_thunder, "ui_move": s_ui_move, "ui_select": s_ui_select, "ui_error": s_ui_error,
     "inventory_open": s_inventory_open, "inventory_close": s_inventory_close,
+    "explosion": s_explosion, "elevator_ding": s_elevator_ding, "elevator_move": s_elevator_move,
+    "veilleur_click": s_veilleur_click, "veilleur_scream": s_veilleur_scream, "neonatal_screech": s_neonatal_screech,
+    "neonatal_skitter": s_neonatal_skitter, "colossus_roar": s_colossus_roar, "sarah_scream": s_sarah_scream,
+    "zero_scream": s_zero_scream, "zero_whisper": s_zero_whisper,
     "light_flicker": lambda: mix(bp(white(0.3), 1000, 8000) * (rng.random(n(0.3)) > 0.93), square(120, 0.3) * 0.3 * env_ad(0.3, 0.01, 0.1)),
 }
 
 VARIANTS = {
     "step_tile": (4, lambda i: step("tile")), "step_lino": (4, lambda i: step("lino")),
     "step_concrete": (4, lambda i: step("concrete")), "step_metal": (4, lambda i: step("metal")),
-    "step_outdoor": (4, lambda i: step("outdoor")), "player_hurt": (3, lambda i: s_player_hurt()),
+    "step_outdoor": (4, lambda i: step("outdoor")), "step_carpet": (4, lambda i: step("carpet")),
+    "step_wood": (4, lambda i: step("wood")), "player_hurt": (3, lambda i: s_player_hurt()),
     "hollow_groan": (3, s_hollow_groan),
 }
 

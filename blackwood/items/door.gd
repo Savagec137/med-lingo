@@ -39,6 +39,8 @@ var heavy := false
 var start_open := false
 ## Sens du vantail pour une porte ouverte au départ (voir Facility.add_door).
 var start_dir := 1.0
+## Sens d'ouverture imposé (0 : le vantail s'écarte de celui qui ouvre).
+var fixed_dir := 0.0
 
 var _pivots: Array[Node3D] = []
 var _bodies: Array[AnimatableBody3D] = []
@@ -222,7 +224,9 @@ func set_lock(new_lock: int, msg: String = "") -> void:
 func open_door(from: Vector3 = Vector3.INF, silent: bool = false) -> void:
 	if is_open and not _moving:
 		return
-	if from != Vector3.INF:
+	if fixed_dir != 0.0:
+		_dir = fixed_dir
+	elif from != Vector3.INF:
 		var local := to_local(from)
 		_dir = 1.0 if local.z > 0.0 else -1.0
 	is_open = true
@@ -232,6 +236,7 @@ func open_door(from: Vector3 = Vector3.INF, silent: bool = false) -> void:
 	if not silent:
 		Audio.play_3d(sound_open, global_position + Vector3.UP, -2.0 if not heavy else 1.0, 0.08, 16.0, 3.0)
 	_store_state()
+	update_leaf_nav()
 	opened.emit()
 
 
@@ -245,6 +250,7 @@ func close_door(silent: bool = false) -> void:
 	if not silent:
 		Audio.play_3d(sound_close, global_position + Vector3.UP, -2.0, 0.08, 16.0, 3.0)
 	_store_state()
+	update_leaf_nav()
 	closed.emit()
 
 
@@ -258,6 +264,7 @@ func slam() -> void:
 	_set_collision(false)
 	Audio.play_3d("door_slam", global_position + Vector3.UP, 4.0, 0.05, 30.0, 5.0)
 	_store_state()
+	update_leaf_nav()
 	closed.emit()
 
 
@@ -265,10 +272,24 @@ func slam() -> void:
 func bump(by: Node3D) -> void:
 	if _bang_cd > 0.0 or is_open:
 		return
+	if by.get("smashes_doors") == true:
+		smash(by)
+		return
 	_bang_cd = 1.2
 	Audio.play_3d("door_bang", global_position + Vector3.UP, 2.0, 0.1, 25.0, 4.0)
 	if lock == Lock.NONE:
 		open_door(by.global_position, true)
+
+
+## Enfoncée par une créature énorme (Colossus) : la serrure cède.
+func smash(by: Node3D) -> void:
+	_bang_cd = 2.0
+	Audio.play_3d("door_burst", global_position + Vector3.UP, 6.0, 0.0, 50.0, 8.0)
+	var world: Node = GameState.game if GameState.game else get_tree().current_scene
+	FX.dust(world, global_position + Vector3.UP, 18, 0.5)
+	lock = Lock.NONE
+	open_door(by.global_position, true)
+	_update_nav()
 
 
 func _set_collision(on: bool) -> void:
@@ -325,9 +346,36 @@ func _update_nav() -> void:
 		GameState.game.set_nav_door(self, lock != Lock.NONE)
 
 
-## Emprise de l'ouverture au sol (pour la grille de navigation).
-func footprint() -> Rect2:
-	var a := global_transform * Vector3(-width * 0.5, 0, -0.25)
-	var b := global_transform * Vector3(width * 0.5, 0, 0.25)
+## Un vantail ouvert dépasse du mur à angle droit : la grille de navigation le
+## contourne (sinon créatures et robot de test restent coincés derrière).
+func update_leaf_nav() -> void:
+	var fac: Facility = null
+	if GameState.game and GameState.game.get("facility"):
+		fac = GameState.game.get("facility")
+	else:
+		var n := get_parent()
+		while n and not (n is Facility):
+			n = n.get_parent()
+		fac = n as Facility
+	if fac == null or not is_inside_tree():
+		return
+	var segs: Array = []
+	if is_open:
+		var leaf_w := width / _pivots.size()
+		for i in _pivots.size():
+			var side := 1.0 if i == 0 else -1.0
+			var hinge := global_transform * _pivots[i].position
+			var dir := global_transform.basis * Vector3(side, 0, 0).rotated(Vector3.UP, open_angle * _dir * side)
+			segs.append([hinge, hinge + dir.normalized() * leaf_w])
+	fac.set_nav_overlay(nav_floor, "leaf:" + door_id, segs)
+
+
+## Emprise de l'ouverture au sol (pour la grille de navigation), rétrécie de
+## « shrink » de chaque côté : la marge autour des montants reste bloquante et
+## les créatures passent au milieu de la baie au lieu de s'accrocher au cadre.
+func footprint(shrink: float = 0.0) -> Rect2:
+	var hw := maxf(width * 0.5 - shrink, 0.05)
+	var a := global_transform * Vector3(-hw, 0, -0.25)
+	var b := global_transform * Vector3(hw, 0, 0.25)
 	var r := Rect2(Vector2(minf(a.x, b.x), minf(a.z, b.z)), Vector2(absf(a.x - b.x), absf(a.z - b.z)))
 	return r
