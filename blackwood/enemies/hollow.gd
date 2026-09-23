@@ -6,6 +6,7 @@ extends Enemy
 ## Démarche traînante, bras tendus quand elle chasse, tics nerveux.
 
 var variant := "patient"   # « patient » (blouse) ou « guard » (uniforme de sécurité)
+var skin: SkinnedBody
 var _twitch_t := 0.0
 var _twitch_joint := ""
 var _twitch_rot := Vector3.ZERO
@@ -52,13 +53,25 @@ func _build_body() -> void:
 	else:
 		cfg.merge({"torso_shape": "gown", "mat_torso": "gown", "mat_legs": flesh_mat, "mat_shins": flesh_mat}, true)
 	rig.build(cfg)
-	# Visage : yeux laiteux, bouche béante
-	var eye := SphereMesh.new()
-	eye.radius = 0.018
-	eye.height = 0.036
-	for s in [-0.038, 0.038]:
-		rig.attach_mesh("head", eye, "eye_glow", Vector3(s, 0.12, -0.098))
-	rig.attach_mesh("head", rig._box(Vector3(0.05, 0.05, 0.02)), "black", Vector3(0, 0.035, -0.1))
+	if SkinnedBody.available():
+		# Modèle réaliste (Higgsfield) : le rig procédural devient un pilote invisible
+		for m in rig.meshes:
+			m.visible = false
+		skin = SkinnedBody.new()
+		skin.name = "Skin"
+		rig.add_child(skin)
+		var look := skin_look()
+		look["scale"] = float(look.get("scale", 1.0)) * float(cfg.height) / 0.946
+		skin.setup(rig, look)
+		flesh_mat = skin.material
+	else:
+		# Visage : yeux laiteux, bouche béante
+		var eye := SphereMesh.new()
+		eye.radius = 0.018
+		eye.height = 0.036
+		for s in [-0.038, 0.038]:
+			rig.attach_mesh("head", eye, "eye_glow", Vector3(s, 0.12, -0.098))
+		rig.attach_mesh("head", rig._box(Vector3(0.05, 0.05, 0.02)), "black", Vector3(0, 0.035, -0.1))
 	# Zones de tir : tête (dégâts x2.6), torse, bassin
 	var head_shape := SphereShape3D.new()
 	head_shape.radius = 0.15
@@ -69,6 +82,22 @@ func _build_body() -> void:
 	var hips_shape := BoxShape3D.new()
 	hips_shape.size = Vector3(0.38, 0.55, 0.28)
 	add_hitbox("hips", hips_shape, Vector3(0, -0.2, 0), false)
+
+
+## Apparence du modèle réaliste selon la variante (voir SkinnedBody.setup).
+func skin_look() -> Dictionary:
+	match variant:
+		"guard":
+			return {"cloth_tint": Color(0.06, 0.08, 0.16), "cloth_mix": 0.97, "blood": 0.45}
+		"nurse":
+			return {"cloth_tint": Color(0.22, 0.52, 0.36), "cloth_mix": 0.95, "blood": 0.6, "wet": 0.3}
+		"neuro":
+			return {"cloth_tint": Color(0.85, 0.85, 0.8), "cloth_mix": 0.8, "pallor": 0.55, "blood": 0.15}
+		"experimental":
+			return {"skin_tint": Color(1.1, 0.72, 0.68), "blood": 0.8, "wet": 0.6, "scale": 1.3,
+				"bone_scale": {"Spine": Vector3(1.35, 1.0, 1.3), "Spine01": Vector3(1.25, 1.0, 1.25),
+					"LeftArm": Vector3(1.3, 1.0, 1.3), "RightArm": Vector3(1.3, 1.0, 1.3)}}
+	return {"blood": 0.35}
 
 
 func _voice(kind: String) -> void:

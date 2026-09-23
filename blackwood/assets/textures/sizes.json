@@ -1,0 +1,184 @@
+{
+ "floor_hospital": {
+  "id": "grey_tiles",
+  "size_mm": [
+   2200.000047683716,
+   2200.000047683716
+  ]
+ },
+ "floor_hall": {
+  "id": "large_grey_tiles",
+  "size_mm": [
+   3000,
+   3000
+  ]
+ },
+ "floor_lab": {
+  "id": "anti_skid_tiles",
+  "size_mm": [
+   1800.0000715255737,
+   1800.0000715255737
+  ]
+ },
+ "floor_worn": {
+  "id": "worn_tile_floor",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "floor_retro": {
+  "id": "old_linoleum_flooring_01",
+  "size_mm": [
+   1990.0001287460327,
+   1990.0001287460327
+  ]
+ },
+ "floor_checker": {
+  "id": "floor_tiles_06",
+  "size_mm": [
+   3000,
+   3000
+  ]
+ },
+ "floor_concrete": {
+  "id": "concrete_floor_worn_001",
+  "size_mm": [
+   3000,
+   3000.000238418579
+  ]
+ },
+ "floor_wood": {
+  "id": "laminate_floor_02",
+  "size_mm": [
+   1699.9999284744263,
+   1700.0000476837158
+  ]
+ },
+ "floor_carpet": {
+  "id": "dirty_carpet",
+  "size_mm": [
+   599.9999046325684,
+   599.9999046325684
+  ]
+ },
+ "wall_plaster": {
+  "id": "painted_plaster_wall",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "wall_plaster_worn": {
+  "id": "worn_plaster_wall",
+  "size_mm": [
+   1800.0000715255737,
+   1800.0000715255737
+  ]
+ },
+ "wall_peeling": {
+  "id": "peeling_painted_wall",
+  "size_mm": [
+   1800.0000715255737,
+   1800.0000715255737
+  ]
+ },
+ "wall_tile": {
+  "id": "long_white_tiles",
+  "size_mm": [
+   1269.9999809265137,
+   1269.9999809265137
+  ]
+ },
+ "wall_tile_big": {
+  "id": "interior_tiles",
+  "size_mm": [
+   1899.9998569488525,
+   1899.9998569488525
+  ]
+ },
+ "wall_concrete": {
+  "id": "concrete_wall_004",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "facade": {
+  "id": "concrete_panels",
+  "size_mm": [
+   8000,
+   8000
+  ]
+ },
+ "facade_dark": {
+  "id": "rectangular_facade_tiles",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "asphalt": {
+  "id": "asphalt_02",
+  "size_mm": [
+   3000.000238418579,
+   3000
+  ]
+ },
+ "metal_diamond": {
+  "id": "metal_plate",
+  "size_mm": [
+   500,
+   500
+  ]
+ },
+ "metal_worn": {
+  "id": "metal_plate_02",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "metal_painted": {
+  "id": "rusty_metal_02",
+  "size_mm": [
+   1000,
+   1000
+  ]
+ },
+ "metal_blue": {
+  "id": "blue_metal_plate",
+  "size_mm": [
+   2500,
+   2500
+  ]
+ },
+ "shutter": {
+  "id": "painted_metal_shutter",
+  "size_mm": [
+   2000,
+   2000
+  ]
+ },
+ "wood": {
+  "id": "wood_table_001",
+  "size_mm": [
+   1500,
+   1500.0001192092896
+  ]
+ },
+ "denim": {
+  "id": "denim_fabric",
+  "size_mm": [
+   100.00000149011612,
+   99.99999403953552
+  ]
+ },
+ "leather": {
+  "id": "fabric_leather_01",
+  "size_mm": [
+   400.0000059604645,
+   400.00003576278687
+  ]
+ }
+}

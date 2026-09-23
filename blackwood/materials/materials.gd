@@ -10,6 +10,64 @@ const SCREEN_SHADER := preload("res://materials/shaders/screen.gdshader")
 const LIQUID_SHADER := preload("res://materials/shaders/liquid.gdshader")
 const WATER_SHADER := preload("res://materials/shaders/water.gdshader")
 const FLESH_SHADER := preload("res://materials/shaders/flesh.gdshader")
+const PBR_SHADER := preload("res://materials/shaders/pbr_surface.gdshader")
+const TEX_DIR := "res://assets/textures/"
+
+## Taille réelle (m) couverte par une répétition de chaque jeu de textures
+## (données Poly Haven, voir assets/textures/SOURCES.md).
+const TEX_SIZE := {
+	"floor_hospital": 2.2, "floor_hall": 3.0, "floor_lab": 1.8, "floor_worn": 2.0, "floor_retro": 2.0,
+	"floor_checker": 3.0, "floor_concrete": 3.0, "floor_wood": 1.7, "floor_carpet": 0.6,
+	"wall_plaster": 2.0, "wall_plaster_worn": 1.8, "wall_peeling": 1.8, "wall_tile": 1.27,
+	"wall_tile_big": 1.9, "wall_concrete": 2.0, "facade": 8.0, "facade_dark": 2.0, "asphalt": 3.0,
+	"metal_diamond": 0.5, "metal_worn": 2.0, "metal_painted": 1.0, "metal_blue": 2.5, "shutter": 2.0,
+	"wood": 1.5, "denim": 0.1, "leather": 0.4, "ceiling_tile": 1.2,
+}
+
+## Surfaces photoréalistes : textures PBR CC0 + teinte, soubassement, salissures,
+## humidité (shader pbr_surface). Prioritaires sur SURFACES quand elles existent.
+const TEXTURED := {
+	"wall_hospital": {"tex": "wall_plaster", "tint": Color(0.86, 0.9, 0.86), "band": 1.1, "band_tint": Color(0.5, 0.62, 0.58), "rail": Color(0.28, 0.33, 0.31), "grime": 0.45},
+	"wall_hospital_dirty": {"tex": "wall_plaster_worn", "tint": Color(0.84, 0.88, 0.84), "band": 1.1, "band_tint": Color(0.46, 0.56, 0.52), "rail": Color(0.25, 0.28, 0.26), "grime": 0.8},
+	"wall_admin": {"tex": "wall_plaster", "tint": Color(0.93, 0.88, 0.8), "band": 0.95, "band_tint": Color(0.55, 0.42, 0.3), "rail": Color(0.28, 0.2, 0.13), "grime": 0.4},
+	"wall_pediatric": {"tex": "wall_plaster", "tint": Color(0.95, 0.9, 0.78), "band": 1.0, "band_tint": Color(0.55, 0.7, 0.82), "rail": Color(0.8, 0.5, 0.2), "grime": 0.55},
+	"wall_tile_white": {"tex": "wall_tile", "grime": 0.4, "rough_mul": 0.9},
+	"wall_tile_dirty": {"tex": "wall_tile", "grime": 0.85, "brightness": 0.85},
+	"wall_tile_big": {"tex": "wall_tile_big", "grime": 0.45},
+	"wall_concrete": {"tex": "wall_concrete", "grime": 0.6},
+	"wall_concrete_dark": {"tex": "wall_concrete", "brightness": 0.55, "grime": 0.8},
+	"wall_ext": {"tex": "facade", "grime": 0.5},
+	"wall_facade_dark": {"tex": "facade_dark", "grime": 0.3},
+	"wall_plaster": {"tex": "wall_plaster_worn", "tint": Color(0.92, 0.88, 0.82), "grime": 0.7},
+	"wall_peeling": {"tex": "wall_peeling", "saturation": 0.35, "tint": Color(0.95, 0.93, 0.88), "grime": 0.7},
+	"floor_tile": {"tex": "floor_hall", "grime": 0.45, "wet": 0.35},
+	"floor_tile_lab": {"tex": "floor_lab", "tint": Color(0.92, 0.95, 0.97), "grime": 0.35, "wet": 0.3},
+	"floor_lino": {"tex": "floor_hospital", "grime": 0.5, "wet": 0.25},
+	"floor_retro": {"tex": "floor_retro", "saturation": 0.7, "grime": 0.55},
+	"floor_checker": {"tex": "floor_checker", "grime": 0.5, "wet": 0.3},
+	"floor_worn": {"tex": "floor_worn", "grime": 0.6, "wet": 0.5},
+	"floor_wood": {"tex": "floor_wood", "grime": 0.35},
+	"floor_carpet": {"tex": "floor_carpet", "grime": 0.5},
+	"floor_concrete": {"tex": "floor_concrete", "grime": 0.6, "wet": 0.55},
+	"floor_metal": {"tex": "metal_diamond", "grime": 0.4},
+	"ceiling_tile": {"tex": "ceiling_tile", "grime": 0.55},
+	"ceiling_concrete": {"tex": "wall_concrete", "brightness": 0.65, "grime": 0.7},
+	"asphalt": {"tex": "asphalt", "grime": 0.2, "wet": 0.8},
+	"curb": {"tex": "floor_concrete", "brightness": 1.1, "grime": 0.5},
+	"metal_gray": {"tex": "metal_worn", "brightness": 1.1, "grime": 0.3},
+	"metal_dark": {"tex": "metal_worn", "brightness": 0.55, "grime": 0.3},
+	"metal_green": {"tex": "metal_painted", "saturation": 0.4, "tint": Color(0.55, 0.75, 0.62), "grime": 0.4},
+	"metal_blue": {"tex": "metal_blue", "grime": 0.35},
+	"metal_rust": {"tex": "metal_painted", "brightness": 0.75, "grime": 0.6},
+	"metal_white": {"tex": "metal_painted", "saturation": 0.6, "grime": 0.35},
+	"metal_yellow": {"tex": "metal_painted", "saturation": 0.3, "tint": Color(1.0, 0.8, 0.25), "grime": 0.5},
+	"shutter": {"tex": "shutter", "grime": 0.5},
+	"wood_door": {"tex": "wood", "saturation": 0.5, "tint": Color(1.0, 0.9, 0.78), "brightness": 0.85, "grime": 0.3},
+	"wood_desk": {"tex": "wood", "saturation": 0.55, "tint": Color(1.0, 0.92, 0.8), "grime": 0.25},
+	"wood_light": {"tex": "floor_wood", "grime": 0.25},
+	"cloth_jeans": {"tex": "denim", "grime": 0.2, "scale": 2.0},
+	"cloth_jacket": {"tex": "leather", "tint": Color(0.55, 0.42, 0.32), "grime": 0.25},
+}
 
 ## Surfaces du décor (shader surface.gdshader).
 const SURFACES := {
@@ -114,11 +172,42 @@ static func get_mat(mat_name: String) -> Material:
 	if _cache.has(mat_name):
 		return _cache[mat_name]
 	var m: Material
-	if SURFACES.has(mat_name):
+	if TEXTURED.has(mat_name):
+		m = _textured(TEXTURED[mat_name])
+	if m == null and SURFACES.has(mat_name):
 		m = _surface(SURFACES[mat_name])
-	else:
+	elif m == null:
 		m = _special(mat_name)
 	_cache[mat_name] = m
+	return m
+
+
+## Matériau PBR texturé ; null si les textures sont absentes (repli procédural).
+static func _textured(def: Dictionary) -> ShaderMaterial:
+	var set_name: String = def.tex
+	var base := TEX_DIR + set_name + "/"
+	if not ResourceLoader.exists(base + "albedo.jpg"):
+		return null
+	var m := ShaderMaterial.new()
+	m.shader = PBR_SHADER
+	m.set_shader_parameter("albedo_tex", load(base + "albedo.jpg"))
+	m.set_shader_parameter("normal_tex", load(base + "normal.jpg"))
+	m.set_shader_parameter("orm_tex", load(base + "orm.jpg"))
+	m.set_shader_parameter("noise_a", noise_a())
+	var size: float = float(TEX_SIZE.get(set_name, 2.0)) * float(def.get("scale", 1.0))
+	m.set_shader_parameter("tex_size", Vector2(size, size))
+	m.set_shader_parameter("tint", def.get("tint", Color(1, 1, 1)))
+	m.set_shader_parameter("saturation", float(def.get("saturation", 1.0)))
+	m.set_shader_parameter("brightness", float(def.get("brightness", 1.0)))
+	m.set_shader_parameter("band_height", float(def.get("band", 0.0)))
+	m.set_shader_parameter("band_tint", def.get("band_tint", Color(1, 1, 1)))
+	m.set_shader_parameter("rail_color", def.get("rail", Color(0.2, 0.2, 0.2)))
+	m.set_shader_parameter("grime", float(def.get("grime", 0.35)))
+	m.set_shader_parameter("grime_color", def.get("grime_color", Color(0.1, 0.085, 0.07)))
+	m.set_shader_parameter("wetness", float(def.get("wet", 0.0)))
+	m.set_shader_parameter("roughness_mul", float(def.get("rough_mul", 1.0)))
+	m.set_shader_parameter("normal_strength", float(def.get("normal", 1.0)))
+	m.set_shader_parameter("variation", float(def.get("variation", 0.12)))
 	return m
 
 

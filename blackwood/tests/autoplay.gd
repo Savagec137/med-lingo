@@ -419,11 +419,20 @@ func fight(e: Enemy, timeout: float = 45.0) -> bool:
 				return false
 			Input.action_release("fire")
 			Input.action_release("aim")
+			if player.pistol.reloading:
+				# Rechargement en cours : on recule sans esquiver (l'esquive l'annulerait).
+				face(e.global_position + Vector3.UP * 1.5)
+				Input.action_press("move_back")
+				await _frames(4)
+				t += 4.0 / 60.0
+				continue
+			Input.action_release("move_back")
 			# Au contact, on prend d'abord de la distance (esquive) avant de recharger.
 			if e.global_position.distance_to(player.global_position) < 3.0:
 				await dodge_away_from(e)
 			await press("reload")
-			await _secs(1.8)
+			await _frames(6)
+			t += 0.1
 			continue
 		var head := e.rig.joint("head").global_position + Vector3.UP * 0.1
 		var d := e.global_position.distance_to(player.global_position)
