@@ -61,6 +61,7 @@ func _shot(label: String) -> void:
 	var img := get_viewport().get_texture().get_image()
 	if img:
 		img.save_png("%s/%s.png" % [shots_dir, label])
+	_log("  [rendu %s] %s" % [label, PerfOverlay.summary().replace("\n", "  ·  ")])
 
 
 # --- Entrées simulées --------------------------------------------------------------

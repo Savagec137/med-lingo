@@ -73,6 +73,9 @@ func _ready() -> void:
 	hud.visible = false
 	root.add_child(hud)
 
+	var perf := PerfOverlay.new()
+	root.add_child(perf)
+
 	letterbox_top = _bar()
 	letterbox_bottom = _bar()
 

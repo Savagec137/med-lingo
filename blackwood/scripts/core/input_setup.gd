@@ -18,6 +18,7 @@ const BINDINGS := {
 	"pause": [KEY_ESCAPE],
 	"dodge": [KEY_SPACE],
 	"quick_heal": [KEY_H],
+	"debug_perf": [KEY_F3],
 }
 
 const MOUSE_BINDINGS := {

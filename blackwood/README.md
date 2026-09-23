@@ -42,6 +42,7 @@ Les touches sont liées à leur **position physique** : sur un clavier AZERTY, W
 | Soin rapide (Medical Spray) | H |
 | Inventaire | Tab (ou I) |
 | Pause | Échap |
+| Compteur de performances (FPS, appels de dessin) | F3 |
 
 Les options (volumes, sensibilité, inversion Y, luminosité, lampe, champ de vision,
 qualité graphique, plein écran) se trouvent dans **OPTIONS** (menu principal ou pause).
