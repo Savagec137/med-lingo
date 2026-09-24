@@ -44,6 +44,8 @@ encore ne doit pas bloquer la visite du niveau).
 **Le plus simple** : installer les pré-requis ci-dessous, puis double-cliquer **`Scripts\SetupAll.bat`**.
 Il vérifie les outils, décompresse les maillages extraits, copie le mannequin d'Unreal, compile,
 lance l'import (l'éditeur s'ouvre puis se ferme tout seul) et les tests, et affiche le résultat.
+Unreal est trouvé automatiquement (registre de l'Epic Games Launcher, puis `C:\Program Files\Epic Games`) ;
+sinon, indiquer son dossier : `Scripts\SetupAll.bat "D:\Epic Games\UE_5.8"`.
 Les étapes détaillées ci-dessous restent utiles en cas d'erreur.
 
 Paquet complet sans Git : `Blackwood_Unreal_complet.zip` (livré en morceaux avec `REASSEMBLER_Unreal.bat`)

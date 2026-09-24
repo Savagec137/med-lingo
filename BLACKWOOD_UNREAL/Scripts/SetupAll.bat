@@ -4,8 +4,9 @@ setlocal EnableExtensions
 title Blackwood - installation dans Unreal
 rem ============================================================================================
 rem  Tout en un : verification, fichiers extraits, mannequin, compilation, import, tests.
-rem  Usage : double-clic (ou Scripts\SetupAll.bat "C:\Program Files\Epic Games\UE_5.8")
-rem  Journaux : Saved\Blackwood\ (build.log, import_report.txt) et Saved\Automation\ (tests)
+rem  Usage : double-clic (ou Scripts\SetupAll.bat "D:\Epic Games\UE_5.8")
+rem  Journaux : Saved\Blackwood\ (build.log, import_report.txt, tests.log) et Saved\Automation\
+rem  Ce fichier reste en ASCII (sans accents) : cmd lit mal les .bat qui contiennent de l'UTF-8.
 rem ============================================================================================
 cd /d "%~dp0.."
 if not exist "Saved\Blackwood" mkdir "Saved\Blackwood"
@@ -21,16 +22,18 @@ if exist "%VSWHERE%" for /f "usebackq delims=" %%I in (`"%VSWHERE%" -latest -pro
 if not defined VSPATH (
   echo.
   echo Visual Studio 2022 avec les outils C++ est introuvable. Il est indispensable pour compiler
-  echo le code du jeu. Installer gratuitement « Visual Studio Community 2022 » :
+  echo le code du jeu. Installer gratuitement "Visual Studio Community 2022" :
   echo   https://visualstudio.microsoft.com/fr/downloads/
-  echo en cochant la charge de travail « Developpement de jeux en C++ », puis relancer ce script.
+  echo en cochant la charge de travail "Developpement de jeux en C++", puis relancer ce script.
   goto :fail
 )
 echo Visual Studio : %VSPATH%
 
-rem Version du moteur dans Blackwood.uproject (si elle n'est pas encore renseignee)
-for %%V in ("%UE%") do set "UEFOLDER=%%~nxV"
-set "UEVER=%UEFOLDER:UE_=%"
+rem Version du moteur (Engine\Build\Build.version) inscrite dans Blackwood.uproject si elle est vide
+set "UEVER="
+if exist "%UE%\Engine\Build\Build.version" for /f "usebackq delims=" %%V in (`powershell -NoProfile -Command "$v = Get-Content -Raw '%UE%\Engine\Build\Build.version' | ConvertFrom-Json; [string]$v.MajorVersion + '.' + $v.MinorVersion"`) do set "UEVER=%%V"
+if not defined UEVER for %%V in ("%UE%") do set "UEVER=%%~nxV"
+set "UEVER=%UEVER:UE_=%"
 findstr /c:"\"EngineAssociation\": \"\"" Blackwood.uproject >nul && (
   powershell -NoProfile -Command "(Get-Content -Raw 'Blackwood.uproject') -replace '\"EngineAssociation\": \"\"', '\"EngineAssociation\": \"%UEVER%\"' | Set-Content -NoNewline -Encoding ASCII 'Blackwood.uproject'"
   echo Projet associe a Unreal %UEVER%
@@ -50,7 +53,7 @@ if not exist "SourceAssets\Meshes\SM_Calib_X.glb" (
   goto :fail
 )
 if not exist "..\blackwood\assets\textures" (
-  echo Le dossier « blackwood », le jeu Godot, doit se trouver a cote de BLACKWOOD_UNREAL.
+  echo Le dossier "blackwood" - le jeu Godot - doit se trouver a cote de BLACKWOOD_UNREAL.
   goto :fail
 )
 echo OK
@@ -78,6 +81,7 @@ echo === [5/6] Import dans Unreal ===
 echo L'editeur va s'ouvrir, importer les textures, materiaux, maillages, sons et donnees, construire
 echo la carte, puis se fermer tout seul. Premiere ouverture : la compilation des shaders peut
 echo prendre de 15 a 45 minutes. Ne pas fermer l'editeur pendant l'import.
+if exist "Saved\Blackwood\import_report.txt" del /q "Saved\Blackwood\import_report.txt"
 start "" /wait "%UE%\Engine\Binaries\Win64\UnrealEditor.exe" "%CD%\Blackwood.uproject" -ExecutePythonScript="%~dp0import_all.py" -BWQuitAfterImport
 if exist "Saved\Blackwood\import_report.txt" (
   type "Saved\Blackwood\import_report.txt"
@@ -88,6 +92,7 @@ if exist "Saved\Blackwood\import_report.txt" (
 
 echo.
 echo === [6/6] Tests automatiques (comparaison avec la version Godot) ===
+if exist "Saved\Automation\index.json" del /q "Saved\Automation\index.json"
 call "%~dp0RunTests.bat" "%UE%" > "Saved\Blackwood\tests.log" 2>&1
 if exist "Saved\Automation\index.json" (
   powershell -NoProfile -Command "$r = Get-Content -Raw 'Saved\Automation\index.json' | ConvertFrom-Json; Write-Host ('Tests reussis : ' + $r.succeeded + '   echoues : ' + $r.failed + '   non lances : ' + $r.notRun)"
@@ -97,7 +102,8 @@ if exist "Saved\Automation\index.json" (
 
 echo.
 echo TERMINE. Pour jouer : double-cliquer Blackwood.uproject, puis bouton Play (ou Alt+P).
-echo Touche F3 : informations de debogage. Console (touche ² ) : BWFlag has_flashlight 1, BWTp 38.2 -4 -7.8
+echo Touche F3 : informations de debogage. Console (touche en haut a gauche, sous Echap) :
+echo   BWFlag has_flashlight 1     BWTp 38.2 -4 -7.8     BWGive pistol
 pause
 exit /b 0
 
@@ -117,5 +123,6 @@ exit /b 0
 :fail
 echo.
 echo Arret. Corriger le point ci-dessus puis relancer Scripts\SetupAll.bat.
+echo En cas de doute, envoyer Saved\Blackwood\build.log ou Saved\Blackwood\import_report.txt.
 pause
 exit /b 1

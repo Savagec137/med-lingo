@@ -1499,6 +1499,11 @@ def step_player():
 def main():
     t0 = time.time()
     log("Import Blackwood : projet %s ; Godot %s" % (PROJECT_DIR, GODOT_DIR))
+    # Lancé au démarrage de l'éditeur (SetupAll.bat) : attendre la fin de l'inventaire des assets
+    try:
+        unreal.AssetRegistryHelpers.get_asset_registry().wait_for_completion()
+    except Exception as e:
+        warn("Inventaire des assets non attendu : %s" % e)
     for needed in (DATA_DIR, MESH_DIR, GODOT_DIR):
         if not os.path.isdir(needed):
             warn("Dossier introuvable : %s (voir README.md)" % needed)
