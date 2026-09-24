@@ -69,13 +69,6 @@
    2000
   ]
  },
- "wall_plaster_worn": {
-  "id": "worn_plaster_wall",
-  "size_mm": [
-   1800.0000715255737,
-   1800.0000715255737
-  ]
- },
  "wall_peeling": {
   "id": "peeling_painted_wall",
   "size_mm": [

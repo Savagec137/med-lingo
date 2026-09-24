@@ -83,14 +83,16 @@ void fragment() {
 		pert += (vec3(s.z, 0.0, 0.0) * n.x + vec3(0.0, 1.0, 0.0) * n.y) * w.z;
 	}
 
-	// Taches et variations à grande échelle (bruit projeté sur l'axe dominant)
+	// Taches et variations à grande échelle (bruit projeté sur l'axe dominant) :
+	// nl ~ 2 m (nappes douces), na ~ 0.7 m, nb ~ 10 cm (irrégularité des bords)
 	vec2 nuv = an.y > max(an.x, an.z) ? w_pos.xz : (an.x > an.z ? w_pos.zy : w_pos.xy);
+	float nl = texture(noise_a, nuv * 0.085 + vec2(0.21, 0.47)).r;
 	float na = texture(noise_a, nuv * 0.23).r;
 	float nb = texture(noise_a, nuv * 1.7 + vec2(0.37, 0.61)).r;
 
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
 	alb = mix(vec3(lum), alb, saturation) * tint * brightness;
-	alb *= 1.0 + (na - 0.5) * variation * 2.0;
+	alb *= 1.0 + (nl * 0.65 + na * 0.35 - 0.5) * variation * 2.0;
 
 	float h = mod(w_pos.y - floor_offset, storey_height);
 	bool is_wall = an.y < 0.5;
@@ -101,8 +103,9 @@ void fragment() {
 		alb = mix(alb, rail_color, rail * 0.85);
 	}
 
-	// Salissures : nappes diffuses + accumulation au pied des murs + coulures
-	float g = smoothstep(0.52, 0.95, na) * grime * 0.7;
+	// Salissures : nappes larges et diffuses (pas de taches franches) +
+	// accumulation au pied des murs + coulures
+	float g = smoothstep(0.45, 0.85, nl * 0.8 + na * 0.2) * grime * 0.5;
 	if (is_wall) {
 		float foot = 1.0 - smoothstep(0.0, 0.3 + nb * 0.25, h);
 		float drip = smoothstep(0.62, 0.9, texture(noise_a, vec2(nuv.x * 3.1, w_pos.y * 0.35)).r) * (1.0 - smoothstep(0.4, 2.6, h));
@@ -115,12 +118,16 @@ void fragment() {
 	float rough = clamp(orm.g * roughness_mul + roughness_add + g * 0.15, 0.03, 1.0);
 	float metal = clamp(orm.b * metallic_mul, 0.0, 1.0);
 
-	// Sol mouillé : flaques qui assombrissent et rendent la surface brillante
+	// Sol mouillé : toute la surface est humide (un peu plus sombre et
+	// brillante) ; quelques flaques larges aux bords doux, lisses comme un miroir.
 	if (wetness > 0.0 && w_nrm.y > 0.7) {
-		float wet = smoothstep(0.48, 0.62, na * 0.7 + nb * 0.3) * wetness;
-		alb *= 1.0 - wet * 0.35;
-		rough = mix(rough, 0.06, wet);
-		pert *= 1.0 - wet * 0.8;
+		float pn = texture(noise_a, w_pos.xz * 0.045 + vec2(0.61, 0.13)).r;
+		float puddle = smoothstep(0.6, 0.655, pn + (nb - 0.5) * 0.06) * wetness;
+		float damp = wetness * 0.6;
+		alb *= (1.0 - damp * 0.2) * (1.0 - puddle * 0.22);
+		rough = mix(rough, rough * 0.55, damp);
+		rough = mix(rough, 0.04, puddle);
+		pert *= 1.0 - puddle * 0.9;
 	}
 
 	vec3 nw = normalize(w_nrm + pert);

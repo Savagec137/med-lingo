@@ -17,7 +17,6 @@ attribution obligatoire. Résolution 1K, cartes : albédo, normale (OpenGL), ORM
 | `floor_wood` | [Laminate Floor 02](https://polyhaven.com/a/laminate_floor_02) | 1699.9999284744263 × 1700.0000476837158 | Dario Barresi, Charlotte Baglioni |
 | `floor_carpet` | [Dirty Carpet](https://polyhaven.com/a/dirty_carpet) | 599.9999046325684 × 599.9999046325684 | Rohit Seervi |
 | `wall_plaster` | [Painted Plaster Wall](https://polyhaven.com/a/painted_plaster_wall) | 2000 × 2000 | Amal Kumar |
-| `wall_plaster_worn` | [Worn Plaster Wall](https://polyhaven.com/a/worn_plaster_wall) | 1800.0000715255737 × 1800.0000715255737 | Dimitrios Savva |
 | `wall_peeling` | [Peeling Painted Wall](https://polyhaven.com/a/peeling_painted_wall) | 1800.0000715255737 × 1800.0000715255737 | Dimitrios Savva |
 | `wall_tile` | [Long White Tiles](https://polyhaven.com/a/long_white_tiles) | 1269.9999809265137 × 1269.9999809265137 | Jenelle van Heerden, Sergej Majboroda |
 | `wall_tile_big` | [Interior Tiles](https://polyhaven.com/a/interior_tiles) | 1899.9998569488525 × 1899.9998569488525 | Charlotte Baglioni |

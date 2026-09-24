@@ -46,20 +46,22 @@ static func curtain(g: Geo, zone: String, a: Vector3, b: Vector3, h: float = 2.3
 	if open > 0.05:
 		g.box(zone, mat, fold + Vector3(0, h * 0.5 + 0.05, 0), Vector3(0.12, h - 0.3, 0.16),
 			{"basis": Basis(Vector3.UP, atan2(-dir.z, dir.x)), "collide": false})
+	# Partie fermée : une cloison, que la navigation contourne (pas un meuble qu'on frôle)
 	if closed > 0.3:
-		g.solid(zone, a + dir * closed * 0.5 + Vector3(0, 1.0, 0), Vector3(closed, 2.0, 0.08), Basis(Vector3.UP, atan2(-dir.z, dir.x)), false)
+		g.solid(zone, a + dir * closed * 0.5 + Vector3(0, 1.0, 0), Vector3(closed, 2.0, 0.08), Basis(Vector3.UP, atan2(-dir.z, dir.x)))
 
 
 ## Comptoir d'accueil (w de long) ; le public est côté -Z local.
 static func reception_desk(g: Geo, zone: String, pos: Vector3, rot: float = 0.0, w: float = 4.0,
 		mat: String = "wood_desk") -> void:
 	var xf := _xf(pos, rot)
-	_b(g, zone, mat, xf, Vector3(0, 0.55, -0.25), Vector3(w, 1.1, 0.08))
-	_b(g, zone, "metal_steel", xf, Vector3(0, 1.12, -0.32), Vector3(w + 0.1, 0.04, 0.34))
-	_b(g, zone, mat, xf, Vector3(0, 0.74, 0.1), Vector3(w - 0.1, 0.04, 0.7))
+	Props._r(g, zone, mat, xf, Vector3(0, 0.56, -0.25), Vector3(w, 1.06, 0.08), 0.015)
+	Props._r(g, zone, "metal_steel", xf, Vector3(0, 1.12, -0.32), Vector3(w + 0.1, 0.04, 0.34), 0.015)
+	Props._r(g, zone, mat, xf, Vector3(0, 0.74, 0.1), Vector3(w - 0.1, 0.04, 0.7), 0.01)
 	for x in [-w * 0.5 + 0.05, w * 0.5 - 0.05]:
-		_b(g, zone, mat, xf, Vector3(x, 0.55, 0.05), Vector3(0.08, 1.1, 0.6))
-	_b(g, zone, "fabric_blue", xf, Vector3(0, 0.3, -0.3), Vector3(w - 0.3, 0.3, 0.01))
+		Props._r(g, zone, mat, xf, Vector3(x, 0.55, 0.05), Vector3(0.08, 1.1, 0.6), 0.012)
+	Props._r(g, zone, "plastic_black", xf, Vector3(0, 0.05, -0.3), Vector3(w - 0.02, 0.1, 0.02), 0.005)
+	Props._r(g, zone, "vinyl_blue", xf, Vector3(0, 0.45, -0.3), Vector3(w - 0.3, 0.42, 0.012), 0.004)
 	g.solid(zone, xf * Vector3(0, 0.55, -0.05), Vector3(w, 1.1, 0.5), xf.basis)
 
 
@@ -238,19 +240,36 @@ static func barrier(g: Geo, zone: String, a: Vector3, b: Vector3) -> void:
 	g.solid(zone, mid + Vector3(0, 0.55, 0), Vector3(length, 1.1, 0.2), Basis(Vector3.UP, rot))
 
 
-## Chariot de soins.
+## Chariot de soins : cadre chromé à roulettes, plateaux à rebord, poignée,
+## matériel posé dessus.
 static func cart(g: Geo, zone: String, pos: Vector3, rot: float = 0.0, tipped: bool = false) -> void:
 	var xf := _xf(pos, rot)
 	if tipped:
 		xf = xf * Transform3D(Basis(Vector3.FORWARD, PI / 2.0 - 0.05), Vector3(0.3, 0.3, 0))
-	for y in [0.2, 0.55, 0.9]:
-		_b(g, zone, "metal_steel", xf, Vector3(0, y, 0), Vector3(0.7, 0.03, 0.45))
-	for x in [-0.33, 0.33]:
-		for z in [-0.2, 0.2]:
-			_b(g, zone, "metal_steel", xf, Vector3(x, 0.47, z), Vector3(0.025, 0.9, 0.025))
-	_b(g, zone, "plastic_white", xf, Vector3(-0.1, 0.97, 0.05), Vector3(0.2, 0.1, 0.15))
-	_b(g, zone, "plastic_orange", xf, Vector3(0.18, 0.95, -0.05), Vector3(0.14, 0.06, 0.1))
+	g.stamp(zone, "cart", xf, func(tg: Geo, tz: String, txf: Transform3D) -> void: _geo_cart(tg, tz, txf))
 	g.solid(zone, _xf(pos, rot) * Vector3(0, 0.45, 0), Vector3(0.75, 0.9, 0.5), Basis(Vector3.UP, rot), false)
+
+
+static func _geo_cart(g: Geo, zone: String, xf: Transform3D) -> void:
+	for x in [-0.32, 0.32]:
+		for z in [-0.19, 0.19]:
+			g.cylinder(zone, "metal_chrome", xf * Vector3(x, 0.1, z), xf * Vector3(x, 0.95, z), 0.013, {"segments": 8})
+			Props.caster(g, zone, xf, Vector3(x, 0, z), 0.04, 0.025, 0.1, "plastic_black", "metal_chrome")
+	for y in [0.22, 0.56, 0.9]:
+		Props._r(g, zone, "metal_steel", xf, Vector3(0, y, 0), Vector3(0.7, 0.022, 0.44), 0.008)
+		for zs in [-1.0, 1.0]:
+			Props._r(g, zone, "metal_steel", xf, Vector3(0, y + 0.025, zs * 0.215), Vector3(0.7, 0.03, 0.012), 0.004)
+	# Poignée de poussée
+	for z2 in [-0.15, 0.15]:
+		g.cylinder(zone, "metal_chrome", xf * Vector3(0.32, 0.9, z2), xf * Vector3(0.42, 0.93, z2), 0.01, {"segments": 6})
+	g.cylinder(zone, "plastic_black", xf * Vector3(0.42, 0.93, -0.17), xf * Vector3(0.42, 0.93, 0.17), 0.016, {"segments": 8})
+	# Matériel : boîte de soins, bac, flacons, serviettes
+	Props._r(g, zone, "plastic_white", xf, Vector3(-0.12, 0.97, 0.04), Vector3(0.22, 0.12, 0.16), 0.02)
+	Props._r(g, zone, "plastic_orange", xf, Vector3(0.14, 0.945, -0.06), Vector3(0.16, 0.07, 0.12), 0.015)
+	for k in 3:
+		g.cylinder(zone, ["glass_dirty", "plastic_white", "metal_blue"][k], xf * Vector3(0.08 + k * 0.06, 0.912, 0.12), xf * Vector3(0.08 + k * 0.06, 1.02, 0.12), 0.022, {"segments": 8})
+	Props._r(g, zone, "linen", xf, Vector3(-0.1, 0.6, 0.0), Vector3(0.36, 0.06, 0.3), 0.02)
+	Props._r(g, zone, "cardboard", xf, Vector3(0.12, 0.3, 0.02), Vector3(0.3, 0.14, 0.26), 0.01)
 
 
 ## Traînée de sang de a vers b.

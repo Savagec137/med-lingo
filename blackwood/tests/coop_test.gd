@@ -660,6 +660,9 @@ func _test_combat() -> void:
 
 func _test_targeting() -> void:
 	_log("── Changement de cible des créatures")
+	# Les deux joueurs debout : un joueur à terre (blessé au combat précédent) n'est
+	# pas une cible, ce qui fausserait le contrôle
+	await _restore_players()
 	await _place_host(Vector3(-2.5, 0.05, -14.0), Vector3(0.0, 1.0, -14.0))
 	await _place_client(Vector3(9.0, 0.05, -14.0), Vector3(0.0, 1.0, -14.0))
 	var e := _spawn_enemy("patient", Vector3(0.0, 0.05, -14.0), 0.0)

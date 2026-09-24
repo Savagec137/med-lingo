@@ -7,7 +7,7 @@ signal closed
 var ui: Node
 ## Met le jeu en pause tant que l'écran est ouvert.
 var pauses_game := true
-## Échap / Tab ferment l'écran.
+## Échap / Tab (manette : B, MENU, VUE) ferment l'écran.
 var closable := true
 
 
@@ -28,7 +28,7 @@ func on_open() -> void:
 
 ## Retourne true si l'évènement a été consommé.
 func handle_input(event: InputEvent) -> bool:
-	if closable and (event.is_action_pressed("pause") or event.is_action_pressed("inventory")):
+	if closable and (event.is_action_pressed("pause") or event.is_action_pressed("inventory") or event.is_action_pressed("ui_cancel")):
 		ui.close_screen(self)
 		return true
 	return false

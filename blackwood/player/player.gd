@@ -65,6 +65,8 @@ var _heal_cd := 0.0
 var _breath_level := 0.0
 var _move_speed := 0.0
 var _fire_was_down := false
+## Manette : course enclenchée par L3 (relâchée à l'arrêt ou en visée).
+var _run_latch := false
 var _downed_t := 0.0
 
 # Réplique réseau : dernier état reçu
@@ -219,7 +221,10 @@ func camera_yaw() -> float:
 func _unhandled_input(event: InputEvent) -> void:
 	if is_dead or not controls_enabled or get_tree().paused:
 		return
-	if event.is_action_pressed("interact"):
+	if event is InputEventJoypadButton and event.is_action_pressed("run"):
+		# Manette : L3 enclenche la course, qui dure jusqu'à l'arrêt
+		_run_latch = not _run_latch
+	elif event.is_action_pressed("interact"):
 		try_interact()
 	elif event.is_action_pressed("reload"):
 		if is_armed():
@@ -323,7 +328,9 @@ func _physics_process(delta: float) -> void:
 	if can_act:
 		input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		want_aim = Input.is_action_pressed("aim") and is_armed() and not weapons.is_melee()
-		want_run = Input.is_action_pressed("run")
+		if input.length() < 0.25 or want_aim:
+			_run_latch = false
+		want_run = Input.is_action_pressed("run") or _run_latch
 		if is_armed() and (fire_edge or (fire_down and (weapons.is_auto() or weapons.is_melee()))):
 			if weapons.is_melee():
 				_do_fire()

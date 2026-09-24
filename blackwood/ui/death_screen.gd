@@ -6,7 +6,7 @@ const TIPS := [
 	"Les créatures entendent vos pas. Marchez plutôt que courir près d'elles.",
 	"Une balle dans la tête vaut trois balles dans le torse.",
 	"Éteindre la lampe (F) rend plus difficile à repérer.",
-	"L'esquive (Espace) rend brièvement insaisissable.",
+	"L'esquive ({key:dodge}) rend brièvement insaisissable.",
 	"Rien ne vous oblige à tuer chaque créature. Les munitions sont rares.",
 	"Le magnétophone enregistre votre progression. Pensez-y avant l'inconnu.",
 ]
@@ -61,7 +61,7 @@ func on_open() -> void:
 	title.text = "GAME OVER" if coop else "YOU DIED"
 	retry_btn.visible = not Net.is_client()
 	waiting.visible = Net.is_client()
-	tip.text = TIPS[randi() % TIPS.size()]
+	tip.text = InputSetup.fill_keys(TIPS[randi() % TIPS.size()])
 	_t = 0.0
 	modulate.a = 0.0
 	var tw := create_tween()

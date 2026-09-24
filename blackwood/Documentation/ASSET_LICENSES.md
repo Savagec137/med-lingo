@@ -1,7 +1,8 @@
 # ASSET_LICENSES — Blackwood Hospital
 
 Registre de tous les assets externes ou générés intégrés au jeu (section 17 du cahier des charges).
-Règle : aucun asset dont la licence est inconnue n'est intégré. Dernière mise à jour : 23/09/2026.
+Règle : aucun asset dont la licence est inconnue n'est intégré. Dernière mise à jour : 24/09/2026
+(texture « Worn Plaster Wall » retirée : ses grosses écailles faisaient des taches répétées sur les murs).
 
 ## Textures PBR — Poly Haven (CC0)
 
@@ -21,7 +22,6 @@ obligatoire (les auteurs sont crédités ci-dessous par courtoisie).
 | `floor_wood` | Laminate Floor 02 | https://polyhaven.com/a/laminate_floor_02 | Dario Barresi, Charlotte Baglioni | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
 | `floor_carpet` | Dirty Carpet | https://polyhaven.com/a/dirty_carpet | Rohit Seervi | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
 | `wall_plaster` | Painted Plaster Wall | https://polyhaven.com/a/painted_plaster_wall | Amal Kumar | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
-| `wall_plaster_worn` | Worn Plaster Wall | https://polyhaven.com/a/worn_plaster_wall | Dimitrios Savva | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
 | `wall_peeling` | Peeling Painted Wall | https://polyhaven.com/a/peeling_painted_wall | Dimitrios Savva | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
 | `wall_tile` | Long White Tiles | https://polyhaven.com/a/long_white_tiles | Jenelle van Heerden, Sergej Majboroda | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
 | `wall_tile_big` | Interior Tiles | https://polyhaven.com/a/interior_tiles | Charlotte Baglioni | Poly Haven | CC0 1.0 | 2026-09-23 | Toute utilisation, y compris commerciale | Non |
@@ -67,8 +67,11 @@ obligatoire (les auteurs sont crédités ci-dessous par courtoisie).
 
 ## Géométrie
 
-Le bâtiment, le mobilier, le matériel médical, les armes et les personnages principaux sont construits en
-code (primitives fusionnées, `scripts/level/`, `player/`, `items/`) : aucun asset externe.
+Le bâtiment, le mobilier, le matériel médical, les véhicules, les arbres, les armes et les personnages
+principaux sont construits en code (primitives fusionnées ou instanciées, `scripts/level/`, `player/`,
+`items/`) : aucun asset externe. Le feuillage est ajouré par un shader original
+(`materials/shaders/foliage.gdshader`) ; les reflets des objets à ramasser et les gouttes de pluie sont
+des textures générées au lancement par le code.
 
 ## Assets refusés / non utilisés
 

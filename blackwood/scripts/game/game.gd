@@ -410,13 +410,28 @@ func _build_rain() -> void:
 	rain.initial_velocity_min = 17.0
 	rain.initial_velocity_max = 21.0
 	var q := QuadMesh.new()
-	q.size = Vector2(0.012, 0.55)
+	q.size = Vector2(0.006, 0.42)
 	var m := StandardMaterial3D.new()
 	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	m.albedo_color = Color(0.7, 0.75, 0.85, 0.28)
+	m.albedo_color = Color(0.72, 0.77, 0.86, 0.3)
 	m.billboard_mode = BaseMaterial3D.BILLBOARD_FIXED_Y
 	m.billboard_keep_scale = true
+	# Traînée aux extrémités adoucies ; les gouttes qui frôlent la caméra
+	# s'effacent (sinon elles barrent l'écran de grands traits blancs).
+	var grad := Gradient.new()
+	grad.offsets = PackedFloat32Array([0.0, 0.35, 0.8, 1.0])
+	grad.colors = PackedColorArray([Color(1, 1, 1, 0), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1), Color(1, 1, 1, 0)])
+	var streak := GradientTexture2D.new()
+	streak.gradient = grad
+	streak.fill_from = Vector2(0.5, 0.0)
+	streak.fill_to = Vector2(0.5, 1.0)
+	streak.width = 4
+	streak.height = 64
+	m.albedo_texture = streak
+	m.distance_fade_mode = BaseMaterial3D.DISTANCE_FADE_PIXEL_ALPHA
+	m.distance_fade_min_distance = 1.2
+	m.distance_fade_max_distance = 4.0
 	q.material = m
 	rain.mesh = q
 	rain.visibility_aabb = AABB(Vector3(-20, -20, -20), Vector3(40, 40, 40))

@@ -95,10 +95,38 @@ Touches liées à leur **position physique** : sur un clavier AZERTY, WASD devie
 | Performances (FPS…) · infos DEBUG | F3 |
 | Console DEBUG (si activée) | F1 |
 
+### Manette
+
+Toute la partie et tous les menus se jouent à la manette (Xbox, PlayStation, Nintendo
+Switch Pro ou compatible, branchée ou sans fil) : il suffit de l'utiliser, le jeu bascule
+tout seul et affiche les boutons de la manette branchée (A / CROIX, RT / R2…). Disposition
+Xbox ci-dessous, mêmes positions sur les autres manettes.
+
+| Action | Manette |
+| --- | --- |
+| Se déplacer · caméra | Stick gauche · stick droit |
+| Courir (enclenché jusqu'à l'arrêt) | L3 (clic du stick gauche) |
+| Viser · tirer / frapper | LT · RT |
+| Interagir, ramasser, lire, réanimer (coop) | A |
+| Esquive | B |
+| Recharger | X |
+| Soin rapide (spray) | Y |
+| Arme précédente / suivante | LB / RB (ou croix gauche / droite) |
+| Lampe torche | Croix haut |
+| Inventaire | VUE (ou croix bas) |
+| Vue 1re / 3e personne | R3 |
+| Pause | MENU |
+| Menus : choisir · valider · retour · onglets | Stick ou croix · A · B · LB / RB |
+
+Le clavier à code se compose au stick (A enfonce la touche). Une manette débranchée en
+pleine partie met le jeu en pause. En coopération, seule l'adresse IP à saisir demande un
+clavier (la recherche de sessions sur le réseau local se fait à la manette).
+
 **OPTIONS** (menu principal ou pause), en onglets : graphismes (préréglages, ombres,
 brouillard volumétrique, SSAO, SSR, anticrénelage, échelle de rendu), affichage (fenêtre,
 V-Sync, FPS max, luminosité, champ de vision), audio (volumes, sous-titres), jeu (vue,
-difficulté, sensibilité, réticule, intensité de la lampe, mode DEBUG), contrôles.
+difficulté, sensibilité de la souris et du stick, vibrations, inversion de l'axe vertical,
+réticule, intensité de la lampe, mode DEBUG), commandes (clavier et manette).
 
 ## Contenu
 
@@ -150,6 +178,10 @@ godot --headless --fixed-fps 60 --path . -- --test=ui_flows
 # Mode DEBUG (console tapée au clavier), batterie de la lampe, épreuve des 9 créatures
 godot --headless --fixed-fps 60 --path . -- --test=debug_mode
 
+# Manette : vrais évènements de manette (menus au stick, A/B, déplacement, caméra, course,
+# visée/tir, armes, pause, inventaire, clavier à code, libellés, déconnexion)
+godot --headless --fixed-fps 60 --path . -- --test=gamepad
+
 # Coopération en réseau : l'hôte lance lui-même un second processus (l'invité) puis un
 # troisième (refusé) ; 119 vérifications (salon, objets, portes, tirs, boss, à terre,
 # GAME OVER/RETRY, déconnexion/reconnexion…) et aucune erreur de script tolérée des
@@ -163,6 +195,11 @@ godot --headless --path . res://tests/interact_audit.tscn
 
 # Construction de la tour, statistiques, 17 contrôles de navigation, 25 vues rendues
 godot --headless --path . res://tests/level_tour.tscn
+
+# Rendus (affichage requis, ex. xvfb-run) : chaque accessoire seul sous deux angles, et
+# captures dans une vraie partie (pluie, reflets, rampe, quai des ambulances, accueil)
+godot --path . res://tests/prop_studio.tscn -- --shots=captures [--only=wheelchair,ambulance]
+godot --path . -- --test=visual_check --shots=captures
 ```
 
 ## Organisation
@@ -191,8 +228,9 @@ couloir, pièces, cages d'escalier, ascenseurs, façades) et un fichier par éta
 
 Registre complet : `Documentation/ASSET_LICENSES.md` (aucune ressource de licence inconnue,
 aucune ressource extraite d'un jeu). Textures : Poly Haven (CC0). Modèle des infectés :
-généré avec Higgsfield. Polices : SIL OFL 1.1 / Apache 2.0. Code, sons, géométrie, textes :
-créés pour ce projet.
+généré avec Higgsfield. Polices : SIL OFL 1.1 / Apache 2.0. Code, sons, géométrie (dont
+tous les accessoires : véhicules, fauteuils, brancards, arbres…), textes : créés pour ce
+projet.
 
 <details>
 <summary><strong>Solution complète (spoilers)</strong></summary>

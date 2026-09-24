@@ -11,6 +11,7 @@ const LIQUID_SHADER := preload("res://materials/shaders/liquid.gdshader")
 const WATER_SHADER := preload("res://materials/shaders/water.gdshader")
 const FLESH_SHADER := preload("res://materials/shaders/flesh.gdshader")
 const PBR_SHADER := preload("res://materials/shaders/pbr_surface.gdshader")
+const FOLIAGE_SHADER := preload("res://materials/shaders/foliage.gdshader")
 const TEX_DIR := "res://assets/textures/"
 
 ## Taille réelle (m) couverte par une répétition de chaque jeu de textures
@@ -18,7 +19,7 @@ const TEX_DIR := "res://assets/textures/"
 const TEX_SIZE := {
 	"floor_hospital": 2.2, "floor_hall": 3.0, "floor_lab": 1.8, "floor_worn": 2.0, "floor_retro": 2.0,
 	"floor_checker": 3.0, "floor_concrete": 3.0, "floor_wood": 1.7, "floor_carpet": 0.6,
-	"wall_plaster": 2.0, "wall_plaster_worn": 1.8, "wall_peeling": 1.8, "wall_tile": 1.27,
+	"wall_plaster": 2.0, "wall_peeling": 1.8, "wall_tile": 1.27,
 	"wall_tile_big": 1.9, "wall_concrete": 2.0, "facade": 8.0, "facade_dark": 2.0, "asphalt": 3.0,
 	"metal_diamond": 0.5, "metal_worn": 2.0, "metal_painted": 1.0, "metal_blue": 2.5, "shutter": 2.0,
 	"wood": 1.5, "denim": 0.1, "leather": 0.4, "ceiling_tile": 1.2,
@@ -28,10 +29,10 @@ const TEX_SIZE := {
 ## humidité (shader pbr_surface). Prioritaires sur SURFACES quand elles existent.
 const TEXTURED := {
 	"wall_hospital": {"tex": "wall_plaster", "tint": Color(0.86, 0.9, 0.86), "band": 1.1, "band_tint": Color(0.5, 0.62, 0.58), "rail": Color(0.28, 0.33, 0.31), "grime": 0.45},
-	"wall_hospital_dirty": {"tex": "wall_plaster_worn", "tint": Color(0.84, 0.88, 0.84), "band": 1.1, "band_tint": Color(0.46, 0.56, 0.52), "rail": Color(0.25, 0.28, 0.26), "grime": 0.8},
+	"wall_hospital_dirty": {"tex": "wall_plaster", "tint": Color(0.8, 0.84, 0.8), "band": 1.1, "band_tint": Color(0.44, 0.54, 0.5), "rail": Color(0.25, 0.28, 0.26), "grime": 0.95, "variation": 0.2},
 	"wall_admin": {"tex": "wall_plaster", "tint": Color(0.93, 0.88, 0.8), "band": 0.95, "band_tint": Color(0.55, 0.42, 0.3), "rail": Color(0.28, 0.2, 0.13), "grime": 0.4},
 	"wall_pediatric": {"tex": "wall_plaster", "tint": Color(0.95, 0.9, 0.78), "band": 1.0, "band_tint": Color(0.55, 0.7, 0.82), "rail": Color(0.8, 0.5, 0.2), "grime": 0.55},
-	"wall_stair": {"tex": "wall_plaster_worn", "tint": Color(0.82, 0.84, 0.82), "band": 1.0, "band_tint": Color(0.42, 0.46, 0.45), "rail": Color(0.2, 0.2, 0.2), "grime": 0.7},
+	"wall_stair": {"tex": "wall_plaster", "tint": Color(0.8, 0.82, 0.8), "band": 1.0, "band_tint": Color(0.42, 0.46, 0.45), "rail": Color(0.2, 0.2, 0.2), "grime": 0.85, "variation": 0.18},
 	"floor_stair": {"tex": "floor_concrete", "brightness": 0.95, "grime": 0.6},
 	"wall_ward": {"tex": "wall_plaster", "tint": Color(0.9, 0.9, 0.86), "band": 1.1, "band_tint": Color(0.62, 0.68, 0.78), "rail": Color(0.35, 0.4, 0.5), "grime": 0.5},
 	"wall_neuro": {"tex": "wall_plaster", "tint": Color(0.9, 0.88, 0.84), "band": 1.1, "band_tint": Color(0.72, 0.6, 0.66), "rail": Color(0.4, 0.3, 0.35), "grime": 0.5},
@@ -45,7 +46,7 @@ const TEXTURED := {
 	"wall_concrete_dark": {"tex": "wall_concrete", "brightness": 0.55, "grime": 0.8},
 	"wall_ext": {"tex": "facade", "grime": 0.5},
 	"wall_facade_dark": {"tex": "facade_dark", "grime": 0.3},
-	"wall_plaster": {"tex": "wall_plaster_worn", "tint": Color(0.92, 0.88, 0.82), "grime": 0.7},
+	"wall_plaster": {"tex": "wall_plaster", "tint": Color(0.9, 0.86, 0.8), "grime": 0.8, "variation": 0.18},
 	"wall_peeling": {"tex": "wall_peeling", "saturation": 0.35, "tint": Color(0.95, 0.93, 0.88), "grime": 0.7},
 	"floor_tile": {"tex": "floor_hall", "grime": 0.45, "wet": 0.35},
 	"floor_tile_lab": {"tex": "floor_lab", "tint": Color(0.92, 0.95, 0.97), "grime": 0.35, "wet": 0.3},
@@ -75,6 +76,11 @@ const TEXTURED := {
 	"cloth_jeans": {"tex": "denim", "grime": 0.2, "scale": 2.0},
 	"cloth_jacket": {"tex": "leather", "tint": Color(0.55, 0.42, 0.32), "grime": 0.25},
 	"glove": {"tex": "leather", "saturation": 0.2, "brightness": 0.35, "grime": 0.1, "scale": 0.5},
+	# Similicuir des fauteuils, brancards, banquettes ; tissu tissé des sièges de bureau
+	"vinyl_dark": {"tex": "leather", "saturation": 0.25, "tint": Color(0.62, 0.68, 0.82), "brightness": 0.3, "grime": 0.1, "scale": 0.6, "variation": 0.05},
+	"vinyl_blue": {"tex": "leather", "saturation": 0.0, "tint": Color(0.36, 0.5, 0.82), "brightness": 0.62, "grime": 0.15, "scale": 0.6, "variation": 0.05},
+	"vinyl_gray": {"tex": "leather", "saturation": 0.0, "tint": Color(0.62, 0.7, 0.74), "brightness": 0.75, "grime": 0.25, "scale": 0.6, "variation": 0.05},
+	"fabric_office": {"tex": "denim", "saturation": 0.12, "tint": Color(0.78, 0.84, 1.0), "brightness": 0.38, "grime": 0.08, "scale": 1.6, "variation": 0.05},
 }
 
 ## Surfaces du décor (shader surface.gdshader).
@@ -114,16 +120,25 @@ const SURFACES := {
 	"fabric_blue": {"pattern": 0, "base": Color(0.11, 0.16, 0.26), "rough": 1.0, "grime": 0.5, "variation": 0.2},
 	"fabric_green": {"pattern": 0, "base": Color(0.14, 0.24, 0.2), "rough": 1.0, "grime": 0.5, "variation": 0.2},
 	"fabric_brown": {"pattern": 0, "base": Color(0.25, 0.16, 0.1), "rough": 1.0, "grime": 0.5, "variation": 0.25},
-	"mattress": {"pattern": 0, "base": Color(0.55, 0.57, 0.55), "rough": 0.95, "grime": 0.9, "variation": 0.15},
+	"mattress": {"pattern": 0, "base": Color(0.55, 0.57, 0.55), "rough": 0.95, "grime": 0.55, "variation": 0.1},
 	"cardboard": {"pattern": 0, "base": Color(0.42, 0.32, 0.2), "rough": 0.95, "grime": 0.5, "variation": 0.2},
 	"paper": {"pattern": 0, "base": Color(0.78, 0.76, 0.68), "rough": 0.95, "grime": 0.35},
 	"rubber": {"pattern": 0, "base": Color(0.03, 0.03, 0.03), "rough": 0.8, "grime": 0.1},
-	"bark": {"pattern": 8, "base": Color(0.09, 0.07, 0.05), "alt": Color(0.05, 0.04, 0.03), "rough": 1.0, "grime": 0.2},
-	"foliage": {"pattern": 0, "base": Color(0.03, 0.06, 0.035), "rough": 1.0, "grime": 0.4, "variation": 0.5},
-	"car_red": {"pattern": 7, "base": Color(0.28, 0.04, 0.04), "alt": Color(0.2, 0.1, 0.05), "rough": 0.3, "metallic": 0.5, "grime": 0.4},
-	"car_gray": {"pattern": 7, "base": Color(0.25, 0.26, 0.27), "alt": Color(0.2, 0.1, 0.05), "rough": 0.35, "metallic": 0.5, "grime": 0.4},
-	"car_white": {"pattern": 7, "base": Color(0.62, 0.62, 0.6), "alt": Color(0.3, 0.15, 0.07), "rough": 0.35, "metallic": 0.3, "grime": 0.5},
-	"car_black": {"pattern": 7, "base": Color(0.03, 0.035, 0.04), "alt": Color(0.1, 0.06, 0.04), "rough": 0.25, "metallic": 0.6, "grime": 0.2},
+	"bark": {"pattern": 8, "base": Color(0.12, 0.095, 0.07), "alt": Color(0.055, 0.045, 0.035), "rough": 1.0, "grime": 0.2, "bump": 3.0},
+	"car_red": {"pattern": 7, "base": Color(0.3, 0.035, 0.035), "alt": Color(0.2, 0.1, 0.05), "rough": 0.24, "metallic": 0.35, "grime": 0.18},
+	"car_gray": {"pattern": 7, "base": Color(0.27, 0.28, 0.3), "alt": Color(0.2, 0.1, 0.05), "rough": 0.26, "metallic": 0.45, "grime": 0.18},
+	"car_white": {"pattern": 7, "base": Color(0.66, 0.66, 0.64), "alt": Color(0.3, 0.15, 0.07), "rough": 0.26, "metallic": 0.15, "grime": 0.18},
+	"car_black": {"pattern": 7, "base": Color(0.03, 0.035, 0.04), "alt": Color(0.1, 0.06, 0.04), "rough": 0.2, "metallic": 0.5, "grime": 0.12},
+	"paint_white": {"pattern": 0, "base": Color(0.7, 0.7, 0.68), "rough": 0.3, "grime": 0.22, "variation": 0.03},
+	"paint_blue": {"pattern": 0, "base": Color(0.03, 0.09, 0.3), "rough": 0.3, "grime": 0.15, "variation": 0.03},
+	"paint_orange": {"pattern": 0, "base": Color(0.72, 0.2, 0.02), "rough": 0.32, "grime": 0.15, "variation": 0.03},
+	"tire": {"pattern": 0, "base": Color(0.022, 0.022, 0.024), "rough": 0.82, "grime": 0.05, "variation": 0.1, "bump": 2.0},
+	"linen": {"pattern": 0, "base": Color(0.6, 0.61, 0.6), "rough": 0.95, "grime": 0.35, "variation": 0.08},
+	"lens_blue": {"pattern": 0, "base": Color(0.02, 0.06, 0.26), "rough": 0.12, "grime": 0.05, "variation": 0.02},
+	"plastic_black": {"pattern": 0, "base": Color(0.03, 0.03, 0.033), "rough": 0.42, "grime": 0.08, "variation": 0.04},
+	"plastic_gray": {"pattern": 0, "base": Color(0.3, 0.31, 0.32), "rough": 0.5, "grime": 0.2, "variation": 0.05},
+	"metal_chrome": {"pattern": 7, "base": Color(0.64, 0.65, 0.67), "alt": Color(0.3, 0.2, 0.15), "rough": 0.2, "metallic": 0.95, "grime": 0.06},
+	"metal_alu": {"pattern": 7, "base": Color(0.52, 0.53, 0.55), "alt": Color(0.3, 0.2, 0.15), "rough": 0.38, "metallic": 0.8, "grime": 0.08},
 	"cloth_jacket": {"pattern": 0, "base": Color(0.17, 0.11, 0.075), "rough": 0.65, "grime": 0.3, "variation": 0.15},
 	"cloth_jeans": {"pattern": 0, "base": Color(0.09, 0.11, 0.16), "rough": 0.95, "grime": 0.3, "variation": 0.15},
 	"cloth_shirt": {"pattern": 0, "base": Color(0.25, 0.26, 0.27), "rough": 0.95, "grime": 0.2},
@@ -258,6 +273,17 @@ static func _special(mat_name: String) -> Material:
 			g2.roughness = 0.4
 			g2.cull_mode = BaseMaterial3D.CULL_DISABLED
 			return g2
+		"glass_car":
+			# Vitre teintée vue de l'extérieur : opaque, sombre et réfléchissante
+			var gc := StandardMaterial3D.new()
+			gc.albedo_color = Color(0.02, 0.025, 0.03)
+			gc.roughness = 0.06
+			gc.metallic_specular = 0.9
+			return gc
+		"foliage":
+			return foliage(Color(0.025, 0.045, 0.022), Color(0.075, 0.105, 0.04), 0.42)
+		"foliage_pine":
+			return foliage(Color(0.018, 0.04, 0.026), Color(0.045, 0.08, 0.045), 0.46)
 		"tank_glass":
 			var g3 := StandardMaterial3D.new()
 			g3.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
@@ -301,6 +327,9 @@ static func _special(mat_name: String) -> Material:
 			return _emissive(Color(1.0, 0.8, 0.55), 0.6)
 		"emit_window_cold":
 			return _emissive(Color(0.7, 0.85, 1.0), 0.5)
+		"emit_window_dim":
+			# Fenêtre derrière un rideau, lampe de chevet
+			return _emissive(Color(1.0, 0.62, 0.35), 0.18)
 		"light_off":
 			var off := StandardMaterial3D.new()
 			off.albedo_color = Color(0.3, 0.3, 0.3)
@@ -417,6 +446,16 @@ static func flesh(skin: Color, wounds: float) -> ShaderMaterial:
 	m.set_shader_parameter("skin", skin)
 	m.set_shader_parameter("wound_amount", wounds)
 	m.set_shader_parameter("noise_a", noise_a())
+	m.set_shader_parameter("noise_b", noise_b())
+	return m
+
+
+static func foliage(dark: Color, light: Color, cutout: float) -> ShaderMaterial:
+	var m := ShaderMaterial.new()
+	m.shader = FOLIAGE_SHADER
+	m.set_shader_parameter("color_dark", dark)
+	m.set_shader_parameter("color_light", light)
+	m.set_shader_parameter("cutout", cutout)
 	m.set_shader_parameter("noise_b", noise_b())
 	return m
 

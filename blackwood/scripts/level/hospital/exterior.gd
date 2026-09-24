@@ -101,8 +101,11 @@ static func _ramp(f: Facility, g: Geo) -> void:
 	g.box(Z, "metal_dark", Vector3(38.0, 3.9, 21.0), Vector3(5.5, 0.4, 0.2), {"collide": false})
 	f.add_label(Z, "HAUTEUR LIMITE 3,60 m", Vector3(38.0, 3.9, 21.12), 0.0, 0.7, Color(1.0, 0.85, 0.2))
 	f.add_light(Z, Vector3(38.0, 4.3, 20.3), Color(1.0, 0.3, 0.25), 1.6, 9.0, LightFixture.Mode.STEADY, {"fog": 1.2})
-	f.add_light(Z, Vector3(38.0, -1.2, 6.0), SODIUM, 1.2, 10.0, LightFixture.Mode.FLICKER, {"panel": Vector3(0.5, 0.12, 0.3), "fog": 1.0, "buzz": true})
-	g.box(Z, "metal_dark", Vector3(33.95, -1.2, 6.0), Vector3(0.1, 0.1, 0.5), {"collide": false})
+	# Applique murale au sodium sur le mur de soutènement (la vasque grésille)
+	var lamp := Vector3(34.0, -0.3, 6.0)
+	Props.wall_lamp(g, Z, lamp, PI / 2.0)
+	f.add_light(Z, lamp + Vector3(0.45, -0.25, 0.0), SODIUM, 1.3, 11.0, LightFixture.Mode.FLICKER,
+		{"panel": Vector3(0.12, 0.02, 0.22), "panel_offset": Vector3(-0.33, 0.125, 0.0), "panel_energy": 2.2, "fog": 0.6, "buzz": true})
 	# Traînée de sang qui descend la rampe
 	for i in 7:
 		var z := 14.0 - i * 2.2
@@ -298,9 +301,7 @@ static func _roof(f: Facility, g: Geo) -> void:
 
 static func _street_props(f: Facility, g: Geo) -> void:
 	# La voiture de Thomas, garée le long du trottoir, portière ouverte, phares allumés
-	Props.car(g, Z, Vector3(-8.0, 0.0, 27.6), PI / 2.0, "car_gray", true)
-	for s in [-0.65, 0.65]:
-		g.box(Z, "emit_headlight", Vector3(-10.17, 0.72, 27.6 + s), Vector3(0.04, 0.12, 0.32), {"collide": false, "shadow": false})
+	Props.car(g, Z, Vector3(-8.0, 0.0, 27.6), PI / 2.0, "car_gray", true, true)
 	f.add_light(Z, Vector3(-10.4, 0.8, 27.6), Color(1.0, 0.95, 0.85), 3.0, 22.0, LightFixture.Mode.STEADY,
 		{"spot_dir": Vector3(-1.0, -0.08, -0.05), "spot_angle": 38.0, "fog": 1.4})
 	f.add_examine(Z, Vector3(-6.6, 1.0, 26.2), "Ma voiture. J'ai roulé trois heures sans m'arrêter. Le message de Sarah tourne en boucle dans ma tête.", {"radius": 1.8})
@@ -341,23 +342,66 @@ static func _street_props(f: Facility, g: Geo) -> void:
 	f.add_examine(Z, Vector3(-40.0, 1.0, 30.0), "La rue est déserte dans les deux sens. Pas une voiture. Pas une sirène. Seulement la pluie.", {"radius": 3.0})
 
 
-## Immeubles de l'autre côté de la rue (silhouettes, quelques fenêtres allumées).
+## Immeubles de l'autre côté de la rue : façades rythmées (fenêtres, bandeaux
+## d'étage, rez-de-chaussée à rideaux métalliques), acrotères et édicules sur
+## les toits ; quelques fenêtres encore allumées.
 static func _city(g: Geo) -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 424242
+	# Détails tirés à part : la silhouette de la ville (et le bosquet) reste
+	# celle d'origine.
+	var rng2 := RandomNumberGenerator.new()
+	rng2.seed = 515151
 	var x := -118.0
 	while x < 118.0:
 		var w := rng.randf_range(10.0, 22.0)
 		var h := rng.randf_range(9.0, 34.0)
 		var d := rng.randf_range(10.0, 18.0)
 		var cz := 50.0 + d * 0.5
-		g.box(Z, "wall_facade_dark" if rng.randf() < 0.5 else "wall_ext", Vector3(x + w * 0.5, h * 0.5, cz), Vector3(w - 1.0, h, d), {"collide": false})
-		var floors := int(h / 3.2)
-		for fl in floors:
-			var n := int((w - 2.0) / 2.4)
-			for k in n:
+		var fz := cz - d * 0.5
+		var bw := w - 1.0
+		var cx := x + w * 0.5
+		g.box(Z, "wall_facade_dark" if rng.randf() < 0.5 else "wall_ext", Vector3(cx, h * 0.5, cz), Vector3(bw, h, d), {"collide": false})
+		for fl in int(h / 3.2):
+			for k in int((w - 2.0) / 2.4):
 				if rng.randf() < 0.07:
-					g.box(Z, "emit_window" if rng.randf() < 0.7 else "emit_window_cold", Vector3(x + 1.6 + k * 2.4, 1.8 + fl * 3.2, cz - d * 0.5 - 0.02), Vector3(1.3, 1.3, 0.04), {"collide": false, "shadow": false})
+					rng.randf()
+		# Acrotère et édicules techniques
+		g.box(Z, "wall_concrete_dark", Vector3(cx, h + 0.45, fz + 0.15), Vector3(bw + 0.2, 0.9, 0.3), {"collide": false})
+		for k in rng2.randi_range(1, 3):
+			var ux := cx + rng2.randf_range(-bw * 0.35, bw * 0.35)
+			var uz := cz + rng2.randf_range(-d * 0.2, d * 0.3)
+			if rng2.randf() < 0.3:
+				g.cylinder(Z, "metal_gray", Vector3(ux, h, uz), Vector3(ux, h + 2.2, uz), 1.1, {"segments": 10})
+			else:
+				g.box(Z, "metal_gray", Vector3(ux, h + 0.8, uz), Vector3(rng2.randf_range(1.5, 3.5), 1.6, rng2.randf_range(1.5, 3.0)), {"collide": false})
+		# Rez-de-chaussée : vitrines fermées par des rideaux métalliques, auvent
+		var shops := maxi(1, int(bw / 5.0))
+		for k in shops:
+			var sx := x + 0.5 + (float(k) + 0.5) * bw / float(shops)
+			g.box(Z, "shutter", Vector3(sx, 1.45, fz - 0.05), Vector3(bw / float(shops) - 1.0, 2.7, 0.1), {"collide": false})
+		g.box(Z, "wall_concrete_dark", Vector3(cx, 3.2, fz - 0.15), Vector3(bw, 0.45, 0.3), {"collide": false})
+		# Étages : bandeaux et fenêtres (vitres sombres, stores, quelques lumières)
+		var floors := int((h - 3.6) / 3.2)
+		var cols := maxi(1, int((bw - 1.0) / 2.4))
+		var pitch := (bw - 1.0) / float(cols)
+		for fl in floors:
+			var y0 := 3.6 + fl * 3.2
+			g.box(Z, "wall_concrete_dark", Vector3(cx, y0 + 0.05, fz - 0.06), Vector3(bw, 0.12, 0.12), {"collide": false, "shadow": false})
+			for k in cols:
+				var wx := x + 1.0 + (float(k) + 0.5) * pitch
+				var r := rng2.randf()
+				var wm := "glass_car"
+				if r < 0.05:
+					wm = "emit_window"
+				elif r < 0.07:
+					wm = "emit_window_cold"
+				elif r < 0.14:
+					wm = "emit_window_dim"
+				elif r < 0.28:
+					wm = "blinds"
+				g.box(Z, wm, Vector3(wx, y0 + 1.6, fz - 0.03), Vector3(pitch * 0.55, 1.5, 0.06), {"collide": false, "shadow": false})
+				g.box(Z, "wall_concrete_dark", Vector3(wx, y0 + 0.8, fz - 0.07), Vector3(pitch * 0.6, 0.08, 0.14), {"collide": false, "shadow": false})
 		x += w
 	# Arrière de l'hôpital : bosquet
 	for i in 18:

@@ -6,6 +6,7 @@ var paper: PanelContainer
 var title_label: Label
 var body: RichTextLabel
 var from_inventory := false
+var hint: Label
 
 
 func _ready() -> void:
@@ -44,9 +45,18 @@ func _ready() -> void:
 	body.add_theme_color_override("default_color", UITheme.COL_INK)
 	body.selection_enabled = false
 	col.add_child(body)
-	var hint := UITheme.label("E / Échap : fermer   ·   Molette : faire défiler", 14, Color(0.35, 0.3, 0.26))
+	hint = UITheme.label("", 14, Color(0.35, 0.3, 0.26))
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	col.add_child(hint)
+	_update_hint(Pad.using_pad)
+	Pad.device_changed.connect(_update_hint)
+
+
+func _update_hint(using_pad: bool) -> void:
+	if using_pad:
+		hint.text = "%s / %s : fermer   ·   Stick gauche : faire défiler" % [Pad.button_name(JOY_BUTTON_A), Pad.button_name(JOY_BUTTON_B)]
+	else:
+		hint.text = "E / Échap : fermer   ·   Molette : faire défiler"
 
 
 func show_doc(doc_id: String) -> void:
@@ -62,7 +72,7 @@ func show_doc(doc_id: String) -> void:
 
 
 func handle_input(event: InputEvent) -> bool:
-	if event.is_action_pressed("interact") or event.is_action_pressed("pause") or event.is_action_pressed("inventory") or event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("interact") or event.is_action_pressed("pause") or event.is_action_pressed("inventory") or event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel"):
 		ui.close_screen(self)
 		Audio.ui("paper", -8.0)
 		return true

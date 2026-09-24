@@ -83,7 +83,16 @@ func on_open() -> void:
 
 
 func handle_input(event: InputEvent) -> bool:
-	# Q / E ou Page préc./suiv. : changer d'onglet
+	# Manette : LB / RB changent d'onglet
+	if event is InputEventJoypadButton and event.pressed:
+		var jb := (event as InputEventJoypadButton).button_index
+		if jb == JOY_BUTTON_LEFT_SHOULDER:
+			_show_tab((current + TABS.size() - 1) % TABS.size())
+			return true
+		if jb == JOY_BUTTON_RIGHT_SHOULDER:
+			_show_tab((current + 1) % TABS.size())
+			return true
+	# Page préc. / suiv. : changer d'onglet
 	if event is InputEventKey and event.pressed and not event.echo:
 		var kc: int = event.physical_keycode
 		if kc == KEY_PAGEUP:
@@ -143,6 +152,8 @@ func _build_game(p: VBoxContainer) -> void:
 	_choice(p, "Vue (V en jeu)", "camera_view", Settings.VIEW_NAMES)
 	_choice(p, "Difficulté", "difficulty", Settings.DIFFICULTY_NAMES)
 	_slider(p, "Sensibilité de la souris", "mouse_sensitivity", 0.2, 3.0, "%")
+	_slider(p, "Sensibilité du stick (manette)", "stick_sensitivity", 0.3, 2.5, "%")
+	_toggle(p, "Vibrations de la manette", "vibration")
 	_toggle(p, "Inverser l'axe vertical", "invert_y")
 	_toggle(p, "Réticule", "crosshair")
 	_slider(p, "Intensité de la lampe torche", "flashlight_intensity", 0.5, 1.6, "%")
@@ -175,6 +186,36 @@ func _build_controls(p: VBoxContainer) -> void:
 		row.add_child(a)
 		row.add_child(UITheme.label(l[1], 18, UITheme.COL_TEXT, UITheme.font_ui_bold()))
 		p.add_child(row)
+	# Manette : libellés selon la manette branchée (Xbox, PlayStation, Nintendo)
+	p.add_child(HSeparator.new())
+	p.add_child(UITheme.label("MANETTE", 22, UITheme.COL_TEXT, UITheme.font_ui_bold()))
+	var pad_lines := [
+		["Se déplacer · caméra", func() -> String: return "STICK GAUCHE · STICK DROIT"],
+		["Courir (enclenché jusqu'à l'arrêt)", func() -> String: return Pad.action_label("run")],
+		["Interagir / ramasser / lire", func() -> String: return Pad.action_label("interact")],
+		["Viser · tirer / frapper", func() -> String: return "%s · %s" % [Pad.action_label("aim"), Pad.action_label("fire")]],
+		["Recharger", func() -> String: return Pad.action_label("reload")],
+		["Arme précédente / suivante", func() -> String: return "%s / %s" % [Pad.action_label("weapon_prev"), Pad.action_label("weapon_next")]],
+		["Esquive", func() -> String: return Pad.action_label("dodge")],
+		["Soin rapide (spray)", func() -> String: return Pad.action_label("quick_heal")],
+		["Lampe torche", func() -> String: return Pad.action_label("flashlight")],
+		["Vue 1re / 3e personne", func() -> String: return Pad.action_label("toggle_view")],
+		["Inventaire · pause", func() -> String: return "%s · %s" % [Pad.button_name(JOY_BUTTON_BACK), Pad.button_name(JOY_BUTTON_START)]],
+		["Menus : choisir · valider · retour", func() -> String: return "STICK / CROIX · %s · %s" % [Pad.button_name(JOY_BUTTON_A), Pad.button_name(JOY_BUTTON_B)]],
+		["Onglets (options, inventaire)", func() -> String: return "%s / %s" % [Pad.button_name(JOY_BUTTON_LEFT_SHOULDER), Pad.button_name(JOY_BUTTON_RIGHT_SHOULDER)]],
+	]
+	for l2 in pad_lines:
+		var row2 := HBoxContainer.new()
+		var a2 := UITheme.label(l2[0], 18, UITheme.COL_DIM)
+		a2.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row2.add_child(a2)
+		var v2 := UITheme.label("", 18, UITheme.COL_TEXT, UITheme.font_ui_bold())
+		row2.add_child(v2)
+		p.add_child(row2)
+		var get_text: Callable = l2[1]
+		var upd := func() -> void: v2.text = get_text.call()
+		_refreshers.append(upd)
+		upd.call()
 	_hint(p, "Les créatures entendent vos pas quand vous courez et voient la lumière de votre lampe. Visez la tête.")
 
 

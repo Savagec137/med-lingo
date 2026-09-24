@@ -252,6 +252,13 @@ func _update_pause() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	var top := top_screen()
 	if top:
+		# Sticks et croix de la manette : déjà traduits en déplacements ui_* par
+		# Pad (sinon la croix bas, liée à l'inventaire en jeu, fermerait l'écran)
+		if event is InputEventJoypadMotion:
+			return
+		if event is InputEventJoypadButton and (event as InputEventJoypadButton).button_index in [
+				JOY_BUTTON_DPAD_UP, JOY_BUTTON_DPAD_DOWN, JOY_BUTTON_DPAD_LEFT, JOY_BUTTON_DPAD_RIGHT]:
+			return
 		if top.handle_input(event):
 			get_viewport().set_input_as_handled()
 		return
@@ -330,7 +337,7 @@ func show_document(doc_id: String, from_inventory: bool = false) -> void:
 	doc_viewer.show_doc(doc_id)
 	open_screen(doc_viewer)
 	if not from_inventory:
-		show_message("Document ajouté : « %s » (Tab → Documents)" % String(DocumentDB.get_doc(doc_id).title), 3.5)
+		show_message("Document ajouté : « %s » (%s → Documents)" % [String(DocumentDB.get_doc(doc_id).title), InputSetup.key_label("inventory")], 3.5)
 
 
 func open_keypad(safe: Interactable) -> void:

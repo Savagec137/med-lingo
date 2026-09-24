@@ -188,6 +188,331 @@ func cylinder(zone: String, mat: String, a: Vector3, b_pt: Vector3, radius: floa
 			_record_obstacle(Transform3D(basis, mid), size)
 
 
+## Gabarits d'accessoires : la géométrie d'un accessoire identique (même
+## fonction, mêmes paramètres) est générée une seule fois en coordonnées
+## locales (la génération sommet par sommet coûte cher en GDScript), puis
+## affichée par instanciation (MultiMesh) : un seul maillage par zone et par
+## gabarit, quel que soit le nombre d'exemplaires. Conservés d'un niveau à
+## l'autre. {clé: [maillage avec ombre, maillage sans ombre]}
+static var templates := {}
+var _stamps := {}   # "zone|clé" → {zone, key, xfs}
+
+
+## Ajoute un exemplaire du gabarit « key » à la transformation « xf ». Au
+## premier appel, le gabarit est construit par build.call(geo, zone, xf), sur
+## une géométrie temporaire (aucune collision ne doit y être créée).
+func stamp(zone: String, key: String, xf: Transform3D, build: Callable) -> void:
+	if not templates.has(key):
+		var tmp := Geo.new(null)
+		tmp.collide_default = false
+		build.call(tmp, "tpl", Transform3D.IDENTITY)
+		templates[key] = tmp._template_meshes()
+	var sk := zone + "|" + key
+	if not _stamps.has(sk):
+		_stamps[sk] = {"zone": zone, "key": key, "xfs": []}
+	_stamps[sk].xfs.append(xf)
+
+
+## Maillages d'un gabarit : les lots avec ombre d'un côté, sans ombre de l'autre.
+func _template_meshes() -> Array:
+	var out: Array = [null, null]
+	for k in _batches:
+		var b: Batch = _batches[k]
+		if b.verts.is_empty():
+			continue
+		var slot := 0 if b.shadow else 1
+		if out[slot] == null:
+			out[slot] = ArrayMesh.new()
+		var m: ArrayMesh = out[slot]
+		m.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, _arrays(b))
+		m.surface_set_material(m.get_surface_count() - 1, Mats.get_mat(b.mat))
+	return out
+
+
+func _arrays(b: Batch) -> Array:
+	var arrays := []
+	arrays.resize(Mesh.ARRAY_MAX)
+	arrays[Mesh.ARRAY_VERTEX] = b.verts
+	arrays[Mesh.ARRAY_NORMAL] = b.norms
+	arrays[Mesh.ARRAY_TANGENT] = b.tangents
+	arrays[Mesh.ARRAY_TEX_UV] = b.uvs
+	arrays[Mesh.ARRAY_INDEX] = b.idx
+	return arrays
+
+
+## Triangle orienté d'après les normales de ses sommets (faces avant dans le
+## sens horaire vu de l'extérieur) ; les triangles dégénérés sont ignorés.
+func _tri(b: Batch, i0: int, i1: int, i2: int) -> void:
+	var p0 := b.verts[i0]
+	var c := (b.verts[i1] - p0).cross(b.verts[i2] - p0)
+	if c.length_squared() < 1e-14:
+		return
+	var n := b.norms[i0] + b.norms[i1] + b.norms[i2]
+	if c.dot(n) > 0.0:
+		b.idx.append_array([i0, i2, i1])
+	else:
+		b.idx.append_array([i0, i1, i2])
+
+
+static var _TANGENT := PackedFloat32Array([1.0, 0.0, 0.0, 1.0])
+
+
+## Sommet des primitives courbes (tangente constante : les shaders du décor
+## travaillent en coordonnées monde et ne l'utilisent pas).
+func _vert(b: Batch, p: Vector3, n: Vector3, uv: Vector2 = Vector2.ZERO) -> int:
+	b.verts.append(p)
+	b.norms.append(n)
+	b.tangents.append_array(_TANGENT)
+	b.uvs.append(uv)
+	return b.verts.size() - 1
+
+
+## Grille de sommets (rows + 1) × (cols + 1) déjà ajoutés à partir de « start ».
+func _grid(b: Batch, start: int, rows: int, cols: int) -> void:
+	for r in rows:
+		for c in cols:
+			var i0 := start + r * (cols + 1) + c
+			var i2 := i0 + cols + 1
+			_tri(b, i0, i0 + 1, i2)
+			_tri(b, i0 + 1, i2 + 1, i2)
+
+
+## Sphère, ou ellipsoïde (opts.scale), centrée en « center ».
+## opts : basis, scale (Vector3), segments, rings, shadow.
+func sphere(zone: String, mat: String, center: Vector3, radius: float, opts: Dictionary = {}) -> void:
+	var seg: int = int(opts.get("segments", 12))
+	var rings: int = int(opts.get("rings", 8))
+	var sc: Vector3 = opts.get("scale", Vector3.ONE)
+	var basis: Basis = opts.get("basis", Basis.IDENTITY)
+	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
+	var start := b.verts.size()
+	for r in rings + 1:
+		var phi := PI * float(r) / float(rings)
+		for s in seg + 1:
+			var th := TAU * float(s) / float(seg)
+			var n := Vector3(sin(phi) * cos(th), cos(phi), sin(phi) * sin(th))
+			_vert(b, center + basis * (n * sc * radius), (basis * (n / sc)).normalized(),
+				Vector2(th * radius, phi * radius))
+	_grid(b, start, rings, seg)
+
+
+## Tore (pneus, mains courantes, anneaux) : axe de révolution « axis ».
+## opts : segments (autour de l'axe), sides (autour du tube), shadow, arc (radians).
+func torus(zone: String, mat: String, center: Vector3, axis: Vector3, major: float, minor: float,
+		opts: Dictionary = {}) -> void:
+	var seg: int = int(opts.get("segments", 20))
+	var sides: int = int(opts.get("sides", 8))
+	var arc: float = float(opts.get("arc", TAU))
+	var a := axis.normalized()
+	var u := a.cross(Vector3.UP if absf(a.y) < 0.95 else Vector3.RIGHT).normalized()
+	var v := a.cross(u).normalized()
+	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
+	var start := b.verts.size()
+	for i in seg + 1:
+		var th := arc * float(i) / float(seg)
+		var e := u * cos(th) + v * sin(th)
+		for j in sides + 1:
+			var ph := TAU * float(j) / float(sides)
+			var n := e * cos(ph) + a * sin(ph)
+			_vert(b, center + e * major + n * minor, n, Vector2(th * major, ph * minor))
+	_grid(b, start, seg, sides)
+
+
+## Boîte aux arêtes chanfreinées (normales adoucies : les arêtes paraissent
+## arrondies). opts : basis, rot, collide, nav, shadow.
+func rbox(zone: String, mat: String, center: Vector3, size: Vector3, bevel: float, opts: Dictionary = {}) -> void:
+	var basis: Basis = opts.get("basis", Basis(Vector3.UP, float(opts.get("rot", 0.0))))
+	var xf := Transform3D(basis, center)
+	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
+	var h := size * 0.5
+	var bv := minf(bevel, minf(h.x, minf(h.y, h.z)) * 0.95)
+	var hi := h - Vector3(bv, bv, bv)
+	var axes := [Vector3.RIGHT, Vector3.UP, Vector3.BACK]
+	var nb := basis.inverse().transposed()
+	# Faces
+	for ai in 3:
+		for sgn in [-1.0, 1.0]:
+			var n: Vector3 = axes[ai] * sgn
+			var ua: Vector3 = axes[(ai + 1) % 3]
+			var va: Vector3 = axes[(ai + 2) % 3]
+			var hu: float = hi[(ai + 1) % 3]
+			var hv: float = hi[(ai + 2) % 3]
+			var c: Vector3 = n * h[ai]
+			var wn := (nb * n).normalized()
+			var s0 := b.verts.size()
+			for k in [[-1, -1], [1, -1], [1, 1], [-1, 1]]:
+				_vert(b, xf * (c + ua * hu * float(k[0]) + va * hv * float(k[1])), wn)
+			_tri(b, s0, s0 + 1, s0 + 2)
+			_tri(b, s0, s0 + 2, s0 + 3)
+	if bv <= 0.0005:
+		_rbox_collide(zone, xf, size, opts)
+		return
+	# Arêtes : bande entre deux faces voisines (normales de chaque face)
+	for ai in 3:
+		var e: Vector3 = axes[ai]
+		var he: float = hi[ai]
+		var a1: int = (ai + 1) % 3
+		var a2: int = (ai + 2) % 3
+		for s1 in [-1.0, 1.0]:
+			for s2 in [-1.0, 1.0]:
+				var n1: Vector3 = axes[a1] * s1
+				var n2: Vector3 = axes[a2] * s2
+				var p_face1 := n1 * h[a1] + n2 * hi[a2]
+				var p_face2 := n1 * hi[a1] + n2 * h[a2]
+				var s0 := b.verts.size()
+				var w1 := (nb * n1).normalized()
+				var w2 := (nb * n2).normalized()
+				_vert(b, xf * (p_face1 - e * he), w1)
+				_vert(b, xf * (p_face1 + e * he), w1)
+				_vert(b, xf * (p_face2 + e * he), w2)
+				_vert(b, xf * (p_face2 - e * he), w2)
+				_tri(b, s0, s0 + 1, s0 + 2)
+				_tri(b, s0, s0 + 2, s0 + 3)
+	# Coins
+	for sx in [-1.0, 1.0]:
+		for sy in [-1.0, 1.0]:
+			for sz in [-1.0, 1.0]:
+				var corner := Vector3(hi.x * sx, hi.y * sy, hi.z * sz)
+				var s0 := b.verts.size()
+				_vert(b, xf * (corner + Vector3(bv * sx, 0, 0)), (nb * Vector3(sx, 0, 0)).normalized())
+				_vert(b, xf * (corner + Vector3(0, bv * sy, 0)), (nb * Vector3(0, sy, 0)).normalized())
+				_vert(b, xf * (corner + Vector3(0, 0, bv * sz)), (nb * Vector3(0, 0, sz)).normalized())
+				_tri(b, s0, s0 + 1, s0 + 2)
+	_rbox_collide(zone, xf, size, opts)
+
+
+func _rbox_collide(zone: String, xf: Transform3D, size: Vector3, opts: Dictionary) -> void:
+	if opts.get("collide", false):
+		add_collision_box(zone, xf, size)
+		if opts.get("nav", true):
+			_record_obstacle(xf, size)
+
+
+## Surface de révolution autour de l'axe Y local de « xf » : profil de points
+## (rayon, hauteur). Normales lissées sauf aux angles vifs (opts.smooth,
+## degrés). Un profil qui commence ou finit sur l'axe (rayon 0) est fermé.
+## opts : segments, smooth, shadow, arc.
+func lathe(zone: String, mat: String, xf: Transform3D, profile: PackedVector2Array, opts: Dictionary = {}) -> void:
+	var seg: int = int(opts.get("segments", 16))
+	var arc: float = float(opts.get("arc", TAU))
+	var smooth: float = deg_to_rad(float(opts.get("smooth", 40.0)))
+	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
+	var nb := xf.basis.inverse().transposed()
+	# Anneaux : [point du profil, normale 2D] (doublés aux angles vifs)
+	var rings: Array = []
+	var n_pts := profile.size()
+	for k in n_pts:
+		var p := profile[k]
+		var d_in := (p - profile[k - 1]).normalized() if k > 0 else Vector2.ZERO
+		var d_out := (profile[k + 1] - p).normalized() if k < n_pts - 1 else Vector2.ZERO
+		if d_in == Vector2.ZERO:
+			d_in = d_out
+		if d_out == Vector2.ZERO:
+			d_out = d_in
+		# Normale 2D : à droite du sens de parcours (le profil monte le long de l'axe, rayon > 0)
+		var n_in := Vector2(d_in.y, -d_in.x)
+		var n_out := Vector2(d_out.y, -d_out.x)
+		if d_in.angle_to(d_out) > smooth or d_in.angle_to(d_out) < -smooth:
+			rings.append([p, n_in])
+			rings.append([p, n_out])
+		else:
+			rings.append([p, (n_in + n_out).normalized()])
+	var start := b.verts.size()
+	for ring in rings:
+		var p: Vector2 = ring[0]
+		var n2: Vector2 = ring[1]
+		for i in seg + 1:
+			var th := arc * float(i) / float(seg)
+			var dir := Vector3(cos(th), 0.0, sin(th))
+			var n := dir * n2.x + Vector3.UP * n2.y
+			_vert(b, xf * (dir * p.x + Vector3.UP * p.y), (nb * n).normalized(), Vector2(th * p.x, p.y))
+	_grid(b, start, rings.size() - 1, seg)
+
+
+## Prisme extrudé le long de l'axe X local de « xf », de x0 à x1, à partir d'un
+## profil (z, y) (silhouette de véhicule, montants…). opts : bevel (chanfrein
+## des deux faces), smooth (degrés : angles du profil lissés en dessous),
+## caps (bool), shadow.
+func extrude_x(zone: String, mat: String, xf: Transform3D, poly: PackedVector2Array, x0: float, x1: float,
+		opts: Dictionary = {}) -> void:
+	var pts := poly.duplicate()
+	# Sens trigonométrique dans le plan (z, y)
+	var area := 0.0
+	for k in pts.size():
+		var q0 := pts[k]
+		var q1 := pts[(k + 1) % pts.size()]
+		area += q0.x * q1.y - q1.x * q0.y
+	if area < 0.0:
+		pts.reverse()
+	var n_pts := pts.size()
+	var bv: float = minf(float(opts.get("bevel", 0.0)), (x1 - x0) * 0.45)
+	var smooth: float = deg_to_rad(float(opts.get("smooth", 30.0)))
+	var b := _batch(zone, mat, bool(opts.get("shadow", true)))
+	var nb := xf.basis.inverse().transposed()
+	# Normales des arêtes et des sommets
+	var edge_n: Array = []
+	for k in n_pts:
+		var d := (pts[(k + 1) % n_pts] - pts[k]).normalized()
+		edge_n.append(Vector2(d.y, -d.x))
+	var vert_n: Array = []   # [normale avant le sommet, normale après]
+	var inset := PackedVector2Array()
+	for k in n_pts:
+		var na: Vector2 = edge_n[k - 1 if k > 0 else n_pts - 1]
+		var nbv: Vector2 = edge_n[k]
+		var avg := (na + nbv).normalized()
+		if absf(na.angle_to(nbv)) <= smooth:
+			vert_n.append([avg, avg])
+		else:
+			vert_n.append([na, nbv])
+		var miter := avg / maxf(avg.dot(nbv), 0.5)
+		inset.append(pts[k] - miter * bv)
+	var xa := x0 + bv
+	var xb := x1 - bv
+	# Flancs
+	for k in n_pts:
+		var k2 := (k + 1) % n_pts
+		var n0: Vector2 = vert_n[k][1]
+		var n1: Vector2 = vert_n[k2][0]
+		var s0 := b.verts.size()
+		for q in [[pts[k], n0, xa], [pts[k2], n1, xa], [pts[k2], n1, xb], [pts[k], n0, xb]]:
+			var p2: Vector2 = q[0]
+			var n2: Vector2 = q[1]
+			_vert(b, xf * Vector3(float(q[2]), p2.y, p2.x), (nb * Vector3(0, n2.y, n2.x)).normalized())
+		_tri(b, s0, s0 + 1, s0 + 2)
+		_tri(b, s0, s0 + 2, s0 + 3)
+	if not opts.get("caps", true):
+		return
+	var tris := Geometry2D.triangulate_polygon(inset) if bv > 0.0 else PackedInt32Array()
+	var cap := inset
+	if tris.is_empty():
+		cap = pts
+		tris = Geometry2D.triangulate_polygon(pts)
+	for side in [-1.0, 1.0]:
+		var xc := x0 if side < 0.0 else x1
+		var xe := xa if side < 0.0 else xb
+		var wn := (nb * Vector3(side, 0, 0)).normalized()
+		# Chanfrein : du profil complet (normale du flanc) au profil rentré (normale de la face)
+		if cap == inset and bv > 0.0:
+			for k in n_pts:
+				var k2 := (k + 1) % n_pts
+				var s1 := b.verts.size()
+				var n0: Vector2 = vert_n[k][1]
+				var n1: Vector2 = vert_n[k2][0]
+				_vert(b, xf * Vector3(xe, pts[k].y, pts[k].x), (nb * Vector3(0, n0.y, n0.x)).normalized())
+				_vert(b, xf * Vector3(xe, pts[k2].y, pts[k2].x), (nb * Vector3(0, n1.y, n1.x)).normalized())
+				_vert(b, xf * Vector3(xc, cap[k2].y, cap[k2].x), wn)
+				_vert(b, xf * Vector3(xc, cap[k].y, cap[k].x), wn)
+				_tri(b, s1, s1 + 1, s1 + 2)
+				_tri(b, s1, s1 + 2, s1 + 3)
+		else:
+			xc = xe
+		var s2 := b.verts.size()
+		for k in n_pts:
+			_vert(b, xf * Vector3(xc, cap[k].y, cap[k].x), wn)
+		for t in range(0, tris.size(), 3):
+			_tri(b, s2 + tris[t], s2 + tris[t + 1], s2 + tris[t + 2])
+
+
 func _emit_box(b: Batch, xf: Transform3D, size: Vector3) -> void:
 	var h := size * 0.5
 	# [normale, axe u, axe v, demi-extensions (n, u, v)]
@@ -305,15 +630,8 @@ func build() -> void:
 		var b: Batch = _batches[key]
 		if b.verts.is_empty():
 			continue
-		var arrays := []
-		arrays.resize(Mesh.ARRAY_MAX)
-		arrays[Mesh.ARRAY_VERTEX] = b.verts
-		arrays[Mesh.ARRAY_NORMAL] = b.norms
-		arrays[Mesh.ARRAY_TANGENT] = b.tangents
-		arrays[Mesh.ARRAY_TEX_UV] = b.uvs
-		arrays[Mesh.ARRAY_INDEX] = b.idx
 		var mesh := ArrayMesh.new()
-		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, _arrays(b))
 		mesh.surface_set_material(0, Mats.get_mat(b.mat))
 		var mi := MeshInstance3D.new()
 		mi.name = "Mesh_%s" % b.mat
@@ -321,3 +639,23 @@ func build() -> void:
 		mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON if b.shadow else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		zone_root(b.zone).add_child(mi)
 	_batches.clear()
+	# Accessoires instanciés
+	for sk in _stamps:
+		var st: Dictionary = _stamps[sk]
+		var xfs: Array = st.xfs
+		var meshes: Array = templates[st.key]
+		for slot in 2:
+			if meshes[slot] == null:
+				continue
+			var mm := MultiMesh.new()
+			mm.transform_format = MultiMesh.TRANSFORM_3D
+			mm.mesh = meshes[slot]
+			mm.instance_count = xfs.size()
+			for i in xfs.size():
+				mm.set_instance_transform(i, xfs[i])
+			var mmi := MultiMeshInstance3D.new()
+			mmi.name = "Props_%s" % String(st.key).replace("|", "_")
+			mmi.multimesh = mm
+			mmi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON if slot == 0 else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			zone_root(st.zone).add_child(mmi)
+	_stamps.clear()

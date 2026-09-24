@@ -11,6 +11,11 @@ var status: Label
 var pad: GridContainer
 var _error_t := 0.0
 var _busy := false
+## Manette : touche sélectionnée (stick / croix), A l'enfonce.
+const KEYS := ["1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "OK"]
+var _sel := 4
+var _keys: Array[Button] = []
+var hint: Label
 
 
 func _ready() -> void:
@@ -55,7 +60,7 @@ func _ready() -> void:
 	pad.add_theme_constant_override("h_separation", 8)
 	pad.add_theme_constant_override("v_separation", 8)
 	col.add_child(pad)
-	for k in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "OK"]:
+	for k in KEYS:
 		var b := UITheme.button(k, 30)
 		# Pas de focus clavier : sinon Entrée « appuie » sur le bouton focalisé
 		# au lieu de valider le code, et les chiffres tapés se perdent.
@@ -68,7 +73,8 @@ func _ready() -> void:
 		b.add_theme_stylebox_override("normal", bs)
 		b.pressed.connect(_press.bind(k))
 		pad.add_child(b)
-	var hint := UITheme.label("Chiffres du clavier · Entrée : valider · Échap : quitter", 13, UITheme.COL_FAINT)
+		_keys.append(b)
+	hint = UITheme.label("", 13, UITheme.COL_FAINT)
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	col.add_child(hint)
 
@@ -170,7 +176,19 @@ func _update() -> void:
 	display.text = shown
 
 
+## Touche sélectionnée en surbrillance (manette) et aide selon le périphérique.
+func _show_pad_cursor() -> void:
+	for i in _keys.size():
+		_keys[i].modulate = Color(1.45, 1.4, 1.1) if Pad.using_pad and i == _sel else Color.WHITE
+	if Pad.using_pad:
+		hint.text = "Stick / croix : choisir · %s : appuyer · %s : quitter" % [Pad.button_name(JOY_BUTTON_A), Pad.button_name(JOY_BUTTON_B)]
+	else:
+		hint.text = "Chiffres du clavier · Entrée : valider · Échap : quitter"
+
+
 func _process(delta: float) -> void:
+	if visible:
+		_show_pad_cursor()
 	if _error_t > 0.0:
 		_error_t -= delta
 		display.add_theme_color_override("font_color", Color(1.0, 0.2, 0.15) if int(_error_t * 10) % 2 == 0 else Color(0.3, 1.0, 0.45))
@@ -179,8 +197,28 @@ func _process(delta: float) -> void:
 
 
 func handle_input(event: InputEvent) -> bool:
-	if event.is_action_pressed("pause") or event.is_action_pressed("inventory"):
+	if event.is_action_pressed("pause") or event.is_action_pressed("inventory") or event.is_action_pressed("ui_cancel"):
 		ui.close_screen(self)
+		return true
+	# Manette : déplacer la sélection, A enfonce la touche
+	if event is InputEventAction or event is InputEventJoypadButton:
+		var col := _sel % 3
+		var row := int(_sel / 3.0)
+		if event.is_action_pressed("ui_left"):
+			col = (col + 2) % 3
+		elif event.is_action_pressed("ui_right"):
+			col = (col + 1) % 3
+		elif event.is_action_pressed("ui_up"):
+			row = (row + 3) % 4
+		elif event.is_action_pressed("ui_down"):
+			row = (row + 1) % 4
+		elif event.is_action_pressed("ui_accept"):
+			_press(KEYS[_sel])
+			return true
+		else:
+			return false
+		_sel = row * 3 + col
+		Audio.ui("ui_move", -14.0)
 		return true
 	if event is InputEventKey and event.pressed and not event.echo:
 		var kc: int = event.physical_keycode

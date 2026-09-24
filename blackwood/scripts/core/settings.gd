@@ -61,6 +61,8 @@ var subtitle_size := 1
 # --- Jeu
 var camera_view: int = View.THIRD_PERSON
 var mouse_sensitivity := 1.0
+var stick_sensitivity := 1.0
+var vibration := true
 var invert_y := false
 var difficulty := 1
 var crosshair := true
@@ -72,7 +74,7 @@ const _KEYS := [
 	"film_grain", "chromatic_aberration",
 	"window_mode", "vsync", "max_fps", "brightness", "fov", "camera_shake", "head_bob",
 	"master_volume", "music_volume", "sfx_volume", "ambience_volume", "subtitles", "subtitle_size",
-	"camera_view", "mouse_sensitivity", "invert_y", "difficulty", "crosshair", "flashlight_intensity",
+	"camera_view", "mouse_sensitivity", "stick_sensitivity", "vibration", "invert_y", "difficulty", "crosshair", "flashlight_intensity",
 	"debug_mode",
 ]
 const _GRAPHIC_KEYS := ["shadows", "volumetric_fog", "ssao", "ssil", "ssr", "glow", "antialiasing", "render_scale"]

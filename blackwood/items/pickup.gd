@@ -26,49 +26,65 @@ func _ready() -> void:
 	model = ItemModels.build(item_id)
 	add_child(model)
 	if show_glint:
-		_glint = MeshInstance3D.new()
-		var q := QuadMesh.new()
-		q.size = Vector2(0.09, 0.09)
-		_glint.mesh = q
-		var m := StandardMaterial3D.new()
-		m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		m.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
-		m.billboard_mode = BaseMaterial3D.BILLBOARD_ENABLED
-		m.albedo_texture = _glint_texture()
-		m.albedo_color = Color(1.0, 0.95, 0.8, 0.9)
-		m.no_depth_test = false
-		_glint.material_override = m
-		_glint.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		_glint.position = Vector3(0, 0.12, 0)
+		_glint = make_glint(Vector3(0, 0.08, 0), Color(1.0, 0.95, 0.82))
 		add_child(_glint)
 
 
-static var _glint_tex: GradientTexture2D
+static var _glint_tex: ImageTexture
 
 
-static func _glint_texture() -> GradientTexture2D:
+## Reflet en étoile à quatre branches (texture générée une fois).
+static func _glint_texture() -> ImageTexture:
 	if _glint_tex == null:
-		var g := Gradient.new()
-		g.offsets = PackedFloat32Array([0.0, 0.15, 1.0])
-		g.colors = PackedColorArray([Color(1, 1, 1, 1), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0)])
-		_glint_tex = GradientTexture2D.new()
-		_glint_tex.gradient = g
-		_glint_tex.fill = GradientTexture2D.FILL_RADIAL
-		_glint_tex.fill_from = Vector2(0.5, 0.5)
-		_glint_tex.fill_to = Vector2(0.5, 0.0)
-		_glint_tex.width = 32
-		_glint_tex.height = 32
+		var n := 64
+		var img := Image.create(n, n, false, Image.FORMAT_RGBA8)
+		for y in n:
+			for x in n:
+				var u := (float(x) + 0.5) / float(n) * 2.0 - 1.0
+				var v := (float(y) + 0.5) / float(n) * 2.0 - 1.0
+				var r := sqrt(u * u + v * v)
+				var arms := exp(-absf(u) * 38.0) * exp(-absf(v) * 3.2) + exp(-absf(v) * 38.0) * exp(-absf(u) * 3.2)
+				var core := exp(-r * r * 60.0)
+				var a := clampf(arms * 0.85 + core, 0.0, 1.0) * clampf(1.0 - r, 0.0, 1.0)
+				img.set_pixel(x, y, Color(1, 1, 1, a))
+		img.generate_mipmaps()
+		_glint_tex = ImageTexture.create_from_image(img)
 	return _glint_tex
+
+
+## Petit éclat qui scintille par intermittence au-dessus d'un objet à ramasser.
+static func make_glint(offset: Vector3, color: Color) -> MeshInstance3D:
+	var mi := MeshInstance3D.new()
+	var q := QuadMesh.new()
+	q.size = Vector2(0.14, 0.14)
+	mi.mesh = q
+	var m := StandardMaterial3D.new()
+	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	m.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	m.billboard_mode = BaseMaterial3D.BILLBOARD_ENABLED
+	m.albedo_texture = _glint_texture()
+	m.albedo_color = Color(color.r, color.g, color.b, 0.0)
+	mi.material_override = m
+	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	mi.position = offset
+	return mi
+
+
+## Éclat bref toutes les trois secondes environ (déphasé selon l'objet), un
+## reflet discret entre deux.
+static func animate_glint(glint: MeshInstance3D, t: float, phase: float) -> void:
+	var pulse := pow(maxf(sin(t * 2.1 + phase), 0.0), 24.0)
+	glint.scale = Vector3.ONE * (0.35 + pulse * 0.75)
+	glint.rotation.z = pulse * 0.4
+	(glint.material_override as StandardMaterial3D).albedo_color.a = 0.12 + pulse * 0.88
 
 
 func _process(delta: float) -> void:
 	if _glint == null:
 		return
 	_t += delta
-	var pulse := pow(maxf(sin(_t * 2.2 + float(hash(pickup_id) % 100)), 0.0), 8.0)
-	_glint.scale = Vector3.ONE * (0.4 + pulse * 1.3)
-	(_glint.material_override as StandardMaterial3D).albedo_color.a = 0.25 + pulse * 0.75
+	animate_glint(_glint, _t, float(hash(pickup_id) % 100))
 
 
 func get_prompt() -> String:
@@ -100,7 +116,10 @@ func interact(player: Node) -> void:
 			if not first and partner:
 				_tell(player, "%s : déjà en votre possession. Celle-ci revient à votre partenaire." % item_name, 3.0)
 				return
-			_announce(player, pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. [%d] pour l'équiper." % [item_name, slot] if first else "%s : déjà en votre possession." % item_name))
+			var how := "[%d] pour l'équiper" % slot
+			if Pad.using_pad:
+				how = "[%s] / [%s] pour changer d'arme" % [InputSetup.key_label("weapon_prev"), InputSetup.key_label("weapon_next")]
+			_announce(player, pickup_msg if pickup_msg != "" else ("Vous obtenez : %s. %s." % [item_name, how] if first else "%s : déjà en votre possession." % item_name))
 			# Coop : l'arme est personnelle, chaque joueur prend SON exemplaire
 			if partner:
 				GameState.set_flag("picked_" + pickup_id, true)
@@ -138,6 +157,7 @@ func net_refresh() -> void:
 
 
 func _announce(player: Node, text: String) -> void:
+	text = InputSetup.fill_keys(text)
 	_tell(player, text, 3.5, "pickup_key" if ItemDB.kind(item_id) == "key" else "pickup")
 
 

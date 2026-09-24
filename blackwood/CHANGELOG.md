@@ -3,6 +3,42 @@
 Format : du plus récent au plus ancien. Chaque version a été compilée, lancée et testée
 (robot de campagne et tests automatisés, voir `README.md`).
 
+## 0.6 — Manette, modèles et textures retravaillés (24/09/2026)
+
+- **Manette** (Xbox, PlayStation, Nintendo ou compatible) : déplacement et caméra aux sticks
+  (courbe de réponse, plus lente en visée), LT / RT pour viser / tirer, L3 enclenche la course
+  jusqu'à l'arrêt, A interagir, B esquive, X recharger, Y soin, LB / RB armes, croix haut
+  lampe, VUE inventaire, MENU pause, R3 vue. Menus entièrement jouables : stick ou croix avec
+  répétition, A valide, B revient, LB / RB changent d'onglet (options, inventaire), clavier à
+  code composé au stick. Le jeu bascule seul entre clavier et manette et affiche les bons
+  boutons (A / CROIX / B…) dans les invites, les messages et les aides. Options : sensibilité
+  du stick, vibrations (tirs, coups reçus, explosions). Manette débranchée : pause.
+  Nouveau test `gamepad` (35 vérifications avec de vrais évènements de manette).
+- **Accessoires reconstruits** avec de nouvelles primitives (boîtes chanfreinées, sphères,
+  tores, tours, profils extrudés) : fauteuil roulant (grandes roues à rayons et mains
+  courantes, roulettes pivotantes, cadre chromé, repose-pieds), siège de bureau (piétement
+  cinq branches à roulettes, vérin, accoudoirs), ambulance à cellule (cabine, pare-brise
+  incliné, bandes, gyrophares, portes arrière ouvrables sur une cellule aménagée), berline
+  (caisse profilée, habitacle vitré, jantes alliage), brancard, lit, pied à perfusion,
+  chariot de soins, chaises, banquettes, bureau, distributeur, réverbères, plantes.
+- **Arbres** : feuillus (houppier en masses de feuilles) et conifères (étages de branches),
+  feuillage ajouré par un nouveau shader (silhouettes irrégulières, léger vent).
+- **Textures** : les taches « camouflage » des sols mouillés et des murs sales ont disparu
+  (sol humide uniforme et flaques larges aux bords doux ; salissures en nappes diffuses ;
+  la texture de plâtre à grosses écailles est remplacée). Peintures des véhicules moins
+  rouillées, nouveaux matériaux (similicuir, tissu de siège, pneu, chrome, vitrages).
+- **Pluie** : gouttes fines aux extrémités adoucies, invisibles tout près de la caméra (plus
+  de grands traits blancs). **Reflets des objets** : petite étoile qui scintille brièvement
+  au lieu d'une boule blanche permanente.
+- **Rampe des ambulances** : applique murale fixée au mur de soutènement (au lieu d'un
+  panneau lumineux flottant au milieu de la rampe). **Ville** : façades à fenêtres, bandeaux
+  d'étage, rideaux métalliques, édicules sur les toits, fenêtres éclairées ou tamisées.
+- La lampe torche du SAMU est posée sur le plancher de l'ambulance, portes ouvertes.
+- Performances : les accessoires identiques sont générés une fois puis instanciés
+  (MultiMesh) ; la tour se construit en ~1,2 s (0,9 s avant, malgré 3× plus de détails).
+- Corrigé : le robot de test pouvait rester coincé contre un rideau de box fermé (les rideaux
+  fermés sont désormais des cloisons pour la navigation).
+
 ## 0.5 — Coopération en ligne à deux joueurs (23/09/2026)
 
 - **CO-OP** dans le menu principal : HOST GAME (salon, adresse à donner, NOUVELLE PARTIE /

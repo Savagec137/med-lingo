@@ -6,6 +6,9 @@ extends Node3D
 ## les chocs, et peut être « détournée » vers un point d'intérêt.
 
 const MOUSE_SCALE := 0.0022
+## Stick droit, déviation maximale (radians par seconde)
+const STICK_YAW_SPEED := 3.1
+const STICK_PITCH_SPEED := 1.9
 const PITCH_MIN := -1.15
 const PITCH_MAX := 0.85
 
@@ -143,6 +146,7 @@ func add_look(dyaw: float, dpitch: float) -> void:
 
 func shake(amount: float) -> void:
 	trauma = clampf(trauma + amount * Settings.camera_shake, 0.0, 1.0)
+	Pad.rumble(amount)
 
 
 func kick(amount: float) -> void:
@@ -165,9 +169,26 @@ func forward() -> Vector3:
 	return -cam.global_transform.basis.z
 
 
+## Stick droit de la manette : rotation continue, courbe de réponse
+## quadratique (précise près du centre), plus lente en visée.
+func _stick_look(delta: float) -> void:
+	if not input_enabled or get_tree().paused:
+		return
+	var look := Input.get_vector("look_left", "look_right", "look_up", "look_down")
+	var k := look.length()
+	if k < 0.001:
+		return
+	look = look / k * (k * k)
+	var sens := Settings.stick_sensitivity * (0.55 if aiming else 1.0)
+	yaw -= look.x * STICK_YAW_SPEED * sens * delta
+	var inv := -1.0 if Settings.invert_y else 1.0
+	pitch = clampf(pitch - look.y * STICK_PITCH_SPEED * sens * inv * delta, PITCH_MIN, PITCH_MAX)
+
+
 func _process(delta: float) -> void:
 	if target == null:
 		return
+	_stick_look(delta)
 	_t += delta
 	if first_person:
 		# À hauteur des yeux : suit le bassin (marche, esquive, chute) sans retard horizontal

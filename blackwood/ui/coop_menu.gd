@@ -207,7 +207,7 @@ func _back() -> void:
 
 
 func handle_input(event: InputEvent) -> bool:
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("pause") or (event is InputEventJoypadButton and event.is_action_pressed("ui_cancel")):
 		match page:
 			"root":
 				_back()

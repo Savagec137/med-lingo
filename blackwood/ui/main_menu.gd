@@ -7,6 +7,7 @@ var title: Label
 var buttons: VBoxContainer
 var continue_btn: Button
 var load_btn: Button
+var footer: Label
 var _t := 0.0
 
 
@@ -76,9 +77,19 @@ func _ready() -> void:
 	b_quit.pressed.connect(func(): ui.request_quit())
 	buttons.add_child(b_quit)
 
-	var footer := UITheme.label("Survival horror — version personnelle 0.1  ·  ZQSD/WASD : se déplacer  ·  Souris : caméra  ·  E : interagir", 14, UITheme.COL_FAINT)
+	footer = UITheme.label("", 14, UITheme.COL_FAINT)
 	add_child(footer)
 	UITheme.anchor(footer, 0.0, 1.0, 110, -28, 1, -1)
+	_update_footer(Pad.using_pad)
+	Pad.device_changed.connect(_update_footer)
+
+
+## Rappel des commandes : clavier / souris ou manette selon ce que le joueur utilise.
+func _update_footer(using_pad: bool) -> void:
+	if using_pad:
+		footer.text = "Survival horror — version personnelle 0.1  ·  Stick gauche : se déplacer  ·  Stick droit : caméra  ·  %s : interagir  ·  Manette : voir OPTIONS › COMMANDES" % Pad.button_name(JOY_BUTTON_A)
+	else:
+		footer.text = "Survival horror — version personnelle 0.1  ·  ZQSD/WASD : se déplacer  ·  Souris : caméra  ·  E : interagir  ·  Manette prise en charge"
 
 
 func on_open() -> void:

@@ -27,6 +27,16 @@ charges (« Première action obligatoire »). Rien n'a été supprimé.
 > pertes). La campagne solo reste vérifiée de bout en bout. Architecture prête pour un serveur
 > dédié (`Net.host(port, false)`) mais le jeu sans joueur local n'est pas encore branché.
 
+> **Mise à jour — manette et visuels (24/09/2026)** — Jeu et menus jouables à la manette (Xbox,
+> PlayStation, Nintendo ; libellés des boutons adaptés, vibrations, pause si débranchée), vérifiés
+> par `tests/gamepad.gd` (35 vérifications). Accessoires reconstruits à partir de primitives plus
+> fines (boîtes chanfreinées, tores, tours, profils extrudés) et instanciés (MultiMesh) : fauteuils
+> roulants, sièges de bureau, ambulances, voitures, brancards, lits, arbres… La limite signalée au
+> §6 (« formes simples ») est donc réduite pour le mobilier et les véhicules ; les personnages (hors
+> infectés) restent construits en code. Taches « camouflage » des sols et murs supprimées (shader
+> et texture de plâtre), pluie et reflets des objets corrigés. Studio de rendu `tests/prop_studio.tscn`
+> et captures en jeu `--test=visual_check` pour juger les modèles.
+
 ---
 
 ## 0. Verdict
@@ -178,7 +188,7 @@ Légende : ✅ fonctionnel et testé · 🟡 partiel · 🔧 écrit mais pas enc
 
 | Type | Quantité | Origine | Licence |
 | --- | --- | --- | --- |
-| Textures PBR 1K (albédo, normale, ORM) | 26 jeux | Poly Haven | CC0 |
+| Textures PBR 1K (albédo, normale, ORM) | 26 jeux (25 depuis le 24/09 : plâtre écaillé retiré) | Poly Haven | CC0 |
 | Texture de plafond | 1 | générée par `tools/gen_textures.py` | originale |
 | Modèle 3D humanoïde riggé | 1 (zombie) | généré avec **Higgsfield** (Tripo 3D + auto-rig) | conditions Higgsfield du compte utilisateur |
 | Sons | 134 | synthèse par `tools/gen_audio.py` (aucun échantillon externe) | originaux |

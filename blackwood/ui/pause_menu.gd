@@ -77,7 +77,11 @@ func _quit() -> void:
 
 
 func handle_input(event: InputEvent) -> bool:
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("ui_cancel") and confirm.visible:
+		confirm.visible = false
+		focus_first(box)
+		return true
+	if event.is_action_pressed("pause") or event.is_action_pressed("ui_cancel"):
 		ui.close_screen(self)
 		return true
 	if event.is_action_pressed("inventory"):

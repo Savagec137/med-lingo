@@ -88,19 +88,18 @@ static func _bay(f: Facility, k: HKit) -> void:
 		{"panel": Vector3(1.2, 0.05, 0.3), "buzz": true, "fog": 0.8})
 	f.add_light(Z, Vector3(43.5, y + 3.35, -12.0), Color(1.0, 0.62, 0.3), 0.8, 8.0, LightFixture.Mode.STEADY,
 		{"panel": Vector3(0.5, 0.1, 0.3), "fog": 0.8})
-	# Ambulance arrivée en urgence, portes arrière ouvertes vers les urgences
-	Props.ambulance(g, Z, Vector3(40.5, y, -8.2), -PI / 2.0)
-	for s in [-1.0, 1.0]:
-		g.box(Z, "car_white", Vector3(37.7, y + 1.3, -8.2 + s * 1.35), Vector3(0.06, 1.7, 0.9), {"rot": s * 1.1, "collide": false})
-	g.box(Z, "emit_blue", Vector3(40.5, y + 2.52, -9.1), Vector3(0.3, 0.1, 0.25), {"collide": false, "shadow": false})
-	f.add_light(Z, Vector3(40.5, y + 2.7, -9.1), Color(0.25, 0.4, 1.0), 1.6, 7.0, LightFixture.Mode.PULSE, {"fog": 1.2})
+	# Ambulance arrivée en urgence, gyrophares allumés, portes arrière ouvertes vers les urgences
+	Props.ambulance(g, Z, Vector3(40.5, y, -8.2), -PI / 2.0, true, true)
+	f.add_light(Z, Vector3(38.6, y + 3.0, -9.2), Color(0.25, 0.4, 1.0), 1.6, 7.0, LightFixture.Mode.PULSE, {"fog": 1.2})
+	# Plafonnier de la cellule, faiblard
+	f.add_light(Z, Vector3(39.4, y + 2.35, -8.2), Color(0.85, 0.92, 1.0), 0.45, 3.5, LightFixture.Mode.FLICKER)
 	Props.gurney(g, Z, Vector3(35.5, y, -5.2), 0.5, true)
 	HProps.blood_trail(f, Z, Vector3(37.0, y, -8.2), Vector3(32.6, y, -8.0), 5)
 	f.add_blood(Z, Vector3(36.4, y + 0.01, -7.4), 1.2, "blood_dry")
 	Props.body_bag(g, Z, Vector3(44.0, y, -4.0), 0.3)
 	Props.papers(g, Z, Vector3(36.0, y, -9.5), 1.5, 8)
-	f.add_pickup("b1_flashlight", Z, "flashlight", 1, Vector3(37.2, y + 0.95, -7.7), 0.4,
-		{"msg": "La lampe de l'équipe du SAMU, encore accrochée au brancard. [F] pour l'allumer ou l'éteindre."})
+	f.add_pickup("b1_flashlight", Z, "flashlight", 1, Vector3(38.2, y + 0.98, -7.85), 0.4,
+		{"msg": "La lampe de l'équipe du SAMU, encore accrochée au brancard. [{key:flashlight}] pour l'allumer ou l'éteindre."})
 	f.add_examine(Z, Vector3(37.6, y + 1.2, -8.8), "L'arrière de l'ambulance est maculé de sang. Le brancard a été arraché de ses fixations. Sur le siège, un gilet : « SAMU — Équipe 3 ».", {"radius": 2.0})
 	f.add_examine(Z, Vector3(33.2, y + 1.3, -10.6), "Les portes automatiques s'ouvrent encore. Quelqu'un a laissé l'alimentation de secours des urgences en marche.", {"radius": 1.8})
 	f.add_trigger("er_bay", Vector3(39.0, y + 1.2, -6.0), Vector3(12.0, 2.4, 7.0))
