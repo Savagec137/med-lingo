@@ -1,0 +1,1001 @@
+{
+	"audio": {
+		"buses": [
+			"Music",
+			"SFX",
+			"Ambience",
+			"UI"
+		],
+		"loop_rule": "nom commençant par amb_ ou music_, ou présent dans loops",
+		"loops": [
+			"light_buzz",
+			"heartbeat",
+			"alarm",
+			"phone_static",
+			"phone_ring",
+			"surgeon_breath",
+			"metal_scrape"
+		],
+		"max_3d": 40,
+		"reverb_presets": {
+			"basement": [
+				0.7,
+				0.3,
+				0.3,
+				1.0
+			],
+			"corridor": [
+				0.55,
+				0.45,
+				0.2,
+				0.8
+			],
+			"hall": [
+				0.8,
+				0.35,
+				0.28,
+				1.0
+			],
+			"outdoor": [
+				0.15,
+				0.8,
+				0.03,
+				0.4
+			],
+			"room": [
+				0.35,
+				0.6,
+				0.12,
+				0.6
+			],
+			"tunnel": [
+				0.9,
+				0.2,
+				0.35,
+				1.0
+			]
+		}
+	},
+	"camera": {
+		"MOUSE_SCALE": 0.0022,
+		"PITCH_MAX": 0.85,
+		"PITCH_MIN": -1.15,
+		"STICK_PITCH_SPEED": 1.9,
+		"STICK_YAW_SPEED": 3.1
+	},
+	"countdown": [
+		300.0,
+		240.0,
+		200.0
+	],
+	"difficulty": [
+		{
+			"ammo": 1.5,
+			"damage_taken": 0.6,
+			"enemy_hp": 0.8
+		},
+		{
+			"ammo": 1.0,
+			"damage_taken": 1.0,
+			"enemy_hp": 1.0
+		},
+		{
+			"ammo": 0.7,
+			"damage_taken": 1.4,
+			"enemy_hp": 1.2
+		}
+	],
+	"documents": {
+		"doc_board": {
+			"body": "CONSEIL D'ADMINISTRATION — SÉANCE EXTRAORDINAIRE — 2 novembre\n\nPoint 3 — Programme ECHO\nLe Dr Vance présente les résultats de la phase II (sujets sous tutelle hospitalière). Taux de régénération : 100 %. Taux de « réanimation post-mortem » : 100 %.\n\nM. le Directeur général rappelle que le contrat Kessler représente l'équivalent de huit années de budget de l'établissement.\n\nVote : poursuite du programme et livraison du lot ECHO-7 — adoptée à l'unanimité moins une voix.\n\nLa voix contre n'est pas nommée au procès-verbal.",
+			"style": "typed",
+			"title": "Procès-verbal du conseil (extrait)"
+		},
+		"doc_care_log": {
+			"body": "Nuit du 11/11\n\n22 h — Mme Carvalho (consult. 2) : fièvre 41,2. Mord son drap. Sédatée.\n22 h 40 — Mme Carvalho : arrêt cardio-respiratoire. Décès constaté 22 h 51.\n23 h 15 — Mme Carvalho a quitté la salle de soins.\n\nJe relis ce que je viens d'écrire. Je le laisse.\n\n23 h 50 — La morgue ne répond plus. Les brancardiers qui sont descendus avec les corps ne sont pas remontés.\nLes morts de ce soir ne restent pas morts.",
+			"style": "hand",
+			"title": "Cahier de transmissions — 1er étage"
+		},
+		"doc_communique": {
+			"body": "CENTRE HOSPITALIER UNIVERSITAIRE BLACKWOOD\nCommuniqué interne — diffusion immédiate\n\nEn raison d'un incident technique survenu sur les installations de ventilation des niveaux supérieurs, l'établissement est placé en mesure de précaution sanitaire.\n\nIl est demandé au personnel :\n— de ne communiquer aucune information à l'extérieur, y compris aux familles ;\n— de ne pas se rendre aux étages 7 et 8 ;\n— de signaler tout patient « désorienté » au poste de sécurité, sans intervenir.\n\nNos partenaires industriels ont été informés et assurent la continuité du programme.\n\n— La Direction générale",
+			"style": "typed",
+			"title": "Communiqué de la direction"
+		},
+		"doc_crisis": {
+			"body": "CELLULE DE CRISE — 6e ÉTAGE — Unité NRBC (renfort discret à la demande de Kessler Biotech)\n\n00 h 30 — Arrivée par le toit. Mission : récupérer les stocks ECHO-7 et le personnel scientifique. Ne pas intervenir sur les patients.\n01 h 00 — Point de situation : l'épidémie a commencé au 8e étage, au laboratoire, peu avant minuit. Les « sujets » se sont échappés des cellules.\n01 h 20 — Contamination par morsure en moins d'une heure. Les décédés se relèvent en 10 à 40 minutes.\n01 h 45 — Le Dr Vance est introuvable. Sa carte d'accès recherche a été retrouvée ici.\n02 h 10 — Nous avons perdu l'équipe Bravo au 8e. Quelque chose de très grand.\n02 h 30 — Ordre reçu : attendre. Le client veut ses doses.\n\nOn ne nous a pas envoyés sauver qui que ce soit.",
+			"style": "typed",
+			"title": "Main courante — Cellule de crise"
+		},
+		"doc_director": {
+			"body": "Monsieur le Directeur,\n\nVous trouverez ci-joint le virement correspondant à la seconde tranche du Programme ECHO. La troisième tranche sera versée à réception du lot commercial au Site 2.\n\nNous vous rappelons que la confidentialité est la condition de notre partenariat. Tout incident devra être traité en interne. Nos équipes sont en mesure d'intervenir dans votre établissement sans délai et sans formalité.\n\nNos hommages,\nKessler Biotech — Département des acquisitions",
+			"style": "typed",
+			"title": "Courrier du directeur général"
+		},
+		"doc_echo_protocol": {
+			"body": "PROJET ECHO — CONFIDENTIEL — Direction scientifique : Dr H. Vance\nFinancement : Kessler Biotech\n\nPrincipe : réactivation des voies embryonnaires de régénération tissulaire. Chez la souris, ECHO-3 reconstitue un membre amputé en 11 jours.\n\nPhase I (humaine) — Sujet 0 : É. Brandt, 34 ans, glioblastome terminal.\nPremière injection : 03/09.\nJ+6 : régression tumorale complète.\nJ+14 : la régénération ne s'arrête pas. Croissance osseuse et musculaire anarchique.\nJ+17 : arrêt cardiaque. Décès constaté.\nJ+17 (+ 40 min) : reprise d'activité motrice. Le sujet se lève.\n\nConclusion du Dr Vance : « Le corps ne sait plus mourir. C'est un résultat, pas un échec. »",
+			"style": "typed",
+			"title": "PROJET ECHO — Protocole de phase I"
+		},
+		"doc_generator": {
+			"body": "SERVICES TECHNIQUES — SOUS-SOL -2\nRemise sous tension manuelle (secours)\n\nEn cas de coupure du réseau ET de verrouillage du démarrage automatique, respecter STRICTEMENT l'ordre suivant :\n\n1. POMPE GASOIL → MARCHE\n   (armoire murale, salle des groupes, côté cuve)\n2. DÉMARRAGE G1 → ACTIONNER\n   (pupitre en façade du groupe G1)\n3. INVERSEUR SECOURS → BASCULER\n   (mur nord de la salle des groupes)\n\nToute manœuvre dans le désordre provoque un calage du groupe et une réinitialisation de la séquence (bruit important).\n\nUne fois le secours établi : ascenseurs, éclairage des sous-sols et monte-charge de recherche sont réalimentés.",
+			"style": "typed",
+			"title": "Procédure — Groupe électrogène G1"
+		},
+		"doc_keller": {
+			"body": "BLOC DE NEUROCHIRURGIE — 3e ÉTAGE\nOpérateur : Dr Markus Keller\n\nIntervention : implantation d'un diffuseur ECHO sous-occipital (sujet mineur n°3).\nDéroulement : sans incident.\n\nAddendum personnel, 11/11, 23 h 20 :\nJe me suis piqué avec l'aiguille du diffuseur. Une goutte. Rien.\n23 h 45 : mes mains ne tremblent plus. Pour la première fois en vingt ans, mes mains ne tremblent plus.\n00 h 30 : je n'ai plus besoin de dormir. Je n'ai plus besoin de rien. Je veux opérer. Encore. Et encore. Ils sont tous malades, là, dehors, et je peux les RÉPARER.\n\n(La fin du document est illisible — lacérée au scalpel.)",
+			"style": "typed",
+			"title": "Compte rendu opératoire — Dr M. Keller"
+		},
+		"doc_morgue": {
+			"body": "Entrées du 11 novembre :\n— 21 h 30 : 2 corps du 8e (« patients du protocole », sans nom, sans dossier)\n— 22 h 15 : 4 corps des urgences\n— 23 h 00 : 3 corps du 1er\n\n23 h 40 : le casier 7 est ouvert. De l'intérieur.\n23 h 42 : le casier 12 aussi.\nJe ferme la morgue à clé. Je ne remonte pas le registre.\n\nLes corps du 8e avaient tous la même cicatrice à la nuque. Une petite pastille. « ECHO », gravé dessus.",
+			"style": "hand",
+			"title": "Registre de la morgue"
+		},
+		"doc_nurse_note": {
+			"body": "Si c'est Julie qui trouve ça : je suis montée chercher Sarah au 3e.\nElle a appelé tout le monde pour qu'on descende, qu'on se barricade, qu'on n'ouvre à PERSONNE.\nElle pleurait. Elle disait que c'était sa faute.\nJe ne comprends rien.\nNe m'attends pas pour le café.\n— Nadia",
+			"style": "hand",
+			"title": "Mot griffonné — vestiaires"
+		},
+		"doc_order": {
+			"body": "BON DE COMMANDE N° K-2231\nClient : Kessler Biotech — Département des acquisitions\nDestination : SITE 2 (coordonnées communiquées au transporteur)\n\nDésignation : ECHO-7, lot commercial\nQuantité : 4 000 doses\nConditionnement : 8 caisses réfrigérées\nEnlèvement : toit, hélicoptère, nuit du 11 au 12 novembre\n\nMention : « Usage : programme militaire et civil — distribution grand public à l'étude ».\n\nDes milliers de doses. Des milliers de gens qui ne pourraient plus jamais mourir.",
+			"style": "typed",
+			"title": "Bon de commande — ECHO-7"
+		},
+		"doc_patient_file": {
+			"body": "CONSULTATION D'ONCOLOGIE — Dr A. Ferrand\nPatient : BRANDT Élias, 34 ans\n\nMars — Glioblastome de stade IV. Pronostic : 6 à 9 mois. Aucune option thérapeutique standard.\n\nJuillet — Le patient est orienté, à la demande de la direction, vers un « protocole de recherche interne » (7e/8e étage). Je n'ai pas eu accès au dossier du protocole.\n\nSeptembre — Je revois M. Brandt par hasard dans un couloir. La tumeur a DISPARU. Il est en pleine forme. Il ne se souvient plus du prénom de sa fille.\n\nOctobre — On m'informe que M. Brandt est décédé. Je n'ai pas été convié à l'autopsie. Je n'ai reçu aucun certificat de décès.",
+			"style": "typed",
+			"title": "Dossier de consultation — É. Brandt"
+		},
+		"doc_patient_list": {
+			"body": "NEUROLOGIE — 3e ÉTAGE — Infirmière de nuit : S. REED\n\n301 — M. Duclos — AVC — stable\n302 — Mme Petit — coma post-traumatique → TRANSFERT 8e (sur ordre Dr Vance)\n303 — M. Laurent — sclérose latérale → TRANSFERT 8e\n304 — M. Ngoma — coma → TRANSFERT 8e\n305 — Mme Weiss — état végétatif → TRANSFERT 8e\n306 — lit vide\n\nNote manuscrite en marge, écriture de Sarah :\n« Pourquoi toujours les patients qui ne peuvent pas dire non ? »",
+			"style": "typed",
+			"title": "Liste des patients — Neurologie"
+		},
+		"doc_sabotage": {
+			"body": "SYSTÈME DE CONFINEMENT BIOLOGIQUE — NIVEAU 8 — JOURNAL AUTOMATIQUE\n\n11/11 23 h 49 — Accès salle de contrôle P3 — badge 0447 — REED Sarah (infirmière, neurologie)\n11/11 23 h 51 — Désactivation vidéosurveillance niveau 8 — badge 0447\n11/11 23 h 52 — Désactivation des verrous biologiques, cellules C-1 à C-12 — badge 0447\n11/11 23 h 52 — ALERTE : ouverture cellules C-3, C-5, C-9\n11/11 23 h 58 — ALERTE : agression, couloir 8-Nord\n12/11 00 h 04 — CONFINEMENT GÉNÉRAL DU BÂTIMENT — commande manuelle, centre de contrôle (11e) — badge 0447\n\nC'est elle. C'est Sarah qui a tout ouvert.\nEt c'est elle qui a tout fermé.",
+			"style": "typed",
+			"title": "Journal de sécurité — Niveau 8"
+		},
+		"doc_sarah_letter": {
+			"body": "Thomas,\n\nTu te souviens quand maman disait que j'étais celle qui répare et toi celui qui protège ? J'ai voulu réparer quelque chose ici, et je crois que je l'ai cassé.\n\nDepuis l'été, on m'enlève mes patients. Les comateux, ceux qui ne peuvent pas protester. Ils montent au 8e et ils ne redescendent pas. On m'a dit « protocole de recherche ». J'ai vu les formulaires de consentement : tous signés par la direction « au titre de la tutelle ».\n\nLe Projet ECHO. Une molécule qui fait repousser les tissus. Elle marche, Thomas. Elle marche trop bien. Elle ne s'arrête jamais.\n\nIls veulent la vendre. Des milliers de doses. Je vais les en empêcher.\n\nPardon d'avoir raté ton anniversaire.\nTa sœur qui t'aime,\nSarah",
+			"style": "hand",
+			"title": "Lettre de Sarah (jamais envoyée)"
+		},
+		"doc_sarah_note": {
+			"body": "Si c'est toi, Thomas — et je sais que c'est toi, tu n'as jamais écouté personne —\n\nL'escalier de service B, au 1er étage, monte jusqu'au 6e. C'est le seul passage vers le haut. Le code, c'est ton anniversaire : jour puis mois.\n\n0 6 1 2\n\nAu 6e tu comprendras. Au 8e tu sauras tout. Et après… ne monte pas plus haut. S'il te plaît.\n\nS.",
+			"style": "hand",
+			"title": "Note de Sarah"
+		},
+		"doc_security_log": {
+			"body": "POSTE DE SÉCURITÉ CENTRAL — REZ-DE-CHAUSSÉE\nMain courante — 11 novembre\n\n21 h 40 — Ordre du Dr Vance (direction scientifique) : fermer l'accès aux étages 7 et 8. Motif : « maintenance ».\n23 h 05 — Alarme biologique au 8e. Le Dr Vance dit que c'est un exercice.\n23 h 52 — Les verrous biologiques du 8e sont DÉSACTIVÉS depuis un badge interne. Je ne vois pas lequel, le système ne répond plus.\n00 h 04 — Le bâtiment passe en CONFINEMENT TOTAL. Portes, ascenseurs, sorties. Commande lancée du 11e (centre de contrôle).\n00 h 10 — Coupure générale. Éclairage de secours seulement.\n00 h 20 — Morel descend aux urgences. Diaz monte en radiologie.\n00 h 45 — Morel ne répond plus.\n01 h 12 — Quelqu'un frappe à la porte du poste. Avec la tête. Régulièrement.\n\nJ'enchaîne l'entrée principale. Rien ne doit sortir d'ici.\n— Agent R. Lemaire",
+			"style": "typed",
+			"title": "Main courante — Poste de sécurité"
+		},
+		"doc_triage": {
+			"body": "CHU BLACKWOOD — SERVICE DES URGENCES\nFiche de régulation — nuit du 11 au 12 novembre\n\n22 h 05 — 3 admissions « agitation extrême + hyperthermie » en provenance des étages (!). Transferts internes non annoncés.\n22 h 30 — 7 admissions. Morsures. Tous les patients viennent du 8e étage.\n22 h 47 — Consigne de la direction : NE PAS transférer vers l'extérieur. NE PAS appeler le SAMU. NE PAS prévenir la préfecture.\n23 h 10 — Arrêt des admissions. Les patients mordus → box 4, isolement.\n23 h 26 — Le patient du box 2 (décédé 23 h 02) est debout.\n23 h 31 — Nous n'avons plus assez de sangles.\n\nSi quelqu'un lit ça : ils ne ressentent pas la douleur. Seule la tête compte.",
+			"style": "typed",
+			"title": "Fiche de tri — Urgences"
+		},
+		"doc_vance_memo": {
+			"body": "DE : Dr Helena Vance\nÀ : Direction générale — copie Kessler Biotech\nOBJET : Livraison ECHO-7\n\nLe lot commercial de 4 000 doses est prêt au 12e. Enlèvement confirmé par le client dans la nuit du 11 au 12, par le toit.\n\nConcernant l'infirmière Reed : elle pose des questions. Elle a accédé à des dossiers de transfert. Je recommande de la muter, ou mieux, de l'intégrer au protocole — son profil sanguin est compatible.\n\nRappel : le code du coffre reste la date de la première injection. Ne l'écrivez nulle part.\n\n— H. V.",
+			"style": "typed",
+			"title": "Mémo du Dr H. Vance"
+		},
+		"doc_video": {
+			"body": "[Enregistrement — S. REED — 11/11 — 23 h 40]\n\n« Je m'appelle Sarah Reed. Infirmière en neurologie.\nDepuis juillet, la direction et le Dr Vance testent le Projet ECHO sur des patients qui n'ont jamais consenti. Des comateux. Des enfants de la pédiatrie. Ils les montent ici, au 8e.\nECHO fait repousser les tissus. Mais la régénération ne s'arrête jamais. Et quand le corps meurt, il se relève.\nIls ont vendu la molécule. Des milliers de doses partent cette nuit.\nJe vais couper la sécurité du 8e et ouvrir les cellules : les enfants, au moins, ne finiront pas dans une caisse.\nLe coffre de Vance contient la clé de l'ascenseur de direction. Code : 0-3-0-9. La date où ils ont piqué Élias.\nSi tout tourne mal… je fermerai le bâtiment. Moi avec. »\n\n[23 h 44 — un choc hors champ — Sarah se retourne — fin de l'enregistrement]",
+			"style": "hand",
+			"title": "Vidéo de Sarah — transcription"
+		},
+		"doc_voicemail": {
+			"body": "Messagerie — 1 nouveau message — reçu à 23 h 58\n\n« Thomas… c'est moi.\nSi tu reçois ce message, ne viens surtout pas à l'hôpital.\nTu m'entends ? Surtout pas.\nIls ne sont pas morts, Thomas. Ils ne sont pas morts.\nJ'ai fait une bêtise. J'ai voulu arrêter ça et j'ai… j'ai tout ouvert.\nJ'ai fermé le bâtiment. Personne ne sort. Personne ne rentre.\nJe t'aime, petit frère. Ne viens pas. »\n\n[fin du message]",
+			"style": "hand",
+			"title": "Message vocal — Sarah"
+		},
+		"doc_zero": {
+			"body": "SUJET 0 — BRANDT Élias — cellule 12-A\n\nStatut : actif depuis 54 jours post-mortem.\nParticularité : SEUL sujet conservant la parole et la mémoire. Le sujet reconnaît le personnel, pose des questions, demande des nouvelles de sa fille (Léa, 6 ans).\n\nTissus : régénération continue. Le sujet a subi 31 prélèvements complets. Tout a repoussé.\n\nRecommandation : conserver le Sujet 0 comme souche de référence jusqu'à la fin de la production.\n\nNote manuscrite : « Il m'a demandé aujourd'hui si c'était bientôt fini. Je n'ai pas su quoi répondre. » — S.R.",
+			"style": "typed",
+			"title": "Dossier du Sujet 0 — Élias Brandt"
+		}
+	},
+	"enemies": {
+		"colossus": {
+			"attack_damage": 45.0,
+			"attack_range": 2.5,
+			"attack_recovery": 1.1,
+			"attack_windup": 0.9,
+			"body_height": 2.9,
+			"body_radius": 0.7,
+			"chase_speed": 3.3,
+			"class": "Colossus",
+			"give_up_distance": 90.0,
+			"hearing_scale": 2.0,
+			"lose_time": 60.0,
+			"max_hp": 6000.0,
+			"patrol_wait": 2.5,
+			"proximity": 4.0,
+			"search_time": 30.0,
+			"stagger_chance": 0.0,
+			"turn_speed": 3.0,
+			"vision_range": 20.0,
+			"vision_range_lit": 24.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.2
+		},
+		"hollow_experimental": {
+			"attack_damage": 32.0,
+			"attack_range": 1.9,
+			"attack_recovery": 1.0,
+			"attack_windup": 0.8,
+			"body_height": 2.2,
+			"body_radius": 0.45,
+			"chase_speed": 1.6,
+			"class": "Hollow",
+			"give_up_distance": 22.0,
+			"hearing_scale": 1.0,
+			"lose_time": 5.0,
+			"max_hp": 420.0,
+			"patrol_wait": 2.5,
+			"proximity": 2.2,
+			"search_time": 11.0,
+			"stagger_chance": 0.12,
+			"turn_speed": 6.0,
+			"vision_range": 8.0,
+			"vision_range_lit": 11.0,
+			"wake_radius": 3.2,
+			"walk_speed": 0.75
+		},
+		"hollow_guard": {
+			"attack_damage": 18.0,
+			"attack_range": 1.45,
+			"attack_recovery": 0.75,
+			"attack_windup": 0.55,
+			"body_height": 1.72,
+			"body_radius": 0.34,
+			"chase_speed": 2.35,
+			"class": "Hollow",
+			"give_up_distance": 22.0,
+			"hearing_scale": 1.0,
+			"lose_time": 5.0,
+			"max_hp": 130.0,
+			"patrol_wait": 2.5,
+			"proximity": 2.2,
+			"search_time": 11.0,
+			"stagger_chance": 0.55,
+			"turn_speed": 6.0,
+			"vision_range": 6.5,
+			"vision_range_lit": 11.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.05
+		},
+		"hollow_neuro": {
+			"attack_damage": 18.0,
+			"attack_range": 1.45,
+			"attack_recovery": 0.75,
+			"attack_windup": 0.55,
+			"body_height": 1.72,
+			"body_radius": 0.34,
+			"chase_speed": 3.4,
+			"class": "Hollow",
+			"give_up_distance": 22.0,
+			"hearing_scale": 1.7,
+			"lose_time": 2.5,
+			"max_hp": 110.0,
+			"patrol_wait": 2.5,
+			"proximity": 1.3,
+			"search_time": 5.0,
+			"stagger_chance": 0.55,
+			"turn_speed": 6.0,
+			"vision_range": 1.3,
+			"vision_range_lit": 1.6,
+			"wake_radius": 3.2,
+			"walk_speed": 0.7
+		},
+		"hollow_nurse": {
+			"attack_damage": 15.0,
+			"attack_range": 1.45,
+			"attack_recovery": 0.6,
+			"attack_windup": 0.42,
+			"body_height": 1.72,
+			"body_radius": 0.34,
+			"chase_speed": 2.9,
+			"class": "Hollow",
+			"give_up_distance": 30.0,
+			"hearing_scale": 1.0,
+			"lose_time": 7.0,
+			"max_hp": 90.0,
+			"patrol_wait": 2.5,
+			"proximity": 2.2,
+			"search_time": 11.0,
+			"stagger_chance": 0.45,
+			"turn_speed": 6.0,
+			"vision_range": 8.0,
+			"vision_range_lit": 11.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.3
+		},
+		"hollow_patient": {
+			"attack_damage": 18.0,
+			"attack_range": 1.45,
+			"attack_recovery": 0.75,
+			"attack_windup": 0.55,
+			"body_height": 1.72,
+			"body_radius": 0.34,
+			"chase_speed": 2.1,
+			"class": "Hollow",
+			"give_up_distance": 22.0,
+			"hearing_scale": 1.0,
+			"lose_time": 5.0,
+			"max_hp": 140.0,
+			"patrol_wait": 2.5,
+			"proximity": 2.2,
+			"search_time": 11.0,
+			"stagger_chance": 0.55,
+			"turn_speed": 6.0,
+			"vision_range": 6.5,
+			"vision_range_lit": 11.0,
+			"wake_radius": 3.2,
+			"walk_speed": 0.95
+		},
+		"neonatal": {
+			"attack_damage": 12.0,
+			"attack_range": 1.15,
+			"attack_recovery": 0.35,
+			"attack_windup": 0.3,
+			"body_height": 0.8,
+			"body_radius": 0.25,
+			"chase_speed": 5.2,
+			"class": "Neonatal",
+			"give_up_distance": 22.0,
+			"hearing_scale": 1.8,
+			"lose_time": 8.0,
+			"max_hp": 70.0,
+			"patrol_wait": 2.5,
+			"proximity": 3.0,
+			"search_time": 11.0,
+			"stagger_chance": 0.8,
+			"turn_speed": 12.0,
+			"vision_range": 9.0,
+			"vision_range_lit": 12.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.6
+		},
+		"sarah": {
+			"attack_damage": 22.0,
+			"attack_range": 1.8,
+			"attack_recovery": 0.6,
+			"attack_windup": 0.45,
+			"body_height": 1.7,
+			"body_radius": 0.33,
+			"chase_speed": 3.5,
+			"class": "SarahBoss",
+			"give_up_distance": 70.0,
+			"hearing_scale": 1.5,
+			"lose_time": 40.0,
+			"max_hp": 1300.0,
+			"patrol_wait": 2.5,
+			"proximity": 6.0,
+			"search_time": 20.0,
+			"stagger_chance": 0.15,
+			"turn_speed": 8.0,
+			"vision_range": 18.0,
+			"vision_range_lit": 20.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.2
+		},
+		"surgeon": {
+			"attack_damage": 36.0,
+			"attack_range": 2.4,
+			"attack_recovery": 1.05,
+			"attack_windup": 0.95,
+			"body_height": 2.4,
+			"body_radius": 0.55,
+			"chase_speed": 1.95,
+			"class": "Surgeon",
+			"give_up_distance": 60.0,
+			"hearing_scale": 1.6,
+			"lose_time": 30.0,
+			"max_hp": 900.0,
+			"patrol_wait": 2.5,
+			"proximity": 4.5,
+			"search_time": 25.0,
+			"stagger_chance": 0.0,
+			"turn_speed": 3.2,
+			"vision_range": 16.0,
+			"vision_range_lit": 18.0,
+			"wake_radius": 3.2,
+			"walk_speed": 0.95
+		},
+		"veilleur": {
+			"attack_damage": 28.0,
+			"attack_range": 2.2,
+			"attack_recovery": 0.9,
+			"attack_windup": 0.5,
+			"body_height": 2.15,
+			"body_radius": 0.32,
+			"chase_speed": 4.2,
+			"class": "Veilleur",
+			"give_up_distance": 40.0,
+			"hearing_scale": 2.2,
+			"lose_time": 3.0,
+			"max_hp": 380.0,
+			"patrol_wait": 4.0,
+			"proximity": 1.8,
+			"search_time": 8.0,
+			"stagger_chance": 0.2,
+			"turn_speed": 7.0,
+			"vision_range": 2.2,
+			"vision_range_lit": 3.2,
+			"wake_radius": 3.2,
+			"walk_speed": 0.9
+		},
+		"zero": {
+			"attack_damage": 24.0,
+			"attack_range": 1.9,
+			"attack_recovery": 0.7,
+			"attack_windup": 0.62,
+			"body_height": 1.95,
+			"body_radius": 0.38,
+			"chase_speed": 3.3,
+			"class": "PatientZero",
+			"give_up_distance": 90.0,
+			"hearing_scale": 1.5,
+			"lose_time": 40.0,
+			"max_hp": 2200.0,
+			"patrol_wait": 2.5,
+			"proximity": 5.0,
+			"search_time": 25.0,
+			"stagger_chance": 0.2,
+			"turn_speed": 7.0,
+			"vision_range": 18.0,
+			"vision_range_lit": 22.0,
+			"wake_radius": 3.2,
+			"walk_speed": 1.2
+		}
+	},
+	"flashlight": {
+		"BASE_ENERGY": 5.0,
+		"BASE_RANGE": 24.0,
+		"DRAIN_PER_SEC": 0.1,
+		"LEVELS": [
+			100,
+			75,
+			50,
+			25,
+			10,
+			0
+		],
+		"LEVEL_POWER": {
+			"0": 0.0,
+			"10": 0.38,
+			"100": 1.0,
+			"25": 0.6,
+			"50": 0.78,
+			"75": 0.9
+		}
+	},
+	"game_state": {
+		"inventory_slots": 6,
+		"max_hp": 100.0
+	},
+	"generator_switch_order": [
+		"pump",
+		"g1",
+		"transfer"
+	],
+	"input": {
+		"joy_axes": {
+			"aim": [
+				4,
+				1.0,
+				0.3
+			],
+			"fire": [
+				5,
+				1.0,
+				0.3
+			],
+			"look_down": [
+				3,
+				1.0,
+				0.12
+			],
+			"look_left": [
+				2,
+				-1.0,
+				0.12
+			],
+			"look_right": [
+				2,
+				1.0,
+				0.12
+			],
+			"look_up": [
+				3,
+				-1.0,
+				0.12
+			],
+			"move_back": [
+				1,
+				1.0,
+				0.2
+			],
+			"move_forward": [
+				1,
+				-1.0,
+				0.2
+			],
+			"move_left": [
+				0,
+				-1.0,
+				0.2
+			],
+			"move_right": [
+				0,
+				1.0,
+				0.2
+			]
+		},
+		"joy_buttons": {
+			"dodge": [
+				1
+			],
+			"flashlight": [
+				11
+			],
+			"interact": [
+				0
+			],
+			"inventory": [
+				4,
+				12
+			],
+			"pause": [
+				6
+			],
+			"quick_heal": [
+				3
+			],
+			"reload": [
+				2
+			],
+			"run": [
+				7
+			],
+			"toggle_view": [
+				8
+			],
+			"weapon_next": [
+				10,
+				14
+			],
+			"weapon_prev": [
+				9,
+				13
+			]
+		},
+		"keys_physical": {
+			"debug_console": [
+				"F1"
+			],
+			"debug_perf": [
+				"F3"
+			],
+			"dodge": [
+				"Space"
+			],
+			"flashlight": [
+				"F"
+			],
+			"interact": [
+				"E"
+			],
+			"inventory": [
+				"Tab",
+				"I"
+			],
+			"move_back": [
+				"S",
+				"Down"
+			],
+			"move_forward": [
+				"W",
+				"Up"
+			],
+			"move_left": [
+				"A",
+				"Left"
+			],
+			"move_right": [
+				"D",
+				"Right"
+			],
+			"pause": [
+				"Escape"
+			],
+			"quick_heal": [
+				"H"
+			],
+			"reload": [
+				"R"
+			],
+			"run": [
+				"Shift"
+			],
+			"toggle_view": [
+				"V"
+			],
+			"weapon_1": [
+				"1"
+			],
+			"weapon_2": [
+				"2"
+			],
+			"weapon_3": [
+				"3"
+			],
+			"weapon_4": [
+				"4"
+			],
+			"weapon_5": [
+				"5"
+			]
+		},
+		"menu_navigation": {
+			"nav_down": [
+				1,
+				1.0,
+				12
+			],
+			"nav_left": [
+				0,
+				-1.0,
+				13
+			],
+			"nav_right": [
+				0,
+				1.0,
+				14
+			],
+			"nav_up": [
+				1,
+				-1.0,
+				11
+			]
+		},
+		"mouse_buttons": {
+			"aim": [
+				2
+			],
+			"fire": [
+				1
+			],
+			"weapon_next": [
+				5
+			],
+			"weapon_prev": [
+				4
+			]
+		},
+		"note": "Codes Godot : MOUSE_BUTTON_* (1 gauche, 2 droit, 4/5 molette), JOY_BUTTON_* (0 A, 1 B, 2 X, 3 Y, 4 Vue, 6 Menu, 7 L3, 8 R3, 9 LB, 10 RB, 11-14 croix haut/bas/gauche/droite), JOY_AXIS_* (0/1 stick gauche, 2/3 stick droit, 4 LT, 5 RT)"
+	},
+	"items": {
+		"ammo_9mm": {
+			"desc": "Cartouches 9mm Parabellum. Visez la tête : le corps ne les arrête pas.",
+			"icon": "ammo",
+			"kind": "ammo",
+			"max_stack": 99,
+			"name": "Munitions 9mm"
+		},
+		"ammo_magnum": {
+			"desc": "Munitions de gros calibre pour le Magnum. Chaque balle est précieuse.",
+			"icon": "magnum_ammo",
+			"kind": "ammo",
+			"max_stack": 18,
+			"name": "Balles .357 Magnum"
+		},
+		"ammo_shells": {
+			"desc": "Cartouches de chevrotine pour le fusil à pompe. Rares : à garder pour les urgences.",
+			"icon": "shells",
+			"kind": "ammo",
+			"max_stack": 30,
+			"name": "Cartouches calibre 12"
+		},
+		"baton": {
+			"desc": "Matraque d'agent de sécurité. Silencieuse : économise les munitions.",
+			"icon": "baton",
+			"kind": "weapon",
+			"max_stack": 1,
+			"name": "Matraque télescopique"
+		},
+		"battery": {
+			"desc": "Des piles neuves pour la lampe torche.",
+			"icon": "battery",
+			"kind": "instant",
+			"max_stack": 1,
+			"name": "Piles"
+		},
+		"card_research": {
+			"desc": "Carte du Dr H. Vance, direction scientifique. Monte-charge sécurisé : étages de recherche 7 et 8 (départ du sous-sol -2).",
+			"icon": "keycard",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Carte d'accès RECHERCHE"
+		},
+		"flashlight": {
+			"desc": "Une lampe torche militaire. Touche F pour l'allumer. Attention : la lumière attire l'attention.",
+			"icon": "flashlight",
+			"kind": "tool",
+			"max_stack": 1,
+			"name": "Lampe torche"
+		},
+		"fuse": {
+			"desc": "Un fusible cylindrique de 60 ampères, neuf. De quoi réalimenter une porte électrique.",
+			"icon": "fuse",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Fusible 60 A"
+		},
+		"key_boxes": {
+			"desc": "Un trousseau de l'accueil des urgences : « BOX DE SOINS ».",
+			"icon": "key",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Clé des box de soins"
+		},
+		"key_locker": {
+			"desc": "Une petite clé sur un porte-clés en forme de phare. Sarah l'avait déjà quand on était gamins.",
+			"icon": "key",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Clé du casier de Sarah"
+		},
+		"key_main_lab": {
+			"desc": "La carte d'accès de Sarah, poisseuse de sang. Niveau d'accréditation 5 : zone interdite, 12e étage.",
+			"icon": "keycard",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Carte de Sarah — Niveau 5"
+		},
+		"key_pharmacy": {
+			"desc": "Une clé plate sur un anneau : « RIDEAU PHARMACIE — RDC ».",
+			"icon": "key",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Clé du rideau de la pharmacie"
+		},
+		"key_private": {
+			"desc": "Clé à tube, gravée « DIRECTION — 8 ↔ 11 ». Ouvre l'ascenseur privé du 8e étage.",
+			"icon": "key",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Clé de l'ascenseur de direction"
+		},
+		"key_technical": {
+			"desc": "Le trousseau de l'agent Diaz. Étiquette : « LOCAL TECHNIQUE — SOUS-SOL -2 ». Ouvre la porte de l'escalier A au -2.",
+			"icon": "key",
+			"kind": "key",
+			"max_stack": 1,
+			"name": "Clé du local technique"
+		},
+		"magnum": {
+			"desc": "Six coups de gros calibre. Pour ce qui ne devrait plus marcher.",
+			"icon": "magnum",
+			"kind": "weapon",
+			"max_stack": 1,
+			"name": "Magnum .357"
+		},
+		"pistol": {
+			"desc": "Pistolet semi-automatique de service. Chargeur de 12 balles. Chaque balle compte.",
+			"icon": "pistol",
+			"kind": "weapon",
+			"max_stack": 1,
+			"name": "Pistolet 9mm"
+		},
+		"shotgun": {
+			"desc": "Calibre 12. Dévastateur de près. Très peu de cartouches.",
+			"icon": "shotgun",
+			"kind": "weapon",
+			"max_stack": 1,
+			"name": "Fusil à pompe"
+		},
+		"smg": {
+			"desc": "Rafales rapides. Consomme énormément de 9mm.",
+			"icon": "smg",
+			"kind": "weapon",
+			"max_stack": 1,
+			"name": "Pistolet-mitrailleur"
+		},
+		"spray": {
+			"desc": "Spray hémostatique et anesthésiant. Restaure 40 PV.",
+			"heal": 40.0,
+			"icon": "spray",
+			"kind": "heal",
+			"max_stack": 3,
+			"name": "Medical Spray"
+		}
+	},
+	"objectives": [
+		"Fin du chapitre 1.",
+		"SORTIR ! Box de soins, accueil des urgences, quai des ambulances… et la rampe.",
+		"Le monte-charge, à l'est du couloir du 8e : descendre au -1 !",
+		"AUTODESTRUCTION ! Descendre par l'escalier C (ouest) jusqu'au 8e étage.",
+		"Détruire le laboratoire : console d'autodestruction, poste de commande au nord.",
+		"Monter au 12e par l'escalier de secours C, au bout ouest du couloir.",
+		"Sarah…",
+		"Trouver Sarah : le centre de contrôle, au sud du couloir.",
+		"L'ascenseur de direction (8e, à côté du monte-charge) : monter au 11e.",
+		"Ouvrir le coffre du Dr Vance (bureau au nord du couloir). Code : 0309.",
+		"Fouiller le laboratoire expérimental. Le bureau de recherche est au sud du couloir.",
+		"Descendre au -2 par les ascenseurs, puis prendre le monte-charge de recherche jusqu'au 8e.",
+		"Fouiller le 6e étage. La cellule de crise est au nord du couloir.",
+		"Monter au 6e par l'escalier de service B.",
+		"Survivre au Chirurgien. Les bouteilles d'oxygène du couloir…",
+		"Retourner au 1er étage (ascenseurs) : escalier de service B, code 0612.",
+		"Ouvrir le casier de Sarah : salle de repos des infirmières, au nord-ouest du couloir.",
+		"Chercher des traces de Sarah dans son service. Le poste de soins est au nord du couloir.",
+		"Le courant est revenu : prendre les ascenseurs jusqu'au 3e, le service de Sarah.",
+		"Rétablir le courant : salle des groupes électrogènes (procédure dans le local technique).",
+		"Descendre au sous-sol -2 par l'escalier A : la clé du local technique ouvre la porte.",
+		"Explorer l'hôpital et trouver un chemin vers le 3e, le service de Sarah.",
+		"FUIR ! L'escalier A, à l'ouest du couloir.",
+		"Traverser les urgences.",
+		"Entrer par les urgences : la rampe des ambulances, côté est du parking.",
+		"Entrer dans l'hôpital Blackwood."
+	],
+	"player": {
+		"ACCEL": 9.0,
+		"AIM_SPEED": 1.3,
+		"DECEL": 11.0,
+		"DODGE_COOLDOWN": 0.9,
+		"DODGE_SPEED": 7.0,
+		"DODGE_TIME": 0.4,
+		"GRAVITY": 22.0,
+		"RUN_SPEED": 4.7,
+		"STRIDE_RUN": 1.2,
+		"STRIDE_WALK": 0.8,
+		"TURN_SPEED": 10.0,
+		"WALK_SPEED": 2.3
+	},
+	"settings_defaults": {
+		"ambience_volume": 0.85,
+		"antialiasing": 1,
+		"brightness": 1.0,
+		"camera_shake": 1.0,
+		"camera_view": 1,
+		"chromatic_aberration": true,
+		"crosshair": true,
+		"debug_mode": false,
+		"difficulty": 1,
+		"film_grain": true,
+		"flashlight_intensity": 1.0,
+		"fov": 70.0,
+		"glow": true,
+		"head_bob": true,
+		"invert_y": false,
+		"master_volume": 0.9,
+		"max_fps": 0,
+		"mouse_sensitivity": 1.0,
+		"music_volume": 0.7,
+		"quality": 2,
+		"render_scale": 1.0,
+		"sfx_volume": 0.9,
+		"shadows": 2,
+		"ssao": true,
+		"ssil": false,
+		"ssr": false,
+		"stick_sensitivity": 1.0,
+		"subtitle_size": 1,
+		"subtitles": true,
+		"vibration": true,
+		"volumetric_fog": true,
+		"vsync": true,
+		"window_mode": 0
+	},
+	"weapon_order": [
+		"baton",
+		"pistol",
+		"shotgun",
+		"smg",
+		"magnum"
+	],
+	"weapons": {
+		"baton": {
+			"ammo": "",
+			"arc": 70.0,
+			"damage": 30.0,
+			"desc": "Matraque d'agent de sécurité, déployée d'un coup sec. Faible, mais silencieuse : chaque balle économisée compte.",
+			"head_mult": 1.5,
+			"interval": 0.72,
+			"kind": "melee",
+			"mag": 0,
+			"name": "Matraque télescopique",
+			"noise": 4.0,
+			"reach": 1.75,
+			"short": "MATRAQUE",
+			"stagger": 0.75
+		},
+		"magnum": {
+			"ammo": "ammo_magnum",
+			"damage": 120.0,
+			"desc": "Revolver de gros calibre. Six coups. De quoi arrêter ce qui ne devrait plus marcher.",
+			"head_mult": 2.0,
+			"interval": 0.85,
+			"kind": "hitscan",
+			"knockback": 2.0,
+			"mag": 6,
+			"name": "Magnum .357",
+			"noise": 45.0,
+			"pierce": true,
+			"range": 80.0,
+			"recoil": 0.12,
+			"reload": 2.6,
+			"shake": 0.55,
+			"short": "MAGNUM .357",
+			"spread_aim": 0.4,
+			"spread_hip": 3.0,
+			"stagger": 1.0
+		},
+		"pistol": {
+			"ammo": "ammo_9mm",
+			"damage": 26.0,
+			"desc": "Pistolet semi-automatique de service. Chargeur de 12 balles. L'arme principale : chaque balle compte.",
+			"head_mult": 2.6,
+			"interval": 0.32,
+			"kind": "hitscan",
+			"mag": 12,
+			"name": "Pistolet 9mm",
+			"noise": 26.0,
+			"range": 60.0,
+			"recoil": 0.035,
+			"reload": 1.7,
+			"shake": 0.18,
+			"short": "PISTOLET 9MM",
+			"spread_aim": 0.7,
+			"spread_hip": 4.0,
+			"stagger": 0.35
+		},
+		"shotgun": {
+			"ammo": "ammo_shells",
+			"damage": 13.0,
+			"desc": "Fusil à pompe de calibre 12. Dévastateur à courte portée, inutile au loin. Cinq cartouches, rechargées une à une.",
+			"head_mult": 1.8,
+			"interval": 0.95,
+			"kind": "pellets",
+			"knockback": 3.5,
+			"mag": 5,
+			"name": "Fusil à pompe",
+			"noise": 38.0,
+			"pellets": 9,
+			"range": 22.0,
+			"recoil": 0.09,
+			"reload": 0.55,
+			"reload_one": true,
+			"shake": 0.45,
+			"short": "FUSIL À POMPE",
+			"spread_aim": 4.2,
+			"spread_hip": 6.5,
+			"stagger": 0.95
+		},
+		"smg": {
+			"ammo": "ammo_9mm",
+			"auto": true,
+			"damage": 14.0,
+			"desc": "Pistolet-mitrailleur compact. Rafales rapides — et un chargeur de 30 balles de 9mm vidé en deux secondes.",
+			"head_mult": 2.2,
+			"interval": 0.075,
+			"kind": "hitscan",
+			"mag": 30,
+			"name": "Pistolet-mitrailleur",
+			"noise": 30.0,
+			"range": 45.0,
+			"recoil": 0.018,
+			"reload": 2.1,
+			"shake": 0.08,
+			"short": "PISTOLET-MITRAILLEUR",
+			"spread_aim": 1.6,
+			"spread_growth": 0.35,
+			"spread_hip": 5.0,
+			"stagger": 0.2
+		}
+	}
+}

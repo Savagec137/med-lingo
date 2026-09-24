@@ -1,0 +1,7448 @@
+{
+	"surfaces": {
+		"apron": {
+			"base": [
+				0.2,
+				0.17,
+				0.14,
+				1.0
+			],
+			"grime": 1.0,
+			"grime_color": [
+				0.22,
+				0.02,
+				0.015,
+				1.0
+			],
+			"pattern": 0,
+			"rough": 0.35,
+			"variation": 0.3
+		},
+		"asphalt": {
+			"base": [
+				0.11,
+				0.11,
+				0.12,
+				1.0
+			],
+			"grime": 0.2,
+			"line": [
+				0.04,
+				0.04,
+				0.04,
+				1.0
+			],
+			"pattern": 5,
+			"rough": 0.8,
+			"wet": 0.75
+		},
+		"bark": {
+			"alt": [
+				0.055,
+				0.045,
+				0.035,
+				1.0
+			],
+			"base": [
+				0.12,
+				0.095,
+				0.07,
+				1.0
+			],
+			"bump": 3.0,
+			"grime": 0.2,
+			"pattern": 8,
+			"rough": 1.0
+		},
+		"car_black": {
+			"alt": [
+				0.1,
+				0.06,
+				0.04,
+				1.0
+			],
+			"base": [
+				0.03,
+				0.035,
+				0.04,
+				1.0
+			],
+			"grime": 0.12,
+			"metallic": 0.5,
+			"pattern": 7,
+			"rough": 0.2
+		},
+		"car_gray": {
+			"alt": [
+				0.2,
+				0.1,
+				0.05,
+				1.0
+			],
+			"base": [
+				0.27,
+				0.28,
+				0.3,
+				1.0
+			],
+			"grime": 0.18,
+			"metallic": 0.45,
+			"pattern": 7,
+			"rough": 0.26
+		},
+		"car_red": {
+			"alt": [
+				0.2,
+				0.1,
+				0.05,
+				1.0
+			],
+			"base": [
+				0.3,
+				0.035,
+				0.035,
+				1.0
+			],
+			"grime": 0.18,
+			"metallic": 0.35,
+			"pattern": 7,
+			"rough": 0.24
+		},
+		"car_white": {
+			"alt": [
+				0.3,
+				0.15,
+				0.07,
+				1.0
+			],
+			"base": [
+				0.66,
+				0.66,
+				0.64,
+				1.0
+			],
+			"grime": 0.18,
+			"metallic": 0.15,
+			"pattern": 7,
+			"rough": 0.26
+		},
+		"cardboard": {
+			"base": [
+				0.42,
+				0.32,
+				0.2,
+				1.0
+			],
+			"grime": 0.5,
+			"pattern": 0,
+			"rough": 0.95,
+			"variation": 0.2
+		},
+		"ceiling_concrete": {
+			"alt": [
+				0.18,
+				0.18,
+				0.18,
+				1.0
+			],
+			"base": [
+				0.24,
+				0.24,
+				0.23,
+				1.0
+			],
+			"grime": 0.8,
+			"line": [
+				0.1,
+				0.1,
+				0.1,
+				1.0
+			],
+			"pattern": 4
+		},
+		"ceiling_tile": {
+			"base": [
+				0.58,
+				0.58,
+				0.55,
+				1.0
+			],
+			"grime": 0.7,
+			"line": [
+				0.35,
+				0.35,
+				0.33,
+				1.0
+			],
+			"pattern": 3
+		},
+		"cloth_jacket": {
+			"base": [
+				0.17,
+				0.11,
+				0.075,
+				1.0
+			],
+			"grime": 0.3,
+			"pattern": 0,
+			"rough": 0.65,
+			"variation": 0.15
+		},
+		"cloth_jeans": {
+			"base": [
+				0.09,
+				0.11,
+				0.16,
+				1.0
+			],
+			"grime": 0.3,
+			"pattern": 0,
+			"rough": 0.95,
+			"variation": 0.15
+		},
+		"cloth_shirt": {
+			"base": [
+				0.25,
+				0.26,
+				0.27,
+				1.0
+			],
+			"grime": 0.2,
+			"pattern": 0,
+			"rough": 0.95
+		},
+		"curb": {
+			"base": [
+				0.38,
+				0.38,
+				0.36,
+				1.0
+			],
+			"grime": 0.6,
+			"pattern": 4
+		},
+		"fabric_blue": {
+			"base": [
+				0.11,
+				0.16,
+				0.26,
+				1.0
+			],
+			"grime": 0.5,
+			"pattern": 0,
+			"rough": 1.0,
+			"variation": 0.2
+		},
+		"fabric_brown": {
+			"base": [
+				0.25,
+				0.16,
+				0.1,
+				1.0
+			],
+			"grime": 0.5,
+			"pattern": 0,
+			"rough": 1.0,
+			"variation": 0.25
+		},
+		"fabric_green": {
+			"base": [
+				0.14,
+				0.24,
+				0.2,
+				1.0
+			],
+			"grime": 0.5,
+			"pattern": 0,
+			"rough": 1.0,
+			"variation": 0.2
+		},
+		"floor_carpet": {
+			"base": [
+				0.22,
+				0.07,
+				0.06,
+				1.0
+			],
+			"bump": 2.0,
+			"grime": 0.6,
+			"pattern": 0,
+			"rough": 1.0,
+			"variation": 0.2
+		},
+		"floor_concrete": {
+			"alt": [
+				0.22,
+				0.22,
+				0.21,
+				1.0
+			],
+			"base": [
+				0.28,
+				0.28,
+				0.27,
+				1.0
+			],
+			"grime": 0.75,
+			"line": [
+				0.14,
+				0.14,
+				0.13,
+				1.0
+			],
+			"pattern": 4,
+			"wet": 0.7
+		},
+		"floor_lino": {
+			"base": [
+				0.34,
+				0.32,
+				0.28,
+				1.0
+			],
+			"grime": 0.55,
+			"line": [
+				0.15,
+				0.14,
+				0.12,
+				1.0
+			],
+			"pattern": 6,
+			"rough": 0.6,
+			"tile": 1.0,
+			"variation": 0.15
+		},
+		"floor_tile": {
+			"alt": [
+				0.2,
+				0.22,
+				0.22,
+				1.0
+			],
+			"base": [
+				0.5,
+				0.5,
+				0.47,
+				1.0
+			],
+			"grime": 0.6,
+			"line": [
+				0.12,
+				0.12,
+				0.11,
+				1.0
+			],
+			"pattern": 1,
+			"rough": 0.55,
+			"tile": 0.4,
+			"wet": 0.5
+		},
+		"floor_tile_lab": {
+			"alt": [
+				0.5,
+				0.53,
+				0.52,
+				1.0
+			],
+			"base": [
+				0.56,
+				0.58,
+				0.57,
+				1.0
+			],
+			"grime": 0.5,
+			"line": [
+				0.25,
+				0.26,
+				0.25,
+				1.0
+			],
+			"pattern": 1,
+			"rough": 0.4,
+			"tile": 0.3,
+			"wet": 0.6
+		},
+		"gown": {
+			"base": [
+				0.42,
+				0.48,
+				0.5,
+				1.0
+			],
+			"grime": 0.95,
+			"grime_color": [
+				0.22,
+				0.05,
+				0.03,
+				1.0
+			],
+			"pattern": 0,
+			"rough": 0.95,
+			"variation": 0.2
+		},
+		"ground": {
+			"base": [
+				0.07,
+				0.08,
+				0.05,
+				1.0
+			],
+			"bump": 3.0,
+			"grime": 0.8,
+			"grime_color": [
+				0.04,
+				0.035,
+				0.02,
+				1.0
+			],
+			"pattern": 0,
+			"rough": 1.0,
+			"variation": 0.4
+		},
+		"hair_dark": {
+			"base": [
+				0.045,
+				0.035,
+				0.03,
+				1.0
+			],
+			"grime": 0.0,
+			"pattern": 0,
+			"rough": 0.7,
+			"variation": 0.3
+		},
+		"leather_boots": {
+			"base": [
+				0.06,
+				0.045,
+				0.035,
+				1.0
+			],
+			"grime": 0.3,
+			"pattern": 0,
+			"rough": 0.5
+		},
+		"lens_blue": {
+			"base": [
+				0.02,
+				0.06,
+				0.26,
+				1.0
+			],
+			"grime": 0.05,
+			"pattern": 0,
+			"rough": 0.12,
+			"variation": 0.02
+		},
+		"linen": {
+			"base": [
+				0.6,
+				0.61,
+				0.6,
+				1.0
+			],
+			"grime": 0.35,
+			"pattern": 0,
+			"rough": 0.95,
+			"variation": 0.08
+		},
+		"mattress": {
+			"base": [
+				0.55,
+				0.57,
+				0.55,
+				1.0
+			],
+			"grime": 0.55,
+			"pattern": 0,
+			"rough": 0.95,
+			"variation": 0.1
+		},
+		"metal_alu": {
+			"alt": [
+				0.3,
+				0.2,
+				0.15,
+				1.0
+			],
+			"base": [
+				0.52,
+				0.53,
+				0.55,
+				1.0
+			],
+			"grime": 0.08,
+			"metallic": 0.8,
+			"pattern": 7,
+			"rough": 0.38
+		},
+		"metal_blue": {
+			"alt": [
+				0.26,
+				0.13,
+				0.07,
+				1.0
+			],
+			"base": [
+				0.14,
+				0.2,
+				0.3,
+				1.0
+			],
+			"grime": 0.4,
+			"metallic": 0.4,
+			"pattern": 7,
+			"rough": 0.55
+		},
+		"metal_chrome": {
+			"alt": [
+				0.3,
+				0.2,
+				0.15,
+				1.0
+			],
+			"base": [
+				0.64,
+				0.65,
+				0.67,
+				1.0
+			],
+			"grime": 0.06,
+			"metallic": 0.95,
+			"pattern": 7,
+			"rough": 0.2
+		},
+		"metal_dark": {
+			"alt": [
+				0.22,
+				0.11,
+				0.06,
+				1.0
+			],
+			"base": [
+				0.13,
+				0.14,
+				0.15,
+				1.0
+			],
+			"grime": 0.3,
+			"metallic": 0.7,
+			"pattern": 7,
+			"rough": 0.45
+		},
+		"metal_gray": {
+			"alt": [
+				0.28,
+				0.14,
+				0.07,
+				1.0
+			],
+			"base": [
+				0.36,
+				0.38,
+				0.39,
+				1.0
+			],
+			"grime": 0.35,
+			"metallic": 0.6,
+			"pattern": 7,
+			"rough": 0.5
+		},
+		"metal_green": {
+			"alt": [
+				0.26,
+				0.13,
+				0.07,
+				1.0
+			],
+			"base": [
+				0.18,
+				0.27,
+				0.22,
+				1.0
+			],
+			"grime": 0.4,
+			"metallic": 0.4,
+			"pattern": 7,
+			"rough": 0.55
+		},
+		"metal_rust": {
+			"alt": [
+				0.24,
+				0.1,
+				0.04,
+				1.0
+			],
+			"base": [
+				0.3,
+				0.2,
+				0.14,
+				1.0
+			],
+			"grime": 0.6,
+			"metallic": 0.3,
+			"pattern": 7,
+			"rough": 0.85
+		},
+		"metal_steel": {
+			"alt": [
+				0.3,
+				0.2,
+				0.15,
+				1.0
+			],
+			"base": [
+				0.55,
+				0.56,
+				0.57,
+				1.0
+			],
+			"grime": 0.25,
+			"metallic": 0.9,
+			"pattern": 7,
+			"rough": 0.3
+		},
+		"metal_yellow": {
+			"alt": [
+				0.2,
+				0.12,
+				0.05,
+				1.0
+			],
+			"base": [
+				0.55,
+				0.42,
+				0.06,
+				1.0
+			],
+			"grime": 0.5,
+			"metallic": 0.3,
+			"pattern": 7,
+			"rough": 0.6
+		},
+		"paint_blue": {
+			"base": [
+				0.03,
+				0.09,
+				0.3,
+				1.0
+			],
+			"grime": 0.15,
+			"pattern": 0,
+			"rough": 0.3,
+			"variation": 0.03
+		},
+		"paint_orange": {
+			"base": [
+				0.72,
+				0.2,
+				0.02,
+				1.0
+			],
+			"grime": 0.15,
+			"pattern": 0,
+			"rough": 0.32,
+			"variation": 0.03
+		},
+		"paint_white": {
+			"base": [
+				0.7,
+				0.7,
+				0.68,
+				1.0
+			],
+			"grime": 0.22,
+			"pattern": 0,
+			"rough": 0.3,
+			"variation": 0.03
+		},
+		"paper": {
+			"base": [
+				0.78,
+				0.76,
+				0.68,
+				1.0
+			],
+			"grime": 0.35,
+			"pattern": 0,
+			"rough": 0.95
+		},
+		"plastic_beige": {
+			"base": [
+				0.58,
+				0.54,
+				0.46,
+				1.0
+			],
+			"grime": 0.45,
+			"pattern": 0,
+			"rough": 0.5
+		},
+		"plastic_black": {
+			"base": [
+				0.03,
+				0.03,
+				0.033,
+				1.0
+			],
+			"grime": 0.08,
+			"pattern": 0,
+			"rough": 0.42,
+			"variation": 0.04
+		},
+		"plastic_dark": {
+			"base": [
+				0.07,
+				0.07,
+				0.08,
+				1.0
+			],
+			"grime": 0.2,
+			"pattern": 0,
+			"rough": 0.4
+		},
+		"plastic_gray": {
+			"base": [
+				0.3,
+				0.31,
+				0.32,
+				1.0
+			],
+			"grime": 0.2,
+			"pattern": 0,
+			"rough": 0.5,
+			"variation": 0.05
+		},
+		"plastic_orange": {
+			"base": [
+				0.55,
+				0.22,
+				0.05,
+				1.0
+			],
+			"grime": 0.5,
+			"pattern": 0,
+			"rough": 0.5
+		},
+		"plastic_white": {
+			"base": [
+				0.66,
+				0.66,
+				0.63,
+				1.0
+			],
+			"grime": 0.45,
+			"pattern": 0,
+			"rough": 0.45
+		},
+		"rubber": {
+			"base": [
+				0.03,
+				0.03,
+				0.03,
+				1.0
+			],
+			"grime": 0.1,
+			"pattern": 0,
+			"rough": 0.8
+		},
+		"skin_human": {
+			"base": [
+				0.6,
+				0.45,
+				0.36,
+				1.0
+			],
+			"grime": 0.15,
+			"pattern": 0,
+			"rough": 0.6,
+			"variation": 0.05
+		},
+		"surgical_cloth": {
+			"base": [
+				0.3,
+				0.42,
+				0.38,
+				1.0
+			],
+			"grime": 0.9,
+			"grime_color": [
+				0.2,
+				0.03,
+				0.02,
+				1.0
+			],
+			"pattern": 0,
+			"rough": 0.9,
+			"variation": 0.25
+		},
+		"tire": {
+			"base": [
+				0.022,
+				0.022,
+				0.024,
+				1.0
+			],
+			"bump": 2.0,
+			"grime": 0.05,
+			"pattern": 0,
+			"rough": 0.82,
+			"variation": 0.1
+		},
+		"uniform_guard": {
+			"base": [
+				0.1,
+				0.12,
+				0.16,
+				1.0
+			],
+			"grime": 0.8,
+			"grime_color": [
+				0.2,
+				0.04,
+				0.03,
+				1.0
+			],
+			"pattern": 0,
+			"rough": 0.9,
+			"variation": 0.2
+		},
+		"wall_admin": {
+			"alt": [
+				0.36,
+				0.27,
+				0.19,
+				1.0
+			],
+			"band": 0.95,
+			"base": [
+				0.56,
+				0.53,
+				0.46,
+				1.0
+			],
+			"grime": 0.5,
+			"line": [
+				0.2,
+				0.14,
+				0.09,
+				1.0
+			],
+			"pattern": 2
+		},
+		"wall_concrete": {
+			"alt": [
+				0.3,
+				0.31,
+				0.3,
+				1.0
+			],
+			"base": [
+				0.4,
+				0.4,
+				0.38,
+				1.0
+			],
+			"grime": 0.7,
+			"line": [
+				0.2,
+				0.2,
+				0.19,
+				1.0
+			],
+			"pattern": 4
+		},
+		"wall_concrete_dark": {
+			"alt": [
+				0.2,
+				0.2,
+				0.19,
+				1.0
+			],
+			"base": [
+				0.27,
+				0.27,
+				0.26,
+				1.0
+			],
+			"grime": 0.85,
+			"line": [
+				0.12,
+				0.12,
+				0.12,
+				1.0
+			],
+			"pattern": 4
+		},
+		"wall_ext": {
+			"alt": [
+				0.26,
+				0.27,
+				0.27,
+				1.0
+			],
+			"base": [
+				0.36,
+				0.36,
+				0.35,
+				1.0
+			],
+			"grime": 0.8,
+			"line": [
+				0.15,
+				0.15,
+				0.15,
+				1.0
+			],
+			"pattern": 4
+		},
+		"wall_hospital": {
+			"alt": [
+				0.29,
+				0.37,
+				0.34,
+				1.0
+			],
+			"base": [
+				0.6,
+				0.6,
+				0.55,
+				1.0
+			],
+			"grime": 0.55,
+			"line": [
+				0.16,
+				0.2,
+				0.18,
+				1.0
+			],
+			"pattern": 2
+		},
+		"wall_hospital_dirty": {
+			"alt": [
+				0.25,
+				0.31,
+				0.28,
+				1.0
+			],
+			"base": [
+				0.5,
+				0.5,
+				0.45,
+				1.0
+			],
+			"grime": 0.95,
+			"line": [
+				0.14,
+				0.16,
+				0.15,
+				1.0
+			],
+			"pattern": 2
+		},
+		"wall_plaster": {
+			"alt": [
+				0.34,
+				0.31,
+				0.27,
+				1.0
+			],
+			"base": [
+				0.55,
+				0.53,
+				0.48,
+				1.0
+			],
+			"grime": 0.7,
+			"pattern": 9
+		},
+		"wall_tile_white": {
+			"alt": [
+				0.66,
+				0.69,
+				0.68,
+				1.0
+			],
+			"base": [
+				0.7,
+				0.72,
+				0.7,
+				1.0
+			],
+			"grime": 0.55,
+			"line": [
+				0.32,
+				0.33,
+				0.31,
+				1.0
+			],
+			"pattern": 1,
+			"rough": 0.35,
+			"tile": 0.2,
+			"variation": 0.05
+		},
+		"wood_desk": {
+			"alt": [
+				0.27,
+				0.18,
+				0.1,
+				1.0
+			],
+			"base": [
+				0.38,
+				0.27,
+				0.17,
+				1.0
+			],
+			"grime": 0.3,
+			"pattern": 8,
+			"rough": 0.5
+		},
+		"wood_door": {
+			"alt": [
+				0.22,
+				0.13,
+				0.07,
+				1.0
+			],
+			"base": [
+				0.32,
+				0.2,
+				0.11,
+				1.0
+			],
+			"grime": 0.35,
+			"pattern": 8,
+			"rough": 0.55
+		},
+		"wood_light": {
+			"alt": [
+				0.42,
+				0.33,
+				0.22,
+				1.0
+			],
+			"base": [
+				0.55,
+				0.45,
+				0.32,
+				1.0
+			],
+			"grime": 0.3,
+			"pattern": 8,
+			"rough": 0.6
+		}
+	},
+	"texture_size_m": {
+		"asphalt": 3.0,
+		"ceiling_tile": 1.2,
+		"denim": 0.1,
+		"facade": 8.0,
+		"facade_dark": 2.0,
+		"floor_carpet": 0.6,
+		"floor_checker": 3.0,
+		"floor_concrete": 3.0,
+		"floor_hall": 3.0,
+		"floor_hospital": 2.2,
+		"floor_lab": 1.8,
+		"floor_retro": 2.0,
+		"floor_wood": 1.7,
+		"floor_worn": 2.0,
+		"leather": 0.4,
+		"metal_blue": 2.5,
+		"metal_diamond": 0.5,
+		"metal_painted": 1.0,
+		"metal_worn": 2.0,
+		"shutter": 2.0,
+		"wall_concrete": 2.0,
+		"wall_peeling": 1.8,
+		"wall_plaster": 2.0,
+		"wall_tile": 1.27,
+		"wall_tile_big": 1.9,
+		"wood": 1.5
+	},
+	"textured": {
+		"asphalt": {
+			"grime": 0.2,
+			"tex": "asphalt",
+			"wet": 0.8
+		},
+		"ceiling_concrete": {
+			"brightness": 0.65,
+			"grime": 0.7,
+			"tex": "wall_concrete"
+		},
+		"ceiling_tile": {
+			"grime": 0.55,
+			"tex": "ceiling_tile"
+		},
+		"cloth_jacket": {
+			"grime": 0.25,
+			"tex": "leather",
+			"tint": [
+				0.55,
+				0.42,
+				0.32,
+				1.0
+			]
+		},
+		"cloth_jeans": {
+			"grime": 0.2,
+			"scale": 2.0,
+			"tex": "denim"
+		},
+		"curb": {
+			"brightness": 1.1,
+			"grime": 0.5,
+			"tex": "floor_concrete"
+		},
+		"fabric_office": {
+			"brightness": 0.38,
+			"grime": 0.08,
+			"saturation": 0.12,
+			"scale": 1.6,
+			"tex": "denim",
+			"tint": [
+				0.78,
+				0.84,
+				1.0,
+				1.0
+			],
+			"variation": 0.05
+		},
+		"floor_carpet": {
+			"grime": 0.5,
+			"tex": "floor_carpet"
+		},
+		"floor_checker": {
+			"grime": 0.5,
+			"tex": "floor_checker",
+			"wet": 0.3
+		},
+		"floor_concrete": {
+			"grime": 0.6,
+			"tex": "floor_concrete",
+			"wet": 0.55
+		},
+		"floor_lino": {
+			"grime": 0.5,
+			"tex": "floor_hospital",
+			"wet": 0.25
+		},
+		"floor_metal": {
+			"grime": 0.4,
+			"tex": "metal_diamond"
+		},
+		"floor_retro": {
+			"grime": 0.55,
+			"saturation": 0.7,
+			"tex": "floor_retro"
+		},
+		"floor_stair": {
+			"brightness": 0.95,
+			"grime": 0.6,
+			"tex": "floor_concrete"
+		},
+		"floor_tile": {
+			"grime": 0.45,
+			"tex": "floor_hall",
+			"wet": 0.35
+		},
+		"floor_tile_lab": {
+			"grime": 0.35,
+			"tex": "floor_lab",
+			"tint": [
+				0.92,
+				0.95,
+				0.97,
+				1.0
+			],
+			"wet": 0.3
+		},
+		"floor_ward": {
+			"grime": 0.45,
+			"saturation": 0.5,
+			"tex": "floor_retro",
+			"tint": [
+				0.95,
+				0.98,
+				1.0,
+				1.0
+			]
+		},
+		"floor_wood": {
+			"grime": 0.35,
+			"tex": "floor_wood"
+		},
+		"floor_worn": {
+			"grime": 0.6,
+			"tex": "floor_worn",
+			"wet": 0.5
+		},
+		"glove": {
+			"brightness": 0.35,
+			"grime": 0.1,
+			"saturation": 0.2,
+			"scale": 0.5,
+			"tex": "leather"
+		},
+		"metal_blue": {
+			"grime": 0.35,
+			"tex": "metal_blue"
+		},
+		"metal_dark": {
+			"brightness": 0.55,
+			"grime": 0.3,
+			"tex": "metal_worn"
+		},
+		"metal_gray": {
+			"brightness": 1.1,
+			"grime": 0.3,
+			"tex": "metal_worn"
+		},
+		"metal_green": {
+			"grime": 0.4,
+			"saturation": 0.4,
+			"tex": "metal_painted",
+			"tint": [
+				0.55,
+				0.75,
+				0.62,
+				1.0
+			]
+		},
+		"metal_rust": {
+			"brightness": 0.75,
+			"grime": 0.6,
+			"tex": "metal_painted"
+		},
+		"metal_white": {
+			"grime": 0.35,
+			"saturation": 0.6,
+			"tex": "metal_painted"
+		},
+		"metal_yellow": {
+			"grime": 0.5,
+			"saturation": 0.3,
+			"tex": "metal_painted",
+			"tint": [
+				1.0,
+				0.8,
+				0.25,
+				1.0
+			]
+		},
+		"shutter": {
+			"grime": 0.5,
+			"tex": "shutter"
+		},
+		"vinyl_blue": {
+			"brightness": 0.62,
+			"grime": 0.15,
+			"saturation": 0.0,
+			"scale": 0.6,
+			"tex": "leather",
+			"tint": [
+				0.36,
+				0.5,
+				0.82,
+				1.0
+			],
+			"variation": 0.05
+		},
+		"vinyl_dark": {
+			"brightness": 0.3,
+			"grime": 0.1,
+			"saturation": 0.25,
+			"scale": 0.6,
+			"tex": "leather",
+			"tint": [
+				0.62,
+				0.68,
+				0.82,
+				1.0
+			],
+			"variation": 0.05
+		},
+		"vinyl_gray": {
+			"brightness": 0.75,
+			"grime": 0.25,
+			"saturation": 0.0,
+			"scale": 0.6,
+			"tex": "leather",
+			"tint": [
+				0.62,
+				0.7,
+				0.74,
+				1.0
+			],
+			"variation": 0.05
+		},
+		"wall_admin": {
+			"band": 0.95,
+			"band_tint": [
+				0.55,
+				0.42,
+				0.3,
+				1.0
+			],
+			"grime": 0.4,
+			"rail": [
+				0.28,
+				0.2,
+				0.13,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.93,
+				0.88,
+				0.8,
+				1.0
+			]
+		},
+		"wall_concrete": {
+			"grime": 0.6,
+			"tex": "wall_concrete"
+		},
+		"wall_concrete_dark": {
+			"brightness": 0.55,
+			"grime": 0.8,
+			"tex": "wall_concrete"
+		},
+		"wall_ext": {
+			"grime": 0.5,
+			"tex": "facade"
+		},
+		"wall_facade_dark": {
+			"grime": 0.3,
+			"tex": "facade_dark"
+		},
+		"wall_hospital": {
+			"band": 1.1,
+			"band_tint": [
+				0.5,
+				0.62,
+				0.58,
+				1.0
+			],
+			"grime": 0.45,
+			"rail": [
+				0.28,
+				0.33,
+				0.31,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.86,
+				0.9,
+				0.86,
+				1.0
+			]
+		},
+		"wall_hospital_dirty": {
+			"band": 1.1,
+			"band_tint": [
+				0.44,
+				0.54,
+				0.5,
+				1.0
+			],
+			"grime": 0.95,
+			"rail": [
+				0.25,
+				0.28,
+				0.26,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.8,
+				0.84,
+				0.8,
+				1.0
+			],
+			"variation": 0.2
+		},
+		"wall_infect": {
+			"band": 1.2,
+			"band_tint": [
+				0.85,
+				0.72,
+				0.35,
+				1.0
+			],
+			"grime": 0.55,
+			"rail": [
+				0.45,
+				0.35,
+				0.1,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.88,
+				0.9,
+				0.86,
+				1.0
+			]
+		},
+		"wall_lab": {
+			"grime": 0.35,
+			"tex": "wall_tile_big",
+			"tint": [
+				0.92,
+				0.95,
+				0.97,
+				1.0
+			]
+		},
+		"wall_neuro": {
+			"band": 1.1,
+			"band_tint": [
+				0.72,
+				0.6,
+				0.66,
+				1.0
+			],
+			"grime": 0.5,
+			"rail": [
+				0.4,
+				0.3,
+				0.35,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.9,
+				0.88,
+				0.84,
+				1.0
+			]
+		},
+		"wall_pediatric": {
+			"band": 1.0,
+			"band_tint": [
+				0.55,
+				0.7,
+				0.82,
+				1.0
+			],
+			"grime": 0.55,
+			"rail": [
+				0.8,
+				0.5,
+				0.2,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.95,
+				0.9,
+				0.78,
+				1.0
+			]
+		},
+		"wall_peeling": {
+			"grime": 0.7,
+			"saturation": 0.35,
+			"tex": "wall_peeling",
+			"tint": [
+				0.95,
+				0.93,
+				0.88,
+				1.0
+			]
+		},
+		"wall_plaster": {
+			"grime": 0.8,
+			"tex": "wall_plaster",
+			"tint": [
+				0.9,
+				0.86,
+				0.8,
+				1.0
+			],
+			"variation": 0.18
+		},
+		"wall_stair": {
+			"band": 1.0,
+			"band_tint": [
+				0.42,
+				0.46,
+				0.45,
+				1.0
+			],
+			"grime": 0.85,
+			"rail": [
+				0.2,
+				0.2,
+				0.2,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.8,
+				0.82,
+				0.8,
+				1.0
+			],
+			"variation": 0.18
+		},
+		"wall_tile_big": {
+			"grime": 0.45,
+			"tex": "wall_tile_big"
+		},
+		"wall_tile_dirty": {
+			"brightness": 0.85,
+			"grime": 0.85,
+			"tex": "wall_tile"
+		},
+		"wall_tile_white": {
+			"grime": 0.4,
+			"rough_mul": 0.9,
+			"tex": "wall_tile"
+		},
+		"wall_ward": {
+			"band": 1.1,
+			"band_tint": [
+				0.62,
+				0.68,
+				0.78,
+				1.0
+			],
+			"grime": 0.5,
+			"rail": [
+				0.35,
+				0.4,
+				0.5,
+				1.0
+			],
+			"tex": "wall_plaster",
+			"tint": [
+				0.9,
+				0.9,
+				0.86,
+				1.0
+			]
+		},
+		"wood_desk": {
+			"grime": 0.25,
+			"saturation": 0.55,
+			"tex": "wood",
+			"tint": [
+				1.0,
+				0.92,
+				0.8,
+				1.0
+			]
+		},
+		"wood_door": {
+			"brightness": 0.85,
+			"grime": 0.3,
+			"saturation": 0.5,
+			"tex": "wood",
+			"tint": [
+				1.0,
+				0.9,
+				0.78,
+				1.0
+			]
+		},
+		"wood_light": {
+			"grime": 0.25,
+			"tex": "floor_wood"
+		}
+	},
+	"used": {
+		"adhoc_15a090a3a8": {
+			"def": {
+				"albedo": [
+					0.275,
+					0.5,
+					0.35,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.55,
+					1.0,
+					0.7,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_1965b2bf83": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.375,
+					0.225,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.75,
+					0.45,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_2383aa838b": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.075,
+					0.04,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.15,
+					0.08,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_3a79f26bcc": {
+			"def": {
+				"albedo": [
+					0.3,
+					0.02,
+					0.02,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.1,
+					0.05,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 3.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 1.0,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_4797a297f2": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.075,
+					0.05,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.15,
+					0.1,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_47c8e500c1": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.4,
+					0.25,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.8,
+					0.5,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_4d4a6b0f63": {
+			"def": {
+				"albedo": [
+					0.45,
+					0.25,
+					0.15,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.9,
+					0.5,
+					0.3,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_64af238d6a": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.425,
+					0.31,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.85,
+					0.62,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_6f284e5785": {
+			"def": {
+				"albedo": [
+					0.15,
+					0.3,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.3,
+					0.6,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_789c7847f1": {
+			"def": {
+				"albedo": [
+					0.3,
+					0.02,
+					0.02,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.1,
+					0.05,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 1.0,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_8aaddf704d": {
+			"def": {
+				"albedo": [
+					0.425,
+					0.46,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.85,
+					0.92,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_8cefbd1703": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.485,
+					0.45,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.97,
+					0.9,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_9234fdcebc": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.31,
+					0.15,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.62,
+					0.3,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 2.20000004768372,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_96307a86a2": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.375,
+					0.1,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.75,
+					0.2,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_987636941d": {
+			"def": {
+				"albedo": [
+					0.4,
+					0.02,
+					0.02,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.1,
+					0.05,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 1.0,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_9c09a27e45": {
+			"def": {
+				"albedo": [
+					0.4,
+					0.44,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.8,
+					0.88,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_a075603788": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.09,
+					0.05,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.18,
+					0.1,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_a3cb59d3a9": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.31,
+					0.15,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.62,
+					0.3,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_aade0cc767": {
+			"def": {
+				"albedo": [
+					0.4,
+					0.45,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.8,
+					0.9,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_c2af5465ce": {
+			"def": {
+				"albedo": [
+					0.39,
+					0.44,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.78,
+					0.88,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_c906661f1e": {
+			"def": {
+				"albedo": [
+					0.425,
+					0.45,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.85,
+					0.9,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_cf00d819e0": {
+			"def": {
+				"albedo": [
+					0.41,
+					0.45,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.82,
+					0.9,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_d41b1e754e": {
+			"def": {
+				"albedo": [
+					0.375,
+					0.425,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.75,
+					0.85,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_d78c01a637": {
+			"def": {
+				"albedo": [
+					0.3,
+					0.04,
+					0.02,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.2,
+					0.05,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 1.0,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_df9f21d30c": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.1,
+					0.075,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.2,
+					0.15,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_e6dd1aae89": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"mode": 3,
+					"noise_b": "texture:",
+					"tint": [
+						0.3,
+						1.0,
+						0.4,
+						1.0
+					]
+				},
+				"shader": "screen.gdshader"
+			},
+			"type": "adhoc"
+		},
+		"adhoc_ee648a6931": {
+			"def": {
+				"albedo": [
+					0.4,
+					0.44,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.8,
+					0.88,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 0.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_fc0f53c001": {
+			"def": {
+				"albedo": [
+					0.41,
+					0.45,
+					0.5,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.82,
+					0.9,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 0.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"adhoc_fe195e6d7c": {
+			"def": {
+				"albedo": [
+					0.5,
+					0.125,
+					0.075,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.25,
+					0.15,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"type": "adhoc"
+		},
+		"asphalt": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/asphalt/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.2,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/asphalt/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/asphalt/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.8
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"bark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.055,
+						0.045,
+						0.035,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.12,
+						0.095,
+						0.07,
+						1.0
+					],
+					"bump": 3.0,
+					"grime": 0.2,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 8,
+					"roughness": 1.0,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"black": {
+			"def": {
+				"albedo": [
+					0.01,
+					0.01,
+					0.01,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.899999976158142,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"blinds": {
+			"def": {
+				"albedo": [
+					0.36,
+					0.35,
+					0.32,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.800000011920929,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"blood": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"dryness": 0.35,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"smear": 0.0
+				},
+				"shader": "blood.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"blood_dry": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"dryness": 0.85,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"smear": 0.0
+				},
+				"shader": "blood.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"blood_smear": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"dryness": 0.55,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"smear": 1.0
+				},
+				"shader": "blood.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"calibration": {
+			"def": {
+				"albedo": [
+					1,
+					0,
+					1,
+					1
+				]
+			},
+			"type": "special"
+		},
+		"car_black": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.1,
+						0.06,
+						0.04,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.03,
+						0.035,
+						0.04,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.12,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.5,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.2,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"car_gray": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.2,
+						0.1,
+						0.05,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.27,
+						0.28,
+						0.3,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.18,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.45,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.26,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"car_red": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.2,
+						0.1,
+						0.05,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.3,
+						0.035,
+						0.035,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.18,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.35,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.24,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"car_white": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.3,
+						0.15,
+						0.07,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.66,
+						0.66,
+						0.64,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.18,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.15,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.26,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"cardboard": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.42,
+						0.32,
+						0.2,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.42,
+						0.32,
+						0.2,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.95,
+					"tile_size": 0.5,
+					"variation": 0.2,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"ceiling_concrete": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.65,
+					"grime": 0.7,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"ceiling_tile": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/ceiling_tile/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.55,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/ceiling_tile/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/ceiling_tile/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.20000004768372,
+						1.20000004768372
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"collision": {
+			"def": {
+				"albedo": [
+					0,
+					1,
+					0,
+					1
+				]
+			},
+			"type": "special"
+		},
+		"curb": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.1,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"emit_amber": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.36,
+					0.06,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.6,
+					0.1,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 3.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_blue": {
+			"def": {
+				"albedo": [
+					0.18,
+					0.33,
+					0.6,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.3,
+					0.55,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 4.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_green": {
+			"def": {
+				"albedo": [
+					0.09,
+					0.6,
+					0.21,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.15,
+					1.0,
+					0.35,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 3.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_headlight": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.57,
+					0.51,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.95,
+					0.85,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 8.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_red": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.048,
+					0.024,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.08,
+					0.04,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 5.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_sodium": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.33,
+					0.12,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.55,
+					0.2,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 5.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_taillight": {
+			"def": {
+				"albedo": [
+					0.48,
+					0.012,
+					0.012,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.8,
+					0.02,
+					0.02,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 1.5,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_white_dim": {
+			"def": {
+				"albedo": [
+					0.54,
+					0.552,
+					0.6,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.9,
+					0.92,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 1.20000004768372,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_window": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.48,
+					0.33,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.8,
+					0.55,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 0.600000023841858,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_window_cold": {
+			"def": {
+				"albedo": [
+					0.42,
+					0.51,
+					0.6,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.7,
+					0.85,
+					1.0,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 0.5,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"emit_window_dim": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.372,
+					0.21,
+					0.6
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					1.0,
+					0.62,
+					0.35,
+					1.0
+				],
+				"emission_enabled": true,
+				"emission_energy": 0.180000007152557,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"fabric_blue": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.11,
+						0.16,
+						0.26,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.11,
+						0.16,
+						0.26,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 1.0,
+					"tile_size": 0.5,
+					"variation": 0.2,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"fabric_brown": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.25,
+						0.16,
+						0.1,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.25,
+						0.16,
+						0.1,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 1.0,
+					"tile_size": 0.5,
+					"variation": 0.25,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"fabric_green": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.14,
+						0.24,
+						0.2,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.14,
+						0.24,
+						0.2,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 1.0,
+					"tile_size": 0.5,
+					"variation": 0.2,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"fabric_office": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/denim/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.38,
+					"grime": 0.08,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/denim/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/denim/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.12,
+					"tex_size": [
+						0.159999996423721,
+						0.159999996423721
+					],
+					"tint": [
+						0.78,
+						0.84,
+						1.0,
+						1.0
+					],
+					"variation": 0.05,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_carpet": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_carpet/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_carpet/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_carpet/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						0.600000023841858,
+						0.600000023841858
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_checker": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_checker/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_checker/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_checker/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.3
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_concrete": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.6,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.55
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_lino": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_hospital/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_hospital/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_hospital/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.20000004768372,
+						2.20000004768372
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.25
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_metal": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_diamond/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.4,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_diamond/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_diamond/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						0.5,
+						0.5
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_retro": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_retro/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.55,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_retro/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_retro/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.7,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_stair": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.95,
+					"grime": 0.6,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_tile": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_hall/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.45,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_hall/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_hall/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						3.0,
+						3.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.35
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_tile_lab": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_lab/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_lab/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_lab/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.79999995231628,
+						1.79999995231628
+					],
+					"tint": [
+						0.92,
+						0.95,
+						0.97,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.3
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_ward": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_retro/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.45,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_retro/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_retro/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.5,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.95,
+						0.98,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_wood": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_wood/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_wood/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_wood/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.70000004768372,
+						1.70000004768372
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"floor_worn": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_worn/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.6,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_worn/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_worn/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.5
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"foliage": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"color_dark": [
+						0.025,
+						0.045,
+						0.022,
+						1.0
+					],
+					"color_light": [
+						0.075,
+						0.105,
+						0.04,
+						1.0
+					],
+					"cutout": 0.42,
+					"noise_b": "texture:"
+				},
+				"shader": "foliage.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"foliage_pine": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"color_dark": [
+						0.018,
+						0.04,
+						0.026,
+						1.0
+					],
+					"color_light": [
+						0.045,
+						0.08,
+						0.045,
+						1.0
+					],
+					"cutout": 0.46,
+					"noise_b": "texture:"
+				},
+				"shader": "foliage.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"glass": {
+			"def": {
+				"albedo": [
+					0.55,
+					0.65,
+					0.7,
+					0.12
+				],
+				"albedo_texture": "",
+				"cull": 2,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.200000002980232,
+				"roughness": 0.0500000007450581,
+				"transparency": 1,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"glass_car": {
+			"def": {
+				"albedo": [
+					0.02,
+					0.025,
+					0.03,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.0599999986588955,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"glass_dirty": {
+			"def": {
+				"albedo": [
+					0.4,
+					0.45,
+					0.42,
+					0.35
+				],
+				"albedo_texture": "",
+				"cull": 2,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.400000005960464,
+				"transparency": 1,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"gown": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.42,
+						0.48,
+						0.5,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.42,
+						0.48,
+						0.5,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.95,
+					"grime_color": [
+						0.22,
+						0.05,
+						0.03,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.95,
+					"tile_size": 0.5,
+					"variation": 0.2,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"ground": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.07,
+						0.08,
+						0.05,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.07,
+						0.08,
+						0.05,
+						1.0
+					],
+					"bump": 3.0,
+					"grime": 0.8,
+					"grime_color": [
+						0.04,
+						0.035,
+						0.02,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 1.0,
+					"tile_size": 0.5,
+					"variation": 0.4,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"leather_boots": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.06,
+						0.045,
+						0.035,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.06,
+						0.045,
+						0.035,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.3,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.5,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"lens_blue": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.02,
+						0.06,
+						0.26,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.02,
+						0.06,
+						0.26,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.05,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.12,
+					"tile_size": 0.5,
+					"variation": 0.02,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"light_off": {
+			"def": {
+				"albedo": [
+					0.3,
+					0.3,
+					0.3,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.300000011920929,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"linen": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.6,
+						0.61,
+						0.6,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.6,
+						0.61,
+						0.6,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.95,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"liquid_amber": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"color": [
+						0.8,
+						0.45,
+						0.1,
+						1.0
+					],
+					"glow": 1.0,
+					"noise_b": "texture:"
+				},
+				"shader": "liquid.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"liquid_green": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"noise_b": "texture:"
+				},
+				"shader": "liquid.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"mattress": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.55,
+						0.57,
+						0.55,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.55,
+						0.57,
+						0.55,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.55,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.95,
+					"tile_size": 0.5,
+					"variation": 0.1,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"metal_alu": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.3,
+						0.2,
+						0.15,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.52,
+						0.53,
+						0.55,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.08,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.8,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.38,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"metal_blue": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_blue/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_blue/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_blue/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.5,
+						2.5
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_chrome": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.3,
+						0.2,
+						0.15,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.64,
+						0.65,
+						0.67,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.06,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.95,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.2,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"metal_dark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_worn/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.55,
+					"grime": 0.3,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_worn/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_worn/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_gray": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_worn/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.1,
+					"grime": 0.3,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_worn/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_worn/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_green": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_painted/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.4,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_painted/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_painted/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.4,
+					"tex_size": [
+						1.0,
+						1.0
+					],
+					"tint": [
+						0.55,
+						0.75,
+						0.62,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_rust": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_painted/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.75,
+					"grime": 0.6,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_painted/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_painted/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.0,
+						1.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_steel": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.3,
+						0.2,
+						0.15,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.55,
+						0.56,
+						0.57,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.25,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.9,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 7,
+					"roughness": 0.3,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"metal_white": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_painted/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_painted/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_painted/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.6,
+					"tex_size": [
+						1.0,
+						1.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"metal_yellow": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/metal_painted/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/metal_painted/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/metal_painted/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.3,
+					"tex_size": [
+						1.0,
+						1.0
+					],
+					"tint": [
+						1.0,
+						0.8,
+						0.25,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"paint_blue": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.03,
+						0.09,
+						0.3,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.03,
+						0.09,
+						0.3,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.15,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.3,
+					"tile_size": 0.5,
+					"variation": 0.03,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"paint_orange": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.72,
+						0.2,
+						0.02,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.72,
+						0.2,
+						0.02,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.15,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.32,
+					"tile_size": 0.5,
+					"variation": 0.03,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"paint_white": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.7,
+						0.7,
+						0.68,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.7,
+						0.7,
+						0.68,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.22,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.3,
+					"tile_size": 0.5,
+					"variation": 0.03,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"paper": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.78,
+						0.76,
+						0.68,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.78,
+						0.76,
+						0.68,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.95,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_beige": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.58,
+						0.54,
+						0.46,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.58,
+						0.54,
+						0.46,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.45,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.5,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_black": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.03,
+						0.03,
+						0.033,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.03,
+						0.03,
+						0.033,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.08,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.42,
+					"tile_size": 0.5,
+					"variation": 0.04,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_dark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.07,
+						0.07,
+						0.08,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.07,
+						0.07,
+						0.08,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.2,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.4,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_gray": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.3,
+						0.31,
+						0.32,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.3,
+						0.31,
+						0.32,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.2,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.5,
+					"tile_size": 0.5,
+					"variation": 0.05,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_orange": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.55,
+						0.22,
+						0.05,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.55,
+						0.22,
+						0.05,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.5,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"plastic_sheet": {
+			"def": {
+				"albedo": [
+					0.85,
+					0.88,
+					0.9,
+					0.45
+				],
+				"albedo_texture": "",
+				"cull": 2,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.0,
+				"roughness": 0.349999994039536,
+				"transparency": 1,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"plastic_white": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.66,
+						0.66,
+						0.63,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.66,
+						0.66,
+						0.63,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.45,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.45,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"rubber": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.03,
+						0.03,
+						0.03,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.03,
+						0.03,
+						0.03,
+						1.0
+					],
+					"bump": 1.0,
+					"grime": 0.1,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.8,
+					"tile_size": 0.5,
+					"variation": 0.08,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"screen_ecg": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"mode": 4,
+					"noise_b": "texture:",
+					"tint": [
+						0.3,
+						1.0,
+						0.4,
+						1.0
+					]
+				},
+				"shader": "screen.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"screen_error": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"mode": 3,
+					"noise_b": "texture:",
+					"tint": [
+						1.0,
+						0.15,
+						0.1,
+						1.0
+					]
+				},
+				"shader": "screen.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"screen_off": {
+			"def": {
+				"albedo": [
+					0.02,
+					0.025,
+					0.03,
+					1.0
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.300000011920929,
+				"roughness": 0.150000005960464,
+				"transparency": 0,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"screen_snow": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"mode": 1,
+					"noise_b": "texture:",
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					]
+				},
+				"shader": "screen.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"screen_terminal": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"mode": 0,
+					"noise_b": "texture:",
+					"tint": [
+						0.3,
+						1.0,
+						0.5,
+						1.0
+					]
+				},
+				"shader": "screen.gdshader"
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"shutter": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/shutter/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/shutter/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/shutter/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"tank_glass": {
+			"def": {
+				"albedo": [
+					0.6,
+					0.8,
+					0.75,
+					0.1
+				],
+				"albedo_texture": "",
+				"cull": 0,
+				"emission": [
+					0.0,
+					0.0,
+					0.0,
+					1.0
+				],
+				"emission_enabled": false,
+				"emission_energy": 1.0,
+				"kind": "standard",
+				"metallic": 0.400000005960464,
+				"roughness": 0.0199999995529652,
+				"transparency": 1,
+				"unshaded": false
+			},
+			"source": "special",
+			"type": "mats"
+		},
+		"tire": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"alt_color": [
+						0.022,
+						0.022,
+						0.024,
+						1.0
+					],
+					"band_height": 1.1,
+					"base_color": [
+						0.022,
+						0.022,
+						0.024,
+						1.0
+					],
+					"bump": 2.0,
+					"grime": 0.05,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"line_color": [
+						0.18,
+						0.18,
+						0.17,
+						1.0
+					],
+					"metallic": 0.0,
+					"noise_a": "texture:",
+					"noise_b": "texture:",
+					"pattern": 0,
+					"roughness": 0.82,
+					"tile_size": 0.5,
+					"variation": 0.1,
+					"wetness": 0.0
+				},
+				"shader": "surface.gdshader"
+			},
+			"source": "surface",
+			"type": "mats"
+		},
+		"vinyl_blue": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/leather/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.62,
+					"grime": 0.15,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/leather/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/leather/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.0,
+					"tex_size": [
+						0.239999994635582,
+						0.239999994635582
+					],
+					"tint": [
+						0.36,
+						0.5,
+						0.82,
+						1.0
+					],
+					"variation": 0.05,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"vinyl_dark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/leather/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.3,
+					"grime": 0.1,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/leather/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/leather/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.25,
+					"tex_size": [
+						0.239999994635582,
+						0.239999994635582
+					],
+					"tint": [
+						0.62,
+						0.68,
+						0.82,
+						1.0
+					],
+					"variation": 0.05,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"vinyl_gray": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/leather/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.75,
+					"grime": 0.25,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/leather/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/leather/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.0,
+					"tex_size": [
+						0.239999994635582,
+						0.239999994635582
+					],
+					"tint": [
+						0.62,
+						0.7,
+						0.74,
+						1.0
+					],
+					"variation": 0.05,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_admin": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 0.95,
+					"band_tint": [
+						0.55,
+						0.42,
+						0.3,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.4,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.28,
+						0.2,
+						0.13,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.93,
+						0.88,
+						0.8,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_concrete": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.6,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_concrete_dark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_concrete/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.55,
+					"grime": 0.8,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_concrete/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_concrete/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_ext": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/facade/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/facade/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/facade/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						8.0,
+						8.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_facade_dark": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/facade_dark/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.3,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/facade_dark/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/facade_dark/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_hospital": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 1.1,
+					"band_tint": [
+						0.5,
+						0.62,
+						0.58,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.45,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.28,
+						0.33,
+						0.31,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.86,
+						0.9,
+						0.86,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_hospital_dirty": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 1.1,
+					"band_tint": [
+						0.44,
+						0.54,
+						0.5,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.95,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.25,
+						0.28,
+						0.26,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.8,
+						0.84,
+						0.8,
+						1.0
+					],
+					"variation": 0.2,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_infect": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 1.2,
+					"band_tint": [
+						0.85,
+						0.72,
+						0.35,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.55,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.45,
+						0.35,
+						0.1,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.88,
+						0.9,
+						0.86,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_lab": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_tile_big/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.35,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_tile_big/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_tile_big/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.89999997615814,
+						1.89999997615814
+					],
+					"tint": [
+						0.92,
+						0.95,
+						0.97,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_neuro": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 1.1,
+					"band_tint": [
+						0.72,
+						0.6,
+						0.66,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.5,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.4,
+						0.3,
+						0.35,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.9,
+						0.88,
+						0.84,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_stair": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_plaster/albedo.jpg",
+					"band_height": 1.0,
+					"band_tint": [
+						0.42,
+						0.46,
+						0.45,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.85,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_plaster/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_plaster/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						2.0,
+						2.0
+					],
+					"tint": [
+						0.8,
+						0.82,
+						0.8,
+						1.0
+					],
+					"variation": 0.18,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_tile_dirty": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_tile/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.85,
+					"grime": 0.85,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_tile/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_tile/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.26999998092651,
+						1.26999998092651
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wall_tile_white": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wall_tile/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.4,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wall_tile/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wall_tile/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 0.9,
+					"saturation": 1.0,
+					"tex_size": [
+						1.26999998092651,
+						1.26999998092651
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wood_desk": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wood/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.25,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wood/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wood/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.55,
+					"tex_size": [
+						1.5,
+						1.5
+					],
+					"tint": [
+						1.0,
+						0.92,
+						0.8,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wood_door": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/wood/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 0.85,
+					"grime": 0.3,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/wood/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/wood/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 0.5,
+					"tex_size": [
+						1.5,
+						1.5
+					],
+					"tint": [
+						1.0,
+						0.9,
+						0.78,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"wood_light": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/textures/floor_wood/albedo.jpg",
+					"band_height": 0.0,
+					"band_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"brightness": 1.0,
+					"grime": 0.25,
+					"grime_color": [
+						0.1,
+						0.085,
+						0.07,
+						1.0
+					],
+					"noise_a": "texture:",
+					"normal_strength": 1.0,
+					"normal_tex": "texture:res://assets/textures/floor_wood/normal.jpg",
+					"orm_tex": "texture:res://assets/textures/floor_wood/orm.jpg",
+					"rail_color": [
+						0.2,
+						0.2,
+						0.2,
+						1.0
+					],
+					"roughness_mul": 1.0,
+					"saturation": 1.0,
+					"tex_size": [
+						1.70000004768372,
+						1.70000004768372
+					],
+					"tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"variation": 0.12,
+					"wetness": 0.0
+				},
+				"shader": "pbr_surface.gdshader"
+			},
+			"source": "textured",
+			"type": "mats"
+		},
+		"zombie_skin_corpse_00": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 1.0,
+					"cloth_mix": 0.9,
+					"cloth_tint": [
+						0.1,
+						0.12,
+						0.2,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_01": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.9,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_02": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 1.0,
+					"cloth_mix": 0.7,
+					"cloth_tint": [
+						0.85,
+						0.85,
+						0.82,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_03": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.85,
+					"cloth_mix": 0.9,
+					"cloth_tint": [
+						0.15,
+						0.3,
+						0.55,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_04": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.85,
+					"cloth_mix": 0.8,
+					"cloth_tint": [
+						0.4,
+						0.3,
+						0.2,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_05": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.85,
+					"cloth_mix": 0.95,
+					"cloth_tint": [
+						0.06,
+						0.08,
+						0.16,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_06": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 1.0,
+					"cloth_mix": 0.6,
+					"cloth_tint": [
+						0.7,
+						0.7,
+						0.68,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_07": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.9,
+					"cloth_mix": 0.95,
+					"cloth_tint": [
+						0.06,
+						0.08,
+						0.16,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_08": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 1.0,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.6,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_09": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 1.0,
+					"cloth_mix": 0.95,
+					"cloth_tint": [
+						0.06,
+						0.08,
+						0.16,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_10": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.9,
+					"cloth_mix": 0.95,
+					"cloth_tint": [
+						0.15,
+						0.2,
+						0.12,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.45,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_11": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_12": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_13": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_14": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_15": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_16": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_17": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_18": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_19": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.9,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.8,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 0.2
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_20": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_21": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_22": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_23": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_24": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_25": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_26": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		},
+		"zombie_skin_corpse_27": {
+			"def": {
+				"kind": "shader",
+				"params": {
+					"albedo_tex": "texture:res://assets/models/zombie/albedo.jpg",
+					"blood": 0.1,
+					"cloth_mix": 0.0,
+					"cloth_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"noise_tex": "texture:",
+					"normal_tex": "texture:res://assets/models/zombie/normal.jpg",
+					"orm_tex": "texture:res://assets/models/zombie/orm.jpg",
+					"pallor": 0.7,
+					"skin_tint": [
+						1.0,
+						1.0,
+						1.0,
+						1.0
+					],
+					"wet": 1.0
+				},
+				"shader": "zombie_skin.gdshader"
+			},
+			"source": "corpse",
+			"type": "zombie_skin"
+		}
+	}
+}

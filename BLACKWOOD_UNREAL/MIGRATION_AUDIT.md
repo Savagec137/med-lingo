@@ -566,7 +566,7 @@ Néonatal et les escaliers.
 | Shader | Type | Rôle | Équivalent Unreal |
 | --- | --- | --- | --- |
 | `pbr_surface` | spatial | PBR triplanaire en coordonnées monde (aucun UV), teinte, saleté, bandeau mural bicolore, humidité | Material maître `M_BW_WorldAligned` (fonction `WorldAlignedTexture`) + Material Instances |
-| `surface` | spatial | Surfaces procédurales (carrelage, bicolore, faux plafond, béton, métal, bois) | `M_BW_Procedural` (bruit + motifs) |
+| `surface` | spatial | Surfaces procédurales (carrelage, bicolore, faux plafond, béton, métal, bois) | `M_BW_Simple` (couleur, rugosité, métal ; les motifs procéduraux ne servent que sans textures) |
 | `foliage` | spatial | Feuillage découpé par bruit | `M_BW_Foliage` (Masked, Two Sided Foliage) |
 | `blood` | spatial | Taches de sang procédurales | `M_BW_BloodDecal` (Deferred Decal) |
 | `flesh` | spatial | Chair des créatures | `M_BW_Flesh` (Subsurface) |

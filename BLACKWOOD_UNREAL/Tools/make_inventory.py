@@ -229,7 +229,7 @@ def build(godot):
               "(paramètres recopiés automatiquement depuis l'export JSON).")
     shaders = {
         "pbr_surface": ("Surface PBR triplanaire en coordonnées monde (albédo/normale/ORM, teinte, saleté, bandeau mural, humidité)", "M_BW_WorldAligned (fonction WorldAlignedTexture)"),
-        "surface": ("Surface procédurale sans texture (carrelage, bicolore, faux plafond, béton, métal, bois…)", "M_BW_Procedural"),
+        "surface": ("Surface procédurale sans texture (carrelage, bicolore, faux plafond, béton, métal, bois…)", "M_BW_Simple"),
         "foliage": ("Feuillage découpé par bruit (alpha scissor)", "M_BW_Foliage (Masked, Two Sided Foliage)"),
         "blood": ("Taches de sang procédurales (décal quad)", "M_BW_BloodDecal (Deferred Decal)"),
         "flesh": ("Chair des créatures (veines, plaies humides)", "M_BW_Flesh (Subsurface)"),

@@ -1,0 +1,2422 @@
+{
+	"counts": {
+		"corpses": 28,
+		"labels": 243,
+		"materials": 164,
+		"meshes": 248,
+		"objects": 454,
+		"props": 142,
+		"static_parts": 42
+	},
+	"excluded": {
+		"maillage masqué ou reflet": 87
+	},
+	"exported_at": "2026-09-24 09:18:53 UTC",
+	"format": 1,
+	"godot": "4.7.2-stable (official)",
+	"meshes": {
+		"SM_AutoDoor_07baddb9": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_AutoDoor_09a031fb": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_AutoDoor_Mover_3b1baf2d": {
+			"materials": [
+				"glass",
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_AutoDoor_Mover_4b2cf381": {
+			"materials": [
+				"glass",
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_AutoDoor_Mover_52aa9c87": {
+			"materials": [
+				"glass",
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_AutoDoor_Mover_9de22698": {
+			"materials": [
+				"glass",
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_BreakableGlass_3e20161c": {
+			"materials": [
+				"glass"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_BreakableGlass_47c1f8fa": {
+			"materials": [
+				"glass"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_BreakableGlass_609f14d9": {
+			"materials": [
+				"glass"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_Calib_X": {
+			"materials": [
+				"calibration"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_Calib_Y": {
+			"materials": [
+				"calibration"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_Calib_Z": {
+			"materials": [
+				"calibration"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_CodePanel_dfc69e60": {
+			"materials": [
+				"adhoc_789c7847f1",
+				"adhoc_e6dd1aae89",
+				"metal_steel",
+				"plastic_dark"
+			],
+			"tris": 180,
+			"verts": 360
+		},
+		"SM_Collision_B1": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1512,
+			"verts": 3024
+		},
+		"SM_Collision_B2": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1128,
+			"verts": 2256
+		},
+		"SM_Collision_EXT": {
+			"materials": [
+				"collision"
+			],
+			"tris": 864,
+			"verts": 1728
+		},
+		"SM_Collision_F0": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1596,
+			"verts": 3192
+		},
+		"SM_Collision_F1": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1416,
+			"verts": 2832
+		},
+		"SM_Collision_F11": {
+			"materials": [
+				"collision"
+			],
+			"tris": 672,
+			"verts": 1344
+		},
+		"SM_Collision_F12": {
+			"materials": [
+				"collision"
+			],
+			"tris": 816,
+			"verts": 1632
+		},
+		"SM_Collision_F3": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1704,
+			"verts": 3408
+		},
+		"SM_Collision_F6": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1416,
+			"verts": 2832
+		},
+		"SM_Collision_F8": {
+			"materials": [
+				"collision"
+			],
+			"tris": 1236,
+			"verts": 2472
+		},
+		"SM_Collision_SHELL": {
+			"materials": [
+				"collision"
+			],
+			"tris": 15432,
+			"verts": 30864
+		},
+		"SM_Collision_STAIR_A": {
+			"materials": [
+				"collision"
+			],
+			"tris": 624,
+			"verts": 1248
+		},
+		"SM_Collision_STAIR_B": {
+			"materials": [
+				"collision"
+			],
+			"tris": 684,
+			"verts": 1368
+		},
+		"SM_Collision_STAIR_C": {
+			"materials": [
+				"collision"
+			],
+			"tris": 564,
+			"verts": 1128
+		},
+		"SM_Corpse_00": {
+			"materials": [
+				"zombie_skin_corpse_00"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_01": {
+			"materials": [
+				"zombie_skin_corpse_01"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_02": {
+			"materials": [
+				"zombie_skin_corpse_02"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_03": {
+			"materials": [
+				"zombie_skin_corpse_03"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_04": {
+			"materials": [
+				"zombie_skin_corpse_04"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_05": {
+			"materials": [
+				"zombie_skin_corpse_05"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_06": {
+			"materials": [
+				"zombie_skin_corpse_06"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_07": {
+			"materials": [
+				"zombie_skin_corpse_07"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_08": {
+			"materials": [
+				"zombie_skin_corpse_08"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_09": {
+			"materials": [
+				"zombie_skin_corpse_09"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_10": {
+			"materials": [
+				"zombie_skin_corpse_10"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_11": {
+			"materials": [
+				"zombie_skin_corpse_11"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_12": {
+			"materials": [
+				"zombie_skin_corpse_12"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_13": {
+			"materials": [
+				"zombie_skin_corpse_13"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_14": {
+			"materials": [
+				"zombie_skin_corpse_14"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_15": {
+			"materials": [
+				"zombie_skin_corpse_15"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_16": {
+			"materials": [
+				"zombie_skin_corpse_16"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_17": {
+			"materials": [
+				"zombie_skin_corpse_17"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_18": {
+			"materials": [
+				"zombie_skin_corpse_18"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_19": {
+			"materials": [
+				"zombie_skin_corpse_19"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_20": {
+			"materials": [
+				"zombie_skin_corpse_20"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_21": {
+			"materials": [
+				"zombie_skin_corpse_21"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_22": {
+			"materials": [
+				"zombie_skin_corpse_22"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_23": {
+			"materials": [
+				"zombie_skin_corpse_23"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_24": {
+			"materials": [
+				"zombie_skin_corpse_24"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_25": {
+			"materials": [
+				"zombie_skin_corpse_25"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_26": {
+			"materials": [
+				"zombie_skin_corpse_26"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_Corpse_27": {
+			"materials": [
+				"zombie_skin_corpse_27"
+			],
+			"tris": 28222,
+			"verts": 16941
+		},
+		"SM_DocumentPickup_0d355b8e": {
+			"materials": [
+				"cardboard",
+				"paper"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_DocumentPickup_f30d1a33": {
+			"materials": [
+				"paper"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Door_1a153ae8": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_5107a89d": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_6f233352": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_720d0f87": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_9e04f9e8": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_Mover_023358b5": {
+			"materials": [
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_07d423f3": {
+			"materials": [
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_0c31f81b": {
+			"materials": [
+				"metal_green",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_0e133424": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_1244a13f": {
+			"materials": [
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_15fc74d3": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_168f438a": {
+			"materials": [
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_1d2e5120": {
+			"materials": [
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_26572f44": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_306d86aa": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_30971d32": {
+			"materials": [
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_3311492e": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_3ca0b3ed": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_42e2b2c5": {
+			"materials": [
+				"glass_dirty",
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_4435a1fc": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_45372887": {
+			"materials": [
+				"metal_rust",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_4c7ee5a4": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_5936c686": {
+			"materials": [
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_5ed0901d": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_66baef7f": {
+			"materials": [
+				"glass_dirty",
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_73b4aff9": {
+			"materials": [
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_74ba1d6f": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_7be07348": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_7ff7b1a6": {
+			"materials": [
+				"glass",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_82029129": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_884b8d6a": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_8d0c7c19": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_94842d68": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_98ae6af4": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_9c423df3": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_9f54c1f9": {
+			"materials": [
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_a06f5494": {
+			"materials": [
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_a0f2901c": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_a2e5607d": {
+			"materials": [
+				"glass_dirty",
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_a5eb1ce6": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_a922c017": {
+			"materials": [
+				"metal_steel",
+				"shutter"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_aaf1ecf8": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_ad1bc151": {
+			"materials": [
+				"glass_dirty",
+				"metal_gray",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_b4742b42": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_bbdf5bf9": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_c19e3035": {
+			"materials": [
+				"metal_green",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_c965a29f": {
+			"materials": [
+				"glass_dirty",
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_db1f0c82": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_e06abadf": {
+			"materials": [
+				"glass",
+				"metal_steel"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_e1a5a357": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_e1b0129b": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_e5d91ec9": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_e883f1a7": {
+			"materials": [
+				"metal_steel",
+				"wood_door"
+			],
+			"tris": 48,
+			"verts": 96
+		},
+		"SM_Door_Mover_f9b20c79": {
+			"materials": [
+				"glass_dirty",
+				"metal_dark",
+				"metal_steel"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_Mover_fa62c5e6": {
+			"materials": [
+				"glass_dirty",
+				"metal_steel",
+				"metal_white"
+			],
+			"tris": 96,
+			"verts": 192
+		},
+		"SM_Door_aa53a3f2": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_c36e0a2d": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Door_f04264ce": {
+			"materials": [
+				"metal_gray"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_ElevatorPanel_e93b64e0": {
+			"materials": [
+				"emit_amber",
+				"metal_steel"
+			],
+			"tris": 1548,
+			"verts": 1068
+		},
+		"SM_ExplosiveTank_ee7f43bb": {
+			"materials": [
+				"metal_green",
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 372,
+			"verts": 294
+		},
+		"SM_KeypadSafe_77f9732b": {
+			"materials": [
+				"adhoc_3a79f26bcc",
+				"adhoc_e6dd1aae89",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"plastic_dark"
+			],
+			"tris": 228,
+			"verts": 306
+		},
+		"SM_Level_B1_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"metal_gray",
+				"metal_steel",
+				"paper",
+				"screen_error",
+				"screen_terminal"
+			],
+			"tris": 930,
+			"verts": 1734
+		},
+		"SM_Level_B1_Shadow": {
+			"materials": [
+				"black",
+				"cardboard",
+				"ceiling_tile",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_concrete",
+				"floor_tile",
+				"floor_tile_lab",
+				"floor_worn",
+				"glass_dirty",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"metal_white",
+				"metal_yellow",
+				"paper",
+				"plastic_beige",
+				"plastic_black",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_sheet",
+				"plastic_white",
+				"rubber",
+				"vinyl_blue",
+				"wall_concrete",
+				"wall_facade_dark",
+				"wall_hospital",
+				"wall_hospital_dirty",
+				"wood_desk"
+			],
+			"tris": 5872,
+			"verts": 11322
+		},
+		"SM_Level_B2_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"metal_gray",
+				"paper"
+			],
+			"tris": 502,
+			"verts": 1004
+		},
+		"SM_Level_B2_Shadow": {
+			"materials": [
+				"black",
+				"cardboard",
+				"ceiling_concrete",
+				"ceiling_tile",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_concrete",
+				"floor_tile",
+				"floor_worn",
+				"metal_dark",
+				"metal_gray",
+				"metal_green",
+				"metal_rust",
+				"metal_steel",
+				"metal_yellow",
+				"paper",
+				"plastic_beige",
+				"plastic_dark",
+				"plastic_white",
+				"rubber",
+				"shutter",
+				"wall_concrete",
+				"wall_hospital",
+				"wood_desk"
+			],
+			"tris": 4948,
+			"verts": 8978
+		},
+		"SM_Level_EXT_NoShadow": {
+			"materials": [
+				"blinds",
+				"blood_dry",
+				"emit_red",
+				"emit_sodium",
+				"emit_window",
+				"emit_window_cold",
+				"emit_window_dim",
+				"glass_car",
+				"light_off",
+				"metal_dark",
+				"metal_gray",
+				"metal_yellow",
+				"paper",
+				"wall_concrete_dark"
+			],
+			"tris": 12028,
+			"verts": 24056
+		},
+		"SM_Level_EXT_Shadow": {
+			"materials": [
+				"asphalt",
+				"curb",
+				"floor_concrete",
+				"ground",
+				"metal_chrome",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"metal_white",
+				"metal_yellow",
+				"plastic_sheet",
+				"shutter",
+				"wall_concrete",
+				"wall_concrete_dark",
+				"wall_ext",
+				"wall_facade_dark"
+			],
+			"tris": 3684,
+			"verts": 5994
+		},
+		"SM_Level_F0_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"emit_green",
+				"emit_white_dim",
+				"glass_dirty",
+				"metal_chrome",
+				"metal_gray",
+				"metal_steel",
+				"paper",
+				"screen_error",
+				"screen_off",
+				"screen_snow",
+				"screen_terminal"
+			],
+			"tris": 2070,
+			"verts": 4380
+		},
+		"SM_Level_F0_Shadow": {
+			"materials": [
+				"bark",
+				"black",
+				"car_red",
+				"cardboard",
+				"ceiling_tile",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_checker",
+				"floor_lino",
+				"floor_tile",
+				"floor_wood",
+				"foliage",
+				"glass_dirty",
+				"metal_blue",
+				"metal_dark",
+				"metal_gray",
+				"metal_green",
+				"metal_steel",
+				"metal_white",
+				"metal_yellow",
+				"paper",
+				"plastic_beige",
+				"plastic_black",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_white",
+				"vinyl_blue",
+				"wall_concrete",
+				"wall_hospital",
+				"wood_desk",
+				"wood_light"
+			],
+			"tris": 14482,
+			"verts": 24117
+		},
+		"SM_Level_F11_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"metal_gray",
+				"paper",
+				"screen_error",
+				"screen_snow",
+				"screen_terminal"
+			],
+			"tris": 480,
+			"verts": 960
+		},
+		"SM_Level_F11_Shadow": {
+			"materials": [
+				"bark",
+				"black",
+				"cardboard",
+				"ceiling_tile",
+				"emit_amber",
+				"emit_green",
+				"emit_red",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_carpet",
+				"floor_tile_lab",
+				"floor_wood",
+				"foliage",
+				"glass",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"plastic_beige",
+				"plastic_dark",
+				"wall_admin",
+				"wall_hospital",
+				"wood_desk",
+				"wood_light"
+			],
+			"tris": 3646,
+			"verts": 6483
+		},
+		"SM_Level_F12_NoShadow": {
+			"materials": [
+				"liquid_amber",
+				"liquid_green",
+				"metal_gray",
+				"screen_ecg",
+				"screen_error",
+				"screen_terminal",
+				"tank_glass"
+			],
+			"tris": 5458,
+			"verts": 4076
+		},
+		"SM_Level_F12_Shadow": {
+			"materials": [
+				"ceiling_concrete",
+				"ceiling_tile",
+				"emit_amber",
+				"emit_green",
+				"emit_red",
+				"floor_concrete",
+				"floor_metal",
+				"floor_tile_lab",
+				"glass",
+				"liquid_amber",
+				"metal_dark",
+				"metal_steel",
+				"metal_white",
+				"paper",
+				"plastic_beige",
+				"plastic_dark",
+				"rubber",
+				"tank_glass",
+				"wall_concrete",
+				"wall_lab",
+				"wood_desk"
+			],
+			"tris": 19980,
+			"verts": 37646
+		},
+		"SM_Level_F1_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"metal_gray",
+				"paper",
+				"screen_off",
+				"screen_snow",
+				"screen_terminal"
+			],
+			"tris": 436,
+			"verts": 872
+		},
+		"SM_Level_F1_Shadow": {
+			"materials": [
+				"bark",
+				"black",
+				"cardboard",
+				"ceiling_tile",
+				"emit_white_dim",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_lino",
+				"floor_retro",
+				"floor_tile",
+				"floor_tile_lab",
+				"floor_wood",
+				"foliage",
+				"glass",
+				"glass_dirty",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"metal_white",
+				"plastic_beige",
+				"plastic_black",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_white",
+				"vinyl_blue",
+				"wall_facade_dark",
+				"wall_hospital",
+				"wall_tile_white",
+				"wood_light"
+			],
+			"tris": 12182,
+			"verts": 18983
+		},
+		"SM_Level_F3_NoShadow": {
+			"materials": [
+				"blood",
+				"blood_dry",
+				"blood_smear",
+				"metal_gray",
+				"paper",
+				"screen_ecg",
+				"screen_error",
+				"screen_off",
+				"screen_snow",
+				"screen_terminal"
+			],
+			"tris": 402,
+			"verts": 804
+		},
+		"SM_Level_F3_Shadow": {
+			"materials": [
+				"bark",
+				"black",
+				"cardboard",
+				"ceiling_tile",
+				"emit_amber",
+				"emit_green",
+				"emit_red",
+				"fabric_blue",
+				"fabric_green",
+				"floor_lino",
+				"floor_tile_lab",
+				"floor_ward",
+				"floor_wood",
+				"foliage",
+				"glass_dirty",
+				"metal_blue",
+				"metal_dark",
+				"metal_gray",
+				"metal_green",
+				"metal_steel",
+				"metal_white",
+				"paper",
+				"plastic_beige",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_white",
+				"rubber",
+				"wall_hospital",
+				"wall_neuro",
+				"wood_light"
+			],
+			"tris": 6268,
+			"verts": 10226
+		},
+		"SM_Level_F6_NoShadow": {
+			"materials": [
+				"blood",
+				"metal_gray",
+				"screen_ecg",
+				"screen_error",
+				"screen_off",
+				"screen_snow",
+				"screen_terminal"
+			],
+			"tris": 300,
+			"verts": 600
+		},
+		"SM_Level_F6_Shadow": {
+			"materials": [
+				"black",
+				"cardboard",
+				"ceiling_tile",
+				"emit_amber",
+				"emit_green",
+				"emit_red",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_lino",
+				"floor_metal",
+				"floor_tile_lab",
+				"glass",
+				"glass_dirty",
+				"metal_dark",
+				"metal_gray",
+				"metal_steel",
+				"metal_white",
+				"metal_yellow",
+				"paper",
+				"plastic_beige",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_sheet",
+				"plastic_white",
+				"wall_hospital",
+				"wall_infect",
+				"wood_desk",
+				"wood_light"
+			],
+			"tris": 6472,
+			"verts": 12498
+		},
+		"SM_Level_F8_NoShadow": {
+			"materials": [
+				"blood_dry",
+				"blood_smear",
+				"liquid_amber",
+				"liquid_green",
+				"metal_gray",
+				"paper",
+				"screen_ecg",
+				"screen_terminal",
+				"tank_glass"
+			],
+			"tris": 5230,
+			"verts": 4304
+		},
+		"SM_Level_F8_Shadow": {
+			"materials": [
+				"black",
+				"cardboard",
+				"ceiling_concrete",
+				"ceiling_tile",
+				"emit_amber",
+				"emit_green",
+				"fabric_blue",
+				"fabric_brown",
+				"fabric_green",
+				"floor_concrete",
+				"floor_lino",
+				"floor_metal",
+				"floor_tile_lab",
+				"floor_wood",
+				"glass",
+				"glass_dirty",
+				"leather_boots",
+				"metal_dark",
+				"metal_gray",
+				"metal_rust",
+				"metal_steel",
+				"metal_white",
+				"paper",
+				"plastic_beige",
+				"plastic_dark",
+				"plastic_orange",
+				"plastic_white",
+				"rubber",
+				"wall_hospital",
+				"wall_lab",
+				"wood_desk",
+				"wood_light"
+			],
+			"tris": 9764,
+			"verts": 17576
+		},
+		"SM_Level_SHELL_NoShadow": {
+			"materials": [
+				"emit_red"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_Level_SHELL_Shadow": {
+			"materials": [
+				"blinds",
+				"ceiling_concrete",
+				"emit_window",
+				"emit_window_cold",
+				"glass",
+				"glass_dirty",
+				"metal_dark",
+				"metal_gray",
+				"wall_admin",
+				"wall_concrete",
+				"wall_ext",
+				"wall_facade_dark",
+				"wall_hospital",
+				"wall_hospital_dirty",
+				"wall_infect",
+				"wall_lab",
+				"wall_neuro",
+				"wall_tile_dirty"
+			],
+			"tris": 65276,
+			"verts": 130274
+		},
+		"SM_Level_STAIR_A_NoShadow": {
+			"materials": [
+				"metal_dark",
+				"metal_gray"
+			],
+			"tris": 1200,
+			"verts": 2400
+		},
+		"SM_Level_STAIR_A_Shadow": {
+			"materials": [
+				"floor_stair",
+				"metal_dark",
+				"wall_concrete",
+				"wall_concrete_dark",
+				"wall_hospital",
+				"wall_stair"
+			],
+			"tris": 3304,
+			"verts": 5536
+		},
+		"SM_Level_STAIR_B_NoShadow": {
+			"materials": [
+				"metal_dark",
+				"metal_gray"
+			],
+			"tris": 1512,
+			"verts": 3024
+		},
+		"SM_Level_STAIR_B_Shadow": {
+			"materials": [
+				"floor_stair",
+				"metal_dark",
+				"wall_concrete",
+				"wall_hospital",
+				"wall_stair"
+			],
+			"tris": 3980,
+			"verts": 6620
+		},
+		"SM_Level_STAIR_C_NoShadow": {
+			"materials": [
+				"metal_dark",
+				"metal_gray"
+			],
+			"tris": 1212,
+			"verts": 2424
+		},
+		"SM_Level_STAIR_C_Shadow": {
+			"materials": [
+				"floor_stair",
+				"metal_dark",
+				"wall_concrete",
+				"wall_hospital",
+				"wall_stair"
+			],
+			"tris": 3208,
+			"verts": 5344
+		},
+		"SM_LightFixture_0fad32c8": {
+			"materials": [
+				"adhoc_c906661f1e"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_199f1ff2": {
+			"materials": [
+				"adhoc_96307a86a2"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_1fd35d9f": {
+			"materials": [
+				"adhoc_a075603788"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_2de548bd": {
+			"materials": [
+				"adhoc_9c09a27e45"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_3a65e73e": {
+			"materials": [
+				"adhoc_1965b2bf83"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_4669b7ed": {
+			"materials": [
+				"adhoc_ee648a6931"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_4b228288": {
+			"materials": [
+				"adhoc_47c8e500c1"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_704564c6": {
+			"materials": [
+				"adhoc_fc0f53c001"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_7b8f3540": {
+			"materials": [
+				"adhoc_a075603788"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_7f16050c": {
+			"materials": [
+				"adhoc_9234fdcebc"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_843e500d": {
+			"materials": [
+				"adhoc_4d4a6b0f63"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_8cc5e194": {
+			"materials": [
+				"adhoc_c2af5465ce"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_921190e2": {
+			"materials": [
+				"adhoc_4797a297f2"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_98553e9d": {
+			"materials": [
+				"adhoc_d41b1e754e"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_98affc16": {
+			"materials": [
+				"adhoc_47c8e500c1"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_996e65d0": {
+			"materials": [
+				"adhoc_fe195e6d7c"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_a03c5c54": {
+			"materials": [
+				"adhoc_6f284e5785"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_a0ada890": {
+			"materials": [
+				"adhoc_df9f21d30c"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_a71186c7": {
+			"materials": [
+				"adhoc_a075603788"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_b8609bad": {
+			"materials": [
+				"adhoc_cf00d819e0"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_bafc770a": {
+			"materials": [
+				"adhoc_aade0cc767"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_c3936ffa": {
+			"materials": [
+				"adhoc_64af238d6a"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_c7d03604": {
+			"materials": [
+				"adhoc_15a090a3a8"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_d6ec0919": {
+			"materials": [
+				"adhoc_2383aa838b"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_d86c0066": {
+			"materials": [
+				"adhoc_8cefbd1703"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_d961216b": {
+			"materials": [
+				"adhoc_64af238d6a"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_defce77d": {
+			"materials": [
+				"adhoc_a3cb59d3a9"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_f164ea5c": {
+			"materials": [
+				"adhoc_8aaddf704d"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LightFixture_fee059fc": {
+			"materials": [
+				"adhoc_c2af5465ce"
+			],
+			"tris": 12,
+			"verts": 24
+		},
+		"SM_LockerBox_05011d0d": {
+			"materials": [
+				"black",
+				"metal_blue",
+				"metal_steel",
+				"paper"
+			],
+			"tris": 156,
+			"verts": 312
+		},
+		"SM_Mechanism_abd68dea": {
+			"materials": [
+				"adhoc_789c7847f1",
+				"metal_gray",
+				"metal_yellow",
+				"plastic_dark",
+				"plastic_white",
+				"rubber"
+			],
+			"tris": 432,
+			"verts": 414
+		},
+		"SM_Phone_7a86e045": {
+			"materials": [
+				"plastic_beige",
+				"plastic_dark"
+			],
+			"tris": 36,
+			"verts": 72
+		},
+		"SM_Pickup_091086b5": {
+			"materials": [
+				"cardboard",
+				"emit_red"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_0f2be7c3": {
+			"materials": [
+				"metal_steel",
+				"plastic_white"
+			],
+			"tris": 360,
+			"verts": 270
+		},
+		"SM_Pickup_1ca901fe": {
+			"materials": [
+				"cardboard",
+				"emit_red"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_25c470d8": {
+			"materials": [
+				"metal_dark",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_26f36c36": {
+			"materials": [
+				"metal_yellow",
+				"paper"
+			],
+			"tris": 144,
+			"verts": 138
+		},
+		"SM_Pickup_32b59d5d": {
+			"materials": [
+				"cardboard",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_382ab097": {
+			"materials": [
+				"cardboard",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_73a24845": {
+			"materials": [
+				"metal_dark",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_8f8f485f": {
+			"materials": [
+				"metal_dark",
+				"metal_yellow"
+			],
+			"tris": 252,
+			"verts": 204
+		},
+		"SM_Pickup_980ce0c3": {
+			"materials": [
+				"metal_blue",
+				"plastic_white"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_9e1091c8": {
+			"materials": [
+				"metal_dark",
+				"metal_yellow"
+			],
+			"tris": 252,
+			"verts": 204
+		},
+		"SM_Pickup_9e8e2dbe": {
+			"materials": [
+				"metal_yellow",
+				"paper"
+			],
+			"tris": 144,
+			"verts": 138
+		},
+		"SM_Pickup_a9be2888": {
+			"materials": [
+				"metal_yellow",
+				"paper"
+			],
+			"tris": 144,
+			"verts": 138
+		},
+		"SM_Pickup_ae480cde": {
+			"materials": [
+				"emit_red",
+				"plastic_dark",
+				"plastic_white"
+			],
+			"tris": 252,
+			"verts": 204
+		},
+		"SM_Pickup_b087e5d0": {
+			"materials": [
+				"cardboard",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_c29045b1": {
+			"materials": [
+				"metal_dark",
+				"metal_steel",
+				"plastic_dark"
+			],
+			"tris": 228,
+			"verts": 242
+		},
+		"SM_Pickup_cdd252bd": {
+			"materials": [
+				"metal_dark",
+				"metal_yellow"
+			],
+			"tris": 24,
+			"verts": 48
+		},
+		"SM_Pickup_d11b0ee9": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 240,
+			"verts": 180
+		},
+		"SM_Pickup_d1ab0b1a": {
+			"materials": [
+				"metal_dark",
+				"wood_desk"
+			],
+			"tris": 384,
+			"verts": 340
+		},
+		"SM_Pickup_eddf1380": {
+			"materials": [
+				"metal_dark",
+				"metal_steel",
+				"plastic_dark"
+			],
+			"tris": 60,
+			"verts": 120
+		},
+		"SM_Pickup_f177a3b1": {
+			"materials": [
+				"metal_dark",
+				"metal_steel",
+				"rubber"
+			],
+			"tris": 840,
+			"verts": 592
+		},
+		"SM_Prop_ambulance_false_false_NoShadow_4c7317e8": {
+			"materials": [
+				"black",
+				"plastic_white"
+			],
+			"tris": 856,
+			"verts": 1104
+		},
+		"SM_Prop_ambulance_false_false_Shadow_0149a47e": {
+			"materials": [
+				"black",
+				"emit_taillight",
+				"glass_car",
+				"lens_blue",
+				"light_off",
+				"metal_chrome",
+				"metal_gray",
+				"paint_blue",
+				"paint_orange",
+				"paint_white",
+				"paper",
+				"plastic_black",
+				"plastic_gray",
+				"plastic_orange",
+				"tire"
+			],
+			"tris": 6628,
+			"verts": 8198
+		},
+		"SM_Prop_ambulance_true_true_NoShadow_c123475b": {
+			"materials": [
+				"black",
+				"emit_white_dim",
+				"glass_dirty",
+				"plastic_white"
+			],
+			"tris": 1076,
+			"verts": 1584
+		},
+		"SM_Prop_ambulance_true_true_Shadow_805a7410": {
+			"materials": [
+				"black",
+				"emit_amber",
+				"emit_blue",
+				"emit_taillight",
+				"glass_car",
+				"light_off",
+				"metal_alu",
+				"metal_blue",
+				"metal_chrome",
+				"metal_gray",
+				"metal_green",
+				"metal_steel",
+				"paint_blue",
+				"paint_orange",
+				"paint_white",
+				"paper",
+				"plastic_black",
+				"plastic_gray",
+				"plastic_orange",
+				"plastic_white",
+				"screen_off",
+				"tire",
+				"vinyl_blue"
+			],
+			"tris": 7556,
+			"verts": 10172
+		},
+		"SM_Prop_bed_false_true_Shadow_d4a6b4a8": {
+			"materials": [
+				"fabric_green",
+				"linen",
+				"mattress",
+				"metal_chrome",
+				"metal_steel",
+				"plastic_beige",
+				"plastic_black",
+				"plastic_gray",
+				"tire"
+			],
+			"tris": 1508,
+			"verts": 2228
+		},
+		"SM_Prop_bed_true_true_Shadow_cf8c121b": {
+			"materials": [
+				"fabric_green",
+				"gown",
+				"linen",
+				"mattress",
+				"metal_chrome",
+				"metal_steel",
+				"plastic_beige",
+				"plastic_black",
+				"plastic_gray",
+				"tire"
+			],
+			"tris": 1520,
+			"verts": 2252
+		},
+		"SM_Prop_bench_3_fabric_blue_Shadow_7f62182c": {
+			"materials": [
+				"fabric_blue",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 792,
+			"verts": 1728
+		},
+		"SM_Prop_bench_4_fabric_blue_Shadow_7cc1303b": {
+			"materials": [
+				"fabric_blue",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 1012,
+			"verts": 2208
+		},
+		"SM_Prop_bench_4_fabric_green_Shadow_f16572e8": {
+			"materials": [
+				"fabric_green",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 1012,
+			"verts": 2208
+		},
+		"SM_Prop_bench_5_fabric_blue_Shadow_0d43693d": {
+			"materials": [
+				"fabric_blue",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 1232,
+			"verts": 2688
+		},
+		"SM_Prop_bench_5_fabric_green_Shadow_9f6a96c7": {
+			"materials": [
+				"fabric_green",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 1232,
+			"verts": 2688
+		},
+		"SM_Prop_bench_6_fabric_blue_Shadow_3f6c0b60": {
+			"materials": [
+				"fabric_blue",
+				"metal_dark",
+				"plastic_black"
+			],
+			"tris": 1452,
+			"verts": 3168
+		},
+		"SM_Prop_car_car_black_false_false_NoShadow_767c3daa": {
+			"materials": [
+				"car_black"
+			],
+			"tris": 128,
+			"verts": 152
+		},
+		"SM_Prop_car_car_black_false_false_Shadow_67c42ec7": {
+			"materials": [
+				"black",
+				"car_black",
+				"emit_taillight",
+				"glass_car",
+				"light_off",
+				"metal_alu",
+				"metal_chrome",
+				"metal_dark",
+				"paper",
+				"plastic_black",
+				"tire"
+			],
+			"tris": 5548,
+			"verts": 6734
+		},
+		"SM_Prop_car_car_gray_true_true_NoShadow_4b01349c": {
+			"materials": [
+				"car_gray"
+			],
+			"tris": 128,
+			"verts": 152
+		},
+		"SM_Prop_car_car_gray_true_true_Shadow_f791406f": {
+			"materials": [
+				"black",
+				"car_gray",
+				"emit_headlight",
+				"emit_taillight",
+				"glass_car",
+				"metal_alu",
+				"metal_chrome",
+				"metal_dark",
+				"paper",
+				"plastic_black",
+				"plastic_dark",
+				"tire"
+			],
+			"tris": 5692,
+			"verts": 7046
+		},
+		"SM_Prop_car_car_red_true_false_NoShadow_aa4af37d": {
+			"materials": [
+				"car_red"
+			],
+			"tris": 128,
+			"verts": 152
+		},
+		"SM_Prop_car_car_red_true_false_Shadow_860a5b87": {
+			"materials": [
+				"black",
+				"car_red",
+				"emit_taillight",
+				"glass_car",
+				"light_off",
+				"metal_alu",
+				"metal_chrome",
+				"metal_dark",
+				"paper",
+				"plastic_black",
+				"plastic_dark",
+				"tire"
+			],
+			"tris": 5692,
+			"verts": 7046
+		},
+		"SM_Prop_car_car_white_false_false_NoShadow_9e089ee9": {
+			"materials": [
+				"car_white"
+			],
+			"tris": 128,
+			"verts": 152
+		},
+		"SM_Prop_car_car_white_false_false_Shadow_105cf926": {
+			"materials": [
+				"black",
+				"car_white",
+				"emit_taillight",
+				"glass_car",
+				"light_off",
+				"metal_alu",
+				"metal_chrome",
+				"metal_dark",
+				"paper",
+				"plastic_black",
+				"tire"
+			],
+			"tris": 5548,
+			"verts": 6734
+		},
+		"SM_Prop_cart_Shadow_3be26249": {
+			"materials": [
+				"cardboard",
+				"glass_dirty",
+				"linen",
+				"metal_blue",
+				"metal_chrome",
+				"metal_steel",
+				"plastic_black",
+				"plastic_orange",
+				"plastic_white"
+			],
+			"tris": 1564,
+			"verts": 2500
+		},
+		"SM_Prop_chair_metal_gray_fabric_blue_Shadow_865dccc2": {
+			"materials": [
+				"fabric_blue",
+				"metal_gray",
+				"plastic_black"
+			],
+			"tris": 576,
+			"verts": 752
+		},
+		"SM_Prop_chair_metal_gray_plastic_orange_Shadow_27042577": {
+			"materials": [
+				"metal_gray",
+				"plastic_black",
+				"plastic_orange"
+			],
+			"tris": 576,
+			"verts": 752
+		},
+		"SM_Prop_desk_wood_desk_1_40_0_70_Shadow_d68e20e1": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_desk_wood_desk_2_00_0_80_Shadow_ab25f698": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_desk_wood_desk_2_00_0_90_Shadow_958ec450": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_desk_wood_desk_2_20_0_80_Shadow_7350a29c": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_desk_wood_desk_2_20_0_90_Shadow_455a39c3": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_desk_wood_desk_2_40_1_00_Shadow_e473f21b": {
+			"materials": [
+				"metal_chrome",
+				"wood_desk"
+			],
+			"tris": 440,
+			"verts": 960
+		},
+		"SM_Prop_gurney_NoShadow_36d310b3": {
+			"materials": [
+				"plastic_black"
+			],
+			"tris": 960,
+			"verts": 650
+		},
+		"SM_Prop_gurney_Shadow_4b403f8f": {
+			"materials": [
+				"metal_alu",
+				"metal_chrome",
+				"plastic_black",
+				"plastic_gray",
+				"tire",
+				"vinyl_gray"
+			],
+			"tris": 1964,
+			"verts": 2630
+		},
+		"SM_Prop_iv_stand_NoShadow_d3776628": {
+			"materials": [
+				"glass_dirty",
+				"linen",
+				"metal_chrome"
+			],
+			"tris": 480,
+			"verts": 586
+		},
+		"SM_Prop_iv_stand_Shadow_942430b6": {
+			"materials": [
+				"glass_dirty",
+				"metal_alu",
+				"metal_chrome",
+				"plastic_black"
+			],
+			"tris": 1308,
+			"verts": 1724
+		},
+		"SM_Prop_lamp_post_7_00_Shadow_6ce6d3be": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 440,
+			"verts": 533
+		},
+		"SM_Prop_lamp_post_8_00_Shadow_c052f6ea": {
+			"materials": [
+				"metal_dark"
+			],
+			"tris": 440,
+			"verts": 533
+		},
+		"SM_Prop_office_chair_Shadow_076580b6": {
+			"materials": [
+				"fabric_office",
+				"metal_chrome",
+				"plastic_black"
+			],
+			"tris": 1884,
+			"verts": 3059
+		},
+		"SM_Prop_tree_false_0_Shadow_c92cdeed": {
+			"materials": [
+				"bark",
+				"foliage"
+			],
+			"tris": 1958,
+			"verts": 1413
+		},
+		"SM_Prop_tree_false_1_Shadow_d542209f": {
+			"materials": [
+				"bark",
+				"foliage"
+			],
+			"tris": 1958,
+			"verts": 1413
+		},
+		"SM_Prop_tree_false_2_Shadow_dfd30650": {
+			"materials": [
+				"bark",
+				"foliage"
+			],
+			"tris": 1958,
+			"verts": 1413
+		},
+		"SM_Prop_tree_false_3_Shadow_f1437fba": {
+			"materials": [
+				"bark",
+				"foliage"
+			],
+			"tris": 1958,
+			"verts": 1413
+		},
+		"SM_Prop_tree_true_0_Shadow_3702e782": {
+			"materials": [
+				"bark",
+				"foliage_pine"
+			],
+			"tris": 3812,
+			"verts": 3228
+		},
+		"SM_Prop_tree_true_1_Shadow_02ab8657": {
+			"materials": [
+				"bark",
+				"foliage_pine"
+			],
+			"tris": 3812,
+			"verts": 3228
+		},
+		"SM_Prop_tree_true_2_Shadow_9dfedac6": {
+			"materials": [
+				"bark",
+				"foliage_pine"
+			],
+			"tris": 3812,
+			"verts": 3228
+		},
+		"SM_Prop_tree_true_3_Shadow_8fee9922": {
+			"materials": [
+				"bark",
+				"foliage_pine"
+			],
+			"tris": 3812,
+			"verts": 3228
+		},
+		"SM_Prop_wheelchair_NoShadow_83cd070f": {
+			"materials": [
+				"metal_chrome"
+			],
+			"tris": 456,
+			"verts": 580
+		},
+		"SM_Prop_wheelchair_Shadow_4d1de4e4": {
+			"materials": [
+				"metal_chrome",
+				"metal_dark",
+				"plastic_black",
+				"plastic_gray",
+				"tire",
+				"vinyl_dark"
+			],
+			"tris": 4336,
+			"verts": 4102
+		},
+		"SM_SavePoint_48ab9eba": {
+			"materials": [
+				"adhoc_987636941d",
+				"metal_dark",
+				"metal_steel",
+				"plastic_beige",
+				"plastic_dark"
+			],
+			"tris": 516,
+			"verts": 432
+		},
+		"SM_SavePoint_89473e69": {
+			"materials": [
+				"adhoc_987636941d",
+				"metal_dark",
+				"metal_steel",
+				"plastic_beige",
+				"plastic_dark"
+			],
+			"tris": 516,
+			"verts": 432
+		},
+		"SM_SwitchPanel_2cdb8e0c": {
+			"materials": [
+				"adhoc_d78c01a637",
+				"metal_gray",
+				"metal_steel",
+				"metal_yellow",
+				"plastic_orange"
+			],
+			"tris": 60,
+			"verts": 120
+		}
+	},
+	"source_commit": "6d279bd",
+	"source_project": "blackwood",
+	"units": "Godot : mètres, Y vers le haut, repère direct",
+	"warnings": []
+}

@@ -195,7 +195,7 @@ Aucun fichier de matériau (.tres) : les matériaux sont créés par le code (`m
 | Nom | Type | Format | Licence / source | Destination Unreal | Statut |
 | --- | --- | --- | --- | --- | --- |
 | pbr_surface.gdshader — Surface PBR triplanaire en coordonnées monde (albédo/normale/ORM, teinte, saleté, bandeau mural, humidité) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_WorldAligned (fonction WorldAlignedTexture) | Non migré — à reconstruire |
-| surface.gdshader — Surface procédurale sans texture (carrelage, bicolore, faux plafond, béton, métal, bois…) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_Procedural | Non migré — à reconstruire |
+| surface.gdshader — Surface procédurale sans texture (carrelage, bicolore, faux plafond, béton, métal, bois…) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_Simple | Non migré — à reconstruire |
 | foliage.gdshader — Feuillage découpé par bruit (alpha scissor) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_Foliage (Masked, Two Sided Foliage) | Non migré — à reconstruire |
 | blood.gdshader — Taches de sang procédurales (décal quad) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_BloodDecal (Deferred Decal) | Non migré — à reconstruire |
 | flesh.gdshader — Chair des créatures (veines, plaies humides) | Shader Godot | GLSL Godot (.gdshader) | Original (projet) | /Game/Blackwood/Materials/Master/M_BW_Flesh (Subsurface) | Non migré — à reconstruire |
