@@ -41,6 +41,15 @@ encore ne doit pas bloquer la visite du niveau).
 
 ## Mise en route (PC Windows)
 
+**Le plus simple** : installer les pré-requis ci-dessous, puis double-cliquer **`Scripts\SetupAll.bat`**.
+Il vérifie les outils, décompresse les maillages extraits, copie le mannequin d'Unreal, compile,
+lance l'import (l'éditeur s'ouvre puis se ferme tout seul) et les tests, et affiche le résultat.
+Les étapes détaillées ci-dessous restent utiles en cas d'erreur.
+
+Paquet complet sans Git : `Blackwood_Unreal_complet.zip` (livré en morceaux avec `REASSEMBLER_Unreal.bat`)
+contient `BLACKWOOD_UNREAL/`, les maillages extraits et la partie du jeu Godot nécessaire à l'import
+(textures, sons, polices, zombie). Décompresser, puis `BLACKWOOD_UNREAL\Scripts\SetupAll.bat`.
+
 ### 1. Pré-requis
 
 - Windows 10/11, carte graphique DirectX 12 récente ;

@@ -1515,11 +1515,18 @@ def main():
             warn("Étape %s interrompue : %s" % (name, e))
             import traceback
             unreal.log_error(traceback.format_exc())
+    try:
+        unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
+    except Exception as e:
+        warn("Enregistrement final incomplet : %s" % e)
     log("Terminé en %.0f s. Ensuite : Fichier > Tout enregistrer, puis Jouer (Alt+P)." % (time.time() - t0))
     out = os.path.join(PROJECT_DIR, "Saved", "Blackwood")
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "import_report.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(REPORT) + "\n")
+    # Lancé par Scripts/SetupAll.bat : l'éditeur se ferme de lui-même à la fin
+    if "-BWQuitAfterImport" in unreal.SystemLibrary.get_command_line():
+        unreal.SystemLibrary.quit_editor()
 
 
 main()
