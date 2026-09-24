@@ -1,0 +1,25 @@
+# Fichiers générés par Unreal Engine / Visual Studio
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.vsconfig
+
+# Assets Unreal importés (binaires lourds) : régénérés par Scripts/import_all.py.
+# Ce dépôt est synchronisé avec Lovable : ne pas y pousser le contenu importé sans Git LFS.
+Content/**/*.uasset
+Content/**/*.umap
+
+# Sources d'import volumineuses produites par Tools/GodotExport (géométrie glTF, sons convertis)
+SourceAssets/
+
+# Python
+__pycache__/
+*.pyc
