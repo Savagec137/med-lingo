@@ -47,6 +47,7 @@ var _found := {}
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	add_to_group("rpc_nodes")
 	multiplayer.peer_connected.connect(_on_peer_connected)
 	multiplayer.peer_disconnected.connect(_on_peer_disconnected)
 	multiplayer.connected_to_server.connect(_on_connected)
@@ -136,10 +137,26 @@ func leave() -> void:
 	if _peer:
 		_peer.close()
 	_peer = null
+	_flush_rpc_cache()
 	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
 	active = false
 	dedicated = false
 	slots.clear()
+
+
+## Godot 4.7 (modèles d'export « release ») : au changement de pair réseau, le
+## cache des chemins RPC n'arrive pas à se détacher des nœuds qu'il suit et le
+## signale en erreur. Ces nœuds (groupe « rpc_nodes ») sortent de l'arbre un
+## instant : le cache les oublie proprement, sans erreur.
+func _flush_rpc_cache() -> void:
+	for n in get_tree().get_nodes_in_group("rpc_nodes"):
+		var parent := n.get_parent()
+		if parent == null:
+			continue
+		var idx := n.get_index()
+		parent.remove_child(n)
+		parent.add_child(n)
+		parent.move_child(n, idx)
 
 
 func _on_connected() -> void:

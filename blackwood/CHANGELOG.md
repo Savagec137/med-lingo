@@ -27,7 +27,9 @@ Format : du plus récent au plus ancien. Chaque version a été compilée, lanc�
   plateau (petits meubles désormais évités par les grandes créatures) ; une créature pouvait être
   emportée par un joueur comme par une plateforme mobile (seul le décor porte désormais) ;
   chez l'hôte, un objet d'un étage masqué (loin de son joueur) refusait l'interaction de
-  l'invité.
+  l'invité ; avec les exécutables exportés (modèles « release » de Godot 4.7.2), chaque
+  connexion ou départ affichait des erreurs du cache réseau du moteur (contourné) ; un état
+  de partie reçu pendant une transition est désormais mis en attente au lieu d'être ignoré.
 
 ## 0.4 — Mode DEBUG, batterie à paliers, exécutables (23/09/2026)
 

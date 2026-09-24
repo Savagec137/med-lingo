@@ -57,6 +57,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	Engine.max_fps = 60
 	OS.add_logger(_errors)
+	add_to_group("rpc_nodes")
 	t0 = Time.get_ticks_msec()
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--role="):
@@ -179,7 +180,29 @@ func _expect(kind: String, timeout: float = 20.0) -> Dictionary:
 func _next_msg() -> Array:
 	while _inbox.is_empty():
 		await get_tree().process_frame
-	return _inbox.pop_front()
+	_last_msg_ms = Time.get_ticks_msec()
+	var m: Array = _inbox.pop_front()
+	_log("    ← %s" % String(m[0]))
+	return m
+
+
+var _last_msg_ms := 0
+
+
+## Invité : si l'hôte ne dit plus rien pendant 90 s, on décrit l'état et on
+## s'arrête (pas de processus orphelin).
+func _watchdog() -> void:
+	_last_msg_ms = Time.get_ticks_msec()
+	while true:
+		await _sleep(5.0)
+		if Time.get_ticks_msec() - _last_msg_ms > 90000:
+			var main := get_parent()
+			_log("CHIEN DE GARDE : plus de message de l'hôte depuis 90 s — écran %s, chargement %s, partie %s, session %s (client %s), pairs %s" % [
+				ui.top_screen().get_class() if ui.top_screen() else "aucun", str(main.get("_busy")), str(_game() != null),
+				str(Net.active), str(Net.is_client()), str(multiplayer.get_peers())])
+			failures += 1
+			get_parent().call("quit_game", 99)
+			return
 
 
 # =================================================================================
@@ -537,7 +560,7 @@ func _test_boss() -> void:
 	_game().events._surgeon_intro()
 	var woke := await _wait_for(func() -> bool: return GameState.get_flag("surgeon_started") and boss.active, 12.0)
 	_check(woke, "l'hôte déclenche le réveil (une seule fois, côté serveur)")
-	await _sleep(2.0)
+	await _sleep(3.0)
 	_send("boss_check", {"id": "f3_surgeon"})
 	var r := await _expect("boss_state", 10.0)
 	_check(bool(r.get("bar", false)), "chez l'invité : barre de vie « %s »" % String(r.get("title", "")))
@@ -584,6 +607,21 @@ func _spawn_enemy(kind: String, pos: Vector3, rot: float) -> Enemy:
 	g.facility.spawns[id] = {"type": "hollow", "variant": kind, "pos": pos, "rot": rot, "patrol": [],
 		"floor": Facility.floor_at(pos.y + 0.2), "event": true, "flag": "__debug"}
 	return g.spawn_enemy(id)
+
+
+## Les combats précédents ont pu blesser (voire mettre à terre) un joueur :
+## l'hôte remet les deux joueurs debout, pleine santé (autorité du serveur).
+func _restore_players() -> void:
+	for slot in _game().players:
+		var pd := GameState.data(int(slot))
+		var p: Player = _game().players[slot]
+		pd.downed = false
+		pd.dead = false
+		pd.bleed_t = 0.0
+		pd.set_hp(PlayerData.MAX_HP)
+		pd.changed.emit("state")
+		p.revive_state()
+	await _sleep(1.2 + latency / 500.0)
 
 
 func _test_combat() -> void:
@@ -644,6 +682,9 @@ func _test_downed_revive() -> void:
 	_log("── Joueur à terre et réanimation")
 	# Pas de créature de l'étage attirée par les coups de feu pendant le test
 	DebugTools.kill_all(false)
+	_log("    avant : hôte %d PV%s, invité %d PV%s" % [int(GameState.data(1).hp), " (à terre)" if GameState.data(1).downed else "",
+		int(GameState.data(2).hp), " (à terre)" if GameState.data(2).downed else ""])
+	await _restore_players()
 	var p2 := _p2()
 	var center := Vector3(0, 0.05, -14.0)
 	await _place_client(center, center + Vector3(0, 0, -3))
@@ -678,6 +719,7 @@ func _test_downed_revive() -> void:
 func _test_game_over_retry() -> void:
 	_log("── Mort, GAME OVER, RETRY")
 	DebugTools.kill_all(false)
+	await _restore_players()
 	# Répit d'une seconde après la réanimation
 	await _sleep(1.2)
 	var p2 := _p2()
@@ -738,12 +780,15 @@ func _finish() -> void:
 		_check(menu and not Net.active, "hôte : retour au menu, session fermée")
 		var ended := await _wait_for(func() -> bool: return not OS.is_process_running(_client_pid), 30.0)
 		_client_failures = OS.get_process_exit_code(_client_pid) if ended else -1
+		if not ended:
+			OS.kill(_client_pid)
 		_check(ended, "l'invité revient au menu (« L'HÔTE A QUITTÉ LA PARTIE ») et termine son test")
 	elif _client_pid > 0:
 		_send("done")
 		var r := await _expect("client_result", 20.0)
 		_client_failures = int(r.get("failures", -1))
-		await _wait_for(func() -> bool: return not OS.is_process_running(_client_pid), 15.0)
+		if not await _wait_for(func() -> bool: return not OS.is_process_running(_client_pid), 15.0):
+			OS.kill(_client_pid)
 	if _proxy:
 		_log("relais : %d paquets transmis, %d perdus" % [_proxy.forwarded, _proxy.dropped])
 	_check(_errors.count == 0, "hôte : aucune erreur de script ou du moteur (%d%s)" % [_errors.count, (" : " + _errors.first) if _errors.first != "" else ""])
@@ -758,6 +803,7 @@ func _finish() -> void:
 # =================================================================================
 
 func _run_client() -> void:
+	_watchdog()
 	await _wait_menu()
 	await _join()
 	var in_game := await _wait_for(func() -> bool: return _game() != null and _player() != null and _game().coop != null, 60.0)

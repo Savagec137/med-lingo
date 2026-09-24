@@ -17,6 +17,8 @@ var world: Node3D
 var game: Game
 var backdrop: MenuBackdrop
 var _busy := false
+## Coop : état de partie reçu pendant une transition, appliqué juste après.
+var _pending_snapshot: Dictionary = {}
 
 
 func _ready() -> void:
@@ -122,14 +124,14 @@ func load_data(data: Dictionary) -> void:
 	GameState.from_dict(data.get("state", {}))
 	_start_game(data)
 	_busy = false
+	_apply_pending_snapshot()
 
 
 ## Invité : l'hôte envoie la partie (arrivée, reconnexion, RETRY de l'hôte).
 func load_coop(data: Dictionary) -> void:
 	if _busy:
-		await get_tree().create_timer(0.8, true).timeout
-		if _busy:
-			return
+		_pending_snapshot = data
+		return
 	_busy = true
 	await _transition()
 	GameState.from_dict(data.get("state", {}))
@@ -139,6 +141,17 @@ func load_coop(data: Dictionary) -> void:
 	Net.friendly_fire = bool(info.get("friendly_fire", false))
 	_start_game(data)
 	_busy = false
+	_apply_pending_snapshot()
+
+
+## Applique l'état de partie arrivé pendant une transition (le plus récent).
+func _apply_pending_snapshot() -> void:
+	if _pending_snapshot.is_empty() or not Net.is_client():
+		_pending_snapshot = {}
+		return
+	var next := _pending_snapshot
+	_pending_snapshot = {}
+	load_coop(next)
 
 
 func retry() -> void:
@@ -155,6 +168,7 @@ func quit_to_menu() -> void:
 	if _busy:
 		return
 	_busy = true
+	_pending_snapshot = {}
 	if Net.active:
 		Net.leave()
 	await _transition()

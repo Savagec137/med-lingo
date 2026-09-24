@@ -67,8 +67,13 @@ static func instance() -> Coop:
 	return _instance if is_instance_valid(_instance) else null
 
 
+func _enter_tree() -> void:
+	_instance = self
+
+
 func _ready() -> void:
 	_instance = self
+	add_to_group("rpc_nodes")
 	if Net.is_server():
 		Net.peer_joined.connect(_on_peer_joined)
 		Net.peer_left.connect(_on_peer_left)

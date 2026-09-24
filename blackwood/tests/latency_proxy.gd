@@ -73,6 +73,9 @@ func _pump() -> void:
 	_queue = keep
 
 
-func _exit_tree() -> void:
-	_client_side.close()
-	_server_side.close()
+## Fermeture à la destruction seulement (le nœud peut sortir de l'arbre un
+## instant, voir Net._flush_rpc_cache).
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		_client_side.close()
+		_server_side.close()
