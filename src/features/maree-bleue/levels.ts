@@ -1,0 +1,219 @@
+/**
+ * Marée Bleue — les cinq niveaux.
+ *
+ * Repère : le canon du joueur est en bas, vers z positif ; la forteresse rouge
+ * est en haut, à z = -length. Le chemin s'étend de x = -width/2 à x = +width/2.
+ * Toutes les distances sont en mètres « monde ».
+ */
+
+export type ThemeId = "jardin" | "canyon" | "fjord" | "forge" | "citadelle";
+
+export type GateOp = "mul" | "div";
+
+export interface GateDef {
+  op: GateOp;
+  value: number;
+  x: number;
+  z: number;
+  /** Largeur de la porte. */
+  w: number;
+  /** Porte dorée : gros multiplicateur, plus étroite. */
+  gold?: boolean;
+  move?: { amp: number; speed: number; phase?: number };
+}
+
+export type ObstacleDef =
+  | { kind: "box"; minX: number; maxX: number; minZ: number; maxZ: number; height?: number }
+  | { kind: "pillar"; x: number; z: number; r: number; height?: number };
+
+export type HazardDef =
+  | { kind: "spinner"; x: number; z: number; r: number; speed: number }
+  | { kind: "geyser"; x: number; z: number; r: number; period: number; phase?: number };
+
+export interface EnemyDef {
+  /** Soldats rouges par seconde au départ. */
+  rate: number;
+  /** Accroissement du débit, par seconde de partie. */
+  ramp: number;
+  /** Plafond du débit. */
+  maxRate: number;
+  /** Horde déjà massée devant la forteresse au lancement. */
+  horde: number;
+  /** Un colosse rouge toutes les N secondes (0 = jamais). */
+  bruteEvery: number;
+  /** Abscisses des portes de la forteresse. */
+  doors: number[];
+}
+
+export interface LevelDef {
+  id: number;
+  name: string;
+  tagline: string;
+  theme: ThemeId;
+  width: number;
+  length: number;
+  baseHp: number;
+  playerHp: number;
+  /** Tirs par seconde quand on maintient le doigt. */
+  fireRate: number;
+  /** Tirs nécessaires pour charger un champion. */
+  chargeShots: number;
+  enemy: EnemyDef;
+  gates: GateDef[];
+  obstacles: ObstacleDef[];
+  hazards: HazardDef[];
+}
+
+export const LEVELS: LevelDef[] = [
+  {
+    id: 1,
+    name: "Le Jardin des Arches",
+    tagline: "Vise les portes, la foule fera le reste.",
+    theme: "jardin",
+    width: 11,
+    length: 34,
+    baseHp: 900,
+    playerHp: 12,
+    fireRate: 8,
+    chargeShots: 70,
+    enemy: { rate: 4, ramp: 0.12, maxRate: 14, horde: 120, bruteEvery: 0, doors: [0] },
+    gates: [
+      { op: "mul", value: 2, x: -2.6, z: -9, w: 3.4 },
+      { op: "mul", value: 3, x: 2.6, z: -12, w: 3.4 },
+      { op: "mul", value: 5, x: 0, z: -19, w: 3.2 },
+    ],
+    obstacles: [
+      { kind: "box", minX: -5.5, maxX: -3.6, minZ: -25, maxZ: -22.4, height: 1.3 },
+      { kind: "box", minX: 3.6, maxX: 5.5, minZ: -25, maxZ: -22.4, height: 1.3 },
+    ],
+    hazards: [],
+  },
+  {
+    id: 2,
+    name: "Le Canyon Doré",
+    tagline: "Les portes bougent. Le sable, lui, ne pardonne pas.",
+    theme: "canyon",
+    width: 11,
+    length: 38,
+    baseHp: 3000,
+    playerHp: 12,
+    fireRate: 8,
+    chargeShots: 70,
+    enemy: { rate: 7, ramp: 0.2, maxRate: 24, horde: 260, bruteEvery: 14, doors: [0] },
+    gates: [
+      { op: "mul", value: 3, x: -3, z: -8, w: 3.5 },
+      { op: "mul", value: 4, x: 0, z: -14, w: 3.0, move: { amp: 3, speed: 0.7 } },
+      {
+        op: "mul",
+        value: 10,
+        x: 0,
+        z: -22,
+        w: 1.7,
+        gold: true,
+        move: { amp: 3.6, speed: 1.25, phase: 1.2 },
+      },
+      { op: "div", value: 2, x: 3, z: -27, w: 3.2 },
+    ],
+    obstacles: [
+      { kind: "pillar", x: 0, z: -18, r: 0.9, height: 2.6 },
+      { kind: "pillar", x: -4, z: -26, r: 0.8, height: 2.2 },
+    ],
+    hazards: [],
+  },
+  {
+    id: 3,
+    name: "Le Fjord Gelé",
+    tagline: "Trois couloirs de glace. Un seul est généreux.",
+    theme: "fjord",
+    width: 12,
+    length: 40,
+    baseHp: 3200,
+    playerHp: 12,
+    fireRate: 8.5,
+    chargeShots: 65,
+    enemy: { rate: 8, ramp: 0.22, maxRate: 26, horde: 340, bruteEvery: 10, doors: [-1.5, 1.5] },
+    gates: [
+      { op: "mul", value: 2, x: -4, z: -15, w: 3.2 },
+      { op: "div", value: 2, x: 0, z: -15, w: 3.2 },
+      { op: "mul", value: 5, x: 4, z: -15, w: 3.2 },
+      { op: "mul", value: 4, x: 0, z: -27, w: 3.4, move: { amp: 3.5, speed: 0.8 } },
+      {
+        op: "mul",
+        value: 12,
+        x: 0,
+        z: -33,
+        w: 1.6,
+        gold: true,
+        move: { amp: 4.2, speed: 1.5, phase: 2 },
+      },
+    ],
+    obstacles: [
+      { kind: "box", minX: -2.25, maxX: -1.75, minZ: -21, maxZ: -10.5, height: 1.4 },
+      { kind: "box", minX: 1.75, maxX: 2.25, minZ: -21, maxZ: -10.5, height: 1.4 },
+    ],
+    hazards: [],
+  },
+  {
+    id: 4,
+    name: "La Forge Volcanique",
+    tagline: "Le marteau tourne, les geysers grondent. Passe au bon moment.",
+    theme: "forge",
+    width: 12,
+    length: 42,
+    baseHp: 4600,
+    playerHp: 12,
+    fireRate: 9,
+    chargeShots: 60,
+    enemy: { rate: 8, ramp: 0.22, maxRate: 26, horde: 400, bruteEvery: 8, doors: [-2, 2] },
+    gates: [
+      { op: "mul", value: 3, x: -3.4, z: -8, w: 3.4 },
+      { op: "mul", value: 2, x: 3.4, z: -8, w: 3.4 },
+      { op: "mul", value: 10, x: 0, z: -19.5, w: 2.2, gold: true, move: { amp: 4.6, speed: 0.85 } },
+      { op: "div", value: 3, x: 0, z: -31, w: 3.0, move: { amp: 3.6, speed: 0.9, phase: 1.6 } },
+      { op: "mul", value: 2, x: 0, z: -35, w: 5.0 },
+    ],
+    obstacles: [],
+    hazards: [
+      { kind: "spinner", x: 0, z: -14, r: 2.4, speed: 1.1 },
+      { kind: "geyser", x: -3.7, z: -25, r: 1.6, period: 4.2 },
+      { kind: "geyser", x: 3.7, z: -27.5, r: 1.6, period: 4.2, phase: 2.1 },
+    ],
+  },
+  {
+    id: 5,
+    name: "La Citadelle de Minuit",
+    tagline: "Deux portes, trois marteaux, une horde sans fin.",
+    theme: "citadelle",
+    width: 13,
+    length: 46,
+    baseHp: 6000,
+    playerHp: 14,
+    fireRate: 9.5,
+    chargeShots: 55,
+    enemy: { rate: 12, ramp: 0.3, maxRate: 34, horde: 650, bruteEvery: 6, doors: [-3.2, 0, 3.2] },
+    gates: [
+      { op: "mul", value: 3, x: 0, z: -8, w: 3.4, move: { amp: 2.6, speed: 1.0 } },
+      { op: "div", value: 2, x: 0, z: -8, w: 3.0, move: { amp: 2.6, speed: 1.0, phase: Math.PI } },
+      { op: "mul", value: 5, x: 0, z: -19, w: 2.8, move: { amp: 3.2, speed: 0.6, phase: 0.8 } },
+      { op: "mul", value: 20, x: 0, z: -27, w: 1.8, gold: true, move: { amp: 4.2, speed: 1.4 } },
+      { op: "mul", value: 4, x: -3.6, z: -33, w: 3.4 },
+      { op: "div", value: 2, x: 3.6, z: -33, w: 3.4 },
+    ],
+    obstacles: [
+      { kind: "box", minX: -6.5, maxX: -4.4, minZ: -23.4, maxZ: -21.2, height: 1.8 },
+      { kind: "box", minX: 4.4, maxX: 6.5, minZ: -23.4, maxZ: -21.2, height: 1.8 },
+    ],
+    hazards: [
+      { kind: "spinner", x: -3.3, z: -14.5, r: 2.3, speed: 1.4 },
+      { kind: "spinner", x: 3.3, z: -14.5, r: 2.3, speed: -1.4 },
+      { kind: "spinner", x: 0, z: -38.5, r: 3.0, speed: 1.1 },
+    ],
+  },
+];
+
+export function starsFor(playerHp: number, maxHp: number): number {
+  const ratio = playerHp / maxHp;
+  if (ratio >= 0.7) return 3;
+  if (ratio >= 0.35) return 2;
+  return 1;
+}
