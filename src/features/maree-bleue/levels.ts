@@ -186,7 +186,7 @@ export const LEVELS: LevelDef[] = [
     theme: "citadelle",
     width: 13,
     length: 46,
-    baseHp: 6000,
+    baseHp: 5600,
     playerHp: 14,
     fireRate: 9.5,
     chargeShots: 55,
@@ -204,8 +204,8 @@ export const LEVELS: LevelDef[] = [
       { kind: "box", minX: 4.4, maxX: 6.5, minZ: -23.4, maxZ: -21.2, height: 1.8 },
     ],
     hazards: [
-      { kind: "spinner", x: -3.3, z: -14.5, r: 2.3, speed: 1.4 },
-      { kind: "spinner", x: 3.3, z: -14.5, r: 2.3, speed: -1.4 },
+      { kind: "spinner", x: -3.4, z: -14.5, r: 2.1, speed: 1.2 },
+      { kind: "spinner", x: 3.4, z: -14.5, r: 2.1, speed: -1.2 },
       { kind: "spinner", x: 0, z: -38.5, r: 3.0, speed: 1.1 },
     ],
   },
@@ -217,3 +217,116 @@ export function starsFor(playerHp: number, maxHp: number): number {
   if (ratio >= 0.35) return 2;
   return 1;
 }
+
+// ---------------------------------------------------------------------------
+// Difficulté
+// ---------------------------------------------------------------------------
+
+export type Difficulty = "facile" | "normal" | "difficile";
+
+export interface DifficultyDef {
+  id: Difficulty;
+  label: string;
+  hint: string;
+  /** Multiplie le débit et la horde rouges. Les défenses alliées existent : la horde est plus grosse qu'avant. */
+  enemy: number;
+  horde: number;
+  /** Multiplie l'intervalle entre deux colosses (plus petit = plus fréquent). */
+  brute: number;
+  baseHp: number;
+  playerHpDelta: number;
+  /** Or de départ pour les défenses. */
+  startGold: number;
+}
+
+export const DIFFICULTIES: DifficultyDef[] = [
+  {
+    id: "facile",
+    label: "Facile",
+    hint: "Horde réduite, rempart solide.",
+    enemy: 0.85,
+    horde: 0.8,
+    brute: 1.6,
+    baseHp: 0.8,
+    playerHpDelta: 4,
+    startGold: 100,
+  },
+  {
+    id: "normal",
+    label: "Normal",
+    hint: "La marée contre la horde, à armes égales.",
+    enemy: 1.1,
+    horde: 1.15,
+    brute: 0.9,
+    baseHp: 1,
+    playerHpDelta: 0,
+    startGold: 60,
+  },
+  {
+    id: "difficile",
+    label: "Difficile",
+    hint: "Horde déchaînée, colosses en série.",
+    enemy: 1.4,
+    horde: 1.45,
+    brute: 0.65,
+    baseHp: 1.15,
+    playerHpDelta: -2,
+    startGold: 30,
+  },
+];
+
+export function difficultyDef(id: Difficulty): DifficultyDef {
+  return DIFFICULTIES.find((d) => d.id === id) ?? DIFFICULTIES[1];
+}
+
+/** Le niveau tel qu'il se joue dans une difficulté donnée. */
+export function withDifficulty(level: LevelDef, id: Difficulty): LevelDef {
+  const d = difficultyDef(id);
+  return {
+    ...level,
+    baseHp: Math.round((level.baseHp * d.baseHp) / 10) * 10,
+    playerHp: Math.max(6, level.playerHp + d.playerHpDelta),
+    enemy: {
+      ...level.enemy,
+      rate: level.enemy.rate * d.enemy,
+      ramp: level.enemy.ramp * d.enemy,
+      maxRate: level.enemy.maxRate * d.enemy,
+      horde: Math.round(level.enemy.horde * d.horde),
+      // Même au niveau 1, la horde envoie des colosses dès le mode difficile.
+      bruteEvery:
+        level.enemy.bruteEvery > 0 ? level.enemy.bruteEvery * d.brute : id === "difficile" ? 14 : 0,
+    },
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Défenses alliées
+// ---------------------------------------------------------------------------
+
+export type HelperKind = "mortier" | "baliste";
+
+export interface HelperDef {
+  kind: HelperKind;
+  label: string;
+  hint: string;
+  cost: number;
+}
+
+/**
+ * Le mortier pilonne la horde là où elle est la plus dense ; la baliste est un
+ * petit canon allié qui tire ses propres soldats vers la meilleure porte.
+ * Chaque défense construite fait riposter la forteresse : plus de pillards.
+ */
+export const HELPERS: HelperDef[] = [
+  { kind: "mortier", label: "Mortier", hint: "Pilonne la horde", cost: 120 },
+  { kind: "baliste", label: "Canon allié", hint: "Tire ses soldats", cost: 160 },
+];
+
+/** Chaque défense déjà construite renchérit la suivante. */
+export function helperCost(kind: HelperKind, built: number) {
+  const base = HELPERS.find((h) => h.kind === kind)?.cost ?? 50;
+  return Math.round(base * Math.pow(1.5, built));
+}
+
+/** Surcroît de renforts rouges par défense construite. */
+export const RIPOSTE_PER_HELPER = 0.12;

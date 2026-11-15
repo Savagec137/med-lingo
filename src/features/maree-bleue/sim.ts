@@ -6,7 +6,15 @@
  * pour supporter des milliers de soldats à 60 images par seconde.
  */
 
-import type { GateDef, HazardDef, LevelDef, ObstacleDef } from "./levels";
+import {
+  RIPOSTE_PER_HELPER,
+  helperCost,
+  type GateDef,
+  type HazardDef,
+  type HelperKind,
+  type LevelDef,
+  type ObstacleDef,
+} from "./levels.ts";
 
 export const KIND_NORMAL = 0;
 export const KIND_GIANT = 1;
@@ -52,6 +60,10 @@ export class Pool {
   readonly kind: Uint8Array;
   readonly alive: Uint8Array;
   readonly mask: Uint32Array;
+  /** Couloir visé (NaN : aucun) — utilisé par les soldats du canon allié. */
+  readonly tx: Float32Array;
+  /** Profondeur au-delà de laquelle le couloir est oublié. */
+  readonly tz: Float32Array;
 
   constructor(cap: number) {
     this.cap = cap;
@@ -69,6 +81,8 @@ export class Pool {
     this.kind = new Uint8Array(cap);
     this.alive = new Uint8Array(cap);
     this.mask = new Uint32Array(cap);
+    this.tx = new Float32Array(cap);
+    this.tz = new Float32Array(cap);
   }
 
   add(
@@ -96,6 +110,8 @@ export class Pool {
     this.kind[i] = kind;
     this.alive[i] = 1;
     this.mask[i] = mask;
+    this.tx[i] = NaN;
+    this.tz[i] = 0;
     return i;
   }
 
@@ -112,6 +128,8 @@ export class Pool {
     this.kind[dst] = this.kind[src];
     this.alive[dst] = this.alive[src];
     this.mask[dst] = this.mask[src];
+    this.tx[dst] = this.tx[src];
+    this.tz[dst] = this.tz[src];
   }
 
   compact() {
@@ -203,12 +221,45 @@ export interface SimEvent {
     | "brute"
     | "won"
     | "lost"
-    | "spinnerHit";
+    | "spinnerHit"
+    | "mortarFire"
+    | "shellHit"
+    | "balisteFire"
+    | "built";
   x: number;
   z: number;
   value: number;
   index: number;
 }
+
+/** Une défense alliée posée sur un socle. */
+export interface HelperRuntime {
+  kind: HelperKind;
+  x: number;
+  z: number;
+  cooldown: number;
+  aimX: number;
+  aimZ: number;
+  recoil: number;
+}
+
+/** Obus de mortier en vol. */
+export interface Shell {
+  x0: number;
+  z0: number;
+  x1: number;
+  z1: number;
+  t: number;
+  dur: number;
+}
+
+export interface SimOptions {
+  startGold?: number;
+}
+
+const MORTAR_RELOAD = 3;
+const MORTAR_RADIUS = 1.7;
+const BALISTE_RATE = 2.6;
 
 export interface SimInput {
   /** Abscisse visée par le joueur. */
@@ -242,6 +293,12 @@ export class Sim {
   recoil = 0;
   baseFlash = 0;
   playerFlash = 0;
+  /** Or gagné en abattant des pillards, dépensé en défenses. */
+  gold: number;
+  readonly helpers: HelperRuntime[] = [];
+  readonly shells: Shell[] = [];
+  /** Socles où se construisent les défenses, dans l'ordre de remplissage. */
+  readonly pads: { x: number; z: number }[];
 
   /** Morts du pas courant : x, z, équipe, géant — consommé par le rendu. */
   readonly deaths = new Float32Array(4 * 4096);
@@ -267,8 +324,9 @@ export class Sim {
   private readonly densRed: Float32Array;
   private readonly sumXRed: Float32Array;
 
-  constructor(level: LevelDef, seed = 1234) {
+  constructor(level: LevelDef, seed = 1234, opts: SimOptions = {}) {
     this.level = level;
+    this.gold = opts.startGold ?? 60;
     this.rng = makeRng(seed);
     this.halfW = level.width / 2;
     this.baseZ = -level.length + 1.2;
@@ -276,6 +334,14 @@ export class Sim {
     this.baseHp = level.baseHp;
     this.playerHp = level.playerHp;
     this.obstacles = level.obstacles;
+    // Socles en retrait des bords : la caméra, proche, ne montre pas toute la largeur.
+    const px = this.halfW - 1.55;
+    this.pads = [
+      { x: -px, z: -2.9 },
+      { x: px, z: -2.9 },
+      { x: -px, z: -5.9 },
+      { x: px, z: -5.9 },
+    ];
     this.gates = level.gates.map((def) => ({ def, x: def.x, counter: 0, pulse: 0, passed: 0 }));
     this.hazards = level.hazards.map((def) => ({
       def,
@@ -333,17 +399,188 @@ export class Sim {
     this.deathCount++;
   }
 
-  private kill(p: Pool, i: number, team: number) {
+  private kill(p: Pool, i: number, team: number, reward = true) {
     if (!p.alive[i]) return;
     p.alive[i] = 0;
     this.pushDeath(p.x[i], p.z[i], team, p.kind[i]);
-    if (team === 1) this.kills++;
+    if (team === 1 && reward) {
+      this.kills++;
+      this.gold += p.kind[i] ? 8 : 1;
+    }
+  }
+
+  // --- Défenses alliées -----------------------------------------------------
+
+  costOf(kind: HelperKind) {
+    return helperCost(kind, this.helpers.length);
+  }
+
+  canBuild(kind: HelperKind) {
+    return (
+      this.state === "playing" &&
+      this.helpers.length < this.pads.length &&
+      this.gold >= this.costOf(kind)
+    );
+  }
+
+  /** Construit une défense sur le prochain socle libre. La forteresse riposte aussitôt. */
+  build(kind: HelperKind): boolean {
+    if (!this.canBuild(kind)) return false;
+    this.gold -= this.costOf(kind);
+    const pad = this.pads[this.helpers.length];
+    this.helpers.push({
+      kind,
+      x: pad.x,
+      z: pad.z,
+      cooldown: 0.8,
+      aimX: pad.x,
+      aimZ: pad.z - 6,
+      recoil: 0,
+    });
+    // Riposte : une vague de pillards sort immédiatement des portes.
+    const wave = 8 + 5 * this.helpers.length;
+    const doors = this.level.enemy.doors;
+    for (let k = 0; k < wave; k++) {
+      const door = doors[this.doorCursor++ % doors.length];
+      this.red.add(
+        door + (this.rng() * 2 - 1) * 1.2,
+        this.baseZ + 0.6 + this.rng() * 1.4,
+        KIND_NORMAL,
+        1,
+        1.9 + this.rng() * 0.4,
+        0,
+        1,
+      );
+    }
+    this.emit("built", pad.x, pad.z, this.helpers.length, this.helpers.length - 1);
+    return true;
+  }
+
+  /** Cible du mortier : la masse rouge la plus dense, en priorité près du rempart. */
+  private mortarTarget() {
+    let best = -1;
+    let bestScore = 3;
+    const zMin = this.baseZ + 2.5;
+    const zMax = this.playerLineZ - 1.5;
+    for (let r = 0; r < this.coarseRows; r++) {
+      const zc = this.coarseMinZ + (r + 0.5) * COARSE;
+      if (zc < zMin || zc > zMax) continue;
+      const near = 1 + 1.5 * (1 - (zMax - zc) / (zMax - zMin));
+      for (let c = 0; c < this.coarseCols; c++) {
+        const idx = c + r * this.coarseCols;
+        const score = this.densRed[idx] * near;
+        if (score > bestScore) {
+          bestScore = score;
+          best = idx;
+        }
+      }
+    }
+    if (best < 0) return null;
+    const r = Math.floor(best / this.coarseCols);
+    return { x: this.sumXRed[best] / this.densRed[best], z: this.coarseMinZ + (r + 0.5) * COARSE };
+  }
+
+  /** Couloir du canon allié : la porte multiplicatrice la plus rentable, là où elle sera. */
+  private bestLane(fromZ: number) {
+    let best: { x: number; z: number } | null = null;
+    let bestScore = 0;
+    for (const g of this.gates) {
+      if (g.def.op !== "mul" || g.def.z >= fromZ) continue;
+      const tArr = (fromZ - g.def.z) / 5.4;
+      const m = g.def.move;
+      let gx = m
+        ? g.def.x + Math.sin((this.time + tArr) * m.speed + (m.phase ?? 0)) * m.amp
+        : g.def.x;
+      const lim = this.halfW - g.def.w / 2;
+      gx = Math.max(-lim, Math.min(lim, gx));
+      const score = g.def.value / (1 + (fromZ - g.def.z) * 0.03);
+      if (score > bestScore) {
+        bestScore = score;
+        best = { x: gx, z: g.def.z - 0.6 };
+      }
+    }
+    return best;
+  }
+
+  private updateHelpers(dt: number) {
+    for (let k = 0; k < this.helpers.length; k++) {
+      const h = this.helpers[k];
+      h.recoil = Math.max(0, h.recoil - dt * 3);
+      h.cooldown -= dt;
+      if (h.kind === "mortier") {
+        if (h.cooldown > 0) continue;
+        const t = this.mortarTarget();
+        if (!t) {
+          h.cooldown = 0.4;
+          continue;
+        }
+        h.cooldown = MORTAR_RELOAD;
+        h.aimX = t.x;
+        h.aimZ = t.z;
+        h.recoil = 1;
+        const dist = Math.hypot(t.x - h.x, t.z - h.z);
+        this.shells.push({ x0: h.x, z0: h.z, x1: t.x, z1: t.z, t: 0, dur: 0.9 + dist * 0.025 });
+        this.emit("mortarFire", h.x, h.z, 0, k);
+      } else {
+        if (h.cooldown > 0) continue;
+        h.cooldown += 1 / BALISTE_RATE;
+        if (h.cooldown < 0) h.cooldown = 0;
+        const lane = this.bestLane(h.z);
+        const j = this.blue.add(
+          h.x + (this.rng() * 2 - 1) * 0.15,
+          h.z - 0.7,
+          KIND_NORMAL,
+          1,
+          5.2 + this.rng() * 0.5,
+          0,
+          -1,
+        );
+        if (j < 0) continue;
+        if (lane) {
+          this.blue.tx[j] = lane.x;
+          this.blue.tz[j] = lane.z;
+          h.aimX = lane.x;
+          h.aimZ = lane.z;
+        }
+        h.recoil = 1;
+        this.emit("balisteFire", h.x, h.z, 0, k);
+      }
+    }
+  }
+
+  private updateShells(dt: number) {
+    for (let i = this.shells.length - 1; i >= 0; i--) {
+      const s = this.shells[i];
+      s.t += dt;
+      if (s.t < s.dur) continue;
+      this.shells.splice(i, 1);
+      let killed = 0;
+      const R2 = MORTAR_RADIUS * MORTAR_RADIUS;
+      const r = this.red;
+      for (let j = 0; j < r.n; j++) {
+        if (!r.alive[j]) continue;
+        const dx = r.x[j] - s.x1;
+        const dz = r.z[j] - s.z1;
+        if (dx * dx + dz * dz > R2) continue;
+        if (r.kind[j]) {
+          r.hp[j] -= 6;
+          if (r.hp[j] <= 0) {
+            this.kill(r, j, 1);
+            killed++;
+          }
+        } else {
+          this.kill(r, j, 1);
+          killed++;
+        }
+      }
+      this.emit("shellHit", s.x1, s.z1, killed);
+    }
   }
 
   fireChampion(): boolean {
     if (this.state !== "playing" || !this.championReady) return false;
     this.charge = 0;
-    const i = this.blue.add(this.cannonX, this.cannonZ - 1.2, KIND_GIANT, 40, 3.2, 0xffffffff, -1);
+    const i = this.blue.add(this.cannonX, this.cannonZ - 2.4, KIND_GIANT, 40, 3.2, 0xffffffff, -1);
     if (i >= 0) {
       this.recoil = 1;
       this.emit("champion", this.cannonX, this.cannonZ);
@@ -376,7 +613,7 @@ export class Sim {
           if (
             this.blue.add(
               this.cannonX + jitter,
-              this.cannonZ - 1.0,
+              this.cannonZ - 2.1,
               KIND_NORMAL,
               1,
               5.4 + rng() * 0.6,
@@ -395,7 +632,8 @@ export class Sim {
       }
 
       // --- Renforts rouges.
-      const rate = Math.min(lvl.enemy.maxRate, lvl.enemy.rate + lvl.enemy.ramp * this.time);
+      const boost = 1 + RIPOSTE_PER_HELPER * this.helpers.length;
+      const rate = Math.min(lvl.enemy.maxRate, lvl.enemy.rate + lvl.enemy.ramp * this.time) * boost;
       this.spawnAcc += dt * rate;
       const doors = lvl.enemy.doors;
       while (this.spawnAcc >= 1) {
@@ -450,6 +688,8 @@ export class Sim {
     this.gridRed.build(this.red);
     this.buildDensity(this.blue, this.densBlue, this.sumXBlue);
     this.buildDensity(this.red, this.densRed, this.sumXRed);
+    if (this.state === "playing") this.updateHelpers(dt);
+    this.updateShells(dt);
     this.separate(this.blue, this.gridBlue);
     this.separate(this.red, this.gridRed);
     this.combat();
@@ -474,7 +714,7 @@ export class Sim {
     } else if (this.state === "won") {
       // La horde se disperse en fumée après la victoire.
       const n = Math.min(this.red.n, 40);
-      for (let i = 0; i < n; i++) this.kill(this.red, i, 1);
+      for (let i = 0; i < n; i++) this.kill(this.red, i, 1, false);
       this.red.compact();
     }
   }
@@ -665,6 +905,17 @@ export class Sim {
         }
       }
     }
+    for (const h of this.helpers) {
+      const dx = x - h.x;
+      const dz = z - h.z;
+      const min = 0.55 + r;
+      const d2 = dx * dx + dz * dz;
+      if (d2 < min * min && d2 > 1e-8) {
+        const d = Math.sqrt(d2);
+        x = h.x + (dx / d) * min;
+        z = h.z + (dz / d) * min;
+      }
+    }
     for (const h of this.hazards) {
       if (h.def.kind !== "spinner") continue;
       const dx = x - h.def.x;
@@ -704,6 +955,10 @@ export class Sim {
       const vz = -b.speed[i];
       const z0 = b.z[i];
       let vx = this.seek(b.x[i], z0, -1, this.densRed, this.sumXRed, 1.4, 2.6);
+      if (vx === 0 && !Number.isNaN(b.tx[i])) {
+        if (z0 < b.tz[i]) b.tx[i] = NaN;
+        else vx = Math.max(-3, Math.min(3, (b.tx[i] - b.x[i]) * 2.2));
+      }
       if (z0 < nearBase && vx === 0) {
         const lim = this.baseHalfW - 0.6;
         const tx = Math.max(-lim, Math.min(lim, b.x[i]));
@@ -802,8 +1057,7 @@ export class Sim {
         this.playerHp -= dmg;
         this.playerFlash = 1;
         this.emit("playerHit", r.x[i], r.z[i], dmg);
-        this.kill(r, i, 1);
-        this.kills--;
+        this.kill(r, i, 1, false);
       }
     }
   }

@@ -2,10 +2,13 @@
  * Interface en DOM par-dessus le canvas : menu des niveaux, HUD, pause, fin.
  */
 
-import { LEVELS, type LevelDef } from "./levels";
+import { DIFFICULTIES, LEVELS, type Difficulty, type HelperKind, type LevelDef } from "./levels";
 import { THEMES } from "./world";
 
 const ICON = {
+  coin: `<svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9.5" fill="#ffc93d" stroke="#b87a00" stroke-width="2"/><path d="M12 7v10M9.5 9.5h4a2 2 0 0 1 0 4h-3a2 2 0 0 0 0 4h4" stroke="#8a5a00" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>`,
+  mortar: `<svg viewBox="0 0 32 32" width="30" height="30"><ellipse cx="16" cy="25" rx="11" ry="3.5" fill="#c9a46b"/><rect x="9" y="18" width="14" height="5" rx="2" fill="#3a3f4c"/><path d="M11 19 L19 6 L25 9.5 L17 21 Z" fill="#ffc84a" stroke="#8a5a00" stroke-width="1.2"/><circle cx="22" cy="7.5" r="2.4" fill="#3a2a10"/></svg>`,
+  ally: `<svg viewBox="0 0 32 32" width="30" height="30"><circle cx="9" cy="22" r="6" fill="none" stroke="#7a4a26" stroke-width="2.4"/><circle cx="23" cy="22" r="6" fill="none" stroke="#7a4a26" stroke-width="2.4"/><rect x="6" y="11" width="20" height="7" rx="3.5" fill="#2f6bff" stroke="#ffc84a" stroke-width="1.5"/><rect x="24" y="10" width="4" height="9" rx="1.5" fill="#ffc84a"/><path d="M14 9 l2-4 l2 4z" fill="#7fd8ff"/></svg>`,
   castle: `<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 21V9h2V5h2v4h2V5h2v4h2V5h2v4h2V5h2v4h2v12h-7v-5a2 2 0 0 0-4 0v5z"/></svg>`,
   heart: `<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>`,
   pause: `<svg viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="5" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1.2" fill="currentColor"/></svg>`,
@@ -41,7 +44,7 @@ const CSS = `
 .mb-bar.blue .mb-txt{font-size:11px}
 .mb-bar.flash{animation:mbShake .25s}
 @keyframes mbShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
-.mb-counts{position:absolute;top:calc(env(safe-area-inset-top,0px) + 70px);left:68px;display:flex;gap:6px}
+.mb-counts{position:absolute;top:calc(env(safe-area-inset-top,0px) + 70px);left:68px;right:68px;display:flex;gap:6px;flex-wrap:wrap}
 .mb-pill{font-weight:900;font-size:12px;padding:3px 9px;border-radius:999px;background:rgba(8,14,40,.55);display:flex;align-items:center;gap:5px}
 .mb-pill i{width:9px;height:9px;border-radius:50%;display:inline-block}
 .mb-pill.blue i{background:#4b8bff;box-shadow:0 0 6px #4b8bff}
@@ -52,7 +55,7 @@ const CSS = `
 .mb-champion svg.mb-ring{position:absolute;inset:-5px;width:94px;height:94px;transform:rotate(-90deg)}
 .mb-champion.ready{opacity:1;color:#fff;background:radial-gradient(circle at 50% 35%,#ffd75a,#f08a12);animation:mbPulse 1s infinite}
 @keyframes mbPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.mb-hint{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 34px);transform:translateX(-50%);padding:10px 16px;border-radius:999px;
+.mb-hint{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 110px);transform:translateX(-50%);padding:10px 16px;border-radius:999px;
   background:rgba(8,14,40,.6);font-weight:800;font-size:14px;white-space:nowrap;pointer-events:none;animation:mbBob 1.4s ease-in-out infinite}
 @keyframes mbBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
 .mb-banner{position:absolute;left:0;right:0;top:34%;text-align:center;pointer-events:none;animation:mbBanner 2.6s ease forwards}
@@ -109,6 +112,25 @@ const CSS = `
 @keyframes mbFloat{0%{opacity:0;transform:translate(-50%,0) scale(.6)}15%{opacity:1;transform:translate(-50%,-8px) scale(1.15)}100%{opacity:0;transform:translate(-50%,-48px) scale(1)}}
 .mb-vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 90px 20px rgba(255,30,40,.0);transition:box-shadow .2s}
 .mb-vignette.hit{box-shadow:inset 0 0 90px 30px rgba(255,30,40,.55)}
+.mb-pill.gold{background:rgba(60,40,0,.55);color:#ffe9a8}
+.mb-pill.gold svg{display:block}
+.mb-build{position:absolute;left:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);display:flex;gap:8px;pointer-events:auto}
+.mb-bbtn{width:66px;height:78px;border-radius:18px;flex-direction:column;gap:2px;background:linear-gradient(180deg,#3f6fe8,#1f3a9c);
+  box-shadow:0 4px 0 #142866,inset 0 0 0 2px rgba(255,255,255,.22);font-weight:900;font-size:10px;letter-spacing:.3px;color:#e7f0ff}
+.mb-bbtn .mb-cost{display:flex;align-items:center;gap:3px;font-size:12px;color:#ffe9a8;background:rgba(0,0,0,.25);padding:1px 6px;border-radius:999px}
+.mb-bbtn:active{transform:translateY(2px);box-shadow:0 2px 0 #142866}
+.mb-bbtn.off{filter:grayscale(.8) brightness(.75)}
+.mb-bbtn.full{display:none}
+.mb-toast{position:absolute;left:50%;top:calc(env(safe-area-inset-top,0px) + 104px);transform:translateX(-50%);padding:9px 14px;border-radius:14px;
+  background:linear-gradient(180deg,#c0283a,#7d1020);font-weight:900;font-size:13px;white-space:nowrap;pointer-events:none;
+  box-shadow:0 4px 12px rgba(0,0,0,.35);animation:mbToast 2.4s ease forwards}
+@keyframes mbToast{0%{opacity:0;transform:translate(-50%,-8px)}10%{opacity:1;transform:translate(-50%,0)}80%{opacity:1}100%{opacity:0}}
+.mb-diff{display:flex;gap:6px;padding:5px;border-radius:16px;background:rgba(8,14,40,.55);box-shadow:inset 0 0 0 2px rgba(255,255,255,.14);margin-bottom:8px}
+.mb-diff button{min-width:92px;height:40px;border-radius:12px;font-weight:900;font-size:14px;color:#cfe0ff;background:transparent}
+.mb-diff button.on{color:#fff;background:linear-gradient(180deg,#4b7dff,#2448c4);box-shadow:0 3px 0 #142866}
+.mb-diff button.on.d-facile{background:linear-gradient(180deg,#5ad06a,#2a8f3a);box-shadow:0 3px 0 #1a5a24}
+.mb-diff button.on.d-difficile{background:linear-gradient(180deg,#ff5a5a,#b81c2c);box-shadow:0 3px 0 #6a0d18}
+.mb-diffhint{font-size:12.5px;font-weight:800;opacity:.85;margin:0 0 14px;text-align:center}
 @media (prefers-reduced-motion:reduce){.mb-hint,.mb-champion.ready,.mb-bigstars svg.on,.mb-panel{animation:none!important}}
 @media (min-width:700px){.mb-counts{left:80px}.mb-top{padding-left:20px;padding-right:20px}}
 `;
@@ -122,12 +144,17 @@ export interface UiCallbacks {
   onNext(): void;
   onChampion(): void;
   onToggleSound(): void;
+  onBuild(kind: HelperKind): void;
+  onDifficulty(d: Difficulty): void;
   onExit?: () => void;
 }
 
 export interface Progress {
-  unlocked: number;
-  stars: Record<number, number>;
+  difficulty: Difficulty;
+  /** Nombre de niveaux débloqués, par difficulté. */
+  unlocked: Record<Difficulty, number>;
+  /** Étoiles obtenues par niveau, par difficulté. */
+  stars: Record<Difficulty, Record<number, number>>;
 }
 
 function h<K extends keyof HTMLElementTagNameMap>(
@@ -168,6 +195,10 @@ export class GameUi {
   private readonly champ: HTMLButtonElement;
   private readonly champRing: SVGCircleElement;
   private readonly hint: HTMLDivElement;
+  private readonly goldTxt: HTMLSpanElement;
+  private readonly buildBtns: Record<HelperKind, { btn: HTMLButtonElement; cost: HTMLSpanElement }>;
+  private readonly diffBox: HTMLDivElement;
+  private readonly diffHint: HTMLParagraphElement;
   private readonly vignette: HTMLDivElement;
   private readonly soundBtns: HTMLButtonElement[] = [];
   private modal: HTMLDivElement | null = null;
@@ -218,8 +249,30 @@ export class GameUi {
     const rc = h("span", "mb-pill red", "<i></i>");
     this.redCount = h("span");
     rc.appendChild(this.redCount);
-    counts.append(bc, rc);
+    const gc = h("span", "mb-pill gold", ICON.coin);
+    this.goldTxt = h("span");
+    gc.appendChild(this.goldTxt);
+    counts.append(bc, rc, gc);
     this.hud.appendChild(counts);
+    // Défenses à construire
+    const build = h("div", "mb-build");
+    const mkBuild = (kind: HelperKind, icon: string, label: string) => {
+      const btn = h("button", "mb-btn mb-bbtn", `${icon}<span>${label}</span>`);
+      const cost = h("span", "mb-cost");
+      btn.appendChild(cost);
+      btn.setAttribute("aria-label", `Construire : ${label}`);
+      btn.addEventListener("pointerdown", (e) => {
+        e.stopPropagation();
+        cb.onBuild(kind);
+      });
+      build.appendChild(btn);
+      return { btn, cost };
+    };
+    this.buildBtns = {
+      mortier: mkBuild("mortier", ICON.mortar, "MORTIER"),
+      baliste: mkBuild("baliste", ICON.ally, "CANON"),
+    };
+    this.hud.appendChild(build);
     this.champ = h("button", "mb-btn mb-champion");
     this.champ.innerHTML = `<svg class="mb-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="7"/><circle class="mb-prog" cx="50" cy="50" r="46" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289"/></svg>${ICON.sword}<span>CHAMPION</span>`;
     this.champRing = this.champ.querySelector(".mb-prog") as SVGCircleElement;
@@ -239,6 +292,10 @@ export class GameUi {
     this.menu.appendChild(
       h("p", "mb-sub", "Une foule. Des portes. Une forteresse à faire tomber."),
     );
+    this.diffBox = h("div", "mb-diff");
+    this.menu.appendChild(this.diffBox);
+    this.diffHint = h("p", "mb-diffhint");
+    this.menu.appendChild(this.diffHint);
     this.levelsBox = h("div", "mb-levels");
     this.menu.appendChild(this.levelsBox);
     const foot = h("div", "mb-foot");
@@ -273,15 +330,26 @@ export class GameUi {
     this.closeModal();
     this.hud.classList.add("mb-hidden");
     this.menu.classList.remove("mb-hidden");
+    const d = progress.difficulty;
+    this.diffBox.innerHTML = "";
+    for (const def of DIFFICULTIES) {
+      const b = h("button", `mb-btn d-${def.id}${def.id === d ? " on" : ""}`, def.label);
+      b.setAttribute("aria-pressed", String(def.id === d));
+      b.addEventListener("click", () => {
+        if (def.id !== d) this.cb.onDifficulty(def.id);
+      });
+      this.diffBox.appendChild(b);
+    }
+    this.diffHint.textContent = DIFFICULTIES.find((x) => x.id === d)?.hint ?? "";
     this.levelsBox.innerHTML = "";
     LEVELS.forEach((lvl, i) => {
       const theme = THEMES[lvl.theme];
-      const locked = i + 1 > progress.unlocked;
+      const locked = i + 1 > progress.unlocked[d];
       const card = h("button", `mb-btn mb-card${locked ? " locked" : ""}`);
       card.style.background = `linear-gradient(135deg, ${theme.menuGradient[0]}, ${theme.menuGradient[1]})`;
       card.innerHTML = `<div class="mb-num">${locked ? ICON.lock : lvl.id}</div>
         <div><div class="mb-name">${lvl.name}</div><div class="mb-tag">${lvl.tagline}</div>
-        <div class="mb-stars">${starsHtml(progress.stars[lvl.id] ?? 0)}</div></div>`;
+        <div class="mb-stars">${starsHtml(progress.stars[d][lvl.id] ?? 0)}</div></div>`;
       card.addEventListener("click", () => {
         if (locked) {
           card.animate(
@@ -300,14 +368,18 @@ export class GameUi {
     });
   }
 
-  showHud(level: LevelDef) {
+  showHud(level: LevelDef, difficultyLabel: string) {
     this.closeModal();
     this.menu.classList.add("mb-hidden");
     this.hud.classList.remove("mb-hidden");
     this.hint.classList.remove("mb-hidden");
     this.lastBase = -1;
     this.lastHp = -1;
-    this.showBanner(`NIVEAU ${level.id}`, level.name, level.tagline);
+    this.showBanner(
+      `NIVEAU ${level.id} · ${difficultyLabel.toUpperCase()}`,
+      level.name,
+      level.tagline,
+    );
   }
 
   hideHint() {
@@ -340,7 +412,18 @@ export class GameUi {
     red: number;
     charge: number;
     ready: boolean;
+    gold: number;
+    costs: Record<HelperKind, number>;
+    canBuild: Record<HelperKind, boolean>;
+    padsLeft: number;
   }) {
+    this.goldTxt.textContent = fmt(s.gold);
+    for (const kind of ["mortier", "baliste"] as HelperKind[]) {
+      const b = this.buildBtns[kind];
+      b.cost.innerHTML = `${ICON.coin}${fmt(s.costs[kind])}`;
+      b.btn.classList.toggle("off", !s.canBuild[kind]);
+      b.btn.classList.toggle("full", s.padsLeft <= 0);
+    }
     this.baseFill.style.transform = `scaleX(${Math.max(0, s.baseHp / s.baseMax)})`;
     this.baseTxt.textContent = fmt(s.baseHp);
     if (this.lastBase >= 0 && s.baseHp < this.lastBase) {
@@ -363,6 +446,13 @@ export class GameUi {
     this.redCount.textContent = fmt(s.red);
     this.champRing.style.strokeDashoffset = String(289 * (1 - s.charge));
     this.champ.classList.toggle("ready", s.ready);
+  }
+
+  toast(text: string) {
+    this.hud.querySelector(".mb-toast")?.remove();
+    const el = h("div", "mb-toast", text);
+    this.hud.appendChild(el);
+    window.setTimeout(() => el.remove(), 2500);
   }
 
   floatText(x: number, y: number, text: string, color: string) {

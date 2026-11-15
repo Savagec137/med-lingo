@@ -7,9 +7,22 @@ import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { Sfx } from "./audio";
 import { Debris, Glows, Rings } from "./effects";
-import { LEVELS, starsFor, type LevelDef } from "./levels";
 import {
+  DIFFICULTIES,
+  LEVELS,
+  difficultyDef,
+  starsFor,
+  withDifficulty,
+  type Difficulty,
+  type HelperKind,
+  type LevelDef,
+} from "./levels";
+import {
+  buildAllyCannon,
   buildCannon,
+  buildMortar,
+  buildPad,
+  buildShell,
   buildGate,
   buildGeyser,
   buildGiantGeometry,
@@ -19,6 +32,7 @@ import {
   soldierMaterial,
   type CannonModel,
   type GateModel,
+  type HelperModel,
 } from "./models";
 import { disposeSharedMaterials } from "./props";
 import { GIANT_SCALE, KIND_GIANT, Pool, Sim } from "./sim";
@@ -26,8 +40,11 @@ import { radialTexture } from "./textures";
 import { GameUi, type Progress } from "./ui";
 import { buildWorld, type World } from "./world";
 
-const STORAGE_KEY = "maree-bleue:v1";
+const STORAGE_KEY = "maree-bleue:v2";
+const LEGACY_KEY = "maree-bleue:v1";
 const STEP = 1 / 60;
+/** Au-delà de cette profondeur, les soldats passent au modèle allégé. */
+const LOD_Z = -13;
 
 export interface MareeBleueOptions {
   /** Affiche un bouton « Quitter » dans le menu. */
@@ -40,18 +57,42 @@ export interface MareeBleueHandle {
 
 type Mode = "menu" | "playing" | "paused" | "ended";
 
+function emptyProgress(): Progress {
+  return {
+    difficulty: "normal",
+    unlocked: { facile: 1, normal: 1, difficile: 1 },
+    stars: { facile: {}, normal: {}, difficile: {} },
+  };
+}
+
 function loadProgress(): Progress {
+  const p = emptyProgress();
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (raw) {
-      const p = JSON.parse(raw) as Progress;
-      if (typeof p.unlocked === "number" && p.stars)
-        return { unlocked: Math.max(1, Math.min(LEVELS.length, p.unlocked)), stars: p.stars };
+      const saved = JSON.parse(raw) as Partial<Progress>;
+      for (const d of DIFFICULTIES) {
+        const u = saved.unlocked?.[d.id];
+        if (typeof u === "number") p.unlocked[d.id] = Math.max(1, Math.min(LEVELS.length, u));
+        const st = saved.stars?.[d.id];
+        if (st && typeof st === "object") p.stars[d.id] = st;
+      }
+      if (saved.difficulty && DIFFICULTIES.some((d) => d.id === saved.difficulty))
+        p.difficulty = saved.difficulty;
+      return p;
+    }
+    // Ancienne sauvegarde (une seule difficulté) : elle devient le mode normal.
+    const legacy = window.localStorage.getItem(LEGACY_KEY);
+    if (legacy) {
+      const old = JSON.parse(legacy) as { unlocked?: number; stars?: Record<number, number> };
+      if (typeof old.unlocked === "number")
+        p.unlocked.normal = Math.max(1, Math.min(LEVELS.length, old.unlocked));
+      if (old.stars) p.stars.normal = old.stars;
     }
   } catch {
     /* stockage indisponible : on repart de zéro */
   }
-  return { unlocked: 1, stars: {} };
+  return p;
 }
 
 function saveProgress(p: Progress) {
@@ -70,67 +111,77 @@ function loadMuted() {
   }
 }
 
-/** Une foule : soldats normaux + géants, chacun avec son ombre portée. */
+interface CrowdLayer {
+  mesh: THREE.InstancedMesh;
+  shadow: THREE.InstancedMesh;
+}
+
+/**
+ * Une foule : soldats détaillés (près de la caméra), soldats allégés (au loin)
+ * et géants, chacun avec son ombre portée.
+ */
 class CrowdView {
-  readonly normal: THREE.InstancedMesh;
-  readonly giant: THREE.InstancedMesh;
-  readonly normalShadow: THREE.InstancedMesh;
-  readonly giantShadow: THREE.InstancedMesh;
+  private readonly layers: CrowdLayer[];
+  private readonly shadowGeo: THREE.PlaneGeometry;
+  private readonly shadowMat: THREE.MeshBasicMaterial;
+  private readonly mats: THREE.Material[];
 
   constructor(team: "blue" | "red", cap: number, shadowTex: THREE.Texture) {
-    this.normal = new THREE.InstancedMesh(buildSoldierGeometry(team), soldierMaterial(11), cap);
-    this.giant = new THREE.InstancedMesh(buildGiantGeometry(team), soldierMaterial(6.5), 64);
-    const shadowGeo = new THREE.PlaneGeometry(0.62, 0.62);
-    shadowGeo.rotateX(-Math.PI / 2);
-    shadowGeo.translate(0, 0.018, 0);
-    const shadowMat = new THREE.MeshBasicMaterial({
+    const rim = team === "blue" ? 0x8fc4ff : 0xffa070;
+    const walk = soldierMaterial(11, rim);
+    const stomp = soldierMaterial(6.5, rim);
+    this.mats = [walk, stomp];
+    this.shadowGeo = new THREE.PlaneGeometry(0.62, 0.62);
+    this.shadowGeo.rotateX(-Math.PI / 2);
+    this.shadowGeo.translate(0, 0.018, 0);
+    this.shadowMat = new THREE.MeshBasicMaterial({
       map: shadowTex,
       transparent: true,
       depthWrite: false,
       opacity: 0.8,
     });
-    this.normalShadow = new THREE.InstancedMesh(shadowGeo, shadowMat, cap);
-    this.giantShadow = new THREE.InstancedMesh(shadowGeo, shadowMat, 64);
-    this.normalShadow.instanceMatrix = this.normal.instanceMatrix;
-    this.giantShadow.instanceMatrix = this.giant.instanceMatrix;
-    for (const m of [this.normal, this.giant]) {
-      m.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
-      m.frustumCulled = false;
-      m.count = 0;
-      m.castShadow = false;
-      m.receiveShadow = false;
-    }
-    for (const m of [this.normalShadow, this.giantShadow]) {
-      m.frustumCulled = false;
-      m.count = 0;
-      m.renderOrder = -1;
-    }
+    const layer = (geo: THREE.BufferGeometry, mat: THREE.Material, n: number): CrowdLayer => {
+      const mesh = new THREE.InstancedMesh(geo, mat, n);
+      mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+      mesh.frustumCulled = false;
+      mesh.count = 0;
+      const shadow = new THREE.InstancedMesh(this.shadowGeo, this.shadowMat, n);
+      shadow.instanceMatrix = mesh.instanceMatrix;
+      shadow.frustumCulled = false;
+      shadow.count = 0;
+      shadow.renderOrder = -1;
+      return { mesh, shadow };
+    };
+    this.layers = [
+      layer(buildSoldierGeometry(team, "high"), walk, cap),
+      layer(buildSoldierGeometry(team, "low"), walk, cap),
+      layer(buildGiantGeometry(team), stomp, 64),
+    ];
   }
 
   add(scene: THREE.Object3D) {
-    scene.add(this.normalShadow, this.giantShadow, this.normal, this.giant);
+    for (const l of this.layers) scene.add(l.shadow, l.mesh);
   }
 
   sync(p: Pool) {
-    const na = this.normal.instanceMatrix.array as Float32Array;
-    const ga = this.giant.instanceMatrix.array as Float32Array;
-    let a = 0;
-    let b = 0;
-    const gcap = this.giant.instanceMatrix.count;
+    const arrs = this.layers.map((l) => l.mesh.instanceMatrix.array as Float32Array);
+    const caps = this.layers.map((l) => l.mesh.instanceMatrix.count);
+    const counts = [0, 0, 0];
     for (let i = 0; i < p.n; i++) {
       const giant = p.kind[i] === KIND_GIANT;
-      if (giant && b >= gcap) continue;
+      const li = giant ? 2 : p.z[i] > LOD_Z ? 0 : 1;
+      if (counts[li] >= caps[li]) continue;
       let k = giant ? GIANT_SCALE : 1;
       const age = p.age[i];
       if (age < 0.2) {
         const u = age / 0.2;
-        k *= u < 1 ? 1 + 2.2 * (u - 1) ** 3 + 1.2 * (u - 1) ** 2 : 1;
+        k *= 1 + 2.2 * (u - 1) ** 3 + 1.2 * (u - 1) ** 2;
       }
       const yaw = Math.atan2(p.fx[i], p.fz[i]);
       const c = Math.cos(yaw) * k;
       const s = Math.sin(yaw) * k;
-      const arr = giant ? ga : na;
-      const o = (giant ? b++ : a++) * 16;
+      const arr = arrs[li];
+      const o = counts[li]++ * 16;
       arr[o] = c;
       arr[o + 1] = 0;
       arr[o + 2] = -s;
@@ -148,22 +199,21 @@ class CrowdView {
       arr[o + 14] = p.z[i];
       arr[o + 15] = 1;
     }
-    this.normal.count = a;
-    this.normalShadow.count = a;
-    this.giant.count = b;
-    this.giantShadow.count = b;
-    this.normal.instanceMatrix.needsUpdate = true;
-    this.giant.instanceMatrix.needsUpdate = true;
+    this.layers.forEach((l, i) => {
+      l.mesh.count = counts[i];
+      l.shadow.count = counts[i];
+      l.mesh.instanceMatrix.needsUpdate = true;
+    });
   }
 
   dispose() {
-    for (const m of [this.normal, this.giant]) {
-      m.geometry.dispose();
-      (m.material as THREE.Material).dispose();
-      m.dispose();
+    for (const l of this.layers) {
+      l.mesh.geometry.dispose();
+      l.mesh.dispose();
     }
-    this.normalShadow.geometry.dispose();
-    (this.normalShadow.material as THREE.Material).dispose();
+    for (const m of this.mats) m.dispose();
+    this.shadowGeo.dispose();
+    this.shadowMat.dispose();
   }
 }
 
@@ -210,8 +260,16 @@ export function createMareeBleue(
   blueView.add(scene);
   redView.add(scene);
   const cannon: CannonModel = buildCannon();
-  cannon.group.scale.setScalar(1.35);
+  const CANNON_SCALE = 1.3;
+  cannon.group.scale.setScalar(CANNON_SCALE);
   scene.add(cannon.group);
+  const shellMeshes: THREE.Mesh[] = [];
+  for (let k = 0; k < 12; k++) {
+    const m = buildShell();
+    m.visible = false;
+    scene.add(m);
+    shellMeshes.push(m);
+  }
   const debris = new Debris();
   const glows = new Glows();
   const rings = new Rings();
@@ -221,12 +279,17 @@ export function createMareeBleue(
 
   // --- État de partie
   let progress = loadProgress();
+  let difficulty: Difficulty = progress.difficulty;
   let mode: Mode = "menu";
   let levelIndex = 0;
   let sim: Sim;
   let world: World | null = null;
   let gateModels: GateModel[] = [];
   let hazardViews: { update(): void; group: THREE.Group }[] = [];
+  let padViews: ReturnType<typeof buildPad>[] = [];
+  let helperViews: HelperModel[] = [];
+  let camFollow = 0;
+  let followK = 0.5;
   let levelGroup = new THREE.Group();
   scene.add(levelGroup);
   let acc = 0;
@@ -278,6 +341,19 @@ export function createMareeBleue(
       sfx.unlock();
       if (mode === "playing") sim.fireChampion();
     },
+    onBuild: (kind: HelperKind) => {
+      sfx.unlock();
+      if (mode !== "playing") return;
+      if (!sim.build(kind)) sfx.click();
+    },
+    onDifficulty: (d: Difficulty) => {
+      sfx.unlock();
+      sfx.click();
+      difficulty = d;
+      progress = { ...progress, difficulty: d };
+      saveProgress(progress);
+      ui.showMenu(progress);
+    },
     onToggleSound: () => {
       sfx.unlock();
       sfx.setMuted(!sfx.muted);
@@ -312,6 +388,9 @@ export function createMareeBleue(
     }
     gateModels = [];
     hazardViews = [];
+    padViews = [];
+    helperViews = [];
+    for (const m of shellMeshes) m.visible = false;
     scene.remove(levelGroup);
     levelGroup.traverse((o) => {
       const m = o as THREE.Mesh;
@@ -332,8 +411,12 @@ export function createMareeBleue(
     clearLevel();
     levelIndex = i;
     demo = asDemo;
-    const lvl = LEVELS[i];
-    sim = new Sim(lvl, (Date.now() & 0xffff) + i);
+    // La démo du menu se joue en normal, avec de l'or pour montrer les défenses.
+    const diff: Difficulty = asDemo ? "normal" : difficulty;
+    const lvl = withDifficulty(LEVELS[i], diff);
+    sim = new Sim(lvl, (Date.now() & 0xffff) + i, {
+      startGold: asDemo ? 400 : difficultyDef(diff).startGold,
+    });
     world = buildWorld(lvl, sim.baseZ, sim.baseHalfW);
     levelGroup.add(world.group);
     scene.fog = new THREE.Fog(world.theme.fog, world.theme.fogNear, world.theme.fogFar);
@@ -345,6 +428,13 @@ export function createMareeBleue(
       gm.group.position.set(g.x, 0, g.z);
       levelGroup.add(gm.group);
       gateModels.push(gm);
+    }
+    for (const pad of sim.pads) {
+      const pv = buildPad();
+      pv.group.position.set(pad.x, 0, pad.z);
+      pv.group.traverse((o) => (o.userData.own = true));
+      levelGroup.add(pv.group);
+      padViews.push(pv);
     }
     sim.hazards.forEach((h) => {
       if (h.def.kind === "spinner") {
@@ -401,12 +491,12 @@ export function createMareeBleue(
       ui.showMenu(progress);
     } else {
       mode = "playing";
-      ui.showHud(lvl);
+      ui.showHud(lvl, difficultyDef(diff).label);
     }
   }
 
   function goMenu() {
-    const next = Math.min(LEVELS.length - 1, Math.max(0, progress.unlocked - 1));
+    const next = Math.min(LEVELS.length - 1, Math.max(0, progress.unlocked[difficulty] - 1));
     startLevel(next, true);
   }
 
@@ -418,16 +508,20 @@ export function createMareeBleue(
     camera.aspect = aspect;
     const lvl = sim.level;
     const portrait = aspect < 1;
-    const pitch = THREE.MathUtils.degToRad(portrait ? 50 : 46);
-    camera.fov = portrait ? 50 : 42;
+    // Vue inclinée : on voit les soldats de trois quarts plutôt que d'en haut.
+    const pitch = THREE.MathUtils.degToRad(portrait ? 38 : 36);
+    camera.fov = portrait ? 50 : 44;
     camera.updateProjectionMatrix();
     const f = THREE.MathUtils.degToRad(camera.fov);
     const cotA = 1 / Math.tan(pitch - f / 2);
     const cotB = 1 / Math.tan(pitch + f / 2);
     // Le bas de l'écran montre le canon ; le haut, la forteresse sous le HUD.
-    const zNear = 3.4;
-    const zFar = -lvl.length - (portrait ? 11 : 8);
-    const halfW = lvl.width / 2 + 0.3;
+    const zNear = 3.6;
+    const zFar = -lvl.length - 6;
+    // En portrait, la caméra est plus proche que la largeur du chemin : elle
+    // suit le canon de côté pour montrer le bord vers lequel il se déplace.
+    const halfW = portrait ? lvl.width / 2 - 1.4 : lvl.width / 2 + 0.3;
+    followK = portrait ? Math.min(0.6, Math.max(0, 1.6 / (lvl.width / 2 - 0.9))) : 0.15;
     const probe = new THREE.Vector3();
     const place = (H: number) => {
       const zc = zNear + H * cotB;
@@ -553,6 +647,8 @@ export function createMareeBleue(
     }
     demoX += Math.max(-0.15, Math.min(0.15, best - demoX));
     input.targetX = demoX;
+    if (sim.time > 3 && sim.helpers.length < 2)
+      sim.build(sim.helpers.length === 0 ? "mortier" : "baliste");
     input.firing = Math.sin(sim.time * 0.7) > -0.6;
   }
 
@@ -657,6 +753,69 @@ export function createMareeBleue(
             debris.burst(e.x, 0.6, e.z, 3, 4, e.value === 0 ? 0x3d7bff : 0xe3262f, 1, 1.4);
           if (!demo) sfx.chop();
           break;
+        case "mortarFire": {
+          const h = sim.helpers[e.index];
+          if (h) {
+            glows.spawn(h.x, 1.3, h.z - 0.3, 1.6, 0xffc070, 0.3, 1.4, 1.5);
+            debris.burst(h.x, 1.2, h.z, 4, 1, 0x9a9a9a, 0.8, 1.2);
+          }
+          if (!demo) sfx.mortar();
+          break;
+        }
+        case "shellHit":
+          shake = Math.max(shake, 0.22);
+          rings.spawn(e.x, e.z, 3.6, 0xffa040, 0.5);
+          debris.burst(e.x, 0.3, e.z, 16, 4.5, 0x3a3030, 1.4, 1.6);
+          debris.burst(e.x, 0.4, e.z, 10, 3.5, 0xff8a30, 1, 1.8);
+          for (let k = 0; k < 4; k++)
+            glows.spawn(
+              e.x + (Math.random() - 0.5),
+              0.4 + k * 0.4,
+              e.z + (Math.random() - 0.5),
+              2.4 - k * 0.3,
+              0xff9a40,
+              0.45,
+              1.3,
+              1.5,
+            );
+          if (!demo) {
+            sfx.explosion();
+            if (e.value >= 8) {
+              const p = toScreen(e.x, 1.5, e.z);
+              ui.floatText(p.x, p.y, `×${e.value}`, "#ffb347");
+            }
+          }
+          break;
+        case "balisteFire": {
+          const h = sim.helpers[e.index];
+          if (h && Math.random() < 0.5) glows.spawn(h.x, 0.75, h.z - 0.7, 0.4, 0x7fb8ff, 0.15, 1);
+          break;
+        }
+        case "built": {
+          const k = e.index;
+          const h = sim.helpers[k];
+          const model = h.kind === "mortier" ? buildMortar() : buildAllyCannon();
+          model.group.position.set(h.x, 0.16, h.z);
+          model.group.traverse((o) => (o.userData.own = true));
+          levelGroup.add(model.group);
+          helperViews[k] = model;
+          padViews[k].plus.visible = false;
+          padViews[k].glowMat.color.setHex(0xffd23f);
+          rings.spawn(h.x, h.z, 2.4, 0xffd23f);
+          for (let j = 0; j < 5; j++)
+            glows.spawn(h.x, 0.3 + j * 0.35, h.z, 1.4, 0xffd25a, 0.5, 1.2, 1);
+          for (const door of sim.level.enemy.doors)
+            glows.spawn(door, 1.2, sim.baseZ + 0.5, 3, 0xff3a1a, 0.8, 1.2);
+          if (!demo) {
+            sfx.build();
+            ui.toast(
+              h.kind === "mortier"
+                ? "Mortier en place · la forteresse riposte !"
+                : "Canon allié en place · la forteresse riposte !",
+            );
+          }
+          break;
+        }
         case "won":
           endTimer = 2.4;
           collapse = 0.0001;
@@ -679,9 +838,17 @@ export function createMareeBleue(
     let stars = 0;
     if (won) {
       stars = starsFor(sim.playerHp, lvl.playerHp);
+      const d = difficulty;
       progress = {
-        unlocked: Math.max(progress.unlocked, Math.min(LEVELS.length, lvl.id + 1)),
-        stars: { ...progress.stars, [lvl.id]: Math.max(progress.stars[lvl.id] ?? 0, stars) },
+        difficulty: d,
+        unlocked: {
+          ...progress.unlocked,
+          [d]: Math.max(progress.unlocked[d], Math.min(LEVELS.length, lvl.id + 1)),
+        },
+        stars: {
+          ...progress.stars,
+          [d]: { ...progress.stars[d], [lvl.id]: Math.max(progress.stars[d][lvl.id] ?? 0, stars) },
+        },
       };
       saveProgress(progress);
     }
@@ -707,14 +874,19 @@ export function createMareeBleue(
     peakBlue = Math.max(peakBlue, sim.blue.n);
 
     cannon.group.position.set(sim.cannonX, 0, sim.cannonZ);
-    wheelSpin.v += (sim.cannonVel * dt) / 0.27;
+    wheelSpin.v += (sim.cannonVel * dt) / (0.52 * CANNON_SCALE) + sim.recoil * dt * 2;
     for (const w of cannon.wheels) w.rotation.x = wheelSpin.v;
-    cannon.turret.rotation.z = THREE.MathUtils.clamp(-sim.cannonVel * 0.012, -0.12, 0.12);
-    cannon.barrel.position.z = -0.05 + sim.recoil * 0.16;
+    cannon.turret.rotation.z = THREE.MathUtils.clamp(-sim.cannonVel * 0.01, -0.1, 0.1);
+    cannon.barrel.position.z = sim.recoil * 0.18;
     (cannon.flash.material as THREE.MeshBasicMaterial).opacity = sim.recoil * sim.recoil * 0.9;
     cannon.flash.scale.setScalar(0.6 + sim.recoil * 0.6);
     const charge = sim.charge / sim.level.chargeShots;
-    cannon.tankFill.scale.y = Math.max(0.03, charge);
+    cannon.crystal.rotation.y += dt * (1.2 + charge * 4);
+    cannon.crystal.scale.set(0.8 + charge * 0.4, (0.8 + charge * 0.4) * 1.5, 0.8 + charge * 0.4);
+    cannon.crystalMat.emissiveIntensity = sim.championReady
+      ? 2.4 + Math.sin(t * 10) * 0.8
+      : 0.4 + charge * 1.6;
+    cannon.muzzleGlow.opacity = 0.35 + sim.recoil * 0.6;
     const ringMat = cannon.ring.material as THREE.MeshBasicMaterial;
     if (sim.championReady) {
       ringMat.color.setHex(0xffd23f);
@@ -737,6 +909,45 @@ export function createMareeBleue(
       gm.orbs.forEach((o, j) => (o.position.y = 1.72 + Math.sin(t * 3 + j * 1.7 + i) * 0.05));
     });
     for (const h of hazardViews) h.update();
+
+    sim.helpers.forEach((h, k) => {
+      const v = helperViews[k];
+      if (!v) return;
+      const target = Math.atan2(-(h.aimX - h.x), -(h.aimZ - h.z));
+      let d = target - v.yaw.rotation.y;
+      d = Math.atan2(Math.sin(d), Math.cos(d));
+      v.yaw.rotation.y += d * Math.min(1, dt * 6);
+      if (h.kind === "mortier") v.recoil.position.y = -h.recoil * h.recoil * 0.18;
+      else v.recoil.position.z = 0.05 + h.recoil * 0.12;
+    });
+    padViews.forEach((pv, k) => {
+      if (k >= sim.helpers.length) {
+        pv.plus.rotation.y = t * 1.5;
+        pv.plus.position.y = 0.35 + Math.sin(t * 3 + k) * 0.05;
+        pv.glowMat.opacity =
+          sim.canBuild("mortier") || sim.canBuild("baliste") ? 0.5 + Math.sin(t * 6) * 0.3 : 0.25;
+      }
+    });
+    for (let k = 0; k < shellMeshes.length; k++) {
+      const m = shellMeshes[k];
+      const sh = sim.shells[k];
+      if (!sh) {
+        m.visible = false;
+        continue;
+      }
+      const u = Math.min(1, sh.t / sh.dur);
+      const dist = Math.hypot(sh.x1 - sh.x0, sh.z1 - sh.z0);
+      const apex = 3 + dist * 0.18;
+      m.visible = true;
+      m.position.set(
+        sh.x0 + (sh.x1 - sh.x0) * u,
+        1.2 * (1 - u) + 4 * apex * u * (1 - u),
+        sh.z0 + (sh.z1 - sh.z0) * u,
+      );
+      m.rotation.x += dt * 8;
+      if (Math.random() < 0.5)
+        glows.spawn(m.position.x, m.position.y, m.position.z, 0.45, 0xffb060, 0.3, 1.5);
+    }
 
     if (world) {
       const f = world.fortress;
@@ -789,8 +1000,9 @@ export function createMareeBleue(
     shake = Math.max(0, shake - dt * 2.2);
     const sx = (Math.random() - 0.5) * shake * 0.35;
     const sy = (Math.random() - 0.5) * shake * 0.35;
-    camera.position.set(camBase.x + sx, camBase.y + sy, camBase.z);
-    camera.lookAt(camLook.x + sx * 0.5, camLook.y, camLook.z);
+    camFollow += (sim.cannonX * followK - camFollow) * Math.min(1, dt * 4);
+    camera.position.set(camBase.x + camFollow + sx, camBase.y + sy, camBase.z);
+    camera.lookAt(camLook.x + camFollow + sx * 0.5, camLook.y, camLook.z);
   }
 
   // --- Boucle principale
@@ -873,6 +1085,10 @@ export function createMareeBleue(
         red: sim.red.n,
         charge: sim.charge / sim.level.chargeShots,
         ready: sim.championReady,
+        gold: sim.gold,
+        costs: { mortier: sim.costOf("mortier"), baliste: sim.costOf("baliste") },
+        canBuild: { mortier: sim.canBuild("mortier"), baliste: sim.canBuild("baliste") },
+        padsLeft: sim.pads.length - sim.helpers.length,
       });
     }
   };
@@ -900,13 +1116,24 @@ export function createMareeBleue(
       rings.dispose();
       shadowTex.dispose();
       envTex.dispose();
+      for (const m of shellMeshes) {
+        m.traverse((o) => {
+          const mm = o as THREE.Mesh;
+          if (mm.isMesh) {
+            mm.geometry.dispose();
+            (mm.material as THREE.Material).dispose();
+          }
+        });
+      }
+      const cannonMats = new Set<THREE.Material>();
       cannon.group.traverse((o) => {
         const m = o as THREE.Mesh;
         if (m.isMesh) {
           m.geometry.dispose();
-          (m.material as THREE.Material).dispose();
+          cannonMats.add(m.material as THREE.Material);
         }
       });
+      cannonMats.forEach((m) => m.dispose());
       disposeSharedMaterials();
       sfx.dispose();
       ui.dispose();

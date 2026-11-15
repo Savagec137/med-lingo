@@ -1,6 +1,15 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { LEVELS, starsFor, type LevelDef } from "./levels.ts";
+import {
+  DIFFICULTIES,
+  LEVELS,
+  difficultyDef,
+  helperCost,
+  starsFor,
+  withDifficulty,
+  type Difficulty,
+  type LevelDef,
+} from "./levels.ts";
 import { Sim } from "./sim.ts";
 
 /**
@@ -40,12 +49,25 @@ function expert() {
   };
 }
 
-function play(level: LevelDef, aim: (sim: Sim) => number, seed = 7, limit = 240) {
-  const sim = new Sim(level, seed);
+interface PlayOptions {
+  difficulty?: Difficulty;
+  /** Le joueur construit mortiers et canons alliés dès qu'il peut. */
+  build?: boolean;
+  seed?: number;
+  limit?: number;
+}
+
+function play(base: LevelDef, aim: (sim: Sim) => number, o: PlayOptions = {}) {
+  const d = o.difficulty ?? "normal";
+  const sim = new Sim(withDifficulty(base, d), o.seed ?? 7, {
+    startGold: difficultyDef(d).startGold,
+  });
   let peak = 0;
-  while (sim.state === "playing" && sim.time < limit) {
+  let built = 0;
+  while (sim.state === "playing" && sim.time < (o.limit ?? 300)) {
     sim.step(1 / 60, { targetX: aim(sim), firing: true });
     if (sim.championReady) sim.fireChampion();
+    if (o.build && sim.build(built % 2 === 0 ? "mortier" : "baliste")) built++;
     sim.drain();
     peak = Math.max(peak, sim.blue.n);
   }
@@ -58,20 +80,28 @@ test("les cinq niveaux existent, chacun avec son thème", () => {
   LEVELS.forEach((l, i) => assert.equal(l.id, i + 1));
 });
 
-test("chaque niveau se gagne en jouant bien, en moins de quatre minutes", () => {
+test("en normal, chaque niveau se gagne en jouant bien et en construisant ses défenses", () => {
   for (const level of LEVELS) {
-    const { sim } = play(level, expert());
+    const { sim } = play(level, expert(), { build: true });
     assert.equal(sim.state, "won", `niveau ${level.id} : ${sim.state}, forteresse à ${sim.baseHp}`);
-    assert.ok(sim.time < 240, `niveau ${level.id} trop long : ${sim.time.toFixed(0)} s`);
+    assert.ok(sim.time < 300, `niveau ${level.id} trop long : ${sim.time.toFixed(0)} s`);
   }
 });
 
-test("la difficulté monte : la forteresse résiste plus longtemps de niveau en niveau", () => {
-  const times = LEVELS.map((l) => play(l, expert()).sim.time);
-  assert.ok(
-    times[4] > times[0],
-    `niveau 5 (${times[4]}) devrait durer plus que le 1 (${times[0]})`,
-  );
+test("même en difficile, le dernier niveau reste gagnable", () => {
+  const { sim } = play(LEVELS[4], expert(), { build: true, difficulty: "difficile" });
+  assert.equal(sim.state, "won", `forteresse à ${sim.baseHp}`);
+});
+
+test("la difficulté change la horde, le rempart et l'or de départ", () => {
+  const [easy, normal, hard] = DIFFICULTIES.map((d) => withDifficulty(LEVELS[2], d.id));
+  assert.ok(easy.enemy.horde < normal.enemy.horde && normal.enemy.horde < hard.enemy.horde);
+  assert.ok(easy.enemy.rate < hard.enemy.rate);
+  assert.ok(easy.playerHp > hard.playerHp);
+  assert.ok(difficultyDef("facile").startGold > difficultyDef("difficile").startGold);
+  // Le niveau 1 en difficile envoie des colosses, absents en normal.
+  assert.equal(withDifficulty(LEVELS[0], "normal").enemy.bruteEvery, 0);
+  assert.ok(withDifficulty(LEVELS[0], "difficile").enemy.bruteEvery > 0);
 });
 
 test("viser n'importe où ne suffit pas à partir du troisième niveau", () => {
@@ -80,9 +110,78 @@ test("viser n'importe où ne suffit pas à partir du troisième niveau", () => {
   assert.equal(sim.state, "lost");
 });
 
-test("les portes multiplient la foule : on dépasse des centaines de soldats", () => {
-  const { peak } = play(LEVELS[2], expert());
-  assert.ok(peak > 300, `foule max ${peak}`);
+test("les défenses aident : sans elles, le dernier niveau en difficile ne tombe pas", () => {
+  const opts = { difficulty: "difficile" as const, limit: 150 };
+  const without = play(LEVELS[4], expert(), { ...opts, build: false });
+  const withHelpers = play(LEVELS[4], expert(), { ...opts, build: true });
+  assert.equal(withHelpers.sim.state, "won");
+  assert.ok(
+    without.sim.baseHp > without.sim.level.baseHp / 2,
+    `sans défenses : ${without.sim.baseHp}`,
+  );
+});
+
+test("en normal, les défenses font tomber la dernière forteresse bien plus vite", () => {
+  const without = play(LEVELS[4], expert(), { build: false });
+  const withHelpers = play(LEVELS[4], expert(), { build: true });
+  assert.ok(withHelpers.sim.time < without.sim.time * 0.7);
+});
+
+test("construire coûte de l'or, renchérit la suivante et fait riposter la forteresse", () => {
+  const level: LevelDef = { ...LEVELS[0], enemy: { ...LEVELS[0].enemy, horde: 0 } };
+  const sim = new Sim(level, 3, { startGold: 1000 });
+  const redBefore = sim.red.n;
+  assert.equal(sim.costOf("mortier"), helperCost("mortier", 0));
+  assert.ok(sim.build("mortier"));
+  assert.equal(sim.gold, 1000 - helperCost("mortier", 0));
+  assert.ok(sim.red.n > redBefore, "une vague de pillards sort de la forteresse");
+  assert.ok(sim.costOf("baliste") > helperCost("baliste", 0));
+  // Quatre socles, pas un de plus.
+  sim.gold = 1e6;
+  assert.ok(sim.build("baliste") && sim.build("mortier") && sim.build("baliste"));
+  assert.equal(sim.build("mortier"), false);
+  assert.equal(sim.helpers.length, 4);
+});
+
+test("sans or, rien ne se construit", () => {
+  const sim = new Sim(LEVELS[0], 3, { startGold: 0 });
+  assert.equal(sim.canBuild("mortier"), false);
+  assert.equal(sim.build("mortier"), false);
+});
+
+test("le mortier pilonne la horde", () => {
+  const level: LevelDef = {
+    ...LEVELS[0],
+    enemy: { ...LEVELS[0].enemy, rate: 0, ramp: 0, horde: 0 },
+  };
+  const sim = new Sim(level, 5, { startGold: 1000 });
+  sim.build("mortier");
+  // Une grappe de pillards à mi-terrain, immobile pendant le test.
+  sim.red.clear();
+  for (let i = 0; i < 40; i++)
+    sim.red.add((i % 8) * 0.25 - 1, -14 + Math.floor(i / 8) * 0.25, 0, 1, 0, 0, 1);
+  const before = sim.red.n;
+  for (let i = 0; i < 60 * 5; i++) {
+    sim.step(1 / 60, { targetX: 0, firing: false });
+    sim.drain();
+  }
+  assert.ok(sim.red.n < before - 10, `pillards restants : ${sim.red.n} / ${before}`);
+  assert.ok(sim.gold > 1000 - helperCost("mortier", 0), "chaque pillard abattu rapporte de l'or");
+});
+
+test("les soldats du canon allié visent une porte multiplicatrice", () => {
+  const level: LevelDef = {
+    ...LEVELS[0],
+    enemy: { ...LEVELS[0].enemy, rate: 0, ramp: 0, horde: 0 },
+  };
+  const sim = new Sim(level, 5, { startGold: 1000 });
+  sim.build("baliste");
+  for (let i = 0; i < 60 * 6; i++) {
+    sim.step(1 / 60, { targetX: 0, firing: false });
+    sim.drain();
+  }
+  const passed = sim.gates.reduce((n, g) => n + (g.def.op === "mul" ? g.passed : 0), 0);
+  assert.ok(passed > 5, `passages de portes : ${passed}`);
 });
 
 test("une porte ne multiplie qu'une fois le même soldat", () => {

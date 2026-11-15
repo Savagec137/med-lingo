@@ -155,6 +155,25 @@ export class Sfx {
     this.tone(660, 990, 0.06, "triangle", 0.08);
   }
 
+  mortar() {
+    if (!this.gate("mortar", 0.15)) return;
+    this.tone(140, 60, 0.25, "sine", 0.22);
+    this.hiss(0.18, 0.12, 700, 0.8);
+  }
+
+  explosion() {
+    if (!this.gate("boom", 0.1)) return;
+    this.tone(90, 35, 0.45, "sine", 0.3);
+    this.hiss(0.5, 0.2, 350, 0.5);
+  }
+
+  build() {
+    if (!this.gate("build", 0.3)) return;
+    this.tone(523, 784, 0.12, "triangle", 0.1);
+    this.tone(784, 1046, 0.16, "triangle", 0.09, 0.09);
+    this.tone(110, 70, 0.3, "sawtooth", 0.05, 0.2);
+  }
+
   win() {
     if (!this.ctx || this.muted) return;
     const notes = [523, 659, 784, 1046, 1318];
