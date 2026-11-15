@@ -36,6 +36,7 @@ import {
 } from "./props";
 import { makeRng } from "./sim";
 import {
+  bannerTexture,
   brickTexture,
   groundTexture,
   leafTexture,
@@ -136,7 +137,8 @@ export const THEMES: Record<ThemeId, ThemeDef> = {
 export interface World {
   group: THREE.Group;
   theme: ThemeDef;
-  fortress: FortressModel;
+  /** Absente en mode Survie : il n'y a rien à prendre, seulement à tenir. */
+  fortress: FortressModel | null;
   sun: THREE.DirectionalLight;
   update(t: number, dt: number): void;
   dispose(): void;
@@ -157,6 +159,15 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   const W = level.width;
   const L = level.length;
   const hw = W / 2;
+  const sv = level.survival ?? null;
+  /** Profondeur totale du terrain, entonnoir compris. */
+  const depthAll = L + (sv ? sv.funnel.depth : 0);
+  /** Demi-largeur praticable (le terrain, puis l'entonnoir qui s'évase). */
+  const halfWAt = (z: number) => {
+    if (!sv || z >= -L) return hw;
+    const t = Math.min(1, (-L - z) / sv.funnel.depth);
+    return sv.funnel.throatHalfW + (sv.funnel.topHalfW - sv.funnel.throatHalfW) * t;
+  };
 
   const track = <T extends { dispose(): void }>(x: T) => {
     disposables.push(x);
@@ -168,12 +179,12 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   group.add(hemi);
   const sun = new THREE.DirectionalLight(theme.sun.color, theme.sun.intensity);
   const dir = new THREE.Vector3(...theme.sun.dir).normalize();
-  const center = new THREE.Vector3(0, 0, -L / 2 + 2);
+  const center = new THREE.Vector3(0, 0, -depthAll / 2 + 2);
   sun.position.copy(center).addScaledVector(dir, 45);
   sun.target.position.copy(center);
   sun.castShadow = true;
   sun.shadow.mapSize.set(2048, 2048);
-  const ext = L / 2 + 10;
+  const ext = depthAll / 2 + 10;
   sun.shadow.camera.left = -ext;
   sun.shadow.camera.right = ext;
   sun.shadow.camera.top = ext;
@@ -190,12 +201,14 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   const groundMat = track(new THREE.MeshStandardMaterial({ map: groundTex, roughness: 0.95 }));
   const ground = new THREE.Mesh(track(new THREE.PlaneGeometry(220, 220)), groundMat);
   ground.rotation.x = -Math.PI / 2;
-  ground.position.set(0, -0.03, -L / 2);
+  ground.position.set(0, -0.03, -depthAll / 2);
   ground.receiveShadow = true;
   group.add(ground);
 
   // --- Chemin dallé
-  const pathLen = L + 10;
+  const pathFar = sv ? -L - 0.6 : -L - 4;
+  const pathLen = 6 - pathFar;
+  const pathMid = (6 + pathFar) / 2;
   const pathTex = track(pavingTexture(theme.paving, level.id * 7));
   pathTex.repeat.set(W / 4.4, pathLen / 4.4);
   const pathMat = track(
@@ -210,7 +223,7 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   );
   const path = new THREE.Mesh(track(new THREE.PlaneGeometry(W, pathLen)), pathMat);
   path.rotation.x = -Math.PI / 2;
-  path.position.set(0, 0, -L / 2 + 1);
+  path.position.set(0, 0, pathMid);
   path.receiveShadow = true;
   group.add(path);
   // Socle du chemin (épaisseur visible)
@@ -218,7 +231,7 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
     track(new THREE.BoxGeometry(W + 0.5, 0.35, pathLen)),
     track(new THREE.MeshStandardMaterial({ color: theme.curb, roughness: 0.8 })),
   );
-  plinth.position.set(0, -0.18, -L / 2 + 1);
+  plinth.position.set(0, -0.18, pathMid);
   plinth.receiveShadow = true;
   group.add(plinth);
   // Ligne de défense devant le canon
@@ -233,8 +246,14 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   // --- Placement des accessoires hors du chemin
   const placed: Placement[] = [];
   const free = (x: number, z: number, r: number) => {
-    if (Math.abs(x) < hw + 1.0 + r) return false;
-    if (z < baseZ - 1 && Math.abs(x) < baseHalfW + 3.5 + r) return false;
+    if (sv) {
+      // Rien dans l'entonnoir ni dans l'épaisseur de ses falaises.
+      if (z < -L + 3 && Math.abs(x) < halfWAt(z) + 6 + r) return false;
+      if (Math.abs(x) < hw + 1.0 + r) return false;
+    } else {
+      if (Math.abs(x) < hw + 1.0 + r) return false;
+      if (z < baseZ - 1 && Math.abs(x) < baseHalfW + 3.5 + r) return false;
+    }
     for (const p of placed) if ((p.x - x) ** 2 + (p.z - z) ** 2 < (p.r + r) ** 2) return false;
     return true;
   };
@@ -243,7 +262,7 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
     r: number,
     minAbsX: number,
     maxAbsX: number,
-    zMin = -L - 26,
+    zMin = -depthAll - 26,
     zMax = 14,
   ) => {
     const out: Placement[] = [];
@@ -297,13 +316,13 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
       track(new RoundedBoxGeometry(0.3, 0.18, pathLen, 2, 0.05)),
       track(new THREE.MeshStandardMaterial({ color: theme.curb, roughness: 0.7 })),
     );
-    curb.position.set(side * (hw + 0.1), 0.09, -L / 2 + 1);
+    curb.position.set(side * (hw + 0.1), 0.09, pathMid);
     curb.castShadow = true;
     curb.receiveShadow = true;
     group.add(curb);
   }
   const zStart = 4;
-  const zEnd = baseZ - 0.5;
+  const zEnd = sv ? -L + 0.4 : baseZ - 0.5;
 
   // --- Décor par thème
   switch (level.theme) {
@@ -675,26 +694,31 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
     }
   }
 
-  // --- Forteresse
-  const fortress = buildFortress(baseHalfW, level.enemy.doors, theme.fortress);
-  fortress.group.position.z = baseZ;
-  group.add(fortress.group);
-  fortress.group.traverse((o) => {
-    const mesh = o as THREE.Mesh;
-    if (mesh.isMesh) {
-      track(mesh.geometry);
-      const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
-      for (const m of mats) track(m);
-    }
-  });
-  // Esplanade sous la forteresse
-  const apron = new THREE.Mesh(
-    track(new THREE.BoxGeometry(baseHalfW * 2 + 6, 0.3, 8)),
-    track(new THREE.MeshStandardMaterial({ color: theme.curb, roughness: 0.85 })),
-  );
-  apron.position.set(0, -0.14, baseZ - 3.5);
-  apron.receiveShadow = true;
-  group.add(apron);
+  // --- Forteresse (siège) ou entonnoir de la horde (survie)
+  let fortress: FortressModel | null = null;
+  if (sv) {
+    buildFunnel(group, track, level, sv, rng);
+  } else {
+    fortress = buildFortress(baseHalfW, level.enemy.doors, theme.fortress);
+    fortress.group.position.z = baseZ;
+    group.add(fortress.group);
+    fortress.group.traverse((o) => {
+      const mesh = o as THREE.Mesh;
+      if (mesh.isMesh) {
+        track(mesh.geometry);
+        const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+        for (const m of mats) track(m);
+      }
+    });
+    // Esplanade sous la forteresse
+    const apron = new THREE.Mesh(
+      track(new THREE.BoxGeometry(baseHalfW * 2 + 6, 0.3, 8)),
+      track(new THREE.MeshStandardMaterial({ color: theme.curb, roughness: 0.85 })),
+    );
+    apron.position.set(0, -0.14, baseZ - 3.5);
+    apron.receiveShadow = true;
+    group.add(apron);
+  }
 
   return {
     group,
@@ -709,6 +733,137 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
       sun.shadow.map?.dispose();
     },
   };
+}
+
+/**
+ * L'entonnoir du mode Survie : un défilé de grès qui s'évase vers le fond,
+ * fermé de part et d'autre du goulot, pavoisé aux couleurs des pillards.
+ */
+function buildFunnel(
+  group: THREE.Group,
+  track: Track,
+  level: LevelDef,
+  sv: NonNullable<LevelDef["survival"]>,
+  rng: () => number,
+) {
+  const L = level.length;
+  const hw = level.width / 2;
+  const f = sv.funnel;
+  const zTop = -L - f.depth - 14;
+  const wTop = f.topHalfW + ((f.topHalfW - f.throatHalfW) * 14) / f.depth;
+
+  // Sol piétiné de l'entonnoir
+  const floorGeo = track(new THREE.BufferGeometry());
+  const m0 = f.throatHalfW + 1.2;
+  const m1 = wTop + 1.2;
+  const pos = [-m0, 0, -L + 0.2, m0, 0, -L + 0.2, m1, 0, zTop, -m1, 0, zTop];
+  const uv = pos.filter((_, i) => i % 3 !== 1).map((v) => v / 5);
+  floorGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(pos), 3));
+  floorGeo.setAttribute("uv", new THREE.BufferAttribute(new Float32Array(uv), 2));
+  floorGeo.setIndex([0, 1, 2, 0, 2, 3]);
+  floorGeo.computeVertexNormals();
+  const floorTex = track(groundTexture({ base: [26, 0.42, 0.5], detail: "sand" }, 91));
+  const floor = new THREE.Mesh(
+    floorGeo,
+    track(new THREE.MeshStandardMaterial({ map: floorTex, roughness: 0.95 })),
+  );
+  floor.position.y = -0.012;
+  floor.receiveShadow = true;
+  group.add(floor);
+
+  // Falaises : colonnes de grès serrées le long des deux diagonales et du front
+  const near: THREE.Matrix4[] = [];
+  const far: THREE.Matrix4[] = [];
+  const q = new THREE.Quaternion();
+  const up = new THREE.Vector3(0, 1, 0);
+  const put = (list: THREE.Matrix4[], x: number, z: number, radius: number, height: number) => {
+    q.setFromAxisAngle(up, rng() * Math.PI * 2);
+    list.push(
+      new THREE.Matrix4().compose(
+        new THREE.Vector3(x, -0.1, z),
+        q,
+        new THREE.Vector3(radius, height / 3.4, radius),
+      ),
+    );
+  };
+  for (const side of [-1, 1]) {
+    // Diagonales : la paroi monte à mesure qu'on s'éloigne du goulot.
+    const steps = Math.ceil((f.depth + 14) / 1.7);
+    for (let i = 0; i <= steps; i++) {
+      const t = i / steps;
+      const z = -L - t * (f.depth + 14);
+      const w = f.throatHalfW + (wTop - f.throatHalfW) * t;
+      const r = 1.25 + rng() * 0.5;
+      put(near, side * (w + r * 0.82), z, r, 2.1 + t * 2.2 + rng() * 0.8);
+      put(far, side * (w + r + 2 + rng() * 1.5), z - 0.6, 2.2 + rng(), 3.6 + t * 3 + rng() * 1.6);
+    }
+    // Front : ferme le terrain entre le goulot et le bord, puis se prolonge.
+    for (let x = f.throatHalfW + 1.1; x < hw + 16; x += 1.6) {
+      const r = 1.2 + rng() * 0.45;
+      put(near, side * x, -L - r * 0.7, r, 2 + rng() * 0.7 + Math.max(0, x - hw) * 0.25);
+      put(far, side * (x + 0.8), -L - 3.2 - rng(), 2.1 + rng() * 0.8, 3.6 + rng() * 2);
+    }
+  }
+  const rock = vertexColorMaterial(0.9, true);
+  for (const [list, seed] of [
+    [near, 4],
+    [far, 9],
+  ] as const) {
+    const geo = track(mesaGeometry(seed));
+    const mesh = new THREE.InstancedMesh(geo, rock, list.length);
+    list.forEach((mat, i) => mesh.setMatrixAt(i, mat));
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    group.add(mesh);
+  }
+
+  // Étendards des pillards de part et d'autre du goulot, et le long du défilé
+  const banner = track(bannerTexture());
+  const bannerMat = track(
+    new THREE.MeshStandardMaterial({
+      map: banner,
+      transparent: true,
+      alphaTest: 0.5,
+      side: THREE.DoubleSide,
+      roughness: 0.8,
+    }),
+  );
+  const poleMat = track(new THREE.MeshStandardMaterial({ color: 0x3a2a1e, roughness: 0.8 }));
+  const boneMat = track(new THREE.MeshStandardMaterial({ color: 0xf2e7c9, roughness: 0.5 }));
+  const poleGeo = track(new THREE.CylinderGeometry(0.07, 0.09, 4.6, 6));
+  const clothGeo = track(new THREE.PlaneGeometry(1.1, 2.2));
+  const skullGeo = track(new THREE.SphereGeometry(0.22, 8, 6));
+  const hornGeo = track(new THREE.ConeGeometry(0.07, 0.42, 5));
+  const stand = (x: number, z: number, yaw: number) => {
+    const g = new THREE.Group();
+    g.position.set(x, 0, z);
+    g.rotation.y = yaw;
+    const pole = new THREE.Mesh(poleGeo, poleMat);
+    pole.position.y = 2.3;
+    pole.castShadow = true;
+    g.add(pole);
+    const cloth = new THREE.Mesh(clothGeo, bannerMat);
+    cloth.position.set(0.62, 3.3, 0);
+    g.add(cloth);
+    const skull = new THREE.Mesh(skullGeo, boneMat);
+    skull.position.y = 4.75;
+    g.add(skull);
+    for (const sx of [-1, 1]) {
+      const horn = new THREE.Mesh(hornGeo, boneMat);
+      horn.position.set(sx * 0.26, 4.9, 0);
+      horn.rotation.z = -sx * 0.9;
+      g.add(horn);
+    }
+    group.add(g);
+  };
+  for (const side of [-1, 1]) {
+    stand(side * (f.throatHalfW + 0.7), -L + 0.9, side > 0 ? 0 : Math.PI);
+    for (const t of [0.3, 0.62, 0.95]) {
+      const z = -L - t * f.depth;
+      const w = f.throatHalfW + (f.topHalfW - f.throatHalfW) * t;
+      stand(side * (w + 0.5), z, side > 0 ? 0.5 : Math.PI - 0.5);
+    }
+  }
 }
 
 function k(n: number) {

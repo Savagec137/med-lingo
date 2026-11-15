@@ -174,6 +174,13 @@ export class Sfx {
     this.tone(110, 70, 0.3, "sawtooth", 0.05, 0.2);
   }
 
+  surge() {
+    if (!this.gate("surge", 1)) return;
+    this.tone(98, 147, 0.7, "sawtooth", 0.12);
+    this.tone(147, 196, 0.7, "sawtooth", 0.09, 0.12);
+    this.hiss(0.9, 0.1, 220, 0.5);
+  }
+
   win() {
     if (!this.ctx || this.muted) return;
     const notes = [523, 659, 784, 1046, 1318];

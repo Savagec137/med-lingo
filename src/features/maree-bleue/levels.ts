@@ -45,6 +45,26 @@ export interface EnemyDef {
   doors: number[];
 }
 
+/**
+ * Mode Survie : pas de forteresse à abattre. Une horde immense est massée
+ * dans un entonnoir au bout du terrain et déferle par son goulot ; on gagne
+ * en tenant jusqu'au dernier pillard.
+ */
+export interface SurvivalDef {
+  /** Nombre total de pillards à abattre. */
+  total: number;
+  /** L'entonnoir, au-delà du bout du terrain : demi-largeur au goulot, au fond, et profondeur. */
+  funnel: { throatHalfW: number; topHalfW: number; depth: number };
+  /** Pillards lâchés par seconde à travers le goulot : au départ, puis gain par seconde de partie. */
+  flow: [number, number];
+  /** Une vague toutes les N secondes : le débit double pendant quelques secondes. */
+  surgeEvery: number;
+  /** Vitesse de marche : piétinement dans l'entonnoir, puis charge à découvert. */
+  speed: [number, number];
+  /** Or gagné par pillard abattu (ils sont des milliers : moins qu'en siège). */
+  goldPerKill: number;
+}
+
 export interface LevelDef {
   id: number;
   name: string;
@@ -62,6 +82,7 @@ export interface LevelDef {
   gates: GateDef[];
   obstacles: ObstacleDef[];
   hazards: HazardDef[];
+  survival?: SurvivalDef;
 }
 
 export const LEVELS: LevelDef[] = [
@@ -211,6 +232,59 @@ export const LEVELS: LevelDef[] = [
   },
 ];
 
+/**
+ * Le mode Survie. Identifiant 0 : il ne fait pas partie de la campagne et
+ * reste disponible dès le départ, dans chaque difficulté.
+ */
+export const SURVIVAL: LevelDef = {
+  id: 0,
+  name: "La Grande Horde",
+  tagline: "Aucune forteresse à prendre. Tiens jusqu'au dernier pillard.",
+  theme: "canyon",
+  width: 12,
+  length: 23,
+  baseHp: 0,
+  playerHp: 30,
+  fireRate: 9.5,
+  chargeShots: 60,
+  enemy: { rate: 0, ramp: 0, maxRate: 0, horde: 0, bruteEvery: 9, doors: [0] },
+  gates: [
+    { op: "mul", value: 3, x: -3.7, z: -6.5, w: 3.4 },
+    { op: "mul", value: 2, x: 3.7, z: -6.5, w: 3.4 },
+    { op: "mul", value: 3, x: 0, z: -11.5, w: 3.2, move: { amp: 3.9, speed: 0.75 } },
+    {
+      op: "div",
+      value: 2,
+      x: 0,
+      z: -11.5,
+      w: 2.6,
+      move: { amp: 3.9, speed: 0.75, phase: Math.PI },
+    },
+    {
+      op: "mul",
+      value: 6,
+      x: 0,
+      z: -16.5,
+      w: 1.9,
+      gold: true,
+      move: { amp: 4.6, speed: 1.3, phase: 0.7 },
+    },
+  ],
+  obstacles: [
+    // Lices entre les couloirs, à la sortie du canon.
+    { kind: "box", minX: -0.3, maxX: 0.3, minZ: -9, maxZ: -4.4, height: 0.9 },
+  ],
+  hazards: [],
+  survival: {
+    total: 7000,
+    funnel: { throatHalfW: 2.4, topHalfW: 9.5, depth: 21 },
+    flow: [10, 0.3],
+    surgeEvery: 24,
+    speed: [0.9, 1.7],
+    goldPerKill: 0.18,
+  },
+};
+
 export function starsFor(playerHp: number, maxHp: number): number {
   const ratio = playerHp / maxHp;
   if (ratio >= 0.7) return 3;
@@ -282,8 +356,19 @@ export function difficultyDef(id: Difficulty): DifficultyDef {
 /** Le niveau tel qu'il se joue dans une difficulté donnée. */
 export function withDifficulty(level: LevelDef, id: Difficulty): LevelDef {
   const d = difficultyDef(id);
+  const survival = level.survival
+    ? {
+        ...level.survival,
+        total: Math.round((level.survival.total * d.horde) / 50) * 50,
+        flow: [level.survival.flow[0] * d.enemy, level.survival.flow[1] * d.enemy] as [
+          number,
+          number,
+        ],
+      }
+    : undefined;
   return {
     ...level,
+    survival,
     baseHp: Math.round((level.baseHp * d.baseHp) / 10) * 10,
     playerHp: Math.max(6, level.playerHp + d.playerHpDelta),
     enemy: {

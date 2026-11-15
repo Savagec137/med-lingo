@@ -2,10 +2,19 @@
  * Interface en DOM par-dessus le canvas : menu des niveaux, HUD, pause, fin.
  */
 
-import { DIFFICULTIES, LEVELS, type Difficulty, type HelperKind, type LevelDef } from "./levels";
+import {
+  DIFFICULTIES,
+  LEVELS,
+  SURVIVAL,
+  withDifficulty,
+  type Difficulty,
+  type HelperKind,
+  type LevelDef,
+} from "./levels";
 import { THEMES } from "./world";
 
 const ICON = {
+  horde: `<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 3c1 4 2.5 5.5 4.6 6.3A6.5 6.5 0 0 1 12 7.5c1.7 0 3.2.6 4.4 1.8C18.5 8.5 20 7 21 3c1.5 5-.3 8.8-2.6 10.4.1.5.1 1 .1 1.6 0 3.3-2.9 6-6.5 6s-6.5-2.7-6.5-6c0-.6 0-1.1.1-1.6C3.300 11.800 1.500 8 3 3zm6 10.500a1.400 1.400 0 1 0 0 2.800 1.400 1.400 0 0 0 0-2.800zm6 0a1.400 1.400 0 1 0 0 2.800 1.400 1.400 0 0 0 0-2.800z"/></svg>`,
   coin: `<svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9.5" fill="#ffc93d" stroke="#b87a00" stroke-width="2"/><path d="M12 7v10M9.5 9.5h4a2 2 0 0 1 0 4h-3a2 2 0 0 0 0 4h4" stroke="#8a5a00" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>`,
   mortar: `<svg viewBox="0 0 32 32" width="30" height="30"><ellipse cx="16" cy="25" rx="11" ry="3.5" fill="#c9a46b"/><rect x="9" y="18" width="14" height="5" rx="2" fill="#3a3f4c"/><path d="M11 19 L19 6 L25 9.5 L17 21 Z" fill="#ffc84a" stroke="#8a5a00" stroke-width="1.2"/><circle cx="22" cy="7.5" r="2.4" fill="#3a2a10"/></svg>`,
   ally: `<svg viewBox="0 0 32 32" width="30" height="30"><circle cx="9" cy="22" r="6" fill="none" stroke="#7a4a26" stroke-width="2.4"/><circle cx="23" cy="22" r="6" fill="none" stroke="#7a4a26" stroke-width="2.4"/><rect x="6" y="11" width="20" height="7" rx="3.5" fill="#2f6bff" stroke="#ffc84a" stroke-width="1.5"/><rect x="24" y="10" width="4" height="9" rx="1.5" fill="#ffc84a"/><path d="M14 9 l2-4 l2 4z" fill="#7fd8ff"/></svg>`,
@@ -125,6 +134,11 @@ const CSS = `
   background:linear-gradient(180deg,#c0283a,#7d1020);font-weight:900;font-size:13px;white-space:nowrap;pointer-events:none;
   box-shadow:0 4px 12px rgba(0,0,0,.35);animation:mbToast 2.4s ease forwards}
 @keyframes mbToast{0%{opacity:0;transform:translate(-50%,-8px)}10%{opacity:1;transform:translate(-50%,0)}80%{opacity:1}100%{opacity:0}}
+.mb-card.survival{background:linear-gradient(135deg,#d8323c,#5a0d16);min-height:98px;
+  box-shadow:0 6px 0 rgba(0,0,0,.3),0 10px 26px rgba(160,20,30,.4),inset 0 0 0 2px rgba(255,210,140,.5)}
+.mb-card.survival .mb-num svg{width:30px;height:30px}
+.mb-card.survival .mb-kick{font-size:11px;font-weight:900;letter-spacing:2px;color:#ffd9a0}
+.mb-sep{font-size:11px;font-weight:900;letter-spacing:2px;opacity:.7;text-align:center;margin:4px 0 -2px}
 .mb-diff{display:flex;gap:6px;padding:5px;border-radius:16px;background:rgba(8,14,40,.55);box-shadow:inset 0 0 0 2px rgba(255,255,255,.14);margin-bottom:8px}
 .mb-diff button{min-width:92px;height:40px;border-radius:12px;font-weight:900;font-size:14px;color:#cfe0ff;background:transparent}
 .mb-diff button.on{color:#fff;background:linear-gradient(180deg,#4b7dff,#2448c4);box-shadow:0 3px 0 #142866}
@@ -186,6 +200,8 @@ export class GameUi {
   private readonly levelsBox: HTMLDivElement;
   private readonly baseFill: HTMLDivElement;
   private readonly baseTxt: HTMLSpanElement;
+  /** Icône de l'objectif : forteresse en siège, horde en survie. */
+  private readonly objIcon: HTMLSpanElement;
   private readonly baseBar: HTMLDivElement;
   private readonly hpFill: HTMLDivElement;
   private readonly hpTxt: HTMLSpanElement;
@@ -228,9 +244,11 @@ export class GameUi {
     const bars = h("div", "mb-bars");
     this.baseBar = h("div", "mb-bar red");
     this.baseFill = h("div", "mb-fill");
-    const baseTxt = h("div", "mb-txt", ICON.castle);
+    const baseTxt = h("div", "mb-txt");
+    this.objIcon = h("span", "", ICON.castle);
+    this.objIcon.style.display = "flex";
     this.baseTxt = h("span");
-    baseTxt.appendChild(this.baseTxt);
+    baseTxt.append(this.objIcon, this.baseTxt);
     this.baseBar.append(this.baseFill, baseTxt);
     this.hpBar = h("div", "mb-bar blue");
     this.hpFill = h("div", "mb-fill");
@@ -342,6 +360,16 @@ export class GameUi {
     }
     this.diffHint.textContent = DIFFICULTIES.find((x) => x.id === d)?.hint ?? "";
     this.levelsBox.innerHTML = "";
+    // Mode Survie : toujours disponible, en tête de liste.
+    const horde = withDifficulty(SURVIVAL, d).survival?.total ?? 0;
+    const surv = h("button", "mb-btn mb-card survival");
+    surv.innerHTML = `<div class="mb-num">${ICON.horde}</div>
+      <div><div class="mb-kick">MODE SURVIE</div><div class="mb-name">${SURVIVAL.name}</div>
+      <div class="mb-tag">Tiens bon face à ${fmt(horde)} pillards. Pas de forteresse : juste la horde.</div>
+      <div class="mb-stars">${starsHtml(progress.stars[d][SURVIVAL.id] ?? 0)}</div></div>`;
+    surv.addEventListener("click", () => this.cb.onPlay(-1));
+    this.levelsBox.appendChild(surv);
+    this.levelsBox.appendChild(h("div", "mb-sep", "CAMPAGNE"));
     LEVELS.forEach((lvl, i) => {
       const theme = THEMES[lvl.theme];
       const locked = i + 1 > progress.unlocked[d];
@@ -369,6 +397,7 @@ export class GameUi {
   }
 
   showHud(level: LevelDef, difficultyLabel: string) {
+    this.objIcon.innerHTML = level.survival ? ICON.horde : ICON.castle;
     this.closeModal();
     this.menu.classList.add("mb-hidden");
     this.hud.classList.remove("mb-hidden");
@@ -376,7 +405,9 @@ export class GameUi {
     this.lastBase = -1;
     this.lastHp = -1;
     this.showBanner(
-      `NIVEAU ${level.id} · ${difficultyLabel.toUpperCase()}`,
+      level.survival
+        ? `MODE SURVIE · ${difficultyLabel.toUpperCase()}`
+        : `NIVEAU ${level.id} · ${difficultyLabel.toUpperCase()}`,
       level.name,
       level.tagline,
     );
@@ -482,13 +513,24 @@ export class GameUi {
     peak: number;
     hasNext: boolean;
     last: boolean;
+    /** Mode Survie : pillards restants à la fin (0 si la horde est anéantie). */
+    survival?: { left: number; total: number };
   }) {
-    const title = o.won ? (o.last ? "Triomphe !" : "Victoire !") : "Le rempart cède";
-    const sub = o.won
-      ? o.last
-        ? "Les cinq forteresses sont tombées. La marée est souveraine."
-        : "La forteresse s'effondre sous la marée bleue."
-      : "La horde a percé. Vise mieux les portes !";
+    let title: string;
+    let sub: string;
+    if (o.survival) {
+      title = o.won ? "Tu as tenu !" : "Submergé";
+      sub = o.won
+        ? `La Grande Horde est anéantie : ${fmt(o.survival.total)} pillards repoussés.`
+        : `Il restait ${fmt(o.survival.left)} pillards sur ${fmt(o.survival.total)}. Enchaîne les portes et construis tes défenses.`;
+    } else {
+      title = o.won ? (o.last ? "Triomphe !" : "Victoire !") : "Le rempart cède";
+      sub = o.won
+        ? o.last
+          ? "Les cinq forteresses sont tombées. La marée est souveraine."
+          : "La forteresse s'effondre sous la marée bleue."
+        : "La horde a percé. Vise mieux les portes !";
+    }
     const m = Math.floor(o.time / 60);
     const s = Math.floor(o.time % 60);
     const stats = `<div class="mb-stats">

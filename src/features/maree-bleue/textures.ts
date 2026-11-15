@@ -420,3 +420,57 @@ export function skyTexture(top: string, horizon: string) {
   t.colorSpace = THREE.SRGBColorSpace;
   return t;
 }
+
+/** Bois veiné en planches, pour affûts, roues et caisses. */
+export function woodTexture(seed = 17) {
+  const S = 256;
+  const { c, ctx } = canvas(S, S);
+  const rng = makeRng(seed);
+  ctx.fillStyle = "#8a5a30";
+  ctx.fillRect(0, 0, S, S);
+  for (let p = 0; p < 4; p++) {
+    const y0 = p * 64;
+    const l = 0.3 + rng() * 0.08;
+    ctx.fillStyle = hsl(26 + rng() * 6, 0.5, l);
+    ctx.fillRect(0, y0, S, 64);
+    for (let k = 0; k < 16; k++) {
+      ctx.strokeStyle = `rgba(${rng() < 0.5 ? "40,20,5" : "230,180,120"},${0.08 + rng() * 0.14})`;
+      ctx.lineWidth = 1 + rng() * 1.5;
+      ctx.beginPath();
+      const y = y0 + 3 + rng() * 58;
+      ctx.moveTo(0, y);
+      ctx.bezierCurveTo(S * 0.3, y + (rng() - 0.5) * 8, S * 0.7, y + (rng() - 0.5) * 8, S, y);
+      ctx.stroke();
+    }
+    if (rng() < 0.7) {
+      const kx = rng() * S;
+      const ky = y0 + 16 + rng() * 32;
+      ctx.strokeStyle = "rgba(50,25,8,0.45)";
+      for (let r = 2; r < 9; r += 2.5) {
+        ctx.beginPath();
+        ctx.ellipse(kx, ky, r * 1.8, r, 0, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
+    ctx.fillStyle = "rgba(30,14,4,0.6)";
+    ctx.fillRect(0, y0, S, 2);
+  }
+  return toTexture(c);
+}
+
+/** Toile de jute des sacs de sable. */
+export function burlapTexture(seed = 19) {
+  const S = 64;
+  const { c, ctx } = canvas(S, S);
+  const rng = makeRng(seed);
+  ctx.fillStyle = "#c8a56e";
+  ctx.fillRect(0, 0, S, S);
+  for (let i = 0; i < S; i += 4) {
+    ctx.fillStyle = `rgba(90,60,20,${0.12 + rng() * 0.12})`;
+    ctx.fillRect(i, 0, 1.5, S);
+    ctx.fillStyle = `rgba(255,235,190,${0.1 + rng() * 0.12})`;
+    ctx.fillRect(0, i + 2, S, 1.5);
+  }
+  speckle(ctx, S, S, rng, 200, 0.12);
+  return toTexture(c);
+}

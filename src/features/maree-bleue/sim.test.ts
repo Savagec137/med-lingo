@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   DIFFICULTIES,
   LEVELS,
+  SURVIVAL,
   difficultyDef,
   helperCost,
   starsFor,
@@ -11,6 +12,7 @@ import {
   type LevelDef,
 } from "./levels.ts";
 import { Sim } from "./sim.ts";
+import { buildGiantGeometry, buildSoldierGeometry, triangleCount } from "./soldiers.ts";
 
 /**
  * Un joueur appliqué : il anticipe où seront les portes quand ses tirs les
@@ -202,4 +204,83 @@ test("les étoiles dépendent du rempart restant", () => {
   assert.equal(starsFor(12, 12), 3);
   assert.equal(starsFor(6, 12), 2);
   assert.equal(starsFor(2, 12), 1);
+});
+
+// ---------------------------------------------------------------------------
+// Mode Survie
+// ---------------------------------------------------------------------------
+
+test("survie : une horde de plusieurs milliers de pillards, massée dans l'entonnoir", () => {
+  const sim = new Sim(withDifficulty(SURVIVAL, "normal"), 3);
+  assert.ok(sim.survival, "le niveau est bien en mode survie");
+  assert.ok(sim.hordeTotal >= 6000, `horde : ${sim.hordeTotal}`);
+  assert.ok(sim.red.n >= 1500, `pillards visibles au départ : ${sim.red.n}`);
+  assert.equal(sim.enemiesLeft, sim.hordeTotal);
+  // Tous derrière le goulot, entre les parois de l'entonnoir.
+  for (let i = 0; i < sim.red.n; i++) {
+    assert.ok(sim.red.z[i] < sim.throatZ);
+    assert.ok(Math.abs(sim.red.x[i]) <= sim.halfWAt(sim.red.z[i]));
+  }
+});
+
+test("survie : on gagne en tenant jusqu'au dernier pillard, pas en prenant une forteresse", () => {
+  const { sim } = play(SURVIVAL, expert());
+  assert.equal(sim.state, "won");
+  assert.equal(sim.enemiesLeft, 0);
+  assert.ok(sim.kills >= sim.hordeTotal - 5, `abattus : ${sim.kills} / ${sim.hordeTotal}`);
+  assert.ok(sim.time > 45 && sim.time < 240, `durée : ${sim.time.toFixed(0)} s`);
+});
+
+test("survie : sans viser les portes, la horde finit par submerger le rempart", () => {
+  const { sim } = play(SURVIVAL, () => 0);
+  assert.equal(sim.state, "lost");
+  assert.ok(sim.time > 40, `le début laisse le temps de s'installer : ${sim.time.toFixed(0)} s`);
+  assert.ok(sim.enemiesLeft > 1000);
+});
+
+test("survie : la pression monte avec le temps, par vagues", () => {
+  const sim = new Sim(withDifficulty(SURVIVAL, "normal"), 3);
+  const start = sim.hordeFlow;
+  let surges = 0;
+  for (let i = 0; i < 60 * 60; i++) {
+    sim.step(1 / 60, { targetX: 0, firing: true });
+    surges += sim.events.filter((e) => e.type === "surge").length;
+    sim.drain();
+    if (sim.state !== "playing") break;
+  }
+  assert.ok(sim.hordeFlow > start * 1.5, `débit : ${start} → ${sim.hordeFlow}`);
+  assert.ok(surges >= 2, `vagues : ${surges}`);
+});
+
+test("survie : construire une défense fait grossir la horde", () => {
+  const sim = new Sim(withDifficulty(SURVIVAL, "normal"), 3, { startGold: 1000 });
+  const before = sim.hordeTotal;
+  const flow = sim.hordeFlow;
+  assert.ok(sim.build("mortier"));
+  assert.ok(sim.hordeTotal > before);
+  assert.ok(sim.hordeFlow > flow);
+});
+
+test("survie : la difficulté change la taille de la horde", () => {
+  const [easy, normal, hard] = DIFFICULTIES.map((d) => withDifficulty(SURVIVAL, d.id).survival!);
+  assert.ok(easy.total < normal.total && normal.total < hard.total);
+  assert.ok(easy.flow[0] < hard.flow[0]);
+});
+
+// ---------------------------------------------------------------------------
+// Budget des modèles
+// ---------------------------------------------------------------------------
+
+test("les modèles de soldats tiennent leur budget de triangles", () => {
+  for (const team of ["blue", "red"] as const) {
+    const high = triangleCount(buildSoldierGeometry(team, "high"));
+    const mid = triangleCount(buildSoldierGeometry(team, "mid"));
+    const low = triangleCount(buildSoldierGeometry(team, "low"));
+    // Le modèle lointain sert à des milliers d'exemplaires : il doit rester minuscule.
+    assert.ok(low <= 160, `${team} low : ${low}`);
+    assert.ok(mid <= 700, `${team} mid : ${mid}`);
+    assert.ok(high <= 2400, `${team} high : ${high}`);
+    assert.ok(low < mid && mid < high);
+    assert.ok(triangleCount(buildGiantGeometry(team)) <= 2800);
+  }
 });

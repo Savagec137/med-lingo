@@ -6,10 +6,21 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { Sfx } from "./audio";
-import { Debris, Glows, Rings } from "./effects";
+import {
+  buildAllyCannon,
+  buildCannon,
+  buildMortar,
+  buildPad,
+  buildShell,
+  disposeArtilleryShared,
+  type CannonModel,
+  type HelperModel,
+} from "./artillery";
+import { Bodies, Debris, Glows, Rings, Scorches, Smoke } from "./effects";
 import {
   DIFFICULTIES,
   LEVELS,
+  SURVIVAL,
   difficultyDef,
   starsFor,
   withDifficulty,
@@ -17,25 +28,15 @@ import {
   type HelperKind,
   type LevelDef,
 } from "./levels";
+import { buildGate, buildGeyser, buildSpinner, sharedTime, type GateModel } from "./models";
+import { disposeSharedMaterials } from "./props";
+import { BLUE_CAP, GIANT_SCALE, KIND_GIANT, Pool, RED_CAP_SURVIVAL, Sim } from "./sim";
 import {
-  buildAllyCannon,
-  buildCannon,
-  buildMortar,
-  buildPad,
-  buildShell,
-  buildGate,
-  buildGeyser,
   buildGiantGeometry,
   buildSoldierGeometry,
-  buildSpinner,
-  sharedTime,
+  soldierDepthMaterial,
   soldierMaterial,
-  type CannonModel,
-  type GateModel,
-  type HelperModel,
-} from "./models";
-import { disposeSharedMaterials } from "./props";
-import { GIANT_SCALE, KIND_GIANT, Pool, Sim } from "./sim";
+} from "./soldiers";
 import { radialTexture } from "./textures";
 import { GameUi, type Progress } from "./ui";
 import { buildWorld, type World } from "./world";
@@ -43,8 +44,16 @@ import { buildWorld, type World } from "./world";
 const STORAGE_KEY = "maree-bleue:v2";
 const LEGACY_KEY = "maree-bleue:v1";
 const STEP = 1 / 60;
-/** Au-delà de cette profondeur, les soldats passent au modèle allégé. */
-const LOD_Z = -13;
+/**
+ * Niveaux de détail selon la qualité : en deçà de `high`, modèle complet avec
+ * ombre réelle ; jusqu'à `mid`, modèle moyen ; au-delà, modèle allégé.
+ * La qualité baisse d'elle-même si l'appareil peine.
+ */
+const LOD_STEPS = [
+  { high: -7, mid: -18 },
+  { high: -4, mid: -12 },
+  { high: 99, mid: -7 },
+];
 
 export interface MareeBleueOptions {
   /** Affiche un bouton « Quitter » dans le menu. */
@@ -117,59 +126,92 @@ interface CrowdLayer {
 }
 
 /**
- * Une foule : soldats détaillés (près de la caméra), soldats allégés (au loin)
- * et géants, chacun avec son ombre portée.
+ * Une foule : trois niveaux de détail et les géants. Les soldats proches et
+ * les géants projettent une vraie ombre ; tous gardent une ombre de contact.
  */
 class CrowdView {
+  /** Seuils de détail en vigueur (voir LOD_STEPS). */
+  lod = LOD_STEPS[0];
+  /** Géométrie et matériau prêtés aux soldats projetés en l'air. */
+  readonly tossGeo: THREE.BufferGeometry;
+  readonly tossMat: THREE.Material;
   private readonly layers: CrowdLayer[];
   private readonly shadowGeo: THREE.PlaneGeometry;
-  private readonly shadowMat: THREE.MeshBasicMaterial;
   private readonly mats: THREE.Material[];
 
   constructor(team: "blue" | "red", cap: number, shadowTex: THREE.Texture) {
     const rim = team === "blue" ? 0x8fc4ff : 0xffa070;
     const walk = soldierMaterial(11, rim);
     const stomp = soldierMaterial(6.5, rim);
-    this.mats = [walk, stomp];
-    this.shadowGeo = new THREE.PlaneGeometry(0.62, 0.62);
+    const walkDepth = soldierDepthMaterial(11);
+    const stompDepth = soldierDepthMaterial(6.5);
+    this.shadowGeo = new THREE.PlaneGeometry(0.66, 0.66);
     this.shadowGeo.rotateX(-Math.PI / 2);
     this.shadowGeo.translate(0, 0.018, 0);
-    this.shadowMat = new THREE.MeshBasicMaterial({
-      map: shadowTex,
-      transparent: true,
-      depthWrite: false,
-      opacity: 0.8,
-    });
-    const layer = (geo: THREE.BufferGeometry, mat: THREE.Material, n: number): CrowdLayer => {
+    const blob = (opacity: number) =>
+      new THREE.MeshBasicMaterial({
+        map: shadowTex,
+        transparent: true,
+        depthWrite: false,
+        opacity,
+      });
+    const contact = blob(0.4);
+    const full = blob(0.8);
+    this.mats = [walk, stomp, walkDepth, stompDepth, contact, full];
+    const layer = (
+      geo: THREE.BufferGeometry,
+      mat: THREE.Material,
+      n: number,
+      depth: THREE.Material | null,
+    ): CrowdLayer => {
       const mesh = new THREE.InstancedMesh(geo, mat, n);
       mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
       mesh.frustumCulled = false;
       mesh.count = 0;
-      const shadow = new THREE.InstancedMesh(this.shadowGeo, this.shadowMat, n);
+      if (depth) {
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        mesh.customDepthMaterial = depth;
+      }
+      const shadow = new THREE.InstancedMesh(this.shadowGeo, depth ? contact : full, n);
       shadow.instanceMatrix = mesh.instanceMatrix;
       shadow.frustumCulled = false;
       shadow.count = 0;
       shadow.renderOrder = -1;
       return { mesh, shadow };
     };
+    const mid = buildSoldierGeometry(team, "mid");
     this.layers = [
-      layer(buildSoldierGeometry(team, "high"), walk, cap),
-      layer(buildSoldierGeometry(team, "low"), walk, cap),
-      layer(buildGiantGeometry(team), stomp, 64),
+      layer(buildSoldierGeometry(team, "high"), walk, 320, walkDepth),
+      layer(mid, walk, cap, null),
+      layer(buildSoldierGeometry(team, "low"), walk, cap, null),
+      layer(buildGiantGeometry(team), stomp, 64, stompDepth),
     ];
+    this.tossGeo = mid;
+    this.tossMat = walk;
   }
 
   add(scene: THREE.Object3D) {
     for (const l of this.layers) scene.add(l.shadow, l.mesh);
   }
 
+  /** Coupe les ombres réelles des soldats (qualité basse). */
+  setRealShadows(on: boolean) {
+    this.layers[0].mesh.castShadow = on;
+    this.layers[3].mesh.castShadow = on;
+  }
+
   sync(p: Pool) {
     const arrs = this.layers.map((l) => l.mesh.instanceMatrix.array as Float32Array);
     const caps = this.layers.map((l) => l.mesh.instanceMatrix.count);
-    const counts = [0, 0, 0];
+    const counts = [0, 0, 0, 0];
+    const { high, mid } = this.lod;
     for (let i = 0; i < p.n; i++) {
       const giant = p.kind[i] === KIND_GIANT;
-      const li = giant ? 2 : p.z[i] > LOD_Z ? 0 : 1;
+      const z = p.z[i];
+      let li = giant ? 3 : z > high ? 0 : z > mid ? 1 : 2;
+      // Couche pleine : on se rabat sur la suivante, moins détaillée.
+      while (li < 2 && counts[li] >= caps[li]) li++;
       if (counts[li] >= caps[li]) continue;
       let k = giant ? GIANT_SCALE : 1;
       const age = p.age[i];
@@ -196,7 +238,7 @@ class CrowdView {
       arr[o + 11] = 0;
       arr[o + 12] = p.x[i];
       arr[o + 13] = 0;
-      arr[o + 14] = p.z[i];
+      arr[o + 14] = z;
       arr[o + 15] = 1;
     }
     this.layers.forEach((l, i) => {
@@ -213,7 +255,6 @@ class CrowdView {
     }
     for (const m of this.mats) m.dispose();
     this.shadowGeo.dispose();
-    this.shadowMat.dispose();
   }
 }
 
@@ -255,10 +296,17 @@ export function createMareeBleue(
 
   // --- Objets persistants
   const shadowTex = radialTexture("rgba(0,0,0,0.5)");
-  const blueView = new CrowdView("blue", 2200, shadowTex);
-  const redView = new CrowdView("red", 1800, shadowTex);
+  const blueView = new CrowdView("blue", BLUE_CAP, shadowTex);
+  const redView = new CrowdView("red", RED_CAP_SURVIVAL, shadowTex);
   blueView.add(scene);
   redView.add(scene);
+  // Soldats projetés en l'air : [bleus, rouges]
+  const bodies = [
+    new Bodies(blueView.tossGeo, blueView.tossMat),
+    new Bodies(redView.tossGeo, redView.tossMat),
+  ];
+  scene.add(bodies[0].mesh, bodies[1].mesh);
+  let lodQuality = 0;
   const cannon: CannonModel = buildCannon();
   const CANNON_SCALE = 1.3;
   cannon.group.scale.setScalar(CANNON_SCALE);
@@ -273,7 +321,9 @@ export function createMareeBleue(
   const debris = new Debris();
   const glows = new Glows();
   const rings = new Rings();
-  scene.add(debris.mesh, glows.mesh, rings.group);
+  const smoke = new Smoke();
+  const scorches = new Scorches();
+  scene.add(debris.mesh, glows.mesh, rings.group, smoke.mesh, scorches.group);
   const sfx = new Sfx();
   sfx.muted = loadMuted();
 
@@ -335,7 +385,7 @@ export function createMareeBleue(
     },
     onNext: () => {
       sfx.click();
-      startLevel(Math.min(LEVELS.length - 1, levelIndex + 1), false);
+      startLevel(Math.min(LEVELS.length - 1, Math.max(0, levelIndex) + 1), false);
     },
     onChampion: () => {
       sfx.unlock();
@@ -397,7 +447,10 @@ export function createMareeBleue(
       if (m.isMesh && o.userData.own) {
         m.geometry.dispose();
         const mats = Array.isArray(m.material) ? m.material : [m.material];
-        mats.forEach((x) => x.dispose());
+        // Les matières partagées de l'artillerie servent encore au canon du joueur.
+        mats.forEach((x) => {
+          if (!x.userData.shared) x.dispose();
+        });
       }
     });
     levelGroup = new THREE.Group();
@@ -405,6 +458,10 @@ export function createMareeBleue(
     debris.clear();
     glows.clear();
     rings.clear();
+    smoke.clear();
+    scorches.clear();
+    bodies[0].clear();
+    bodies[1].clear();
   }
 
   function startLevel(i: number, asDemo: boolean) {
@@ -413,7 +470,8 @@ export function createMareeBleue(
     demo = asDemo;
     // La démo du menu se joue en normal, avec de l'or pour montrer les défenses.
     const diff: Difficulty = asDemo ? "normal" : difficulty;
-    const lvl = withDifficulty(LEVELS[i], diff);
+    // Indice négatif : le mode Survie, hors campagne.
+    const lvl = withDifficulty(i < 0 ? SURVIVAL : LEVELS[i], diff);
     sim = new Sim(lvl, (Date.now() & 0xffff) + i, {
       startGold: asDemo ? 400 : difficultyDef(diff).startGold,
     });
@@ -483,8 +541,6 @@ export function createMareeBleue(
     input.targetX = 0;
     input.firing = false;
     demoX = 0;
-    world.fortress.group.position.y = 0;
-    world.fortress.group.rotation.set(0, 0, 0);
     frameCamera();
     if (asDemo) {
       mode = "menu";
@@ -517,7 +573,7 @@ export function createMareeBleue(
     const cotB = 1 / Math.tan(pitch + f / 2);
     // Le bas de l'écran montre le canon ; le haut, la forteresse sous le HUD.
     const zNear = 3.6;
-    const zFar = -lvl.length - 6;
+    const zFar = sim.farZ - (sim.survival ? 1 : 6);
     // En portrait, la caméra est plus proche que la largeur du chemin : elle
     // suit le canon de côté pour montrer le bord vers lequel il se déplace.
     const halfW = portrait ? lvl.width / 2 - 1.4 : lvl.width / 2 + 0.3;
@@ -674,7 +730,18 @@ export function createMareeBleue(
       const team = deaths[o + 2];
       const giant = deaths[o + 3] > 0;
       const color = team === 0 ? 0x3d7bff : 0xe3262f;
-      debris.burst(x, 0.45, z, giant ? 14 : 2, giant ? 3.5 : 1.8, color, giant ? 1.8 : 1);
+      // Les soldats proches de la caméra sont projetés en l'air ; au loin, de simples éclats suffisent.
+      const tossed = !giant && z > -24 && !bodies[team].full && (k / stride) % 2 === 0;
+      if (tossed) bodies[team].toss(x, z, team === 0 ? 1 : -1);
+      debris.burst(
+        x,
+        0.45,
+        z,
+        giant ? 14 : tossed ? 1 : 2,
+        giant ? 3.5 : 1.8,
+        color,
+        giant ? 1.8 : 1,
+      );
       if (giant) {
         debris.burst(x, 0.8, z, 8, 3, 0xffffff, 1.2);
         rings.spawn(x, z, 2.2, team === 0 ? 0x6ab0ff : 0xff6a4a);
@@ -691,6 +758,7 @@ export function createMareeBleue(
     for (const e of sim.events) {
       switch (e.type) {
         case "fire":
+          if (Math.random() < 0.35) smoke.puff(e.x, 1.25, e.z - 2.3, 0.7, 0.85, 0.5, 0.9);
           if (!demo) sfx.fire();
           break;
         case "gate": {
@@ -756,14 +824,34 @@ export function createMareeBleue(
         case "mortarFire": {
           const h = sim.helpers[e.index];
           if (h) {
-            glows.spawn(h.x, 1.3, h.z - 0.3, 1.6, 0xffc070, 0.3, 1.4, 1.5);
-            debris.burst(h.x, 1.2, h.z, 4, 1, 0x9a9a9a, 0.8, 1.2);
+            glows.spawn(h.x, 1.4, h.z - 0.4, 2, 0xffc070, 0.3, 1.4, 1.5);
+            for (let j = 0; j < 5; j++)
+              smoke.puff(
+                h.x + (Math.random() - 0.5) * 0.5,
+                1.2 + j * 0.25,
+                h.z - 0.5,
+                1.1,
+                0.75,
+                1.1,
+                1.6,
+              );
           }
           if (!demo) sfx.mortar();
           break;
         }
         case "shellHit":
           shake = Math.max(shake, 0.22);
+          scorches.spawn(e.x, e.z, 2);
+          for (let j = 0; j < 7; j++)
+            smoke.puff(
+              e.x + (Math.random() - 0.5) * 1.6,
+              0.4 + Math.random() * 0.8,
+              e.z + (Math.random() - 0.5) * 1.6,
+              1.6 + Math.random(),
+              0.12 + Math.random() * 0.25,
+              1.3 + Math.random() * 0.6,
+              1.8,
+            );
           rings.spawn(e.x, e.z, 3.6, 0xffa040, 0.5);
           debris.burst(e.x, 0.3, e.z, 16, 4.5, 0x3a3030, 1.4, 1.6);
           debris.burst(e.x, 0.4, e.z, 10, 3.5, 0xff8a30, 1, 1.8);
@@ -804,18 +892,41 @@ export function createMareeBleue(
           rings.spawn(h.x, h.z, 2.4, 0xffd23f);
           for (let j = 0; j < 5; j++)
             glows.spawn(h.x, 0.3 + j * 0.35, h.z, 1.4, 0xffd25a, 0.5, 1.2, 1);
-          for (const door of sim.level.enemy.doors)
-            glows.spawn(door, 1.2, sim.baseZ + 0.5, 3, 0xff3a1a, 0.8, 1.2);
+          for (let j = 0; j < 6; j++)
+            smoke.puff(
+              h.x + (Math.random() - 0.5),
+              0.3,
+              h.z + (Math.random() - 0.5),
+              1.2,
+              0.9,
+              0.8,
+              0.8,
+            );
+          if (sim.survival) {
+            glows.spawn(0, 1.5, sim.throatZ - 1, 5, 0xff3a1a, 0.9, 1.2);
+          } else {
+            for (const door of sim.level.enemy.doors)
+              glows.spawn(door, 1.2, sim.baseZ + 0.5, 3, 0xff3a1a, 0.8, 1.2);
+          }
           if (!demo) {
             sfx.build();
+            const what = h.kind === "mortier" ? "Mortier en place" : "Canon allié en place";
             ui.toast(
-              h.kind === "mortier"
-                ? "Mortier en place · la forteresse riposte !"
-                : "Canon allié en place · la forteresse riposte !",
+              sim.survival ? `${what} · la horde grossit !` : `${what} · la forteresse riposte !`,
             );
           }
           break;
         }
+        case "surge":
+          shake = Math.max(shake, 0.4);
+          for (let j = 0; j < 5; j++)
+            glows.spawn((j - 2) * 1.2, 1.2, sim.throatZ - 0.5, 3.5, 0xff3a1a, 0.9, 1.2);
+          rings.spawn(0, sim.throatZ + 0.5, 6, 0xff4a2a, 0.9);
+          if (!demo) {
+            sfx.surge();
+            ui.toast(`Vague ${e.value} · la horde déferle !`);
+          }
+          break;
         case "won":
           endTimer = 2.4;
           collapse = 0.0001;
@@ -841,9 +952,12 @@ export function createMareeBleue(
       const d = difficulty;
       progress = {
         difficulty: d,
+        // Le mode Survie (identifiant 0) ne débloque rien dans la campagne.
         unlocked: {
           ...progress.unlocked,
-          [d]: Math.max(progress.unlocked[d], Math.min(LEVELS.length, lvl.id + 1)),
+          [d]: sim.survival
+            ? progress.unlocked[d]
+            : Math.max(progress.unlocked[d], Math.min(LEVELS.length, lvl.id + 1)),
         },
         stars: {
           ...progress.stars,
@@ -861,8 +975,9 @@ export function createMareeBleue(
       shots: sim.shots,
       kills: sim.kills,
       peak: peakBlue,
-      hasNext: won && levelIndex < LEVELS.length - 1,
+      hasNext: won && !sim.survival && levelIndex < LEVELS.length - 1,
       last: won && levelIndex === LEVELS.length - 1,
+      survival: sim.survival ? { left: sim.enemiesLeft, total: sim.hordeTotal } : undefined,
     });
   }
 
@@ -874,7 +989,7 @@ export function createMareeBleue(
     peakBlue = Math.max(peakBlue, sim.blue.n);
 
     cannon.group.position.set(sim.cannonX, 0, sim.cannonZ);
-    wheelSpin.v += (sim.cannonVel * dt) / (0.52 * CANNON_SCALE) + sim.recoil * dt * 2;
+    wheelSpin.v += (sim.cannonVel * dt) / (0.56 * CANNON_SCALE) + sim.recoil * dt * 2;
     for (const w of cannon.wheels) w.rotation.x = wheelSpin.v;
     cannon.turret.rotation.z = THREE.MathUtils.clamp(-sim.cannonVel * 0.01, -0.1, 0.1);
     cannon.barrel.position.z = sim.recoil * 0.18;
@@ -887,6 +1002,14 @@ export function createMareeBleue(
       ? 2.4 + Math.sin(t * 10) * 0.8
       : 0.4 + charge * 1.6;
     cannon.muzzleGlow.opacity = 0.35 + sim.recoil * 0.6;
+    cannon.coilMat.emissiveIntensity = 0.5 + sim.recoil * 2.2;
+    // L'affût encaisse le recul ; les casques sautillent dans la trémie.
+    cannon.turret.position.z = sim.recoil * 0.06;
+    cannon.turret.rotation.x = -sim.recoil * 0.025;
+    cannon.heads.forEach((hd, j) => {
+      hd.position.y = (hd.userData.baseY as number) + Math.abs(Math.sin(t * 7 + j * 2.1)) * 0.07;
+      hd.rotation.y = Math.sin(t * 3 + j) * 0.5;
+    });
     const ringMat = cannon.ring.material as THREE.MeshBasicMaterial;
     if (sim.championReady) {
       ringMat.color.setHex(0xffd23f);
@@ -917,8 +1040,11 @@ export function createMareeBleue(
       let d = target - v.yaw.rotation.y;
       d = Math.atan2(Math.sin(d), Math.cos(d));
       v.yaw.rotation.y += d * Math.min(1, dt * 6);
-      if (h.kind === "mortier") v.recoil.position.y = -h.recoil * h.recoil * 0.18;
-      else v.recoil.position.z = 0.05 + h.recoil * 0.12;
+      if (h.kind === "mortier") {
+        v.recoil.position.y = -h.recoil * h.recoil * 0.2;
+        // L'âme du tube rougeoie à mesure que le mortier recharge.
+        if (v.glow) v.glow.opacity = 0.25 + 0.75 * Math.max(0, 1 - h.cooldown / 3);
+      } else v.recoil.position.z = h.recoil * 0.12;
     });
     padViews.forEach((pv, k) => {
       if (k >= sim.helpers.length) {
@@ -945,45 +1071,58 @@ export function createMareeBleue(
         sh.z0 + (sh.z1 - sh.z0) * u,
       );
       m.rotation.x += dt * 8;
-      if (Math.random() < 0.5)
-        glows.spawn(m.position.x, m.position.y, m.position.z, 0.45, 0xffb060, 0.3, 1.5);
+      if (dt > 0 && Math.random() < 0.6) {
+        glows.spawn(m.position.x, m.position.y + 0.2, m.position.z, 0.45, 0xffb060, 0.3, 1.5);
+        smoke.puff(m.position.x, m.position.y, m.position.z, 0.5, 0.55, 0.6, 0.2);
+      }
     }
 
     if (world) {
       const f = world.fortress;
-      const flash = sim.baseFlash;
-      for (const m of f.flashMats) {
-        m.emissive.setRGB(flash * 0.6, flash * 0.08, flash * 0.05);
+      if (f) {
+        const flash = sim.baseFlash;
+        for (const m of f.flashMats) m.emissive.setRGB(flash * 0.6, flash * 0.08, flash * 0.05);
+        for (const g of f.doorGlows)
+          (g.material as THREE.MeshBasicMaterial).opacity = 0.3 + Math.sin(t * 4) * 0.12;
+        f.group.position.x = Math.sin(t * 60) * 0.05 * flash;
       }
-      for (const g of f.doorGlows)
-        (g.material as THREE.MeshBasicMaterial).opacity = 0.3 + Math.sin(t * 4) * 0.12;
-      f.group.position.x = Math.sin(t * 60) * 0.05 * flash;
       if (collapse > 0) {
         collapse += dt;
-        const u = Math.min(1, collapse / 2.2);
-        f.group.position.y = -u * u * 4.5;
-        f.group.rotation.x = -u * 0.25;
-        if (Math.random() < 0.6 && collapse < 2.2) {
-          const x = (Math.random() - 0.5) * (sim.baseHalfW * 2 + 2);
-          debris.burst(
-            x,
-            2 + Math.random() * 2,
-            sim.baseZ - Math.random() * 2,
-            4,
-            4,
-            0x8a7a70,
-            2.2,
-          );
-          glows.spawn(x, 1 + Math.random() * 3, sim.baseZ - 1, 3, 0xffb060, 0.6, 1.5);
-          if (Math.random() < 0.15) rings.spawn(x, sim.baseZ + 0.5, 4, 0xffd23f);
-          shake = Math.max(shake, 0.35);
+        if (f) {
+          // Siège : la forteresse s'effondre.
+          const u = Math.min(1, collapse / 2.2);
+          f.group.position.y = -u * u * 4.5;
+          f.group.rotation.x = -u * 0.25;
+          if (Math.random() < 0.6 && collapse < 2.2) {
+            const x = (Math.random() - 0.5) * (sim.baseHalfW * 2 + 2);
+            debris.burst(
+              x,
+              2 + Math.random() * 2,
+              sim.baseZ - Math.random() * 2,
+              4,
+              4,
+              0x8a7a70,
+              2.2,
+            );
+            glows.spawn(x, 1 + Math.random() * 3, sim.baseZ - 1, 3, 0xffb060, 0.6, 1.5);
+            smoke.puff(x, 1 + Math.random() * 2, sim.baseZ - 0.5, 3, 0.6, 1.6, 1.5);
+            if (Math.random() < 0.15) rings.spawn(x, sim.baseZ + 0.5, 4, 0xffd23f);
+            shake = Math.max(shake, 0.35);
+          }
+        } else if (collapse < 2.4 && Math.random() < 0.12) {
+          // Survie : feux de joie au-dessus du terrain.
+          const x = (Math.random() - 0.5) * sim.halfW * 1.8;
+          const z = -4 - Math.random() * 16;
+          const c = [0xffd23f, 0x4b8bff, 0xff6bb5, 0x5ad35a][Math.floor(Math.random() * 4)];
+          glows.spawn(x, 5 + Math.random() * 3, z, 4, c, 0.7, 1.6);
+          debris.burst(x, 6, z, 14, 5, c, 1.2, 0.4);
         }
         if (collapse > 0.4 && collapse < 2.4 && Math.random() < 0.35) {
           const colors = [0xffd23f, 0x4b8bff, 0xffffff, 0x5ad35a, 0xff6bb5];
           debris.spawn(
             (Math.random() - 0.5) * 10,
             6 + Math.random() * 3,
-            sim.baseZ + 6 + Math.random() * 8,
+            (f ? sim.baseZ + 6 : -18) + Math.random() * 8,
             (Math.random() - 0.5) * 3,
             2,
             (Math.random() - 0.5) * 3,
@@ -1021,10 +1160,24 @@ export function createMareeBleue(
       perfFrames++;
       if (perfTime > 2.5) {
         const fps = perfFrames / perfTime;
-        if (fps < 42 && ratioStep < ratios.length - 1) {
-          ratioStep++;
-          renderer.setPixelRatio(ratios[ratioStep]);
-          resize();
+        if (fps < 42) {
+          // On alterne : d'abord la résolution, puis le détail des soldats.
+          if (ratioStep < ratios.length - 1 && ratioStep <= lodQuality * 2) {
+            ratioStep++;
+            renderer.setPixelRatio(ratios[ratioStep]);
+            resize();
+          } else if (lodQuality < LOD_STEPS.length - 1) {
+            lodQuality++;
+            blueView.lod = redView.lod = LOD_STEPS[lodQuality];
+            if (lodQuality === LOD_STEPS.length - 1) {
+              blueView.setRealShadows(false);
+              redView.setRealShadows(false);
+            }
+          } else if (ratioStep < ratios.length - 1) {
+            ratioStep++;
+            renderer.setPixelRatio(ratios[ratioStep]);
+            resize();
+          }
         }
         perfTime = 0;
         perfFrames = 0;
@@ -1068,17 +1221,22 @@ export function createMareeBleue(
     }
     sharedTime.value += mode === "paused" ? 0 : dt;
     syncVisuals(mode === "paused" ? 0 : dt, sharedTime.value);
-    debris.update(mode === "paused" ? 0 : dt);
-    glows.update(mode === "paused" ? 0 : dt, camera);
-    rings.update(mode === "paused" ? 0 : dt);
+    const fxDt = mode === "paused" ? 0 : dt;
+    debris.update(fxDt);
+    glows.update(fxDt, camera);
+    rings.update(fxDt);
+    smoke.update(fxDt, camera);
+    scorches.update(fxDt);
+    bodies[0].update(fxDt);
+    bodies[1].update(fxDt);
     renderer.render(scene, camera);
 
     uiTimer -= dt;
     if (uiTimer <= 0 && (mode === "playing" || mode === "paused")) {
       uiTimer = 0.08;
       ui.update({
-        baseHp: sim.baseHp,
-        baseMax: sim.level.baseHp,
+        baseHp: sim.survival ? sim.enemiesLeft : sim.baseHp,
+        baseMax: sim.survival ? sim.hordeTotal : sim.level.baseHp,
         hp: sim.playerHp,
         hpMax: sim.level.playerHp,
         blue: sim.blue.n,
@@ -1111,9 +1269,13 @@ export function createMareeBleue(
       clearLevel();
       blueView.dispose();
       redView.dispose();
+      bodies[0].dispose();
+      bodies[1].dispose();
       debris.dispose();
       glows.dispose();
       rings.dispose();
+      smoke.dispose();
+      scorches.dispose();
       shadowTex.dispose();
       envTex.dispose();
       for (const m of shellMeshes) {
@@ -1125,15 +1287,12 @@ export function createMareeBleue(
           }
         });
       }
-      const cannonMats = new Set<THREE.Material>();
       cannon.group.traverse((o) => {
         const m = o as THREE.Mesh;
-        if (m.isMesh) {
-          m.geometry.dispose();
-          cannonMats.add(m.material as THREE.Material);
-        }
+        if (m.isMesh) m.geometry.dispose();
       });
-      cannonMats.forEach((m) => m.dispose());
+      cannon.own.forEach((m) => m.dispose());
+      disposeArtilleryShared();
       disposeSharedMaterials();
       sfx.dispose();
       ui.dispose();

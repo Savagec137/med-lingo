@@ -14,6 +14,7 @@ import {
   type HelperKind,
   type LevelDef,
   type ObstacleDef,
+  type SurvivalDef,
 } from "./levels.ts";
 
 export const KIND_NORMAL = 0;
@@ -23,8 +24,10 @@ export const R_NORMAL = 0.2;
 export const R_GIANT = 0.5;
 export const GIANT_SCALE = 2.4;
 
-const BLUE_CAP = 2200;
-const RED_CAP = 1800;
+export const BLUE_CAP = 2200;
+/** Pillards vivants au plus : en siège, puis en survie (la horde y est immense). */
+export const RED_CAP = 1800;
+export const RED_CAP_SURVIVAL = 3000;
 const CELL = 0.7;
 /** Maille grossière pour l'attraction entre foules. */
 const COARSE = 2;
@@ -225,7 +228,8 @@ export interface SimEvent {
     | "mortarFire"
     | "shellHit"
     | "balisteFire"
-    | "built";
+    | "built"
+    | "surge";
   x: number;
   z: number;
   value: number;
@@ -270,7 +274,7 @@ export interface SimInput {
 export class Sim {
   readonly level: LevelDef;
   readonly blue = new Pool(BLUE_CAP);
-  readonly red = new Pool(RED_CAP);
+  readonly red: Pool;
   readonly gates: GateRuntime[];
   readonly hazards: HazardRuntime[];
   readonly obstacles: ObstacleDef[];
@@ -279,6 +283,20 @@ export class Sim {
   readonly baseHalfW: number;
   readonly cannonZ = 1.3;
   readonly playerLineZ = 0.2;
+  /** Mode Survie : réglages de la horde, sinon `null`. */
+  readonly survival: SurvivalDef | null;
+  /** Bout du terrain dallé : la forteresse en siège, le goulot de l'entonnoir en survie. */
+  readonly throatZ: number;
+  /** Fond du terrain jouable (au-delà du goulot en survie). */
+  readonly farZ: number;
+  /** Survie : taille de la horde et pillards qui ne sont pas encore entrés en scène. */
+  hordeTotal = 0;
+  hordeLeft = 0;
+  /** Survie : temps restant de la vague en cours (0 hors vague), et numéro de vague. */
+  surge = 0;
+  wave = 0;
+  private tokens = 0;
+  private surgeTimer = 0;
 
   state: SimState = "playing";
   time = 0;
@@ -329,13 +347,44 @@ export class Sim {
     this.gold = opts.startGold ?? 60;
     this.rng = makeRng(seed);
     this.halfW = level.width / 2;
-    this.baseZ = -level.length + 1.2;
-    this.baseHalfW = Math.min(4.2, level.width / 2 - 1);
+    this.survival = level.survival ?? null;
+    this.throatZ = -level.length;
+    const sv = this.survival;
+    if (sv) {
+      // Pas de forteresse : « baseZ » devient le fond de l'entonnoir.
+      this.farZ = this.throatZ - sv.funnel.depth;
+      this.baseZ = this.farZ + 0.5;
+      this.baseHalfW = sv.funnel.topHalfW;
+      // Deux murs ferment le terrain de part et d'autre du goulot. Ils débordent
+      // loin vers l'extérieur pour que les soldats bloqués glissent vers l'ouverture.
+      this.obstacles = [
+        ...level.obstacles,
+        {
+          kind: "box",
+          minX: -this.halfW - 40,
+          maxX: -sv.funnel.throatHalfW,
+          minZ: this.throatZ - 1.2,
+          maxZ: this.throatZ,
+        },
+        {
+          kind: "box",
+          minX: sv.funnel.throatHalfW,
+          maxX: this.halfW + 40,
+          minZ: this.throatZ - 1.2,
+          maxZ: this.throatZ,
+        },
+      ];
+    } else {
+      this.farZ = this.throatZ;
+      this.baseZ = -level.length + 1.2;
+      this.baseHalfW = Math.min(4.2, level.width / 2 - 1);
+      this.obstacles = level.obstacles;
+    }
+    this.red = new Pool(sv ? RED_CAP_SURVIVAL : RED_CAP);
     this.baseHp = level.baseHp;
     this.playerHp = level.playerHp;
-    this.obstacles = level.obstacles;
     // Socles en retrait des bords : la caméra, proche, ne montre pas toute la largeur.
-    const px = this.halfW - 1.55;
+    const px = this.halfW - 1.9;
     this.pads = [
       { x: -px, z: -2.9 },
       { x: px, z: -2.9 },
@@ -350,12 +399,13 @@ export class Sim {
       timer: 0,
       hitGiants: false,
     }));
-    const minX = -this.halfW - 1;
-    const maxX = this.halfW + 1;
-    const minZ = -level.length - 2;
+    const reach = Math.max(this.halfW, sv ? sv.funnel.topHalfW : 0);
+    const minX = -reach - 1;
+    const maxX = reach + 1;
+    const minZ = this.farZ - 2;
     const maxZ = 4;
     this.gridBlue = new Grid(minX, maxX, minZ, maxZ, BLUE_CAP);
-    this.gridRed = new Grid(minX, maxX, minZ, maxZ, RED_CAP);
+    this.gridRed = new Grid(minX, maxX, minZ, maxZ, this.red.cap);
     this.coarseMinX = minX;
     this.coarseMinZ = minZ;
     this.coarseCols = Math.ceil((maxX - minX) / COARSE) + 1;
@@ -365,8 +415,69 @@ export class Sim {
     this.sumXBlue = new Float32Array(cells);
     this.densRed = new Float32Array(cells);
     this.sumXRed = new Float32Array(cells);
-    this.placeHorde(level.enemy.horde);
+    if (sv) this.massHorde(sv);
+    else this.placeHorde(level.enemy.horde);
     this.bruteTimer = level.enemy.bruteEvery > 0 ? level.enemy.bruteEvery * 0.6 : 0;
+  }
+
+  /** Demi-largeur praticable à une profondeur donnée (l'entonnoir s'évase vers le fond). */
+  halfWAt(z: number) {
+    const sv = this.survival;
+    if (!sv || z >= this.throatZ) return this.halfW;
+    const t = Math.min(1, (this.throatZ - z) / sv.funnel.depth);
+    return sv.funnel.throatHalfW + (sv.funnel.topHalfW - sv.funnel.throatHalfW) * t;
+  }
+
+  /** Survie : pillards encore à abattre (vivants + pas encore entrés). */
+  get enemiesLeft() {
+    return this.hordeLeft + this.red.n;
+  }
+
+  /** Survie : part de la horde déjà abattue, de 0 à 1. */
+  get hordeProgress() {
+    return this.hordeTotal > 0 ? 1 - this.enemiesLeft / this.hordeTotal : 0;
+  }
+
+  /** Survie : pillards lâchés par seconde à travers le goulot, à cet instant. */
+  get hordeFlow() {
+    const sv = this.survival;
+    if (!sv) return 0;
+    const base = sv.flow[0] + sv.flow[1] * this.time;
+    return base * (this.surge > 0 ? 2 : 1) * (1 + 0.1 * this.helpers.length);
+  }
+
+  /** Survie : remplit l'entonnoir d'une masse compacte de pillards. */
+  private massHorde(sv: SurvivalDef) {
+    this.hordeTotal = sv.total;
+    const f = sv.funnel;
+    const area = f.depth * (f.throatHalfW + f.topHalfW);
+    const count = Math.min(sv.total, Math.floor(this.red.cap * 0.82), Math.floor(area * 6.2));
+    for (let i = 0; i < count; i++) {
+      // Tirage uniforme sur le trapèze : plus de monde là où il est large.
+      let t = this.rng();
+      const w0 = f.throatHalfW;
+      const w1 = f.topHalfW;
+      t = (Math.sqrt(w0 * w0 + t * (w1 * w1 - w0 * w0)) - w0) / (w1 - w0);
+      const z = this.throatZ - 0.3 - t * (f.depth - 0.8);
+      const x = (this.rng() * 2 - 1) * (this.halfWAt(z) - 0.25);
+      this.red.add(x, z, KIND_NORMAL, 1, 0.86 + this.rng() * 0.28, 0, 1);
+    }
+    this.hordeLeft = sv.total - count;
+  }
+
+  /** Survie : la horde se reforme au fond de l'entonnoir tant qu'il reste des pillards. */
+  private refillHorde() {
+    const r = this.red;
+    let want = Math.min(this.hordeLeft, r.cap - r.n, 6);
+    let tries = want * 3;
+    while (want > 0 && tries-- > 0) {
+      const z = this.farZ + 0.6 + this.rng() * 3;
+      const x = (this.rng() * 2 - 1) * (this.halfWAt(z) - 0.3);
+      if (this.densRed[this.coarseCell(x, z)] > 22) continue;
+      if (r.add(x, z, KIND_NORMAL, 1, 0.86 + this.rng() * 0.28, 0, 1) < 0) break;
+      this.hordeLeft--;
+      want--;
+    }
   }
 
   get championReady() {
@@ -405,7 +516,7 @@ export class Sim {
     this.pushDeath(p.x[i], p.z[i], team, p.kind[i]);
     if (team === 1 && reward) {
       this.kills++;
-      this.gold += p.kind[i] ? 8 : 1;
+      this.gold += p.kind[i] ? 8 : (this.survival?.goldPerKill ?? 1);
     }
   }
 
@@ -437,6 +548,14 @@ export class Sim {
       aimZ: pad.z - 6,
       recoil: 0,
     });
+    if (this.survival) {
+      // Riposte : la horde grossit et déferle plus vite (voir hordeFlow).
+      const more = 120 + 60 * this.helpers.length;
+      this.hordeTotal += more;
+      this.hordeLeft += more;
+      this.emit("built", pad.x, pad.z, this.helpers.length, this.helpers.length - 1);
+      return true;
+    }
     // Riposte : une vague de pillards sort immédiatement des portes.
     const wave = 8 + 5 * this.helpers.length;
     const doors = this.level.enemy.doors;
@@ -460,7 +579,8 @@ export class Sim {
   private mortarTarget() {
     let best = -1;
     let bestScore = 3;
-    const zMin = this.baseZ + 2.5;
+    // En survie, le mortier garde le goulot : il ne tire pas au fond de l'entonnoir.
+    const zMin = this.survival ? this.throatZ - 7 : this.baseZ + 2.5;
     const zMax = this.playerLineZ - 1.5;
     for (let r = 0; r < this.coarseRows; r++) {
       const zc = this.coarseMinZ + (r + 0.5) * COARSE;
@@ -631,6 +751,23 @@ export class Sim {
         this.fireAcc = Math.min(this.fireAcc, 0.999);
       }
 
+      if (this.survival) {
+        this.refillHorde();
+        const sv = this.survival;
+        this.surge = Math.max(0, this.surge - dt);
+        this.surgeTimer += dt;
+        if (this.surgeTimer >= sv.surgeEvery) {
+          this.surgeTimer = 0;
+          this.surge = 5;
+          this.wave++;
+          this.emit("surge", 0, this.throatZ, this.wave);
+        }
+        // Le goulot ne laisse passer qu'un débit donné : la pression monte avec le temps.
+        // Trois secondes de répit au départ, le temps de prendre le canon en main.
+        const flow = this.time < 3 ? 0 : this.hordeFlow;
+        this.tokens = Math.min(Math.max(4, flow * 0.5), this.tokens + flow * dt);
+      }
+
       // --- Renforts rouges.
       const boost = 1 + RIPOSTE_PER_HELPER * this.helpers.length;
       const rate = Math.min(lvl.enemy.maxRate, lvl.enemy.rate + lvl.enemy.ramp * this.time) * boost;
@@ -653,9 +790,21 @@ export class Sim {
         this.bruteTimer -= dt;
         if (this.bruteTimer <= 0) {
           this.bruteTimer = lvl.enemy.bruteEvery;
-          const door = doors[this.doorCursor++ % doors.length];
-          if (this.red.add(door, this.baseZ + 1, KIND_GIANT, 14, 1.35, 0, 1) >= 0)
-            this.emit("brute", door, this.baseZ + 1);
+          if (this.survival) {
+            // Les colosses sortent du rang, juste derrière le goulot.
+            if (this.hordeLeft > 0) {
+              const bz = this.throatZ - 2 - rng() * 3;
+              const bx = (rng() * 2 - 1) * (this.halfWAt(bz) - 0.8);
+              if (this.red.add(bx, bz, KIND_GIANT, 14, 0.8, 0, 1) >= 0) {
+                this.hordeTotal++;
+                this.emit("brute", bx, bz);
+              }
+            }
+          } else {
+            const door = doors[this.doorCursor++ % doors.length];
+            if (this.red.add(door, this.baseZ + 1, KIND_GIANT, 14, 1.35, 0, 1) >= 0)
+              this.emit("brute", door, this.baseZ + 1);
+          }
         }
       }
     }
@@ -700,11 +849,12 @@ export class Sim {
     this.red.compact();
 
     if (this.state === "playing") {
-      if (this.baseHp <= 0) {
+      const won = this.survival ? this.hordeLeft === 0 && this.red.n === 0 : this.baseHp <= 0;
+      if (won) {
         this.baseHp = 0;
         this.state = "won";
         this.endTime = this.time;
-        this.emit("won", 0, this.baseZ);
+        this.emit("won", 0, this.survival ? this.throatZ : this.baseZ);
       } else if (this.playerHp <= 0) {
         this.playerHp = 0;
         this.state = "lost";
@@ -928,7 +1078,7 @@ export class Sim {
         z = h.def.z + (dz / d) * min;
       }
     }
-    const lim = this.halfW - r;
+    const lim = this.halfWAt(z) - r;
     if (x < -lim) x = -lim;
     if (x > lim) x = lim;
     p.x[i] = x;
@@ -959,7 +1109,7 @@ export class Sim {
         if (z0 < b.tz[i]) b.tx[i] = NaN;
         else vx = Math.max(-3, Math.min(3, (b.tx[i] - b.x[i]) * 2.2));
       }
-      if (z0 < nearBase && vx === 0) {
+      if (!this.survival && z0 < nearBase && vx === 0) {
         const lim = this.baseHalfW - 0.6;
         const tx = Math.max(-lim, Math.min(lim, b.x[i]));
         vx = (tx - b.x[i]) * 1.6;
@@ -978,6 +1128,11 @@ export class Sim {
       if (!b.alive[i]) continue;
 
       if (b.z[i] <= this.baseZ + (b.kind[i] ? R_GIANT : R_NORMAL)) {
+        if (this.survival) {
+          // Au fond de l'entonnoir il n'y a rien à prendre : le soldat quitte le terrain.
+          b.alive[i] = 0;
+          continue;
+        }
         if (Math.abs(b.x[i]) <= this.baseHalfW && this.state === "playing") {
           const dmg = b.kind[i] ? 30 : 1;
           this.baseHp -= dmg;
@@ -1034,12 +1189,21 @@ export class Sim {
   private moveRed(dt: number) {
     const r = this.red;
     const nearPlayer = this.playerLineZ - 10;
+    const sv = this.survival;
     for (let i = 0; i < r.n; i++) {
       if (!r.alive[i]) continue;
       r.age[i] += dt;
-      const speed = this.state === "lost" ? r.speed[i] * 0.3 : r.speed[i];
-      const vz = speed;
       const z0 = r.z[i];
+      let pace = r.speed[i];
+      if (sv) {
+        if (z0 < this.throatZ) {
+          // Dans l'entonnoir, la horde piétine — et ralentit encore là où elle est trop serrée.
+          const d = this.densRed[this.coarseCell(r.x[i], z0 + COARSE)];
+          pace *= sv.speed[0] * (d > 26 ? 0.25 : d > 20 ? 0.6 : 1);
+        } else pace *= sv.speed[1];
+      }
+      const speed = this.state === "lost" ? pace * 0.3 : pace;
+      const vz = speed;
       let vx = this.seek(r.x[i], z0, 1, this.densBlue, this.sumXBlue, 1.0, 1.6);
       if (z0 > nearPlayer && vx === 0)
         vx = Math.max(-speed, Math.min(speed, (this.cannonX - r.x[i]) * 0.5));
@@ -1048,6 +1212,11 @@ export class Sim {
       r.z[i] += vz * dt + r.sz[i];
       if (r.z[i] < z0 - 0.02) r.z[i] = z0 - 0.02;
       if (r.z[i] < this.baseZ + 0.4) r.z[i] = this.baseZ + 0.4;
+      if (sv && z0 < this.throatZ && r.z[i] >= this.throatZ) {
+        // Passage du goulot : un jeton par pillard, sinon il attend son tour.
+        if (this.tokens >= 1) this.tokens -= 1;
+        else r.z[i] = this.throatZ - 0.01;
+      }
       this.collide(r, i, 1);
       const len = Math.hypot(vx, vz) || 1;
       r.fx[i] += (vx / len - r.fx[i]) * Math.min(1, dt * 8);
