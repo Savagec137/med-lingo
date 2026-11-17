@@ -49,16 +49,19 @@ import {
   ROLE_SHIELD,
   Sim,
 } from "./sim";
+import { buildKnightGeometry, KNIGHT_POSE, knightTexture } from "./characters";
 import {
   buildGiantGeometry,
   buildRaiderVariant,
   buildSoldierGeometry,
+  DEFAULT_POSE,
   soldierDepthMaterial,
   soldierMaterial,
+  type Detail,
 } from "./soldiers";
 import { radialTexture } from "./textures";
 import { GameUi, type Progress } from "./ui";
-import { buildWorld, type World } from "./world";
+import { buildWorld, preloadRoads, type World } from "./world";
 
 const STORAGE_KEY = "maree-bleue:v2";
 const LEGACY_KEY = "maree-bleue:v1";
@@ -174,13 +177,21 @@ class CrowdView {
   private readonly counts: number[];
   private readonly shadowGeo: THREE.PlaneGeometry;
   private readonly mats: THREE.Material[];
+  private readonly texture: THREE.Texture | null;
 
   constructor(team: "blue" | "red", cap: number, shadowTex: THREE.Texture) {
     const rim = team === "blue" ? 0x8fc4ff : 0xffa070;
-    const walk = soldierMaterial(11, rim);
+    // Les bleus sont les chevaliers modélisés avec Higgsfield : leurs pivots
+    // d'animation diffèrent de ceux des soldats construits en code.
+    const knight = team === "blue";
+    const pose = knight ? KNIGHT_POSE : DEFAULT_POSE;
+    const walk = soldierMaterial(11, rim, { pose });
+    const tex = knight ? knightTexture() : null;
+    const walkNear = tex ? soldierMaterial(11, rim, { pose, map: tex }) : walk;
     const stomp = soldierMaterial(6.5, rim);
-    const walkDepth = soldierDepthMaterial(11);
+    const walkDepth = soldierDepthMaterial(11, pose);
     const stompDepth = soldierDepthMaterial(6.5);
+    this.texture = tex;
     this.shadowGeo = new THREE.PlaneGeometry(0.66, 0.66);
     this.shadowGeo.rotateX(-Math.PI / 2);
     this.shadowGeo.translate(0, 0.018, 0);
@@ -194,6 +205,7 @@ class CrowdView {
     const contact = blob(0.4);
     const full = blob(0.8);
     this.mats = [walk, stomp, walkDepth, stompDepth, contact, full];
+    if (walkNear !== walk) this.mats.push(walkNear);
     const layer = (
       geo: THREE.BufferGeometry,
       mat: THREE.Material,
@@ -216,11 +228,12 @@ class CrowdView {
       shadow.renderOrder = -1;
       return { mesh, shadow };
     };
-    const mid = buildSoldierGeometry(team, "mid");
+    const geo = (d: Detail) => (knight ? buildKnightGeometry(d) : buildSoldierGeometry(team, d));
+    const mid = geo("mid");
     this.layers = [
-      layer(buildSoldierGeometry(team, "high"), walk, 320, walkDepth),
+      layer(geo("high"), walkNear, 320, walkDepth),
       layer(mid, walk, cap, null),
-      layer(buildSoldierGeometry(team, "low"), walk, cap, null),
+      layer(geo("low"), walk, cap, null),
       layer(buildGiantGeometry(team), stomp, 64, stompDepth),
     ];
     if (team === "red") {
@@ -313,6 +326,7 @@ class CrowdView {
       l.mesh.dispose();
     }
     for (const m of this.mats) m.dispose();
+    this.texture?.dispose();
     this.shadowGeo.dispose();
   }
 }
@@ -354,6 +368,7 @@ export function createMareeBleue(
   let shake = 0;
 
   // --- Objets persistants
+  preloadRoads();
   const shadowTex = radialTexture("rgba(0,0,0,0.5)");
   const blueView = new CrowdView("blue", BLUE_CAP, shadowTex);
   const redView = new CrowdView("red", RED_CAP_SURVIVAL, shadowTex);

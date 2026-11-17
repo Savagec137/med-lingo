@@ -11,6 +11,7 @@ import {
   type Difficulty,
   type LevelDef,
 } from "./levels.ts";
+import { buildKnightGeometry, KNIGHT_HEIGHT, KNIGHT_POSE } from "./characters.ts";
 import { ROLE_BOMBER, ROLE_SHIELD, Sim } from "./sim.ts";
 import {
   buildGiantGeometry,
@@ -466,4 +467,32 @@ test("les modèles de soldats tiennent leur budget de triangles", () => {
     assert.ok(triangleCount(buildRaiderVariant(role, "low")) <= 200, `${role} low`);
     assert.ok(triangleCount(buildRaiderVariant(role, "mid")) <= 760, `${role} mid`);
   }
+});
+
+test("le chevalier modélisé avec Higgsfield tient son budget et s'anime membre par membre", () => {
+  const budget = { high: 2400, mid: 700, low: 200 } as const;
+  for (const detail of ["high", "mid", "low"] as const) {
+    const g = buildKnightGeometry(detail);
+    const tris = triangleCount(g);
+    assert.ok(tris <= budget[detail], `${detail} : ${tris} triangles`);
+    g.computeBoundingBox();
+    const box = g.boundingBox!;
+    // Debout sur le sol, à la taille des autres soldats.
+    assert.ok(Math.abs(box.min.y) < 0.02, `${detail} : pieds à ${box.min.y}`);
+    assert.ok(Math.abs(box.max.y - KNIGHT_HEIGHT) < 0.05, `${detail} : hauteur ${box.max.y}`);
+    // Jambes, bras et cape existent bien, et les jambes sont sous les hanches.
+    const part = g.getAttribute("aPart");
+    const pos = g.getAttribute("position");
+    const seen = new Set<number>();
+    for (let i = 0; i < part.count; i++) {
+      const id = part.getX(i);
+      seen.add(id);
+      if (id === 1 || id === 2) assert.ok(pos.getY(i) < KNIGHT_POSE.hip + 0.12);
+    }
+    for (const id of [0, 1, 2, 3, 4]) assert.ok(seen.has(id), `${detail} : membre ${id} absent`);
+  }
+  // Les niveaux lointains ont leurs couleurs dans les sommets ; le proche, sa texture.
+  assert.ok(buildKnightGeometry("high").getAttribute("uv"));
+  assert.ok(buildKnightGeometry("mid").getAttribute("color"));
+  assert.ok(buildKnightGeometry("low").getAttribute("color"));
 });

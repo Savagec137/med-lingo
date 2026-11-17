@@ -1359,10 +1359,30 @@ export function buildGiantGeometry(team: Team) {
 // Matériaux
 // ---------------------------------------------------------------------------
 
-const S = SOLDIER_SCALE.toFixed(2);
+/**
+ * Pivots de l'animation, en unités du jeu : hauteur des hanches (jambes), des
+ * épaules (bras), haut et longueur de la cape. Chaque modèle a les siens.
+ */
+export interface Pose {
+  hip: number;
+  shoulder: number;
+  capeTop: number;
+  capeLength: number;
+}
+
+/** Pivots des soldats construits en code. */
+export const DEFAULT_POSE: Pose = {
+  hip: 0.31 * SOLDIER_SCALE,
+  shoulder: 0.58 * SOLDIER_SCALE,
+  capeTop: 0.62 * SOLDIER_SCALE,
+  capeLength: 0.5 * SOLDIER_SCALE,
+};
+
+const f = (v: number) => v.toFixed(4);
+const poseKey = (p: Pose) => [p.hip, p.shoulder, p.capeTop, p.capeLength].map(f).join("/");
 
 /** Animation commune au rendu et aux ombres : course, bras en garde, cape et plumet au vent. */
-const VERT_COMMON = `
+const vertCommon = (pose: Pose) => `
   attribute float aPart;
   uniform float uTime;
   uniform float uStride;
@@ -1387,16 +1407,16 @@ const VERT_COMMON = `
   vec3 mbPose(vec3 p) {
     float sw = mbSwing();
     if (aPart > 0.5 && aPart < 4.5) {
-      float pivot = (aPart > 2.5 ? 0.58 : 0.31) * ${S};
+      float pivot = aPart > 2.5 ? ${f(pose.shoulder)} : ${f(pose.hip)};
       p.y -= pivot;
       p = mbRotX(mbAngle()) * p;
       p.y += pivot;
     } else if (aPart > 4.5 && aPart < 5.5) {
-      float w = clamp((0.62 * ${S} - p.y) / (0.5 * ${S}), 0.0, 1.0);
+      float w = clamp((${f(pose.capeTop)} - p.y) / ${f(pose.capeLength)}, 0.0, 1.0);
       p.z -= (0.09 + sin(uTime * uStride * 0.8 + mbPhase() + p.y * 7.0) * 0.06) * w * w;
       p.x += sin(uTime * uStride * 0.5 + mbPhase() * 1.3 + p.y * 5.0) * 0.03 * w;
     } else if (aPart > 5.5) {
-      float w = clamp(-p.z / (0.3 * ${S}), 0.0, 1.0);
+      float w = clamp(-p.z / ${f(0.3 * SOLDIER_SCALE)}, 0.0, 1.0);
       p.x += sin(uTime * uStride * 0.5 + mbPhase()) * 0.05 * w;
       p.y -= abs(sw) * 0.03 * w;
     }
@@ -1410,10 +1430,24 @@ const VERT_COMMON = `
  * Matériau des soldats : couleurs et matières par sommet (acier brillant,
  * tissu mat, yeux luisants), membres animés, liseré lumineux d'équipe.
  */
-export function soldierMaterial(stride = 11, rim = 0x8fc4ff) {
-  const mat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1, metalness: 1 });
+export interface SoldierLook {
+  /** Pivots propres au modèle (par défaut, ceux des soldats construits en code). */
+  pose?: Pose;
+  /** Texture du modèle : remplace alors les couleurs par sommet. */
+  map?: THREE.Texture;
+}
+
+export function soldierMaterial(stride = 11, rim = 0x8fc4ff, look: SoldierLook = {}) {
+  const pose = look.pose ?? DEFAULT_POSE;
+  const mat = new THREE.MeshStandardMaterial({
+    vertexColors: !look.map,
+    map: look.map ?? null,
+    roughness: 1,
+    metalness: 1,
+  });
   const rimColor = new THREE.Color(rim);
-  mat.customProgramCacheKey = () => `soldier-${stride}-${rim}`;
+  mat.customProgramCacheKey = () =>
+    `soldier-${stride}-${rim}-${poseKey(pose)}-${look.map ? "tex" : "col"}`;
   mat.onBeforeCompile = (shader) => {
     shader.uniforms.uTime = sharedTime;
     shader.uniforms.uStride = { value: stride };
@@ -1424,7 +1458,7 @@ export function soldierMaterial(stride = 11, rim = 0x8fc4ff) {
         `#include <common>
         attribute vec3 aMat;
         varying vec3 vMat;
-        ${VERT_COMMON}`,
+        ${vertCommon(pose)}`,
       )
       .replace(
         "#include <beginnormal_vertex>",
@@ -1464,14 +1498,14 @@ export function soldierMaterial(stride = 11, rim = 0x8fc4ff) {
 }
 
 /** Matériau de profondeur assorti : l'ombre portée suit la même animation que le soldat. */
-export function soldierDepthMaterial(stride = 11) {
+export function soldierDepthMaterial(stride = 11, pose: Pose = DEFAULT_POSE) {
   const mat = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking });
-  mat.customProgramCacheKey = () => `soldier-depth-${stride}`;
+  mat.customProgramCacheKey = () => `soldier-depth-${stride}-${poseKey(pose)}`;
   mat.onBeforeCompile = (shader) => {
     shader.uniforms.uTime = sharedTime;
     shader.uniforms.uStride = { value: stride };
     shader.vertexShader = shader.vertexShader
-      .replace("#include <common>", `#include <common>\n${VERT_COMMON}`)
+      .replace("#include <common>", `#include <common>\n${vertCommon(pose)}`)
       .replace(
         "#include <begin_vertex>",
         `#include <begin_vertex>
@@ -1481,7 +1515,7 @@ export function soldierDepthMaterial(stride = 11) {
   return mat;
 }
 
-/** Nombre de triangles d'une géométrie non indexée — sert aux tests de budget. */
+/** Nombre de triangles d'une géométrie, indexée ou non — sert aux tests de budget. */
 export function triangleCount(g: THREE.BufferGeometry) {
-  return g.attributes.position.count / 3;
+  return (g.index ? g.index.count : g.attributes.position.count) / 3;
 }

@@ -5,6 +5,7 @@
 
 import * as THREE from "three";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
+import { ROAD_GLOW, ROAD_TEXTURES } from "./assets/roads";
 import type { LevelDef, ThemeId } from "./levels";
 import { buildFortress, type FortressModel, type FortressStyle } from "./models";
 import {
@@ -44,6 +45,48 @@ import {
   type GroundStyle,
   type PavingStyle,
 } from "./textures";
+
+/**
+ * Routes peintes générées avec Higgsfield : une image par thème, décodée une
+ * seule fois. Taille d'un motif au sol, en mètres (des pierres à l'échelle des soldats).
+ */
+const ROAD_TILE: Record<ThemeId, number> = {
+  jardin: 5.2,
+  canyon: 3.4,
+  fjord: 3.4,
+  forge: 3.6,
+  citadelle: 3.8,
+};
+const roadImages = new Map<string, HTMLImageElement>();
+function cachedImage(key: string, src: string) {
+  let img = roadImages.get(key);
+  if (!img) {
+    img = new Image();
+    img.decoding = "async";
+    img.src = src;
+    roadImages.set(key, img);
+  }
+  return img;
+}
+const roadImage = (id: ThemeId) => cachedImage(id, ROAD_TEXTURES[id]);
+const glowImage = (id: ThemeId) => {
+  const src = ROAD_GLOW[id];
+  return src ? cachedImage(id + ":glow", src) : null;
+};
+
+/** Décode d'avance les routes peintes, pour qu'elles soient prêtes au premier niveau. */
+export function preloadRoads() {
+  for (const id of Object.keys(ROAD_TEXTURES) as ThemeId[]) {
+    roadImage(id);
+    glowImage(id);
+  }
+}
+
+/** Quand une image est décodée (tout de suite si elle l'est déjà). */
+function whenLoaded(img: HTMLImageElement, fn: () => void) {
+  if (img.complete && img.naturalWidth > 0) fn();
+  else img.addEventListener("load", fn, { once: true });
+}
 
 export interface ThemeDef {
   paving: PavingStyle;
@@ -226,6 +269,55 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
   path.position.set(0, 0, pathMid);
   path.receiveShadow = true;
   group.add(path);
+  // La route peinte remplace la texture dessinée en code dès que son image est décodée.
+  let disposed = false;
+  const tile = ROAD_TILE[level.theme];
+  const roadTex = (img: HTMLImageElement, srgb: boolean) => {
+    const tex = track(new THREE.Texture(img));
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    if (srgb) tex.colorSpace = THREE.SRGBColorSpace;
+    tex.anisotropy = 8;
+    tex.repeat.set(W / tile, pathLen / tile);
+    tex.needsUpdate = true;
+    return tex;
+  };
+  const glow = glowImage(level.theme);
+  whenLoaded(roadImage(level.theme), () => {
+    if (disposed) return;
+    pathMat.map = roadTex(roadImage(level.theme), true);
+    // Sans masque, la texture dessinée en code garde son rôle de lueur.
+    if (pathMat.emissiveMap && !glow) pathMat.emissiveMap = pathMat.map;
+    pathMat.needsUpdate = true;
+  });
+  if (glow) {
+    whenLoaded(glow, () => {
+      if (disposed) return;
+      // Seules les fissures de lave brillent, le basalte reste éteint.
+      pathMat.emissiveMap = roadTex(glow, false);
+      pathMat.emissive.setHex(0xff6a1a);
+      pathMat.emissiveIntensity = 1.7;
+      pathMat.needsUpdate = true;
+    });
+  }
+  // Liseré d'ombre au pied des bordures : la route paraît encaissée, construite.
+  const edgeTex = track(edgeShadeTexture());
+  const edgeMat = track(
+    new THREE.MeshBasicMaterial({
+      map: edgeTex,
+      transparent: true,
+      depthWrite: false,
+      polygonOffset: true,
+      polygonOffsetFactor: -2,
+    }),
+  );
+  for (const side of [-1, 1]) {
+    const strip = new THREE.Mesh(track(new THREE.PlaneGeometry(1.1, pathLen)), edgeMat);
+    strip.rotation.x = -Math.PI / 2;
+    if (side > 0) strip.rotation.z = Math.PI;
+    strip.position.set(side * (hw - 0.55), 0.004, pathMid);
+    strip.renderOrder = -2;
+    group.add(strip);
+  }
   // Socle du chemin (épaisseur visible)
   const plinth = new THREE.Mesh(
     track(new THREE.BoxGeometry(W + 0.5, 0.35, pathLen)),
@@ -677,6 +769,9 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
     }
   }
 
+  // --- Habillage des bords de route : ce qu'on voit dans les marges de l'écran
+  dressEdges(level.theme, group, track, updaters, rng, hw, zStart, zEnd, L, W);
+
   // --- Obstacles du niveau, habillés selon le thème
   for (const o of level.obstacles) {
     if (o.kind === "box") {
@@ -729,6 +824,7 @@ export function buildWorld(level: LevelDef, baseZ: number, baseHalfW: number): W
       for (const u of updaters) u(t, dt);
     },
     dispose() {
+      disposed = true;
       for (const d of disposables) d.dispose();
       sun.shadow.map?.dispose();
     },
@@ -1288,3 +1384,243 @@ function buildFireflies(group: THREE.Group, track: Track, w: number, l: number) 
 }
 
 export { merge };
+
+/** Dégradé d'ombre, opaque côté bordure (à gauche de la texture). */
+function edgeShadeTexture() {
+  const c = document.createElement("canvas");
+  c.width = 64;
+  c.height = 4;
+  const g = c.getContext("2d") as CanvasRenderingContext2D;
+  const grad = g.createLinearGradient(0, 0, 64, 0);
+  grad.addColorStop(0, "rgba(10,8,6,0.42)");
+  grad.addColorStop(0.35, "rgba(10,8,6,0.16)");
+  grad.addColorStop(1, "rgba(10,8,6,0)");
+  g.fillStyle = grad;
+  g.fillRect(0, 0, 64, 4);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+/**
+ * Accessoires plantés le long des bordures, assez hauts pour se voir dans les
+ * marges de l'écran : lampadaires du jardin, torches du canyon, lanternes de
+ * glace, braseros de la forge, étendards de la citadelle ; et de quoi animer l'air.
+ */
+function dressEdges(
+  theme: ThemeId,
+  group: THREE.Group,
+  track: Track,
+  updaters: ((t: number, dt: number) => void)[],
+  rng: () => number,
+  hw: number,
+  zStart: number,
+  zEnd: number,
+  L: number,
+  W: number,
+) {
+  const along = (step: number, offset = 0) => {
+    const out: number[] = [];
+    for (let z = zStart - 1.5 - offset; z > zEnd + 1; z -= step) out.push(z);
+    return out;
+  };
+  const instancedAt = (
+    geo: THREE.BufferGeometry,
+    mat: THREE.Material,
+    spots: [number, number, number, number][],
+    cast = true,
+  ) => {
+    track(geo);
+    const mesh = new THREE.InstancedMesh(geo, mat, Math.max(1, spots.length));
+    const m = new THREE.Matrix4();
+    const q = new THREE.Quaternion();
+    spots.forEach(([x, y, z, k], i) => {
+      q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), rng() * Math.PI * 2);
+      m.compose(new THREE.Vector3(x, y, z), q, new THREE.Vector3(k, k, k));
+      mesh.setMatrixAt(i, m);
+    });
+    mesh.count = spots.length;
+    mesh.castShadow = cast;
+    mesh.receiveShadow = true;
+    group.add(mesh);
+    return mesh;
+  };
+  const flames = (spots: [number, number, number, number][], color: number) => {
+    const mat = track(flameMaterial(color));
+    const geo = track(new THREE.ConeGeometry(0.16, 0.55, 8, 3, true).translate(0, 0.27, 0));
+    for (const [x, y, z, k] of spots) {
+      const f = new THREE.Mesh(geo, mat);
+      f.position.set(x, y, z);
+      f.scale.setScalar(k);
+      group.add(f);
+    }
+  };
+  const flicker = (spots: [number, number, number][], color: number, power: number, max = 4) => {
+    spots.slice(0, max).forEach(([x, y, z], i) => {
+      const pl = new THREE.PointLight(color, power, 9, 1.6);
+      pl.position.set(x, y, z);
+      group.add(pl);
+      updaters.push((t) => {
+        pl.intensity =
+          power * (0.82 + Math.sin(t * 11 + i * 1.7) * 0.1 + Math.sin(t * 6.1 + i) * 0.08);
+      });
+    });
+  };
+  const sides = [-1, 1];
+  switch (theme) {
+    case "jardin": {
+      // Lampadaires sur les piliers de la balustrade, un pilier sur deux.
+      const spots: [number, number, number, number][] = [];
+      for (const side of sides)
+        for (let z = zStart; z > zEnd; z -= 6) spots.push([side * (hw + 0.3), 0.95, z, 0.72]);
+      instancedAt(lampGeometry(), vertexColorMaterial(0.4, false, 0.6), spots);
+      instancedAt(
+        lanternGlowGeometry(),
+        track(
+          new THREE.MeshStandardMaterial({
+            color: 0xfff1c2,
+            emissive: 0xffd77a,
+            emissiveIntensity: 1.6,
+          }),
+        ),
+        spots,
+        false,
+      );
+      // Pétales qui volent au-dessus du jardin.
+      updaters.push(buildPrecipitation(group, track, W + 16, L + 24, 260, 0xffbfd8, -0.45, 0.1));
+      break;
+    }
+    case "canyon": {
+      // Torches plantées sur le muret de grès.
+      const spots: [number, number, number, number][] = [];
+      for (const side of sides)
+        for (const z of along(7, side > 0 ? 3.5 : 0)) spots.push([side * (hw + 0.55), 0.52, z, 1]);
+      instancedAt(torchGeometry(), vertexColorMaterial(0.8), spots);
+      flames(
+        spots.map(([x, y, z]) => [x, y + 1.61, z, 1.1] as [number, number, number, number]),
+        0xffa040,
+      );
+      // Poussière de sable portée par le vent.
+      updaters.push(buildPrecipitation(group, track, W + 12, L + 20, 320, 0xf4d29c, 0.18, 0.06));
+      break;
+    }
+    case "fjord": {
+      // Lanternes de glace : cristaux lumineux posés sur les blocs de glace.
+      const mat = track(
+        new THREE.MeshStandardMaterial({
+          vertexColors: true,
+          roughness: 0.1,
+          metalness: 0.1,
+          emissive: 0x3a9be0,
+          emissiveIntensity: 0.9,
+          flatShading: true,
+        }),
+      );
+      const spots: [number, number, number, number][] = [];
+      for (const side of sides)
+        for (const z of along(6, side > 0 ? 3 : 0)) spots.push([side * (hw + 0.55), 0.5, z, 0.75]);
+      instancedAt(crystalGeometry(9), mat, spots);
+      // Halo bleuté au pied de chaque lanterne.
+      const haloMat = track(
+        new THREE.MeshBasicMaterial({
+          color: 0x6fc4ff,
+          transparent: true,
+          opacity: 0.22,
+          depthWrite: false,
+          blending: THREE.AdditiveBlending,
+        }),
+      );
+      const haloGeo = track(new THREE.CircleGeometry(1.1, 20));
+      for (const [x, , z] of spots) {
+        const h = new THREE.Mesh(haloGeo, haloMat);
+        h.rotation.x = -Math.PI / 2;
+        h.position.set(x - Math.sign(x) * 0.7, 0.012, z);
+        group.add(h);
+      }
+      break;
+    }
+    case "forge": {
+      // Braseros de fer le long de la route.
+      const bowl = merge([
+        colorize(
+          new THREE.CylinderGeometry(0.09, 0.14, 0.9, 6).translate(0, 0.45, 0),
+          0x2a2224,
+          0.05,
+        ),
+        colorize(
+          new THREE.CylinderGeometry(0.36, 0.18, 0.3, 10).translate(0, 1.05, 0),
+          0x3a2c28,
+          0.08,
+        ),
+        colorize(
+          new THREE.TorusGeometry(0.36, 0.05, 5, 10).rotateX(Math.PI / 2).translate(0, 1.2, 0),
+          0x5a4038,
+          0.05,
+        ),
+        colorize(
+          new THREE.SphereGeometry(0.28, 8, 4, 0, Math.PI * 2, 0, Math.PI / 2).translate(
+            0,
+            1.14,
+            0,
+          ),
+          0xff7a2a,
+          0.15,
+        ),
+      ]);
+      const spots: [number, number, number, number][] = [];
+      for (const side of sides)
+        for (const z of along(6.5, side > 0 ? 3.2 : 0)) spots.push([side * (hw + 0.62), 0, z, 1]);
+      instancedAt(bowl, vertexColorMaterial(0.7, false, 0.3), spots);
+      flames(
+        spots.map(([x, , z]) => [x, 1.16, z, 1.7] as [number, number, number, number]),
+        0xff7a2a,
+      );
+      flicker(
+        spots
+          .filter((_, i) => i % 3 === 0)
+          .map(([x, , z]) => [x * 0.92, 1.8, z] as [number, number, number]),
+        0xff7a3a,
+        7,
+      );
+      break;
+    }
+    case "citadelle": {
+      // Étendards bleu nuit entre les torches, côté route.
+      const banner = track(bannerTexture("#3a2f8f", 29));
+      const bannerMat = track(
+        new THREE.MeshStandardMaterial({
+          map: banner,
+          transparent: true,
+          alphaTest: 0.5,
+          side: THREE.DoubleSide,
+          roughness: 0.8,
+        }),
+      );
+      const poleMat = track(
+        new THREE.MeshStandardMaterial({ color: 0x2a2430, roughness: 0.6, metalness: 0.4 }),
+      );
+      const poleGeo = track(new THREE.CylinderGeometry(0.05, 0.07, 3.4, 6));
+      const clothGeo = track(new THREE.PlaneGeometry(0.75, 1.5));
+      const cloths: THREE.Mesh[] = [];
+      for (const side of sides) {
+        for (const z of along(15, side > 0 ? 7.5 : 3.75)) {
+          const pole = new THREE.Mesh(poleGeo, poleMat);
+          pole.position.set(side * (hw + 0.55), 1.7 + 0.7, z);
+          pole.castShadow = true;
+          group.add(pole);
+          const cloth = new THREE.Mesh(clothGeo, bannerMat);
+          cloth.position.set(side * (hw + 0.55) - side * 0.42, 2.9, z);
+          cloth.castShadow = true;
+          group.add(cloth);
+          cloths.push(cloth);
+        }
+      }
+      updaters.push((t) => {
+        cloths.forEach((c, i) => {
+          c.rotation.y = Math.sin(t * 1.3 + i) * 0.12;
+        });
+      });
+      break;
+    }
+  }
+}
