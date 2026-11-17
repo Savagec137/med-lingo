@@ -467,3 +467,140 @@ export function buildGeyser(r: number) {
   group.add(core);
   return { group, poolMat, column, core };
 }
+
+// ---------------------------------------------------------------------------
+// Catapulte ennemie : rocher en vol et marque au sol
+// ---------------------------------------------------------------------------
+
+export interface BoulderModel {
+  /** Le rocher lui-même. */
+  rock: THREE.Mesh;
+  /**
+   * Marque au sol : anneau lumineux, disque qui se remplit jusqu'à l'impact,
+   * ombre du rocher qui grossit, et panneau « ! » au-dessus de la cible.
+   */
+  mark: THREE.Group;
+  fill: THREE.Mesh;
+  shadow: THREE.Mesh;
+  warn: THREE.Sprite;
+  ringMat: THREE.MeshBasicMaterial;
+  fillMat: THREE.MeshBasicMaterial;
+  shadowMat: THREE.MeshBasicMaterial;
+  warnMat: THREE.SpriteMaterial;
+  dispose(): void;
+}
+
+function warningTexture() {
+  const c = document.createElement("canvas");
+  c.width = c.height = 128;
+  const g = c.getContext("2d") as CanvasRenderingContext2D;
+  g.beginPath();
+  g.moveTo(64, 8);
+  g.lineTo(122, 112);
+  g.lineTo(6, 112);
+  g.closePath();
+  g.fillStyle = "#ff3b2a";
+  g.fill();
+  g.lineWidth = 8;
+  g.lineJoin = "round";
+  g.strokeStyle = "#ffffff";
+  g.stroke();
+  g.fillStyle = "#ffffff";
+  g.font = "900 72px system-ui, sans-serif";
+  g.textAlign = "center";
+  g.textBaseline = "middle";
+  g.fillText("!", 64, 76);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+export function buildBoulder(radius: number): BoulderModel {
+  const geo = new THREE.DodecahedronGeometry(0.62, 1);
+  // Bosses irrégulières : un rocher, pas une boule.
+  const pos = geo.attributes.position;
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i);
+    const y = pos.getY(i);
+    const z = pos.getZ(i);
+    const k = 1 + 0.16 * Math.sin(x * 7.1 + y * 3.3) * Math.cos(z * 5.7 + x * 2.1);
+    pos.setXYZ(i, x * k, y * k * 0.88, z * k);
+  }
+  geo.computeVertexNormals();
+  const rockMat = new THREE.MeshStandardMaterial({
+    color: 0x6b6258,
+    roughness: 0.95,
+    flatShading: true,
+    emissive: 0xff5a1a,
+    emissiveIntensity: 0.18,
+  });
+  const rock = new THREE.Mesh(geo, rockMat);
+  rock.castShadow = true;
+  rock.visible = false;
+
+  const mark = new THREE.Group();
+  // Anneau épais et additif : il doit se lire même à moitié caché par le canon.
+  const ringGeo = new THREE.RingGeometry(radius - 0.24, radius + 0.06, 48);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: 0xff3b2a,
+    transparent: true,
+    opacity: 0.9,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+  });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.rotation.x = -Math.PI / 2;
+  const fillGeo = new THREE.CircleGeometry(radius - 0.24, 40);
+  const fillMat = new THREE.MeshBasicMaterial({
+    color: 0xff3b2a,
+    transparent: true,
+    opacity: 0.35,
+    depthWrite: false,
+  });
+  const fill = new THREE.Mesh(fillGeo, fillMat);
+  fill.rotation.x = -Math.PI / 2;
+  fill.position.y = 0.005;
+  const shadowGeo = new THREE.CircleGeometry(0.9, 28);
+  const shadowMat = new THREE.MeshBasicMaterial({
+    color: 0x000000,
+    transparent: true,
+    opacity: 0,
+    depthWrite: false,
+  });
+  const shadow = new THREE.Mesh(shadowGeo, shadowMat);
+  shadow.rotation.x = -Math.PI / 2;
+  shadow.position.y = 0.01;
+  const warnTex = warningTexture();
+  const warnMat = new THREE.SpriteMaterial({ map: warnTex, depthTest: false, transparent: true });
+  const warn = new THREE.Sprite(warnMat);
+  warn.scale.set(0.9, 0.9, 1);
+  warn.position.y = 3.6;
+  warn.renderOrder = 8;
+  mark.add(ring, fill, shadow, warn);
+  mark.position.y = 0.04;
+  mark.renderOrder = 2;
+  mark.visible = false;
+  return {
+    rock,
+    mark,
+    fill,
+    shadow,
+    warn,
+    ringMat,
+    fillMat,
+    shadowMat,
+    warnMat,
+    dispose() {
+      geo.dispose();
+      rockMat.dispose();
+      ringGeo.dispose();
+      ringMat.dispose();
+      fillGeo.dispose();
+      fillMat.dispose();
+      shadowGeo.dispose();
+      shadowMat.dispose();
+      warnTex.dispose();
+      warnMat.dispose();
+    },
+  };
+}

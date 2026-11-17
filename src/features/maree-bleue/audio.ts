@@ -167,6 +167,32 @@ export class Sfx {
     this.hiss(0.5, 0.2, 350, 0.5);
   }
 
+  /** Rocher de catapulte : sifflement qui descend pendant le vol. */
+  whoosh() {
+    if (!this.gate("whoosh", 0.4)) return;
+    this.tone(900, 240, 1.6, "sine", 0.07);
+    this.hiss(1.4, 0.05, 1400, 1.2);
+  }
+
+  /** Le canon est sonné. */
+  stun() {
+    if (!this.gate("stun", 0.4)) return;
+    this.tone(70, 30, 0.6, "sine", 0.4);
+    this.hiss(0.6, 0.25, 260, 0.5);
+    this.tone(1400, 700, 0.5, "triangle", 0.06, 0.1);
+  }
+
+  /** Une défense alliée encaisse ou tombe. */
+  helperHit(down = false) {
+    if (!this.gate(down ? "helperDown" : "helperHit", down ? 0.3 : 0.12)) return;
+    if (down) {
+      this.tone(160, 40, 0.5, "sawtooth", 0.14);
+      this.hiss(0.5, 0.2, 500, 0.6);
+    } else {
+      this.tone(520, 260, 0.08, "square", 0.05);
+    }
+  }
+
   build() {
     if (!this.gate("build", 0.3)) return;
     this.tone(523, 784, 0.12, "triangle", 0.1);

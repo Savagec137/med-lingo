@@ -43,6 +43,12 @@ export interface EnemyDef {
   bruteEvery: number;
   /** Abscisses des portes de la forteresse. */
   doors: number[];
+  /** Part de porte-pavois parmi les renforts : il faut quatre soldats pour en venir à bout. */
+  shieldShare?: number;
+  /** Part d'artificiers : rapides, ils explosent au contact et fauchent un groupe entier. */
+  bomberShare?: number;
+  /** La catapulte ennemie vise le canon toutes les N secondes (absente si 0). */
+  boulderEvery?: number;
 }
 
 /**
@@ -93,15 +99,23 @@ export const LEVELS: LevelDef[] = [
     theme: "jardin",
     width: 11,
     length: 34,
-    baseHp: 900,
+    baseHp: 1100,
     playerHp: 12,
     fireRate: 8,
     chargeShots: 70,
-    enemy: { rate: 4, ramp: 0.12, maxRate: 14, horde: 120, bruteEvery: 0, doors: [0] },
+    enemy: {
+      rate: 5,
+      ramp: 0.16,
+      maxRate: 14,
+      horde: 140,
+      bruteEvery: 0,
+      doors: [0],
+      shieldShare: 0.05,
+    },
     gates: [
       { op: "mul", value: 2, x: -2.6, z: -9, w: 3.4 },
-      { op: "mul", value: 3, x: 2.6, z: -12, w: 3.4 },
-      { op: "mul", value: 5, x: 0, z: -19, w: 3.2 },
+      { op: "mul", value: 3, x: -2.6, z: -18, w: 3.4 },
+      { op: "mul", value: 3, x: 2.6, z: -13, w: 3.4 },
     ],
     obstacles: [
       { kind: "box", minX: -5.5, maxX: -3.6, minZ: -25, maxZ: -22.4, height: 1.3 },
@@ -116,11 +130,21 @@ export const LEVELS: LevelDef[] = [
     theme: "canyon",
     width: 11,
     length: 38,
-    baseHp: 3000,
+    baseHp: 3600,
     playerHp: 12,
     fireRate: 8,
     chargeShots: 70,
-    enemy: { rate: 7, ramp: 0.2, maxRate: 24, horde: 260, bruteEvery: 14, doors: [0] },
+    enemy: {
+      rate: 8,
+      ramp: 0.24,
+      maxRate: 24,
+      horde: 260,
+      bruteEvery: 14,
+      doors: [0],
+      shieldShare: 0.09,
+      bomberShare: 0.03,
+      boulderEvery: 15,
+    },
     gates: [
       { op: "mul", value: 3, x: -3, z: -8, w: 3.5 },
       { op: "mul", value: 4, x: 0, z: -14, w: 3.0, move: { amp: 3, speed: 0.7 } },
@@ -148,29 +172,39 @@ export const LEVELS: LevelDef[] = [
     theme: "fjord",
     width: 12,
     length: 40,
-    baseHp: 3200,
+    baseHp: 3800,
     playerHp: 12,
     fireRate: 8.5,
     chargeShots: 65,
-    enemy: { rate: 8, ramp: 0.22, maxRate: 26, horde: 340, bruteEvery: 10, doors: [-1.5, 1.5] },
+    enemy: {
+      rate: 8,
+      ramp: 0.22,
+      maxRate: 26,
+      horde: 340,
+      bruteEvery: 10,
+      doors: [-1.5, 1.5],
+      shieldShare: 0.11,
+      bomberShare: 0.05,
+      boulderEvery: 12,
+    },
     gates: [
-      { op: "mul", value: 2, x: -4, z: -15, w: 3.2 },
-      { op: "div", value: 2, x: 0, z: -15, w: 3.2 },
-      { op: "mul", value: 5, x: 4, z: -15, w: 3.2 },
-      { op: "mul", value: 4, x: 0, z: -27, w: 3.4, move: { amp: 3.5, speed: 0.8 } },
+      { op: "mul", value: 2, x: -4, z: -10, w: 3.2 },
+      { op: "div", value: 2, x: 0, z: -10, w: 3.2 },
+      { op: "mul", value: 5, x: 4, z: -10, w: 3.2 },
+      { op: "mul", value: 4, x: 0, z: -22, w: 3.4, move: { amp: 3.5, speed: 0.8 } },
       {
         op: "mul",
         value: 12,
         x: 0,
-        z: -33,
+        z: -29,
         w: 1.6,
         gold: true,
         move: { amp: 4.2, speed: 1.5, phase: 2 },
       },
     ],
     obstacles: [
-      { kind: "box", minX: -2.25, maxX: -1.75, minZ: -21, maxZ: -10.5, height: 1.4 },
-      { kind: "box", minX: 1.75, maxX: 2.25, minZ: -21, maxZ: -10.5, height: 1.4 },
+      { kind: "box", minX: -2.25, maxX: -1.75, minZ: -15.5, maxZ: -6, height: 1.4 },
+      { kind: "box", minX: 1.75, maxX: 2.25, minZ: -15.5, maxZ: -6, height: 1.4 },
     ],
     hazards: [],
   },
@@ -181,11 +215,21 @@ export const LEVELS: LevelDef[] = [
     theme: "forge",
     width: 12,
     length: 42,
-    baseHp: 4600,
+    baseHp: 3000,
     playerHp: 12,
     fireRate: 9,
     chargeShots: 60,
-    enemy: { rate: 8, ramp: 0.22, maxRate: 26, horde: 400, bruteEvery: 8, doors: [-2, 2] },
+    enemy: {
+      rate: 7,
+      ramp: 0.2,
+      maxRate: 26,
+      horde: 360,
+      bruteEvery: 8,
+      doors: [-2, 2],
+      shieldShare: 0.13,
+      bomberShare: 0.06,
+      boulderEvery: 10,
+    },
     gates: [
       { op: "mul", value: 3, x: -3.4, z: -8, w: 3.4 },
       { op: "mul", value: 2, x: 3.4, z: -8, w: 3.4 },
@@ -207,11 +251,21 @@ export const LEVELS: LevelDef[] = [
     theme: "citadelle",
     width: 13,
     length: 46,
-    baseHp: 5600,
+    baseHp: 4600,
     playerHp: 14,
     fireRate: 9.5,
     chargeShots: 55,
-    enemy: { rate: 12, ramp: 0.3, maxRate: 34, horde: 650, bruteEvery: 6, doors: [-3.2, 0, 3.2] },
+    enemy: {
+      rate: 9.5,
+      ramp: 0.24,
+      maxRate: 30,
+      horde: 500,
+      bruteEvery: 6,
+      doors: [-3.2, 0, 3.2],
+      shieldShare: 0.12,
+      bomberShare: 0.06,
+      boulderEvery: 8,
+    },
     gates: [
       { op: "mul", value: 3, x: 0, z: -8, w: 3.4, move: { amp: 2.6, speed: 1.0 } },
       { op: "div", value: 2, x: 0, z: -8, w: 3.0, move: { amp: 2.6, speed: 1.0, phase: Math.PI } },
@@ -247,7 +301,17 @@ export const SURVIVAL: LevelDef = {
   playerHp: 30,
   fireRate: 9.5,
   chargeShots: 60,
-  enemy: { rate: 0, ramp: 0, maxRate: 0, horde: 0, bruteEvery: 9, doors: [0] },
+  enemy: {
+    rate: 0,
+    ramp: 0,
+    maxRate: 0,
+    horde: 0,
+    bruteEvery: 9,
+    doors: [0],
+    shieldShare: 0.1,
+    bomberShare: 0.04,
+    boulderEvery: 11,
+  },
   gates: [
     { op: "mul", value: 3, x: -3.7, z: -6.5, w: 3.4 },
     { op: "mul", value: 2, x: 3.7, z: -6.5, w: 3.4 },
@@ -311,6 +375,10 @@ export interface DifficultyDef {
   playerHpDelta: number;
   /** Or de départ pour les défenses. */
   startGold: number;
+  /** Multiplie la part d'ennemis spéciaux (pavois, artificiers). */
+  special: number;
+  /** Multiplie l'intervalle entre deux tirs de catapulte. */
+  boulder: number;
 }
 
 export const DIFFICULTIES: DifficultyDef[] = [
@@ -324,6 +392,8 @@ export const DIFFICULTIES: DifficultyDef[] = [
     baseHp: 0.8,
     playerHpDelta: 4,
     startGold: 100,
+    special: 0.6,
+    boulder: 1.4,
   },
   {
     id: "normal",
@@ -335,17 +405,21 @@ export const DIFFICULTIES: DifficultyDef[] = [
     baseHp: 1,
     playerHpDelta: 0,
     startGold: 60,
+    special: 1,
+    boulder: 1,
   },
   {
     id: "difficile",
     label: "Difficile",
     hint: "Horde déchaînée, colosses en série.",
-    enemy: 1.4,
-    horde: 1.45,
+    enemy: 1.3,
+    horde: 1.35,
     brute: 0.65,
-    baseHp: 1.15,
+    baseHp: 1.1,
     playerHpDelta: -2,
     startGold: 30,
+    special: 1.2,
+    boulder: 0.8,
   },
 ];
 
@@ -377,6 +451,9 @@ export function withDifficulty(level: LevelDef, id: Difficulty): LevelDef {
       ramp: level.enemy.ramp * d.enemy,
       maxRate: level.enemy.maxRate * d.enemy,
       horde: Math.round(level.enemy.horde * d.horde),
+      shieldShare: (level.enemy.shieldShare ?? 0) * d.special,
+      bomberShare: (level.enemy.bomberShare ?? 0) * d.special,
+      boulderEvery: (level.enemy.boulderEvery ?? 0) * d.boulder,
       // Même au niveau 1, la horde envoie des colosses dès le mode difficile.
       bruteEvery:
         level.enemy.bruteEvery > 0 ? level.enemy.bruteEvery * d.brute : id === "difficile" ? 14 : 0,

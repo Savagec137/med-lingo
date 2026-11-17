@@ -11,44 +11,106 @@ import {
   type Difficulty,
   type LevelDef,
 } from "./levels.ts";
-import { Sim } from "./sim.ts";
-import { buildGiantGeometry, buildSoldierGeometry, triangleCount } from "./soldiers.ts";
+import { ROLE_BOMBER, ROLE_SHIELD, Sim } from "./sim.ts";
+import {
+  buildGiantGeometry,
+  buildRaiderVariant,
+  buildSoldierGeometry,
+  triangleCount,
+} from "./soldiers.ts";
+
+/** Esquive : si un rocher va tomber sur le canon, on s'écarte du cercle. */
+function dodge(sim: Sim, x: number) {
+  for (const bd of sim.boulders) {
+    if (bd.dur - bd.t < 1.5 && Math.abs(bd.x1 - x) < 2.1) {
+      const lim = sim.halfW - 0.9;
+      const away = x >= bd.x1 ? bd.x1 + 2.6 : bd.x1 - 2.6;
+      return Math.abs(away) <= lim ? away : x >= bd.x1 ? bd.x1 - 2.6 : bd.x1 + 2.6;
+    }
+  }
+  return x;
+}
 
 /**
- * Un joueur appliqué : il anticipe où seront les portes quand ses tirs les
- * atteindront, évite les marteaux et les geysers, et ne bouge pas son doigt
- * plus vite qu'un humain.
+ * Un joueur appliqué : il choisit le couloir le plus rentable parmi les portes
+ * encore atteignables (pas celles que la horde a déjà dépassées), anticipe les
+ * portes mobiles, évite marteaux et geysers, s'écarte des rochers, et ne bouge
+ * pas son doigt plus vite qu'un humain.
  */
 function expert() {
   let cur = 0;
+  let lane = 0;
+  let dwell = 0;
   return (sim: Sim) => {
     const lim = sim.halfW - 0.9;
-    let best = cur;
-    let bestScore = -1;
-    for (let x = -lim; x <= lim + 1e-6; x += 0.25) {
-      let m = 1;
-      for (const g of sim.gates) {
-        const tArr = (sim.cannonZ - 1 - g.def.z) / 5.7;
-        const mv = g.def.move;
-        const gx = mv
-          ? g.def.x + Math.sin((sim.time + tArr) * mv.speed + (mv.phase ?? 0)) * mv.amp
-          : g.def.x;
-        if (Math.abs(x - gx) > g.def.w / 2 - 0.3) continue;
-        m *= g.def.op === "mul" ? g.def.value : 1 / g.def.value;
+    let front = -999;
+    for (let i = 0; i < sim.red.n; i++) if (sim.red.z[i] > front) front = sim.red.z[i];
+    dwell -= 1 / 60;
+    if (dwell <= 0) {
+      let best = lane;
+      let bestScore = -1;
+      for (let x = -lim; x <= lim + 1e-6; x += 0.25) {
+        let m = 1;
+        for (const g of sim.gates) {
+          if (g.def.z < front - 1) continue;
+          const tArr = (sim.cannonZ - 2.1 - g.def.z) / 5.7;
+          const mv = g.def.move;
+          let gx = mv
+            ? g.def.x + Math.sin((sim.time + tArr) * mv.speed + (mv.phase ?? 0)) * mv.amp
+            : g.def.x;
+          const glim = sim.halfW - g.def.w / 2;
+          gx = Math.max(-glim, Math.min(glim, gx));
+          if (Math.abs(x - gx) > g.def.w / 2 - 0.3) continue;
+          m *= g.def.op === "mul" ? g.def.value : 1 / g.def.value;
+        }
+        for (const h of sim.hazards) {
+          if (h.def.kind === "spinner" && Math.abs(x - h.def.x) < h.def.r) m *= 0.6;
+          if (h.def.kind === "geyser" && Math.abs(x - h.def.x) < h.def.r) m *= 0.7;
+        }
+        const score = m * (1 - Math.min(0.5, Math.abs(x - lane) * 0.06));
+        if (score > bestScore) {
+          bestScore = score;
+          best = x;
+        }
       }
-      for (const h of sim.hazards) {
-        if (h.def.kind === "spinner" && Math.abs(x - h.def.x) < h.def.r) m *= 0.6;
-        if (h.def.kind === "geyser" && Math.abs(x - h.def.x) < h.def.r) m *= 0.7;
-      }
-      const score = m - Math.abs(x - cur) * 0.05;
-      if (score > bestScore) {
-        bestScore = score;
-        best = x;
-      }
+      if (best !== lane) dwell = 1.5;
+      lane = best;
     }
-    cur += Math.max(-0.25, Math.min(0.25, best - cur));
+    cur += Math.max(-0.3, Math.min(0.3, dodge(sim, lane) - cur));
     return cur;
   };
+}
+
+/** Un terrain nu, sans horde : pour observer une mécanique isolée. */
+function quiet(extra: Partial<LevelDef["enemy"]> = {}, base: LevelDef = LEVELS[0]): LevelDef {
+  return {
+    ...base,
+    gates: [],
+    obstacles: [],
+    hazards: [],
+    enemy: {
+      ...base.enemy,
+      rate: 0,
+      ramp: 0,
+      horde: 0,
+      bruteEvery: 0,
+      shieldShare: 0,
+      bomberShare: 0,
+      boulderEvery: 0,
+      ...extra,
+    },
+  };
+}
+
+function run(sim: Sim, seconds: number, targetX: number | ((sim: Sim) => number) = 0) {
+  const seen: string[] = [];
+  for (let i = 0; i < seconds * 60 && sim.state === "playing"; i++) {
+    const x = typeof targetX === "number" ? targetX : targetX(sim);
+    sim.step(1 / 60, { targetX: x, firing: false });
+    for (const e of sim.events) seen.push(e.type);
+    sim.drain();
+  }
+  return seen;
 }
 
 interface PlayOptions {
@@ -112,21 +174,20 @@ test("viser n'importe où ne suffit pas à partir du troisième niveau", () => {
   assert.equal(sim.state, "lost");
 });
 
-test("les défenses aident : sans elles, le dernier niveau en difficile ne tombe pas", () => {
-  const opts = { difficulty: "difficile" as const, limit: 150 };
-  const without = play(LEVELS[4], expert(), { ...opts, build: false });
-  const withHelpers = play(LEVELS[4], expert(), { ...opts, build: true });
-  assert.equal(withHelpers.sim.state, "won");
-  assert.ok(
-    without.sim.baseHp > without.sim.level.baseHp / 2,
-    `sans défenses : ${without.sim.baseHp}`,
-  );
+test("le jeu n'est plus une promenade : rester planté au centre perd partout en normal", () => {
+  for (const level of [...LEVELS, SURVIVAL]) {
+    const { sim } = play(level, () => 0);
+    assert.equal(sim.state, "lost", `niveau ${level.id} : ${sim.state}`);
+  }
 });
 
-test("en normal, les défenses font tomber la dernière forteresse bien plus vite", () => {
-  const without = play(LEVELS[4], expert(), { build: false });
-  const withHelpers = play(LEVELS[4], expert(), { build: true });
-  assert.ok(withHelpers.sim.time < without.sim.time * 0.7);
+test("les défenses comptent : sans elles, la dernière forteresse ne tombe pas", () => {
+  for (const difficulty of ["normal", "difficile"] as const) {
+    const without = play(LEVELS[4], expert(), { difficulty, build: false });
+    const withHelpers = play(LEVELS[4], expert(), { difficulty, build: true });
+    assert.equal(withHelpers.sim.state, "won", `${difficulty} avec défenses`);
+    assert.notEqual(without.sim.state, "won", `${difficulty} sans défenses`);
+  }
 });
 
 test("construire coûte de l'or, renchérit la suivante et fait riposter la forteresse", () => {
@@ -241,9 +302,10 @@ test("survie : sans viser les portes, la horde finit par submerger le rempart", 
 test("survie : la pression monte avec le temps, par vagues", () => {
   const sim = new Sim(withDifficulty(SURVIVAL, "normal"), 3);
   const start = sim.hordeFlow;
+  const aim = expert();
   let surges = 0;
   for (let i = 0; i < 60 * 60; i++) {
-    sim.step(1 / 60, { targetX: 0, firing: true });
+    sim.step(1 / 60, { targetX: aim(sim), firing: true });
     surges += sim.events.filter((e) => e.type === "surge").length;
     sim.drain();
     if (sim.state !== "playing") break;
@@ -268,6 +330,123 @@ test("survie : la difficulté change la taille de la horde", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Soldats qui chassent, pillards spéciaux, catapulte, défenses destructibles
+// ---------------------------------------------------------------------------
+
+test("les soldats ne marchent plus tout droit : ils obliquent vers l'ennemi en vue", () => {
+  // Sans ennemi, un soldat file droit vers la forteresse.
+  const calm = new Sim(quiet(), 1);
+  const a = calm.blue.add(0, -3, 0, 1, 5, 0, -1);
+  run(calm, 1.5);
+  assert.ok(Math.abs(calm.blue.x[a]) < 0.3, `sans ennemi : x = ${calm.blue.x[a].toFixed(2)}`);
+
+  // Avec un groupe de pillards sur le côté, il quitte sa ligne pour aller les chercher.
+  const sim = new Sim(quiet(), 1);
+  for (let i = 0; i < 6; i++)
+    sim.red.add(3 + (i % 3) * 0.3, -10 - Math.floor(i / 3) * 0.3, 0, 1, 0, 0, 1);
+  for (let i = 0; i < 8; i++)
+    sim.blue.add((i % 4) * 0.3 - 0.45, -3 - Math.floor(i / 4) * 0.3, 0, 1, 5, 0, -1);
+  const before = sim.red.n;
+  run(sim, 3);
+  assert.ok(sim.red.n < before, `pillards restants : ${sim.red.n} / ${before}`);
+  assert.ok(sim.kills > 0);
+});
+
+test("les pillards aussi chassent : ils vont attaquer une défense à leur portée", () => {
+  // Le canon allié ne pilonne pas : il ne peut compter que sur ses soldats pour se défendre.
+  const sim = new Sim(quiet(), 2, { startGold: 1000 });
+  assert.ok(sim.build("baliste"));
+  sim.red.clear();
+  const h = sim.helpers[0];
+  // Une bande qui passe à côté de la défense, pas dessus.
+  for (let i = 0; i < 30; i++)
+    sim.red.add(h.x + 1.6 + (i % 5) * 0.3, h.z - 3 - Math.floor(i / 5) * 0.3, 0, 1, 2, 0, 1);
+  const seen = run(sim, 6);
+  assert.ok(seen.includes("helperHit"), "la défense a encaissé des coups");
+  assert.ok(seen.includes("helperDown"), "elle finit détruite");
+  assert.equal(sim.helpers.length, 0);
+  // Le socle est de nouveau libre.
+  sim.gold = 1000;
+  assert.ok(sim.canBuild("mortier"));
+  assert.ok(sim.build("mortier"));
+  assert.equal(sim.helpers[0].pad, 0);
+});
+
+test("porte-pavois : il faut trois soldats pour en venir à bout", () => {
+  const duel = (blues: number) => {
+    const sim = new Sim(quiet(), 4);
+    const r = sim.red.add(0, -8, 0, 3, 0, 0, 1);
+    sim.red.role[r] = ROLE_SHIELD;
+    for (let i = 0; i < blues; i++) sim.blue.add(0, -6.5 + i * 0.5, 0, 1, 5, 0, -1);
+    run(sim, 3);
+    return sim.red.n;
+  };
+  assert.equal(duel(2), 1, "deux soldats ne suffisent pas");
+  assert.equal(duel(3), 0, "le troisième le perce");
+  // Les niveaux avancés en alignent une part réelle.
+  const lvl = quiet({ shieldShare: 1, horde: 40 }, LEVELS[3]);
+  const sim = new Sim(lvl, 4);
+  let shields = 0;
+  for (let i = 0; i < sim.red.n; i++) if (sim.red.role[i] === ROLE_SHIELD) shields++;
+  assert.ok(shields > 0 && shields === sim.red.n, `pavois : ${shields} / ${sim.red.n}`);
+});
+
+test("artificier : il explose au contact et fauche plusieurs soldats", () => {
+  const sim = new Sim(quiet(), 4);
+  const r = sim.red.add(0, -9, 0, 1, 0, 0, 1);
+  sim.red.role[r] = ROLE_BOMBER;
+  for (let i = 0; i < 12; i++)
+    sim.blue.add((i % 4) * 0.3 - 0.45, -6 + Math.floor(i / 4) * 0.3, 0, 1, 5, 0, -1);
+  const seen = run(sim, 3);
+  assert.ok(seen.includes("boom"), "l'artificier a explosé");
+  assert.equal(sim.red.n, 0);
+  const lost = 12 - sim.blue.n;
+  assert.ok(lost >= 3 && lost <= 9, `soldats fauchés : ${lost}`);
+});
+
+test("catapulte : rester sous le rocher sonne le canon, s'écarter l'évite", () => {
+  const level = quiet({ boulderEvery: 4 }, LEVELS[1]);
+  // Immobile : le rocher tombe sur le canon.
+  const still = new Sim(level, 6);
+  const seen = run(still, 12, 0);
+  assert.ok(seen.includes("boulderLaunch") && seen.includes("boulderHit"));
+  assert.ok(still.playerHp <= level.playerHp - 3, `rempart : ${still.playerHp}`);
+  // Sonné, le canon ne tire plus.
+  const stunned = new Sim(level, 6);
+  let shotsWhileStunned = 0;
+  for (let i = 0; i < 12 * 60; i++) {
+    const before = stunned.shots;
+    const wasStunned = stunned.stun > 0.05;
+    stunned.step(1 / 60, { targetX: 0, firing: true });
+    if (wasStunned && stunned.shots > before) shotsWhileStunned++;
+    stunned.drain();
+  }
+  assert.equal(shotsWhileStunned, 0);
+  // En s'écartant du cercle, on ne prend rien.
+  const moving = new Sim(level, 6);
+  let x = 0;
+  run(moving, 12, (s) => {
+    x += Math.max(-0.3, Math.min(0.3, dodge(s, 0) - x));
+    return x;
+  });
+  assert.equal(moving.playerHp, level.playerHp);
+});
+
+test("les niveaux avancés alignent pavois, artificiers et catapulte ; pas le premier", () => {
+  assert.ok(!LEVELS[0].enemy.bomberShare && !LEVELS[0].enemy.boulderEvery);
+  for (const level of LEVELS.slice(1)) {
+    assert.ok((level.enemy.shieldShare ?? 0) > 0, `niveau ${level.id} : pavois`);
+    assert.ok((level.enemy.bomberShare ?? 0) > 0, `niveau ${level.id} : artificiers`);
+    assert.ok((level.enemy.boulderEvery ?? 0) > 0, `niveau ${level.id} : catapulte`);
+  }
+  // En difficile, les spéciaux sont plus nombreux et la catapulte tire plus souvent.
+  const normal = withDifficulty(LEVELS[3], "normal").enemy;
+  const hard = withDifficulty(LEVELS[3], "difficile").enemy;
+  assert.ok((hard.shieldShare ?? 0) > (normal.shieldShare ?? 0));
+  assert.ok((hard.boulderEvery ?? 0) < (normal.boulderEvery ?? 0));
+});
+
+// ---------------------------------------------------------------------------
 // Budget des modèles
 // ---------------------------------------------------------------------------
 
@@ -282,5 +461,9 @@ test("les modèles de soldats tiennent leur budget de triangles", () => {
     assert.ok(high <= 2400, `${team} high : ${high}`);
     assert.ok(low < mid && mid < high);
     assert.ok(triangleCount(buildGiantGeometry(team)) <= 2800);
+  }
+  for (const role of ["shield", "bomber"] as const) {
+    assert.ok(triangleCount(buildRaiderVariant(role, "low")) <= 200, `${role} low`);
+    assert.ok(triangleCount(buildRaiderVariant(role, "mid")) <= 760, `${role} mid`);
   }
 });

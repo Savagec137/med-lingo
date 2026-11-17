@@ -20,6 +20,11 @@ import {
 export const KIND_NORMAL = 0;
 export const KIND_GIANT = 1;
 
+/** Rôles des pillards ordinaires : le pavois encaisse, l'artificier explose au contact. */
+export const ROLE_NONE = 0;
+export const ROLE_SHIELD = 1;
+export const ROLE_BOMBER = 2;
+
 export const R_NORMAL = 0.2;
 export const R_GIANT = 0.5;
 export const GIANT_SCALE = 2.4;
@@ -29,8 +34,18 @@ export const BLUE_CAP = 2200;
 export const RED_CAP = 1800;
 export const RED_CAP_SURVIVAL = 3000;
 const CELL = 0.7;
-/** Maille grossière pour l'attraction entre foules. */
+/** Maille grossière : densités, cibles du mortier, bouchons dans l'entonnoir. */
 const COARSE = 2;
+/** Maille de navigation, en mètres. */
+const NAV = 1;
+/** Jusqu'où un soldat repère l'ennemi et dévie de sa route pour aller le chercher. */
+const HUNT_BLUE = 8;
+const HUNT_RED = 3.4;
+/** En deçà, il court droit sur l'adversaire le plus proche. */
+const CHARGE = 1.8;
+export const BOMB_RADIUS = 1.15;
+export const BOULDER_RADIUS = 1.5;
+const HELPER_HP = 14;
 
 export type SimState = "playing" | "won" | "lost";
 
@@ -67,6 +82,8 @@ export class Pool {
   readonly tx: Float32Array;
   /** Profondeur au-delà de laquelle le couloir est oublié. */
   readonly tz: Float32Array;
+  /** Rôle d'un pillard ordinaire (ROLE_*). */
+  readonly role: Uint8Array;
 
   constructor(cap: number) {
     this.cap = cap;
@@ -86,6 +103,7 @@ export class Pool {
     this.mask = new Uint32Array(cap);
     this.tx = new Float32Array(cap);
     this.tz = new Float32Array(cap);
+    this.role = new Uint8Array(cap);
   }
 
   add(
@@ -115,6 +133,7 @@ export class Pool {
     this.mask[i] = mask;
     this.tx[i] = NaN;
     this.tz[i] = 0;
+    this.role[i] = ROLE_NONE;
     return i;
   }
 
@@ -133,6 +152,7 @@ export class Pool {
     this.mask[dst] = this.mask[src];
     this.tx[dst] = this.tx[src];
     this.tz[dst] = this.tz[src];
+    this.role[dst] = this.role[src];
   }
 
   compact() {
@@ -195,6 +215,112 @@ class Grid {
   }
 }
 
+/**
+ * Carte de navigation : pour chaque case, la distance à une cible (ennemi le
+ * plus proche, forteresse, rempart…) en contournant les obstacles. Un soldat
+ * suit la pente de ce champ : il « sait » où aller.
+ */
+class Nav {
+  readonly cols: number;
+  readonly rows: number;
+  readonly minX: number;
+  readonly minZ: number;
+  readonly blocked: Uint8Array;
+
+  constructor(minX: number, maxX: number, minZ: number, maxZ: number) {
+    this.minX = minX;
+    this.minZ = minZ;
+    this.cols = Math.ceil((maxX - minX) / NAV);
+    this.rows = Math.ceil((maxZ - minZ) / NAV);
+    this.blocked = new Uint8Array(this.cols * this.rows);
+  }
+
+  field() {
+    return new Float32Array(this.cols * this.rows);
+  }
+
+  cell(x: number, z: number) {
+    let c = Math.floor((x - this.minX) / NAV);
+    let r = Math.floor((z - this.minZ) / NAV);
+    if (c < 0) c = 0;
+    else if (c >= this.cols) c = this.cols - 1;
+    if (r < 0) r = 0;
+    else if (r >= this.rows) r = this.rows - 1;
+    return c + r * this.cols;
+  }
+
+  centerX(c: number) {
+    return this.minX + (c + 0.5) * NAV;
+  }
+
+  centerZ(r: number) {
+    return this.minZ + (r + 0.5) * NAV;
+  }
+
+  /**
+   * Propage les distances depuis les cases à 0 en contournant les obstacles.
+   * Balayages croisés de l'équation eikonale : la distance obtenue est quasi
+   * euclidienne, donc sa pente pointe droit vers la cible (pas en diagonale).
+   */
+  solve(f: Float32Array, sweeps: number) {
+    const { cols, rows, blocked } = this;
+    const BIG = 1e9;
+    for (let s = 0; s < sweeps * 4; s++) {
+      const ascC = (s & 1) === 0;
+      const ascR = (s & 2) === 0;
+      for (let rr = 0; rr < rows; rr++) {
+        const r = ascR ? rr : rows - 1 - rr;
+        for (let cc = 0; cc < cols; cc++) {
+          const c = ascC ? cc : cols - 1 - cc;
+          const i = c + r * cols;
+          if (blocked[i]) continue;
+          const l = c > 0 && !blocked[i - 1] ? f[i - 1] : BIG;
+          const rt = c < cols - 1 && !blocked[i + 1] ? f[i + 1] : BIG;
+          const u = r > 0 && !blocked[i - cols] ? f[i - cols] : BIG;
+          const d = r < rows - 1 && !blocked[i + cols] ? f[i + cols] : BIG;
+          let a = l < rt ? l : rt;
+          let b = u < d ? u : d;
+          if (a > b) {
+            const t = a;
+            a = b;
+            b = t;
+          }
+          if (a >= BIG) continue;
+          let v = a + 1;
+          if (v > b) v = (a + b + Math.sqrt(2 - (b - a) * (b - a))) / 2;
+          if (v < f[i]) f[i] = v;
+        }
+      }
+    }
+  }
+
+  /** Vrai si le point tombe dans une case infranchissable. */
+  isBlocked(x: number, z: number) {
+    return this.blocked[this.cell(x, z)] === 1;
+  }
+
+  /** Valeur interpolée du champ en un point. */
+  sample(f: Float32Array, x: number, z: number) {
+    const fx = (x - this.minX) / NAV - 0.5;
+    const fz = (z - this.minZ) / NAV - 0.5;
+    let c = Math.floor(fx);
+    let r = Math.floor(fz);
+    if (c < 0) c = 0;
+    else if (c > this.cols - 2) c = this.cols - 2;
+    if (r < 0) r = 0;
+    else if (r > this.rows - 2) r = this.rows - 2;
+    let tx = fx - c;
+    let tz = fz - r;
+    tx = tx < 0 ? 0 : tx > 1 ? 1 : tx;
+    tz = tz < 0 ? 0 : tz > 1 ? 1 : tz;
+    const i = c + r * this.cols;
+    return (
+      (f[i] * (1 - tx) + f[i + 1] * tx) * (1 - tz) +
+      (f[i + this.cols] * (1 - tx) + f[i + this.cols + 1] * tx) * tz
+    );
+  }
+}
+
 export interface GateRuntime {
   def: GateDef;
   x: number;
@@ -229,7 +355,12 @@ export interface SimEvent {
     | "shellHit"
     | "balisteFire"
     | "built"
-    | "surge";
+    | "surge"
+    | "boom"
+    | "helperHit"
+    | "helperDown"
+    | "boulderLaunch"
+    | "boulderHit";
   x: number;
   z: number;
   value: number;
@@ -245,6 +376,23 @@ export interface HelperRuntime {
   aimX: number;
   aimZ: number;
   recoil: number;
+  /** Socle occupé. */
+  pad: number;
+  /** Les pillards s'en prennent aux défenses : à zéro, elle est détruite. */
+  hp: number;
+  maxHp: number;
+  /** Impulsion visuelle quand elle encaisse un coup. */
+  flash: number;
+}
+
+/** Rocher de la catapulte ennemie : il vise l'endroit où se trouvait le canon au départ du tir. */
+export interface Boulder {
+  x0: number;
+  z0: number;
+  x1: number;
+  z1: number;
+  t: number;
+  dur: number;
 }
 
 /** Obus de mortier en vol. */
@@ -297,6 +445,15 @@ export class Sim {
   wave = 0;
   private tokens = 0;
   private surgeTimer = 0;
+  private boulderTimer = 0;
+  private navTick = 0;
+  private readonly nav: Nav;
+  /** Champs fixes : chemin vers la forteresse (bleus) et vers le rempart (rouges). */
+  private readonly goalBlue: Float32Array;
+  private readonly goalRed: Float32Array;
+  /** Champs recalculés en continu : distance au plus proche ennemi. */
+  private readonly huntBlue: Float32Array;
+  private readonly huntRed: Float32Array;
 
   state: SimState = "playing";
   time = 0;
@@ -315,6 +472,9 @@ export class Sim {
   gold: number;
   readonly helpers: HelperRuntime[] = [];
   readonly shells: Shell[] = [];
+  readonly boulders: Boulder[] = [];
+  /** Canon sonné par un rocher : il ne tire plus pendant ce délai. */
+  stun = 0;
   /** Socles où se construisent les défenses, dans l'ordre de remplissage. */
   readonly pads: { x: number; z: number }[];
 
@@ -415,9 +575,112 @@ export class Sim {
     this.sumXBlue = new Float32Array(cells);
     this.densRed = new Float32Array(cells);
     this.sumXRed = new Float32Array(cells);
+    this.nav = new Nav(minX, maxX, minZ, maxZ);
+    this.goalBlue = this.nav.field();
+    this.goalRed = this.nav.field();
+    this.huntBlue = this.nav.field();
+    this.huntRed = this.nav.field();
+    this.buildNav();
     if (sv) this.massHorde(sv);
     else this.placeHorde(level.enemy.horde);
     this.bruteTimer = level.enemy.bruteEvery > 0 ? level.enemy.bruteEvery * 0.6 : 0;
+    this.boulderTimer = (level.enemy.boulderEvery ?? 0) * 0.8;
+  }
+
+  /** Marque les cases infranchissables et calcule les deux chemins fixes. */
+  private buildNav() {
+    const nav = this.nav;
+    const FAR = 1e4;
+    for (let r = 0; r < nav.rows; r++) {
+      const z = nav.centerZ(r);
+      for (let c = 0; c < nav.cols; c++) {
+        const x = nav.centerX(c);
+        let blocked = Math.abs(x) > this.halfWAt(z) + 0.4 || z < this.farZ - 0.5;
+        for (const o of this.obstacles) {
+          if (blocked) break;
+          if (o.kind === "box") {
+            blocked =
+              x > o.minX - 0.15 && x < o.maxX + 0.15 && z > o.minZ - 0.15 && z < o.maxZ + 0.15;
+          } else {
+            blocked = (x - o.x) ** 2 + (z - o.z) ** 2 < (o.r + 0.2) ** 2;
+          }
+        }
+        nav.blocked[c + r * nav.cols] = blocked ? 1 : 0;
+      }
+    }
+    this.goalBlue.fill(FAR);
+    this.goalRed.fill(FAR);
+    // Bleus : la façade de la forteresse (ou le fond de l'entonnoir en survie).
+    const goalZ = this.baseZ + 0.3;
+    for (let c = 0; c < nav.cols; c++) {
+      const x = nav.centerX(c);
+      if (Math.abs(x) <= this.baseHalfW - 0.3) this.goalBlue[nav.cell(x, goalZ)] = 0;
+      // Rouges : toute la ligne du rempart.
+      if (Math.abs(x) <= this.halfW) this.goalRed[nav.cell(x, this.playerLineZ + 0.6)] = 0;
+    }
+    nav.solve(this.goalBlue, 4);
+    nav.solve(this.goalRed, 4);
+  }
+
+  /** Met à jour les deux champs de chasse : où sont les ennemis de chaque camp. */
+  private updateHunt() {
+    const nav = this.nav;
+    const hb = this.huntBlue;
+    const hr = this.huntRed;
+    hb.fill(HUNT_BLUE);
+    hr.fill(HUNT_RED);
+    const r = this.red;
+    for (let i = 0; i < r.n; i++) hb[nav.cell(r.x[i], r.z[i])] = 0;
+    const b = this.blue;
+    for (let i = 0; i < b.n; i++) hr[nav.cell(b.x[i], b.z[i])] = 0;
+    // Les pillards visent aussi les défenses et le canon.
+    for (const h of this.helpers) hr[nav.cell(h.x, h.z)] = 0;
+    hr[nav.cell(this.cannonX, this.cannonZ - 0.6)] = 0;
+    nav.solve(hb, 1);
+    nav.solve(hr, 1);
+  }
+
+  /** L'adversaire vivant le plus proche dans le voisinage immédiat, ou -1. */
+  private nearest(g: Grid, p: Pool, x: number, z: number) {
+    const c0 = g.col(x);
+    const r0 = g.row(z);
+    let best = -1;
+    let bestD = CHARGE * CHARGE * 1.6;
+    for (let rr = r0 - 3; rr <= r0 + 3; rr++) {
+      if (rr < 0 || rr >= g.rows) continue;
+      for (let cc = c0 - 3; cc <= c0 + 3; cc++) {
+        if (cc < 0 || cc >= g.cols) continue;
+        const cell = cc + rr * g.cols;
+        for (let k = g.start[cell]; k < g.start[cell + 1]; k++) {
+          const j = g.items[k];
+          if (!p.alive[j]) continue;
+          const dx = p.x[j] - x;
+          const dz = p.z[j] - z;
+          const d = dx * dx + dz * dz;
+          if (d < bestD) {
+            bestD = d;
+            best = j;
+          }
+        }
+      }
+    }
+    return best;
+  }
+
+  /** Ajoute un pillard ordinaire en tirant son rôle au sort (pavois, artificier ou simple). */
+  private addRaider(x: number, z: number, speed: number, allowBomber = true) {
+    const e = this.level.enemy;
+    const roll = this.rng();
+    const shield = e.shieldShare ?? 0;
+    const bomber = allowBomber ? (e.bomberShare ?? 0) : 0;
+    let role = ROLE_NONE;
+    if (roll < shield) role = ROLE_SHIELD;
+    else if (roll < shield + bomber) role = ROLE_BOMBER;
+    const hp = role === ROLE_SHIELD ? 3 : 1;
+    const k = role === ROLE_SHIELD ? 0.8 : role === ROLE_BOMBER ? 1.55 : 1;
+    const i = this.red.add(x, z, KIND_NORMAL, hp, speed * k, 0, 1);
+    if (i >= 0) this.red.role[i] = role;
+    return i;
   }
 
   /** Demi-largeur praticable à une profondeur donnée (l'entonnoir s'évase vers le fond). */
@@ -460,7 +723,7 @@ export class Sim {
       t = (Math.sqrt(w0 * w0 + t * (w1 * w1 - w0 * w0)) - w0) / (w1 - w0);
       const z = this.throatZ - 0.3 - t * (f.depth - 0.8);
       const x = (this.rng() * 2 - 1) * (this.halfWAt(z) - 0.25);
-      this.red.add(x, z, KIND_NORMAL, 1, 0.86 + this.rng() * 0.28, 0, 1);
+      this.addRaider(x, z, 0.86 + this.rng() * 0.28, false);
     }
     this.hordeLeft = sv.total - count;
   }
@@ -474,7 +737,7 @@ export class Sim {
       const z = this.farZ + 0.6 + this.rng() * 3;
       const x = (this.rng() * 2 - 1) * (this.halfWAt(z) - 0.3);
       if (this.densRed[this.coarseCell(x, z)] > 22) continue;
-      if (r.add(x, z, KIND_NORMAL, 1, 0.86 + this.rng() * 0.28, 0, 1) < 0) break;
+      if (this.addRaider(x, z, 0.86 + this.rng() * 0.28) < 0) break;
       this.hordeLeft--;
       want--;
     }
@@ -492,7 +755,7 @@ export class Sim {
       // Entonnoir : la horde est plus large loin de la forteresse.
       const spread = Math.min(this.halfW - 0.4, 2.5 + t * (this.halfW - 2.5));
       const x = (this.rng() * 2 - 1) * spread;
-      this.red.add(x, z, KIND_NORMAL, 1, 0.55 + this.rng() * 0.35, 0, 1);
+      this.addRaider(x, z, 0.55 + this.rng() * 0.35, false);
     }
   }
 
@@ -526,19 +789,24 @@ export class Sim {
     return helperCost(kind, this.helpers.length);
   }
 
+  /** Premier socle libre, ou -1. */
+  private freePad() {
+    for (let p = 0; p < this.pads.length; p++) {
+      if (!this.helpers.some((h) => h.pad === p)) return p;
+    }
+    return -1;
+  }
+
   canBuild(kind: HelperKind) {
-    return (
-      this.state === "playing" &&
-      this.helpers.length < this.pads.length &&
-      this.gold >= this.costOf(kind)
-    );
+    return this.state === "playing" && this.freePad() >= 0 && this.gold >= this.costOf(kind);
   }
 
   /** Construit une défense sur le prochain socle libre. La forteresse riposte aussitôt. */
   build(kind: HelperKind): boolean {
     if (!this.canBuild(kind)) return false;
     this.gold -= this.costOf(kind);
-    const pad = this.pads[this.helpers.length];
+    const padIndex = this.freePad();
+    const pad = this.pads[padIndex];
     this.helpers.push({
       kind,
       x: pad.x,
@@ -547,13 +815,17 @@ export class Sim {
       aimX: pad.x,
       aimZ: pad.z - 6,
       recoil: 0,
+      pad: padIndex,
+      hp: HELPER_HP,
+      maxHp: HELPER_HP,
+      flash: 0,
     });
     if (this.survival) {
       // Riposte : la horde grossit et déferle plus vite (voir hordeFlow).
       const more = 120 + 60 * this.helpers.length;
       this.hordeTotal += more;
       this.hordeLeft += more;
-      this.emit("built", pad.x, pad.z, this.helpers.length, this.helpers.length - 1);
+      this.emit("built", pad.x, pad.z, this.helpers.length, padIndex);
       return true;
     }
     // Riposte : une vague de pillards sort immédiatement des portes.
@@ -561,18 +833,58 @@ export class Sim {
     const doors = this.level.enemy.doors;
     for (let k = 0; k < wave; k++) {
       const door = doors[this.doorCursor++ % doors.length];
-      this.red.add(
+      this.addRaider(
         door + (this.rng() * 2 - 1) * 1.2,
         this.baseZ + 0.6 + this.rng() * 1.4,
-        KIND_NORMAL,
-        1,
         1.9 + this.rng() * 0.4,
-        0,
-        1,
       );
     }
-    this.emit("built", pad.x, pad.z, this.helpers.length, this.helpers.length - 1);
+    this.emit("built", pad.x, pad.z, this.helpers.length, padIndex);
     return true;
+  }
+
+  /** Une défense encaisse un coup ; détruite, elle libère son socle. */
+  private hitHelper(h: HelperRuntime, dmg: number) {
+    h.hp -= dmg;
+    h.flash = 1;
+    if (h.hp > 0) {
+      this.emit("helperHit", h.x, h.z, h.hp / h.maxHp, h.pad);
+      return;
+    }
+    this.helpers.splice(this.helpers.indexOf(h), 1);
+    this.emit("helperDown", h.x, h.z, 0, h.pad);
+  }
+
+  /** Explosion d'un artificier : fauche les soldats bleus alentour. */
+  private detonate(x: number, z: number) {
+    const b = this.blue;
+    const g = this.gridBlue;
+    const c0 = g.col(x);
+    const r0 = g.row(z);
+    const reach = Math.ceil(BOMB_RADIUS / CELL);
+    let killed = 0;
+    for (let rr = r0 - reach; rr <= r0 + reach; rr++) {
+      if (rr < 0 || rr >= g.rows) continue;
+      for (let cc = c0 - reach; cc <= c0 + reach; cc++) {
+        if (cc < 0 || cc >= g.cols) continue;
+        const cell = cc + rr * g.cols;
+        for (let k = g.start[cell]; k < g.start[cell + 1]; k++) {
+          const j = g.items[k];
+          if (!b.alive[j]) continue;
+          const dx = b.x[j] - x;
+          const dz = b.z[j] - z;
+          if (dx * dx + dz * dz > BOMB_RADIUS * BOMB_RADIUS) continue;
+          if (b.kind[j]) {
+            b.hp[j] -= 6;
+            if (b.hp[j] <= 0) this.kill(b, j, 0);
+          } else if (killed < 8) {
+            this.kill(b, j, 0);
+            killed++;
+          }
+        }
+      }
+    }
+    this.emit("boom", x, z, killed);
   }
 
   /** Cible du mortier : la masse rouge la plus dense, en priorité près du rempart. */
@@ -626,6 +938,7 @@ export class Sim {
     for (let k = 0; k < this.helpers.length; k++) {
       const h = this.helpers[k];
       h.recoil = Math.max(0, h.recoil - dt * 3);
+      h.flash = Math.max(0, h.flash - dt * 4);
       h.cooldown -= dt;
       if (h.kind === "mortier") {
         if (h.cooldown > 0) continue;
@@ -640,7 +953,7 @@ export class Sim {
         h.recoil = 1;
         const dist = Math.hypot(t.x - h.x, t.z - h.z);
         this.shells.push({ x0: h.x, z0: h.z, x1: t.x, z1: t.z, t: 0, dur: 0.9 + dist * 0.025 });
-        this.emit("mortarFire", h.x, h.z, 0, k);
+        this.emit("mortarFire", h.x, h.z, 0, h.pad);
       } else {
         if (h.cooldown > 0) continue;
         h.cooldown += 1 / BALISTE_RATE;
@@ -663,7 +976,7 @@ export class Sim {
           h.aimZ = lane.z;
         }
         h.recoil = 1;
-        this.emit("balisteFire", h.x, h.z, 0, k);
+        this.emit("balisteFire", h.x, h.z, 0, h.pad);
       }
     }
   }
@@ -697,6 +1010,31 @@ export class Sim {
     }
   }
 
+  private updateBoulders(dt: number) {
+    for (let i = this.boulders.length - 1; i >= 0; i--) {
+      const bd = this.boulders[i];
+      bd.t += dt;
+      if (bd.t < bd.dur) continue;
+      this.boulders.splice(i, 1);
+      // Les soldats pris dessous sont écrasés.
+      const b = this.blue;
+      for (let j = 0; j < b.n; j++) {
+        if (!b.alive[j] || b.kind[j]) continue;
+        const dx = b.x[j] - bd.x1;
+        const dz = b.z[j] - bd.z1;
+        if (dx * dx + dz * dz < BOULDER_RADIUS * BOULDER_RADIUS) this.kill(b, j, 0);
+      }
+      // Le canon, s'il n'a pas bougé, est sonné et le rempart encaisse.
+      const hit = Math.abs(this.cannonX - bd.x1) < BOULDER_RADIUS && this.state === "playing";
+      if (hit) {
+        this.playerHp -= 3;
+        this.playerFlash = 1;
+        this.stun = 1.4;
+      }
+      this.emit("boulderHit", bd.x1, bd.z1, hit ? 1 : 0);
+    }
+  }
+
   fireChampion(): boolean {
     if (this.state !== "playing" || !this.championReady) return false;
     this.charge = 0;
@@ -724,8 +1062,9 @@ export class Sim {
     this.baseFlash = Math.max(0, this.baseFlash - dt * 4);
     this.playerFlash = Math.max(0, this.playerFlash - dt * 3);
 
+    this.stun = Math.max(0, this.stun - dt);
     if (this.state === "playing") {
-      if (input.firing) {
+      if (input.firing && this.stun <= 0) {
         this.fireAcc += dt * lvl.fireRate;
         while (this.fireAcc >= 1) {
           this.fireAcc -= 1;
@@ -776,15 +1115,30 @@ export class Sim {
       while (this.spawnAcc >= 1) {
         this.spawnAcc -= 1;
         const door = doors[this.doorCursor++ % doors.length];
-        this.red.add(
+        this.addRaider(
           door + (rng() * 2 - 1) * 0.9,
           this.baseZ + 0.6 + rng() * 0.6,
-          KIND_NORMAL,
-          1,
           1.75 + rng() * 0.4,
-          0,
-          1,
         );
+      }
+      // --- Catapulte ennemie : elle vise le canon là où il se trouve au départ du tir.
+      const every = lvl.enemy.boulderEvery ?? 0;
+      if (every > 0 && this.time > 6) {
+        this.boulderTimer -= dt;
+        if (this.boulderTimer <= 0) {
+          this.boulderTimer = every * (0.85 + rng() * 0.3);
+          const z0 = this.survival ? this.throatZ - 2 : this.baseZ - 1;
+          const bd: Boulder = {
+            x0: (rng() * 2 - 1) * 2,
+            z0,
+            x1: this.cannonX,
+            z1: this.cannonZ - 0.2,
+            t: 0,
+            dur: 2.3,
+          };
+          this.boulders.push(bd);
+          this.emit("boulderLaunch", bd.x1, bd.z1, bd.dur, this.boulders.length - 1);
+        }
       }
       if (lvl.enemy.bruteEvery > 0) {
         this.bruteTimer -= dt;
@@ -837,6 +1191,8 @@ export class Sim {
     this.gridRed.build(this.red);
     this.buildDensity(this.blue, this.densBlue, this.sumXBlue);
     this.buildDensity(this.red, this.densRed, this.sumXRed);
+    if (this.navTick++ % 3 === 0) this.updateHunt();
+    this.updateBoulders(dt);
     if (this.state === "playing") this.updateHelpers(dt);
     this.updateShells(dt);
     this.separate(this.blue, this.gridBlue);
@@ -888,39 +1244,6 @@ export class Sim {
     if (r < 0) r = 0;
     else if (r >= this.coarseRows) r = this.coarseRows - 1;
     return c + r * this.coarseCols;
-  }
-
-  /**
-   * Attraction latérale vers la foule adverse, juste devant soi.
-   * Renvoie la vitesse latérale souhaitée (0 si personne en vue).
-   */
-  private seek(
-    x: number,
-    z: number,
-    ahead: number,
-    dens: Float32Array,
-    sumX: Float32Array,
-    gain: number,
-    max: number,
-  ) {
-    const cell = this.coarseCell(x, z);
-    const c0 = cell % this.coarseCols;
-    const r0 = (cell - c0) / this.coarseCols;
-    let n = 0;
-    let sx = 0;
-    for (let k = 0; k <= 1; k++) {
-      const r = r0 + ahead * k;
-      if (r < 0 || r >= this.coarseRows) continue;
-      for (let c = c0 - 1; c <= c0 + 1; c++) {
-        if (c < 0 || c >= this.coarseCols) continue;
-        const idx = c + r * this.coarseCols;
-        n += dens[idx];
-        sx += sumX[idx];
-      }
-    }
-    if (n < 1) return 0;
-    const v = (sx / n - x) * gain;
-    return v > max ? max : v < -max ? -max : v;
   }
 
   private separate(p: Pool, g: Grid) {
@@ -997,6 +1320,13 @@ export class Sim {
             const dz = zi - r.z[j];
             const min = ri + (r.kind[j] ? R_GIANT : R_NORMAL) + 0.06;
             if (dx * dx + dz * dz > min * min) continue;
+            if (r.role[j] === ROLE_BOMBER) {
+              // L'artificier saute au premier contact.
+              this.kill(r, j, 1);
+              this.detonate(r.x[j], r.z[j]);
+              if (!b.alive[i]) break outer;
+              continue;
+            }
             const dmg = Math.min(b.hp[i], r.hp[j]);
             b.hp[i] -= dmg;
             r.hp[j] -= dmg;
@@ -1098,31 +1428,91 @@ export class Sim {
 
   private moveBlue(dt: number) {
     const b = this.blue;
-    const nearBase = this.baseZ + 9;
+    const r = this.red;
+    const nav = this.nav;
+    const goal = this.goalBlue;
+    const hunt = this.huntBlue;
+    // À l'approche de la forteresse, la foule converge vers sa façade.
+    const nearGoal = this.survival ? -1e9 : this.baseZ + 8;
     for (let i = 0; i < b.n; i++) {
       if (!b.alive[i]) continue;
       b.age[i] += dt;
-      const vz = -b.speed[i];
+      const x0 = b.x[i];
       const z0 = b.z[i];
-      let vx = this.seek(b.x[i], z0, -1, this.densRed, this.sumXRed, 1.4, 2.6);
-      if (vx === 0 && !Number.isNaN(b.tx[i])) {
+
+      // 1. La route : tout droit dans le couloir visé par le joueur. La carte ne sert
+      //    que si un obstacle barre le passage, ou à l'approche de la forteresse.
+      let dx = 0;
+      let dz = -1;
+      let len = 1;
+      if (nav.isBlocked(x0, z0 - 1.6) || nav.isBlocked(x0, z0 - 3.4) || z0 < nearGoal) {
+        dx = nav.sample(goal, x0 - 0.5, z0) - nav.sample(goal, x0 + 0.5, z0);
+        dz = nav.sample(goal, x0, z0 - 0.5) - nav.sample(goal, x0, z0 + 0.5);
+        len = Math.hypot(dx, dz);
+        if (len < 1e-4 || len > 50) {
+          dx = 0;
+          dz = -1;
+        } else {
+          dx /= len;
+          dz /= len;
+        }
+      }
+      // Soldats du canon allié : ils gardent le couloir qu'on leur a donné.
+      if (!Number.isNaN(b.tx[i])) {
         if (z0 < b.tz[i]) b.tx[i] = NaN;
-        else vx = Math.max(-3, Math.min(3, (b.tx[i] - b.x[i]) * 2.2));
+        else {
+          dx = Math.max(-0.55, Math.min(0.55, (b.tx[i] - x0) * 0.45));
+          dz = -Math.sqrt(1 - dx * dx);
+        }
       }
-      if (!this.survival && z0 < nearBase && vx === 0) {
-        const lim = this.baseHalfW - 0.6;
-        const tx = Math.max(-lim, Math.min(lim, b.x[i]));
-        vx = (tx - b.x[i]) * 1.6;
+
+      // 2. La chasse : dès qu'un pillard est repéré, on dévie pour aller le chercher ;
+      //    de près, on court droit sur lui.
+      const d = nav.sample(hunt, x0, z0);
+      if (d < HUNT_BLUE - 0.15) {
+        let hx: number;
+        let hz: number;
+        let w: number;
+        const j = d < CHARGE ? this.nearest(this.gridRed, r, x0, z0) : -1;
+        if (j >= 0) {
+          hx = r.x[j] - x0;
+          hz = r.z[j] - z0;
+          w = 1;
+        } else {
+          hx = nav.sample(hunt, x0 - 0.5, z0) - nav.sample(hunt, x0 + 0.5, z0);
+          hz = nav.sample(hunt, x0, z0 - 0.5) - nav.sample(hunt, x0, z0 + 0.5);
+          w = Math.min(1, (HUNT_BLUE - d) / (HUNT_BLUE * 0.6));
+          if (hz > 0) {
+            // Un ennemi passé derrière ne fait faire demi-tour que s'il est tout proche ;
+            // sinon on se décale vers lui sans cesser d'avancer vers les portes.
+            if (d > 3.2) hz = 0;
+          }
+          if (d > 3.2) w *= 0.75;
+        }
+        const hl = Math.hypot(hx, hz);
+        if (w > 0 && hl > 1e-4) {
+          dx = dx * (1 - w) + (hx / hl) * w;
+          dz = dz * (1 - w) + (hz / hl) * w;
+          len = Math.hypot(dx, dz);
+          if (len < 0.05) {
+            dx = hx / hl;
+            dz = hz / hl;
+          } else {
+            dx /= len;
+            dz /= len;
+          }
+        }
       }
+
+      const sp = b.speed[i];
+      const sx = b.sx[i] > 0.09 ? 0.09 : b.sx[i] < -0.09 ? -0.09 : b.sx[i];
+      const sz = b.sz[i] > 0.09 ? 0.09 : b.sz[i] < -0.09 ? -0.09 : b.sz[i];
       b.pz[i] = z0;
-      b.x[i] += vx * dt + b.sx[i];
-      b.z[i] += vz * dt + b.sz[i];
-      // Ne jamais reculer à cause de la poussée : la foule avance.
-      if (b.z[i] > z0 + 0.02) b.z[i] = z0 + 0.02;
+      b.x[i] = x0 + dx * sp * dt + sx;
+      b.z[i] = z0 + dz * sp * dt + sz;
       this.collide(b, i, 0);
-      const len = Math.hypot(vx, vz) || 1;
-      b.fx[i] += (vx / len - b.fx[i]) * Math.min(1, dt * 8);
-      b.fz[i] += (vz / len - b.fz[i]) * Math.min(1, dt * 8);
+      b.fx[i] += (dx - b.fx[i]) * Math.min(1, dt * 8);
+      b.fz[i] += (dz - b.fz[i]) * Math.min(1, dt * 8);
 
       if (b.kind[i] === KIND_NORMAL) this.crossGates(i, z0);
       if (!b.alive[i]) continue;
@@ -1188,29 +1578,82 @@ export class Sim {
 
   private moveRed(dt: number) {
     const r = this.red;
-    const nearPlayer = this.playerLineZ - 10;
+    const b = this.blue;
+    const nav = this.nav;
+    const goal = this.goalRed;
+    const hunt = this.huntRed;
     const sv = this.survival;
     for (let i = 0; i < r.n; i++) {
       if (!r.alive[i]) continue;
       r.age[i] += dt;
+      const x0 = r.x[i];
       const z0 = r.z[i];
+      const inFunnel = sv !== null && z0 < this.throatZ;
       let pace = r.speed[i];
       if (sv) {
-        if (z0 < this.throatZ) {
+        if (inFunnel) {
           // Dans l'entonnoir, la horde piétine — et ralentit encore là où elle est trop serrée.
-          const d = this.densRed[this.coarseCell(r.x[i], z0 + COARSE)];
-          pace *= sv.speed[0] * (d > 26 ? 0.25 : d > 20 ? 0.6 : 1);
+          const dens = this.densRed[this.coarseCell(x0, z0 + COARSE)];
+          pace *= sv.speed[0] * (dens > 26 ? 0.25 : dens > 20 ? 0.6 : 1);
         } else pace *= sv.speed[1];
       }
       const speed = this.state === "lost" ? pace * 0.3 : pace;
-      const vz = speed;
-      let vx = this.seek(r.x[i], z0, 1, this.densBlue, this.sumXBlue, 1.0, 1.6);
-      if (z0 > nearPlayer && vx === 0)
-        vx = Math.max(-speed, Math.min(speed, (this.cannonX - r.x[i]) * 0.5));
+
+      // 1. La route : droit vers le rempart ; la carte sert à contourner les obstacles
+      //    et à trouver le goulot quand on est dans l'entonnoir.
+      let dx = 0;
+      let dz = 1;
+      let len = 1;
+      if (inFunnel || nav.isBlocked(x0, z0 + 1.6) || nav.isBlocked(x0, z0 + 3.4)) {
+        dx = nav.sample(goal, x0 - 0.5, z0) - nav.sample(goal, x0 + 0.5, z0);
+        dz = nav.sample(goal, x0, z0 - 0.5) - nav.sample(goal, x0, z0 + 0.5);
+        len = Math.hypot(dx, dz);
+        if (len < 1e-4 || len > 50) {
+          dx = 0;
+          dz = 1;
+        } else {
+          dx /= len;
+          dz /= len;
+        }
+      }
+
+      // 2. La chasse : soldats bleus, défenses et canon à portée.
+      const d = inFunnel ? HUNT_RED : nav.sample(hunt, x0, z0);
+      if (d < HUNT_RED - 0.15) {
+        let hx: number;
+        let hz: number;
+        let w: number;
+        const j = d < CHARGE ? this.nearest(this.gridBlue, b, x0, z0) : -1;
+        if (j >= 0) {
+          hx = b.x[j] - x0;
+          hz = b.z[j] - z0;
+          w = 1;
+        } else {
+          hx = nav.sample(hunt, x0 - 0.5, z0) - nav.sample(hunt, x0 + 0.5, z0);
+          hz = nav.sample(hunt, x0, z0 - 0.5) - nav.sample(hunt, x0, z0 + 0.5);
+          w = Math.min(1, (HUNT_RED - d) / (HUNT_RED * 0.6));
+          if (hz < 0 && d > 2.2) hz = 0;
+        }
+        const hl = Math.hypot(hx, hz);
+        if (w > 0 && hl > 1e-4) {
+          dx = dx * (1 - w) + (hx / hl) * w;
+          dz = dz * (1 - w) + (hz / hl) * w;
+          len = Math.hypot(dx, dz);
+          if (len < 0.05) {
+            dx = hx / hl;
+            dz = hz / hl;
+          } else {
+            dx /= len;
+            dz /= len;
+          }
+        }
+      }
+
+      const sx = r.sx[i] > 0.09 ? 0.09 : r.sx[i] < -0.09 ? -0.09 : r.sx[i];
+      const sz = r.sz[i] > 0.09 ? 0.09 : r.sz[i] < -0.09 ? -0.09 : r.sz[i];
       r.pz[i] = z0;
-      r.x[i] += vx * dt + r.sx[i];
-      r.z[i] += vz * dt + r.sz[i];
-      if (r.z[i] < z0 - 0.02) r.z[i] = z0 - 0.02;
+      r.x[i] = x0 + dx * speed * dt + sx;
+      r.z[i] = z0 + dz * speed * dt + sz;
       if (r.z[i] < this.baseZ + 0.4) r.z[i] = this.baseZ + 0.4;
       if (sv && z0 < this.throatZ && r.z[i] >= this.throatZ) {
         // Passage du goulot : un jeton par pillard, sinon il attend son tour.
@@ -1218,14 +1661,33 @@ export class Sim {
         else r.z[i] = this.throatZ - 0.01;
       }
       this.collide(r, i, 1);
-      const len = Math.hypot(vx, vz) || 1;
-      r.fx[i] += (vx / len - r.fx[i]) * Math.min(1, dt * 8);
-      r.fz[i] += (vz / len - r.fz[i]) * Math.min(1, dt * 8);
-      if (r.z[i] >= this.playerLineZ && this.state === "playing") {
-        const dmg = r.kind[i] ? 3 : 1;
+      r.fx[i] += (dx - r.fx[i]) * Math.min(1, dt * 8);
+      r.fz[i] += (dz - r.fz[i]) * Math.min(1, dt * 8);
+      if (this.state !== "playing") continue;
+
+      // 3. Les défenses à portée de coup : le pillard s'y jette.
+      const giant = r.kind[i] === KIND_GIANT;
+      const bomber = r.role[i] === ROLE_BOMBER;
+      const reach = 0.64 + (giant ? R_GIANT : R_NORMAL);
+      let struck = false;
+      for (const h of this.helpers) {
+        const hx = r.x[i] - h.x;
+        const hz = r.z[i] - h.z;
+        if (hx * hx + hz * hz > reach * reach) continue;
+        this.hitHelper(h, giant ? 4 : bomber ? 6 : 1);
+        if (bomber) this.detonate(r.x[i], r.z[i]);
+        this.kill(r, i, 1, false);
+        struck = true;
+        break;
+      }
+      if (struck) continue;
+
+      if (r.z[i] >= this.playerLineZ) {
+        const dmg = giant || bomber ? 3 : 1;
         this.playerHp -= dmg;
         this.playerFlash = 1;
         this.emit("playerHit", r.x[i], r.z[i], dmg);
+        if (bomber) this.detonate(r.x[i], r.z[i]);
         this.kill(r, i, 1, false);
       }
     }

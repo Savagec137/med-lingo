@@ -191,6 +191,10 @@ function helmetWing(side: number) {
 
 interface Build {
   giant?: boolean;
+  /** Variantes : sans rondache, sans arme, sans bras (ils sont refaits par la variante). */
+  noShield?: boolean;
+  noWeapon?: boolean;
+  noArms?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -643,9 +647,10 @@ function raider(detail: Detail, o: Build = {}): THREE.BufferGeometry[] {
       g.push(
         P(new THREE.BoxGeometry(0.11, 0.3, 0.12), leather, id, LEATHER, [side * 0.075, 0.15, 0.01]),
       );
-      g.push(
-        P(new THREE.BoxGeometry(0.085, 0.26, 0.09), skin, id + 2, SKIN, [side * 0.22, 0.46, 0]),
-      );
+      if (!o.noArms)
+        g.push(
+          P(new THREE.BoxGeometry(0.085, 0.26, 0.09), skin, id + 2, SKIN, [side * 0.22, 0.46, 0]),
+        );
     }
     g.push(P(new THREE.CylinderGeometry(0.15, 0.18, 0.36, 5), red, BODY, LEATHER, [0, 0.46, 0]));
     g.push(P(new THREE.IcosahedronGeometry(0.17, 0), skin, BODY, SKIN, [0, 0.77, 0.01]));
@@ -670,8 +675,12 @@ function raider(detail: Detail, o: Build = {}): THREE.BufferGeometry[] {
         ),
       );
     }
-    g.push(P(new THREE.BoxGeometry(0.03, 0.26, 0.26), wood, ARM_L, WOOD, [-0.29, 0.44, 0.03]));
-    g.push(P(new THREE.BoxGeometry(0.03, 0.24, 0.13), 0xc5cad2, ARM_R, STEEL, [0.22, 0.34, 0.34]));
+    if (!o.noShield)
+      g.push(P(new THREE.BoxGeometry(0.03, 0.26, 0.26), wood, ARM_L, WOOD, [-0.29, 0.44, 0.03]));
+    if (!o.noWeapon)
+      g.push(
+        P(new THREE.BoxGeometry(0.03, 0.24, 0.13), 0xc5cad2, ARM_R, STEEL, [0.22, 0.34, 0.34]),
+      );
     return g;
   }
 
@@ -851,6 +860,7 @@ function raider(detail: Detail, o: Build = {}): THREE.BufferGeometry[] {
     [-1, ARM_L],
     [1, ARM_R],
   ] as const) {
+    if (o.noArms) break;
     const x = side * 0.23;
     if (hi) {
       g.push(P(new THREE.CapsuleGeometry(0.05, 0.12, 1, 6), skin, id, SKIN, [x, 0.475, 0]));
@@ -865,52 +875,56 @@ function raider(detail: Detail, o: Build = {}): THREE.BufferGeometry[] {
 
   // Rondache de bois cerclée de fer, pointe centrale
   const sx = -0.305;
-  g.push(
-    P(
-      new THREE.CylinderGeometry(0.155, 0.155, 0.032, hi ? 12 : 7),
-      wood,
-      ARM_L,
-      WOOD,
-      [sx, 0.44, 0.03],
-      [0, 0, Math.PI / 2],
-    ),
-  );
-  g.push(
-    P(
-      new THREE.TorusGeometry(0.155, 0.02, hi ? 4 : 3, hi ? 12 : 7),
-      iron,
-      ARM_L,
-      IRON,
-      [sx, 0.44, 0.03],
-      [0, Math.PI / 2, 0],
-    ),
-  );
-  g.push(
-    P(
-      new THREE.ConeGeometry(0.045, 0.11, hi ? 6 : 4),
-      iron,
-      ARM_L,
-      IRON,
-      [sx - 0.065, 0.44, 0.03],
-      [0, 0, Math.PI / 2],
-    ),
-  );
-  if (hi) {
+  if (!o.noShield) {
     g.push(
       P(
-        new THREE.BoxGeometry(0.012, 0.29, 0.05),
-        darkRed,
+        new THREE.CylinderGeometry(0.155, 0.155, 0.032, hi ? 12 : 7),
+        wood,
         ARM_L,
-        CLOTH,
-        [sx - 0.018, 0.44, 0.03],
-        [0.6, 0, 0],
+        WOOD,
+        [sx, 0.44, 0.03],
+        [0, 0, Math.PI / 2],
       ),
     );
+    g.push(
+      P(
+        new THREE.TorusGeometry(0.155, 0.02, hi ? 4 : 3, hi ? 12 : 7),
+        iron,
+        ARM_L,
+        IRON,
+        [sx, 0.44, 0.03],
+        [0, Math.PI / 2, 0],
+      ),
+    );
+    g.push(
+      P(
+        new THREE.ConeGeometry(0.045, 0.11, hi ? 6 : 4),
+        iron,
+        ARM_L,
+        IRON,
+        [sx - 0.065, 0.44, 0.03],
+        [0, 0, Math.PI / 2],
+      ),
+    );
+    if (hi) {
+      g.push(
+        P(
+          new THREE.BoxGeometry(0.012, 0.29, 0.05),
+          darkRed,
+          ARM_L,
+          CLOTH,
+          [sx - 0.018, 0.44, 0.03],
+          [0.6, 0, 0],
+        ),
+      );
+    }
   }
 
   // Arme : hache double, ou massue cloutée pour le colosse
   const wx = 0.23;
-  if (o.giant) {
+  if (o.noWeapon) {
+    // rien : la variante tient autre chose
+  } else if (o.giant) {
     g.push(
       P(
         new THREE.CylinderGeometry(0.075, 0.03, 0.52, 7),
@@ -1198,6 +1212,134 @@ function raider(detail: Detail, o: Build = {}): THREE.BufferGeometry[] {
 export function buildSoldierGeometry(team: Team, detail: Detail = "high") {
   const parts = team === "blue" ? guardian(detail) : raider(detail);
   const merged = mergeGeometries(parts, false);
+  merged.scale(SOLDIER_SCALE, SOLDIER_SCALE, SOLDIER_SCALE);
+  merged.computeBoundingSphere();
+  return merged;
+}
+
+export type RaiderRole = "shield" | "bomber";
+
+/**
+ * Variantes de pillards. Le porte-pavois avance derrière un grand bouclier
+ * de fer : il faut plusieurs soldats pour en venir à bout. L'artificier porte
+ * une bombe à mèche allumée au-dessus de sa tête et explose au contact.
+ * L'échelle propre à chaque rôle est appliquée par l'instance, pas ici, pour
+ * que l'animation des membres garde ses pivots.
+ */
+export function buildRaiderVariant(role: RaiderRole, detail: "mid" | "low" = "mid") {
+  const g = raider(detail, {
+    noShield: true,
+    noWeapon: true,
+    noArms: role === "bomber",
+  });
+  const fine = detail !== "low";
+  const iron = 0x6a6672;
+  const darkRed = 0x8e1219;
+  if (role === "shield") {
+    // Pavois : grande plaque d'acier clair cerclée d'or, chevron rouge, pointes d'os.
+    // Clair et bordé d'or pour se détacher de la masse rouge et verte.
+    g.push(P(new THREE.BoxGeometry(0.52, 0.66, 0.05), 0xaab2bf, BODY, STEEL, [0, 0.44, 0.27]));
+    g.push(P(new THREE.BoxGeometry(0.56, 0.06, 0.07), 0xd9a23a, BODY, GOLD, [0, 0.77, 0.27]));
+    g.push(P(new THREE.BoxGeometry(0.56, 0.06, 0.07), 0xd9a23a, BODY, GOLD, [0, 0.11, 0.27]));
+    for (const s of [-1, 1])
+      g.push(
+        P(new THREE.BoxGeometry(0.05, 0.6, 0.07), 0xd9a23a, BODY, GOLD, [s * 0.265, 0.44, 0.27]),
+      );
+    if (fine) {
+      for (const s of [-1, 1]) {
+        g.push(
+          P(
+            new THREE.BoxGeometry(0.3, 0.08, 0.02),
+            0xd3232c,
+            BODY,
+            ENAMEL,
+            [s * 0.11, 0.46, 0.3],
+            [0, 0, s * 0.6],
+          ),
+        );
+        g.push(
+          P(
+            new THREE.ConeGeometry(0.035, 0.1, 4),
+            0xd8d2c0,
+            BODY,
+            BONE,
+            [s * 0.17, 0.62, 0.33],
+            [Math.PI / 2, 0, 0],
+          ),
+        );
+        g.push(
+          P(
+            new THREE.ConeGeometry(0.035, 0.1, 4),
+            0xd8d2c0,
+            BODY,
+            BONE,
+            [s * 0.17, 0.26, 0.33],
+            [Math.PI / 2, 0, 0],
+          ),
+        );
+      }
+      g.push(
+        P(
+          new THREE.ConeGeometry(0.05, 0.14, 5),
+          0xd8d2c0,
+          BODY,
+          BONE,
+          [0, 0.44, 0.34],
+          [Math.PI / 2, 0, 0],
+        ),
+      );
+      // Visière de fer : on ne voit que les yeux.
+      g.push(P(new THREE.BoxGeometry(0.3, 0.09, 0.03), iron, BODY, IRON, [0, 0.72, 0.16]));
+    }
+  } else {
+    // Bombe à mèche portée à bout de bras au-dessus de la tête.
+    g.push(
+      P(
+        new THREE.SphereGeometry(0.2, fine ? 10 : 6, fine ? 7 : 4),
+        0x24262e,
+        BODY,
+        [0.35, 0.6, 0] as Surf,
+        [0, 1.22, 0.02],
+      ),
+    );
+    g.push(
+      P(new THREE.CylinderGeometry(0.045, 0.06, 0.07, 6), 0x8a8f9c, BODY, IRON, [0, 1.43, 0.02]),
+    );
+    g.push(
+      P(
+        new THREE.OctahedronGeometry(0.07, 0),
+        0xffd24a,
+        BODY,
+        [0.3, 0, 2.4] as Surf,
+        [0.02, 1.52, 0.03],
+      ),
+    );
+    for (const s of [-1, 1]) {
+      g.push(
+        P(
+          new THREE.CylinderGeometry(0.04, 0.045, 0.42, 5),
+          0x86b85a,
+          BODY,
+          SKIN,
+          [s * 0.17, 0.86, 0.01],
+          [0, 0, s * 0.42],
+        ),
+      );
+    }
+    if (fine) {
+      g.push(
+        P(
+          new THREE.TorusGeometry(0.2, 0.018, 4, 10),
+          0xc4222b,
+          BODY,
+          ENAMEL,
+          [0, 1.22, 0.02],
+          [Math.PI / 2, 0, 0],
+        ),
+      );
+    }
+  }
+  const merged = mergeGeometries(g, false);
   merged.scale(SOLDIER_SCALE, SOLDIER_SCALE, SOLDIER_SCALE);
   merged.computeBoundingSphere();
   return merged;

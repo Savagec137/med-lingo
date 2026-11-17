@@ -28,11 +28,30 @@ import {
   type HelperKind,
   type LevelDef,
 } from "./levels";
-import { buildGate, buildGeyser, buildSpinner, sharedTime, type GateModel } from "./models";
+import {
+  buildBoulder,
+  buildGate,
+  buildGeyser,
+  buildSpinner,
+  sharedTime,
+  type BoulderModel,
+  type GateModel,
+} from "./models";
 import { disposeSharedMaterials } from "./props";
-import { BLUE_CAP, GIANT_SCALE, KIND_GIANT, Pool, RED_CAP_SURVIVAL, Sim } from "./sim";
+import {
+  BLUE_CAP,
+  BOULDER_RADIUS,
+  GIANT_SCALE,
+  KIND_GIANT,
+  Pool,
+  RED_CAP_SURVIVAL,
+  ROLE_BOMBER,
+  ROLE_SHIELD,
+  Sim,
+} from "./sim";
 import {
   buildGiantGeometry,
+  buildRaiderVariant,
   buildSoldierGeometry,
   soldierDepthMaterial,
   soldierMaterial,
@@ -120,14 +139,27 @@ function loadMuted() {
   }
 }
 
+/** Une défense posée : son modèle et sa barre de vie (visible une fois entamée). */
+interface HelperView {
+  model: HelperModel;
+  bar: THREE.Group;
+  fill: THREE.Sprite;
+  mats: THREE.SpriteMaterial[];
+}
+
 interface CrowdLayer {
   mesh: THREE.InstancedMesh;
   shadow: THREE.InstancedMesh;
 }
 
+/** Échelle propre aux pillards spéciaux : le porte-pavois est trapu, l'artificier fluet. */
+const SHIELD_SCALE = 1.14;
+const BOMBER_SCALE = 0.92;
+
 /**
  * Une foule : trois niveaux de détail et les géants. Les soldats proches et
  * les géants projettent une vraie ombre ; tous gardent une ombre de contact.
+ * La foule rouge a en plus ses porte-pavois et ses artificiers.
  */
 class CrowdView {
   /** Seuils de détail en vigueur (voir LOD_STEPS). */
@@ -135,7 +167,11 @@ class CrowdView {
   /** Géométrie et matériau prêtés aux soldats projetés en l'air. */
   readonly tossGeo: THREE.BufferGeometry;
   readonly tossMat: THREE.Material;
+  /** Vrai dès qu'un porte-pavois / un artificier a été affiché (pour l'annoncer au joueur). */
+  shieldSeen = false;
+  bomberSeen = false;
   private readonly layers: CrowdLayer[];
+  private readonly counts: number[];
   private readonly shadowGeo: THREE.PlaneGeometry;
   private readonly mats: THREE.Material[];
 
@@ -187,6 +223,16 @@ class CrowdView {
       layer(buildSoldierGeometry(team, "low"), walk, cap, null),
       layer(buildGiantGeometry(team), stomp, 64, stompDepth),
     ];
+    if (team === "red") {
+      // Couches 4-5 : porte-pavois (proche, lointain) ; 6-7 : artificiers.
+      this.layers.push(
+        layer(buildRaiderVariant("shield", "mid"), walk, 420, walkDepth),
+        layer(buildRaiderVariant("shield", "low"), walk, 700, null),
+        layer(buildRaiderVariant("bomber", "mid"), walk, 260, walkDepth),
+        layer(buildRaiderVariant("bomber", "low"), walk, 420, null),
+      );
+    }
+    this.counts = this.layers.map(() => 0);
     this.tossGeo = mid;
     this.tossMat = walk;
   }
@@ -197,23 +243,36 @@ class CrowdView {
 
   /** Coupe les ombres réelles des soldats (qualité basse). */
   setRealShadows(on: boolean) {
-    this.layers[0].mesh.castShadow = on;
-    this.layers[3].mesh.castShadow = on;
+    for (const l of this.layers) if (l.mesh.customDepthMaterial) l.mesh.castShadow = on;
   }
 
   sync(p: Pool) {
     const arrs = this.layers.map((l) => l.mesh.instanceMatrix.array as Float32Array);
     const caps = this.layers.map((l) => l.mesh.instanceMatrix.count);
-    const counts = [0, 0, 0, 0];
+    const counts = this.counts.fill(0);
+    const roles = this.layers.length > 4;
     const { high, mid } = this.lod;
     for (let i = 0; i < p.n; i++) {
       const giant = p.kind[i] === KIND_GIANT;
+      const role = roles && !giant ? p.role[i] : 0;
       const z = p.z[i];
-      let li = giant ? 3 : z > high ? 0 : z > mid ? 1 : 2;
-      // Couche pleine : on se rabat sur la suivante, moins détaillée.
-      while (li < 2 && counts[li] >= caps[li]) li++;
+      let li: number;
+      let k = 1;
+      if (role === ROLE_SHIELD) {
+        li = z > mid && counts[4] < caps[4] ? 4 : 5;
+        k = SHIELD_SCALE;
+        this.shieldSeen = true;
+      } else if (role === ROLE_BOMBER) {
+        li = z > mid && counts[6] < caps[6] ? 6 : 7;
+        k = BOMBER_SCALE;
+        this.bomberSeen = true;
+      } else {
+        li = giant ? 3 : z > high ? 0 : z > mid ? 1 : 2;
+        // Couche pleine : on se rabat sur la suivante, moins détaillée.
+        while (li < 2 && counts[li] >= caps[li]) li++;
+        if (giant) k = GIANT_SCALE;
+      }
       if (counts[li] >= caps[li]) continue;
-      let k = giant ? GIANT_SCALE : 1;
       const age = p.age[i];
       if (age < 0.2) {
         const u = age / 0.2;
@@ -318,6 +377,25 @@ export function createMareeBleue(
     scene.add(m);
     shellMeshes.push(m);
   }
+  // Rochers de la catapulte ennemie et leur marque au sol.
+  const boulderViews: BoulderModel[] = [];
+  for (let k = 0; k < 4; k++) {
+    const bv = buildBoulder(BOULDER_RADIUS);
+    scene.add(bv.rock, bv.mark);
+    boulderViews.push(bv);
+  }
+  // Étoiles qui tournent au-dessus du canon quand il est sonné.
+  const stunStars = new THREE.Group();
+  const starGeo = new THREE.OctahedronGeometry(0.24, 0);
+  const starMat = new THREE.MeshBasicMaterial({ color: 0xffe14a });
+  for (let k = 0; k < 5; k++) {
+    const st = new THREE.Mesh(starGeo, starMat);
+    const a = (k / 5) * Math.PI * 2;
+    st.position.set(Math.cos(a) * 0.95, 0, Math.sin(a) * 0.95);
+    stunStars.add(st);
+  }
+  stunStars.visible = false;
+  scene.add(stunStars);
   const debris = new Debris();
   const glows = new Glows();
   const rings = new Rings();
@@ -337,7 +415,17 @@ export function createMareeBleue(
   let gateModels: GateModel[] = [];
   let hazardViews: { update(): void; group: THREE.Group }[] = [];
   let padViews: ReturnType<typeof buildPad>[] = [];
-  let helperViews: HelperModel[] = [];
+  /** Indexé par socle, comme `padViews`. */
+  let helperViews: (HelperView | null)[] = [];
+  let toldShield = false;
+  let toldBomber = false;
+  let toldBoulder = false;
+  /** Annonces pédagogiques : une à la fois, pour qu'aucune n'en écrase une autre. */
+  const notices: string[] = [];
+  let noticeTimer = 0;
+  const notice = (text: string) => {
+    if (!notices.includes(text)) notices.push(text);
+  };
   let camFollow = 0;
   let followK = 0.5;
   let levelGroup = new THREE.Group();
@@ -419,6 +507,21 @@ export function createMareeBleue(
   });
   ui.setMuted(sfx.muted);
 
+  /** Libère les maillages propres à un objet du niveau (pas les matières partagées). */
+  function disposeOwn(obj: THREE.Object3D) {
+    obj.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (m.isMesh && o.userData.own) {
+        m.geometry.dispose();
+        const mats = Array.isArray(m.material) ? m.material : [m.material];
+        // Les matières partagées de l'artillerie servent encore au canon du joueur.
+        mats.forEach((x) => {
+          if (!x.userData.shared) x.dispose();
+        });
+      }
+    });
+  }
+
   function clearLevel() {
     if (world) {
       levelGroup.remove(world.group);
@@ -439,20 +542,13 @@ export function createMareeBleue(
     gateModels = [];
     hazardViews = [];
     padViews = [];
+    for (const v of helperViews) v?.mats.forEach((m) => m.dispose());
     helperViews = [];
     for (const m of shellMeshes) m.visible = false;
+    for (const bv of boulderViews) bv.rock.visible = bv.mark.visible = false;
+    stunStars.visible = false;
     scene.remove(levelGroup);
-    levelGroup.traverse((o) => {
-      const m = o as THREE.Mesh;
-      if (m.isMesh && o.userData.own) {
-        m.geometry.dispose();
-        const mats = Array.isArray(m.material) ? m.material : [m.material];
-        // Les matières partagées de l'artillerie servent encore au canon du joueur.
-        mats.forEach((x) => {
-          if (!x.userData.shared) x.dispose();
-        });
-      }
-    });
+    disposeOwn(levelGroup);
     levelGroup = new THREE.Group();
     scene.add(levelGroup);
     debris.clear();
@@ -493,7 +589,12 @@ export function createMareeBleue(
       pv.group.traverse((o) => (o.userData.own = true));
       levelGroup.add(pv.group);
       padViews.push(pv);
+      helperViews.push(null);
     }
+    toldShield = toldBomber = toldBoulder = false;
+    notices.length = 0;
+    noticeTimer = 0;
+    redView.shieldSeen = redView.bomberSeen = false;
     sim.hazards.forEach((h) => {
       if (h.def.kind === "spinner") {
         const sp = buildSpinner(h.def.r);
@@ -821,24 +922,20 @@ export function createMareeBleue(
             debris.burst(e.x, 0.6, e.z, 3, 4, e.value === 0 ? 0x3d7bff : 0xe3262f, 1, 1.4);
           if (!demo) sfx.chop();
           break;
-        case "mortarFire": {
-          const h = sim.helpers[e.index];
-          if (h) {
-            glows.spawn(h.x, 1.4, h.z - 0.4, 2, 0xffc070, 0.3, 1.4, 1.5);
-            for (let j = 0; j < 5; j++)
-              smoke.puff(
-                h.x + (Math.random() - 0.5) * 0.5,
-                1.2 + j * 0.25,
-                h.z - 0.5,
-                1.1,
-                0.75,
-                1.1,
-                1.6,
-              );
-          }
+        case "mortarFire":
+          glows.spawn(e.x, 1.4, e.z - 0.4, 2, 0xffc070, 0.3, 1.4, 1.5);
+          for (let j = 0; j < 5; j++)
+            smoke.puff(
+              e.x + (Math.random() - 0.5) * 0.5,
+              1.2 + j * 0.25,
+              e.z - 0.5,
+              1.1,
+              0.75,
+              1.1,
+              1.6,
+            );
           if (!demo) sfx.mortar();
           break;
-        }
         case "shellHit":
           shake = Math.max(shake, 0.22);
           scorches.spawn(e.x, e.z, 2);
@@ -874,19 +971,35 @@ export function createMareeBleue(
             }
           }
           break;
-        case "balisteFire": {
-          const h = sim.helpers[e.index];
-          if (h && Math.random() < 0.5) glows.spawn(h.x, 0.75, h.z - 0.7, 0.4, 0x7fb8ff, 0.15, 1);
+        case "balisteFire":
+          if (Math.random() < 0.5) glows.spawn(e.x, 0.75, e.z - 0.7, 0.4, 0x7fb8ff, 0.15, 1);
           break;
-        }
         case "built": {
           const k = e.index;
-          const h = sim.helpers[k];
+          const h = sim.helpers.find((x) => x.pad === k);
+          if (!h) break;
           const model = h.kind === "mortier" ? buildMortar() : buildAllyCannon();
           model.group.position.set(h.x, 0.16, h.z);
           model.group.traverse((o) => (o.userData.own = true));
           levelGroup.add(model.group);
-          helperViews[k] = model;
+          // Barre de vie : n'apparaît qu'une fois la défense entamée.
+          const backMat = new THREE.SpriteMaterial({ color: 0x1a1f2e, depthTest: false });
+          const fillMat = new THREE.SpriteMaterial({ color: 0x5ad35a, depthTest: false });
+          const back = new THREE.Sprite(backMat);
+          back.scale.set(1.06, 0.17, 1);
+          const fill = new THREE.Sprite(fillMat);
+          fill.center.set(0, 0.5);
+          fill.position.x = -0.49;
+          fill.scale.set(0.98, 0.1, 1);
+          const bar = new THREE.Group();
+          bar.add(back, fill);
+          bar.position.y = h.kind === "mortier" ? 1.75 : 1.45;
+          bar.renderOrder = 5;
+          back.renderOrder = 5;
+          fill.renderOrder = 6;
+          bar.visible = false;
+          model.group.add(bar);
+          helperViews[k] = { model, bar, fill, mats: [backMat, fillMat] };
           padViews[k].plus.visible = false;
           padViews[k].glowMat.color.setHex(0xffd23f);
           rings.spawn(h.x, h.z, 2.4, 0xffd23f);
@@ -917,6 +1030,110 @@ export function createMareeBleue(
           }
           break;
         }
+        case "helperHit":
+          debris.burst(e.x, 0.7, e.z, 4, 2.6, 0xffc070, 0.9);
+          glows.spawn(e.x, 0.8, e.z, 1.1, 0xff6a3a, 0.2, 1.2);
+          if (!demo) sfx.helperHit(false);
+          break;
+        case "helperDown": {
+          const k = e.index;
+          const v = helperViews[k];
+          if (v) {
+            levelGroup.remove(v.model.group);
+            disposeOwn(v.model.group);
+            v.mats.forEach((m) => m.dispose());
+            helperViews[k] = null;
+          }
+          const pv = padViews[k];
+          if (pv) {
+            pv.plus.visible = true;
+            pv.glowMat.color.setHex(0x6ab4ff);
+          }
+          shake = Math.max(shake, 0.45);
+          scorches.spawn(e.x, e.z, 1.5);
+          rings.spawn(e.x, e.z, 3, 0xff6a3a, 0.5);
+          debris.burst(e.x, 0.6, e.z, 22, 4.5, 0x6b4a2e, 1.6, 1.8);
+          debris.burst(e.x, 0.6, e.z, 12, 4, 0x8a8f9c, 1.2, 1.6);
+          for (let j = 0; j < 6; j++)
+            smoke.puff(
+              e.x + (Math.random() - 0.5),
+              0.4 + j * 0.3,
+              e.z + (Math.random() - 0.5),
+              1.5,
+              0.2,
+              1.4,
+              1.6,
+            );
+          if (!demo) {
+            sfx.helperHit(true);
+            ui.toast("Défense détruite ! Le socle est libre.");
+          }
+          break;
+        }
+        case "boom":
+          // Un artificier explose au milieu des nôtres.
+          shake = Math.max(shake, 0.2);
+          scorches.spawn(e.x, e.z, 1.3);
+          rings.spawn(e.x, e.z, 2.6, 0xff5a2a, 0.4);
+          debris.burst(e.x, 0.4, e.z, 12, 4, 0x2a2420, 1.2, 1.6);
+          debris.burst(e.x, 0.5, e.z, 8, 3.5, 0xffa030, 1, 1.8);
+          for (let j = 0; j < 3; j++)
+            glows.spawn(e.x, 0.4 + j * 0.45, e.z, 2.1 - j * 0.3, 0xff7a30, 0.4, 1.3, 1.4);
+          for (let j = 0; j < 3; j++)
+            smoke.puff(
+              e.x + (Math.random() - 0.5),
+              0.5 + Math.random() * 0.6,
+              e.z + (Math.random() - 0.5),
+              1.3,
+              0.15,
+              1.1,
+              1.6,
+            );
+          if (!demo) {
+            sfx.explosion();
+            if (e.value >= 3) {
+              const p = toScreen(e.x, 1.4, e.z);
+              ui.floatText(p.x, p.y, `-${e.value}`, "#ff6a5a");
+            }
+          }
+          break;
+        case "boulderLaunch":
+          glows.spawn(0, 3, sim.survival ? sim.throatZ - 2 : sim.baseZ - 1, 4, 0xff6a2a, 0.6, 1.2);
+          if (!demo) {
+            sfx.whoosh();
+            if (!toldBoulder) {
+              toldBoulder = true;
+              // Celle-ci passe devant les autres : le rocher est déjà en l'air.
+              notices.unshift("Catapulte ! Écarte le canon du cercle rouge.");
+              noticeTimer = 0;
+            }
+          }
+          break;
+        case "boulderHit":
+          shake = Math.max(shake, e.value > 0 ? 0.9 : 0.45);
+          scorches.spawn(e.x, e.z, 1.9);
+          rings.spawn(e.x, e.z, 3.4, 0xff8a40, 0.5);
+          debris.burst(e.x, 0.4, e.z, 26, 5, 0x6b6258, 1.8, 1.7);
+          debris.burst(e.x, 0.4, e.z, 10, 4, 0xb0a89a, 1.2, 1.9);
+          for (let j = 0; j < 6; j++)
+            smoke.puff(
+              e.x + (Math.random() - 0.5) * 1.8,
+              0.3 + Math.random() * 0.7,
+              e.z + (Math.random() - 0.5) * 1.4,
+              1.6,
+              0.45,
+              1.3,
+              1.4,
+            );
+          if (!demo) {
+            if (e.value > 0) {
+              sfx.stun();
+              const p = toScreen(e.x, 2.2, e.z);
+              ui.floatText(p.x, p.y, "-3", "#ff5a4a");
+              ui.toast("Canon sonné !");
+            } else sfx.explosion();
+          }
+          break;
         case "surge":
           shake = Math.max(shake, 0.4);
           for (let j = 0; j < 5; j++)
@@ -1022,6 +1239,33 @@ export function createMareeBleue(
     }
     if (sim.championReady && !wasReady && !demo) sfx.ready();
     wasReady = sim.championReady;
+    // Canon sonné : il tangue, l'anneau vire au rouge, des étoiles tournent au-dessus.
+    const stunned = sim.stun > 0;
+    stunStars.visible = stunned;
+    if (stunned) {
+      stunStars.position.set(sim.cannonX, 3.4 + Math.sin(t * 6) * 0.08, sim.cannonZ);
+      stunStars.rotation.y = t * 5;
+      for (const st of stunStars.children) st.rotation.y = -t * 9;
+      cannon.turret.rotation.z += Math.sin(t * 22) * 0.07;
+      ringMat.color.setHex(0xff4030);
+      ringMat.opacity = 0.75;
+    }
+    // Premiers pillards spéciaux en vue : on prévient le joueur, une annonce à la fois.
+    if (!demo && mode === "playing") {
+      if (redView.shieldSeen && !toldShield) {
+        toldShield = true;
+        notice("Porte-pavois : il faut trois soldats pour le percer.");
+      }
+      if (redView.bomberSeen && !toldBomber) {
+        toldBomber = true;
+        notice("Artificier : il explose au contact de tes soldats !");
+      }
+      noticeTimer -= dt;
+      if (noticeTimer <= 0 && notices.length > 0) {
+        ui.toast(notices.shift() as string);
+        noticeTimer = 3.2;
+      }
+    }
 
     sim.gates.forEach((g, i) => {
       const gm = gateModels[i];
@@ -1033,9 +1277,16 @@ export function createMareeBleue(
     });
     for (const h of hazardViews) h.update();
 
-    sim.helpers.forEach((h, k) => {
-      const v = helperViews[k];
-      if (!v) return;
+    for (const h of sim.helpers) {
+      const hv = helperViews[h.pad];
+      if (!hv) continue;
+      const v = hv.model;
+      // Encaisse : la défense tremble et sa barre de vie apparaît.
+      v.group.position.x = h.x + Math.sin(t * 70) * 0.05 * h.flash;
+      const ratio = h.hp / h.maxHp;
+      hv.bar.visible = ratio < 1;
+      hv.fill.scale.x = 0.98 * Math.max(0.02, ratio);
+      hv.mats[1].color.setHex(ratio > 0.55 ? 0x5ad35a : ratio > 0.28 ? 0xffc23f : 0xff4a3a);
       const target = Math.atan2(-(h.aimX - h.x), -(h.aimZ - h.z));
       let d = target - v.yaw.rotation.y;
       d = Math.atan2(Math.sin(d), Math.cos(d));
@@ -1045,9 +1296,9 @@ export function createMareeBleue(
         // L'âme du tube rougeoie à mesure que le mortier recharge.
         if (v.glow) v.glow.opacity = 0.25 + 0.75 * Math.max(0, 1 - h.cooldown / 3);
       } else v.recoil.position.z = h.recoil * 0.12;
-    });
+    }
     padViews.forEach((pv, k) => {
-      if (k >= sim.helpers.length) {
+      if (!helperViews[k]) {
         pv.plus.rotation.y = t * 1.5;
         pv.plus.position.y = 0.35 + Math.sin(t * 3 + k) * 0.05;
         pv.glowMat.opacity =
@@ -1075,6 +1326,41 @@ export function createMareeBleue(
         glows.spawn(m.position.x, m.position.y + 0.2, m.position.z, 0.45, 0xffb060, 0.3, 1.5);
         smoke.puff(m.position.x, m.position.y, m.position.z, 0.5, 0.55, 0.6, 0.2);
       }
+    }
+
+    // Rochers : trajectoire en cloche, marque au sol qui se remplit jusqu'à l'impact.
+    for (let k = 0; k < boulderViews.length; k++) {
+      const bv = boulderViews[k];
+      const bd = sim.boulders[k];
+      if (!bd) {
+        bv.rock.visible = bv.mark.visible = false;
+        continue;
+      }
+      const u = Math.min(1, bd.t / bd.dur);
+      const dist = Math.hypot(bd.x1 - bd.x0, bd.z1 - bd.z0);
+      const apex = 5 + dist * 0.14;
+      bv.rock.visible = bv.mark.visible = true;
+      bv.rock.position.set(
+        bd.x0 + (bd.x1 - bd.x0) * u,
+        2.5 * (1 - u) + 0.5 * u + 4 * apex * u * (1 - u),
+        bd.z0 + (bd.z1 - bd.z0) * u,
+      );
+      bv.rock.rotation.x += dt * 5;
+      bv.rock.rotation.z += dt * 3;
+      bv.mark.position.set(bd.x1, 0.04, bd.z1);
+      const fillK = Math.max(0.05, u);
+      bv.fill.scale.set(fillK, fillK, 1);
+      bv.ringMat.opacity = 0.7 + Math.sin(t * (10 + u * 22)) * 0.3;
+      bv.fillMat.opacity = 0.2 + u * 0.3;
+      // L'ombre du rocher grossit et fonce à mesure qu'il approche.
+      const sh = 0.35 + u * 0.65;
+      bv.shadow.scale.set(sh, sh, 1);
+      bv.shadowMat.opacity = u * u * 0.45;
+      // Panneau « ! » qui clignote de plus en plus vite.
+      bv.warnMat.opacity = Math.sin(t * (6 + u * 18)) > -0.2 ? 1 : 0.25;
+      bv.warn.position.y = 3.6 + Math.sin(t * 5) * 0.12;
+      if (dt > 0 && Math.random() < 0.5)
+        smoke.puff(bv.rock.position.x, bv.rock.position.y, bv.rock.position.z, 0.7, 0.35, 0.7, 0.1);
     }
 
     if (world) {
@@ -1278,6 +1564,9 @@ export function createMareeBleue(
       scorches.dispose();
       shadowTex.dispose();
       envTex.dispose();
+      for (const bv of boulderViews) bv.dispose();
+      starGeo.dispose();
+      starMat.dispose();
       for (const m of shellMeshes) {
         m.traverse((o) => {
           const mm = o as THREE.Mesh;
