@@ -1,0 +1,295 @@
+/* Naval Battles — identité visuelle : bleu océan, or, bois. */
+
+.nb-root {
+  --nb-gold: #f3c25b;
+  --nb-gold-deep: #a8741f;
+  --nb-gold-light: #ffe7a3;
+  --nb-navy: #0b1428;
+  --nb-navy-2: #12223f;
+  --nb-wood: #3b2414;
+  --nb-wood-2: #5a3a20;
+  --nb-parchment: #ecd9ae;
+  --nb-red: #e0483a;
+  --nb-green: #5fd068;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow: hidden;
+  background: #0b1428;
+  color: #f5ecd6;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+
+.nb-display {
+  font-family: "Cinzel", Georgia, "Times New Roman", serif;
+  letter-spacing: 0.04em;
+}
+
+.nb-gold-text {
+  background: linear-gradient(180deg, #fff4c9 0%, #f3c25b 45%, #b8801f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+.nb-title-white {
+  color: #f7f1e3;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Panneaux : verre sombre bordé d'or. */
+.nb-panel {
+  background: linear-gradient(180deg, rgba(18, 30, 54, 0.88), rgba(8, 14, 28, 0.92));
+  border: 1.5px solid rgba(243, 194, 91, 0.55);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 231, 163, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Bois verni avec veinage. */
+.nb-wood {
+  background:
+    repeating-linear-gradient(
+      92deg,
+      rgba(0, 0, 0, 0) 0 22px,
+      rgba(0, 0, 0, 0.12) 22px 23px,
+      rgba(255, 220, 170, 0.04) 23px 40px
+    ),
+    linear-gradient(180deg, #6a4426 0%, #4a2e18 55%, #34200f 100%);
+  border: 2px solid #c99a3c;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.55),
+    inset 0 2px 0 rgba(255, 220, 160, 0.25),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.nb-parchment {
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 255, 255, 0.35), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(120, 70, 20, 0.25), transparent 55%),
+    linear-gradient(180deg, #f1e0b6, #dcc28a);
+  color: #3b2414;
+  border: 1.5px solid #8a5a20;
+}
+
+.nb-btn-gold {
+  background: linear-gradient(180deg, #ffe7a3 0%, #f3c25b 40%, #b8801f 100%);
+  color: #2a1606;
+  border: 1.5px solid #7a4e10;
+  box-shadow:
+    0 4px 0 #6a420c,
+    0 8px 18px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s,
+    filter 0.2s;
+}
+.nb-btn-gold:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #6a420c,
+    0 3px 8px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.nb-btn-gold:disabled {
+  filter: grayscale(0.8) brightness(0.7);
+  box-shadow: 0 2px 0 #3a2a14;
+}
+
+.nb-btn-ghost {
+  background: linear-gradient(180deg, rgba(30, 48, 82, 0.9), rgba(12, 20, 38, 0.95));
+  border: 1.5px solid rgba(243, 194, 91, 0.6);
+  color: #f5ecd6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.nb-btn-ghost:active {
+  transform: translateY(1px);
+}
+
+.nb-round {
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 35%, rgba(36, 54, 88, 0.92), rgba(8, 14, 28, 0.95));
+  border: 2px solid rgba(243, 194, 91, 0.75);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 231, 163, 0.25);
+}
+
+.nb-fire-btn {
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 30%, #1f3157 0%, #0c1529 70%);
+  box-shadow:
+    0 0 0 3px #7a4e10,
+    0 0 0 6px #f3c25b,
+    0 0 0 8px #8a5a12,
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    0 0 28px rgba(243, 194, 91, 0.35);
+  transition:
+    transform 0.08s,
+    filter 0.2s;
+}
+.nb-fire-btn:active {
+  transform: scale(0.95);
+}
+.nb-fire-btn.nb-not-ready {
+  filter: saturate(0.4) brightness(0.8);
+}
+.nb-fire-btn.nb-denied {
+  animation: nb-shake 0.3s;
+}
+
+.nb-helm-pad {
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 40%, rgba(22, 36, 64, 0.55), rgba(6, 12, 24, 0.7));
+  border: 1.5px solid rgba(243, 194, 91, 0.35);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.45);
+}
+
+.nb-bar {
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(6, 10, 20, 0.8);
+  border: 1.5px solid rgba(243, 194, 91, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+.nb-bar > i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  transition:
+    width 0.25s,
+    background 0.4s;
+}
+
+.nb-toast {
+  animation:
+    nb-toast-in 0.25s ease-out,
+    nb-toast-out 0.4s ease-in 2.4s forwards;
+}
+
+.nb-pop {
+  animation: nb-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+.nb-glow-pulse {
+  animation: nb-glow 1.6s ease-in-out infinite;
+}
+
+.nb-scroll {
+  overflow-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(243, 194, 91, 0.5) transparent;
+}
+
+.nb-vignette {
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 45%, rgba(4, 8, 18, 0.55) 100%),
+    linear-gradient(
+      180deg,
+      rgba(5, 10, 22, 0.55) 0%,
+      transparent 18%,
+      transparent 70%,
+      rgba(5, 10, 22, 0.6) 100%
+    );
+}
+
+.nb-repair-urgent {
+  animation: nb-urgent 0.9s ease-in-out infinite;
+}
+
+.nb-hurt {
+  animation: nb-hurt 0.45s ease-out;
+}
+
+@keyframes nb-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@keyframes nb-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes nb-toast-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes nb-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes nb-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 3px #7a4e10,
+      0 0 0 6px #f3c25b,
+      0 0 0 8px #8a5a12,
+      0 10px 30px rgba(0, 0, 0, 0.6),
+      0 0 18px rgba(243, 194, 91, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 0 3px #7a4e10,
+      0 0 0 6px #ffe7a3,
+      0 0 0 8px #8a5a12,
+      0 10px 30px rgba(0, 0, 0, 0.6),
+      0 0 36px rgba(255, 210, 110, 0.65);
+  }
+}
+@keyframes nb-hurt {
+  from {
+    box-shadow: inset 0 0 90px rgba(220, 40, 30, 0.75);
+  }
+  to {
+    box-shadow: inset 0 0 0 rgba(220, 40, 30, 0);
+  }
+}
+@keyframes nb-urgent {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px #7ee081,
+      0 0 6px rgba(126, 224, 129, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 3px #b9ffb5,
+      0 0 22px rgba(126, 224, 129, 0.9);
+  }
+}
