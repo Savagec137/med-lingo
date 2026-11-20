@@ -6,7 +6,8 @@
  */
 
 import * as THREE from "three";
-import { FOG_FAR, FOG_NEAR, NOISE_GLSL, PALETTE, SUN_DIR } from "./environment.ts";
+import { FOG_FAR, FOG_NEAR, PALETTE, SUN_DIR } from "./environment.ts";
+import { foamLaceTexture, oceanDetailTexture } from "./water-textures.ts";
 import { wavesGlsl } from "./waves.ts";
 
 const HALF_SIZE = 2200;
@@ -54,12 +55,14 @@ export function createOcean(quality: "haute" | "basse"): Ocean {
     uniforms: {
       uTime: { value: 0 },
       uCenter: { value: new THREE.Vector2() },
+      uDetail: { value: oceanDetailTexture() },
+      uFoam: { value: foamLaceTexture() },
       uSunDir: { value: SUN_DIR },
       uSunColor: { value: PALETTE.sun },
       uDeep: { value: PALETTE.deep },
       uShallow: { value: PALETTE.shallow },
       uZenith: { value: PALETTE.zenith },
-      uMid: { value: PALETTE.midSky },
+      uMid: { value: PALETTE.waterSky },
       uHorizon: { value: PALETTE.horizon },
       uSunHorizon: { value: PALETTE.sunHorizon },
       uFog: { value: PALETTE.fog },
@@ -106,6 +109,8 @@ export function createOcean(quality: "haute" | "basse"): Ocean {
     `,
     fragmentShader: /* glsl */ `
       uniform float uTime;
+      uniform sampler2D uDetail;
+      uniform sampler2D uFoam;
       uniform vec3 uSunDir;
       uniform vec3 uSunColor;
       uniform vec3 uDeep;
@@ -121,39 +126,72 @@ export function createOcean(quality: "haute" | "basse"): Ocean {
       varying vec3 vNormal;
       varying float vCrest;
       varying float vFade;
-      ${NOISE_GLSL}
-      vec2 noiseGrad(vec2 p) {
-        float c = vnoise(p);
-        return vec2(vnoise(p + vec2(0.2, 0.0)) - c, vnoise(p + vec2(0.0, 0.2)) - c) * 5.0;
+
+      // Une couche de vagues : texture tournée, mise à l'échelle et en dérive ;
+      // la pente est ramenée dans le repère du monde.
+      vec2 waveLayer(vec2 w, float scale, float ang, vec2 drift, float strength, out float h) {
+        float c = cos(ang);
+        float s = sin(ang);
+        mat2 R = mat2(c, s, -s, c);
+        vec4 t = texture2D(uDetail, (R * w) / scale + drift * uTime);
+        h = t.b;
+        return (transpose(R) * (t.rg * 2.0 - 1.0)) * strength;
       }
+
       void main() {
-        vec2 uv = vWorld.xz;
+        vec2 w = vWorld.xz;
         float dist = length(vWorld - cameraPosition);
-        float detail = 1.0 - smoothstep(60.0, 420.0, dist);
-        // Ridules : gradient d'un bruit non périodique (pas de moiré vu de haut).
-        vec2 dn = noiseGrad(uv * 0.21 + vec2(uTime * 0.06, uTime * 0.035)) * 0.6
-                + noiseGrad(uv * 0.53 - vec2(uTime * 0.11, -uTime * 0.05)) * 0.4;
-        vec3 N = normalize(vNormal + vec3(dn.x, 0.0, dn.y) * (0.05 + 0.09 * detail));
+        float near = 1.0 - smoothstep(30.0, 220.0, dist);
+        float hA;
+        float hB;
+        float hC;
+        float hD;
+        // Quatre échelles incommensurables : pas de motif répété visible.
+        vec2 g = waveLayer(w, 36.0, 0.0, vec2(0.011, 0.006), 0.24, hA)
+               + waveLayer(w, 14.5, 1.1, vec2(-0.017, 0.02), 0.17, hB)
+               + waveLayer(w, 88.0, -0.7, vec2(0.004, -0.008), 0.22, hC)
+               + waveLayer(w, 5.8, 2.3, vec2(0.032, -0.021), 0.08 * near, hD);
+        g += -vNormal.xz / max(vNormal.y, 0.2);
+        vec3 N = normalize(vec3(-g.x, 1.0, -g.y));
+        float hc = hA * 0.42 + hB * 0.3 + hC * 0.28;
+
         vec3 V = normalize(cameraPosition - vWorld);
         float ndv = max(dot(N, V), 0.0);
-        float fres = 0.02 + 0.62 * pow(1.0 - ndv, 5.0);
+        float fres = min(0.02 + 0.98 * pow(1.0 - ndv, 5.0), 0.6);
         vec3 R = reflect(-V, N);
-        R.y = abs(R.y);
+        // Les faces des vagues renvoient le bleu du ciel plutôt que l'horizon délavé.
+        R.y = abs(R.y) * 0.8 + 0.14;
         float towardSun = pow(max(dot(normalize(R.xz + vec2(1e-4)), normalize(uSunDir.xz)), 0.0), 2.0);
         vec3 horizon = mix(uHorizon, uSunHorizon, towardSun * 0.85);
-        vec3 sky = mix(mix(horizon, uMid, smoothstep(0.0, 0.17, R.y)), uZenith, smoothstep(0.17, 0.75, R.y)) * 0.82;
+        vec3 sky = mix(mix(horizon, uMid, smoothstep(0.0, 0.17, R.y)), uZenith, smoothstep(0.17, 0.75, R.y));
+
+        // Reflet du soleil sur chaque facette : un chemin doré brisé en éclats.
         float sunAmt = max(dot(R, uSunDir), 0.0);
-        vec3 glitter = uSunColor * (pow(sunAmt, 700.0) * 18.0 + pow(sunAmt, 80.0) * 0.8 + pow(sunAmt, 14.0) * 0.07);
-        float sss = pow(max(dot(V, -uSunDir), 0.0), 3.0) * max(vCrest, 0.0) * 0.6;
-        vec3 body = mix(uDeep, uShallow, clamp(0.35 + vCrest * 0.35, 0.0, 1.0));
-        body *= 0.55 + 0.45 * max(dot(N, uSunDir), 0.0);
+        // Éclats dorés (et non blancs saturés), plafonnés pour rester des étincelles.
+        vec3 gold = uSunColor * vec3(1.0, 0.78, 0.5);
+        vec3 glitter = min(gold * (pow(sunAmt, 420.0) * 10.0 + pow(sunAmt, 70.0) * 0.5), vec3(2.6))
+                     + uSunColor * pow(sunAmt, 14.0) * 0.025;
+
+        // Corps de l'eau : creux sombres, faces de vagues plus claires, transparence des crêtes.
+        float lit = max(dot(N, uSunDir), 0.0);
+        float sss = pow(max(dot(V, -uSunDir), 0.0), 3.0) * smoothstep(0.45, 0.9, hc) * 0.7;
+        vec3 body = mix(uDeep, uShallow, smoothstep(0.25, 0.85, hc) * 0.75) * (0.7 + 0.3 * lit);
         body += uShallow * sss;
-        vec3 col = mix(body, sky, fres) + glitter * (0.4 + 0.6 * fres);
-        // Écume sur les crêtes.
-        float foamNoise = vnoise(uv * 0.35 + vec2(uTime * 0.08, -uTime * 0.05)) * 0.6 + vnoise(uv * 1.3 - uTime * 0.2) * 0.4;
-        float foam = smoothstep(0.82, 1.22, vCrest + foamNoise * 0.32) * vFade * (0.35 + 0.65 * detail);
-        foam *= smoothstep(0.35, 0.75, vnoise(uv * 0.08 + uTime * 0.02));
-        col = mix(col, vec3(0.86, 0.92, 0.98), foam * 0.6);
+        // Soleil rasant : les éclats se concentrent vers l'horizon, l'eau proche reste sombre.
+        glitter *= smoothstep(70.0, 320.0, dist);
+        vec3 col = mix(body, sky, fres) + glitter;
+
+        // Moutons : fines lignes d'écume sur les crêtes, découpées en dentelle.
+        float lace = texture2D(uFoam, w / 8.5 + vec2(0.012, -0.007) * uTime).r;
+        float lace2 = texture2D(uFoam, w / 24.0 - vec2(0.005, 0.009) * uTime).r;
+        // Les crêtes aiguës de chaque couche dessinent de fines lignes blanches.
+        float crest = max(smoothstep(0.8, 0.95, hA), smoothstep(0.82, 0.96, hB) * 0.75);
+        crest = max(crest, smoothstep(0.74, 0.88, hc + vCrest * 0.1) * 0.6);
+        float foam = crest * lace * (0.55 + 0.45 * lace2) * 1.4;
+        foam *= 1.0 - 0.75 * smoothstep(200.0, 900.0, dist);
+        vec3 foamCol = mix(vec3(0.8, 0.87, 0.94), vec3(1.0, 0.9, 0.76), towardSun * 0.35);
+        col = mix(col, foamCol, clamp(foam, 0.0, 1.0) * 0.9);
+
         float f = smoothstep(uFogNear, uFogFar, dist);
         col = mix(col, uFog, f);
         gl_FragColor = vec4(col, 1.0);

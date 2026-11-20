@@ -12,8 +12,9 @@ export const PALETTE = {
   sunHorizon: new THREE.Color("#ffad5c"),
   sun: new THREE.Color("#ffd29a"),
   fog: new THREE.Color("#6d84ab"),
-  deep: new THREE.Color("#031a33"),
-  shallow: new THREE.Color("#0b4a70"),
+  deep: new THREE.Color("#021a2a"),
+  shallow: new THREE.Color("#0d5878"),
+  waterSky: new THREE.Color("#2a6890"),
 } as const;
 
 /** Soleil devant la position de départ, un peu à bâbord, à 5° au-dessus de l'eau. */

@@ -65,6 +65,7 @@ import {
   type ShipVisual,
 } from "./ship-model.ts";
 import { disposeTextures } from "./textures.ts";
+import { disposeWaterTextures } from "./water-textures.ts";
 import { waveHeight } from "./waves.ts";
 
 export interface HudState {
@@ -892,6 +893,7 @@ export function createNavalEngine(
       sky.geometry.dispose();
       sky.material.dispose();
       disposeTextures();
+      disposeWaterTextures();
       audio.dispose();
       renderer.dispose();
       renderer.domElement.remove();

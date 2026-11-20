@@ -8,7 +8,7 @@
 
 import * as THREE from "three";
 import { FOG_FAR, FOG_NEAR, PALETTE } from "./environment.ts";
-import { foamTexture } from "./textures.ts";
+import { foamLaceTexture } from "./water-textures.ts";
 import { waveHeight } from "./waves.ts";
 
 export interface ParticleSpec {
@@ -185,7 +185,7 @@ class ParticlePool {
 /** Sillage : un ruban d'écume qui suit l'historique des positions du navire. */
 class Wake {
   private readonly history: { x: number; z: number; w: number }[] = [];
-  private readonly segments = 34;
+  private readonly segments = 52;
   private readonly geometry: THREE.BufferGeometry;
   readonly mesh: THREE.Mesh;
   private timer = 0;
@@ -227,7 +227,7 @@ class Wake {
     this.timer += dt;
     const sx = x - Math.sin(h) * length * 0.48;
     const sz = z - Math.cos(h) * length * 0.48;
-    if (this.timer > 0.14 || this.history.length === 0) {
+    if (this.timer > 0.17 || this.history.length === 0) {
       this.timer = 0;
       this.history.unshift({ x: sx, z: sz, w: alive ? Math.min(1, speed / 6) : 0 });
       if (this.history.length > this.segments + 1) this.history.pop();
@@ -247,13 +247,13 @@ class Wake {
       dx /= len;
       dz /= len;
       const k = i / this.segments;
-      const half = beam * (0.35 + k * 1.6);
+      const half = beam * (0.45 + k * 1.9);
       const y = waveHeight(p.x, p.z, time) + 0.4;
       pos.setXYZ(i * 2, p.x - dz * half, y, p.z + dx * half);
       pos.setXYZ(i * 2 + 1, p.x + dz * half, y, p.z - dx * half);
       uv.setXY(i * 2, 0, k * 6 - time * 0.3);
       uv.setXY(i * 2 + 1, 1, k * 6 - time * 0.3);
-      const a = i >= n ? 0 : p.w * (1 - k) * (1 - k);
+      const a = i >= n ? 0 : p.w * Math.pow(1 - k, 1.4);
       alpha.setX(i * 2, a);
       alpha.setX(i * 2 + 1, a);
     }
@@ -320,28 +320,38 @@ export function createFx(): Fx {
   const quat = new THREE.Quaternion();
   const vec = new THREE.Vector3();
 
+  // Sillage : dentelle d'écume posée sur l'eau (coordonnées monde), dense au centre.
   const wakeMaterial = new THREE.ShaderMaterial({
     transparent: true,
     depthWrite: false,
-    uniforms: { uMap: { value: foamTexture() } },
+    uniforms: { uLace: { value: foamLaceTexture() }, uTime: { value: 0 } },
     vertexShader: /* glsl */ `
       attribute float alpha;
       varying float vAlpha;
       varying vec2 vUv;
+      varying vec2 vWorldXZ;
       void main() {
         vAlpha = alpha;
         vUv = uv;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        vec4 wp = modelMatrix * vec4(position, 1.0);
+        vWorldXZ = wp.xz;
+        gl_Position = projectionMatrix * viewMatrix * wp;
       }
     `,
     fragmentShader: /* glsl */ `
-      uniform sampler2D uMap;
+      uniform sampler2D uLace;
+      uniform float uTime;
       varying float vAlpha;
       varying vec2 vUv;
+      varying vec2 vWorldXZ;
       void main() {
-        float edge = 1.0 - pow(abs(vUv.x - 0.5) * 2.0, 2.0);
-        float foam = texture2D(uMap, vUv).a;
-        gl_FragColor = vec4(vec3(0.92, 0.96, 1.0), (foam * 0.7 + 0.35) * edge * vAlpha * 0.85);
+        float across = abs(vUv.x - 0.5) * 2.0;
+        float edge = 1.0 - pow(across, 1.6);
+        float l1 = texture2D(uLace, vWorldXZ / 5.5 + vec2(0.0, uTime * 0.03)).r;
+        float l2 = texture2D(uLace, vWorldXZ / 14.0 - vec2(uTime * 0.012, 0.0)).r;
+        float core = 1.0 - smoothstep(0.0, 0.55, across);
+        float a = clamp(l1 * 1.1 + l2 * 0.6 + core * 0.55, 0.0, 1.0) * edge * min(1.0, vAlpha * 1.4);
+        gl_FragColor = vec4(vec3(0.9, 0.95, 1.0), a);
       }
     `,
   });
@@ -444,6 +454,7 @@ export function createFx(): Fx {
       arcMat.opacity = ready && inRange ? 0.18 : 0.08;
     },
     update(dt, now) {
+      wakeMaterial.uniforms.uTime.value = now;
       alpha.update(dt);
       additive.update(dt);
       for (let i = markers.length - 1; i >= 0; i--) {

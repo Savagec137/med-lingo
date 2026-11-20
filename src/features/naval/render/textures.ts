@@ -327,23 +327,6 @@ export function leafTexture(): THREE.Texture {
   });
 }
 
-export function foamTexture(): THREE.Texture {
-  return cached("foam", () => {
-    const [c, ctx] = canvas(64, 256);
-    ctx.clearRect(0, 0, 64, 256);
-    for (let i = 0; i < 380; i++) {
-      const x = 32 + (Math.random() - 0.5) * 60 * Math.random();
-      const y = Math.random() * 256;
-      const r = 1 + Math.random() * 4;
-      ctx.fillStyle = `rgba(255,255,255,${0.25 + Math.random() * 0.5})`;
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    return finish(c, { repeat: true });
-  });
-}
-
 /** Petite tache douce pour les particules et halos. */
 export function glowTexture(): THREE.Texture {
   return cached("glow", () => {
