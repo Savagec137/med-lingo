@@ -21,6 +21,21 @@
   pas rompre les sauvegardes, même si les navires d'élite s'appellent désormais
   « Le Vigilant » et « L'Inflexible ».
 
+## Modèle 3D du galion du joueur
+
+- Référence : `docs/naval-battles/reference/` (planche fournie et quatre vues découpées).
+- Génération prévue : Higgsfield, modèle `meshy_multi_image_to_3d`, 4 vues, texturé + PBR,
+  ~25 000 triangles, symétrie imposée — devis : **30 crédits**.
+- Intégration prête (`render/player-model.ts`) : chargement GLB (meshopt accepté), calage
+  automatique (orientation, longueur hors-tout, tirant d'eau), reflets du ciel couchant
+  (PMREM), fenêtres et fanaux illuminés à partir de la texture, noircissement avec les
+  dégâts, repli sur le galion procédural tant que `PLAYER_MODEL_URL` est vide.
+- À la livraison : optimiser le fichier
+  (`npx @gltf-transform/cli optimize in.glb public/models/galion-joueur.glb --compress meshopt --texture-compress webp --texture-size 1024`),
+  renseigner `PLAYER_MODEL_URL` et `PLAYER_MODEL_FIT`, recaler les zones de tir du galion si
+  les proportions diffèrent, vérifier en jeu.
+- En développement, `/naval?modele=/chemin.glb` essaie un fichier sans rien modifier.
+
 ## 2. Architecture
 
 ```

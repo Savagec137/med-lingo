@@ -64,6 +64,12 @@ import {
   syncShipVisual,
   type ShipVisual,
 } from "./ship-model.ts";
+import {
+  PLAYER_MODEL_URL,
+  createModelShipVisual,
+  loadPlayerModel,
+  type PlayerModel,
+} from "./player-model.ts";
 import { disposeTextures } from "./textures.ts";
 import { disposeWaterTextures } from "./water-textures.ts";
 import { waveHeight } from "./waves.ts";
@@ -115,7 +121,13 @@ export interface NavalEngine {
   /** Accès de test : état de la simulation courante. */
   debugWorld(): World | null;
   /** Accès de test : coût de rendu de la dernière image. */
-  debugStats(): { calls: number; triangles: number; pixelRatio: number; frameMs: number };
+  debugStats(): {
+    calls: number;
+    triangles: number;
+    pixelRatio: number;
+    frameMs: number;
+    playerModel: boolean;
+  };
   dispose(): void;
 }
 
@@ -176,7 +188,8 @@ interface Marker {
 export function createNavalEngine(
   host: HTMLElement,
   callbacks: EngineCallbacks,
-  opts: { sound: boolean },
+  /** `playerModelUrl` : adresse d'un modèle à essayer (null = aucun, absent = modèle livré). */
+  opts: { sound: boolean; playerModelUrl?: string | null },
 ): NavalEngine {
   const lowEnd =
     (navigator.hardwareConcurrency ?? 8) <= 4 ||
@@ -214,6 +227,26 @@ export function createNavalEngine(
   const fx: Fx = createFx();
   scene.add(fx.group);
   const audio: NavalAudio = createAudio(opts.sound);
+
+  // Modèle 3D du galion du joueur : chargé en arrière-plan, le galion procédural
+  // reste affiché tant que le fichier n'est pas prêt (ou s'il est absent).
+  let playerModel: PlayerModel | null = null;
+  const modelUrl = opts.playerModelUrl === undefined ? PLAYER_MODEL_URL : opts.playerModelUrl;
+  void (modelUrl ? loadPlayerModel(renderer, modelUrl) : Promise.resolve(null)).then((model) => {
+    if (!model) return;
+    if (disposed) {
+      model.dispose();
+      return;
+    }
+    playerModel = model;
+    for (const s of world.ships) {
+      const v = s.team === "joueur" ? visuals.get(s.id) : undefined;
+      if (v) {
+        disposeShipVisual(v);
+        visuals.delete(s.id);
+      }
+    }
+  });
 
   let mode: "port" | "battle" = "port";
   let world: World = createBattle(
@@ -276,7 +309,10 @@ export function createNavalEngine(
   function ensureVisual(s: Ship): ShipVisual {
     let v = visuals.get(s.id);
     if (!v) {
-      v = createShipVisual(s.cls, s.id * 1.37);
+      v =
+        s.team === "joueur" && playerModel
+          ? createModelShipVisual(s.cls, playerModel)
+          : createShipVisual(s.cls, s.id * 1.37);
       visuals.set(s.id, v);
       scene.add(v.root);
     }
@@ -876,6 +912,7 @@ export function createNavalEngine(
         triangles: r.triangles,
         pixelRatio,
         frameMs: Math.round(frameAvg * 10) / 10,
+        playerModel: playerModel !== null,
       };
     },
     dispose() {
@@ -894,6 +931,7 @@ export function createNavalEngine(
       sky.material.dispose();
       disposeTextures();
       disposeWaterTextures();
+      playerModel?.dispose();
       audio.dispose();
       renderer.dispose();
       renderer.domElement.remove();

@@ -223,8 +223,10 @@ export interface ShipVisual {
   body: THREE.Group;
   cls: ShipClass;
   tear: { value: number };
-  hullMaterial: THREE.MeshStandardMaterial;
-  cannons: THREE.InstancedMesh;
+  /** Matériaux qui noircissent quand la coque s'abîme. */
+  tintMaterials: THREE.MeshStandardMaterial[];
+  /** Canons instanciés (absents d'un modèle importé, qui porte les siens). */
+  cannons: THREE.InstancedMesh | null;
   gunSlots: { battery: BatteryId; index: number; matrix: THREE.Matrix4 }[];
   flag: THREE.Mesh | null;
   flagBase: Float32Array | null;
@@ -561,7 +563,7 @@ export function createShipVisual(cls: ShipClass, seed: number): ShipVisual {
     body,
     cls,
     tear,
-    hullMaterial,
+    tintMaterials: [hullMaterial],
     cannons,
     gunSlots,
     flag,
@@ -609,7 +611,7 @@ export function syncShipVisual(v: ShipVisual, ship: Ship, time: number, dt: numb
   // Dégâts visibles.
   v.tear.value = 1 - ship.sails / ship.sailsMax;
   const hullDamage = 1 - ship.hull / ship.hullMax;
-  v.hullMaterial.color.setScalar(1 - 0.5 * hullDamage);
+  for (const m of v.tintMaterials) m.color.setScalar(1 - 0.5 * hullDamage);
   const visible: Record<BatteryId, number> = {
     babord: gunsAvailable(ship, "babord"),
     tribord: gunsAvailable(ship, "tribord"),
@@ -617,12 +619,13 @@ export function syncShipVisual(v: ShipVisual, ship: Ship, time: number, dt: numb
     poupe: gunsAvailable(ship, "poupe"),
   };
   const key = `${visible.babord}${visible.tribord}${visible.proue}${visible.poupe}`;
-  if (key !== v.gunKey) {
+  if (v.cannons && key !== v.gunKey) {
     v.gunKey = key;
+    const cannons = v.cannons;
     v.gunSlots.forEach((slot, i) =>
-      v.cannons.setMatrixAt(i, slot.index < visible[slot.battery] ? slot.matrix : ZERO),
+      cannons.setMatrixAt(i, slot.index < visible[slot.battery] ? slot.matrix : ZERO),
     );
-    v.cannons.instanceMatrix.needsUpdate = true;
+    cannons.instanceMatrix.needsUpdate = true;
   }
 
   // Pavillon qui claque au vent.
@@ -643,7 +646,7 @@ export function syncShipVisual(v: ShipVisual, ship: Ship, time: number, dt: numb
 export function disposeShipVisual(v: ShipVisual): void {
   v.root.removeFromParent();
   for (const d of v.disposables) d.dispose();
-  v.cannons.dispose();
+  v.cannons?.dispose();
 }
 
 /** Point aléatoire sur le pont, en coordonnées monde (flammes, fumée). */

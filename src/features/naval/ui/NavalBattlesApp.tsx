@@ -324,7 +324,13 @@ export function NavalBattlesApp({ onExit }: { onExit(): void }) {
         onToast: toast,
         onAutoPause: () => setPaused(true),
       },
-      { sound: saveRef.current.settings.sound },
+      {
+        sound: saveRef.current.settings.sound,
+        // Développement uniquement : `?modele=/chemin.glb` essaie un modèle de galion.
+        playerModelUrl: import.meta.env.DEV
+          ? (new URLSearchParams(window.location.search).get("modele") ?? undefined)
+          : undefined,
+      },
     );
     engine.current = e;
     // Accès de test (développement uniquement) : les tests de bout en bout lisent l'état de la bataille.
