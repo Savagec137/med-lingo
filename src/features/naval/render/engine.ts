@@ -359,7 +359,7 @@ export function createNavalEngine(
         if (!s) break;
         explosion(fx, rnd, s.x, s.cls.deckHeight + 1, s.z, !!s.cls.ram);
         audio.explosion(distToCamera(s.x, 0, s.z), !!s.cls.ram);
-        if (s.team === "pirates") {
+        if (s.team === "ennemis") {
           const loot = s.sunkByPlayer ? ` · +${s.bounty} or` : "";
           callbacks.onToast(`${s.name} coulé${loot}`, "success");
         }
@@ -532,7 +532,7 @@ export function createNavalEngine(
     const live = new Set<number>();
     if (mode === "battle") {
       for (const s of world.ships) {
-        if (s.team !== "pirates" || s.state !== "afloat") continue;
+        if (s.team !== "ennemis" || s.state !== "afloat") continue;
         live.add(s.id);
         const m = ensureMarker(s);
         tmp.set(s.x, s.cls.mastHeight + 3, s.z).project(camera);

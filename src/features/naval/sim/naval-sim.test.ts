@@ -476,20 +476,20 @@ test("l'IA contourne les îles au lieu de s'échouer", () => {
 
 test("les vagues arrivent quand la précédente est presque coulée", () => {
   const w = createBattle(getMission("coulez-cinq"), buildLoadout(emptyUpgradeLevels()), 2);
-  assert.equal(w.ships.filter((s) => s.team === "pirates").length, 2);
-  for (const s of w.ships.filter((s) => s.team === "pirates"))
+  assert.equal(w.ships.filter((s) => s.team === "ennemis").length, 2);
+  for (const s of w.ships.filter((s) => s.team === "ennemis"))
     applyDamage(w, s, "coque", 999, w.playerId);
   run(w, DT);
-  assert.equal(w.ships.filter((s) => s.team === "pirates").length, 4, "la deuxième vague est là");
+  assert.equal(w.ships.filter((s) => s.team === "ennemis").length, 4, "la deuxième vague est là");
   assert.deepEqual(objectiveProgress(w), { done: 2, total: 5 });
-  assert.equal(objectiveLabel(getMission("coulez-cinq")), "Coulez 5 pirates");
+  assert.equal(objectiveLabel(getMission("coulez-cinq")), "Coulez 5 navires");
 });
 
 test("une mission d'élite se gagne en coulant le capitaine nommé, escorte comprise ou non", () => {
   const w = createBattle(getMission("le-borgne"), buildLoadout(emptyUpgradeLevels()), 4);
-  const borgne = w.ships.find((s) => s.name === "Le Borgne")!;
-  assert.ok(borgne.elite && borgne.hullMax > SHIP_CLASSES.brick.hull);
-  applyDamage(w, borgne, "coque", 1e6, w.playerId);
+  const vigilant = w.ships.find((s) => s.name === "Le Vigilant")!;
+  assert.ok(vigilant.elite && vigilant.hullMax > SHIP_CLASSES.brick.hull);
+  applyDamage(w, vigilant, "coque", 1e6, w.playerId);
   run(w, 3);
   assert.equal(w.outcome, "victoire");
   assert.equal(battleReport(w).loot, Math.round(SHIP_CLASSES.brick.bounty * 2.5));

@@ -5,7 +5,7 @@
  */
 
 import { useId, type SVGProps } from "react";
-import type { AmmoId, ShipClassId } from "../sim/defs.ts";
+import { SHIP_CLASSES, type AmmoId, type ShipClassId } from "../sim/defs.ts";
 import type { UpgradeId } from "../sim/upgrades.ts";
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number };
@@ -379,14 +379,15 @@ export function ShipSilhouette({ cls, size, ...p }: IconProps & { cls: ShipClass
     brulot: [32],
     galiote: [28, 42],
   };
-  const sailColor: Record<ShipClassId, string> = {
-    galion: "#20202a",
-    cotre: "#b3342a",
-    brick: "#8e241e",
-    fregate: "#e8dcbc",
-    brulot: "#7c6a50",
-    galiote: "#a39d90",
-  };
+  // Couleurs lues dans la définition du navire : une seule source de vérité.
+  const look = SHIP_CLASSES[cls].look;
+  const sail = look.sail;
+  const flag =
+    look.flag === "pavillon-gouverneur"
+      ? "#1b3a7a"
+      : look.flag === "pavillon-noir"
+        ? "#0c0c0f"
+        : null;
   const xs = masts[cls];
   return (
     <svg {...base(size, p)}>
@@ -402,13 +403,13 @@ export function ShipSilhouette({ cls, size, ...p }: IconProps & { cls: ShipClass
           />
           <path
             d={`M${x - 8} ${i === Math.floor(xs.length / 2) ? 12 : 16}h16c-2 5-2 10 0 14h-16c2-4 2-9 0-14z`}
-            fill={sailColor[cls]}
+            fill={sail}
             stroke="#2a1a10"
             strokeWidth="1.2"
           />
           <path
             d={`M${x - 7} 32h14c-1.5 3-1.5 6 0 9h-14c1.5-3 1.5-6 0-9z`}
-            fill={sailColor[cls]}
+            fill={sail}
             stroke="#2a1a10"
             strokeWidth="1.2"
           />
@@ -418,8 +419,16 @@ export function ShipSilhouette({ cls, size, ...p }: IconProps & { cls: ShipClass
         <path d="M26 30c2-6 6-8 6-14 4 6 8 8 6 16z" fill="#ff8a1e" opacity="0.9" />
       )}
       {cls === "galiote" && <rect x="12" y="38" width="8" height="5" rx="2" fill="#2a2a2e" />}
-      <path d="M6 44h52l-6 12H14z" fill="#5a3a20" stroke="#2a1a10" strokeWidth="1.5" />
-      <path d="M8 46h48" stroke="#c99a3c" strokeWidth="1.6" />
+      {flag && (
+        <path
+          d={`M${xs[Math.floor(xs.length / 2)]} 8h9l-2 3 2 3h-9z`}
+          fill={flag}
+          stroke={look.flag === "pavillon-gouverneur" ? "#e3b64c" : "#f1ead8"}
+          strokeWidth="0.8"
+        />
+      )}
+      <path d="M6 44h52l-6 12H14z" fill={look.hull} stroke="#0d0a08" strokeWidth="1.5" />
+      <path d="M8 46h48" stroke={look.trim} strokeWidth="1.8" />
     </svg>
   );
 }

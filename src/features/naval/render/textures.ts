@@ -167,10 +167,9 @@ export function sailTexture(look: ShipLook, withEmblem: boolean): THREE.Texture 
           light ? "#efe6cf" : "#16110d",
           light ? shade(look.sail, 0.9) : look.sail,
         );
-      } else if (look.emblem === "croix") {
-        ctx.fillStyle = "#9b1d1d";
-        ctx.fillRect(110, 30, 36, 196);
-        ctx.fillRect(40, 100, 176, 36);
+      } else if (look.emblem === "ancre") {
+        // Voile de la Marine : armoiries bleues sur la toile écrue.
+        drawCrest(ctx, 128, 140, 88, "#1f3d78");
       } else if (look.emblem === "flamme") {
         ctx.fillStyle = "rgba(60,30,10,0.55)";
         for (let i = 0; i < 6; i++) ctx.fillRect(30 + i * 34, 40 + ((i * 53) % 120), 28, 34);
@@ -245,12 +244,75 @@ export function deckTexture(): THREE.Texture {
   });
 }
 
+/** Armoiries du Gouverneur : une ancre surmontée d'une couronne. */
+export function drawCrest(
+  ctx: CanvasRenderingContext2D,
+  cx: number,
+  cy: number,
+  s: number,
+  color: string,
+): void {
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.scale(s, s);
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  // Couronne.
+  ctx.beginPath();
+  ctx.moveTo(-0.42, -0.62);
+  ctx.lineTo(-0.42, -0.9);
+  ctx.lineTo(-0.22, -0.74);
+  ctx.lineTo(0, -1);
+  ctx.lineTo(0.22, -0.74);
+  ctx.lineTo(0.42, -0.9);
+  ctx.lineTo(0.42, -0.62);
+  ctx.closePath();
+  ctx.fill();
+  // Ancre : anneau, verge, jas et bras.
+  ctx.lineWidth = 0.11;
+  ctx.beginPath();
+  ctx.arc(0, -0.42, 0.11, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0, -0.3);
+  ctx.lineTo(0, 0.78);
+  ctx.moveTo(-0.32, -0.12);
+  ctx.lineTo(0.32, -0.12);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0.22, 0.58, Math.PI * 0.12, Math.PI * 0.88);
+  ctx.stroke();
+  for (const dir of [-1, 1]) {
+    const x = Math.cos(Math.PI * (dir > 0 ? 0.12 : 0.88)) * 0.58;
+    const y = 0.22 + Math.sin(Math.PI * 0.12) * 0.58;
+    ctx.beginPath();
+    ctx.moveTo(x + dir * 0.06, y - 0.2);
+    ctx.lineTo(x + dir * 0.16, y + 0.06);
+    ctx.lineTo(x - dir * 0.14, y + 0.02);
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
 export function flagTexture(kind: ShipLook["flag"]): THREE.Texture {
   return cached(`flag:${kind}`, () => {
     const [c, ctx] = canvas(128, 96);
-    ctx.fillStyle = kind === "pavillon-rouge" ? "#8c1414" : "#0c0c0f";
-    ctx.fillRect(0, 0, 128, 96);
-    drawSkull(ctx, 64, 44, 26, "#f1ead8", kind === "pavillon-rouge" ? "#8c1414" : "#0c0c0f");
+    if (kind === "pavillon-gouverneur") {
+      // Pavillon de la Marine : bleu roi, liseré et armoiries d'or.
+      ctx.fillStyle = "#1b3a7a";
+      ctx.fillRect(0, 0, 128, 96);
+      ctx.strokeStyle = "#e3b64c";
+      ctx.lineWidth = 5;
+      ctx.strokeRect(4, 4, 120, 88);
+      drawCrest(ctx, 64, 52, 30, "#f0c75a");
+    } else {
+      ctx.fillStyle = "#0c0c0f";
+      ctx.fillRect(0, 0, 128, 96);
+      drawSkull(ctx, 64, 44, 26, "#f1ead8", "#0c0c0f");
+    }
     grime(ctx, 128, 96, 0.2, 9);
     return finish(c);
   });

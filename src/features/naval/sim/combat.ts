@@ -53,7 +53,7 @@ export function getPlayer(world: World): Ship {
 }
 
 export function enemiesAfloat(world: World): Ship[] {
-  return world.ships.filter((s) => s.team === "pirates" && s.state === "afloat");
+  return world.ships.filter((s) => s.team === "ennemis" && s.state === "afloat");
 }
 
 /** Relèvement central de chaque batterie (0 = avant, +π/2 = tribord). */
@@ -387,7 +387,7 @@ export function startSinking(world: World, s: Ship): void {
   s.repairT = 0;
   s.sunkByPlayer = s.lastAttacker === world.playerId;
   world.events.push({ type: "naufrage", shipId: s.id });
-  if (s.team === "pirates") {
+  if (s.team === "ennemis") {
     world.kills += 1;
     world.killsByClass[s.cls.id] = (world.killsByClass[s.cls.id] ?? 0) + 1;
     if (s.sunkByPlayer) world.loot += s.bounty;

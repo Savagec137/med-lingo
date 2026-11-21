@@ -87,7 +87,7 @@ function makeShip(
     gunDamage: c.gunDamage * (elite ? ELITE.damage : 1),
     range: c.range,
     baseReload: c.reload,
-    spread: c.spread * (team === "pirates" ? AI_SPREAD_MUL : 1) * (elite ? ELITE.accuracy : 1),
+    spread: c.spread * (team === "ennemis" ? AI_SPREAD_MUL : 1) * (elite ? ELITE.accuracy : 1),
     guns: { ...c.guns },
     reload: { babord: 0, tribord: 0, proue: 0, poupe: 0 },
     reloadTotal: { babord: 1, tribord: 1, proue: 1, poupe: 1 },
@@ -107,7 +107,7 @@ function makeShip(
     groundedFor: 0,
   };
   // Les batteries ennemies ne sont pas toutes prêtes au même instant.
-  if (team === "pirates") {
+  if (team === "ennemis") {
     for (const b of ["babord", "tribord", "proue", "poupe"] as const)
       ship.reload[b] = world.rng() * 1.5;
   }
@@ -223,7 +223,7 @@ function spawnWave(world: World, wave: WaveDef, index: number): void {
   world.events.push({ type: "vague", index });
 }
 
-/** Ajoute un navire pirate piloté par l'IA (vagues, tests, scénarios). */
+/** Ajoute un navire ennemi piloté par l'IA (vagues, tests, scénarios). */
 export function addEnemy(
   world: World,
   cls: ShipClassId,
@@ -232,7 +232,7 @@ export function addEnemy(
   h: number,
   opts: { elite?: boolean; name?: string } = {},
 ): Ship {
-  const ship = makeShip(world, cls, "pirates", x, z, h, opts);
+  const ship = makeShip(world, cls, "ennemis", x, z, h, opts);
   ship.ai = createAiState(world.rng);
   ship.ai.desiredH = h;
   world.ships.push(ship);
@@ -412,7 +412,7 @@ export function objectiveComplete(world: World): boolean {
   const o = world.mission.objective;
   if (o.type === "couler-elite") {
     return world.ships.some(
-      (s) => s.team === "pirates" && s.elite && s.name === o.name && s.state !== "afloat",
+      (s) => s.team === "ennemis" && s.elite && s.name === o.name && s.state !== "afloat",
     );
   }
   return world.waves.every((w) => w.spawned) && enemiesAfloat(world).length === 0;

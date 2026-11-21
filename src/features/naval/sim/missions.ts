@@ -105,7 +105,7 @@ export const MISSIONS: readonly MissionDef[] = [
     id: "premiers-boulets",
     name: "Premiers boulets",
     brief:
-      "Deux cotres rôdent près du cap. Présentez-leur votre flanc : les canons sont sur les côtés.",
+      "Deux cotres des douanes patrouillent près du cap. Présentez-leur votre flanc : les canons sont sur les côtés.",
     objective: { type: "couler-tout" },
     waves: [
       { ships: [{ cls: "cotre" }, { cls: "cotre" }], trigger: { type: "start" }, spawn: "devant" },
@@ -117,9 +117,9 @@ export const MISSIONS: readonly MissionDef[] = [
   },
   {
     id: "coulez-cinq",
-    name: "Coulez 5 pirates",
+    name: "Coulez 5 navires",
     brief:
-      "Une bande de cotres et de bricks pille les pêcheurs. Les bricks se battent bord à bord.",
+      "Une patrouille de la Marine traque les contrebandiers de l'archipel. Ses bricks se battent bord à bord.",
     objective: { type: "couler-tout" },
     waves: [
       { ships: [{ cls: "cotre" }, { cls: "cotre" }], trigger: { type: "start" }, spawn: "devant" },
@@ -138,7 +138,7 @@ export const MISSIONS: readonly MissionDef[] = [
     id: "brulots",
     name: "Les brûlots de la baie",
     brief:
-      "Des brûlots chargés de poudre foncent sur vous. Coulez-les avant le contact, ou esquivez.",
+      "Le Gouverneur lance des brûlots chargés de poudre sur vous. Coulez-les avant le contact, ou esquivez.",
     objective: { type: "couler-tout" },
     waves: [
       { ships: [{ cls: "brick" }, { cls: "brulot" }], trigger: { type: "start" }, spawn: "devant" },
@@ -153,14 +153,16 @@ export const MISSIONS: readonly MissionDef[] = [
     replayGold: 90,
   },
   {
+    // Identifiant historique conservé : les sauvegardes y sont rattachées.
     id: "le-borgne",
-    name: "Le Brick du Borgne",
-    brief: "Le Borgne commande un brick renforcé. Coulez-le : son escorte ne compte pas.",
-    objective: { type: "couler-elite", name: "Le Borgne" },
+    name: "Le Vigilant",
+    brief:
+      "Le Vigilant, brick renforcé du capitaine Valmont, chasse les pirates de l'archipel. Coulez-le : son escorte ne compte pas.",
+    objective: { type: "couler-elite", name: "Le Vigilant" },
     waves: [
       {
         ships: [
-          { cls: "brick", elite: true, name: "Le Borgne" },
+          { cls: "brick", elite: true, name: "Le Vigilant" },
           { cls: "cotre" },
           { cls: "cotre" },
         ],
@@ -180,7 +182,8 @@ export const MISSIONS: readonly MissionDef[] = [
   {
     id: "bombes-sur-la-passe",
     name: "Bombes sur la passe",
-    brief: "Des galiotes bombardent de loin. Sortez des cercles rouges et allez les chercher.",
+    brief:
+      "Les galiotes du Gouverneur bombardent la passe depuis le large. Sortez des cercles rouges et allez les chercher.",
     objective: { type: "couler-tout" },
     waves: [
       {
@@ -199,13 +202,15 @@ export const MISSIONS: readonly MissionDef[] = [
     replayGold: 130,
   },
   {
+    // Identifiant historique conservé : les sauvegardes y sont rattachées.
     id: "la-vipere",
-    name: "La Frégate corsaire",
-    brief: "La Vipère, une frégate de 16 canons, garde le passage. Ses bricks la couvrent.",
-    objective: { type: "couler-elite", name: "La Vipère" },
+    name: "La frégate du Gouverneur",
+    brief:
+      "L'Inflexible, frégate de 16 canons du Gouverneur, garde le passage. Ses bricks la couvrent.",
+    objective: { type: "couler-elite", name: "L'Inflexible" },
     waves: [
       {
-        ships: [{ cls: "fregate", elite: true, name: "La Vipère" }],
+        ships: [{ cls: "fregate", elite: true, name: "L'Inflexible" }],
         trigger: { type: "start" },
         spawn: "devant",
       },
@@ -222,7 +227,7 @@ export const MISSIONS: readonly MissionDef[] = [
   {
     id: "tempete-de-fer",
     name: "Tempête de fer",
-    brief: "Toute la flotte pirate de la région converge. Quatre vagues, aucun répit.",
+    brief: "Toute l'escadre du Gouverneur converge sur vous. Quatre vagues, aucun répit.",
     objective: { type: "couler-tout" },
     waves: [
       {
@@ -265,5 +270,5 @@ export function missionEnemyCount(mission: MissionDef): number {
 export function objectiveLabel(mission: MissionDef): string {
   if (mission.objective.type === "couler-elite") return `Coulez ${mission.objective.name}`;
   const n = missionEnemyCount(mission);
-  return `Coulez ${n} pirate${n > 1 ? "s" : ""}`;
+  return `Coulez ${n} navire${n > 1 ? "s" : ""}`;
 }

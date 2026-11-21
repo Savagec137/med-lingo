@@ -33,8 +33,8 @@ export interface ShipLook {
   hull: string;
   trim: string;
   sail: string;
-  emblem: "crane" | "croix" | "aucun" | "flamme";
-  flag: "pavillon-noir" | "pavillon-rouge" | "aucun";
+  emblem: "crane" | "ancre" | "aucun" | "flamme";
+  flag: "pavillon-noir" | "pavillon-gouverneur" | "aucun";
 }
 
 export interface MortarSpec {
@@ -117,8 +117,9 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
   },
   cotre: {
     id: "cotre",
-    name: "Cotre pirate",
-    description: "Rapide et fragile, il tourne autour de sa proie et fuit quand il saigne.",
+    name: "Cotre des douanes",
+    description:
+      "Garde-côte rapide et fragile : il tourne autour de sa proie et fuit quand il saigne.",
     role: "harceleur",
     length: 15,
     beam: 5,
@@ -138,16 +139,16 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
     spread: 0.07,
     bounty: 30,
     look: {
-      hull: "#4a2c18",
-      trim: "#8a2a1e",
-      sail: "#9c2a22",
-      emblem: "crane",
-      flag: "pavillon-noir",
+      hull: "#2b3d55",
+      trim: "#e4e0d2",
+      sail: "#ddd6c4",
+      emblem: "aucun",
+      flag: "pavillon-gouverneur",
     },
   },
   brick: {
     id: "brick",
-    name: "Brick pirate",
+    name: "Brick de la Marine",
     description:
       "Un duelliste : il se met bord à bord et change d'amure pour garder une bordée prête.",
     role: "duelliste",
@@ -169,16 +170,16 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
     spread: 0.06,
     bounty: 55,
     look: {
-      hull: "#2f1d12",
-      trim: "#a33224",
-      sail: "#7d1f1a",
-      emblem: "crane",
-      flag: "pavillon-rouge",
+      hull: "#1c2b45",
+      trim: "#d8a93a",
+      sail: "#e6dfcc",
+      emblem: "ancre",
+      flag: "pavillon-gouverneur",
     },
   },
   fregate: {
     id: "fregate",
-    name: "Frégate corsaire",
+    name: "Frégate du Gouverneur",
     description: "Lourde et lente, elle tient la distance, brise vos voiles puis vous pilonne.",
     role: "artilleur",
     length: 30,
@@ -199,17 +200,17 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
     spread: 0.05,
     bounty: 120,
     look: {
-      hull: "#1d1a1c",
-      trim: "#b8862e",
-      sail: "#e4d6b4",
-      emblem: "croix",
-      flag: "pavillon-rouge",
+      hull: "#141c2c",
+      trim: "#e0b54a",
+      sail: "#efe8d6",
+      emblem: "ancre",
+      flag: "pavillon-gouverneur",
     },
   },
   brulot: {
     id: "brulot",
-    name: "Brûlot",
-    description: "Un navire bourré de poudre qui fonce sur vous. Coulez-le avant le contact.",
+    name: "Brûlot de la Marine",
+    description: "Une vieille coque bourrée de poudre lancée sur vous. Coulez-la avant le contact.",
     role: "kamikaze",
     length: 14,
     beam: 5,
@@ -229,7 +230,7 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
     spread: 0,
     ram: { hull: 32, sails: 20, fire: 0.65, radius: 9 },
     bounty: 25,
-    look: { hull: "#3b2a1c", trim: "#5a3a1e", sail: "#6b5a44", emblem: "flamme", flag: "aucun" },
+    look: { hull: "#3b2a1c", trim: "#5a3a1e", sail: "#8a7f6a", emblem: "flamme", flag: "aucun" },
   },
   galiote: {
     id: "galiote",
@@ -255,11 +256,11 @@ export const SHIP_CLASSES: Record<ShipClassId, ShipClass> = {
     mortar: { damage: 24, radius: 9, reload: 7, minRange: 35, range: 135, flightTime: 3.2 },
     bounty: 70,
     look: {
-      hull: "#2c2620",
-      trim: "#6d6a62",
-      sail: "#8f8a80",
-      emblem: "crane",
-      flag: "pavillon-noir",
+      hull: "#26344a",
+      trim: "#c9c2a8",
+      sail: "#cfc6ae",
+      emblem: "aucun",
+      flag: "pavillon-gouverneur",
     },
   },
 };
@@ -379,7 +380,7 @@ export const FIRE = {
   igniteAmount: 0.4,
 } as const;
 
-/** Les canonniers pirates visent moins bien que ceux du joueur. */
+/** Les canonniers de la Marine visent moins bien que ceux du joueur. */
 export const AI_SPREAD_MUL = 2.5;
 
 /** Bonus des navires d'élite (capitaines nommés). */

@@ -3,7 +3,8 @@
  * palmiers et le fort du cap. Les îles reprennent exactement les positions
  * et rayons de la simulation (elles bloquent les navires).
  *
- * Le fort est un décor en phase 1 : la conquête des îles arrivera en phase 4.
+ * Le fort (tenu par le Gouverneur) est un décor en phase 1 : la conquête des
+ * îles arrivera en phase 4.
  */
 
 import * as THREE from "three";
@@ -165,7 +166,7 @@ function buildFort(isl: IslandDef, disposables: { dispose(): void }[]): THREE.Gr
   flagGeo.translate(2.25, 0, 0);
   disposables.push(flagGeo);
   const flagMat = new THREE.MeshStandardMaterial({
-    map: flagTexture("pavillon-noir"),
+    map: flagTexture("pavillon-gouverneur"),
     side: THREE.DoubleSide,
   });
   disposables.push(flagMat);

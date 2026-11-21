@@ -2,7 +2,8 @@ import type { AmmoId, BatteryId, ShipClass, ShipClassId, Zone } from "./defs.ts"
 import type { Rng } from "./math.ts";
 import type { IslandDef, MissionDef, WaveDef } from "./missions.ts";
 
-export type Team = "joueur" | "pirates";
+/** Le joueur (pirate) contre les navires ennemis (Marine du Gouverneur). */
+export type Team = "joueur" | "ennemis";
 export type ShipState = "afloat" | "sinking" | "sunk";
 
 export interface AiState {

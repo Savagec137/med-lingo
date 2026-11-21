@@ -9,6 +9,18 @@
 - Il ne touche à aucune fonctionnalité existante de MedLingo : route isolée, module chargé à
   la demande (Three.js inclus), aucune donnée partagée.
 
+## Univers
+
+- Le joueur est un pirate ; son galion recevra le modèle 3D fourni par le propriétaire
+  (modèle réservé au joueur).
+- Les ennemis sont les navires du gouvernement : **la Marine du Gouverneur** (faction
+  fictive). Livrée : coques bleu nuit à bandeau doré, voiles de toile écrue, pavillon bleu
+  roi aux armoiries d'or (ancre couronnée). Cotre des douanes, brick de la Marine, frégate
+  du Gouverneur, brûlot de la Marine, galiote à bombes. Le fort du cap bat aussi ce pavillon.
+- Les identifiants internes des missions (`le-borgne`, `la-vipere`) sont conservés pour ne
+  pas rompre les sauvegardes, même si les navires d'élite s'appellent désormais
+  « Le Vigilant » et « L'Inflexible ».
+
 ## 2. Architecture
 
 ```
@@ -43,7 +55,7 @@ Principes :
 | 2   | Conquête des îles      | Non commencé       | Le fort du cap est un décor                                                                                                                                                                       |
 | 3   | Équipage               | Non commencé       | —                                                                                                                                                                                                 |
 | 4   | Coffres et équipements | Non commencé       | —                                                                                                                                                                                                 |
-| 5   | Boss maritimes         | Amorcé             | Capitaines d'élite nommés (Le Borgne, La Vipère) ; pas encore de phases de boss                                                                                                                   |
+| 5   | Boss maritimes         | Amorcé             | Navires d'élite nommés (Le Vigilant, L'Inflexible) ; pas encore de phases de boss                                                                                                                 |
 | 6   | Exploration / carte    | Non commencé       | Une région (« Eaux tranquilles »)                                                                                                                                                                 |
 | 7   | Météo dynamique        | Non commencé       | Couchant fixe, houle animée (sans effet de jeu)                                                                                                                                                   |
 | 8   | Commerce               | Non commencé       | —                                                                                                                                                                                                 |
@@ -55,7 +67,7 @@ Principes :
 ## 4. Règles économiques (phase 1)
 
 - Butin : prime de chaque navire coulé **par le joueur** (cotre 30, brick 55, frégate 120,
-  brûlot 25, galiote 70 ; ×2,5 pour un capitaine d'élite). Un brûlot qui explose au contact ne
+  brûlot 25, galiote 70 ; ×2,5 pour un navire d'élite). Un brûlot qui explose au contact ne
   rapporte rien.
 - Victoire : butin + prime de mission (complète et gemmes à la première victoire, prime de
   reprise ensuite).
